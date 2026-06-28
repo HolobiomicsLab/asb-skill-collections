@@ -47,6 +47,13 @@ def demo_root(tmp_path):
     return tmp_path
 
 
+def test_ver_key_mixed_no_typeerror():
+    from scripts.asb_skill_index import _ver_key
+    # mixed numeric/alpha components must compare without TypeError
+    assert _ver_key("2") > _ver_key("2-rc")
+    assert _ver_key("10") > _ver_key("2")
+
+
 def test_discover_and_resolve(demo_root):
     from scripts import asb_skill_index as idx
     cols = idx.discover_collections(demo_root)

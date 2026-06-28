@@ -118,6 +118,7 @@ jobs:
           ZENODO_SANDBOX: ${{ vars.ZENODO_SANDBOX }}
           COLLECTION_SLUG: ${{ steps.tag.outputs.slug }}
           COLLECTION_VERSION: ${{ steps.tag.outputs.version }}
+          RELEASE_TAG: ${{ steps.tag.outputs.tag }}
         run: |
           if [ -z "${ZENODO_TOKEN}" ]; then
             echo "ZENODO_TOKEN not set — skipping Zenodo upload"
@@ -176,9 +177,10 @@ jobs:
             for old in dep.get("files", []):
               fid = old.get("id")
               if fid:
-                requests.delete(
+                dresp = requests.delete(
                   f"{base_url}/deposit/depositions/{dep_id}/files/{fid}",
                   headers=headers, timeout=30)
+                dresp.raise_for_status()  # else the old file persists alongside the new one
             print(f"Created NEW VERSION draft {dep_id} of Zenodo concept record {concept_record}")
           else:
             resp = requests.post(f"{base_url}/deposit/depositions",
@@ -272,7 +274,7 @@ jobs:
               "keywords": ["scientific-agents", "agent-skills", slug, "asb"],
               "license": "cc-by-4.0",
               "access_right": "open",
-              "version": os.environ.get("GITHUB_REF_NAME", f"{slug}-v{version}"),
+              "version": os.environ.get("RELEASE_TAG") or os.environ.get("GITHUB_REF_NAME", f"{slug}-v{version}"),
             }
 
           meta_resp = requests.put(

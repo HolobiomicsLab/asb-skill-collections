@@ -5,16 +5,21 @@
 const REPO = "HolobiomicsLab/asb-skill-collections";
 const DRAFT_KEY = "asb-contribute-draft";
 
-// Redaction rules — general shapes only (kept in lock-step with the Python scrubber).
+// Redaction rules — kept in lock-step with scripts/make_improvement_report.py.
+// Bounded quantifiers (no ReDoS on long pasted blobs); non-alnum lookbehind (not
+// \b) so ANTHROPIC_API_KEY / GITHUB_TOKEN etc. still match.
 const SCRUBBERS = [
-  ["email", /[\w.+-]+@[\w-]+\.[\w.-]+/g, "[email]"],
+  ["email", /[\w.+-]{1,64}@[\w-]{1,255}(?:\.[\w-]{1,255})+/g, "[email]"],
   ["ip", /\b\d{1,3}(?:\.\d{1,3}){3}\b/g, "[ip]"],
   ["path", /(?:\/Users\/|\/home\/|\/private\/|~\/)[^\s"'`]+/g, "[path]"],
   ["path", /\b[A-Za-z]:\\[^\s"'`]+/g, "[path]"],
   ["path", /(?<![\w.])\/(?:usr|var|tmp|opt|etc|mnt|srv)\/[^\s"'`]+/g, "[path]"],
-  ["secret", /\bsk-[A-Za-z0-9]{16,}\b/g, "[secret]"],
+  ["secret", /\b(?:sk|pk)-[A-Za-z0-9_-]{16,}/g, "[secret]"],
+  ["secret", /\b(?:ghp|gho|ghu|ghs|ghr)_[A-Za-z0-9]{16,}\b/g, "[secret]"],
+  ["secret", /\bglpat-[A-Za-z0-9_-]{16,}/g, "[secret]"],
+  ["secret", /\bAKIA[0-9A-Z]{12,}\b/g, "[secret]"],
   ["secret", /\bBearer\s+[A-Za-z0-9._-]{12,}/gi, "Bearer [secret]"],
-  ["secret", /\b(api[_-]?key|access[_-]?key|secret[_-]?key|token|secret|password|passwd|pwd|key)\b\s*[:=]\s*\S+/gi, "$1=[secret]"],
+  ["secret", /(?<![A-Za-z0-9])(api[_-]?key|access[_-]?key|secret[_-]?key|token|secret|password|passwd|pwd|key)\s*[:=]\s*\S+/gi, "$1=[secret]"],
 ];
 
 function scrub(text) {

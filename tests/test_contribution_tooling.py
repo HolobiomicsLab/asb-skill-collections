@@ -57,6 +57,33 @@ def test_scrub_leaves_clean_text_untouched():
     assert counts == {}
 
 
+def test_scrub_underscore_prefixed_keys_and_token_shapes():
+    """Regression: \\b before an underscore-glued key did NOT match, leaking
+    ANTHROPIC_API_KEY / GITHUB_TOKEN etc. (adversarial-review MUST-FIX)."""
+    from scripts.make_improvement_report import scrub
+
+    dirty = (
+        "export ANTHROPIC_API_KEY=sk-ant-abc123def456ghi789jkl "
+        "GITHUB_TOKEN=ghp_0123456789abcdef0123 "
+        "aws AKIAIOSFODNN7EXAMPLE my_secret_key: hunter2pass"
+    )
+    clean, counts = scrub(dirty)
+    for leak in ["sk-ant-abc123def456ghi789jkl", "ghp_0123456789abcdef0123",
+                 "AKIAIOSFODNN7EXAMPLE", "hunter2pass"]:
+        assert leak not in clean, f"leaked: {leak}"
+    assert counts.get("secret", 0) >= 4
+
+
+def test_scrub_no_redos_on_long_blob():
+    """A long no-delimiter blob (pasted diff/base64) must not hang the scrubber."""
+    import time
+    from scripts.make_improvement_report import scrub
+
+    t0 = time.time()
+    scrub("a" * 200_000)
+    assert time.time() - t0 < 2.0
+
+
 # --------------------------------------------------------------------------- #
 # select_release_coauthors                                                     #
 # --------------------------------------------------------------------------- #
@@ -145,6 +172,30 @@ def test_apply_citation_and_zenodo_dedup(leaderboard_repo, tmp_path):
     # Idempotent: re-applying adds nobody (dedup by ORCID).
     assert _apply_citation(cff, res["selected"]) == 0
     assert _apply_zenodo(zen, res["selected"]) == 0
+
+
+def test_apply_citation_indented_block_stays_valid(leaderboard_repo, tmp_path):
+    """Regression: yaml.safe_dump emits column-0 items; appending to an INDENTED
+    authors block must preserve indentation or the file becomes invalid YAML."""
+    import yaml
+    from scripts.select_release_coauthors import _apply_citation, select_coauthors
+
+    cff = tmp_path / "CITATION_indented.cff"
+    cff.write_text(
+        "cff-version: 1.2.0\n"
+        "title: Test\n"
+        "authors:\n"
+        "  - family-names: Lead\n"
+        "    given-names: Person\n"
+        "    orcid: https://orcid.org/0000-0009-9999-9999\n"
+        "version: '2'\n"
+    )
+    res = select_coauthors(leaderboard_repo, "metabolomics", "domain_contributor", 3, 0, 0)
+    assert _apply_citation(cff, res["selected"]) == 1
+    doc = yaml.safe_load(cff.read_text())  # must still parse
+    assert doc["version"] == "2"
+    orcids = {a.get("orcid", "").rsplit("/", 1)[-1] for a in doc["authors"]}
+    assert "0000-0001-0000-0001" in orcids and "0000-0009-9999-9999" in orcids
 
 
 # --------------------------------------------------------------------------- #

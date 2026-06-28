@@ -223,8 +223,22 @@ def _apply_citation(path: pathlib.Path, selected: list[dict]) -> int:
     end = start + 1
     while end < len(lines) and (lines[end].startswith((" ", "\t", "-")) or not lines[end].strip()):
         end += 1
-    block = yaml.safe_dump(additions, sort_keys=False, allow_unicode=True).rstrip("\n").splitlines()
-    new_lines = lines[:end] + block + lines[end:]
+    # Match the existing list-item indentation (cffinit-style files indent items
+    # under authors:); yaml.safe_dump emits column-0 items, which would corrupt an
+    # indented block. Re-indent the dumped additions to the existing depth.
+    indent = ""
+    for ln in lines[start + 1:end]:
+        m = re.match(r"^(\s*)-\s", ln)
+        if m:
+            indent = m.group(1)
+            break
+    dumped = yaml.safe_dump(additions, sort_keys=False, allow_unicode=True).rstrip("\n").splitlines()
+    block = [(indent + ln) if ln else ln for ln in dumped]
+    # Insert right after the last non-blank line of the block (avoid a stray blank).
+    insert_at = end
+    while insert_at > start + 1 and not lines[insert_at - 1].strip():
+        insert_at -= 1
+    new_lines = lines[:insert_at] + block + lines[insert_at:]
     path.write_text("\n".join(new_lines) + ("\n" if text.endswith("\n") else ""))
     return len(additions)
 

@@ -29,6 +29,14 @@ async function fetchJSON(path) {
   return resp.json();
 }
 
+// Escape text before it goes into innerHTML. Index data is trusted (curated repo)
+// but descriptions/tool names contain '<', '>', '&' (e.g. "Python >= 3.8",
+// "mzspec:<ns>:<id>") that would otherwise be parsed as tags and dropped.
+function esc(s) {
+  return String(s == null ? "" : s).replace(/[&<>"']/g, c =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
 function collDir(c) {
   return `collections/${c.slug}/v${c.version}`;
 }
@@ -49,7 +57,7 @@ function barChart(pairs) {
     const y = i * rowH + 4;
     const len = Math.max(2, Math.round((n / max) * barW));
     svg.push(
-      `<text x="0" y="${y + 13}" class="chart-label">${label}</text>`,
+      `<text x="0" y="${y + 13}" class="chart-label">${esc(label)}</text>`,
       `<rect x="${labelW}" y="${y + 3}" width="${len}" height="14" rx="3" class="chart-bar"></rect>`,
       `<text x="${labelW + len + 6}" y="${y + 13}" class="chart-num">${n}</text>`
     );
@@ -106,11 +114,11 @@ function actions(viewPath, target, slug) {
 
 function skillCard(r) {
   const path = `${collDir(state.collection)}/skills/${r.slug}/SKILL.md`;
-  const tools = (r.tools || []).slice(0, 6).map(t => `<span class="badge badge-tool">${t}</span>`).join("");
-  const techs = (r.techniques || []).map(t => `<span class="badge badge-skill">${t}</span>`).join("");
+  const tools = (r.tools || []).slice(0, 6).map(t => `<span class="badge badge-tool">${esc(t)}</span>`).join("");
+  const techs = (r.techniques || []).map(t => `<span class="badge badge-skill">${esc(t)}</span>`).join("");
   return `<div class="card item">
-      <div class="item-head"><span class="item-name">${r.name || r.slug}</span></div>
-      <p class="item-desc">${(r.description || "").trim()}</p>
+      <div class="item-head"><span class="item-name">${esc(r.name || r.slug)}</span></div>
+      <p class="item-desc">${esc((r.description || "").trim())}</p>
       <div class="badges">${techs}${tools}</div>
       ${actions(path, "skills", r.slug)}
     </div>`;
@@ -118,13 +126,13 @@ function skillCard(r) {
 
 function workflowCard(r) {
   const path = `${collDir(state.collection)}/workflows/${r.slug}/SKILL.md`;
-  const techs = (r.techniques || []).map(t => `<span class="badge badge-skill">${t}</span>`).join("");
-  const stages = (r.stages || []).map(s => `<span class="badge">${s}</span>`).join(" → ");
-  const tools = (r.member_tools || []).slice(0, 8).map(t => `<span class="badge badge-tool">${t}</span>`).join("");
+  const techs = (r.techniques || []).map(t => `<span class="badge badge-skill">${esc(t)}</span>`).join("");
+  const stages = (r.stages || []).map(s => `<span class="badge">${esc(s)}</span>`).join(" → ");
+  const tools = (r.member_tools || []).slice(0, 8).map(t => `<span class="badge badge-tool">${esc(t)}</span>`).join("");
   return `<div class="card item">
-      <div class="item-head"><span class="item-name">${r.name || r.slug}</span>
+      <div class="item-head"><span class="item-name">${esc(r.name || r.slug)}</span>
         <span class="muted">${r.stage_count || (r.stages || []).length} stages</span></div>
-      <p class="item-desc">${(r.description || "").trim()}</p>
+      <p class="item-desc">${esc((r.description || "").trim())}</p>
       <div class="stages">${stages}</div>
       <div class="badges">${techs}${tools}</div>
       ${actions(path, "workflows", r.slug)}
@@ -134,11 +142,11 @@ function workflowCard(r) {
 function toolCard(r) {
   const path = `${collDir(state.collection)}/tools/${r.slug}.yaml`;
   const url = r.canonical_url
-    ? `<a href="${r.canonical_url}" target="_blank" rel="noopener">${r.canonical_url}</a>` : "";
+    ? `<a href="${encodeURI(r.canonical_url)}" target="_blank" rel="noopener">${esc(r.canonical_url)}</a>` : "";
   return `<div class="card item">
-      <div class="item-head"><span class="item-name">${r.name || r.slug}</span></div>
+      <div class="item-head"><span class="item-name">${esc(r.name || r.slug)}</span></div>
       <p class="item-desc">${url}</p>
-      <div class="badges">${(r.edam_topics || []).slice(0, 4).map(t => `<span class="badge">${t.split("/").pop()}</span>`).join("")}</div>
+      <div class="badges">${(r.edam_topics || []).slice(0, 4).map(t => `<span class="badge">${esc(t.split("/").pop())}</span>`).join("")}</div>
       ${actions(path, "tools", r.slug)}
     </div>`;
 }

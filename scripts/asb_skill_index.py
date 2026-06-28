@@ -93,7 +93,9 @@ def resolve_collection_dir(collection: str, root: str | os.PathLike | None = Non
 
 
 def _ver_key(v: str):
-    return tuple(int(p) if p.isdigit() else p for p in str(v).split("."))
+    # Uniform tuple element type so mixed numeric/alpha components (e.g. "2" vs
+    # "2-rc") compare without TypeError; numeric sorts after alpha within a part.
+    return tuple((1, int(p)) if p.isdigit() else (0, p) for p in str(v).split("."))
 
 
 def index_path(collection_dir: Path, target: str) -> Path:

@@ -39,16 +39,25 @@ import urllib.parse
 KINDS = ["correction", "enhancement", "new-skill", "bug", "tool-update", "other"]
 
 # (label, compiled pattern, replacement) — general shapes only, never specific tokens.
+# Quantifiers are bounded (RFC-realistic caps) so a long no-delimiter blob in a
+# pasted diff/log can't trigger quadratic backtracking (ReDoS). The keyword
+# secret rule uses a non-alnum lookbehind (NOT \b) so underscore-prefixed names
+# like ANTHROPIC_API_KEY / GITHUB_TOKEN still match.
 _SCRUBBERS = [
-    ("email", re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+"), "[email]"),
+    ("email", re.compile(r"[\w.+-]{1,64}@[\w-]{1,255}(?:\.[\w-]{1,255})+"), "[email]"),
     ("ip", re.compile(r"\b\d{1,3}(?:\.\d{1,3}){3}\b"), "[ip]"),
     ("path", re.compile(r"(?:/Users/|/home/|/private/|~/)[^\s\"'`]+"), "[path]"),
     ("path", re.compile(r"\b[A-Za-z]:\\[^\s\"'`]+"), "[path]"),
     ("path", re.compile(r"(?<![\w.])/(?:usr|var|tmp|opt|etc|mnt|srv)/[^\s\"'`]+"), "[path]"),
-    ("secret", re.compile(r"\bsk-[A-Za-z0-9]{16,}\b"), "[secret]"),
+    # Known token shapes (caught even without a key= prefix).
+    ("secret", re.compile(r"\b(?:sk|pk)-[A-Za-z0-9_\-]{16,}"), "[secret]"),
+    ("secret", re.compile(r"\b(?:ghp|gho|ghu|ghs|ghr)_[A-Za-z0-9]{16,}\b"), "[secret]"),
+    ("secret", re.compile(r"\bglpat-[A-Za-z0-9_\-]{16,}"), "[secret]"),
+    ("secret", re.compile(r"\bAKIA[0-9A-Z]{12,}\b"), "[secret]"),
     ("secret", re.compile(r"\bBearer\s+[A-Za-z0-9._\-]{12,}", re.I), "Bearer [secret]"),
+    # key=value / token: value (any prefix glued via _ or -).
     ("secret", re.compile(
-        r"(?i)\b(api[_-]?key|access[_-]?key|secret[_-]?key|token|secret|password|passwd|pwd|key)\b"
+        r"(?i)(?<![A-Za-z0-9])(api[_-]?key|access[_-]?key|secret[_-]?key|token|secret|password|passwd|pwd|key)"
         r"\s*[:=]\s*\S+"), r"\1=[secret]"),
 ]
 
