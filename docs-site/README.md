@@ -7,14 +7,22 @@ vanilla JS + CDN-loaded libraries. No build step, no npm, no backend.
 
 | File | What it shows |
 | ---- | ------------- |
-| `index.html` (+ `app.js`) | Catalogue of collections + contributor leaderboard |
+| `index.html` (+ `app.js`) | Catalogue of collections + new-release banner + ranked contributor leaderboard |
+| `collections.html` (+ `collections.js`) | Browse a collection's skills, composite workflows (super-skills), and tools, with filters + per-item GitHub view/edit/suggest links |
 | `corpus.html` (+ `corpus.js`) | Browse all source papers across collections, with filters |
 | `paper.html` (+ `paper.js`) | Per-paper review: skills, tools, claims; verify/flag actions |
+| `contribute.html` (+ `contribute.js`) | Package an anonymized skill/workflow improvement → pre-filled GitHub issue (mirrors `scripts/make_improvement_report.py`) |
 | `propose.html` | Form to propose a new paper (submits via GitHub Issue URL params) |
 | `search.html` (+ `search.js`) | Full-text search across papers / skills / tools (lunr.js) |
 
-All write actions (verify, flag, propose) round-trip through GitHub Issues or
-Pull Requests via prefilled URL params — no server.
+All write actions (verify, flag, propose, contribute) round-trip through GitHub
+Issues or Pull Requests via prefilled URL params — no server.
+
+`collections.html` reads each collection's machine indexes directly from GitHub
+raw (`collections/<slug>/v<N>/skills_index.json`, `…/workflows/workflows_index.json`,
+`…/tools_index.json`) — so it needs no build step and stays current with `main`.
+`contribute.html` scrubs file paths, emails, IPs, and secrets in the browser
+before building the issue body (same rules as the Python CLI).
 
 ## Search index
 
