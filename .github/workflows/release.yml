@@ -92,6 +92,24 @@ jobs:
             fi
           fi
 
+      - name: Propose release co-authors from leaderboard (advisory)
+        # Turns the measured contribution record into a PROPOSED author list for
+        # this release. Advisory only — it writes the proposal to the job summary
+        # and never mutates CITATION.cff/.zenodo.json automatically (a maintainer
+        # injects reviewed authors via select_release_coauthors.py --apply in a PR).
+        continue-on-error: true
+        env:
+          COLLECTION_SLUG: ${{ steps.tag.outputs.slug }}
+        run: |
+          python scripts/regen_career_stats.py --repo-root . || true
+          python scripts/select_release_coauthors.py --repo-root . \
+            --collection "${COLLECTION_SLUG}" --recent-years 2 \
+            --report release_coauthors.md --json release_coauthors.json || true
+          if [ -f release_coauthors.md ]; then
+            cat release_coauthors.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+          echo "::notice::Co-author proposal is ADVISORY. Inject reviewed authors with select_release_coauthors.py --apply (CITATION.cff / .zenodo.json) in a PR before tagging."
+
       - name: Upload to Zenodo (fail-soft if token missing)
         id: zenodo
         env:
