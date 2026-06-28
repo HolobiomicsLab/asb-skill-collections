@@ -1,6 +1,6 @@
 # Using the ASB Metabolomics Collection (v2)
 
-5,865 evidence-grounded skills + 909 software-tool records for computational
+5,858 evidence-grounded skills + 909 software-tool records for computational
 metabolomics — predominantly LC-MS/MS, but also LC-MS, GC-MS, mass-spectrometry
 imaging, ion mobility and lipidomics, with some NMR and multi-omics / statistics
 / pathway tools — each derived from a peer-reviewed method paper and its public
@@ -51,7 +51,7 @@ jq '.[] | select(.slug=="<slug>") | .tools' skills_index.json
 
 ```bash
 /plugin marketplace add HolobiomicsLab/asb-skill-collections
-/plugin install metabolomics@asb-skill-collections          # full (5,865 skills)
+/plugin install metabolomics@asb-skill-collections          # full (5,858 skills)
 # or a lighter per-technique pack (load only what you need):
 /plugin install metabolomics-lc-ms@asb-skill-collections    # lc-ms · gc-ms · nmr · ms-imaging ·
                                                             # ion-mobility · ce-ms ·
@@ -60,7 +60,7 @@ jq '.[] | select(.slug=="<slug>") | .tools' skills_index.json
 
 Skills are auto-discovered from `skills/<slug>/SKILL.md` and become available to
 the agent. The entry point is `skills/_router/SKILL.md`. The full plugin loads
-all 5,865 skills eagerly; the technique packs are much smaller. Packs **overlap**
+all 5,858 skills eagerly; the technique packs are much smaller. Packs **overlap**
 (a multi-technique skill is in several), so install one full plugin *or* a few
 packs — not both — to avoid duplicate skills in context.
 
@@ -82,7 +82,7 @@ the machine indexes directly:
 
 No CLI needed — you attach the skills as **uploaded knowledge** and add a short
 routing instruction. Because these UIs cap how many files you can upload, **do
-not upload all 5,865 skills**. Upload instead:
+not upload all 5,858 skills**. Upload instead:
 
 1. `skills_index.json` + `tools_index.json` (the searchable catalogue), and
 2. only the handful of `skills/<slug>/SKILL.md` files relevant to your work

@@ -30,7 +30,7 @@ lead_curators:
 contributors:
 - name: Louis-Felix Nothias
   orcid: https://orcid.org/0000-0001-6711-6719
-skills_count: 5865
+skills_count: 5858
 tools_count: 909
 skills:
 - 2d-nmr-pulse-sequence-implementation
@@ -1294,7 +1294,6 @@ skills:
 - euclidean-distance-computation-for-spatial-alignment
 - evaluation-data-collection-for-simulation-assessment
 - evaluation-data-object-handling
-- evidence-linking
 - evolutionary-pattern-encoding-in-molecules
 - exact-mass-accuracy-calculation
 - exact-mass-database-matching
@@ -1310,7 +1309,6 @@ skills:
 - experiment-metadata-organization-and-tracking
 - experimental-design-metadata-integration
 - experimental-predicted-fragment-comparison
-- expert-review-preparation
 - exploitation-exploration-trade-off-balancing
 - export-tag-syntax-validation
 - expression-level-filtering-with-edger
@@ -1481,7 +1479,6 @@ skills:
 - field-exclusion-filtering
 - field-mapping-and-transformation
 - field-type-identification
-- figure-table-interpretation
 - file-api-endpoint-implementation
 - file-compression-and-archiving
 - file-format-compliance-validation
@@ -3877,7 +3874,6 @@ skills:
 - outlier-feature-classification
 - outlier-sample-identification-pca
 - outlier-sample-removal-quality-control
-- output-grounding
 - over-representation-analysis-pvalue-interpretation
 - over-representation-analysis-workflow
 - over-representation-enrichment-analysis
@@ -4605,7 +4601,6 @@ skills:
 - repository-structure-standardization
 - representation-collapse-prevention
 - representation-vector-dimensionality-reduction
-- reproducibility-gap-detection
 - reproducibility-seed-management
 - reproducibility-signal-detection-nonparametric
 - reproducibility-statistic-computation-rank-based
@@ -4793,7 +4788,6 @@ skills:
 - schema-compliance-testing
 - schema-conformance-checking
 - schema-constraint-checking
-- scientific-task-formulation
 - sciex-multiquant-data-export-format-recognition
 - scikit-learn-metric-computation
 - score-distribution-analysis-and-statistical-significance-testing
@@ -5869,7 +5863,6 @@ skills:
 - workflow-orchestration-and-parallelization
 - workflow-output-validation-and-qa
 - workflow-pipeline-execution-validation
-- workflow-reconstruction
 - workflow-reproducibility-validation
 - workflow-routing-configuration
 - workflow-status-monitoring

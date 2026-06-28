@@ -4,7 +4,7 @@ description: Use when an agent needs to find and apply a computational-metabolom
 license: CC-BY-4.0
 metadata:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
-  skills_count: 5865
+  skills_count: 5858
   tools_count: 909
   indexes:
   - skills_index.json
@@ -24,7 +24,7 @@ attribution:
 
 # ASB Metabolomics Skill Collection — router
 
-This is the default entry point for the ASB Metabolomics collection (v2): **5,865
+This is the default entry point for the ASB Metabolomics collection (v2): **5,858
 evidence-grounded skills** and **909 software-tool records** for computational
 metabolomics — predominantly LC-MS/MS, but also LC-MS, GC-MS, mass-spectrometry
 imaging, ion mobility, lipidomics, and some NMR / multi-omics — each derived from
@@ -34,7 +34,7 @@ You (the agent) use this router in three steps: **search → apply → (optional
 
 ## 1. Search — find the right skill
 
-**Prefer semantic retrieval.** Let meaning, not keyword overlap, rank the 5,865
+**Prefer semantic retrieval.** Let meaning, not keyword overlap, rank the 5,858
 skills (run from the collection root):
 
 ```bash
@@ -47,9 +47,9 @@ an embedding backend is available (set `OPENAI_API_KEY`, and point
 `ASB_LEAF_EMB_CACHE` at the leaf embedding cache or drop it at
 `.cache/leafemb_v2.npz`), and **falls back to a keyword index search
 automatically** when it is not, so it always works offline. The `mode` field in
-the output tells you which ran. Registry/meta leaves (>25 tools, e.g.
-`evidence-linking`) are filtered from both modes so they cannot crowd out real
-skills. The same tool selects composite workflow super-skills with
+the output tells you which ran. Registry/meta leaves (>25 tools —
+over-aggregated tool dumps) are filtered from both modes so they cannot crowd out
+real skills (the collection was also purged of such artifacts at v2 release). The same tool selects composite workflow super-skills with
 `--target workflows` (see `metabolomics-workflow-router`).
 
 If you prefer manual lookup, two machine indexes at the collection root make it

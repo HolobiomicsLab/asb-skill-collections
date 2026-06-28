@@ -1,6 +1,6 @@
 {
   "schema": "asbb-release-gate/1.0",
-  "generated_at": "2026-06-22T09:06:33.841433+00:00",
+  "generated_at": "2026-06-28T18:06:39.022034+00:00",
   "collection_dir": "collections/metabolomics/v2",
   "corpus_path": "collections/metabolomics/v2/corpus.yaml",
   "mode": "strict",
@@ -29,7 +29,7 @@
   "blocking": false,
   "exit_code": 0,
   "summary_counts": {
-    "pass": 3,
+    "pass": 4,
     "warn": 1,
     "fail": 0
   },
@@ -61,7 +61,7 @@
         6
       ],
       "hard_gate": true,
-      "summary": "OA papers exempt from caps (unlimited verbatim w/ attribution; >300-char spans \u2192 advisory WARN).  Non-OA: per-span text cap 300 chars, cumulative cap 1500 chars/DOI.  Near-verbatim similarity flagged for all.  (43470 verbatim spans scanned)",
+      "summary": "OA papers exempt from caps (unlimited verbatim w/ attribution; >300-char spans \u2192 advisory WARN).  Non-OA: per-span text cap 300 chars, cumulative cap 1500 chars/DOI.  Near-verbatim similarity flagged for all.  (43399 verbatim spans scanned)",
       "n_findings": 0,
       "details": []
     },
@@ -72,7 +72,7 @@
         6
       ],
       "hard_gate": true,
-      "summary": "Two-tier PII / dual-use scan of verbatim quote spans (pii_config=2026-06-15.1).  (43470 spans scanned)",
+      "summary": "Two-tier PII / dual-use scan of verbatim quote spans (pii_config=2026-06-15.1).  (43399 spans scanned)",
       "n_findings": 3,
       "details": [
         {
@@ -102,9 +102,23 @@
         8
       ],
       "hard_gate": true,
-      "summary": "Every skill carries a source DOI + a license SPDX tag.  (5865 skills checked)",
+      "summary": "Every skill carries a source DOI + a license SPDX tag.  (5858 skills checked)",
       "n_findings": 0,
       "details": []
+    },
+    {
+      "name": "composite_workflows",
+      "status": "pass",
+      "gates": [],
+      "hard_gate": false,
+      "summary": "Composite workflow super-skills resolve to real leaves with a valid DAG.",
+      "n_findings": 1,
+      "details": [
+        {
+          "status": "pass",
+          "message": "No workflows/ subtree (n/a)."
+        }
+      ]
     }
   ]
 }
