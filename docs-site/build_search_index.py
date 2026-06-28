@@ -71,15 +71,18 @@ def _parse_skill_md(path: Path) -> tuple[dict | None, str]:
         return None, ""
     if not raw.startswith("---"):
         return None, raw
-    parts = raw.split("---", 2)
-    if len(parts) < 3:
+    # Split on the frontmatter delimiters that sit on their OWN line, so a literal
+    # '---' inside a value (e.g. '-----' in an evidence span) doesn't truncate the
+    # block. A naive raw.split('---', 2) silently drops such skills.
+    m = re.match(r"^---\r?\n(.*?)\r?\n---\r?\n?(.*)$", raw, re.DOTALL)
+    if not m:
         return None, raw
     try:
-        fm = yaml.safe_load(parts[1])
+        fm = yaml.safe_load(m.group(1))
     except yaml.YAMLError as exc:
         sys.stderr.write(f"warn: bad frontmatter in {path}: {exc}\n")
         fm = None
-    return fm, parts[2]
+    return fm, m.group(2)
 
 
 def _extract_summary(body: str) -> str:
@@ -114,7 +117,25 @@ def _iter_skill_files() -> list[Path]:
         root = REPO_ROOT / root_name
         if not root.exists():
             continue
-        paths.extend(sorted(root.glob("*/v*/skills/*/SKILL.md")))
+        # Skip router/meta dirs (e.g. _router) so the count matches skills_index.json.
+        paths.extend(
+            p for p in sorted(root.glob("*/v*/skills/*/SKILL.md"))
+            if not p.parent.name.startswith("_")
+        )
+    return paths
+
+
+def _iter_workflow_files() -> list[Path]:
+    paths: list[Path] = []
+    for root_name in ("collections", "staged-collections"):
+        root = REPO_ROOT / root_name
+        if not root.exists():
+            continue
+        # Composite-workflow super-skills; skip the _workflow_router and bin/.
+        paths.extend(
+            p for p in sorted(root.glob("*/v*/workflows/*/SKILL.md"))
+            if not p.parent.name.startswith("_")
+        )
     return paths
 
 
@@ -240,6 +261,54 @@ def index_skills() -> list[dict]:
     return out
 
 
+def index_workflows() -> list[dict]:
+    """Index composite-workflow super-skills (one row per workflows/<slug>/SKILL.md)."""
+    out: list[dict] = []
+    for wpath in _iter_workflow_files():
+        fm, body = _parse_skill_md(wpath)
+        if not isinstance(fm, dict):
+            continue
+        name = fm.get("name") or wpath.parent.name
+        description = fm.get("description") or ""
+        meta = fm.get("metadata") or {}
+        techniques = meta.get("techniques") or []
+        if not isinstance(techniques, list):
+            techniques = [techniques]
+        member_skills = meta.get("member_skills") or []
+        if not isinstance(member_skills, list):
+            member_skills = [member_skills]
+        stage_count = meta.get("stage_count") or 0
+        summary = _extract_summary(body)
+        coll_label = _collection_from_path(wpath)
+        search_text = " ".join(
+            filter(
+                None,
+                [
+                    name,
+                    description,
+                    " ".join(str(t) for t in techniques),
+                    " ".join(str(s) for s in member_skills),
+                    summary,
+                    coll_label,
+                ],
+            )
+        )
+        out.append(
+            {
+                "slug": wpath.parent.name,
+                "name": name,
+                "description": description,
+                "techniques": [str(t) for t in techniques],
+                "stage_count": stage_count,
+                "collection": coll_label,
+                "summary": summary,
+                "md_path": str(wpath.relative_to(REPO_ROOT)),
+                "search_text": search_text,
+            }
+        )
+    return out
+
+
 def index_tools() -> list[dict]:
     out: list[dict] = []
     for tpath in _iter_tool_files():
@@ -290,9 +359,10 @@ def index_tools() -> list[dict]:
 def main() -> int:
     papers = index_papers()
     skills = index_skills()
+    workflows = index_workflows()
     tools = index_tools()
     collections = sorted(
-        {r["collection"] for r in papers + skills + tools if r.get("collection")}
+        {r["collection"] for r in papers + skills + workflows + tools if r.get("collection")}
     )
 
     payload = {
@@ -301,13 +371,14 @@ def main() -> int:
         "collections": collections,
         "papers": papers,
         "skills": skills,
+        "workflows": workflows,
         "tools": tools,
     }
     OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     size = OUTPUT.stat().st_size
     print(
-        f"Indexed {len(papers)} papers, {len(skills)} skills, {len(tools)} tools "
-        f"across {len(collections)} collections. "
+        f"Indexed {len(papers)} papers, {len(skills)} skills, {len(workflows)} workflows, "
+        f"{len(tools)} tools across {len(collections)} collections. "
         f"Wrote {OUTPUT.relative_to(REPO_ROOT)} ({size:,} bytes)."
     )
     return 0

@@ -30,7 +30,7 @@
 <body>
   <header>
     <h1>Search</h1>
-    <p class="tagline">Full-text search across papers, skills, and tools.</p>
+    <p class="tagline">Full-text search across papers, skills, workflows, and tools.</p>
     <nav>
       <a href="./">Catalogue</a>
       <a href="./corpus.html">Corpus</a>
@@ -48,6 +48,7 @@
       <div id="search-filters" class="search-filters">
         <label><input type="checkbox" id="filter-papers" checked> Papers</label>
         <label><input type="checkbox" id="filter-skills" checked> Skills</label>
+        <label><input type="checkbox" id="filter-workflows" checked> Workflows</label>
         <label><input type="checkbox" id="filter-tools" checked> Tools</label>
         <span id="search-hint" class="hint"></span>
       </div>
@@ -65,6 +66,7 @@
       </div>
       <div id="results-papers" class="result-group" hidden></div>
       <div id="results-skills" class="result-group" hidden></div>
+      <div id="results-workflows" class="result-group" hidden></div>
       <div id="results-tools" class="result-group" hidden></div>
       <div id="no-results" class="empty" hidden>
         <p>No matches. Try:</p>
