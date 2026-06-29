@@ -71,6 +71,14 @@ A paper qualifies as **open-access** if its access tier is one of the values abo
 
 > **NOTE — `preprint` is NOT an OA tier.** "Preprint" is a value on a **separate provenance axis** (the version/stage of the document: preprint vs. accepted-manuscript vs. version-of-record), recorded in `provenance.version` / `provenance.source`. It is NOT a member of the OA set above and MUST NOT be used as `access.type`. A bioRxiv/medRxiv/arXiv preprint is admitted because its access tier is open (`open-access` / `gold-oa` as applicable) AND its provenance is `preprint`; the two axes are recorded independently. Do not conflate the open-access axis with the provenance axis.
 
+> **NOTE — software tools have their own tier family.** The enum above governs
+> **papers**. A corpus entry that is a *software tool* is admitted on the openness
+> of its **code repository**, not the paper's reuse license, via the
+> `repo-oa` / `repo-permissive` / `repo-copyleft` tiers (`scripts/release_gate.py`
+> `_REPO_OA_TIERS`, layered on top of promote.py's `_OA_TIERS`). See
+> [OPEN_ACCESS_POLICY.md → *Software tools — repository-OA tier*](OPEN_ACCESS_POLICY.md)
+> for the rationale and requirements.
+
 ### Non-OA Exclusion
 
 Papers with the following status are **rejected at curation**:
