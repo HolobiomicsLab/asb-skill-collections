@@ -73,7 +73,10 @@ async function renderLeaderboard() {
     const data = await fetchJSON("leaderboard/career.jsonld");
     const contribs = data.contributors || [];
     if (contribs.length === 0) {
-      section.innerHTML += "<p class='loading'>No contributors yet.</p>";
+      section.innerHTML =
+        "<p class='empty'>The contribution mechanism is live — the leaderboard " +
+        "populates as the first review attestations are merged. " +
+        "<a href='./contribute.html'>Contribute a review or improvement.</a></p>";
       return;
     }
     const rows = contribs.map(c => {
