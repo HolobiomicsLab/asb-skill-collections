@@ -41,7 +41,7 @@ except ModuleNotFoundError:  # pragma: no cover - exercised only without the ext
     )
     raise SystemExit(1)
 
-from scripts import asb_skill_index as idx
+from . import asb_skill_index as idx
 
 mcp = FastMCP("asb-skills")
 

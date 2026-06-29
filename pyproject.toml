@@ -31,9 +31,9 @@ Pipeline = "https://github.com/HolobiomicsLab/AgenticScienceBuilder"
 # Thin programmatic surface: `asbb search/get` (offline retrieval over a checkout)
 # + registry/verify/doctor + install for non-Claude runtimes. For Claude Code the
 # canonical collection install is `/plugin install`.
-asbb = "scripts.asbb_cli:main"
+asbb = "asb_skill_collections.asbb_cli:main"
 # MCP skill-server (needs the [mcp] extra). Any MCP agent can search/fetch skills.
-asb-mcp = "scripts.asb_mcp_server:main"
+asb-mcp = "asb_skill_collections.asb_mcp_server:main"
 
 [project.optional-dependencies]
 mcp = [
@@ -55,7 +55,28 @@ test = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["scripts"]
+# The installable package is `asb_skill_collections` (the `asbb` CLI + `asb-mcp`
+# server + retrieval lib). The repo's conventional `scripts/` directory holds
+# path-invoked CI/dev tools and is deliberately NOT distributed.
+packages = ["asb_skill_collections"]
+
+[tool.hatch.build.targets.sdist]
+# Ship the package + tests + the repo-local scripts (so the sdist is a complete,
+# testable source snapshot) — but NOT the multi-thousand-skill corpus under
+# collections/. The CLI reads collections from a checkout / ASB_COLLECTIONS_ROOT
+# at run time, not from the wheel. Without this, the default sdist is ~37 MB.
+include = [
+    "/asb_skill_collections",
+    "/scripts",
+    "/tests",
+    "/README.md",
+    "/LICENSE",
+    "/pyproject.toml",
+]
+exclude = [
+    "**/__pycache__",
+    "**/*.pyc",
+]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

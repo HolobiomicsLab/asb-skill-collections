@@ -48,14 +48,14 @@ def demo_root(tmp_path):
 
 
 def test_ver_key_mixed_no_typeerror():
-    from scripts.asb_skill_index import _ver_key
+    from asb_skill_collections.asb_skill_index import _ver_key
     # mixed numeric/alpha components must compare without TypeError
     assert _ver_key("2") > _ver_key("2-rc")
     assert _ver_key("10") > _ver_key("2")
 
 
 def test_discover_and_resolve(demo_root):
-    from scripts import asb_skill_index as idx
+    from asb_skill_collections import asb_skill_index as idx
     cols = idx.discover_collections(demo_root)
     assert len(cols) == 1 and cols[0]["id"] == "demo/v2"
     assert cols[0]["has_workflows"] and cols[0]["title"] == "Demo v2"
@@ -65,7 +65,7 @@ def test_discover_and_resolve(demo_root):
 
 
 def test_search_ranks_and_drops_junk(demo_root):
-    from scripts import asb_skill_index as idx
+    from asb_skill_collections import asb_skill_index as idx
     hits = idx.search(None, "skills", "detect features", root=demo_root)  # None = all collections
     slugs = [h["slug"] for h in hits]
     assert "alpha-detect" in slugs
@@ -73,25 +73,25 @@ def test_search_ranks_and_drops_junk(demo_root):
 
 
 def test_search_technique_filter(demo_root):
-    from scripts import asb_skill_index as idx
+    from asb_skill_collections import asb_skill_index as idx
     nmr = idx.search("demo", "skills", "annotate", technique="NMR", root=demo_root)
     assert [h["slug"] for h in nmr] == ["beta-annotate"]
 
 
 def test_search_workflows_no_junk_guard(demo_root):
-    from scripts import asb_skill_index as idx
+    from asb_skill_collections import asb_skill_index as idx
     wf = idx.search("demo", "workflows", "annotation pipeline", root=demo_root)
     assert wf and wf[0]["slug"] == "full-pipeline"
 
 
 def test_get_item_text(demo_root):
-    from scripts import asb_skill_index as idx
+    from asb_skill_collections import asb_skill_index as idx
     assert "alpha" in idx.get_item_text("demo/v2", "skills", "alpha-detect", root=demo_root)
     assert idx.get_item_text("demo/v2", "skills", "missing", root=demo_root) is None
 
 
 def test_cli_search_and_get(demo_root, capsys):
-    from scripts.asbb_cli import main
+    from asb_skill_collections.asbb_cli import main
     rc = main(["search", "detect", "--repo", str(demo_root), "--target", "skills"])
     assert rc == 0
     out = json.loads(capsys.readouterr().out)
@@ -109,6 +109,6 @@ def test_mcp_server_requires_extra():
         import mcp  # noqa: F401
         pytest.skip("mcp extra installed; import-guard path not exercised")
     except ModuleNotFoundError:
-        sys.modules.pop("scripts.asb_mcp_server", None)
+        sys.modules.pop("asb_skill_collections.asb_mcp_server", None)
         with pytest.raises(SystemExit):
-            importlib.import_module("scripts.asb_mcp_server")
+            importlib.import_module("asb_skill_collections.asb_mcp_server")

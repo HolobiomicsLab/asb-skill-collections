@@ -31,20 +31,20 @@ def make_repo(root: Path, slug="demo-pack", source="packs/demo/pack",
 
 
 def test_find_repo_root_walks_up(tmp_path):
-    from scripts.asbb.repo import find_repo_root
+    from asb_skill_collections.asbb.repo import find_repo_root
     make_repo(tmp_path)
     deep = tmp_path / "packs" / "demo" / "pack" / "skills" / "alpha-skill"
     assert find_repo_root(deep) == tmp_path.resolve()
 
 
 def test_find_repo_root_missing_raises(tmp_path):
-    from scripts.asbb.repo import find_repo_root
+    from asb_skill_collections.asbb.repo import find_repo_root
     with pytest.raises(FileNotFoundError):
         find_repo_root(tmp_path)
 
 
 def test_resolve_pack_and_skill_dirs(tmp_path):
-    from scripts.asbb.repo import resolve_pack, iter_skill_dirs, list_pack_slugs
+    from asb_skill_collections.asbb.repo import resolve_pack, iter_skill_dirs, list_pack_slugs
     make_repo(tmp_path)
     assert list_pack_slugs(tmp_path) == ["demo-pack"]
     pack = resolve_pack(tmp_path, "demo-pack")
@@ -54,14 +54,14 @@ def test_resolve_pack_and_skill_dirs(tmp_path):
 
 
 def test_resolve_pack_unknown_raises(tmp_path):
-    from scripts.asbb.repo import resolve_pack
+    from asb_skill_collections.asbb.repo import resolve_pack
     make_repo(tmp_path)
     with pytest.raises(KeyError):
         resolve_pack(tmp_path, "nope")
 
 
 def test_parse_skill_md_frontmatter_and_body(tmp_path):
-    from scripts.asbb.skillmd import parse_skill_md
+    from asb_skill_collections.asbb.skillmd import parse_skill_md
     make_repo(tmp_path)
     p = tmp_path / "packs/demo/pack/skills/alpha-skill/SKILL.md"
     fm, body = parse_skill_md(p)
@@ -72,7 +72,7 @@ def test_parse_skill_md_frontmatter_and_body(tmp_path):
 
 
 def test_parse_skill_md_no_frontmatter(tmp_path):
-    from scripts.asbb.skillmd import parse_skill_md
+    from asb_skill_collections.asbb.skillmd import parse_skill_md
     p = tmp_path / "plain.md"
     p.write_text("just text\n", encoding="utf-8")
     fm, body = parse_skill_md(p)
@@ -81,7 +81,7 @@ def test_parse_skill_md_no_frontmatter(tmp_path):
 
 
 def test_manifest_round_trip(tmp_path):
-    from scripts.asbb import manifest
+    from asb_skill_collections.asbb import manifest
     home = tmp_path / "home"
     assert manifest.get(home, "demo-pack", "agents") is None
     manifest.record(home, "demo-pack", "agents", home / "d", ["alpha-skill"], "symlink")
@@ -92,7 +92,7 @@ def test_manifest_round_trip(tmp_path):
 
 
 def test_manifest_remove_prunes_empty(tmp_path):
-    from scripts.asbb import manifest
+    from asb_skill_collections.asbb import manifest
     home = tmp_path / "home"
     manifest.record(home, "demo-pack", "agents", home / "d", ["x"], "symlink")
     manifest.remove(home, "demo-pack", "agents")
@@ -101,12 +101,12 @@ def test_manifest_remove_prunes_empty(tmp_path):
 
 
 def _opts(tmp_path, **kw):
-    from scripts.asbb.targets import InstallOpts
+    from asb_skill_collections.asbb.targets import InstallOpts
     return InstallOpts(home=tmp_path / "home", project=tmp_path / "proj", **kw)
 
 
 def test_skill_native_dests(tmp_path):
-    from scripts.asbb.targets import get_target
+    from asb_skill_collections.asbb.targets import get_target
     o = _opts(tmp_path)
     assert get_target("agents").dest(o) == o.home / ".agents" / "skills"
     assert get_target("codex").dest(o) == o.home / ".codex" / "skills"
@@ -116,7 +116,7 @@ def test_skill_native_dests(tmp_path):
 
 
 def test_rules_dests_and_filenames(tmp_path):
-    from scripts.asbb.targets import get_target
+    from asb_skill_collections.asbb.targets import get_target
     o = _opts(tmp_path)
     cur = get_target("cursor")
     assert cur.kind == "rules"
@@ -127,7 +127,7 @@ def test_rules_dests_and_filenames(tmp_path):
 
 
 def test_rules_render_carries_description_and_body():
-    from scripts.asbb.targets import get_target
+    from asb_skill_collections.asbb.targets import get_target
     fm = {"name": "alpha-skill", "description": "Use when X."}
     body = "# alpha-skill\n\nDo the thing.\n"
     out = get_target("cursor").render(fm, body, "alpha-skill")
@@ -141,7 +141,7 @@ def test_rules_render_carries_description_and_body():
 
 
 def test_list_runtimes_lists_all_ids():
-    from scripts.asbb.targets import list_runtimes
+    from asb_skill_collections.asbb.targets import list_runtimes
     text = list_runtimes()
     for rid in ("agents", "codex", "copilot", "gemini", "claude",
                 "cursor", "cline", "vscode-copilot"):
@@ -149,7 +149,7 @@ def test_list_runtimes_lists_all_ids():
 
 
 def test_resolve_rejects_escape(tmp_path):
-    from scripts.asbb.installer import _resolve
+    from asb_skill_collections.asbb.installer import _resolve
     root = tmp_path / "dest"
     assert _resolve(root, "alpha-skill") == (root / "alpha-skill").resolve()
     with pytest.raises(ValueError):
@@ -157,9 +157,9 @@ def test_resolve_rejects_escape(tmp_path):
 
 
 def test_install_skill_native_symlinks(tmp_path):
-    from scripts.asbb.repo import resolve_pack
-    from scripts.asbb.targets import get_target, InstallOpts
-    from scripts.asbb.installer import install
+    from asb_skill_collections.asbb.repo import resolve_pack
+    from asb_skill_collections.asbb.targets import get_target, InstallOpts
+    from asb_skill_collections.asbb.installer import install
     make_repo(tmp_path)
     pack = resolve_pack(tmp_path, "demo-pack")
     o = InstallOpts(home=tmp_path / "home", project=tmp_path / "proj")
@@ -171,9 +171,9 @@ def test_install_skill_native_symlinks(tmp_path):
 
 
 def test_install_copy_makes_real_dirs(tmp_path):
-    from scripts.asbb.repo import resolve_pack
-    from scripts.asbb.targets import get_target, InstallOpts
-    from scripts.asbb.installer import install
+    from asb_skill_collections.asbb.repo import resolve_pack
+    from asb_skill_collections.asbb.targets import get_target, InstallOpts
+    from asb_skill_collections.asbb.installer import install
     make_repo(tmp_path)
     pack = resolve_pack(tmp_path, "demo-pack")
     o = InstallOpts(home=tmp_path / "home", project=tmp_path / "proj", copy=True)
@@ -183,9 +183,9 @@ def test_install_copy_makes_real_dirs(tmp_path):
 
 
 def test_install_idempotent_reinstall(tmp_path):
-    from scripts.asbb.repo import resolve_pack
-    from scripts.asbb.targets import get_target, InstallOpts
-    from scripts.asbb.installer import install
+    from asb_skill_collections.asbb.repo import resolve_pack
+    from asb_skill_collections.asbb.targets import get_target, InstallOpts
+    from asb_skill_collections.asbb.installer import install
     make_repo(tmp_path)
     pack = resolve_pack(tmp_path, "demo-pack")
     o = InstallOpts(home=tmp_path / "home", project=tmp_path / "proj")
@@ -195,9 +195,9 @@ def test_install_idempotent_reinstall(tmp_path):
 
 
 def test_install_dest_override(tmp_path):
-    from scripts.asbb.repo import resolve_pack
-    from scripts.asbb.targets import generic_dest_target, InstallOpts
-    from scripts.asbb.installer import install
+    from asb_skill_collections.asbb.repo import resolve_pack
+    from asb_skill_collections.asbb.targets import generic_dest_target, InstallOpts
+    from asb_skill_collections.asbb.installer import install
     make_repo(tmp_path)
     pack = resolve_pack(tmp_path, "demo-pack")
     dest = tmp_path / "anywhere"
@@ -208,9 +208,9 @@ def test_install_dest_override(tmp_path):
 
 
 def test_install_rules_renders_files(tmp_path):
-    from scripts.asbb.repo import resolve_pack
-    from scripts.asbb.targets import get_target, InstallOpts
-    from scripts.asbb.installer import install
+    from asb_skill_collections.asbb.repo import resolve_pack
+    from asb_skill_collections.asbb.targets import get_target, InstallOpts
+    from asb_skill_collections.asbb.installer import install
     make_repo(tmp_path)
     pack = resolve_pack(tmp_path, "demo-pack")
     o = InstallOpts(home=tmp_path / "home", project=tmp_path / "proj")
@@ -221,9 +221,9 @@ def test_install_rules_renders_files(tmp_path):
 
 
 def test_install_unmanaged_conflict_needs_force(tmp_path):
-    from scripts.asbb.repo import resolve_pack
-    from scripts.asbb.targets import get_target, InstallOpts
-    from scripts.asbb.installer import install
+    from asb_skill_collections.asbb.repo import resolve_pack
+    from asb_skill_collections.asbb.targets import get_target, InstallOpts
+    from asb_skill_collections.asbb.installer import install
     make_repo(tmp_path)
     pack = resolve_pack(tmp_path, "demo-pack")
     o = InstallOpts(home=tmp_path / "home", project=tmp_path / "proj")
@@ -238,9 +238,9 @@ def test_install_unmanaged_conflict_needs_force(tmp_path):
 
 
 def test_install_dry_run_writes_nothing(tmp_path):
-    from scripts.asbb.repo import resolve_pack
-    from scripts.asbb.targets import get_target, InstallOpts
-    from scripts.asbb.installer import install
+    from asb_skill_collections.asbb.repo import resolve_pack
+    from asb_skill_collections.asbb.targets import get_target, InstallOpts
+    from asb_skill_collections.asbb.installer import install
     make_repo(tmp_path)
     pack = resolve_pack(tmp_path, "demo-pack")
     o = InstallOpts(home=tmp_path / "home", project=tmp_path / "proj", dry_run=True)
@@ -249,9 +249,9 @@ def test_install_dry_run_writes_nothing(tmp_path):
 
 
 def test_uninstall_removes_recorded_entries(tmp_path):
-    from scripts.asbb.repo import resolve_pack
-    from scripts.asbb.targets import get_target, InstallOpts
-    from scripts.asbb.installer import install, uninstall
+    from asb_skill_collections.asbb.repo import resolve_pack
+    from asb_skill_collections.asbb.targets import get_target, InstallOpts
+    from asb_skill_collections.asbb.installer import install, uninstall
     make_repo(tmp_path)
     pack = resolve_pack(tmp_path, "demo-pack")
     o = InstallOpts(home=tmp_path / "home", project=tmp_path / "proj")
@@ -263,7 +263,7 @@ def test_uninstall_removes_recorded_entries(tmp_path):
 
 
 def test_cli_list_runtimes(capsys):
-    from scripts.asbb_cli import main
+    from asb_skill_collections.asbb_cli import main
     rc = main(["install", "--list-runtimes"])
     assert rc == 0
     out = capsys.readouterr().out
@@ -271,7 +271,7 @@ def test_cli_list_runtimes(capsys):
 
 
 def test_cli_install_and_uninstall_dest(tmp_path, capsys):
-    from scripts.asbb_cli import main
+    from asb_skill_collections.asbb_cli import main
     make_repo(tmp_path)
     dest = tmp_path / "out"
     home = tmp_path / "home"
@@ -285,7 +285,7 @@ def test_cli_install_and_uninstall_dest(tmp_path, capsys):
 
 
 def test_cli_unknown_slug_errors(tmp_path, capsys):
-    from scripts.asbb_cli import main
+    from asb_skill_collections.asbb_cli import main
     make_repo(tmp_path)
     rc = main(["install", "nope", "--runtime", "agents",
                "--repo", str(tmp_path), "--home", str(tmp_path / "home")])
@@ -294,7 +294,7 @@ def test_cli_unknown_slug_errors(tmp_path, capsys):
 
 
 def test_cli_unknown_runtime_errors(tmp_path, capsys):
-    from scripts.asbb_cli import main
+    from asb_skill_collections.asbb_cli import main
     make_repo(tmp_path)
     rc = main(["install", "demo-pack", "--runtime", "bogus",
                "--repo", str(tmp_path), "--home", str(tmp_path / "home")])
@@ -303,7 +303,7 @@ def test_cli_unknown_runtime_errors(tmp_path, capsys):
 
 
 def test_cli_uninstall_requires_target(tmp_path, capsys):
-    from scripts.asbb_cli import main
+    from asb_skill_collections.asbb_cli import main
     make_repo(tmp_path)
     rc = main(["uninstall", "demo-pack", "--home", str(tmp_path / "home")])
     assert rc == 1

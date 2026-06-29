@@ -15,7 +15,7 @@ For Claude Code the canonical install path remains the plugin marketplace::
     /plugin install <slug>@HolobiomicsLab/asb-skill-collections
 
 `install` resolves packs from a LOCAL checkout (run from a clone or pass
---repo); the published wheel ships only these scripts, not the packs.
+--repo); the published wheel ships only this package, not the packs.
 """
 from __future__ import annotations
 
@@ -55,7 +55,7 @@ def _cmd_doctor(args: argparse.Namespace) -> int:
 def _cmd_search(args) -> int:
     """`asbb search` — keyword-search skills/workflows/tools in a local checkout."""
     import json
-    from scripts import asb_skill_index as idx
+    from . import asb_skill_index as idx
     cols = idx.discover_collections(args.repo)
     if not cols:
         print("error: no collections found. Run from a checkout or set "
@@ -75,7 +75,7 @@ def _cmd_search(args) -> int:
 
 def _cmd_get(args) -> int:
     """`asbb get` — print a skill/workflow/tool's source file."""
-    from scripts import asb_skill_index as idx
+    from . import asb_skill_index as idx
     text = idx.get_item_text(args.collection, args.target, args.slug, root=args.repo)
     if text is None:
         print(f"error: {args.target[:-1]} {args.slug!r} not found in "
@@ -87,7 +87,7 @@ def _cmd_get(args) -> int:
 
 def _install_opts(args):
     from pathlib import Path
-    from scripts.asbb.targets import InstallOpts
+    from .asbb.targets import InstallOpts
     home = Path(args.home) if args.home else Path.home()
     return InstallOpts(
         home=home,
@@ -101,19 +101,19 @@ def _install_opts(args):
 
 
 def _select_target(args):
-    from scripts.asbb.targets import get_target, generic_dest_target
+    from .asbb.targets import get_target, generic_dest_target
     if args.dest:
         return generic_dest_target()
     return get_target(args.runtime)
 
 
 def _cmd_install(args) -> int:
-    from scripts.asbb.targets import list_runtimes
+    from .asbb.targets import list_runtimes
     if getattr(args, "list_runtimes", False):
         print(list_runtimes())
         return 0
-    from scripts.asbb.repo import find_repo_root, resolve_pack, list_pack_slugs
-    from scripts.asbb.installer import install
+    from .asbb.repo import find_repo_root, resolve_pack, list_pack_slugs
+    from .asbb.installer import install
     from pathlib import Path
     if not args.runtime and not args.dest:
         print("error: one of --runtime or --dest is required", file=sys.stderr)
@@ -121,7 +121,7 @@ def _cmd_install(args) -> int:
     try:
         target = _select_target(args)
     except KeyError:
-        from scripts.asbb.targets import list_runtimes
+        from .asbb.targets import list_runtimes
         print(f"error: unknown runtime {args.runtime!r}\n{list_runtimes()}",
               file=sys.stderr)
         return 1
@@ -149,8 +149,8 @@ def _cmd_install(args) -> int:
 
 
 def _cmd_uninstall(args) -> int:
-    from scripts.asbb.targets import get_target, generic_dest_target
-    from scripts.asbb.installer import uninstall
+    from .asbb.targets import get_target, generic_dest_target
+    from .asbb.installer import uninstall
     if not args.runtime and not args.dest:
         print("error: one of --runtime or --dest is required", file=sys.stderr)
         return 1

@@ -108,14 +108,14 @@ local clone to materialize a pack into the runtime's own location.
 ```bash
 git clone https://github.com/HolobiomicsLab/asb-skill-collections.git
 cd asb-skill-collections
-python3 -m scripts.asbb_cli install --list-runtimes      # see all targets
+python3 -m asb_skill_collections.asbb_cli install --list-runtimes      # see all targets
 ```
 
 **Skill-native runtimes** (read `SKILL.md` directly):
 
 ```bash
 # Codex + Copilot CLI + Gemini CLI all share ~/.agents/skills — one install:
-python3 -m scripts.asbb_cli install metabolomics-lc-ms --runtime agents
+python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --runtime agents
 
 # Or a specific home: --runtime codex | copilot | gemini
 # Vendor into a project for Claude Code: --runtime claude  (add --user for ~/.claude)
@@ -125,15 +125,15 @@ python3 -m scripts.asbb_cli install metabolomics-lc-ms --runtime agents
 the target project):
 
 ```bash
-python3 -m scripts.asbb_cli install metabolomics-lc-ms --runtime cursor          # .cursor/rules/*.mdc
-python3 -m scripts.asbb_cli install metabolomics-lc-ms --runtime cline           # .clinerules/*.md
-python3 -m scripts.asbb_cli install metabolomics-lc-ms --runtime vscode-copilot  # .github/instructions/*.instructions.md
+python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --runtime cursor          # .cursor/rules/*.mdc
+python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --runtime cline           # .clinerules/*.md
+python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --runtime vscode-copilot  # .github/instructions/*.instructions.md
 ```
 
 **Anything else** (pi, Antigravity, or a runtime without a preset):
 
 ```bash
-python3 -m scripts.asbb_cli install metabolomics-lc-ms --dest ~/some/skills/dir
+python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --dest ~/some/skills/dir
 ```
 
 Skill-native installs **symlink** by default (a `git pull` in the clone updates
@@ -160,8 +160,9 @@ asbb search --list-collections
 
 `search`/`get` read a local checkout (or `ASB_COLLECTIONS_ROOT` / `--repo`); the
 ranking matches each collection's `bin/semantic_search.py` keyword mode — no API
-key. *(Publishing to PyPI is pending; from a clone today, use
-`python3 -m scripts.asbb_cli search …`.)*
+key. *(From a clone, the same surface is `python3 -m asb_skill_collections.asbb_cli search …`.
+Maintainers: PyPI release flow — trusted publishing + local — is in
+[`docs/RELEASING_PYPI.md`](docs/RELEASING_PYPI.md).)*
 
 ### 🔌 MCP skill-server — for any MCP agent
 
