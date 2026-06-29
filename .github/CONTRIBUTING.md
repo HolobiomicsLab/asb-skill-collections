@@ -105,6 +105,23 @@ Improve a paper already in (or proposed to) the corpus by either:
 owned): `doi`, the `access` block, and `status` — these are set by verification
 and curation, not by annotation.
 
+## Propose a super-skill (composite workflow)
+
+A **super-skill** is an end-to-end *composite workflow* — an ordered DAG of
+**existing leaf skills** (e.g. `mzML → annotation`). It reuses leaves; it does not
+add new ones (to add a new tool/paper, use the paper paths above). It is generated
+from a short **skeleton** by the ASB factory, not hand-written.
+
+1. Open a **Propose a super-skill** issue using the
+   [`propose-superskill`](ISSUE_TEMPLATE/propose-superskill.md) template: name,
+   end-to-end goal, target collection, and the **stages** (each stage's goal plus
+   the preferred leaf skill slugs from `skills_index.json`).
+2. A curator runs the checklist (every leaf slug resolves; stages form a valid
+   DAG; no leaf in two stages; scientific ordering sound; not a duplicate).
+3. On go-ahead, the skeleton lands at `skeletons/<collection>/<slug>.yaml`; a
+   maintainer generates the workflow with `compose_workflows.py` and it must pass
+   `validate_workflows.py` before promotion into the collection's `workflows/`.
+
 ## Tier progression
 
 | Tier | Requirement |
