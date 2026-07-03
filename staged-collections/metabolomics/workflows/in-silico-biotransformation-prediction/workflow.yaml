@@ -1,0 +1,239 @@
+schema_version: 0.3.0
+workflow_id: in_silico_biotransformation_prediction
+kind: composite-workflow
+techniques:
+- LC-MS
+steps:
+- id: preprocess
+  goal: raw mzML -> feature table + MS2 export
+  edam_operation: operation_3215
+  skills:
+  - peak-detection-and-mass-alignment
+  - mass-spectrometry-feature-table-construction
+  - spectral-feature-table-generation
+  - lcms-feature-detection-and-quantification
+  - feature-alignment-metabolomics
+  tools:
+  - MZmine2
+  - Optimus
+  - OpenMS
+  inputs:
+  - type: mzML
+  outputs:
+  - type: feature-table
+  - type: mgf
+    flavour: gnps-fbmn
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1007-s00216-023-05070-2
+    - asb-paper-10-1021-acs-jnatprod-7b00737
+    - asb-paper-10-1038-s41467-024-48009-6
+    - asb-paper-10-21147-j-issn-1000-9604-2023-05-11
+    - asb-paper-10-3390-metabo12030212
+    dois:
+    - 10.1007/s00216-023-05070-2
+    - 10.1021/acs.jnatprod.7b00737
+    - 10.1038/s41467-024-48009-6
+    - 10.21147/j.issn.1000-9604.2023.05.11
+    - 10.3390/metabo12030212
+  after: []
+  candidate_tools:
+  - Python
+  - pyOpenMS
+  - MSConvert
+  - PFΔScreen
+  - JPA
+  - R
+  - XCMS
+  - MS-Convert
+  - MetaboAnalystR
+  - openNAU
+  - MetaQC
+- id: biotransformation_prediction
+  goal: parent structure -> predicted metabolite/transformation-product structures
+    (rule-based expansion)
+  edam_operation: operation_3802
+  skills:
+  - biotransformation-rule-application
+  - biotransformation-prediction-across-microbiota-contexts
+  - microbial-biotransformation-prediction
+  - small-molecule-structure-input-preparation
+  - metabolite-structure-prediction
+  tools:
+  - BioTransformer
+  - EAWAG Biodegradation and Biocatalysis Database
+  - EnviPath
+  - MINE-Database Pickaxe
+  - RDKit
+  inputs:
+  - type: smiles
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1093-nar-gkac408
+    - asb-paper-10-1186-s13321-019-0375-2
+    dois:
+    - 10.1093/nar/gkac408
+    - 10.1186/s13321-019-0375-2
+  after: []
+- id: candidate_filtering
+  goal: predicted candidates -> mass-plausible candidates (filter against the experimental
+    peak list)
+  edam_operation: operation_3801
+  skills:
+  - adduct-mass-adjustment-calculation
+  - exact-mass-database-matching
+  - adduct-mass-shift-calculation
+  tools:
+  - RDKit
+  - mordred
+  - pytest
+  - MINE-Database Filter base class
+  inputs:
+  - type: tsv
+  - type: feature-table
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1007-s11306-020-01717-8
+    - asb-paper-10-1021-acs-analchem-5b03628
+    - asb-paper-10-1021-acs-est-5c08558
+    - asb-paper-10-1186-s12859-023-05149-8
+    dois:
+    - 10.1007/s11306-020-01717-8
+    - 10.1021/acs.analchem.5b03628
+    - 10.1021/acs.est.5c08558
+    - 10.1186/s12859-023-05149-8
+  after:
+  - biotransformation_prediction
+  - preprocess
+  candidate_tools:
+  - tidyverse
+  - CluMSID
+  - CluMSIDdata
+  - grid
+  - OrgMassSpecR
+  - pheatmap
+  - reshape2
+  - MSMSsim
+  - msentropy
+  - readxl
+  - MSDial
+  - Biotransformer
+  - geoRge
+  - R
+  - basepeak_finder
+  - XCMS
+  - MetaboShiny
+  inputs_from:
+    biotransformation_prediction:
+    - tsv
+    preprocess:
+    - feature-table
+- id: ms_matching
+  goal: mass-plausible candidates -> MS/MS-matched and ranked biotransformation products
+  edam_operation: operation_3802
+  skills:
+  - in-silico-fragmentation-prediction
+  - candidate-metabolite-ranking
+  - transformation-product-prediction
+  - fragment-ion-scoring-and-ranking
+  - structural-similarity-scoring-metabolites
+  tools:
+  - MAGMa
+  - PubChem
+  - BioTransformer
+  - MetFrag
+  inputs:
+  - type: tsv
+  - type: mgf
+    flavour: gnps-fbmn
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-1c03032
+    - asb-paper-10-1021-acs-analchem-8b05405
+    - asb-paper-10-1186-s13321-019-0375-2
+    - asb-paper-10-1186-s13321-020-00477-w
+    - asb-paper-10-5702-massspectrometry-s0033
+    dois:
+    - 10.1021/acs.analchem.1c03032
+    - 10.1021/acs.analchem.8b05405
+    - 10.1186/s13321-019-0375-2
+    - 10.1186/s13321-020-00477-w
+    - 10.5702/massspectrometry.S0033
+  after:
+  - candidate_filtering
+  - preprocess
+  candidate_tools:
+  - patRoon
+  - CTS
+  - PubChemLite
+  - MetaboAnnotatoR
+  - R (version or higher)
+  - R
+  - xcms
+  - RamClustR
+  - DeepMASS
+  - Keras
+  - RDKit
+  - IsoSpecPy
+  inputs_from:
+    candidate_filtering:
+    - tsv
+    preprocess:
+    - mgf:gnps-fbmn
+- id: report
+  goal: consolidate parent structure, predicted candidates, and MS/MS-matched hits
+    into a biotransformation-product annotation table
+  edam_operation: operation_3434
+  skills:
+  - biotransformation-candidate-integration-with-networking
+  - mass-spectrometry-compound-annotation-database-generation
+  - transformation-product-parent-linkage
+  - metabolite-structure-annotation-integration
+  - parent-product-relationship-tracking
+  tools:
+  - BAM
+  - PROXIMAL2
+  - GNN-SOM
+  inputs:
+  - type: tsv
+  - type: feature-table
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-4c01565
+    - asb-paper-10-1186-s13321-020-00477-w
+    dois:
+    - 10.1021/acs.analchem.4c01565
+    - 10.1186/s13321-020-00477-w
+  after:
+  - ms_matching
+  - preprocess
+  candidate_tools:
+  - patRoon
+  - MetFrag
+  - BioTransformer
+  - CTS
+  - screenSuspects
+  - convertToSuspects
+  - RDKit
+  - KEGG or RetroRules
+  inputs_from:
+    ms_matching:
+    - tsv
+    preprocess:
+    - feature-table
+verification:
+  final_outputs:
+  - path: biotransformation_annotation_table.tsv
+    type: file
+provenance:
+  derived_from_workflows: []
+  bound_by: perspicacite-semantic
+  coverage_gaps: []

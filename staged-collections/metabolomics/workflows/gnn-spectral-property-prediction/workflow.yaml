@@ -1,0 +1,271 @@
+schema_version: 0.3.0
+workflow_id: gnn_spectral_property_prediction
+kind: composite-workflow
+techniques:
+- LC-MS
+- ion-mobility-MS
+steps:
+- id: featurize
+  goal: SMILES structures -> attributed molecular graphs (RDKit + PyTorch Geometric)
+  edam_operation: operation_0292
+  skills:
+  - molecular-graph-construction-from-smiles
+  - molecular-graph-construction-pytorch-geometric
+  - feature-encoding-atoms-bonds
+  - molecular-structure-parsing-rdkit
+  - pytorch-graph-serialization
+  tools:
+  - manual expert review
+  - RDKit
+  - PyTorch
+  inputs:
+  - type: tsv
+  outputs:
+  - type: pyg-graph-dataset
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-0c04071
+    - asb-paper-10-1038-s41467-019-13680-7
+    - asb-paper-10-1093-bioinformatics-btae084
+    - asb-paper-10-1186-s13321-024-00899-w
+    dois:
+    - 10.1021/acs.analchem.0c04071
+    - 10.1038/s41467-019-13680-7
+    - 10.1093/bioinformatics/btae084
+    - 10.1186/s13321-024-00899-w
+  after: []
+  candidate_tools:
+  - torch_geometric
+  - torch
+  - Python
+  - rdkit-pypi
+  - RT-Transformer
+  - Python pickle module
+  - HDF5 (h5py)
+- id: architect
+  goal: molecular graph representation -> GNN architecture (message-passing layers
+    + property head)
+  edam_operation: operation_0337
+  skills:
+  - graph-neural-network-architecture-assembly
+  - graph-neural-network-architecture-design
+  - gnn-architecture-design-for-molecular-graphs
+  - graph-neural-network-implementation
+  - graph-neural-network-architecture-implementation
+  tools:
+  - Graphormer
+  - DGL
+  - RDKit
+  - PyTorch
+  inputs:
+  - type: pyg-graph-dataset
+  outputs:
+  - type: model-architecture
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1002-cem-70040
+    - asb-paper-10-1021-acs-analchem-0c04071
+    - asb-paper-10-1021-acs-analchem-3c03177
+    - asb-paper-10-1021-acs-analchem-4c05859
+    - asb-paper-10-1021-acs-analchem-4c06210
+    - asb-paper-10-1038-s41467-019-13680-7
+    - asb-paper-10-1093-bioinformatics-btae084
+    - asb-paper-10-1186-s13321-024-00899-w
+    dois:
+    - 10.1002/cem.70040
+    - 10.1021/acs.analchem.0c04071
+    - 10.1021/acs.analchem.3c03177
+    - 10.1021/acs.analchem.4c05859
+    - 10.1021/acs.analchem.4c06210
+    - 10.1038/s41467-019-13680-7
+    - 10.1093/bioinformatics/btae084
+    - 10.1186/s13321-024-00899-w
+  after:
+  - featurize
+  candidate_tools:
+  - Python
+  - torch
+  - torch-scatter
+  - torch-sparse
+  - torch-cluster
+  - torch_geometric
+  - PyTorch (torch)
+  - RDKit (rdkit-pypi)
+  - torch-scatter, torch-sparse, torch-cluster
+  - scanpy
+  - STAGATE
+  - pandas
+  - h5py
+  - GNN-RT (repository)
+  - Python 3
+  - PyG
+  - NumPy
+  - conda
+  - pip
+  - PyTorch Geometric (PyG)
+  - NumPy and pandas
+  inputs_from:
+    featurize:
+    - pyg-graph-dataset
+- id: train
+  goal: GNN architecture + labelled property dataset -> trained model checkpoint
+  edam_operation: operation_3445
+  skills:
+  - graph-neural-network-model-training
+  - pytorch-model-checkpoint-management
+  - pytorch-model-training-and-optimization
+  - retention-time-prediction-validation
+  tools:
+  - Python
+  - PyG
+  - RDKit
+  - NumPy
+  - Pandas
+  - torch-scatter
+  - torch-sparse
+  - torch-cluster
+  - PyTorch
+  - PyG (PyTorch Geometric)
+  - TorchMetrics
+  - torch-scatter, torch-sparse, torch-cluster
+  inputs:
+  - type: model-architecture
+  - type: pyg-graph-dataset
+  outputs:
+  - type: model-checkpoint
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-0c04071
+    - asb-paper-10-1021-acs-jcim-4c02179
+    dois:
+    - 10.1021/acs.analchem.0c04071
+    - 10.1021/acs.jcim.4c02179
+  after:
+  - architect
+  - featurize
+  candidate_tools:
+  - Anaconda
+  inputs_from:
+    architect:
+    - model-architecture
+    featurize:
+    - pyg-graph-dataset
+- id: predict
+  goal: trained GNN + candidate structures -> predicted property values
+  edam_operation: operation_3659
+  skills:
+  - gnn-model-inference-and-prediction
+  - graph-neural-network-model-inference
+  - neural-network-inference-execution
+  - molecular-property-prediction-feature-construction
+  tools:
+  - PyTorch Geometric
+  inputs:
+  - type: model-checkpoint
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-3c04654
+    - asb-paper-10-1021-acs-jcim-1c00055
+    - asb-paper-10-1186-s13321-024-00899-w
+    dois:
+    - 10.1021/acs.analchem.3c04654
+    - 10.1021/acs.jcim.1c00055
+    - 10.1186/s13321-024-00899-w
+  after:
+  - train
+  candidate_tools:
+  - PyTorch or TensorFlow
+  - PyTorch
+  - TensorFlow
+  - RDKit
+  - ms-pred
+  - ICEBERG WebUI
+  - ICEBERG model
+  - ms-pred repository
+  - PubChem
+  - chemprop
+  - chemprop-IR
+  inputs_from:
+    train:
+    - model-checkpoint
+- id: rescore
+  goal: predicted property + experimental evidence -> re-ranked / filtered annotation
+    candidates
+  edam_operation: operation_3800
+  skills:
+  - metabolite-annotation-by-chromatographic-behavior
+  - candidate-ranking-by-score
+  - metabolite-candidate-ranking
+  - candidate-structure-ranking
+  - ranked-annotation-prioritization
+  - metabolite-annotation-ensemble-ranking
+  tools:
+  - Retip
+  - Retip (R package)
+  - pyRetip (Python package)
+  - Retip app
+  inputs:
+  - type: tsv
+  - type: feature-table
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-1c00238
+    - asb-paper-10-1021-acs-analchem-9b05765
+    - asb-paper-10-1093-bioinformatics-btad078-7067745
+    - asb-paper-10-1093-bioinformatics-btae490
+    - asb-paper-10-1093-bioinformatics-btaf354
+    - asb-paper-10-1101-2025-11-12-688047v1
+    - asb-paper-10-48550-arxiv-2507-06853
+    dois:
+    - 10.1021/acs.analchem.1c00238
+    - 10.1021/acs.analchem.9b05765
+    - 10.1093/bioinformatics/btad078/7067745
+    - 10.1093/bioinformatics/btae490
+    - 10.1093/bioinformatics/btaf354
+    - 10.1101/2025.11.12.688047v1
+    - 10.48550/arxiv.2507.06853
+  after:
+  - predict
+  candidate_tools:
+  - Python 3.11.7
+  - MVP (MultiView Projection)
+  - PyTorch Geometric
+  - DGL (Deep Graph Library)
+  - RDKit
+  - Streamlit
+  - MassSpecGym
+  - pip
+  - CUDA
+  - PyTorch
+  - CUDA 11.8
+  - Python
+  - pyrwr
+  - MetFrag
+  - ChemWalker
+  - DiffSpectra
+  - Diffusion Molecule Transformer (DMT)
+  - SpecFormer
+  - mWISE
+  - R
+  - FELLA
+  - igraph
+  - MLP (Multi-Layer Perceptron) baseline model
+  - GNN (Graph Neural Network) baseline model
+  - LDA (Latent Dirichlet Allocation)
+  - PyTorch & DGL
+  inputs_from:
+    predict:
+    - tsv
+verification:
+  final_outputs:
+  - path: gnn_property_rescored_candidates.tsv
+    type: file
+provenance:
+  derived_from_workflows: []
+  bound_by: perspicacite-semantic
+  coverage_gaps: []

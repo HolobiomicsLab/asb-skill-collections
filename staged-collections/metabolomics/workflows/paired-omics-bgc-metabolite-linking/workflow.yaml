@@ -1,0 +1,259 @@
+schema_version: 0.3.0
+workflow_id: paired_omics_bgc_metabolite_linking
+kind: composite-workflow
+techniques:
+- LC-MS
+steps:
+- id: bgc_mine
+  goal: assembled genomes -> detected BGCs (antiSMASH genome mining)
+  edam_operation: operation_0436
+  skills:
+  - biosynthetic-gene-cluster-detection-and-annotation
+  - genomic-bgc-extraction-antismash
+  - biosynthetic-gene-cluster-annotation
+  tools:
+  - antiSMASH
+  - BiG-SCAPE
+  - NPLinker
+  - GNPS
+  - MIBiG
+  inputs:
+  - type: fasta
+  outputs:
+  - type: genbank
+    flavour: antismash-bgc
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1093-gigascience-giaa154
+    - asb-paper-10-1101-2024-10-11-617756
+    - asb-paper-10-1186-s40168-022-01444-3
+    - asb-paper-10-1371-journal-pcbi-1008920
+    dois:
+    - 10.1093/gigascience/giaa154
+    - 10.1101/2024.10.11.617756
+    - 10.1186/s40168-022-01444-3
+    - 10.1371/journal.pcbi.1008920
+  after: []
+  candidate_tools:
+  - Python
+  - conda
+  - pip
+  - BigScape
+  - pyHMMER
+  - BiG-SLiCE
+  - PFAM 35.0
+- id: bgc_tokenize
+  goal: GenBank BGC records -> Pfam-domain tokens and sub-cluster motifs (iPRESTO)
+  edam_operation: operation_3096
+  skills:
+  - biosynthetic-gene-cluster-tokenization
+  - bgc-tokenization-with-pfam-domains
+  - gene-tokenization-representation
+  - pfam-domain-pattern-recognition
+  - statistical-sub-cluster-detection
+  tools:
+  - iPRESTO
+  inputs:
+  - type: genbank
+    flavour: antismash-bgc
+  outputs:
+  - type: tsv
+    flavour: bgc-domain-tokens
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1371-journal-pcbi-1010462
+    dois:
+    - 10.1371/journal.pcbi.1010462
+  after:
+  - bgc_mine
+  candidate_tools:
+  - Pfam
+  inputs_from:
+    bgc_mine:
+    - genbank:antismash-bgc
+- id: gcf_cluster
+  goal: BGCs -> gene cluster families (BiG-SCAPE similarity clustering)
+  edam_operation: operation_3432
+  skills:
+  - gcf-assignment-from-distance-matrix
+  - gene-cluster-family-formation-and-similarity-clustering
+  - big-slice-workflow-execution
+  - bgc-sequence-domain-scanning
+  tools:
+  - BiG-SLiCE
+  - pyHMMER
+  - antiSMASH v7.0.0
+  inputs:
+  - type: genbank
+    flavour: antismash-bgc
+  - type: tsv
+    flavour: bgc-domain-tokens
+  outputs:
+  - type: tsv
+    flavour: gcf-table
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1093-gigascience-giaa154
+    - asb-paper-10-1101-2024-10-11-617756
+    - asb-paper-10-1371-journal-pcbi-1008920
+    dois:
+    - 10.1093/gigascience/giaa154
+    - 10.1101/2024.10.11.617756
+    - 10.1371/journal.pcbi.1008920
+  after:
+  - bgc_mine
+  - bgc_tokenize
+  candidate_tools:
+  - antiSMASH
+  - BiG-SCAPE
+  - NPLinker
+  - GNPS
+  - MIBiG
+  - Flask
+  - PFAM 35.0
+  inputs_from:
+    bgc_mine:
+    - genbank:antismash-bgc
+    bgc_tokenize:
+    - tsv:bgc-domain-tokens
+- id: mf_network
+  goal: paired LC-MS/MS spectra -> molecular families (GNPS feature-based molecular
+    networking)
+  edam_operation: operation_3767
+  skills:
+  - spectral-similarity-network-generation
+  - metabolomic-spectral-annotation-and-molecular-family-clustering
+  - metabolomic-molecular-family-networking-gnps
+  - spectral-similarity-network-building
+  tools:
+  - MZmine2
+  - Optimus
+  - GNPS
+  - Cytoscape
+  inputs:
+  - type: mgf
+    flavour: gnps-fbmn
+  outputs:
+  - type: tsv
+    flavour: mf-table
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-jnatprod-7b00737
+    - asb-paper-10-1038-s41589-020-00677-3
+    - asb-paper-10-1101-2024-10-11-617756
+    - asb-paper-10-1186-s40168-022-01444-3
+    - asb-paper-10-1371-journal-pcbi-1008920
+    dois:
+    - 10.1021/acs.jnatprod.7b00737
+    - 10.1038/s41589-020-00677-3
+    - 10.1101/2024.10.11.617756
+    - 10.1186/s40168-022-01444-3
+    - 10.1371/journal.pcbi.1008920
+  after: []
+  candidate_tools:
+  - antiSMASH
+  - BiG-SCAPE
+  - NPLinker
+  - MIBiG
+  - Python
+  - conda
+  - pip
+  - BigScape
+  - q2-qemistree
+  - SIRIUS
+  - CSI:FingerID
+  - ZODIAC
+  - GNPS FBMN
+  - ClassyFire
+- id: link_score
+  goal: GCFs + MFs + strain co-occurrence -> ranked GCF-MF links (NPLinker Metcalf/hypergeometric
+    scoring)
+  edam_operation: operation_3357
+  skills:
+  - bgc-mf-link-scoring
+  - link-scoring-metcalf-algorithm
+  - gcf-mf-link-scoring
+  - gcf-mf-link-scoring-computation
+  - strain-correlation-hypergeometric-adjustment
+  tools:
+  - NPLinker
+  - antiSMASH
+  - BiG-SCAPE
+  - MIBiG
+  - GNPS
+  inputs:
+  - type: tsv
+    flavour: gcf-table
+  - type: tsv
+    flavour: mf-table
+  outputs:
+  - type: tsv
+    flavour: gcf-mf-scores
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1101-2024-10-11-617756
+    - asb-paper-10-1186-s40168-022-01444-3
+    - asb-paper-10-1371-journal-pcbi-1008920
+    dois:
+    - 10.1101/2024.10.11.617756
+    - 10.1186/s40168-022-01444-3
+    - 10.1371/journal.pcbi.1008920
+  after:
+  - gcf_cluster
+  - mf_network
+  candidate_tools:
+  - Python
+  - conda
+  - pip
+  - BigScape
+  - NumPy or SciPy
+  inputs_from:
+    gcf_cluster:
+    - tsv:gcf-table
+    mf_network:
+    - tsv:mf-table
+- id: report
+  goal: consolidate scored links + provenance into a ranked BGC-metabolite link table
+  edam_operation: operation_3695
+  skills:
+  - genomic-metabolomic-link-ranking
+  - statistical-enrichment-analysis
+  - gcf-mf-hierarchical-aggregation
+  tools:
+  - NPLinker
+  - BiG-SCAPE
+  - IOKR
+  - antiSMASH
+  - GNPS
+  inputs:
+  - type: tsv
+    flavour: gcf-mf-scores
+  - type: tsv
+    flavour: gcf-table
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1101-2024-10-11-617756
+    - asb-paper-10-1371-journal-pcbi-1008920
+    dois:
+    - 10.1101/2024.10.11.617756
+    - 10.1371/journal.pcbi.1008920
+  after:
+  - link_score
+  - gcf_cluster
+  candidate_tools:
+  - MIBiG
+  inputs_from:
+    link_score:
+    - tsv:gcf-mf-scores
+    gcf_cluster:
+    - tsv:gcf-table
+verification:
+  final_outputs:
+  - path: bgc_metabolite_link_report.tsv
+    type: file
+provenance:
+  derived_from_workflows: []
+  bound_by: perspicacite-semantic
+  coverage_gaps: []

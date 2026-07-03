@@ -118,6 +118,120 @@
     "bound_by": "perspicacite-semantic"
   },
   {
+    "slug": "genome-scale-metabolic-flux-modeling",
+    "name": "genome-scale-metabolic-flux-modeling-workflow",
+    "description": "Use when you have a genome-scale constraint-based metabolic model (GEM, SBML/JSON) for one or more organisms and want predicted flux states grounded in your own omics data — integrate transcriptomics / metabolomics-derived constraints (eFlux-style Reaction Activity/Propensity Scores, extracellular uptake-secretion rates) into the model, sample the feasible flux space with optGpSampler, interpret and compare the resulting flux distributions across samples or conditions, and, when multiple organism or community-member models exist, gap-fill and merge them into a consensus community model (COMMIT-style) — connecting metabolomics features to predicted flux states.\n",
+    "techniques": [
+      "LC-MS"
+    ],
+    "stage_count": 5,
+    "stages": [
+      "constrain",
+      "sample_flux",
+      "interpret_flux",
+      "community_consensus",
+      "report"
+    ],
+    "member_tools": [
+      "eFlux",
+      "TRFBA",
+      "scFBA",
+      "GX-FBA",
+      "constraint-based stoichiometric metabolic models",
+      "optGpSampler",
+      "COBRApy",
+      "Flux Variability Analysis (FVA)",
+      "GLPK solver",
+      "YSI bioanalyzer (YSI2950)",
+      "Flux Variability Analysis",
+      "t-SNE (scikit-learn or standalone)",
+      "scipy.stats.spearmanr",
+      "COMMIT",
+      "COBRApy (optGpSampler algorithm)",
+      "YSI2950 bioanalyzer"
+    ],
+    "coverage_gaps": [],
+    "bound_by": "perspicacite-semantic"
+  },
+  {
+    "slug": "gnn-spectral-property-prediction",
+    "name": "gnn-spectral-property-prediction-workflow",
+    "description": "Use when you want to train or apply a graph neural network over molecular graphs to predict a structure-dependent property — retention time, collision cross section (CCS), or an MS2 spectrum — and use that predicted property to filter or re-rank candidate structures for untargeted metabolomics annotation: build RDKit/PyTorch-Geometric molecular graphs from SMILES, design and train a GNN against a labelled property dataset, run inference to predict the property for candidate structures, and rescore a candidate pool by comparing predicted vs observed property values.\n",
+    "techniques": [
+      "LC-MS",
+      "ion-mobility-MS"
+    ],
+    "stage_count": 5,
+    "stages": [
+      "featurize",
+      "architect",
+      "train",
+      "predict",
+      "rescore"
+    ],
+    "member_tools": [
+      "manual expert review",
+      "RDKit",
+      "PyTorch",
+      "Graphormer",
+      "DGL",
+      "Python",
+      "PyG",
+      "NumPy",
+      "Pandas",
+      "torch-scatter",
+      "torch-sparse",
+      "torch-cluster",
+      "PyG (PyTorch Geometric)",
+      "TorchMetrics",
+      "torch-scatter, torch-sparse, torch-cluster",
+      "PyTorch Geometric",
+      "Retip",
+      "Retip (R package)",
+      "pyRetip (Python package)",
+      "Retip app"
+    ],
+    "coverage_gaps": [],
+    "bound_by": "perspicacite-semantic"
+  },
+  {
+    "slug": "in-silico-biotransformation-prediction",
+    "name": "in-silico-biotransformation-prediction-workflow",
+    "description": "Use when you have a parent structure (drug, natural product, xenobiotic) and untargeted LC-MS/MS data and want to find its biotransformation products — predict plausible metabolites in-silico by rule-based expansion (BioTransformer mammalian/gut-microbial/ environmental rules, EnviPath microbial degradation, or MINE/Pickaxe combinatorial reaction-network generation), filter candidates to those detectable in the experimental mass range, then screen and rank them against the observed LC-MS/MS features to annotate which predicted biotransformation products were actually seen.\n",
+    "techniques": [
+      "LC-MS"
+    ],
+    "stage_count": 5,
+    "stages": [
+      "preprocess",
+      "biotransformation_prediction",
+      "candidate_filtering",
+      "ms_matching",
+      "report"
+    ],
+    "member_tools": [
+      "MZmine2",
+      "Optimus",
+      "OpenMS",
+      "BioTransformer",
+      "EAWAG Biodegradation and Biocatalysis Database",
+      "EnviPath",
+      "MINE-Database Pickaxe",
+      "RDKit",
+      "mordred",
+      "pytest",
+      "MINE-Database Filter base class",
+      "MAGMa",
+      "PubChem",
+      "MetFrag",
+      "BAM",
+      "PROXIMAL2",
+      "GNN-SOM"
+    ],
+    "coverage_gaps": [],
+    "bound_by": "perspicacite-semantic"
+  },
+  {
     "slug": "ion-mobility-4d-annotation",
     "name": "ion-mobility-4d-annotation-workflow",
     "description": "Use when you have ion-mobility LC-IMS-MS/MS data (e.g. timsTOF / PASEF) and want CCS-aware annotations — 4D feature extraction with collision cross section, CCS calibration and filtering, CCS-aware library matching, and (optional) networking.\n",
@@ -263,6 +377,44 @@
     "bound_by": "perspicacite-semantic"
   },
   {
+    "slug": "ms2lda-substructure-discovery",
+    "name": "ms2lda-substructure-discovery-workflow",
+    "description": "Use when you want to discover shared substructures (Mass2Motifs) across a corpus of MS2 spectra via LDA topic modeling — convert MS/MS spectra into a bag-of-fragments document corpus, run MS2LDA (Latent Dirichlet Allocation) to infer recurring fragmentation motifs, annotate motifs against MotifDB / Spec2Vec embeddings, and map motifs back onto molecular-network features for substructure-level annotation of an untargeted LC-MS/MS dataset.\n",
+    "techniques": [
+      "LC-MS"
+    ],
+    "stage_count": 5,
+    "stages": [
+      "preprocess",
+      "lda_modeling",
+      "motif_annotation",
+      "network_mapping",
+      "report"
+    ],
+    "member_tools": [
+      "MS2LDA",
+      "MS2LDA.Preprocessing.load_and_clean",
+      "Python",
+      "Conda",
+      "MS2LDA.Preprocessing.generate_corpus",
+      "ProteoWizard Library and Tools",
+      "pwiz",
+      "Latent Dirichlet Allocation (LDA)",
+      "Spec2Vec",
+      "MAG",
+      "MotifDB",
+      "MassQL",
+      "LDA (Latent Dirichlet Allocation)",
+      "pyMolNetEnhancer",
+      "RMolNetEnhancer",
+      "GNPS",
+      "Cytoscape",
+      "MAG (Automated Mass2Motif Annotation Guidance)"
+    ],
+    "coverage_gaps": [],
+    "bound_by": "perspicacite-semantic"
+  },
+  {
     "slug": "nmr-metabolomics-profiling",
     "name": "nmr-metabolomics-profiling-workflow",
     "description": "Use when you have NMR metabolomics data (1D/2D spectra or FIDs) and want a quantified, identified metabolite profile — spectral preprocessing (phase/baseline/referencing, binning), metabolite identification by chemical shift, quantification, and group statistics.\n",
@@ -290,6 +442,40 @@
       "SAND",
       "NMRPipe",
       "NMRBox"
+    ],
+    "coverage_gaps": [],
+    "bound_by": "perspicacite-semantic"
+  },
+  {
+    "slug": "paired-omics-bgc-metabolite-linking",
+    "name": "paired-omics-bgc-metabolite-linking-workflow",
+    "description": "Use when you have paired genomic and metabolomic data from the same microbial strains and want to link biosynthetic gene clusters (BGCs) to the metabolite features they plausibly encode — mine BGCs from assembled genomes with antiSMASH, tokenize BGC domains with iPRESTO/Pfam and cluster them into gene cluster families (GCFs) with BiG-SCAPE, build an MS/MS molecular network from paired LC-MS/MS data with GNPS to obtain molecular families (MFs), then score GCF-MF co-occurrence across strains (NPLinker-style Metcalf/hypergeometric scoring) to produce a ranked table of candidate BGC-metabolite links for natural-product discovery.\n",
+    "techniques": [
+      "LC-MS"
+    ],
+    "stage_count": 6,
+    "stages": [
+      "bgc_mine",
+      "bgc_tokenize",
+      "gcf_cluster",
+      "mf_network",
+      "link_score",
+      "report"
+    ],
+    "member_tools": [
+      "antiSMASH",
+      "BiG-SCAPE",
+      "NPLinker",
+      "GNPS",
+      "MIBiG",
+      "iPRESTO",
+      "BiG-SLiCE",
+      "pyHMMER",
+      "antiSMASH v7.0.0",
+      "MZmine2",
+      "Optimus",
+      "Cytoscape",
+      "IOKR"
     ],
     "coverage_gaps": [],
     "bound_by": "perspicacite-semantic"
@@ -356,6 +542,41 @@
       "CSI:FingerID",
       "CANOPUS",
       "INVENTA"
+    ],
+    "coverage_gaps": [],
+    "bound_by": "perspicacite-semantic"
+  },
+  {
+    "slug": "spec2vec-ml-embedding-annotation",
+    "name": "spec2vec-ml-embedding-annotation-workflow",
+    "description": "Use when you want to annotate untargeted MS2 spectra with a machine-learned spectral embedding instead of raw cosine scoring — convert spectra into peak/neutral-loss \"documents\", train or load a Spec2Vec (Word2Vec-style) embedding model on a reference corpus, embed query spectra into that learned vector space, and retrieve/annotate nearest library neighbours by embedding similarity, as a deep-learning-adjacent second pass beyond modified-cosine matching.\n",
+    "techniques": [
+      "LC-MS",
+      "GC-MS"
+    ],
+    "stage_count": 4,
+    "stages": [
+      "preprocess",
+      "document_conversion",
+      "embed",
+      "retrieve_annotate"
+    ],
+    "member_tools": [
+      "matchms",
+      "gensim",
+      "Numba",
+      "Pandas",
+      "scipy",
+      "spec2vec",
+      "Word2Vec",
+      "RDKit",
+      "NumPy",
+      "gensim (Word2Vec, CBOW, Skip-gram)",
+      "NumPy, Pandas, SciPy",
+      "NumPy, Pandas",
+      "MS2Query",
+      "MS2Deepscore",
+      "MZMine"
     ],
     "coverage_gaps": [],
     "bound_by": "perspicacite-semantic"

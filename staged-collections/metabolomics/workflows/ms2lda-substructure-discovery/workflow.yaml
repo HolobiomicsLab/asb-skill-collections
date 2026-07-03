@@ -1,0 +1,196 @@
+schema_version: 0.3.0
+workflow_id: ms2lda_substructure_discovery
+kind: composite-workflow
+techniques:
+- LC-MS
+steps:
+- id: preprocess
+  goal: raw MS2 spectra (mgf/mzML/msp) -> cleaned, intensity-normalized bag-of-fragments
+    corpus
+  edam_operation: operation_3632
+  skills:
+  - mass-spectrometry-file-format-parsing
+  - fragment-ion-peak-detection-and-normalization
+  - mass-spectrometry-peak-filtering-and-noise-reduction
+  - spectral-noise-filtering-and-artifact-removal
+  - spectral-noise-filtering-and-quality-control
+  tools:
+  - MS2LDA
+  - MS2LDA.Preprocessing.load_and_clean
+  - Python
+  - Conda
+  - MS2LDA.Preprocessing.generate_corpus
+  - ProteoWizard Library and Tools
+  - pwiz
+  inputs:
+  - type: mgf
+  - type: mzML
+  outputs:
+  - type: corpus-json
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-jproteome-9b00640
+    - asb-paper-10-1073-pnas-1608041113
+    dois:
+    - 10.1021/acs.jproteome.9b00640
+    - 10.1073/pnas.1608041113
+  after: []
+- id: lda_modeling
+  goal: bag-of-fragments corpus -> Mass2Motifs (LDA topic model over spectral documents)
+  edam_operation: operation_3644
+  skills:
+  - probabilistic-topic-modeling-mass-spectrometry
+  - mass2motif-parameter-optimization
+  - lda-model-training-convergence
+  - latent-dirichlet-allocation-topic-inference
+  - mass-binning-and-tokenization-for-topic-modeling
+  tools:
+  - MS2LDA
+  - Latent Dirichlet Allocation (LDA)
+  - Python
+  - Spec2Vec
+  inputs:
+  - type: corpus-json
+  outputs:
+  - type: motifset-json
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1073-pnas-1608041113
+    dois:
+    - 10.1073/pnas.1608041113
+  after:
+  - preprocess
+  candidate_tools:
+  - MS2LDA.modeling
+  - MotifDB
+  - MS2LDA.Preprocessing.load_and_clean
+  - Conda
+  - MS2LDA.Preprocessing.generate_corpus
+  inputs_from:
+    preprocess:
+    - corpus-json
+- id: motif_annotation
+  goal: Mass2Motifs -> putative substructure annotations (MotifDB + Spec2Vec embedding
+    match)
+  edam_operation: operation_3629
+  skills:
+  - mass2motif-annotation-guidance-via-spectral-embeddings
+  - motifdb-reference-library-querying
+  - mass2motif-annotation-mapping
+  - spectral-similarity-scoring-and-ranking
+  - motif-metadata-annotation
+  tools:
+  - MS2LDA
+  - MAG
+  - Python
+  - Spec2Vec
+  - MotifDB
+  - MassQL
+  - LDA (Latent Dirichlet Allocation)
+  inputs:
+  - type: motifset-json
+  outputs:
+  - type: annotated-motifset-json
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1073-pnas-1608041113
+    - asb-paper-10-5281-zenodo-15688609
+    dois:
+    - 10.1073/pnas.1608041113
+    - 10.5281/zenodo.15688609
+  after:
+  - lda_modeling
+  candidate_tools:
+  - MAG (Automated Mass2Motif Annotation Guidance)
+  - MAG (Mass2Motif Annotation Guidance)
+  - MS2LDAViz
+  inputs_from:
+    lda_modeling:
+    - motifset-json
+- id: network_mapping
+  goal: annotated Mass2Motifs + GNPS molecular network -> motif-enriched network nodes
+  edam_operation: operation_3778
+  skills:
+  - mass2motif-substructure-mapping
+  - ms2lda-motif-to-network-mapping
+  - molecular-network-annotation-integration
+  - mass-spectral-network-annotation
+  - substructure-annotation-integration
+  tools:
+  - pyMolNetEnhancer
+  - Python
+  - RMolNetEnhancer
+  - GNPS
+  - MS2LDA
+  - Cytoscape
+  inputs:
+  - type: annotated-motifset-json
+  - type: mgf
+    flavour: gnps-fbmn
+  outputs:
+  - type: graphml
+  grounding:
+    kb_slugs:
+    - asb-paper-10-3390-metabo9070144
+    dois:
+    - 10.3390/metabo9070144
+  after:
+  - motif_annotation
+  - preprocess
+  candidate_tools:
+  - MS2LDA (ms2lda.org)
+  inputs_from:
+    motif_annotation:
+    - annotated-motifset-json
+    preprocess:
+    - mgf
+- id: report
+  goal: consolidate motifs + annotations + motif-enriched network into a substructure
+    discovery report
+  edam_operation: operation_3434
+  skills:
+  - json-structured-report-generation
+  - mass2motif-network-construction
+  - ms2lda-motif-mapping
+  - ms2lda-substructure-assignment
+  tools:
+  - MS2LDA
+  - MAG
+  - Python
+  - MAG (Automated Mass2Motif Annotation Guidance)
+  - Spec2Vec
+  - MotifDB
+  inputs:
+  - type: annotated-motifset-json
+  - type: graphml
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1073-pnas-1608041113
+    - asb-paper-10-3390-metabo9070144
+    dois:
+    - 10.1073/pnas.1608041113
+    - 10.3390/metabo9070144
+  after:
+  - motif_annotation
+  - network_mapping
+  candidate_tools:
+  - Latent Dirichlet Allocation (LDA)
+  - pyMolNetEnhancer
+  - RMolNetEnhancer
+  - GNPS
+  - Cytoscape
+  inputs_from:
+    motif_annotation:
+    - annotated-motifset-json
+    network_mapping:
+    - graphml
+verification:
+  final_outputs:
+  - path: ms2lda_substructure_report.tsv
+    type: file
+provenance:
+  derived_from_workflows: []
+  bound_by: perspicacite-semantic
+  coverage_gaps: []

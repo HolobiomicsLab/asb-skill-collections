@@ -1,0 +1,191 @@
+schema_version: 0.3.0
+workflow_id: spec2vec_ml_embedding_annotation
+kind: composite-workflow
+techniques:
+- LC-MS
+- GC-MS
+steps:
+- id: preprocess
+  goal: raw MS2 spectra -> filtered, normalized spectrum objects
+  edam_operation: operation_3630
+  skills:
+  - peak-filtering-and-preprocessing-lc-ms
+  - spectral-peak-filtering-and-normalization
+  - spectral-peak-filtering
+  - spectrum-normalization-and-standardization
+  - ms-ms-spectrum-parsing
+  tools:
+  - matchms
+  - gensim
+  - Numba
+  - Pandas
+  - scipy
+  - spec2vec
+  - Word2Vec
+  inputs:
+  - type: mzML
+  outputs:
+  - type: mgf
+    flavour: sirius
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1038-s41467-023-37446-4
+    - asb-paper-10-1186-s13321-021-00558-4
+    - asb-paper-10-1186-s13321-024-00878-1
+    - asb-paper-10-1371-journal-pcbi-1008724
+    - asb-paper-10-3389-fbinf-2022-842964
+    dois:
+    - 10.1038/s41467-023-37446-4
+    - 10.1186/s13321-021-00558-4
+    - 10.1186/s13321-024-00878-1
+    - 10.1371/journal.pcbi.1008724
+    - 10.3389/fbinf.2022.842964
+  after: []
+  candidate_tools:
+  - pubchempy
+  - RDKit
+  - Python
+  - numpy
+  - MS2Query
+  - MZMine
+- id: document_conversion
+  goal: filtered spectra -> peak/neutral-loss "documents" for word-embedding training
+  edam_operation: operation_3357
+  skills:
+  - spectrum-document-conversion-peak-loss-representation
+  - mass-spectrometry-spectrum-tokenization
+  - neutral-loss-calculation-from-precursor
+  tools:
+  - Spec2Vec
+  - matchms
+  - gensim
+  - RDKit
+  - NumPy
+  - Numba
+  - Pandas
+  - scipy
+  - gensim (Word2Vec, CBOW, Skip-gram)
+  - NumPy, Pandas, SciPy
+  inputs:
+  - type: mgf
+    flavour: sirius
+  outputs:
+  - type: json
+    flavour: spectral-documents
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1371-journal-pcbi-1008724
+    - asb-paper-10-3389-fbinf-2022-842964
+    dois:
+    - 10.1371/journal.pcbi.1008724
+    - 10.3389/fbinf.2022.842964
+  after:
+  - preprocess
+  candidate_tools:
+  - Word2Vec (gensim)
+  - Word2Vec
+  - Python 3.8
+  - MEMO
+  - memo-ms
+  - Python
+  inputs_from:
+    preprocess:
+    - mgf:sirius
+- id: embed
+  goal: peak/loss documents -> Spec2Vec Word2Vec embedding model + query-spectrum
+    embedding vectors
+  edam_operation: operation_3800
+  skills:
+  - corpus-size-coverage-scaling-analysis
+  - spectral-peak-word-embedding-representation
+  - missing-fraction-quality-filtering-for-embeddings
+  - mass-spectral-missing-word-fraction-computation
+  tools:
+  - Spec2Vec
+  - matchms
+  - gensim
+  - NumPy
+  - Numba
+  - Pandas
+  - Word2Vec
+  - NumPy, Pandas
+  inputs:
+  - type: json
+    flavour: spectral-documents
+  outputs:
+  - type: json
+    flavour: spectrum-embeddings
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1371-journal-pcbi-1008724
+    dois:
+    - 10.1371/journal.pcbi.1008724
+  after:
+  - document_conversion
+  candidate_tools:
+  - Word2Vec (gensim)
+  inputs_from:
+    document_conversion:
+    - json:spectral-documents
+- id: retrieve_annotate
+  goal: query embeddings -> nearest-neighbour library matches -> embedding-based annotation
+    table
+  edam_operation: operation_3767
+  skills:
+  - candidate-match-retrieval
+  - embedding-vector-similarity-ranking
+  - approximate-nearest-neighbor-search
+  - spectral-similarity-scoring-computation
+  - spectrum-embedding-indexing
+  - embedding-similarity-computation
+  tools:
+  - MS2Query
+  - MS2Deepscore
+  - Spec2Vec
+  - MZMine
+  - RDKit
+  inputs:
+  - type: json
+    flavour: spectrum-embeddings
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-4c02426
+    - asb-paper-10-1038-s41467-023-37446-4
+    - asb-paper-10-1038-s41467-023-39279-7
+    - asb-paper-10-1371-journal-pcbi-1008724
+    dois:
+    - 10.1021/acs.analchem.4c02426
+    - 10.1038/s41467-023-37446-4
+    - 10.1038/s41467-023-39279-7
+    - 10.1371/journal.pcbi.1008724
+  after:
+  - embed
+  candidate_tools:
+  - hnswlib
+  - Python
+  - gensim
+  - Python 3.7
+  - matchms
+  - NumPy
+  - Numba
+  - Pandas
+  - scipy
+  - Word2Vec (gensim)
+  - NumPy, Pandas, SciPy, Numba
+  - Anaconda
+  - Git
+  - MSBERT
+  - PyTorch
+  inputs_from:
+    embed:
+    - json:spectrum-embeddings
+verification:
+  final_outputs:
+  - path: spec2vec_embedding_annotation_table.tsv
+    type: file
+provenance:
+  derived_from_workflows: []
+  bound_by: perspicacite-semantic
+  coverage_gaps: []
