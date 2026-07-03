@@ -1,0 +1,203 @@
+schema_version: 0.3.0
+workflow_id: compound_class_annotation
+kind: composite-workflow
+techniques:
+- LC-MS
+steps:
+- id: preprocess
+  goal: raw mzML -> feature table + SIRIUS-flavour MS2 export
+  edam_operation: operation_3215
+  skills:
+  - peak-detection-and-mass-alignment
+  - mass-spectrometry-feature-table-construction
+  - cross-sample-feature-alignment
+  - lcms-feature-table-construction
+  - mass-spectrometry-feature-annotation
+  tools:
+  - MZmine2
+  - Optimus
+  - OpenMS
+  inputs:
+  - type: mzML
+  outputs:
+  - type: feature-table
+  - type: mgf
+    flavour: sirius
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1007-s00216-023-05070-2
+    - asb-paper-10-1021-acs-analchem-1c02687
+    - asb-paper-10-1021-acs-jnatprod-7b00737
+    - asb-paper-10-1038-s41589-020-00677-3
+    dois:
+    - 10.1007/s00216-023-05070-2
+    - 10.1021/acs.analchem.1c02687
+    - 10.1021/acs.jnatprod.7b00737
+    - 10.1038/s41589-020-00677-3
+  after: []
+  candidate_tools:
+  - Python
+  - pyOpenMS
+  - MSConvert
+  - PFΔScreen
+  - Centwave
+  - FeatureFinderMetabo
+  - ADAP
+  - ProteoWizard
+  - q2-qemistree
+  - SIRIUS
+  - GNPS FBMN
+  - Classyfire
+- id: formula
+  goal: MS2 spectra -> molecular formula (SIRIUS + ZODIAC re-ranking)
+  edam_operation: operation_3860
+  skills:
+  - molecular-formula-prediction-from-fragmentation
+  - energy-based-formula-scoring
+  - neural-network-based-molecular-formula-inference
+  - molecular-formula-assignment
+  - fragment-peak-subformula-enumeration
+  tools:
+  - msfiddle
+  - FIDDLE
+  - BUDDY
+  - SIRIUS
+  inputs:
+  - type: mgf
+    flavour: sirius
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-jcim-3c01082
+    - asb-paper-10-1038-s41467-025-66060-9
+    dois:
+    - 10.1021/acs.jcim.3c01082
+    - 10.1038/s41467-025-66060-9
+  after:
+  - preprocess
+  candidate_tools:
+  - MIST-CF
+  - MIST
+  - SCARF
+  inputs_from:
+    preprocess:
+    - mgf:sirius
+- id: fingerprint
+  goal: formula + MS2 -> molecular fingerprint (CSI:FingerID)
+  edam_operation: operation_3801
+  skills:
+  - molecular-fingerprint-parsing
+  - molecular-fingerprint-prediction
+  - spectrum-query-formatting
+  - spectral-fingerprint-web-service-query
+  - molecular-fingerprint-generation-and-encoding
+  tools:
+  - CSI:FingerID
+  - SIRIUS
+  - CANOPUS
+  inputs:
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1038-s41587-021-01045-9
+    - asb-paper-10-1038-s42256-023-00708-3
+    dois:
+    - 10.1038/s41587-021-01045-9
+    - 10.1038/s42256-023-00708-3
+  after:
+  - formula
+  candidate_tools:
+  - PyTorch
+  - MIST
+  - MIST-CF
+  - SIRIUS decomp
+  - ClassyFire
+  inputs_from:
+    formula:
+    - tsv
+- id: classify
+  goal: 'fingerprint -> compound class (CANOPUS / NPClassifier: superclass/class/pathway)'
+  edam_operation: operation_0224
+  skills:
+  - natural-product-classifier-substitution
+  - natural-product-classification-prediction
+  - classification-workflow-parameter-toggling
+  tools:
+  - NPClassifier
+  - SIRIUS
+  - GNPS
+  - ClassyFire
+  - ConCISE
+  inputs:
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-jnatprod-1c00399
+    - asb-paper-10-3390-metabo12121275
+    dois:
+    - 10.1021/acs.jnatprod.1c00399
+    - 10.3390/metabo12121275
+  after:
+  - fingerprint
+  candidate_tools:
+  - Python
+  - Docker
+  - docker-compose
+  - TensorFlow 2.3.0
+  - Keras
+  - TensorFlow Serving
+  - NP Classifier Repository
+  inputs_from:
+    fingerprint:
+    - tsv
+- id: consolidate
+  goal: consolidate formula + fingerprint + class into a class-annotated feature table
+  edam_operation: operation_3434
+  skills:
+  - consensus-classification-reconciliation
+  - spectral-feature-chemical-assignment
+  - chemical-classification-scheme-validation
+  - chemical-ontology-mapping
+  - structural-annotation-integration
+  tools:
+  - SIRIUS
+  - NPClassifier
+  - GNPS
+  - ClassyFire
+  - ConCISE
+  inputs:
+  - type: feature-table
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-3390-metabo12121275
+    dois:
+    - 10.3390/metabo12121275
+  after:
+  - preprocess
+  - classify
+  candidate_tools:
+  - Fiehn Labs ClassyFire Batch
+  - CANOPUS
+  inputs_from:
+    preprocess:
+    - feature-table
+    classify:
+    - tsv
+verification:
+  final_outputs:
+  - path: class_annotation_table.tsv
+    type: file
+provenance:
+  derived_from_workflows:
+  - coll_npclassscore_cq
+  - coll_molnetenhancer
+  bound_by: perspicacite-semantic
+  coverage_gaps: []

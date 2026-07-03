@@ -1,0 +1,265 @@
+schema_version: 0.3.0
+workflow_id: suspect_screening_exposomics
+kind: composite-workflow
+techniques:
+- LC-MS
+steps:
+- id: preprocess
+  goal: raw HRMS -> feature table + MS2 export
+  edam_operation: operation_3215
+  skills:
+  - peak-detection-and-mass-alignment
+  - mass-spectrometry-feature-table-construction
+  - ms1-feature-extraction
+  - mass-spectrometry-feature-detection-validation
+  - non-targeted-preprocessing-tool-comparison
+  tools:
+  - MZmine2
+  - Optimus
+  - OpenMS
+  inputs:
+  - type: mzML
+  outputs:
+  - type: feature-table
+  - type: mgf
+    flavour: gnps-fbmn
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1007-s00216-023-05070-2
+    - asb-paper-10-1021-acs-est-3c04764
+    - asb-paper-10-1021-acs-jnatprod-7b00737
+    - asb-paper-10-1093-bioinformatics-btab231-6214530
+    dois:
+    - 10.1007/s00216-023-05070-2
+    - 10.1021/acs.est.3c04764
+    - 10.1021/acs.jnatprod.7b00737
+    - 10.1093/bioinformatics/btab231/6214530
+  after: []
+  candidate_tools:
+  - Python
+  - pyOpenMS
+  - MSConvert
+  - PFΔScreen
+  - Scannotation
+  - mzRAPP
+  - MZmine 2
+  - R
+  - XCMS
+  - enviPat
+  - Skyline
+  - R (with mzRAPP library)
+- id: suspect_match
+  goal: features -> suspect-list matches by exact mass / RT / MS2
+  edam_operation: operation_3631
+  skills:
+  - suspect-database-matching
+  - mass-spectrometry-screening-workflows
+  - feature-annotation-with-chemical-descriptors
+  - multi-criterion-scoring-integration
+  tools:
+  - R Shiny
+  - EISA-EXPOSOME
+  - T3DB
+  inputs:
+  - type: feature-table
+  - type: mgf
+    flavour: gnps-fbmn
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1007-s00216-023-05070-2
+    - asb-paper-10-1021-acs-analchem-3c02697
+    - asb-paper-10-1021-acs-est-3c04764
+    - asb-paper-10-1186-s13321-020-00477-w
+    dois:
+    - 10.1007/s00216-023-05070-2
+    - 10.1021/acs.analchem.3c02697
+    - 10.1021/acs.est.3c04764
+    - 10.1186/s13321-020-00477-w
+  after:
+  - preprocess
+  candidate_tools:
+  - patRoon
+  - XCMS
+  - OpenMS
+  - BioTransformer
+  - CTS
+  - MetFrag
+  - SIRIUS
+  - CAMERA
+  - RAMClustR
+  - ProteoWizard
+  - Python
+  - pyOpenMS
+  - MSConvert
+  - PFΔScreen
+  - Scannotation
+  inputs_from:
+    preprocess:
+    - feature-table
+    - mgf:gnps-fbmn
+- id: in_silico_fragment
+  goal: suspect hits -> in-silico fragmentation structure ranking (MetFrag / SIRIUS)
+  edam_operation: operation_3860
+  skills:
+  - in-silico-fragmentation-prediction
+  - candidate-structure-ranking
+  - candidate-rank-scoring
+  - fragment-ion-scoring-and-ranking
+  - candidate-structure-ranking-from-spectrum
+  tools:
+  - MAGMa
+  - PubChem
+  inputs:
+  - type: tsv
+  - type: mgf
+    flavour: gnps-fbmn
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-1c03032
+    - asb-paper-10-1038-s42256-024-00816-8
+    - asb-paper-10-1093-bioinformatics-btad078-7067745
+    - asb-paper-10-1186-s13321-023-00695-y
+    - asb-paper-10-48550-arxiv-2507-06853
+    - asb-paper-10-5702-massspectrometry-s0033
+    dois:
+    - 10.1021/acs.analchem.1c03032
+    - 10.1038/s42256-024-00816-8
+    - 10.1093/bioinformatics/btad078/7067745
+    - 10.1186/s13321-023-00695-y
+    - 10.48550/arxiv.2507.06853
+    - 10.5702/massspectrometry.S0033
+  after:
+  - suspect_match
+  - preprocess
+  candidate_tools:
+  - Python
+  - pyrwr
+  - MetFrag
+  - ChemWalker
+  - DiffSpectra
+  - Diffusion Molecule Transformer (DMT)
+  - SpecFormer
+  - Spectra
+  - SIRIUS
+  - R
+  - RDKit
+  - PubChemPy
+  - MetaboAnnotatoR
+  - R (version or higher)
+  - xcms
+  - RamClustR
+  - ICEBERG WebUI
+  - SCARF
+  inputs_from:
+    suspect_match:
+    - tsv
+    preprocess:
+    - mgf:gnps-fbmn
+- id: confidence
+  goal: assign identification confidence levels (Schymanski 1-5) to hits
+  edam_operation: operation_0224
+  skills:
+  - compound-annotation-confidence-assessment
+  - metabolite-annotation-confidence-assignment
+  - annotation-confidence-assessment
+  - annotation-scoring-and-ranking
+  - lipid-species-identification
+  tools:
+  - masscube
+  - Python
+  inputs:
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-0c01594
+    - asb-paper-10-1021-acs-analchem-1c03032
+    - asb-paper-10-1038-s41467-025-60640-5
+    - asb-paper-10-1515-jib-2025-0047
+    - asb-paper-10-3390-metabo12020173
+    dois:
+    - 10.1021/acs.analchem.0c01594
+    - 10.1021/acs.analchem.1c03032
+    - 10.1038/s41467-025-60640-5
+    - 10.1515/jib-2025-0047
+    - 10.3390/metabo12020173
+  after:
+  - in_silico_fragment
+  candidate_tools:
+  - R
+  - XCMS
+  - MS-Dial
+  - GetFeatistics
+  - patRoon
+  - MS-CleanR
+  - MS-FINDER
+  - commons-math3
+  - jfreechart
+  - jopt-simple
+  - trove4j
+  - Passatutto
+  - MetaboAnnotatoR
+  - R (version or higher)
+  - RamClustR
+  - R (≥4.5.0)
+  inputs_from:
+    in_silico_fragment:
+    - tsv
+- id: report
+  goal: consolidate suspect hits + structures + confidence into an annotated table
+  edam_operation: operation_3434
+  skills:
+  - suspect-list-format-conversion
+  - inchikey-structural-similarity-computation
+  - spectral-database-schema-validation
+  tools:
+  - patRoon
+  - generateTPs
+  - screenSuspects
+  - BioTransformer
+  - CTS
+  inputs:
+  - type: tsv
+  - type: feature-table
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-3c02697
+    - asb-paper-10-1038-s41467-023-37446-4
+    - asb-paper-10-1186-s13321-020-00477-w
+    dois:
+    - 10.1021/acs.analchem.3c02697
+    - 10.1038/s41467-023-37446-4
+    - 10.1186/s13321-020-00477-w
+  after:
+  - confidence
+  - preprocess
+  candidate_tools:
+  - MS2Query
+  - GitHub
+  - MS2Deepscore
+  - RDKit
+  - Random forest (scikit-learn or equivalent)
+  - R Shiny
+  - T3DB
+  inputs_from:
+    confidence:
+    - tsv
+    preprocess:
+    - feature-table
+verification:
+  final_outputs:
+  - path: suspect_screening_report.tsv
+    type: file
+provenance:
+  derived_from_workflows:
+  - coll_ms2deepscore
+  - coll_metabodirect
+  bound_by: perspicacite-semantic
+  coverage_gaps: []
