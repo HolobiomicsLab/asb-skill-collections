@@ -1,5 +1,86 @@
 [
   {
+    "slug": "compound-class-annotation",
+    "name": "compound-class-annotation-workflow",
+    "description": "Use when you want chemical-class-level annotations for untargeted LC-MS/MS features rather than exact structures — determine molecular formulas with SIRIUS, compute CSI:FingerID fingerprints, and predict compound classes with CANOPUS and NPClassifier (superclass / class / pathway), producing a class-annotated feature table for chemical-inventory and enrichment analysis.\n",
+    "techniques": [
+      "LC-MS"
+    ],
+    "stage_count": 5,
+    "stages": [
+      "preprocess",
+      "formula",
+      "fingerprint",
+      "classify",
+      "consolidate"
+    ],
+    "member_tools": [
+      "MZmine2",
+      "Optimus",
+      "OpenMS",
+      "msfiddle",
+      "FIDDLE",
+      "BUDDY",
+      "SIRIUS",
+      "CSI:FingerID",
+      "CANOPUS",
+      "NPClassifier",
+      "GNPS",
+      "ClassyFire",
+      "ConCISE"
+    ],
+    "coverage_gaps": [],
+    "bound_by": "perspicacite-semantic"
+  },
+  {
+    "slug": "fbmn-annotation-propagation",
+    "name": "feature-based-molecular-networking-and-propagation-workflow",
+    "description": "Use when you have untargeted LC-MS/MS MS2 data and want to spread a handful of confident annotations across whole molecular families — build a feature-based molecular network, seed it with spectral-library and SIRIUS/CANOPUS annotations, then propagate compound classes and analogue annotations across network components (MolNetEnhancer / network annotation propagation) so unannotated nodes inherit chemically-plausible identities.\n",
+    "techniques": [
+      "LC-MS"
+    ],
+    "stage_count": 6,
+    "stages": [
+      "preprocess",
+      "network",
+      "seed_annotate",
+      "class_annotate",
+      "propagate",
+      "consolidate"
+    ],
+    "member_tools": [
+      "MZmine2",
+      "Optimus",
+      "OpenMS",
+      "mineMS2",
+      "igraph",
+      "R",
+      "GNPS",
+      "Cytoscape",
+      "MSThunder",
+      "Windows",
+      "MSConvert",
+      "SIRIUS",
+      "NPClassifier",
+      "CANOPUS",
+      "ClassyFire",
+      "ConCISE",
+      "pyMolNetEnhancer",
+      "Python",
+      "RMolNetEnhancer",
+      "MS2LDA",
+      "networkx",
+      "treelib",
+      "mass2chem",
+      "metDataModel",
+      "Python 3",
+      "asari",
+      "khipu"
+    ],
+    "coverage_gaps": [],
+    "bound_by": "perspicacite-semantic"
+  },
+  {
     "slug": "gcms-deconvolution-and-identification",
     "name": "gcms-deconvolution-identification-workflow",
     "description": "Use when you have GC-MS data (mzML / CDF, typically EI) and want deconvolved, retention-index-validated compound identifications — spectral deconvolution of co-eluting peaks, EI library matching, RI calibration, and differential analysis.\n",
@@ -280,6 +361,40 @@
     "bound_by": "perspicacite-semantic"
   },
   {
+    "slug": "stable-isotope-tracing-fluxomics",
+    "name": "stable-isotope-tracing-fluxomics-workflow",
+    "description": "Use when you have LC-MS data from a stable-isotope (e.g. 13C / 15N) tracing experiment and want labelling / flux information — detect features, extract per-feature isotopologue distributions, correct for natural isotope abundance, and compute mass-isotopomer distributions and fractional labelling enrichment across conditions or timepoints.\n",
+    "techniques": [
+      "LC-MS"
+    ],
+    "stage_count": 5,
+    "stages": [
+      "preprocess",
+      "isotopologue_extract",
+      "natural_abundance_correction",
+      "labelling_analysis",
+      "report"
+    ],
+    "member_tools": [
+      "MZmine2",
+      "Optimus",
+      "OpenMS",
+      "geoRge",
+      "R",
+      "XCMS",
+      "ElemCor",
+      "isoSCAN",
+      "mzR",
+      "enviPat",
+      "Proteowizard MSconvert",
+      "INTEGRATE",
+      "Agilent 1290 Infinity UHPLC system + Agilent 6550 iFunnel Q-TOF mass spectrometer",
+      "constraint-based stoichiometric metabolic models (e.g., ENGRO2)"
+    ],
+    "coverage_gaps": [],
+    "bound_by": "perspicacite-semantic"
+  },
+  {
     "slug": "statistics-and-biomarker-discovery",
     "name": "statistics-biomarker-discovery-workflow",
     "description": "Use when you have a metabolomics feature/quant table and want a statistically rigorous comparison and candidate biomarkers — cleaning and normalization, multivariate analysis, differential features, enrichment/pathway analysis, and biomarker selection with ROC.\n",
@@ -310,6 +425,71 @@
       "KEGGREST",
       "igraph",
       "MeTEor"
+    ],
+    "coverage_gaps": [],
+    "bound_by": "perspicacite-semantic"
+  },
+  {
+    "slug": "suspect-screening-exposomics",
+    "name": "suspect-screening-exposomics-workflow",
+    "description": "Use when you have untargeted HRMS data and want to screen for a defined suspect list of environmental / exposure-relevant compounds — detect features, match them to suspect-list entries by exact mass/RT/MS2, elucidate structures of hits by in-silico fragmentation, and assign identification confidence levels (Schymanski), producing a confidence-annotated suspect-hit table.\n",
+    "techniques": [
+      "LC-MS"
+    ],
+    "stage_count": 5,
+    "stages": [
+      "preprocess",
+      "suspect_match",
+      "in_silico_fragment",
+      "confidence",
+      "report"
+    ],
+    "member_tools": [
+      "MZmine2",
+      "Optimus",
+      "OpenMS",
+      "R Shiny",
+      "EISA-EXPOSOME",
+      "T3DB",
+      "MAGMa",
+      "PubChem",
+      "masscube",
+      "Python",
+      "patRoon",
+      "generateTPs",
+      "screenSuspects",
+      "BioTransformer",
+      "CTS"
+    ],
+    "coverage_gaps": [],
+    "bound_by": "perspicacite-semantic"
+  },
+  {
+    "slug": "targeted-lcms-quantification",
+    "name": "targeted-lcms-quantification-workflow",
+    "description": "Use when you have targeted LC-MS data for a defined panel of analytes and want absolute or relative concentrations — extract and integrate the target transitions/ion chromatograms, build calibration curves from standards with internal-standard normalization, apply them to samples, and QC the batch (response drift, QC-sample RSD) to a reportable quantification table.\n",
+    "techniques": [
+      "LC-MS"
+    ],
+    "stage_count": 5,
+    "stages": [
+      "integrate",
+      "calibrate",
+      "quantify",
+      "qc",
+      "report"
+    ],
+    "member_tools": [
+      "TARDIS",
+      "Spectra",
+      "R",
+      "MSConvert (ProteoWizard)",
+      "xcms",
+      "MsExperiment",
+      "mzQuality",
+      "SummarizedExperiment",
+      "mzQualityDashboard",
+      "R (lm, weighted.lm)"
     ],
     "coverage_gaps": [],
     "bound_by": "perspicacite-semantic"
