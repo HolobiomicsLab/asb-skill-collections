@@ -455,10 +455,9 @@
       "PubChem",
       "masscube",
       "Python",
-      "RDKit",
-      "PubChemPy",
-      "SIRIUS",
-      "MetFrag"
+      "msFeaST",
+      "jupyter-notebook",
+      "msFeaST Dashboard bundle"
     ],
     "coverage_gaps": [],
     "bound_by": "perspicacite-semantic"

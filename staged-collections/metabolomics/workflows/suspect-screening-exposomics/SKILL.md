@@ -35,9 +35,9 @@ metadata:
   - annotation-confidence-assessment
   - annotation-scoring-and-ranking
   - bayesian-annotation-probability-inference
+  - feature-metadata-annotation
   - chemical-structure-validation
-  - peak-extraction-rescue-algorithms
-  - spectral-match-result-consolidation
+  - reference-compound-verification
   member_tools:
   - MZmine2
   - Optimus
@@ -49,10 +49,9 @@ metadata:
   - PubChem
   - masscube
   - Python
-  - RDKit
-  - PubChemPy
-  - SIRIUS
-  - MetFrag
+  - msFeaST
+  - jupyter-notebook
+  - msFeaST Dashboard bundle
   coverage_gaps: []
   derived_from_workflows:
   - coll_ms2deepscore
@@ -157,13 +156,13 @@ Use when you have untargeted HRMS data and want to screen for a defined suspect 
 
 **Inputs:** tsv, feature-table · **Outputs:** tsv
 
-**Candidate leaf skills:** `chemical-structure-validation` (primary), `peak-extraction-rescue-algorithms`, `spectral-match-result-consolidation`
+**Candidate leaf skills:** `feature-metadata-annotation` (primary), `chemical-structure-validation`, `reference-compound-verification`
 
-**Tools (primary):** RDKit, PubChemPy, Python, SIRIUS, MetFrag
+**Tools (primary):** msFeaST, jupyter-notebook, msFeaST Dashboard bundle
 
-**Other candidate tools:** R Shiny, EISA-EXPOSOME, metadataMASST, microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST, Fast Search API, GNPS_MASST
+**Other candidate tools:** RDKit, PubChemPy, Python, SIRIUS, MetFrag, R Shiny, EISA-EXPOSOME
 
-**Grounding:** 3 KB(s); DOIs: 10.1021/acs.analchem.3c02697, 10.1038/s41564-023-01575-9, 10.1186/s13321-023-00695-y
+**Grounding:** 3 KB(s); DOIs: 10.1021/acs.analchem.3c02697, 10.1093/bioinformatics/btae584, 10.1186/s13321-023-00695-y
 
 ## Grounding
 

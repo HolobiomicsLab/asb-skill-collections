@@ -219,15 +219,13 @@ steps:
   goal: consolidate suspect hits + structures + confidence into an annotated table
   edam_operation: operation_3434
   skills:
+  - feature-metadata-annotation
   - chemical-structure-validation
-  - peak-extraction-rescue-algorithms
-  - spectral-match-result-consolidation
+  - reference-compound-verification
   tools:
-  - RDKit
-  - PubChemPy
-  - Python
-  - SIRIUS
-  - MetFrag
+  - msFeaST
+  - jupyter-notebook
+  - msFeaST Dashboard bundle
   inputs:
   - type: tsv
   - type: feature-table
@@ -236,26 +234,23 @@ steps:
   grounding:
     kb_slugs:
     - asb-paper-10-1021-acs-analchem-3c02697
-    - asb-paper-10-1038-s41564-023-01575-9
+    - asb-paper-10-1093-bioinformatics-btae584
     - asb-paper-10-1186-s13321-023-00695-y
     dois:
     - 10.1021/acs.analchem.3c02697
-    - 10.1038/s41564-023-01575-9
+    - 10.1093/bioinformatics/btae584
     - 10.1186/s13321-023-00695-y
   after:
   - confidence
   - preprocess
   candidate_tools:
+  - RDKit
+  - PubChemPy
+  - Python
+  - SIRIUS
+  - MetFrag
   - R Shiny
   - EISA-EXPOSOME
-  - metadataMASST
-  - microbeMASST
-  - plantMASST
-  - tissueMASST
-  - microbiomeMASST
-  - foodMASST
-  - Fast Search API
-  - GNPS_MASST
   inputs_from:
     confidence:
     - tsv
