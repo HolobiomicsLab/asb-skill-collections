@@ -33,13 +33,13 @@ metadata:
   - natural-product-classification-prediction
   - chemical-classification-scheme-validation
   - chemical-ontology-mapping
-  - chemical-class-assignment-classyfire
   - classyfire-taxonomy-assignment
+  - chemical-class-metadata-integration
   - consensus-classification-reconciliation
   - consensus-taxonomy-generation
   - annotation-table-quality-control
   - sample-centric-metabolite-annotation
-  - chemical-phylogenetic-comparison
+  - taxonomic-classification-merging
   member_tools:
   - MZmine2
   - Optimus
@@ -149,13 +149,13 @@ Use when you want chemical-class-level annotations for untargeted LC-MS/MS featu
 
 **Inputs:** tsv · **Outputs:** tsv
 
-**Candidate leaf skills:** `natural-product-classification-prediction` (primary), `chemical-classification-scheme-validation`, `chemical-ontology-mapping`, `chemical-class-assignment-classyfire`, `classyfire-taxonomy-assignment`
+**Candidate leaf skills:** `natural-product-classification-prediction` (primary), `chemical-classification-scheme-validation`, `chemical-ontology-mapping`, `classyfire-taxonomy-assignment`, `chemical-class-metadata-integration`
 
 **Tools (primary):** Python, Docker, docker-compose, TensorFlow 2.3.0, Keras, TensorFlow Serving, NP Classifier Repository
 
-**Other candidate tools:** NPClassifier, SIRIUS, GNPS, ClassyFire, ConCISE, Fiehn Labs ClassyFire Batch, CANOPUS, matchms, MS2DeepScore, scikit-learn, RDKit, PubChem standardization, rcdk
+**Other candidate tools:** NPClassifier, SIRIUS, GNPS, ClassyFire, ConCISE, Fiehn Labs ClassyFire Batch, CANOPUS, PubChem standardization, rcdk, pyMolNetEnhancer, RMolNetEnhancer, Cytoscape
 
-**Grounding:** 4 KB(s); DOIs: 10.1021/acs.jnatprod.1c00399, 10.1038/s41592-023-02143-z, 10.1186/s13321-021-00558-4, 10.3390/metabo12121275
+**Grounding:** 4 KB(s); DOIs: 10.1021/acs.jnatprod.1c00399, 10.1038/s41592-023-02143-z, 10.3390/metabo12121275, 10.3390/metabo9070144
 
 ### Stage 5 — consolidate
 
@@ -165,13 +165,13 @@ Use when you want chemical-class-level annotations for untargeted LC-MS/MS featu
 
 **Inputs:** feature-table, tsv · **Outputs:** tsv
 
-**Candidate leaf skills:** `consensus-classification-reconciliation` (primary), `consensus-taxonomy-generation`, `annotation-table-quality-control`, `sample-centric-metabolite-annotation`, `chemical-phylogenetic-comparison`
+**Candidate leaf skills:** `consensus-classification-reconciliation` (primary), `consensus-taxonomy-generation`, `annotation-table-quality-control`, `sample-centric-metabolite-annotation`, `taxonomic-classification-merging`
 
 **Tools (primary):** SIRIUS, NPClassifier, GNPS, ClassyFire, ConCISE
 
-**Other candidate tools:** CANOPUS, Fiehn Labs ClassyFire Batch, Inventa, ENPKG, MZmine, enpkg_mn_isdb_taxo, enpkg_sirius_canopus, enpkg_meta_analysis, Open Tree of Life, Wikidata, ChEMBL, q2-qemistree, MZmine2, GNPS FBMN
+**Other candidate tools:** CANOPUS, Fiehn Labs ClassyFire Batch, Inventa, ENPKG, MZmine, enpkg_mn_isdb_taxo, enpkg_sirius_canopus, enpkg_meta_analysis, Open Tree of Life, Wikidata, ChEMBL, pandas
 
-**Grounding:** 5 KB(s); DOIs: 10.1021/acscentsci.3c00800, 10.1038/s41467-021-23953-9, 10.1038/s41589-020-00677-3, 10.3389/fmolb.2022.1028334 …
+**Grounding:** 4 KB(s); DOIs: 10.1021/acscentsci.3c00800, 10.1038/s41467-021-23953-9, 10.3389/fmolb.2022.1028334, 10.3390/metabo12121275
 
 ## Grounding
 

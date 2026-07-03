@@ -10,6 +10,6 @@
 2. **suspect_match** — features -> suspect-list matches by exact mass / RT / MS2  →  `suspect-database-matching`, `ms1-feature-extraction`, `mass-spectrometry-screening-workflows`, `multi-criterion-scoring-integration`, `feature-annotation-with-chemical-descriptors`
 3. **in_silico_fragment** — suspect hits -> in-silico fragmentation structure ranking (MetFrag / SIRIUS)  →  `in-silico-fragmentation-prediction`, `candidate-structure-ranking`, `candidate-rank-scoring`, `fragment-ion-scoring-and-ranking`, `candidate-structure-ranking-from-spectrum`
 4. **confidence** — assign identification confidence levels (Schymanski 1-5) to hits  →  `compound-annotation-confidence-assessment`, `metabolite-annotation-confidence-assignment`, `annotation-confidence-assessment`, `annotation-scoring-and-ranking`, `bayesian-annotation-probability-inference`
-5. **report** — consolidate suspect hits + structures + confidence into an annotated table  →  `suspect-list-format-conversion`, `chemical-structure-validation`, `hit-score-consolidation-across-domains`
+5. **report** — consolidate suspect hits + structures + confidence into an annotated table  →  `chemical-structure-validation`, `peak-extraction-rescue-algorithms`, `spectral-match-result-consolidation`
 
 `derived_from_workflows` in the frontmatter is the eval-ablation set (SPEC §8).

@@ -35,9 +35,9 @@ metadata:
   - annotation-confidence-assessment
   - annotation-scoring-and-ranking
   - bayesian-annotation-probability-inference
-  - suspect-list-format-conversion
   - chemical-structure-validation
-  - hit-score-consolidation-across-domains
+  - peak-extraction-rescue-algorithms
+  - spectral-match-result-consolidation
   member_tools:
   - MZmine2
   - Optimus
@@ -49,11 +49,10 @@ metadata:
   - PubChem
   - masscube
   - Python
-  - patRoon
-  - generateTPs
-  - screenSuspects
-  - BioTransformer
-  - CTS
+  - RDKit
+  - PubChemPy
+  - SIRIUS
+  - MetFrag
   coverage_gaps: []
   derived_from_workflows:
   - coll_ms2deepscore
@@ -158,13 +157,13 @@ Use when you have untargeted HRMS data and want to screen for a defined suspect 
 
 **Inputs:** tsv, feature-table · **Outputs:** tsv
 
-**Candidate leaf skills:** `suspect-list-format-conversion` (primary), `chemical-structure-validation`, `hit-score-consolidation-across-domains`
+**Candidate leaf skills:** `chemical-structure-validation` (primary), `peak-extraction-rescue-algorithms`, `spectral-match-result-consolidation`
 
-**Tools (primary):** patRoon, generateTPs, screenSuspects, BioTransformer, CTS
+**Tools (primary):** RDKit, PubChemPy, Python, SIRIUS, MetFrag
 
-**Other candidate tools:** RDKit, PubChemPy, Python, SIRIUS, MetFrag, metadataMASST, microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST, Fast Search API, GNPS_MASST
+**Other candidate tools:** R Shiny, EISA-EXPOSOME, metadataMASST, microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST, Fast Search API, GNPS_MASST
 
-**Grounding:** 3 KB(s); DOIs: 10.1038/s41564-023-01575-9, 10.1186/s13321-020-00477-w, 10.1186/s13321-023-00695-y
+**Grounding:** 3 KB(s); DOIs: 10.1021/acs.analchem.3c02697, 10.1038/s41564-023-01575-9, 10.1186/s13321-023-00695-y
 
 ## Grounding
 

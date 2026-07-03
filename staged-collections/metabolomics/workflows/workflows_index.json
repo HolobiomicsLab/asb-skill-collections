@@ -455,11 +455,10 @@
       "PubChem",
       "masscube",
       "Python",
-      "patRoon",
-      "generateTPs",
-      "screenSuspects",
-      "BioTransformer",
-      "CTS"
+      "RDKit",
+      "PubChemPy",
+      "SIRIUS",
+      "MetFrag"
     ],
     "coverage_gaps": [],
     "bound_by": "perspicacite-semantic"

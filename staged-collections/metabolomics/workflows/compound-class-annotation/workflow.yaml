@@ -137,8 +137,8 @@ steps:
   - natural-product-classification-prediction
   - chemical-classification-scheme-validation
   - chemical-ontology-mapping
-  - chemical-class-assignment-classyfire
   - classyfire-taxonomy-assignment
+  - chemical-class-metadata-integration
   tools:
   - Python
   - Docker
@@ -155,13 +155,13 @@ steps:
     kb_slugs:
     - asb-paper-10-1021-acs-jnatprod-1c00399
     - asb-paper-10-1038-s41592-023-02143-z
-    - asb-paper-10-1186-s13321-021-00558-4
     - asb-paper-10-3390-metabo12121275
+    - asb-paper-10-3390-metabo9070144
     dois:
     - 10.1021/acs.jnatprod.1c00399
     - 10.1038/s41592-023-02143-z
-    - 10.1186/s13321-021-00558-4
     - 10.3390/metabo12121275
+    - 10.3390/metabo9070144
   after:
   - fingerprint
   candidate_tools:
@@ -172,12 +172,11 @@ steps:
   - ConCISE
   - Fiehn Labs ClassyFire Batch
   - CANOPUS
-  - matchms
-  - MS2DeepScore
-  - scikit-learn
-  - RDKit
   - PubChem standardization
   - rcdk
+  - pyMolNetEnhancer
+  - RMolNetEnhancer
+  - Cytoscape
   inputs_from:
     fingerprint:
     - tsv
@@ -189,7 +188,7 @@ steps:
   - consensus-taxonomy-generation
   - annotation-table-quality-control
   - sample-centric-metabolite-annotation
-  - chemical-phylogenetic-comparison
+  - taxonomic-classification-merging
   tools:
   - SIRIUS
   - NPClassifier
@@ -205,13 +204,11 @@ steps:
     kb_slugs:
     - asb-paper-10-1021-acscentsci-3c00800
     - asb-paper-10-1038-s41467-021-23953-9
-    - asb-paper-10-1038-s41589-020-00677-3
     - asb-paper-10-3389-fmolb-2022-1028334
     - asb-paper-10-3390-metabo12121275
     dois:
     - 10.1021/acscentsci.3c00800
     - 10.1038/s41467-021-23953-9
-    - 10.1038/s41589-020-00677-3
     - 10.3389/fmolb.2022.1028334
     - 10.3390/metabo12121275
   after:
@@ -229,9 +226,7 @@ steps:
   - Open Tree of Life
   - Wikidata
   - ChEMBL
-  - q2-qemistree
-  - MZmine2
-  - GNPS FBMN
+  - pandas
   inputs_from:
     preprocess:
     - feature-table
