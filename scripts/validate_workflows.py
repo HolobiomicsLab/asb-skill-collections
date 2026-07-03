@@ -23,7 +23,16 @@ import yaml
 
 
 def _frontmatter(path):
-    return yaml.safe_load(open(path).read().split("---")[1])
+    # Parse the block between the first two lines that are exactly '---', so a
+    # stray '---' inside a value/body cannot truncate it (the v0.2.0 bug) and a
+    # fenceless file yields {} instead of an IndexError.
+    lines = open(path).read().splitlines()
+    if not lines or lines[0].strip() != "---":
+        return {}
+    for i in range(1, len(lines)):
+        if lines[i].strip() == "---":
+            return yaml.safe_load("\n".join(lines[1:i])) or {}
+    return {}
 
 
 def validate_one(d, idx):

@@ -36,7 +36,29 @@ MAX_TOOLS_PER_LEAF = 25
 # similar AND they share tools+DOIs. A prefix/boilerplate match is not enough:
 # distinct skills from one paper share tools, so a loose gate over-fires.
 _DUP_SIM_THRESHOLD = 0.90
+# Above this many leaves sharing one (tools+DOIs) key, skip the O(n^2) pairwise
+# similarity and emit a single "manual review" finding — bounds runtime and is
+# louder than a silent truncation (generalize-or-stop: no silent caps).
+_MAX_DUP_BUCKET = 150
 _WORKFLOW_SKIP = ("bin", "_archive")
+
+
+def _slug(leaf: dict) -> str:
+    """Leaf slug, or a loud placeholder so a slug-less leaf never crashes a check."""
+    return leaf.get("slug") or "<missing-slug>"
+
+
+def _as_list(val) -> tuple:
+    """Return (list, ok). ok is False when val is present but not a list.
+
+    A string is iterable, so treating a string field as a list would silently
+    score it per-character; callers use ok=False to flag it instead.
+    """
+    if val is None:
+        return [], True
+    if isinstance(val, list):
+        return val, True
+    return [], False
 
 
 def norm_doi(doi: str) -> str:
@@ -77,8 +99,11 @@ def load_corpus_dois(collection_dir: str) -> set:
         return set()
     with open(path) as fh:
         corpus = yaml.safe_load(fh) or {}
+    if not isinstance(corpus, dict):
+        return set()  # a top-level list/scalar carries no papers mapping
+    papers = corpus.get("papers") or []
     dois = set()
-    for paper in corpus.get("papers", []) or []:
+    for paper in papers if isinstance(papers, list) else []:
         if isinstance(paper, dict) and paper.get("doi"):
             dois.add(norm_doi(paper["doi"]))
     return dois
@@ -97,9 +122,14 @@ def read_frontmatter(path: str):
     for i in range(1, len(lines)):
         if lines[i].strip() == "---":
             try:
-                return yaml.safe_load("\n".join(lines[1:i])) or {}, None
+                data = yaml.safe_load("\n".join(lines[1:i]))
             except yaml.YAMLError as exc:
                 return None, f"yaml error: {exc}".splitlines()[0]
+            if data is None:
+                return {}, None
+            if not isinstance(data, dict):
+                return None, "frontmatter is not a mapping"
+            return data, None
     return None, "no closing frontmatter fence"
 
 
@@ -117,10 +147,13 @@ def check_leaf_grounding(index: list) -> dict:
     for leaf in index:
         dois = leaf.get("dois")
         if dois is None:
-            findings.append(finding("leaf_grounding", "warn", leaf["slug"],
+            findings.append(finding("leaf_grounding", "warn", _slug(leaf),
                                     "no 'dois' field (grounding unknown)"))
+        elif not isinstance(dois, list):
+            findings.append(finding("leaf_grounding", "fail", _slug(leaf),
+                                    "'dois' is not a list (malformed)"))
         elif len(dois) == 0:
-            findings.append(finding("leaf_grounding", "fail", leaf["slug"],
+            findings.append(finding("leaf_grounding", "fail", _slug(leaf),
                                     "empty 'dois' (ungrounded leaf)"))
     return result("leaf_grounding", findings, len(index), 0)
 
@@ -129,10 +162,14 @@ def check_oversized_leaf(index: list) -> dict:
     """Flag leaves carrying more than MAX_TOOLS_PER_LEAF tools (meta-leaf smell)."""
     findings = []
     for leaf in index:
-        n = len(leaf.get("tools") or [])
-        if n > MAX_TOOLS_PER_LEAF:
-            findings.append(finding("oversized_leaf", "warn", leaf["slug"],
-                                    f"{n} tools (> {MAX_TOOLS_PER_LEAF})"))
+        tools, ok = _as_list(leaf.get("tools"))
+        if not ok:
+            findings.append(finding("oversized_leaf", "warn", _slug(leaf),
+                                    "'tools' is not a list (malformed)"))
+            continue
+        if len(tools) > MAX_TOOLS_PER_LEAF:
+            findings.append(finding("oversized_leaf", "warn", _slug(leaf),
+                                    f"{len(tools)} tools (> {MAX_TOOLS_PER_LEAF})"))
     return result("oversized_leaf", findings, len(index), 0)
 
 
@@ -151,7 +188,7 @@ def _dup_pairs(members: list) -> list:
                 continue
             ratio = difflib.SequenceMatcher(None, descs[i], descs[j]).ratio()
             if ratio >= _DUP_SIM_THRESHOLD:
-                pair = ", ".join(sorted([members[i]["slug"], members[j]["slug"]]))
+                pair = ", ".join(sorted([_slug(members[i]), _slug(members[j])]))
                 out.append(finding("duplicate_leaf", "warn", pair,
                                     f"descriptions {ratio:.2f} similar + shared tools/DOIs"))
     return out
@@ -162,22 +199,30 @@ def check_duplicate_leaf(index: list) -> dict:
 
     Bucketing on (tools, dois) keeps this O(sum bucket^2); the description
     similarity gate is the discriminating signal, so two distinct skills that
-    merely share a paper's tools are not flagged (precision over recall).
+    merely share a paper's tools are not flagged (precision over recall). Oversized
+    buckets skip pairwise and get one loud finding (no silent runtime cliff).
     """
     buckets = defaultdict(list)
     n_na = 0
     for leaf in index:
-        tools = leaf.get("tools") or []
-        dois = leaf.get("dois") or []
-        if not tools and not dois:
-            n_na += 1  # nothing to fingerprint → not applicable, not "unique"
+        tools, tok = _as_list(leaf.get("tools"))
+        dois, dok = _as_list(leaf.get("dois"))
+        if not (tok and dok) or (not tools and not dois):
+            n_na += 1  # malformed or nothing to fingerprint → not applicable
             continue
         key = (tuple(sorted(map(str, tools))), tuple(sorted(map(str, dois))))
         buckets[key].append(leaf)
     findings = []
     for members in buckets.values():
-        if len(members) > 1:
-            findings.extend(_dup_pairs(members))
+        if len(members) < 2:
+            continue
+        if len(members) > _MAX_DUP_BUCKET:
+            sample = ", ".join(sorted(_slug(m) for m in members)[:5])
+            findings.append(finding("duplicate_leaf", "warn", sample + ", …",
+                                    f"{len(members)} leaves share tools+DOIs "
+                                    "(bucket over cap; pairwise skipped, manual review)"))
+            continue
+        findings.extend(_dup_pairs(members))
     return result("duplicate_leaf", findings, len(index) - n_na, n_na)
 
 
@@ -187,10 +232,13 @@ def check_doi_in_corpus(index: list, corpus_dois: set) -> dict:
         return result("doi_in_corpus", [], 0, len(index), status="not_applicable")
     findings, n = [], 0
     for leaf in index:
-        for doi in (leaf.get("dois") or []):
-            n += 1
+        dois, ok = _as_list(leaf.get("dois"))
+        if not ok or not dois:
+            continue  # malformed/absent dois handled by leaf_grounding
+        n += 1
+        for doi in dois:
             if norm_doi(doi) not in corpus_dois:
-                findings.append(finding("doi_in_corpus", "warn", leaf["slug"],
+                findings.append(finding("doi_in_corpus", "warn", _slug(leaf),
                                         f"DOI not in corpus: {doi}"))
     return result("doi_in_corpus", findings, n, 0)
 
@@ -217,14 +265,18 @@ def check_workflow_integrity(collection_dir: str) -> dict:
     wf_dir = os.path.join(collection_dir, "workflows")
     if not os.path.isdir(wf_dir):
         return result("workflow_integrity", [], 0, 1, status="not_applicable")
-    idx = {r["slug"] for r in load_index(collection_dir)}
+    idx = {s for s in (r.get("slug") for r in load_index(collection_dir)) if s}
     findings, n = [], 0
     for d in sorted(glob.glob(os.path.join(wf_dir, "*"))):
         base = os.path.basename(d)
         if not os.path.isdir(d) or base.startswith("_") or base in _WORKFLOW_SKIP:
             continue
         n += 1
-        for err in vw.validate_one(d, idx):
+        try:
+            errs = vw.validate_one(d, idx)
+        except Exception as exc:  # a malformed workflow must not kill the sweep
+            errs = [f"validator crashed: {type(exc).__name__}: {exc}"]
+        for err in errs:
             findings.append(finding("workflow_integrity", "fail", base, err))
     if n == 0:
         return result("workflow_integrity", [], 0, 1, status="not_applicable")
@@ -292,11 +344,19 @@ def main(argv: list | None = None) -> int:
         print(f"error: not a directory: {args.collection_dir}", file=sys.stderr)
         return 2
 
-    checks = run_curation(args.collection_dir)
+    try:
+        checks = run_curation(args.collection_dir)
+    except FileNotFoundError as exc:
+        print(f"error: missing collection file: {exc}", file=sys.stderr)
+        return 2
     report = build_report(args.collection_dir, checks)
     out = args.report or os.path.join(args.collection_dir, "curation_report.json")
-    with open(out, "w") as fh:
-        json.dump(report, fh, indent=2)
+    try:
+        with open(out, "w") as fh:
+            json.dump(report, fh, indent=2)
+    except OSError as exc:
+        print(f"error: cannot write report to {out}: {exc}", file=sys.stderr)
+        return 2
     if not args.quiet:
         print_summary(report)
         print(f"  report: {out}")
@@ -326,6 +386,23 @@ def _selftest() -> None:
     assert check_doi_in_corpus(idx, set())["status"] == "not_applicable"
     assert check_doi_in_corpus(idx, {"10.1/x"})["status"] == "pass"
     assert norm_doi("https://doi.org/10.1/X") == "10.1/x"
+
+    # Robustness: malformed leaves must be flagged, never crash a check.
+    bad = [{"slug": "m1", "dois": "10.1/x", "tools": "abcdefghij"},  # string fields
+           {"dois": [], "tools": []}]                                # missing slug
+    assert check_leaf_grounding(bad)["status"] == "fail"  # m1 dois-not-list, m2 empty
+    assert check_oversized_leaf(bad)["n_findings"] == 1   # m1 tools flagged, not char-counted
+    check_duplicate_leaf(bad)                             # must not crash / iterate chars
+    check_doi_in_corpus(bad, {"10.1/x"})                  # must not iterate chars
+
+    # Robustness: non-dict frontmatter is an error, not an AttributeError.
+    import tempfile
+    with tempfile.NamedTemporaryFile("w", suffix=".md", delete=False) as tf:
+        tf.write("---\njust a scalar\n---\nbody\n")
+        scalar_md = tf.name
+    fm, err = read_frontmatter(scalar_md)
+    os.unlink(scalar_md)
+    assert fm is None and err == "frontmatter is not a mapping", (fm, err)
     print("curate self-test: OK")
 
 
