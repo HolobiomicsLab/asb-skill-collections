@@ -16,10 +16,10 @@ metadata:
   stage_count: 5
   member_skills:
   - peak-detection-and-mass-alignment
-  - lcims-msms-data-preprocessing-peak-detection
   - mass-spectral-feature-alignment
   - lcms-peak-detection-and-alignment
   - isotope-labeling-data-integration
+  - mass-isotopologue-adduct-grouping
   - isotope-labelling-feature-interpretation
   - metabolite-feature-grouping-by-adduct-isotope
   - isotopologue-signature-detection
@@ -30,10 +30,10 @@ metadata:
   - isotopologue-distribution-matrix-construction
   - stable-isotope-labeling-quantification
   - fractional-abundance-transformation
-  - stable-isotope-labelling-feature-detection
+  - metabolite-fold-change-statistical-testing
   - metabolite-abundance-normalization-across-conditions
-  - feature-consolidation-across-batches
-  - retention-time-mass-tolerance-calibration
+  - tab-delimited-export-formatting-for-metabolomics
+  - stable-isotope-labelling-feature-detection
   member_tools:
   - MZmine2
   - Optimus
@@ -89,13 +89,13 @@ Use when you have LC-MS data from a stable-isotope (e.g. 13C / 15N) tracing expe
 
 **Inputs:** mzML · **Outputs:** feature-table
 
-**Candidate leaf skills:** `peak-detection-and-mass-alignment` (primary), `lcims-msms-data-preprocessing-peak-detection`, `mass-spectral-feature-alignment`, `lcms-peak-detection-and-alignment`, `isotope-labeling-data-integration`
+**Candidate leaf skills:** `peak-detection-and-mass-alignment` (primary), `mass-spectral-feature-alignment`, `lcms-peak-detection-and-alignment`, `isotope-labeling-data-integration`, `mass-isotopologue-adduct-grouping`
 
 **Tools (primary):** MZmine2, Optimus, OpenMS
 
-**Other candidate tools:** DEIMoS, conda, pip, Python, Snakemake, ProteoWizard, R, devtools, BiocManager, dplyr, tidyr, readr, stringr, tibble, purrr, ggplot2, IsoPairFinder, ISFrag, XCMS, CAMERA, MS-DIAL
+**Other candidate tools:** R, devtools, BiocManager, dplyr, tidyr, readr, stringr, tibble, purrr, ggplot2, IsoPairFinder, ISFrag, XCMS, CAMERA, MS-DIAL, Centwave, FeatureFinderMetabo, ADAP, SLAW
 
-**Grounding:** 4 KB(s); DOIs: 10.1021/acs.analchem.1c01644, 10.1021/acs.analchem.1c05017, 10.1021/acs.jnatprod.7b00737, 10.1101/2021.12.05.471237v2
+**Grounding:** 4 KB(s); DOIs: 10.1021/acs.analchem.1c01644, 10.1021/acs.analchem.1c02687, 10.1021/acs.jnatprod.7b00737, 10.1101/2021.12.05.471237v2
 
 ### Stage 2 — isotopologue_extract
 
@@ -137,7 +137,7 @@ Use when you have LC-MS data from a stable-isotope (e.g. 13C / 15N) tracing expe
 
 **Inputs:** tsv · **Outputs:** tsv
 
-**Candidate leaf skills:** `stable-isotope-labeling-quantification` (primary), `fractional-abundance-transformation`, `stable-isotope-labelling-feature-detection`
+**Candidate leaf skills:** `stable-isotope-labeling-quantification` (primary), `fractional-abundance-transformation`, `metabolite-fold-change-statistical-testing`
 
 **Tools (primary):** R, isoSCAN, mzR, enviPat, Proteowizard MSconvert
 
@@ -153,13 +153,13 @@ Use when you have LC-MS data from a stable-isotope (e.g. 13C / 15N) tracing expe
 
 **Inputs:** tsv · **Outputs:** tsv
 
-**Candidate leaf skills:** `metabolite-abundance-normalization-across-conditions` (primary), `feature-consolidation-across-batches`, `retention-time-mass-tolerance-calibration`
+**Candidate leaf skills:** `metabolite-abundance-normalization-across-conditions` (primary), `tab-delimited-export-formatting-for-metabolomics`, `stable-isotope-labelling-feature-detection`
 
 **Tools (primary):** INTEGRATE, Agilent 1290 Infinity UHPLC system + Agilent 6550 iFunnel Q-TOF mass spectrometer, constraint-based stoichiometric metabolic models (e.g., ENGRO2)
 
-**Other candidate tools:** R (>=), LargeMetabo, R, meRgeION2, GNPS
+**Other candidate tools:** R, rmarkdown, knitr, ggplot2, metaboprep, geoRge, XCMS
 
-**Grounding:** 3 KB(s); DOIs: 10.1021/acs.analchem.2c04343, 10.1093/bib/bbac455, 10.1371/journal.pcbi.1009337
+**Grounding:** 3 KB(s); DOIs: 10.1021/acs.analchem.5b03628, 10.1093/bioinformatics/btac059/6522114, 10.1371/journal.pcbi.1009337
 
 ## Grounding
 

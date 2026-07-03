@@ -9,10 +9,10 @@ steps:
   edam_operation: operation_3215
   skills:
   - peak-detection-and-mass-alignment
-  - lcims-msms-data-preprocessing-peak-detection
   - mass-spectral-feature-alignment
   - lcms-peak-detection-and-alignment
   - isotope-labeling-data-integration
+  - mass-isotopologue-adduct-grouping
   tools:
   - MZmine2
   - Optimus
@@ -24,22 +24,16 @@ steps:
   grounding:
     kb_slugs:
     - asb-paper-10-1021-acs-analchem-1c01644
-    - asb-paper-10-1021-acs-analchem-1c05017
+    - asb-paper-10-1021-acs-analchem-1c02687
     - asb-paper-10-1021-acs-jnatprod-7b00737
     - asb-paper-10-1101-2021-12-05-471237v2
     dois:
     - 10.1021/acs.analchem.1c01644
-    - 10.1021/acs.analchem.1c05017
+    - 10.1021/acs.analchem.1c02687
     - 10.1021/acs.jnatprod.7b00737
     - 10.1101/2021.12.05.471237v2
   after: []
   candidate_tools:
-  - DEIMoS
-  - conda
-  - pip
-  - Python
-  - Snakemake
-  - ProteoWizard
   - R
   - devtools
   - BiocManager
@@ -55,6 +49,10 @@ steps:
   - XCMS
   - CAMERA
   - MS-DIAL
+  - Centwave
+  - FeatureFinderMetabo
+  - ADAP
+  - SLAW
 - id: isotopologue_extract
   goal: feature table -> per-metabolite isotopologue intensity distributions
   edam_operation: operation_3799
@@ -131,7 +129,7 @@ steps:
   skills:
   - stable-isotope-labeling-quantification
   - fractional-abundance-transformation
-  - stable-isotope-labelling-feature-detection
+  - metabolite-fold-change-statistical-testing
   tools:
   - R
   - isoSCAN
@@ -165,8 +163,8 @@ steps:
   edam_operation: operation_3434
   skills:
   - metabolite-abundance-normalization-across-conditions
-  - feature-consolidation-across-batches
-  - retention-time-mass-tolerance-calibration
+  - tab-delimited-export-formatting-for-metabolomics
+  - stable-isotope-labelling-feature-detection
   tools:
   - INTEGRATE
   - Agilent 1290 Infinity UHPLC system + Agilent 6550 iFunnel Q-TOF mass spectrometer
@@ -177,21 +175,23 @@ steps:
   - type: tsv
   grounding:
     kb_slugs:
-    - asb-paper-10-1021-acs-analchem-2c04343
-    - asb-paper-10-1093-bib-bbac455
+    - asb-paper-10-1021-acs-analchem-5b03628
+    - asb-paper-10-1093-bioinformatics-btac059-6522114
     - asb-paper-10-1371-journal-pcbi-1009337
     dois:
-    - 10.1021/acs.analchem.2c04343
-    - 10.1093/bib/bbac455
+    - 10.1021/acs.analchem.5b03628
+    - 10.1093/bioinformatics/btac059/6522114
     - 10.1371/journal.pcbi.1009337
   after:
   - labelling_analysis
   candidate_tools:
-  - R (>=)
-  - LargeMetabo
   - R
-  - meRgeION2
-  - GNPS
+  - rmarkdown
+  - knitr
+  - ggplot2
+  - metaboprep
+  - geoRge
+  - XCMS
   inputs_from:
     labelling_analysis:
     - tsv

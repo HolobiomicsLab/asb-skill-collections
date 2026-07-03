@@ -53,15 +53,14 @@ steps:
   goal: MS2 spectra -> molecular family graph (modified cosine; GNPS-style components)
   edam_operation: operation_3214
   skills:
-  - gnps-molecular-network-integration
-  - molecular-family-graph-construction
   - spectral-similarity-network-generation
-  - spectral-library-molecular-networking
-  - graph-based-metabolite-similarity-assessment
+  - molecular-family-graph-construction
+  - metabolomic-spectral-annotation-and-molecular-family-clustering
+  - molecular-family-grouping-analysis
+  - metabolomic-molecular-family-networking-gnps
   tools:
-  - mineMS2
-  - igraph
-  - R
+  - MZmine2
+  - Optimus
   - GNPS
   - Cytoscape
   inputs:
@@ -73,24 +72,35 @@ steps:
   grounding:
     kb_slugs:
     - asb-paper-10-1021-acs-jnatprod-7b00737
-    - asb-paper-10-1038-s41587-020-0700-3
-    - asb-paper-10-1186-s13321-025-01051-y
+    - asb-paper-10-1101-2024-10-11-617756
+    - asb-paper-10-1186-1471-2105-6-225
     - asb-paper-10-1186-s40168-022-01444-3
+    - asb-paper-10-1371-journal-pcbi-1008920
+    - asb-paper-10-3390-metabo11020103
     dois:
     - 10.1021/acs.jnatprod.7b00737
-    - 10.1038/s41587-020-0700-3
-    - 10.1186/s13321-025-01051-y
+    - 10.1101/2024.10.11.617756
+    - 10.1186/1471-2105-6-225
     - 10.1186/s40168-022-01444-3
+    - 10.1371/journal.pcbi.1008920
+    - 10.3390/metabo11020103
   after:
   - preprocess
   candidate_tools:
   - nplinker
   - Python
   - pytest
-  - MZmine2
-  - Optimus
-  - MSHub
-  - MSnbase
+  - antiSMASH
+  - BiG-SCAPE
+  - MIBiG
+  - MS2LDA
+  - PALS (Pathway Activity Level Scoring)
+  - GNPS (Global Natural Products Social Molecular Networking)
+  - MS2LDA (Mass2Motif Latent Dirichlet Allocation)
+  - PALS Viewer
+  - conda
+  - pip
+  - BigScape
   inputs_from:
     preprocess:
     - mgf:gnps-fbmn
@@ -100,7 +110,8 @@ steps:
   skills:
   - spectral-library-matching-annotation
   - spectral-library-matching
-  - spectral-library-matching-with-cosine-similarity
+  - spectral-library-molecular-networking
+  - mass-spectrometry-library-ranking
   tools:
   - MSThunder
   - Windows
@@ -115,16 +126,18 @@ steps:
     kb_slugs:
     - asb-paper-10-1016-j-enceco-2025-07-022
     - asb-paper-10-1021-acs-analchem-2c04343
-    - asb-paper-10-1021-acs-jproteome-8b00359
+    - asb-paper-10-1021-acs-analchem-4c02426
     - asb-paper-10-1021-jasms-5c00322
     - asb-paper-10-1038-s41538-022-00137-3
+    - asb-paper-10-1038-s41587-020-0700-3
     - asb-paper-10-1089-omi-2021-0051
     dois:
     - 10.1016/j.enceco.2025.07.022
     - 10.1021/acs.analchem.2c04343
-    - 10.1021/acs.jproteome.8b00359
+    - 10.1021/acs.analchem.4c02426
     - 10.1021/jasms.5c00322
     - 10.1038/s41538-022-00137-3
+    - 10.1038/s41587-020-0700-3
     - 10.1089/omi.2021.0051
   after:
   - preprocess
@@ -148,7 +161,14 @@ steps:
   - mssearchr
   - R
   - NIST API
-  - ANN-SoLo
+  - MSHub
+  - Python
+  - Anaconda
+  - Git
+  - MSBERT
+  - PyTorch
+  - matchms
+  - Spec2Vec
   inputs_from:
     preprocess:
     - mgf:gnps-fbmn
@@ -231,19 +251,15 @@ steps:
     table
   edam_operation: operation_3434
   skills:
-  - feature-network-construction-from-mass-spectrometry
-  - feature-to-metabolite-network-propagation
-  - feature-table-consensus-aggregation
-  - feature-network-construction-and-partitioning
-  - feature-table-integration-and-normalization
+  - feature-metadata-annotation
+  - feature-consolidation-across-batches
+  - untargeted-metabolomics-dataset-integration
+  - lcms-feature-table-construction
+  - feature-annotation-consolidation
   tools:
-  - networkx
-  - treelib
-  - mass2chem
-  - metDataModel
-  - Python 3
-  - asari
-  - khipu
+  - msFeaST
+  - jupyter-notebook
+  - msFeaST Dashboard bundle
   inputs:
   - type: feature-table
   - type: graphml
@@ -252,29 +268,34 @@ steps:
   - type: tsv
   grounding:
     kb_slugs:
-    - asb-paper-10-1021-acs-analchem-1c01644
-    - asb-paper-10-1021-acs-analchem-1c05017
-    - asb-paper-10-1021-acs-analchem-2c05810
-    - asb-paper-10-1371-journal-pcbi-1003123
+    - asb-paper-10-1021-ac051437y
+    - asb-paper-10-1021-acs-analchem-1c02687
+    - asb-paper-10-1021-acs-analchem-1c03592
+    - asb-paper-10-1093-bib-bbac455
+    - asb-paper-10-1093-bioinformatics-btae584
     dois:
-    - 10.1021/acs.analchem.1c01644
-    - 10.1021/acs.analchem.1c05017
-    - 10.1021/acs.analchem.2c05810
-    - 10.1371/journal.pcbi.1003123
+    - 10.1021/ac051437y
+    - 10.1021/acs.analchem.1c02687
+    - 10.1021/acs.analchem.1c03592
+    - 10.1093/bib/bbac455
+    - 10.1093/bioinformatics/btae584
   after:
   - preprocess
   - network
   - propagate
   candidate_tools:
-  - Mummichog 3
-  - JMS
-  - Python
-  - DEIMoS
-  - numpy
-  - ProteoWizard msconvert
-  - ISFrag
+  - R (>=)
+  - LargeMetabo
   - R
-  - XCMS
+  - Matlab
+  - M2S
+  - Centwave
+  - FeatureFinderMetabo
+  - ADAP
+  - ProteoWizard
+  - MsFeatures
+  - xcms
+  - faahKO
   inputs_from:
     preprocess:
     - feature-table

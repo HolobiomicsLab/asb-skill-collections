@@ -21,14 +21,15 @@ metadata:
   - lcms-peak-detection-and-alignment
   - spectral-feature-table-generation
   - mass-spectrometry-feature-detection-validation
-  - gnps-molecular-network-integration
-  - molecular-family-graph-construction
   - spectral-similarity-network-generation
-  - spectral-library-molecular-networking
-  - graph-based-metabolite-similarity-assessment
+  - molecular-family-graph-construction
+  - metabolomic-spectral-annotation-and-molecular-family-clustering
+  - molecular-family-grouping-analysis
+  - metabolomic-molecular-family-networking-gnps
   - spectral-library-matching-annotation
   - spectral-library-matching
-  - spectral-library-matching-with-cosine-similarity
+  - spectral-library-molecular-networking
+  - mass-spectrometry-library-ranking
   - chemical-ontology-mapping
   - spectral-feature-chemical-assignment
   - consensus-classification-reconciliation
@@ -39,18 +40,15 @@ metadata:
   - molecular-network-node-annotation
   - molecular-network-attribute-enrichment
   - molecular-network-annotation-integration
-  - feature-network-construction-from-mass-spectrometry
-  - feature-to-metabolite-network-propagation
-  - feature-table-consensus-aggregation
-  - feature-network-construction-and-partitioning
-  - feature-table-integration-and-normalization
+  - feature-metadata-annotation
+  - feature-consolidation-across-batches
+  - untargeted-metabolomics-dataset-integration
+  - lcms-feature-table-construction
+  - feature-annotation-consolidation
   member_tools:
   - MZmine2
   - Optimus
   - OpenMS
-  - mineMS2
-  - igraph
-  - R
   - GNPS
   - Cytoscape
   - MSThunder
@@ -65,13 +63,9 @@ metadata:
   - Python
   - RMolNetEnhancer
   - MS2LDA
-  - networkx
-  - treelib
-  - mass2chem
-  - metDataModel
-  - Python 3
-  - asari
-  - khipu
+  - msFeaST
+  - jupyter-notebook
+  - msFeaST Dashboard bundle
   coverage_gaps: []
   derived_from_workflows:
   - coll_molnetenhancer
@@ -130,13 +124,13 @@ Use when you have untargeted LC-MS/MS MS2 data and want to spread a handful of c
 
 **Inputs:** mgf/gnps-fbmn · **Outputs:** graphml, tsv
 
-**Candidate leaf skills:** `gnps-molecular-network-integration` (primary), `molecular-family-graph-construction`, `spectral-similarity-network-generation`, `spectral-library-molecular-networking`, `graph-based-metabolite-similarity-assessment`
+**Candidate leaf skills:** `spectral-similarity-network-generation` (primary), `molecular-family-graph-construction`, `metabolomic-spectral-annotation-and-molecular-family-clustering`, `molecular-family-grouping-analysis`, `metabolomic-molecular-family-networking-gnps`
 
-**Tools (primary):** mineMS2, igraph, R, GNPS, Cytoscape
+**Tools (primary):** MZmine2, Optimus, GNPS, Cytoscape
 
-**Other candidate tools:** nplinker, Python, pytest, MZmine2, Optimus, MSHub, MSnbase
+**Other candidate tools:** nplinker, Python, pytest, antiSMASH, BiG-SCAPE, MIBiG, MS2LDA, PALS (Pathway Activity Level Scoring), GNPS (Global Natural Products Social Molecular Networking), MS2LDA (Mass2Motif Latent Dirichlet Allocation), PALS Viewer, conda, pip, BigScape
 
-**Grounding:** 4 KB(s); DOIs: 10.1021/acs.jnatprod.7b00737, 10.1038/s41587-020-0700-3, 10.1186/s13321-025-01051-y, 10.1186/s40168-022-01444-3
+**Grounding:** 6 KB(s); DOIs: 10.1021/acs.jnatprod.7b00737, 10.1101/2024.10.11.617756, 10.1186/1471-2105-6-225, 10.1186/s40168-022-01444-3 …
 
 ### Stage 3 — seed_annotate
 
@@ -146,13 +140,13 @@ Use when you have untargeted LC-MS/MS MS2 data and want to spread a handful of c
 
 **Inputs:** mgf/gnps-fbmn · **Outputs:** tsv
 
-**Candidate leaf skills:** `spectral-library-matching-annotation` (primary), `spectral-library-matching`, `spectral-library-matching-with-cosine-similarity`
+**Candidate leaf skills:** `spectral-library-matching-annotation` (primary), `spectral-library-matching`, `spectral-library-molecular-networking`, `mass-spectrometry-library-ranking`
 
 **Tools (primary):** MSThunder, Windows, GNPS, MSConvert
 
-**Other candidate tools:** microbeMASST, metadataMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST, GNPS_MASST, GNPS libraries, Fast Search API, MZmine, MASSBANK, DrugBANK, meRgeION2, RChemMass, MS2Compound, CFM-id, mssearchr, R, NIST API, ANN-SoLo
+**Other candidate tools:** microbeMASST, metadataMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST, GNPS_MASST, GNPS libraries, Fast Search API, MZmine, MASSBANK, DrugBANK, meRgeION2, RChemMass, MS2Compound, CFM-id, mssearchr, R, NIST API, MSHub, Python, Anaconda, Git, MSBERT, PyTorch, matchms, Spec2Vec
 
-**Grounding:** 6 KB(s); DOIs: 10.1016/j.enceco.2025.07.022, 10.1021/acs.analchem.2c04343, 10.1021/acs.jproteome.8b00359, 10.1021/jasms.5c00322 …
+**Grounding:** 7 KB(s); DOIs: 10.1016/j.enceco.2025.07.022, 10.1021/acs.analchem.2c04343, 10.1021/acs.analchem.4c02426, 10.1021/jasms.5c00322 …
 
 ### Stage 4 — class_annotate
 
@@ -194,13 +188,13 @@ Use when you have untargeted LC-MS/MS MS2 data and want to spread a handful of c
 
 **Inputs:** feature-table, graphml, tsv · **Outputs:** tsv
 
-**Candidate leaf skills:** `feature-network-construction-from-mass-spectrometry` (primary), `feature-to-metabolite-network-propagation`, `feature-table-consensus-aggregation`, `feature-network-construction-and-partitioning`, `feature-table-integration-and-normalization`
+**Candidate leaf skills:** `feature-metadata-annotation` (primary), `feature-consolidation-across-batches`, `untargeted-metabolomics-dataset-integration`, `lcms-feature-table-construction`, `feature-annotation-consolidation`
 
-**Tools (primary):** networkx, treelib, mass2chem, metDataModel, Python 3, asari, khipu
+**Tools (primary):** msFeaST, jupyter-notebook, msFeaST Dashboard bundle
 
-**Other candidate tools:** Mummichog 3, JMS, Python, DEIMoS, numpy, ProteoWizard msconvert, ISFrag, R, XCMS
+**Other candidate tools:** R (>=), LargeMetabo, R, Matlab, M2S, Centwave, FeatureFinderMetabo, ADAP, ProteoWizard, MsFeatures, xcms, faahKO
 
-**Grounding:** 4 KB(s); DOIs: 10.1021/acs.analchem.1c01644, 10.1021/acs.analchem.1c05017, 10.1021/acs.analchem.2c05810, 10.1371/journal.pcbi.1003123
+**Grounding:** 5 KB(s); DOIs: 10.1021/ac051437y, 10.1021/acs.analchem.1c02687, 10.1021/acs.analchem.1c03592, 10.1093/bib/bbac455 …
 
 ## Grounding
 

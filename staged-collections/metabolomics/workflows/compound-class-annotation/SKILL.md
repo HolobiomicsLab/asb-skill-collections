@@ -26,18 +26,20 @@ metadata:
   - molecular-formula-assignment
   - fragment-peak-subformula-enumeration
   - molecular-fingerprint-parsing
-  - molecular-fingerprint-prediction
   - spectrum-query-formatting
-  - spectral-fingerprint-web-service-query
-  - molecular-fingerprint-generation-and-encoding
-  - natural-product-classifier-substitution
+  - spectrum-fingerprint-contrastive-learning
+  - molecular-fingerprint-generation
+  - molecular-fingerprint-representation-learning
   - natural-product-classification-prediction
-  - classification-workflow-parameter-toggling
-  - consensus-classification-reconciliation
-  - spectral-feature-chemical-assignment
   - chemical-classification-scheme-validation
   - chemical-ontology-mapping
-  - structural-annotation-integration
+  - chemical-class-assignment-classyfire
+  - classyfire-taxonomy-assignment
+  - consensus-classification-reconciliation
+  - consensus-taxonomy-generation
+  - annotation-table-quality-control
+  - sample-centric-metabolite-annotation
+  - chemical-phylogenetic-comparison
   member_tools:
   - MZmine2
   - Optimus
@@ -48,6 +50,13 @@ metadata:
   - SIRIUS
   - CSI:FingerID
   - CANOPUS
+  - Python
+  - Docker
+  - docker-compose
+  - TensorFlow 2.3.0
+  - Keras
+  - TensorFlow Serving
+  - NP Classifier Repository
   - NPClassifier
   - GNPS
   - ClassyFire
@@ -124,13 +133,13 @@ Use when you want chemical-class-level annotations for untargeted LC-MS/MS featu
 
 **Inputs:** tsv · **Outputs:** tsv
 
-**Candidate leaf skills:** `molecular-fingerprint-parsing` (primary), `molecular-fingerprint-prediction`, `spectrum-query-formatting`, `spectral-fingerprint-web-service-query`, `molecular-fingerprint-generation-and-encoding`
+**Candidate leaf skills:** `molecular-fingerprint-parsing` (primary), `spectrum-query-formatting`, `spectrum-fingerprint-contrastive-learning`, `molecular-fingerprint-generation`, `molecular-fingerprint-representation-learning`
 
 **Tools (primary):** CSI:FingerID, SIRIUS, CANOPUS
 
-**Other candidate tools:** PyTorch, MIST, MIST-CF, SIRIUS decomp, ClassyFire
+**Other candidate tools:** MIST, MIST-CF, RDKit, matchms, Python, MS2DeepScore, Spec2Vec, scikit-learn, pubchempy, TensorFlow, PyTorch, PyFingerprint, Open Babel
 
-**Grounding:** 2 KB(s); DOIs: 10.1038/s41587-021-01045-9, 10.1038/s42256-023-00708-3
+**Grounding:** 4 KB(s); DOIs: 10.1007/s11306-020-01726-7, 10.1038/s41587-021-01045-9, 10.1038/s42256-023-00708-3, 10.1186/s13321-021-00558-4
 
 ### Stage 4 — classify
 
@@ -140,13 +149,13 @@ Use when you want chemical-class-level annotations for untargeted LC-MS/MS featu
 
 **Inputs:** tsv · **Outputs:** tsv
 
-**Candidate leaf skills:** `natural-product-classifier-substitution` (primary), `natural-product-classification-prediction`, `classification-workflow-parameter-toggling`
+**Candidate leaf skills:** `natural-product-classification-prediction` (primary), `chemical-classification-scheme-validation`, `chemical-ontology-mapping`, `chemical-class-assignment-classyfire`, `classyfire-taxonomy-assignment`
 
-**Tools (primary):** NPClassifier, SIRIUS, GNPS, ClassyFire, ConCISE
+**Tools (primary):** Python, Docker, docker-compose, TensorFlow 2.3.0, Keras, TensorFlow Serving, NP Classifier Repository
 
-**Other candidate tools:** Python, Docker, docker-compose, TensorFlow 2.3.0, Keras, TensorFlow Serving, NP Classifier Repository
+**Other candidate tools:** NPClassifier, SIRIUS, GNPS, ClassyFire, ConCISE, Fiehn Labs ClassyFire Batch, CANOPUS, matchms, MS2DeepScore, scikit-learn, RDKit, PubChem standardization, rcdk
 
-**Grounding:** 2 KB(s); DOIs: 10.1021/acs.jnatprod.1c00399, 10.3390/metabo12121275
+**Grounding:** 4 KB(s); DOIs: 10.1021/acs.jnatprod.1c00399, 10.1038/s41592-023-02143-z, 10.1186/s13321-021-00558-4, 10.3390/metabo12121275
 
 ### Stage 5 — consolidate
 
@@ -156,13 +165,13 @@ Use when you want chemical-class-level annotations for untargeted LC-MS/MS featu
 
 **Inputs:** feature-table, tsv · **Outputs:** tsv
 
-**Candidate leaf skills:** `consensus-classification-reconciliation` (primary), `spectral-feature-chemical-assignment`, `chemical-classification-scheme-validation`, `chemical-ontology-mapping`, `structural-annotation-integration`
+**Candidate leaf skills:** `consensus-classification-reconciliation` (primary), `consensus-taxonomy-generation`, `annotation-table-quality-control`, `sample-centric-metabolite-annotation`, `chemical-phylogenetic-comparison`
 
 **Tools (primary):** SIRIUS, NPClassifier, GNPS, ClassyFire, ConCISE
 
-**Other candidate tools:** Fiehn Labs ClassyFire Batch, CANOPUS
+**Other candidate tools:** CANOPUS, Fiehn Labs ClassyFire Batch, Inventa, ENPKG, MZmine, enpkg_mn_isdb_taxo, enpkg_sirius_canopus, enpkg_meta_analysis, Open Tree of Life, Wikidata, ChEMBL, q2-qemistree, MZmine2, GNPS FBMN
 
-**Grounding:** 1 KB(s); DOIs: 10.3390/metabo12121275
+**Grounding:** 5 KB(s); DOIs: 10.1021/acscentsci.3c00800, 10.1038/s41467-021-23953-9, 10.1038/s41589-020-00677-3, 10.3389/fmolb.2022.1028334 …
 
 ## Grounding
 

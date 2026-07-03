@@ -17,13 +17,14 @@ metadata:
   member_skills:
   - peak-detection-and-mass-alignment
   - mass-spectrometry-feature-table-construction
-  - ms1-feature-extraction
   - mass-spectrometry-feature-detection-validation
   - non-targeted-preprocessing-tool-comparison
+  - non-targeted-feature-detection-and-screening
   - suspect-database-matching
+  - ms1-feature-extraction
   - mass-spectrometry-screening-workflows
-  - feature-annotation-with-chemical-descriptors
   - multi-criterion-scoring-integration
+  - feature-annotation-with-chemical-descriptors
   - in-silico-fragmentation-prediction
   - candidate-structure-ranking
   - candidate-rank-scoring
@@ -33,10 +34,10 @@ metadata:
   - metabolite-annotation-confidence-assignment
   - annotation-confidence-assessment
   - annotation-scoring-and-ranking
-  - lipid-species-identification
+  - bayesian-annotation-probability-inference
   - suspect-list-format-conversion
-  - inchikey-structural-similarity-computation
-  - spectral-database-schema-validation
+  - chemical-structure-validation
+  - hit-score-consolidation-across-domains
   member_tools:
   - MZmine2
   - Optimus
@@ -93,13 +94,13 @@ Use when you have untargeted HRMS data and want to screen for a defined suspect 
 
 **Inputs:** mzML · **Outputs:** feature-table, mgf/gnps-fbmn
 
-**Candidate leaf skills:** `peak-detection-and-mass-alignment` (primary), `mass-spectrometry-feature-table-construction`, `ms1-feature-extraction`, `mass-spectrometry-feature-detection-validation`, `non-targeted-preprocessing-tool-comparison`
+**Candidate leaf skills:** `peak-detection-and-mass-alignment` (primary), `mass-spectrometry-feature-table-construction`, `mass-spectrometry-feature-detection-validation`, `non-targeted-preprocessing-tool-comparison`, `non-targeted-feature-detection-and-screening`
 
 **Tools (primary):** MZmine2, Optimus, OpenMS
 
-**Other candidate tools:** Python, pyOpenMS, MSConvert, PFΔScreen, Scannotation, mzRAPP, MZmine 2, R, XCMS, enviPat, Skyline, R (with mzRAPP library)
+**Other candidate tools:** Python, pyOpenMS, MSConvert, PFΔScreen, mzRAPP, MZmine 2, R, XCMS, enviPat, Skyline, R (with mzRAPP library), pymzml, pandas, numpy, scipy, joblib, tqdm, tqdm_joblib, matplotlib
 
-**Grounding:** 4 KB(s); DOIs: 10.1007/s00216-023-05070-2, 10.1021/acs.est.3c04764, 10.1021/acs.jnatprod.7b00737, 10.1093/bioinformatics/btab231/6214530
+**Grounding:** 4 KB(s); DOIs: 10.1007/s00216-023-05070-2, 10.1021/acs.analchem.5c00060, 10.1021/acs.jnatprod.7b00737, 10.1093/bioinformatics/btab231/6214530
 
 ### Stage 2 — suspect_match
 
@@ -109,11 +110,11 @@ Use when you have untargeted HRMS data and want to screen for a defined suspect 
 
 **Inputs:** feature-table, mgf/gnps-fbmn · **Outputs:** tsv
 
-**Candidate leaf skills:** `suspect-database-matching` (primary), `mass-spectrometry-screening-workflows`, `feature-annotation-with-chemical-descriptors`, `multi-criterion-scoring-integration`
+**Candidate leaf skills:** `suspect-database-matching` (primary), `ms1-feature-extraction`, `mass-spectrometry-screening-workflows`, `multi-criterion-scoring-integration`, `feature-annotation-with-chemical-descriptors`
 
 **Tools (primary):** R Shiny, EISA-EXPOSOME, T3DB
 
-**Other candidate tools:** patRoon, XCMS, OpenMS, BioTransformer, CTS, MetFrag, SIRIUS, CAMERA, RAMClustR, ProteoWizard, Python, pyOpenMS, MSConvert, PFΔScreen, Scannotation
+**Other candidate tools:** Scannotation, patRoon, XCMS, OpenMS, BioTransformer, CTS, MetFrag, SIRIUS, CAMERA, RAMClustR, ProteoWizard, Python, pyOpenMS, MSConvert, PFΔScreen
 
 **Grounding:** 4 KB(s); DOIs: 10.1007/s00216-023-05070-2, 10.1021/acs.analchem.3c02697, 10.1021/acs.est.3c04764, 10.1186/s13321-020-00477-w
 
@@ -141,13 +142,13 @@ Use when you have untargeted HRMS data and want to screen for a defined suspect 
 
 **Inputs:** tsv · **Outputs:** tsv
 
-**Candidate leaf skills:** `compound-annotation-confidence-assessment` (primary), `metabolite-annotation-confidence-assignment`, `annotation-confidence-assessment`, `annotation-scoring-and-ranking`, `lipid-species-identification`
+**Candidate leaf skills:** `compound-annotation-confidence-assessment` (primary), `metabolite-annotation-confidence-assignment`, `annotation-confidence-assessment`, `annotation-scoring-and-ranking`, `bayesian-annotation-probability-inference`
 
 **Tools (primary):** masscube, Python
 
-**Other candidate tools:** R, XCMS, MS-Dial, GetFeatistics, patRoon, MS-CleanR, MS-FINDER, commons-math3, jfreechart, jopt-simple, trove4j, Passatutto, MetaboAnnotatoR, R (version or higher), RamClustR, R (≥4.5.0)
+**Other candidate tools:** R, XCMS, MS-Dial, GetFeatistics, patRoon, MS-CleanR, MS-FINDER, commons-math3, jfreechart, jopt-simple, trove4j, Passatutto, ipaPy2
 
-**Grounding:** 5 KB(s); DOIs: 10.1021/acs.analchem.0c01594, 10.1021/acs.analchem.1c03032, 10.1038/s41467-025-60640-5, 10.1515/jib-2025-0047 …
+**Grounding:** 5 KB(s); DOIs: 10.1021/acs.analchem.0c01594, 10.1038/s41467-025-60640-5, 10.1093/bioinformatics/btad455, 10.1515/jib-2025-0047 …
 
 ### Stage 5 — report
 
@@ -157,13 +158,13 @@ Use when you have untargeted HRMS data and want to screen for a defined suspect 
 
 **Inputs:** tsv, feature-table · **Outputs:** tsv
 
-**Candidate leaf skills:** `suspect-list-format-conversion` (primary), `inchikey-structural-similarity-computation`, `spectral-database-schema-validation`
+**Candidate leaf skills:** `suspect-list-format-conversion` (primary), `chemical-structure-validation`, `hit-score-consolidation-across-domains`
 
 **Tools (primary):** patRoon, generateTPs, screenSuspects, BioTransformer, CTS
 
-**Other candidate tools:** MS2Query, GitHub, MS2Deepscore, RDKit, Random forest (scikit-learn or equivalent), R Shiny, T3DB
+**Other candidate tools:** RDKit, PubChemPy, Python, SIRIUS, MetFrag, metadataMASST, microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST, Fast Search API, GNPS_MASST
 
-**Grounding:** 3 KB(s); DOIs: 10.1021/acs.analchem.3c02697, 10.1038/s41467-023-37446-4, 10.1186/s13321-020-00477-w
+**Grounding:** 3 KB(s); DOIs: 10.1038/s41564-023-01575-9, 10.1186/s13321-020-00477-w, 10.1186/s13321-023-00695-y
 
 ## Grounding
 

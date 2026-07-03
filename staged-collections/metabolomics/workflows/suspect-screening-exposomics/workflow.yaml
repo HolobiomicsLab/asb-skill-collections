@@ -10,9 +10,9 @@ steps:
   skills:
   - peak-detection-and-mass-alignment
   - mass-spectrometry-feature-table-construction
-  - ms1-feature-extraction
   - mass-spectrometry-feature-detection-validation
   - non-targeted-preprocessing-tool-comparison
+  - non-targeted-feature-detection-and-screening
   tools:
   - MZmine2
   - Optimus
@@ -26,12 +26,12 @@ steps:
   grounding:
     kb_slugs:
     - asb-paper-10-1007-s00216-023-05070-2
-    - asb-paper-10-1021-acs-est-3c04764
+    - asb-paper-10-1021-acs-analchem-5c00060
     - asb-paper-10-1021-acs-jnatprod-7b00737
     - asb-paper-10-1093-bioinformatics-btab231-6214530
     dois:
     - 10.1007/s00216-023-05070-2
-    - 10.1021/acs.est.3c04764
+    - 10.1021/acs.analchem.5c00060
     - 10.1021/acs.jnatprod.7b00737
     - 10.1093/bioinformatics/btab231/6214530
   after: []
@@ -40,7 +40,6 @@ steps:
   - pyOpenMS
   - MSConvert
   - PFΔScreen
-  - Scannotation
   - mzRAPP
   - MZmine 2
   - R
@@ -48,14 +47,23 @@ steps:
   - enviPat
   - Skyline
   - R (with mzRAPP library)
+  - pymzml
+  - pandas
+  - numpy
+  - scipy
+  - joblib
+  - tqdm
+  - tqdm_joblib
+  - matplotlib
 - id: suspect_match
   goal: features -> suspect-list matches by exact mass / RT / MS2
   edam_operation: operation_3631
   skills:
   - suspect-database-matching
+  - ms1-feature-extraction
   - mass-spectrometry-screening-workflows
-  - feature-annotation-with-chemical-descriptors
   - multi-criterion-scoring-integration
+  - feature-annotation-with-chemical-descriptors
   tools:
   - R Shiny
   - EISA-EXPOSOME
@@ -80,6 +88,7 @@ steps:
   after:
   - preprocess
   candidate_tools:
+  - Scannotation
   - patRoon
   - XCMS
   - OpenMS
@@ -94,7 +103,6 @@ steps:
   - pyOpenMS
   - MSConvert
   - PFΔScreen
-  - Scannotation
   inputs_from:
     preprocess:
     - feature-table
@@ -167,7 +175,7 @@ steps:
   - metabolite-annotation-confidence-assignment
   - annotation-confidence-assessment
   - annotation-scoring-and-ranking
-  - lipid-species-identification
+  - bayesian-annotation-probability-inference
   tools:
   - masscube
   - Python
@@ -178,14 +186,14 @@ steps:
   grounding:
     kb_slugs:
     - asb-paper-10-1021-acs-analchem-0c01594
-    - asb-paper-10-1021-acs-analchem-1c03032
     - asb-paper-10-1038-s41467-025-60640-5
+    - asb-paper-10-1093-bioinformatics-btad455
     - asb-paper-10-1515-jib-2025-0047
     - asb-paper-10-3390-metabo12020173
     dois:
     - 10.1021/acs.analchem.0c01594
-    - 10.1021/acs.analchem.1c03032
     - 10.1038/s41467-025-60640-5
+    - 10.1093/bioinformatics/btad455
     - 10.1515/jib-2025-0047
     - 10.3390/metabo12020173
   after:
@@ -203,10 +211,7 @@ steps:
   - jopt-simple
   - trove4j
   - Passatutto
-  - MetaboAnnotatoR
-  - R (version or higher)
-  - RamClustR
-  - R (≥4.5.0)
+  - ipaPy2
   inputs_from:
     in_silico_fragment:
     - tsv
@@ -215,8 +220,8 @@ steps:
   edam_operation: operation_3434
   skills:
   - suspect-list-format-conversion
-  - inchikey-structural-similarity-computation
-  - spectral-database-schema-validation
+  - chemical-structure-validation
+  - hit-score-consolidation-across-domains
   tools:
   - patRoon
   - generateTPs
@@ -230,24 +235,30 @@ steps:
   - type: tsv
   grounding:
     kb_slugs:
-    - asb-paper-10-1021-acs-analchem-3c02697
-    - asb-paper-10-1038-s41467-023-37446-4
+    - asb-paper-10-1038-s41564-023-01575-9
     - asb-paper-10-1186-s13321-020-00477-w
+    - asb-paper-10-1186-s13321-023-00695-y
     dois:
-    - 10.1021/acs.analchem.3c02697
-    - 10.1038/s41467-023-37446-4
+    - 10.1038/s41564-023-01575-9
     - 10.1186/s13321-020-00477-w
+    - 10.1186/s13321-023-00695-y
   after:
   - confidence
   - preprocess
   candidate_tools:
-  - MS2Query
-  - GitHub
-  - MS2Deepscore
   - RDKit
-  - Random forest (scikit-learn or equivalent)
-  - R Shiny
-  - T3DB
+  - PubChemPy
+  - Python
+  - SIRIUS
+  - MetFrag
+  - metadataMASST
+  - microbeMASST
+  - plantMASST
+  - tissueMASST
+  - microbiomeMASST
+  - foodMASST
+  - Fast Search API
+  - GNPS_MASST
   inputs_from:
     confidence:
     - tsv
