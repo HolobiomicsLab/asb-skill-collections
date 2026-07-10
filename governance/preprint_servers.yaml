@@ -1,0 +1,29 @@
+# Server-specific licence APIs, consulted only when the DOI registry itself
+# declares no usable licence URL. Crossref names the server in `institution[].name`;
+# that name (lowercased) selects an entry here. Nothing dispatches on a DOI prefix,
+# so adding a server is a change to this file, never to scripts/preprint_license.py.
+#
+# Human doc: governance/OPEN_ACCESS_POLICY.md, section "Pre-prints".
+version: 1
+
+servers:
+  biorxiv:
+    detail_url: https://api.biorxiv.org/details/biorxiv/{doi}
+  medrxiv:
+    detail_url: https://api.biorxiv.org/details/medrxiv/{doi}
+
+# The token these servers return in `collection[].license` -> an SPDX id.
+# Resolve the id's reuse rights through `source_reuse` in license_tiers.yaml.
+# A token absent from this table is UNKNOWN and blocks admission; it is never
+# assumed to be permissive.
+license_tokens:
+  cc_by: CC-BY-4.0
+  cc_by_sa: CC-BY-SA-4.0
+  cc_by_nc: CC-BY-NC-4.0
+  cc_by_nd: CC-BY-ND-4.0
+  cc_by_nc_sa: CC-BY-NC-SA-4.0
+  cc_by_nc_nd: CC-BY-NC-ND-4.0
+  cc0: CC0-1.0
+  # The author reserved all rights: bioRxiv displays the preprint but grants no
+  # reuse. Distinct from an unknown licence -- this is a known refusal.
+  cc_no: NoReuse-1.0
