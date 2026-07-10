@@ -37,11 +37,18 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install pyyaml jsonschema requests
+          pip install pyyaml jsonschema requests pytest
           pip install linkml linkml-runtime || echo "WARNING: linkml install failed"
           pip install rocrate || echo "WARNING: rocrate install failed"
           # indicium-adapters provides the verify-claims console script (Plan 1c)
           pip install indicium-adapters || echo "WARNING: indicium-adapters not yet available; gate 9 will warn-only"
+
+      # -- Gate 0: Unit tests -------------------------------------------------
+      # Until now the suite ran only inside release.yml, so a test could sit broken
+      # on main for weeks and nothing would say so. The suite is hermetic (pyyaml
+      # + pytest, no network).
+      - name: Run test suite
+        run: python -m pytest tests/ -q
 
       # -- Gate 10: Plugin manifest validates --------------------------------
       - name: Validate .claude-plugin/marketplace.json

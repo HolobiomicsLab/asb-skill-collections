@@ -18,6 +18,9 @@ on:
       - 'collections/**/v*/collection.yaml'
       - 'staged-collections/**/corpus.yaml'
       - 'staged-collections/**/v*/collection.yaml'
+      # Editing the gate must re-run the gate, or a change to the admitted tier set
+      # ships without ever being exercised.
+      - '.github/workflows/verify-paper.yml'
   push:
     branches: [main]
     paths:
@@ -25,6 +28,7 @@ on:
       - 'collections/**/v*/collection.yaml'
       - 'staged-collections/**/corpus.yaml'
       - 'staged-collections/**/v*/collection.yaml'
+      - '.github/workflows/verify-paper.yml'
 
 permissions:
   contents: read
