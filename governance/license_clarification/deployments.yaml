@@ -9,7 +9,7 @@ deployments:
   wave: trial-2026-06-24
   status: open
   license_after: null
-  last_checked: '2026-06-24'
+  last_checked: '2026-07-10'
 - repo: matteogiulietti/LipidOne
   tool_names:
   - LipidOne 2.0
@@ -17,9 +17,12 @@ deployments:
   issue_url: https://github.com/matteogiulietti/LipidOne/issues/1
   filed_on: '2026-06-24'
   wave: trial-2026-06-24
-  status: open
-  license_after: null
-  last_checked: '2026-06-24'
+  status: closed
+  license_after: BSD-2-Clause
+  last_checked: '2026-07-10'
+  note: Already licensed when we filed. The two-clause FreeBSD text is embedded in
+    the README rather than a LICENSE file, so GitHub does not surface it and our LICENSE-file-only
+    scan missed it. Issue closed with an apology. Do not re-file.
 - repo: Ansanqi/GutUDB
   tool_names:
   - GutUDB
@@ -29,7 +32,7 @@ deployments:
   wave: trial-2026-06-24
   status: open
   license_after: null
-  last_checked: '2026-06-24'
+  last_checked: '2026-07-10'
 - repo: MassBank/MassBank-data
   tool_names:
   - MassBank
@@ -37,9 +40,13 @@ deployments:
   issue_url: https://github.com/MassBank/MassBank-data/issues/394
   filed_on: '2026-06-24'
   wave: trial-2026-06-24
-  status: open
+  status: closed
   license_after: null
-  last_checked: '2026-06-24'
+  last_checked: '2026-07-10'
+  note: 'Answered by the maintainer: GPL-3 covers the MassBank software, but this
+    repository is a data collection whose records carry per-record licences (CC0 or
+    another Creative Commons variant). No single SPDX id applies, so license_after
+    stays null deliberately. Do not re-file.'
 - repo: mariallr/easy-amanida
   tool_names:
   - Easy-Amanida
@@ -47,6 +54,6 @@ deployments:
   issue_url: https://github.com/mariallr/easy-amanida/issues/2
   filed_on: '2026-06-24'
   wave: trial-2026-06-24
-  status: open
+  status: responded
   license_after: null
-  last_checked: '2026-06-24'
+  last_checked: '2026-07-10'
