@@ -86,7 +86,7 @@ Papers with the following status are **rejected at curation**:
 
 1. **Automated check:** OpenAlex API lookup; flag `is_oa: true|false`
 2. **Manual spot-check:** Sample papers in the final corpus (≥10% per domain) to confirm OA license accuracy
-3. **Red-flag gate:** CI verify-paper.yml (stage §7.5) enforces `access.type ∈ {open-access, open_access, oa, gold-oa, gold_oa, green-oa, green, diamond}` (after hyphen/underscore + `green`→`green-oa` normalization) for all `status:included` papers; unknown/non-OA triggers a hard fail. `preprint` is rejected as an `access.type` value because it is a provenance value, not an OA tier.
+3. **Red-flag gate:** CI verify-paper.yml (stage §7.5) enforces `access.type ∈ {open-access, open_access, oa, gold-oa, gold_oa, green-oa, green, diamond} ∪ {repo-oa, repo-permissive, repo-copyleft}` (after hyphen/underscore + `green`→`green-oa` normalization) for all `status:included` papers; unknown/non-OA triggers a hard fail. `preprint` is rejected as an `access.type` value because it is a provenance value, not an OA tier. The three `repo-*` values are the repository-access tiers from the software/dataset note above; `tests/test_oa_tier_parity.py` keeps this set identical to `scripts/release_gate.py:_REPO_OA_TIERS`, so the push gate and the release gate cannot drift apart.
 
 ### Exception Procedure (Post-v0)
 

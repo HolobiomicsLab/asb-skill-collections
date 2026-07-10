@@ -76,9 +76,12 @@ jobs:
               "diamond",
           }
 
-          # Repository-OA tier (OPEN_ACCESS_POLICY.md): a tool admitted on its
-          # repository's open licence rather than a paper's. Must stay in sync with
-          # scripts/release_gate.py:_REPO_OA_TIERS, which is the release authority.
+          # Repository-OA tier (CONTENT_POLICY.md §3, "software / dataset / tutorial
+          # DOIs"): a public git repository cloned at build qualifies as `repo-oa`.
+          # This is the paper-ACCESS axis only; what a consumer may do with the tool is
+          # the separate `license_tier` axis. Must stay in sync with
+          # scripts/release_gate.py:_REPO_OA_TIERS -- tests/test_oa_tier_parity.py
+          # fails if the two ever drift apart.
           REPO_OA_TYPES = {
               "repo-oa",
               "repo-permissive",
