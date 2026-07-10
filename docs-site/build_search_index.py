@@ -33,6 +33,9 @@ except ImportError:  # pragma: no cover
 
 # Repo root = parent of docs-site/
 REPO_ROOT = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(REPO_ROOT))
+
+from scripts.skill_index import split_frontmatter  # noqa: E402  (needs REPO_ROOT on the path)
 DOCS_SITE = Path(__file__).resolve().parent
 OUTPUT = DOCS_SITE / "search_index.json"
 
@@ -62,24 +65,16 @@ def _load_yaml(path: Path) -> dict | None:
 
 
 def _parse_skill_md(path: Path) -> tuple[dict | None, str]:
-    """Return (frontmatter_dict, body_text). Body is everything after the
-    closing '---' delimiter; frontmatter is parsed as YAML."""
+    """Return (frontmatter_dict, body_text) via the canonical SKILL.md parser."""
     try:
         raw = path.read_text(encoding="utf-8")
     except OSError as exc:
         sys.stderr.write(f"warn: failed to read {path}: {exc}\n")
         return None, ""
-    if not raw.startswith("---"):
-        return None, raw
-    parts = raw.split("---", 2)
-    if len(parts) < 3:
-        return None, raw
-    try:
-        fm = yaml.safe_load(parts[1])
-    except yaml.YAMLError as exc:
-        sys.stderr.write(f"warn: bad frontmatter in {path}: {exc}\n")
-        fm = None
-    return fm, parts[2]
+    frontmatter, body = split_frontmatter(raw)
+    if frontmatter is None:
+        sys.stderr.write(f"warn: bad frontmatter in {path}\n")
+    return frontmatter, body
 
 
 def _extract_summary(body: str) -> str:
