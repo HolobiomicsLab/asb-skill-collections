@@ -57256,6 +57256,17 @@
       ],
       "license_tier": "open"
     },
+    "masster": {
+      "dois": [],
+      "kb_slugs": [],
+      "license_tier": "noncommercial",
+      "repo_urls": [
+        "https://github.com/zamboni-lab/masster-dist"
+      ],
+      "tools": [
+        "Masster"
+      ]
+    },
     "match-factor-threshold-filtering": {
       "dois": [
         "10.1371/journal.pone.0306202"
