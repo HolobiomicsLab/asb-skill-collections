@@ -76,6 +76,16 @@ jobs:
               "diamond",
           }
 
+          # Repository-OA tier (OPEN_ACCESS_POLICY.md): a tool admitted on its
+          # repository's open licence rather than a paper's. Must stay in sync with
+          # scripts/release_gate.py:_REPO_OA_TIERS, which is the release authority.
+          REPO_OA_TYPES = {
+              "repo-oa",
+              "repo-permissive",
+              "repo-copyleft",
+          }
+          OPEN_ACCESS_TYPES |= REPO_OA_TYPES
+
           def normalize_access_type(raw: str) -> str:
               """Normalize an access.type token to a canonical OA tier.
 
