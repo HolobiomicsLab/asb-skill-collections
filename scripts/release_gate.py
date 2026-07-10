@@ -116,17 +116,21 @@ except Exception:  # noqa: BLE001 - any import failure → vendored fallback
 # gate report records the version used per CONTENT_POLICY.md §6.2.             #
 # --------------------------------------------------------------------------- #
 PII_CONFIG: dict[str, Any] = {
-    "version": "2026-06-15.1",
+    "version": "2026-07-10.1",
     "source": "scripts/release_gate.py::PII_CONFIG (mirror of pii_patterns.json)",
     # Tier 1 — HARD FAIL when found inside a verbatim quote span.
     "hard_fail_patterns": {
         # Clinical / personal identifiers.
-        "mrn": r"\bMRN[:\s#]*\d{5,12}\b",
+        # `mrn`/`ssn` tolerate optional separators inside the token so trivial
+        # obfuscations (`M.R.N 4820193`, `000 00 0000`) don't evade the abbreviation
+        # / dash form. Both still require the discriminating digit run, so they stay
+        # at 0 false positives on the 43k-span corpus (see test_pii_evasion_hardening).
+        "mrn": r"\bM[.\s]?R[.\s]?N\b[:\s#.]*\d{5,12}\b",
         "medical_record": r"\bmedical\s+record\s+(?:no\.?|number|#)\s*[:#]?\s*\d{4,}\b",
         "nhs_number": r"\b\d{3}[\s-]?\d{3}[\s-]?\d{4}\b",  # NHS 10-digit format
         "hospital_id": r"\b(?:hospital|patient)\s+ID[:\s#]*\w*\d{3,}\b",
         "account_number": r"\baccount\s+(?:no\.?|number|#)\s*[:#]?\s*\d{6,}\b",
-        "ssn": r"\b\d{3}-\d{2}-\d{4}\b",
+        "ssn": r"\b\d{3}[\s-]\d{2}[\s-]\d{4}\b",
         # Explicit named-patient health information.
         "named_patient_dx": (
             r"\bpatient\s+[A-Z][a-z]+\s+[A-Z][a-z]+\b"  # "Patient John Doe"
