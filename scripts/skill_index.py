@@ -22,15 +22,25 @@ import argparse
 import glob as globlib
 import json
 import pathlib
-import sys
+import re
 
 import yaml
 
+from scripts.license_tier import load_map
 from scripts.propagate_license_tiers import detect_indent
 
 META_ROLE = "meta"
 INFRASTRUCTURE_PREFIX = "_"
-DEFAULT_COLLECTION_GLOB = "collections/*/v*"
+# Both trees ship skills to users. `packs/` publishes only a kb_bundle.json; a
+# directory is checked against whichever indexes it actually publishes.
+DEFAULT_COLLECTION_GLOBS = ("collections/*/v*", "packs/*/*")
+DEFAULT_KB_PREFIX = "asb-paper-"
+_NON_SLUG_RE = re.compile(r"[^a-z0-9]+")
+
+
+def valid_tiers() -> set[str]:
+    """The licence-tier vocabulary, read from its one canonical home."""
+    return set(load_map()["tiers"])
 
 
 def _rewrite_json(path: pathlib.Path, payload) -> None:
@@ -80,7 +90,7 @@ def untiered(slug: str, frontmatter: dict) -> bool:
     Indexing a skill without one makes it searchable while stripping the very
     label that governs whether it may be used -- a silent downgrade, not a gap.
     """
-    return (frontmatter.get("metadata") or {}).get("license_tier") not in ("open", "noncommercial", "restricted")
+    return (frontmatter.get("metadata") or {}).get("license_tier") not in valid_tiers()
 
 
 def entry_from_frontmatter(slug: str, frontmatter: dict) -> dict:
@@ -99,13 +109,19 @@ def entry_from_frontmatter(slug: str, frontmatter: dict) -> dict:
     }
 
 
-def kb_entry_from_frontmatter(frontmatter: dict) -> dict:
+def kb_slug_for_doi(doi: str, prefix: str = DEFAULT_KB_PREFIX) -> str:
+    """The per-paper KB slug a DOI grounds against, e.g. `asb-paper-10-1093-...`."""
+    return prefix + _NON_SLUG_RE.sub("-", doi.strip().lower()).strip("-")
+
+
+def kb_entry_from_frontmatter(frontmatter: dict, kb_prefix: str = DEFAULT_KB_PREFIX) -> dict:
     """Build a kb_bundle skills entry from a skill's own frontmatter."""
     metadata = frontmatter.get("metadata") or {}
     repo_url = metadata.get("repo_url")
+    dois = _dois(frontmatter)
     return {
-        "dois": _dois(frontmatter),
-        "kb_slugs": [],
+        "dois": dois,
+        "kb_slugs": [kb_slug_for_doi(doi, kb_prefix) for doi in dois],
         "license_tier": metadata.get("license_tier"),
         "repo_urls": [repo_url] if repo_url else [],
         "tools": metadata.get("tools") or [],
@@ -163,20 +179,33 @@ def add_missing(version_dir: pathlib.Path) -> dict[str, list[str]]:
     if gaps.get("kb_bundle.json"):
         path = version_dir / "kb_bundle.json"
         bundle = json.loads(path.read_text(encoding="utf-8"))
+        prefix = bundle.get("kb_prefix") or DEFAULT_KB_PREFIX
         for slug in gaps["kb_bundle.json"]:
-            bundle.setdefault("skills", {})[slug] = kb_entry_from_frontmatter(skills[slug])
+            bundle.setdefault("skills", {})[slug] = kb_entry_from_frontmatter(skills[slug], prefix)
         bundle["skills"] = dict(sorted(bundle["skills"].items()))
         _rewrite_json(path, bundle)
     return gaps
 
 
-def _version_dirs(pattern: str) -> list[pathlib.Path]:
-    return [pathlib.Path(p) for p in sorted(globlib.glob(pattern)) if (pathlib.Path(p) / "skills").is_dir()]
+def _version_dirs(patterns: tuple[str, ...]) -> list[pathlib.Path]:
+    """Every directory that ships skills, across all configured trees."""
+    found = []
+    for pattern in patterns:
+        found += [pathlib.Path(p) for p in sorted(globlib.glob(pattern)) if (pathlib.Path(p) / "skills").is_dir()]
+    return found
+
+
+def _report(version_dir: pathlib.Path, gaps: dict[str, list[str]], fixing: bool) -> set[str]:
+    """Print one directory's gaps; return the distinct slugs involved."""
+    for index_name, slugs in gaps.items():
+        verb = "added to" if fixing else "MISSING from"
+        print(f"  {version_dir}/{index_name}: {len(slugs)} {verb} index -> {', '.join(slugs)}")
+    return {slug for slugs in gaps.values() for slug in slugs}
 
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--collections", default=DEFAULT_COLLECTION_GLOB)
+    parser.add_argument("--collections", nargs="*", default=list(DEFAULT_COLLECTION_GLOBS))
     parser.add_argument("--fix", action="store_true", help="insert the missing entries instead of failing")
     parser.add_argument("--smoke", action="store_true", help="run the module's self-check and exit")
     args = parser.parse_args(argv)
@@ -184,24 +213,31 @@ def main(argv: list[str] | None = None) -> int:
     if args.smoke:
         return _smoke()
 
-    violations = 0
-    for version_dir in _version_dirs(args.collections):
+    version_dirs = _version_dirs(tuple(args.collections))
+    if not version_dirs:
+        # A gate that inspects nothing must never report success.
+        print(f"FAIL: no skill directories matched {args.collections}. Run from the repository root.")
+        return 1
+
+    orphans, needing_a_tier = set(), []
+    for version_dir in version_dirs:
         try:
             gaps = add_missing(version_dir) if args.fix else missing_from_indexes(version_dir)
         except ValueError as exc:
             print(f"  {version_dir}: {exc}")
-            violations += 1
+            needing_a_tier.append(version_dir)
             continue
-        for index_name, slugs in gaps.items():
-            verb = "added to" if args.fix else "MISSING from"
-            print(f"  {version_dir}/{index_name}: {len(slugs)} {verb} index -> {', '.join(slugs)}")
-            violations += 0 if args.fix else len(slugs)
-    if violations:
-        print(f"\nFAIL: {violations} skill(s) exist on disk but appear in no index.")
+        orphans |= _report(version_dir, gaps, args.fix) if not args.fix else set()
+    if needing_a_tier:
+        print("\nFAIL: a skill declares no metadata.license_tier, so it cannot be indexed.")
+        print("Add the tier to its SKILL.md by hand; --fix cannot invent one.")
+        return 1
+    if orphans:
+        print(f"\nFAIL: {len(orphans)} skill(s) exist on disk but appear in no index.")
         print("A skill absent from the index cannot be found by search, the MCP server, or the docs site.")
         print("Run: python -m scripts.skill_index --fix")
         return 1
-    print("PASS: every indexable skill is present in every index its collection publishes.")
+    print(f"PASS: every indexable skill across {len(version_dirs)} directories is present in every index published.")
     return 0
 
 

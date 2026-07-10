@@ -9,9 +9,11 @@ import sys
 
 import yaml
 
-from scripts.license_tier import ack_required
+from scripts.license_tier import ack_required, load_map
 
-_VALID = {"open", "noncommercial", "restricted"}
+# The tier vocabulary has one home: governance/license_tiers.yaml. A hand-copied
+# set here silently rejects any tier added there.
+_VALID = set(load_map()["tiers"])
 
 
 def check_collection(collection_dir) -> list[str]:
