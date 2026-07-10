@@ -25,6 +25,7 @@ import json
 import pathlib
 import re
 import sys
+import time
 import urllib.error
 import urllib.parse
 import urllib.request
@@ -39,6 +40,10 @@ DATACITE_DOI_URL = "https://api.datacite.org/dois/{doi}"
 SERVERS_MAP = pathlib.Path(__file__).resolve().parent.parent / "governance" / "preprint_servers.yaml"
 USER_AGENT = "asb-skill-collections/1.0 (https://github.com/HolobiomicsLab/asb-skill-collections)"
 REQUEST_TIMEOUT_S = 20
+ABSENT_STATUS = (403, 404, 410)
+RETRYABLE_STATUS = (429, 500, 502, 503, 504)
+MAX_ATTEMPTS = 4
+BACKOFF_BASE_S = 2.0
 
 STATUS_RESOLVED = "resolved"
 STATUS_UNKNOWN_LICENCE = "unknown_licence"
@@ -95,16 +100,45 @@ def strip_version_suffix(doi: str) -> str:
     return _VERSION_SUFFIX_RE.sub("", (doi or "").strip())
 
 
-def fetch_json(url: str) -> dict | None:
-    """GET a JSON document. None when the record does not exist (404/403/410)."""
+def retry_delay(attempt: int, retry_after: str | None) -> float:
+    """Seconds to wait before the next attempt, honouring a server's Retry-After."""
+    if retry_after and retry_after.strip().isdigit():
+        return float(retry_after.strip())
+    return BACKOFF_BASE_S * (2 ** (attempt - 1))
+
+
+def _get_json(url: str) -> dict | None:
+    """One attempt. None when the record is absent; raises on anything else."""
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
     try:
         with urllib.request.urlopen(request, timeout=REQUEST_TIMEOUT_S) as response:
             return json.loads(response.read().decode("utf-8"))
     except urllib.error.HTTPError as exc:
-        if exc.code in (403, 404, 410):
+        if exc.code in ABSENT_STATUS:
             return None
         raise
+
+
+def fetch_json(url: str) -> dict | None:
+    """GET a JSON document, retrying transient failures.
+
+    A rate-limited or briefly unavailable registry must not be mistaken for a DOI
+    that does not exist: the first would silently mark a resolvable pre-print
+    `unresolved`, and a bulk audit would report absence where there was only 429.
+    Only ABSENT_STATUS means "no record".
+    """
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        try:
+            return _get_json(url)
+        except urllib.error.HTTPError as exc:
+            if exc.code not in RETRYABLE_STATUS or attempt == MAX_ATTEMPTS:
+                raise
+            time.sleep(retry_delay(attempt, exc.headers.get("Retry-After")))
+        except (urllib.error.URLError, TimeoutError):
+            if attempt == MAX_ATTEMPTS:
+                raise
+            time.sleep(retry_delay(attempt, None))
+    return None
 
 
 def _first_recognised_spdx(urls: list[str]) -> tuple[str | None, str | None]:

@@ -246,6 +246,56 @@ def test_unknown_spdx_has_no_source_reuse_entry():
     assert source_reuse_for_license("arXiv-1.0", load_map()) == "none"
 
 
+# --- A rate-limited registry is not an absent DOI ------------------------------
+
+def test_absent_and_retryable_statuses_are_disjoint():
+    assert not set(pl.ABSENT_STATUS) & set(pl.RETRYABLE_STATUS)
+
+
+def test_retry_delay_honours_retry_after_then_backs_off():
+    assert pl.retry_delay(1, "7") == 7.0
+    assert pl.retry_delay(1, None) == pl.BACKOFF_BASE_S
+    assert pl.retry_delay(3, None) > pl.retry_delay(2, None)
+    assert pl.retry_delay(2, "not-a-number") == pl.retry_delay(2, None)
+
+
+def test_fetch_json_retries_a_rate_limit_then_succeeds(monkeypatch):
+    attempts = []
+
+    def flaky(url):
+        attempts.append(url)
+        if len(attempts) < 3:
+            raise urllib.error.HTTPError(url, 429, "Too Many Requests", {"Retry-After": "0"}, None)
+        return {"ok": True}
+
+    monkeypatch.setattr(pl, "_get_json", flaky)
+    monkeypatch.setattr(pl.time, "sleep", lambda _s: None)
+    assert pl.fetch_json("https://example.org/x") == {"ok": True}
+    assert len(attempts) == 3
+
+
+def test_fetch_json_gives_up_loudly_rather_than_reporting_absence(monkeypatch):
+    def always_limited(url):
+        raise urllib.error.HTTPError(url, 429, "Too Many Requests", {}, None)
+
+    monkeypatch.setattr(pl, "_get_json", always_limited)
+    monkeypatch.setattr(pl.time, "sleep", lambda _s: None)
+    with pytest.raises(urllib.error.HTTPError):
+        pl.fetch_json("https://example.org/x")
+
+
+def test_a_rate_limited_registry_never_yields_a_clean_answer(monkeypatch):
+    """The whole point: 429 must surface as unresolved, never as not_a_preprint."""
+    def always_limited(url):
+        raise urllib.error.HTTPError(url, 429, "Too Many Requests", {}, None)
+
+    monkeypatch.setattr(pl, "_get_json", always_limited)
+    monkeypatch.setattr(pl.time, "sleep", lambda _s: None)
+    result = pl.resolve_preprint_license("d/1", fetch=pl.fetch_json)
+    assert result.status == pl.STATUS_UNRESOLVED
+    assert not result.admissible_as_open_access
+
+
 # --- Generality guards --------------------------------------------------------
 
 def _string_constants(module_path: pathlib.Path):
