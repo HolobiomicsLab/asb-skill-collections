@@ -69,14 +69,21 @@ fallback:
 # An SPDX id absent from this table resolves to UNKNOWN, never to a default.
 # Unknown must block admission and be reported loudly; see scripts/preprint_license.py.
 source_reuse:
-  CC-BY-4.0: full
+  CC-BY-1.0: full
+  CC-BY-2.0: full
+  CC-BY-2.5: full
   CC-BY-3.0: full
+  CC-BY-4.0: full
+  CC-BY-SA-3.0: full
   CC-BY-SA-4.0: full
   CC0-1.0: full
-  CC-BY-NC-4.0: limited
   CC-BY-NC-3.0: limited
+  CC-BY-NC-4.0: limited
+  CC-BY-NC-SA-3.0: limited
   CC-BY-NC-SA-4.0: limited
+  CC-BY-ND-3.0: limited
   CC-BY-ND-4.0: limited
+  CC-BY-NC-ND-3.0: limited
   CC-BY-NC-ND-4.0: limited
   # arXiv's default: a non-exclusive licence to distribute, granting no reuse rights.
   arXiv-1.0: none
