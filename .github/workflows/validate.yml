@@ -50,6 +50,14 @@ jobs:
       - name: Run test suite
         run: python -m pytest tests/ -q
 
+      # -- Gate 0b: Index coverage -------------------------------------------
+      # A skill absent from skills_index.json / kb_bundle.json ships on disk but
+      # cannot be found by search, the MCP server, or the docs site. Nothing else
+      # notices: check_license_tiers.py only inspects skills the index already
+      # knows about, so the orphan stays invisible and CI stays green.
+      - name: Every skill is in every index its collection publishes
+        run: python -m scripts.skill_index
+
       # -- Gate 10: Plugin manifest validates --------------------------------
       - name: Validate .claude-plugin/marketplace.json
         run: |
