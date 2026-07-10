@@ -246,6 +246,64 @@ def test_unknown_spdx_has_no_source_reuse_entry():
     assert source_reuse_for_license("arXiv-1.0", load_map()) == "none"
 
 
+# --- Several declared licences: the most restrictive governs -------------------
+
+@pytest.mark.parametrize("order", [[CC_BY, CC_BY_NC_ND], [CC_BY_NC_ND, CC_BY]])
+def test_admission_does_not_depend_on_registry_array_order(order):
+    """Crossref lists the accepted manuscript and version of record separately."""
+    entries = [{"URL": url, "content-version": "vor"} for url in order]
+    fetch = fetch_from({"api.crossref.org": {"message": {"type": "posted-content", "license": entries}}})
+    result = pl.resolve_preprint_license("d/1", fetch=fetch)
+    assert result.spdx == "CC-BY-NC-ND-4.0", order
+    assert not result.admissible_as_open_access, order
+
+
+def test_most_restrictive_license_ranks_none_below_limited_below_full():
+    assert pl.most_restrictive_license([CC_BY, ARXIV_DEFAULT])[2] == "none"
+    assert pl.most_restrictive_license([CC_BY, CC_BY_NC_ND])[2] == "limited"
+    assert pl.most_restrictive_license([CC_BY, CC_ZERO])[2] == "full"
+
+
+def test_a_recognised_licence_with_no_reuse_row_blocks_rather_than_falling_through():
+    """CC-BY-9.9 parses to an SPDX id, but the table does not know its rights."""
+    unknown_version = "https://creativecommons.org/licenses/by/9.9/"
+    url, spdx, reuse = pl.most_restrictive_license([unknown_version, CC_BY])
+    assert spdx == "CC-BY-9.9" and reuse is None
+    result = pl.resolve_preprint_license("d/1", fetch=crossref_only(crossref("posted-content", [unknown_version])))
+    assert result.status == pl.STATUS_UNKNOWN_LICENCE
+    assert not result.admissible_as_open_access
+
+
+def test_a_text_mining_grant_is_not_a_redistribution_grant():
+    entries = [{"URL": CC_BY, "content-version": "tdm"}]
+    fetch = fetch_from({"api.crossref.org": {"message": {"type": "posted-content", "license": entries}}})
+    result = pl.resolve_preprint_license("d/1", fetch=fetch)
+    assert result.status == pl.STATUS_NO_LICENCE_DECLARED
+    assert not result.admissible_as_open_access
+
+
+# --- A licence deed must live on the licensor's own host ----------------------
+
+@pytest.mark.parametrize("url", [
+    "https://evil.example.com/redirect?to=creativecommons.org/licenses/by/4.0",
+    "https://example.org/creativecommons.org/licenses/by/4.0/faq",
+    "https://notarxiv.org/licenses/nonexclusive-distrib/1.0/",
+])
+def test_a_deed_quoted_inside_another_host_is_not_a_licence(url):
+    assert pl.spdx_from_license_url(url) is None
+
+
+def test_real_deeds_on_the_licensors_host_still_parse():
+    assert pl.spdx_from_license_url("https://www.creativecommons.org/licenses/by-sa/4.0/") == "CC-BY-SA-4.0"
+    assert pl.spdx_from_license_url("creativecommons.org/licenses/by/4.0") == "CC-BY-4.0"
+
+
+def test_a_malformed_payload_fails_one_doi_not_the_batch():
+    fetch = fetch_from({"api.crossref.org": {"message": {"type": "posted-content",
+                                                         "license": [{"URL": {"nested": "object"}}]}}})
+    assert pl.resolve_preprint_license("d/1", fetch=fetch).status in (pl.STATUS_UNKNOWN_LICENCE, pl.STATUS_UNRESOLVED)
+
+
 # --- A rate-limited registry is not an absent DOI ------------------------------
 
 def test_absent_and_retryable_statuses_are_disjoint():

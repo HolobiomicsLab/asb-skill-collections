@@ -51,9 +51,22 @@ STATUS_NO_LICENCE_DECLARED = "no_licence_declared"
 STATUS_NOT_A_PREPRINT = "not_a_preprint"
 STATUS_UNRESOLVED = "unresolved"
 
-_CC_LICENSE_RE = re.compile(r"creativecommons\.org/licenses/(?P<code>[a-z][a-z-]*)/(?P<version>\d+(?:\.\d+)?)", re.I)
-_CC_ZERO_RE = re.compile(r"creativecommons\.org/publicdomain/zero/(?P<version>\d+(?:\.\d+)?)", re.I)
-_ARXIV_DEFAULT_RE = re.compile(r"arxiv\.org/licenses/nonexclusive-distrib/(?P<version>\d+(?:\.\d+)?)", re.I)
+# Matched against the URL's PATH, after its host has been checked. An unanchored
+# search would accept a deed pasted into any unrelated URL, e.g.
+# `https://example.org/redirect?to=creativecommons.org/licenses/by/4.0`.
+_CC_LICENSE_RE = re.compile(r"^/licenses/(?P<code>[a-z][a-z-]*)/(?P<version>\d+(?:\.\d+)?)", re.I)
+_CC_ZERO_RE = re.compile(r"^/publicdomain/zero/(?P<version>\d+(?:\.\d+)?)", re.I)
+_ARXIV_DEFAULT_RE = re.compile(r"^/licenses/nonexclusive-distrib/(?P<version>\d+(?:\.\d+)?)", re.I)
+_CC_HOST = "creativecommons.org"
+_ARXIV_HOST = "arxiv.org"
+
+# A `tdm` grant permits text and data mining, not redistribution. It must never
+# stand in for a licence to reuse the source.
+TDM_CONTENT_VERSION = "tdm"
+
+# Least permissive first. Where a work declares several licences, the most
+# restrictive governs -- admission must not depend on registry array order.
+_REUSE_RANK = {"none": 0, "limited": 1, "full": 2}
 
 # A trailing server-side version marker, e.g. `...433248v2` or `...530140v1.abstract`.
 # Requires a digit before the `v` so a real DOI segment like `.v2` (figshare) is kept.
@@ -79,19 +92,33 @@ class PreprintLicense:
         return self.status == STATUS_RESOLVED and self.source_reuse == "full"
 
 
+def _host_and_path(url: str) -> tuple[str, str]:
+    """The URL's lowercased host (without `www.`) and its path."""
+    parsed = urllib.parse.urlparse(url if "//" in url else f"//{url}")
+    host = parsed.netloc.lower()
+    return (host[4:] if host.startswith("www.") else host), parsed.path
+
+
 def spdx_from_license_url(url: str) -> str | None:
-    """Map a licence URL to an SPDX id; None when the URL is not recognised."""
-    if not url:
+    """Map a licence URL to an SPDX id; None when the URL is not recognised.
+
+    The host is checked before the path, so a deed quoted inside an unrelated URL
+    is not mistaken for a licence grant.
+    """
+    if not isinstance(url, str) or not url:
         return None
-    zero = _CC_ZERO_RE.search(url)
-    if zero:
-        return f"CC0-{zero['version']}"
-    arxiv = _ARXIV_DEFAULT_RE.search(url)
-    if arxiv:
-        return f"arXiv-{arxiv['version']}"
-    creative = _CC_LICENSE_RE.search(url)
-    if creative:
-        return f"CC-{creative['code'].upper()}-{creative['version']}"
+    host, path = _host_and_path(url)
+    if host == _CC_HOST:
+        zero = _CC_ZERO_RE.search(path)
+        if zero:
+            return f"CC0-{zero['version']}"
+        creative = _CC_LICENSE_RE.search(path)
+        if creative:
+            return f"CC-{creative['code'].upper()}-{creative['version']}"
+    if host == _ARXIV_HOST:
+        arxiv = _ARXIV_DEFAULT_RE.search(path)
+        if arxiv:
+            return f"arXiv-{arxiv['version']}"
     return None
 
 
@@ -141,24 +168,38 @@ def fetch_json(url: str) -> dict | None:
     return None
 
 
-def _first_recognised_spdx(urls: list[str]) -> tuple[str | None, str | None]:
-    """Return the first (url, spdx) pair whose URL maps to a known SPDX id."""
+def most_restrictive_license(urls: list[str]) -> tuple[str | None, str | None, str | None]:
+    """The least permissive recognised licence among `urls`, as (url, spdx, reuse).
+
+    A work may declare several licences -- Crossref lists the accepted manuscript
+    and the version of record separately -- and their order is not guaranteed.
+    Picking the first would make admission depend on array position. The most
+    restrictive grant governs what we may actually do with the text.
+
+    A recognised SPDX with no `source_reuse` row yields reuse=None: unknown, and
+    the caller must treat it as blocking rather than fall back to another licence.
+    """
+    candidates = []
     for url in urls:
         spdx = spdx_from_license_url(url)
-        if spdx:
-            return url, spdx
-    return (urls[0] if urls else None), None
+        if not spdx:
+            continue
+        reuse = source_reuse_for_license(spdx)
+        if reuse is None:
+            return url, spdx, None
+        candidates.append((_REUSE_RANK[reuse], url, spdx, reuse))
+    if not candidates:
+        return (urls[0] if urls else None), None, None
+    _, url, spdx, reuse = min(candidates)
+    return url, spdx, reuse
 
 
 def _classify(doi: str, doi_used: str, registry: str, urls: list[str]) -> PreprintLicense:
     """Turn a registry's declared licence URLs into a typed outcome."""
     if not urls:
         return PreprintLicense(doi, STATUS_NO_LICENCE_DECLARED, doi_used, registry)
-    url, spdx = _first_recognised_spdx(urls)
-    if not spdx:
-        return PreprintLicense(doi, STATUS_UNKNOWN_LICENCE, doi_used, registry, url)
-    reuse = source_reuse_for_license(spdx)
-    if reuse is None:
+    url, spdx, reuse = most_restrictive_license(urls)
+    if not spdx or reuse is None:
         return PreprintLicense(doi, STATUS_UNKNOWN_LICENCE, doi_used, registry, url, spdx)
     return PreprintLicense(doi, STATUS_RESOLVED, doi_used, registry, url, spdx, reuse, tier_for_license(spdx))
 
@@ -174,10 +215,21 @@ def _declared_servers(message: dict, servers: dict) -> list[str]:
     return [name for name in names if name in servers]
 
 
+def _redistribution_urls(message: dict) -> list[str]:
+    """Crossref licence URLs that could ground redistribution; TDM grants excluded."""
+    urls = []
+    for entry in message.get("license") or []:
+        url = entry.get("URL")
+        if url and str(entry.get("content-version") or "").lower() != TDM_CONTENT_VERSION:
+            urls.append(url)
+    return urls
+
+
 def _probe_server_api(server: str, doi: str, original: str, fetch) -> PreprintLicense | None:
     """Ask a pre-print server for its own licence token when the registry has none."""
     config = load_servers()
-    payload = fetch(config["servers"][server]["detail_url"].format(doi=doi))
+    quoted = urllib.parse.quote(doi, safe="/")
+    payload = fetch(config["servers"][server]["detail_url"].format(doi=quoted))
     records = (payload or {}).get("collection") or []
     if not records:
         return None
@@ -204,8 +256,7 @@ def _probe_crossref(doi: str, original: str, fetch) -> PreprintLicense | None:
     message = payload.get("message") or {}
     if message.get("type") != "posted-content":
         return PreprintLicense(original, STATUS_NOT_A_PREPRINT, doi, "crossref")
-    urls = [entry.get("URL") for entry in (message.get("license") or []) if entry.get("URL")]
-    outcome = _classify(original, doi, "crossref", urls)
+    outcome = _classify(original, doi, "crossref", _redistribution_urls(message))
     if outcome.status == STATUS_RESOLVED:
         return outcome
     for server in _declared_servers(message, load_servers().get("servers") or {}):
@@ -244,7 +295,8 @@ def resolve_preprint_license(doi: str, fetch=fetch_json) -> PreprintLicense:
                 outcome = probe(candidate, doi, fetch)
                 if outcome is not None:
                     return outcome
-    except (urllib.error.URLError, OSError, ValueError):
+    except (urllib.error.URLError, OSError, ValueError, TypeError, KeyError):
+        # One malformed registry payload must fail its own DOI, never the batch.
         return PreprintLicense(doi, STATUS_UNRESOLVED)
     return PreprintLicense(doi, STATUS_UNRESOLVED)
 
@@ -270,11 +322,15 @@ def audit(patterns: list[str], cache_path: pathlib.Path, fetch=fetch_json) -> li
         doi = str(paper.get("doi") or "").strip()
         if not doi:
             continue
-        if doi not in cache:
-            cache[doi] = resolve_preprint_license(doi, fetch).__dict__
-            cache_path.parent.mkdir(parents=True, exist_ok=True)
-            cache_path.write_text(json.dumps(cache, indent=2, sort_keys=True), encoding="utf-8")
-        record = cache[doi]
+        record = cache.get(doi)
+        if record is None:
+            record = resolve_preprint_license(doi, fetch).__dict__
+            # `unresolved` is not a terminal answer -- a rate limit or an outage
+            # would otherwise freeze into a permanent verdict on the next run.
+            if record["status"] != STATUS_UNRESOLVED:
+                cache[doi] = record
+                cache_path.parent.mkdir(parents=True, exist_ok=True)
+                cache_path.write_text(json.dumps(cache, indent=2, sort_keys=True), encoding="utf-8")
         if record["status"] == STATUS_NOT_A_PREPRINT:
             continue
         access = paper.get("access") or {}
