@@ -279,13 +279,15 @@ def _normalize_access_type(raw: str) -> str:
 # spelling-insensitive against promote.py's `_OA_TIERS`.
 _NORMALIZED_OA_TIERS = {_normalize_access_type(t) for t in _OA_TIERS} | {"green-oa"}
 
-# repo-oa: a tool whose PAPER is non-CC-BY but whose code repository is openly
-# licensed (permissive or copyleft).  Its skills are grounded in the openly-
-# licensed REPO (not the paper) — usage/component skills carrying no paper
-# verbatim — so the redistributable source IS open.  Admitted by the access-tier
-# gate, and OA-exempt in strip-verbatim (it is not in _NON_OA_TIERS, so the
-# per-DOI cap regime never applies).  The specific code SPDX + the cited (non-OA)
-# paper DOI are recorded per-paper in corpus.yaml (`code_license` / `paper_*`).
+# repo-oa: the paper-ACCESS axis only (CONTENT_POLICY.md §3) — "a public git
+# repository cloned at build".  It asserts nothing about reuse rights; what a
+# consumer may do with the tool rides on the separate `license_tier` axis (§4).
+# Skills grounded on a repo-oa entry ground on the cloned REPOSITORY (code /
+# README / docs), never on paper text — the repository-only grounding rule (§3).
+# Because it is an access tier, admission REQUIRES evidence that a clone was
+# possible: a non-empty `repo_url` (enforced under --strict below).
+# `access.verified_via` is a constant stamp, not evidence — it reads
+# `git_clone_succeeded_at_build` on entries that have no repo_url at all.
 _REPO_OA_TIERS = {"repo-oa", "repo-permissive", "repo-copyleft"}
 _NORMALIZED_OA_TIERS = _NORMALIZED_OA_TIERS | _REPO_OA_TIERS
 
@@ -475,6 +477,9 @@ def check_access_tier(corpus: dict[str, Any], require_open_access: bool = True) 
         hard_gate=True,
         summary="Every included paper's access.type is in the OA allowed set (v0 OA-only).",
     )
+    # A repo-* access tier claims a clone happened; only a non-empty repo_url is
+    # evidence of that. FAIL surfaces the finding and blocks the strict (promotion)
+    # path, while staged-collections PRs stay advisory (CONTENT_POLICY.md §3).
     papers = corpus.get("papers") or []
     checked = 0
     for i, paper in enumerate(papers):
@@ -508,6 +513,16 @@ def check_access_tier(corpus: dict[str, Any], require_open_access: bool = True) 
                 f"{doi}: access.type='{raw}' (normalized '{norm}') is not open-access. "
                 f"v0 (require_open_access=true) permits only {sorted(_OA_TIERS)} "
                 "(hyphen/underscore variants accepted; 'green'→'green-oa').",
+                doi=doi,
+                access_type=raw,
+            )
+        if norm in _REPO_OA_TIERS and not (paper.get("repo_url") or "").strip():
+            res.add(
+                FAIL,
+                f"{doi}: access.type='{raw}' claims a repository was cloned at build, but "
+                "repo_url is empty — no clone was possible, so the tier is unverified. "
+                "access.verified_via is a constant stamp, not evidence (CONTENT_POLICY.md "
+                "§3). Provide a repo_url or set status:needs-evidence.",
                 doi=doi,
                 access_type=raw,
             )
