@@ -146,6 +146,56 @@ def test_entry_is_derived_from_frontmatter(tmp_path):
     assert si.kb_entry_from_frontmatter(frontmatter)["repo_urls"] == ["https://example.org/r"]
 
 
+# --- The gate must never inspect nothing and call it success ------------------
+
+def test_a_gate_that_matched_no_directory_fails(tmp_path, monkeypatch, capsys):
+    monkeypatch.chdir(tmp_path)
+    assert si.main([]) == 1
+    assert "no skill directories matched" in capsys.readouterr().out
+
+
+def test_every_configured_tree_is_visited(tmp_path, monkeypatch):
+    monkeypatch.chdir(tmp_path)
+    collection(tmp_path, "metabolomics", {"a-leaf": leaf("a-leaf")}, indexed=["a-leaf"])
+    pack = tmp_path / "packs" / "metabolomics" / "lc-ms"
+    write_skill(pack, "pack-leaf", leaf("pack-leaf"))
+    (pack / "kb_bundle.json").write_text(json.dumps({"skills": {}}), encoding="utf-8")
+    assert si.main([]) == 1, "an orphan inside packs/ must fail the gate"
+
+
+def test_default_globs_cover_both_shipped_trees():
+    assert "collections/*/v*" in si.DEFAULT_COLLECTION_GLOBS
+    assert "packs/*/*" in si.DEFAULT_COLLECTION_GLOBS
+
+
+# --- The tier vocabulary has exactly one home ---------------------------------
+
+def test_valid_tiers_are_read_from_the_canonical_map():
+    assert si.valid_tiers() == set(yaml.safe_load(
+        (pathlib.Path(__file__).parent.parent / "governance" / "license_tiers.yaml").read_text())["tiers"])
+
+
+def test_a_new_tier_in_the_canonical_map_is_accepted_without_a_code_change(monkeypatch):
+    monkeypatch.setattr(si, "valid_tiers", lambda: {"open", "noncommercial", "restricted", "academic"})
+    assert not si.untiered("s", {"metadata": {"license_tier": "academic"}})
+
+
+# --- kb_slugs are derived, not blanked ----------------------------------------
+
+def test_kb_slugs_are_derived_from_the_dois():
+    entry = si.kb_entry_from_frontmatter({"derived_from": [{"doi": "10.1093/bioinformatics/btaf045"}],
+                                          "metadata": {"license_tier": "open"}})
+    assert entry["kb_slugs"] == ["asb-paper-10-1093-bioinformatics-btaf045"]
+
+
+def test_kb_slug_honours_the_bundles_own_prefix():
+    assert si.kb_slug_for_doi("10.1/A_b", prefix="kb-") == "kb-10-1-a-b"
+
+
+def test_a_skill_without_dois_gets_no_kb_slugs():
+    assert si.kb_entry_from_frontmatter({"metadata": {"license_tier": "noncommercial"}})["kb_slugs"] == []
+
+
 # --- The canonical frontmatter parser -----------------------------------------
 
 def test_a_rule_inside_frontmatter_does_not_truncate_it():
