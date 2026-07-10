@@ -13,13 +13,13 @@ schema: asb-corpus/1.0
 collection: metabolomics
 version: 2
 generated_on: '2026-06-23'
-source: community proposals (GitHub issues #11–#14), curator-normalized
+source: community proposals (GitHub issues #11–#16), curator-normalized
 policy: OPEN_ACCESS_POLICY.md (OA verified per entry; unresolved tiers flagged in triage)
 wave: community-2026-06
 summary:
-  total: 4
+  total: 6
   included: 0
-  hold: 4
+  hold: 6
 
 papers:
 - name: RforMassSpectrometry
@@ -32,7 +32,7 @@ papers:
   license_tier: open
   wave: community-2026-06
   resource_type: software-ecosystem
-  source_issue: 14   # filed alongside #13
+  source_issue: 13   # co-staged with #14 (Metabonaut), same authors
   access:
     type: gold-oa
     license: cc-by-4.0
@@ -147,3 +147,73 @@ papers:
       prose-only SKILL.md with link-only grounding and a runtime use-acknowledgment
       gate; do NOT embed the repo. access.type stays "restricted" (OA axis unchanged) —
       the license_tier is what makes it includable. Still status: hold pending merge.
+
+- name: OmniPath Metabo
+  doi: 10.64898/2026.06.18.733117
+  title: 'OmniPath Metabo: chemical structures, interactions and mechanisms to study the metabolome'
+  year: 2026
+  category: Databases
+  repo_url: https://github.com/saezlab/omnipath-metabo
+  status: hold
+  license_tier: open
+  wave: community-2026-06
+  resource_type: database-knowledge-base
+  source_issue: 15
+  access:
+    type: open-access
+    license: cc-by-4.0
+    is_oa: true
+    provenance: preprint   # bioRxiv; update to the canonical DOI once peer-reviewed
+    verified_via: biorxiv_api_license   # api.biorxiv.org reported license=cc_by
+    verified_on: '2026-07-10'
+    code_license: BSD-3-Clause   # saezlab/omnipath-metabo LICENSE
+  triage:
+    proposer: lfnothias
+    rationale: >-
+      A metabolome-oriented extension of the OmniPath knowledge base (Saez-Rodriguez
+      lab) linking chemical structures to interactions and mechanisms. Useful for
+      grounding agent tasks that connect annotated metabolites to biological context.
+    decision: accept
+    notes: >-
+      The preprint's licence was read from the bioRxiv API (cc_by), NOT inferred from
+      OPEN_ACCESS_POLICY.md's blanket "preprints are always CC-BY" rule — bioRxiv lets
+      authors choose CC-BY-NC-ND or no-reuse, so that rule can admit non-reusable text.
+      Repository is BSD-3-Clause. Re-point the entry at the peer-reviewed DOI on
+      publication, keeping this preprint as source_history.
+
+- name: Workflow4Metabolomics
+  doi: 10.1093/bioinformatics/btu813
+  title: 'Workflow4Metabolomics: a collaborative research infrastructure for computational metabolomics'
+  year: 2015
+  category: Multifunctional
+  repo_url: https://github.com/workflow4metabolomics/tools-metabolomics
+  status: hold
+  license_tier: open
+  wave: community-2026-06
+  resource_type: workflow-platform
+  source_issue: 16
+  links:
+    - https://workflow4metabolomics.usegalaxy.fr/
+    - https://doi.org/10.1002/cpz1.70095   # Delport 2025 protocol; green OA, NOT reusable
+  access:
+    type: open-access
+    license: cc-by
+    is_oa: true
+    oa_status: hybrid
+    verified_via: unpaywall_best_oa_location   # publisher-hosted cc-by
+    verified_on: '2026-07-10'
+    code_license: GPL-3.0-only   # tools-metabolomics LICENSE.txt
+  triage:
+    proposer: yguitton   # first external community proposal
+    rationale: >-
+      The Galaxy Workflow4Metabolomics suite is a long-standing, widely adopted public
+      infrastructure for reproducible LC-MS/GC-MS/NMR metabolomics. It covers the
+      preprocessing-to-statistics span with tools our corpus otherwise reaches only
+      through individual R/Python packages.
+    decision: accept
+    notes: >-
+      Anchored on Giacomoni 2015 (Bioinformatics), verified CC-BY at the publisher.
+      The Delport 2025 Current Protocols paper is green OA with no reuse licence, so it
+      is linked for context only and must NOT be used as the grounding source. The
+      repository is GPL-3, which clears the repository-OA tier independently.
+      Proposed by an external contributor — credit yguitton on promotion.
