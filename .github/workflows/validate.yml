@@ -7,7 +7,9 @@
 #   5. Description discipline lint (leading phrase, length, no marketing)
 #   6. EDAM IRI resolution
 #   8. RO-Crate validation (Workflow Run Profile 0.5)
-#   9. Indicium round-trip (verify-claims CLI from indicium-adapters)
+#   9. Indicium round-trip (verify-claims) — WARN-ONLY / inert: the CLI ships in
+#      indicium-adapters, not yet on PyPI, so this gate is advertised but does not
+#      run in public CI (emits a ::warning:: annotation; never blocks). See gate9-inert.
 #  10. Plugin manifest validation
 
 name: Validate
@@ -234,13 +236,22 @@ jobs:
           print(f"PASS: RO-Crate validation OK ({len(crate_files)} crates checked)")
           EOF
 
-      # -- Gate 9: indicium round-trip (verify-claims) -------------------------
-      - name: verify-claims round-trip
+      # -- Gate 9: indicium round-trip (verify-claims) — WARN-ONLY -------------
+      # This gate is ADVERTISED but INERT in public CI: the verify-claims CLI ships
+      # in indicium-adapters, which is not yet on PyPI, so `pip install` above is a
+      # no-op and the command is always absent. When that happens the step emits a
+      # GitHub ::warning:: annotation (visible in the PR checks UI) and exits 0 — it
+      # must never read as an enforced gate that passed. See the `gate9-inert` item
+      # in agenticsciencebuilder_dev/docs/asbb/HUMAN_REVIEW_GATE.md.
+      - name: "Gate 9: indicium round-trip (WARN-ONLY until indicium-adapters is published)"
         run: |
           if ! command -v verify-claims &> /dev/null; then
-            echo "WARNING: verify-claims CLI not found."
-            echo "Install indicium-adapters to enable gate 9: pip install indicium-adapters"
-            echo "Skipping gate 9 (non-blocking until indicium-adapters is published)"
+            echo "::warning title=Gate 9 inert (not enforced)::verify-claims CLI is absent (indicium-adapters is not on PyPI), so the indicium round-trip gate did NOT run. This is advisory only — do not read a green Validate as gate 9 passing. Tracked as gate9-inert."
+            echo "=============================================================="
+            echo " GATE 9 DID NOT RUN — verify-claims CLI not found."
+            echo " indicium-adapters is not yet published to PyPI, so this gate"
+            echo " is advertised but INERT. It is NOT enforced. Non-blocking."
+            echo "=============================================================="
             exit 0
           fi
           EXIT=0
