@@ -74,9 +74,18 @@ jobs:
           MAX_LEN = 300
           MARKETING_TERMS = ["best", "state-of-the-art", "revolutionary", "leading", "superior"]
 
+          # Workflow super-skills and `_`-prefixed scaffolds (e.g. `_router`) are
+          # composites, gated separately by check_workflows — the release authority
+          # release_gate.py::_iter_skill_md exempts them from the leaf description
+          # lint, so this gate must too (they legitimately carry longer, composite
+          # descriptions). Kept consistent by tests/test_ci_gate_consistency.py.
+          def _is_leaf(p):
+              return "workflows" not in p.parts and not any(s.startswith("_") for s in p.parts[:-1])
+
           failures = []
           skill_files = list(pathlib.Path("collections").rglob("SKILL.md"))
           skill_files += list(pathlib.Path("staged-collections").rglob("SKILL.md"))
+          skill_files = [p for p in skill_files if _is_leaf(p)]
           for skill_md in skill_files:
               text = skill_md.read_text()
               if not text.startswith("---"):
