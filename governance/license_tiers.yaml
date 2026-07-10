@@ -42,7 +42,44 @@ spdx:
   CC-BY-NC-4.0: noncommercial
   CC-BY-NC-3.0: noncommercial
   CC-BY-NC-SA-4.0: noncommercial
+  CC-BY-NC-ND-4.0: noncommercial
   PolyForm-Noncommercial-1.0.0: noncommercial
+  # NoDerivatives permits commercial *use* of the tool but forbids derivative
+  # distribution. It carries no explicit commercial prohibition, so it is not
+  # `noncommercial`; it grants no derivative rights, so it is not `open`.
+  CC-BY-ND-4.0: restricted
 fallback:
   noncommercial_keywords: [noncommercial, "non-commercial", "cc-by-nc", polyform-noncommercial]
   default: restricted
+
+# ---------------------------------------------------------------------------
+# SOURCE-REUSE axis. Distinct from the `spdx` tier map above.
+#
+#   spdx:         "what may a consumer do with the TOOL?"      -> license_tier
+#   source_reuse: "what may WE do with the SOURCE TEXT?"       -> access.type
+#
+# These are different questions and must not be conflated (LICENSE_TIERS.md).
+# CC-BY-ND allows commercial use of a tool but forbids derivative text, so it is
+# `restricted` on the tool axis and `limited` on the source axis.
+#
+#   full    - redistribute, quote at length, and derive (the OA-first bar)
+#   limited - some grant, but not full reuse (NC and/or ND); link-only
+#   none    - no reuse rights granted at all
+#
+# An SPDX id absent from this table resolves to UNKNOWN, never to a default.
+# Unknown must block admission and be reported loudly; see scripts/preprint_license.py.
+source_reuse:
+  CC-BY-4.0: full
+  CC-BY-3.0: full
+  CC-BY-SA-4.0: full
+  CC0-1.0: full
+  CC-BY-NC-4.0: limited
+  CC-BY-NC-3.0: limited
+  CC-BY-NC-SA-4.0: limited
+  CC-BY-ND-4.0: limited
+  CC-BY-NC-ND-4.0: limited
+  # arXiv's default: a non-exclusive licence to distribute, granting no reuse rights.
+  arXiv-1.0: none
+  # A pre-print server displays the work but the author reserved all rights
+  # (bioRxiv/medRxiv token `cc_no`). A known refusal, not an unknown.
+  NoReuse-1.0: none

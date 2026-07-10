@@ -51,3 +51,29 @@ def ack_required(tier: str) -> bool:
     """Only the noncommercial tier triggers a blocking runtime use acknowledgment.
     'restricted' is labeled + link-only with a soft note, but does not block."""
     return tier == "noncommercial"
+
+
+def source_reuse_for_license(spdx: str, _map: dict | None = None) -> str | None:
+    """What may we do with a SOURCE's text under this licence?
+
+    Returns 'full', 'limited', 'none', or None when the licence is not in the
+    canonical table. None means UNKNOWN and must block admission -- it is never
+    the same as 'none', which is a known refusal. See governance/license_tiers.yaml.
+    """
+    if not spdx or not spdx.strip():
+        return None
+    table = (_map or load_map()).get("source_reuse") or {}
+    key = spdx.strip().lower()
+    for known, reuse in table.items():
+        if known.lower() == key:
+            return reuse
+    return None
+
+
+def permits_full_reuse(spdx: str, _map: dict | None = None) -> bool:
+    """True only for licences that grant redistribution and derivation.
+
+    An unknown licence is not full reuse, but callers must still distinguish the
+    two: use source_reuse_for_license() when the difference matters.
+    """
+    return source_reuse_for_license(spdx, _map) == "full"
