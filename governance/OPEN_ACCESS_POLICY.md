@@ -146,7 +146,19 @@ The static page at <https://holobiomicslab.github.io/asb-skill-collections/paper
 
 ### Pre-prints
 
-Pre-prints (bioRxiv, medRxiv, ChemRxiv, arXiv) are treated as **open-access** (always CC-BY by repository policy) and may be included. When the peer-reviewed version is later published with a different DOI, the corpus entry is updated to point at the canonical DOI (linking back to the preprint as `source_history`).
+Pre-prints (bioRxiv, medRxiv, ChemRxiv, arXiv) may be included, but **their posting licence must be verified per pre-print — it is not always CC-BY.** bioRxiv and medRxiv let the author choose CC-BY, CC-BY-NC, CC-BY-ND, CC-BY-NC-ND, CC0 or "no reuse allowed"; arXiv's default licence-to-distribute grants no reuse rights at all. Treating every pre-print as CC-BY would admit text this project has no right to redistribute.
+
+Resolve the actual licence before admitting an entry, and record how it was resolved:
+
+| Server | Where the licence lives | Record as |
+|---|---|---|
+| bioRxiv / medRxiv | `https://api.biorxiv.org/details/<server>/<doi>` → `license` (`cc_by`, `cc_by_nc_nd`, `cc_no`, …) | `verified_via: biorxiv_api_license` |
+| arXiv | Atom API entry → `<license>` | `verified_via: arxiv_api_license` |
+| ChemRxiv | item metadata → `license` | `verified_via: chemrxiv_api_license` |
+
+Only a licence permitting the intended reuse admits the pre-print at an open `access.type`. A non-reuse licence makes the entry link-only, exactly as for a closed paper. Note that bioRxiv/medRxiv DOIs now carry the **openRxiv prefix `10.64898`** alongside the legacy Cold Spring Harbor prefix `10.1101`; both are genuine.
+
+Per [`CONTENT_POLICY.md`](CONTENT_POLICY.md) §3, `preprint` is a **provenance** value and must never be used as an `access.type`. When the peer-reviewed version is later published with a different DOI, the corpus entry is updated to point at the canonical DOI (linking back to the pre-print as `source_history`).
 
 ### Books and book chapters
 
