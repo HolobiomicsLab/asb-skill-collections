@@ -149,6 +149,8 @@ papers:
       the license_tier is what makes it includable. Still status: hold pending merge.
 
 - name: OmniPath Metabo
+  # DOI prefix 10.64898 is openRxiv (bioRxiv/medRxiv's registrant since the Cold Spring
+  # Harbor handover). It is NOT a typo for the legacy 10.1101 prefix. Do not "correct" it.
   doi: 10.64898/2026.06.18.733117
   title: 'OmniPath Metabo: chemical structures, interactions and mechanisms to study the metabolome'
   year: 2026
