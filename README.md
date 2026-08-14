@@ -54,10 +54,9 @@ collections/<domain>/<version>/    # full collection per domain   (e.g. metabolo
 packs/<domain>/<technique>/        # lighter per-technique subsets (e.g. metabolomics/lc-ms)
 ```
 
-Each domain ships a full plugin (`<domain>`) plus per-technique packs (`<domain>-<technique>`).
-**Metabolomics is the first released collection;** proteomics, transcriptomics, epigenomics and
-further domains follow under the same layout — no rename, just new entries under
-`collections/` + `marketplace.json`.
+**Metabolomics is the released collection:** a full plugin (`metabolomics`) plus per-technique packs
+(`metabolomics-<technique>`). Other domains (proteomics, transcriptomics, epigenomics) are staged/internal
+and will ship under the same layout — no rename, just new entries under `collections/` + `marketplace.json`.
 
 ---
 
