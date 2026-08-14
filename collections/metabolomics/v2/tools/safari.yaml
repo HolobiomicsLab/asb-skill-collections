@@ -4,7 +4,7 @@ canonical_url: https://github.com/lidawei1975/colmarvista
 evidence_spans:
 - 'For Safari: 1. Open Safari settings and go to the "Advanced" tab.'
 derived_from:
-- doi: 10.1007/s10858-025-00465-y#sec2
+- doi: 10.1007/s10858-025-00465-y
   title: COLMARvista
 source_repos:
 - lidawei1975/colmarvista

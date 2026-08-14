@@ -18,6 +18,9 @@ on:
       - 'collections/**/v*/collection.yaml'
       - 'staged-collections/**/corpus.yaml'
       - 'staged-collections/**/v*/collection.yaml'
+      # Editing the gate must re-run the gate, or a change to the admitted tier set
+      # ships without ever being exercised.
+      - '.github/workflows/verify-paper.yml'
   push:
     branches: [main]
     paths:
@@ -25,6 +28,7 @@ on:
       - 'collections/**/v*/collection.yaml'
       - 'staged-collections/**/corpus.yaml'
       - 'staged-collections/**/v*/collection.yaml'
+      - '.github/workflows/verify-paper.yml'
 
 permissions:
   contents: read
@@ -75,6 +79,19 @@ jobs:
               "green",
               "diamond",
           }
+
+          # Repository-OA tier (CONTENT_POLICY.md §3, "software / dataset / tutorial
+          # DOIs"): a public git repository cloned at build qualifies as `repo-oa`.
+          # This is the paper-ACCESS axis only; what a consumer may do with the tool is
+          # the separate `license_tier` axis. Must stay in sync with
+          # scripts/release_gate.py:_REPO_OA_TIERS -- tests/test_oa_tier_parity.py
+          # fails if the two ever drift apart.
+          REPO_OA_TYPES = {
+              "repo-oa",
+              "repo-permissive",
+              "repo-copyleft",
+          }
+          OPEN_ACCESS_TYPES |= REPO_OA_TYPES
 
           def normalize_access_type(raw: str) -> str:
               """Normalize an access.type token to a canonical OA tier.

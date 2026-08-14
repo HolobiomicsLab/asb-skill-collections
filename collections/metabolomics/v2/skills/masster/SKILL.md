@@ -8,6 +8,7 @@ metadata:
   techniques:
   - LC-MS
   repo_url: https://github.com/zamboni-lab/masster-dist
+  license_tier: noncommercial
   tool_license:
     tier: noncommercial
     requires_ack: true

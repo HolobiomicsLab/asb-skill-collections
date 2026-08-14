@@ -1,0 +1,8 @@
+{
+  "hard_fail_recall_target": null,
+  "_note": "UNRECONCILED — human decision (see agenticsciencebuilder_dev/docs/asbb/HUMAN_REVIEW_GATE.md#pii-recall-target). governance/CONTENT_POLICY.md:295 requires >=0.95 recall on the HARD_FAIL category; asbb-v0.yaml states 0.80. Until one number is chosen and written here, the recall test REPORTS the measured recall but does not hard-assert a threshold. Set this to a float in [0,1] to activate the gate.",
+  "sources": {
+    "content_policy": 0.95,
+    "asbb_v0_profile": 0.80
+  }
+}

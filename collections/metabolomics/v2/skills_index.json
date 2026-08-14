@@ -7070,7 +7070,7 @@
    "COLMARvista"
   ],
   "dois": [
-   "10.1007/s10858-025-00465-y#sec2"
+   "10.1007/s10858-025-00465-y"
   ],
   "techniques": [
    "NMR"
@@ -20243,7 +20243,7 @@
    "WebAssembly"
   ],
   "dois": [
-   "10.1007/s10858-025-00465-y#sec2"
+   "10.1007/s10858-025-00465-y"
   ],
   "techniques": [],
   "license_tier": "open"
@@ -63356,6 +63356,21 @@
   "license_tier": "open"
  },
  {
+  "slug": "masster",
+  "name": "masster",
+  "description": "Use when you need to run the Zamboni-lab Masster (MASSter) workflow for untargeted LC-MS metabolomics data analysis. NONCOMMERCIAL tool — confirm permitted use before applying (see License notice).",
+  "edam_operation": null,
+  "edam_topics": [],
+  "tools": [
+   "Masster"
+  ],
+  "dois": [],
+  "techniques": [
+   "LC-MS"
+  ],
+  "license_tier": "noncommercial"
+ },
+ {
   "slug": "match-factor-threshold-filtering",
   "name": "match-factor-threshold-filtering",
   "description": "Use when you have a GC-MS dataset with Match.Factor scores for each detected compound (output from Agilent Unknowns Analysis or equivalent), and you want to reduce the number of query chemicals passed to computationally intensive cheminformatics functions (categorate, mzExacto, or exactoThese).",
@@ -95535,7 +95550,7 @@
    "WebAssembly"
   ],
   "dois": [
-   "10.1007/s10858-025-00465-y#sec2"
+   "10.1007/s10858-025-00465-y"
   ],
   "techniques": [
    "NMR"
@@ -136651,7 +136666,7 @@
    "COLMARvista"
   ],
   "dois": [
-   "10.1007/s10858-025-00465-y#sec2"
+   "10.1007/s10858-025-00465-y"
   ],
   "techniques": [
    "NMR"
@@ -136673,7 +136688,7 @@
    "COLMARvista"
   ],
   "dois": [
-   "10.1007/s10858-025-00465-y#sec2"
+   "10.1007/s10858-025-00465-y"
   ],
   "techniques": [
    "NMR"

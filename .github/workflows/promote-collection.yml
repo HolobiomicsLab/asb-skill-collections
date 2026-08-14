@@ -1,0 +1,129 @@
+# promote-collection.yml — Hard-block gate for staged → collections promotion.
+#
+# Spec: governance/CONTENT_POLICY.md §7.2. A promotion PR moves a collection from
+# staged-collections/ into collections/. Unlike the advisory staged gate, every
+# FAIL here blocks the merge.
+#
+# Runs:
+#   - release_gate.py --strict over each collection (hard gates 1,2,5,6,8,10,12,15)
+#   - leaderboard consistency (scripts/validate_leaderboard.py)
+#   - COI presence check (full co-reviewer enforcement lives in verify-coi.yml,
+#     the single source; here we only fail the promotion if an attestation's COI
+#     probe errors, so a promotion never lands on an unverifiable attestation).
+#
+# Hard gates (2,5,6,8,10,12,15) are never overridable (§8); coi_override /
+# degraded_release apply only to soft gates and are honoured by release_gate.py.
+
+name: Promote collection
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'collections/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  promote:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install pyyaml numpy jsonschema requests httpx
+          pip install indicium-adapters || echo "WARNING: indicium-adapters not yet published; gate 9 stays warn-only"
+
+      # -- Hard block: strict release gate over every promoted collection ------
+      - name: Release gate (strict)
+        run: |
+          set -euo pipefail
+          fail=0
+          shopt -s globstar nullglob
+          dirs=(collections/*/v*)
+          if [ ${#dirs[@]} -eq 0 ]; then
+            echo "FAIL: no collections/*/v* directory to promote"; exit 1
+          fi
+          for dir in "${dirs[@]}"; do
+            [ -f "$dir/corpus.yaml" ] || continue
+            echo "::group::release_gate --strict $dir"
+            python scripts/release_gate.py "$dir" --strict --report "$dir/gate_report.json" || fail=1
+            echo "::endgroup::"
+          done
+          exit $fail
+
+      # -- Hard block: leaderboard consistency --------------------------------
+      - name: Leaderboard consistency
+        run: |
+          set -euo pipefail
+          fail=0
+          shopt -s globstar nullglob
+          boards=(collections/**/leaderboard.jsonld)
+          if [ ${#boards[@]} -eq 0 ]; then
+            echo "No leaderboard.jsonld in the promoted collections; nothing to check."
+            exit 0
+          fi
+          for board in "${boards[@]}"; do
+            echo "::group::validate_leaderboard $board"
+            python scripts/validate_leaderboard.py "$board" || fail=1
+            echo "::endgroup::"
+          done
+          exit $fail
+
+      # -- Hard block: no promotion on an unverifiable COI attestation ---------
+      # The co-reviewer / self-review rule is enforced by verify-coi.yml (single
+      # source). Here we only guarantee every attestation in the promoted set has
+      # a resolvable COI probe, so a promotion cannot land on an unchecked claim.
+      - name: COI probe resolves for every attestation
+        run: |
+          set -euo pipefail
+          python - <<'EOF'
+          import glob, pathlib, subprocess, sys, yaml
+
+          attestations = glob.glob("collections/**/reviews/*.yaml", recursive=True)
+          attestations += glob.glob("collections/**/reviews/*.yml", recursive=True)
+          if not attestations:
+              print("No review attestations in the promoted collections; COI check not applicable.")
+              sys.exit(0)
+
+          failures = []
+          checked = 0
+          for path in attestations:
+              try:
+                  doc = yaml.safe_load(pathlib.Path(path).read_text()) or {}
+              except Exception as exc:  # noqa: BLE001
+                  failures.append(f"{path}: unparseable attestation ({exc})")
+                  continue
+              orcid = doc.get("reviewer_orcid") or (doc.get("reviewer") or {}).get("orcid")
+              doi = doc.get("paper_doi") or doc.get("doi")
+              if not orcid or not doi:
+                  # No identity to probe; verify-coi.yml owns schema enforcement.
+                  continue
+              proc = subprocess.run(
+                  [sys.executable, "scripts/check_coi.py", "--orcid", str(orcid), "--doi", str(doi)],
+                  capture_output=True, text=True,
+              )
+              checked += 1
+              if proc.returncode != 0:
+                  failures.append(f"{path}: COI probe errored ({proc.stderr.strip()[:120]})")
+
+          if failures:
+              print("FAIL: unverifiable COI attestations block promotion:")
+              for f in failures:
+                  print(f"  - {f}")
+              sys.exit(1)
+          print(f"PASS: {checked} COI probe(s) resolved.")
+          EOF

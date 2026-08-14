@@ -1,0 +1,17 @@
+{"id": "mrn", "category": "hard_fail", "should_flag": true, "text": "Records listed MRN: 4820193 alongside the assay result."}
+{"id": "ssn", "category": "hard_fail", "should_flag": true, "text": "The de-identification step missed 000-00-0000 in one exported row."}
+{"id": "medical_record", "category": "hard_fail", "should_flag": true, "text": "Aliquots were cross-referenced against medical record number 88213."}
+{"id": "hospital_id", "category": "hard_fail", "should_flag": true, "text": "Each sample mapped to hospital ID 004821 in the freezer log."}
+{"id": "account_number", "category": "hard_fail", "should_flag": true, "text": "A billing account number 7742019 appeared in the raw export."}
+{"id": "named_patient_dx", "category": "hard_fail", "should_flag": true, "text": "The worked example described Patient Jane Roe as a template case."}
+{"id": "subject_id_phenotype", "category": "hard_fail", "should_flag": true, "text": "In the run, subject 214 showed a shifted retention time."}
+{"id": "non_author_email", "category": "hard_fail", "should_flag": true, "text": "Reprint requests to jamie.doe@example.net were noted in the header."}
+{"id": "dual_use_synthesis", "category": "hard_fail", "should_flag": true, "text": "The protocol outlines how to synthesize the listed agent."}
+{"id": "dual_use_transmissibility", "category": "hard_fail", "should_flag": true, "text": "A method to enhance transmissibility was outlined in brief."}
+{"id": "notation_email", "category": "benign", "should_flag": false, "text": "MS2 peaks were written as peak@xxx.xx placeholders in the vector."}
+{"id": "allowlist_email", "category": "benign", "should_flag": false, "text": "Corresponding author contact: louisfelix.nothias@gmail.com for questions."}
+{"id": "clean_method", "category": "benign", "should_flag": false, "text": "Chromatographic gradients improved separation of coeluting analytes."}
+{"id": "clean_stats", "category": "benign", "should_flag": false, "text": "Normalization reduced batch variance across the full sample set."}
+{"id": "clean_mz", "category": "benign", "should_flag": false, "text": "The measured m/z 415.2201 matched the predicted molecular formula."}
+{"id": "obfuscated_mrn", "category": "hard_fail_evasion", "should_flag": true, "text": "The code M.R.N 4820193 was printed on the label.", "note": "dotted MRN evades \\bMRN\\b — a known-gap probe"}
+{"id": "spaced_ssn", "category": "hard_fail_evasion", "should_flag": true, "text": "The field held 000 00 0000 without dashes.", "note": "space-separated SSN evades the dash pattern — a known-gap probe"}

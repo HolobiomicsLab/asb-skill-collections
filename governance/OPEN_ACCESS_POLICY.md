@@ -146,7 +146,32 @@ The static page at <https://holobiomicslab.github.io/asb-skill-collections/paper
 
 ### Pre-prints
 
-Pre-prints (bioRxiv, medRxiv, ChemRxiv, arXiv) are treated as **open-access** (always CC-BY by repository policy) and may be included. When the peer-reviewed version is later published with a different DOI, the corpus entry is updated to point at the canonical DOI (linking back to the preprint as `source_history`).
+Pre-prints (bioRxiv, medRxiv, ChemRxiv, arXiv) may be included, but **their posting licence must be verified per pre-print — it is not always CC-BY.** bioRxiv and medRxiv let the author choose CC-BY, CC-BY-NC, CC-BY-ND, CC-BY-NC-ND, CC0 or "no reuse allowed"; arXiv's default licence-to-distribute grants no reuse rights at all. Treating every pre-print as CC-BY would admit text this project has no right to redistribute.
+
+Resolve the actual licence before admitting an entry, with `scripts/preprint_license.py`:
+
+```bash
+python -m scripts.preprint_license --doi 10.1101/2020.04.09.033894
+python -m scripts.preprint_license --corpus 'collections/*/v*/corpus.yaml'
+```
+
+**Read pre-print-ness from the DOI registry, never from a DOI prefix.** A prefix identifies a *registrant*, not a work type — `10.1101` is Cold Spring Harbor, covering bioRxiv, medRxiv **and** CSHL journals, and bioRxiv/medRxiv now also register under the **openRxiv prefix `10.64898`**. Both registries declare the work type directly, so any server they cover resolves with no code change:
+
+| Registry | Declares a pre-print by | Licence field | Record as |
+|---|---|---|---|
+| Crossref (bioRxiv, medRxiv, ChemRxiv, most servers) | `type: posted-content` | `license[].URL` | `verified_via: crossref_license` |
+| DataCite (arXiv) | `types.resourceTypeGeneral: Preprint` | `rightsList[].rightsUri` | `verified_via: datacite_license` |
+
+Two corrections to earlier guidance, both established by testing the live APIs:
+
+- **arXiv's Atom API returns no licence at all.** Use DataCite (or OAI-PMH `arXivRaw`). arXiv's default `nonexclusive-distrib` licence grants **no reuse rights**, so an arXiv pre-print is not open by default.
+- **ChemRxiv's public API is behind Cloudflare and answers `403` to scripted requests.** Resolve ChemRxiv through Crossref, which carries its licence.
+
+`api.biorxiv.org/details/<server>/<doi>` remains an authoritative cross-check for bioRxiv/medRxiv (returning tokens such as `cc_by`, `cc_by_nc_nd`, `cc_no`), but it is server-specific and so is not the primary path.
+
+Only a **full-reuse** licence — one mapped to `source_reuse: full` in [`license_tiers.yaml`](license_tiers.yaml), i.e. CC-BY, CC-BY-SA or CC0 — admits a pre-print at an open `access.type`. NC and ND licences grant `limited` reuse and make the entry link-only, exactly as for a closed paper. A licence the table does not know resolves to **unknown**, which blocks admission and must be reported; it is never silently treated as either permissive or restrictive.
+
+Per [`CONTENT_POLICY.md`](CONTENT_POLICY.md) §3, `preprint` is a **provenance** value and must never be used as an `access.type`. When the peer-reviewed version is later published with a different DOI, the corpus entry is updated to point at the canonical DOI (linking back to the pre-print as `source_history`).
 
 ### Books and book chapters
 

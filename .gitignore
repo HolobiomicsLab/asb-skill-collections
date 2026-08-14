@@ -43,3 +43,7 @@ outputs/
 # License clarification wave output (runtime artifact — not committed)
 governance/license_clarification/wave.yaml
 .license-cache-v2.json
+
+# Local resolver caches (preprint licence lookups, embeddings). Never committed.
+.cache/
+**/.cache/

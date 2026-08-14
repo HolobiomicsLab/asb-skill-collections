@@ -81,7 +81,25 @@ deployments:
   status: open               # open | responded | license-added | closed | wontfix
   license_after: null        # SPDX id if the repo later adds a license
   last_checked: null         # ISO date of last verify run
+  note: ...                  # optional prose; why an entry is settled. Preserved by verify.
 ```
+
+### Before filing a wave: check for licences outside `LICENSE`
+
+`verify` (and the original wave scan) resolve a licence through GitHub's SPDX
+detection, which **only reads a `LICENSE`/`COPYING` file**. A project can be
+properly licensed without one:
+
+| Where the licence hides | Real example |
+|---|---|
+| Full licence text pasted into the `README` | `matteogiulietti/LipidOne` — BSD-2-Clause |
+| `License:` field of an R package `DESCRIPTION` | `mariallr/amanida` — GPL-3 |
+| `LICENSE.txt` (detected by GitHub, but not by a bare `LICENSE` glob) | `workflow4metabolomics/tools-metabolomics` — GPL-3 |
+
+Filing against such a repo asks an author for something they already published.
+This happened once (LipidOne, issue closed with an apology). Run
+`scripts/readme_license_precheck.py` **before** `--create`, and treat a null
+`licenseInfo` as *unknown*, never as *unlicensed*.
 
 ### Append-on-create
 
