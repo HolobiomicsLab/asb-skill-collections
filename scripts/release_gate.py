@@ -116,20 +116,32 @@ except Exception:  # noqa: BLE001 - any import failure → vendored fallback
 # gate report records the version used per CONTENT_POLICY.md §6.2.             #
 # --------------------------------------------------------------------------- #
 PII_CONFIG: dict[str, Any] = {
-    "version": "2026-06-15.1",
+    "version": "2026-07-10.2",
     "source": "scripts/release_gate.py::PII_CONFIG (mirror of pii_patterns.json)",
     # Tier 1 — HARD FAIL when found inside a verbatim quote span.
     "hard_fail_patterns": {
         # Clinical / personal identifiers.
-        "mrn": r"\bMRN[:\s#]*\d{5,12}\b",
+        # `mrn` tolerates optional separators (`M.R.N 4820193`, `M R N …`) because the
+        # abbreviation + a 5-12 digit run is specific — 0 false positives across ≥4
+        # sciences (see test_pii_evasion_hardening / test_pii_crossdomain).
+        "mrn": r"\bM[.\s]?R[.\s]?N\b[:\s#.]*\d{5,12}\b",
         "medical_record": r"\bmedical\s+record\s+(?:no\.?|number|#)\s*[:#]?\s*\d{4,}\b",
         "nhs_number": r"\b\d{3}[\s-]?\d{3}[\s-]?\d{4}\b",  # NHS 10-digit format
         "hospital_id": r"\b(?:hospital|patient)\s+ID[:\s#]*\w*\d{3,}\b",
         "account_number": r"\baccount\s+(?:no\.?|number|#)\s*[:#]?\s*\d{6,}\b",
+        # `ssn` stays DASH-ONLY on purpose. A space-separated 3-2-4 run (`000 00 0000`)
+        # is irreducibly ambiguous with scientific numeric IDs (electrode / station /
+        # coordinate values), so tolerating spaces over-fires cross-domain — a
+        # documented, accepted detection gap, NOT a regex to force. The dashed form is
+        # a specific SSN convention. (test_pii_crossdomain pins this decision.)
         "ssn": r"\b\d{3}-\d{2}-\d{4}\b",
-        # Explicit named-patient health information.
+        # Explicit named-patient health information: "Patient John Doe".
+        # The name parts are wrapped in (?-i:...) so they require REAL capitalisation
+        # even though the gate compiles every pattern with IGNORECASE — otherwise
+        # IGNORECASE makes [A-Z] match lowercase and this fires on ordinary clinical
+        # prose ("patient cohort showed", "patient samples were"). See test_pii_crossdomain.
         "named_patient_dx": (
-            r"\bpatient\s+[A-Z][a-z]+\s+[A-Z][a-z]+\b"  # "Patient John Doe"
+            r"\bpatient\s+(?-i:[A-Z][a-z]+\s+[A-Z][a-z]+)\b"
         ),
         "subject_id_phenotype": (
             r"\bsubject\s+(?:id\s+)?\d{3,}\s+(?:showed|presented|exhibited|had)\b"
