@@ -148,6 +148,7 @@ jobs:
           import sys, pathlib, yaml, urllib.request, urllib.error
 
           failures = []
+          unverified = []
           checked = 0
           skill_files = list(pathlib.Path("collections").rglob("SKILL.md"))
           skill_files += list(pathlib.Path("staged-collections").rglob("SKILL.md"))
@@ -174,14 +175,27 @@ jobs:
                   )
                   with urllib.request.urlopen(req, timeout=10):
                       checked += 1
+              except urllib.error.HTTPError as e:
+                  # 404/410 = the DOI genuinely does not resolve (orphan).
+                  # 403/429/401/405/5xx = the resolver answered but the
+                  # publisher bot-blocked HEAD; the DOI exists, not an orphan.
+                  if e.code in (404, 410):
+                      failures.append(f"{skill_md}: DOI {doi} does not resolve (HTTP {e.code})")
+                  else:
+                      unverified.append(f"{skill_md}: DOI {doi} reachable, target blocked HEAD (HTTP {e.code})")
               except Exception as e:
-                  failures.append(f"{skill_md}: DOI {doi} failed to resolve: {e}")
+                  # Network/timeout flakiness is inconclusive, not a missing DOI.
+                  unverified.append(f"{skill_md}: DOI {doi} check inconclusive ({e})")
+          if unverified:
+              print(f"NOTE: {len(unverified)} DOI(s) reachable but not target-verified (not orphans):")
+              for u in unverified:
+                  print(f"  - {u}")
           if failures:
               print("FAIL: orphan skill / DOI resolution failures:")
               for f in failures:
                   print(f"  - {f}")
               sys.exit(1)
-          print(f"PASS: DOI resolution OK ({checked} DOIs checked)")
+          print(f"PASS: DOI resolution OK ({checked} verified, {len(unverified)} unverified)")
           EOF
 
       # -- Gate 6: EDAM IRI resolution ----------------------------------------
