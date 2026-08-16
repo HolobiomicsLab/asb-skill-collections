@@ -26,6 +26,41 @@ V2 = REPO / "collections" / "metabolomics" / "v2"
 ADVERTISED_TOKEN_BUDGET = 5_000
 
 
+def _marketplace_units() -> list[pathlib.Path]:
+    """Every plugin directory the marketplace offers for installation."""
+    manifest = json.loads(
+        (REPO / ".claude-plugin" / "marketplace.json").read_text(encoding="utf-8")
+    )
+    return [REPO / p["source"].lstrip("./") for p in manifest["plugins"]]
+
+
+@pytest.mark.parametrize(
+    "unit", _marketplace_units(), ids=lambda p: p.name
+)
+def test_every_offered_plugin_is_cheap_to_install(unit):
+    """No plugin may charge a user's session for a corpus it ships as data."""
+    advertised = sorted((unit / layout.ADVERTISED_DIRNAME).glob("*/SKILL.md"))
+    total = sum(len(_frontmatter(p)) for p in advertised)
+    assert total // 4 < ADVERTISED_TOKEN_BUDGET, (
+        f"{unit.name} advertises {len(advertised)} skills costing ~{total // 4} "
+        f"tokens at session start, over the {ADVERTISED_TOKEN_BUDGET} budget"
+    )
+
+
+@pytest.mark.parametrize(
+    "unit", _marketplace_units(), ids=lambda p: p.name
+)
+def test_every_offered_plugin_can_retrieve_its_corpus(unit):
+    """A router-shaped unit must ship the index and script its router promises."""
+    if not layout.is_router_shaped(unit):
+        pytest.skip("legacy layout: the corpus is advertised, not retrieved")
+    assert (unit / "bin" / "search_skills.py").is_file()
+    indexed = {e["slug"] for e in json.loads((unit / "skills_index.json").read_text())}
+    on_disk = {d.name for d in (unit / "leaves").iterdir() if d.is_dir()}
+    missing = on_disk - indexed
+    assert not missing, f"{unit.name}: {len(missing)} leaves unreachable by search"
+
+
 def _frontmatter(path: pathlib.Path) -> str:
     match = re.match(r"^---\n(.*?)\n---\n", path.read_text(encoding="utf-8"), re.S)
     return match.group(1) if match else ""
