@@ -59,6 +59,7 @@ import pathlib
 import re
 import sys
 from datetime import datetime, timezone
+from scripts import layout
 
 try:
     import yaml
@@ -840,7 +841,7 @@ def assemble(
     n_dups = sum(len(r["_all_sources"]) - 1 for r in skills_by_slug.values())
 
     if not dry_run:
-        skills_out = release_dir / "skills"
+        skills_out = layout.leaf_dir(release_dir)
         tools_out = release_dir / "tools"
         if clean:
             _rmtree(skills_out)

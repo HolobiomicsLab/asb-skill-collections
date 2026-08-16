@@ -27,6 +27,7 @@ import re
 import yaml
 
 from scripts.license_tier import load_map
+from scripts import layout
 from scripts.propagate_license_tiers import detect_indent
 
 META_ROLE = "meta"
@@ -136,7 +137,7 @@ def _dois(frontmatter: dict) -> list[str]:
 def indexable_skills(version_dir: pathlib.Path) -> dict[str, dict]:
     """Map slug -> frontmatter for every skill that belongs in an index."""
     found = {}
-    for skill_md in sorted((version_dir / "skills").glob("*/SKILL.md")):
+    for skill_md in layout.iter_skill_md(version_dir):
         slug = skill_md.parent.name
         frontmatter = parse_frontmatter(skill_md)
         if is_indexable(slug, frontmatter):
