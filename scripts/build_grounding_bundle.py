@@ -115,7 +115,7 @@ def build_unit(unit_dir, collection_dir, bind_script):
     unit_dir, collection_dir, bind_script = Path(unit_dir), Path(collection_dir), Path(bind_script)
     if not any(d.is_dir() for d in layout.skill_dirs(unit_dir)):
         raise ValueError(f"no skill dir in unit {unit_dir}")
-    slugs = layout.slugs(unit_dir)
+    slugs = {d.name for d in layout.slug_dirs(unit_dir)}
     full = json.loads((collection_dir / "kb_bundle.json").read_text())
     bundle = filter_and_enrich_bundle(full, slugs, _read_corpus(collection_dir), _read_tools(collection_dir))
     written = []

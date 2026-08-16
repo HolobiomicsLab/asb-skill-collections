@@ -4,8 +4,10 @@ description: Use when an agent needs to find and apply a computational-metabolom
 license: CC-BY-4.0
 metadata:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
-  skills_count: 5865
+  skills_count: 5866
   tools_count: 909
+  leaf_dir: leaves
+  retrieval: bin/search_skills.py
   indexes:
   - skills_index.json
   - tools_index.json
@@ -23,7 +25,7 @@ attribution:
 
 # ASB Metabolomics Skill Collection — router
 
-This is the default entry point for the ASB Metabolomics collection (v2): **5,865
+This is the default entry point for the ASB Metabolomics collection (v2): **5,866
 evidence-grounded skills** and **909 software-tool records** for computational
 metabolomics — predominantly LC-MS/MS, but also LC-MS, GC-MS, mass-spectrometry
 imaging, ion mobility, lipidomics, and some NMR / multi-omics — each derived from
@@ -31,29 +33,48 @@ a peer-reviewed method paper and its public code repository.
 
 You (the agent) use this router in three steps: **search → apply → (optionally) ground**.
 
+## How this collection is laid out
+
+The 5,866 leaf skills live in **`leaves/<slug>/SKILL.md`**, not in `skills/`.
+That is deliberate: a plugin host loads the name and description of every skill
+under `skills/` into the session prompt, so advertising all of them would cost
+several hundred thousand tokens before you have done anything. Only this router
+and the `asb-metabolomics` licence gate are advertised; the corpus ships beside
+them as data and you retrieve from it on demand.
+
+So: **do not enumerate `leaves/`, and do not read `skills_index.json` whole**
+(it is several megabytes). Search it with the script below, then read the one
+skill you need.
+
 ## 1. Search — find the right skill
 
-Every skill is one `skills/<slug>/SKILL.md` with YAML frontmatter. Two machine
-indexes at the collection root make lookup cheap — load whichever fits:
+```bash
+python bin/search_skills.py --query "<the user's task>" -k 10
+```
+
+Standard library only — no network, no API key. It prints a handful of
+candidates with their tools, techniques, licence tier, and the exact path to
+read. Narrow it with exact-match filters when the user has already been
+specific:
+
+- `--technique LC-MS` — analytical platform tag: `LC-MS` (incl. LC-MS/MS),
+  `GC-MS`, `CE-MS`, `direct-infusion-MS`, `MS-imaging`, `ion-mobility-MS`,
+  `NMR`, `mass-spectrometry` (generic).
+- `--tool SIRIUS` — the user already names a tool ("run XCMS", "use SIRIUS",
+  "GNPS molecular networking", "MZmine", "matchms").
+- `--edam operation_3215` — exact ontology match (e.g. peak picking, spectral
+  library matching, formula prediction).
+
+Two machine indexes back the search, and are worth querying directly with `jq`
+when you need a field the script does not print:
 
 - **`skills_index.json`** — one row per skill: `slug`, `name`, `description`,
-  `edam_operation`, `edam_topics`, `tools`, `dois`, `techniques`.
+  `edam_operation`, `edam_topics`, `tools`, `dois`, `techniques`,
+  `license_tier`.
 - **`tools_index.json`** — one row per tool: `slug`, `name`, `canonical_url`,
   `edam_topics`, `dois`.
 
-Pick a skill by matching the user's task against, in order of precision:
-
-1. **Technique** (`techniques`) — analytical platform tags: `LC-MS` (incl.
-   LC-MS/MS), `GC-MS`, `CE-MS`, `direct-infusion-MS`, `MS-imaging`,
-   `ion-mobility-MS`, `NMR`, `mass-spectrometry` (generic).
-   e.g. `jq '.[]|select(.techniques[]?=="LC-MS")'`.
-2. **EDAM operation/topic IRI** — exact ontology match (e.g. peak picking =
-   `operation_3215`, spectral library matching, formula prediction).
-3. **Tool name** — the user already names a tool ("run XCMS", "use SIRIUS",
-   "GNPS molecular networking", "MZmine", "matchms").
-4. **Keyword** over `name` + `description`.
-
-Then read that skill's `skills/<slug>/SKILL.md` and follow it.
+Then read that skill's `leaves/<slug>/SKILL.md` and follow it.
 
 ## 2. Apply — use the skill
 

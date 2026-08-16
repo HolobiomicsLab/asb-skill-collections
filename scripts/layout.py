@@ -84,6 +84,22 @@ def slugs(collection_dir: str | os.PathLike) -> set[str]:
     return {p.parent.name for p in iter_skill_md(collection_dir)}
 
 
+def slug_dirs(collection_dir: str | os.PathLike) -> list[Path]:
+    """Every skill directory, whether or not it yet holds a ``SKILL.md``.
+
+    Packaging steps run over half-built units where the body has not been
+    written, so membership here is by directory, not by file.
+    """
+    found = [
+        child
+        for root in skill_dirs(collection_dir)
+        if root.is_dir()
+        for child in sorted(root.iterdir())
+        if child.is_dir() and not child.name.startswith("_")
+    ]
+    return found
+
+
 if __name__ == "__main__":
     import sys
     import tempfile

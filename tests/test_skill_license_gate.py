@@ -2,7 +2,11 @@ import pathlib, sys, yaml
 sys.path.insert(0, str(pathlib.Path(__file__).parent.parent))
 from scripts import license_tier as lt
 
-V2 = pathlib.Path(__file__).parent.parent / "collections/metabolomics/v2/skills"
+from scripts import layout
+
+V2 = layout.leaf_dir(
+    pathlib.Path(__file__).parent.parent / "collections/metabolomics/v2"
+)
 
 def _frontmatter(skill_md: pathlib.Path) -> dict:
     text = skill_md.read_text(encoding="utf-8")
