@@ -5,6 +5,7 @@ description: Use when you have a CSV or EXCEL file containing molecular descript
   binary bitterness predictions (bitter vs. non-bitter) for each molecule.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0209

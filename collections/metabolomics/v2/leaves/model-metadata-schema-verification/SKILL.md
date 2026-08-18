@@ -6,6 +6,7 @@ description: Use when before submitting peak data or other inputs to a machine l
   names or structure may change and require code updates.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_topics: []
   tools:
   - tensorflow serving

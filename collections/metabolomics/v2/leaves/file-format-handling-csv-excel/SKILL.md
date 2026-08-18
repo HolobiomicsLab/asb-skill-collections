@@ -4,6 +4,7 @@ description: Use when you have molecular descriptor data in CSV or EXCEL format 
   need to pass it to BitterPredict.m or another descriptor-based classifier.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0154

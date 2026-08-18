@@ -4,6 +4,7 @@ description: Use when when a new file format specification has multiple language
   and you need to validate that all implementations correctly interpret the specification.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -6,6 +6,7 @@ description: Use when you have nuclear magnetic resonance (NMR) peak data (proto
   SMART 3 classification model.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0154

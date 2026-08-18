@@ -6,6 +6,7 @@ description: Use when when you have calculated molecular descriptors from valida
   for bitter/non-bitter predictions.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3750
   edam_topics:
   - http://edamontology.org/topic_0091

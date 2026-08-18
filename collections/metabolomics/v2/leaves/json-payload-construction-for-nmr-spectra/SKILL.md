@@ -6,6 +6,7 @@ description: Use when when you have NMR peak assignments (1H and 13C chemical sh
   data conforms to the expected JSON schema.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0593

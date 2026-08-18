@@ -6,6 +6,7 @@ description: Use when when you have raw mass spectrometry data from diverse inst
   parameters—into a queryable, vendor-agnostic tabular schema.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

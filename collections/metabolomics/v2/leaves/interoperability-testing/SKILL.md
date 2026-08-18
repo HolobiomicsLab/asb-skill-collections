@@ -4,6 +4,7 @@ description: Use when when a new file format specification exists as a living do
   (e.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_0091

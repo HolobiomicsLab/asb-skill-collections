@@ -6,6 +6,7 @@ description: Use when you have collected or parsed 1H and 13C NMR peak data (che
   expects peaks as JSON rather than raw spectroscopic files.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0593

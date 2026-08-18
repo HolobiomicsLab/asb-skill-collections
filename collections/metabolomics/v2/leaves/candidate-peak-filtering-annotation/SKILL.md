@@ -5,6 +5,7 @@ description: Use when you have a peak list extracted from MSI data that includes
   images.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

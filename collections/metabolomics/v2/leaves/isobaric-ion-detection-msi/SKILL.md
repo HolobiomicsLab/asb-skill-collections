@@ -6,6 +6,7 @@ description: Use when you have loaded MSI data with an extracted peak list and n
   during downstream annotation filtering.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

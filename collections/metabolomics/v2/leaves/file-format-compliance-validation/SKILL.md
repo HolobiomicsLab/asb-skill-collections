@@ -6,6 +6,7 @@ description: Use when you have generated or received mzPeak files from a Rust, P
   downstream analysis pipeline.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_0121

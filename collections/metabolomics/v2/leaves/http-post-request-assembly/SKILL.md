@@ -6,6 +6,7 @@ description: Use when you have NMR peak data (1H and 13C chemical shift values) 
   and parse the response to extract predictions and confidence.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0091

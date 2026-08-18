@@ -5,6 +5,7 @@ description: Use when you have one or more mzML files (XML-based mass spectromet
   or integration with tools that consume Parquet-based spectra.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -6,6 +6,7 @@ description: Use when when preparing to send peak data (1H and 13C NMR measureme
   code that constructs JSON payloads for the /api/smart3/search.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_topics: []
   tools:
   - TensorFlow Serving

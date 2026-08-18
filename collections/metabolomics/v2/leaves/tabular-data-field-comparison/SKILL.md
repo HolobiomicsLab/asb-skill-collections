@@ -5,6 +5,7 @@ description: Use when you have multiple independent implementations of the same 
   or equivalent output.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0121

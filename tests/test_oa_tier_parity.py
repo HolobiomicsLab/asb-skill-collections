@@ -22,7 +22,7 @@ from scripts import release_gate
 
 REPO_ROOT = pathlib.Path(__file__).parent.parent
 VERIFY_PAPER_WORKFLOW = REPO_ROOT / ".github" / "workflows" / "verify-paper.yml"
-TIER_NAMES = {"OPEN_ACCESS_TYPES", "REPO_OA_TYPES"}
+TIER_NAMES = {"OPEN_ACCESS_TYPES", "REPO_OA_TYPES", "LINK_ONLY_TYPES"}
 
 
 def _inline_gate_source() -> str:
@@ -83,6 +83,10 @@ def test_tier_sets_are_bound_only_at_module_level():
 
 def test_workflow_admits_every_repo_oa_tier():
     assert release_gate._REPO_OA_TIERS <= _workflow_open_access_types()
+
+
+def test_workflow_admits_every_link_only_tier():
+    assert release_gate._LINK_ONLY_TIERS <= _workflow_open_access_types()
 
 
 def test_workflow_admits_every_release_gate_tier():

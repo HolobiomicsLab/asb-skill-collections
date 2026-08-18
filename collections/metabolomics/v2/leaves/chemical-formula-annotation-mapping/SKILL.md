@@ -6,6 +6,7 @@ description: 'Use when you have processed MSI peak data (in rMSIproc format) and
   matrix identity (e.g., ''Ag1'' for silver);'
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_3520

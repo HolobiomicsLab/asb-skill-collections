@@ -5,6 +5,7 @@ description: Use when processing extracted peak lists from MSI data and you need
   very similar m/z values (isobaric ions) are present.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

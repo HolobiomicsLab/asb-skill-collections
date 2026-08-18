@@ -6,6 +6,7 @@ description: Use when your input is an mzPeak archive (ZIP of Parquet files) and
   profile or centroid mode spectra stored in `spectra_data.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_3520

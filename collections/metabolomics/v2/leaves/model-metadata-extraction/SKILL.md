@@ -4,6 +4,7 @@ description: Use when when you need to programmatically interface with a TensorF
   Serving model instance and must discover or validate the expected input names (e.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_topics: []
   tools:
   - tensorflow serving

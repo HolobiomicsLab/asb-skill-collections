@@ -6,6 +6,7 @@ description: Use when when you have Rust source code (such as the mzPeak format 
   domain-specific formats like mzPeak.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3565
   edam_topics:
   - http://edamontology.org/topic_0091

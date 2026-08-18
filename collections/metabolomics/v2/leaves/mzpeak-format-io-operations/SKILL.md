@@ -6,6 +6,7 @@ description: Use when you have mass spectrometry run data (spectra, chromatogram
   read and write paths for round-trip fidelity.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_0121

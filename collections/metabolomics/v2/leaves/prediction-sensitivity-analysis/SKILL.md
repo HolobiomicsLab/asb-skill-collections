@@ -4,6 +4,7 @@ description: Use when you have a trained predictor (like BitterPredict) that acc
   structured descriptors and want to understand feature importance without retraining.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3928
   edam_topics:
   - http://edamontology.org/topic_0081

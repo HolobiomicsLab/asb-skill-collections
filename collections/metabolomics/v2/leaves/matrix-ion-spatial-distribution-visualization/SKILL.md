@@ -6,6 +6,7 @@ description: Use when after rMSIcleanup has classified ions as matrix-related or
   misclassification risks per annotation.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_0570
   edam_topics:
   - http://edamontology.org/topic_3520

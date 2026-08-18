@@ -4,6 +4,7 @@ description: Use when when you have a set of molecules with known chemical struc
   and need to prepare them for classification or prediction tasks.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3674
   edam_topics:
   - http://edamontology.org/topic_0209

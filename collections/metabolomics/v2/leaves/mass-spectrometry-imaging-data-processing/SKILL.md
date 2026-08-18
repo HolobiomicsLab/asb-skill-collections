@@ -6,6 +6,7 @@ description: Use when you have raw or processed MSI data (in imzML or rMSIproc f
   a chemical matrix (e.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3929
   edam_topics:
   - http://edamontology.org/topic_3520

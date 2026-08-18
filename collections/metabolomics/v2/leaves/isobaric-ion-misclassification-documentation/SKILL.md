@@ -6,6 +6,7 @@ description: Use when after matrix annotation has been performed on mass spectro
   false negative matrix assignments.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3520

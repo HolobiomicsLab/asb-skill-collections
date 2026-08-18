@@ -6,6 +6,7 @@ description: Use when when you have loaded MSI peak data with associated m/z val
   have pixel-level spatial intensity maps for each ion.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520

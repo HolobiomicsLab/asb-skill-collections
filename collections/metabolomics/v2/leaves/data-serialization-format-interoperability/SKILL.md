@@ -6,6 +6,7 @@ description: Use when you have a new or draft file format specification (e.g., m
   for production use.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

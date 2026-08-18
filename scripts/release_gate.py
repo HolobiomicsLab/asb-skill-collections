@@ -302,7 +302,16 @@ _NORMALIZED_OA_TIERS = {_normalize_access_type(t) for t in _OA_TIERS} | {"green-
 # `access.verified_via` is a constant stamp, not evidence — it reads
 # `git_clone_succeeded_at_build` on entries that have no repo_url at all.
 _REPO_OA_TIERS = {"repo-oa", "repo-permissive", "repo-copyleft"}
-_NORMALIZED_OA_TIERS = _NORMALIZED_OA_TIERS | _REPO_OA_TIERS
+
+# link-only: the DOI resolves and is citable, but nothing was cloned and no
+# reuse right is claimed (CONTENT_POLICY.md §3).  It is the honest tier for a
+# source with no public repository -- a paywalled book, a journal placeholder,
+# an archived deposit we did not bind to source.  Because it asserts no clone,
+# it must NOT carry `access.verified_via`; the inverse of the repo-oa evidence
+# rule is enforced below.  Skills grounded solely on link-only entries carry a
+# weaker `grounding_tier`, they are not silently presented as repo-grounded.
+_LINK_ONLY_TIERS = {"link-only"}
+_NORMALIZED_OA_TIERS = _NORMALIZED_OA_TIERS | _REPO_OA_TIERS | _LINK_ONLY_TIERS
 
 
 def _read_frontmatter(text: str) -> tuple[dict[str, Any], str]:
@@ -522,6 +531,16 @@ def check_access_tier(corpus: dict[str, Any], require_open_access: bool = True) 
                 f"{doi}: access.type='{raw}' (normalized '{norm}') is not open-access. "
                 f"v0 (require_open_access=true) permits only {sorted(_OA_TIERS)} "
                 "(hyphen/underscore variants accepted; 'green'→'green-oa').",
+                doi=doi,
+                access_type=raw,
+            )
+        stamp = ((paper.get("access") or {}).get("verified_via") or "").strip()
+        if norm in _LINK_ONLY_TIERS and stamp:
+            res.add(
+                FAIL,
+                f"{doi}: access.type='{raw}' claims no clone, but "
+                f"access.verified_via='{stamp}' still asserts one. A link-only "
+                "entry must carry no clone stamp (CONTENT_POLICY.md §3).",
                 doi=doi,
                 access_type=raw,
             )

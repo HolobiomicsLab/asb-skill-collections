@@ -6,6 +6,7 @@ description: Use when when annotating matrix-related peaks in MSI datasets where
   confound downstream annotation filtering.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_3370

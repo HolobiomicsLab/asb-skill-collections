@@ -91,7 +91,12 @@ jobs:
               "repo-permissive",
               "repo-copyleft",
           }
-          OPEN_ACCESS_TYPES |= REPO_OA_TYPES
+          # Link-only tier: citable DOI, nothing cloned, no reuse right claimed.
+          # Must stay in sync with scripts/release_gate.py:_LINK_ONLY_TIERS.
+          LINK_ONLY_TYPES = {
+              "link-only",
+          }
+          OPEN_ACCESS_TYPES |= REPO_OA_TYPES | LINK_ONLY_TYPES
 
           def normalize_access_type(raw: str) -> str:
               """Normalize an access.type token to a canonical OA tier.

@@ -3,6 +3,7 @@ name: masster
 description: Use when you need to run the Zamboni-lab Masster (MASSter) workflow for untargeted LC-MS metabolomics data analysis. NONCOMMERCIAL tool — confirm permitted use before applying (see License notice).
 license: CC-BY-4.0
 metadata:
+  grounding_tier: ungrounded
   tools:
   - Masster
   techniques:

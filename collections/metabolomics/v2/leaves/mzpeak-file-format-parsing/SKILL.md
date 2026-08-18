@@ -6,6 +6,7 @@ description: Use when when you have mass spectrometry data stored in mzPeak form
   if your input is an .
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

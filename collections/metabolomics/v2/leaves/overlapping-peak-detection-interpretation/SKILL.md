@@ -5,6 +5,7 @@ description: Use when annotating matrix-related signals in MSI datasets where ch
   nominal m/z values (isobaric peaks).
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

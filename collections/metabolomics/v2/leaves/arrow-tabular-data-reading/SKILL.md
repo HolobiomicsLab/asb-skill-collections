@@ -3,6 +3,7 @@ name: arrow-tabular-data-reading
 description: Use when when you have Parquet-encoded tabular data (e.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

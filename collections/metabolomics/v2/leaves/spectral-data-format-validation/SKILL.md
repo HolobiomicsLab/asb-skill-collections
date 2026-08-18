@@ -5,6 +5,7 @@ description: Use when after converting existing mass spectrometry formats (mzML,
   external sources.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_3520

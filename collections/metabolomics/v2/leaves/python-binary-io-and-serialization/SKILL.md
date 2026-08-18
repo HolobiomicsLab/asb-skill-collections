@@ -6,6 +6,7 @@ description: Use when when you have mzPeak files (Parquet-based archives in unco
   into Python memory for downstream.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3520

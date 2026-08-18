@@ -6,6 +6,7 @@ description: Use when when reading mzPeak files or other Parquet-backed mass spe
   pandas DataFrames, or equivalent in-memory structures for.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_0121

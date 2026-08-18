@@ -4,6 +4,7 @@ description: Use when you have raw molecular structures in SMILES or SDF format 
   will feed into BitterPredict.m or other structure-based classifiers.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_0602

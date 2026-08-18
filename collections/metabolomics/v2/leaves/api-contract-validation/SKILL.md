@@ -5,6 +5,7 @@ description: Use when integrating with an external API (such as TensorFlow Servi
   must be extracted and verified before being used in downstream analysis steps.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_topics: []
   tools:
   - tensorflow serving

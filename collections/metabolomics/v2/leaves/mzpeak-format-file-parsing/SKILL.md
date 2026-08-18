@@ -6,6 +6,7 @@ description: Use when you have an mzPeak file (uncompressed ZIP archive containi
   arrays), or chromatogram data.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0121

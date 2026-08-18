@@ -6,6 +6,7 @@ description: Use when after generating mzPeak files from prototype implementatio
   it when specification compliance is a hard requirement (e.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3961
   edam_topics:
   - http://edamontology.org/topic_0121

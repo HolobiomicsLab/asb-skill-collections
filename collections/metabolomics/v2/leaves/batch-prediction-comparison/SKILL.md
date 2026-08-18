@@ -5,6 +5,7 @@ description: Use when when you have a trained molecular classifier (like BitterP
   descriptor subgroups drive prediction outcomes.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_0154

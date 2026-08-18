@@ -6,6 +6,7 @@ description: Use when after a classifier (such as BitterPredict.m) has computed 
   downstream analysis, validation, or reporting.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0203

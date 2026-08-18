@@ -5,6 +5,7 @@ description: Use when you have nuclear magnetic resonance (NMR) peak data (1H an
   you want to submit peaks programmatically rather than through a web UI.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0593

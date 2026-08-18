@@ -5,6 +5,7 @@ description: Use when after submitting a POST request to the /api/smart3/search 
   classification predictions and confidence scores.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3172

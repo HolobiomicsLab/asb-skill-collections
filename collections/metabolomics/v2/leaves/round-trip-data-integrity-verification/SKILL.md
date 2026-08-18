@@ -5,6 +5,7 @@ description: Use when you have implemented or are validating a reader/writer lib
   to confirm that data parsed from disk can be written back without loss of information.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_3520

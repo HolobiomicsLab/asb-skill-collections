@@ -6,6 +6,7 @@ description: Use when when you have a trained BitterPredict classifier, a datase
   topological, pharmacophoric) drive prediction decisions.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0154

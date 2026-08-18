@@ -6,6 +6,7 @@ description: Use when when you have a mass spectrometry data file (such as mzPea
   metadata, data types, row counts, and numerical values.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -6,6 +6,7 @@ description: Use when you have loaded mzPeak spectrum or chromatogram metadata a
   with other languages (R, .
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_1812
   edam_topics:
   - http://edamontology.org/topic_3520

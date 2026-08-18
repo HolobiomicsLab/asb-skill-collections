@@ -5,6 +5,7 @@ description: Use when you have obtained a Rust source repository (e.g., mzpeak_p
   this skill when the source includes a Cargo.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_0091

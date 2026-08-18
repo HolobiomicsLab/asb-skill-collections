@@ -6,6 +6,7 @@ description: Use when you have proton (1H) and carbon-13 (13C) NMR peak measurem
   into JSON before submission to the /api/smart3/search endpoint.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0593

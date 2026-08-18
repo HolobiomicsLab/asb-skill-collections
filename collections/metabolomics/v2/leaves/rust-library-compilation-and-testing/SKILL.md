@@ -5,6 +5,7 @@ description: Use when when you have access to Rust source code in a repository w
   APIs produce byte-equivalent or structurally equivalent output.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

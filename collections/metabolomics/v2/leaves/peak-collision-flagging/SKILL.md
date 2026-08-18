@@ -5,6 +5,7 @@ description: Use when you have extracted a peak list from MSI data and need to a
   or near-identical m/z values) risk being misclassified.
 license: CC-BY-4.0
 metadata:
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_0659
