@@ -321,6 +321,17 @@ _REPO_OA_TIERS = {"repo-oa", "repo-permissive", "repo-copyleft"}
 _LINK_ONLY_TIERS = {"link-only"}
 _NORMALIZED_OA_TIERS = _NORMALIZED_OA_TIERS | _REPO_OA_TIERS | _LINK_ONLY_TIERS
 
+# ADMISSION and REUSE are different questions, and `link-only` answers them
+# differently: a citable DOI is admissible (above), but the tier means no reuse
+# right was established, so it takes the strict verbatim caps rather than the OA
+# exemption.  `repo-oa` keeps the exemption because its spans come from a cloned,
+# openly licensed repository (the repository-only grounding rule), not paper text.
+# Where a link-only paper does declare an open licence, the fix is to record it —
+# `scripts/resolve_paper_license.py` promotes such an entry to `open-access` on the
+# registry's evidence — never to widen the exemption here.
+# Kept separate from promote.py's `_NON_OA_TIERS`, which is vendored byte-for-byte.
+_CAPPED_VERBATIM_TIERS = _NON_OA_TIERS | _LINK_ONLY_TIERS
+
 
 def _read_frontmatter(text: str) -> tuple[dict[str, Any], str]:
     """Split a SKILL.md into (frontmatter_dict, body).  Fail-soft to ({}, text)."""
@@ -595,8 +606,9 @@ def check_strip_verbatim(
         hard_gate=True,
         summary=(
             "OA papers exempt from caps (unlimited verbatim w/ attribution; "
-            f">{_TEXT_FIELD_CAP}-char spans → advisory WARN).  Non-OA: per-span text cap "
-            f"{_TEXT_FIELD_CAP} chars, cumulative cap {_CUMULATIVE_CAP} chars/DOI.  "
+            f">{_TEXT_FIELD_CAP}-char spans → advisory WARN).  Non-OA and link-only "
+            f"(no reuse right established): per-span text cap {_TEXT_FIELD_CAP} chars, "
+            f"cumulative cap {_CUMULATIVE_CAP} chars/DOI.  "
             "Near-verbatim similarity flagged for all."
         ),
     )
@@ -604,9 +616,13 @@ def check_strip_verbatim(
     total_spans = 0
 
     def _is_non_oa(doi: str) -> bool:
-        # Treat unknown / non-OA tiers (and any DOI absent from the corpus) as
-        # the strict-cap regime; OA papers permit fuller verbatim with attribution.
-        return access_by_doi.get(doi, "unknown") in _NON_OA_TIERS or doi not in access_by_doi
+        # Treat unknown / non-OA / link-only tiers (and any DOI absent from the
+        # corpus) as the strict-cap regime; OA papers permit fuller verbatim with
+        # attribution.  See _CAPPED_VERBATIM_TIERS for why link-only is in here.
+        return (
+            access_by_doi.get(doi, "unknown") in _CAPPED_VERBATIM_TIERS
+            or doi not in access_by_doi
+        )
 
     for sk_md in _iter_skill_md(collection_dir):
         try:

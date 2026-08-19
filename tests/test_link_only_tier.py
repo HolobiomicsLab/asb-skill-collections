@@ -199,3 +199,57 @@ def test_a_skill_without_a_frontmatter_fence_does_not_abort_labelling(tmp_path):
     (col / "leaves" / "broken").mkdir()
     (col / "leaves" / "broken" / "SKILL.md").write_text("no fence here\n", encoding="utf-8")
     lg.run(col)  # raised AttributeError before the canonical parser was adopted
+
+
+# --------------------------------------------------------------------------- #
+# The reuse regime: admission and reuse are different questions.               #
+# --------------------------------------------------------------------------- #
+
+def _collection_quoting(tmp_path, access_type, span_chars):
+    """A one-skill collection whose single evidence span is `span_chars` long."""
+    col = tmp_path / "c"
+    (col / "leaves" / "alpha").mkdir(parents=True)
+    (col / "leaves" / "alpha" / "SKILL.md").write_text(
+        "---\nname: alpha\nderived_from:\n- doi: 10.1/a\n---\n"
+        f'- [evidence] p1: "{"x" * span_chars}"\n',
+        encoding="utf-8",
+    )
+    _corpus(col, [{"doi": "10.1/a", "status": "included", "repo_url": "",
+                   "access": {"type": access_type}}])
+    return col
+
+
+def _verbatim_failures(col, access_type):
+    res = release_gate.check_strip_verbatim(col, {"10.1/a": access_type})
+    return [d for d in res.details if d["status"] == release_gate.FAIL]
+
+
+def test_link_only_takes_the_strict_verbatim_caps():
+    """Its own definition claims no reuse right; the OA exemption must not apply."""
+    assert "link-only" in release_gate._CAPPED_VERBATIM_TIERS
+
+
+@pytest.mark.parametrize("tier", sorted(release_gate._NON_OA_TIERS))
+def test_every_non_oa_tier_stays_capped(tier):
+    """Adding link-only must not have displaced the tiers already capped."""
+    assert tier in release_gate._CAPPED_VERBATIM_TIERS
+
+
+def test_an_over_cap_span_on_a_link_only_source_fails(tmp_path):
+    over = release_gate._TEXT_FIELD_CAP + 50
+    col = _collection_quoting(tmp_path, "link-only", over)
+    assert _verbatim_failures(col, "link-only"), (
+        "a source claiming no reuse right shipped an over-cap verbatim span"
+    )
+
+
+@pytest.mark.parametrize("tier", ["open-access", "gold-oa", "repo-oa"])
+def test_the_same_span_is_allowed_where_a_licence_grants_reuse(tmp_path, tier):
+    """The other side: capping everything would gut grounding on open sources.
+
+    `repo-oa` is included deliberately — its spans come from a cloned, openly
+    licensed repository, so it keeps the exemption link-only loses.
+    """
+    over = release_gate._TEXT_FIELD_CAP + 50
+    col = _collection_quoting(tmp_path, tier, over)
+    assert not _verbatim_failures(col, tier)
