@@ -1,6 +1,6 @@
 # Using the ASB Metabolomics Collection (v2)
 
-5,858 evidence-grounded skills + 909 software-tool records for computational
+5,859 evidence-grounded skills + 909 software-tool records for computational
 metabolomics — predominantly LC-MS/MS, but also LC-MS, GC-MS, mass-spectrometry
 imaging, ion mobility and lipidomics, with some NMR and multi-omics / statistics
 / pathway tools — each derived from a peer-reviewed method paper and its public
@@ -51,7 +51,7 @@ jq '.[] | select(.slug=="<slug>") | .tools' skills_index.json
 
 ```bash
 /plugin marketplace add HolobiomicsLab/asb-skill-collections
-/plugin install metabolomics@asb-skill-collections          # full (5,858 skills)
+/plugin install metabolomics@asb-skill-collections          # full (5,859 skills)
 # or a lighter per-technique pack (load only what you need):
 /plugin install metabolomics-lc-ms@asb-skill-collections    # lc-ms · gc-ms · nmr · ms-imaging ·
                                                             # ion-mobility · ce-ms ·
@@ -86,7 +86,7 @@ the machine indexes directly:
 
 No CLI needed — you attach the skills as **uploaded knowledge** and add a short
 routing instruction. Because these UIs cap how many files you can upload, **do
-not upload all 5,858 skills**. Upload instead:
+not upload all 5,859 skills**. Upload instead:
 
 1. `skills_index.json` + `tools_index.json` (the searchable catalogue), and
 2. only the handful of `leaves/<slug>/SKILL.md` files relevant to your work
@@ -182,7 +182,7 @@ says which ran). Two things switch semantic mode on:
      ```
 2. **`OPENAI_API_KEY`** — needed only to embed the *query* at run time (≈free per
    call). The corpus is already embedded in the cache; the key never re-embeds the
-   5,858 leaves.
+   5,859 leaves.
 
 So: cache present + key set → semantic ranking; cache present, no key → keyword;
 no cache → keyword. Nothing is required for the collection to be usable.
@@ -191,7 +191,7 @@ no cache → keyword. Nothing is required for the collection to be usable.
 
 For an end-to-end goal ("annotate an untargeted LC-MS/MS run", "GC-MS deconvolution
 + identification", "SIRIUS de-novo elucidation"), start from a **composite workflow
-super-skill** instead of a single atomic skill. The 10 workflows live under
+super-skill** instead of a single atomic skill. The 21 workflows live under
 [`workflows/`](workflows/); each is an ordered DAG of stages that delegates to the
 atomic skills above. Pick one with the workflow router:
 

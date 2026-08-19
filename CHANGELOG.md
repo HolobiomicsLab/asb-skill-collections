@@ -16,7 +16,7 @@ First release of the installable tooling and of composite workflow super-skills.
 Dates finalize at tag time.
 
 ### Added
-- **10 composite workflow super-skills** in `metabolomics/v2` (e.g.
+- **21 composite workflow super-skills** in `metabolomics/v2` (e.g.
   `untargeted-lcmsms-annotation`, `lipidomics-lcms-annotation`,
   `sirius-denovo-structure-elucidation`, `pathway-functional-analysis`), each a
   DAG of leaf skills grounded in 3–8 source DOIs, with a `_workflow_router`.
@@ -34,7 +34,7 @@ Dates finalize at tag time.
 - **`docs/NEXT_WAVE.md`** — backlog for the next ASB generation wave.
 
 ### Changed
-- Metabolomics `v2` corpus: **5,865 → 5,858 skills** — purged 7 over-aggregated
+- Metabolomics `v2` corpus: **5,866 → 5,859 skills** — purged 7 over-aggregated
   "meta-leaf" artifacts (>25 tools each); added a >25-tools-per-leaf guard to
   prevent reintroduction.
 - Distributed package reorganized: the installable surface moved

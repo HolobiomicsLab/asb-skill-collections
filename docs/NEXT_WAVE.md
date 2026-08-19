@@ -58,7 +58,9 @@ Perspicacité server (grounding falls back to git-clone + local read otherwise).
 PYTHONPATH=src python3 -m agentic_science_builder build <pkg_dir> \
     --output outputs/<run> --llm --enrich-skills --claim-ledger --no-pin --metabolomics
 # 3. Promote into the registry + reindex (this repo):
-cp -r <AgenticScienceBuilder>/outputs/<run>/skills/<slug> collections/metabolomics/v2/skills/
+# the released collection is router-shaped: leaves ship in leaves/, and only
+# the router + licence-gate skill are advertised under skills/
+cp -r <AgenticScienceBuilder>/outputs/<run>/skills/<slug> collections/metabolomics/v2/leaves/
 python3 scripts/regen_catalogue.py collections/metabolomics/v2 --update-indexes
 # 4. Add the corpus.yaml entry (repo-permissive / repo-copyleft + code_license),
 #    then gate:

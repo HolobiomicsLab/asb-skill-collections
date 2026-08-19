@@ -5,7 +5,7 @@
 # ASB Skill Collections
 
 [![release](https://img.shields.io/badge/release-metabolomics--v0.2.0-blue)](collections/metabolomics/v2)
-[![skills](https://img.shields.io/badge/skills-5%2C865-success)](collections/metabolomics/v2/skills_index.json)
+[![skills](https://img.shields.io/badge/skills-5%2C859-success)](collections/metabolomics/v2/skills_index.json)
 [![tools](https://img.shields.io/badge/tools-909-success)](collections/metabolomics/v2/tools_index.json)
 [![license](https://img.shields.io/badge/code-Apache--2.0-green)](LICENSE) [![content](https://img.shields.io/badge/content-CC--BY--4.0-green)](LICENSING.md)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20794026.svg)](https://doi.org/10.5281/zenodo.20794026)
@@ -25,11 +25,11 @@ Metabolomics** ([26181](https://www.dagstuhl.de/en/seminars/seminar-calendar/sem
 </p>
 
 > **This release — `metabolomics-v0.2.0` (preliminary):**
-> [`collections/metabolomics/v2`](collections/metabolomics/v2) — **5,858 skills**
+> [`collections/metabolomics/v2`](collections/metabolomics/v2) — **5,859 skills**
 > across **909 tools** distilled from **568 papers**, for computational
 > metabolomics — predominantly **LC-MS/MS**, but also LC-MS, GC-MS,
 > mass-spectrometry imaging, ion mobility and lipidomics, with some **NMR** and
-> multi-omics / statistics / pathway tools. New in this version: **10 composite
+> multi-omics / statistics / pathway tools. New in this version: **21 composite
 > workflow super-skills** (end-to-end pipelines that chain the atomic skills) under
 > [`workflows/`](collections/metabolomics/v2/workflows).
 
@@ -38,7 +38,7 @@ Metabolomics** ([26181](https://www.dagstuhl.de/en/seminars/seminar-calendar/sem
 | Artifact | Status |
 |---|---|
 | **ASB-Skills** — evidence-grounded procedural skills | ✅ **released** |
-| **ASB-Workflows** — 10 composite end-to-end pipeline super-skills | ✅ **released** |
+| **ASB-Workflows** — 21 composite end-to-end pipeline super-skills | ✅ **released** |
 | **ASB-Tools** — deduplicated software-tool records (EDAM + DOIs) | ✅ **released** |
 | **ASB-Benchmark** — per-paper tasks + claim-retrieval test sets | ⏳ to be released soon |
 | **ASB-Capsules** — raw per-paper ASB pipeline outputs (full traceability) | ⏳ to be released soon |
@@ -72,7 +72,7 @@ and will ship under the same layout — no rename, just new entries under `colle
 
 ```bash
 /plugin marketplace add HolobiomicsLab/asb-skill-collections
-/plugin install metabolomics@asb-skill-collections          # full collection (5,858 skills)
+/plugin install metabolomics@asb-skill-collections          # full collection (5,859 skills)
 ```
 
 ### 🧩 Lighter per-technique packs — load only what you need
@@ -232,7 +232,7 @@ The `kb` backend needs a reachable Perspicacité (`PERSPICACITE_BASE`, default
   <img src="assets/metabolomics-skills-collection.png" alt="Metabolomics skill collection schematic: peer-reviewed papers → ASB → EDAM-typed, deduplicated skills routed via Perspicacité (EDAM filter + skill KB, search_skill_kb) to a Mimosa agent, spanning the untargeted LC-MS/MS workflow and wrapping community tools (GNPS, XCMS, matchms, MS-DIAL, MZmine, SIRIUS, spec2vec)" width="760">
 </p>
 
-<p align="center"><sub>The LC-MS view of the collection (the <code>metabolomics-lc-ms</code> pack): papers → ASB → EDAM-typed skills, routed by Perspicacité. The full release spans 5,858 skills across all techniques.</sub></p>
+<p align="center"><sub>The LC-MS view of the collection (the <code>metabolomics-lc-ms</code> pack): papers → ASB → EDAM-typed skills, routed by Perspicacité. The full release spans 5,859 skills across all techniques.</sub></p>
 
 | File | Contents |
 |---|---|
