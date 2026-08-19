@@ -941,12 +941,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: crossref-paper
+  source_reuse: full
 - name: GNN-RT
   doi: 10.1021/acs.analchem.0c04071
   title: GNN-RT
@@ -1055,9 +1056,10 @@ papers:
     type: link-only
     is_oa: null
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-NC-ND-4.0
+  license_tier: noncommercial
+  license_detection: crossref-paper
+  source_reuse: limited
 - name: ISFrag
   doi: 10.1021/acs.analchem.1c01644
   title: ISFrag
@@ -2422,12 +2424,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: crossref-paper
+  source_reuse: full
 - name: HDSE-MS
   doi: 10.1021/acs.analchem.5c04111
   title: HDSE-MS
@@ -2468,9 +2471,10 @@ papers:
     type: link-only
     is_oa: null
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-NC-ND-4.0
+  license_tier: noncommercial
+  license_detection: crossref-paper
+  source_reuse: limited
 - name: eRah
   doi: 10.1021/acs.analchem.6b02927
   title: eRah
@@ -2633,12 +2637,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: crossref-paper
+  source_reuse: full
 - name: Chemprop-IR
   doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
@@ -2814,12 +2819,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: crossref-paper
+  source_reuse: full
 - name: Omics Untargeted Key Script
   doi: 10.1021/acs.jproteome.1c00392
   title: Omics Untargeted Key Script
@@ -3050,12 +3056,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: crossref-paper
+  source_reuse: full
 - name: metScribeR
   doi: 10.1021/acs.jproteome.5c00548
   title: metScribeR
@@ -3536,12 +3543,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: crossref-paper
+  source_reuse: full
 - name: 10.1038/s41467-019-13680-7
   doi: 10.1038/s41467-019-13680-7
   title: 10.1038/s41467-019-13680-7
@@ -3549,12 +3557,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: crossref-paper
+  source_reuse: full
 - name: LipidCreator
   doi: 10.1038/s41467-020-15960-z
   title: LipidCreator
@@ -4561,12 +4570,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: crossref-paper
+  source_reuse: full
 - name: SPIFFED
   doi: 10.1093/bib/bbad229/7199559
   title: SPIFFED
@@ -5435,9 +5445,10 @@ papers:
     type: link-only
     is_oa: null
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-NC-ND-4.0
+  license_tier: noncommercial
+  license_detection: biorxiv_api-paper
+  source_reuse: limited
 - name: InjectionDesign
   doi: 10.1101/2023.02.26.530140v1.article-info
   title: InjectionDesign
@@ -5476,9 +5487,10 @@ papers:
     type: link-only
     is_oa: null
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-NC-ND-4.0
+  license_tier: noncommercial
+  license_detection: biorxiv_api-paper
+  source_reuse: limited
 - name: Mass2SMILES
   doi: 10.1101/2023.07.06.547963v1
   title: Mass2SMILES
@@ -5556,12 +5568,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: crossref-paper
+  source_reuse: full
 - name: MargheRita
   doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -5670,9 +5683,10 @@ papers:
     type: link-only
     is_oa: null
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-NC-ND-4.0
+  license_tier: noncommercial
+  license_detection: crossref-paper
+  source_reuse: limited
 - name: SpaMTP
   doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -5750,12 +5764,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: crossref-paper
+  source_reuse: full
 - name: MetaNet
   doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
@@ -5836,9 +5851,10 @@ papers:
     type: link-only
     is_oa: null
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-NC-ND-4.0
+  license_tier: noncommercial
+  license_detection: crossref-paper
+  source_reuse: limited
 - name: MetaboliteChat
   doi: 10.1101/2025.11.07.687008v1
   title: MetaboliteChat
@@ -6065,12 +6081,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
+    license: CC-BY-2.0
   license_tier: restricted
-  license_detection: none
+  license_detection: crossref-paper
+  source_reuse: full
 - name: 10.1186/s12859-017-1547-6
   doi: 10.1186/s12859-017-1547-6
   title: 10.1186/s12859-017-1547-6
@@ -6078,12 +6095,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: crossref-paper
+  source_reuse: full
 - name: lipidmatch
   doi: 10.1186/s12859-017-1744-3
   title: lipidmatch
@@ -6291,12 +6309,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: crossref-paper
+  source_reuse: full
 - name: patRoon
   doi: 10.1186/s13321-020-00477-w
   title: patRoon
@@ -6419,12 +6438,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: crossref-paper
+  source_reuse: full
 - name: DeepSAT
   doi: 10.1186/s13321-023-00738-4
   title: DeepSAT
@@ -6432,12 +6452,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: crossref-paper
+  source_reuse: full
 - name: Mass-Suite
   doi: 10.1186/s13321-023-00741-9
   title: Mass-Suite
@@ -6670,12 +6691,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: crossref-paper
+  source_reuse: full
 - name: MiMeNet
   doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -6767,12 +6789,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: crossref-paper
+  source_reuse: full
 - name: pcpfm
   doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -6794,12 +6817,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: crossref-paper
+  source_reuse: full
 - name: MetNet
   doi: 10.1371/journal.pone.0246962
   title: MetNet
@@ -6890,12 +6914,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: crossref-paper
+  source_reuse: full
 - name: subMALDI
   doi: 10.21105/joss.02694
   title: subMALDI
@@ -7196,12 +7221,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: crossref-paper
+  source_reuse: full
 - name: pals
   doi: 10.3390/metabo11020103
   title: pals
@@ -7336,12 +7362,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: crossref-paper
+  source_reuse: full
 - name: DisCo P-ad
   doi: 10.3390/metabo15010028
   title: DisCo P-ad
@@ -7545,12 +7572,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: datacite-paper
+  source_reuse: full
 - name: 10.5281/zenodo.1043226
   doi: 10.5281/zenodo.1043226
   title: 10.5281/zenodo.1043226
@@ -7584,12 +7612,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: datacite-paper
+  source_reuse: full
 - name: 10.5281/zenodo.11199061.svg
   doi: 10.5281/zenodo.11199061.svg
   title: 10.5281/zenodo.11199061.svg
@@ -7610,12 +7639,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: datacite-paper
+  source_reuse: full
 - name: corems
   doi: 10.5281/zenodo.14009575
   title: corems
@@ -7637,12 +7667,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: datacite-paper
+  source_reuse: full
 - name: 10.5281/zenodo.14778327
   doi: 10.5281/zenodo.14778327
   title: 10.5281/zenodo.14778327
@@ -7650,12 +7681,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: datacite-paper
+  source_reuse: full
 - name: 10.5281/zenodo.14822624
   doi: 10.5281/zenodo.14822624
   title: 10.5281/zenodo.14822624
@@ -7676,12 +7708,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: datacite-paper
+  source_reuse: full
 - name: 10.5281/zenodo.16076914
   doi: 10.5281/zenodo.16076914
   title: 10.5281/zenodo.16076914
@@ -7689,12 +7722,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: datacite-paper
+  source_reuse: full
 - name: 10.5281/zenodo.16257786
   doi: 10.5281/zenodo.16257786
   title: 10.5281/zenodo.16257786
@@ -7702,12 +7736,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: datacite-paper
+  source_reuse: full
 - name: 10.5281/zenodo.17284940
   doi: 10.5281/zenodo.17284940
   title: 10.5281/zenodo.17284940
@@ -7715,12 +7750,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: datacite-paper
+  source_reuse: full
 - name: 10.5281/zenodo.17819145
   doi: 10.5281/zenodo.17819145
   title: 10.5281/zenodo.17819145
@@ -7728,12 +7764,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: datacite-paper
+  source_reuse: full
 - name: 10.5281/zenodo.18494293
   doi: 10.5281/zenodo.18494293
   title: 10.5281/zenodo.18494293
@@ -7741,12 +7778,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: datacite-paper
+  source_reuse: full
 - name: 10.5281/zenodo.19181279
   doi: 10.5281/zenodo.19181279
   title: 10.5281/zenodo.19181279
@@ -7767,12 +7805,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: datacite-paper
+  source_reuse: full
 - name: 10.5281/zenodo.363932874
   doi: 10.5281/zenodo.363932874
   title: 10.5281/zenodo.363932874
@@ -7806,12 +7845,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: datacite-paper
+  source_reuse: full
 - name: 10.5281/zenodo.5501673
   doi: 10.5281/zenodo.5501673
   title: 10.5281/zenodo.5501673
@@ -7819,12 +7859,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: datacite-paper
+  source_reuse: full
 - name: 10.5281/zenodo.5607185
   doi: 10.5281/zenodo.5607185
   title: 10.5281/zenodo.5607185
@@ -7832,12 +7873,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: datacite-paper
+  source_reuse: full
 - name: 10.5281/zenodo.5794106
   doi: 10.5281/zenodo.5794106
   title: 10.5281/zenodo.5794106
@@ -7845,12 +7887,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: datacite-paper
+  source_reuse: full
 - name: 10.5281/zenodo.6784251
   doi: 10.5281/zenodo.6784251
   title: 10.5281/zenodo.6784251
@@ -7858,12 +7901,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: datacite-paper
+  source_reuse: full
 - name: 10.5281/zenodo.7565700
   doi: 10.5281/zenodo.7565700
   title: 10.5281/zenodo.7565700
@@ -7898,12 +7942,13 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: link-only
-    is_oa: null
+    type: open-access
+    is_oa: true
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: datacite-paper
+  source_reuse: full
 - name: lotus
   doi: 10.7554/eLife.70780
   title: lotus

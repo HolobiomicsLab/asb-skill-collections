@@ -15,7 +15,7 @@ metadata:
   - DatabaseFormulaSampler
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -50,7 +50,6 @@ attribution:
 
 # hmdb-compound-database-manipulation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load, filter, and deduplicate the HMDB compounds database by m/z range and MS level to obtain counts and inventories of unique molecular formulas for virtual metabolomics simulation. This skill enables reproducible quantification of the chemical search space available for fragmentation strategy development.

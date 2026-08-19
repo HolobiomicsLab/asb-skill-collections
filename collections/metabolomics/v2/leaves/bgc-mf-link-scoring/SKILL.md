@@ -19,7 +19,7 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -60,7 +60,6 @@ attribution:
 
 # BGC-MF link scoring
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute complementary scoring functions (strain correlation and IOKR) to rank potential links between bacterial gene cluster families (GCFs) and metabolomic features (MFs), enabling prioritization of validated natural product–BGC associations. Combining both scores significantly enriches for true links compared to either score alone.

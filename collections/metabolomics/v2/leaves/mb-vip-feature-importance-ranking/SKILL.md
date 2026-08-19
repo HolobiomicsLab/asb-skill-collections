@@ -21,7 +21,7 @@ metadata:
   - MAMSI
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -59,7 +59,6 @@ attribution:
 
 # mb-vip-feature-importance-ranking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate Multi-Block Variable Importance in Projection (MB-VIP) scores to rank and identify statistically significant features across multiple assay blocks in multi-assay LC-MS metabolomics datasets. MB-VIP quantifies each feature's contribution to discriminant or predictive model performance while accounting for block-level structure.

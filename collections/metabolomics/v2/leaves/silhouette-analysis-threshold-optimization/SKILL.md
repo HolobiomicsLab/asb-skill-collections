@@ -20,7 +20,7 @@ metadata:
   - MAMSI (Multi-Assay Mass Spectrometry Integration)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -57,7 +57,6 @@ attribution:
 
 # silhouette-analysis-threshold-optimization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Replace fixed dendrogram-flattening thresholds with silhouette-score optimization to derive data-driven cluster assignments. This skill evaluates hierarchical clustering solutions by maximizing silhouette coefficients, yielding structural cluster assignments that adapt to the intrinsic cohesion and separation of LC-MS feature groups rather than relying on arbitrary cutoff values.

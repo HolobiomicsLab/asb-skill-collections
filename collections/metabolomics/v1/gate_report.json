@@ -1,6 +1,6 @@
 {
   "schema": "asbb-release-gate/1.0",
-  "generated_at": "2026-08-19T10:30:33.508685+00:00",
+  "generated_at": "2026-08-19T22:33:49.520643+00:00",
   "collection_dir": "collections/metabolomics/v1",
   "corpus_path": "collections/metabolomics/v1/corpus.yaml",
   "mode": "strict",
@@ -62,7 +62,7 @@
         6
       ],
       "hard_gate": true,
-      "summary": "OA papers exempt from caps (unlimited verbatim w/ attribution; >300-char spans \u2192 advisory WARN).  Non-OA: per-span text cap 300 chars, cumulative cap 1500 chars/DOI.  Near-verbatim similarity flagged for all.  (11122 verbatim spans scanned)",
+      "summary": "OA papers exempt from caps (unlimited verbatim w/ attribution; >300-char spans \u2192 advisory WARN).  Non-OA and link-only (no reuse right established): per-span text cap 300 chars, cumulative cap 1500 chars/DOI.  Near-verbatim similarity flagged for all.  (11122 verbatim spans scanned)",
       "n_findings": 0,
       "details": []
     },

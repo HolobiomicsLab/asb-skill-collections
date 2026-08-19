@@ -21,7 +21,7 @@ metadata:
   - scikit-learn
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -58,7 +58,6 @@ attribution:
 
 # Isotopologue-Adduct Link Identification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A structural clustering method that identifies mass spectrometry features linked by isotopologue signatures (mass difference ~1.00335 Da) and common adduct patterns within retention time windows, enabling grouping of related features into structural clusters for multi-assay LC-MS metabolomics datasets.

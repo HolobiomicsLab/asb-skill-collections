@@ -16,7 +16,7 @@ metadata:
   - VIMMS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -50,7 +50,6 @@ attribution:
 
 # peak-detection-and-alignment-in-metabolomics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Peak detection and alignment extracts ion intensity peaks from LC-MS/MS mzML data and matches them across real and simulated acquisitions to compare fragmentation coverage and chemical detection. This skill is essential for validating whether simulated MS/MS strategies reproduce the same metabolite signals as experimental data.

@@ -16,7 +16,7 @@ metadata:
   - DeepSAT
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT
@@ -44,7 +44,6 @@ attribution:
 
 # api-request-response-handling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and submit programmatic requests to a TensorFlow Serving classification endpoint, formatting NMR peak data as JSON and parsing the structured response. This skill bridges raw spectroscopic measurements to machine-learning-backed molecular classification by managing endpoint schema, request serialization, and response deserialization.

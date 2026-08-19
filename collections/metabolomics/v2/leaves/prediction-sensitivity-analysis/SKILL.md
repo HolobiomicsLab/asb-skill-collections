@@ -12,7 +12,7 @@ metadata:
   - http://edamontology.org/topic_0154
   tools:
   - BitterPredict
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
@@ -42,7 +42,6 @@ attribution:
 
 # prediction-sensitivity-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically ablate input descriptor subgroups to quantify their individual impact on bitter/not-bitter prediction accuracy in a trained classifier. This skill reveals which molecular descriptor categories (e.g., lipophilicity, topological features) drive predictions and which are redundant.

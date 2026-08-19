@@ -20,7 +20,7 @@ metadata:
   - mzPeak Rust implementation
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -50,7 +50,6 @@ attribution:
 
 # Python Binary I/O and Serialization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and reconstruct mass spectrometry spectral data from binary or columnar file formats using PyArrow and the PyData stack, enabling read-only access to mzPeak files and conversion of raw spectra into Python-native data structures. This skill addresses the need to deserialize compact, archive-based MS data formats into analysis-ready NumPy arrays and pandas DataFrames.

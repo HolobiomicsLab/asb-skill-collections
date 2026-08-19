@@ -15,7 +15,7 @@ metadata:
   - Python pickle module
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -50,7 +50,6 @@ attribution:
 
 # metabolomics-scan-metadata-linking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Persist evaluation metadata and chemical definitions alongside simulated LC-MS/MS scans in mzML output by serializing in-memory EvaluationData objects to pickle files. This enables downstream traceability between generated MS/MS fragmentation events and their source chemical compounds for comparative acquisition strategy evaluation.

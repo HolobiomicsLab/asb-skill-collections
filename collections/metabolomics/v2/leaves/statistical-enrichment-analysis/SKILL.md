@@ -18,7 +18,7 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -59,7 +59,6 @@ attribution:
 
 # statistical-enrichment-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify whether a subset of genomic-metabolomic links scoring above defined percentile thresholds on complementary scoring functions (strain correlation, IOKR) shows significantly higher validation rates than links exceeding only individual scores. This determines whether multiple scoring approaches are genuinely complementary for prioritizing true links.

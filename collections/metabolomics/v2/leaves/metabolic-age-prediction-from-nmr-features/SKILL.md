@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac388
   title: MiMIR
@@ -49,7 +49,6 @@ attribution:
 
 # metabolic-age-prediction-from-nmr-features
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reconstruct and apply the MetaboAge predictive model to estimate biological metabolic age from Nightingale Health 1H-NMR metabolomics features. This skill maps a curated set of NMR-derived metabolite concentrations through pre-trained linear model coefficients to produce a single predicted metabolic age value per sample, enabling assessment of metabolic aging independent of chronological age.

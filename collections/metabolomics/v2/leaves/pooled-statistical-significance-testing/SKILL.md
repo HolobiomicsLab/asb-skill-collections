@@ -17,7 +17,7 @@ metadata:
   - MIBiG
   - Python (numpy, scipy.stats, pandas, matplotlib, seaborn)
   - Python scipy.stats
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -55,7 +55,6 @@ attribution:
 
 # pooled-statistical-significance-testing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Combine validated link counts across multiple independent datasets and apply Fisher exact test or chi-square test to assess whether a combined ranking criterion (e.g. joint percentile threshold) yields statistically significant enrichment for true links compared to single-function baselines. This allows detection of complementarity effects that may be obscured in individual datasets.

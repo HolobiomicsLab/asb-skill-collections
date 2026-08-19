@@ -16,7 +16,7 @@ metadata:
   - vimms-data
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -48,7 +48,6 @@ attribution:
 
 # HMDB Metabolite Extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and filter molecular metabolites from the Human Metabolome Database (HMDB) using ViMMS's database utilities, applying m/z range and intensity constraints to create a curated chemical object library for LC-MS/MS simulation and evaluation.

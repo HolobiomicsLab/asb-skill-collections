@@ -12,7 +12,7 @@ metadata:
   tools:
   - R
   - amanida
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
@@ -47,7 +47,6 @@ attribution:
 
 # study-size-weighted-averaging
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Combine effect sizes (fold-changes) across multiple metabolomics studies by applying log2 transformation and computing a weighted average where weights are proportional to each study's sample size (N). This produces a single pooled fold-change estimate that reflects both the magnitude of change and the statistical power of each contributing study.

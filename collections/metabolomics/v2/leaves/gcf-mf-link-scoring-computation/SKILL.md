@@ -20,7 +20,7 @@ metadata:
   - MIBiG
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -54,7 +54,6 @@ attribution:
 
 # GCF-MF Link Scoring Computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Computes standardised strain correlation scores and IOKR scores for Gene Cluster Family (GCF) to Metabolite Feature (MF) links, then combines them into a unified ranking to prioritise true genomic–metabolomic associations. This skill addresses the inability of raw strain correlation scores to be reliably compared across links of different sizes by standardising via hypergeometric null-model normalisation.

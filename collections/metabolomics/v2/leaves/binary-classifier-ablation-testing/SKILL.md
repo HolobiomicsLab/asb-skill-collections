@@ -13,7 +13,7 @@ metadata:
   tools:
   - BitterPredict
   - BitterPredict.m
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
@@ -43,7 +43,6 @@ attribution:
 
 # binary-classifier-ablation-testing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically remove descriptor subgroups from a molecular classifier's input data and measure prediction changes to identify which chemical structure descriptors have the greatest impact on bitter/not-bitter predictions. This reveals descriptor importance and enables interpretability of the classifier's decision logic.

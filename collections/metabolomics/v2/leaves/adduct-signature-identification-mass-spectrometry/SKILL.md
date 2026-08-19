@@ -18,7 +18,7 @@ metadata:
   - MamsiStructSearch
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -54,7 +54,6 @@ attribution:
 
 # Adduct Signature Identification in Mass Spectrometry
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies common electrospray ionization (ESI) adduct signatures in LC-MS features by calculating hypothetical neutral masses and grouping features with matching neutral masses within ppm tolerance. This enables structural annotation and cross-assay linking of metabolite features.

@@ -20,7 +20,7 @@ metadata:
   - Rust mzPeak implementation
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00313
   title: MZA
@@ -58,7 +58,6 @@ attribution:
 
 # mass-spectrometry-data-structure-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret and navigate the hierarchical HDF5 structure of converted multidimensional mass spectrometry data (MZA format) to extract metadata, spectral arrays, and ion mobility calibration coefficients across programming languages. This skill enables reproducible access to complex LC–IM–MS datasets without vendor-specific tools.

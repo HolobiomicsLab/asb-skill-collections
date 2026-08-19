@@ -19,7 +19,7 @@ metadata:
   - MamsiStructSearch
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -56,7 +56,6 @@ attribution:
 
 # network-node-attribute-assignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign node attributes (assay membership, structural cluster identity, correlation cluster membership, and compound name) to feature nodes in a NetworkX graph constructed from multi-assay LC-MS data. This enrichment enables downstream filtering, visualization, and structural interpretation of feature relationships.

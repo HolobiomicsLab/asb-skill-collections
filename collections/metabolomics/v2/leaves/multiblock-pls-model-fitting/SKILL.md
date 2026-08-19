@@ -20,7 +20,7 @@ metadata:
   - matplotlib
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -58,7 +58,6 @@ attribution:
 
 # multiblock-pls-model-fitting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fit a Multi-Block Partial Least Squares (MB-PLS) discriminant model to integrate and analyze multi-assay LC-MS metabolomics blocks (e.g., HPOS, LPOS, LNEG) for classification or regression tasks. MB-PLS leverages the NIPALS algorithm to model covariance structure across blocks while predicting a single response variable.

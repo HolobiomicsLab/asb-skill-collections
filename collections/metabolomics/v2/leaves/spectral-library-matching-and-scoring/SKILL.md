@@ -25,7 +25,7 @@ metadata:
   - tima R package
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01513
   title: MSI-Explorer
@@ -66,7 +66,6 @@ attribution:
 
 # spectral-library-matching-and-scoring
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match mass spectra extracted from regions of interest (ROI) or mean intensity profiles against reference biochemical databases using m/z tolerance and spectral similarity scoring to generate ranked lists of putative metabolite identities. This skill enables targeted annotation of MSI data by linking detected m/z features to known molecules with confidence metrics.

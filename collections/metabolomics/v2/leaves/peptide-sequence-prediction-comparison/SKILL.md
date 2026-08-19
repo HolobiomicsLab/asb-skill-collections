@@ -15,7 +15,7 @@ metadata:
   - PDV
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo
@@ -52,7 +52,6 @@ attribution:
 
 # peptide-sequence-prediction-comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare de novo peptide sequences predicted by Casanovo using different decoding strategies (greedy vs. beam search) to assess whether alternative inference methods yield higher-quality predictions on MS/MS spectra. This skill quantifies prediction accuracy differences at both amino acid and peptide levels using precision, recall, and F1 scores.

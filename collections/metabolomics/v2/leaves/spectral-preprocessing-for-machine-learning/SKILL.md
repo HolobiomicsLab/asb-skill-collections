@@ -16,7 +16,7 @@ metadata:
   - Probability Product Kernel (PPK)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -54,7 +54,6 @@ attribution:
 
 # spectral-preprocessing-for-machine-learning
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter MS2 spectra to retain only peaks present in the training dataset before applying machine learning kernels, reducing noise and computational cost while leveraging the statistical coverage of the training set. This denoising step precedes Probability Product Kernel (PPK) computation to normalize peak diversity and avoid spurious signal.

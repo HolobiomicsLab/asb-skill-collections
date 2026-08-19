@@ -20,7 +20,7 @@ metadata:
   - mzPeak Rust implementation
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -51,7 +51,6 @@ attribution:
 
 # Apache Arrow Columnar Format Parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and decode Apache Arrow columnar data files (such as Parquet archives) to extract structured mass spectrometry metadata and signal arrays for downstream analysis. This skill enables read-only access to mzPeak files through language-specific Arrow bindings that handle the columnar schema, packed parallel table groups, and optional data transformations like zero run stripping and null marking.

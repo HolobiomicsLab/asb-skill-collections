@@ -20,7 +20,7 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -63,7 +63,6 @@ attribution:
 
 # Spectral denoising via training data filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter MS2 spectra to retain only peaks present in a reference training library, then apply the Probability Product Kernel (PPK) as a denoising step before downstream scoring. This reduces computational burden and noise in spectrum-to-BGC matching by excluding unexplained fragmentation peaks.

@@ -17,7 +17,7 @@ metadata:
   - rMSIproc
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
@@ -49,7 +49,6 @@ attribution:
 
 # peak-collision-flagging
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and flag overlapped or isobaric ions in mass spectrometry imaging data to prevent their misclassification during matrix-related signal annotation. This skill uses m/z matching and spatial distribution analysis to generate binary overlap flags for each candidate peak.

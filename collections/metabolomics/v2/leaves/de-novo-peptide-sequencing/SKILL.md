@@ -17,7 +17,7 @@ metadata:
   - CUDA Toolkit
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo
@@ -54,7 +54,6 @@ attribution:
 
 # de-novo-peptide-sequencing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a transformer neural network (Casanovo) to predict amino acid sequences directly from MS/MS spectral peaks without requiring a protein database. This skill is essential for identifying unexpected or novel peptides in bottom-up tandem mass spectrometry datasets, particularly in immunopeptidomics, metaproteomics, and other applications where database searching is insufficient.

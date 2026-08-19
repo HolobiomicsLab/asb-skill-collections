@@ -18,7 +18,7 @@ metadata:
   - Environment
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -58,7 +58,6 @@ attribution:
 
 # mzML file parsing and ROI extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse a real LC-MS/MS mzML data file and extract regions of interest (ROIs) as chemical objects for simulation or analysis. This skill bridges raw mass spectrometry data and virtual fragmentation simulation by converting observed m/z and retention time features into UnknownChemical objects suitable for downstream mass spectrometer modeling.

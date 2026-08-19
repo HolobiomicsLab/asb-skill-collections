@@ -19,7 +19,7 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -60,7 +60,6 @@ attribution:
 
 # IOKR Kernel Regression Scoring
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Score GCF-MF links by training an in silico kernel regression model on spectrum-molecular fingerprint pairs from GNPS, then predicting the match probability between query spectra and BGC-derived fingerprints. This provides a complementary scoring dimension to strain correlation, especially for BGCs showing homology to characterized MIBiG references.

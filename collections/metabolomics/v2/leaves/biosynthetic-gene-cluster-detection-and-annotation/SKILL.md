@@ -16,7 +16,7 @@ metadata:
   - NPLinker
   - GNPS
   - MIBiG
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -54,7 +54,6 @@ attribution:
 
 # biosynthetic-gene-cluster-detection-and-annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect BGCs in microbial genomes using antiSMASH and annotate them by clustering into Gene Cluster Families (GCFs) using BiG-SCAPE based on product class and structural similarity. This enables systematic integration of genomic predictions with metabolomic data for natural product discovery.

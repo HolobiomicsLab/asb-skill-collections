@@ -16,7 +16,7 @@ metadata:
   - R (base and stats)
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac388
   title: MiMIR
@@ -48,7 +48,6 @@ attribution:
 
 # R Package Function Integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate a predictive model (such as MetaboAge) as a validated R function into an existing package, ensuring compatibility with the package's input/output formats and maintaining reproducibility through pre-trained model coefficients. This skill is essential when extending a package like MiMIR to support new metabolic biomarkers or surrogate predictions.

@@ -19,7 +19,7 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -60,7 +60,6 @@ attribution:
 
 # Score Standardisation (Z-Score Normalization)
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform raw scoring functions (strain correlation or IOKR) to zero mean and unit variance by subtracting the hypergeometric expected value and dividing by the standard deviation, enabling reliable cross-link comparison and statistical ranking. This standardisation resolves the inability of raw scores to distinguish links with identical strain/spectrum patterns.

@@ -19,7 +19,7 @@ metadata:
   - NPLinker
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -62,7 +62,6 @@ attribution:
 
 # score-distribution-analysis-and-statistical-significance-testing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Analyze the distribution of link-scoring function outputs (e.g., IOKR, strain correlation) across all candidate pairs and compare validated links against the null distribution using statistical hypothesis tests to quantify enrichment. This skill determines whether a scoring function reliably separates true BGC-spectrum pairs from spurious matches.

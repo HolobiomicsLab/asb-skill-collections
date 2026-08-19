@@ -16,7 +16,7 @@ metadata:
   - NumPy
   - SciPy
   - NPLinker
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -50,7 +50,6 @@ attribution:
 
 # z-score-normalization-for-cross-dataset-comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform raw scoring metrics (strain correlation, IOKR) into standardized z-scores by subtracting the null-model expected value and dividing by standard deviation, enabling direct comparison of link scores across GCF-MF pairs of different sizes and molecular families. This normalization resolves the inability of raw scores to distinguish validated links reliably when scores span different ranges.

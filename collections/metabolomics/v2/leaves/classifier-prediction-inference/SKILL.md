@@ -13,7 +13,7 @@ metadata:
   tools:
   - BitterPredict
   - BitterPredict.m
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
@@ -43,7 +43,6 @@ attribution:
 
 # classifier-prediction-inference
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a trained machine-learning classifier to predict binary class labels (bitter/not-bitter) for a set of molecules given their chemical structure descriptors. This skill is used when you have pre-computed molecular descriptors and need to generate taste predictions without retraining the classifier.

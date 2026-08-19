@@ -16,7 +16,7 @@ metadata:
   - MAMSI (MamsiStructSearch)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -52,7 +52,6 @@ attribution:
 
 # data-summarization-and-tabulation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and compute summary statistics from structural clustering outputs (cluster count, size distribution, feature coverage) and tabulate results across parameterized conditions (e.g., adduct mode selection) to enable side-by-side comparison of method effects on LC-MS feature grouping.

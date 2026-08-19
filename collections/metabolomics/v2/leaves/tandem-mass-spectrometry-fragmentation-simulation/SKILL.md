@@ -16,7 +16,7 @@ metadata:
   - OpenMS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -49,7 +49,6 @@ attribution:
 
 # tandem-mass-spectrometry-fragmentation-simulation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Simulate and compare data-dependent acquisition (DDA) fragmentation strategies in LC-MS/MS using a virtual mass spectrometer framework (ViMMS) before testing on real equipment. This skill enables rapid prototyping, evaluation, and optimization of MS/MS scan-level control policies by generating synthetic LC-MS/MS data and computing coverage and intensity metrics against baseline strategies.

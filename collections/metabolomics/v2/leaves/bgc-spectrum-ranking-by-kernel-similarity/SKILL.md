@@ -19,7 +19,7 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -62,7 +62,6 @@ attribution:
 
 # BGC-spectrum ranking by kernel similarity
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank candidate biosynthetic gene clusters (BGCs) against observed mass spectrometry data by learning a mapping from spectrum kernel space to molecular fingerprint space using Input-Output Kernel Regression (IOKR), then scoring BGC-spectrum pairs via inner product in fingerprint space. This approach ranks true metabolite-BGC links significantly above random baseline, achieving top-5 accuracy of 0.1708 and AUC of 0.6534 on the MIBiG-GNPS paired dataset.

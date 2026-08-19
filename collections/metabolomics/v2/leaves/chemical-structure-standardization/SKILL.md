@@ -17,7 +17,7 @@ metadata:
   - MAGMa
   - PubChem
   - PubChem standardization
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
@@ -61,7 +61,6 @@ attribution:
 
 # chemical-structure-standardization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and validate raw molecular structures in SMILES or SDF format, converting them into canonicalized representations suitable for descriptor calculation and chemical informatics pipelines. This skill ensures structural integrity before downstream analysis.

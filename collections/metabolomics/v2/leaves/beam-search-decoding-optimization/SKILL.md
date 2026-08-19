@@ -18,7 +18,7 @@ metadata:
   - limelight-import-casanovo
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo
@@ -57,7 +57,6 @@ attribution:
 
 # beam-search-decoding-optimization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Replace greedy decoding with beam search decoding in Casanovo to generate multiple candidate peptide sequences ranked by confidence score, improving the likelihood of recovering correct sequences that greedy selection might miss. This skill is applied when MS/MS spectral predictions need higher accuracy and you can tolerate increased computational cost.

@@ -16,7 +16,7 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -54,7 +54,6 @@ attribution:
 
 # MS2 spectrum peak filtering by training set membership
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter MS2 spectrum peaks to retain only those present in a training dataset prior to kernel-based scoring, reducing noise and computational cost while accepting a small bias toward the training set's ion diversity. This preprocessing step is essential when applying the Probability Product Kernel (PPK) to metabolomics spectra linked to genomic data in natural products discovery workflows.

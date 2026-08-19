@@ -20,7 +20,7 @@ metadata:
   - mzPeak specification JSON Schemas
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -50,7 +50,6 @@ attribution:
 
 # arrow-table-serialization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Serialize mass spectrometry spectrum or chromatogram data from in-memory Arrow Table structures into Parquet files within an mzPeak archive. This skill bridges tabular data representation and persistent storage in a Parquet-based format compatible with the PyData stack.

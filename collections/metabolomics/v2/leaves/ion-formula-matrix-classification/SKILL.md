@@ -18,7 +18,7 @@ metadata:
   - devtools
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
@@ -52,7 +52,6 @@ attribution:
 
 # Ion formula and spatial distribution matrix classification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Classify ions detected in mass spectrometry imaging (MSI) data as matrix-related or analyte-related by integrating chemical formula matching against known matrix characteristics with spatial distribution coherence metrics. This skill automates removal of matrix-background noise from MSI datasets, improving signal-to-noise and enabling more reliable downstream analysis of tissue-localized molecular species.

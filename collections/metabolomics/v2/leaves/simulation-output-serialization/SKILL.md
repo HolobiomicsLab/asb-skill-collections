@@ -14,7 +14,7 @@ metadata:
   - Python pickle module
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -49,7 +49,6 @@ attribution:
 
 # Serialize Simulated LC-MS/MS Output to Persistent Artifacts
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Persist the in-memory evaluation data and chemical definitions generated during a ViMMS Environment simulation run into companion pickle and mzML files, enabling linkage between simulated MS/MS scans and their source metabolite definitions for downstream evaluation and reuse.

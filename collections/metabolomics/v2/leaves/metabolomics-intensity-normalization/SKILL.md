@@ -14,7 +14,7 @@ metadata:
   - Metanorm
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1101/2025.09.30.679445v1
   title: Metanorm
@@ -48,7 +48,7 @@ attribution:
 
 # metabolomics-intensity-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Apply robust normalization methods (tGAM, rGAM, rLOESS, QC-RLSC, QC-RSC) to correct for signal drift and batch effects in untargeted metabolomics intensity matrices. This skill removes systematic variation across analytical runs while preserving biological signal, essential for cross-batch and multi-scale metabolomics studies.

@@ -18,7 +18,7 @@ metadata:
   - peakPantheR
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -54,7 +54,6 @@ attribution:
 
 # Isotopologue Pattern Detection in LC-MS
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detects and groups isotopologue signatures in LC-MS features by identifying mass differences characteristic of stable isotope distributions (1.00335 Da between successive isotopologues). This skill enables structural annotation of metabolite features by recognizing the fingerprint of natural or introduced isotopic labeling within retention-time windows.

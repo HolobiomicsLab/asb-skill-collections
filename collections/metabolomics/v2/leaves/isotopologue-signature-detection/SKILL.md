@@ -20,7 +20,7 @@ metadata:
   - MAMSI (MamsiStructSearch)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -57,7 +57,6 @@ attribution:
 
 # isotopologue-signature-detection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies isotopologue signatures within retention-time windows of LC-MS features by detecting characteristic mass differences (1.00335 Da, corresponding to ¹³C–¹²C) between feature m/z values. This is a foundational step in structural clustering that groups features likely derived from the same compound across different isotopic states.

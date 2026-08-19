@@ -18,7 +18,7 @@ metadata:
   - HMDB
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -53,7 +53,6 @@ attribution:
 
 # full-scan-acquisition-strategy
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A mass spectrometry acquisition approach that configures a controller to collect MS1 scans only (without tandem MS/MS fragmentation) across a full retention time window, enabling rapid prototyping and evaluation of chemical ionization and detection strategies in a virtual metabolomics environment.

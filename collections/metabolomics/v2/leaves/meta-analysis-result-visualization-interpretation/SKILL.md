@@ -16,7 +16,7 @@ metadata:
   - volcano_plot
   - explore_plot
   - vote_plot
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
@@ -51,7 +51,6 @@ attribution:
 
 # meta-analysis-result-visualization-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply volcano plots, vote plots, and explore plots to the outputs of metabolomics meta-analysis in order to identify compounds meeting statistical and consistency thresholds, filter false positives, and reject null hypotheses about compound significance.

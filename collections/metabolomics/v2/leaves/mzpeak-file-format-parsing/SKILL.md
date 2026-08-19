@@ -19,7 +19,7 @@ metadata:
   - mzPeak specification
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -49,7 +49,6 @@ attribution:
 
 # mzPeak File Format Parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse mass spectrometry spectral and chromatographic data from mzPeak archives—a Parquet-based, ZIP-containerized format—using language-specific libraries (Rust, Python/pyarrow, R/arrow) to extract decoded spectra, metadata, and signal arrays for downstream analysis.

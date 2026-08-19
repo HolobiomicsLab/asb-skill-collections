@@ -12,7 +12,7 @@ metadata:
   - antiSMASH
   - Python (numpy, scipy.stats, pandas, matplotlib, seaborn)
   - NPLinker
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -48,7 +48,6 @@ attribution:
 
 # Combination-function parameterisation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically evaluate alternative mathematical combination functions and their parameters to optimally merge complementary scoring functions (e.g. ℓp-norm with varying exponent p) for ranking BGC-metabolite predictions. This skill identifies which combination strategy most enriches validated links in high-ranking tiers.

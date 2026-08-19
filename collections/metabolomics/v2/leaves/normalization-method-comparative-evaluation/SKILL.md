@@ -12,7 +12,7 @@ metadata:
   tools:
   - R
   - Metanorm
-  license_tier: restricted
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1101/2025.09.30.679445v1
   title: Metanorm
@@ -46,7 +46,7 @@ attribution:
 
 # Comparative Evaluation of Metabolomics Normalization Methods
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 This skill reproduces and validates published rankings of five normalization methods (tGAM, rGAM, rLOESS, QC-RLSC, QC-RSC) across robustness and computational speed dimensions using the Metanorm R package on metabolomics datasets. It enables practitioners to verify which method best suits their experimental design and performance requirements.

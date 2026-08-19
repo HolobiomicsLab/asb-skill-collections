@@ -19,7 +19,7 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -59,7 +59,6 @@ attribution:
 
 # statistical-hypothesis-testing-mean-comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare mean scores between validated and all hypothetical genomic-metabolomic links using t-tests to demonstrate that a standardisation scheme improves the separation and statistical discriminability of true links from background. This skill validates whether a scoring function reliably ranks validated natural product-BGC pairs above random associations.

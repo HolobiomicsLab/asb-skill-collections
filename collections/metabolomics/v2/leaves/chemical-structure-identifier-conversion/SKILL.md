@@ -16,7 +16,7 @@ metadata:
   - webchem
   - amanida
   - PubChem
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
@@ -52,7 +52,6 @@ attribution:
 
 # Chemical Structure Identifier Conversion
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert multiple chemical identifier formats (chemical name, InChI, InChIKey, SMILES) into a standardized PubChem ID nomenclature, detect duplicates, and optionally retrieve enriched metabolite descriptors (Molecular Formula, Molecular Weight, cross-database IDs) from public repositories.

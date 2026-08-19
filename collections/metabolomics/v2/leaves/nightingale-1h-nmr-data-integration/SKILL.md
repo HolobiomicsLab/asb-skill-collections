@@ -16,7 +16,7 @@ metadata:
   - MiMIR
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac388
   title: MiMIR
@@ -49,7 +49,6 @@ attribution:
 
 # nightingale-1h-nmr-data-integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate and standardize Nightingale Health 1H-NMR metabolomics measurements into a feature matrix compatible with MiMIR's pre-trained metabolic scoring models. This skill enables projection of published metabolic biomarkers (mortality risk, MetaboAge, cardiovascular risk, etc.) onto new cohorts by aligning raw metabolite data to expected column nomenclature and validating feature completeness.

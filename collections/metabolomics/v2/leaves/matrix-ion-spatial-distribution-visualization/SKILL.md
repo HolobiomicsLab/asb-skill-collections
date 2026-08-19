@@ -18,7 +18,7 @@ metadata:
   - rMSIproc
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
@@ -50,7 +50,6 @@ attribution:
 
 # matrix-ion-spatial-distribution-visualization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate multi-panel visual reports that display ion spatial maps alongside chemical formula identifiers, peak overlap status, and classification justification to transparently document matrix-related annotations in MSI datasets. This skill enables practitioners to inspect and validate the rationale behind each matrix vs. non-matrix ion classification decision.

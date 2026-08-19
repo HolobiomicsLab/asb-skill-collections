@@ -12,7 +12,7 @@ metadata:
   - http://edamontology.org/topic_3314
   tools:
   - BitterPredict.m
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
@@ -42,7 +42,6 @@ attribution:
 
 # chemical-structure-to-taste-prediction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 BitterPredict is a binary classification skill that predicts whether a chemical compound will taste bitter based on its molecular structure, encoded as a set of computed molecular descriptors. Use this skill to rapidly screen chemical libraries or predict bitterness of novel compounds without requiring direct sensory evaluation.

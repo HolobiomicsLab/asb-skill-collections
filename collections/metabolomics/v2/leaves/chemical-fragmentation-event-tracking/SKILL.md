@@ -16,7 +16,7 @@ metadata:
   - MZMine
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -51,7 +51,6 @@ attribution:
 
 # Chemical Fragmentation Event Tracking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Track and persist fragmentation events and their source chemical definitions during simulated mass spectrometry acquisitions, enabling post-run linkage between generated MS/MS scans and the chemicals that produced them. This skill is essential for evaluating data-dependent acquisition strategies where understanding which chemical gave rise to which fragmentation spectrum is necessary for validation and optimization.

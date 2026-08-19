@@ -13,7 +13,7 @@ metadata:
   - R
   - amanida
   - webchem
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
@@ -48,7 +48,6 @@ attribution:
 
 # Trend classification from fold-change
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign directional trend labels (+1 for up-regulation, −1 for down-regulation, 0 for no trend) to metabolite compounds based on fold-change thresholds and statistical significance. This classification enables qualitative vote-counting meta-analysis in metabolomics studies where raw variance data are unavailable.

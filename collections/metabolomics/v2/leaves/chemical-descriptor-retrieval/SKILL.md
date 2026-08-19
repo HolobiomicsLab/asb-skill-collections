@@ -14,7 +14,7 @@ metadata:
   - webchem
   - amanida
   - PubChem
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
@@ -50,7 +50,6 @@ attribution:
 
 # Chemical Descriptor Retrieval
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve standardized chemical descriptors (molecular formula, molecular weight, SMILES, InChIKey, and cross-database identifiers) for metabolites from public chemical databases using canonical identifiers. This enriches harmonized compound records with physicochemical and structural properties needed for comparative metabolomics meta-analysis.

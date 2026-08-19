@@ -16,7 +16,7 @@ metadata:
   - Chemistry Development Kit (CDK)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -54,7 +54,6 @@ attribution:
 
 # training-data-inventory-construction-from-spectral-libraries
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a curated peak inventory from public spectral libraries (e.g., GNPS) with structural annotations to serve as the reference set for MS2 spectrum filtering and Probability Product Kernel (PPK) denoising. This inventory enables downstream kernel-based scoring of BGC–metabolite links while leveraging community-validated spectral data.

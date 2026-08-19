@@ -16,7 +16,7 @@ metadata:
   - HMDB database
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -48,7 +48,6 @@ attribution:
 
 # molecular-formula-database-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter a molecular formula database (e.g., HMDB) by physicochemical constraints such as m/z range to obtain a subset of unique chemical formulae suitable for virtual mass spectrometry simulation or targeted metabolomics analysis.

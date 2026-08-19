@@ -1255,7 +1255,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "adduct-mass-offset-assignment": {
       "dois": [
@@ -1363,7 +1363,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "adduct-specific-model-fine-tuning": {
       "dois": [
@@ -1594,7 +1594,7 @@
         "https://github.com/Noble-Lab/casanovo",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "analog-search-result-routing": {
       "dois": [
@@ -2188,7 +2188,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "api-adapter-layer-design": {
       "dois": [
@@ -2220,7 +2220,7 @@
       "repo_urls": [
         "https://github.com/mwang87/NP-Classifier"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "api-data-retrieval": {
       "dois": [
@@ -2344,7 +2344,7 @@
       "repo_urls": [
         "https://github.com/mwang87/NP-Classifier"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "api-response-error-handling": {
       "dois": [
@@ -2409,7 +2409,7 @@
       "repo_urls": [
         "https://github.com/mwang87/NP-Classifier"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "api-specification-extraction": {
       "dois": [
@@ -2691,7 +2691,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "arrow-table-serialization": {
       "dois": [
@@ -2712,7 +2712,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "arrow-tabular-data-reading": {
       "dois": [
@@ -2733,7 +2733,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "artifact-checksum-verification": {
       "dois": [
@@ -4654,7 +4654,7 @@
         "asb-paper-10-1021-acs-jafc-3c09767"
       ],
       "repo_urls": [],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "batch-preparation-class-imbalance-handling": {
       "dois": [
@@ -5040,7 +5040,7 @@
         "https://github.com/Noble-Lab/casanovo",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "benchmark-dataset-generation-from-reference-metabolites": {
       "dois": [
@@ -5234,7 +5234,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "bgc-mf-link-scoring-standardisation": {
       "dois": [
@@ -5257,7 +5257,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "bgc-sequence-domain-scanning": {
       "dois": [
@@ -5300,7 +5300,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "bgc-spectrum-ranking-by-kernel-similarity": {
       "dois": [
@@ -5324,7 +5324,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "bgc-tokenization-with-pfam-domains": {
       "dois": [
@@ -5491,7 +5491,7 @@
         "asb-paper-10-1021-acs-jafc-3c09767"
       ],
       "repo_urls": [],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "binary-classifier-ablation-testing": {
       "dois": [
@@ -5505,7 +5505,7 @@
         "asb-paper-10-1021-acs-jafc-3c09767"
       ],
       "repo_urls": [],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "binary-cross-entropy-loss-optimization": {
       "dois": [
@@ -6169,7 +6169,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "biosynthetic-gene-cluster-mining-with-genomic-data": {
       "dois": [
@@ -7524,7 +7524,7 @@
       "repo_urls": [
         "https://github.com/Ghoshlab/marr"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "candidate-psm-cardinality-control": {
       "dois": [
@@ -8743,7 +8743,7 @@
         "https://github.com/mariallr/amanida",
         "https://github.com/RECETOX/MSMetaEnhancer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chemical-formula-annotation-mapping": {
       "dois": [
@@ -8761,7 +8761,7 @@
       "repo_urls": [
         "https://github.com/Ghoshlab/marr"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chemical-formula-deduplication-across-databases": {
       "dois": [
@@ -8816,7 +8816,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chemical-formula-manipulation": {
       "dois": [
@@ -8937,7 +8937,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chemical-graph-connectivity-validation": {
       "dois": [
@@ -9442,7 +9442,7 @@
       "repo_urls": [
         "https://github.com/mwang87/NP-Classifier"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chemical-shift-reference-matching": {
       "dois": [
@@ -9672,7 +9672,7 @@
         "asb-paper-10-1021-acs-jafc-3c09767"
       ],
       "repo_urls": [],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chemical-structure-featurization": {
       "dois": [
@@ -9791,7 +9791,7 @@
         "https://github.com/mariallr/amanida",
         "https://github.com/RECETOX/MSMetaEnhancer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chemical-structure-integrity-verification": {
       "dois": [
@@ -9942,7 +9942,7 @@
       "repo_urls": [
         "https://github.com/michaelwitting/RepoRT"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chemical-structure-to-taste-prediction": {
       "dois": [
@@ -9955,7 +9955,7 @@
         "asb-paper-10-1021-acs-jafc-3c09767"
       ],
       "repo_urls": [],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chemical-structure-transformation-documentation": {
       "dois": [
@@ -10344,7 +10344,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chromatogram-artifact-removal": {
       "dois": [
@@ -10977,7 +10977,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chromatographic-peak-detection-retention-time-alignment": {
       "dois": [
@@ -11881,7 +11881,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "classification-performance-evaluation": {
       "dois": [
@@ -11968,7 +11968,7 @@
         "asb-paper-10-1021-acs-jafc-3c09767"
       ],
       "repo_urls": [],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "classifier-prediction-inference": {
       "dois": [
@@ -11982,7 +11982,7 @@
         "asb-paper-10-1021-acs-jafc-3c09767"
       ],
       "repo_urls": [],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "classyfire-batch-database-querying": {
       "dois": [
@@ -12263,7 +12263,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "clustering-tool-orchestration": {
       "dois": [
@@ -13058,7 +13058,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "combined-table-extraction-and-inspection": {
       "dois": [
@@ -13247,7 +13247,7 @@
         "https://github.com/wh-xu/Hyper-Spec",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "command-line-tool-installation-and-configuration": {
       "dois": [
@@ -13310,7 +13310,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "command-line-tool-verification": {
       "dois": [
@@ -13663,7 +13663,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "component-candidate-prioritization-filtering": {
       "dois": [
@@ -14226,7 +14226,7 @@
         "https://github.com/mariallr/amanida",
         "https://github.com/RECETOX/MSMetaEnhancer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "compound-identifier-cross-referencing": {
       "dois": [
@@ -14891,7 +14891,7 @@
       "repo_urls": [
         "https://github.com/UGent-LIMET/Metanorm"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "computational-performance-benchmarking-and-timing-measurement": {
       "dois": [
@@ -16113,7 +16113,7 @@
         "https://github.com/mariallr/amanida",
         "https://github.com/RECETOX/MSMetaEnhancer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "consensus-spectrum-assembly-from-fragmentation-spectra": {
       "dois": [
@@ -17215,7 +17215,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "correlation-coefficient-computation-across-samples": {
       "dois": [
@@ -17305,7 +17305,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "correlation-network-characterization": {
       "dois": [
@@ -17766,7 +17766,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "cross-assay-feature-linkage-analysis": {
       "dois": [
@@ -17794,7 +17794,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "cross-batch-metabolite-quantification-harmonization": {
       "dois": [
@@ -17874,7 +17874,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "cross-dataset-entry-filtering": {
       "dois": [
@@ -18016,7 +18016,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "cross-domain-masst-output-parsing": {
       "dois": [
@@ -18201,7 +18201,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "cross-language-interface-design": {
       "dois": [
@@ -19636,7 +19636,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "data-driven-similarity-layer-implementation": {
       "dois": [
@@ -19976,7 +19976,7 @@
         "https://github.com/FangYuan717/ROASMI",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "data-quality-assessment-from-molecular-descriptors": {
       "dois": [
@@ -20097,7 +20097,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "data-structure-design-for-spectral-searches": {
       "dois": [
@@ -20162,7 +20162,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "data-summary-statistics": {
       "dois": [
@@ -20769,7 +20769,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "dda-fragmentation-strategy-simulation": {
       "dois": [
@@ -20793,7 +20793,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "dda-mode-metabolomics-data-processing": {
       "dois": [
@@ -20887,7 +20887,7 @@
         "https://github.com/Noble-Lab/casanovo",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "de-novo-precursor-mass-annotation": {
       "dois": [
@@ -22030,7 +22030,7 @@
         "asb-paper-10-1021-acs-jafc-3c09767"
       ],
       "repo_urls": [],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "descriptor-table-assembly": {
       "dois": [
@@ -22045,7 +22045,7 @@
         "asb-paper-10-1021-acs-jafc-3c09767"
       ],
       "repo_urls": [],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "detection-limit-threshold-definition": {
       "dois": [
@@ -22066,7 +22066,7 @@
       "repo_urls": [
         "https://github.com/WandeRum/GSimp"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "detection-network-output-parsing": {
       "dois": [
@@ -22730,7 +22730,7 @@
         "https://github.com/mariallr/amanida",
         "https://github.com/RECETOX/MSMetaEnhancer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "directive-engine-implementation": {
       "dois": [
@@ -22811,7 +22811,7 @@
       "repo_urls": [
         "https://github.com/UGent-LIMET/Metanorm"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "disease-classification-prediction": {
       "dois": [
@@ -24309,7 +24309,7 @@
         "https://github.com/mariallr/amanida",
         "https://github.com/RECETOX/MSMetaEnhancer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "duplicate-spectrum-detection-removal": {
       "dois": [
@@ -24387,7 +24387,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "dynamic-method-discovery": {
       "dois": [
@@ -25419,7 +25419,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "enrichment-score-computation": {
       "dois": [
@@ -26024,7 +26024,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "evaluation-data-object-handling": {
       "dois": [
@@ -26044,7 +26044,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "evolutionary-pattern-encoding-in-molecules": {
       "dois": [
@@ -28774,7 +28774,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "feature-retention-criteria-application": {
       "dois": [
@@ -29737,7 +29737,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "file-format-conversion-peak-picking-to-lipidmatch": {
       "dois": [
@@ -29882,7 +29882,7 @@
         "asb-paper-10-1021-acs-jafc-3c09767"
       ],
       "repo_urls": [],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "file-format-identification-mass-spectrometry": {
       "dois": [
@@ -30050,7 +30050,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "file-grouping-by-sample-attributes": {
       "dois": [
@@ -30605,7 +30605,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "fixed-architecture-layer-validation": {
       "dois": [
@@ -30935,7 +30935,7 @@
         "https://github.com/mariallr/amanida",
         "https://github.com/RECETOX/MSMetaEnhancer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "fold-change-sign-determination-statistics": {
       "dois": [
@@ -31206,7 +31206,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "formula-network-extraction-from-mz": {
       "dois": [
@@ -31284,7 +31284,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "formula-stratified-sampling": {
       "dois": [
@@ -32136,7 +32136,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "frame-metadata-extraction-and-export": {
       "dois": [
@@ -32343,7 +32343,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ftms-mass-calibration-workflow": {
       "dois": [
@@ -32448,7 +32448,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "function-wrapping-and-binding-mechanisms": {
       "dois": [
@@ -33164,7 +33164,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "gcf-mf-link-scoring": {
       "dois": [
@@ -33187,7 +33187,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "gcf-mf-link-scoring-computation": {
       "dois": [
@@ -33212,7 +33212,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "gcf-spectra-association-ranking": {
       "dois": [
@@ -33398,7 +33398,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "gene-domain-co-occurrence-analysis": {
       "dois": [
@@ -33781,7 +33781,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "genotype-phenotype-data-preparation": {
       "dois": [
@@ -35386,7 +35386,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "graph-representation-construction": {
       "dois": [
@@ -35498,7 +35498,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "graphical-interface-error-handling": {
       "dois": [
@@ -36346,7 +36346,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "hierarchical-clustering-euclidean-complete-linkage": {
       "dois": [
@@ -36864,7 +36864,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "hmdb-formula-sampling": {
       "dois": [
@@ -36885,7 +36885,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "hmdb-metabolite-extraction": {
       "dois": [
@@ -36906,7 +36906,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "hmdb-metabolite-query-and-retrieval": {
       "dois": [
@@ -37293,7 +37293,7 @@
       "repo_urls": [
         "https://github.com/mwang87/NP-Classifier"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "http-post-request-construction": {
       "dois": [
@@ -37404,7 +37404,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "hypergeometric-distribution-null-model-application": {
       "dois": [
@@ -37427,7 +37427,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "hypergeometric-distribution-probability-calculation": {
       "dois": [
@@ -37448,7 +37448,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "hyperparameter-sweep-configuration": {
       "dois": [
@@ -38519,7 +38519,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "input-type-classification": {
       "dois": [
@@ -39299,7 +39299,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "interactive-plot-axis-selection-ui": {
       "dois": [
@@ -39858,7 +39858,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "interpretable-machine-learning": {
       "dois": [
@@ -39926,7 +39926,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "iokr-kernel-regression-scoring": {
       "dois": [
@@ -39949,7 +39949,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ion-adduct-isotope-pattern-matching": {
       "dois": [
@@ -40113,7 +40113,7 @@
       "repo_urls": [
         "https://github.com/Ghoshlab/marr"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ion-image-augmentation-contrastive-learning": {
       "dois": [
@@ -41143,7 +41143,7 @@
       "repo_urls": [
         "https://github.com/Ghoshlab/marr"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "isobaric-ion-misclassification-documentation": {
       "dois": [
@@ -41161,7 +41161,7 @@
       "repo_urls": [
         "https://github.com/Ghoshlab/marr"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "isoform-sequence-extraction-and-formatting": {
       "dois": [
@@ -41831,7 +41831,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "isotopologue-adduct-link-identification": {
       "dois": [
@@ -41861,7 +41861,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "isotopologue-distribution-matrix-construction": {
       "dois": [
@@ -41965,7 +41965,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "isotopologue-quantification-data-normalization": {
       "dois": [
@@ -42076,7 +42076,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "iterative-fitting-convergence": {
       "dois": [
@@ -42717,7 +42717,7 @@
       "repo_urls": [
         "https://github.com/mwang87/NP-Classifier"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "json-record-enrichment": {
       "dois": [
@@ -42759,7 +42759,7 @@
         "https://github.com/JainLab/Manuscript-DNNs-for-Classification-of-LCMS-Peaks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "json-response-serialization": {
       "dois": [
@@ -43287,7 +43287,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "k-nearest-neighbor-algorithm-application": {
       "dois": [
@@ -43612,7 +43612,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "khipu-grid-offset-mapping": {
       "dois": [
@@ -44253,7 +44253,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "lc-ms-data-calibration": {
       "dois": [
@@ -44495,7 +44495,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "lc-ms-feature-quality-assessment": {
       "dois": [
@@ -44741,7 +44741,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "lc-ms-spectral-data-import": {
       "dois": [
@@ -45737,7 +45737,7 @@
       "repo_urls": [
         "https://github.com/DanieleBizzarri/MiMIR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "lineshape-convolution-and-broadening": {
       "dois": [
@@ -46396,7 +46396,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/LeaveMeNotTonight/CMDN"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "lipid-library-annotation-from-mz": {
       "dois": [
@@ -47632,7 +47632,7 @@
       "repo_urls": [
         "https://github.com/Ghoshlab/marr"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "m-z-value-ordering-enforcement": {
       "dois": [
@@ -48011,7 +48011,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "manifest-generation": {
       "dois": [
@@ -49096,7 +49096,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-range-filtering-for-metabolomics": {
       "dois": [
@@ -49116,7 +49116,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-range-window-restriction": {
       "dois": [
@@ -49738,7 +49738,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-adduct-annotation": {
       "dois": [
@@ -50273,7 +50273,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-data-formatting": {
       "dois": [
@@ -50898,7 +50898,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-data-structure-interpretation": {
       "dois": [
@@ -50928,7 +50928,7 @@
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/FanzhouKong/spectral_denoising"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-data-structure-mapping": {
       "dois": [
@@ -51728,7 +51728,7 @@
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-format-parsing": {
       "dois": [
@@ -51970,7 +51970,7 @@
       "repo_urls": [
         "https://github.com/Ghoshlab/marr"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-imaging-data-representation": {
       "dois": [
@@ -53475,7 +53475,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-substructure-assignment": {
       "dois": [
@@ -54239,7 +54239,7 @@
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrum-query-processing": {
       "dois": [
@@ -54667,7 +54667,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-tolerance-filtering": {
       "dois": [
@@ -54964,7 +54964,7 @@
         "https://github.com/glasgowcompbio/PALS",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass2motif-annotation-mapping": {
       "dois": [
@@ -55194,7 +55194,7 @@
     "masster": {
       "dois": [],
       "kb_slugs": [],
-      "license_tier": "noncommercial",
+      "license_tier": "open",
       "repo_urls": [
         "https://github.com/zamboni-lab/masster-dist"
       ],
@@ -55512,7 +55512,7 @@
       "repo_urls": [
         "https://github.com/Ghoshlab/marr"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "matrix-multiplication-pipeline": {
       "dois": [
@@ -55636,7 +55636,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "maximum-weight-matching-optimization": {
       "dois": [
@@ -55682,7 +55682,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "md-defect-ratio-calculation": {
       "dois": [
@@ -55906,7 +55906,7 @@
         "https://github.com/mariallr/amanida",
         "https://github.com/RECETOX/MSMetaEnhancer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "meta-analysis-result-visualization-interpretation": {
       "dois": [
@@ -55928,7 +55928,7 @@
         "https://github.com/mariallr/amanida",
         "https://github.com/RECETOX/MSMetaEnhancer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabcombiner-object-construction": {
       "dois": [
@@ -55979,7 +55979,7 @@
       "repo_urls": [
         "https://github.com/DanieleBizzarri/MiMIR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolic-feature-identification-from-tandem-spectra": {
       "dois": [
@@ -57567,7 +57567,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-detection-frequency-estimation": {
       "dois": [
@@ -57736,7 +57736,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-feature-annotation-mapping": {
       "dois": [
@@ -57869,7 +57869,7 @@
       "repo_urls": [
         "https://github.com/UGent-LIMET/Metanorm"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "metabolite-feature-extraction-and-quantification": {
       "dois": [
@@ -58570,7 +58570,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/LeaveMeNotTonight/CMDN"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-identity-ground-truth-validation": {
       "dois": [
@@ -59544,7 +59544,7 @@
       "repo_urls": [
         "https://github.com/DanieleBizzarri/MiMIR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-set-activity-scoring": {
       "dois": [
@@ -59756,7 +59756,7 @@
         "https://github.com/mariallr/amanida",
         "https://github.com/RECETOX/MSMetaEnhancer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-similarity-scoring": {
       "dois": [
@@ -59892,7 +59892,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-structural-network-construction": {
       "dois": [
@@ -59921,7 +59921,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-structure-annotation": {
       "dois": [
@@ -60137,7 +60137,7 @@
         "https://github.com/mariallr/amanida",
         "https://github.com/RECETOX/MSMetaEnhancer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-vote-counting-qualitative-analysis": {
       "dois": [
@@ -60158,7 +60158,7 @@
         "https://github.com/mariallr/amanida",
         "https://github.com/RECETOX/MSMetaEnhancer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabologenomic-database-construction": {
       "dois": [
@@ -60794,7 +60794,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomic-workflow-ranking-visualization": {
       "dois": [
@@ -60917,7 +60917,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomics-classifier-training": {
       "dois": [
@@ -61684,7 +61684,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomics-feature-table-conversion": {
       "dois": [
@@ -61870,7 +61870,7 @@
       "repo_urls": [
         "https://github.com/UGent-LIMET/Metanorm"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "metabolomics-lcms-data-preprocessing": {
       "dois": [
@@ -61984,7 +61984,7 @@
       "repo_urls": [
         "https://github.com/DanieleBizzarri/MiMIR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomics-model-performance-comparison": {
       "dois": [
@@ -62044,7 +62044,7 @@
       "repo_urls": [
         "https://github.com/UGent-LIMET/Metanorm"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "metabolomics-npp-reliability-assessment": {
       "dois": [
@@ -62284,7 +62284,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomics-software-benchmarking": {
       "dois": [
@@ -63588,7 +63588,7 @@
         "https://github.com/mariallr/amanida",
         "https://github.com/RECETOX/MSMetaEnhancer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "missing-data-mechanism-assessment": {
       "dois": [
@@ -64492,7 +64492,7 @@
       "repo_urls": [
         "https://github.com/mwang87/NP-Classifier"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "model-metadata-schema-inspection": {
       "dois": [
@@ -64507,7 +64507,7 @@
       "repo_urls": [
         "https://github.com/mwang87/NP-Classifier"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "model-metadata-schema-verification": {
       "dois": [
@@ -64523,7 +64523,7 @@
       "repo_urls": [
         "https://github.com/mwang87/NP-Classifier"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "model-metadata-validation": {
       "dois": [
@@ -65125,7 +65125,7 @@
         "asb-paper-10-1021-acs-jafc-3c09767"
       ],
       "repo_urls": [],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "molecular-class-annotation-for-networks": {
       "dois": [
@@ -65278,7 +65278,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "molecular-dataset-partitioning-and-preprocessing": {
       "dois": [
@@ -65313,7 +65313,7 @@
         "asb-paper-10-1021-acs-jafc-3c09767"
       ],
       "repo_urls": [],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "molecular-descriptor-calculation-via-rdkit": {
       "dois": [
@@ -65476,7 +65476,7 @@
         "asb-paper-10-1021-acs-jafc-3c09767"
       ],
       "repo_urls": [],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "molecular-duplicate-detection-and-deduplication": {
       "dois": [
@@ -65697,7 +65697,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "molecular-fingerprint-generation": {
       "dois": [
@@ -65967,7 +65967,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "molecular-formula-heteroatom-classification": {
       "dois": [
@@ -67330,7 +67330,7 @@
         "https://github.com/FangYuan717/ROASMI",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "molecular-structure-reconstruction-from-embeddings": {
       "dois": [
@@ -69002,7 +69002,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ms1-scan-extraction-and-filtering": {
       "dois": [
@@ -69069,7 +69069,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ms1-spectrum-subsetting": {
       "dois": [
@@ -69716,7 +69716,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ms2lda-feature-annotation": {
       "dois": [
@@ -70229,7 +70229,7 @@
       "repo_urls": [
         "https://github.com/Ghoshlab/marr"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "msi-peak-intensity-extraction": {
       "dois": [
@@ -70618,7 +70618,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "multi-assay-data-integration-and-harmonization": {
       "dois": [
@@ -70648,7 +70648,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "multi-backend-plot-generation-and-benchmarking": {
       "dois": [
@@ -70974,7 +70974,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "multi-criterion-scoring-integration": {
       "dois": [
@@ -71233,7 +71233,7 @@
         "https://github.com/mariallr/amanida",
         "https://github.com/RECETOX/MSMetaEnhancer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "multi-generation-transformation-hierarchies": {
       "dois": [
@@ -71473,7 +71473,7 @@
         "https://github.com/FangYuan717/ROASMI",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "multi-modal-spot-validation-and-quality-assessment": {
       "dois": [
@@ -71803,7 +71803,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "multi-service-dependency-management": {
       "dois": [
@@ -72192,7 +72192,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "multiclass-biomarker-quality-assessment": {
       "dois": [
@@ -72593,7 +72593,7 @@
         "https://github.com/FangYuan717/ROASMI",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "multiomics-data-integration": {
       "dois": [
@@ -73574,7 +73574,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mzml-file-parsing-and-roi-extraction": {
       "dois": [
@@ -73597,7 +73597,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mzml-file-random-access-by-spectrum-id": {
       "dois": [
@@ -73637,7 +73637,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mzml-format-generation": {
       "dois": [
@@ -73658,7 +73658,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mzml-format-output-generation-and-validation": {
       "dois": [
@@ -73680,7 +73680,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mzml-format-output-validation": {
       "dois": [
@@ -73917,7 +73917,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mzml-xml-deserialization": {
       "dois": [
@@ -73957,7 +73957,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mzpeak-file-io-operations": {
       "dois": [
@@ -73980,7 +73980,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mzpeak-format-file-parsing": {
       "dois": [
@@ -74000,7 +74000,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mzpeak-format-io-operations": {
       "dois": [
@@ -74019,7 +74019,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mztab-format-export-and-annotation": {
       "dois": [
@@ -74042,7 +74042,7 @@
         "https://github.com/Noble-Lab/casanovo",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mztab-format-generation": {
       "dois": [
@@ -74929,7 +74929,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "network-node-attribute-mapping": {
       "dois": [
@@ -75129,7 +75129,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "neural-network-architecture-design": {
       "dois": [
@@ -76297,7 +76297,7 @@
       "repo_urls": [
         "https://github.com/DanieleBizzarri/MiMIR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "nmds-ordination-distance-metric-selection": {
       "dois": [
@@ -76469,7 +76469,7 @@
       "repo_urls": [
         "https://github.com/mwang87/NP-Classifier"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "nmr-peak-prediction-via-database-lookup": {
       "dois": [
@@ -77265,7 +77265,7 @@
       "repo_urls": [
         "https://github.com/UGent-LIMET/Metanorm"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "normalization-quality-assessment": {
       "dois": [
@@ -77290,7 +77290,7 @@
         "https://github.com/UGent-LIMET/Metanorm",
         "https://github.com/BiosystemEngineeringLab-IITB/dures"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "normalized-enrichment-score-computation": {
       "dois": [
@@ -78881,7 +78881,7 @@
       "repo_urls": [
         "https://github.com/Ghoshlab/marr"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "overlapping-peak-detection-interpretation": {
       "dois": [
@@ -78899,7 +78899,7 @@
       "repo_urls": [
         "https://github.com/Ghoshlab/marr"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "oxidized-lipid-nomenclature-conversion": {
       "dois": [
@@ -78977,7 +78977,7 @@
         "https://github.com/mariallr/amanida",
         "https://github.com/RECETOX/MSMetaEnhancer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "p-value-computation-and-multiple-testing-correction": {
       "dois": [
@@ -80845,7 +80845,7 @@
       "repo_urls": [
         "https://github.com/Ghoshlab/marr"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "peak-count-capping": {
       "dois": [
@@ -80970,7 +80970,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "peak-detection-and-boundary-identification": {
       "dois": [
@@ -81790,7 +81790,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "peak-matrix-construction": {
       "dois": [
@@ -83023,7 +83023,7 @@
         "https://github.com/Noble-Lab/casanovo",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "peptide-sequence-to-spectrum-conversion": {
       "dois": [
@@ -83175,7 +83175,7 @@
         "https://github.com/Noble-Lab/casanovo",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "per-browser-developer-setting-navigation": {
       "dois": [
@@ -83368,7 +83368,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "percentile-threshold-determination-scc": {
       "dois": [
@@ -83419,7 +83419,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "performance-benchmark-execution": {
       "dois": [
@@ -83665,7 +83665,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "pfam-domain-hit-extraction": {
       "dois": [
@@ -84544,7 +84544,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "port-mapping-configuration": {
       "dois": [
@@ -85483,7 +85483,7 @@
         "asb-paper-10-1021-acs-jafc-3c09767"
       ],
       "repo_urls": [],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "preference-system-integration": {
       "dois": [
@@ -85903,7 +85903,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "probability-threshold-calibration": {
       "dois": [
@@ -86524,7 +86524,7 @@
         "https://github.com/mariallr/amanida",
         "https://github.com/RECETOX/MSMetaEnhancer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "pubchem-metadata-retrieval": {
       "dois": [
@@ -86717,7 +86717,7 @@
       "repo_urls": [
         "https://github.com/DanieleBizzarri/MiMIR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "pull-request-change-tracking": {
       "dois": [
@@ -86926,7 +86926,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "python-binding-generation-with-nanobind": {
       "dois": [
@@ -88357,7 +88357,7 @@
       "repo_urls": [
         "https://github.com/UGent-LIMET/Metanorm"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "qc-coefficient-of-variation-calculation": {
       "dois": [
@@ -88542,7 +88542,7 @@
       "repo_urls": [
         "https://github.com/UGent-LIMET/Metanorm"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "qc-sample-quality-assessment": {
       "dois": [
@@ -89476,7 +89476,7 @@
         "https://github.com/mariallr/amanida",
         "https://github.com/RECETOX/MSMetaEnhancer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "quantitative-ms-data-preprocessing": {
       "dois": [
@@ -89901,7 +89901,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "r-data-structure-conversion": {
       "dois": [
@@ -90343,7 +90343,7 @@
       "repo_urls": [
         "https://github.com/DanieleBizzarri/MiMIR"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "r-package-function-mapping": {
       "dois": [
@@ -90505,7 +90505,7 @@
       "repo_urls": [
         "https://github.com/UGent-LIMET/Metanorm"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "r-parallel-backend-configuration": {
       "dois": [
@@ -90757,7 +90757,7 @@
         "https://github.com/mariallr/amanida",
         "https://github.com/RECETOX/MSMetaEnhancer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "r-workflow-implementation": {
       "dois": [
@@ -93189,7 +93189,7 @@
       "repo_urls": [
         "https://github.com/enpkg/enpkg_full"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "repository-cloning-with-recursive-submodules": {
       "dois": [
@@ -93737,7 +93737,7 @@
         "https://github.com/JainLab/Manuscript-DNNs-for-Classification-of-LCMS-Peaks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "rest-api-endpoint-routing": {
       "dois": [
@@ -93792,7 +93792,7 @@
       "repo_urls": [
         "https://github.com/mwang87/NP-Classifier"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "retention-index-assignment-and-filtering": {
       "dois": [
@@ -95205,7 +95205,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "retention-time-window-extraction": {
       "dois": [
@@ -95518,7 +95518,7 @@
       "repo_urls": [
         "https://github.com/UGent-LIMET/Metanorm"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "robust-statistical-spread-quantification": {
       "dois": [
@@ -95578,7 +95578,7 @@
       "repo_urls": [
         "https://github.com/UGent-LIMET/Metanorm"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "roc-auc-computation-for-phenotype-prediction": {
       "dois": [
@@ -95841,7 +95841,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "routing-module-testing-and-validation": {
       "dois": [
@@ -96094,7 +96094,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "rust-build-system-execution": {
       "dois": [
@@ -96113,7 +96113,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "rust-library-compilation-and-testing": {
       "dois": [
@@ -96131,7 +96131,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ruv-iii-implementation-in-metabolomics": {
       "dois": [
@@ -97295,7 +97295,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "score-distribution-visualization": {
       "dois": [
@@ -97318,7 +97318,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "score-standardisation-z-score-normalization": {
       "dois": [
@@ -97341,7 +97341,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "scoring-function-sensitivity-analysis": {
       "dois": [
@@ -97362,7 +97362,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "scoring-module-unit-testing": {
       "dois": [
@@ -98961,7 +98961,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "similarity-matrix-export": {
       "dois": [
@@ -99186,7 +99186,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "simulation-evaluation-data-capture": {
       "dois": [
@@ -99209,7 +99209,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "simulation-output-serialization": {
       "dois": [
@@ -99229,7 +99229,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "simulation-output-validation": {
       "dois": [
@@ -100062,7 +100062,7 @@
         "asb-paper-10-1021-acs-jafc-3c09767"
       ],
       "repo_urls": [],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "smiles-string-formatting": {
       "dois": [
@@ -101068,7 +101068,7 @@
       "repo_urls": [
         "https://github.com/Ghoshlab/marr"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spatial-feature-embedding": {
       "dois": [
@@ -101157,7 +101157,7 @@
       "repo_urls": [
         "https://github.com/Ghoshlab/marr"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spatial-overlap-quantification": {
       "dois": [
@@ -101933,7 +101933,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-artifact-identification-in-tandem-ms": {
       "dois": [
@@ -102112,7 +102112,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-connectivity-filtering": {
       "dois": [
@@ -102218,7 +102218,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-data-alignment": {
       "dois": [
@@ -102394,7 +102394,7 @@
         "https://github.com/FangYuan717/ROASMI",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-data-format-validation": {
       "dois": [
@@ -102414,7 +102414,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-data-import-and-parsing": {
       "dois": [
@@ -102515,7 +102515,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-data-loading-from-repository": {
       "dois": [
@@ -102832,7 +102832,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-data-validation": {
       "dois": [
@@ -103086,7 +103086,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-dimension-verification": {
       "dois": [
@@ -103401,7 +103401,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-feature-clustering-by-intensity-correlation": {
       "dois": [
@@ -104549,7 +104549,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-library-matching-annotation": {
       "dois": [
@@ -105254,7 +105254,7 @@
         "https://github.com/FangYuan717/ROASMI",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-molecular-embedding-alignment": {
       "dois": [
@@ -106101,7 +106101,7 @@
         "https://github.com/Noble-Lab/casanovo",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-peak-fitting-gaussian": {
       "dois": [
@@ -106566,7 +106566,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-quality-assurance-proteomics": {
       "dois": [
@@ -106774,7 +106774,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-scan-metadata-matching": {
       "dois": [
@@ -108110,7 +108110,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectrum-metadata-extraction-validation": {
       "dois": [
@@ -108695,7 +108695,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectrum-relevance-classification": {
       "dois": [
@@ -109234,7 +109234,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "statistical-filtering-metabolite-features": {
       "dois": [
@@ -109307,7 +109307,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "statistical-hypothesis-testing-pvalue-computation": {
       "dois": [
@@ -109562,7 +109562,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "statistical-significance-threshold-application": {
       "dois": [
@@ -109699,7 +109699,7 @@
         "https://github.com/mariallr/amanida",
         "https://github.com/RECETOX/MSMetaEnhancer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "statistical-threshold-parameterization": {
       "dois": [
@@ -109928,7 +109928,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "strain-correlation-score-computation": {
       "dois": [
@@ -109953,7 +109953,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "strain-correlation-score-standardisation": {
       "dois": [
@@ -109976,7 +109976,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "strain-identifier-mapping-across-genomics-metabolomics": {
       "dois": [
@@ -110161,7 +110161,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "structural-cluster-network-construction": {
       "dois": [
@@ -110189,7 +110189,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "structural-clustering-validation-in-chemical-space": {
       "dois": [
@@ -110793,7 +110793,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "structured-data-matrix-construction": {
       "dois": [
@@ -110984,7 +110984,7 @@
         "https://github.com/mariallr/amanida",
         "https://github.com/RECETOX/MSMetaEnhancer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "sub-cluster-assignment-extraction": {
       "dois": [
@@ -111812,7 +111812,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "tabular-data-io-and-masking": {
       "dois": [
@@ -112168,7 +112168,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "tandem-mass-spectrometry-ion-fragmentation-pattern-analysis": {
       "dois": [
@@ -113615,7 +113615,7 @@
       "repo_urls": [
         "https://github.com/mwang87/NP-Classifier"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "tensorflow-serving-endpoint-querying": {
       "dois": [
@@ -114709,7 +114709,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "topic-label-validation-distribution-analysis": {
       "dois": [
@@ -114813,7 +114813,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "total-ion-current-calculation": {
       "dois": [
@@ -114992,7 +114992,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "training-data-loading-and-preprocessing": {
       "dois": [
@@ -115442,7 +115442,7 @@
         "https://github.com/FangYuan717/ROASMI",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "transformer-attention-mechanism-implementation": {
       "dois": [
@@ -115585,7 +115585,7 @@
         "https://github.com/Noble-Lab/casanovo",
         "https://github.com/Chen-micslab/QCCAssisted4DSterol"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "transformer-input-preprocessing": {
       "dois": [
@@ -115910,7 +115910,7 @@
         "https://github.com/mariallr/amanida",
         "https://github.com/RECETOX/MSMetaEnhancer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "true-positive-false-positive-rate-calculation": {
       "dois": [
@@ -116945,7 +116945,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "unknown-chemical-identification-in-complex-mixtures": {
       "dois": [
@@ -117580,7 +117580,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "validated-link-proportional-comparison": {
       "dois": [
@@ -117603,7 +117603,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "validated-link-ranking-comparison": {
       "dois": [
@@ -117627,7 +117627,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "validation-error-categorization": {
       "dois": [
@@ -118092,7 +118092,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "virtual-chemical-mixture-generation": {
       "dois": [
@@ -118113,7 +118113,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "virtual-environment-configuration": {
       "dois": [
@@ -118178,7 +118178,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "virtual-screening-ranking": {
       "dois": [
@@ -119003,7 +119003,7 @@
         "https://github.com/FanzhouKong/spectral_denoising",
         "https://github.com/vdhooftcompmet/MS2LDA"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "word2vec-model-inference-unknown-word-handling": {
       "dois": [
@@ -119835,7 +119835,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "zero-value-handling-in-mass-spectrometry-data": {
       "dois": [

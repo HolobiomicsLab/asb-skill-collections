@@ -17,7 +17,7 @@ metadata:
   - vimms-data
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -51,7 +51,6 @@ attribution:
 
 # unknown-chemical-extraction-from-spectra
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract a list of unknown chemical compounds with retention times and m/z values directly from real LC-MS/MS mzML acquisition data, enabling in silico validation of fragmentation strategies against empirical metabolite populations without prior annotation.

@@ -13,7 +13,7 @@ metadata:
   - TensorFlow Serving
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT
@@ -42,7 +42,6 @@ attribution:
 
 # model-metadata-schema-verification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify the input schema and model version of a deployed machine learning model by querying its metadata endpoint before constructing and submitting prediction requests. This skill ensures that your request payload matches the model's current input specification, preventing schema mismatch errors and outdated code.

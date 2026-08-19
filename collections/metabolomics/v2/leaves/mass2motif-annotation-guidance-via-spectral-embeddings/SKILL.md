@@ -20,7 +20,7 @@ metadata:
   - LDA (Latent Dirichlet Allocation)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
@@ -57,7 +57,6 @@ attribution:
 
 # mass2motif-annotation-guidance-via-spectral-embeddings
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated annotation of Mass2Motifs discovered through LDA-based topic modeling by computing Spec2Vec spectral embeddings for pseudo-spectra representations and querying a motif database to retrieve structurally related reference annotations ranked by similarity. This skill bridges unsupervised substructure discovery with interpretable chemical structure assignment.

@@ -18,7 +18,7 @@ metadata:
   - devtools
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
@@ -52,7 +52,6 @@ attribution:
 
 # overlapping-ion-detection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and flag isobaric or co-localized ions that may confound matrix/non-matrix classification in mass spectrometry imaging (MSI) data. This step prevents misclassification of chemically indistinguishable or spatially overlapped peaks during automated matrix annotation.

@@ -16,7 +16,7 @@ metadata:
   - arrow
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -45,7 +45,6 @@ attribution:
 
 # R data object serialization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert Apache Arrow columnar data structures (Parquet files) into native R data objects (lists or S3 objects) suitable for downstream statistical analysis and visualization. This skill enables read-only access to mzPeak mass spectrometry files by deserializing Arrow-encoded metadata and peak data into R-compatible formats.

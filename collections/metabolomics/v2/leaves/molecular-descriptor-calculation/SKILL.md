@@ -14,7 +14,7 @@ metadata:
   - BitterPredict
   - RDKit
   - BitterPredict.m
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
@@ -44,7 +44,6 @@ attribution:
 
 # molecular-descriptor-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert raw molecular structures (SMILES or SDF format) into computed chemical descriptor tables suitable for machine-learning classifiers like BitterPredict. This skill bridges raw chemical representations and descriptor-based prediction by parsing, validating, computing standardized molecular properties, and assembling them into tabular format.

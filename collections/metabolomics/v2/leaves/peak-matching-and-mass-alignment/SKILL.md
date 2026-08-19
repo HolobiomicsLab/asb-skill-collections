@@ -14,7 +14,7 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -52,7 +52,6 @@ attribution:
 
 # peak-matching-and-mass-alignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter MS2 spectrum peaks by matching their m/z values against a reference training dataset peak list, retaining only peaks found in the training data to reduce noise and bias computations toward well-characterized ion patterns. This denoising step precedes kernel-based spectrum scoring and improves signal quality for downstream natural product identification.

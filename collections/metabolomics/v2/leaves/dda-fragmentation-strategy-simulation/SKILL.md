@@ -19,7 +19,7 @@ metadata:
   - ViMMS (Virtual Metabolomics Mass Spectrometer)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -59,7 +59,6 @@ attribution:
 
 # DDA Fragmentation Strategy Simulation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Simulate Data-Dependent Acquisition (DDA) fragmentation strategies on real or synthetic LC-MS/MS data by extracting chemical constituents and running them through a virtual mass spectrometer with a configurable acquisition controller. This skill enables rapid prototyping and benchmarking of TopN and other MS/MS acquisition strategies before deployment on real instruments.

@@ -19,7 +19,7 @@ metadata:
   - NumPy or SciPy
   - Python
   - NPLinker
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -60,7 +60,6 @@ attribution:
 
 # strain-correlation-score-computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute raw and standardised strain correlation scores to rank genomic–metabolomic links by quantifying strain overlap between gene cluster families (GCFs) and molecular features (MFs). Standardisation via hypergeometric null model enables fair comparison across links of different sizes.

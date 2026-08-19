@@ -18,7 +18,7 @@ metadata:
   - rMSIproc
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
@@ -50,7 +50,6 @@ attribution:
 
 # Isobaric Ion Detection in Mass Spectrometry Imaging
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies and flags ions with identical or near-identical m/z values (isobaric ions) and overlapping spatial distributions in MSI data to prevent their misclassification during matrix annotation. This skill is essential when processing MSI datasets where isobaric peaks can be erroneously assigned to matrix or analyte classes.

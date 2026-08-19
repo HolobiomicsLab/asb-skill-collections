@@ -18,7 +18,7 @@ metadata:
   - mzPeak specification
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -47,7 +47,6 @@ attribution:
 
 # arrow-columnar-data-decoding
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Decode mass spectrometry spectral data (m/z values, intensities) from Apache Arrow columnar storage formats (Parquet) using language-specific Arrow libraries. This skill reconstructs spectrum arrays and metadata from scalable, interoperable columnar archives.

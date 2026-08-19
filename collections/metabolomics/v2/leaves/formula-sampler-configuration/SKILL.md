@@ -16,7 +16,7 @@ metadata:
   - HMDB
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -48,7 +48,6 @@ attribution:
 
 # formula-sampler-configuration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and instantiate a formula sampler (e.g., DatabaseFormulaSampler or UniformMZFormulaSampler) to generate a population of chemical formulas within specified m/z bounds for virtual metabolomics simulation. This skill bridges database/distribution selection and chemical population creation in the ViMMS framework.

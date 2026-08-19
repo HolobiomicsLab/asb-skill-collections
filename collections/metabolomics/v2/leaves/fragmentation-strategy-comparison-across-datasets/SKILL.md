@@ -16,7 +16,7 @@ metadata:
   - ChemicalMixtureFromMZML
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -50,7 +50,6 @@ attribution:
 
 # fragmentation-strategy-comparison-across-datasets
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare fragmentation coverage and intensity metrics between simulated and real LC-MS/MS data to validate whether a virtual acquisition strategy reproduces experimentally observed fragmentation patterns. This skill bridges simulation fidelity assessment by quantifying how well ViMMS-simulated Top-N (or other) controllers match real instrument behavior on the same chemical mixture.

@@ -19,7 +19,7 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -52,7 +52,6 @@ attribution:
 
 # spectral-coverage-and-intensity-metric-computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute fragmentation coverage and cumulative intensity metrics from simulated or real LC-MS/MS acquisitions to evaluate and compare the efficacy of different data-dependent acquisition (DDA) strategies. This skill quantifies how completely a fragmentation strategy captures MS/MS spectra across detected analytes and measures total signal intensity recovered.

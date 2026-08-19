@@ -20,7 +20,7 @@ metadata:
   - MAMSI (MamsiStructSearch.get_correlation_clusters())
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -57,7 +57,6 @@ attribution:
 
 # clustering-solution-comparison-metrics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare two hierarchical clustering solutions (e.g., from different flattening methods) using agreement metrics such as adjusted Rand index and normalized mutual information to quantify structural consistency and validate clustering robustness in LC-MS metabolomics feature grouping.

@@ -12,7 +12,7 @@ metadata:
   - TensorFlow Serving
   - docker-compose
   - tensorflow serving
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jacs.9b13786
   title: CSCS / deep CNN natural-product annotation
@@ -51,7 +51,6 @@ attribution:
 
 # JSON Response Parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and validate structured metadata from JSON responses returned by service endpoints (e.g., TensorFlow Serving /model/metadata). This skill is essential when deploying machine learning models through containerized services and need to verify that model layer names and signatures match expected specifications.

@@ -21,7 +21,7 @@ metadata:
   - LC-MS
   - GC-MS
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -57,7 +57,6 @@ attribution:
 
 # cross-assay-feature-linkage-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Link statistically significant LC-MS features across multiple assays (e.g., HPOS, LPOS, LNEG) by matching their ionization states ([M+H]+/[M-H]− pairs) to identify the same metabolite detected in different chromatographic or ionization modes. This enables unified structural clustering and interpretation of multi-assay metabolomics datasets.

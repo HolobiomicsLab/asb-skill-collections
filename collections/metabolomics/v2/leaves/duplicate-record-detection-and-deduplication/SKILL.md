@@ -14,7 +14,7 @@ metadata:
   - webchem
   - amanida
   - PubChem
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
@@ -50,7 +50,6 @@ attribution:
 
 # Duplicate Record Detection and Deduplication
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and remove duplicate metabolite records in a merged dataset by standardizing compound identifiers to a canonical nomenclature (PubChem ID) and comparing them across all entries. This skill ensures each unique metabolite is represented only once before meta-analysis.

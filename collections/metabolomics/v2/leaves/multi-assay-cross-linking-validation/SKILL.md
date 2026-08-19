@@ -21,7 +21,7 @@ metadata:
   - peakPantheR
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -58,7 +58,6 @@ attribution:
 
 # Multi-Assay Cross-Linking Validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate and link structurally equivalent features across multiple LC-MS assays by searching for canonical adduct pairs ([M+H]+/[M-H]−) that represent the same neutral mass, enabling integration of complementary ionization modes. This skill consolidates multi-assay metabolomics data into unified structural clusters by resolving ionization-mode-specific fragmentation patterns.

@@ -17,7 +17,7 @@ metadata:
   - GNPS
   - MIBiG
   - NPLinker
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -57,7 +57,6 @@ attribution:
 
 # strain-correlation-score-standardisation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Standardise raw strain correlation scores between gene cluster families (GCFs) and molecular families (MFs) by z-normalizing them against their hypergeometric expectation and variance, enabling fair comparison across links with different GCF and MF sizes. This converts size-biased raw scores into a uniform null distribution where validated links show significantly elevated z-scores.

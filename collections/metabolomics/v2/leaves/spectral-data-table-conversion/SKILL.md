@@ -19,7 +19,7 @@ metadata:
   - Rust (mzPeak CLI tools)
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -49,7 +49,6 @@ attribution:
 
 # spectral-data-table-conversion
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert mass spectrometry spectrum data from mzPeak file format into structured tabular representations (pandas DataFrame, pyarrow Table, or Parquet/CSV exports) compatible with PyData analysis workflows. This skill enables downstream statistical, machine learning, and exploratory analyses on spectrum metadata and signal arrays.

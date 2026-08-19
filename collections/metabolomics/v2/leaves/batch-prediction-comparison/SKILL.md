@@ -14,7 +14,7 @@ metadata:
   tools:
   - BitterPredict
   - BitterPredict.m
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
@@ -44,7 +44,6 @@ attribution:
 
 # batch-prediction-comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare predictions across multiple ablated feature sets by systematically removing descriptor subgroups from a classifier input and measuring prediction stability. This skill quantifies which molecular descriptor families are most influential on bitter/not-bitter classification outcomes.

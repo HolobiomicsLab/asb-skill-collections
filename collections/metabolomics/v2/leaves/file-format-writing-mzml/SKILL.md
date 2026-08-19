@@ -13,7 +13,7 @@ metadata:
   - Python pickle module
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -48,7 +48,6 @@ attribution:
 
 # file-format-writing-mzml
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Serialize simulated or replayed mass spectrometry scan data from a ViMMS Environment into the standard mzML (mzXML Markup Language) format for downstream analysis and archival. This enables portable exchange of LC-MS/MS scan metadata, fragmentation spectra, and retention time information with external metabolomics tools.

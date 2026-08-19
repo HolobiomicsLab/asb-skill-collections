@@ -19,7 +19,7 @@ metadata:
   - JavaScript/TypeScript implementation
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -47,7 +47,6 @@ attribution:
 
 # interoperability-testing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that multiple independent implementations of a file format specification produce and consume compliant output by cross-checking mandatory fields, structural elements, and data integrity across language-specific parsers. This skill ensures that a format remains truly interoperable rather than implementation-specific.

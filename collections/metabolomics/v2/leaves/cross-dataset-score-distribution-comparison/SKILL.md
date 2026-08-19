@@ -20,7 +20,7 @@ metadata:
   - Paired Omics Data Platform (PoDP)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -61,7 +61,6 @@ attribution:
 
 # cross-dataset-score-distribution-comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute and compare mean, variance, and statistical significance of standardised genomic-metabolomic link scores (strain correlation and IOKR) across multiple datasets to validate score standardisation and assess complementarity of scoring functions. This skill detects whether standardisation successfully removes systematic bias and whether combined scores enrich for validated links.

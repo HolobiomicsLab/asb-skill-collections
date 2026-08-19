@@ -16,7 +16,7 @@ metadata:
   - amanida
   - webchem
   - PubChem
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
@@ -51,7 +51,6 @@ attribution:
 
 # metabolite-significance-filtering-volcano-plot
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter metabolites from meta-analysis results using statistical significance (p-value) and biological effect size (fold-change) thresholds applied to a volcano plot, then cross-validate consistency across multiple independent studies to identify robust biomarker candidates. This skill separates statistically and biologically meaningful metabolites from noise in multi-study metabolomic datasets.

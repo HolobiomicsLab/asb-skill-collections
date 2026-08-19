@@ -12,7 +12,7 @@ metadata:
   - TensorFlow Serving
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT
@@ -40,7 +40,6 @@ attribution:
 
 # model-metadata-schema-inspection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve and inspect the input/output schema and model metadata from a TensorFlow Serving instance to understand required data formats and structure before sending classification requests. This skill ensures programmatic requests are aligned with the current model's expected input signatures.

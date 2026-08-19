@@ -14,7 +14,7 @@ metadata:
   - Python pickle
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -49,7 +49,6 @@ attribution:
 
 # mass-range-filtering-for-metabolomics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter a metabolite database by m/z range to retain only compounds within a target mass spectrometry analysis window. This preprocessing step isolates chemically relevant formulas before acquisition strategy simulation or spectral library construction.

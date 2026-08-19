@@ -19,7 +19,7 @@ metadata:
   - mzPeak-specification (HUPO-PSI)
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -47,7 +47,6 @@ attribution:
 
 # mandatory-field-verification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that mzPeak file outputs conform to all mandatory fields and structural requirements defined in the published specification by systematically comparing parsed file contents against the normative schema. This skill ensures compliance before downstream consumption or publication.

@@ -18,7 +18,7 @@ metadata:
   - mzPeak specification
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -46,7 +46,6 @@ attribution:
 
 # mzPeak format I/O operations
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Read, write, and round-trip mass spectrometry spectra and chromatogram data using the mzPeak Parquet-based format, which stores spectrum metadata, signal arrays, and instrument configuration in an uncompressed ZIP archive. This skill validates interoperability of mzPeak implementations and enables lossless serialization of complex MS data structures.

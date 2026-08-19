@@ -15,7 +15,7 @@ metadata:
   - dplyr
   - SummarizedExperiment
   - Metanorm
-  license_tier: restricted
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1101/2020.12.21.423723
   title: hRUV
@@ -61,7 +61,7 @@ attribution:
 
 # normalization-quality-assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Visual comparison of PCA plots before and after batch normalisation to assess whether unwanted variation (batch effect) has been effectively removed from metabolomics data. This skill validates the efficacy of hierarchical RUV-based normalisation by detecting absence of batch clustering post-treatment.

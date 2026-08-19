@@ -18,7 +18,7 @@ metadata:
   - rMSIproc
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
@@ -50,7 +50,6 @@ attribution:
 
 # chemical-formula-annotation-mapping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map detected m/z peaks to chemical formulas and classify them as matrix-related or non-matrix ions by integrating chemical identity with spatial distribution patterns across the MSI dataset. This skill enables transparent, justified annotation of matrix signals in mass spectrometry imaging.

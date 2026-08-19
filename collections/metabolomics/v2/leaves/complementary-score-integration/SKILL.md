@@ -15,7 +15,7 @@ metadata:
   - BiG-SCAPE
   - MIBiG
   - GNPS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -56,7 +56,6 @@ attribution:
 
 # complementary-score-integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Combine multiple independent scoring functions (e.g., strain correlation and IOKR) into a unified ranking to identify high-confidence genomic-metabolomic links by exploiting their complementary strengths. This skill detects validated links that neither score alone would rank equally well, improving prioritization of true BGC-spectrum associations.

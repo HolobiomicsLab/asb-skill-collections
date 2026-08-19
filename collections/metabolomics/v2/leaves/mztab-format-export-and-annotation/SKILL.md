@@ -18,7 +18,7 @@ metadata:
   - PDV (Proteomics Data Viewer)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo
@@ -57,7 +57,6 @@ attribution:
 
 # mztab-format-export-and-annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Export de novo peptide sequencing predictions from Casanovo to mzTab format with standardized metadata, modification annotations in ProForma 2.0 notation, and per-residue confidence scores. This skill ensures that predicted peptide sequences, along with their MS/MS spectral metadata and quality metrics, are recorded in a portable, standards-compliant format suitable for downstream analysis and integration with visualization tools.

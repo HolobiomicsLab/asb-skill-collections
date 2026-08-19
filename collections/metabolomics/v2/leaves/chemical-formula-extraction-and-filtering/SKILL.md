@@ -15,7 +15,7 @@ metadata:
   - Python pickle
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -50,7 +50,6 @@ attribution:
 
 # chemical-formula-extraction-and-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and filter chemical molecular formulas from a metabolite database (HMDB) by applying mass-to-charge ratio (m/z) range and MS level constraints, then deduplicate to obtain a curated set of unique formulas suitable for metabolomics simulation or sampling.

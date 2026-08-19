@@ -16,7 +16,7 @@ metadata:
   - check_names
   - webchem
   - volcano_plot
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
@@ -51,7 +51,6 @@ attribution:
 
 # metabolite-trend-classification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Classify metabolites as up-regulated, down-regulated, or no trend by combining statistical significance (p-value), effect direction (fold-change), and study size weights in a meta-analysis framework. This skill integrates quantitative signals across multiple studies to assign a single consensus trend per metabolite.

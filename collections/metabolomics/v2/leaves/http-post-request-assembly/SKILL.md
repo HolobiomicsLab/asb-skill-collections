@@ -17,7 +17,7 @@ metadata:
   - DeepSAT
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT
@@ -46,7 +46,6 @@ attribution:
 
 # http-post-request-assembly
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and execute HTTP POST requests with structured JSON payloads to communicate peak data to a remote classification API endpoint. This skill enables programmatic submission of NMR spectroscopy data (1H and 13C chemical shifts) to obtain machine learning predictions.

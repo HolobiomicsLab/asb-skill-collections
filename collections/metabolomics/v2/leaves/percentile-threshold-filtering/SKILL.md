@@ -18,7 +18,7 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -59,7 +59,6 @@ attribution:
 
 # percentile-threshold-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter genomic–metabolomic links by computing independent percentile thresholds (e.g., 90th) on scoring functions and partitioning links into single- or multi-score categories. This enables enrichment analysis of validated links and prioritization of high-confidence predictions by combining complementary scoring approaches.

@@ -844,7 +844,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -968,7 +968,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -1260,7 +1260,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -1981,7 +1981,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -2019,7 +2019,7 @@
    "10.1186/s13321-023-00738-4"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -2161,7 +2161,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -2230,7 +2230,7 @@
    "10.1186/s13321-023-00738-4"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -2573,7 +2573,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -2599,7 +2599,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -2625,7 +2625,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -4804,7 +4804,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -5257,7 +5257,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -5481,7 +5481,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -5506,7 +5506,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -5557,7 +5557,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -5585,7 +5585,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -5783,7 +5783,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -5804,7 +5804,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -6606,7 +6606,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -8241,7 +8241,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -9697,7 +9697,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -9721,7 +9721,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -9789,7 +9789,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -9942,7 +9942,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -10525,7 +10525,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -10821,7 +10821,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -10949,7 +10949,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -11125,7 +11125,7 @@
    "10.1038/s41592-023-02143-z"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -11144,7 +11144,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -11627,7 +11627,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -12386,7 +12386,7 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -13423,7 +13423,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -13530,7 +13530,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -13550,7 +13550,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -13884,7 +13884,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -14865,7 +14865,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -15071,7 +15071,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -15135,7 +15135,7 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -15547,7 +15547,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -16207,7 +16207,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -16993,7 +16993,7 @@
    "10.1021/acs.analchem.5c06841"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -18408,7 +18408,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -19688,7 +19688,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -19793,7 +19793,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -20334,7 +20334,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -20363,7 +20363,7 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -20458,7 +20458,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -20617,7 +20617,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -20843,7 +20843,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -22550,7 +22550,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -22951,7 +22951,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -23090,7 +23090,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -23162,7 +23162,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -23859,7 +23859,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -23886,7 +23886,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -24008,7 +24008,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -25384,7 +25384,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -25405,7 +25405,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -25431,7 +25431,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -26205,7 +26205,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -26299,7 +26299,7 @@
    "10.1021/acs.analchem.5c06841"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -28038,7 +28038,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -28134,7 +28134,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -29348,7 +29348,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -30073,7 +30073,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -30096,7 +30096,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -33384,7 +33384,7 @@
    "10.1371/journal.pcbi.1011814"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -34558,7 +34558,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -34742,7 +34742,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -34941,7 +34941,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -35587,7 +35587,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -35985,7 +35985,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -36335,7 +36335,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -36429,7 +36429,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -37457,7 +37457,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -37671,7 +37671,7 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -37796,7 +37796,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -38655,7 +38655,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -38682,7 +38682,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -38711,7 +38711,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -38945,7 +38945,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -39418,7 +39418,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -41284,7 +41284,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -41403,7 +41403,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -42383,7 +42383,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -43024,7 +43024,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -43049,7 +43049,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -43074,7 +43074,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -43541,7 +43541,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -43676,7 +43676,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -43701,7 +43701,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -43724,7 +43724,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -45044,7 +45044,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -45966,7 +45966,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -46635,7 +46635,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -46714,7 +46714,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -46741,7 +46741,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -46940,7 +46940,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -48225,7 +48225,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -48249,7 +48249,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -49042,7 +49042,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -49072,7 +49072,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -49191,7 +49191,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -49318,7 +49318,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -50026,7 +50026,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -50072,7 +50072,7 @@
    "10.1186/s13321-023-00738-4"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -50654,7 +50654,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -51022,7 +51022,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -51771,7 +51771,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -52038,7 +52038,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -52337,7 +52337,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -53532,7 +53532,7 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -54350,7 +54350,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -55834,7 +55834,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -56295,7 +56295,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -57592,7 +57592,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -57615,7 +57615,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -58347,7 +58347,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -58972,7 +58972,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -59646,7 +59646,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -59676,7 +59676,7 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -60614,7 +60614,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -60916,7 +60916,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -62696,7 +62696,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -63587,7 +63587,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -64071,7 +64071,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -64398,7 +64398,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -64663,7 +64663,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "noncommercial",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -65019,7 +65019,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -65153,7 +65153,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -65204,7 +65204,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -65474,7 +65474,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -65498,7 +65498,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -65568,7 +65568,7 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -67521,7 +67521,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -67716,7 +67716,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -67885,7 +67885,7 @@
    "10.1021/acs.analchem.5c06841"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -68750,7 +68750,7 @@
    "10.1101/2025.08.28.672951v2"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -69932,7 +69932,7 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -70188,7 +70188,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -70362,7 +70362,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -70390,7 +70390,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -70658,7 +70658,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -70681,7 +70681,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -71430,7 +71430,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -71570,7 +71570,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -72475,7 +72475,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -72701,7 +72701,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -72842,7 +72842,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -72914,7 +72914,7 @@
    "10.1021/acs.analchem.5c06841"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -73209,7 +73209,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -74700,7 +74700,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -75752,7 +75752,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -75770,7 +75770,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -75789,7 +75789,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -76503,7 +76503,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -76676,7 +76676,7 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -76724,7 +76724,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -76923,7 +76923,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -77167,7 +77167,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -77488,7 +77488,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -79125,7 +79125,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -81190,7 +81190,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -81266,7 +81266,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -81993,7 +81993,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -82629,7 +82629,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -83081,7 +83081,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -83111,7 +83111,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -83482,7 +83482,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -83793,7 +83793,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -84064,7 +84064,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -84467,7 +84467,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -84922,7 +84922,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -85379,7 +85379,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -86515,7 +86515,7 @@
    "10.1021/acs.analchem.0c03895"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -86541,7 +86541,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -86589,7 +86589,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -86613,7 +86613,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -86638,7 +86638,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -86928,7 +86928,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -86978,7 +86978,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -87006,7 +87006,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -87031,7 +87031,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -87055,7 +87055,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -87082,7 +87082,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -88123,7 +88123,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -88368,7 +88368,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -89727,7 +89727,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -89943,7 +89943,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -90938,7 +90938,7 @@
    "10.1021/acs.analchem.5c06841"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -90963,7 +90963,7 @@
    "10.1021/acs.analchem.5c06841"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -92781,7 +92781,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -92805,7 +92805,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -92891,7 +92891,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -95073,7 +95073,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -95219,7 +95219,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -96205,7 +96205,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -97659,7 +97659,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -97836,7 +97836,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -98056,7 +98056,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -98111,7 +98111,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -98373,7 +98373,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -99418,7 +99418,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -100538,7 +100538,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -101011,7 +101011,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -101750,7 +101750,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -101974,7 +101974,7 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -102208,7 +102208,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -103794,7 +103794,7 @@
    "10.1021/acs.analchem.5c06841"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -104023,7 +104023,7 @@
    "10.1021/acs.analchem.5c06841"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -105171,7 +105171,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -105696,7 +105696,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -106207,7 +106207,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -106389,7 +106389,7 @@
    "10.1021/acs.analchem.5c06841"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -106690,7 +106690,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -109603,7 +109603,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -110257,7 +110257,7 @@
    "10.1021/acs.jnatprod.1c00399"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -110320,7 +110320,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -112039,7 +112039,7 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -112400,7 +112400,7 @@
    "10.1021/acs.analchem.5c06841"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -112468,7 +112468,7 @@
    "10.1021/acs.analchem.5c06841"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -112766,7 +112766,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -113069,7 +113069,7 @@
    "10.1021/acs.jproteome.5c00435"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -113093,7 +113093,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -113116,7 +113116,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -114504,7 +114504,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -114530,7 +114530,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -114557,7 +114557,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -114582,7 +114582,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -116475,7 +116475,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -116734,7 +116734,7 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -116760,7 +116760,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -116783,7 +116783,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -117792,7 +117792,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -118994,7 +118994,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -119117,7 +119117,7 @@
    "MS-imaging",
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -120044,7 +120044,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -120266,7 +120266,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -120391,7 +120391,7 @@
    "LC-MS",
    "CE-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -120592,7 +120592,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -120617,7 +120617,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -120734,7 +120734,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -121116,7 +121116,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -121420,7 +121420,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -121773,7 +121773,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -123119,7 +123119,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -123977,7 +123977,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -124958,7 +124958,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -125515,7 +125515,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -125765,7 +125765,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -127330,7 +127330,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -127998,7 +127998,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -128654,7 +128654,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -128740,7 +128740,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -129042,7 +129042,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -129194,7 +129194,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -129485,7 +129485,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -129512,7 +129512,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -129537,7 +129537,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -129731,7 +129731,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -129759,7 +129759,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -130463,7 +130463,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -130690,7 +130690,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -131680,7 +131680,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -132090,7 +132090,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -133802,7 +133802,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -135082,7 +135082,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -135199,7 +135199,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -135416,7 +135416,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -135935,7 +135935,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -136106,7 +136106,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -136497,7 +136497,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -137722,7 +137722,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -138490,7 +138490,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -138517,7 +138517,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -138543,7 +138543,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -139100,7 +139100,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -139124,7 +139124,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -139196,7 +139196,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -140133,7 +140133,7 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -141107,7 +141107,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {

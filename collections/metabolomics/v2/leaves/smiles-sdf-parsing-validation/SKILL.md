@@ -12,7 +12,7 @@ metadata:
   tools:
   - BitterPredict
   - RDKit
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
@@ -42,7 +42,6 @@ attribution:
 
 # SMILES/SDF parsing and validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and validate molecular structure syntax from raw SMILES or SDF format files using a cheminformatics parser (e.g., RDKit) to ensure structural integrity before descriptor calculation. This skill is essential to detect malformed or invalid molecular representations that would fail downstream descriptor computation or classification.

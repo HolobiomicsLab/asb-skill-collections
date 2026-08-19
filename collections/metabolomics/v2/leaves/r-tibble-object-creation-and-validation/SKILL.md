@@ -14,7 +14,7 @@ metadata:
   - R
   - amanida
   - webchem
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
@@ -49,7 +49,6 @@ attribution:
 
 # R tibble object creation and validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert raw metabolomics datasets from multiple file formats (xls/xlsx/csv/txt) into a validated R tibble structure suitable for downstream quantitative meta-analysis, including standardized column mapping, missing data handling, and fold-change transformation.

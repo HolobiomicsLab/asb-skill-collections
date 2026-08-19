@@ -24,7 +24,7 @@ metadata:
   - networkx
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -61,7 +61,6 @@ attribution:
 
 # Metabolite Structural Annotation Integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate statistically significant LC-MS features into structural clusters by detecting isotopologue and adduct signatures, then cross-reference with retention time and m/z-based metabolite annotations to assign putative identities. This skill bridges the gap between multivariate statistical feature selection and structural/chemical interpretation of untargeted metabolomics.

@@ -19,7 +19,7 @@ metadata:
   - devtools
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
@@ -53,7 +53,6 @@ attribution:
 
 # spatial-distribution-pattern-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and evaluate spatial distribution patterns of ions across a mass spectrometry imaging dataset to classify matrix-related vs. analyte signals. This skill leverages co-localization coherence and spatial heterogeneity as discriminative features alongside chemical formula matching.

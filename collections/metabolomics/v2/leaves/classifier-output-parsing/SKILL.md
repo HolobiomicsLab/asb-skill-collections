@@ -13,7 +13,7 @@ metadata:
   - http://edamontology.org/topic_3474
   tools:
   - BitterPredict.m
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
@@ -43,7 +43,6 @@ attribution:
 
 # classifier-output-parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and structure binary classification predictions from a machine-learning classifier into a formatted output file with molecule identifiers and predicted class labels. This skill is essential when compiling per-sample predictions from a classifier into a reusable, traceable result artifact.

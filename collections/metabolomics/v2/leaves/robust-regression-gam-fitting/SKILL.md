@@ -13,7 +13,7 @@ metadata:
   tools:
   - R
   - Metanorm
-  license_tier: restricted
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1101/2025.09.30.679445v1
   title: Metanorm
@@ -47,7 +47,7 @@ attribution:
 
 # robust-regression-gam-fitting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Fit robust generalized additive models (GAMs) to metabolomics intensity data across quality control (QC) and biological samples to normalize signal drift and batch effects while resisting outliers. tGAM is recommended for superior robustness in metabolomics normalization despite slower computation than faster alternatives like rGAM and rLOESS.

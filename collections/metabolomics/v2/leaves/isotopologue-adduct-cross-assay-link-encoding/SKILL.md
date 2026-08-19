@@ -20,7 +20,7 @@ metadata:
   - MamsiStructSearch
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -55,7 +55,6 @@ attribution:
 
 # Isotopologue, Adduct, and Cross-Assay Link Encoding
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill encodes structural relationships between LC-MS features as weighted edges in a NetworkX graph, where edge weights (1–15) represent the type and specificity of structural link: isotopologue (weight 1), adduct (weight 5), cross-assay (weight 10), and correlation cluster co-membership (weight 15). It converts raw structural cluster assignments into a machine-readable and visualizable network representation suitable for downstream curation and analysis.

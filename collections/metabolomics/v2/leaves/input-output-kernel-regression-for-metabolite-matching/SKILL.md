@@ -22,7 +22,7 @@ metadata:
   - Klekota-Roth fingerprints
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -60,7 +60,6 @@ attribution:
 
 # Input-Output Kernel Regression for Metabolite Matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 IOKR is a feature-based scoring method that ranks BGC–spectrum links by learning a regression model from molecular fingerprints of MIBiG-homologous metabolites to MS2 spectral features, enabling BGC–metabolite link prioritization independent of compound class. The method improves link ranking when combined with strain correlation scores.

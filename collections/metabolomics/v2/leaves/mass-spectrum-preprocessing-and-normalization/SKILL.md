@@ -19,7 +19,7 @@ metadata:
   - MSI-Explorer
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo
@@ -64,7 +64,6 @@ attribution:
 
 # mass-spectrum-preprocessing-and-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preprocessing and normalization of MS/MS spectra converts raw peak data into a standardized, high-quality format suitable for de novo peptide sequencing inference. This step removes noise, filters low-quality scans, normalizes peak intensities, and retains only the most informative peaks to maximize downstream transformer model performance.

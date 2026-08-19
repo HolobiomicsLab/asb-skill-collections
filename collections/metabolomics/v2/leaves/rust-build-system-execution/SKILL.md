@@ -17,7 +17,7 @@ metadata:
   - mzpeak_prototyping
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -46,7 +46,6 @@ attribution:
 
 # rust-build-system-execution
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build and compile a Rust project using cargo to produce executable command-line tools or libraries. This skill is essential for preparing prototype bioinformatics software—such as mass spectrometry format converters—from source code into runnable binaries.

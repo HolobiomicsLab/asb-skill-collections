@@ -15,7 +15,7 @@ metadata:
   - ViMMS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -49,7 +49,6 @@ attribution:
 
 # Mass Spectrometer Simulator Configuration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure a virtual mass spectrometer instance within the ViMMS framework to simulate tandem MS/MS acquisition on a chemical mixture with specified polarity, ionization mode, and detector parameters. This skill enables prototyping of fragmentation strategies before real instrument deployment.

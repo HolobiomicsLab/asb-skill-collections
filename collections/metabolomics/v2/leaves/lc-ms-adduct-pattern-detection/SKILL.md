@@ -19,7 +19,7 @@ metadata:
   - peakPantheR
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -55,7 +55,6 @@ attribution:
 
 # LC-MS adduct pattern detection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies common adduct signatures in untargeted LC-MS features by calculating hypothetical neutral masses from known electrospray ionization adducts and matching them within a mass tolerance window. This clustering step links features that likely derive from the same molecular species ionized under different conditions.

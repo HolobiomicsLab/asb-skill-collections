@@ -17,7 +17,7 @@ metadata:
   - NPLinker
   - GNPS
   - MIBiG
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -55,7 +55,6 @@ attribution:
 
 # validated-link-enrichment-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantifies whether genomic-metabolomic links scoring in the top percentile (e.g., 90th) of one or more scoring functions are enriched for experimentally validated pairs, using Fisher exact test to compare enrichment across individual and combined scoring strategies. This skill detects whether high-scoring predictions align significantly better with known true links than chance.

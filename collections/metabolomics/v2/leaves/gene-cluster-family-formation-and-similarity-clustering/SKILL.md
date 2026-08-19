@@ -17,7 +17,7 @@ metadata:
   - MIBiG
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -55,7 +55,6 @@ attribution:
 
 # gene-cluster-family-formation-and-similarity-clustering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Cluster antiSMASH-predicted biosynthetic gene clusters (BGCs) into Gene Cluster Families (GCFs) using BiG-SCAPE by grouping BGCs with similar product classes and sequence similarity, creating a hierarchical scaffold for linking genomic data to metabolomic families. This reduces the dimensionality of hypothetical BGC–metabolite links and enables strain-level and fingerprint-based scoring.
