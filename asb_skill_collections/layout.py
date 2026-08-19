@@ -26,6 +26,10 @@ ADVERTISED_DIRNAME = "skills"
 # `release_gate.check_workflows`, not by the per-leaf provenance and
 # verbatim checks: a workflow composes leaves, it has no single source paper.
 WORKFLOW_DIRNAME = "workflows"
+# Community proposals in review. A staging area, deliberately outside the
+# corpus: nothing here is advertised, indexed or gated as a shipped skill until
+# `promote_proposals.py` moves it into the leaf dir.
+STAGING_DIRNAME = "proposals"
 
 
 def is_router_shaped(collection_dir: str | os.PathLike) -> bool:
@@ -42,6 +46,18 @@ def leaf_dir(collection_dir: str | os.PathLike) -> Path:
     """
     base = Path(collection_dir)
     return base / LEAF_DIRNAME if is_router_shaped(base) else base / ADVERTISED_DIRNAME
+
+
+def staging_dir(collection_dir: str | os.PathLike) -> Path:
+    """Where a community proposal is written while it is under review.
+
+    Fixed at ``proposals/skills/`` in every layout. A proposal is not part of
+    the corpus, so it does not follow the leaf/advertised split — but routing
+    through here keeps the one place that spells directory names in this
+    package, and keeps `promote_proposals` honest about where it moves files
+    *to*, which does depend on the layout.
+    """
+    return Path(collection_dir) / STAGING_DIRNAME / ADVERTISED_DIRNAME
 
 
 def skill_dirs(collection_dir: str | os.PathLike) -> list[Path]:
