@@ -142,34 +142,43 @@ removes exactly what was installed (tracked in `~/.asbb/installed.json`).
 
 > For **Claude Code**, the plugin marketplace above remains the recommended path.
 
-### 🐍 Pip / uvx — `asbb` as a programmatic skill provider
+### 🐍 `asbb` CLI — a programmatic skill provider over your checkout
 
-The `asbb` CLI offers offline, key-free retrieval over a checkout — the thin
-programmatic surface for any agent or script:
+The `asbb` CLI offers offline, key-free retrieval — the thin programmatic surface
+for any agent or script. It reads the **corpus from a checkout**, so the clone is
+the install:
 
 ```bash
-pip install asb-skill-collections          # or: pipx install asb-skill-collections
-# zero-install with uv:
-uvx --from asb-skill-collections asbb search "spectral library matching" --collection metabolomics
+git clone https://github.com/HolobiomicsLab/asb-skill-collections
+cd asb-skill-collections
+uv pip install -e .            # or: python3 -m pip install -e .
 
 asbb search "untargeted LC-MS/MS annotation" --collection metabolomics --target workflows
 asbb get untargeted-lcmsms-annotation --collection metabolomics/v2 --target workflows
 asbb search --list-collections
 ```
 
-`search`/`get` read a local checkout (or `ASB_COLLECTIONS_ROOT` / `--repo`); the
-ranking matches each collection's `bin/semantic_search.py` keyword mode — no API
-key. *(From a clone, the same surface is `python3 -m asb_skill_collections.asbb_cli search …`.
-Maintainers: PyPI release flow — trusted publishing + local — is in
-[`docs/RELEASING_PYPI.md`](docs/RELEASING_PYPI.md).)*
+`search`/`get` read the checkout you cloned (point elsewhere with
+`ASB_COLLECTIONS_ROOT` / `--repo`); the ranking matches each collection's
+`bin/semantic_search.py` keyword mode — no API key. Without installing anything,
+the same surface is `python3 -m asb_skill_collections.asbb_cli search …` from the
+clone.
+
+> **Not on PyPI in v0.** `asb-skill-collections` is unpublished by
+> [design decision 5](https://github.com/HolobiomicsLab/AgenticScienceBuilder) —
+> a `pip install asb-skill-collections` from an index would fetch the CLI without
+> the corpus it reads, which is not a working install. Publication is deferred to
+> v1, once the corpus ships as package data. Maintainers: the (currently dormant)
+> release flow is in [`docs/RELEASING_PYPI.md`](docs/RELEASING_PYPI.md).
 
 ### 🔌 MCP skill-server — for any MCP agent
 
 Expose the same retrieval over the Model Context Protocol so Claude Desktop,
-Cursor, Cline, Codex, etc. can search and fetch skills at run time:
+Cursor, Cline, Codex, etc. can search and fetch skills at run time. Same checkout,
+plus the `mcp` extra:
 
 ```bash
-pip install "asb-skill-collections[mcp]"
+uv pip install -e ".[mcp]"     # from the clone above
 ASB_COLLECTIONS_ROOT=/path/to/checkout asb-mcp
 ```
 
@@ -177,8 +186,8 @@ ASB_COLLECTIONS_ROOT=/path/to/checkout asb-mcp
 // Claude Desktop / Code  →  mcpServers
 {
   "asb-skills": {
-    "command": "uvx",
-    "args": ["--from", "asb-skill-collections[mcp]", "asb-mcp"],
+    "command": "uv",
+    "args": ["run", "--directory", "/path/to/asb-skill-collections", "asb-mcp"],
     "env": { "ASB_COLLECTIONS_ROOT": "/path/to/asb-skill-collections" }
   }
 }

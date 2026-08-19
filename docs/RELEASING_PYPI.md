@@ -1,5 +1,12 @@
 # Releasing `asb-skill-collections` to PyPI
 
+> **Dormant for v0 — do not run this.** Design decision 5 keeps the distribution
+> off PyPI for v0, because the CLI without the corpus it reads is not a working
+> install (see the README's `asbb` section). `publish-pypi.yml` fires only on a
+> published GitHub Release or a manual dispatch, so nothing here happens by
+> accident. This document is the procedure for **v1**, kept current so it is not
+> reconstructed from memory under time pressure.
+
 This is the **Python distribution** release (the `asbb` CLI + the `asb-mcp`
 server). It is separate from a *collection* release (`release.yml` → Zenodo /
 HuggingFace on `<slug>-v<N>` tags). The distribution name is
@@ -7,10 +14,10 @@ HuggingFace on `<slug>-v<N>` tags). The distribution name is
 two console scripts (`asbb`, `asb-mcp`). (The repo's `scripts/` directory holds
 path-invoked CI/dev tools and is intentionally not part of the wheel.)
 
-> The wheel is tiny (~110 KB — just `scripts/`). It does **not** bundle the skill
-> corpus; the CLI reads collections from a checkout / `ASB_COLLECTIONS_ROOT` /
-> `--repo` at run time. The sdist is constrained in `pyproject.toml` so it stays
-> small too.
+> The wheel is tiny — just the `asb_skill_collections` package. It does **not**
+> bundle the skill corpus; the CLI reads collections from a checkout /
+> `ASB_COLLECTIONS_ROOT` / `--repo` at run time. The sdist is constrained in
+> `pyproject.toml` so it stays small too.
 
 There are three ways the package can be published. Pick based on where you are:
 

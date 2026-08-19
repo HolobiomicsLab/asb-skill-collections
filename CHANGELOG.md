@@ -6,7 +6,9 @@ All notable changes to this repository are recorded here. The format follows
 
 This repo ships **two** things on **two** tag schemes, both noted per release:
 - the **Python distribution** `asb-skill-collections` (the `asbb` CLI + `asb-mcp`
-  server) — tagged `vX.Y.Z`, published to PyPI;
+  server) — tagged `vX.Y.Z`, installed from a checkout in v0 and published to
+  PyPI from v1 (design decision 5: the CLI without the corpus it reads is not a
+  working install);
 - the **skill collections** (e.g. metabolomics) — tagged `<slug>-v<N>`, deposited
   to Zenodo / HuggingFace.
 
@@ -24,8 +26,9 @@ Dates finalize at tag time.
   `ASB_COLLECTIONS_ROOT` (`--target skills|workflows|tools`).
 - **`asb-mcp` MCP skill-server** — `search`/`get` for skills, workflows, and
   tools from any MCP agent (behind the `[mcp]` extra).
-- **pip-installable `asb-skill-collections` package** (wheel ~108 KB) and
-  `publish-pypi.yml` (PyPI Trusted Publishing, no stored token).
+- **Installable `asb-skill-collections` package** — `uv pip install -e .` from a
+  checkout — and a dormant `publish-pypi.yml` (PyPI Trusted Publishing, no stored
+  token) held back to v1.
 - **Leaf embedding-cache builder** for semantic search, shipped via the release
   deposition.
 - **Repository-OA tier** documented in governance (`repo-oa` / `repo-permissive`
