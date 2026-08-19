@@ -8,6 +8,7 @@ skills resting on it must be labelled as weaker.
 
 from __future__ import annotations
 
+import json
 import pathlib
 
 import pytest
@@ -160,3 +161,41 @@ def test_released_collection_has_no_ungrounded_skill():
         if lg.tier_for(lg.skill_dois(fm), weak, lg.repo_url(fm)) == lg.UNGROUNDED:
             bad.append(md.parent.name)
     assert not bad, f"skills with no evidence at all: {bad}"
+
+
+def _labelling_collection(tmp_path, extra_rows=()):
+    """A minimal router-shaped collection `lg.run` can label end to end."""
+    col = tmp_path / "c"
+    (col / "leaves" / "alpha").mkdir(parents=True)
+    (col / "leaves" / "alpha" / "SKILL.md").write_text(
+        "---\nname: alpha\nderived_from:\n- doi: 10.1/a\n---\nbody\n", encoding="utf-8"
+    )
+    _corpus(col, [{"doi": "10.1/a", "repo_url": "https://example.org/r",
+                   "access": {"type": "repo-oa"}}])
+    rows = [{"slug": "alpha"}, *extra_rows]
+    (col / "skills_index.json").write_text(json.dumps(rows), encoding="utf-8")
+    return col
+
+
+def test_an_index_row_with_no_file_on_disk_is_not_called_repo_grounded(tmp_path):
+    """The strongest tier must never be the default for evidence never seen.
+
+    A row can outlive its file (a purge, an index/disk skew). Defaulting it to
+    `repo` would advertise missing evidence as cloned source code.
+    """
+    col = _labelling_collection(tmp_path, extra_rows=[{"slug": "vanished"}])
+    lg.run(col)
+    rows = {r["slug"]: r["grounding_tier"]
+            for r in json.loads((col / "skills_index.json").read_text())}
+    assert rows["alpha"] == lg.REPO_GROUNDED
+    assert rows["vanished"] == lg.UNGROUNDED, (
+        "an unlabelled row inherited the strongest grounding tier"
+    )
+
+
+def test_a_skill_without_a_frontmatter_fence_does_not_abort_labelling(tmp_path):
+    """One malformed leaf must not take the whole labelling run down."""
+    col = _labelling_collection(tmp_path)
+    (col / "leaves" / "broken").mkdir()
+    (col / "leaves" / "broken" / "SKILL.md").write_text("no fence here\n", encoding="utf-8")
+    lg.run(col)  # raised AttributeError before the canonical parser was adopted
