@@ -29,6 +29,14 @@ Usage:
 from __future__ import annotations
 import argparse, json, re, shutil
 from pathlib import Path
+# Invoked by path (`python scripts/x.py`), only `scripts/` lands on sys.path, so
+# the repo root has to be added before the sibling package can be imported.
+if __package__ in (None, ""):
+    import os.path as _p
+    import sys as _sys
+
+    _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
+
 from asb_skill_collections import layout
 
 import yaml
