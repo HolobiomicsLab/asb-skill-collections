@@ -99,6 +99,11 @@ LAYOUT_LITERAL = {
         re.compile(rf"""join\([^)]*["']{name}["']"""),          # os.path.join(d, "skills", …)
         re.compile(rf"""/\s*["']{name}["']\s*/"""),             # d / "skills" / slug
         re.compile(rf"""["'][^"']*{name}/[^"']*\*[^"']*SKILL\.md["']"""),
+        # f"{collection}/skills" — the shape that let stamp_skill_license.py
+        # sweep an empty directory and report a clean run. Anchored on the
+        # interpolation so a fixed path like "~/.claude/skills", which is a
+        # runtime install target rather than a corpus, is not swept up.
+        re.compile(rf"""\{{[^}}]*\}}/{name}["']"""),
     ]
     for name in (layout.ADVERTISED_DIRNAME, layout.LEAF_DIRNAME)
 }
