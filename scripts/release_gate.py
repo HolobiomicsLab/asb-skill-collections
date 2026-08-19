@@ -64,6 +64,14 @@ from datetime import datetime, timezone
 from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any, Iterable
+# Invoked by path (`python scripts/x.py`), only `scripts/` lands on sys.path, so
+# the repo root has to be added before the sibling package can be imported.
+if __package__ in (None, ""):
+    import os.path as _p
+    import sys as _sys
+
+    _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
+
 from scripts import layout
 
 try:
