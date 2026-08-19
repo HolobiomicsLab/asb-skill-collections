@@ -1,6 +1,6 @@
 {
   "schema": "asbb-release-gate/1.0",
-  "generated_at": "2026-08-18T14:11:40.480486+00:00",
+  "generated_at": "2026-08-19T09:33:08.983743+00:00",
   "collection_dir": "collections/metabolomics/v1",
   "corpus_path": "collections/metabolomics/v1/corpus.yaml",
   "mode": "strict",
@@ -84,7 +84,7 @@
         8
       ],
       "hard_gate": true,
-      "summary": "Every skill carries a source DOI + a license SPDX tag.  (1485 skills checked)",
+      "summary": "Every skill carries provenance (source DOI or repository) + a license SPDX tag.  (1485 skills checked)",
       "n_findings": 0,
       "details": []
     }

@@ -50,27 +50,47 @@ def skill_dois(frontmatter: dict) -> list[str]:
     ]
 
 
-def tier_for(dois: list[str], weak: set[str]) -> str:
+def repo_url(frontmatter: dict) -> str:
+    """The repository a skill grounds on, if it declares a usable one."""
+    for source in (frontmatter.get("metadata") or {}, frontmatter):
+        raw = str((source or {}).get("repo_url") or "").strip()
+        if raw.startswith(("https://", "http://")):
+            return raw
+    return ""
+
+
+def tier_for(dois: list[str], weak: set[str], repo: str = "") -> str:
     """Grade a skill by the weakest thing its evidence rests on.
 
-    A skill citing no source at all is ``ungrounded`` — never the repo default,
-    which would present missing evidence as the strongest kind.
+    A declared repository is full grounding, not a fallback: repository-only
+    grounding is the project's primary basis (CONTENT_POLICY.md §3). A skill
+    with neither a source nor a repository is ``ungrounded`` — never the repo
+    default, which would present missing evidence as the strongest kind.
     """
     if not dois:
-        return UNGROUNDED
+        return REPO_GROUNDED if repo else UNGROUNDED
     if all(d in weak for d in dois):
-        return LINK_ONLY
+        return LINK_ONLY if not repo else REPO_GROUNDED
     return REPO_GROUNDED
 
 
 def stamp_skill(path: Path, tier: str) -> bool:
-    """Write metadata.grounding_tier into a SKILL.md. True when changed."""
+    """Write metadata.grounding_tier into a SKILL.md. True when changed.
+
+    Passing the default tier *removes* any existing stamp, so a skill whose
+    evidence later improves does not keep a stale weaker label.
+    """
     text = path.read_text(encoding="utf-8")
     match = re.match(r"^---\n(.*?)\n---\n", text, re.S)
     if not match:
         return False
     block = match.group(1)
-    if re.search(r"^  grounding_tier: .*$", block, re.M):
+    has_stamp = bool(re.search(r"^  grounding_tier: .*$", block, re.M))
+    if tier == REPO_GROUNDED:
+        if not has_stamp:
+            return False
+        new_block = re.sub(r"^  grounding_tier: .*\n", "", block + "\n", flags=re.M).rstrip("\n")
+    elif has_stamp:
         new_block = re.sub(
             r"^  grounding_tier: .*$", f"  grounding_tier: {tier}", block, flags=re.M
         )
@@ -92,12 +112,11 @@ def run(collection: Path) -> dict:
     tiers, stamped = {}, 0
     for md in layout.iter_skill_md(collection):
         fm = yaml.safe_load(re.match(r"^---\n(.*?)\n---\n", md.read_text(encoding="utf-8"), re.S).group(1)) or {}
-        tier = tier_for(skill_dois(fm), weak)
+        tier = tier_for(skill_dois(fm), weak, repo_url(fm))
         tiers[md.parent.name] = tier
-        # Only the weaker tier is stamped into the file: repo-grounding is the
-        # default, and stamping 5,000 files with it would bury the exception.
-        if tier != REPO_GROUNDED:
-            stamped += stamp_skill(md, tier)
+        # Weak tiers are written; the default tier only ever clears a stale
+        # stamp, so repo-grounded files stay clean rather than all carrying it.
+        stamped += stamp_skill(md, tier)
     index_path = collection / "skills_index.json"
     rows = json.loads(index_path.read_text(encoding="utf-8"))
     for row in rows:

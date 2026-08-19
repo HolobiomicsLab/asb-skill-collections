@@ -397,6 +397,21 @@ def _collect_evidence_spans(fm: dict[str, Any], body: str) -> list[dict[str, Any
     return spans
 
 
+def _skill_repo_url(fm: dict[str, Any]) -> str:
+    """The repository a skill grounds on, if it declares one.
+
+    Repository-only grounding (CONTENT_POLICY.md §3) makes a cloned repository
+    a first-class provenance basis, not a lesser one: a skill describing a tool
+    whose code is public is grounded on that code even when the tool has no
+    method paper. Only a non-empty http(s) URL counts as evidence.
+    """
+    for source in (fm.get("metadata") or {}, fm):
+        raw = str((source or {}).get("repo_url") or "").strip()
+        if raw.startswith(("https://", "http://")):
+            return raw
+    return ""
+
+
 def _skill_dois(fm: dict[str, Any]) -> list[str]:
     """All source DOIs a skill declares (provenance.source_papers + derived_from)."""
     dois: list[str] = []
@@ -804,7 +819,7 @@ def check_provenance(collection_dir: Path) -> CheckResult:
         name="provenance_doi_license",
         gates=[8],
         hard_gate=True,
-        summary="Every skill carries a source DOI + a license SPDX tag.",
+        summary="Every skill carries provenance (source DOI or repository) + a license SPDX tag.",
     )
     n_skills = 0
     for sk_md in _iter_skill_md(collection_dir):
@@ -816,10 +831,12 @@ def check_provenance(collection_dir: Path) -> CheckResult:
             res.add(FAIL, f"{rel}: unreadable ({exc}).", file=rel)
             continue
         dois = _skill_dois(fm)
-        if not dois:
+        if not dois and not _skill_repo_url(fm):
             res.add(
                 FAIL,
-                f"{rel}: no source DOI (provenance.source_papers / derived_from / doi).",
+                f"{rel}: no provenance — needs a source DOI "
+                "(provenance.source_papers / derived_from / doi) or, for a tool with "
+                "no method paper, the repository it grounds on (metadata.repo_url).",
                 file=rel,
             )
         lic = _skill_license(fm)

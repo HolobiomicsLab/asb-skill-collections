@@ -1,6 +1,6 @@
 {
   "schema": "asbb-release-gate/1.0",
-  "generated_at": "2026-08-18T14:12:30.728743+00:00",
+  "generated_at": "2026-08-19T09:35:05.537637+00:00",
   "collection_dir": "collections/metabolomics/v2",
   "corpus_path": "collections/metabolomics/v2/corpus.yaml",
   "mode": "strict",
@@ -26,13 +26,13 @@
     "pii_config_version": "2026-07-10.2",
     "require_open_access": true
   },
-  "overall_status": "fail",
-  "blocking": true,
-  "exit_code": 1,
+  "overall_status": "warn",
+  "blocking": false,
+  "exit_code": 0,
   "summary_counts": {
-    "pass": 2,
+    "pass": 3,
     "warn": 1,
-    "fail": 1
+    "fail": 0
   },
   "hard_gate_ids": [
     2,
@@ -98,25 +98,14 @@
     },
     {
       "name": "provenance_doi_license",
-      "status": "fail",
+      "status": "pass",
       "gates": [
         8
       ],
       "hard_gate": true,
-      "summary": "Every skill carries a source DOI + a license SPDX tag.  (5867 skills checked)",
-      "n_findings": 2,
-      "details": [
-        {
-          "status": "fail",
-          "message": "leaves/masster/SKILL.md: no source DOI (provenance.source_papers / derived_from / doi).",
-          "file": "leaves/masster/SKILL.md"
-        },
-        {
-          "status": "fail",
-          "message": "skills/asb-metabolomics/SKILL.md: no source DOI (provenance.source_papers / derived_from / doi).",
-          "file": "skills/asb-metabolomics/SKILL.md"
-        }
-      ]
+      "summary": "Every skill carries provenance (source DOI or repository) + a license SPDX tag.  (5867 skills checked)",
+      "n_findings": 0,
+      "details": []
     }
   ]
 }

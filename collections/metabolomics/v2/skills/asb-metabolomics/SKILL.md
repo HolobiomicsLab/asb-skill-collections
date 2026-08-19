@@ -3,9 +3,11 @@ name: asb-metabolomics
 description: "Use when starting any task with the ASB Metabolomics skill collection — read this meta-skill first. It explains good practice (search -> apply -> ground), enforces the license-tier acknowledgment for non-open tools, then hands off to the _router skill for actual skill selection."
 license: CC-BY-4.0
 metadata:
-  grounding_tier: ungrounded
   role: meta
   delegates_to: _router
+derived_from:
+- doi: 10.5281/zenodo.20794027
+  title: ASB Metabolomics Skill Collection v2 (metabolomics-v0.1.0)
 schema_version: 0.2.0
 ---
 

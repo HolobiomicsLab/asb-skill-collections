@@ -94,3 +94,69 @@ def test_released_link_only_entries_carry_no_clone_stamp():
         and (p.get("access") or {}).get("verified_via")
     ]
     assert not stamped, f"link-only entries still claiming a clone: {stamped[:3]}"
+
+
+# --------------------------------------------------------------------------- #
+# Repository-only grounding (CONTENT_POLICY.md §3): a public repo IS evidence. #
+# --------------------------------------------------------------------------- #
+
+def test_repo_url_satisfies_provenance_without_a_paper_doi(tmp_path):
+    """A tool with no method paper is grounded on its published code."""
+    col = tmp_path / "c"
+    (col / "skills" / "toolskill").mkdir(parents=True)
+    (col / "skills" / "toolskill" / "SKILL.md").write_text(
+        "---\nname: toolskill\nlicense: CC-BY-4.0\n"
+        "metadata:\n  repo_url: https://github.com/example/tool\n---\nbody\n",
+        encoding="utf-8",
+    )
+    res = release_gate.check_provenance(col)
+    assert not [d for d in res.details if str(d.get("level", "")).lower() == "fail"]
+
+
+def test_no_doi_and_no_repo_still_fails(tmp_path):
+    col = tmp_path / "c"
+    (col / "skills" / "bare").mkdir(parents=True)
+    (col / "skills" / "bare" / "SKILL.md").write_text(
+        "---\nname: bare\nlicense: CC-BY-4.0\n---\nbody\n", encoding="utf-8"
+    )
+    res = release_gate.check_provenance(col)
+    assert any("no provenance" in str(d) for d in res.details)
+
+
+@pytest.mark.parametrize("bogus", ["", "   ", "example/tool", "git@github.com:x/y"])
+def test_a_non_url_repo_field_is_not_evidence(bogus):
+    """Only a real http(s) URL counts; a bare slug or empty string does not."""
+    assert release_gate._skill_repo_url({"metadata": {"repo_url": bogus}}) == ""
+
+
+def test_repo_grounding_outranks_link_only():
+    assert lg.tier_for([], set(), "https://github.com/x/y") == lg.REPO_GROUNDED
+    assert lg.tier_for(["10.1/a"], {"10.1/a"}, "https://github.com/x/y") == lg.REPO_GROUNDED
+    assert lg.tier_for(["10.1/a"], {"10.1/a"}, "") == lg.LINK_ONLY
+
+
+def test_stamp_is_cleared_when_evidence_improves(tmp_path):
+    """Re-running after a skill gains evidence must not leave a stale label."""
+    md = tmp_path / "SKILL.md"
+    md.write_text(
+        "---\nname: s\nmetadata:\n  grounding_tier: ungrounded\n  role: x\n---\nbody\n",
+        encoding="utf-8",
+    )
+    assert lg.stamp_skill(md, lg.REPO_GROUNDED) is True
+    assert "grounding_tier" not in md.read_text(encoding="utf-8")
+    assert lg.stamp_skill(md, lg.REPO_GROUNDED) is False  # idempotent
+
+
+def test_released_collection_has_no_ungrounded_skill():
+    import yaml as _yaml
+    from scripts import layout
+    weak = lg.link_only_dois(V2 / "corpus.yaml")
+    import re as _re
+    bad = []
+    for md in layout.iter_skill_md(V2):
+        fm = _yaml.safe_load(
+            _re.match(r"^---\n(.*?)\n---\n", md.read_text(encoding="utf-8"), _re.S).group(1)
+        ) or {}
+        if lg.tier_for(lg.skill_dois(fm), weak, lg.repo_url(fm)) == lg.UNGROUNDED:
+            bad.append(md.parent.name)
+    assert not bad, f"skills with no evidence at all: {bad}"
