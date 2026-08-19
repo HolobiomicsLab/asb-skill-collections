@@ -27,13 +27,21 @@ REPO = pathlib.Path(__file__).resolve().parent.parent
 WORKFLOWS = REPO / ".github" / "workflows"
 INVOCATION = re.compile(r"python3?\s+(scripts/[a-z_0-9]+\.py)")
 
+# A script that carries the sys.path bootstrap is *claiming* it can be run by
+# path. Testing only the CI-invoked ones let `skill_index.py` ship with the
+# bootstrap placed below its first sibling import, where it does nothing: no
+# workflow ran it, so nothing noticed.
+BOOTSTRAP = 'if __package__ in (None, ""):'
 
-def _ci_invoked_scripts() -> list[str]:
-    """Every `python scripts/x.py` a CI workflow actually runs."""
+
+def _path_invocable_scripts() -> list[str]:
+    """Every script CI runs by path, plus every script that claims it can be."""
     found: set[str] = set()
     for workflow in sorted(WORKFLOWS.glob("*.yml")):
-        text = workflow.read_text(encoding="utf-8")
-        found.update(m.group(1) for m in INVOCATION.finditer(text))
+        found.update(m.group(1) for m in INVOCATION.finditer(workflow.read_text(encoding="utf-8")))
+    for script in sorted((REPO / "scripts").glob("*.py")):
+        if BOOTSTRAP in script.read_text(encoding="utf-8"):
+            found.add(script.relative_to(REPO).as_posix())
     return sorted(rel for rel in found if (REPO / rel).is_file())
 
 
@@ -44,8 +52,8 @@ def _clean_env() -> dict[str, str]:
     return env
 
 
-@pytest.mark.parametrize("rel", _ci_invoked_scripts())
-def test_a_ci_invoked_script_imports_cleanly_by_path(rel):
+@pytest.mark.parametrize("rel", _path_invocable_scripts())
+def test_a_path_invocable_script_imports_cleanly_by_path(rel):
     """`--help` is enough: the failure is at import time, before any argument."""
     proc = subprocess.run(
         [sys.executable, rel, "--help"],
@@ -53,6 +61,35 @@ def test_a_ci_invoked_script_imports_cleanly_by_path(rel):
     )
     assert "ModuleNotFoundError" not in proc.stderr, (
         f"{rel} cannot be run the way CI runs it:\n{proc.stderr.strip()[-400:]}"
+    )
+
+
+SIBLING_IMPORT = re.compile(r"^\s*(?:from|import)\s+(?:scripts|asb_skill_collections)\b", re.M)
+
+
+def _runnable_scripts_importing_a_sibling() -> list[str]:
+    """Scripts with a `__main__` block that reach for a sibling package."""
+    out = []
+    for script in sorted((REPO / "scripts").glob("*.py")):
+        text = script.read_text(encoding="utf-8")
+        if '__name__ == "__main__"' in text and SIBLING_IMPORT.search(text):
+            out.append(script.relative_to(REPO).as_posix())
+    return out
+
+
+@pytest.mark.parametrize("rel", _runnable_scripts_importing_a_sibling())
+def test_the_bootstrap_comes_before_the_first_sibling_import(rel):
+    """A bootstrap below the import it enables is dead code.
+
+    Cheaper and sharper than the subprocess probe: it names the line, and it
+    still bites in an environment where an editable install would resolve the
+    import anyway.
+    """
+    text = (REPO / rel).read_text(encoding="utf-8")
+    assert BOOTSTRAP in text, f"{rel} imports a sibling but cannot be run by path"
+    assert SIBLING_IMPORT.search(text).start() > text.index(BOOTSTRAP), (
+        f"{rel} bootstraps sys.path *after* its first sibling import, so the "
+        f"bootstrap never runs in time"
     )
 
 
