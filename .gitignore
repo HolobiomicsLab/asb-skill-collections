@@ -50,3 +50,7 @@ governance/license_clarification/wave.yaml
 .cache/
 **/.cache/
 *.npz
+
+# curate.py writes a local audit snapshot; it is a dev-tool output, not a
+# release artifact like gate_report.json.
+collections/*/v*/curation_report.json

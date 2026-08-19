@@ -4,7 +4,7 @@ import pytest, yaml
 
 sys.path.insert(0, str(pathlib.Path(__file__).parent.parent))
 
-from scripts import layout
+from asb_skill_collections import layout
 
 FIX = pathlib.Path(__file__).parent / "fixtures" / "mini_grounding"
 

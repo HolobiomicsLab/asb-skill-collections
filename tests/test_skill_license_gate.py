@@ -2,7 +2,7 @@ import pathlib, sys, yaml
 sys.path.insert(0, str(pathlib.Path(__file__).parent.parent))
 from scripts import license_tier as lt
 
-from scripts import layout
+from asb_skill_collections import layout
 
 V2 = layout.leaf_dir(
     pathlib.Path(__file__).parent.parent / "collections/metabolomics/v2"

@@ -29,7 +29,7 @@ Usage:
 from __future__ import annotations
 import argparse, json, re, shutil
 from pathlib import Path
-from scripts import layout
+from asb_skill_collections import layout
 
 import yaml
 

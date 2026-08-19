@@ -16,6 +16,8 @@ import json
 import os
 from pathlib import Path
 
+from asb_skill_collections import layout
+
 # Mirror bin/semantic_search.py: stopwords, junk-leaf guard, keyword scoring.
 STOP = set(
     "the a an of for and or to in on with from by use when need data your this that "
@@ -153,11 +155,22 @@ def keyword_search(rows, query, technique=None, k=10, max_tools=MAX_TOOLS):
 
 
 def item_source_path(collection_dir: Path, target: str, slug: str) -> Path:
+    """On-disk path of one item, honouring the collection's layout.
+
+    A router-shaped collection keeps its leaf corpus in ``leaves/`` and only a
+    couple of entry points in ``skills/``; a legacy one keeps everything in
+    ``skills/``. Hardcoding either name makes every leaf unreachable in the
+    other layout, so resolution goes through the canonical resolver.
+    """
     if target == "workflows":
         return collection_dir / "workflows" / slug / "SKILL.md"
     if target == "tools":
         return collection_dir / "tools" / f"{slug}.yaml"
-    return collection_dir / "skills" / slug / "SKILL.md"
+    for root in layout.skill_dirs(collection_dir):
+        candidate = root / slug / "SKILL.md"
+        if candidate.is_file():
+            return candidate
+    return layout.leaf_dir(collection_dir) / slug / "SKILL.md"
 
 
 def get_item_text(collection: str, target: str, slug: str,

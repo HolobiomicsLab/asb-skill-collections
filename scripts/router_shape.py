@@ -23,7 +23,7 @@ import shutil
 import sys
 from pathlib import Path
 
-from scripts import layout
+from asb_skill_collections import layout
 
 REPO = Path(__file__).resolve().parent.parent
 SEARCH_SCRIPT = REPO / "collections" / "metabolomics" / "v2" / "bin" / "search_skills.py"

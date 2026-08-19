@@ -27,7 +27,10 @@ from datetime import datetime, timezone
 
 import yaml
 
+import label_grounding_tier as lg
 import validate_workflows as vw
+
+from asb_skill_collections import layout
 
 # A leaf carrying more tools than this is an over-aggregated "meta-leaf" artifact
 # (the 7 purged in v0.2.0). Matches compose_workflows.MAX_TOOLS_PER_LEAF.
@@ -135,14 +138,20 @@ def read_frontmatter(path: str):
 
 def iter_leaf_frontmatter(collection_dir: str):
     """Yield (slug, frontmatter_or_None, error_or_None) for every leaf SKILL.md."""
-    for md in sorted(glob.glob(os.path.join(collection_dir, "skills", "*", "SKILL.md"))):
-        slug = os.path.basename(os.path.dirname(md))
+    for md in layout.iter_skill_md(collection_dir):
+        slug = md.parent.name
         fm, err = read_frontmatter(md)
         yield slug, fm, err
 
 
 def check_leaf_grounding(index: list) -> dict:
-    """Flag indexed leaves with no source DOI. Absent field warns; empty fails."""
+    """Flag indexed leaves with no grounding. Absent DOI field warns; empty fails.
+
+    A leaf with no DOI is still grounded when it rests on a cloned repository
+    (CONTENT_POLICY.md §3) — the same rule the release gate applies. The signal
+    is the declarative ``grounding_tier``; a leaf that was never labelled has
+    no such field and still fails, so the exemption cannot open silently.
+    """
     findings = []
     for leaf in index:
         dois = leaf.get("dois")
@@ -152,9 +161,9 @@ def check_leaf_grounding(index: list) -> dict:
         elif not isinstance(dois, list):
             findings.append(finding("leaf_grounding", "fail", _slug(leaf),
                                     "'dois' is not a list (malformed)"))
-        elif len(dois) == 0:
+        elif len(dois) == 0 and leaf.get("grounding_tier") != lg.REPO_GROUNDED:
             findings.append(finding("leaf_grounding", "fail", _slug(leaf),
-                                    "empty 'dois' (ungrounded leaf)"))
+                                    "empty 'dois' and no repository grounding"))
     return result("leaf_grounding", findings, len(index), 0)
 
 

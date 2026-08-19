@@ -35,7 +35,7 @@ except ImportError:  # pragma: no cover
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-from scripts import layout  # noqa: E402  (needs REPO_ROOT on the path)
+from asb_skill_collections import layout  # noqa: E402  (needs REPO_ROOT on the path)
 from scripts.skill_index import split_frontmatter  # noqa: E402
 DOCS_SITE = Path(__file__).resolve().parent
 OUTPUT = DOCS_SITE / "search_index.json"

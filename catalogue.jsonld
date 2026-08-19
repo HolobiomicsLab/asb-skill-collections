@@ -33,13 +33,14 @@
       "@id": "asb:releasedAt",
       "@type": "xsd:dateTime"
     },
-    "slug": "asb:slug"
+    "slug": "asb:slug",
+    "leaf_dir": "asb:leafDir"
   },
   "@type": "asb:SkillCollectionRegistry",
   "@id": "https://w3id.org/holobiomicslab/asb-skill/registry",
   "name": "ASB Skill Collection Registry",
   "description": "Auto-generated registry of all released ASB Skill Collections.",
-  "generated_at": "2026-06-28T18:23:10Z",
+  "generated_at": "2026-08-19T11:19:01Z",
   "collections": [
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/epigenomics/v1",
@@ -48,6 +49,7 @@
       "slug": "epigenomics",
       "skills_count": 203,
       "tools_count": 68,
+      "leaf_dir": "skills",
       "domain_topics": [
         "http://edamontology.org/topic_0080",
         "http://edamontology.org/topic_0081",
@@ -113,6 +115,7 @@
       "slug": "metabolomics",
       "skills_count": 1485,
       "tools_count": 292,
+      "leaf_dir": "skills",
       "domain_topics": [
         "http://edamontology.org/topic_0003",
         "http://edamontology.org/topic_0080",
@@ -239,8 +242,9 @@
       "title": "ASB Metabolomics Skill Collection v2 (expansion)",
       "version": "2",
       "slug": "metabolomics",
-      "skills_count": 5858,
+      "skills_count": 5859,
       "tools_count": 909,
+      "leaf_dir": "leaves",
       "domain_topics": [
         "http://edamontology.org/topic_0003",
         "http://edamontology.org/topic_0008",
@@ -449,6 +453,7 @@
       "slug": "transcriptomics",
       "skills_count": 166,
       "tools_count": 37,
+      "leaf_dir": "skills",
       "domain_topics": [
         "http://edamontology.org/topic_0080",
         "http://edamontology.org/topic_0081",

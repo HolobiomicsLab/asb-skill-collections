@@ -27,7 +27,7 @@ import re
 import yaml
 
 from scripts.license_tier import load_map
-from scripts import layout
+from asb_skill_collections import layout
 from scripts.propagate_license_tiers import detect_indent
 
 META_ROLE = "meta"

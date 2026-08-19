@@ -123,3 +123,34 @@ def test_forge_code_has_no_domain_or_id_literals():
 
 if __name__ == "__main__":
     sys.exit(pytest.main([__file__, "-q"]))
+
+
+def test_leaf_grounding_accepts_repository_only_grounding():
+    """A repo-grounded leaf needs no DOI, but the exemption must fail closed.
+
+    The release gate accepts a cloned repository as provenance; curate has to
+    agree, or the two graders disagree about the same leaf. A leaf that was
+    never labelled carries no `grounding_tier` and is still flagged.
+    """
+    idx = [{"slug": "repo-only", "dois": [], "grounding_tier": curate.lg.REPO_GROUNDED},
+           {"slug": "unlabelled", "dois": []},
+           {"slug": "weak", "dois": [], "grounding_tier": curate.lg.LINK_ONLY}]
+    r = curate.check_leaf_grounding(idx)
+    flagged = {f["target"] for f in r["findings"]}
+    assert flagged == {"unlabelled", "weak"}, flagged
+
+
+def test_iter_leaf_frontmatter_reads_a_router_shaped_collection(tmp_path):
+    """The auditor must see the corpus wherever the collection's layout puts it.
+
+    Globbing `skills/` literally made this yield 2 entry points out of 5,859
+    leaves and still report a clean pass — a silent no-op the `n == 0`
+    not-applicable guard cannot catch, because 2 is not 0.
+    """
+    col = tmp_path / "c"
+    (col / "leaves" / "alpha").mkdir(parents=True)
+    (col / "leaves" / "alpha" / "SKILL.md").write_text("---\nname: alpha\n---\n")
+    (col / "skills" / "_router").mkdir(parents=True)
+    (col / "skills" / "_router" / "SKILL.md").write_text("---\nname: r\n---\n")
+    slugs = {slug for slug, _, _ in curate.iter_leaf_frontmatter(str(col))}
+    assert slugs == {"alpha"}, slugs

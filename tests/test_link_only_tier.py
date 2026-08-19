@@ -150,7 +150,7 @@ def test_stamp_is_cleared_when_evidence_improves(tmp_path):
 
 def test_released_collection_has_no_ungrounded_skill():
     import yaml as _yaml
-    from scripts import layout
+    from asb_skill_collections import layout
     weak = lg.link_only_dois(V2 / "corpus.yaml")
     import re as _re
     bad = []

@@ -64,7 +64,7 @@ from datetime import datetime, timezone
 from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any, Iterable
-from scripts import layout
+from asb_skill_collections import layout
 
 try:
     import yaml

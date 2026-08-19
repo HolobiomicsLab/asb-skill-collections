@@ -23,7 +23,11 @@ import argparse
 import sys
 from typing import Optional, Sequence
 
-__version__ = "0.1.0"
+try:  # the installed distribution is the one source of the version
+    from importlib.metadata import PackageNotFoundError, version as _dist_version
+    __version__ = _dist_version("asb-skill-collections")
+except (ImportError, PackageNotFoundError):  # running from a checkout
+    __version__ = "0.0.0+source"
 
 _TO_BUILD = "(Phase 1.7 stub — not yet implemented)"
 

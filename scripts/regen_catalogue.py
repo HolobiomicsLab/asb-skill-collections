@@ -21,6 +21,8 @@ from datetime import datetime, timezone
 
 import yaml
 
+from asb_skill_collections import layout
+
 
 CATALOGUE_CONTEXT = {
     "@vocab": "https://schema.org/",
@@ -35,6 +37,7 @@ CATALOGUE_CONTEXT = {
     "generated_at": {"@id": "asb:generatedAt", "@type": "xsd:dateTime"},
     "released_at": {"@id": "asb:releasedAt", "@type": "xsd:dateTime"},
     "slug": "asb:slug",
+    "leaf_dir": "asb:leafDir",
 }
 
 REGISTRY_ID = "https://w3id.org/holobiomicslab/asb-skill/registry"
@@ -49,7 +52,7 @@ def _load_collection_yaml(path: pathlib.Path) -> dict:
     return data
 
 
-def _collection_entry(col_yaml: dict) -> dict:
+def _collection_entry(col_yaml: dict, collection_dir: pathlib.Path) -> dict:
     """Convert a collection.yaml dict to a catalogue entry dict."""
     entry: dict = {}
 
@@ -67,6 +70,9 @@ def _collection_entry(col_yaml: dict) -> dict:
     entry["slug"] = col_yaml.get("slug", "")
     entry["skills_count"] = int(col_yaml.get("skills_count", 0))
     entry["tools_count"] = int(col_yaml.get("tools_count", 0))
+    # Consumers that link to a skill's source need the layout, not a guess:
+    # the corpus sits in leaves/ when router-shaped and in skills/ otherwise.
+    entry["leaf_dir"] = layout.leaf_dir(collection_dir).name
 
     # Optional fields
     domain_topics = col_yaml.get("domain_topics") or []
@@ -104,7 +110,7 @@ def build_catalogue(repo_root: pathlib.Path) -> dict:
         for col_yaml_path in sorted(collections_dir.glob("**/collection.yaml")):
             try:
                 col_data = _load_collection_yaml(col_yaml_path)
-                entry = _collection_entry(col_data)
+                entry = _collection_entry(col_data, col_yaml_path.parent)
                 entries.append(entry)
             except Exception as exc:
                 print(

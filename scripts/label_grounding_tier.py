@@ -22,7 +22,7 @@ from pathlib import Path
 
 import yaml
 
-from scripts import layout
+from asb_skill_collections import layout
 from scripts.skill_index import split_frontmatter
 
 LINK_ONLY = "link-only"

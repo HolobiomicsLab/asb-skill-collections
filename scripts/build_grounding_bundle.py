@@ -8,7 +8,7 @@ import json
 import re
 import shutil
 from pathlib import Path
-from scripts import layout
+from asb_skill_collections import layout
 
 try:
     import yaml

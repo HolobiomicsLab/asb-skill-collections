@@ -113,7 +113,7 @@ function actions(viewPath, target, slug) {
 }
 
 function skillCard(r) {
-  const path = `${collDir(state.collection)}/skills/${r.slug}/SKILL.md`;
+  const path = `${collDir(state.collection)}/${state.collection.leaf_dir || "skills"}/${r.slug}/SKILL.md`;
   const tools = (r.tools || []).slice(0, 6).map(t => `<span class="badge badge-tool">${esc(t)}</span>`).join("");
   const techs = (r.techniques || []).map(t => `<span class="badge badge-skill">${esc(t)}</span>`).join("");
   return `<div class="card item">

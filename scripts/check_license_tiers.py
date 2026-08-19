@@ -10,7 +10,7 @@ import sys
 import yaml
 
 from scripts.license_tier import ack_required, load_map
-from scripts import layout
+from asb_skill_collections import layout
 
 # The tier vocabulary has one home: governance/license_tiers.yaml. A hand-copied
 # set here silently rejects any tier added there.
