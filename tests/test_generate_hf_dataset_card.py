@@ -75,7 +75,8 @@ class TestGenerateDatasetCard(unittest.TestCase):
     def test_configs_data_files(self):
         collection = gen.parse_collection_yaml(MINIMAL_COLLECTION_YAML)
         result = gen.generate_readme(collection=collection, citation=None)
-        assert 'data_files: "skills/**/SKILL.md"' in result
+        assert '- "leaves/**/SKILL.md"' in result   # router-shaped collections
+        assert '- "skills/**/SKILL.md"' in result   # legacy collections
         assert 'data_files: "benchmark/tasks/**/task.md"' in result
         assert 'data_files: "tools/**/*.yaml"' in result
 

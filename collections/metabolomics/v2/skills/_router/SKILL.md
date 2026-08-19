@@ -4,14 +4,18 @@ description: Use when an agent needs to find and apply a computational-metabolom
 license: CC-BY-4.0
 metadata:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
-  skills_count: 5866
+  skills_count: 5859
   tools_count: 909
+  workflows_count: 21
   leaf_dir: leaves
+  workflow_dir: workflows
   retrieval: bin/search_skills.py
+  semantic_retrieval: bin/semantic_search.py
   indexes:
   - skills_index.json
   - tools_index.json
   - kb_bundle.json
+  - workflows/workflows_index.json
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
@@ -25,8 +29,8 @@ attribution:
 
 # ASB Metabolomics Skill Collection — router
 
-This is the default entry point for the ASB Metabolomics collection (v2): **5,866
-evidence-grounded skills** and **909 software-tool records** for computational
+This is the default entry point for the ASB Metabolomics collection (v2): **5,859
+evidence-grounded skills**, **21 composite workflows** and **909 software-tool records** for computational
 metabolomics — predominantly LC-MS/MS, but also LC-MS, GC-MS, mass-spectrometry
 imaging, ion mobility, lipidomics, and some NMR / multi-omics — each derived from
 a peer-reviewed method paper and its public code repository.
@@ -35,7 +39,8 @@ You (the agent) use this router in three steps: **search → apply → (optional
 
 ## How this collection is laid out
 
-The 5,866 leaf skills live in **`leaves/<slug>/SKILL.md`**, not in `skills/`.
+The 5,859 leaf skills live in **`leaves/<slug>/SKILL.md`**, and the 21 composite
+workflows in **`workflows/<slug>/SKILL.md`** — neither is under `skills/`.
 That is deliberate: a plugin host loads the name and description of every skill
 under `skills/` into the session prompt, so advertising all of them would cost
 several hundred thousand tokens before you have done anything. Only this router
@@ -65,14 +70,39 @@ specific:
 - `--edam operation_3215` — exact ontology match (e.g. peak picking, spectral
   library matching, formula prediction).
 
-Two machine indexes back the search, and are worth querying directly with `jq`
-when you need a field the script does not print:
+### Whole pipelines: search the workflows first
+
+When the request spans a whole study rather than one step — *"annotate my
+untargeted LC-MS/MS run"*, *"lipidomics from mzML to a feature table"* — a
+composite workflow already chains the right leaves in the right order:
+
+```bash
+python bin/search_skills.py --target workflows --query "<the user's task>" -k 5
+```
+
+Each hit prints its stages and the path to `workflows/<slug>/SKILL.md`. Read
+that, follow its stages, and use the leaf skills it names. Fall back to a leaf
+search when no workflow covers the request.
+
+### Optional: semantic ranking
+
+`bin/semantic_search.py` ranks by meaning rather than keyword overlap, using
+`text-embedding-3-large` when an embedding backend is available (set
+`OPENAI_API_KEY`, and point `ASB_LEAF_EMB_CACHE` at the leaf embedding cache or
+drop it at `.cache/leafemb_v2.npz`). It falls back to a keyword search when no
+backend is configured, and the `mode` field in its output says which ran. It
+takes the same `--target skills|workflows`.
+
+Three machine indexes back both scripts, and are worth querying directly with
+`jq` when you need a field they do not print:
 
 - **`skills_index.json`** — one row per skill: `slug`, `name`, `description`,
   `edam_operation`, `edam_topics`, `tools`, `dois`, `techniques`,
   `license_tier`.
 - **`tools_index.json`** — one row per tool: `slug`, `name`, `canonical_url`,
   `edam_topics`, `dois`.
+- **`workflows/workflows_index.json`** — one row per composite workflow: `slug`,
+  `name`, `description`, `techniques`, `stages`, `member_tools`.
 
 Then read that skill's `leaves/<slug>/SKILL.md` and follow it.
 

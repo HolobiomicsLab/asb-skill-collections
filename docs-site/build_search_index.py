@@ -35,7 +35,8 @@ except ImportError:  # pragma: no cover
 REPO_ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
-from scripts.skill_index import split_frontmatter  # noqa: E402  (needs REPO_ROOT on the path)
+from scripts import layout  # noqa: E402  (needs REPO_ROOT on the path)
+from scripts.skill_index import split_frontmatter  # noqa: E402
 DOCS_SITE = Path(__file__).resolve().parent
 OUTPUT = DOCS_SITE / "search_index.json"
 
@@ -104,12 +105,33 @@ def _iter_corpus_files() -> list[Path]:
 
 
 def _iter_skill_files() -> list[Path]:
+    """Every leaf SKILL.md, from whichever directory a collection's layout uses.
+
+    Router-shaped collections keep the corpus in `leaves/`, legacy ones in
+    `skills/`. Globbing one of them drops the other silently, so resolution
+    goes through the same helper the release gate uses.
+    """
     paths: list[Path] = []
     for root_name in ("collections", "staged-collections"):
         root = REPO_ROOT / root_name
         if not root.exists():
             continue
-        paths.extend(sorted(root.glob("*/v*/skills/*/SKILL.md")))
+        for version_dir in sorted(root.glob("*/v*")):
+            paths.extend(layout.iter_skill_md(version_dir))
+    return paths
+
+
+def _iter_workflow_files() -> list[Path]:
+    paths: list[Path] = []
+    for root_name in ("collections", "staged-collections"):
+        root = REPO_ROOT / root_name
+        if not root.exists():
+            continue
+        # Composite-workflow super-skills; skip the _workflow_router and bin/.
+        paths.extend(
+            p for p in sorted(root.glob("*/v*/workflows/*/SKILL.md"))
+            if not p.parent.name.startswith("_")
+        )
     return paths
 
 
@@ -235,6 +257,54 @@ def index_skills() -> list[dict]:
     return out
 
 
+def index_workflows() -> list[dict]:
+    """Index composite-workflow super-skills (one row per workflows/<slug>/SKILL.md)."""
+    out: list[dict] = []
+    for wpath in _iter_workflow_files():
+        fm, body = _parse_skill_md(wpath)
+        if not isinstance(fm, dict):
+            continue
+        name = fm.get("name") or wpath.parent.name
+        description = fm.get("description") or ""
+        meta = fm.get("metadata") or {}
+        techniques = meta.get("techniques") or []
+        if not isinstance(techniques, list):
+            techniques = [techniques]
+        member_skills = meta.get("member_skills") or []
+        if not isinstance(member_skills, list):
+            member_skills = [member_skills]
+        stage_count = meta.get("stage_count") or 0
+        summary = _extract_summary(body)
+        coll_label = _collection_from_path(wpath)
+        search_text = " ".join(
+            filter(
+                None,
+                [
+                    name,
+                    description,
+                    " ".join(str(t) for t in techniques),
+                    " ".join(str(s) for s in member_skills),
+                    summary,
+                    coll_label,
+                ],
+            )
+        )
+        out.append(
+            {
+                "slug": wpath.parent.name,
+                "name": name,
+                "description": description,
+                "techniques": [str(t) for t in techniques],
+                "stage_count": stage_count,
+                "collection": coll_label,
+                "summary": summary,
+                "md_path": str(wpath.relative_to(REPO_ROOT)),
+                "search_text": search_text,
+            }
+        )
+    return out
+
+
 def index_tools() -> list[dict]:
     out: list[dict] = []
     for tpath in _iter_tool_files():
@@ -285,9 +355,10 @@ def index_tools() -> list[dict]:
 def main() -> int:
     papers = index_papers()
     skills = index_skills()
+    workflows = index_workflows()
     tools = index_tools()
     collections = sorted(
-        {r["collection"] for r in papers + skills + tools if r.get("collection")}
+        {r["collection"] for r in papers + skills + workflows + tools if r.get("collection")}
     )
 
     payload = {
@@ -296,13 +367,14 @@ def main() -> int:
         "collections": collections,
         "papers": papers,
         "skills": skills,
+        "workflows": workflows,
         "tools": tools,
     }
     OUTPUT.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
     size = OUTPUT.stat().st_size
     print(
-        f"Indexed {len(papers)} papers, {len(skills)} skills, {len(tools)} tools "
-        f"across {len(collections)} collections. "
+        f"Indexed {len(papers)} papers, {len(skills)} skills, {len(workflows)} workflows, "
+        f"{len(tools)} tools across {len(collections)} collections. "
         f"Wrote {OUTPUT.relative_to(REPO_ROOT)} ({size:,} bytes)."
     )
     return 0

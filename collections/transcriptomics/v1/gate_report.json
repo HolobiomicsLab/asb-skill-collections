@@ -1,6 +1,6 @@
 {
   "schema": "asbb-release-gate/1.0",
-  "generated_at": "2026-08-19T09:34:01.100182+00:00",
+  "generated_at": "2026-08-19T10:31:24.712874+00:00",
   "collection_dir": "collections/transcriptomics/v1",
   "corpus_path": "collections/transcriptomics/v1/corpus.yaml",
   "mode": "strict",
@@ -30,7 +30,7 @@
   "blocking": false,
   "exit_code": 0,
   "summary_counts": {
-    "pass": 4,
+    "pass": 5,
     "warn": 0,
     "fail": 0
   },
@@ -87,6 +87,20 @@
       "summary": "Every skill carries provenance (source DOI or repository) + a license SPDX tag.  (166 skills checked)",
       "n_findings": 0,
       "details": []
+    },
+    {
+      "name": "composite_workflows",
+      "status": "pass",
+      "gates": [],
+      "hard_gate": false,
+      "summary": "Composite workflow super-skills resolve to real leaves with a valid DAG.",
+      "n_findings": 1,
+      "details": [
+        {
+          "status": "pass",
+          "message": "No workflows/ subtree (n/a)."
+        }
+      ]
     }
   ]
 }

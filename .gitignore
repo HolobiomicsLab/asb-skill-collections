@@ -45,5 +45,8 @@ governance/license_clarification/wave.yaml
 .license-cache-v2.json
 
 # Local resolver caches (preprint licence lookups, embeddings). Never committed.
+# Leaf embedding caches are large and regenerated from source / shipped as
+# Zenodo + GitHub Release assets.
 .cache/
 **/.cache/
+*.npz

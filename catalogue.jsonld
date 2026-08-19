@@ -39,7 +39,7 @@
   "@id": "https://w3id.org/holobiomicslab/asb-skill/registry",
   "name": "ASB Skill Collection Registry",
   "description": "Auto-generated registry of all released ASB Skill Collections.",
-  "generated_at": "2026-06-22T08:43:43Z",
+  "generated_at": "2026-06-28T18:23:10Z",
   "collections": [
     {
       "@id": "https://w3id.org/holobiomicslab/asb-skill/collection/epigenomics/v1",
@@ -239,7 +239,7 @@
       "title": "ASB Metabolomics Skill Collection v2 (expansion)",
       "version": "2",
       "slug": "metabolomics",
-      "skills_count": 5865,
+      "skills_count": 5858,
       "tools_count": 909,
       "domain_topics": [
         "http://edamontology.org/topic_0003",
@@ -432,8 +432,8 @@
         "http://edamontology.org/topic_3957",
         "http://edamontology.org/topic_3958"
       ],
-      "doi": "TODO-zenodo",
-      "released_at": "2026-06-22T00:02:37Z",
+      "doi": "10.5281/zenodo.20794027",
+      "released_at": "2026-06-28T00:00:00Z",
       "lead_curators": [
         {
           "name": "Louis-Felix Nothias",

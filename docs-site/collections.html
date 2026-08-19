@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Browse collections — ASB Skill Collections</title>
+  <meta name="description" content="Browse the skills, composite workflows (super-skills), and software tools in each ASB skill collection, and contribute improvements directly on GitHub." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Browse a collection</h1>
+  <p>
+    Explore the <strong>skills</strong>, composite <strong>workflows</strong> (super-skills),
+    and software <strong>tools</strong> in each collection. Every item links to its source on
+    GitHub — open it, edit it, or file an anonymized improvement.
+  </p>
+  <nav>
+    <a href="./">Catalogue</a>
+    <a href="./collections.html">Browse</a>
+    <a href="./corpus.html">Corpus</a>
+    <a href="./search.html">Search</a>
+    <a href="./contribute.html">Contribute</a>
+    <a href="./propose.html">Propose paper</a>
+    <a href="https://github.com/HolobiomicsLab/asb-skill-collections">GitHub</a>
+  </nav>
+
+  <div class="field">
+    <label for="collection-select">Collection</label>
+    <select id="collection-select"><option>Loading…</option></select>
+  </div>
+
+  <div id="summary"></div>
+
+  <div class="tabs" id="tabs" role="tablist">
+    <button class="tab active" data-tab="skills" role="tab">Skills</button>
+    <button class="tab" data-tab="workflows" role="tab">Workflows (super-skills)</button>
+    <button class="tab" data-tab="tools" role="tab">Tools</button>
+  </div>
+
+  <div class="field">
+    <input type="search" id="filter-q" placeholder="Filter by name, description, tool…" autocomplete="off" />
+    <select id="filter-technique"><option value="">All techniques</option></select>
+  </div>
+
+  <p id="result-meta" class="muted"></p>
+  <div id="results"><p class="loading">Pick a collection to begin.</p></div>
+
+  <script src="collections.js"></script>
+</body>
+</html>

@@ -11,7 +11,7 @@ version: 2
 description: Curated, evidence-grounded skills and software-tool records for computational metabolomics, assembled by the AgenticScienceBuilder pipeline from open-access method papers. Each skill is deduplicated across papers, anchored to verbatim evidence spans, and annotated with EDAM IRIs.
 license: CC-BY-4.0
 doi: 10.5281/zenodo.20794027
-released_at: '2026-06-22T00:02:37Z'
+released_at: '2026-06-28T00:00:00Z'
 roles:
   generator: AgenticScienceBuilder
   promoter: Louis-Félix Nothias
@@ -30,8 +30,9 @@ lead_curators:
 contributors:
 - name: Louis-Felix Nothias
   orcid: https://orcid.org/0000-0001-6711-6719
-skills_count: 5865
+skills_count: 5858
 tools_count: 909
+workflows_count: 10
 skills:
 - 2d-nmr-pulse-sequence-implementation
 - 2d-tic-preprocessing
@@ -1294,7 +1295,6 @@ skills:
 - euclidean-distance-computation-for-spatial-alignment
 - evaluation-data-collection-for-simulation-assessment
 - evaluation-data-object-handling
-- evidence-linking
 - evolutionary-pattern-encoding-in-molecules
 - exact-mass-accuracy-calculation
 - exact-mass-database-matching
@@ -1310,7 +1310,6 @@ skills:
 - experiment-metadata-organization-and-tracking
 - experimental-design-metadata-integration
 - experimental-predicted-fragment-comparison
-- expert-review-preparation
 - exploitation-exploration-trade-off-balancing
 - export-tag-syntax-validation
 - expression-level-filtering-with-edger
@@ -1481,7 +1480,6 @@ skills:
 - field-exclusion-filtering
 - field-mapping-and-transformation
 - field-type-identification
-- figure-table-interpretation
 - file-api-endpoint-implementation
 - file-compression-and-archiving
 - file-format-compliance-validation
@@ -3877,7 +3875,6 @@ skills:
 - outlier-feature-classification
 - outlier-sample-identification-pca
 - outlier-sample-removal-quality-control
-- output-grounding
 - over-representation-analysis-pvalue-interpretation
 - over-representation-analysis-workflow
 - over-representation-enrichment-analysis
@@ -4605,7 +4602,6 @@ skills:
 - repository-structure-standardization
 - representation-collapse-prevention
 - representation-vector-dimensionality-reduction
-- reproducibility-gap-detection
 - reproducibility-seed-management
 - reproducibility-signal-detection-nonparametric
 - reproducibility-statistic-computation-rank-based
@@ -4793,7 +4789,6 @@ skills:
 - schema-compliance-testing
 - schema-conformance-checking
 - schema-constraint-checking
-- scientific-task-formulation
 - sciex-multiquant-data-export-format-recognition
 - scikit-learn-metric-computation
 - score-distribution-analysis-and-statistical-significance-testing
@@ -5869,7 +5864,6 @@ skills:
 - workflow-orchestration-and-parallelization
 - workflow-output-validation-and-qa
 - workflow-pipeline-execution-validation
-- workflow-reconstruction
 - workflow-reproducibility-validation
 - workflow-routing-configuration
 - workflow-status-monitoring

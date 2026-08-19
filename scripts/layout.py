@@ -22,6 +22,10 @@ from typing import Iterable, Iterator
 
 LEAF_DIRNAME = "leaves"
 ADVERTISED_DIRNAME = "skills"
+# Composite super-skills. Shipped inside a collection but gated by
+# `release_gate.check_workflows`, not by the per-leaf provenance and
+# verbatim checks: a workflow composes leaves, it has no single source paper.
+WORKFLOW_DIRNAME = "workflows"
 
 
 def is_router_shaped(collection_dir: str | os.PathLike) -> bool:
@@ -61,8 +65,9 @@ def iter_skill_md(
     Skips skills in ``_``-prefixed directories (routing scaffolds such as
     ``_router``) unless ``include_infrastructure`` is set: they are not
     paper-derived, so provenance and verbatim checks do not apply to them.
-    Falls back to the collection root when no skill directory exists, matching
-    the historical behaviour of the release gate.
+    Always skips the ``workflows/`` subtree, which ``check_workflows`` gates
+    separately. Falls back to the collection root when no skill directory
+    exists, matching the historical behaviour of the release gate.
     """
     roots: Iterable[Path] = [d for d in skill_dirs(collection_dir) if d.is_dir()]
     if not roots:
@@ -73,6 +78,8 @@ def iter_skill_md(
             if path in seen:
                 continue
             parents = path.relative_to(root).parts[:-1]
+            if WORKFLOW_DIRNAME in parents:
+                continue
             if not include_infrastructure and any(p.startswith("_") for p in parents):
                 continue
             seen.add(path)
@@ -123,5 +130,14 @@ if __name__ == "__main__":
         assert leaf_dir(router).name == LEAF_DIRNAME
         assert slugs(router) == {"beta", "gate"}, slugs(router)
         assert len(list(iter_skill_md(router, include_infrastructure=True))) == 3
+
+        # Root fallback: a collection with no skill dir must still not treat a
+        # composite workflow as a paper-derived leaf.
+        bare = Path(tmp) / "bare"
+        (bare / "workflows" / "pipeline").mkdir(parents=True)
+        (bare / "workflows" / "pipeline" / "SKILL.md").write_text("x")
+        (bare / "solo").mkdir()
+        (bare / "solo" / "SKILL.md").write_text("x")
+        assert slugs(bare) == {"solo"}, slugs(bare)
 
     print("layout.py smoke check OK", file=sys.stderr)

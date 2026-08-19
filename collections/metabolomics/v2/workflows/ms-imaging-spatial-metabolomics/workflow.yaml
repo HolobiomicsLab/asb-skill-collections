@@ -1,0 +1,178 @@
+schema_version: 0.3.0
+workflow_id: ms_imaging_spatial_metabolomics
+kind: composite-workflow
+techniques:
+- MS-imaging
+steps:
+- id: preprocess_imaging
+  goal: load imzML, peak pick, align m/z across pixels
+  edam_operation: operation_3215
+  skills:
+  - mass-spectrometry-imaging-data-import
+  - mass-spectrometry-peak-detection-and-alignment
+  - spatial-pixel-coordinate-alignment
+  - spectral-peak-alignment-across-pixels
+  - imzml-metadata-parsing
+  tools:
+  - Cardinal
+  - CardinalIO
+  - R
+  - matter
+  - BiocManager
+  inputs:
+  - type: imzML
+  outputs:
+  - type: feature-table
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-1c02138
+    - asb-paper-10-1021-acs-analchem-4c06520
+    - asb-paper-10-1093-bioinformatics-btv146
+    - asb-paper-10-1529-biophysj-103-038422
+    dois:
+    - 10.1021/acs.analchem.1c02138
+    - 10.1021/acs.analchem.4c06520
+    - 10.1093/bioinformatics/btv146
+    - 10.1529/biophysj.103.038422
+  after: []
+  candidate_tools:
+  - BiocParallel
+  - Cardinal 3.6
+  - Python
+  - imzML Writer
+  - imzML Scout
+  - msconvert
+  - pewpew
+  - pewlib
+  - pewpew (pew²)
+- id: spatial_annotation
+  goal: annotate ion images to metabolites with FDR control
+  edam_operation: operation_3803
+  skills:
+  - maldi-imaging-mass-spectrometry-data-interpretation
+  - spatial-metabolomics-feature-annotation
+  - imaging-mass-spectrometry-ion-identification
+  - mass-spectral-feature-annotation
+  - m-z-metabolite-annotation-mapping
+  - metabolite-annotation-at-scale
+  tools:
+  - Google Colab
+  - Python 3
+  - METASPACE
+  - CellProfiler 3.0.0
+  - Fiji (December 22 2015)
+  - Python 3 with requirements.txt
+  inputs:
+  - type: feature-table
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-4c06210
+    - asb-paper-10-1038-s41592-021-01198-0
+    - asb-paper-10-1101-2024-10-14-618269
+    - asb-paper-10-1101-2024-10-31-621429v1
+    dois:
+    - 10.1021/acs.analchem.4c06210
+    - 10.1038/s41592-021-01198-0
+    - 10.1101/2024.10.14.618269
+    - 10.1101/2024.10.31.621429v1
+  after:
+  - preprocess_imaging
+  candidate_tools:
+  - SpaMTP
+  - R
+  - Seurat
+  - Cardinal
+  - pandas
+  - h5py
+  - Graph-attention autoencoder
+  - scanpy
+  - SMART
+  - RefineLipids
+  - SearchAnnotations
+  - dplyr
+  - HMDB Database
+  - Lipidmaps Database
+  inputs_from:
+    preprocess_imaging:
+    - feature-table
+- id: segmentation
+  goal: spatial segmentation / clustering into regions
+  edam_operation: operation_3432
+  skills:
+  - spatial-segmentation-shrunken-centroids
+  - spatial-spectral-array-processing
+  - cardinal-object-structure-understanding
+  tools:
+  - SpaMTP
+  - dplyr
+  - R
+  - Cardinal
+  - Seurat
+  inputs:
+  - type: feature-table
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1093-bioinformatics-btv146
+    - asb-paper-10-1101-2024-10-14-618269
+    - asb-paper-10-1101-2024-10-31-621429v1
+    dois:
+    - 10.1093/bioinformatics/btv146
+    - 10.1101/2024.10.14.618269
+    - 10.1101/2024.10.31.621429v1
+  after:
+  - preprocess_imaging
+  candidate_tools:
+  - BiocParallel
+  - matter
+  inputs_from:
+    preprocess_imaging:
+    - feature-table
+- id: region_statistics
+  goal: compare metabolite intensities across spatial regions
+  edam_operation: operation_3659
+  skills:
+  - bioinformatic-object-conversion
+  - spatial-coordinate-mapping-msi
+  - spot-level-intensity-aggregation
+  tools:
+  - SpaMTP
+  - R
+  - Cardinal
+  - Seurat
+  inputs:
+  - type: tsv
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1038-s41467-025-63915-z
+    - asb-paper-10-1101-2024-10-14-618269
+    - asb-paper-10-1101-2024-10-31-621429v1
+    dois:
+    - 10.1038/s41467-025-63915-z
+    - 10.1101/2024.10.14.618269
+    - 10.1101/2024.10.31.621429v1
+  after:
+  - spatial_annotation
+  - segmentation
+  candidate_tools:
+  - spatialMETA
+  - spatialmeta.pp.filter_cells_sm
+  inputs_from:
+    spatial_annotation:
+    - tsv
+    segmentation:
+    - tsv
+verification:
+  final_outputs:
+  - path: spatial_annotation_report.tsv
+    type: file
+provenance:
+  derived_from_workflows: []
+  bound_by: perspicacite-semantic
+  coverage_gaps: []

@@ -27,8 +27,10 @@ import yaml
 
 STATIC_ENTRIES = [
     ("/", "1.0", "weekly"),
+    ("/collections.html", "0.9", "weekly"),
     ("/corpus.html", "0.9", "weekly"),
     ("/search.html", "0.9", "weekly"),
+    ("/contribute.html", "0.8", "monthly"),
     ("/propose.html", "0.7", "monthly"),
 ]
 

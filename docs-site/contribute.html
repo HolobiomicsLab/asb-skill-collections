@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contribute an improvement — ASB Skill Collections</title>
+  <meta name="description" content="Found a fix while using a skill or workflow? Package an anonymized improvement report and open a pre-filled GitHub issue in one click." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Contribute an improvement</h1>
+  <p>
+    Exercised a skill or workflow and found a better default, a missing step, an
+    outdated tool, or a bug? Turn it into a contribution. Your text is
+    <strong>scrubbed of file paths, emails, IPs, and secrets</strong> in your
+    browser before anything leaves the page — then this opens a pre-filled GitHub
+    issue you review and submit. Reviewers can promote it to a PR; merged
+    contributions count toward the <a href="./">contributor leaderboard</a> and
+    co-authorship on the next release DOI.
+  </p>
+  <nav>
+    <a href="./">Catalogue</a>
+    <a href="./collections.html">Browse</a>
+    <a href="./corpus.html">Corpus</a>
+    <a href="./search.html">Search</a>
+    <a href="./contribute.html">Contribute</a>
+    <a href="./propose.html">Propose paper</a>
+    <a href="https://github.com/HolobiomicsLab/asb-skill-collections">GitHub</a>
+  </nav>
+
+  <form id="form" autocomplete="off">
+    <div class="field">
+      <label for="collection">Collection (slug/version)</label>
+      <input id="collection" placeholder="metabolomics/v2" required />
+    </div>
+    <div class="field">
+      <label for="target">Item type</label>
+      <select id="target">
+        <option value="skills">Skill</option>
+        <option value="workflows">Workflow (super-skill)</option>
+        <option value="tools">Tool</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="item">Item slug</label>
+      <input id="item" placeholder="feature-detection-xcms" required />
+    </div>
+    <div class="field">
+      <label for="kind">Kind</label>
+      <select id="kind">
+        <option value="correction">correction</option>
+        <option value="enhancement">enhancement</option>
+        <option value="bug">bug</option>
+        <option value="tool-update">tool-update</option>
+        <option value="new-skill">new-skill</option>
+        <option value="other">other</option>
+      </select>
+    </div>
+    <div class="field">
+      <label for="summary">Summary (one line)</label>
+      <input id="summary" required />
+    </div>
+    <div class="field">
+      <label for="detail">Detail — what's wrong / what to change</label>
+      <textarea id="detail" rows="5"></textarea>
+    </div>
+    <div class="field">
+      <label for="diff">Proposed change (optional, diff/patch)</label>
+      <textarea id="diff" rows="5"></textarea>
+    </div>
+    <div class="field">
+      <label for="runtime">Agent runtime (optional)</label>
+      <input id="runtime" placeholder="claude-code / cursor / codex / chat" />
+    </div>
+    <div class="field">
+      <label for="handle">Your GitHub handle (optional — for contributor credit)</label>
+      <input id="handle" placeholder="your-handle" />
+    </div>
+
+    <p id="redaction" class="muted"></p>
+    <details open>
+      <summary>Preview (anonymized issue body)</summary>
+      <pre id="preview" class="preview"></pre>
+    </details>
+
+    <button type="submit" id="submit">Open pre-filled GitHub issue →</button>
+  </form>
+
+  <script src="contribute.js"></script>
+</body>
+</html>

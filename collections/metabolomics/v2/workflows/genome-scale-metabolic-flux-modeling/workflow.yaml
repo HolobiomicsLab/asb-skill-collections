@@ -1,0 +1,212 @@
+schema_version: 0.3.0
+workflow_id: genome_scale_metabolic_flux_modeling
+kind: composite-workflow
+techniques:
+- LC-MS
+steps:
+- id: constrain
+  goal: generic GEM + omics data -> sample-constrained metabolic model
+  edam_operation: operation_3660
+  skills:
+  - metabolic-model-constraint-application
+  - constraint-based-flux-balance-analysis
+  - reaction-activity-score-computation-from-gpr
+  - gene-expression-constraint-integration
+  - transcriptomics-reaction-activity-scoring
+  tools:
+  - eFlux
+  - TRFBA
+  - scFBA
+  - GX-FBA
+  - constraint-based stoichiometric metabolic models
+  - optGpSampler
+  - COBRApy
+  - Flux Variability Analysis (FVA)
+  - GLPK solver
+  - YSI bioanalyzer (YSI2950)
+  inputs:
+  - type: sbml
+  - type: tsv
+  outputs:
+  - type: sbml
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1371-journal-pcbi-1009337
+    dois:
+    - 10.1371/journal.pcbi.1009337
+  after: []
+  candidate_tools:
+  - STAR aligner (v.2.6.1d)
+  - HTSeq (v.0.6.1)
+  - YSI2950 bioanalyzer
+  - Agilent 1290 Infinity UHPLC system
+  - optGpSampler algorithm
+  - t-SNE (t-distributed Stochastic Neighbor Embedding)
+  - Agilent 1290 Infinity UHPLC + 6550 iFunnel Q-TOF MS
+  - eFlux, TRFBA, GX-FBA, scFBA
+  - getRASscore (INTEGRATE step 2)
+  - getNormalizedRAS (INTEGRATE step 3)
+  - rasIntegration (INTEGRATE step 4)
+  - rasTtest (INTEGRATE step 8)
+- id: sample_flux
+  goal: constrained model -> feasible flux distribution samples (optGpSampler)
+  edam_operation: operation_3927
+  skills:
+  - irreversible-model-conversion
+  - feasible-flux-distribution-sampling
+  - dimensionality-reduction-and-clustering-evaluation
+  tools:
+  - eFlux
+  - TRFBA
+  - scFBA
+  - GX-FBA
+  - optGpSampler
+  - COBRApy
+  inputs:
+  - type: sbml
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1371-journal-pcbi-1009337
+    dois:
+    - 10.1371/journal.pcbi.1009337
+  after:
+  - constrain
+  candidate_tools:
+  - STAR aligner (v.2.6.1d)
+  - HTSeq (v.0.6.1)
+  - YSI2950 bioanalyzer
+  - Agilent 1290 Infinity UHPLC system
+  - optGpSampler algorithm
+  - t-SNE (t-distributed Stochastic Neighbor Embedding)
+  - Mann-Whitney U test
+  - GLPK
+  - MATLAB (optional)
+  - t-SNE
+  - Flux Variability Analysis (FVA)
+  inputs_from:
+    constrain:
+    - sbml
+- id: interpret_flux
+  goal: sampled flux distributions -> normalized, compared flux-distribution report
+  edam_operation: operation_3436
+  skills:
+  - flux-distribution-segregation-visualization
+  - flux-distribution-interpretation-across-cell-lines
+  - flux-variability-analysis-interpretation
+  - flux-variability-analysis-for-scaling
+  - constraint-based-flux-sampling-and-analysis
+  tools:
+  - Flux Variability Analysis
+  - optGpSampler
+  - COBRApy
+  - t-SNE (scikit-learn or standalone)
+  - scipy.stats.spearmanr
+  inputs:
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1371-journal-pcbi-1009337
+    dois:
+    - 10.1371/journal.pcbi.1009337
+  after:
+  - sample_flux
+  candidate_tools:
+  - constraint-based stoichiometric metabolic models
+  - Flux Variability Analysis (FVA)
+  - randomSampling (INTEGRATE pipeline Step 6)
+  - getRASscore (INTEGRATE pipeline Step 2)
+  - concordanceAnalysis (INTEGRATE pipeline Step 10)
+  - createMetabolicDataset (INTEGRATE pipeline Step 9)
+  - COBRApy (optGpSampler)
+  - randomSampling.py (INTEGRATE pipeline)
+  - mannWhitneyUTest.py (INTEGRATE pipeline)
+  - eFlux
+  - TRFBA
+  - scFBA
+  - GX-FBA
+  - GLPK (GNU Linear Programming Kit)
+  - t-SNE
+  - YSI bioanalyzer (YSI2950)
+  inputs_from:
+    sample_flux:
+    - tsv
+- id: community_consensus
+  goal: draft per-organism/community-member GEMs -> gap-filled consensus community
+    model
+  edam_operation: operation_3695
+  skills:
+  - metabolic-model-merging-consensus-building
+  - community-metabolic-reconstruction-synthesis
+  - metabolic-model-consensus-integration
+  - community-metabolic-pathway-integration
+  - systems-biology-model-standardization
+  tools:
+  - COMMIT
+  inputs:
+  - type: sbml
+  outputs:
+  - type: sbml
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1371-journal-pcbi-1009906
+    - asb-paper-10-5281-zenodo-363932874
+    dois:
+    - 10.1371/journal.pcbi.1009906
+    - 10.5281/zenodo.363932874
+  after: []
+- id: report
+  goal: consolidate sampled/interpreted flux states + consensus community model into
+    a flux-state report
+  edam_operation: operation_3434
+  skills:
+  - constraint-based-model-sampling-and-flux-prediction
+  - mass-action-law-flux-prediction
+  - extracellular-flux-constraint-integration
+  tools:
+  - COBRApy (optGpSampler algorithm)
+  - Flux Variability Analysis (FVA)
+  - constraint-based stoichiometric metabolic models
+  - YSI2950 bioanalyzer
+  inputs:
+  - type: tsv
+  - type: sbml
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1371-journal-pcbi-1009337
+    dois:
+    - 10.1371/journal.pcbi.1009337
+  after:
+  - interpret_flux
+  - community_consensus
+  candidate_tools:
+  - MassHunter ProFinder
+  - COBRApy (implied by workflow)
+  - Flux Variability Analysis
+  - eFlux
+  - TRFBA
+  - scFBA
+  - GX-FBA
+  - optGpSampler
+  - COBRApy
+  - YSI bioanalyzer (YSI2950)
+  - Agilent 1290 Infinity UHPLC + 6550 iFunnel Q-TOF MS
+  - t-SNE
+  inputs_from:
+    interpret_flux:
+    - tsv
+    community_consensus:
+    - sbml
+verification:
+  final_outputs:
+  - path: flux_state_report.tsv
+    type: file
+provenance:
+  derived_from_workflows: []
+  bound_by: perspicacite-semantic
+  coverage_gaps: []

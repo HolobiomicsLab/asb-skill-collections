@@ -1,7 +1,7 @@
 # CLAUDE.md — ASB Metabolomics skills
 
 This repo publishes the **ASB Metabolomics Skill Collection**
-(`collections/metabolomics/v2/`): 5,865 evidence-grounded skills + 909 tools for
+(`collections/metabolomics/v2/`): 5,858 evidence-grounded skills + 909 tools for
 computational LC-MS/MS metabolomics.
 
 ## Install (Claude Code plugin)

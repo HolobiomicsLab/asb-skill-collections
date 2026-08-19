@@ -82,6 +82,8 @@ def _build_contributor_stats(
         collections = contrib.get("asb:collections", []) or []
         total = int(contrib.get("asb:total_reviews", 0))
         self_authored = int(contrib.get("asb:self_authored_reviews", 0))
+        # external = reviews of papers the contributor did NOT co-author (COI_POLICY).
+        external = int(contrib.get("asb:external_reviews", max(total - self_authored, 0)))
 
         # Self-authored percentage
         pct = (self_authored / total * 100) if total > 0 else 0.0
@@ -108,6 +110,7 @@ def _build_contributor_stats(
             "name": contrib.get("name", ""),
             "tier": tier,
             "total_reviews": total,
+            "external_reviews": external,
             "self_authored_percentage": round(pct, 4),
             "lead_curator_of": lead_curator_of,
             "curator_of": curator_of,
@@ -156,7 +159,9 @@ def _build_annual(
             "reviews_this_year": n,
             "collections": sorted(year_collections.get(orcid, set())),
         })
-    year_contributors.sort(key=lambda c: -c["reviews_this_year"])
+    year_contributors.sort(key=lambda c: (-c["reviews_this_year"], c["name"]))
+    for i, c in enumerate(year_contributors, 1):
+        c["rank"] = i
     return year_contributors
 
 
@@ -178,7 +183,9 @@ def _build_by_domain(
             "tier": contrib.get("asb:tier", "reviewer"),
             "total_reviews": int(contrib.get("asb:total_reviews", 0)),
         })
-    result.sort(key=lambda c: -c["total_reviews"])
+    result.sort(key=lambda c: (-c["total_reviews"], c["name"]))
+    for i, c in enumerate(result, 1):
+        c["rank"] = i
     return result
 
 
@@ -210,8 +217,11 @@ def regen_career_stats(repo_root: pathlib.Path) -> None:
     now_utc = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     current_year = datetime.now(timezone.utc).year
 
-    # 1. career.jsonld
+    # 1. career.jsonld — ranked by total reviews (public numeric rank)
     career_stats = _build_contributor_stats(contributors, reviews)
+    career_stats.sort(key=lambda c: (-c["total_reviews"], c["name"]))
+    for i, c in enumerate(career_stats, 1):
+        c["rank"] = i
     career_data: dict[str, Any] = {
         "@context": JSONLD_CONTEXT,
         "@type": "asb:CareerLeaderboard",

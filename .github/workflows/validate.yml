@@ -39,7 +39,8 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade pip
-          pip install pyyaml jsonschema requests pytest
+          # numpy backs scripts/skill_map.py; without it that suite silently skips.
+          pip install pyyaml jsonschema requests pytest numpy
           pip install linkml linkml-runtime || echo "WARNING: linkml install failed"
           pip install rocrate || echo "WARNING: rocrate install failed"
           # indicium-adapters provides the verify-claims console script (Plan 1c)

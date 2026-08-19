@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "asb": "https://w3id.org/holobiomicslab/asb-skill/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "generated_at": {
+      "@id": "asb:generatedAt",
+      "@type": "xsd:dateTime"
+    }
+  },
+  "@type": "asb:AnnualLeaderboard",
+  "@id": "https://w3id.org/holobiomicslab/asb-skill/leaderboard/annual-2026",
+  "name": "ASB Contributor Leaderboard 2026",
+  "year": 2026,
+  "generated_at": "2026-06-28T19:41:09Z",
+  "contributors": []
+}
