@@ -23,6 +23,7 @@ from pathlib import Path
 import yaml
 
 from scripts import layout
+from scripts.skill_index import split_frontmatter
 
 LINK_ONLY = "link-only"
 REPO_GROUNDED = "repo"
@@ -111,7 +112,7 @@ def run(collection: Path) -> dict:
     weak = link_only_dois(collection / "corpus.yaml")
     tiers, stamped = {}, 0
     for md in layout.iter_skill_md(collection):
-        fm = yaml.safe_load(re.match(r"^---\n(.*?)\n---\n", md.read_text(encoding="utf-8"), re.S).group(1)) or {}
+        fm = split_frontmatter(md.read_text(encoding="utf-8"))[0] or {}
         tier = tier_for(skill_dois(fm), weak, repo_url(fm))
         tiers[md.parent.name] = tier
         # Weak tiers are written; the default tier only ever clears a stale
@@ -120,7 +121,9 @@ def run(collection: Path) -> dict:
     index_path = collection / "skills_index.json"
     rows = json.loads(index_path.read_text(encoding="utf-8"))
     for row in rows:
-        row["grounding_tier"] = tiers.get(row.get("slug"), REPO_GROUNDED)
+        # A row with no labelled file on disk has no evidence behind it; the
+        # repo default would present that absence as the strongest grounding.
+        row["grounding_tier"] = tiers.get(row.get("slug"), UNGROUNDED)
     index_path.write_text(
         json.dumps(rows, indent=1, ensure_ascii=False) + "\n", encoding="utf-8"
     )
