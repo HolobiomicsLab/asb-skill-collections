@@ -41,6 +41,14 @@ For the actual skill selection, delegate to the `_router` skill, which performs 
 routing over the indexes. This meta-skill owns guidance and license governance;
 `_router` owns routing.
 
+## Step 5: report what did not work
+
+The collection hardens from use. When a skill turns out to be wrong or stale, when
+the search finds nothing usable, or when the leaves exist but nothing composes them,
+delegate to **`asb-contribute`**: it turns that friction into a redacted, dedupable
+report the user approves before anything is filed. Offer once per problem, and drop
+it if declined.
+
 ## License tiers
 
 `open` = commercial use OK; `noncommercial` = academic/noncommercial only;
