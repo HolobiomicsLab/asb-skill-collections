@@ -1,7 +1,8 @@
 """Propagate provenance_tier onto the committed artifacts.
 
-Backfills ``provenance_tier`` (DEFAULT = ``literature``) onto every skills_index
-entry and kb_bundle skill record that carries >=1 doi, and stamps
+Backfills ``provenance_tier`` onto every skills_index entry and kb_bundle skill
+record whose origin can be shown -- ``literature`` from a doi, ``repository``
+from a tool repository where there is no paper -- and stamps
 ``metadata.provenance_tier`` into each SKILL.md frontmatter. Field-only — no
 banner. Idempotent, indent / key-order preserving. Orthogonal to license_tier
 (see scripts/license_tier.py / scripts/propagate_license_tiers.py).
@@ -23,13 +24,42 @@ if __package__ in (None, ""):
 
 from asb_skill_collections import layout
 from scripts.propagate_license_tiers import detect_indent
-from scripts.provenance_tier import DEFAULT
+from scripts.provenance_tier import DEFAULT, REPOSITORY
 from scripts.stamp_skill_license import _split
 
 
-def propagate_indices(skills_index_path, kb_bundle_path) -> dict:
-    """Set ``provenance_tier=DEFAULT`` on every skills_index entry and kb_bundle
-    skill record that has >=1 doi. Returns ``{tier: count}`` over skills_index.
+def _origin_tier(dois, repo_url) -> str | None:
+    """Where this skill's content came from, or None when nothing shows it."""
+    if dois:
+        return DEFAULT
+    return REPOSITORY if str(repo_url or "").strip() else None
+
+
+def repo_urls(collection_dir) -> dict[str, str]:
+    """Each skill's own ``metadata.repo_url``, keyed by slug.
+
+    A skill grounded on a tool's repository rather than on a paper carries no
+    DOI, so the literature default cannot describe it -- but the skill knows
+    where its content came from.
+    """
+    out: dict[str, str] = {}
+    for md in layout.iter_skill_md(collection_dir):
+        try:
+            fm = yaml.safe_load(md.read_text(encoding="utf-8").split("---\n", 2)[1]) or {}
+        except (OSError, IndexError, yaml.YAMLError):
+            continue
+        url = (fm.get("metadata") or {}).get("repo_url")
+        if str(url or "").strip():
+            out[md.parent.name] = url
+    return out
+
+
+def propagate_indices(skills_index_path, kb_bundle_path, repos=None) -> dict:
+    """Set each skills_index entry's and kb_bundle record's ``provenance_tier``.
+
+    An entry with >=1 doi is ``literature``; one with no doi but a known
+    repository is ``repository``. An entry with neither is left unset, so the
+    gate reports it rather than the corpus claiming an origin it cannot show.
     Preserves JSON indent (``detect_indent``) and key order. Idempotent."""
     si_path, kb_path = pathlib.Path(skills_index_path), pathlib.Path(kb_bundle_path)
     si_raw = si_path.read_text(encoding="utf-8")
@@ -38,14 +68,17 @@ def propagate_indices(skills_index_path, kb_bundle_path) -> dict:
     kb = json.loads(kb_raw)
     si_indent = detect_indent(si_raw)
     kb_indent = detect_indent(kb_raw)
+    repos = repos or {}
     summary: dict[str, int] = {}
     for entry in si:
-        if entry.get("dois"):
-            entry["provenance_tier"] = DEFAULT
-            summary[DEFAULT] = summary.get(DEFAULT, 0) + 1
-    for rec in (kb.get("skills") or {}).values():
-        if rec.get("dois"):
-            rec["provenance_tier"] = DEFAULT
+        tier = _origin_tier(entry.get("dois"), repos.get(entry.get("slug")))
+        if tier:
+            entry["provenance_tier"] = tier
+            summary[tier] = summary.get(tier, 0) + 1
+    for slug, rec in (kb.get("skills") or {}).items():
+        tier = _origin_tier(rec.get("dois"), repos.get(slug))
+        if tier:
+            rec["provenance_tier"] = tier
     si_path.write_text(
         json.dumps(si, indent=si_indent, ensure_ascii=False), encoding="utf-8"
     )
@@ -121,7 +154,8 @@ def main(argv=None):
     )
     a = ap.parse_args(argv)
     prop = propagate_indices(
-        f"{a.collection}/skills_index.json", f"{a.collection}/kb_bundle.json"
+        f"{a.collection}/skills_index.json", f"{a.collection}/kb_bundle.json",
+        repo_urls(a.collection),
     )
     res = stamp_all(a.collection, f"{a.collection}/skills_index.json")
     print(json.dumps({"propagated": prop, **res}, indent=2))

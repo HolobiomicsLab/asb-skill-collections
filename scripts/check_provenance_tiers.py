@@ -19,7 +19,22 @@ if __package__ in (None, ""):
     _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
 
 
+from asb_skill_collections import layout
 from scripts.provenance_tier import validate_entry
+
+
+def _repo_urls(collection_dir) -> dict[str, str]:
+    """Each skill's declared ``metadata.repo_url``, keyed by slug."""
+    out: dict[str, str] = {}
+    for md in layout.iter_skill_md(collection_dir):
+        text = md.read_text(encoding="utf-8")
+        if not text.startswith("---\n"):
+            continue
+        fm = yaml.safe_load(text.split("---\n", 2)[1]) or {}
+        url = (fm.get("metadata") or {}).get("repo_url")
+        if str(url or "").strip():
+            out[md.parent.name] = url
+    return out
 
 
 def check_collection(collection_dir) -> list[str]:
@@ -27,22 +42,30 @@ def check_collection(collection_dir) -> list[str]:
     violations: list[str] = []
 
     si = json.loads((d / "skills_index.json").read_text(encoding="utf-8"))
+    # A `repository`-tier entry keeps its repo_url in the SKILL.md, not the
+    # index, so the invariant needs both sides.
+    repos = _repo_urls(d)
     # Build slug→index_tier map for cross-check against SKILL.md frontmatter.
     slug_to_index_tier: dict[str, str] = {}
     for e in si:
         slug = e.get("slug")
         tier = e.get("provenance_tier")
-        for msg in validate_entry(
+        problems = validate_entry(
             tier,
             dois=e.get("dois"),
             synthesized_from=e.get("synthesized_from"),
             related_skills=e.get("related_skills"),
-        ):
+            repo_url=repos.get(slug),
+        )
+        for msg in problems:
             violations.append(f"skills_index {slug!r}: {msg}")
-        if not validate_entry(tier, dois=e.get("dois")):
+        if not problems:
             slug_to_index_tier[slug] = tier
 
-    for md in (d / "skills").glob("*/SKILL.md"):
+    # A router-shaped collection keeps its corpus in `leaves/`; globbing a
+    # hardcoded `skills/` there cross-checks the two entry points and reports a
+    # clean pass over the other 5,857 skills.
+    for md in layout.iter_skill_md(d):
         text = md.read_text(encoding="utf-8")
         if not text.startswith("---\n"):
             continue
