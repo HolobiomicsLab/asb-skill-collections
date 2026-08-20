@@ -1,6 +1,6 @@
 ---
 name: asb-contribute
-description: "Use when an ASB skill was wrong, stale, missing, or wasteful in practice — a skill's steps did not work, no skill covered the task, the leaves existed but nothing composed them, or the underlying tool has changed. Turns that friction into a redacted, dedupable report the user approves before anything is filed, and closes the credit loop for skills the user relied on."
+description: "Use when an ASB skill proved wrong, stale, missing or wasteful in practice — its steps failed, no skill covered the task, the leaves existed but nothing composed them, or the tool has changed. Turns that friction into a redacted, dedupable report the user approves before anything is filed."
 license: CC-BY-4.0
 metadata:
   role: meta
