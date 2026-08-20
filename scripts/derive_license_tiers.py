@@ -206,11 +206,14 @@ def apply_to_corpus(corpus_path, token, cache=None, _detect=detect_license) -> d
             summary[t] = summary.get(t, 0) + 1
             continue
         tier, lic, src = tier_for_repo(p.get("repo_url"), token=token, cache=cache, _detect=_detect)
-        # A lookup that found nothing must not erase one that did. Fifteen
-        # `readme-llm` licences were wiped in a single re-run before this guard:
-        # the API and the LICENSE text both came back empty, and the empty
-        # answer was written over a real one.
-        if lic is None and p.get("license_detection") not in UNESTABLISHED_DETECTIONS:
+        # A lookup that found nothing must not erase one that did. The licence
+        # *value* is what matters, not the detection label beside it: in
+        # metabolomics/v1 the recorded licences carry `license_detection: null`
+        # because they came from Unpaywall rather than from a repository, and a
+        # guard keyed only on the label wiped nineteen of them.
+        recorded = (p.get("access") or {}).get("license")
+        if lic is None and (recorded
+                            or p.get("license_detection") not in UNESTABLISHED_DETECTIONS):
             kept = p.get("license_tier", "restricted")
             summary[kept] = summary.get(kept, 0) + 1
             continue

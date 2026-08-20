@@ -356,3 +356,39 @@ def test_an_r_version_floor_is_kept_not_discarded(field, expected):
 def test_a_version_floor_on_a_non_versioned_family_is_ignored():
     """Only the GPL families carry a meaningful floor; MIT has no versions."""
     assert d.spdx_from_r_description("License: MIT (>= 2)\n") == "MIT"
+
+
+def test_a_failed_lookup_never_erases_a_recorded_licence_even_with_no_detection(tmp_path):
+    """metabolomics/v1 records Unpaywall-verified paper licences with
+    `license_detection: null`, because no repository was ever consulted. A guard
+    keyed on the detection label rather than on the value wiped nineteen of them
+    in one run."""
+    c = tmp_path / "corpus.yaml"
+    c.write_text(textwrap.dedent('''
+        papers:
+        - name: from-unpaywall
+          doi: 10.1/a
+          repo_url: https://github.com/o/r
+          access: {license: cc-by, type: gold-oa, verified_via: unpaywall_oa_locations}
+          license_tier: null
+          license_detection: null
+    ''').strip() + "\n", encoding="utf-8")
+    d.apply_to_corpus(c, token=None, _detect=lambda *a, **k: (None, "none"))
+    entry = yaml.safe_load(c.read_text())["papers"][0]
+    assert entry["access"]["license"] == "cc-by"
+
+
+def test_an_entry_with_neither_a_licence_nor_a_detection_is_still_derived(tmp_path):
+    """The other side: an entry that knows nothing has nothing to protect."""
+    c = tmp_path / "corpus.yaml"
+    c.write_text(textwrap.dedent('''
+        papers:
+        - name: blank
+          doi: 10.1/b
+          repo_url: https://github.com/o/r
+          access: {license: null}
+          license_tier: null
+          license_detection: null
+    ''').strip() + "\n", encoding="utf-8")
+    d.apply_to_corpus(c, token=None, _detect=lambda *a, **k: ("MIT", "github-api"))
+    assert yaml.safe_load(c.read_text())["papers"][0]["access"]["license"] == "MIT"
