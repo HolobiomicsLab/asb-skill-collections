@@ -18,8 +18,11 @@ def test_skill_tier_most_restrictive():
     tiers = {"10.1/a": {"tier": "open"}, "10.1/b": {"tier": "noncommercial"}}
     assert p.skill_tier(["10.1/a", "10.1/b"], tiers) == "noncommercial"
     assert p.skill_tier(["10.1/a"], tiers) == "open"
-    assert p.skill_tier(["10.1/unknown"], tiers) == "open"   # unknown -> open
-    assert p.skill_tier([], tiers) == "open"
+    # Re-blessed: both of these asserted `open` until 2026-08-20. A DOI the corpus
+    # does not know, and no DOI at all, are the same state -- nothing established
+    # the tier -- and `open` is the most permissive answer available to guess.
+    assert p.skill_tier(["10.1/unknown"], tiers) == p.UNESTABLISHED_TIER
+    assert p.skill_tier([], tiers) == p.UNESTABLISHED_TIER
 
 def test_propagate_indices(tmp_path):
     si = tmp_path / "skills_index.json"
@@ -63,3 +66,53 @@ def test_tool_license_block_consistency():
     assert b["tier"] == "noncommercial"
     assert b["requires_ack"] == lt.ack_required("noncommercial") is True
     assert b["ref"] == "CC-BY-NC-4.0" and b["url"] == "https://github.com/x/y"
+
+
+# --- an unestablished tier must never be reported as the most permissive one --
+
+def test_a_skill_with_no_doi_does_not_become_open():
+    """`open` was the old default. asb-metabolomics tells agents to default
+    discovery to open-tier skills, so guessing open advertises an unchecked
+    tool as free to use."""
+    assert p.skill_tier([], {}) == p.UNESTABLISHED_TIER
+    assert p.skill_tier(None, {}) != "open"
+
+
+def test_a_skill_with_no_doi_uses_its_own_declared_tier():
+    assert p.skill_tier([], {}, declared="noncommercial") == "noncommercial"
+    assert p.skill_tier([], {}, declared="open") == "open"
+
+
+def test_a_nonsense_declared_tier_falls_back_to_the_safe_answer():
+    assert p.skill_tier([], {}, declared="probably-fine") == p.UNESTABLISHED_TIER
+
+
+def test_a_doi_derived_tier_still_wins_over_the_declaration():
+    """The other side: the corpus is authoritative where it has an answer."""
+    tiers = {"10.1/a": {"tier": "restricted"}}
+    assert p.skill_tier(["10.1/a"], tiers, declared="open") == "restricted"
+
+
+def test_the_most_restrictive_doi_still_governs():
+    tiers = {"10.1/a": {"tier": "open"}, "10.2/b": {"tier": "noncommercial"}}
+    assert p.skill_tier(["10.1/a", "10.2/b"], tiers) == "noncommercial"
+
+
+def test_declared_tiers_reads_a_router_shaped_collection(tmp_path):
+    col = tmp_path / "c"
+    (col / "leaves" / "nc-tool").mkdir(parents=True)
+    (col / "leaves" / "nc-tool" / "SKILL.md").write_text(
+        "---\nname: nc-tool\nmetadata:\n  tool_license:\n    tier: noncommercial\n---\nbody\n",
+        encoding="utf-8")
+    (col / "leaves" / "plain").mkdir()
+    (col / "leaves" / "plain" / "SKILL.md").write_text(
+        "---\nname: plain\nmetadata: {}\n---\nbody\n", encoding="utf-8")
+    found = p.declared_tiers(col)
+    assert found == {"nc-tool": "noncommercial"}, "only a declared tier counts"
+
+
+def test_declared_tiers_survives_a_malformed_skill(tmp_path):
+    col = tmp_path / "c"
+    (col / "leaves" / "broken").mkdir(parents=True)
+    (col / "leaves" / "broken" / "SKILL.md").write_text("no fence here\n", encoding="utf-8")
+    assert p.declared_tiers(col) == {}
