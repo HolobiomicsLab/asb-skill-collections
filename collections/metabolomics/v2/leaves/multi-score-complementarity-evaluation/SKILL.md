@@ -19,7 +19,7 @@ metadata:
   - Paired Omics Data Platform
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -57,7 +57,6 @@ attribution:
 
 # multi-score-complementarity-evaluation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate whether combining independent scoring functions for genomic-metabolomic links produces enrichment for validated links beyond either individual scorer alone, using joint percentile filtering and statistical significance testing. This skill determines whether two complementary ranking methods (e.g. strain correlation and IOKR) should be integrated into a single composite score.

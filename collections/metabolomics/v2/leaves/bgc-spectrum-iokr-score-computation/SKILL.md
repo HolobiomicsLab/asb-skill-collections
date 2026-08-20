@@ -20,7 +20,7 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -59,7 +59,6 @@ attribution:
 
 # BGC-spectrum IOKR score computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute IOKR (Integrative Omic-based Knowledge Rank) scores for individual BGC-spectrum pairs by comparing molecular fingerprints derived from BGC homology to MIBiG with MS/MS spectral features. This score measures feature-based sequence-to-metabolite predictive linkage independent of compound class annotation.

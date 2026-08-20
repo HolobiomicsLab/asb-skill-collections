@@ -18,7 +18,7 @@ metadata:
   - rMSIproc
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
@@ -50,7 +50,6 @@ attribution:
 
 # isobaric-ion-misclassification-documentation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Document and visualize potential misclassification risks arising from overlapping or isobaric peaks in matrix-related ion annotation workflows. This skill generates transparent, per-annotation reports that justify classification decisions by flagging peak overlap status and spatial distribution patterns.

@@ -11,7 +11,7 @@ metadata:
   - http://edamontology.org/topic_3373
   tools:
   - BitterPredict.m
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
@@ -41,7 +41,6 @@ attribution:
 
 # file-format-handling-csv-excel
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and parse CSV or EXCEL files containing molecular descriptors into a structured table format suitable for classifier input. This skill bridges raw descriptor data files and machine-learning prediction workflows by ensuring proper file I/O and data integrity.

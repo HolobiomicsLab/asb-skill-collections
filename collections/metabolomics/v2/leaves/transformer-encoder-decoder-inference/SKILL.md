@@ -19,7 +19,7 @@ metadata:
   - limelight-import-casanovo
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo
@@ -58,7 +58,6 @@ attribution:
 
 # transformer-encoder-decoder-inference
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a pretrained transformer encoder–decoder model with beam search decoding to convert preprocessed MS/MS spectral data into candidate peptide sequences ranked by confidence score. This skill encapsulates the core inference step of deep learning–based de novo peptide sequencing, where spectral features are translated into amino acid sequences through learned representations.

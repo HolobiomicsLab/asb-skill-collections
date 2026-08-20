@@ -19,7 +19,7 @@ metadata:
   - BLAST
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -57,7 +57,6 @@ attribution:
 
 # cross-database-structural-homology-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match biosynthetic gene clusters (BGCs) to reference database entries (MIBiG) using cumulative BLAST homology scoring to identify those with known or predicted metabolite structures. This filtering step enables downstream molecular fingerprint extraction and structure-guided metabolomic-genomic linking.

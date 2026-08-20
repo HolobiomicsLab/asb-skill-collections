@@ -12,7 +12,7 @@ metadata:
   tools:
   - tensorflow serving
   - TensorFlow Serving
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT
@@ -41,7 +41,6 @@ attribution:
 
 # api-response-parsing-and-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and validate JSON responses from the DeepSAT SMART 3 classification API to extract predictions and confidence scores. This skill ensures that API responses conform to the expected schema and that prediction results are reliably captured for downstream analysis or logging.

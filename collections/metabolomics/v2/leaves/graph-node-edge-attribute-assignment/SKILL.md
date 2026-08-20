@@ -20,7 +20,7 @@ metadata:
   - MamsiStructSearch
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -55,7 +55,6 @@ attribution:
 
 # graph-node-edge-attribute-assignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a NetworkX graph representation of mass spectrometry feature relationships by assigning nodes for individual features and edges for structural links (isotopologue, adduct, cross-assay, correlation), with typed weights and metadata attributes. This enables interactive visualization and systematic network analysis of metabolomic structural associations.

@@ -3,8 +3,8 @@
 Instructions for coding/research agents (Claude Code, OpenAI Codex, GitHub
 Copilot, or any SKILL-aware agent) to **install and use** the ASB Metabolomics
 Skill Collection. The public release is the **metabolomics** collection at
-`collections/metabolomics/v2/` (5,865 evidence-grounded skills over 909
-software tools for computational LC-MS/MS; tag `metabolomics-v0.1.0`).
+`collections/metabolomics/v2/` (5,859 evidence-grounded skills over 909
+software tools for computational LC-MS/MS; tag `metabolomics-v0.2.0`).
 
 > Full human guide: [`collections/metabolomics/v2/USAGE.md`](collections/metabolomics/v2/USAGE.md).
 
@@ -59,7 +59,7 @@ no build step.
 For end users without a CLI: upload `skills_index.json` + `tools_index.json` and
 your chosen `leaves/<slug>/SKILL.md` files as the assistant's **knowledge**
 (Claude *Projects*, ChatGPT *Custom GPT / Project*, Mistral *Agent / Library*),
-then paste a short routing instruction. Don't upload all 5,865 skills — upload
+then paste a short routing instruction. Don't upload all 5,859 skills — upload
 the indexes plus the few skills you need. Full steps:
 [`collections/metabolomics/v2/USAGE.md`](collections/metabolomics/v2/USAGE.md) →
 "Chat assistants via the web UI".

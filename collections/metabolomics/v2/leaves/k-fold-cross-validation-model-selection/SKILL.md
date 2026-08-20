@@ -20,7 +20,7 @@ metadata:
   - MamsiPls
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -58,7 +58,6 @@ attribution:
 
 # k-fold-cross-validation-model-selection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use k-fold cross-validation to estimate the optimal number of latent variables in a multi-block PLS model by iteratively training on k−1 folds and evaluating on the held-out fold, selecting the latent variable count where model performance plateaus. This prevents overfitting and provides a data-driven criterion for model complexity in multi-assay metabolomics integration.

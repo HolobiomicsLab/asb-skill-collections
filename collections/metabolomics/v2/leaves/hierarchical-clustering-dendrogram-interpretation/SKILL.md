@@ -24,7 +24,7 @@ metadata:
   - scipy.cluster.hierarchy (linkage, dendrogram, fcluster)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -61,7 +61,6 @@ attribution:
 
 # Hierarchical-Clustering Dendrogram Interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare and evaluate alternative dendrogram flattening strategies (constant-threshold versus silhouette-score optimization) to determine structural cluster assignments for LC-MS features, assessing agreement between methods to validate cluster stability.

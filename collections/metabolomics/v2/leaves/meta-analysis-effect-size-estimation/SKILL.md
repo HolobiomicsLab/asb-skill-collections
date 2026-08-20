@@ -14,7 +14,7 @@ metadata:
   - R
   - amanida
   - webchem
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
@@ -49,7 +49,6 @@ attribution:
 
 # meta-analysis-effect-size-estimation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Combines p-values and fold-changes across multiple metabolomics studies using study-size-weighted statistical methods to produce unified effect size estimates and significance values. This skill enables cross-study comparison in metabolomics where raw data and standard deviations are unavailable.

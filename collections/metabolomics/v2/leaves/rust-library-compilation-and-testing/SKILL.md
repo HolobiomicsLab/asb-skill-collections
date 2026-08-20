@@ -16,7 +16,7 @@ metadata:
   - mzPeak Rust library
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -45,7 +45,6 @@ attribution:
 
 # Rust Library Compilation and Testing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compile a Rust library from source using Cargo and validate its round-trip read/write functionality by loading, serializing, and comparing data structures. This skill is essential for verifying that a Rust-based file format implementation (e.g., mzPeak reader/writer) correctly preserves data integrity across serialization cycles.

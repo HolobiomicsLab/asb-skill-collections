@@ -20,7 +20,7 @@ metadata:
   - mzpeakts
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -50,7 +50,6 @@ attribution:
 
 # mass-spectrometry-data-structure-decoding
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Decode mass spectrometry spectral and chromatographic data from columnar Apache Arrow/Parquet storage formats (mzPeak) into language-native arrays and metadata structures. This skill extracts m/z values, intensities, spectrum-level metadata, and instrument parameters from binary-packed mzPeak archives for downstream analysis.

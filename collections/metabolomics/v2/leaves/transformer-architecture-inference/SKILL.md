@@ -19,7 +19,7 @@ metadata:
   - Chemprop-IR
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/ange.202517611
   title: MMST
@@ -54,7 +54,6 @@ attribution:
 
 # transformer-architecture-inference
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute a pre-trained transformer model on multi-modal spectroscopic input data (NMR, HSQC, COSY, IR) to generate automated molecular structure predictions. This skill operationalizes the MultiModalSpectralTransformer architecture for inference on new or reference spectral datasets.

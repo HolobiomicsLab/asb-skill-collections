@@ -22,7 +22,7 @@ metadata:
   - pandas / numpy
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -59,7 +59,6 @@ attribution:
 
 # mass-tolerance-calibration-ppm-units
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calibrate and apply mass-to-charge ratio (m/z) tolerance thresholds expressed in parts-per-million (ppm) units to match features across LC-MS assays during structural clustering and adduct annotation. This skill ensures that hypothetical neutral masses calculated from common electrospray ionization (ESI) adducts are correctly paired with observed features within instrument-specific accuracy bounds.

@@ -16,7 +16,7 @@ metadata:
   - RDKit
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/ange.202517611
   title: MMST
@@ -54,7 +54,6 @@ attribution:
 
 # molecular-structure-prediction-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate predicted molecular structures from transformer-based spectroscopic models by comparing model outputs against reference structures using structural similarity metrics and exact-match validation. This skill ensures that automated structure elucidation from integrated spectroscopic modalities (NMR, HSQC, COSY, IR) produces chemically valid and accurate predictions.

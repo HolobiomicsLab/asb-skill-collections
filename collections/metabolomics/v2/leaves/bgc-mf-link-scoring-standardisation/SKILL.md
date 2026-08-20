@@ -17,7 +17,7 @@ metadata:
   - NPLinker
   - GNPS
   - MIBiG
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -55,7 +55,6 @@ attribution:
 
 # BGC–MF Link Scoring Standardisation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Standardise raw strain correlation and IOKR scores for genomic-metabolomic (BGC–MF) links to enable fair comparison across heterogeneous scoring functions and improve enrichment of validated links. This skill transforms incomparable raw scores into z-score equivalents using hypergeometric null distributions, making it possible to combine them into a single ranking function.

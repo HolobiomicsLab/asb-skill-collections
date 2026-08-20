@@ -1,0 +1,227 @@
+schema_version: 0.3.0
+workflow_id: targeted_lcms_quantification
+kind: composite-workflow
+techniques:
+- LC-MS
+steps:
+- id: integrate
+  goal: raw targeted LC-MS -> integrated peak areas for target transitions
+  edam_operation: operation_3215
+  skills:
+  - targeted-peak-detection-and-integration
+  - chromatographic-peak-detection-and-integration
+  - targeted-peak-detection-screening-and-validation
+  - targeted-peak-extraction-ms1
+  - m-z-and-retention-time-window-validation
+  tools:
+  - TARDIS
+  - Spectra
+  - R
+  - MSConvert (ProteoWizard)
+  - xcms
+  - MsExperiment
+  inputs:
+  - type: mzML
+  outputs:
+  - type: feature-table
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-5c00567
+    - asb-paper-10-1021-jasms-4c00146
+    dois:
+    - 10.1021/acs.analchem.5c00567
+    - 10.1021/jasms.4c00146
+  after: []
+  candidate_tools:
+  - knitr
+  - kableExtra
+  - ProteoWizard MSConvert
+  - IonToolPack
+  - PeakQuant
+  - PeakQC
+  - Comparador
+- id: calibrate
+  goal: calibrant standards -> calibration curves with internal-standard normalization
+  edam_operation: operation_3435
+  skills:
+  - calibration-curve-fitting-metabolomics
+  - calibration-curve-validation
+  - linear-regression-concentration-calibration
+  - linear-regression-model-fitting
+  tools:
+  - R
+  - mzQuality
+  - SummarizedExperiment
+  - mzQualityDashboard
+  - R (lm, weighted.lm)
+  inputs:
+  - type: feature-table
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1016-j-aca-2025-344571
+    - asb-paper-10-1021-acs-analchem-2c05810
+    - asb-paper-10-1021-acs-jproteome-0c00866
+    - asb-paper-10-1021-jasms-5c00073
+    - asb-paper-10-1101-2020-10-30-362533
+    - asb-paper-10-1515-jib-2025-0047
+    dois:
+    - 10.1016/j.aca.2025.344571
+    - 10.1021/acs.analchem.2c05810
+    - 10.1021/acs.jproteome.0c00866
+    - 10.1021/jasms.5c00073
+    - 10.1101/2020.10.30.362533
+    - 10.1515/jib-2025-0047
+  after:
+  - integrate
+  candidate_tools:
+  - Shiny
+  - QuantyFey
+  - GetFeatistics
+  - lme4
+  - AER
+  - R base
+  - Python 3
+  - networkx
+  - mass2chem
+  - khipu
+  - RawFileReader
+  - rawrr
+  - R base stats package (lm function)
+  inputs_from:
+    integrate:
+    - feature-table
+- id: quantify
+  goal: apply calibration -> absolute / relative concentrations per sample
+  edam_operation: operation_3799
+  skills:
+  - concentration-prediction-from-calibration-model
+  - linear-regression-absolute-quantification
+  - concentration-prediction-from-calibration-curves
+  tools:
+  - R
+  - mzQuality
+  - SummarizedExperiment
+  - mzQualityDashboard
+  inputs:
+  - type: feature-table
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-jasms-5c00073
+    - asb-paper-10-1515-jib-2025-0047
+    dois:
+    - 10.1021/jasms.5c00073
+    - 10.1515/jib-2025-0047
+  after:
+  - integrate
+  - calibrate
+  candidate_tools:
+  - GetFeatistics
+  - lme4
+  - AER
+  inputs_from:
+    integrate:
+    - feature-table
+    calibrate:
+    - tsv
+- id: qc
+  goal: (optional) batch QC — response drift, QC-sample RSD, outlier flagging
+  edam_operation: operation_3435
+  skills:
+  - qc-sample-variability-assessment
+  - qc-sample-reliability-evaluation
+  - qc-sample-batch-drift-correction
+  - batch-effect-assessment-via-quality-metrics
+  - signal-trend-assessment-across-injections
+  tools:
+  - R
+  - mzQuality
+  - SummarizedExperiment
+  - mzQualityDashboard
+  inputs:
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-3c03660
+    - asb-paper-10-1021-acs-jproteome-1c00392
+    - asb-paper-10-1021-jasms-5c00073
+    - asb-paper-10-1093-bioinformatics-btr597
+    - asb-paper-10-3390-metabo10040135
+    dois:
+    - 10.1021/acs.analchem.3c03660
+    - 10.1021/acs.jproteome.1c00392
+    - 10.1021/jasms.5c00073
+    - 10.1093/bioinformatics/btr597
+    - 10.3390/metabo10040135
+  after:
+  - quantify
+  candidate_tools:
+  - notame
+  - Biobase
+  - MetCorR
+  - OUKS
+  - QComics
+  - Sciex Multiquant
+  inputs_from:
+    quantify:
+    - tsv
+  optional: true
+- id: report
+  goal: consolidate concentrations + QC into a reportable quantification table
+  edam_operation: operation_3434
+  skills:
+  - quality-control-report-generation
+  - quality-control-metric-threshold-configuration
+  - quality-control-metric-computation
+  - qc-summary-table-extraction
+  - compound-metric-tabulation
+  tools:
+  - R
+  - mzQuality
+  - SummarizedExperiment
+  - mzQualityDashboard
+  inputs:
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-2c04632
+    - asb-paper-10-1021-acs-jproteome-1c00392
+    - asb-paper-10-1021-jasms-5c00073
+    - asb-paper-10-1128-mra-00997-24
+    dois:
+    - 10.1021/acs.analchem.2c04632
+    - 10.1021/acs.jproteome.1c00392
+    - 10.1021/jasms.5c00073
+    - 10.1128/mra.00997-24
+  after:
+  - quantify
+  - qc
+  candidate_tools:
+  - R ≥4.1.2
+  - OUKS step 4 (Correction.R)
+  - OUKS step 6 (Filtering.R)
+  - ggplot
+  - data.table
+  - mpactr
+  - ggplot2
+  inputs_from:
+    quantify:
+    - tsv
+verification:
+  final_outputs:
+  - path: quantification_report.tsv
+    type: file
+provenance:
+  derived_from_workflows:
+  - coll_fbmn_stats_cq
+  - coll_peakqc_cq
+  bound_by: perspicacite-semantic
+  coverage_gaps: []

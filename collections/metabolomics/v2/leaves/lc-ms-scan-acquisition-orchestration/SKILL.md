@@ -21,7 +21,7 @@ metadata:
   - OpenMS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -53,7 +53,6 @@ attribution:
 
 # LC-MS Scan Acquisition Orchestration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Orchestrate a complete tandem mass spectrometry (MS/MS) simulation control loop by coupling a virtual mass spectrometer, chemical library, and fragmentation strategy controller within an Environment instance. This skill enables rapid prototyping and evaluation of data-dependent acquisition (DDA) strategies before testing on real LC-MS/MS hardware.

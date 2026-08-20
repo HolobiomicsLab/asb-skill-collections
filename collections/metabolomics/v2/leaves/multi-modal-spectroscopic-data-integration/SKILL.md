@@ -17,7 +17,7 @@ metadata:
   - RDKit
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/ange.202517611
   title: MMST
@@ -49,7 +49,6 @@ attribution:
 
 # multi-modal-spectroscopic-data-integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate heterogeneous spectroscopic modalities (NMR, HSQC, COSY, IR) into a unified transformer-based input representation for automated molecular structure prediction. This skill bridges disparate spectral formats and measurement domains into a common learned feature space.

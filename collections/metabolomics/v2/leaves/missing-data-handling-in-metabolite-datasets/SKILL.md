@@ -12,7 +12,7 @@ metadata:
   tools:
   - R
   - amanida
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
@@ -47,7 +47,6 @@ attribution:
 
 # missing-data-handling-in-metabolite-datasets
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A strategy for handling missing values in metabolomics datasets during import and meta-analysis preparation. Missing data is ignored during the amanida_read import step, allowing incomplete compound records to be retained without imputation, which is appropriate when metabolomics studies report sparse or incomplete effect size information across multiple studies.

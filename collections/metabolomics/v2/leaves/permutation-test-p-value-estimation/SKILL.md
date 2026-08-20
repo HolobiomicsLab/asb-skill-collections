@@ -21,7 +21,7 @@ metadata:
   - joblib
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -59,7 +59,6 @@ attribution:
 
 # permutation-test-p-value-estimation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Empirical permutation testing on shuffled response labels to generate null distributions and compute feature-level p-values for multi-block variable importance scores in discriminant LC-MS metabolomics models. This approach corrects for multiple testing and identifies statistically significant features after feature selection.

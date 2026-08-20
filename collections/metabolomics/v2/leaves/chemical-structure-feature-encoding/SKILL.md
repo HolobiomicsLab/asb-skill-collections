@@ -11,7 +11,7 @@ metadata:
   - http://edamontology.org/topic_3372
   tools:
   - BitterPredict
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
@@ -41,7 +41,6 @@ attribution:
 
 # chemical-structure-feature-encoding
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encoding molecular structures as quantitative chemical descriptor vectors suitable for machine learning classifiers. This skill transforms raw chemical structures into tabular feature representations (CSV/Excel) that capture structural properties required for predictive modeling of molecular properties like bitterness.

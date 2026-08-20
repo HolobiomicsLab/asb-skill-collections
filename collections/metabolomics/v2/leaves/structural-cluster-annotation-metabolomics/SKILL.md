@@ -23,7 +23,7 @@ metadata:
   - pyvis
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -59,7 +59,6 @@ attribution:
 
 # Reconstruct MAMSI structural feature clustering of significant LC-MS features by m/z and RT
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Group statistically significant LC-MS features into structural clusters by systematically detecting isotopologue and adduct signatures across retention-time windows, then merge overlapping clusters and annotate cross-assay links. This enables metabolite-level interpretation of untargeted metabolomics by linking ionization variants and mass isotopologues to putative neutral masses.

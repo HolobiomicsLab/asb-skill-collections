@@ -18,7 +18,7 @@ metadata:
   - MIBiG
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -56,7 +56,6 @@ attribution:
 
 # IOKR fingerprint-space ranking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A kernel regression method that ranks candidate BGC-spectrum links by projecting MS2 spectra into molecular fingerprint space and assigning IOKR scores without direct dependence on natural product compound class. This provides a complementary scoring signal to strain correlation for prioritizing validated genomic–metabolomic associations.

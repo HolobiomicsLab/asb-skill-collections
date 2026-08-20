@@ -17,7 +17,7 @@ metadata:
   - kNN-TN (Truncation k-nearest neighbors)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp
@@ -50,7 +50,7 @@ attribution:
 
 # Detection-Limit Threshold Definition
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Define and parameterize detection/quantification limits (LOD/LOQ) as the upper bound for left-censored missing values in metabolomics data, enabling proper constraint specification for imputation algorithms. This step operationalizes the biological and instrumental detection threshold as a computational boundary for missing-value simulation and bounds-constrained imputation.

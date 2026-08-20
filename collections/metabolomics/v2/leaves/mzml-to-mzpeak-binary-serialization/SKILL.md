@@ -17,7 +17,7 @@ metadata:
   - Apache Arrow (R)
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -45,7 +45,6 @@ attribution:
 
 # mzml-to-mzpeak-binary-serialization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert mass spectrometry data from mzML format into the mzPeak binary Parquet-based archive format using the Rust command-line converter tool. This skill enables transformation of vendor-neutral XML-based spectra into a scalable, interoperable columnar storage format optimized for random access and compression.

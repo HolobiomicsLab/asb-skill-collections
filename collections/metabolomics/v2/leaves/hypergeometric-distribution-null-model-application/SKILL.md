@@ -16,7 +16,7 @@ metadata:
   - MIBiG
   - GNPS
   - NPLinker
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -57,7 +57,6 @@ attribution:
 
 # hypergeometric-distribution-null-model-application
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a hypergeometric null model to compute expected value and variance of strain overlap between Gene Cluster Families (GCFs) and Molecular Features (MFs), enabling standardization of raw correlation scores to zero mean and unit variance for cross-link comparability. This skill transforms non-comparable raw scores into statistically normalized scores that reliably distinguish validated genomic–metabolomic links from false positives.

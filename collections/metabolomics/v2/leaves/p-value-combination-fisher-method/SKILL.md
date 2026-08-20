@@ -14,7 +14,7 @@ metadata:
   - R
   - amanida
   - webchem
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
@@ -49,7 +49,6 @@ attribution:
 
 # p-value-combination-fisher-method
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Combines statistical significance (p-values) from multiple metabolomics studies into a single meta-analytic p-value using a weighted variant of Fisher's method, where weights are gamma-distributed and proportional to study sample size. This enables aggregation of significance across studies without requiring raw data or standard deviations.

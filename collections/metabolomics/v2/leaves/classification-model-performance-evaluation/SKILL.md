@@ -19,7 +19,7 @@ metadata:
   - MamsiPls
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -57,7 +57,6 @@ attribution:
 
 # classification-model-performance-evaluation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate a trained multi-block PLS discriminant classifier on an independent test set by computing accuracy, recall, specificity, F1-score, and area under the receiver operating characteristic curve (AUC). This skill quantifies generalization performance and identifies which evaluation metric best represents the model's discriminative capacity for the biological or clinical endpoint.

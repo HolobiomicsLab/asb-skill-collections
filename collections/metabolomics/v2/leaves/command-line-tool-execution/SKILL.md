@@ -27,7 +27,7 @@ metadata:
   - SECIMTools suite
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -83,7 +83,6 @@ attribution:
 
 # command-line-tool-execution
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute a bioinformatics command-line tool with specified parameters on input data files to produce analysis output. This skill involves installing the tool, configuring runtime parameters, invoking the command with appropriate file paths and tolerances, and verifying successful execution.

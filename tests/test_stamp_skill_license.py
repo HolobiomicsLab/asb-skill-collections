@@ -1,11 +1,13 @@
 import pathlib, sys, yaml, json
+
+import pytest
 sys.path.insert(0, str(pathlib.Path(__file__).parent.parent))
 from scripts import stamp_skill_license as S
 
 MARK = "<!-- asb-license-banner -->"
 
-def _skill(tmp, slug, body="# t\n\nuse it.\n", meta=None):
-    d = tmp/"skills"/slug; d.mkdir(parents=True)
+def _skill(tmp, slug, body="# t\n\nuse it.\n", meta=None, corpus_dir="skills"):
+    d = tmp/corpus_dir/slug; d.mkdir(parents=True)
     fm = {"name": slug, "license": "CC-BY-4.0", "metadata": (meta or {})}
     (d/"SKILL.md").write_text("---\n"+yaml.safe_dump(fm, sort_keys=False)+"---\n"+body)
     return d/"SKILL.md"
@@ -54,9 +56,25 @@ def test_stamp_handles_null_metadata(tmp_path):
     fm = yaml.safe_load((d/"SKILL.md").read_text().split("---\n",2)[1])
     assert fm["metadata"]["license_tier"] == "open"
 
-def test_stamp_all(tmp_path):
-    _skill(tmp_path, "a"); _skill(tmp_path, "b")
+@pytest.mark.parametrize("corpus_dir", ["skills", "leaves"])
+def test_stamp_all_finds_the_corpus_in_either_layout(tmp_path, corpus_dir):
+    """A router-shaped collection keeps its leaves in `leaves/`.
+
+    Sweeping a hardcoded `skills/` there stamped nothing and still reported a
+    clean run -- 5,859 skills silently unstamped.
+    """
+    _skill(tmp_path, "a", corpus_dir=corpus_dir); _skill(tmp_path, "b", corpus_dir=corpus_dir)
     (tmp_path/"skills_index.json").write_text(json.dumps([
         {"slug":"a","license_tier":"open"},{"slug":"b","license_tier":"restricted"}]))
-    res = S.stamp_all(str(tmp_path/"skills"), str(tmp_path/"skills_index.json"))
+    res = S.stamp_all(str(tmp_path), str(tmp_path/"skills_index.json"))
     assert res["tiers"] == {"open":1,"restricted":1}
+    assert res["indexed_but_absent"] == 0
+
+
+def test_stamp_all_reports_an_indexed_skill_that_is_not_on_disk(tmp_path):
+    """The count must never be silently short."""
+    _skill(tmp_path, "a", corpus_dir="leaves")
+    (tmp_path/"skills_index.json").write_text(json.dumps([
+        {"slug":"a","license_tier":"open"},{"slug":"gone","license_tier":"open"}]))
+    res = S.stamp_all(str(tmp_path), str(tmp_path/"skills_index.json"))
+    assert res["indexed_but_absent"] == 1

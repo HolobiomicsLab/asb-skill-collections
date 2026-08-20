@@ -16,7 +16,7 @@ metadata:
   - ZIP utility
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -44,7 +44,6 @@ attribution:
 
 # round-trip-data-integrity-verification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that mass spectrometry data can be read from a file format, written back to disk, and compared for structural and data equivalence to confirm lossless serialization. This ensures that file format implementations correctly preserve all spectrum metadata, signal arrays, and instrument information through encode–decode cycles.

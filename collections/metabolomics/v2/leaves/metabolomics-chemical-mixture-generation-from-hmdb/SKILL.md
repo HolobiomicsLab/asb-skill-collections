@@ -17,7 +17,7 @@ metadata:
   - HMDB
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -50,7 +50,6 @@ attribution:
 
 # metabolomics-chemical-mixture-generation-from-hmdb
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate synthetic chemical mixtures by sampling molecular formulas from the HMDB database within a specified m/z range, then create KnownChemical objects with realistic retention times, intensities, and chromatographic profiles for LC-MS simulation. This skill enables in-silico prototyping of fragmentation strategies before real instrument testing.

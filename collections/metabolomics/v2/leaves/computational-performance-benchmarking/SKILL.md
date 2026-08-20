@@ -12,7 +12,7 @@ metadata:
   tools:
   - R
   - Metanorm
-  license_tier: restricted
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1101/2025.09.30.679445v1
   title: Metanorm
@@ -46,7 +46,7 @@ attribution:
 
 # computational-performance-benchmarking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Systematically measure and rank competing normalization algorithms (tGAM, rGAM, rLOESS, QC-RLSC, QC-RSC) on robustness metrics (bias, variance, ground-truth recovery) and execution time to guide method selection for metabolomics batch correction. This skill enables reproducible performance trade-off analysis across computational speed and statistical accuracy dimensions.

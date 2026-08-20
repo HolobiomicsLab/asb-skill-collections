@@ -15,7 +15,7 @@ metadata:
   - amanida
   - webchem
   - PubChem
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
@@ -50,7 +50,6 @@ attribution:
 
 # Consensus Scoring via Vote-Counting Meta-Analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Qualitative meta-analysis method that assigns directional votes (+1 for up-regulation, −1 for down-regulation, 0 for no trend) to each metabolite across multiple studies and sums them to produce a consensus measure of compound behaviour. This approach is designed for metabolomics datasets where standard deviations or raw effect sizes are unavailable but trend direction and study counts are known.

@@ -24,7 +24,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -65,7 +65,6 @@ attribution:
 
 # word2vec-embedding-training-mass-spectrometry
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train Word2Vec embeddings on mass spectrometry spectral data represented as documents, where peaks and neutral losses are encoded as words, to learn fragment-relationship representations that enable improved spectral similarity scoring. This skill is foundational for Spec2Vec and produces learned embeddings that capture structural relationships between spectral fragments.

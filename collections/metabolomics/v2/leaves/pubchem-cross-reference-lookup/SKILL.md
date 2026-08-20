@@ -15,7 +15,7 @@ metadata:
   - webchem
   - PubChem
   - amanida
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
@@ -52,7 +52,6 @@ attribution:
 
 # pubchem-cross-reference-lookup
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert heterogeneous chemical identifiers (chemical names, InChI, InChIKey, SMILES) into a unified PubChem ID and retrieve standardized compound descriptors. This skill enables harmonization of metabolite nomenclature across multi-study datasets, essential for meta-analysis where identifier format inconsistency would otherwise prevent duplicate detection and comparison.

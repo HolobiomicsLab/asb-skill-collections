@@ -1,7 +1,7 @@
 # GitHub Copilot — ASB Metabolomics skills
 
 This repository publishes the **ASB Metabolomics Skill Collection**
-(`collections/metabolomics/v2/`): 5,865 evidence-grounded skills over 909
+(`collections/metabolomics/v2/`): 5,859 evidence-grounded skills over 909
 software tools for computational LC-MS/MS metabolomics, each derived from a
 peer-reviewed method paper.
 

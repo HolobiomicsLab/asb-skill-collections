@@ -1,0 +1,200 @@
+schema_version: 0.3.0
+workflow_id: ion_mobility_4d_annotation
+kind: composite-workflow
+techniques:
+- ion-mobility-MS
+steps:
+- id: preprocess_4d
+  goal: 4D LC-IMS-MS/MS feature extraction (with CCS)
+  edam_operation: operation_3215
+  skills:
+  - multidimensional-feature-detection-and-alignment
+  - ion-mobility-heatmap-visualization
+  - ion-mobility-feature-classification
+  - ion-mobility-dimension-detection
+  - multidimensional-coordinate-alignment
+  tools:
+  - DEIMoS
+  - Python
+  - conda
+  - pip
+  - Snakemake
+  - ProteoWizard msconvert
+  inputs:
+  - type: mzML
+  outputs:
+  - type: feature-table
+  - type: mgf
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-1c05017
+    - asb-paper-10-1021-acs-analchem-3c04290
+    - asb-paper-10-1021-jasms-4c00146
+    - asb-paper-10-1038-s41587-023-01690-2
+    dois:
+    - 10.1021/acs.analchem.1c05017
+    - 10.1021/acs.analchem.3c04290
+    - 10.1021/jasms.4c00146
+    - 10.1038/s41587-023-01690-2
+  after: []
+  candidate_tools:
+  - Mirador
+  - IonToolPack
+  - PeakQC
+  - MOCCal
+  - mzmine
+  - JDK 25
+  - JavaFX 24
+  - numpy
+- id: ccs_calibration
+  goal: collision cross section calibration + filtering
+  edam_operation: operation_3695
+  skills:
+  - collision-cross-section-calibration-ccs
+  - collision-cross-section-calibration
+  - collision-cross-section-calculation
+  - collision-cross-section-measurement-quality-control
+  tools:
+  - DEIMoS
+  - conda
+  - pip
+  - Python
+  - numpy
+  inputs:
+  - type: feature-table
+  outputs:
+  - type: feature-table
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-1c05017
+    - asb-paper-10-1021-acs-analchem-3c04290
+    - asb-paper-10-1021-acs-analchem-4c01253
+    dois:
+    - 10.1021/acs.analchem.1c05017
+    - 10.1021/acs.analchem.3c04290
+    - 10.1021/acs.analchem.4c01253
+  after:
+  - preprocess_4d
+  candidate_tools:
+  - Snakemake
+  - MOCCal
+  - MOCCal (Multi-Omic CCS Calibrator)
+  - DEIMoS (Data-Exploratory Ion Mobility MS)
+  - R
+  - MobiLipid
+  - ggplot2
+  - data.table
+  inputs_from:
+    preprocess_4d:
+    - feature-table
+- id: ccs_library_match
+  goal: CCS-aware spectral / library annotation
+  edam_operation: operation_3631
+  skills:
+  - collision-cross-section-matching-and-annotation
+  - reference-library-alignment
+  - 4d-lcimmsms-feature-extraction
+  - fragmentation-pattern-spectral-matching
+  tools:
+  - Python
+  - Jupyter Notebook
+  - scikit-learn
+  inputs:
+  - type: mgf
+  - type: feature-table
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1002-anie-202507483
+    - asb-paper-10-1021-acs-analchem-4c01253
+    dois:
+    - 10.1002/anie.202507483
+    - 10.1021/acs.analchem.4c01253
+  after:
+  - preprocess_4d
+  - ccs_calibration
+  candidate_tools:
+  - R
+  - MobiLipid
+  - R (ggplot2, data.table, DT packages)
+  - RDKit
+  inputs_from:
+    preprocess_4d:
+    - mgf
+    ccs_calibration:
+    - feature-table
+- id: networking
+  goal: (optional) molecular networking of IM-resolved features
+  edam_operation: operation_3432
+  skills:
+  - feature-based-molecular-network-interpretation
+  - spectral-similarity-network-building
+  - molecular-networking-construction
+  - feature-network-construction-from-mass-spectrometry
+  - spectral-similarity-network-generation
+  tools:
+  - R
+  - Jupyter Notebook
+  - MZmine3
+  - GNPS FBMN
+  - Google Colab
+  inputs:
+  - type: mgf
+  - type: feature-table
+  - type: tsv
+  outputs:
+  - type: graphml
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-2c05810
+    - asb-paper-10-1021-acs-jnatprod-7b00737
+    - asb-paper-10-1021-acscentsci-3c00800
+    - asb-paper-10-1038-s41589-020-00677-3
+    - asb-paper-10-1038-s41596-024-01046-3
+    dois:
+    - 10.1021/acs.analchem.2c05810
+    - 10.1021/acs.jnatprod.7b00737
+    - 10.1021/acscentsci.3c00800
+    - 10.1038/s41589-020-00677-3
+    - 10.1038/s41596-024-01046-3
+  after:
+  - preprocess_4d
+  - ccs_calibration
+  - ccs_library_match
+  candidate_tools:
+  - q2-qemistree
+  - SIRIUS
+  - CSI:FingerID
+  - ZODIAC
+  - MZmine2
+  - ClassyFire
+  - ENPKG
+  - MZmine
+  - MEMO
+  - networkx
+  - treelib
+  - mass2chem
+  - metDataModel
+  - Python 3
+  - asari
+  - khipu
+  - Optimus
+  - GNPS
+  - Cytoscape
+  inputs_from:
+    preprocess_4d:
+    - mgf
+    ccs_calibration:
+    - feature-table
+    ccs_library_match:
+    - tsv
+  optional: true
+verification:
+  final_outputs:
+  - path: ccs_annotations.tsv
+    type: file
+provenance:
+  derived_from_workflows: []
+  bound_by: perspicacite-semantic
+  coverage_gaps: []

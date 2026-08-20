@@ -3,7 +3,7 @@ message: If you use this collection, please cite it as below.
 title: ASB Metabolomics Skill Collection v2 (expansion)
 abstract: Curated, evidence-grounded skills and software-tool records for computational metabolomics, assembled by the AgenticScienceBuilder pipeline from open-access method papers. Each skill is deduplicated across papers, anchored to verbatim evidence spans, and annotated with EDAM IRIs.
 version: '2'
-date-released: '2026-06-22'
+date-released: '2026-06-28'
 license: CC-BY-4.0
 url: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
 doi: 10.5281/zenodo.20794027
@@ -1014,5 +1014,5 @@ references:
   doi: 10.7554/eLife.70780
 identifiers:
 - type: other
-  value: agenticsciencebuilder/metabolomics-v0.1.0
+  value: agenticsciencebuilder/metabolomics-v0.2.0
   description: AgenticScienceBuilder pipeline release tag that produced this collection

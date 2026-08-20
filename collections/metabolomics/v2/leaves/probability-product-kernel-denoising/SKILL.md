@@ -16,7 +16,7 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -54,7 +54,6 @@ attribution:
 
 # probability-product-kernel-denoising
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Denoise MS2 spectra by retaining only peaks present in a training dataset, then reweight peaks using a Probability Product Kernel (PPK) that adjusts intensities based on ion likelihood in the training set. This filtering reduces computational cost and noise while preserving signal diversity sufficient for downstream scoring.

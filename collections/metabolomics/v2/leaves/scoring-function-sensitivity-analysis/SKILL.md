@@ -17,7 +17,7 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -53,7 +53,6 @@ attribution:
 
 # Scoring-function sensitivity analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically evaluate how parameter choices in scoring function combinations affect enrichment of validated links in BGC-metabolite predictions. This skill determines which combination function (e.g., ℓp-norm with varying exponents, weighted linear combinations, or alternative aggregation methods) best prioritizes true links across multiple datasets.

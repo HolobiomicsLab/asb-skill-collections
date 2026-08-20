@@ -103,6 +103,15 @@ function buildLunrIndices(data) {
     this.field("collection");
     for (const s of data.skills) this.add(s);
   });
+  const workflowsIdx = lunr(function () {
+    this.ref("slug");
+    this.field("name", { boost: 5 });
+    this.field("description", { boost: 3 });
+    this.field("summary");
+    this.field("search_text");
+    this.field("collection");
+    for (const w of data.workflows || []) this.add(w);
+  });
   const toolsIdx = lunr(function () {
     this.ref("slug");
     this.field("slug", { boost: 5 });
@@ -113,7 +122,7 @@ function buildLunrIndices(data) {
     this.field("collection");
     for (const t of data.tools) this.add(t);
   });
-  return { papers: papersIdx, skills: skillsIdx, tools: toolsIdx };
+  return { papers: papersIdx, skills: skillsIdx, workflows: workflowsIdx, tools: toolsIdx };
 }
 
 /** Run a tolerant lunr query: try exact, then prefix-match fallback. */
@@ -175,6 +184,21 @@ function skillResultNode(skill, terms) {
   );
 }
 
+function workflowResultNode(wf, terms) {
+  const href = wf.md_path ? `${RAW_BASE}/${wf.md_path}` : "#";
+  const snip = snippet(wf.description || wf.summary || wf.search_text || "", terms);
+  return el("div", { class: "result-item" },
+    el("a", { href, target: "_blank", rel: "noopener", class: "result-title" }, wf.name || wf.slug),
+    el("div", { class: "result-meta" },
+      el("span", { class: "badge" }, "workflow"),
+      " ",
+      el("span", {}, wf.collection || ""),
+      wf.stage_count ? el("span", {}, ` · ${wf.stage_count} stages`) : null,
+    ),
+    snip ? el("div", { class: "result-snippet", html: highlight(snip, terms) }) : null,
+  );
+}
+
 function toolResultNode(tool, terms) {
   const href = tool.yaml_path
     ? `${RAW_BASE}/${tool.yaml_path}`
@@ -198,6 +222,7 @@ function toolResultNode(tool, terms) {
 function render(query) {
   const wantPapers = document.getElementById("filter-papers").checked;
   const wantSkills = document.getElementById("filter-skills").checked;
+  const wantWorkflows = document.getElementById("filter-workflows").checked;
   const wantTools = document.getElementById("filter-tools").checked;
 
   const emptyEl = document.getElementById("empty-state");
@@ -205,6 +230,7 @@ function render(query) {
   const groups = {
     papers: document.getElementById("results-papers"),
     skills: document.getElementById("results-skills"),
+    workflows: document.getElementById("results-workflows"),
     tools: document.getElementById("results-tools"),
   };
   for (const g of Object.values(groups)) {
@@ -223,9 +249,10 @@ function render(query) {
 
   const paperHits = wantPapers ? runLunr(IDX.papers, query) : [];
   const skillHits = wantSkills ? runLunr(IDX.skills, query) : [];
+  const workflowHits = wantWorkflows ? runLunr(IDX.workflows, query) : [];
   const toolHits = wantTools ? runLunr(IDX.tools, query) : [];
 
-  const total = paperHits.length + skillHits.length + toolHits.length;
+  const total = paperHits.length + skillHits.length + workflowHits.length + toolHits.length;
   if (total === 0) {
     noResEl.hidden = false;
     return;
@@ -249,6 +276,16 @@ function render(query) {
     for (const hit of skillHits.slice(0, PER_GROUP_LIMIT)) {
       const s = byName.get(hit.ref);
       if (s) g.appendChild(skillResultNode(s, terms));
+    }
+  }
+  if (workflowHits.length) {
+    const g = groups.workflows;
+    g.hidden = false;
+    g.appendChild(el("h2", {}, `Workflows (${workflowHits.length})`));
+    const bySlug = new Map((DATA.workflows || []).map((w) => [w.slug, w]));
+    for (const hit of workflowHits.slice(0, PER_GROUP_LIMIT)) {
+      const w = bySlug.get(hit.ref);
+      if (w) g.appendChild(workflowResultNode(w, terms));
     }
   }
   if (toolHits.length) {
@@ -287,11 +324,12 @@ function onInput() {
   IDX = buildLunrIndices(DATA);
   hintEl.textContent =
     `Searching ${DATA.papers.length} papers, ${DATA.skills.length} skills, ` +
-    `${DATA.tools.length} tools across ${(DATA.collections || []).length} collections.`;
+    `${(DATA.workflows || []).length} workflows, ${DATA.tools.length} tools ` +
+    `across ${(DATA.collections || []).length} collections.`;
 
   const input = document.getElementById("search-input");
   input.addEventListener("input", onInput);
-  for (const id of ["filter-papers", "filter-skills", "filter-tools"]) {
+  for (const id of ["filter-papers", "filter-skills", "filter-workflows", "filter-tools"]) {
     document.getElementById(id).addEventListener("change", () => render(input.value));
   }
 

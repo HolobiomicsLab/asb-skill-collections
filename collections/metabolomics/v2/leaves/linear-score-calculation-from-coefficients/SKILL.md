@@ -18,7 +18,7 @@ metadata:
   - LC-MS
   - GC-MS
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac388
   title: MiMIR
@@ -51,7 +51,6 @@ attribution:
 
 # Linear Score Calculation from Coefficients
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply published regression coefficients to a feature matrix of metabolomic measurements to compute risk scores for individual samples. This skill enables projection of previously validated metabolic risk models onto new 1H-NMR data assayed by Nightingale Health.

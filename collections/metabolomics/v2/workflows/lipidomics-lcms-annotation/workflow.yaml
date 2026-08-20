@@ -1,0 +1,259 @@
+schema_version: 0.3.0
+workflow_id: lipidomics_lcms_annotation
+kind: composite-workflow
+techniques:
+- LC-MS
+steps:
+- id: preprocess
+  goal: raw lipidomics mzML -> aligned feature table + MS/MS export
+  edam_operation: operation_3215
+  skills:
+  - lcms-peak-detection-and-alignment
+  - mass-spectrometry-metadata-extraction
+  - file-format-conversion-peak-picking-to-lipidmatch
+  - feature-table-normalization
+  - mass-spectrometry-data-column-mapping
+  tools:
+  - ISFrag
+  - R
+  - XCMS
+  - CAMERA
+  inputs:
+  - type: mzML
+  outputs:
+  - type: feature-table
+  - type: mgf
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-1c01644
+    - asb-paper-10-1186-s12859-017-1744-3
+    dois:
+    - 10.1021/acs.analchem.1c01644
+    - 10.1186/s12859-017-1744-3
+  after: []
+  candidate_tools:
+  - MZmine
+  - MS-DIAL
+  - Compound Discoverer
+  - LipidMatch
+- id: normalize
+  goal: normalize + batch-correct the lipid feature table
+  edam_operation: operation_3434
+  skills:
+  - batch-aware-normalization-workflows
+  - batch-correction-quality-assessment
+  - batch-effect-correction-in-metabolomics
+  - batch-corrected-feature-table-validation
+  - batch-effect-correction-workflow
+  tools:
+  - Python
+  - pycombat
+  - Asari
+  inputs:
+  - type: feature-table
+  outputs:
+  - type: feature-table
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1038-s41596-024-01046-3
+    - asb-paper-10-1093-bioinformatics-btac706
+    - asb-paper-10-1371-journal-pcbi-1011912
+    dois:
+    - 10.1038/s41596-024-01046-3
+    - 10.1093/bioinformatics/btac706
+    - 10.1371/journal.pcbi.1011912
+  after:
+  - preprocess
+  candidate_tools:
+  - ThermoRawFileParser
+  - pcpfm
+  - ADViSELipidomics
+  - limma
+  - edgeR
+  - ComBat
+  - R
+  - Jupyter Notebook
+  - Google Colab
+  - FBMN-STATS
+  inputs_from:
+    preprocess:
+    - feature-table
+- id: lipid_identification
+  goal: identify lipids (class + species) from MS/MS fragmentation
+  edam_operation: operation_3803
+  skills:
+  - lipid-identification-scoring
+  - fragment-ion-library-matching
+  - multi-species-lipid-prediction
+  - uhplc-hrms-ms-data-matching
+  - lipid-structure-specification
+  tools:
+  - LipidMatch
+  - MZmine
+  - XCMS
+  - MS-DIAL
+  - Compound Discoverer
+  inputs:
+  - type: mgf
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1038-s41467-025-59683-5
+    - asb-paper-10-1186-s12859-017-1744-3
+    dois:
+    - 10.1038/s41467-025-59683-5
+    - 10.1186/s12859-017-1744-3
+  after:
+  - preprocess
+  candidate_tools:
+  - Q-Exactive
+  - CAMERA
+  - LipidIN EQ module
+  - LipidIN LCI module
+  - Q-Exactive orbitrap
+  - Agilent Q-TOF
+  - Bruker Q-TOF
+  - SCIEX Q-TOF
+  inputs_from:
+    preprocess:
+    - mgf
+- id: rule_validation
+  goal: validate lipid annotations by adduct / retention-time / class rules
+  edam_operation: operation_3695
+  skills:
+  - false-positive-annotation-filtering
+  - lipid-identification-quality-filtering
+  - lipid-retention-time-rule-application
+  - lipid-species-annotation-assessment
+  tools:
+  - XCMS
+  - CAMERA
+  - LipidIN LCI module
+  inputs:
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-1c03032
+    - asb-paper-10-1021-acs-analchem-4c04040
+    - asb-paper-10-1038-s41467-025-59683-5
+    dois:
+    - 10.1021/acs.analchem.1c03032
+    - 10.1021/acs.analchem.4c04040
+    - 10.1038/s41467-025-59683-5
+  after:
+  - lipid_identification
+  candidate_tools:
+  - LipoCLEAN
+  - MS-DIAL
+  - LipidIN (LCI Module)
+  - RaMS
+  - MetaboAnnotatoR
+  - R
+  inputs_from:
+    lipid_identification:
+    - tsv
+- id: statistics
+  goal: differential lipid analysis between sample groups
+  edam_operation: operation_3659
+  skills:
+  - multicontrast-statistical-testing-lipidomics
+  - fold-change-calculation
+  - lipid-abundance-differential-analysis
+  - differential-lipid-expression-analysis
+  - metabolite-feature-anova-analysis
+  tools:
+  - lipidr
+  - limma
+  - R
+  inputs:
+  - type: feature-table
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-4c05039
+    - asb-paper-10-1021-acs-jproteome-0c00082
+    - asb-paper-10-1093-bioinformatics-btac706
+    - asb-paper-10-1101-2024-06-20-599545
+    - asb-paper-10-1101-2024-06-20-599545v1
+    dois:
+    - 10.1021/acs.analchem.4c05039
+    - 10.1021/acs.jproteome.0c00082
+    - 10.1093/bioinformatics/btac706
+    - 10.1101/2024.06.20.599545
+    - 10.1101/2024.06.20.599545v1
+  after:
+  - normalize
+  - rule_validation
+  candidate_tools:
+  - Python (pandas, NumPy, SciPy)
+  - R (base stats, tidyverse, or similar)
+  - pandas
+  - NumPy
+  - SciPy
+  - edgeR.R
+  - ADViSELipidomics
+  - edgeR
+  - ComBat
+  - LIPID MAPS
+  - Metabolomics Workbench API
+  - margheRita
+  - MS-DIAL
+  inputs_from:
+    normalize:
+    - feature-table
+    rule_validation:
+    - tsv
+- id: fusion
+  goal: consolidate lipid annotations + stats into one master table
+  edam_operation: operation_3434
+  skills:
+  - structured-data-matrix-construction
+  - lipid-class-feature-annotation
+  - lipid-class-annotation-and-parsing
+  - lipid-species-classification-mapping
+  tools:
+  - ADViSELipidomics
+  - LipidSearch
+  - LIQUID
+  - LIPID MAPS
+  inputs:
+  - type: feature-table
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-jproteome-0c00082
+    - asb-paper-10-1093-bioinformatics-btac706
+    dois:
+    - 10.1021/acs.jproteome.0c00082
+    - 10.1093/bioinformatics/btac706
+  after:
+  - normalize
+  - statistics
+  candidate_tools:
+  - lipidr
+  - R
+  - Skyline
+  - SummarizedExperiment
+  - limma
+  - edgeR
+  - ComBat
+  inputs_from:
+    normalize:
+    - feature-table
+    statistics:
+    - tsv
+verification:
+  final_outputs:
+  - path: master_lipid_table.tsv
+    type: file
+provenance:
+  derived_from_workflows: []
+  bound_by: perspicacite-semantic
+  coverage_gaps: []

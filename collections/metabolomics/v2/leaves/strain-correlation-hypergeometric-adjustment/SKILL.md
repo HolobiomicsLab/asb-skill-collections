@@ -15,7 +15,7 @@ metadata:
   - NPLinker
   - GNPS
   - MIBiG
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -53,7 +53,6 @@ attribution:
 
 # strain-correlation-hypergeometric-adjustment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute standardised strain correlation scores for genomic-metabolomic links by adjusting raw co-occurrence counts against a hypergeometric null distribution. This makes correlation scores comparable across datasets and significantly enriches for validated links by accounting for expected co-occurrence by chance.

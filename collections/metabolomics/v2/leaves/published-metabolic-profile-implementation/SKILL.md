@@ -18,7 +18,7 @@ metadata:
   - LC-MS
   - GC-MS
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac388
   title: MiMIR
@@ -51,7 +51,6 @@ attribution:
 
 # published-metabolic-profile-implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill projects previously published metabolic risk scores—such as Deelen et al.'s all-cause mortality metabolic profile derived from 44,168 individuals—onto new 1H-NMR metabolomics data assayed by Nightingale Health. It enables rapid risk stratification of new cohorts using validated, externally derived metabolite-weight combinations without retraining.

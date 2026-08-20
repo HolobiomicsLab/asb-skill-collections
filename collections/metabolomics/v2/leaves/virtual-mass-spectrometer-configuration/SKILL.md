@@ -19,7 +19,7 @@ metadata:
   - DatabaseFormulaSampler
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -59,7 +59,6 @@ attribution:
 
 # Virtual Mass Spectrometer Configuration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure an IndependentMassSpectrometer instance with ionization polarity and chemical mixture composition to enable realistic full-scan or tandem MS acquisition simulation. This is the foundational step for prototyping fragmentation strategies in ViMMS before testing on real LC-MS/MS hardware.

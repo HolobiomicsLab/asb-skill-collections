@@ -17,7 +17,7 @@ metadata:
   - IAPI (Thermo Fisher Tribrid/Exactive)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -49,7 +49,6 @@ attribution:
 
 # dda-fragmentation-strategy-parameterization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and validate data-dependent acquisition (DDA) fragmentation strategies by setting isolation window, m/z tolerance, retention-time tolerance, intensity thresholds, and fragment count constraints, then execute the parameterized strategy in a virtual mass spectrometry environment to generate MS1/MS2 scan data.

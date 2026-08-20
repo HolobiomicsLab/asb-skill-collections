@@ -18,7 +18,7 @@ metadata:
   - PDV
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo
@@ -57,7 +57,6 @@ attribution:
 
 # peptidoform-scoring-and-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Post-hoc validation and ranking of de novo peptide sequence predictions by applying mass tolerance constraints, minimum length thresholds, and per-residue confidence scoring. This skill ensures predicted peptidoforms meet chemical plausibility and quality criteria before downstream interpretation.

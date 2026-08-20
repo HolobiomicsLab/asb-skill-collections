@@ -14,7 +14,7 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -49,7 +49,6 @@ attribution:
 
 # mzml-format-generation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert simulated LC-MS/MS acquisition scans into mzML (mass spectrometry Markup Language) format for downstream analysis, archiving, and interoperability with metabolomics software. This skill bridges virtual mass spectrometry simulation with standard data formats used in untargeted metabolomics workflows.

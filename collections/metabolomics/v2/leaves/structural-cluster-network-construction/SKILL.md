@@ -19,7 +19,7 @@ metadata:
   - MAMSI MamsiStructSearch
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -54,7 +54,6 @@ attribution:
 
 # Reconstruct the structural network graph generation from significant features
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert structural cluster assignments (isotopologues, adducts, cross-assay links) and correlation cluster memberships into an interactive NetworkX graph, then visualize in Cytoscape or pyvis for interactive exploration of metabolite structural relationships.

@@ -26,7 +26,6 @@ import re
 
 import yaml
 
-from scripts.license_tier import load_map
 # Invoked by path (`python scripts/x.py`), only `scripts/` lands on sys.path, so
 # the repo root has to be added before the sibling package can be imported.
 if __package__ in (None, ""):
@@ -35,7 +34,8 @@ if __package__ in (None, ""):
 
     _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
 
-from scripts import layout
+from asb_skill_collections import layout
+from scripts.license_tier import load_map
 from scripts.propagate_license_tiers import detect_indent
 
 META_ROLE = "meta"

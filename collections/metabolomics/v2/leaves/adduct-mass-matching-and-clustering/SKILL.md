@@ -20,7 +20,7 @@ metadata:
   - MamsiStructSearch
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -57,7 +57,6 @@ attribution:
 
 # Adduct-Mass Matching and Clustering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill groups LC-MS features that share a common neutral mass by calculating hypothetical neutral masses from common electrospray ionisation adducts and matching them within a mass tolerance window. It is essential for linking multiply-charged or adducted ions of the same molecule into structural clusters.

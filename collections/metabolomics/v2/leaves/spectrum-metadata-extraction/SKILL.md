@@ -19,7 +19,7 @@ metadata:
   - arrow (R package)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -48,7 +48,6 @@ attribution:
 
 # spectrum-metadata-extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and structure spectrum-level metadata (descriptions, scans, precursors, selected ions) from mass spectrometry data into a Parquet-backed tabular format using the mzPeak specification. This skill enables standardized metadata capture and interoperability across different MS instrument vendors and data pipelines.

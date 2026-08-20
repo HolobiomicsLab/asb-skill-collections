@@ -17,7 +17,7 @@ metadata:
   - rMSIproc
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
@@ -49,7 +49,6 @@ attribution:
 
 # overlapping-peak-detection-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and document overlapping or isobaric peaks in mass spectrometry imaging data to prevent misclassification of matrix-related ions and transparently justify annotation decisions. This skill interprets overlap status as part of the classification rationale for each m/z feature.

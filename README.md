@@ -4,8 +4,8 @@
 
 # ASB Skill Collections
 
-[![release](https://img.shields.io/badge/release-metabolomics--v0.1.0-blue)](collections/metabolomics/v2)
-[![skills](https://img.shields.io/badge/skills-5%2C865-success)](collections/metabolomics/v2/skills_index.json)
+[![release](https://img.shields.io/badge/release-metabolomics--v0.2.0-blue)](collections/metabolomics/v2)
+[![skills](https://img.shields.io/badge/skills-5%2C859-success)](collections/metabolomics/v2/skills_index.json)
 [![tools](https://img.shields.io/badge/tools-909-success)](collections/metabolomics/v2/tools_index.json)
 [![license](https://img.shields.io/badge/code-Apache--2.0-green)](LICENSE) [![content](https://img.shields.io/badge/content-CC--BY--4.0-green)](LICENSING.md)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20794026.svg)](https://doi.org/10.5281/zenodo.20794026)
@@ -24,18 +24,21 @@ Metabolomics** ([26181](https://www.dagstuhl.de/en/seminars/seminar-calendar/sem
   <img src="assets/asb-overview.png" alt="ASB pipeline: real research papers → ASB → domain benchmark (skills · tools · data) → agents evaluated → community validates, with a domain/community-defined feedback loop" width="640">
 </p>
 
-> **This release — `metabolomics-v0.1.0` (preliminary):**
-> [`collections/metabolomics/v2`](collections/metabolomics/v2) — **5,865 skills**
+> **This release — `metabolomics-v0.2.0` (preliminary):**
+> [`collections/metabolomics/v2`](collections/metabolomics/v2) — **5,859 skills**
 > across **909 tools** distilled from **568 papers**, for computational
 > metabolomics — predominantly **LC-MS/MS**, but also LC-MS, GC-MS,
 > mass-spectrometry imaging, ion mobility and lipidomics, with some **NMR** and
-> multi-omics / statistics / pathway tools.
+> multi-omics / statistics / pathway tools. New in this version: **21 composite
+> workflow super-skills** (end-to-end pipelines that chain the atomic skills) under
+> [`workflows/`](collections/metabolomics/v2/workflows).
 
 ### Artifacts in this release
 
 | Artifact | Status |
 |---|---|
 | **ASB-Skills** — evidence-grounded procedural skills | ✅ **released** |
+| **ASB-Workflows** — 21 composite end-to-end pipeline super-skills | ✅ **released** |
 | **ASB-Tools** — deduplicated software-tool records (EDAM + DOIs) | ✅ **released** |
 | **ASB-Benchmark** — per-paper tasks + claim-retrieval test sets | ⏳ to be released soon |
 | **ASB-Capsules** — raw per-paper ASB pipeline outputs (full traceability) | ⏳ to be released soon |
@@ -69,7 +72,7 @@ and will ship under the same layout — no rename, just new entries under `colle
 
 ```bash
 /plugin marketplace add HolobiomicsLab/asb-skill-collections
-/plugin install metabolomics@asb-skill-collections          # full collection (5,865 skills)
+/plugin install metabolomics@asb-skill-collections          # full collection (5,859 skills)
 ```
 
 ### 🧩 Lighter per-technique packs — load only what you need
@@ -104,14 +107,14 @@ local clone to materialize a pack into the runtime's own location.
 ```bash
 git clone https://github.com/HolobiomicsLab/asb-skill-collections.git
 cd asb-skill-collections
-python3 -m scripts.asbb_cli install --list-runtimes      # see all targets
+python3 -m asb_skill_collections.asbb_cli install --list-runtimes      # see all targets
 ```
 
 **Skill-native runtimes** (read `SKILL.md` directly):
 
 ```bash
 # Codex + Copilot CLI + Gemini CLI all share ~/.agents/skills — one install:
-python3 -m scripts.asbb_cli install metabolomics-lc-ms --runtime agents
+python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --runtime agents
 
 # Or a specific home: --runtime codex | copilot | gemini
 # Vendor into a project for Claude Code: --runtime claude  (add --user for ~/.claude)
@@ -121,15 +124,15 @@ python3 -m scripts.asbb_cli install metabolomics-lc-ms --runtime agents
 the target project):
 
 ```bash
-python3 -m scripts.asbb_cli install metabolomics-lc-ms --runtime cursor          # .cursor/rules/*.mdc
-python3 -m scripts.asbb_cli install metabolomics-lc-ms --runtime cline           # .clinerules/*.md
-python3 -m scripts.asbb_cli install metabolomics-lc-ms --runtime vscode-copilot  # .github/instructions/*.instructions.md
+python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --runtime cursor          # .cursor/rules/*.mdc
+python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --runtime cline           # .clinerules/*.md
+python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --runtime vscode-copilot  # .github/instructions/*.instructions.md
 ```
 
 **Anything else** (pi, Antigravity, or a runtime without a preset):
 
 ```bash
-python3 -m scripts.asbb_cli install metabolomics-lc-ms --dest ~/some/skills/dir
+python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --dest ~/some/skills/dir
 ```
 
 Skill-native installs **symlink** by default (a `git pull` in the clone updates
@@ -138,6 +141,61 @@ overwrites unmanaged files, and `asbb uninstall <pack> --runtime <id>` cleanly
 removes exactly what was installed (tracked in `~/.asbb/installed.json`).
 
 > For **Claude Code**, the plugin marketplace above remains the recommended path.
+
+### 🐍 `asbb` CLI — a programmatic skill provider over your checkout
+
+The `asbb` CLI offers offline, key-free retrieval — the thin programmatic surface
+for any agent or script. It reads the **corpus from a checkout**, so the clone is
+the install:
+
+```bash
+git clone https://github.com/HolobiomicsLab/asb-skill-collections
+cd asb-skill-collections
+uv pip install -e .            # or: python3 -m pip install -e .
+
+asbb search "untargeted LC-MS/MS annotation" --collection metabolomics --target workflows
+asbb get untargeted-lcmsms-annotation --collection metabolomics/v2 --target workflows
+asbb search --list-collections
+```
+
+`search`/`get` read the checkout you cloned (point elsewhere with
+`ASB_COLLECTIONS_ROOT` / `--repo`); the ranking matches each collection's
+`bin/semantic_search.py` keyword mode — no API key. Without installing anything,
+the same surface is `python3 -m asb_skill_collections.asbb_cli search …` from the
+clone.
+
+> **Not on PyPI in v0.** `asb-skill-collections` is unpublished by
+> [design decision 5](https://github.com/HolobiomicsLab/AgenticScienceBuilder) —
+> a `pip install asb-skill-collections` from an index would fetch the CLI without
+> the corpus it reads, which is not a working install. Publication is deferred to
+> v1, once the corpus ships as package data. Maintainers: the (currently dormant)
+> release flow is in [`docs/RELEASING_PYPI.md`](docs/RELEASING_PYPI.md).
+
+### 🔌 MCP skill-server — for any MCP agent
+
+Expose the same retrieval over the Model Context Protocol so Claude Desktop,
+Cursor, Cline, Codex, etc. can search and fetch skills at run time. Same checkout,
+plus the `mcp` extra:
+
+```bash
+uv pip install -e ".[mcp]"     # from the clone above
+ASB_COLLECTIONS_ROOT=/path/to/checkout asb-mcp
+```
+
+```jsonc
+// Claude Desktop / Code  →  mcpServers
+{
+  "asb-skills": {
+    "command": "uv",
+    "args": ["run", "--directory", "/path/to/asb-skill-collections", "asb-mcp"],
+    "env": { "ASB_COLLECTIONS_ROOT": "/path/to/asb-skill-collections" }
+  }
+}
+```
+
+Tools: `list_collections`, `search_skills`, `search_workflows`, `search_tools`,
+`get_skill`, `get_workflow`. Pairs naturally with a Perspicacité MCP — one server
+for skill retrieval, one for evidence grounding.
 
 ## Use
 
@@ -183,7 +241,7 @@ The `kb` backend needs a reachable Perspicacité (`PERSPICACITE_BASE`, default
   <img src="assets/metabolomics-skills-collection.png" alt="Metabolomics skill collection schematic: peer-reviewed papers → ASB → EDAM-typed, deduplicated skills routed via Perspicacité (EDAM filter + skill KB, search_skill_kb) to a Mimosa agent, spanning the untargeted LC-MS/MS workflow and wrapping community tools (GNPS, XCMS, matchms, MS-DIAL, MZmine, SIRIUS, spec2vec)" width="760">
 </p>
 
-<p align="center"><sub>The LC-MS view of the collection (the <code>metabolomics-lc-ms</code> pack): papers → ASB → EDAM-typed skills, routed by Perspicacité. The full release spans 5,865 skills across all techniques.</sub></p>
+<p align="center"><sub>The LC-MS view of the collection (the <code>metabolomics-lc-ms</code> pack): papers → ASB → EDAM-typed skills, routed by Perspicacité. The full release spans 5,859 skills across all techniques.</sub></p>
 
 | File | Contents |
 |---|---|
@@ -280,6 +338,13 @@ Maintained by [Holobiomics Lab](https://github.com/HolobiomicsLab) — see
 [MAINTAINERS.md](governance/MAINTAINERS.md). Curator workflow: [CONTRIBUTING.md](.github/CONTRIBUTING.md);
 conflict-of-interest policy: [COI_POLICY.md](governance/COI_POLICY.md). All governance & policy
 docs now live in [`governance/`](governance/).
+
+**Found an improvement while using a skill?** Use the
+[Contribute page](https://holobiomicslab.github.io/asb-skill-collections/contribute.html)
+or `scripts/make_improvement_report.py` to open an anonymized issue. Merged
+contributions earn a place on the contributor leaderboard and can become
+co-authorship on the next release DOI — the full flywheel is documented in
+[CONTRIBUTION_LOOP.md](governance/CONTRIBUTION_LOOP.md).
 
 ## Other collections
 

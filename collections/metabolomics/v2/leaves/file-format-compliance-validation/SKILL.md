@@ -18,7 +18,7 @@ metadata:
   - arrow (R package)
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -46,7 +46,6 @@ attribution:
 
 # file-format-compliance-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that prototype implementations of a mass spectrometry data format produce files conforming to all mandatory fields and structural elements defined in a published specification. This skill ensures interoperability and correctness by systematically comparing generated files against a normative specification document.

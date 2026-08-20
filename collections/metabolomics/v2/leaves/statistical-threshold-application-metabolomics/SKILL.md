@@ -14,7 +14,7 @@ metadata:
   - amanida
   - webchem
   - PubChem
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
@@ -49,7 +49,6 @@ attribution:
 
 # Statistical Threshold Application in Metabolomics Meta-Analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply combined statistical and effect-size cutoffs (p-value ≤0.05, fold-change ≥3.5) to volcano plot and mixed-mode explore plot outputs to identify metabolites with statistical significance, multiple independent reports, and consistent directional trends across studies. This skill validates candidate biomarkers by rejecting the null hypothesis through quantitative filtering and qualitative consistency voting.

@@ -20,7 +20,7 @@ metadata:
   techniques:
   - MS-imaging
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
@@ -52,7 +52,6 @@ attribution:
 
 # Spatial-overlap analysis for imaging mass spectrometry
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies and flags overlapping peaks and isobaric ions in mass spectrometry imaging (MSI) data by analyzing m/z coincidence and spatial distribution patterns across tissue. This prevents misclassification of chemically distinct ions during matrix-related signal annotation.

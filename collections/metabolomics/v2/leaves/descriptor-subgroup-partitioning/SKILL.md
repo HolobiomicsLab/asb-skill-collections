@@ -15,7 +15,7 @@ metadata:
   tools:
   - BitterPredict
   - BitterPredict.m
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
@@ -45,7 +45,6 @@ attribution:
 
 # descriptor-subgroup-partitioning
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Partition molecular descriptors into functionally coherent subgroups and systematically ablate each subgroup to quantify its impact on bitter/not-bitter prediction accuracy. This skill enables feature importance analysis through controlled descriptor removal and comparison of prediction changes.

@@ -18,7 +18,7 @@ metadata:
   - MamsiStructSearch
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -55,7 +55,6 @@ attribution:
 
 # NetworkX object generation and export
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert structural cluster assignments and feature metadata into a NetworkX graph object, optionally visualizing it with pyvis and exporting for interactive analysis in Cytoscape. This skill enables programmatic construction of metabolite feature networks where nodes represent features and edges encode structural relationships (isotopologues, adducts, cross-assay links, correlation clusters).

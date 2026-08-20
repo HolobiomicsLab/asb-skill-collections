@@ -18,7 +18,7 @@ metadata:
   - Docker
   - Docker Compose
   - NP-Classifier
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jacs.9b13786
   title: CSCS / deep CNN natural-product annotation
@@ -60,7 +60,6 @@ attribution:
 
 # rest-api-endpoint-querying
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Query a REST API endpoint to retrieve and validate structured metadata from a running service instance. This skill is essential for confirming that deployed models or services expose the correct interface specifications before downstream processing or integration.

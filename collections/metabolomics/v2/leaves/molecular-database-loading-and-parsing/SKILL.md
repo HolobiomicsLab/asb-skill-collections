@@ -15,7 +15,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -50,7 +50,6 @@ attribution:
 
 # molecular-database-loading-and-parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and parse serialized molecular structure databases (e.g., HMDB compounds in pickle format) into memory, then apply m/z range and MS level filters to extract a curated set of unique molecular formulas for chemical sampling in virtual metabolomics simulations.

@@ -19,7 +19,7 @@ metadata:
   - R arrow
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -50,7 +50,6 @@ attribution:
 
 # Tabular Data Field Comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare structured tabular outputs (CSV, Parquet) exported from independent implementations of the same file reader to detect field-level discrepancies in names, types, row counts, and numerical values. This skill validates implementation interoperability and identifies divergences in data interpretation across language/library variants.

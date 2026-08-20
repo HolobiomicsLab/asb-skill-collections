@@ -18,7 +18,7 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -55,7 +55,6 @@ attribution:
 
 # metabolite-structural-network-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Constructs an interactive or static network graph of mass spectrometry features organized into structural clusters by the MAMSI framework, where nodes represent features and edges encode isotopologue, adduct, and cross-assay relationships. This skill visualizes and curates the linkage structure among statistically significant LC-MS features identified from multi-assay metabolomics data.

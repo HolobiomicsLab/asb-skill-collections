@@ -18,7 +18,7 @@ metadata:
   - Environment
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -58,7 +58,6 @@ attribution:
 
 # spectral-scan-generation-and-export
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Simulate tandem mass spectrometry acquisition by extracting regions of interest (ROIs) from real LC-MS/MS data, instantiating a virtual mass spectrometer, configuring a fragmentation controller, and exporting the generated scans to mzML format for downstream comparison and validation.

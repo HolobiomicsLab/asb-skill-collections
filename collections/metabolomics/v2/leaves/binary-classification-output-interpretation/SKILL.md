@@ -13,7 +13,7 @@ metadata:
   tools:
   - BitterPredict
   - BitterPredict.m
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
@@ -43,7 +43,6 @@ attribution:
 
 # binary-classification-output-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret and compile binary classification predictions (bitter/not-bitter) from a machine-learning classifier into structured output files linked to molecule identifiers. This skill bridges trained model inference and downstream analysis by organizing predictions into a reusable tabular format.

@@ -18,7 +18,7 @@ metadata:
   - OpenMS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -51,7 +51,6 @@ attribution:
 
 # dynamic-exclusion-weighting-strategy-evaluation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate how weighted dynamic exclusion fragmentation strategies (e.g., WeightedDEWController) compare to baseline TopN acquisition in LC-MS/MS by running parallel simulations through the ViMMS framework and measuring coverage and intensity metrics on the resulting mzML and EvaluationData outputs.

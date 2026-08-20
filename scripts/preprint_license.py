@@ -32,6 +32,14 @@ import urllib.request
 from dataclasses import dataclass
 
 import yaml
+# Invoked by path (`python scripts/x.py`), only `scripts/` lands on sys.path, so
+# the repo root has to be added before the sibling package can be imported.
+if __package__ in (None, ""):
+    import os.path as _p
+    import sys as _sys
+
+    _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
+
 
 from scripts.license_tier import load_map, source_reuse_for_license, tier_for_license
 
@@ -243,7 +251,7 @@ def _probe_server_api(server: str, doi: str, original: str, fetch) -> PreprintLi
     return PreprintLicense(original, STATUS_RESOLVED, doi, f"{server}_api", token, spdx, reuse, tier_for_license(spdx))
 
 
-def _probe_crossref(doi: str, original: str, fetch) -> PreprintLicense | None:
+def _probe_crossref(doi: str, original: str, fetch, preprints_only: bool = True) -> PreprintLicense | None:
     """Crossref declares a pre-print as type `posted-content`.
 
     Crossref's `license` array is sometimes absent, or points at a server FAQ page
@@ -254,7 +262,7 @@ def _probe_crossref(doi: str, original: str, fetch) -> PreprintLicense | None:
     if not payload:
         return None
     message = payload.get("message") or {}
-    if message.get("type") != "posted-content":
+    if preprints_only and message.get("type") != "posted-content":
         return PreprintLicense(original, STATUS_NOT_A_PREPRINT, doi, "crossref")
     outcome = _classify(original, doi, "crossref", _redistribution_urls(message))
     if outcome.status == STATUS_RESOLVED:
@@ -266,13 +274,13 @@ def _probe_crossref(doi: str, original: str, fetch) -> PreprintLicense | None:
     return outcome
 
 
-def _probe_datacite(doi: str, original: str, fetch) -> PreprintLicense | None:
+def _probe_datacite(doi: str, original: str, fetch, preprints_only: bool = True) -> PreprintLicense | None:
     """DataCite declares a pre-print as resourceTypeGeneral `Preprint` (arXiv lives here)."""
     payload = fetch(DATACITE_DOI_URL.format(doi=urllib.parse.quote(doi, safe="/")))
     if not payload:
         return None
     attributes = (payload.get("data") or {}).get("attributes") or {}
-    if (attributes.get("types") or {}).get("resourceTypeGeneral") != "Preprint":
+    if preprints_only and (attributes.get("types") or {}).get("resourceTypeGeneral") != "Preprint":
         return PreprintLicense(original, STATUS_NOT_A_PREPRINT, doi, "datacite")
     urls = [r.get("rightsUri") for r in (attributes.get("rightsList") or []) if r.get("rightsUri")]
     return _classify(original, doi, "datacite", urls)
@@ -285,20 +293,32 @@ def _doi_candidates(doi: str) -> list[str]:
     return [exact] if stripped == exact else [exact, stripped]
 
 
-def resolve_preprint_license(doi: str, fetch=fetch_json) -> PreprintLicense:
-    """Resolve one DOI's posting licence. Never guesses; see module docstring."""
+def resolve_registry_license(doi: str, fetch=fetch_json, preprints_only: bool = True) -> PreprintLicense:
+    """Resolve one DOI's declared licence. Never guesses; see module docstring.
+
+    Licence resolution itself is work-type agnostic: a journal article declares its
+    licence in the same Crossref field a pre-print does. Whether a *non*-pre-print
+    is acceptable is the caller's policy, not this lookup's, so `preprints_only`
+    stays true for the pre-print admission path and is turned off by callers that
+    ask a published paper what it grants.
+    """
     if not (doi or "").strip():
         return PreprintLicense(doi, STATUS_UNRESOLVED)
     try:
         for candidate in _doi_candidates(doi):
             for probe in (_probe_crossref, _probe_datacite):
-                outcome = probe(candidate, doi, fetch)
+                outcome = probe(candidate, doi, fetch, preprints_only)
                 if outcome is not None:
                     return outcome
     except (urllib.error.URLError, OSError, ValueError, TypeError, KeyError):
         # One malformed registry payload must fail its own DOI, never the batch.
         return PreprintLicense(doi, STATUS_UNRESOLVED)
     return PreprintLicense(doi, STATUS_UNRESOLVED)
+
+
+def resolve_preprint_license(doi: str, fetch=fetch_json) -> PreprintLicense:
+    """Resolve one DOI's *pre-print posting* licence; a published work is rejected."""
+    return resolve_registry_license(doi, fetch, preprints_only=True)
 
 
 def _corpus_entries(patterns: list[str]):

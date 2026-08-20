@@ -1,6 +1,8 @@
 ---
 name: masster
-description: Use when you need to run the Zamboni-lab Masster (MASSter) workflow for untargeted LC-MS metabolomics data analysis. NONCOMMERCIAL tool — confirm permitted use before applying (see License notice).
+description: Use when you need to run the Zamboni-lab Masster (MASSter) workflow for
+  untargeted LC-MS metabolomics data analysis. NONCOMMERCIAL tool — confirm permitted
+  use before applying (see License notice).
 license: CC-BY-4.0
 metadata:
   tools:
@@ -8,11 +10,11 @@ metadata:
   techniques:
   - LC-MS
   repo_url: https://github.com/zamboni-lab/masster-dist
-  license_tier: noncommercial
+  license_tier: open
   tool_license:
     tier: noncommercial
     requires_ack: true
-    ref: "Masster Noncommercial and Commercial Services License 1.0.0"
+    ref: Masster Noncommercial and Commercial Services License 1.0.0
     url: https://github.com/zamboni-lab/masster-dist/blob/main/LICENSE
 schema_version: 0.2.0
 ---

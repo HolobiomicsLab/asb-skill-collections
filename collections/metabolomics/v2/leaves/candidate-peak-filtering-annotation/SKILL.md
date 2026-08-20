@@ -17,7 +17,7 @@ metadata:
   - rMSIproc
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
@@ -49,7 +49,6 @@ attribution:
 
 # Overlapping Peak Detection and Isobaric Ion Flagging
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies and flags overlapped or isobaric ions (peaks with identical or near-identical m/z values and overlapping spatial distributions) to prevent their misclassification during matrix-related signal annotation in mass spectrometry imaging. This filtering step is essential for accurate peak annotation workflows where isobaric ambiguity could otherwise lead to false assignments.

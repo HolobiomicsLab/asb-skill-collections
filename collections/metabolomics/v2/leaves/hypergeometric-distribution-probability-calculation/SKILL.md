@@ -14,7 +14,7 @@ metadata:
   - NumPy or SciPy
   - Python
   - NPLinker
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -48,7 +48,6 @@ attribution:
 
 # hypergeometric-distribution-probability-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate the hypergeometric probability distribution and derived statistics (expected value and variance) to establish a null model for strain overlap between genomic and metabolomic feature sets. This enables standardization of raw correlation scores to make them comparable across GCF–MF links of different sizes.

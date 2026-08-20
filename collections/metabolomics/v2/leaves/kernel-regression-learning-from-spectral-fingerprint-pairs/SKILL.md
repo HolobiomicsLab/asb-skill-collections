@@ -18,7 +18,7 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -61,7 +61,6 @@ attribution:
 
 # kernel-regression-learning-from-spectral-fingerprint-pairs
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train an Input-Output Kernel Regression (IOKR) model to learn a mapping from MS2 spectrum space (via spectrum kernels) to molecular fingerprint space (via structured fingerprints like CDK Substructure or PubChem Substructure) using paired spectrum–metabolite training data from spectral libraries. This enables prediction of molecular fingerprints for novel spectra and ranking of genomic BGCs by their predicted fingerprint similarity.

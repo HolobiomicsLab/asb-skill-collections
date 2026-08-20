@@ -30,7 +30,7 @@ if __package__ in (None, ""):
 
     _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
 
-from scripts import layout
+from asb_skill_collections import layout
 from scripts.skill_index import split_frontmatter
 
 LINK_ONLY = "link-only"

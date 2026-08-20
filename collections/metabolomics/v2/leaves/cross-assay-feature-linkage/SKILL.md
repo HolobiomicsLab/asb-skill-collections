@@ -21,7 +21,7 @@ metadata:
   - peakPantheR
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -59,7 +59,6 @@ attribution:
 
 # cross-assay-feature-linkage
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Link statistically significant LC-MS features across multiple assays (e.g., HPOS, LPOS, LNEG) by identifying features that represent the same metabolite in different ionization modes or chromatographic methods. This skill uses mass-to-charge ratio and retention time patterns to recognize common metabolites across assays and strengthen evidence for compound identification in multi-assay metabolomics studies.

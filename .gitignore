@@ -45,5 +45,12 @@ governance/license_clarification/wave.yaml
 .license-cache-v2.json
 
 # Local resolver caches (preprint licence lookups, embeddings). Never committed.
+# Leaf embedding caches are large and regenerated from source / shipped as
+# Zenodo + GitHub Release assets.
 .cache/
 **/.cache/
+*.npz
+
+# curate.py writes a local audit snapshot; it is a dev-tool output, not a
+# release artifact like gate_report.json.
+collections/*/v*/curation_report.json

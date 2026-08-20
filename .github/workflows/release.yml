@@ -92,6 +92,24 @@ jobs:
             fi
           fi
 
+      - name: Propose release co-authors from leaderboard (advisory)
+        # Turns the measured contribution record into a PROPOSED author list for
+        # this release. Advisory only — it writes the proposal to the job summary
+        # and never mutates CITATION.cff/.zenodo.json automatically (a maintainer
+        # injects reviewed authors via select_release_coauthors.py --apply in a PR).
+        continue-on-error: true
+        env:
+          COLLECTION_SLUG: ${{ steps.tag.outputs.slug }}
+        run: |
+          python scripts/regen_career_stats.py --repo-root . || true
+          python scripts/select_release_coauthors.py --repo-root . \
+            --collection "${COLLECTION_SLUG}" --recent-years 2 \
+            --report release_coauthors.md --json release_coauthors.json || true
+          if [ -f release_coauthors.md ]; then
+            cat release_coauthors.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+          echo "::notice::Co-author proposal is ADVISORY. Inject reviewed authors with select_release_coauthors.py --apply (CITATION.cff / .zenodo.json) in a PR before tagging."
+
       - name: Upload to Zenodo (fail-soft if token missing)
         id: zenodo
         env:
@@ -100,6 +118,7 @@ jobs:
           ZENODO_SANDBOX: ${{ vars.ZENODO_SANDBOX }}
           COLLECTION_SLUG: ${{ steps.tag.outputs.slug }}
           COLLECTION_VERSION: ${{ steps.tag.outputs.version }}
+          RELEASE_TAG: ${{ steps.tag.outputs.tag }}
         run: |
           if [ -z "${ZENODO_TOKEN}" ]; then
             echo "ZENODO_TOKEN not set — skipping Zenodo upload"
@@ -107,7 +126,7 @@ jobs:
             exit 0
           fi
           python - <<'PYEOF'
-          import json, os, pathlib, requests, sys, zipfile, tempfile
+          import json, os, pathlib, re, requests, sys, zipfile, tempfile
 
           token = os.environ["ZENODO_TOKEN"]
           slug = os.environ["COLLECTION_SLUG"]
@@ -123,14 +142,54 @@ jobs:
           base_url = "https://sandbox.zenodo.org/api" if sandbox else "https://zenodo.org/api"
           print(f"Zenodo target: {'SANDBOX' if sandbox else 'PRODUCTION'} ({base_url})")
 
-          # Create a new deposition
-          resp = requests.post(f"{base_url}/deposit/depositions",
-              json={}, headers=headers, timeout=30)
-          resp.raise_for_status()
-          dep = resp.json()
-          dep_id = dep["id"]
-          bucket_url = dep["links"]["bucket"]
-          print(f"Created Zenodo deposition {dep_id}")
+          # ---- Resolve the Zenodo concept record for version lineage ----
+          # Read any prior-version DOI from the collection's OWN metadata so no DOI
+          # is hardcoded in CI (generalize-or-stop). ZENODO_CONCEPT_RECORD overrides.
+          # A "new version" keeps the concept DOI stable and mints a fresh version
+          # DOI — exactly like clicking "New version" in the Zenodo UI. Falls back to
+          # a brand-new deposition for a collection's first-ever release.
+          def _concept_record():
+            override = os.environ.get("ZENODO_CONCEPT_RECORD", "").strip()
+            if override:
+              return override
+            zjp = collection_dir / ".zenodo.json"
+            if not zjp.exists():
+              return ""
+            meta0 = json.loads(zjp.read_text())
+            version_relations = {"isversionof", "isnewversionof", "ispreviousversionof"}
+            for rid in (meta0.get("related_identifiers") or []):
+              if str(rid.get("relation", "")).lower() in version_relations:
+                m = re.search(r"zenodo[./](\d+)", str(rid.get("identifier", "")))
+                if m:
+                  return m.group(1)
+            return ""
+
+          concept_record = _concept_record()
+          if concept_record:
+            nv = requests.post(
+              f"{base_url}/deposit/depositions/{concept_record}/actions/newversion",
+              headers=headers, timeout=30)
+            nv.raise_for_status()
+            dep = requests.get(nv.json()["links"]["latest_draft"], headers=headers, timeout=30).json()
+            dep_id = dep["id"]
+            bucket_url = dep["links"]["bucket"]
+            # Drop files inherited from the previous version; we re-upload current artifacts.
+            for old in dep.get("files", []):
+              fid = old.get("id")
+              if fid:
+                dresp = requests.delete(
+                  f"{base_url}/deposit/depositions/{dep_id}/files/{fid}",
+                  headers=headers, timeout=30)
+                dresp.raise_for_status()  # else the old file persists alongside the new one
+            print(f"Created NEW VERSION draft {dep_id} of Zenodo concept record {concept_record}")
+          else:
+            resp = requests.post(f"{base_url}/deposit/depositions",
+                json={}, headers=headers, timeout=30)
+            resp.raise_for_status()
+            dep = resp.json()
+            dep_id = dep["id"]
+            bucket_url = dep["links"]["bucket"]
+            print(f"Created NEW deposition {dep_id} (no prior concept record found — first release)")
 
           # Zip the collection directory + bundle the Perspicacité grounding
           # binder (+ deps + agent guide) so the deposit is self-contained:
@@ -161,6 +220,27 @@ jobs:
             )
             upload_resp.raise_for_status()
           print(f"Uploaded {slug}-v{version}.zip")
+
+          # ---- Optional: ship the prebuilt leaf embedding cache as a separate file ----
+          # Lets Perspicacité users get semantic leaf retrieval without re-embedding
+          # thousands of leaves. Fail-soft: only when a maintainer placed the aligned
+          # cache (LEAF_EMB_CACHE_PATH override, else a conventional location).
+          _cache_env = os.environ.get("LEAF_EMB_CACHE_PATH", "").strip()
+          _cache_candidates = [pathlib.Path(_cache_env)] if _cache_env else [
+            collection_dir / ".cache" / f"leafemb_v{version}.npz",   # bin/semantic_search.py convention
+            collection_dir / ".cache" / f"leafemb_{collection_dir.name}.npz",
+          ]
+          for _cache_path in _cache_candidates:
+            if _cache_path.is_file():
+              with open(_cache_path, "rb") as fh:
+                _up = requests.put(
+                  f"{bucket_url}/{slug}-v{version}-leafemb.npz",
+                  data=fh, headers=headers, timeout=300)
+                _up.raise_for_status()
+              print(f"Uploaded leaf embedding cache from {_cache_path}")
+              break
+          else:
+            print("No leaf embedding cache present — skipping (semantic retrieval re-embeds on first use)")
 
           # ---- Metadata: prefer a checked-in .zenodo.json, else derive from CITATION.cff ----
           zj = collection_dir / ".zenodo.json"
@@ -194,7 +274,7 @@ jobs:
               "keywords": ["scientific-agents", "agent-skills", slug, "asb"],
               "license": "cc-by-4.0",
               "access_right": "open",
-              "version": os.environ.get("GITHUB_REF_NAME", f"{slug}-v{version}"),
+              "version": os.environ.get("RELEASE_TAG") or os.environ.get("GITHUB_REF_NAME", f"{slug}-v{version}"),
             }
 
           meta_resp = requests.put(

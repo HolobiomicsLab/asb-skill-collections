@@ -17,7 +17,7 @@ metadata:
   - JSON Schema validator
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -45,7 +45,6 @@ attribution:
 
 # Spectral Data Integrity Checking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate converted mass-spectrometry spectral data by verifying file format structure, schema compliance, and preservation of key spectral attributes (peaks, precursor masses, retention times) against the mzPeak specification. This skill ensures that data transformations into the mzPeak Parquet-based archive format have not corrupted or lost critical information.

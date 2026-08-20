@@ -16,7 +16,7 @@ metadata:
   - pandas
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -51,7 +51,6 @@ attribution:
 
 # formula-deduplication-and-counting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Deduplicate and count unique molecular formulas from a filtered chemical database after applying m/z range and MS level constraints. This skill quantifies the diversity of ionizable species available in a virtual metabolomics acquisition simulation.

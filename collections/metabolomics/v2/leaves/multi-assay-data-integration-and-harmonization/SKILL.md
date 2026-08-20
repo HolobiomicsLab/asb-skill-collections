@@ -22,7 +22,7 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -60,7 +60,6 @@ attribution:
 
 # multi-assay-data-integration-and-harmonization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load, prefix, and harmonize multi-assay LC-MS metabolomics intensity matrices (e.g., HPOS, LPOS, LNEG) into a unified block structure suitable for Multi-Block PLS modelling and cross-assay feature linking. This skill ensures assay identity is preserved in column names and sample correspondence is maintained across all blocks before statistical integration.

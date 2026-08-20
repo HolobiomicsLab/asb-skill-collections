@@ -13,7 +13,7 @@ metadata:
   - NPLinker
   - BiG-SCAPE
   - IOKR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -50,7 +50,6 @@ attribution:
 
 # maximum-score-selection-over-pairs
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generalize pairwise scoring functions (e.g., BGC-spectrum IOKR scores) to group-level links (e.g., GCF-MF pairs) by computing the maximum score over all possible combinations of elements within each group. This approach enables ranking of composite genomic-metabolomic links when one or both sides contain multiple entities.

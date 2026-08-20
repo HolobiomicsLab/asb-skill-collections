@@ -21,7 +21,7 @@ metadata:
   - readr
   - readxl
   - dplyr
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
@@ -66,7 +66,6 @@ attribution:
 
 # metabolite-identifier-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert multiple chemical identifier formats (chemical name, InChI, InChIKey, SMILES) into a canonical standardized nomenclature using PubChem as the reference database, and detect and remove duplicate entries. This skill enables harmonization across metabolomics studies that report compounds using heterogeneous identifier schemes.

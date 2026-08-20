@@ -15,7 +15,7 @@ metadata:
   - Rust
   - cargo
   - mzPeak
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -44,7 +44,6 @@ attribution:
 
 # Rust Build and Compilation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compiling Rust source code into executable binaries and libraries using cargo, the Rust package manager. This skill is essential for constructing command-line tools and libraries for scientific data format conversion and validation.

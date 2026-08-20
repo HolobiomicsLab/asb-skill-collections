@@ -16,7 +16,7 @@ metadata:
   - scipy.stats
   - pandas
   - matplotlib / seaborn
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -52,7 +52,6 @@ attribution:
 
 # validated-link-ranking-comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically compare ranking performance of different BGC–metabolite scoring functions by measuring their ability to place experimentally validated links in top percentiles of predictions, then select the function(s) that statistically enrich for true positives. This skill bridges computational prediction with experimental ground truth to optimize link prioritization.

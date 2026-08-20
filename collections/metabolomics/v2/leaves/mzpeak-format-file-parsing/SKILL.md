@@ -19,7 +19,7 @@ metadata:
   - Rust mzPeak library
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -48,7 +48,6 @@ attribution:
 
 # mzpeak-format-file-parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse mzPeak files—Parquet-based archives containing mass spectrometry spectra, chromatograms, and metadata—into structured tabular representations for downstream analysis. This skill enables reading of mzPeak's multi-file archive format (spectra_metadata.parquet, spectra_data.parquet, chromatograms_metadata.parquet, etc.) using language-specific implementations.

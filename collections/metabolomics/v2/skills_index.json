@@ -844,7 +844,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -968,7 +968,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -1260,7 +1260,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -1981,7 +1981,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -2019,7 +2019,7 @@
    "10.1186/s13321-023-00738-4"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -2161,7 +2161,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -2230,7 +2230,7 @@
    "10.1186/s13321-023-00738-4"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -2573,7 +2573,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -2599,7 +2599,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -2625,7 +2625,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -4804,7 +4804,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -5257,7 +5257,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -5481,7 +5481,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -5506,7 +5506,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -5557,7 +5557,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -5585,7 +5585,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -5783,7 +5783,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -5804,7 +5804,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -6606,7 +6606,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -8241,7 +8241,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -9697,7 +9697,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -9721,7 +9721,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -9789,7 +9789,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -9942,7 +9942,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -10525,7 +10525,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -10821,7 +10821,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -10949,7 +10949,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -11125,7 +11125,7 @@
    "10.1038/s41592-023-02143-z"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -11144,7 +11144,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -11627,7 +11627,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -12386,7 +12386,7 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -13423,7 +13423,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -13530,7 +13530,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -13550,7 +13550,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -13884,7 +13884,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -14865,7 +14865,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -15071,7 +15071,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -15135,7 +15135,7 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -15547,7 +15547,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -16207,7 +16207,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -16993,7 +16993,7 @@
    "10.1021/acs.analchem.5c06841"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -18408,7 +18408,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -19688,7 +19688,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -19793,7 +19793,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -20334,7 +20334,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -20363,7 +20363,7 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -20458,7 +20458,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -20617,7 +20617,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -20843,7 +20843,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -22550,7 +22550,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -22951,7 +22951,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -23090,7 +23090,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -23162,7 +23162,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -23859,7 +23859,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -23886,7 +23886,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -24008,7 +24008,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -25384,7 +25384,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -25405,7 +25405,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -25431,7 +25431,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -26205,7 +26205,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -26299,7 +26299,7 @@
    "10.1021/acs.analchem.5c06841"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -28038,7 +28038,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -28134,7 +28134,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -29348,7 +29348,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -30073,7 +30073,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -30096,521 +30096,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
-  "grounding_tier": "repo"
- },
- {
-  "slug": "evidence-linking",
-  "name": "evidence-linking",
-  "description": "Use when after generating MS/MS spectra, retention time, or collision cross section predictions using 3DMolMS, you need to validate predictions against reference spectra (MoNA, NIST20, HMDB), verify input molecule conformations were preprocessed correctly (ETKDGv3), or establish reproducibility by.",
-  "edam_operation": "http://edamontology.org/operation_3801",
-  "edam_topics": [
-   "http://edamontology.org/topic_0602",
-   "http://edamontology.org/topic_3172",
-   "http://edamontology.org/topic_3375",
-   "http://edamontology.org/topic_0092",
-   "http://edamontology.org/topic_3361",
-   "http://edamontology.org/topic_0091",
-   "http://edamontology.org/topic_0769",
-   "http://edamontology.org/topic_3391",
-   "http://edamontology.org/topic_3047",
-   "http://edamontology.org/topic_0625",
-   "http://edamontology.org/topic_0630",
-   "http://edamontology.org/topic_3520",
-   "http://edamontology.org/topic_0121",
-   "http://edamontology.org/topic_3372",
-   "http://edamontology.org/topic_0081",
-   "http://edamontology.org/topic_3572",
-   "http://edamontology.org/topic_0154",
-   "http://edamontology.org/topic_3473",
-   "http://edamontology.org/topic_0580",
-   "http://edamontology.org/topic_3050",
-   "http://edamontology.org/topic_3173",
-   "http://edamontology.org/topic_0102",
-   "http://edamontology.org/topic_2269",
-   "http://edamontology.org/topic_3673",
-   "http://edamontology.org/topic_0605",
-   "http://edamontology.org/topic_3373",
-   "http://edamontology.org/topic_3063",
-   "http://edamontology.org/topic_3674",
-   "http://edamontology.org/topic_0219",
-   "http://edamontology.org/topic_0199",
-   "http://edamontology.org/topic_3345",
-   "http://edamontology.org/topic_0080",
-   "http://edamontology.org/topic_3370",
-   "http://edamontology.org/topic_2275",
-   "http://edamontology.org/topic_3304",
-   "http://edamontology.org/topic_3407",
-   "http://edamontology.org/topic_3379",
-   "http://edamontology.org/topic_3071",
-   "http://edamontology.org/topic_3365",
-   "http://edamontology.org/topic_3174",
-   "http://edamontology.org/topic_0078",
-   "http://edamontology.org/topic_3577",
-   "http://edamontology.org/topic_3489",
-   "http://edamontology.org/topic_3316",
-   "http://edamontology.org/topic_3308",
-   "http://edamontology.org/topic_0153"
-  ],
-  "tools": [
-   "PyTorch",
-   "RDKit",
-   "molnetpack",
-   "3DMolMS",
-   "MoNA",
-   "NIST20",
-   "HMDB",
-   "mzmine",
-   "mzmine3",
-   "GitHub",
-   "AnnoSM",
-   "GitLab",
-   "bigmap-family",
-   "bigmap-map",
-   "bigmap-analyse",
-   "antiSMASH / gutSMASH",
-   "MASH",
-   "BiG-SCAPE",
-   "bowtie2",
-   "Bedtools",
-   "Samtools",
-   "BinDiscover",
-   "GitHub / GitHub Actions / Travis CI",
-   "SIRIUS",
-   "CSI:FingerID",
-   "CANOPUS",
-   "ZODIAC",
-   "GitHub / Bitbucket / Version Control Systems",
-   "PostgreSQL",
-   "ChEMBL Structure Curation Pipeline",
-   "Docker",
-   "MSNovelist",
-   "FCC",
-   "CycloBranch",
-   "DearOMG-vendor.exe",
-   "DearOMG-community.exe",
-   "DearOMG-parser.exe",
-   "DeepMASS2",
-   "DeepMASS2_Data_Processing",
-   "Snakemake",
-   "conda",
-   "DIATAGeR",
-   "MSDIAL",
-   "MZMine",
-   "DiGress",
-   "DiffMS",
-   "netgsa R package",
-   "ggplot2",
-   "Cytoscape",
-   "DNEA",
-   "BiocManager",
-   "knitr and kableExtra",
-   "eicCluster",
-   "Bioconductor",
-   "MassBank",
-   "R",
-   "eRah",
-   "OpenMS",
-   "KNIME",
-   "Python",
-   "Comet",
-   "pyOpenMS",
-   "OpenMS IDMapper",
-   "OpenMS PSMFeatureExtractor",
-   "TOPPView",
-   "G-Aligner",
-   "MZmine2",
-   "XCMS",
-   "GcDuo",
-   "EBImage",
-   "GNPS2",
-   "GitHub (Wang-Bioinformatics-Lab/GNPS2_Workflows)",
-   "GitHub Actions",
-   "ProteoSAFe",
-   "GNPS",
-   "nose2",
-   "act",
-   "CCMS-Integration-Tests",
-   "GNPS ProteoSAFe Workflows",
-   "CCMS-Integration-Tests Repository",
-   "FraGNNet",
-   "ms-pred (ICEBERG, SCARF, MARASON)",
-   "Fiora",
-   "MassSpecGym",
-   "HDSE-MS",
-   "HPLG (Heuristic Peak List Generator)",
-   "HP (Heuristic Processor)",
-   "homologueDiscoverer",
-   "dplyr",
-   "MZmine",
-   "pytest",
-   "mkdocs / mkdocstrings",
-   "ViMMS",
-   "instantclue",
-   "jmztab-m CLI",
-   "jmzTab-m-webapp",
-   "jmztabm-io",
-   "pymzTab-m",
-   "MetDNA2",
-   "MS-DIAL",
-   "MetFrag",
-   "MS-FINDER",
-   "MetDNA2Vis",
-   "Python 3.9.0",
-   "numpy",
-   "PySide6",
-   "openpyxl",
-   "scipy",
-   "matplotlib",
-   "requests",
-   "brain-isotopic-distribution",
-   "GitHub repository",
-   "Lipidepifind",
-   "scikit-learn",
-   "PyTorch Lightning",
-   "Weights & Biases",
-   "HDF5",
-   "LipiDex-2",
-   "LipiDex",
-   "Compound Discoverer",
-   "mzMine 2",
-   "Proteowizard MS/MS file converter",
-   "lipydomics",
-   "GitHub Issues / Issue Tracker",
-   "mzbatch.py",
-   "CQMU database",
-   "Jupyter Notebook 001-007.ipynb",
-   "m2r",
-   "Zenodo",
-   "MAFFIN",
-   "Flask",
-   "SQLAlchemy",
-   "scikit-learn DBSCAN/OPTICS",
-   "scikit-learn ensemble (bagging SVC, random forest)",
-   "Pandas",
-   "mass-suite (mss)",
-   "GNPS_MASST",
-   "MEANtools",
-   "MetaboAnalystR",
-   "MetaboAnalyst web server",
-   "MetaboAnalystR 4.0",
-   "MSnbase (R/Bioconductor)",
-   "Internal SQLite database",
-   "Google Drive",
-   "Hugging Face",
-   "metabolitics-frontend",
-   "metabol",
-   "Travis CI",
-   "Gitter chat",
-   "Metabolome-Transformer",
-   "GitHub repository inspection",
-   "MATLAB driver scripts (MetaboPAC_*.m, driver_genDatasets*.m)",
-   "GNPS (Global Natural Product Social Molecular Networking Platform)",
-   "ReDU (Reanalysis of Data User Interface)",
-   "MassIVE Repository",
-   "MetaPro",
-   "AirdPro",
-   "Redis",
-   "MongoDB",
-   "GitHub repository explorer",
-   "Python (for inspecting data format and running code snippets)",
-   "README parser and artifact indexer",
-   "TBtools",
-   "Salmon",
-   "MFAssign",
-   "IsoFiltR",
-   "KMDNoise / HistNoise",
-   "RecalList / Recal",
-   "mineMS2",
-   "MINNO",
-   "molDiscovery",
-   "Spyder",
-   "Anaconda",
-   "MRMkit",
-   "MRMhub",
-   "GitHub Issues",
-   "GNPS (Global Natural Products Social Molecular Networking)",
-   "ISDB-LOTUS (Isomeric Spectral DataBase of Natural Products)",
-   "Sirius 6",
-   "MatchMS",
-   "MS2DECIDE",
-   "ISDB-LOTUS",
-   "Sirius6",
-   "TensorFlow",
-   "MS2toImg-CNN",
-   "Visual Studio",
-   ".NET Framework 4.7.2, .NET Core 3.1, .NET 6, .NET Standard 2.0",
-   "MsdialWorkbench repository",
-   "MSIannotator",
-   "MATLAB",
-   "MSIght",
-   "load_and_preprocess_imzml",
-   "preprocess_he",
-   "register_he_msi",
-   "perform_bspline",
-   "interpolate_MSI",
-   "cluster_msi",
-   "Python 3.8",
-   "GitHub (WoodFY/MSMCE)",
-   "MZmine 2",
-   "mzmine2",
-   "mzmine (successor)",
-   "GitHub (repositories and issue tracker)",
-   "mzmine (mzmine3)",
-   "MZmine 2 (mzmine2)",
-   "GitHub Actions / Development Build Release",
-   "JDK 25, JavaFX 24",
-   "proteowizard",
-   "mzMine",
-   "msconvert",
-   "NeatMS",
-   "Jupyter Notebook",
-   "NetworkX",
-   "SignalPropagation",
-   "NetAurHPD_M5",
-   "result_optimization_and_analysis",
-   "Python 3.6",
-   "NP³ MS Workflow",
-   "GNPS2 Library Search",
-   "NP3_MSCluster algorithm",
-   "UNPD (Universal Natural Products Database)",
-   "npanalyst",
-   "antiSMASH",
-   "scikit-learn (KNN)",
-   "NPOmix_python",
-   "TOPPTools",
-   "TOPPAS",
-   "nextflow / Galaxy",
-   "PeakDetective",
-   "Maven",
-   "PeakMeister",
-   "R stats package (ksmooth function)",
-   "PlantMetSuite",
-   "POMAShiny",
-   "POMA R/Bioconductor package",
-   "RStudio",
-   "PPGB-MS2",
-   "CFM-ID",
-   "Shiny",
-   "Protomix",
-   "pyicoshift",
-   "Zenodo (record 13467227)",
-   "xtb",
-   "alfabet",
-   "RaMP-DB",
-   "BiocFileCache",
-   "Travis CI / AppVeyor",
-   "forward_train.py",
-   "forward_evaluate_pipeline.py",
-   "analysis_pipeline.py",
-   "const.py",
-   "library_match_pipeline.py",
-   "Colab",
-   "GitHub (computational-chemical-biology/regression_filter)",
-   "GitHub (gsarini/regression_filter)",
-   "ProteoWizard",
-   "ProteoWizard msconvert",
-   "RI-based-CPSC (Time_Corecctor Python package)",
-   "Python 3.9+",
-   "SGMNS",
-   "Spyder 3.7",
-   "MSConvert",
-   "Compound Discoverer, MS-DIAL, MZmine 2, XCMS",
-   "rdkit",
-   "TensorFlow / Spektral",
-   "Figshare",
-   "SManalyst",
-   "R / Shiny",
-   "Seurat",
-   "UMAP",
-   "MetaS/MetaS",
-   "GitHub (repository inspection, commit history, file listing)",
-   "SMolESY-select",
-   "SpectraX",
-   "SpecTUS",
-   "MS-ML (Hugging Face checkpoint)",
-   "NIST20 database",
-   "Jupyter",
-   "ms2deepscore",
-   "t-SNE",
-   "MZmine3",
-   "matchms",
-   "SPLASH validation tool",
-   "SPLASH REST Service",
-   "SKYLINE",
-   "MetaboAnalyst",
-   "statTarget",
-   "Combat",
-   "RGtk2",
-   "SIEVE",
-   "knitr",
-   "struct",
-   "pandas",
-   "Conda",
-   "NumPy",
-   "limma"
-  ],
-  "dois": [
-   "10.1093/bioinformatics/btad354",
-   "10.1021/acs.jproteome.5c00423",
-   "10.1021/acs.analchem.3c04946",
-   "10.1016/j.jece.2025.119962",
-   "10.1021/acs.analchem.1c05224",
-   "10.1128/msystems.00937-21",
-   "10.1186/s13321-023-00734-8",
-   "10.1021/ac202450g",
-   "10.1021/acs.analchem.8b04698",
-   "10.1093/nar/gku436",
-   "10.1021/acs.jcim.4c00760",
-   "10.1186/s13321-020-00478-9",
-   "10.3390/app13105969",
-   "10.1038/s41587-021-01045-9",
-   "10.1021/acs.analchem.5c03451",
-   "10.1177/14690667231164766",
-   "10.1007/s12539-025-00786-4",
-   "10.1101/2024.05.30.596727v2",
-   "10.1101/2024.11.13.623458v1",
-   "10.1016/j.aca.2025.344698",
-   "10.48550/arxiv.2502.09571",
-   "10.1186/s12859-024-05994-1",
-   "10.1016/j.chroma.2018.09.050",
-   "10.1021/acs.analchem.6b02927",
-   "10.1074/mcp.M113.031278",
-   "10.26434/chemrxiv-2024-1zk33",
-   "10.48550/arxiv.2404.02360",
-   "10.1007/s11306-025-02379-0",
-   "10.1186/s12859-023-05525-4",
-   "10.1093/bib/bbaf080",
-   "10.1186/s12859-023-05346-5",
-   "10.1038/s41596-025-01237-6",
-   "10.1038/s41467-025-65993-5",
-   "10.1038/s41596-020-0317-5",
-   "10.1002/imt2.195",
-   "10.1021/acs.analchem.5c04111",
-   "10.1021/acs.analchem.4c05315",
-   "10.1289/EHP7722",
-   "10.1093/bioinformatics/btac647/6722615",
-   "10.1186/s13321-024-00804-5",
-   "10.1038/s41467-021-23953-9",
-   "10.1021/acs.analchem.2c04603",
-   "10.1021/acs.analchem.0c03895",
-   "10.1038/s41598-018-31154-6",
-   "10.1038/s41467-022-34537-6",
-   "10.1021/acs.analchem.3c04419",
-   "10.1021/acs.analchem.5c00277",
-   "10.1101/2024.10.07.617094v3",
-   "10.1021/acs.analchem.4c00359",
-   "10.1016/j.cels.2018.03.011",
-   "10.1021/acs.analchem.0c02560",
-   "10.1021/acs.analchem.5c01414",
-   "10.1093/bioinformatics/btab060/6125380",
-   "10.1021/jasms.1c00013",
-   "10.48550/arxiv.2501.01950",
-   "10.1093/bioinformatics/btac355/6593484",
-   "10.1021/acs.analchem.3c03594",
-   "10.1186/s13321-023-00741-9",
-   "10.1038/s41587-023-01985-4",
-   "10.1101/2024.08.02.606356v2",
-   "10.1186/s13020-024-01031-8",
-   "10.1371/journal.pbio.3003307",
-   "10.1093/nar/gkae253",
-   "10.1038/s41467-024-48009-6",
-   "10.1101/2025.11.07.687008v1",
-   "10.1101/2025.11.07.687008",
-   "10.1109/tcbbio.2025.3563807",
-   "10.1038/s41467-025-66163-3",
-   "10.1039/d2mo00168c",
-   "10.1093/bioinformatics/btae373",
-   "10.1093/bioadv/vbad061/7172446",
-   "10.1021/acs.analchem.4c02038",
-   "10.1007/s11306-023-02018-6",
-   "10.1016/j.aca.2018.05.001",
-   "10.1021/acs.analchem.3c04607",
-   "10.1111/jipb.13774",
-   "10.1016/j.envres.2020.110114",
-   "10.1186/s13321-025-01051-y",
-   "10.1021/acs.analchem.3c04501",
-   "10.1038/s41467-021-23986-0",
-   "10.1021/acs.analchem.2c04632",
-   "10.1021/acs.analchem.0c03060",
-   "10.1002/cmtd.202400088",
-   "10.48550/arxiv.2510.09716",
-   "10.1038/s41467-024-54137-w",
-   "10.1021/acs.analchem.4c00527",
-   "10.1002/rcm.9253",
-   "10.1021/acs.analchem.2c00557",
-   "10.1016/j.chemolab.2024.105063",
-   "10.1021/acs.jproteome.4c01140",
-   "10.1371/journal.pone.0321239",
-   "10.1186/1471-2105-11-395",
-   "10.1038/s41587-023-01690-2",
-   "10.1021/acs.analchem.1c02220",
-   "10.48550/arxiv.2410.22030",
-   "10.1101/2023.03.01.530642v1",
-   "10.1021/jasms.4c00467",
-   "10.1021/acs.analchem.3c05829",
-   "10.1021/acscentsci.1c01108",
-   "10.1093/pnasnexus/pgac257/6847575",
-   "10.1038/nmeth.3959",
-   "10.1021/acs.analchem.3c00764",
-   "10.1007/s11306-022-01899-3",
-   "10.1021/acs.analchem.4c03513",
-   "10.1016/j.dmd.2025.100183",
-   "10.3390/plants12152880",
-   "10.1371/journal.pcbi.1009148",
-   "10.1021/acs.analchem.4c04375",
-   "10.1021/acs.analchem.5b02287",
-   "10.1093/bioadv/vbae192",
-   "10.1021/acs.analchem.4c07078",
-   "10.1021/acs.jcim.4c00446",
-   "10.3390/metabo8010016",
-   "10.1021/acs.analchem.2c02093",
-   "10.1101/2024.08.07.607073v1",
-   "10.1038/s41586-023-06906-8",
-   "10.1021/acs.analchem.3c02583",
-   "10.1021/acs.analchem.5c03730",
-   "10.1021/acs.analchem.3c00849",
-   "10.1038/s42004-023-00939-w",
-   "10.5281/zenodo.5501673",
-   "10.1038/s42003-024-05844-z",
-   "10.1101/2024.11.04.621329v1",
-   "10.1038/s41592-019-0344-8",
-   "10.3390/biom15111562",
-   "10.3390/metabo13080941",
-   "10.1021/acs.analchem.1c00113",
-   "10.1021/acs.analchem.5c03682",
-   "10.1021/jasms.3c00322",
-   "10.26434/chemrxiv-2024-37v2j",
-   "10.48550/arxiv.2502.05114",
-   "10.1021/acs.analchem.3c04444",
-   "10.1038/nbt.3689",
-   "10.1016/j.aca.2018.08.002",
-   "10.1093/bioinformatics/btaa1031",
-   "10.21105/joss.02694",
-   "10.1007/s11306-018-1363-7",
-   "10.1038/s42004-024-01189-0",
-   "10.1021/acs.jproteome.3c00784",
-   "10.3390/metabo10100416",
-   "10.1038/s41467-022-32155-w",
-   "10.1186/s13321-024-00858-5",
-   "10.3389/fmolb.2022.952149",
-   "10.1021/acs.analchem.5c03390",
-   "10.1186/s13321-023-00724-w",
-   "10.1016/j.jpba.2022.114681",
-   "10.21105/joss.02410",
-   "10.1038/s43588-025-00923-5",
-   "10.1016/j.aca.2019.02.010",
-   "10.1007/s11306-021-01839-7",
-   "10.3390/metabo9090171",
-   "10.1007/s42081-023-00205-2",
-   "10.1021/ac051437y",
-   "10.1038/s42256-020-00234-6"
-  ],
-  "techniques": [
-   "LC-MS",
-   "ion-mobility-MS"
-  ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -30975,506 +30461,6 @@
    "10.3389/fchem.2022.908572"
   ],
   "techniques": [],
-  "license_tier": "restricted",
-  "grounding_tier": "repo"
- },
- {
-  "slug": "expert-review-preparation",
-  "name": "expert-review-preparation",
-  "description": "Use when when you have a set of molecular structures (from HMDB, RefMet, MoNA, NIST, or custom sources) with associated MS/MS spectra or retention time data, and need to identify which molecules and spectra are suitable for expert human review—either to validate model predictions, flag edge cases.",
-  "edam_operation": "http://edamontology.org/operation_3695",
-  "edam_topics": [
-   "http://edamontology.org/topic_0593",
-   "http://edamontology.org/topic_3375",
-   "http://edamontology.org/topic_0121",
-   "http://edamontology.org/topic_3370",
-   "http://edamontology.org/topic_0625",
-   "http://edamontology.org/topic_3372",
-   "http://edamontology.org/topic_0091",
-   "http://edamontology.org/topic_3361",
-   "http://edamontology.org/topic_0769",
-   "http://edamontology.org/topic_3674",
-   "http://edamontology.org/topic_0092",
-   "http://edamontology.org/topic_0080",
-   "http://edamontology.org/topic_0154",
-   "http://edamontology.org/topic_3172",
-   "http://edamontology.org/topic_3511",
-   "http://edamontology.org/topic_3373",
-   "http://edamontology.org/topic_0081",
-   "http://edamontology.org/topic_3572",
-   "http://edamontology.org/topic_3520",
-   "http://edamontology.org/topic_0219",
-   "http://edamontology.org/topic_3307",
-   "http://edamontology.org/topic_3407",
-   "http://edamontology.org/topic_0634",
-   "http://edamontology.org/topic_3071",
-   "http://edamontology.org/topic_0218",
-   "http://edamontology.org/topic_3473",
-   "http://edamontology.org/topic_3391",
-   "http://edamontology.org/topic_3050",
-   "http://edamontology.org/topic_3673",
-   "http://edamontology.org/topic_3315",
-   "http://edamontology.org/topic_3897",
-   "http://edamontology.org/topic_3577",
-   "http://edamontology.org/topic_3516",
-   "http://edamontology.org/topic_3365",
-   "http://edamontology.org/topic_3316",
-   "http://edamontology.org/topic_3070",
-   "http://edamontology.org/topic_0602",
-   "http://edamontology.org/topic_2269",
-   "http://edamontology.org/topic_3382",
-   "http://edamontology.org/topic_3277",
-   "http://edamontology.org/topic_3175",
-   "http://edamontology.org/topic_3301",
-   "http://edamontology.org/topic_0089",
-   "http://edamontology.org/topic_3474",
-   "http://edamontology.org/topic_3892",
-   "http://edamontology.org/topic_3957"
-  ],
-  "tools": [
-   "PyTorch",
-   "RDKit",
-   "molnetpack",
-   "3DMolMS",
-   "Koina",
-   "mzmine",
-   "mzmine3 (CSi-Studio fork)",
-   "JavaFX",
-   "JDK (Java Development Kit)",
-   "Gradle (gradlew)",
-   "GitHub",
-   "Python environment tools (pandas, numpy, scikit-learn, joblib, tqdm, scipy, matplotlib, seaborn)",
-   "GitLab",
-   "BiG-MAP",
-   "BiG-SCAPE",
-   "antiSMASH / gutSMASH",
-   "bowtie2",
-   "MASH",
-   "Bedtools",
-   "Samtools",
-   "BinDiscover",
-   "Travis CI",
-   "SIRIUS",
-   "CSI:FingerID",
-   "CANOPUS",
-   "MSNovelist",
-   "ZODIAC",
-   "Bright Giant GmbH",
-   "GitHub / Bitbucket / GitLab",
-   "ChEMBL Structure Curation Pipeline",
-   "PostgreSQL",
-   "Docker",
-   "GitHub (Steinbeck-Lab/coconut)",
-   "CycloBranch",
-   "OpenMS",
-   "CompassXport",
-   "DearOMG-vendor.exe",
-   "DearOMG-community.exe",
-   "DearOMG-parser.exe",
-   "python_api (DearOMGConverter, DearOMGParser classes)",
-   "DeepMASS2_Data_Processing",
-   "Snakemake",
-   "GitHub Actions (CI/CD testing)",
-   "Coverage Status (Coveralls)",
-   "DIATAGeR",
-   "MS-DIAL",
-   "MZMine",
-   "MetaboLights",
-   "DiGress",
-   "DiffMS",
-   "Hydra",
-   "PyTorch Geometric",
-   "rdkit",
-   "netgsa R package",
-   "ggplot2",
-   "Cytoscape",
-   "DNEA R package",
-   "BiocParallel",
-   "igraph",
-   "pheatmap",
-   "BiocManager",
-   "eicCluster",
-   "Bioconductor",
-   "MassBank",
-   "R",
-   "eRah",
-   "GitHub Actions (R-CMD-check)",
-   "Codecov",
-   "CRAN",
-   "KNIME",
-   "Python",
-   "Python bindings (pyOpenMS)",
-   "Conda environment specification",
-   "G-Aligner",
-   "MZmine2",
-   "XCMS",
-   "GcDuo",
-   "GNPS2",
-   "GNPS (Global Natural Products Social Molecular Networking)",
-   "ProteoSAFe",
-   "GitHub Actions",
-   "nose2",
-   "act",
-   "CCMS-Integration-Tests",
-   "Uptime Robot",
-   "GNPS",
-   "UptimeRobot",
-   "FraGNNet",
-   "ms-pred (coleygroup)",
-   "Fiora",
-   "MassSpecGym",
-   "HDSE-MS",
-   "HPLG (Heuristic Peak List Generator)",
-   "HP (Heuristic Processor)",
-   "homologueDiscoverer",
-   "dplyr",
-   "IDSL_MINT",
-   "JDK 25",
-   "JavaFX 24",
-   "GitHub Releases + Actions",
-   "MZmine",
-   "pytest",
-   "flake8",
-   "autopep8",
-   "mkdocs",
-   "mkdocstrings",
-   "Poetry",
-   "ViMMS",
-   "InstantClue",
-   "jmzTab-m",
-   "GitHub Actions (Maven CI)",
-   "Maven Central",
-   "MetDNA2",
-   "knitr",
-   "rmarkdown",
-   "Python 3.9.0",
-   "numpy",
-   "openpyxl",
-   "matplotlib",
-   "PySide6",
-   "scipy",
-   "brain-isotopic-distribution",
-   "scikit-learn",
-   "Ruff",
-   "mypy",
-   "Sphinx",
-   "LipiDex-2",
-   "Compound Discoverer",
-   "LipiDex",
-   "mzMine 2",
-   "Proteowizard",
-   "Jupyter Notebook",
-   "mzbatch.py",
-   "m2r",
-   "Zenodo",
-   "OpenReview",
-   "MAFFIN R package",
-   "Git/GitHub",
-   "Flask",
-   "Docker Compose",
-   "Conda",
-   "unittest",
-   "msdial",
-   "GNPS_MASST",
-   "MEANtools",
-   "MetaboAnalystR",
-   "MetaboAnalyst Web Server",
-   "mummichog",
-   "fGSEA",
-   "GitHub repository indexing",
-   "Conda environment management",
-   "Google Drive dataset storage",
-   "Hugging Face Model Hub",
-   "metabolitics-frontend",
-   "Gitter chat",
-   "Metabolome-Transformer",
-   "MetReport",
-   "GNPS (Global Natural Product Social Molecular Networking Platform)",
-   "MassIVE",
-   "AirdPro",
-   "MetaPro",
-   "Redis",
-   "MongoDB",
-   "MetDIT (TransOmics + NetOmics)",
-   "TBtools",
-   "tidymass",
-   "MFAssignR",
-   "mineMS2",
-   "MINNO",
-   "molDiscovery",
-   "MPACT",
-   "MRMkit",
-   "ISDB-LOTUS",
-   "Sirius 6",
-   "MatchMS",
-   "MZmine 4",
-   "MS2DECIDE",
-   "TensorFlow",
-   "Visual Studio Community 2022",
-   "Visual Studio Code",
-   ".NET Framework 4.7.2, .NET Core 3.1, .NET 6",
-   "ReactiveExtensions and ReactiveProperty",
-   "MSIght",
-   "cluster_msi",
-   "cluster_msi_scored_w_csv",
-   "register_he_msi",
-   "perform_bspline",
-   "create_intensity_matrix",
-   "foreground_extract",
-   "apply_dimensionality_reduction",
-   "PyPI",
-   "ReadTheDocs",
-   "Python 3.8",
-   "GitHub (WoodFY/MSMCE repository)",
-   "scikit_learn, numpy, pandas, matplotlib",
-   "MZmine 2",
-   "mzmine2",
-   "GitHub Actions (CI/CD)",
-   "GitHub Actions / CI/CD",
-   "proteowizard",
-   "mzMine",
-   "msconvert",
-   "NeatMS",
-   "Keras",
-   "pandas",
-   "mzMine, XCMS, or ProteoWizard",
-   "NetworkX",
-   "Python 3.6",
-   "NP³ MS Workflow",
-   "mamba / conda",
-   "GNPS2 Library Search (offline)",
-   "NP³ PCA plot generator",
-   "Node.js shelljs and commander packages",
-   "npanalyst",
-   "antiSMASH",
-   "scikit-learn (k-NN)",
-   "GitHub Issues",
-   "nanobind",
-   "PeakDetective",
-   "mz.unity",
-   "Maven",
-   "Open Babel",
-   "MySQL",
-   "PeakMeister",
-   "R statistical environment",
-   "ksmooth (stats package)",
-   "PlantMetSuite",
-   "POMAShiny",
-   "POMA (R/Bioconductor package)",
-   "Docker Hub",
-   "PPGB-MS2",
-   "CFM-ID",
-   "Shiny",
-   "devtools",
-   "Protomix",
-   "pyicoshift",
-   "NumPy, pandas, seaborn, matplotlib, Plotly, scikit-learn",
-   "QC4metabolomics",
-   "GitHub (version control and artifact storage)",
-   "xtb",
-   "alfabet",
-   "torch, torch-geometric",
-   "RaMP-DB (ncats version)",
-   "RaMP-DB (Mathelab version)",
-   "RaMP-Backend",
-   "Conda/Mamba",
-   "Colab",
-   "ProteoWizard",
-   "ProteoWizard msconvert",
-   "Time_Corecctor (RI-based-CPSC)",
-   "SGMNS",
-   "MSConvert",
-   "Compound Discoverer, MS-DIAL, MZmine 2, XCMS",
-   "CAMERA, mz.unity",
-   "Spektral",
-   "Conda and pip",
-   "SIMPEL",
-   "Figshare",
-   "COSMIC",
-   "MetaS/MetaS",
-   "transformer",
-   "Hugging Face Model Hub (MS-ML)",
-   "GitHub (hejjack/SpecTUS)",
-   "Jupyter notebooks",
-   "Demo repository (spectus-demo)",
-   "Jupyter",
-   "MZmine3",
-   "matchms",
-   "specXplore",
-   "SPLASH validation tool",
-   "SKYLINE",
-   "MetaboAnalyst",
-   "statTarget",
-   "ComBat",
-   "R 3.3.0",
-   "RGtk2",
-   "struct",
-   "structToolbox",
-   "NumPy",
-   "HMDB",
-   "limma"
-  ],
-  "dois": [
-   "10.1093/bioinformatics/btad354",
-   "10.1021/acs.jproteome.5c00423",
-   "10.1021/acs.analchem.3c04946",
-   "10.1016/j.jece.2025.119962",
-   "10.1021/acs.analchem.1c05224",
-   "10.1128/msystems.00937-21",
-   "10.1186/s13321-023-00734-8",
-   "10.1021/ac202450g",
-   "10.1021/acs.analchem.8b04698",
-   "10.1093/nar/gku436",
-   "10.1021/acs.jcim.4c00760",
-   "10.1186/s13321-020-00478-9",
-   "10.3390/app13105969",
-   "10.1038/s41587-021-01045-9",
-   "10.1021/acs.analchem.5c03451",
-   "10.1177/14690667231164766",
-   "10.1007/s12539-025-00786-4",
-   "10.1101/2024.05.30.596727v2",
-   "10.1101/2024.11.13.623458v1",
-   "10.1016/j.aca.2025.344698",
-   "10.48550/arxiv.2502.09571",
-   "10.1186/s12859-024-05994-1",
-   "10.1016/j.chroma.2018.09.050",
-   "10.1021/acs.analchem.6b02927",
-   "10.1074/mcp.M113.031278",
-   "10.26434/chemrxiv-2024-1zk33",
-   "10.48550/arxiv.2404.02360",
-   "10.1007/s11306-025-02379-0",
-   "10.1186/s12859-023-05525-4",
-   "10.1093/bib/bbaf080",
-   "10.1186/s12859-023-05346-5",
-   "10.1038/s41596-025-01237-6",
-   "10.1038/s41467-025-65993-5",
-   "10.1038/s41596-020-0317-5",
-   "10.1002/imt2.195",
-   "10.1021/acs.analchem.5c04111",
-   "10.1021/acs.analchem.4c05315",
-   "10.1289/EHP7722",
-   "10.1093/bioinformatics/btac647/6722615",
-   "10.1186/s13321-024-00804-5",
-   "10.1038/s41467-021-23953-9",
-   "10.1021/acs.analchem.2c04603",
-   "10.1021/acs.analchem.0c03895",
-   "10.1038/s41598-018-31154-6",
-   "10.1038/s41467-022-34537-6",
-   "10.1021/acs.analchem.3c04419",
-   "10.1021/acs.analchem.5c00277",
-   "10.1101/2024.10.07.617094v3",
-   "10.1021/acs.analchem.4c00359",
-   "10.1016/j.cels.2018.03.011",
-   "10.1021/acs.analchem.0c02560",
-   "10.1021/acs.analchem.5c01414",
-   "10.1093/bioinformatics/btab060/6125380",
-   "10.1021/jasms.1c00013",
-   "10.48550/arxiv.2501.01950",
-   "10.1093/bioinformatics/btac355/6593484",
-   "10.1021/acs.analchem.3c03594",
-   "10.1186/s13321-023-00741-9",
-   "10.1038/s41587-023-01985-4",
-   "10.1101/2024.08.02.606356v2",
-   "10.1186/s13020-024-01031-8",
-   "10.1371/journal.pbio.3003307",
-   "10.1093/nar/gkae253",
-   "10.1038/s41467-024-48009-6",
-   "10.1101/2025.11.07.687008v1",
-   "10.1101/2025.11.07.687008",
-   "10.1109/tcbbio.2025.3563807",
-   "10.1038/s41467-025-66163-3",
-   "10.1039/d2mo00168c",
-   "10.1093/bioinformatics/btae373",
-   "10.1093/bioadv/vbad061/7172446",
-   "10.1021/acs.analchem.4c02038",
-   "10.1007/s11306-023-02018-6",
-   "10.1016/j.aca.2018.05.001",
-   "10.1021/acs.analchem.3c04607",
-   "10.1111/jipb.13774",
-   "10.1111/jipb.13774-cyan",
-   "10.1016/j.envres.2020.110114",
-   "10.1186/s13321-025-01051-y",
-   "10.1021/acs.analchem.3c04501",
-   "10.1038/s41467-021-23986-0",
-   "10.1021/acs.analchem.2c04632",
-   "10.1021/acs.analchem.0c03060",
-   "10.1002/cmtd.202400088",
-   "10.1038/s41587-023-01690-2",
-   "10.21105/joss.02411",
-   "10.48550/arxiv.2510.09716",
-   "10.1038/s41467-024-54137-w",
-   "10.1021/acs.analchem.4c00527",
-   "10.1002/rcm.9253",
-   "10.1021/acs.analchem.2c00557",
-   "10.1016/j.chemolab.2024.105063",
-   "10.1021/acs.jproteome.4c01140",
-   "10.1371/journal.pone.0321239",
-   "10.1186/1471-2105-11-395",
-   "10.1021/acs.analchem.1c02220",
-   "10.48550/arxiv.2410.22030",
-   "10.1101/2023.03.01.530642v1",
-   "10.1021/jasms.4c00467",
-   "10.1021/acs.analchem.3c05829",
-   "10.1021/acscentsci.1c01108",
-   "10.1093/pnasnexus/pgac257/6847575",
-   "10.1038/nmeth.3959",
-   "10.1021/acs.analchem.3c00764",
-   "10.1007/s11306-022-01899-3",
-   "10.1021/acs.analchem.4c03513",
-   "10.1016/j.dmd.2025.100183",
-   "10.3390/plants12152880",
-   "10.1371/journal.pcbi.1009148",
-   "10.1021/acs.analchem.4c04375",
-   "10.1021/acs.analchem.5b02287",
-   "10.1093/bioadv/vbae192",
-   "10.1021/acs.analchem.4c07078",
-   "10.1021/acs.jcim.4c00446",
-   "10.3390/metabo8010016",
-   "10.1021/acs.analchem.2c02093",
-   "10.1101/2024.08.07.607073v1",
-   "10.1038/s41586-023-06906-8",
-   "10.1021/acs.analchem.3c02583",
-   "10.1021/acs.analchem.5c03730",
-   "10.1021/acs.analchem.3c00849",
-   "10.1038/s42004-023-00939-w",
-   "10.5281/zenodo.5501673",
-   "10.1038/s42003-024-05844-z",
-   "10.1101/2024.11.04.621329v1",
-   "10.1038/s41592-019-0344-8",
-   "10.3390/biom15111562",
-   "10.3390/metabo13080941",
-   "10.1021/acs.analchem.1c00113",
-   "10.1021/acs.analchem.5c03682",
-   "10.1021/jasms.3c00322",
-   "10.26434/chemrxiv-2024-37v2j",
-   "10.48550/arxiv.2502.05114",
-   "10.1021/acs.analchem.3c04444",
-   "10.1038/nbt.3689",
-   "10.1016/j.aca.2018.08.002",
-   "10.1093/bioinformatics/btaa1031",
-   "10.21105/joss.02694",
-   "10.1007/s11306-018-1363-7",
-   "10.1038/s42004-024-01189-0",
-   "10.1021/acs.jproteome.3c00784",
-   "10.3390/metabo10100416",
-   "10.1038/s41467-022-32155-w",
-   "10.1186/s13321-024-00858-5",
-   "10.3389/fmolb.2022.952149",
-   "10.1021/acs.analchem.5c03390",
-   "10.1186/s13321-023-00724-w",
-   "10.1016/j.jpba.2022.114681",
-   "10.21105/joss.02410",
-   "10.1038/s43588-025-00923-5",
-   "10.1016/j.aca.2019.02.010",
-   "10.1007/s11306-021-01839-7",
-   "10.3390/metabo9090171",
-   "10.1007/s42081-023-00205-2",
-   "10.1021/ac051437y",
-   "10.1038/s42256-020-00234-6"
-  ],
-  "techniques": [
-   "LC-MS"
-  ],
   "license_tier": "restricted",
   "grounding_tier": "repo"
  },
@@ -34398,7 +33384,7 @@
    "10.1371/journal.pcbi.1011814"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -35504,387 +34490,6 @@
   "grounding_tier": "repo"
  },
  {
-  "slug": "figure-table-interpretation",
-  "name": "figure-table-interpretation",
-  "description": "Use when after running a 3DMolMS model (or similar MS/MS prediction pipeline) that outputs predictions in MGF, CSV, or PKL format, use this skill to verify prediction quality by examining peak intensities, m/z values, precursor ions, and similarity metrics against ground truth or reference spectra.",
-  "edam_operation": "http://edamontology.org/operation_3630",
-  "edam_topics": [
-   "http://edamontology.org/topic_3172",
-   "http://edamontology.org/topic_0121",
-   "http://edamontology.org/topic_3520",
-   "http://edamontology.org/topic_3050",
-   "http://edamontology.org/topic_0091",
-   "http://edamontology.org/topic_3372",
-   "http://edamontology.org/topic_3474",
-   "http://edamontology.org/topic_3169",
-   "http://edamontology.org/topic_0080",
-   "http://edamontology.org/topic_3173",
-   "http://edamontology.org/topic_0625",
-   "http://edamontology.org/topic_2258",
-   "http://edamontology.org/topic_3407",
-   "http://edamontology.org/topic_0769",
-   "http://edamontology.org/topic_2840",
-   "http://edamontology.org/topic_0154",
-   "http://edamontology.org/topic_3314",
-   "http://edamontology.org/topic_0153",
-   "http://edamontology.org/topic_0602",
-   "http://edamontology.org/topic_3370",
-   "http://edamontology.org/topic_3373",
-   "http://edamontology.org/topic_3361",
-   "http://edamontology.org/topic_3365",
-   "http://edamontology.org/topic_0092",
-   "http://edamontology.org/topic_3308",
-   "http://edamontology.org/topic_3577",
-   "http://edamontology.org/topic_0634",
-   "http://edamontology.org/topic_0188",
-   "http://edamontology.org/topic_3375",
-   "http://edamontology.org/topic_3297",
-   "http://edamontology.org/topic_3572",
-   "http://edamontology.org/topic_3047",
-   "http://edamontology.org/topic_0601",
-   "http://edamontology.org/topic_3674",
-   "http://edamontology.org/topic_3575",
-   "http://edamontology.org/topic_3307",
-   "http://edamontology.org/topic_0611",
-   "http://edamontology.org/topic_3315",
-   "http://edamontology.org/topic_3489",
-   "http://edamontology.org/topic_3070"
-  ],
-  "tools": [
-   "PyTorch",
-   "RDKit",
-   "molnetpack",
-   "matplotlib",
-   "Pandas",
-   "MoNA",
-   "NIST20",
-   "mzmine",
-   "mzmine3",
-   "JavaFX",
-   "Java Development Kit (JDK)",
-   "GitHub",
-   "AnnoSM",
-   "pandas",
-   "scikit-learn",
-   "train.py",
-   "predict.py",
-   "GitLab",
-   "bigmap-download",
-   "bigmap-family",
-   "bigmap-map",
-   "bigmap-analyse",
-   "BiG-SCAPE",
-   "MASH",
-   "bowtie2",
-   "Bedtools",
-   "Samtools",
-   "BinDiscover",
-   "SIRIUS",
-   "CSI:FingerID",
-   "CANOPUS",
-   "MSNovelist",
-   "ChEMBL Structure Curation Pipeline Checker",
-   "PostgreSQL",
-   "ZODIAC",
-   "COSMIC",
-   "OpenMS",
-   "CompassXport",
-   "CycloBranch",
-   "Snakemake",
-   "Python 3.10",
-   "PubChem",
-   "DIATAGeR",
-   "netgsa R package",
-   "ggplot2",
-   "Cytoscape",
-   "DNEA",
-   "igraph",
-   "pheatmap",
-   "eicCluster",
-   "R",
-   "devtools",
-   "Bioconductor",
-   "MassBank",
-   "eRah",
-   "KNIME",
-   "Python",
-   "pyOpenMS",
-   "nextflow",
-   "Galaxy",
-   "TOPPAS",
-   "GNPS",
-   "ProteoSAFe",
-   "GitHub Actions",
-   "Uptime Robot",
-   "GNPS ProteoSAFe",
-   "CCMS-Integration-Tests",
-   "GitHub Actions CI/Badge system",
-   "homologueDiscoverer",
-   "dplyr",
-   "IDSL_MINT",
-   "JDK",
-   "MZmine",
-   "seaborn",
-   "ViMMS",
-   "Instant Clue",
-   "PyQt6",
-   "jmztab-m CLI",
-   "jmztab-m-io library",
-   "jmztab-m-validation library",
-   "jmzTab-m-webapp",
-   "pymzTab-m",
-   "rmzTab-m",
-   "MetDNA2",
-   "MetDNA2Vis",
-   "R / rmarkdown",
-   "Python 3.9.0",
-   "numpy",
-   "openpyxl",
-   "brain-isotopic-distribution",
-   "scipy",
-   "PySide6",
-   "GitHub repository (RaoboXu/Lipidwizard)",
-   "PyTorch Lightning",
-   "Ray Tune",
-   "Weights & Biases",
-   "uv",
-   "LipiDex",
-   "Compound Discoverer",
-   "mzMine 2",
-   "Proteowizard MS/MS file converter",
-   "LiPydomics",
-   "evaluation_generation.py",
-   "sample.py",
-   "MAFFIN",
-   "R (devtools, base functions)",
-   "Flask",
-   "uWSGI",
-   "Docker Compose",
-   "Plotly",
-   "Scikit-learn (DBSCAN, OPTICS)",
-   "GNPS_MASST",
-   "MetaboAnalystR 4.0",
-   "MetaboAnalyst web server",
-   "MetaboAnalystR",
-   "Vicuna-13B-v1.5",
-   "GNN encoder (Snap-stanford-gnn pretrained)",
-   "CNN image encoder (ImageMol-based)",
-   "Human Metabolome Database (HMDB)",
-   "metabolitics-frontend",
-   "Metabol",
-   "ReDU web UI",
-   "GNPS (Global Natural Product Social Molecular Networking Platform)",
-   "MassIVE repository",
-   "MetaMOPE",
-   "Docker",
-   "MetaPro",
-   "Redis",
-   "MongoDB",
-   "AirdPro",
-   "MetDIT",
-   "scikit-learn (Random Forest, SVM)",
-   "XGBoost",
-   "LightGBM",
-   "ComplexHeatmap",
-   "PCAtools",
-   "plotly",
-   "ggrepel",
-   "R v4.3.3",
-   "tidymass",
-   "clusterProfiler",
-   "mineMS2",
-   "MINNO",
-   "MPACT",
-   "Spyder",
-   "MRMkit",
-   "MRMhub",
-   "GitHub Issues",
-   "TensorFlow",
-   "MS2toImg-CNN",
-   "MS-DIAL",
-   ".NET Framework 4.7.2, .NET Core 3.1, .NET 6",
-   "Visual Studio 2022 Community",
-   "Visual Studio Code",
-   "MSIght",
-   "PyPI MSIght package",
-   "MZmine 2",
-   "mzmine2",
-   "mzmine (current)",
-   "MZmine 3",
-   "JDK 25",
-   "JavaFX 24",
-   "proteowizard",
-   "mzMine",
-   "XCMS",
-   "msconvert",
-   "NeatMS",
-   "Jupyter notebook",
-   "dash",
-   "jupyter-dash",
-   "ProteoWizard msconvert",
-   "result_optimization_and_analysis",
-   "NetAurHPD_M5",
-   "Python 3.6",
-   "ISWSVR",
-   "NP³ MS Workflow – run command",
-   "NP³ MS Workflow – pca_plot command",
-   "NP³ MS Workflow – gnps_result command",
-   "GNPS2 Library Search (offline)",
-   "TOPPTools",
-   "GitHub Issues and Pull Requests",
-   "TAPPAS",
-   "PeakDetective",
-   "GitLab CI/CD",
-   "Maven",
-   "Spring Framework",
-   "Open Babel",
-   "POMAShiny",
-   "POMA",
-   "Shiny",
-   "PredRet R package",
-   "Protomix",
-   "pyicoshift",
-   "NumPy",
-   "matplotlib, seaborn, Plotly",
-   "QC4metabolomics",
-   "GitHub (repository hosting and commit history)",
-   "RaMP-DB",
-   "RaMP-Backend",
-   "Colab",
-   "regression_filter (computational-chemical-biology)",
-   "regression_filter (gsarini fork)",
-   "Conda",
-   "SGMNS",
-   "Spektral",
-   "UMAP",
-   "Jupyter Notebook",
-   "SManalyst",
-   "Seurat",
-   "UMAP-kmeans",
-   "MetaS/MetaS",
-   "SMolESY-select",
-   "SpecTUS transformer model",
-   "Pretrained checkpoint (MS-ML on Hugging Face)",
-   "Jupyter notebooks in notebooks/ directory",
-   "Jupyter",
-   "t-SNE",
-   "ms2deepscore",
-   "MZmine3",
-   "matchms",
-   "SKYLINE",
-   "MetaboAnalyst",
-   "statTarget",
-   "RGtk2",
-   "Combat",
-   "struct",
-   "structToolbox",
-   "ProteoWizard",
-   "HMDB",
-   "Zenodo",
-   "limma"
-  ],
-  "dois": [
-   "10.1093/bioinformatics/btad354",
-   "10.1021/acs.jproteome.5c00423",
-   "10.1021/acs.analchem.3c04946",
-   "10.1016/j.jece.2025.119962",
-   "10.1021/acs.analchem.1c05224",
-   "10.1128/msystems.00937-21",
-   "10.1186/s13321-023-00734-8",
-   "10.1021/acs.analchem.8b04698",
-   "10.1186/s13321-020-00478-9",
-   "10.1038/s41587-021-01045-9",
-   "10.1177/14690667231164766",
-   "10.1101/2024.11.13.623458v1",
-   "10.1016/j.aca.2025.344698",
-   "10.1186/s12859-024-05994-1",
-   "10.1016/j.chroma.2018.09.050",
-   "10.1021/acs.analchem.6b02927",
-   "10.1074/mcp.M113.031278",
-   "10.26434/chemrxiv-2024-1zk33",
-   "10.1038/s41596-020-0317-5",
-   "10.1002/imt2.195",
-   "10.1093/bioinformatics/btac647/6722615",
-   "10.1186/s13321-024-00804-5",
-   "10.1038/s41467-021-23953-9",
-   "10.1021/acs.analchem.0c03895",
-   "10.1038/s41598-018-31154-6",
-   "10.1038/s41467-022-34537-6",
-   "10.1021/acs.analchem.3c04419",
-   "10.1101/2024.10.07.617094v3",
-   "10.1016/j.cels.2018.03.011",
-   "10.1021/acs.analchem.0c02560",
-   "10.1021/jasms.1c00013",
-   "10.48550/arxiv.2501.01950",
-   "10.1093/bioinformatics/btac355/6593484",
-   "10.1021/acs.analchem.3c03594",
-   "10.1186/s13321-023-00741-9",
-   "10.1038/s41587-023-01985-4",
-   "10.1093/nar/gkae253",
-   "10.1038/s41467-024-48009-6",
-   "10.1101/2025.11.07.687008v1",
-   "10.1101/2025.11.07.687008",
-   "10.1109/tcbbio.2025.3563807",
-   "10.1093/bioinformatics/btae373",
-   "10.1093/bioadv/vbad061/7172446",
-   "10.1007/s11306-023-02018-6",
-   "10.1016/j.aca.2018.05.001",
-   "10.1021/acs.analchem.3c04607",
-   "10.1111/jipb.13774",
-   "10.1186/s13321-025-01051-y",
-   "10.1021/acs.analchem.3c04501",
-   "10.1021/acs.analchem.2c04632",
-   "10.1021/acs.analchem.0c03060",
-   "10.48550/arxiv.2510.09716",
-   "10.1038/s41467-024-54137-w",
-   "10.1002/rcm.9253",
-   "10.1021/acs.jproteome.4c01140",
-   "10.1186/1471-2105-11-395",
-   "10.1038/s41587-023-01690-2",
-   "10.1021/acs.analchem.1c02220",
-   "10.48550/arxiv.2410.22030",
-   "10.1021/jasms.4c00467",
-   "10.1021/acs.analchem.3c05829",
-   "10.1038/nmeth.3959",
-   "10.1021/acs.analchem.3c00764",
-   "10.1007/s11306-022-01899-3",
-   "10.3390/plants12152880",
-   "10.1371/journal.pcbi.1009148",
-   "10.1021/acs.analchem.5b02287",
-   "10.1093/bioadv/vbae192",
-   "10.1021/acs.analchem.4c07078",
-   "10.3390/metabo8010016",
-   "10.1101/2024.08.07.607073v1",
-   "10.1021/acs.analchem.3c00849",
-   "10.1038/s42004-023-00939-w",
-   "10.1038/s41592-019-0344-8",
-   "10.3390/biom15111562",
-   "10.3390/metabo13080941",
-   "10.1021/acs.analchem.1c00113",
-   "10.48550/arxiv.2502.05114",
-   "10.1021/acs.analchem.3c04444",
-   "10.1016/j.aca.2018.08.002",
-   "10.1093/bioinformatics/btaa1031",
-   "10.21105/joss.02694",
-   "10.1007/s11306-018-1363-7",
-   "10.1021/acs.jproteome.3c00784",
-   "10.3390/metabo10100416",
-   "10.1038/s41467-022-32155-w",
-   "10.3389/fmolb.2022.952149",
-   "10.1186/s13321-023-00724-w",
-   "10.21105/joss.02410",
-   "10.1038/s43588-025-00923-5",
-   "10.1021/ac051437y",
-   "10.1038/s42256-020-00234-6"
-  ],
-  "techniques": [
-   "LC-MS",
-   "ion-mobility-MS"
-  ],
-  "license_tier": "restricted",
-  "grounding_tier": "repo"
- },
- {
   "slug": "file-api-endpoint-implementation",
   "name": "file-api-endpoint-implementation",
   "description": "Use when when you need to construct a POST endpoint that ingests raw spectral data files from multiple vendor formats (jcamp, RAW, mzML) and must standardize them for downstream processing.",
@@ -35953,7 +34558,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -36137,7 +34742,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -36336,7 +34941,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -36982,7 +35587,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -37380,7 +35985,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -37730,7 +36335,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -37824,7 +36429,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -38852,7 +37457,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -39066,7 +37671,7 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -39191,7 +37796,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -40050,7 +38655,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -40077,7 +38682,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -40106,7 +38711,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -40340,7 +38945,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -40813,7 +39418,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -42679,7 +41284,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -42798,7 +41403,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -43778,7 +42383,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -44419,7 +43024,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -44444,7 +43049,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -44469,7 +43074,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -44936,7 +43541,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -45071,7 +43676,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -45096,7 +43701,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -45119,7 +43724,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -46439,7 +45044,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -47361,7 +45966,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -48030,7 +46635,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -48109,7 +46714,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -48136,7 +46741,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -48335,7 +46940,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -49620,7 +48225,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -49644,7 +48249,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -50437,7 +49042,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -50467,7 +49072,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -50586,7 +49191,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -50713,7 +49318,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -51421,7 +50026,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -51467,7 +50072,7 @@
    "10.1186/s13321-023-00738-4"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -52049,7 +50654,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -52417,7 +51022,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -53166,7 +51771,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -53433,7 +52038,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -53732,7 +52337,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -54927,7 +53532,7 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -55745,7 +54350,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -57229,7 +55834,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -57690,7 +56295,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -58987,7 +57592,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -59010,7 +57615,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -59742,7 +58347,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -60367,7 +58972,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -61041,7 +59646,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -61071,7 +59676,7 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -62009,7 +60614,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -62311,7 +60916,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -64091,7 +62696,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -64982,7 +63587,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -65466,7 +64071,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -65793,7 +64398,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -66058,7 +64663,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "noncommercial",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -66414,7 +65019,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -66548,7 +65153,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -66599,7 +65204,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -66869,7 +65474,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -66893,7 +65498,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -66963,7 +65568,7 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -68916,7 +67521,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -69111,7 +67716,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -69280,7 +67885,7 @@
    "10.1021/acs.analchem.5c06841"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -70145,7 +68750,7 @@
    "10.1101/2025.08.28.672951v2"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -71327,7 +69932,7 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -71583,7 +70188,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -71757,7 +70362,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -71785,7 +70390,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -72053,7 +70658,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -72076,7 +70681,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -72825,7 +71430,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -72965,7 +71570,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -73870,7 +72475,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -74096,7 +72701,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -74237,7 +72842,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -74309,7 +72914,7 @@
    "10.1021/acs.analchem.5c06841"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -74604,7 +73209,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -76095,7 +74700,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -77147,7 +75752,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -77165,7 +75770,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -77184,7 +75789,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -77898,7 +76503,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -78071,7 +76676,7 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -78119,7 +76724,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -78318,7 +76923,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -78562,7 +77167,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -78883,7 +77488,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -80520,7 +79125,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -82585,7 +81190,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -82661,7 +81266,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -83388,7 +81993,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -84024,7 +82629,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -84476,7 +83081,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -84506,7 +83111,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -84877,7 +83482,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -85188,7 +83793,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -85459,7 +84064,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -85862,7 +84467,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -86317,7 +84922,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -86774,7 +85379,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -87910,7 +86515,7 @@
    "10.1021/acs.analchem.0c03895"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -87936,7 +86541,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -87984,7 +86589,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -88008,7 +86613,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -88033,7 +86638,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -88323,7 +86928,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -88373,7 +86978,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -88401,7 +87006,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -88426,7 +87031,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -88450,7 +87055,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -88477,7 +87082,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -89518,7 +88123,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -89763,7 +88368,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -91122,7 +89727,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -91338,7 +89943,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -92333,7 +90938,7 @@
    "10.1021/acs.analchem.5c06841"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -92358,7 +90963,7 @@
    "10.1021/acs.analchem.5c06841"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -93987,372 +92592,6 @@
   "grounding_tier": "repo"
  },
  {
-  "slug": "output-grounding",
-  "name": "output-grounding",
-  "description": "Use when after running 3DMolMS predictions (MS/MS spectra, RT, or CCS) on a test set with known experimental ground truth.",
-  "edam_operation": "http://edamontology.org/operation_3435",
-  "edam_topics": [
-   "http://edamontology.org/topic_0121",
-   "http://edamontology.org/topic_3172",
-   "http://edamontology.org/topic_2269",
-   "http://edamontology.org/topic_3520",
-   "http://edamontology.org/topic_3572",
-   "http://edamontology.org/topic_0091",
-   "http://edamontology.org/topic_3407",
-   "http://edamontology.org/topic_3174",
-   "http://edamontology.org/topic_0080",
-   "http://edamontology.org/topic_0625",
-   "http://edamontology.org/topic_0769",
-   "http://edamontology.org/topic_0154",
-   "http://edamontology.org/topic_3372",
-   "http://edamontology.org/topic_3473",
-   "http://edamontology.org/topic_0153",
-   "http://edamontology.org/topic_0602",
-   "http://edamontology.org/topic_3375",
-   "http://edamontology.org/topic_3674",
-   "http://edamontology.org/topic_3071",
-   "http://edamontology.org/topic_0219",
-   "http://edamontology.org/topic_3361",
-   "http://edamontology.org/topic_3360",
-   "http://edamontology.org/topic_3077",
-   "http://edamontology.org/topic_0081",
-   "http://edamontology.org/topic_3047",
-   "http://edamontology.org/topic_3314",
-   "http://edamontology.org/topic_3673",
-   "http://edamontology.org/topic_0092",
-   "http://edamontology.org/topic_0089",
-   "http://edamontology.org/topic_3370",
-   "http://edamontology.org/topic_3170",
-   "http://edamontology.org/topic_0605",
-   "http://edamontology.org/topic_2258",
-   "http://edamontology.org/topic_0218",
-   "http://edamontology.org/topic_0102",
-   "http://edamontology.org/topic_3173",
-   "http://edamontology.org/topic_3050",
-   "http://edamontology.org/topic_3391"
-  ],
-  "tools": [
-   "PyTorch",
-   "RDKit",
-   "MolNet.evaluate()",
-   "molnetpack",
-   "matplotlib",
-   "Pandas",
-   "mzmine",
-   "JavaFX 22/24",
-   "JDK 23/25",
-   "GitHub Actions (dev_build_release.yml)",
-   "GitHub",
-   "AnnoSM",
-   "Python joblib",
-   "pandas",
-   "scikit-learn",
-   "GitHub (piscookie/AS-RT)",
-   "GitLab",
-   "bowtie2",
-   "bedtools",
-   "samtools",
-   "BiG-SCAPE",
-   "Kruskal-Wallis and fitZIG",
-   "BinDiscover",
-   "SIRIUS",
-   "CSI:FingerID",
-   "CANOPUS",
-   "MSNovelist",
-   "PostgreSQL",
-   "ChEMBL Structure Curation Pipeline",
-   "Docker",
-   "ZODIAC",
-   "CycloBranch",
-   "OpenMS 2.x",
-   "Snakemake",
-   "PubChem",
-   "DIATAGeR",
-   "MS-DIAL",
-   "netgsa R package",
-   "ggplot2",
-   "Cytoscape",
-   "DNEA R package",
-   "igraph",
-   "Cytoscape / Metscape",
-   "BiocParallel",
-   "eicCluster",
-   "Bioconductor",
-   "MassBank",
-   "R",
-   "eRah",
-   "OpenMS",
-   "KNIME",
-   "Python",
-   "pyOpenMS",
-   "TOPPView",
-   "nextflow",
-   "Galaxy",
-   "TOPPAS",
-   "GitHub Actions / GitHub Workflows",
-   "nose2",
-   "act",
-   "CCMS-Integration-Tests",
-   "ProteoSAFe",
-   "GNPS",
-   "GNPS_Workflows",
-   "homologueDiscoverer",
-   "dplyr",
-   "RColorBrewer",
-   "IDSL_MINT",
-   "JDK 25",
-   "JavaFX 24",
-   "GitHub releases",
-   "MZmine",
-   "ViMMS",
-   "pytest",
-   "Jupyter",
-   "matplotlib, seaborn, pandas",
-   "GNPS-NIST14-MATCHES.mgf",
-   "HMDB",
-   "Thermo Orbitrap Fusion Tribrid",
-   "instantclue",
-   "jmzTab-m CLI",
-   "jmzTab-m web application",
-   "jmztabm-io (Maven library)",
-   "Bioconda jmztab-m package",
-   "MetDNA2",
-   "MetDNA2Vis",
-   "MetFrag",
-   "MS-FINDER",
-   "R / rmarkdown",
-   "Python 3.9.0",
-   "numpy",
-   "PySide6",
-   "openpyxl",
-   "scipy",
-   "brain-isotopic-distribution",
-   "requests",
-   "GitHub repository (RaoboXu/Lipidwizard)",
-   "PyTorch Lightning",
-   "Weights & Biases",
-   "LipiDex",
-   "Compound Discoverer",
-   "mzMine 2",
-   "Proteowizard",
-   "LiPydomics",
-   "Jupyter Notebook",
-   "evaluation_generation.py (MADGEN)",
-   "MAFFIN",
-   "devtools",
-   "GitHub Actions",
-   "Conda",
-   "pymzml",
-   "plotly",
-   "unittest",
-   "GNPS_MASST",
-   "MetaboAnalystR",
-   "MetaboAnalyst web server",
-   "Vicuna-13B-v1.5",
-   "Human Metabolome Database (HMDB)",
-   "MetaboliteChat",
-   "github.com/alperdokay/metabolitics-frontend",
-   "MuhammedHasan/metabol",
-   "Live demo instance",
-   "ReDU",
-   "GitHub Actions / act",
-   "MetaMOPE web tool",
-   "MetaPro",
-   "AirdPro",
-   "MetDIT/NetOmics",
-   "evaluation.py",
-   "TransOmics",
-   "TBtools",
-   "tidymass",
-   "MetMiner",
-   "clusterProfiler",
-   "mineMS2",
-   "MINNO",
-   "MPACT",
-   "Spyder",
-   "Anaconda",
-   "MRMkit",
-   "MS2toImg-CNN",
-   "TensorFlow",
-   "Visual Studio",
-   ".NET Framework 4.7.2 / .NET Core 3.1 / .NET 6",
-   "MSIght",
-   "cluster_msi",
-   "register_he_msi",
-   "perform_bspline",
-   "MZmine 2",
-   "mzmine2",
-   "proteowizard",
-   "mzMine",
-   "XCMS",
-   "msconvert",
-   "NeatMS",
-   "Keras",
-   "M5",
-   "Result optimization and analysis module",
-   "SignalPropagation",
-   "Python 3.6",
-   "NormISWSVR",
-   "NP³ MS Workflow",
-   "gnps_result command",
-   "join_jobs command",
-   "GNPS2 Library Search",
-   "PeakDetective",
-   "TensorFlow / scikit-learn",
-   "Maven",
-   "Spring Framework",
-   "Open Babel",
-   "MySQL",
-   "POMAShiny",
-   "POMA",
-   "bs4Dash",
-   "Shiny",
-   "rmongodb",
-   "pcaMethods",
-   "massageR",
-   "Rplot.extra",
-   "Protomix",
-   "NumPy",
-   "RaMP-DB",
-   "RaMP-Backend",
-   "BiocFileCache",
-   "R devtools",
-   "Colab",
-   "GitHub (computational-chemical-biology/regression_filter)",
-   "GitHub (gsarini/regression_filter)",
-   "conda",
-   "SGMNS",
-   "Spyder 3.7",
-   "MSConvert",
-   "Compound Discoverer, MS-DIAL, MZmine 2, XCMS",
-   "CAMERA, mz.unity",
-   "Spektral",
-   "SigmaCCS Model_prediction function",
-   "SManalyst",
-   "Seurat",
-   "UMAP-kmeans",
-   "HMDB / KEGG / LIPIDMAPS",
-   "MetaS/MetaS",
-   "SpecTUS transformer model",
-   "Hugging Face MS-ML checkpoint",
-   "ms2deepscore",
-   "t-SNE",
-   "matchms",
-   "SKYLINE",
-   "MetaboAnalyst",
-   "statTarget",
-   "R 3.3.0+",
-   "XCMS / MZmine2 / SIEVE / SKYLINE",
-   "Combat",
-   "struct",
-   "structToolbox",
-   "ProteoWizard",
-   "Zenodo",
-   "limma"
-  ],
-  "dois": [
-   "10.1093/bioinformatics/btad354",
-   "10.1021/acs.jproteome.5c00423",
-   "10.1021/acs.analchem.3c04946",
-   "10.1016/j.jece.2025.119962",
-   "10.1021/acs.analchem.1c05224",
-   "10.1128/msystems.00937-21",
-   "10.1186/s13321-023-00734-8",
-   "10.1021/acs.analchem.8b04698",
-   "10.1186/s13321-020-00478-9",
-   "10.1038/s41587-021-01045-9",
-   "10.1177/14690667231164766",
-   "10.1101/2024.11.13.623458v1",
-   "10.1016/j.aca.2025.344698",
-   "10.1186/s12859-024-05994-1",
-   "10.1016/j.chroma.2018.09.050",
-   "10.1021/acs.analchem.6b02927",
-   "10.1074/mcp.M113.031278",
-   "10.26434/chemrxiv-2024-1zk33",
-   "10.1038/s41596-020-0317-5",
-   "10.1002/imt2.195",
-   "10.1093/bioinformatics/btac647/6722615",
-   "10.1186/s13321-024-00804-5",
-   "10.1038/s41467-021-23953-9",
-   "10.1021/acs.analchem.0c03895",
-   "10.1038/s41598-018-31154-6",
-   "10.1038/s41467-022-34537-6",
-   "10.1021/acs.analchem.3c04419",
-   "10.1101/2024.10.07.617094v3",
-   "10.1016/j.cels.2018.03.011",
-   "10.1021/acs.analchem.0c02560",
-   "10.1021/jasms.1c00013",
-   "10.48550/arxiv.2501.01950",
-   "10.1093/bioinformatics/btac355/6593484",
-   "10.1021/acs.analchem.3c03594",
-   "10.1186/s13321-023-00741-9",
-   "10.1038/s41587-023-01985-4",
-   "10.1093/nar/gkae253",
-   "10.1038/s41467-024-48009-6",
-   "10.1101/2025.11.07.687008v1",
-   "10.1101/2025.11.07.687008",
-   "10.1109/tcbbio.2025.3563807",
-   "10.1093/bioinformatics/btae373",
-   "10.1093/bioadv/vbad061/7172446",
-   "10.1007/s11306-023-02018-6",
-   "10.1016/j.aca.2018.05.001",
-   "10.1021/acs.analchem.3c04607",
-   "10.1111/jipb.13774",
-   "10.1186/s13321-025-01051-y",
-   "10.1021/acs.analchem.3c04501",
-   "10.1021/acs.analchem.2c04632",
-   "10.1021/acs.analchem.0c03060",
-   "10.48550/arxiv.2510.09716",
-   "10.1038/s41467-024-54137-w",
-   "10.1002/rcm.9253",
-   "10.1021/acs.jproteome.4c01140",
-   "10.1186/1471-2105-11-395",
-   "10.1038/s41587-023-01690-2",
-   "10.1021/acs.analchem.1c02220",
-   "10.48550/arxiv.2410.22030",
-   "10.1021/jasms.4c00467",
-   "10.1021/acs.analchem.3c05829",
-   "10.1038/nmeth.3959",
-   "10.1021/acs.analchem.3c00764",
-   "10.1007/s11306-022-01899-3",
-   "10.3390/plants12152880",
-   "10.1371/journal.pcbi.1009148",
-   "10.1021/acs.analchem.5b02287",
-   "10.1093/bioadv/vbae192",
-   "10.1021/acs.analchem.4c07078",
-   "10.3390/metabo8010016",
-   "10.1101/2024.08.07.607073v1",
-   "10.1021/acs.analchem.3c00849",
-   "10.1038/s42004-023-00939-w",
-   "10.5281/zenodo.5501673",
-   "10.1038/s41592-019-0344-8",
-   "10.3390/biom15111562",
-   "10.3390/metabo13080941",
-   "10.1021/acs.analchem.1c00113",
-   "10.48550/arxiv.2502.05114",
-   "10.1021/acs.analchem.3c04444",
-   "10.1016/j.aca.2018.08.002",
-   "10.1093/bioinformatics/btaa1031",
-   "10.21105/joss.02694",
-   "10.1007/s11306-018-1363-7",
-   "10.1021/acs.jproteome.3c00784",
-   "10.3390/metabo10100416",
-   "10.1038/s41467-022-32155-w",
-   "10.3389/fmolb.2022.952149",
-   "10.1186/s13321-023-00724-w",
-   "10.21105/joss.02410",
-   "10.1038/s43588-025-00923-5",
-   "10.1021/ac051437y",
-   "10.1038/s42256-020-00234-6"
-  ],
-  "techniques": [
-   "CE-MS",
-   "ion-mobility-MS"
-  ],
-  "license_tier": "restricted",
-  "grounding_tier": "repo"
- },
- {
   "slug": "over-representation-analysis-pvalue-interpretation",
   "name": "over-representation-analysis-pvalue-interpretation",
   "description": "Use when when you have run ORA on a metabolomics dataset and obtained p-values for pathway enrichment, but you need to assess whether observed significance is genuine or an artifact of incomplete metabolite coverage.",
@@ -94542,7 +92781,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -94566,7 +92805,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -94652,7 +92891,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -96834,7 +95073,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -96980,7 +95219,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -97966,7 +96205,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -99420,7 +97659,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -99597,7 +97836,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -99817,7 +98056,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -99872,7 +98111,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -100134,7 +98373,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -101179,7 +99418,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -102299,7 +100538,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -102772,7 +101011,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -103511,7 +101750,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -103735,7 +101974,7 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -103969,7 +102208,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -105555,7 +103794,7 @@
    "10.1021/acs.analchem.5c06841"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -105784,7 +104023,7 @@
    "10.1021/acs.analchem.5c06841"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -106932,7 +105171,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -107457,7 +105696,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -107968,7 +106207,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -108150,7 +106389,7 @@
    "10.1021/acs.analchem.5c06841"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -108451,7 +106690,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -111364,7 +109603,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -111665,476 +109904,6 @@
   ],
   "dois": [
    "10.1021/acs.analchem.3c05002"
-  ],
-  "techniques": [
-   "MS-imaging"
-  ],
-  "license_tier": "restricted",
-  "grounding_tier": "repo"
- },
- {
-  "slug": "reproducibility-gap-detection",
-  "name": "reproducibility-gap-detection",
-  "description": "Use when when curating a scientific workflow (especially deep learning or data-processing pipelines) and you need to verify that all steps described in the publication have corresponding available code, data downloads, trained model checkpoints, and explicit dependency specifications.",
-  "edam_operation": "http://edamontology.org/operation_3096",
-  "edam_topics": [
-   "http://edamontology.org/topic_0081",
-   "http://edamontology.org/topic_0091",
-   "http://edamontology.org/topic_3520",
-   "http://edamontology.org/topic_3375",
-   "http://edamontology.org/topic_3697",
-   "http://edamontology.org/topic_0769",
-   "http://edamontology.org/topic_3372",
-   "http://edamontology.org/topic_3673",
-   "http://edamontology.org/topic_3047",
-   "http://edamontology.org/topic_3071",
-   "http://edamontology.org/topic_3172",
-   "http://edamontology.org/topic_0601",
-   "http://edamontology.org/topic_3361",
-   "http://edamontology.org/topic_3298",
-   "http://edamontology.org/topic_0593",
-   "http://edamontology.org/topic_3674",
-   "http://edamontology.org/topic_3572",
-   "http://edamontology.org/topic_3373",
-   "http://edamontology.org/topic_3577",
-   "http://edamontology.org/topic_2269",
-   "http://edamontology.org/topic_3407",
-   "http://edamontology.org/topic_0121",
-   "http://edamontology.org/topic_3679",
-   "http://edamontology.org/topic_3050",
-   "http://edamontology.org/topic_0092",
-   "http://edamontology.org/topic_3676",
-   "http://edamontology.org/topic_3371",
-   "http://edamontology.org/topic_0625",
-   "http://edamontology.org/topic_3306",
-   "http://edamontology.org/topic_3473",
-   "http://edamontology.org/topic_3370",
-   "http://edamontology.org/topic_0003",
-   "http://edamontology.org/topic_0080",
-   "http://edamontology.org/topic_3307",
-   "http://edamontology.org/topic_3391",
-   "http://edamontology.org/topic_3365",
-   "http://edamontology.org/topic_0605",
-   "http://edamontology.org/topic_3173",
-   "http://edamontology.org/topic_3360",
-   "http://edamontology.org/topic_0220",
-   "http://edamontology.org/topic_3379",
-   "http://edamontology.org/topic_3314"
-  ],
-  "tools": [
-   "PyTorch",
-   "RDKit",
-   "molnetpack",
-   "3DMolMS",
-   "mzmine",
-   "mzmine3",
-   "JDK",
-   "JavaFX",
-   "GitHub",
-   "Python dependency management (requirements.txt, setup.py, environment specs)",
-   "GitLab",
-   "conda",
-   "GitHub repository inspection",
-   "BiG-SCAPE (optional dependency)",
-   "bowtie2, Bedtools, Samtools, MASH, HMMER",
-   "BinDiscover",
-   "Travis CI",
-   "SIRIUS",
-   "CSI:FingerID",
-   "CANOPUS",
-   "MSNovelist",
-   "Bright Giant GmbH",
-   "Bitbucket",
-   "TeraChem",
-   "LearnReactions.py",
-   "ChEMBL Structure Curation Pipeline Checker",
-   "PostgreSQL",
-   "Docker",
-   "DearOMG-community.exe",
-   "DearOMG-vendor.exe",
-   "DearOMG-parser.exe",
-   "Python API (dear_omg.py)",
-   "Snakemake",
-   "uv",
-   "venv",
-   "pip",
-   "DIATAGeR R package",
-   "MetaboLights",
-   "MS-DIAL",
-   "MZMine",
-   "DiGress",
-   "DiffMS",
-   "Zenodo",
-   "netgsa R package",
-   "ggplot2",
-   "Cytoscape",
-   "DNEA R package",
-   "Filigree Java application",
-   "BiocParallel",
-   "GLASSO (graphical lasso)",
-   "eicCluster",
-   "Bioconductor",
-   "MassBank",
-   "R",
-   "eRah",
-   "CRAN (erah)",
-   "GitHub Actions (R-CMD-check)",
-   "Codecov",
-   "OpenMS",
-   "KNIME",
-   "Python",
-   "Doxygen",
-   "nanobind",
-   "GitHub (source repository)",
-   "pyOpenMS",
-   "README indexing and cross-referencing",
-   "Setup/dependency file inspection (setup.py, requirements.txt, environment.yml, pyproject.toml)",
-   "G-Aligner",
-   "Google Drive",
-   "GcDuo",
-   "GNPS2",
-   "GitHub Actions",
-   "ProteoSAFe",
-   "nose2",
-   "act",
-   "CCMS Deployment Package",
-   "GNPS",
-   "GitHub (CCMS-UCSD/GNPS_Workflows)",
-   "CCMS-Integration-Tests",
-   "FraGNNet",
-   "ms-pred (ICEBERG)",
-   "Fiora",
-   "MassSpecGym",
-   "HPLG (Heuristic Peak List Generator)",
-   "HP (Heuristic Processor)",
-   "homologueDiscoverer",
-   "dplyr",
-   "YAML configuration templates",
-   "Gradle",
-   "MZmine",
-   "ViMMS (Virtual Metabolomics Mass Spectrometer)",
-   "HMDB",
-   "Thermo IAPI",
-   "pytest",
-   "InstantClue",
-   "jmzTab-m",
-   "jmzTab-m CLI",
-   "jmzTab-m-webapp",
-   "GitHub Actions Maven workflow",
-   "MetDNA2",
-   "knitr and rmarkdown",
-   "Python 3.9.0",
-   "numpy",
-   "openpyxl",
-   "numpy, scipy, matplotlib",
-   "brain-isotopic-distribution",
-   "GitHub repository (RaoboXu/Lipidwizard)",
-   "scikit-learn",
-   "mypy",
-   "Ruff",
-   "Sphinx",
-   "LipiDex-2",
-   "LipiDex",
-   "Jupyter Notebook (001-007.ipynb series)",
-   "mzbatch.py",
-   "requirements.txt",
-   "m2r",
-   "Flask",
-   "SQLite / SQLAlchemy",
-   "Docker Compose",
-   "Conda / environment.yml",
-   "unittest / pytest",
-   "Git version tags and changelog",
-   "GNPS_MASST",
-   "MEANtools",
-   "MetaboAnalystR",
-   "MetaboAnalyst Web Server",
-   "MSnbase",
-   "xcms",
-   "MetaboAnalyst web server",
-   "Hugging Face Hub",
-   "metabolitics-frontend",
-   "Metabolome-Transformer",
-   "GNPS (Global Natural Product Social Molecular Networking Platform)",
-   "AirdPro",
-   "MetaPro",
-   "Redis",
-   "MongoDB",
-   "TransOmics (MetDIT component)",
-   "NetOmics (MetDIT component)",
-   "R v4.3.3",
-   "TBtools v2.096",
-   "GitHub (ShawnWx2019/MetMiner)",
-   "tidymass",
-   "MFAssignR",
-   "mineMS2",
-   "MINNO",
-   "GitHub (LewisResearchGroup/MINNO repository)",
-   "molDiscovery",
-   "Spyder",
-   "Anaconda",
-   "MRMkit",
-   "GNPS (Global Natural Products Social Molecular Networking)",
-   "Sirius 6",
-   "ISDB-LOTUS",
-   "MatchMS",
-   "MZmine 4",
-   "Visual Studio",
-   ".NET Framework 4.7.2, .NET Core 3.1, .NET 6, .NET Standard 2.0",
-   "mzML, abf, cdf data formats",
-   "MSIannotator",
-   "MATLAB",
-   "MSIght",
-   "PyPI",
-   "ReadTheDocs documentation",
-   "GitHub repository",
-   "Python 3.8",
-   "GitHub version control",
-   "MZmine 2",
-   "mzmine2",
-   "JDK 25",
-   "JavaFX 24",
-   "GitHub Actions (dev_build_release workflow)",
-   "TensorFlow",
-   "proteowizard",
-   "mzMine",
-   "XCMS",
-   "msconvert",
-   "NeatMS",
-   "Keras",
-   "pandas",
-   "Jupyter notebook",
-   "dash / jupyter-dash",
-   "ProteoWizard / msconvert",
-   "config.py",
-   "network_auralization.py",
-   "utils.py",
-   "Python 3.6",
-   "Norm-ISWSVR",
-   "NP³ MS Workflow",
-   "mamba / conda",
-   "GNPS2 Library Search",
-   "npanalyst",
-   "antiSMASH",
-   "BiG-SCAPE",
-   "scikit-learn (KNN)",
-   "Pfam database",
-   "CTD (Common Tool Description) files",
-   "Galaxy",
-   "nextflow",
-   "PeakDetective",
-   "GitLab CI/CD",
-   "Maven",
-   "Open Babel",
-   "PeakMeister",
-   "POMAShiny",
-   "POMA",
-   "bs4Dash",
-   "PPGB-MS2",
-   "CFM-ID",
-   "Shiny",
-   "Protomix",
-   "pyicoshift",
-   "QC4Metabolomics",
-   "xtb",
-   "alfabet",
-   "RaMP-DB (R package)",
-   "RaMP-Backend",
-   "Travis CI / AppVeyor",
-   "Conda / Mamba",
-   "Google Colab",
-   "GNPS2_Workflows repository",
-   "ProteoWizard",
-   "ProteoWizard msconvert",
-   "Time_Corecctor (RI-based-CPSC)",
-   "SGMNS",
-   "Spyder 3.7",
-   "MSConvert",
-   "conda/pip",
-   "SIMPEL",
-   "Figshare",
-   "SManalyst",
-   "MetaS/MetaS",
-   "SONAR-MSI",
-   "SpectraX",
-   "Hugging Face Model Hub (MS-ML)",
-   "GitHub repository (hejjack/SpecTUS)",
-   "Jupyter notebooks (5_inference_on_open_data.ipynb)",
-   "spectus-demo repository",
-   "Jupyter",
-   "Conda",
-   "Jupyter Notebook",
-   "ms2deepscore",
-   "SKYLINE",
-   "MetaboAnalyst",
-   "statTarget",
-   "Combat",
-   "MZmine2",
-   "SIEVE",
-   "RGtk2",
-   "struct",
-   "structToolbox",
-   "BiocManager",
-   "NumPy",
-   "limma"
-  ],
-  "dois": [
-   "10.1093/bioinformatics/btad354",
-   "10.1021/acs.jproteome.5c00423",
-   "10.1021/acs.analchem.3c04946",
-   "10.1016/j.jece.2025.119962",
-   "10.1021/acs.analchem.1c05224",
-   "10.1128/msystems.00937-21",
-   "10.1186/s13321-023-00734-8",
-   "10.1021/ac202450g",
-   "10.1021/acs.analchem.8b04698",
-   "10.1093/nar/gku436",
-   "10.1021/acs.jcim.4c00760",
-   "10.1186/s13321-020-00478-9",
-   "10.3390/app13105969",
-   "10.1038/s41587-021-01045-9",
-   "10.1021/acs.analchem.5c03451",
-   "10.1177/14690667231164766",
-   "10.1007/s12539-025-00786-4",
-   "10.1101/2024.05.30.596727v2",
-   "10.1101/2024.11.13.623458v1",
-   "10.1016/j.aca.2025.344698",
-   "10.48550/arxiv.2502.09571",
-   "10.1186/s12859-024-05994-1",
-   "10.1016/j.chroma.2018.09.050",
-   "10.1021/acs.analchem.6b02927",
-   "10.1074/mcp.M113.031278",
-   "10.26434/chemrxiv-2024-1zk33",
-   "10.48550/arxiv.2404.02360",
-   "10.1007/s11306-025-02379-0",
-   "10.1186/s12859-023-05525-4",
-   "10.1093/bib/bbaf080",
-   "10.1186/s12859-023-05346-5",
-   "10.1038/s41596-025-01237-6",
-   "10.1038/s41467-025-65993-5",
-   "10.1038/s41596-020-0317-5",
-   "10.1002/imt2.195",
-   "10.1021/acs.analchem.5c04111",
-   "10.1021/acs.analchem.4c05315",
-   "10.1289/EHP7722",
-   "10.1093/bioinformatics/btac647/6722615",
-   "10.1186/s13321-024-00804-5",
-   "10.1038/s41467-021-23953-9",
-   "10.1021/acs.analchem.2c04603",
-   "10.1021/acs.analchem.0c03895",
-   "10.1038/s41598-018-31154-6",
-   "10.1038/s41467-022-34537-6",
-   "10.1021/acs.analchem.3c04419",
-   "10.1021/acs.analchem.5c00277",
-   "10.1101/2024.10.07.617094v3",
-   "10.1021/acs.analchem.4c00359",
-   "10.1016/j.cels.2018.03.011",
-   "10.1021/acs.analchem.0c02560",
-   "10.1021/acs.analchem.5c01414",
-   "10.1093/bioinformatics/btab060/6125380",
-   "10.1021/jasms.1c00013",
-   "10.48550/arxiv.2501.01950",
-   "10.1093/bioinformatics/btac355/6593484",
-   "10.1021/acs.analchem.3c03594",
-   "10.1186/s13321-023-00741-9",
-   "10.1038/s41587-023-01985-4",
-   "10.1101/2024.08.02.606356v2",
-   "10.1186/s13020-024-01031-8",
-   "10.1371/journal.pbio.3003307",
-   "10.1093/nar/gkae253",
-   "10.1038/s41467-024-48009-6",
-   "10.1101/2025.11.07.687008v1",
-   "10.1101/2025.11.07.687008",
-   "10.1109/tcbbio.2025.3563807",
-   "10.1038/s41467-025-66163-3",
-   "10.1039/d2mo00168c",
-   "10.1093/bioinformatics/btae373",
-   "10.1093/bioadv/vbad061/7172446",
-   "10.1021/acs.analchem.4c02038",
-   "10.1007/s11306-023-02018-6",
-   "10.1016/j.aca.2018.05.001",
-   "10.1021/acs.analchem.3c04607",
-   "10.1111/jipb.13774",
-   "10.1016/j.envres.2020.110114",
-   "10.1186/s13321-025-01051-y",
-   "10.1021/acs.analchem.3c04501",
-   "10.1038/s41467-021-23986-0",
-   "10.1021/acs.analchem.2c04632",
-   "10.1021/acs.analchem.0c03060",
-   "10.1002/cmtd.202400088",
-   "10.5281/zenodo.5607185",
-   "10.5281/zenodo.5794106",
-   "10.48550/arxiv.2510.09716",
-   "10.1038/s41467-024-54137-w",
-   "10.1021/acs.analchem.4c00527",
-   "10.1002/rcm.9253",
-   "10.1021/acs.analchem.2c00557",
-   "10.1016/j.chemolab.2024.105063",
-   "10.1021/acs.jproteome.4c01140",
-   "10.1371/journal.pone.0321239",
-   "10.1186/1471-2105-11-395",
-   "10.1038/s41587-023-01690-2",
-   "10.1021/acs.analchem.1c02220",
-   "10.48550/arxiv.2410.22030",
-   "10.1101/2023.03.01.530642v1",
-   "10.1021/jasms.4c00467",
-   "10.1021/acs.analchem.3c05829",
-   "10.1021/acscentsci.1c01108",
-   "10.1093/pnasnexus/pgac257/6847575",
-   "10.1038/nmeth.3959",
-   "10.1021/acs.analchem.3c00764",
-   "10.1007/s11306-022-01899-3",
-   "10.1021/acs.analchem.4c03513",
-   "10.1016/j.dmd.2025.100183",
-   "10.3390/plants12152880",
-   "10.1371/journal.pcbi.1009148",
-   "10.1021/acs.analchem.4c04375",
-   "10.1021/acs.analchem.5b02287",
-   "10.1093/bioadv/vbae192",
-   "10.1021/acs.analchem.4c07078",
-   "10.1021/acs.jcim.4c00446",
-   "10.3390/metabo8010016",
-   "10.1021/acs.analchem.2c02093",
-   "10.1101/2024.08.07.607073v1",
-   "10.1038/s41586-023-06906-8",
-   "10.1021/acs.analchem.3c02583",
-   "10.1021/acs.analchem.5c03730",
-   "10.1021/acs.analchem.3c00849",
-   "10.1038/s42004-023-00939-w",
-   "10.5281/zenodo.5501673",
-   "10.1038/s42003-024-05844-z",
-   "10.1101/2024.11.04.621329v1",
-   "10.1038/s41592-019-0344-8",
-   "10.3390/biom15111562",
-   "10.3390/metabo13080941",
-   "10.1021/acs.analchem.1c00113",
-   "10.1021/acs.analchem.5c03682",
-   "10.1021/jasms.3c00322",
-   "10.26434/chemrxiv-2024-37v2j",
-   "10.48550/arxiv.2502.05114",
-   "10.1021/acs.analchem.3c04444",
-   "10.1038/nbt.3689",
-   "10.1016/j.aca.2018.08.002",
-   "10.1093/bioinformatics/btaa1031",
-   "10.21105/joss.02694",
-   "10.1007/s11306-018-1363-7",
-   "10.1038/s42004-024-01189-0",
-   "10.1021/acs.jproteome.3c00784",
-   "10.3390/metabo10100416",
-   "10.1038/s41467-022-32155-w",
-   "10.1186/s13321-024-00858-5",
-   "10.3389/fmolb.2022.952149",
-   "10.1021/acs.analchem.5c03390",
-   "10.1186/s13321-023-00724-w",
-   "10.1016/j.jpba.2022.114681",
-   "10.21105/joss.02410",
-   "10.1038/s43588-025-00923-5",
-   "10.1016/j.aca.2019.02.010",
-   "10.1007/s11306-021-01839-7",
-   "10.3390/metabo9090171",
-   "10.1007/s42081-023-00205-2",
-   "10.1021/ac051437y",
-   "10.1038/s42256-020-00234-6"
   ],
   "techniques": [
    "MS-imaging"
@@ -112488,7 +110257,7 @@
    "10.1021/acs.jnatprod.1c00399"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -112551,7 +110320,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -114270,7 +112039,7 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -114631,7 +112400,7 @@
    "10.1021/acs.analchem.5c06841"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -114699,7 +112468,7 @@
    "10.1021/acs.analchem.5c06841"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "noncommercial",
   "grounding_tier": "repo"
  },
  {
@@ -114997,7 +112766,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -115300,7 +113069,7 @@
    "10.1021/acs.jproteome.5c00435"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -115324,7 +113093,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -115347,7 +113116,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -116664,532 +114433,6 @@
   "grounding_tier": "repo"
  },
  {
-  "slug": "scientific-task-formulation",
-  "name": "scientific-task-formulation",
-  "description": "Use when you have a collection of molecules (HMDB, RefMet, METLIN, or proprietary library) with known MS/MS spectra, retention times, or CCS values, and you need to frame this as a supervised learning problem suitable for 3DMolMS training or transfer learning.",
-  "edam_operation": "http://edamontology.org/operation_3802",
-  "edam_topics": [
-   "http://edamontology.org/topic_0154",
-   "http://edamontology.org/topic_3172",
-   "http://edamontology.org/topic_3407",
-   "http://edamontology.org/topic_0091",
-   "http://edamontology.org/topic_3520",
-   "http://edamontology.org/topic_2275",
-   "http://edamontology.org/topic_3361",
-   "http://edamontology.org/topic_0081",
-   "http://edamontology.org/topic_0621",
-   "http://edamontology.org/topic_3174",
-   "http://edamontology.org/topic_0080",
-   "http://edamontology.org/topic_0625",
-   "http://edamontology.org/topic_3577",
-   "http://edamontology.org/topic_0092",
-   "http://edamontology.org/topic_0121",
-   "http://edamontology.org/topic_3372",
-   "http://edamontology.org/topic_3373",
-   "http://edamontology.org/topic_0176",
-   "http://edamontology.org/topic_3369",
-   "http://edamontology.org/topic_3673",
-   "http://edamontology.org/topic_3336",
-   "http://edamontology.org/topic_0153",
-   "http://edamontology.org/topic_3370",
-   "http://edamontology.org/topic_0602",
-   "http://edamontology.org/topic_3375",
-   "http://edamontology.org/topic_3365",
-   "http://edamontology.org/topic_3674",
-   "http://edamontology.org/topic_3307",
-   "http://edamontology.org/topic_3071",
-   "http://edamontology.org/topic_0769",
-   "http://edamontology.org/topic_0003",
-   "http://edamontology.org/topic_3360",
-   "http://edamontology.org/topic_3957",
-   "http://edamontology.org/topic_3572",
-   "http://edamontology.org/topic_3050",
-   "http://edamontology.org/topic_3473",
-   "http://edamontology.org/topic_3391",
-   "http://edamontology.org/topic_0082",
-   "http://edamontology.org/topic_3076",
-   "http://edamontology.org/topic_3474",
-   "http://edamontology.org/topic_3371",
-   "http://edamontology.org/topic_3489",
-   "http://edamontology.org/topic_0622",
-   "http://edamontology.org/topic_0749",
-   "http://edamontology.org/topic_3512",
-   "http://edamontology.org/topic_3047",
-   "http://edamontology.org/topic_0593",
-   "http://edamontology.org/topic_3314",
-   "http://edamontology.org/topic_0601",
-   "http://edamontology.org/topic_0605"
-  ],
-  "tools": [
-   "PyTorch",
-   "RDKit",
-   "molnetpack",
-   "PyYAML",
-   "Pandas",
-   "mzmine",
-   "mzmine3 (CSi-Studio fork)",
-   "GitHub",
-   "train.py",
-   "predict.py",
-   "GitLab",
-   "bigmap-download",
-   "bigmap-family",
-   "bigmap-map",
-   "bigmap-analyse",
-   "MASH",
-   "BiG-SCAPE",
-   "antiSMASH / gutSMASH",
-   "bowtie2",
-   "BinDiscover",
-   "CAMERA",
-   "SIRIUS",
-   "CSI:FingerID",
-   "CANOPUS",
-   "MSNovelist",
-   "ZODIAC",
-   "COSMIC",
-   "CFM-ID",
-   "CIDMD_setup.py",
-   "TeraChem",
-   "CIDMD_analysis",
-   "CIDMD_compare",
-   "lebedev.py",
-   "ChEMBL Structure Curation Pipeline",
-   "PostgreSQL",
-   "Docker",
-   "GitHub / Steinbeck-Lab/coconut",
-   "CycloBranch",
-   "OpenMS",
-   "Dear-OMG",
-   "DearOMG-vendor.exe",
-   "DearOMG-community.exe",
-   "DearOMG-parser.exe",
-   "Snakemake",
-   "Python 3.10",
-   "conda / uv",
-   "DIATAGeR",
-   "MS-DIAL",
-   "MZMine",
-   "DiGress",
-   "DiffMS",
-   "netgsa R package",
-   "ggplot2",
-   "Cytoscape",
-   "DNEA R package",
-   "GLASSO",
-   "BiocParallel",
-   "Filigree",
-   "eicCluster",
-   "Bioconductor",
-   "MassBank",
-   "R",
-   "eRah",
-   "KNIME",
-   "Python",
-   "TOPPTools",
-   "pyOpenMS",
-   "TOPPView",
-   "GitHub repository browser",
-   "Conda environment specification",
-   "PyTorch and GNN libraries",
-   "G-Aligner",
-   "MZmine2",
-   "XCMS",
-   "GcDuo",
-   "EBImage",
-   "GlyKAn AZ",
-   "GNPS2",
-   "GNPS",
-   "ProteoSAFe",
-   "GitHub (CCMS-UCSD/GNPS_Workflows)",
-   "CCMS-Integration-Tests",
-   "GNPSDocumentation",
-   "GNPS_Workflows repository",
-   "GNPS_Documentation",
-   "CCMS-Integration-Tests repository",
-   "FraGNNet",
-   "ms-pred (ICEBERG, SCARF, MARASON)",
-   "Fiora",
-   "MassSpecGym",
-   "HDSE-MS",
-   "HeuSMA (Heuristic Strategy for Metabolomics Analysis)",
-   "HPLG (Heuristic Peak List Generator)",
-   "HP (Heuristic Processor)",
-   "homologueDiscoverer",
-   "dplyr",
-   "RColorBrewer",
-   "IDSL_MINT",
-   "JDK 25",
-   "JavaFX 24",
-   "MZmine",
-   "ViMMS (Virtual Metabolomics Mass Spectrometer)",
-   "pytest",
-   "mkdocs and mkdocstrings",
-   "Poetry",
-   "flake8 and autopep8",
-   "HMDB (Human Metabolome Database)",
-   "instantclue",
-   "jmzTab-m",
-   "MetDNA2",
-   "knitr",
-   "rmarkdown",
-   "MetFrag",
-   "Python 3.9.0",
-   "numpy",
-   "openpyxl",
-   "requests",
-   "GitHub API / git",
-   "scikit-learn",
-   "PyTorch Lightning",
-   "Ray Tune",
-   "Weights & Biases",
-   "uv",
-   "LipiDex-2",
-   "Compound Discoverer",
-   ".NET 7.0",
-   "LipiDex",
-   "mzMine 2",
-   "Proteowizard MS/MS file converter",
-   "lipydomics",
-   "Jupyter Notebook",
-   "mzbatch.py",
-   "requirements.txt",
-   "Conda",
-   "m2r",
-   "MADGEN (HassounLab)",
-   "Zenodo",
-   "MAFFIN",
-   "MasserFront",
-   "pymzml",
-   "plotly",
-   "MoNA MassBank",
-   "GNPS_MASST",
-   "MEANtools",
-   "MetaboAnalystR",
-   "MetaboAnalyst web server",
-   "BiocManager",
-   "Vicuna",
-   "ImageMol",
-   "Snap-stanford-gnn",
-   "MetaboliteChat",
-   "metabolitics-frontend",
-   "metabol (backend research project)",
-   "Metabolome-Transformer",
-   "MetaboLM",
-   "GitHub repository viewer / documentation parser",
-   "ReDU",
-   "GitHub Actions",
-   "MassIVE",
-   "MetaMOPE",
-   "MetaPhenotype",
-   "Python (dataloader, base.py, meta.py)",
-   "AirdPro",
-   "MetaPro",
-   "Redis",
-   "MongoDB",
-   "TransOmics",
-   "NetOmics",
-   "MetDIT WebApp (TransOmics)",
-   "TBtools",
-   "GitHub / Git",
-   "tidymass",
-   "MFAssignR",
-   "mineMS2",
-   "GNPS MS/MS molecular networking",
-   "MINNO",
-   "molDiscovery",
-   "MPACT (example tool in source repository)",
-   "MRMkit",
-   "GitHub Issues and Discussions",
-   "GNPS (Global Natural Products Social Molecular Networking)",
-   "ISDB-LOTUS",
-   "Sirius 6",
-   "MatchMS",
-   "MZmine 4",
-   "MS2DECIDE (K_estimation function)",
-   "TensorFlow",
-   "matplotlib",
-   "MS2toImg-CNN",
-   "Visual Studio",
-   "Visual Studio Code",
-   ".NET Framework 4.7.2 / .NET Core 3.1 / .NET 6",
-   "WPF (Windows Presentation Foundation)",
-   "ReactiveExtensions / ReactiveProperty",
-   "MSIannotator.m",
-   "Organ specific metabolite database.xlsx",
-   "MATLAB",
-   "MSIght",
-   "PyPI",
-   "Python 3.8",
-   "MZmine 2",
-   "mzmine2",
-   "mzmine (current)",
-   "mzmine (mzmine3)",
-   "GitHub (mzmine organization)",
-   "proteowizard",
-   "mzMine",
-   "msconvert",
-   "NeatMS",
-   "Keras",
-   "pandas",
-   "Jupyter notebook",
-   "jupyter-dash",
-   "NetworkX",
-   "config.py",
-   "result_optimization_and_analysis.py",
-   "NMRQNet",
-   "Python 3.6",
-   "Norm-ISWSVR (NormISWSVR class)",
-   "NP³ MS Workflow",
-   "GNPS2 Library Search",
-   "NP³ PCA plot command",
-   "Miniforge/Mamba",
-   "npanalyst",
-   "antiSMASH",
-   "scikit-learn (k-nearest neighbors)",
-   "NPOmix",
-   "TOPPAS",
-   "Galaxy",
-   "nextflow",
-   "PeakDetective",
-   "mz.unity",
-   "pyteomics",
-   "tensorflow",
-   "GitLab CI/CD Pipeline",
-   "Maven",
-   "Spring Framework / STS IDE",
-   "PeakMeister",
-   "mzML converter",
-   "R stats::ksmooth",
-   "PlantMetSuite",
-   "POMAShiny",
-   "POMA",
-   "PPGB-MS2",
-   "3DMolMS",
-   "Shiny",
-   "Protomix",
-   "pyicoshift",
-   "NumPy, pandas, matplotlib, seaborn, Plotly, scikit-learn",
-   "QC4metabolomics",
-   "torch, torch-geometric",
-   "alfabet",
-   "xtb",
-   "RaMP-DB (R package)",
-   "RaMP-Backend",
-   "GitHub Issues and CI/CD logs",
-   "forward_train.py",
-   "forward_evaluate_pipeline.py",
-   "analysis_pipeline.py",
-   "Conda / Mamba",
-   "setup.py / pip",
-   "Colab",
-   "conda",
-   "GitHub (gsarini/regression_filter)",
-   "GitHub (computational-chemical-biology/regression_filter)",
-   "ProteoWizard",
-   "ProteoWizard msConvert",
-   "RI-based-CPSC",
-   "Python (version 3.9)",
-   "SGMNS",
-   "Spyder 3.7",
-   "MSConvert",
-   "rdkit",
-   "spektral",
-   "SigmaCCS",
-   "SingleFrag (deep learning model suite)",
-   "Mol2vec",
-   "Python 3.8.19",
-   "Figshare dataset (SingleFrag, ID 27266787)",
-   "SManalyst",
-   "R (≥ v4.1.0)",
-   "MetaS/MetaS",
-   "SMolESY-select",
-   "SpectraX",
-   "transformer",
-   "Hugging Face Model Hub (MS-ML)",
-   "GitHub repository (hejjack/SpecTUS)",
-   "NIST20 dataset",
-   "Jupyter",
-   "t-SNE",
-   "ms2deepscore",
-   "matchms",
-   "SPLASH validation tool",
-   "SKYLINE",
-   "MetaboAnalyst",
-   "statTarget",
-   "ComBat",
-   "struct",
-   "structToolbox",
-   "NumPy",
-   "HMDB",
-   "limma"
-  ],
-  "dois": [
-   "10.1093/bioinformatics/btad354",
-   "10.1021/acs.jproteome.5c00423",
-   "10.1021/acs.analchem.3c04946",
-   "10.1016/j.jece.2025.119962",
-   "10.1021/acs.analchem.1c05224",
-   "10.1128/msystems.00937-21",
-   "10.1186/s13321-023-00734-8",
-   "10.1021/ac202450g",
-   "10.1021/acs.analchem.8b04698",
-   "10.1093/nar/gku436",
-   "10.1021/acs.jcim.4c00760",
-   "10.1186/s13321-020-00478-9",
-   "10.3390/app13105969",
-   "10.1038/s41587-021-01045-9",
-   "10.1021/acs.analchem.5c03451",
-   "10.1177/14690667231164766",
-   "10.1007/s12539-025-00786-4",
-   "10.1101/2024.05.30.596727v2",
-   "10.1101/2024.11.13.623458v1",
-   "10.1016/j.aca.2025.344698",
-   "10.48550/arxiv.2502.09571",
-   "10.1186/s12859-024-05994-1",
-   "10.1016/j.chroma.2018.09.050",
-   "10.1021/acs.analchem.6b02927",
-   "10.1074/mcp.M113.031278",
-   "10.26434/chemrxiv-2024-1zk33",
-   "10.48550/arxiv.2404.02360",
-   "10.1007/s11306-025-02379-0",
-   "10.1186/s12859-023-05525-4",
-   "10.1093/bib/bbaf080",
-   "10.1186/s12859-023-05346-5",
-   "10.1038/s41596-025-01237-6",
-   "10.1038/s41467-025-65993-5",
-   "10.1038/s41596-020-0317-5",
-   "10.1002/imt2.195",
-   "10.1021/acs.analchem.5c04111",
-   "10.1021/acs.analchem.4c05315",
-   "10.1289/EHP7722",
-   "10.1093/bioinformatics/btac647/6722615",
-   "10.1186/s13321-024-00804-5",
-   "10.1021/ci100050t",
-   "10.1021/ci200081k",
-   "10.1038/s41467-021-23953-9",
-   "10.1021/acs.analchem.2c04603",
-   "10.1021/acs.analchem.0c03895",
-   "10.1038/s41598-018-31154-6",
-   "10.1038/s41467-022-34537-6",
-   "10.1021/acs.analchem.3c04419",
-   "10.1021/acs.analchem.5c00277",
-   "10.1101/2024.10.07.617094v3",
-   "10.1021/acs.analchem.4c00359",
-   "10.1016/j.cels.2018.03.011",
-   "10.1021/acs.analchem.0c02560",
-   "10.1021/acs.analchem.5c01414",
-   "10.1093/bioinformatics/btab060/6125380",
-   "10.1021/jasms.1c00013",
-   "10.48550/arxiv.2501.01950",
-   "10.1093/bioinformatics/btac355/6593484",
-   "10.1021/acs.analchem.3c03594",
-   "10.1186/s13321-023-00741-9",
-   "10.1038/s41587-023-01985-4",
-   "10.1101/2024.08.02.606356v2",
-   "10.1186/s13020-024-01031-8",
-   "10.1371/journal.pbio.3003307",
-   "10.1093/nar/gkae253",
-   "10.1038/s41467-024-48009-6",
-   "10.1101/2025.11.07.687008v1",
-   "10.1101/2025.11.07.687008",
-   "10.1109/tcbbio.2025.3563807",
-   "10.1038/s41467-025-66163-3",
-   "10.1039/d2mo00168c",
-   "10.1093/bioinformatics/btae373",
-   "10.1093/bioadv/vbad061/7172446",
-   "10.1021/acs.analchem.4c02038",
-   "10.1007/s11306-023-02018-6",
-   "10.1016/j.aca.2018.05.001",
-   "10.1021/acs.analchem.3c04607",
-   "10.1111/jipb.13774",
-   "10.1016/j.envres.2020.110114",
-   "10.1186/s13321-025-01051-y",
-   "10.1021/acs.analchem.3c04501",
-   "10.1038/s41467-021-23986-0",
-   "10.1021/acs.analchem.2c04632",
-   "10.1021/acs.analchem.0c03060",
-   "10.1002/cmtd.202400088",
-   "10.48550/arxiv.2510.09716",
-   "10.1038/s41467-024-54137-w",
-   "10.1021/acs.analchem.4c00527",
-   "10.1002/rcm.9253",
-   "10.1021/acs.analchem.2c00557",
-   "10.1016/j.chemolab.2024.105063",
-   "10.1021/acs.jproteome.4c01140",
-   "10.1371/journal.pone.0321239",
-   "10.1186/1471-2105-11-395",
-   "10.1038/s41587-023-01690-2",
-   "10.1021/acs.analchem.1c02220",
-   "10.48550/arxiv.2410.22030",
-   "10.1101/2023.03.01.530642v1",
-   "10.1021/jasms.4c00467",
-   "10.1021/acs.analchem.3c05829",
-   "10.1021/acscentsci.1c01108",
-   "10.1093/pnasnexus/pgac257/6847575",
-   "10.1038/nmeth.3959",
-   "10.1021/acs.analchem.3c00764",
-   "10.1007/s11306-022-01899-3",
-   "10.1021/acs.analchem.4c03513",
-   "10.1016/j.dmd.2025.100183",
-   "10.3390/plants12152880",
-   "10.1371/journal.pcbi.1009148",
-   "10.1021/acs.analchem.4c04375",
-   "10.1021/acs.analchem.5b02287",
-   "10.1093/bioadv/vbae192",
-   "10.1021/acs.analchem.4c07078",
-   "10.1021/acs.jcim.4c00446",
-   "10.3390/metabo8010016",
-   "10.1021/acs.analchem.2c02093",
-   "10.1101/2024.08.07.607073v1",
-   "10.1038/s41586-023-06906-8",
-   "10.1021/acs.analchem.3c02583",
-   "10.1021/acs.analchem.5c03730",
-   "10.1021/acs.analchem.3c00849",
-   "10.1038/s42004-023-00939-w",
-   "10.5281/zenodo.5501673",
-   "10.1038/s42003-024-05844-z",
-   "10.1101/2024.11.04.621329v1",
-   "10.1038/s41592-019-0344-8",
-   "10.3390/biom15111562",
-   "10.3390/metabo13080941",
-   "10.1021/acs.analchem.1c00113",
-   "10.1021/acs.analchem.5c03682",
-   "10.1021/jasms.3c00322",
-   "10.26434/chemrxiv-2024-37v2j",
-   "10.48550/arxiv.2502.05114",
-   "10.1021/acs.analchem.3c04444",
-   "10.1038/nbt.3689",
-   "10.1016/j.aca.2018.08.002",
-   "10.1093/bioinformatics/btaa1031",
-   "10.21105/joss.02694",
-   "10.1007/s11306-018-1363-7",
-   "10.1038/s42004-024-01189-0",
-   "10.1021/acs.jproteome.3c00784",
-   "10.3390/metabo10100416",
-   "10.1038/s41467-022-32155-w",
-   "10.1186/s13321-024-00858-5",
-   "10.3389/fmolb.2022.952149",
-   "10.1021/acs.analchem.5c03390",
-   "10.1186/s13321-023-00724-w",
-   "10.1016/j.jpba.2022.114681",
-   "10.21105/joss.02410",
-   "10.1038/s43588-025-00923-5",
-   "10.1016/j.aca.2019.02.010",
-   "10.1007/s11306-021-01839-7",
-   "10.3390/metabo9090171",
-   "10.1007/s42081-023-00205-2",
-   "10.1021/ac051437y",
-   "10.1038/s42256-020-00234-6"
-  ],
-  "techniques": [
-   "LC-MS",
-   "ion-mobility-MS"
-  ],
-  "license_tier": "restricted",
-  "grounding_tier": "repo"
- },
- {
   "slug": "sciex-multiquant-data-export-format-recognition",
   "name": "sciex-multiquant-data-export-format-recognition",
   "description": "Use when you have txt files exported from Sciex MultiQuant (>v3.0.3) containing QCpool samples measured at regular intervals during mass spectrometry sequences, and you need to validate whether the file structure is compatible with the QComics package before parsing and quality assessment.",
@@ -117261,7 +114504,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -117287,7 +114530,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -117314,7 +114557,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -117339,7 +114582,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -119232,7 +116475,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -119491,7 +116734,7 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -119517,7 +116760,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -119540,7 +116783,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -120549,7 +117792,7 @@
    "10.1021/acs.jafc.3c09767"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -121751,7 +118994,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -121874,7 +119117,7 @@
    "MS-imaging",
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -122801,7 +120044,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -123023,7 +120266,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -123148,7 +120391,7 @@
    "LC-MS",
    "CE-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -123349,7 +120592,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -123374,7 +120617,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -123491,7 +120734,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -123873,7 +121116,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -124177,7 +121420,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -124530,7 +121773,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -125876,7 +123119,7 @@
   "techniques": [
    "MS-imaging"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -126734,7 +123977,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -127715,7 +124958,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -128272,7 +125515,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -128522,7 +125765,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -130087,7 +127330,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -130755,7 +127998,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -131411,7 +128654,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -131497,7 +128740,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -131799,7 +129042,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -131951,7 +129194,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -132242,7 +129485,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -132269,7 +129512,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -132294,7 +129537,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -132488,7 +129731,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -132516,7 +129759,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -133220,7 +130463,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -133447,7 +130690,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -134437,7 +131680,7 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -134847,7 +132090,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -136559,7 +133802,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "link-only"
  },
  {
@@ -137839,7 +135082,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -137956,7 +135199,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -138173,7 +135416,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -138692,7 +135935,7 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -138863,7 +136106,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -139254,7 +136497,7 @@
    "10.3390/metabo13121167"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -140479,7 +137722,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -141247,7 +138490,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -141274,7 +138517,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -141300,7 +138543,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -141857,7 +139100,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -141881,7 +139124,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -141953,7 +139196,7 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -142890,7 +140133,7 @@
    "LC-MS",
    "GC-MS"
   ],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {
@@ -143209,259 +140452,6 @@
    "LC-MS"
   ],
   "license_tier": "open",
-  "grounding_tier": "repo"
- },
- {
-  "slug": "workflow-reconstruction",
-  "name": "workflow-reconstruction",
-  "description": "Use when you have molecular structures (SMILES, SDF, or CSV with InChI) and want to predict tandem mass spectra (MS/MS) for those compounds.",
-  "edam_operation": "http://edamontology.org/operation_3964",
-  "edam_topics": [
-   "http://edamontology.org/topic_0121",
-   "http://edamontology.org/topic_3375",
-   "http://edamontology.org/topic_0154",
-   "http://edamontology.org/topic_3520",
-   "http://edamontology.org/topic_0091",
-   "http://edamontology.org/topic_3373",
-   "http://edamontology.org/topic_3361",
-   "http://edamontology.org/topic_3172",
-   "http://edamontology.org/topic_0625",
-   "http://edamontology.org/topic_3365",
-   "http://edamontology.org/topic_3370",
-   "http://edamontology.org/topic_3674",
-   "http://edamontology.org/topic_3391",
-   "http://edamontology.org/topic_0080",
-   "http://edamontology.org/topic_0769",
-   "http://edamontology.org/topic_3372",
-   "http://edamontology.org/topic_0092",
-   "http://edamontology.org/topic_3474",
-   "http://edamontology.org/topic_3047",
-   "http://edamontology.org/topic_0605",
-   "http://edamontology.org/topic_3473",
-   "http://edamontology.org/topic_3050",
-   "http://edamontology.org/topic_3407",
-   "http://edamontology.org/topic_3314",
-   "http://edamontology.org/topic_3572",
-   "http://edamontology.org/topic_2269"
-  ],
-  "tools": [
-   "PyTorch",
-   "RDKit",
-   "molnetpack",
-   "3DMolMS",
-   "NumPy, Pandas",
-   "Koina",
-   "mzmine (main branch)",
-   "mzmine3 (CSi-Studio fork)",
-   "JavaFX (UI framework)",
-   "JDK (Java Development Kit)",
-   "SIRIUS",
-   "CSI:FingerID",
-   "CANOPUS",
-   "MSNovelist",
-   "ZODIAC",
-   "COSMIC",
-   "ChEMBL structure curation pipeline",
-   "PostgreSQL",
-   "Docker",
-   "DearOMG-vendor",
-   "DearOMG-community",
-   "DearOMG-parser",
-   "Python API (dear_omg module)",
-   "Snakemake",
-   "conda",
-   "uv",
-   "GitHub Actions",
-   "netgsa R package",
-   "ggplot2",
-   "Cytoscape",
-   "DNEA",
-   "GLASSO",
-   "BiocManager",
-   "BiocParallel",
-   "dplyr",
-   "pheatmap",
-   "igraph",
-   "Filigree",
-   "CorrelationCalculator",
-   "OpenMS",
-   "KNIME",
-   "Python",
-   "GitHub",
-   "Galaxy",
-   "nextflow",
-   "TOPPAS",
-   "pyOpenMS",
-   "G-Aligner",
-   "MZmine2",
-   "XCMS",
-   "GNPS2",
-   "GNPS",
-   "ProteoSAFe",
-   "GitHub (CCMS-UCSD/GNPS_Workflows)",
-   "CCMS-Integration-Tests",
-   "GNPSDocumentation",
-   "nose2",
-   "GitHub (CCMS-UCSD)",
-   "homologueDiscoverer",
-   "R",
-   "RColorBrewer",
-   "mzmine",
-   "JDK 25",
-   "JavaFX 24",
-   "MZmine",
-   "ViMMS",
-   "pytest",
-   "IAPI",
-   "Poetry",
-   "scikit-learn",
-   "Ruff",
-   "mypy",
-   "PyTorch Lightning",
-   "Ray Tune",
-   "Weights & Biases",
-   "Jupyter Notebook",
-   "mzbatch.py",
-   "conda / pip",
-   "pymzml",
-   "plotly",
-   "MoNA MassBank",
-   "Conda",
-   "MetaboAnalystR",
-   "MetaboAnalyst web server",
-   "MSnbase",
-   "GNPS (Global Natural Product Social Molecular Networking)",
-   "Zenodo",
-   "act",
-   "AirdPro",
-   "MetaPro",
-   "Redis",
-   "MongoDB",
-   "TBtools",
-   "tidymass",
-   "mineMS2",
-   "MS-DIAL",
-   ".NET Framework 4.7.2",
-   ".NET Core 3.1",
-   ".NET 6",
-   "Visual Studio",
-   "Visual Studio Code",
-   "NuGet Package Manager",
-   "MSIght",
-   "PyPI (msight package)",
-   "imzML parser (embedded in MSIght)",
-   "TensorFlow",
-   "proteowizard",
-   "mzMine",
-   "msconvert",
-   "NeatMS",
-   "Keras",
-   "Jupyter notebook",
-   "Dash / jupyter-dash",
-   "pandas",
-   "ProteoWizard / msconvert",
-   "NetworkX",
-   "matplotlib",
-   "SignalPropagation class",
-   "NetAurHPD_M5 class",
-   "result_optimization_and_analysis module",
-   "NP³ MS Workflow",
-   "GNPS2 Library Search",
-   "NP3_MSCluster algorithm",
-   "Universal Natural Products Database (UNPD)",
-   "Maven",
-   "GitLab CI",
-   "OpenBabel",
-   "MySQL",
-   "Spring Framework",
-   "PPGB-MS2",
-   "CFM-ID",
-   "Shiny",
-   "Bioconductor",
-   "QC4metabolomics",
-   "GitHub (Wang-Bioinformatics-Lab/GNPS2_Workflows repository)",
-   "SpecTUS",
-   "MS-ML Hugging Face Hub",
-   "SpecTUS Demo Notebook",
-   "Jupyter",
-   "ms2deepscore",
-   "t-SNE",
-   "matchms",
-   "MZmine3",
-   "specXplore",
-   "SKYLINE",
-   "MetaboAnalyst",
-   "statTarget",
-   "SIEVE",
-   "ComBat",
-   "RGtk2",
-   "struct",
-   "structToolbox",
-   "knitr",
-   "ProteoWizard",
-   "GitLab",
-   "NumPy",
-   "HMDB",
-   "limma"
-  ],
-  "dois": [
-   "10.1093/bioinformatics/btad354",
-   "10.1021/acs.jproteome.5c00423",
-   "10.1021/acs.analchem.8b04698",
-   "10.1186/s13321-020-00478-9",
-   "10.1038/s41587-021-01045-9",
-   "10.1007/s12539-025-00786-4",
-   "10.1101/2024.11.13.623458v1",
-   "10.1186/s12859-024-05994-1",
-   "10.1074/mcp.M113.031278",
-   "10.1186/s12859-023-05525-4",
-   "10.1038/s41596-025-01237-6",
-   "10.1038/s41596-020-0317-5",
-   "10.1093/bioinformatics/btac647/6722615",
-   "10.1038/s41467-021-23953-9",
-   "10.1021/acs.analchem.0c03895",
-   "10.1101/2024.10.07.617094v3",
-   "10.1021/acs.analchem.5c01414",
-   "10.1186/s13321-023-00741-9",
-   "10.1093/nar/gkae253",
-   "10.1038/s41467-024-48009-6",
-   "10.5281/zenodo.3924422.svg",
-   "10.1007/s11306-023-02018-6",
-   "10.1016/j.aca.2018.05.001",
-   "10.1111/jipb.13774",
-   "10.1186/s13321-025-01051-y",
-   "10.1038/s41467-024-54137-w",
-   "10.1021/acs.jproteome.4c01140",
-   "10.1038/s41587-023-01690-2",
-   "10.1021/acs.analchem.1c02220",
-   "10.48550/arxiv.2410.22030",
-   "10.1021/acs.analchem.3c05829",
-   "10.1038/nmeth.3959",
-   "10.1007/s11306-022-01899-3",
-   "10.1021/acs.analchem.4c04375",
-   "10.1021/acs.analchem.5b02287",
-   "10.1021/acs.analchem.4c07078",
-   "10.1038/s41586-023-06906-8",
-   "10.1038/s41592-019-0344-8",
-   "10.48550/arxiv.2502.05114",
-   "10.1021/acs.analchem.3c04444",
-   "10.1016/j.aca.2018.08.002",
-   "10.1093/bioinformatics/btaa1031",
-   "10.1007/s11306-018-1363-7",
-   "10.1021/acs.jproteome.3c00784",
-   "10.3390/metabo10100416",
-   "10.1186/s13321-023-00724-w",
-   "10.1016/j.aca.2019.02.010",
-   "10.1007/s11306-021-01839-7",
-   "10.3390/metabo9090171",
-   "10.1021/ac051437y",
-   "10.1038/s42256-020-00234-6"
-  ],
-  "techniques": [
-   "LC-MS",
-   "ion-mobility-MS"
-  ],
-  "license_tier": "restricted",
   "grounding_tier": "repo"
  },
  {
@@ -144117,7 +141107,7 @@
    "10.1371/journal.pcbi.1008920"
   ],
   "techniques": [],
-  "license_tier": "restricted",
+  "license_tier": "open",
   "grounding_tier": "repo"
  },
  {

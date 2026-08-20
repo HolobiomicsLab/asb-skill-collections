@@ -4,30 +4,54 @@ build-backend = "hatchling.build"
 
 [project]
 name = "asb-skill-collections"
-version = "0.1.0"
-description = "Bootstrap scripts and CI helpers for HolobiomicsLab/asb-skill-collections"
+version = "0.2.0"
+description = "CLI + MCP skill-provider and CI helpers for the ASB (AgenticScienceBuilder) skill collections"
+readme = "README.md"
 license = { text = "Apache-2.0" }
 requires-python = ">=3.12"
+keywords = ["scientific-agents", "agent-skills", "metabolomics", "EDAM", "MCP", "AgenticScienceBuilder", "asb"]
 dependencies = [
     "pyyaml>=6.0",
     "jsonschema>=4.21",
     "requests>=2.31",
 ]
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+
+[project.urls]
+Homepage = "https://holobiomicslab.github.io/asb-skill-collections/"
+Repository = "https://github.com/HolobiomicsLab/asb-skill-collections"
+Pipeline = "https://github.com/HolobiomicsLab/AgenticScienceBuilder"
 
 [project.scripts]
-# Registry utility CLI (Phase 1.7): registry/verify/doctor only.
-# NOT the install surface — collections install via /plugin install.
-asbb = "scripts.asbb_cli:main"
+# Thin programmatic surface: `asbb search/get` (offline retrieval over a checkout)
+# + registry/verify/doctor + install for non-Claude runtimes. For Claude Code the
+# canonical collection install is `/plugin install`.
+asbb = "asb_skill_collections.asbb_cli:main"
+# MCP skill-server (needs the [mcp] extra). Any MCP agent can search/fetch skills.
+asb-mcp = "asb_skill_collections.asb_mcp_server:main"
 
 [project.optional-dependencies]
+mcp = [
+    "mcp>=1.2",
+]
 hf = [
     "huggingface_hub>=0.23",
+]
+analysis = [
+    # scripts/skill_map.py: embedding-space coverage + island map.
+    "numpy>=1.26",
 ]
 dev = [
     "pytest>=8.0",
     "pytest-cov",
     "responses>=0.25",
     "huggingface_hub>=0.23",
+    "numpy>=1.26",
 ]
 test = [
     "pytest>=8.0",
@@ -36,7 +60,28 @@ test = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["scripts"]
+# The installable package is `asb_skill_collections` (the `asbb` CLI + `asb-mcp`
+# server + retrieval lib). The repo's conventional `scripts/` directory holds
+# path-invoked CI/dev tools and is deliberately NOT distributed.
+packages = ["asb_skill_collections"]
+
+[tool.hatch.build.targets.sdist]
+# Ship the package + tests + the repo-local scripts (so the sdist is a complete,
+# testable source snapshot) — but NOT the multi-thousand-skill corpus under
+# collections/. The CLI reads collections from a checkout / ASB_COLLECTIONS_ROOT
+# at run time, not from the wheel. Without this, the default sdist is ~37 MB.
+include = [
+    "/asb_skill_collections",
+    "/scripts",
+    "/tests",
+    "/README.md",
+    "/LICENSE",
+    "/pyproject.toml",
+]
+exclude = [
+    "**/__pycache__",
+    "**/*.pyc",
+]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

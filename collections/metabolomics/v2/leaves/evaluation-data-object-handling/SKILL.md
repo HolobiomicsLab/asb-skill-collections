@@ -15,7 +15,7 @@ metadata:
   - Python pickle module
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -50,7 +50,6 @@ attribution:
 
 # Evaluation-Data Object Handling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Serialize and persist ViMMS in-memory evaluation data (chemicals, generated scans, fragmentation events) alongside simulated mzML output using Python pickle files, enabling reproducible linkage between scan metadata and source chemical definitions for downstream analysis.

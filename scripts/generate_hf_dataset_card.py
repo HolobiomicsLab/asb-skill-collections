@@ -79,7 +79,9 @@ language: [en]
 pretty_name: "{pretty_name}"
 configs:
   - config_name: skills
-    data_files: "skills/**/SKILL.md"
+    data_files:
+      - "leaves/**/SKILL.md"
+      - "skills/**/SKILL.md"
   - config_name: benchmark
     data_files: "benchmark/tasks/**/task.md"
   - config_name: tools

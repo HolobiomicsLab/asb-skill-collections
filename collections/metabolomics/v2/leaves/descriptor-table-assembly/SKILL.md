@@ -15,7 +15,7 @@ metadata:
   - BitterPredict
   - BitterPredict.m
   - RDKit (implied from workflow)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass
@@ -45,7 +45,6 @@ attribution:
 
 # descriptor-table-assembly
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assemble pre-computed molecular descriptors into a structured CSV or Excel table formatted for input to BitterPredict classification. This skill bridges descriptor calculation and taste prediction by organizing descriptor columns and molecule rows into the exact input format required by the BitterPredict.m classifier.

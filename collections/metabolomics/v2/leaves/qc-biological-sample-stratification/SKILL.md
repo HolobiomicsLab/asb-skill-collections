@@ -11,7 +11,7 @@ metadata:
   tools:
   - R
   - Metanorm
-  license_tier: restricted
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1101/2025.09.30.679445v1
   title: Metanorm
@@ -45,7 +45,7 @@ attribution:
 
 # QC/Biological-Sample Stratification and Discrepancy Detection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Partition normalized metabolomics data into QC and biological sample subsets, compute distributional statistics per subset, and identify features with significant discrepancies between the two groups to flag potential normalization artifacts or sample contamination. This quality-control step ensures that QC samples remain representative when both sample types are used together during normalization.

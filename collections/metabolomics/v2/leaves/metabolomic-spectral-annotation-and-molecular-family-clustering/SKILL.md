@@ -18,7 +18,7 @@ metadata:
   - MIBiG
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -56,7 +56,6 @@ attribution:
 
 # metabolomic-spectral-annotation-and-molecular-family-clustering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Import and organize tandem MS (MS2) spectra from GNPS into NPLinker Spectrum objects, cluster spectra into molecular families (MFs) via spectral similarity, and maintain strain-level associations to enable downstream correlation scoring with genomic clusters. This prepares metabolomic data for integration with BGC/GCF predictions.

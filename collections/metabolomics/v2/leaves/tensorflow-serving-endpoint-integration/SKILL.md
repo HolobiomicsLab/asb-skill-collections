@@ -15,7 +15,7 @@ metadata:
   - DeepSAT
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT
@@ -45,7 +45,6 @@ attribution:
 
 # tensorflow-serving-endpoint-integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate with a TensorFlow Serving inference endpoint to programmatically submit nuclear magnetic resonance peak data for molecular classification. This skill enables automated classification workflows by querying model metadata and invoking the classification API with properly formatted NMR peak payloads.

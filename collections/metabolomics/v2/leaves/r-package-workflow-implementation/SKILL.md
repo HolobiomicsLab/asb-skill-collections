@@ -13,7 +13,7 @@ metadata:
   - R
   - Metanorm
   - pak
-  license_tier: restricted
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1101/2025.09.30.679445v1
   title: Metanorm
@@ -47,7 +47,7 @@ attribution:
 
 # R Package Workflow Implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Implement a complete R package-based metabolomics data normalization workflow by loading raw intensity data, applying robust normalization methods (tGAM, rGAM, rLOESS, QC-RLSC, or QC-RSC), and validating batch effect removal through diagnostic plots and PCA. This skill demonstrates how to structure and execute a reproducible R package workflow for preprocessing large-scale metabolomics datasets.

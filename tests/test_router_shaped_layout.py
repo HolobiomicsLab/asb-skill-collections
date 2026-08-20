@@ -16,7 +16,7 @@ import sys
 
 import pytest
 
-from scripts import layout
+from asb_skill_collections import layout
 
 REPO = pathlib.Path(__file__).resolve().parent.parent
 V2 = REPO / "collections" / "metabolomics" / "v2"

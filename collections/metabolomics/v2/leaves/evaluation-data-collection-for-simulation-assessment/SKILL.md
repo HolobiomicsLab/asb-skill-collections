@@ -17,7 +17,7 @@ metadata:
   - MZMine
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -50,7 +50,6 @@ attribution:
 
 # Evaluation-Data Collection for Simulation Assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enable systematic collection of diagnostic metrics during LC-MS/MS simulation runs to assess the performance of fragmentation acquisition strategies without requiring real instrument hardware. This skill bridges virtual metabolomics simulations and downstream evaluation by capturing scan-level data that can be post-processed to compute fragmentation coverage and strategy efficacy.

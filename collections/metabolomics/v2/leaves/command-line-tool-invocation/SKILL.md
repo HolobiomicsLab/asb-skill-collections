@@ -22,7 +22,7 @@ metadata:
   - Apache Parquet
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.4c04040
   title: lipoclean
@@ -57,7 +57,6 @@ attribution:
 
 # command-line-tool-invocation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Invoke command-line bioinformatics tools with version-specific or mode-specific arguments to generate configuration files, run analyses, or produce formatted output. This skill is essential for reproducible automation of tool-driven workflows where configuration and execution are separated.

@@ -78,6 +78,71 @@ The paper is published in a venue that retains traditional copyright but allows 
 - Default state for newly-promoted papers awaiting `verify-paper.yml` CI assessment.
 - **Block from inclusion** — corpus.yaml entries with `access.type: unknown` AND `status: accepted/included` are flagged by CI and require manual resolution before release.
 
+### Software tools — repository-OA tier (`type: repo-oa` / `repo-permissive` / `repo-copyleft`)
+
+Many corpus entries are **software tools** (an algorithm, package, or pipeline)
+rather than a body of findings to be quoted. For these, the artifact ASB ingests
+is the tool's **source repository**, not the paper — and the repository, not the
+paper, governs reuse. A tool therefore qualifies on the **openness of its code
+license**, independently of the (often restrictive) reuse license on the
+accompanying paper. This is the **repository-OA** tier family, defined in
+`scripts/release_gate.py` (`_REPO_OA_TIERS`) and admitted by the access-tier gate
+(gate 2 / 15) on the same footing as the paper-OA tiers above:
+
+| `access.type` | Use for | Example SPDX |
+|---|---|---|
+| `repo-permissive` | tool repo under a permissive OSI license | `MIT`, `Apache-2.0`, `BSD-3-Clause`, `ISC` |
+| `repo-copyleft` | tool repo under a copyleft OSI license | `GPL-3.0-only`, `AGPL-3.0`, `LGPL-3.0`, `MPL-2.0` |
+| `repo-oa` | generic open repo where the SPDX is not (yet) resolved | — |
+
+**Why this is legally clean.** A repo-OA entry's skills are grounded in the
+**openly-licensed repository** — they are *usage / component* skills (how to
+install, configure, and run the tool; its parameters, inputs, and outputs) and
+carry **no verbatim text from the paper**. What ASB redistributes is therefore
+itself open. Because nothing from the (non-OA) paper is quoted, the
+verbatim-quotation cap regime (the hybrid/quotation rules above) does not apply;
+the strip-verbatim sanitizer treats repo-OA as OA-exempt.
+
+**Copyleft is fine for inclusion.** GPL/AGPL governs redistribution of the
+*tool's source*, which ASB does **not** redistribute — it links to the upstream
+repo and distills usage facts. ASB's own derived skill text stays MIT
+(CONTENT_POLICY §4); recording the tool's copyleft SPDX simply tells downstream
+users the upstream tool's terms.
+
+**Requirements for a repo-OA entry:**
+
+1. **Public, cloneable repository** under a recognized open/OSI license; verified
+   at build (`verified_via: git_clone_succeeded_at_build`).
+2. **Record the SPDX** as `code_license` in `corpus.yaml` (e.g. `MIT`,
+   `GPL-3.0-only`) and prefer the specific tier (`repo-permissive` /
+   `repo-copyleft`) over the generic `repo-oa`. The cited (non-OA) paper DOI is
+   recorded in the entry's `paper_*` fields.
+3. **No paper verbatim.** Skills derived under repo-OA contain only facts about
+   operating the software plus content from the open repo (README, docs, code,
+   `--help`). The non-OA paper may be **cited** but never quoted.
+
+> **Current state (v2):** existing entries use the generic `access.type: repo-oa`
+> and do not yet record a per-tool `code_license`. Backfilling the precise SPDX
+> and the `repo-permissive` / `repo-copyleft` tier for the released tools is a
+> forward-standard task scheduled for the next collection wave; it does not change
+> what the gate already admits.
+
+**What does NOT qualify as repo-OA:**
+
+- **Source-available / non-OSI / non-commercial repositories** (e.g. a custom
+  "noncommercial" license). These are *not* open licenses and are **rejected** by
+  the access-tier gate; they must never be tagged `repo-*`. Such a tool may be
+  admitted only through an explicit, recorded **author permission** plus a
+  user-facing non-commercial-use notice — the *restricted-use tier* below.
+- A tool whose repository is private, unlicensed ("all rights reserved" by
+  default), or unreachable.
+
+> **Restricted-use tier (planned).** For source-available tools admitted with the
+> author's documented permission under non-commercial terms, a dedicated tier
+> carrying a machine-readable usage-restriction flag and a user-facing notice is
+> required before inclusion. Until that tier ships, such tools remain proposals
+> (tracked for the next collection wave).
+
 ---
 
 ## Retraction handling

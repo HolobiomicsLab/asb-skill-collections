@@ -19,7 +19,7 @@ metadata:
   - nPYc toolbox
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -56,7 +56,6 @@ attribution:
 
 # LC-MS Feature m/z-RT Extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract mass-to-charge ratio (m/z) and retention time (RT) metadata from preprocessed LC-MS intensity data to enable downstream structural clustering and annotation. This skill converts raw LC-MS feature tables into a structured format where each feature is annotated with its chromatographic and mass spectrometric properties.

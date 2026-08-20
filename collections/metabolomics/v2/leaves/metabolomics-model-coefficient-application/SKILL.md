@@ -17,7 +17,7 @@ metadata:
   - R (base stats, caret, matrixStats)
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac388
   title: MiMIR
@@ -49,7 +49,6 @@ attribution:
 
 # metabolomics-model-coefficient-application
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply pre-trained linear model coefficients to Nightingale Health 1H-NMR metabolomics feature matrices to compute predicted metabolic biomarker scores (e.g., MetaboAge, mortality risk). This skill bridges published metabolic prediction models with new cohort data by mapping individual metabolite concentrations to scalar risk or age estimates.

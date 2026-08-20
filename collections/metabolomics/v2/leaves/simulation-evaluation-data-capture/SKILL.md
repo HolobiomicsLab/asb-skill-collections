@@ -18,7 +18,7 @@ metadata:
   - Environment
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -58,7 +58,6 @@ attribution:
 
 # simulation-evaluation-data-capture
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Capture evaluation metrics and write simulated MS/MS scans to mzML format during a virtual mass spectrometry acquisition loop. This skill bridges in-silico fragmentation strategy prototyping with downstream comparative analysis by preserving both scan results and performance metadata.

@@ -18,7 +18,7 @@ metadata:
   - check_names
   - vote_plot
   - explore_plot
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
@@ -53,7 +53,6 @@ attribution:
 
 # directional-effect-assignment-across-studies
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assigns directional votes (+1 for up-regulation, −1 for down-regulation, 0 for no trend) to each metabolite compound within individual studies, then sums votes across all studies to produce a qualitative consensus measure. This vote-counting approach enables metabolomic meta-analysis when standard deviation or variance data are unavailable.

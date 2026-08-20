@@ -19,7 +19,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
@@ -55,7 +55,6 @@ attribution:
 
 # chromatographic-peak-detection-msw
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect chromatographic peaks in direct-injection or LC-MS data using the MSWParam algorithm, which identifies signal clusters by integrating mass and intensity information. This skill is essential for isolating individual ion signals prior to mass calibration, feature grouping, or spectral annotation in untargeted metabolomics workflows.

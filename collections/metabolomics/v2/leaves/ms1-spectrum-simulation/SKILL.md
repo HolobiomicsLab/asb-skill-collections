@@ -18,7 +18,7 @@ metadata:
   - MZMine
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -53,7 +53,6 @@ attribution:
 
 # ms1-spectrum-simulation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Simulate realistic full-scan MS1 spectra from chemically diverse samples by applying a mass spectrometer controller to a virtual LC-MS environment. This skill enables prototyping and evaluation of MS acquisition strategies without access to real instrumentation.

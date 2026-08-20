@@ -73,7 +73,10 @@ async function renderLeaderboard() {
     const data = await fetchJSON("leaderboard/career.jsonld");
     const contribs = data.contributors || [];
     if (contribs.length === 0) {
-      section.innerHTML += "<p class='loading'>No contributors yet.</p>";
+      section.innerHTML =
+        "<p class='empty'>The contribution mechanism is live — the leaderboard " +
+        "populates as the first review attestations are merged. " +
+        "<a href='./contribute.html'>Contribute a review or improvement.</a></p>";
       return;
     }
     const rows = contribs.map(c => {
@@ -94,6 +97,7 @@ async function renderLeaderboard() {
         ? [el("a", { href: `https://orcid.org/${c.orcid}`, target: "_blank" }, c.orcid)]
         : ["—"];
       return [
+        c.rank != null ? String(c.rank) : "—",
         c.name || c.github || "—",
         orcidLink,
         [tierBadge],
@@ -103,7 +107,7 @@ async function renderLeaderboard() {
       ];
     });
     section.appendChild(makeTable(
-      ["Name", "ORCID", "Tier", "Reviews", "Self-authored %", "Collections"],
+      ["#", "Name", "ORCID", "Tier", "Reviews", "Self-authored %", "Collections"],
       rows
     ));
     section.querySelector(".loading")?.remove();
@@ -113,7 +117,32 @@ async function renderLeaderboard() {
   }
 }
 
+async function renderBanner() {
+  const box = document.getElementById("release-banner");
+  if (!box) return;
+  try {
+    const data = await fetchJSON("catalogue.jsonld");
+    const cols = (data.collections || []).filter(c => c.released_at);
+    if (!cols.length) return;
+    const newest = cols.reduce((a, b) => (a.released_at > b.released_at ? a : b));
+    const id = `${newest.slug}-v${newest.version}-${(newest.released_at || "").substring(0, 10)}`;
+    if (localStorage.getItem(`asb-banner-${id}`)) return;
+    const date = (newest.released_at || "").substring(0, 10);
+    box.className = "banner";
+    box.appendChild(el("span", {},
+      `🆕 Newest release: ${newest.title || newest.slug} (v${newest.version}) — `,
+      el("strong", {}, `${newest.skills_count || 0} skills`), ", ",
+      `${newest.tools_count || 0} tools, released ${date}. `,
+      el("a", { href: `./collections.html?c=${newest.slug}` }, "Browse →")
+    ));
+    const close = el("button", { class: "banner-x", title: "Dismiss" }, "✕");
+    close.addEventListener("click", () => { localStorage.setItem(`asb-banner-${id}`, "1"); box.remove(); });
+    box.appendChild(close);
+  } catch (e) { /* banner is best-effort */ }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
+  renderBanner();
   renderCatalogue();
   renderLeaderboard();
 });

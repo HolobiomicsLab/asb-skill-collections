@@ -19,7 +19,7 @@ metadata:
   - Python
   - OpenMS
   - VIMMS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -62,7 +62,6 @@ attribution:
 
 # mzML File Parsing and Loading
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and load centroided mzML LC–MS files into Spectra/MsExperiment objects with sample type metadata annotation to enable downstream targeted peak integration and quality assessment workflows. This skill bridges raw MS data acquisition and targeted compound analysis by establishing a unified, annotated spectral container.

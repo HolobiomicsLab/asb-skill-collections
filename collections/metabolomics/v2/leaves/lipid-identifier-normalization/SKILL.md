@@ -18,7 +18,7 @@ metadata:
   - enrichmet
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.08.28.672951v2
   title: EnrichMET
@@ -52,7 +52,6 @@ attribution:
 
 # lipid-identifier-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize and map lipid identifiers across multiple ontology systems (KEGG, LION, HMDB, PubChem, CHEBI, STITCH) to enable consistent enrichment analysis and cross-database querying. This skill transforms heterogeneous lipid nomenclature into a unified reference frame compatible with pathway and ontology databases.

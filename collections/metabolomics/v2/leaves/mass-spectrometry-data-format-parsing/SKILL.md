@@ -26,7 +26,7 @@ metadata:
   - mzPeak specification
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
@@ -70,7 +70,6 @@ attribution:
 
 # mass-spectrometry-data-format-parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and parse tandem mass spectrometry (MS/MS) spectral data from standard interchange formats (.mgf, .mzML, .msp) into memory for downstream preprocessing and modeling. This is the essential first step that converts heterogeneous file formats into a unified in-memory representation suitable for spectral filtering, fragmentation analysis, and bag-of-fragments conversion.

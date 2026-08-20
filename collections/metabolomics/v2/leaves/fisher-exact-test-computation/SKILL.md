@@ -15,7 +15,7 @@ metadata:
   - MIBiG
   - GNPS
   - Python scipy.stats.fisher_exact or R stats::fisher.test
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -56,7 +56,6 @@ attribution:
 
 # fisher-exact-test-computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute Fisher exact test p-values to statistically compare the proportion of validated links across categorized link sets, determining whether dual-score enrichment (links exceeding multiple scoring thresholds) is significantly different from single-score enrichment. This enables rigorous hypothesis testing of complementary scoring approach performance.

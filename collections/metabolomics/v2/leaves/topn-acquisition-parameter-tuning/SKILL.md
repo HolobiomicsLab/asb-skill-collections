@@ -20,7 +20,7 @@ metadata:
   - PeakPicking (MZMine parameters)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -60,7 +60,6 @@ attribution:
 
 # TopN Acquisition Parameter Tuning
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize data-dependent acquisition (DDA) fragmentation strategies by systematically configuring TopN controller parameters (N value, isolation window width, m/z tolerance, retention time tolerance, and MS1 intensity threshold) and evaluating their effects on simulated acquisition patterns using real metabolomics data.

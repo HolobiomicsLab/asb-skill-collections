@@ -1,0 +1,192 @@
+schema_version: 0.3.0
+workflow_id: pathway_functional_analysis
+kind: composite-workflow
+techniques:
+- LC-MS
+steps:
+- id: feature_prep
+  goal: prepare a ranked m/z feature list for functional analysis
+  edam_operation: operation_3435
+  skills:
+  - untargeted-metabolomics-feature-analysis
+  - metabolomics-data-quality-assessment
+  - metabolite-feature-column-mapping
+  - metabolomic-feature-table-assembly
+  tools:
+  - Mummichog 3
+  - metDataModel
+  - JMS
+  - mass2chem
+  inputs:
+  - type: feature-table
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-0c03693
+    - asb-paper-10-1038-s41467-024-48009-6
+    - asb-paper-10-1371-journal-pcbi-1003123
+    - asb-paper-10-3390-metabo12030212
+    dois:
+    - 10.1021/acs.analchem.0c03693
+    - 10.1038/s41467-024-48009-6
+    - 10.1371/journal.pcbi.1003123
+    - 10.3390/metabo12030212
+  after: []
+  candidate_tools:
+  - MetaboAnalystR
+  - R
+  - metabCombiner
+  - JPA
+  - XCMS
+  - MS-Convert
+- id: mummichog
+  goal: functional analysis directly from m/z (mummichog)
+  edam_operation: operation_3928
+  skills:
+  - pathway-activity-propagation-inference
+  - metabolic-network-mapping
+  - functional-module-inference-from-networks
+  - network-based-functional-prediction
+  - mass-feature-to-node-mapping
+  tools:
+  - Python
+  - mummichog (v3)
+  - JMS
+  - metDataModel
+  - mass2chem
+  inputs:
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1371-journal-pcbi-1003123
+    dois:
+    - 10.1371/journal.pcbi.1003123
+  after:
+  - feature_prep
+  candidate_tools:
+  - Mummichog 3
+  - mummichog
+  inputs_from:
+    feature_prep:
+    - tsv
+- id: pathway_enrichment
+  goal: pathway + metabolite-set enrichment
+  edam_operation: operation_3928
+  skills:
+  - metabolite-set-analysis
+  - metabolite-set-enrichment-analysis
+  - comparative-enrichment-method-evaluation
+  - untargeted-metabolomics-feature-interpretation
+  tools:
+  - PALS (Pathway Activity Level Scoring)
+  - PALS Viewer
+  - ORA (Over-Representation Analysis)
+  - GSEA (Gene Set Enrichment Analysis)
+  - GNPS (Global Natural Products Social Molecular Networking)
+  - MS2LDA
+  inputs:
+  - type: tsv
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1101-2025-08-28-672951v2
+    - asb-paper-10-1186-1471-2105-6-225
+    - asb-paper-10-1371-journal-pcbi-1003123
+    - asb-paper-10-3390-metabo11020103
+    dois:
+    - 10.1101/2025.08.28.672951v2
+    - 10.1186/1471-2105-6-225
+    - 10.1371/journal.pcbi.1003123
+    - 10.3390/metabo11020103
+  after:
+  - feature_prep
+  - mummichog
+  candidate_tools:
+  - R
+  - fgsea
+  - readr
+  - readxl
+  - KEGG
+  - enrichmet
+  - KEGGREST
+  - igraph
+  - Python
+  - mummichog
+  - metDataModel
+  - JMS
+  - mass2chem
+  inputs_from:
+    feature_prep:
+    - tsv
+    mummichog:
+    - tsv
+- id: interpretation
+  goal: interpret + visualize enriched pathways
+  edam_operation: operation_3659
+  skills:
+  - pathway-metabolite-mapping-integration
+  - pathway-enrichment-visualization
+  - metabolite-kegg-pathway-enrichment
+  - enrichment-score-computation
+  - metabolomic-biomarker-pathway-association
+  tools:
+  - R
+  - fgsea
+  - readr
+  - readxl
+  - enrichmet
+  - KEGGREST
+  - igraph
+  inputs:
+  - type: tsv
+  - type: tsv
+  outputs:
+  - type: tsv
+  - type: html
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1093-bib-bbac455
+    - asb-paper-10-1101-2020-11-20-391912
+    - asb-paper-10-1101-2024-06-20-599545
+    - asb-paper-10-1101-2024-06-20-599545v1
+    - asb-paper-10-1101-2025-08-28-672951v2
+    dois:
+    - 10.1093/bib/bbac455
+    - 10.1101/2020.11.20.391912
+    - 10.1101/2024.06.20.599545
+    - 10.1101/2024.06.20.599545v1
+    - 10.1101/2025.08.28.672951v2
+  after:
+  - mummichog
+  - pathway_enrichment
+  candidate_tools:
+  - clusterProfiler
+  - margheRita
+  - ComplexHeatmap
+  - ggplot2
+  - KEGG_Enrich_PlotPanel
+  - Enrichment
+  - KEGG_Enrich_Plot
+  - Python (pandas, NumPy, SciPy)
+  - Statistical analysis libraries (scipy.stats for enrichment tests)
+  - MetENP
+  - pathview
+  - SciPy (scipy.stats)
+  inputs_from:
+    mummichog:
+    - tsv
+    pathway_enrichment:
+    - tsv
+verification:
+  final_outputs:
+  - path: pathway_functional_report.tsv
+    type: file
+provenance:
+  derived_from_workflows: []
+  bound_by: perspicacite-semantic
+  coverage_gaps: []

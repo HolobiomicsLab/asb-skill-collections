@@ -10,7 +10,7 @@ metadata:
   tools:
   - tensorflow serving
   - TensorFlow Serving
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT
@@ -39,7 +39,6 @@ attribution:
 
 # api-contract-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that an API endpoint's response conforms to an expected schema contract by verifying the presence and structure of required fields. This skill ensures downstream code can safely parse API responses without encountering missing or malformed data.

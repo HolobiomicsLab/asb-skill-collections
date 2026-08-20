@@ -18,7 +18,7 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -61,7 +61,6 @@ attribution:
 
 # top-n-accuracy-and-auc-metric-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute ranking-based accuracy metrics (top-1, top-5, top-10, etc.) and area-under-curve (AUC) to evaluate how often a correct BGC-spectrum match ranks within the top n candidates, and assess discriminative power against a randomized baseline. This skill is essential for ranking-based retrieval tasks where a single ground-truth target must be re-identified within a sorted candidate list.

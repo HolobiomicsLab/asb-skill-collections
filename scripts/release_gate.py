@@ -72,7 +72,7 @@ if __package__ in (None, ""):
 
     _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
 
-from scripts import layout
+from asb_skill_collections import layout
 
 try:
     import yaml
@@ -320,6 +320,17 @@ _REPO_OA_TIERS = {"repo-oa", "repo-permissive", "repo-copyleft"}
 # weaker `grounding_tier`, they are not silently presented as repo-grounded.
 _LINK_ONLY_TIERS = {"link-only"}
 _NORMALIZED_OA_TIERS = _NORMALIZED_OA_TIERS | _REPO_OA_TIERS | _LINK_ONLY_TIERS
+
+# ADMISSION and REUSE are different questions, and `link-only` answers them
+# differently: a citable DOI is admissible (above), but the tier means no reuse
+# right was established, so it takes the strict verbatim caps rather than the OA
+# exemption.  `repo-oa` keeps the exemption because its spans come from a cloned,
+# openly licensed repository (the repository-only grounding rule), not paper text.
+# Where a link-only paper does declare an open licence, the fix is to record it —
+# `scripts/resolve_paper_license.py` promotes such an entry to `open-access` on the
+# registry's evidence — never to widen the exemption here.
+# Kept separate from promote.py's `_NON_OA_TIERS`, which is vendored byte-for-byte.
+_CAPPED_VERBATIM_TIERS = _NON_OA_TIERS | _LINK_ONLY_TIERS
 
 
 def _read_frontmatter(text: str) -> tuple[dict[str, Any], str]:
@@ -595,8 +606,9 @@ def check_strip_verbatim(
         hard_gate=True,
         summary=(
             "OA papers exempt from caps (unlimited verbatim w/ attribution; "
-            f">{_TEXT_FIELD_CAP}-char spans → advisory WARN).  Non-OA: per-span text cap "
-            f"{_TEXT_FIELD_CAP} chars, cumulative cap {_CUMULATIVE_CAP} chars/DOI.  "
+            f">{_TEXT_FIELD_CAP}-char spans → advisory WARN).  Non-OA and link-only "
+            f"(no reuse right established): per-span text cap {_TEXT_FIELD_CAP} chars, "
+            f"cumulative cap {_CUMULATIVE_CAP} chars/DOI.  "
             "Near-verbatim similarity flagged for all."
         ),
     )
@@ -604,9 +616,13 @@ def check_strip_verbatim(
     total_spans = 0
 
     def _is_non_oa(doi: str) -> bool:
-        # Treat unknown / non-OA tiers (and any DOI absent from the corpus) as
-        # the strict-cap regime; OA papers permit fuller verbatim with attribution.
-        return access_by_doi.get(doi, "unknown") in _NON_OA_TIERS or doi not in access_by_doi
+        # Treat unknown / non-OA / link-only tiers (and any DOI absent from the
+        # corpus) as the strict-cap regime; OA papers permit fuller verbatim with
+        # attribution.  See _CAPPED_VERBATIM_TIERS for why link-only is in here.
+        return (
+            access_by_doi.get(doi, "unknown") in _CAPPED_VERBATIM_TIERS
+            or doi not in access_by_doi
+        )
 
     for sk_md in _iter_skill_md(collection_dir):
         try:
@@ -856,6 +872,84 @@ def check_provenance(collection_dir: Path) -> CheckResult:
     return res
 
 
+def check_workflows(collection_dir: Path) -> CheckResult:
+    """Validate the composite workflow super-skill subtree (`workflows/<slug>/`).
+
+    Each workflow's leaves must resolve in skills_index.json, the workflow.yaml DAG
+    (after / inputs_from) must reference only earlier steps, no leaf may appear in two
+    stages, and tools must not leak script filenames. Non-hard (advisory) — the leaf
+    collection is the hard-gated artifact; workflows are an additive layer.
+    """
+    res = CheckResult(
+        name="composite_workflows",
+        gates=[],
+        hard_gate=False,
+        summary="Composite workflow super-skills resolve to real leaves with a valid DAG.",
+    )
+    wf_root = collection_dir / "workflows"
+    if not wf_root.is_dir():
+        res.add(PASS, "No workflows/ subtree (n/a).")
+        return res
+    # Leaf slug resolution needs the leaf index. A staging subtree (workflows only) has no
+    # skills_index.json — its leaves live in the released collection — so degrade to a loud
+    # WARN and run the structural checks (DAG / collisions / tool leaks) rather than a false
+    # FAIL. Full slug resolution: validate_workflows.py --collection <released>.
+    idx: set | None = None
+    idx_path = collection_dir / "skills_index.json"
+    if idx_path.is_file():
+        try:
+            idx = {r["slug"] for r in json.loads(idx_path.read_text(encoding="utf-8"))}
+        except ValueError as exc:
+            res.add(FAIL, f"cannot parse skills_index.json: {exc}")
+            return res
+    else:
+        res.add(WARN, "no skills_index.json in this subtree — leaf-slug resolution deferred "
+                      "to validate_workflows.py --collection <released>; structural checks only.")
+    n = 0
+    for d in sorted(wf_root.iterdir()):
+        if not d.is_dir() or d.name.startswith("_") or d.name == "bin":
+            continue
+        n += 1
+        name = d.name
+        sk_md, wf_y = d / "SKILL.md", d / "workflow.yaml"
+        if not (sk_md.is_file() and wf_y.is_file()):
+            res.add(FAIL, f"{name}: missing SKILL.md or workflow.yaml", file=name)
+            continue
+        try:
+            fm, _ = _read_frontmatter(sk_md.read_text(encoding="utf-8"))
+            wf = yaml.safe_load(wf_y.read_text(encoding="utf-8")) or {}
+        except (OSError, yaml.YAMLError) as exc:
+            res.add(FAIL, f"{name}: unreadable ({exc})", file=name)
+            continue
+        meta = fm.get("metadata", {}) or {}
+        if meta.get("kind") != "composite-workflow":
+            res.add(FAIL, f"{name}: metadata.kind != composite-workflow", file=name)
+        ids: set = set()
+        seen: dict = {}
+        for st in (wf.get("steps") or []):
+            sid = st.get("id")
+            for s in (st.get("skills") or []):
+                if idx is not None and s not in idx:
+                    res.add(FAIL, f"{name}/{sid}: unresolved skill {s}", file=name)
+                if s in seen and seen[s] != sid:
+                    res.add(FAIL, f"{name}: collision {s} ({seen[s]} & {sid})", file=name)
+                seen[s] = sid
+            for a in (st.get("after") or []):
+                if a not in ids:
+                    res.add(FAIL, f"{name}/{sid}: dangling after -> {a}", file=name)
+            for k in (st.get("inputs_from") or {}):
+                if k not in ids:
+                    res.add(FAIL, f"{name}/{sid}: dangling inputs_from -> {k}", file=name)
+            ids.add(sid)
+        for t in (meta.get("member_tools") or []):
+            if str(t).endswith(".py"):
+                res.add(WARN, f"{name}: script-filename as tool: {t}", file=name)
+    res.summary = f"{res.summary}  ({n} workflows checked)"
+    if n == 0:
+        res.add(PASS, "workflows/ present but empty.")
+    return res
+
+
 # --------------------------------------------------------------------------- #
 # Corpus / collection loaders.                                                #
 # --------------------------------------------------------------------------- #
@@ -894,6 +988,7 @@ def run_gate(
         check_strip_verbatim(collection_dir, access_by_doi),
         check_pii_dual_use(collection_dir, collection_meta),
         check_provenance(collection_dir),
+        check_workflows(collection_dir),
     ]
 
     counts = {PASS: 0, WARN: 0, FAIL: 0}

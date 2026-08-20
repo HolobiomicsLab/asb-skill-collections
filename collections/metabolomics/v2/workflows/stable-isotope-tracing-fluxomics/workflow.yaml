@@ -1,0 +1,207 @@
+schema_version: 0.3.0
+workflow_id: stable_isotope_tracing_fluxomics
+kind: composite-workflow
+techniques:
+- LC-MS
+steps:
+- id: preprocess
+  goal: raw labelled LC-MS -> aligned feature table (all isotopologues)
+  edam_operation: operation_3215
+  skills:
+  - peak-detection-and-mass-alignment
+  - mass-spectral-feature-alignment
+  - lcms-peak-detection-and-alignment
+  - isotope-labeling-data-integration
+  - mass-isotopologue-adduct-grouping
+  tools:
+  - MZmine2
+  - Optimus
+  - OpenMS
+  inputs:
+  - type: mzML
+  outputs:
+  - type: feature-table
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-1c01644
+    - asb-paper-10-1021-acs-analchem-1c02687
+    - asb-paper-10-1021-acs-jnatprod-7b00737
+    - asb-paper-10-1101-2021-12-05-471237v2
+    dois:
+    - 10.1021/acs.analchem.1c01644
+    - 10.1021/acs.analchem.1c02687
+    - 10.1021/acs.jnatprod.7b00737
+    - 10.1101/2021.12.05.471237v2
+  after: []
+  candidate_tools:
+  - R
+  - devtools
+  - BiocManager
+  - dplyr
+  - tidyr
+  - readr
+  - stringr
+  - tibble
+  - purrr
+  - ggplot2
+  - IsoPairFinder
+  - ISFrag
+  - XCMS
+  - CAMERA
+  - MS-DIAL
+  - Centwave
+  - FeatureFinderMetabo
+  - ADAP
+  - SLAW
+- id: isotopologue_extract
+  goal: feature table -> per-metabolite isotopologue intensity distributions
+  edam_operation: operation_3799
+  skills:
+  - isotope-labelling-feature-interpretation
+  - metabolite-feature-grouping-by-adduct-isotope
+  - isotopologue-signature-detection
+  tools:
+  - geoRge
+  - R
+  - XCMS
+  inputs:
+  - type: feature-table
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-5b03628
+    - asb-paper-10-1021-acs-analchem-5c01327
+    - asb-paper-10-1371-journal-pcbi-1011814
+    - asb-paper-10-1371-journal-pcbi-1011912
+    dois:
+    - 10.1021/acs.analchem.5b03628
+    - 10.1021/acs.analchem.5c01327
+    - 10.1371/journal.pcbi.1011814
+    - 10.1371/journal.pcbi.1011912
+  after:
+  - preprocess
+  candidate_tools:
+  - khipu
+  - Python
+  - Asari
+  - pandas
+  - numpy
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - MamsiStructSearch
+  - MAMSI (MamsiStructSearch)
+  inputs_from:
+    preprocess:
+    - feature-table
+- id: natural_abundance_correction
+  goal: correct isotopologue distributions for natural isotope abundance
+  edam_operation: operation_3435
+  skills:
+  - isotopic-impurity-accounting
+  - tracer-impurity-correction-modeling
+  - natural-isotope-abundance-propagation
+  - naturally-occurring-isotope-contribution-accounting
+  - isotopologue-distribution-matrix-construction
+  tools:
+  - ElemCor
+  inputs:
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1186-s12859-019-2669-9
+    dois:
+    - 10.1186/s12859-019-2669-9
+  after:
+  - isotopologue_extract
+  candidate_tools:
+  - IsoCor
+  - FluxFix
+  inputs_from:
+    isotopologue_extract:
+    - tsv
+- id: labelling_analysis
+  goal: corrected distributions -> mass-isotopomer distribution / fractional enrichment
+  edam_operation: operation_3799
+  skills:
+  - stable-isotope-labeling-quantification
+  - fractional-abundance-transformation
+  - metabolite-fold-change-statistical-testing
+  tools:
+  - R
+  - isoSCAN
+  - mzR
+  - enviPat
+  - Proteowizard MSconvert
+  inputs:
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-0c02998
+    - asb-paper-10-1021-acs-analchem-5b03628
+    - asb-paper-10-1186-s12859-019-2669-9
+    dois:
+    - 10.1021/acs.analchem.0c02998
+    - 10.1021/acs.analchem.5b03628
+    - 10.1186/s12859-019-2669-9
+  after:
+  - natural_abundance_correction
+  candidate_tools:
+  - ElemCor
+  - geoRge
+  - XCMS
+  inputs_from:
+    natural_abundance_correction:
+    - tsv
+- id: report
+  goal: consolidate labelling / enrichment results into a tracing report table
+  edam_operation: operation_3434
+  skills:
+  - metabolite-abundance-normalization-across-conditions
+  - tab-delimited-export-formatting-for-metabolomics
+  - stable-isotope-labelling-feature-detection
+  tools:
+  - INTEGRATE
+  - Agilent 1290 Infinity UHPLC system + Agilent 6550 iFunnel Q-TOF mass spectrometer
+  - constraint-based stoichiometric metabolic models (e.g., ENGRO2)
+  inputs:
+  - type: tsv
+  outputs:
+  - type: tsv
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-5b03628
+    - asb-paper-10-1093-bioinformatics-btac059-6522114
+    - asb-paper-10-1371-journal-pcbi-1009337
+    dois:
+    - 10.1021/acs.analchem.5b03628
+    - 10.1093/bioinformatics/btac059/6522114
+    - 10.1371/journal.pcbi.1009337
+  after:
+  - labelling_analysis
+  candidate_tools:
+  - R
+  - rmarkdown
+  - knitr
+  - ggplot2
+  - metaboprep
+  - geoRge
+  - XCMS
+  inputs_from:
+    labelling_analysis:
+    - tsv
+verification:
+  final_outputs:
+  - path: labelling_report.tsv
+    type: file
+provenance:
+  derived_from_workflows:
+  - coll_idsl_ipa_cq
+  - coll_corems
+  bound_by: perspicacite-semantic
+  coverage_gaps: []

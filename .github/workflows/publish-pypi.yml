@@ -1,0 +1,88 @@
+# publish-pypi.yml — publish the `asb-skill-collections` Python package
+# (the `asbb` CLI + `asb-mcp` server) to PyPI.
+#
+# This is INDEPENDENT of release.yml: that one releases a *collection*
+# (Zenodo / HuggingFace) on `<slug>-v<N>` tags. This one releases the *Python
+# distribution* and is triggered by a GitHub Release (or a manual dispatch for a
+# TestPyPI dry run). A plain `vX.Y.Z` tag does NOT match release.yml's
+# `*-v[0-9]*` pattern, so the two never collide.
+#
+# Auth = PyPI Trusted Publishing (OIDC). No API token is stored in the repo.
+# One-time setup on PyPI is documented in docs/RELEASING_PYPI.md.
+name: Publish to PyPI
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "Index to publish to"
+        type: choice
+        options: [testpypi, pypi]
+        default: testpypi
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build sdist + wheel
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up uv
+        uses: astral-sh/setup-uv@v6
+        with:
+          python-version: "3.12"
+      - name: Build
+        run: uv build
+      - name: Check distribution metadata
+        run: uvx twine check dist/*
+      - name: Show what will be uploaded
+        run: ls -la dist/
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+          if-no-files-found: error
+
+  publish-testpypi:
+    name: Publish to TestPyPI
+    needs: build
+    if: github.event_name == 'workflow_dispatch' && inputs.target == 'testpypi'
+    runs-on: ubuntu-latest
+    environment:
+      name: testpypi
+      url: https://test.pypi.org/p/asb-skill-collections
+    permissions:
+      id-token: write   # required for trusted publishing (OIDC)
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - name: Publish to TestPyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://test.pypi.org/legacy/
+
+  publish-pypi:
+    name: Publish to PyPI
+    needs: build
+    # A published GitHub Release goes to real PyPI; a manual dispatch with
+    # target=pypi does too (for a re-run). TestPyPI is dispatch-only.
+    if: github.event_name == 'release' || (github.event_name == 'workflow_dispatch' && inputs.target == 'pypi')
+    runs-on: ubuntu-latest
+    environment:
+      name: pypi
+      url: https://pypi.org/p/asb-skill-collections
+    permissions:
+      id-token: write   # required for trusted publishing (OIDC)
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: dist
+          path: dist/
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1

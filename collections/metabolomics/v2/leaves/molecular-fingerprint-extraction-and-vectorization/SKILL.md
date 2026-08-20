@@ -17,7 +17,7 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -60,7 +60,6 @@ attribution:
 
 # molecular-fingerprint-extraction-and-vectorization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and vectorize molecular fingerprints from chemical structures (SMILES strings) using multiple fingerprint encodings (CDK Substructure, PubChem Substructure, Klekota-Roth) to create a feature space for training kernel regression models that link spectra to molecular structures. This skill enables encoding of metabolite chemical diversity in a format compatible with spectrum-to-fingerprint regression tasks.

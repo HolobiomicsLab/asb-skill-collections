@@ -17,7 +17,7 @@ metadata:
   - NPLinker
   - GNPS
   - MIBiG
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -55,7 +55,6 @@ attribution:
 
 # multi-criterion-score-combination-and-ranking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Combine multiple independent scoring functions (strain correlation, structural similarity) using standardized ℓ₁/₂-norm aggregation to rank hypothetical links between genomic and metabolomic entities. This skill improves discrimination of true links by leveraging complementary scoring signals that separately may miss important associations.

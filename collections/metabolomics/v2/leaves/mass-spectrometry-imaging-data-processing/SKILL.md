@@ -19,7 +19,7 @@ metadata:
   - devtools
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
@@ -53,7 +53,6 @@ attribution:
 
 # Mass-spectrometry imaging data processing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load, preprocess, and annotate mass spectrometry imaging (MSI) peak matrices by integrating chemical formula and spatial distribution patterns to classify matrix-related ions, detect overlapping peaks, and generate transparent visual justification reports. This skill is essential for cleaning MSI datasets prior to downstream analysis by removing or flagging matrix contamination that would confound metabolite or biomarker discovery.

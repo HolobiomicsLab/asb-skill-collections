@@ -19,7 +19,7 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -60,7 +60,6 @@ attribution:
 
 # Validated-Link Proportional Comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A statistical method to compare the enrichment of validated genomic-metabolomic links across partitioned scoring categories, using proportional analysis and Fisher exact tests to assess whether links meeting combined scoring thresholds are significantly more reliable than links meeting individual thresholds alone.

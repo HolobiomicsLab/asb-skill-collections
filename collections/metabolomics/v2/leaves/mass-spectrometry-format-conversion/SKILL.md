@@ -22,7 +22,7 @@ metadata:
   - ZIP
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
@@ -59,7 +59,6 @@ attribution:
 
 # mass-spectrometry-format-conversion
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert mass spectrometry spectral data between supported file formats (mzML, mzXML, msp, metabolomics-USI, MGF, JSON) while preserving metadata and peak list integrity. This skill enables standardization of heterogeneous spectral datasets for downstream processing and comparison workflows in matchms.

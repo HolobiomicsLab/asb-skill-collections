@@ -17,7 +17,7 @@ metadata:
   - HMDB (Human Metabolome Database)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -52,7 +52,6 @@ attribution:
 
 # HMDB Formula Sampling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Sample diverse molecular formulas from the Human Metabolome Database (HMDB) within a specified m/z range to generate chemically realistic mixtures for LC-MS simulation. This skill enables rapid prototyping of MS acquisition strategies on representative chemical backgrounds without requiring real samples.

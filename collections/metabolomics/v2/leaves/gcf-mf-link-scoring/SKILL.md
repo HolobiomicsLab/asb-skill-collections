@@ -19,7 +19,7 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -59,7 +59,6 @@ attribution:
 
 # GCF-MF Link Scoring
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank potential links between genomic clusters of biosynthetic gene clusters (GCFs) and metabolomic features (MFs) using standardised strain correlation and Input-Output Kernel Regression (IOKR) scores. This skill enables prioritisation of true natural product–BGC associations from large numbers of hypothetical pairings by combining complementary scoring functions.

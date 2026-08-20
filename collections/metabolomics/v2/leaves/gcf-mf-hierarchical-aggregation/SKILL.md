@@ -16,7 +16,7 @@ metadata:
   - IOKR
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -53,7 +53,6 @@ attribution:
 
 # GCF-MF hierarchical aggregation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generalizes pairwise BGC-spectrum link scores to Gene Cluster Family (GCF) to Molecular Family (MF) level by computing the maximum score over all constituent BGC-spectrum pairs. This hierarchical aggregation enables scoring of multi-BGC/multi-spectrum links in natural product discovery workflows.

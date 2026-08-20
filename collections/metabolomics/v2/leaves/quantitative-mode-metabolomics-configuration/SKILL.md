@@ -17,7 +17,7 @@ metadata:
   - webchem
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
@@ -52,7 +52,6 @@ attribution:
 
 # quantitative-mode-metabolomics-configuration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and validate the input data structure for quantitative metabolomics meta-analysis by specifying column mappings, selecting mode='quan', and handling missing and negative fold-change values. This skill ensures metabolomics datasets from heterogeneous sources (xls/xlsx/csv/txt) conform to the required tibble schema before statistical combination.

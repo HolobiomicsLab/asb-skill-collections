@@ -19,7 +19,7 @@ metadata:
   - pandas
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -48,7 +48,6 @@ attribution:
 
 # spectral-array-extraction-and-reconstruction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract m/z and intensity arrays from mzPeak Parquet-based mass spectrometry archives and reconstruct the original spectral signal using Arrow-backed columnar storage, with support for point or chunked layouts and optional null-marking restoration. This skill is essential for reading scalable, interoperable mzPeak files in Python, R, or Rust environments.

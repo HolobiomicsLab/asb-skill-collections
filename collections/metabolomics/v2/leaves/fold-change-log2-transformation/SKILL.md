@@ -11,7 +11,7 @@ metadata:
   tools:
   - R
   - amanida
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
@@ -46,7 +46,6 @@ attribution:
 
 # fold-change-log2-transformation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Log2 transformation of fold-change values enables symmetric representation of up- and down-regulation and facilitates study-size-weighted averaging in quantitative metabolomics meta-analysis. This transformation is a prerequisite step before combining fold-changes across multiple studies using weighted averaging methods.

@@ -16,7 +16,7 @@ metadata:
   - Python
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1002/ange.202517611
   title: MMST
@@ -54,7 +54,6 @@ attribution:
 
 # Data Pipeline Module Design and Integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and integrate a modular data pipeline that ingests, parses, normalizes, and curates multimodal spectroscopic data (NMR, HSQC, COSY, IR) into aligned, quality-filtered tensor batches for transformer model training. This skill bridges raw spectroscopic datasets to machine-ready tensors by implementing standardized I/O contracts, cross-modal alignment, and deterministic quality gates.

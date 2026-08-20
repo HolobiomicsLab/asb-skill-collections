@@ -13,7 +13,7 @@ metadata:
   tools:
   - R
   - Metanorm
-  license_tier: restricted
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1101/2025.09.30.679445v1
   title: Metanorm
@@ -47,7 +47,7 @@ attribution:
 
 # robustness-metric-computation-metabolomics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Compute and compare robustness metrics (bias, variance, recovery of ground truth) and computational speed across multiple normalization methods applied to metabolomics data. This skill enables quantitative evaluation of normalization method performance for reproducibility assessment and method recommendation.

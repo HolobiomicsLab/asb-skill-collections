@@ -33,7 +33,9 @@ multilinguality: [monolingual]
 source_datasets: [original]
 configs:
   - config_name: skills
-    data_files: "skills/**/SKILL.md"
+    data_files:
+      - "leaves/**/SKILL.md"
+      - "skills/**/SKILL.md"
 homepage: "https://example.org"
 doi: "10.5281/zenodo.123"
 ---
@@ -138,7 +140,8 @@ def test_invalid_yaml_frontmatter_errors(tmp_path: Path):
 
 def test_configs_must_be_list_of_dicts_with_required_keys(tmp_path: Path):
     card = COMPLETE_CARD.replace(
-        "configs:\n  - config_name: skills\n    data_files: \"skills/**/SKILL.md\"",
+        'configs:\n  - config_name: skills\n    data_files:\n'
+        '      - "leaves/**/SKILL.md"\n      - "skills/**/SKILL.md"',
         "configs:\n  - whatever: skills"
     )
     rc, stdout, stderr = _run(card, tmp_path)

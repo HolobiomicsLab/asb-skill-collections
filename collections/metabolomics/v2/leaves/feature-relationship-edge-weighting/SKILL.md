@@ -19,7 +19,7 @@ metadata:
   - Python
   - NetworkX
   - MamsiStructSearch
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -56,7 +56,6 @@ attribution:
 
 # feature-relationship-edge-weighting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign weighted edges in a metabolomics feature network graph based on structural relationship types (isotopologue, adduct, cross-assay) detected from mass-to-charge ratio and retention time patterns. This differentiates the strength and type of biochemical linkage between features during network visualization and interpretation.

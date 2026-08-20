@@ -1,6 +1,6 @@
 # Using the ASB Metabolomics Collection (v2)
 
-5,865 evidence-grounded skills + 909 software-tool records for computational
+5,859 evidence-grounded skills + 909 software-tool records for computational
 metabolomics — predominantly LC-MS/MS, but also LC-MS, GC-MS, mass-spectrometry
 imaging, ion mobility and lipidomics, with some NMR and multi-omics / statistics
 / pathway tools — each derived from a peer-reviewed method paper and its public
@@ -51,7 +51,7 @@ jq '.[] | select(.slug=="<slug>") | .tools' skills_index.json
 
 ```bash
 /plugin marketplace add HolobiomicsLab/asb-skill-collections
-/plugin install metabolomics@asb-skill-collections          # full (5,865 skills)
+/plugin install metabolomics@asb-skill-collections          # full (5,859 skills)
 # or a lighter per-technique pack (load only what you need):
 /plugin install metabolomics-lc-ms@asb-skill-collections    # lc-ms · gc-ms · nmr · ms-imaging ·
                                                             # ion-mobility · ce-ms ·
@@ -86,7 +86,7 @@ the machine indexes directly:
 
 No CLI needed — you attach the skills as **uploaded knowledge** and add a short
 routing instruction. Because these UIs cap how many files you can upload, **do
-not upload all 5,865 skills**. Upload instead:
+not upload all 5,859 skills**. Upload instead:
 
 1. `skills_index.json` + `tools_index.json` (the searchable catalogue), and
 2. only the handful of `leaves/<slug>/SKILL.md` files relevant to your work
@@ -137,9 +137,9 @@ vocabulary and current counts:
 
 | tag | skills | | tag | skills |
 |---|---|---|---|---|
-| `LC-MS` (incl. LC-MS/MS) | 2621 | | `MS-imaging` | 292 |
+| `LC-MS` (incl. LC-MS/MS) | 2616 | | `MS-imaging` | 291 |
 | `GC-MS` | 367 | | `NMR` | 276 |
-| `ion-mobility-MS` | 390 | | `CE-MS` | 114 |
+| `ion-mobility-MS` | 385 | | `CE-MS` | 113 |
 | `mass-spectrometry` (generic) | 804 | | `direct-infusion-MS` | 97 |
 
 *(Tandem-MS / MS/MS is folded into `LC-MS` — a fragmentation mode, not a platform — except genuinely GC-MS/CE-MS/DI/imaging sources. ~1,520 skills are technique-agnostic.)*
@@ -160,6 +160,51 @@ jq '.[] | select(.tools[]? | ascii_downcase | test("sirius")) | .slug' skills_in
 jq '.[] | select(.edam_topics[]? | test("topic_3172")) | {slug,name}' skills_index.json   # Metabolomics
 jq -r '.[] | select(.description | test("library match";"i")) | .slug' skills_index.json
 ```
+
+### Semantic retrieval & the embedding cache
+
+`bin/semantic_search.py` ranks by **meaning** (`text-embedding-3-large`, the model
+Perspicacité uses) when an embedding cache is present, and falls back to a keyword
+index search otherwise — so it always works offline (the `mode` field in the output
+says which ran). Two things switch semantic mode on:
+
+1. **The cache** — a `.npz` of precomputed leaf embeddings. Either:
+   - **Download it** from the collection's Zenodo record (file
+     `metabolomics-v<N>-leafemb.npz`) — no re-embedding, no API cost for the corpus.
+     Drop it at `collections/metabolomics/v2/.cache/leafemb_v2.npz`, or point
+     `ASB_LEAF_EMB_CACHE` at it.
+   - **Build it** from a source embedding set (or from scratch with an API key):
+     ```bash
+     python scripts/build_leaf_embedding_cache.py \
+       --collection collections/metabolomics/v2 --source <full_embeddings.npz>   # align (no key)
+     python scripts/build_leaf_embedding_cache.py \
+       --collection collections/metabolomics/v2 --embed                          # bootstrap (needs key)
+     ```
+2. **`OPENAI_API_KEY`** — needed only to embed the *query* at run time (≈free per
+   call). The corpus is already embedded in the cache; the key never re-embeds the
+   5,859 leaves.
+
+So: cache present + key set → semantic ranking; cache present, no key → keyword;
+no cache → keyword. Nothing is required for the collection to be usable.
+
+### Whole-pipeline goals → composite workflows
+
+For an end-to-end goal ("annotate an untargeted LC-MS/MS run", "GC-MS deconvolution
++ identification", "SIRIUS de-novo elucidation"), start from a **composite workflow
+super-skill** instead of a single atomic skill. The 21 workflows live under
+[`workflows/`](workflows/); each is an ordered DAG of stages that delegates to the
+atomic skills above. Pick one with the workflow router:
+
+```bash
+cd workflows
+python bin/semantic_search.py --query "<the user's goal>" \
+  --collection . --target workflows [--technique LC-MS] --k 3
+# or browse workflows_index.json (one row per workflow: stages, member_tools, coverage_gaps)
+```
+
+Then read that workflow's `workflows/<slug>/SKILL.md` and follow its stages, applying
+each stage's `primary_skill` from the atomic collection. See
+`workflows/_workflow_router/SKILL.md` for the full protocol.
 
 ---
 
@@ -275,7 +320,7 @@ Every `SKILL.md` carries an `attribution:` block (collection-level mirror in
 |---|---|
 | `generator` | what produced the skill — the **AgenticScienceBuilder** pipeline (not a human author) |
 | `original_doi` / `all_source_dois` | the source paper(s) the skill was built from — **always cite these** |
-| `curators` | person(s) who later **modify / validate** the skill (empty at v0.1.0 — none yet) |
+| `curators` | person(s) who later **modify / validate** the skill (empty at v0.2.0 — none yet) |
 | `promoter` | person who **suggests using** the skill — Louis-Félix Nothias |
 | `sponsor` | who **paid the API cost** of generation — CNRS & Université Côte d'Azur |
 | `zenodo_doi` | the collection's Zenodo deposition DOI (TODO until minted) |

@@ -20,7 +20,7 @@ metadata:
   techniques:
   - LC-MS
   - direct-infusion-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -56,7 +56,6 @@ attribution:
 
 # Retention-Time Window Clustering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Split LC-MS features into fixed retention time windows and search within each window for isotopologue and adduct signatures to group structurally related features. This clustering step bridges individual m/z features to higher-order structural clusters by exploiting co-elution patterns.

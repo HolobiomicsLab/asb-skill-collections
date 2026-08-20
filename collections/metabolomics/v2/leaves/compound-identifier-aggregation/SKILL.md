@@ -15,7 +15,7 @@ metadata:
   - amanida
   - webchem
   - PubChem
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
@@ -50,7 +50,6 @@ attribution:
 
 # Compound Identifier Aggregation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Harmonize and deduplicate metabolite compound identifiers across multiple studies by converting diverse ID formats (chemical name, InChI, InChIKey, SMILES) to a common standard (PubChem ID) and detecting duplicates. This enables meaningful meta-analysis by ensuring each metabolite is counted only once across study results.

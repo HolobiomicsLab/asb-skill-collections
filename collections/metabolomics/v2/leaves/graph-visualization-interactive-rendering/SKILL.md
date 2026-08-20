@@ -19,7 +19,7 @@ metadata:
   - MamsiStructSearch
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -56,7 +56,6 @@ attribution:
 
 # graph-visualization-interactive-rendering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Render a NetworkX graph object as an interactive force-directed network visualization using pyvis, or as a static matplotlib plot, optionally with node labels and HTML export. This skill is used to display structural relationships (isotopologue, adduct, and cross-assay links) between mass spectrometry features organized into clusters.
