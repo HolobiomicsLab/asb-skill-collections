@@ -18,7 +18,7 @@ metadata:
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
-- doi: 10.5281/zenodo.1043226.svg
+- doi: 10.5281/zenodo.1043226
   title: ''
 evidence_spans:
 - MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'.
@@ -38,7 +38,7 @@ attribution:
   original_doi: 10.5702/massspectrometry.S0033
   all_source_dois:
   - 10.5702/massspectrometry.S0033
-  - 10.5281/zenodo.1043226.svg
+  - 10.5281/zenodo.1043226
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias
@@ -84,7 +84,7 @@ Locate the target repository's README file and identify all badge image URLs and
 - **Landscape.io** (Provides code health and quality badge endpoint) — https://landscape.io/github/NLeSC/MAGMa/master
 - **Coveralls** (Provides test coverage badge endpoint) — https://coveralls.io/r/NLeSC/MAGMa
 - **Docker Hub** (Provides container readiness status badge) — https://hub.docker.com/r/nlesc/magma
-- **Zenodo** (Provides DOI archival badge endpoint with version metadata) — https://zenodo.org/badge/DOI/10.5281/zenodo.1043226.svg
+- **Zenodo** (Provides DOI archival badge endpoint with version metadata) — https://zenodo.org/badge/DOI/10.5281/zenodo.1043226
 
 ## Examples
 
@@ -116,4 +116,4 @@ curl -s https://travis-ci.org/NLeSC/MAGMa.svg?branch=master | grep -oP '(?<=<tex
 - [readme] image:: https://travis-ci.org/NLeSC/MAGMa.svg?branch=master: "image:: https://travis-ci.org/NLeSC/MAGMa.svg?branch=master"
 - [readme] image:: https://landscape.io/github/NLeSC/MAGMa/master/landscape.svg?style=flat: "image:: https://landscape.io/github/NLeSC/MAGMa/master/landscape.svg?style=flat"
 - [readme] image:: https://coveralls.io/repos/NLeSC/MAGMa/badge.svg?branch=master: "image:: https://coveralls.io/repos/NLeSC/MAGMa/badge.svg?branch=master"
-- [readme] image:: https://zenodo.org/badge/DOI/10.5281/zenodo.1043226.svg: "image:: https://zenodo.org/badge/DOI/10.5281/zenodo.1043226.svg"
+- [readme] image:: https://zenodo.org/badge/DOI/10.5281/zenodo.1043226: "image:: https://zenodo.org/badge/DOI/10.5281/zenodo.1043226"

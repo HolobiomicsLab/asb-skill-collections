@@ -23,7 +23,7 @@ metadata:
   - Tensorflow
   license_tier: restricted
 derived_from:
-- doi: 10.1093/bioinformatics/btac032/6510930
+- doi: 10.1093/bioinformatics/btac032
   title: massNet
 evidence_spans:
 - numpy(1.15.4)
@@ -38,15 +38,15 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_massnet_cq
-    doi: 10.1093/bioinformatics/btac032/6510930
+    doi: 10.1093/bioinformatics/btac032
     title: massNet
   dedup_kept_from: coll_massnet_cq
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bioinformatics/btac032/6510930
+  original_doi: 10.1093/bioinformatics/btac032
   all_source_dois:
-  - 10.1093/bioinformatics/btac032/6510930
+  - 10.1093/bioinformatics/btac032
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias

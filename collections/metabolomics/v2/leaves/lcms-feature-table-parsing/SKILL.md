@@ -20,7 +20,7 @@ metadata:
   - ion-mobility-MS
   license_tier: open
 derived_from:
-- doi: 10.1093/bioinformatics/btaf290/8128335
+- doi: 10.1093/bioinformatics/btaf290
   title: Eclipse
 evidence_spans:
 - pip install bmxp
@@ -34,15 +34,15 @@ provenance:
     doi: 10.1038/nprot.2017.122
     title: 3D molecular cartography (Optimus / 'ili)
   - build: coll_eclipse_cq
-    doi: 10.1093/bioinformatics/btaf290/8128335
+    doi: 10.1093/bioinformatics/btaf290
     title: Eclipse
   dedup_kept_from: coll_eclipse_cq
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bioinformatics/btaf290/8128335
+  original_doi: 10.1093/bioinformatics/btaf290
   all_source_dois:
-  - 10.1093/bioinformatics/btaf290/8128335
+  - 10.1093/bioinformatics/btaf290
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias

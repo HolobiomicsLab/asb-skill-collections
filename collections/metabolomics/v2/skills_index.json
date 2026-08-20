@@ -571,7 +571,7 @@
    "matchms"
   ],
   "dois": [
-   "10.1093/bioinformatics/btad088/7036334"
+   "10.1093/bioinformatics/btad088"
   ],
   "techniques": [
    "LC-MS",
@@ -744,7 +744,7 @@
    "MSconvert"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab231/6214530"
+   "10.1093/bioinformatics/btab231"
   ],
   "techniques": [
    "mass-spectrometry"
@@ -1997,7 +1997,7 @@
    "tinyxml2"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab636/6363791"
+   "10.1093/bioinformatics/btab636"
   ],
   "techniques": [
    "ion-mobility-MS"
@@ -2774,7 +2774,7 @@
    "Benjamini–Hochberg correction"
   ],
   "dois": [
-   "10.1093/bioinformatics/btad523/7248906"
+   "10.1093/bioinformatics/btad523"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -3717,7 +3717,7 @@
   ],
   "dois": [
    "10.5702/massspectrometry.S0033",
-   "10.5281/zenodo.1043226.svg"
+   "10.5281/zenodo.1043226"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -5277,7 +5277,7 @@
    "MSconvert"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab231/6214530"
+   "10.1093/bioinformatics/btab231"
   ],
   "techniques": [
    "mass-spectrometry"
@@ -5870,7 +5870,7 @@
    "msconvert"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab636/6363791"
+   "10.1093/bioinformatics/btab636"
   ],
   "techniques": [
    "ion-mobility-MS"
@@ -7706,7 +7706,7 @@
   "dois": [
    "10.5702/massspectrometry.S0033",
    "10.5281/zenodo.1043226",
-   "10.5281/zenodo.1043226.svg"
+   "10.5281/zenodo.1043226"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -7799,7 +7799,7 @@
    "gzip / bsc"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab636/6363791"
+   "10.1093/bioinformatics/btab636"
   ],
   "techniques": [
    "ion-mobility-MS"
@@ -8385,7 +8385,7 @@
    "SpecFormer"
   ],
   "dois": [
-   "10.1093/bioinformatics/btad078/7067745",
+   "10.1093/bioinformatics/btad078",
    "10.48550/arxiv.2507.06853"
   ],
   "techniques": [
@@ -11967,7 +11967,7 @@
    "bmxp (Chroma module)"
   ],
   "dois": [
-   "10.1093/bioinformatics/btaf290/8128335"
+   "10.1093/bioinformatics/btaf290"
   ],
   "techniques": [
    "LC-MS"
@@ -12254,7 +12254,7 @@
    "Skyline"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab231/6214530"
+   "10.1093/bioinformatics/btab231"
   ],
   "techniques": [
    "mass-spectrometry"
@@ -12432,7 +12432,7 @@
    "MSconvert (ProteoWizard)"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab231/6214530"
+   "10.1093/bioinformatics/btab231"
   ],
   "techniques": [
    "mass-spectrometry"
@@ -13247,7 +13247,7 @@
    "scikit-learn"
   ],
   "dois": [
-   "10.1093/bib/bbad229/7199559"
+   "10.1093/bib/bbad229"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -13666,7 +13666,7 @@
    "Gravity"
   ],
   "dois": [
-   "10.1093/bioinformatics/btaf290/8128335"
+   "10.1093/bioinformatics/btaf290"
   ],
   "techniques": [
    "LC-MS"
@@ -17370,7 +17370,7 @@
    "pip"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac032/6510930"
+   "10.1093/bioinformatics/btac032"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -19732,7 +19732,7 @@
    "bmxp (Python package)"
   ],
   "dois": [
-   "10.1093/bioinformatics/btaf290/8128335"
+   "10.1093/bioinformatics/btaf290"
   ],
   "techniques": [
    "LC-MS"
@@ -20503,7 +20503,7 @@
    "Blueshift"
   ],
   "dois": [
-   "10.1093/bioinformatics/btaf290/8128335"
+   "10.1093/bioinformatics/btaf290"
   ],
   "techniques": [
    "LC-MS"
@@ -21241,7 +21241,7 @@
    "Tensorflow"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac032/6510930"
+   "10.1093/bioinformatics/btac032"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -21547,7 +21547,7 @@
    "metaboprep"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac059/6522114"
+   "10.1093/bioinformatics/btac059"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -24194,7 +24194,7 @@
    "scikit-learn"
   ],
   "dois": [
-   "10.1093/bib/bbad229/7199559"
+   "10.1093/bib/bbad229"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -25168,7 +25168,7 @@
    "Conda (environment.yml)"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac032/6510930"
+   "10.1093/bioinformatics/btac032"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -28767,7 +28767,7 @@
    "EPIC"
   ],
   "dois": [
-   "10.1093/bib/bbad229/7199559"
+   "10.1093/bib/bbad229"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -30138,7 +30138,7 @@
    "Python"
   ],
   "dois": [
-   "10.1093/bioinformatics/btad088/7036334"
+   "10.1093/bioinformatics/btad088"
   ],
   "techniques": [
    "LC-MS"
@@ -31915,7 +31915,7 @@
    "enviPat"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab231/6214530"
+   "10.1093/bioinformatics/btab231"
   ],
   "techniques": [
    "mass-spectrometry"
@@ -32338,7 +32338,7 @@
    "bmxp (Python package)"
   ],
   "dois": [
-   "10.1093/bioinformatics/btaf290/8128335"
+   "10.1093/bioinformatics/btaf290"
   ],
   "techniques": [
    "LC-MS"
@@ -33143,7 +33143,7 @@
    "matchms"
   ],
   "dois": [
-   "10.1093/bioinformatics/btad088/7036334"
+   "10.1093/bioinformatics/btad088"
   ],
   "techniques": [
    "mass-spectrometry"
@@ -33597,7 +33597,7 @@
    "bmxp (Python package)"
   ],
   "dois": [
-   "10.1093/bioinformatics/btaf290/8128335"
+   "10.1093/bioinformatics/btaf290"
   ],
   "techniques": [
    "LC-MS"
@@ -33832,7 +33832,7 @@
    "MZmine 2"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab231/6214530"
+   "10.1093/bioinformatics/btab231"
   ],
   "techniques": [
    "mass-spectrometry"
@@ -34625,7 +34625,7 @@
    "bsc"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab636/6363791"
+   "10.1093/bioinformatics/btab636"
   ],
   "techniques": [
    "ion-mobility-MS"
@@ -35102,7 +35102,7 @@
    "C"
   ],
   "dois": [
-   "10.1093/bioinformatics/btaf290/8128335"
+   "10.1093/bioinformatics/btaf290"
   ],
   "techniques": [
    "mass-spectrometry"
@@ -36097,7 +36097,7 @@
    "tinyxml2"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab636/6363791"
+   "10.1093/bioinformatics/btab636"
   ],
   "techniques": [
    "ion-mobility-MS"
@@ -36886,7 +36886,7 @@
    "matchms"
   ],
   "dois": [
-   "10.1093/bioinformatics/btad088/7036334"
+   "10.1093/bioinformatics/btad088"
   ],
   "techniques": [
    "LC-MS"
@@ -40672,7 +40672,7 @@
    "ChemWalker"
   ],
   "dois": [
-   "10.1093/bioinformatics/btad078/7067745"
+   "10.1093/bioinformatics/btad078"
   ],
   "techniques": [
    "LC-MS"
@@ -41220,7 +41220,7 @@
   "dois": [
    "10.1186/s13321-024-00899-w",
    "10.5281/zenodo.11199061",
-   "10.5281/zenodo.11199061.svg"
+   "10.5281/zenodo.11199061"
   ],
   "techniques": [
    "ion-mobility-MS"
@@ -41696,7 +41696,7 @@
    "GWAS Catalog"
   ],
   "dois": [
-   "10.1093/bioinformatics/btad523/7248906"
+   "10.1093/bioinformatics/btad523"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -42299,7 +42299,7 @@
    "ggplot2"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac059/6522114"
+   "10.1093/bioinformatics/btac059"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -43358,7 +43358,7 @@
    "kableExtra"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac059/6522114"
+   "10.1093/bioinformatics/btac059"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -44619,7 +44619,7 @@
    "matchms"
   ],
   "dois": [
-   "10.1093/bioinformatics/btad088/7036334"
+   "10.1093/bioinformatics/btad088"
   ],
   "techniques": [
    "MS-imaging"
@@ -47598,7 +47598,7 @@
    "matchms"
   ],
   "dois": [
-   "10.1093/bioinformatics/btad088/7036334"
+   "10.1093/bioinformatics/btad088"
   ],
   "techniques": [
    "LC-MS"
@@ -47621,7 +47621,7 @@
    "matchms"
   ],
   "dois": [
-   "10.1093/bioinformatics/btad088/7036334"
+   "10.1093/bioinformatics/btad088"
   ],
   "techniques": [
    "LC-MS"
@@ -49259,7 +49259,7 @@
    "enviPat"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab231/6214530"
+   "10.1093/bioinformatics/btab231"
   ],
   "techniques": [
    "mass-spectrometry"
@@ -49284,7 +49284,7 @@
    "Skyline"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab231/6214530"
+   "10.1093/bioinformatics/btab231"
   ],
   "techniques": [
    "mass-spectrometry"
@@ -50989,7 +50989,7 @@
    "Python"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac032/6510930"
+   "10.1093/bioinformatics/btac032"
   ],
   "techniques": [
    "MS-imaging"
@@ -52384,7 +52384,7 @@
    "MSconvert"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab231/6214530"
+   "10.1093/bioinformatics/btab231"
   ],
   "techniques": [
    "mass-spectrometry"
@@ -52626,7 +52626,7 @@
    "Chroma"
   ],
   "dois": [
-   "10.1093/bioinformatics/btaf290/8128335"
+   "10.1093/bioinformatics/btaf290"
   ],
   "techniques": [
    "LC-MS",
@@ -55313,7 +55313,7 @@
    "msconvert"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab636/6363791"
+   "10.1093/bioinformatics/btab636"
   ],
   "techniques": [
    "ion-mobility-MS"
@@ -56354,7 +56354,7 @@
    "base R"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab741/6409851"
+   "10.1093/bioinformatics/btab741"
   ],
   "techniques": [],
   "license_tier": "open",
@@ -57035,7 +57035,7 @@
    "matchms"
   ],
   "dois": [
-   "10.1093/bioinformatics/btad088/7036334"
+   "10.1093/bioinformatics/btad088"
   ],
   "techniques": [
    "mass-spectrometry"
@@ -60137,7 +60137,7 @@
    "R (with mzRAPP library)"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab231/6214530"
+   "10.1093/bioinformatics/btab231"
   ],
   "techniques": [
    "mass-spectrometry"
@@ -60273,7 +60273,7 @@
    "scipy.stats"
   ],
   "dois": [
-   "10.1093/bioinformatics/btad088/7036334"
+   "10.1093/bioinformatics/btad088"
   ],
   "techniques": [
    "mass-spectrometry"
@@ -60632,7 +60632,7 @@
    "msconvert"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab636/6363791"
+   "10.1093/bioinformatics/btab636"
   ],
   "techniques": [
    "ion-mobility-MS"
@@ -60936,7 +60936,7 @@
    "scipy"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac032/6510930"
+   "10.1093/bioinformatics/btac032"
   ],
   "techniques": [
    "MS-imaging"
@@ -61282,7 +61282,7 @@
    "MSconvert"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab231/6214530"
+   "10.1093/bioinformatics/btab231"
   ],
   "techniques": [
    "mass-spectrometry"
@@ -63902,7 +63902,7 @@
    "Eclipse"
   ],
   "dois": [
-   "10.1093/bioinformatics/btaf290/8128335"
+   "10.1093/bioinformatics/btaf290"
   ],
   "techniques": [
    "LC-MS"
@@ -66173,7 +66173,7 @@
    "Gravity"
   ],
   "dois": [
-   "10.1093/bioinformatics/btaf290/8128335"
+   "10.1093/bioinformatics/btaf290"
   ],
   "techniques": [
    "LC-MS"
@@ -66727,7 +66727,7 @@
    "enviPat"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab231/6214530"
+   "10.1093/bioinformatics/btab231"
   ],
   "techniques": [
    "mass-spectrometry"
@@ -66754,7 +66754,7 @@
    "Skyline"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab231/6214530"
+   "10.1093/bioinformatics/btab231"
   ],
   "techniques": [],
   "license_tier": "open",
@@ -67737,7 +67737,7 @@
    "batch_normalise"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac059/6522114"
+   "10.1093/bioinformatics/btac059"
   ],
   "techniques": [
    "mass-spectrometry"
@@ -68084,7 +68084,7 @@
    "Skyline"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab231/6214530"
+   "10.1093/bioinformatics/btab231"
   ],
   "techniques": [
    "mass-spectrometry"
@@ -68153,7 +68153,7 @@
    "bmxp (Python/C)"
   ],
   "dois": [
-   "10.1093/bioinformatics/btaf290/8128335"
+   "10.1093/bioinformatics/btaf290"
   ],
   "techniques": [
    "LC-MS"
@@ -68527,7 +68527,7 @@
    "GWAS Catalog"
   ],
   "dois": [
-   "10.1093/bioinformatics/btad523/7248906"
+   "10.1093/bioinformatics/btad523"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -71712,7 +71712,7 @@
    "dplyr / tidyr"
   ],
   "dois": [
-   "10.1093/bioinformatics/btaf290/8128335",
+   "10.1093/bioinformatics/btaf290",
    "10.1101/2020.11.20.391912"
   ],
   "techniques": [
@@ -71740,7 +71740,7 @@
   "dois": [
    "10.1093/bioinformatics/btab591",
    "10.3390/metabo13121167",
-   "10.1093/bioinformatics/btac059/6522114"
+   "10.1093/bioinformatics/btac059"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -71860,7 +71860,7 @@
    "maplet"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab741/6409851"
+   "10.1093/bioinformatics/btab741"
   ],
   "techniques": [],
   "license_tier": "open",
@@ -72033,7 +72033,7 @@
    "dendextend"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac059/6522114"
+   "10.1093/bioinformatics/btac059"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -72936,7 +72936,7 @@
    "MSconvert (ProteoWizard)"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab231/6214530"
+   "10.1093/bioinformatics/btab231"
   ],
   "techniques": [
    "LC-MS"
@@ -73399,7 +73399,7 @@
    "metaboprep"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac059/6522114"
+   "10.1093/bioinformatics/btac059"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -73424,7 +73424,7 @@
    "kableExtra"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac059/6522114"
+   "10.1093/bioinformatics/btac059"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -73899,7 +73899,7 @@
    "Formation"
   ],
   "dois": [
-   "10.1093/bioinformatics/btaf290/8128335"
+   "10.1093/bioinformatics/btaf290"
   ],
   "techniques": [
    "LC-MS"
@@ -75003,7 +75003,7 @@
    "metaboprep"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac059/6522114"
+   "10.1093/bioinformatics/btac059"
   ],
   "techniques": [
    "mass-spectrometry"
@@ -75922,7 +75922,7 @@
    "scikit-learn"
   ],
   "dois": [
-   "10.1093/bib/bbad229/7199559"
+   "10.1093/bib/bbad229"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -81842,7 +81842,7 @@
    "matchms"
   ],
   "dois": [
-   "10.1093/bioinformatics/btad088/7036334"
+   "10.1093/bioinformatics/btad088"
   ],
   "techniques": [
    "LC-MS"
@@ -83767,7 +83767,7 @@
    "kableExtra"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac059/6522114"
+   "10.1093/bioinformatics/btac059"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -85508,7 +85508,7 @@
   "dois": [
    "10.1101/2025.08.28.672951v2",
    "10.1101/2020.11.20.391912",
-   "10.1093/bioinformatics/btad523/7248906"
+   "10.1093/bioinformatics/btad523"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -86778,7 +86778,7 @@
    "tinyxml2"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab636/6363791"
+   "10.1093/bioinformatics/btab636"
   ],
   "techniques": [
    "ion-mobility-MS"
@@ -86948,7 +86948,7 @@
    "Gravity"
   ],
   "dois": [
-   "10.1093/bioinformatics/btaf290/8128335"
+   "10.1093/bioinformatics/btaf290"
   ],
   "techniques": [
    "LC-MS"
@@ -90809,7 +90809,7 @@
    "MSConvert"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab231/6214530"
+   "10.1093/bioinformatics/btab231"
   ],
   "techniques": [
    "LC-MS"
@@ -92452,7 +92452,7 @@
    "dendextend"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac059/6522114"
+   "10.1093/bioinformatics/btac059"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -92519,7 +92519,7 @@
    "metaboprep"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac059/6522114"
+   "10.1093/bioinformatics/btac059"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -92653,7 +92653,7 @@
    "GWAS Catalog"
   ],
   "dois": [
-   "10.1093/bioinformatics/btad523/7248906"
+   "10.1093/bioinformatics/btad523"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -94637,7 +94637,7 @@
    "metaboprep"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac059/6522114"
+   "10.1093/bioinformatics/btac059"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -95190,7 +95190,7 @@
    "Skyline"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab231/6214530"
+   "10.1093/bioinformatics/btab231"
   ],
   "techniques": [
    "mass-spectrometry"
@@ -96472,7 +96472,7 @@
    "MSconvert (ProteoWizard)"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab231/6214530"
+   "10.1093/bioinformatics/btab231"
   ],
   "techniques": [
    "LC-MS"
@@ -96888,7 +96888,7 @@
    "enviPat"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab231/6214530"
+   "10.1093/bioinformatics/btab231"
   ],
   "techniques": [
    "mass-spectrometry"
@@ -98731,7 +98731,7 @@
    "pip-compile or pipdeptree"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac032/6510930"
+   "10.1093/bioinformatics/btac032"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -100699,7 +100699,7 @@
    "metaboprep"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac059/6522114"
+   "10.1093/bioinformatics/btac059"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -100888,7 +100888,7 @@
    "massNet"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac032/6510930"
+   "10.1093/bioinformatics/btac032"
   ],
   "techniques": [
    "MS-imaging"
@@ -101333,7 +101333,7 @@
    "scikit-learn"
   ],
   "dois": [
-   "10.1093/bib/bbad229/7199559"
+   "10.1093/bib/bbad229"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -102594,7 +102594,7 @@
    "Conda"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac032/6510930"
+   "10.1093/bioinformatics/btac032"
   ],
   "techniques": [
    "MS-imaging"
@@ -104953,7 +104953,7 @@
    "Gravity"
   ],
   "dois": [
-   "10.1093/bioinformatics/btaf290/8128335"
+   "10.1093/bioinformatics/btaf290"
   ],
   "techniques": [
    "LC-MS"
@@ -106433,7 +106433,7 @@
    "maplet"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab741/6409851"
+   "10.1093/bioinformatics/btab741"
   ],
   "techniques": [],
   "license_tier": "open",
@@ -107023,7 +107023,7 @@
    "ChemWalker"
   ],
   "dois": [
-   "10.1093/bioinformatics/btad078/7067745"
+   "10.1093/bioinformatics/btad078"
   ],
   "techniques": [
    "mass-spectrometry"
@@ -107584,7 +107584,7 @@
    "massNet"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac032/6510930"
+   "10.1093/bioinformatics/btac032"
   ],
   "techniques": [
    "MS-imaging"
@@ -108427,7 +108427,7 @@
    "Blueshift"
   ],
   "dois": [
-   "10.1093/bioinformatics/btaf290/8128335"
+   "10.1093/bioinformatics/btaf290"
   ],
   "techniques": [
    "LC-MS"
@@ -109072,7 +109072,7 @@
   "dois": [
    "10.1186/s13321-024-00899-w",
    "10.5281/zenodo.11199061",
-   "10.5281/zenodo.11199061.svg"
+   "10.5281/zenodo.11199061"
   ],
   "techniques": [
    "ion-mobility-MS"
@@ -110589,7 +110589,7 @@
    "Gravity"
   ],
   "dois": [
-   "10.1093/bioinformatics/btaf290/8128335"
+   "10.1093/bioinformatics/btaf290"
   ],
   "techniques": [
    "LC-MS"
@@ -110635,7 +110635,7 @@
    "enviPat"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab231/6214530"
+   "10.1093/bioinformatics/btab231"
   ],
   "techniques": [
    "mass-spectrometry"
@@ -113322,7 +113322,7 @@
    "metaboprep"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac059/6522114"
+   "10.1093/bioinformatics/btac059"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -113706,7 +113706,7 @@
    "metaboprep"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac059/6522114"
+   "10.1093/bioinformatics/btac059"
   ],
   "techniques": [
    "LC-MS"
@@ -113800,7 +113800,7 @@
    "metaboprep"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac059/6522114"
+   "10.1093/bioinformatics/btac059"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -115033,7 +115033,7 @@
    "maplet"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab741/6409851"
+   "10.1093/bioinformatics/btab741"
   ],
   "techniques": [],
   "license_tier": "open",
@@ -122956,7 +122956,7 @@
    "ChemWalker"
   ],
   "dois": [
-   "10.1093/bioinformatics/btad078/7067745"
+   "10.1093/bioinformatics/btad078"
   ],
   "techniques": [
    "mass-spectrometry"
@@ -123866,7 +123866,7 @@
    "bmxp.blueshift"
   ],
   "dois": [
-   "10.1093/bioinformatics/btaf290/8128335"
+   "10.1093/bioinformatics/btaf290"
   ],
   "techniques": [
    "LC-MS"
@@ -130952,7 +130952,7 @@
    "maplet"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab741/6409851"
+   "10.1093/bioinformatics/btab741"
   ],
   "techniques": [],
   "license_tier": "open",
@@ -131512,7 +131512,7 @@
    "metaboprep"
   ],
   "dois": [
-   "10.1093/bioinformatics/btac059/6522114"
+   "10.1093/bioinformatics/btac059"
   ],
   "techniques": [],
   "license_tier": "restricted",
@@ -133371,7 +133371,7 @@
    "bmxp (package)"
   ],
   "dois": [
-   "10.1093/bioinformatics/btaf290/8128335"
+   "10.1093/bioinformatics/btaf290"
   ],
   "techniques": [
    "LC-MS"
@@ -133468,7 +133468,7 @@
    "matchms"
   ],
   "dois": [
-   "10.1093/bioinformatics/btad088/7036334"
+   "10.1093/bioinformatics/btad088"
   ],
   "techniques": [
    "LC-MS",
@@ -134204,7 +134204,7 @@
    "Eclipse"
   ],
   "dois": [
-   "10.1093/bioinformatics/btaf290/8128335"
+   "10.1093/bioinformatics/btaf290"
   ],
   "techniques": [
    "LC-MS"
@@ -134677,7 +134677,7 @@
    "pandas"
   ],
   "dois": [
-   "10.1093/bioinformatics/btad088/7036334"
+   "10.1093/bioinformatics/btad088"
   ],
   "techniques": [
    "LC-MS"
@@ -134701,7 +134701,7 @@
    "bmxp (Python package)"
   ],
   "dois": [
-   "10.1093/bioinformatics/btaf290/8128335"
+   "10.1093/bioinformatics/btaf290"
   ],
   "techniques": [
    "LC-MS"

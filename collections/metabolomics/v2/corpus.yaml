@@ -4578,7 +4578,7 @@ papers:
   license_detection: crossref-paper
   source_reuse: full
 - name: SPIFFED
-  doi: 10.1093/bib/bbad229/7199559
+  doi: 10.1093/bib/bbad229
   title: SPIFFED
   repo_url: bio-it-station/SPIFFED
   status: included
@@ -4607,7 +4607,7 @@ papers:
   license_detection: readme-llm
   license_evidence: '[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)'
 - name: MetaMOPE
-  doi: 10.1093/bioadv/vbad061/7172446
+  doi: 10.1093/bioadv/vbad061
   title: MetaMOPE
   repo_url: CMDM-Lab/MetaMOPE
   status: included
@@ -4705,7 +4705,7 @@ papers:
   license_tier: open
   license_detection: github-api
 - name: M2R
-  doi: 10.1093/bioinformatics/btab060/6125380
+  doi: 10.1093/bioinformatics/btab060
   title: M2R
   repo_url: e-weglarz-tomczak/m2r
   status: included
@@ -4719,7 +4719,7 @@ papers:
   license_tier: open
   license_detection: github-api
 - name: mzRAPP
-  doi: 10.1093/bioinformatics/btab231/6214530
+  doi: 10.1093/bioinformatics/btab231
   title: mzRAPP
   repo_url: YasinEl/mzRAPP
   status: included
@@ -4762,7 +4762,7 @@ papers:
   license_detection: readme-llm
   license_evidence: '[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)'
 - name: mspack
-  doi: 10.1093/bioinformatics/btab636/6363791
+  doi: 10.1093/bioinformatics/btab636
   title: mspack
   repo_url: fhanau/mspack
   status: included
@@ -4776,7 +4776,7 @@ papers:
   license_tier: open
   license_detection: github-api
 - name: maplet
-  doi: 10.1093/bioinformatics/btab741/6409851
+  doi: 10.1093/bioinformatics/btab741
   title: maplet
   repo_url: krumsieklab/maplet
   status: included
@@ -4790,7 +4790,7 @@ papers:
   license_tier: open
   license_detection: github-api
 - name: massNet
-  doi: 10.1093/bioinformatics/btac032/6510930
+  doi: 10.1093/bioinformatics/btac032
   title: massNet
   repo_url: wabdelmoula/massNet
   status: included
@@ -4804,7 +4804,7 @@ papers:
   license_tier: restricted
   license_detection: none
 - name: Metaboprep
-  doi: 10.1093/bioinformatics/btac059/6522114
+  doi: 10.1093/bioinformatics/btac059
   title: Metaboprep
   repo_url: MRCIEU/metaboprep
   status: included
@@ -4832,7 +4832,7 @@ papers:
   license_tier: noncommercial
   license_detection: license-file
 - name: MAFFIN
-  doi: 10.1093/bioinformatics/btac355/6593484
+  doi: 10.1093/bioinformatics/btac355
   title: MAFFIN
   repo_url: HuanLab/MAFFIN
   status: included
@@ -4874,7 +4874,7 @@ papers:
   license_tier: restricted
   license_detection: none
 - name: homologueDiscoverer
-  doi: 10.1093/bioinformatics/btac647/6722615
+  doi: 10.1093/bioinformatics/btac647
   title: homologueDiscoverer
   repo_url: kevinmildau/homologueDiscoverer
   status: included
@@ -4902,7 +4902,7 @@ papers:
   license_tier: open
   license_detection: github-api
 - name: ChemWalker
-  doi: 10.1093/bioinformatics/btad078/7067745
+  doi: 10.1093/bioinformatics/btad078
   title: ChemWalker
   repo_url: computational-chemical-biology/ChemWalker
   status: included
@@ -4916,7 +4916,7 @@ papers:
   license_tier: open
   license_detection: github-api
 - name: DBDIpy
-  doi: 10.1093/bioinformatics/btad088/7036334
+  doi: 10.1093/bioinformatics/btad088
   title: DBDIpy
   repo_url: leopold-weidner/DBDIpy
   status: included
@@ -4959,7 +4959,7 @@ papers:
   license_tier: open
   license_detection: github-api
 - name: metGWAS 1.0
-  doi: 10.1093/bioinformatics/btad523/7248906
+  doi: 10.1093/bioinformatics/btad523
   title: metGWAS 1.0
   repo_url: saifurbd28/metGWAS-1.0
   status: included
@@ -5043,7 +5043,7 @@ papers:
   license_tier: restricted
   license_detection: none
 - name: Eclipse
-  doi: 10.1093/bioinformatics/btaf290/8128335
+  doi: 10.1093/bioinformatics/btaf290
   title: Eclipse
   repo_url: broadinstitute/bmxp
   status: included
@@ -5296,7 +5296,7 @@ papers:
   license_tier: restricted
   license_detection: none
 - name: NPOmix
-  doi: 10.1093/pnasnexus/pgac257/6847575
+  doi: 10.1093/pnasnexus/pgac257
   title: NPOmix
   repo_url: tiagolbiotech/NPOmix_python
   status: included
@@ -7592,9 +7592,9 @@ papers:
     license: null
   license_tier: restricted
   license_detection: none
-- name: 10.5281/zenodo.1043226.svg
-  doi: 10.5281/zenodo.1043226.svg
-  title: 10.5281/zenodo.1043226.svg
+- name: 10.5281/zenodo.1043226
+  doi: 10.5281/zenodo.1043226
+  title: 10.5281/zenodo.1043226
   repo_url: ''
   status: included
   wave: v2-expansion
@@ -7619,9 +7619,9 @@ papers:
   license_tier: open
   license_detection: datacite-paper
   source_reuse: full
-- name: 10.5281/zenodo.11199061.svg
-  doi: 10.5281/zenodo.11199061.svg
-  title: 10.5281/zenodo.11199061.svg
+- name: 10.5281/zenodo.11199061
+  doi: 10.5281/zenodo.11199061
+  title: 10.5281/zenodo.11199061
   repo_url: ''
   status: included
   wave: v2-expansion
@@ -7825,9 +7825,9 @@ papers:
     license: null
   license_tier: restricted
   license_detection: none
-- name: 10.5281/zenodo.3924422.svg
-  doi: 10.5281/zenodo.3924422.svg
-  title: 10.5281/zenodo.3924422.svg
+- name: 10.5281/zenodo.3924422
+  doi: 10.5281/zenodo.3924422
+  title: 10.5281/zenodo.3924422
   repo_url: ''
   status: included
   wave: v2-expansion

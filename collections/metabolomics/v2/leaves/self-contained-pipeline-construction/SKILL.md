@@ -15,7 +15,7 @@ metadata:
   - maplet
   license_tier: open
 derived_from:
-- doi: 10.1093/bioinformatics/btab741/6409851
+- doi: 10.1093/bioinformatics/btab741
   title: maplet
 evidence_spans:
 - maplet is an R package
@@ -28,15 +28,15 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_maplet_cq
-    doi: 10.1093/bioinformatics/btab741/6409851
+    doi: 10.1093/bioinformatics/btab741
     title: maplet
   dedup_kept_from: coll_maplet_cq
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bioinformatics/btab741/6409851
+  original_doi: 10.1093/bioinformatics/btab741
   all_source_dois:
-  - 10.1093/bioinformatics/btab741/6409851
+  - 10.1093/bioinformatics/btab741
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias

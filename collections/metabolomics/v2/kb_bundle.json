@@ -329,40 +329,40 @@
     "10.1089/omi.2021.0051",
     "10.1093/bib/bbac455",
     "10.1093/bib/bbac542",
-    "10.1093/bib/bbad229/7199559",
+    "10.1093/bib/bbad229",
     "10.1093/bib/bbaf080",
-    "10.1093/bioadv/vbad061/7172446",
+    "10.1093/bioadv/vbad061",
     "10.1093/bioadv/vbae175",
     "10.1093/bioadv/vbae178",
     "10.1093/bioadv/vbae192",
     "10.1093/bioadv/vbag111",
     "10.1093/bioinformatics/btaa037",
     "10.1093/bioinformatics/btaa1031",
-    "10.1093/bioinformatics/btab060/6125380",
-    "10.1093/bioinformatics/btab231/6214530",
+    "10.1093/bioinformatics/btab060",
+    "10.1093/bioinformatics/btab231",
     "10.1093/bioinformatics/btab429",
     "10.1093/bioinformatics/btab591",
-    "10.1093/bioinformatics/btab636/6363791",
-    "10.1093/bioinformatics/btab741/6409851",
-    "10.1093/bioinformatics/btac032/6510930",
-    "10.1093/bioinformatics/btac059/6522114",
+    "10.1093/bioinformatics/btab636",
+    "10.1093/bioinformatics/btab741",
+    "10.1093/bioinformatics/btac032",
+    "10.1093/bioinformatics/btac059",
     "10.1093/bioinformatics/btac344",
-    "10.1093/bioinformatics/btac355/6593484",
+    "10.1093/bioinformatics/btac355",
     "10.1093/bioinformatics/btac388",
     "10.1093/bioinformatics/btac441",
-    "10.1093/bioinformatics/btac647/6722615",
+    "10.1093/bioinformatics/btac647",
     "10.1093/bioinformatics/btac706",
-    "10.1093/bioinformatics/btad078/7067745",
-    "10.1093/bioinformatics/btad088/7036334",
+    "10.1093/bioinformatics/btad078",
+    "10.1093/bioinformatics/btad088",
     "10.1093/bioinformatics/btad354",
     "10.1093/bioinformatics/btad455",
-    "10.1093/bioinformatics/btad523/7248906",
+    "10.1093/bioinformatics/btad523",
     "10.1093/bioinformatics/btae084",
     "10.1093/bioinformatics/btae373",
     "10.1093/bioinformatics/btae490",
     "10.1093/bioinformatics/btae584",
     "10.1093/bioinformatics/btaf045",
-    "10.1093/bioinformatics/btaf290/8128335",
+    "10.1093/bioinformatics/btaf290",
     "10.1093/bioinformatics/btaf354",
     "10.1093/bioinformatics/btr597",
     "10.1093/bioinformatics/btv146",
@@ -380,7 +380,7 @@
     "10.1093/nar/gkae253",
     "10.1093/nar/gku436",
     "10.1093/nar/gkz882",
-    "10.1093/pnasnexus/pgac257/6847575",
+    "10.1093/pnasnexus/pgac257",
     "10.1101/2020.04.09.033894",
     "10.1101/2020.05.09.086066",
     "10.1101/2020.10.30.362533",
@@ -544,9 +544,9 @@
     "10.48550/arxiv.2510.20615",
     "10.5281/zenodo.10018590",
     "10.5281/zenodo.1043226",
-    "10.5281/zenodo.1043226.svg",
+    "10.5281/zenodo.1043226",
     "10.5281/zenodo.11199061",
-    "10.5281/zenodo.11199061.svg",
+    "10.5281/zenodo.11199061",
     "10.5281/zenodo.12602805",
     "10.5281/zenodo.14009575",
     "10.5281/zenodo.14712886",
@@ -561,7 +561,7 @@
     "10.5281/zenodo.19181279",
     "10.5281/zenodo.3378723",
     "10.5281/zenodo.363932874",
-    "10.5281/zenodo.3924422.svg",
+    "10.5281/zenodo.3924422",
     "10.5281/zenodo.3978054",
     "10.5281/zenodo.5501673",
     "10.5281/zenodo.5607185",
@@ -1021,7 +1021,7 @@
     },
     "adduct-fragment-formula-interpretation": {
       "dois": [
-        "10.1093/bioinformatics/btad088/7036334"
+        "10.1093/bioinformatics/btad088"
       ],
       "tools": [
         "DBDIpy",
@@ -1160,7 +1160,7 @@
     },
     "adduct-mass-calculation-and-matching": {
       "dois": [
-        "10.1093/bioinformatics/btab231/6214530"
+        "10.1093/bioinformatics/btab231"
       ],
       "tools": [
         "mzRAPP",
@@ -2192,7 +2192,7 @@
     },
     "api-adapter-layer-design": {
       "dois": [
-        "10.1093/bioinformatics/btab636/6363791"
+        "10.1093/bioinformatics/btab636"
       ],
       "tools": [
         "mspack",
@@ -2848,7 +2848,7 @@
     },
     "association-ranking-statistical-filtering": {
       "dois": [
-        "10.1093/bioinformatics/btad523/7248906"
+        "10.1093/bioinformatics/btad523"
       ],
       "tools": [
         "R",
@@ -3700,7 +3700,7 @@
     "badge-endpoint-retrieval": {
       "dois": [
         "10.5702/massspectrometry.S0033",
-        "10.5281/zenodo.1043226.svg"
+        "10.5281/zenodo.1043226"
       ],
       "tools": [
         "MAGMa",
@@ -5044,7 +5044,7 @@
     },
     "benchmark-dataset-generation-from-reference-metabolites": {
       "dois": [
-        "10.1093/bioinformatics/btab231/6214530"
+        "10.1093/bioinformatics/btab231"
       ],
       "tools": [
         "mzRAPP",
@@ -5542,7 +5542,7 @@
     },
     "binary-data-integrity-verification": {
       "dois": [
-        "10.1093/bioinformatics/btab636/6363791"
+        "10.1093/bioinformatics/btab636"
       ],
       "tools": [
         "mspack",
@@ -7070,7 +7070,7 @@
       "dois": [
         "10.5702/massspectrometry.S0033",
         "10.5281/zenodo.1043226",
-        "10.5281/zenodo.1043226.svg"
+        "10.5281/zenodo.1043226"
       ],
       "tools": [
         "MAGMa",
@@ -7147,7 +7147,7 @@
     },
     "c-module-integration": {
       "dois": [
-        "10.1093/bioinformatics/btab636/6363791"
+        "10.1093/bioinformatics/btab636"
       ],
       "tools": [
         "mspack",
@@ -7624,7 +7624,7 @@
     },
     "candidate-structure-ranking": {
       "dois": [
-        "10.1093/bioinformatics/btad078/7067745",
+        "10.1093/bioinformatics/btad078",
         "10.48550/arxiv.2507.06853"
       ],
       "tools": [
@@ -10621,7 +10621,7 @@
     },
     "chromatographic-data-structure-abstraction": {
       "dois": [
-        "10.1093/bioinformatics/btaf290/8128335"
+        "10.1093/bioinformatics/btaf290"
       ],
       "tools": [
         "Python",
@@ -10851,7 +10851,7 @@
     },
     "chromatographic-peak-classification": {
       "dois": [
-        "10.1093/bioinformatics/btab231/6214530"
+        "10.1093/bioinformatics/btab231"
       ],
       "tools": [
         "mzRAPP",
@@ -11002,7 +11002,7 @@
     },
     "chromatographic-peak-detection-validation": {
       "dois": [
-        "10.1093/bioinformatics/btab231/6214530"
+        "10.1093/bioinformatics/btab231"
       ],
       "tools": [
         "mzRAPP",
@@ -11718,7 +11718,7 @@
     },
     "class-imbalance-handling-in-neural-networks": {
       "dois": [
-        "10.1093/bib/bbad229/7199559"
+        "10.1093/bib/bbad229"
       ],
       "tools": [
         "SPIFFED",
@@ -12065,7 +12065,7 @@
     },
     "cloud-compatible-file-output": {
       "dois": [
-        "10.1093/bioinformatics/btaf290/8128335"
+        "10.1093/bioinformatics/btaf290"
       ],
       "tools": [
         "bmxp",
@@ -15203,7 +15203,7 @@
     },
     "conda-environment-file-generation": {
       "dois": [
-        "10.1093/bioinformatics/btac032/6510930"
+        "10.1093/bioinformatics/btac032"
       ],
       "tools": [
         "numpy 1.15.4",
@@ -17239,7 +17239,7 @@
     },
     "correlation-coefficient-computation-for-metabolomics": {
       "dois": [
-        "10.1093/bioinformatics/btaf290/8128335"
+        "10.1093/bioinformatics/btaf290"
       ],
       "tools": [
         "bmxp",
@@ -17900,7 +17900,7 @@
     },
     "cross-dataset-feature-correspondence-mapping": {
       "dois": [
-        "10.1093/bioinformatics/btaf290/8128335"
+        "10.1093/bioinformatics/btaf290"
       ],
       "tools": [
         "bmxp",
@@ -18511,7 +18511,7 @@
     },
     "cross-platform-reproducibility-configuration": {
       "dois": [
-        "10.1093/bioinformatics/btac032/6510930"
+        "10.1093/bioinformatics/btac032"
       ],
       "tools": [
         "numpy 1.15.4",
@@ -18777,7 +18777,7 @@
     },
     "cross-table-metadata-harmonization": {
       "dois": [
-        "10.1093/bioinformatics/btac059/6522114"
+        "10.1093/bioinformatics/btac059"
       ],
       "tools": [
         "R",
@@ -21024,7 +21024,7 @@
     },
     "deep-learning-architecture-design-for-sequence-data": {
       "dois": [
-        "10.1093/bib/bbad229/7199559"
+        "10.1093/bib/bbad229"
       ],
       "tools": [
         "SPIFFED",
@@ -21813,7 +21813,7 @@
     },
     "dependency-version-specification": {
       "dois": [
-        "10.1093/bioinformatics/btac032/6510930"
+        "10.1093/bioinformatics/btac032"
       ],
       "tools": [
         "numpy 1.15.4",
@@ -24928,7 +24928,7 @@
     },
     "elution-profile-normalization-and-preprocessing": {
       "dois": [
-        "10.1093/bib/bbad229/7199559"
+        "10.1093/bib/bbad229"
       ],
       "tools": [
         "SPIFFED",
@@ -26069,7 +26069,7 @@
     },
     "exact-mass-accuracy-calculation": {
       "dois": [
-        "10.1093/bioinformatics/btad088/7036334"
+        "10.1093/bioinformatics/btad088"
       ],
       "tools": [
         "DBDIpy",
@@ -27578,7 +27578,7 @@
     },
     "feature-count-verification-across-adducts-and-isotopologues": {
       "dois": [
-        "10.1093/bioinformatics/btab231/6214530"
+        "10.1093/bioinformatics/btab231"
       ],
       "tools": [
         "mzRAPP",
@@ -27909,7 +27909,7 @@
     },
     "feature-grouping-by-similarity-metrics": {
       "dois": [
-        "10.1093/bioinformatics/btaf290/8128335"
+        "10.1093/bioinformatics/btaf290"
       ],
       "tools": [
         "bmxp",
@@ -28563,7 +28563,7 @@
     },
     "feature-pair-mass-refinement": {
       "dois": [
-        "10.1093/bioinformatics/btad088/7036334"
+        "10.1093/bioinformatics/btad088"
       ],
       "tools": [
         "DBDIpy",
@@ -28940,7 +28940,7 @@
     },
     "feature-table-annotation-standardization": {
       "dois": [
-        "10.1093/bioinformatics/btaf290/8128335"
+        "10.1093/bioinformatics/btaf290"
       ],
       "tools": [
         "bmxp",
@@ -29126,7 +29126,7 @@
     },
     "feature-table-format-conversion": {
       "dois": [
-        "10.1093/bioinformatics/btab231/6214530"
+        "10.1093/bioinformatics/btab231"
       ],
       "tools": [
         "mzRAPP",
@@ -29781,7 +29781,7 @@
     },
     "file-format-conversion-validation": {
       "dois": [
-        "10.1093/bioinformatics/btab636/6363791"
+        "10.1093/bioinformatics/btab636"
       ],
       "tools": [
         "mspack",
@@ -30168,7 +30168,7 @@
     },
     "file-io-error-handling-robustness": {
       "dois": [
-        "10.1093/bioinformatics/btaf290/8128335"
+        "10.1093/bioinformatics/btaf290"
       ],
       "tools": [
         "Python",
@@ -31013,7 +31013,7 @@
     },
     "format-agnostic-data-ingestion": {
       "dois": [
-        "10.1093/bioinformatics/btab636/6363791"
+        "10.1093/bioinformatics/btab636"
       ],
       "tools": [
         "mspack",
@@ -31651,7 +31651,7 @@
     },
     "fragment-ion-spectral-matching": {
       "dois": [
-        "10.1093/bioinformatics/btad088/7036334"
+        "10.1093/bioinformatics/btad088"
       ],
       "tools": [
         "DBDIpy",
@@ -34848,7 +34848,7 @@
     },
     "graph-based-identity-transfer": {
       "dois": [
-        "10.1093/bioinformatics/btad078/7067745"
+        "10.1093/bioinformatics/btad078"
       ],
       "tools": [
         "Python",
@@ -35311,7 +35311,7 @@
       "dois": [
         "10.1186/s13321-024-00899-w",
         "10.5281/zenodo.11199061",
-        "10.5281/zenodo.11199061.svg"
+        "10.5281/zenodo.11199061"
       ],
       "tools": [
         "train-test.py",
@@ -35732,7 +35732,7 @@
     },
     "gwas-result-integration": {
       "dois": [
-        "10.1093/bioinformatics/btad523/7248906"
+        "10.1093/bioinformatics/btad523"
       ],
       "tools": [
         "R",
@@ -36256,7 +36256,7 @@
     },
     "hierarchical-clustering-dendrogram-construction": {
       "dois": [
-        "10.1093/bioinformatics/btac059/6522114"
+        "10.1093/bioinformatics/btac059"
       ],
       "tools": [
         "R",
@@ -37126,7 +37126,7 @@
     },
     "html-report-generation-from-processed-omics": {
       "dois": [
-        "10.1093/bioinformatics/btac059/6522114"
+        "10.1093/bioinformatics/btac059"
       ],
       "tools": [
         "R",
@@ -38155,7 +38155,7 @@
     },
     "in-source-fragment-adduct-candidate-flagging": {
       "dois": [
-        "10.1093/bioinformatics/btad088/7036334"
+        "10.1093/bioinformatics/btad088"
       ],
       "tools": [
         "DBDIpy",
@@ -40604,7 +40604,7 @@
     },
     "ion-species-annotation-assignment": {
       "dois": [
-        "10.1093/bioinformatics/btad088/7036334"
+        "10.1093/bioinformatics/btad088"
       ],
       "tools": [
         "DBDIpy",
@@ -40622,7 +40622,7 @@
     },
     "ion-species-confirmation-validation": {
       "dois": [
-        "10.1093/bioinformatics/btad088/7036334"
+        "10.1093/bioinformatics/btad088"
       ],
       "tools": [
         "DBDIpy",
@@ -42011,7 +42011,7 @@
     },
     "isotopologue-ratio-quality-assessment": {
       "dois": [
-        "10.1093/bioinformatics/btab231/6214530"
+        "10.1093/bioinformatics/btab231"
       ],
       "tools": [
         "mzRAPP",
@@ -42031,7 +42031,7 @@
     },
     "isotopologue-ratio-quality-filtering": {
       "dois": [
-        "10.1093/bioinformatics/btab231/6214530"
+        "10.1093/bioinformatics/btab231"
       ],
       "tools": [
         "mzRAPP",
@@ -43569,7 +43569,7 @@
     },
     "keras-tensorflow-model-compilation": {
       "dois": [
-        "10.1093/bioinformatics/btac032/6510930"
+        "10.1093/bioinformatics/btac032"
       ],
       "tools": [
         "Keras",
@@ -44767,7 +44767,7 @@
     },
     "lchrms-chromatographic-peak-boundary-extraction": {
       "dois": [
-        "10.1093/bioinformatics/btab231/6214530"
+        "10.1093/bioinformatics/btab231"
       ],
       "tools": [
         "mzRAPP",
@@ -44962,7 +44962,7 @@
     },
     "lcms-feature-table-parsing": {
       "dois": [
-        "10.1093/bioinformatics/btaf290/8128335"
+        "10.1093/bioinformatics/btaf290"
       ],
       "tools": [
         "bmxp",
@@ -47193,7 +47193,7 @@
     },
     "lossless-compression-decompression": {
       "dois": [
-        "10.1093/bioinformatics/btab636/6363791"
+        "10.1093/bioinformatics/btab636"
       ],
       "tools": [
         "mspack",
@@ -48047,7 +48047,7 @@
     },
     "maplet-function-composition": {
       "dois": [
-        "10.1093/bioinformatics/btab741/6409851"
+        "10.1093/bioinformatics/btab741"
       ],
       "tools": [
         "maplet",
@@ -48623,7 +48623,7 @@
     },
     "mass-difference-adduct-matching": {
       "dois": [
-        "10.1093/bioinformatics/btad088/7036334"
+        "10.1093/bioinformatics/btad088"
       ],
       "tools": [
         "DBDIpy",
@@ -51296,7 +51296,7 @@
     },
     "mass-spectrometry-feature-detection-validation": {
       "dois": [
-        "10.1093/bioinformatics/btab231/6214530"
+        "10.1093/bioinformatics/btab231"
       ],
       "tools": [
         "mzRAPP",
@@ -51425,7 +51425,7 @@
     },
     "mass-spectrometry-feature-intensity-normalization": {
       "dois": [
-        "10.1093/bioinformatics/btad088/7036334"
+        "10.1093/bioinformatics/btad088"
       ],
       "tools": [
         "DBDIpy",
@@ -51732,7 +51732,7 @@
     },
     "mass-spectrometry-format-parsing": {
       "dois": [
-        "10.1093/bioinformatics/btab636/6363791"
+        "10.1093/bioinformatics/btab636"
       ],
       "tools": [
         "mspack",
@@ -51974,7 +51974,7 @@
     },
     "mass-spectrometry-imaging-data-representation": {
       "dois": [
-        "10.1093/bioinformatics/btac032/6510930"
+        "10.1093/bioinformatics/btac032"
       ],
       "tools": [
         "numpy",
@@ -52263,7 +52263,7 @@
     },
     "mass-spectrometry-mass-accuracy-and-precision-tuning": {
       "dois": [
-        "10.1093/bioinformatics/btab231/6214530"
+        "10.1093/bioinformatics/btab231"
       ],
       "tools": [
         "mzRAPP",
@@ -54502,7 +54502,7 @@
     },
     "mass-to-charge-matching-tolerance-tuning": {
       "dois": [
-        "10.1093/bioinformatics/btaf290/8128335"
+        "10.1093/bioinformatics/btaf290"
       ],
       "tools": [
         "bmxp",
@@ -56432,7 +56432,7 @@
     },
     "metabolite-abundance-drift-correction": {
       "dois": [
-        "10.1093/bioinformatics/btaf290/8128335"
+        "10.1093/bioinformatics/btaf290"
       ],
       "tools": [
         "bmxp",
@@ -56894,7 +56894,7 @@
     },
     "metabolite-benchmark-dataset-validation": {
       "dois": [
-        "10.1093/bioinformatics/btab231/6214530"
+        "10.1093/bioinformatics/btab231"
       ],
       "tools": [
         "mzRAPP",
@@ -56912,7 +56912,7 @@
     },
     "metabolite-benchmark-peak-matching": {
       "dois": [
-        "10.1093/bioinformatics/btab231/6214530"
+        "10.1093/bioinformatics/btab231"
       ],
       "tools": [
         "mzRAPP",
@@ -57740,7 +57740,7 @@
     },
     "metabolite-feature-annotation-mapping": {
       "dois": [
-        "10.1093/bioinformatics/btac059/6522114"
+        "10.1093/bioinformatics/btac059"
       ],
       "tools": [
         "R",
@@ -58020,7 +58020,7 @@
     },
     "metabolite-feature-m-z-matching": {
       "dois": [
-        "10.1093/bioinformatics/btab231/6214530"
+        "10.1093/bioinformatics/btab231"
       ],
       "tools": [
         "mzRAPP",
@@ -58076,7 +58076,7 @@
     },
     "metabolite-feature-normalization": {
       "dois": [
-        "10.1093/bioinformatics/btaf290/8128335"
+        "10.1093/bioinformatics/btaf290"
       ],
       "tools": [
         "bmxp",
@@ -58377,7 +58377,7 @@
     },
     "metabolite-genomic-network-mapping": {
       "dois": [
-        "10.1093/bioinformatics/btad523/7248906"
+        "10.1093/bioinformatics/btad523"
       ],
       "tools": [
         "R",
@@ -61012,7 +61012,7 @@
     },
     "metabolomics-data-formatting": {
       "dois": [
-        "10.1093/bioinformatics/btaf290/8128335",
+        "10.1093/bioinformatics/btaf290",
         "10.1101/2020.11.20.391912"
       ],
       "tools": [
@@ -61043,7 +61043,7 @@
       "dois": [
         "10.1093/bioinformatics/btab591",
         "10.3390/metabo13121167",
-        "10.1093/bioinformatics/btac059/6522114"
+        "10.1093/bioinformatics/btac059"
       ],
       "tools": [
         "R",
@@ -61143,7 +61143,7 @@
     },
     "metabolomics-data-loading-into-containers": {
       "dois": [
-        "10.1093/bioinformatics/btab741/6409851"
+        "10.1093/bioinformatics/btab741"
       ],
       "tools": [
         "R",
@@ -61291,7 +61291,7 @@
     },
     "metabolomics-data-quality-control": {
       "dois": [
-        "10.1093/bioinformatics/btac059/6522114"
+        "10.1093/bioinformatics/btac059"
       ],
       "tools": [
         "R",
@@ -62048,7 +62048,7 @@
     },
     "metabolomics-npp-reliability-assessment": {
       "dois": [
-        "10.1093/bioinformatics/btab231/6214530"
+        "10.1093/bioinformatics/btab231"
       ],
       "tools": [
         "mzRAPP",
@@ -62426,7 +62426,7 @@
     },
     "metabolon-excel-format-handling": {
       "dois": [
-        "10.1093/bioinformatics/btac059/6522114"
+        "10.1093/bioinformatics/btac059"
       ],
       "tools": [
         "R",
@@ -62443,7 +62443,7 @@
     },
     "metaboprep-object-manipulation": {
       "dois": [
-        "10.1093/bioinformatics/btac059/6522114"
+        "10.1093/bioinformatics/btac059"
       ],
       "tools": [
         "R",
@@ -62854,7 +62854,7 @@
     },
     "metadata-integrity-checking": {
       "dois": [
-        "10.1093/bioinformatics/btaf290/8128335"
+        "10.1093/bioinformatics/btaf290"
       ],
       "tools": [
         "bmxp",
@@ -63835,7 +63835,7 @@
     },
     "missing-value-imputation-for-pca": {
       "dois": [
-        "10.1093/bioinformatics/btac059/6522114"
+        "10.1093/bioinformatics/btac059"
       ],
       "tools": [
         "R",
@@ -64635,7 +64635,7 @@
     },
     "model-training-and-hyperparameter-optimization": {
       "dois": [
-        "10.1093/bib/bbad229/7199559"
+        "10.1093/bib/bbad229"
       ],
       "tools": [
         "SPIFFED",
@@ -69577,7 +69577,7 @@
     },
     "ms2-spectral-similarity-scoring": {
       "dois": [
-        "10.1093/bioinformatics/btad088/7036334"
+        "10.1093/bioinformatics/btad088"
       ],
       "tools": [
         "DBDIpy",
@@ -71194,7 +71194,7 @@
     },
     "multi-format-data-serialization": {
       "dois": [
-        "10.1093/bioinformatics/btac059/6522114"
+        "10.1093/bioinformatics/btac059"
       ],
       "tools": [
         "R",
@@ -72683,7 +72683,7 @@
       "dois": [
         "10.1101/2025.08.28.672951v2",
         "10.1101/2020.11.20.391912",
-        "10.1093/bioinformatics/btad523/7248906"
+        "10.1093/bioinformatics/btad523"
       ],
       "tools": [
         "R",
@@ -73780,7 +73780,7 @@
     },
     "mzml-mzxml-spectrum-reading": {
       "dois": [
-        "10.1093/bioinformatics/btab636/6363791"
+        "10.1093/bioinformatics/btab636"
       ],
       "tools": [
         "mspack",
@@ -73921,7 +73921,7 @@
     },
     "mzml-xml-deserialization": {
       "dois": [
-        "10.1093/bioinformatics/btaf290/8128335"
+        "10.1093/bioinformatics/btaf290"
       ],
       "tools": [
         "Python",
@@ -77145,7 +77145,7 @@
     },
     "non-targeted-preprocessing-tool-comparison": {
       "dois": [
-        "10.1093/bioinformatics/btab231/6214530"
+        "10.1093/bioinformatics/btab231"
       ],
       "tools": [
         "mzRAPP",
@@ -78587,7 +78587,7 @@
     },
     "outlier-detection-and-treatment": {
       "dois": [
-        "10.1093/bioinformatics/btac059/6522114"
+        "10.1093/bioinformatics/btac059"
       ],
       "tools": [
         "R",
@@ -78644,7 +78644,7 @@
     },
     "outlier-detection-via-multivariate-distance": {
       "dois": [
-        "10.1093/bioinformatics/btac059/6522114"
+        "10.1093/bioinformatics/btac059"
       ],
       "tools": [
         "R",
@@ -78757,7 +78757,7 @@
     },
     "over-representation-enrichment-analysis": {
       "dois": [
-        "10.1093/bioinformatics/btad523/7248906"
+        "10.1093/bioinformatics/btad523"
       ],
       "tools": [
         "R",
@@ -80457,7 +80457,7 @@
     },
     "pc-selection-via-acceleration-and-parallel-analysis": {
       "dois": [
-        "10.1093/bioinformatics/btac059/6522114"
+        "10.1093/bioinformatics/btac059"
       ],
       "tools": [
         "R",
@@ -80932,7 +80932,7 @@
     },
     "peak-detection-accuracy-assessment": {
       "dois": [
-        "10.1093/bioinformatics/btab231/6214530"
+        "10.1093/bioinformatics/btab231"
       ],
       "tools": [
         "mzRAPP",
@@ -81996,7 +81996,7 @@
     },
     "peak-picking-performance-benchmarking": {
       "dois": [
-        "10.1093/bioinformatics/btab231/6214530"
+        "10.1093/bioinformatics/btab231"
       ],
       "tools": [
         "mzRAPP",
@@ -82352,7 +82352,7 @@
     },
     "peak-shape-correlation-analysis": {
       "dois": [
-        "10.1093/bioinformatics/btab231/6214530"
+        "10.1093/bioinformatics/btab231"
       ],
       "tools": [
         "mzRAPP",
@@ -83938,7 +83938,7 @@
     },
     "pip-requirements-file-creation": {
       "dois": [
-        "10.1093/bioinformatics/btac032/6510930"
+        "10.1093/bioinformatics/btac032"
       ],
       "tools": [
         "numpy 1.15.4",
@@ -85612,7 +85612,7 @@
     },
     "principal-component-analysis-for-metabolomics": {
       "dois": [
-        "10.1093/bioinformatics/btac059/6522114"
+        "10.1093/bioinformatics/btac059"
       ],
       "tools": [
         "R",
@@ -85773,7 +85773,7 @@
     },
     "probabilistic-classification-network-construction": {
       "dois": [
-        "10.1093/bioinformatics/btac032/6510930"
+        "10.1093/bioinformatics/btac032"
       ],
       "tools": [
         "numpy",
@@ -86181,7 +86181,7 @@
     },
     "protein-interaction-score-prediction": {
       "dois": [
-        "10.1093/bib/bbad229/7199559"
+        "10.1093/bib/bbad229"
       ],
       "tools": [
         "SPIFFED",
@@ -87255,7 +87255,7 @@
     },
     "python-environment-pinning": {
       "dois": [
-        "10.1093/bioinformatics/btac032/6510930"
+        "10.1093/bioinformatics/btac032"
       ],
       "tools": [
         "Python 3.6.12",
@@ -89291,7 +89291,7 @@
     },
     "quality-control-threshold-validation": {
       "dois": [
-        "10.1093/bioinformatics/btaf290/8128335"
+        "10.1093/bioinformatics/btaf290"
       ],
       "tools": [
         "bmxp",
@@ -90529,7 +90529,7 @@
     },
     "r-pipe-operator-chaining": {
       "dois": [
-        "10.1093/bioinformatics/btab741/6409851"
+        "10.1093/bioinformatics/btab741"
       ],
       "tools": [
         "R",
@@ -91021,7 +91021,7 @@
     },
     "random-walk-graph-propagation": {
       "dois": [
-        "10.1093/bioinformatics/btad078/7067745"
+        "10.1093/bioinformatics/btad078"
       ],
       "tools": [
         "Python",
@@ -91474,7 +91474,7 @@
     },
     "raw-spectral-data-input-handling-without-peak-picking": {
       "dois": [
-        "10.1093/bioinformatics/btac032/6510930"
+        "10.1093/bioinformatics/btac032"
       ],
       "tools": [
         "numpy",
@@ -92199,7 +92199,7 @@
     },
     "redundant-feature-identification-lcms": {
       "dois": [
-        "10.1093/bioinformatics/btaf290/8128335"
+        "10.1093/bioinformatics/btaf290"
       ],
       "tools": [
         "bmxp",
@@ -92717,7 +92717,7 @@
       "dois": [
         "10.1186/s13321-024-00899-w",
         "10.5281/zenodo.11199061",
-        "10.5281/zenodo.11199061.svg"
+        "10.5281/zenodo.11199061"
       ],
       "tools": [
         "train-test.py",
@@ -94006,7 +94006,7 @@
     },
     "retention-time-alignment-clustering": {
       "dois": [
-        "10.1093/bioinformatics/btaf290/8128335"
+        "10.1093/bioinformatics/btaf290"
       ],
       "tools": [
         "bmxp",
@@ -94040,7 +94040,7 @@
     },
     "retention-time-alignment-evaluation": {
       "dois": [
-        "10.1093/bioinformatics/btab231/6214530"
+        "10.1093/bioinformatics/btab231"
       ],
       "tools": [
         "mzRAPP",
@@ -96296,7 +96296,7 @@
     },
     "s7-object-construction-and-validation": {
       "dois": [
-        "10.1093/bioinformatics/btac059/6522114"
+        "10.1093/bioinformatics/btac059"
       ],
       "tools": [
         "R",
@@ -96614,7 +96614,7 @@
     },
     "sample-missingness-filtering": {
       "dois": [
-        "10.1093/bioinformatics/btac059/6522114"
+        "10.1093/bioinformatics/btac059"
       ],
       "tools": [
         "R",
@@ -96690,7 +96690,7 @@
     },
     "sample-quality-assessment-using-pca": {
       "dois": [
-        "10.1093/bioinformatics/btac059/6522114"
+        "10.1093/bioinformatics/btac059"
       ],
       "tools": [
         "R",
@@ -97737,7 +97737,7 @@
     },
     "self-contained-pipeline-construction": {
       "dois": [
-        "10.1093/bioinformatics/btab741/6409851"
+        "10.1093/bioinformatics/btab741"
       ],
       "tools": [
         "R",
@@ -104388,7 +104388,7 @@
     },
     "spectral-library-match-assignment": {
       "dois": [
-        "10.1093/bioinformatics/btad078/7067745"
+        "10.1093/bioinformatics/btad078"
       ],
       "tools": [
         "Python",
@@ -105147,7 +105147,7 @@
     },
     "spectral-metadata-schema-design": {
       "dois": [
-        "10.1093/bioinformatics/btaf290/8128335"
+        "10.1093/bioinformatics/btaf290"
       ],
       "tools": [
         "Python",
@@ -111197,7 +111197,7 @@
     },
     "summarized-experiment-initialization-and-population": {
       "dois": [
-        "10.1093/bioinformatics/btab741/6409851"
+        "10.1093/bioinformatics/btab741"
       ],
       "tools": [
         "R",
@@ -111654,7 +111654,7 @@
     },
     "tab-delimited-export-formatting-for-metabolomics": {
       "dois": [
-        "10.1093/bioinformatics/btac059/6522114"
+        "10.1093/bioinformatics/btac059"
       ],
       "tools": [
         "R",
@@ -113238,7 +113238,7 @@
     },
     "technical-replicate-signal-modeling": {
       "dois": [
-        "10.1093/bioinformatics/btaf290/8128335"
+        "10.1093/bioinformatics/btaf290"
       ],
       "tools": [
         "bmxp",
@@ -113317,7 +113317,7 @@
     },
     "temporal-profile-correlation-analysis": {
       "dois": [
-        "10.1093/bioinformatics/btad088/7036334"
+        "10.1093/bioinformatics/btad088"
       ],
       "tools": [
         "DBDIpy",
@@ -113962,7 +113962,7 @@
     },
     "thermo-raw-binary-data-extraction": {
       "dois": [
-        "10.1093/bioinformatics/btaf290/8128335"
+        "10.1093/bioinformatics/btaf290"
       ],
       "tools": [
         "Python",
@@ -114365,7 +114365,7 @@
     },
     "time-resolved-dbdi-data-interpretation": {
       "dois": [
-        "10.1093/bioinformatics/btad088/7036334"
+        "10.1093/bioinformatics/btad088"
       ],
       "tools": [
         "DBDIpy",
@@ -114385,7 +114385,7 @@
     },
     "time-series-intensity-normalization": {
       "dois": [
-        "10.1093/bioinformatics/btaf290/8128335"
+        "10.1093/bioinformatics/btaf290"
       ],
       "tools": [
         "bmxp",

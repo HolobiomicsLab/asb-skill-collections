@@ -20,7 +20,7 @@ metadata:
   - GWAS Catalog
   license_tier: restricted
 derived_from:
-- doi: 10.1093/bioinformatics/btad523/7248906
+- doi: 10.1093/bioinformatics/btad523
   title: metGWAS 1.0
 evidence_spans:
 - An R workflow for network-driven over-representation analysis
@@ -30,15 +30,15 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_metgwas_1_0_cq
-    doi: 10.1093/bioinformatics/btad523/7248906
+    doi: 10.1093/bioinformatics/btad523
     title: metGWAS 1.0
   dedup_kept_from: coll_metgwas_1_0_cq
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bioinformatics/btad523/7248906
+  original_doi: 10.1093/bioinformatics/btad523
   all_source_dois:
-  - 10.1093/bioinformatics/btad523/7248906
+  - 10.1093/bioinformatics/btad523
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias

@@ -22,7 +22,7 @@ derived_from:
   title: Amanida
 - doi: 10.3390/metabo13121167
   title: ''
-- doi: 10.1093/bioinformatics/btac059/6522114
+- doi: 10.1093/bioinformatics/btac059
   title: ''
 evidence_spans:
 - Amanida R package, which contains a collection of functions for computing a weighted
@@ -39,7 +39,7 @@ provenance:
     doi: 10.1093/bioinformatics/btab591
     title: Amanida
   - build: coll_metaboprep_cq
-    doi: 10.1093/bioinformatics/btac059/6522114
+    doi: 10.1093/bioinformatics/btac059
     title: Metaboprep
   dedup_kept_from: coll_amanida_cq
 schema_version: 0.2.0
@@ -49,7 +49,7 @@ attribution:
   all_source_dois:
   - 10.1093/bioinformatics/btab591
   - 10.3390/metabo13121167
-  - 10.1093/bioinformatics/btac059/6522114
+  - 10.1093/bioinformatics/btac059
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias

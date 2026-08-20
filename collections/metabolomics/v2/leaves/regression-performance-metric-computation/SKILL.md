@@ -22,7 +22,7 @@ derived_from:
   title: mol2ccs
 - doi: 10.5281/zenodo.11199061
   title: ''
-- doi: 10.5281/zenodo.11199061.svg
+- doi: 10.5281/zenodo.11199061
   title: ''
 evidence_spans: []
 claims: []
@@ -41,7 +41,7 @@ attribution:
   all_source_dois:
   - 10.1186/s13321-024-00899-w
   - 10.5281/zenodo.11199061
-  - 10.5281/zenodo.11199061.svg
+  - 10.5281/zenodo.11199061
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias
@@ -110,6 +110,6 @@ poetry run python scripts/train-test.py --prefix "train-metlin-test-ccsbase" --t
 ## Evidence
 
 - [other] Compute reported performance metrics (e.g., mean absolute error, R², or other regression statistics) and save results to a metrics file.: "Compute reported performance metrics (e.g., mean absolute error, R², or other regression statistics) and save results to a metrics file."
-- [readme] Predictions are available and can be directly downloaded from [...] The files should be unzipped and placed in the `data` directory.: "Predictions are available and can be directly downloaded from [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11199061.svg)](https://doi.org/10.5281/zenodo.11199061). The files should be unzipped"
+- [readme] Predictions are available and can be directly downloaded from [...] The files should be unzipped and placed in the `data` directory.: "Predictions are available and can be directly downloaded from [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.11199061)](https://doi.org/10.5281/zenodo.11199061). The files should be unzipped"
 - [readme] Run the notebooks located in the `notebooks` corresponding to each analysis. [...] reproduce_figures: the name of the notebooks indicates which notebook can reproduce which figures of the manuscript: "Run the notebooks located in the `notebooks` corresponding to each analysis. [...] reproduce_figures: the name of the notebooks indicates which notebook can reproduce which figures"
 - [readme] prefix is used to generate the output files of the predictions of the test set: "prefix is used to generate the output files of the predictions of the test set"
