@@ -37,7 +37,7 @@ import pathlib
 
 import yaml
 
-from scripts.license_tier import UNESTABLISHED_DETECTIONS, tier_for_license
+from scripts.license_tier import SUBJECT_PAPER, UNESTABLISHED_DETECTIONS, tier_for_license
 from scripts.preprint_license import (
     STATUS_RESOLVED,
     fetch_json,
@@ -109,6 +109,7 @@ def apply_outcome(paper: dict, outcome: dict) -> bool:
     access["license"] = outcome["spdx"]
     paper["license_tier"] = tier_for_license(outcome["spdx"])
     paper["license_detection"] = f"{outcome['registry']}-paper"
+    paper["license_subject"] = SUBJECT_PAPER
     paper["source_reuse"] = outcome["source_reuse"]
     if outcome["promotes"]:
         access["type"] = OPEN_ACCESS_TYPE

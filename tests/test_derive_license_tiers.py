@@ -392,3 +392,61 @@ def test_an_entry_with_neither_a_licence_nor_a_detection_is_still_derived(tmp_pa
     ''').strip() + "\n", encoding="utf-8")
     d.apply_to_corpus(c, token=None, _detect=lambda *a, **k: ("MIT", "github-api"))
     assert yaml.safe_load(c.read_text())["papers"][0]["access"]["license"] == "MIT"
+
+
+def test_a_paper_licence_is_never_substituted_by_a_tool_licence(tmp_path):
+    """This script reads a repository, so it may only speak about the tool.
+
+    Running it over metabolomics/v1 replaced 61 paper licences with tool ones
+    (INTEGRATE cc-by -> GPL-3.0, Spec2Vec cc-by -> Apache-2.0). A value was
+    still present afterwards, so no earlier guard fired.
+    """
+    c = tmp_path / "corpus.yaml"
+    c.write_text(textwrap.dedent('''
+        papers:
+        - name: paper-licensed
+          doi: 10.1/a
+          repo_url: https://github.com/o/r
+          access: {license: cc-by, verified_via: unpaywall_oa_locations}
+          license_tier: open
+          license_subject: paper
+    ''').strip() + "\n", encoding="utf-8")
+    d.apply_to_corpus(c, token=None, _detect=lambda *a, **k: ("GPL-3.0", "github-api"))
+    entry = yaml.safe_load(c.read_text())["papers"][0]
+    assert entry["access"]["license"] == "cc-by"
+    assert entry["license_subject"] == "paper"
+
+
+def test_a_tool_licence_is_still_updated(tmp_path):
+    """The other side: refusing every write would freeze the tool axis."""
+    c = tmp_path / "corpus.yaml"
+    c.write_text(textwrap.dedent('''
+        papers:
+        - name: tool-licensed
+          doi: 10.1/b
+          repo_url: https://github.com/o/r
+          access: {license: BSD}
+          license_tier: open
+          license_detection: readme-llm
+    ''').strip() + "\n", encoding="utf-8")
+    d.apply_to_corpus(c, token=None, _detect=lambda *a, **k: ("Apache-2.0", "github-api"))
+    entry = yaml.safe_load(c.read_text())["papers"][0]
+    assert entry["access"]["license"] == "Apache-2.0"
+    assert entry["license_subject"] == "tool"
+
+
+def test_an_entry_with_no_licence_at_all_is_still_derived(tmp_path):
+    """A blank entry has no axis to protect, so the tool licence may land."""
+    c = tmp_path / "corpus.yaml"
+    c.write_text(textwrap.dedent('''
+        papers:
+        - name: blank
+          doi: 10.1/c
+          repo_url: https://github.com/o/r
+          access: {license: null}
+          license_detection: none
+    ''').strip() + "\n", encoding="utf-8")
+    d.apply_to_corpus(c, token=None, _detect=lambda *a, **k: ("MIT", "github-api"))
+    entry = yaml.safe_load(c.read_text())["papers"][0]
+    assert entry["access"]["license"] == "MIT"
+    assert entry["license_subject"] == "tool"

@@ -23,7 +23,8 @@ if __package__ in (None, ""):
     _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
 
 
-from scripts.license_tier import UNESTABLISHED_DETECTIONS, load_map, tier_for_license
+from scripts.license_tier import (SUBJECT_PAPER, SUBJECT_TOOL, UNESTABLISHED_DETECTIONS,
+                                  licence_subject, load_map, tier_for_license)
 
 _GH_API = "https://api.github.com/repos/{}/{}/license"
 _LICENSE_FILE_RE = re.compile(r"^(licen[sc]e|copying|notice)(\.[\w.-]+)?$", re.I)
@@ -212,6 +213,13 @@ def apply_to_corpus(corpus_path, token, cache=None, _detect=detect_license) -> d
         # because they came from Unpaywall rather than from a repository, and a
         # guard keyed only on the label wiped nineteen of them.
         recorded = (p.get("access") or {}).get("license")
+        # This script reads a repository, so it may only speak about the tool.
+        # Writing over a licence that describes the *paper* substitutes one axis
+        # for the other, and nothing downstream can tell that it happened.
+        if licence_subject(p) == SUBJECT_PAPER:
+            kept = p.get("license_tier") or "restricted"
+            summary[kept] = summary.get(kept, 0) + 1
+            continue
         if lic is None and (recorded
                             or p.get("license_detection") not in UNESTABLISHED_DETECTIONS):
             kept = p.get("license_tier", "restricted")
@@ -220,6 +228,7 @@ def apply_to_corpus(corpus_path, token, cache=None, _detect=detect_license) -> d
         p["license_tier"] = tier
         p.setdefault("access", {})["license"] = lic
         p["license_detection"] = src
+        p["license_subject"] = SUBJECT_TOOL
         summary[tier] = summary.get(tier, 0) + 1
     path.write_text(yaml.safe_dump(doc, sort_keys=False, allow_unicode=True), encoding="utf-8")
     return summary
