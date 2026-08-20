@@ -7592,19 +7592,6 @@ papers:
     license: null
   license_tier: restricted
   license_detection: none
-- name: 10.5281/zenodo.1043226
-  doi: 10.5281/zenodo.1043226
-  title: 10.5281/zenodo.1043226
-  repo_url: ''
-  status: included
-  wave: v2-expansion
-  access:
-    type: link-only
-    is_oa: null
-    verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
 - name: 10.5281/zenodo.11199061
   doi: 10.5281/zenodo.11199061
   title: 10.5281/zenodo.11199061
@@ -7619,19 +7606,6 @@ papers:
   license_tier: open
   license_detection: datacite-paper
   source_reuse: full
-- name: 10.5281/zenodo.11199061
-  doi: 10.5281/zenodo.11199061
-  title: 10.5281/zenodo.11199061
-  repo_url: ''
-  status: included
-  wave: v2-expansion
-  access:
-    type: link-only
-    is_oa: null
-    verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
 - name: 10.5281/zenodo.12602805
   doi: 10.5281/zenodo.12602805
   title: 10.5281/zenodo.12602805

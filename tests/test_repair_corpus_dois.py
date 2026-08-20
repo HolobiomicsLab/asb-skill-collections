@@ -195,3 +195,41 @@ def test_a_real_title_is_never_overwritten_by_the_doi(tmp_path):
 def test_propagation_does_nothing_without_a_repair(tmp_path):
     col = _collection(tmp_path, BADGE)
     assert r.propagate_repairs(col, {}) == 0
+
+
+# --- a repair that would merge two entries is not a repair -------------------
+
+def test_a_repair_onto_an_existing_doi_is_refused():
+    """A badge URL and its DOI are the same work, so the repaired form often
+    already has an entry. Rewriting anyway produces two rows for one work — the
+    exact hazard `test_corpus_doi_hygiene` was written to prevent, and what
+    merging them costs (whose grounding, licence and skills survive) is not
+    something a string rewrite can decide."""
+    out = r.classify(BADGE, _registry({BADGE_REAL}), existing={BADGE_REAL})
+    assert out["status"] == r.STATUS_COLLIDES
+    assert out["repaired"] is None
+    assert out["collides_with"] == BADGE_REAL
+
+
+def test_a_repair_onto_a_free_doi_still_goes_ahead():
+    """The other side: refusing every repair would make the script useless."""
+    out = r.classify(BADGE, _registry({BADGE_REAL}), existing={"10.9999/unrelated"})
+    assert out["status"] == r.STATUS_REPAIRABLE
+
+
+def test_run_refuses_the_collision_and_leaves_both_rows_alone(tmp_path):
+    path = _corpus(tmp_path, [BADGE, BADGE_REAL])
+    before = pathlib.Path(path).read_text()
+    findings = r.run([path], apply=True, fetch=_registry({BADGE_REAL}))
+    assert pathlib.Path(path).read_text() == before
+    assert [f["status"] for f in findings] == [r.STATUS_COLLIDES]
+
+
+def test_two_artefacts_repairing_onto_the_same_doi_collide_on_the_second(tmp_path):
+    """The first repair claims the DOI; the second must see it as taken."""
+    other = "10.5281/zenodo.1043226.png"
+    path = _corpus(tmp_path, [BADGE, other])
+    findings = r.run([path], apply=True, fetch=_registry({BADGE_REAL}))
+    assert [f["status"] for f in findings] == [r.STATUS_REPAIRABLE, r.STATUS_COLLIDES]
+    dois = [p["doi"] for p in yaml.safe_load(pathlib.Path(path).read_text())["papers"]]
+    assert dois == [BADGE_REAL, other], "the second artefact must not duplicate the first"

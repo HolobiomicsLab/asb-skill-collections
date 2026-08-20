@@ -1,6 +1,6 @@
 {
   "schema": "asbb-release-gate/1.0",
-  "generated_at": "2026-08-20T00:56:51.454601+00:00",
+  "generated_at": "2026-08-20T01:33:29.702263+00:00",
   "collection_dir": "collections/transcriptomics/v1",
   "corpus_path": "collections/transcriptomics/v1/corpus.yaml",
   "mode": "strict",

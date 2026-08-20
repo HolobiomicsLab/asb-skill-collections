@@ -98,3 +98,25 @@ def test_a_real_doi_is_not_mistaken_for_an_artefact():
     for doi in ("10.1177/14690667231164766", "10.1002/9780470508183",
                 "10.1101/060012", "10.1093/bioinformatics/btac355"):
         assert repair_candidates(doi) == []
+
+
+def test_no_corpus_doi_appears_twice():
+    """One work, one entry.
+
+    The indexes are string-keyed on the DOI, so two rows for one work split its
+    skills across both and neither half sees the other's grounding — the same
+    hazard this module's header describes for `?ref=` cruft. Repairing a DOI
+    onto one that already exists is the easy way to create it, which is why
+    `repair_corpus_dois` refuses a repair that would collide.
+    """
+    offenders = []
+    for cf in _corpus_files():
+        doc = yaml.safe_load(cf.read_text()) or {}
+        seen = {}
+        for paper in doc.get("papers") or []:
+            doi = str(paper.get("doi") or "").strip()
+            if not doi:
+                continue
+            seen[doi] = seen.get(doi, 0) + 1
+        offenders += [f"{cf.name}: {d} x{n}" for d, n in seen.items() if n > 1]
+    assert not offenders, f"duplicate corpus DOIs: {offenders}"

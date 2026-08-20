@@ -54,6 +54,7 @@ STATUS_OK = "resolves"
 STATUS_REPAIRABLE = "repairable"
 STATUS_DEAD = "unresolvable"
 STATUS_AMBIGUOUS = "ambiguous"
+STATUS_COLLIDES = "collides"
 
 
 def repair_candidates(doi: str) -> list[str]:
@@ -75,20 +76,29 @@ def resolves(doi: str, fetch=fetch_json) -> bool:
     return False
 
 
-def classify(doi: str, fetch=fetch_json) -> dict:
+def classify(doi: str, fetch=fetch_json, existing: set[str] | None = None) -> dict:
     """Decide what to do with one DOI, asking the registry before anything else.
 
     A resolving DOI is never touched, however unusual it looks. A candidate is
     accepted only when exactly one of them resolves — two would mean the repair
     is a guess between real works, which is worse than leaving it broken.
+
+    A repair onto a DOI the corpus **already has** is refused. That is not a
+    repair but a merge of two entries, and the merge has consequences no
+    string rewrite can settle: which entry's grounding, licence and skills
+    survive. `tests/test_corpus_doi_hygiene.py` records the same refusal for
+    the `?ref=` case, deferred to a human for exactly this reason.
     """
     if resolves(doi, fetch):
         return {"doi": doi, "status": STATUS_OK, "repaired": None}
     working = [c for c in repair_candidates(doi) if resolves(c, fetch)]
-    if len(working) == 1:
-        return {"doi": doi, "status": STATUS_REPAIRABLE, "repaired": working[0]}
     if len(working) > 1:
         return {"doi": doi, "status": STATUS_AMBIGUOUS, "repaired": None, "candidates": working}
+    if len(working) == 1:
+        if existing and working[0] in existing:
+            return {"doi": doi, "status": STATUS_COLLIDES, "repaired": None,
+                    "collides_with": working[0]}
+        return {"doi": doi, "status": STATUS_REPAIRABLE, "repaired": working[0]}
     return {"doi": doi, "status": STATUS_DEAD, "repaired": None}
 
 
@@ -128,16 +138,21 @@ def run(patterns: list[str], apply: bool, fetch=fetch_json) -> list[dict]:
     findings: list[dict] = []
     for path in sorted({p for pattern in patterns for p in globlib.glob(pattern)}):
         document = yaml.safe_load(pathlib.Path(path).read_text(encoding="utf-8")) or {}
+        papers = document.get("papers") or []
+        # Every DOI already in this corpus, so a repair cannot silently land on
+        # one of them and turn two entries into a duplicated row.
+        existing = {str(p.get("doi") or "").strip() for p in papers if p.get("doi")}
         mapping: dict[str, str] = {}
-        for paper in document.get("papers") or []:
+        for paper in papers:
             doi = str(paper.get("doi") or "").strip()
             if not doi or not _suspect(doi):
                 continue
-            outcome = {"corpus": path, **classify(doi, fetch)}
+            outcome = {"corpus": path, **classify(doi, fetch, existing)}
             findings.append(outcome)
             if apply and outcome["status"] == STATUS_REPAIRABLE:
                 repaired = outcome["repaired"]
                 mapping[doi] = repaired
+                existing.add(repaired)
                 paper["doi"] = repaired
                 # The harvester filled name/title from the DOI string when it had
                 # nothing better; leaving those behind keeps the artefact visible.
@@ -173,7 +188,8 @@ def main(argv: list[str] | None = None) -> int:
         elif finding["status"] != STATUS_OK:
             print(f"  {finding['status']:12} {finding['doi']}  ({finding['corpus']})")
     print(json.dumps(summarize(findings), indent=2, sort_keys=True))
-    left = sum(1 for f in findings if f["status"] in (STATUS_DEAD, STATUS_AMBIGUOUS))
+    left = sum(1 for f in findings
+               if f["status"] in (STATUS_DEAD, STATUS_AMBIGUOUS, STATUS_COLLIDES))
     if args.strict and (left or (not args.apply and
                                  any(f["status"] == STATUS_REPAIRABLE for f in findings))):
         return 1
