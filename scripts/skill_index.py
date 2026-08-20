@@ -27,6 +27,15 @@ import re
 import yaml
 
 from scripts.license_tier import load_map
+# Invoked by path (`python scripts/x.py`), only `scripts/` lands on sys.path, so
+# the repo root has to be added before the sibling package can be imported.
+if __package__ in (None, ""):
+    import os.path as _p
+    import sys as _sys
+
+    _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
+
+from scripts import layout
 from scripts.propagate_license_tiers import detect_indent
 
 META_ROLE = "meta"
@@ -136,7 +145,7 @@ def _dois(frontmatter: dict) -> list[str]:
 def indexable_skills(version_dir: pathlib.Path) -> dict[str, dict]:
     """Map slug -> frontmatter for every skill that belongs in an index."""
     found = {}
-    for skill_md in sorted((version_dir / "skills").glob("*/SKILL.md")):
+    for skill_md in layout.iter_skill_md(version_dir):
         slug = skill_md.parent.name
         frontmatter = parse_frontmatter(skill_md)
         if is_indexable(slug, frontmatter):

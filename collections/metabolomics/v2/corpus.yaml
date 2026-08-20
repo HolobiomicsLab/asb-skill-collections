@@ -18,9 +18,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -216,9 +215,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -230,9 +228,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -314,9 +311,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -483,9 +479,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -511,9 +506,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -525,9 +519,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -948,9 +941,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -1060,9 +1052,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -1144,9 +1135,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -2432,9 +2422,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -2476,9 +2465,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -2532,9 +2520,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -2646,9 +2633,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -2828,9 +2814,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -2856,9 +2841,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -3066,9 +3050,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -3192,9 +3175,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -3206,9 +3188,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -3220,9 +3201,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -3472,9 +3452,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -3528,9 +3507,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -3558,9 +3536,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -3572,9 +3549,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -4544,9 +4520,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -4586,9 +4561,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -5093,9 +5067,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -5459,9 +5432,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -5501,9 +5473,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -5585,9 +5556,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -5697,9 +5667,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -5781,9 +5750,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -5865,9 +5833,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -5963,9 +5930,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -6019,9 +5985,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -6033,9 +5998,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -6075,9 +6039,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -6089,9 +6052,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -6103,9 +6065,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -6117,9 +6078,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -6331,9 +6291,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -6460,9 +6419,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -6474,9 +6432,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -6642,9 +6599,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -6714,9 +6670,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -6812,9 +6767,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -6840,9 +6794,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -6910,9 +6863,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -6938,9 +6890,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7022,9 +6973,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7246,9 +7196,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7387,9 +7336,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7597,9 +7545,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7611,9 +7558,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7625,9 +7571,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7639,9 +7584,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7653,9 +7597,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7667,9 +7610,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7695,9 +7637,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7709,9 +7650,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7723,9 +7663,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7737,9 +7676,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7751,9 +7689,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7765,9 +7702,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7779,9 +7715,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7793,9 +7728,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7807,9 +7741,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7821,9 +7754,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7835,9 +7767,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7849,9 +7780,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7863,9 +7793,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7877,9 +7806,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7891,9 +7819,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7905,9 +7832,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7919,9 +7845,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7933,9 +7858,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7947,9 +7871,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
@@ -7975,9 +7898,8 @@ papers:
   status: included
   wave: v2-expansion
   access:
-    type: repo-oa
-    is_oa: true
-    verified_via: git_clone_succeeded_at_build
+    type: link-only
+    is_oa: null
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted

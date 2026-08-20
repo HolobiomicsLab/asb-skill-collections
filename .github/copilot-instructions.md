@@ -7,7 +7,9 @@ peer-reviewed method paper.
 
 **Read [`AGENTS.md`](../AGENTS.md) for the full install + use protocol.** In short:
 
-- **Skills** are plain Markdown at `collections/metabolomics/v2/skills/<slug>/SKILL.md`
+- **Skills** are plain Markdown at `collections/metabolomics/v2/leaves/<slug>/SKILL.md`
+  (only `skills/_router` and the licence-gate skill sit under `skills/`, because a
+  plugin host advertises everything there into the session prompt)
   (YAML frontmatter + body). The entry point is `skills/_router/SKILL.md`.
 - **To find a skill**, search the indexes at `collections/metabolomics/v2/`:
   `skills_index.json` (by EDAM IRI, tool name, or keyword over name/description)

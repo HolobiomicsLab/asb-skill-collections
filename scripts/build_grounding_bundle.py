@@ -8,6 +8,15 @@ import json
 import re
 import shutil
 from pathlib import Path
+# Invoked by path (`python scripts/x.py`), only `scripts/` lands on sys.path, so
+# the repo root has to be added before the sibling package can be imported.
+if __package__ in (None, ""):
+    import os.path as _p
+    import sys as _sys
+
+    _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
+
+from scripts import layout
 
 try:
     import yaml
@@ -112,9 +121,9 @@ def _read_tools(collection_dir):
 
 def build_unit(unit_dir, collection_dir, bind_script):
     unit_dir, collection_dir, bind_script = Path(unit_dir), Path(collection_dir), Path(bind_script)
-    if not (unit_dir / "skills").is_dir():
-        raise ValueError(f"no skills/ dir in unit {unit_dir}")
-    slugs = {d.name for d in (unit_dir / "skills").iterdir() if d.is_dir()}
+    if not any(d.is_dir() for d in layout.skill_dirs(unit_dir)):
+        raise ValueError(f"no skill dir in unit {unit_dir}")
+    slugs = {d.name for d in layout.slug_dirs(unit_dir)}
     full = json.loads((collection_dir / "kb_bundle.json").read_text())
     bundle = filter_and_enrich_bundle(full, slugs, _read_corpus(collection_dir), _read_tools(collection_dir))
     written = []

@@ -1,16 +1,17 @@
 {
   "schema": "asbb-release-gate/1.0",
-  "generated_at": "2026-06-22T09:06:33.841433+00:00",
+  "generated_at": "2026-08-19T09:35:05.537637+00:00",
   "collection_dir": "collections/metabolomics/v2",
   "corpus_path": "collections/metabolomics/v2/corpus.yaml",
   "mode": "strict",
   "strict": true,
-  "promote_logic_source": "agentic_science_builder.release.promote",
+  "promote_logic_source": "vendored-fallback",
   "policy": {
     "oa_tiers": [
       "diamond",
       "gold-oa",
       "green-oa",
+      "link-only",
       "oa",
       "open-access",
       "repo-copyleft",
@@ -22,7 +23,7 @@
     "text_field_cap": 300,
     "ngram_jaccard_threshold": 0.3,
     "similarity_ratio_threshold": 0.92,
-    "pii_config_version": "2026-06-15.1",
+    "pii_config_version": "2026-07-10.2",
     "require_open_access": true
   },
   "overall_status": "warn",
@@ -72,25 +73,25 @@
         6
       ],
       "hard_gate": true,
-      "summary": "Two-tier PII / dual-use scan of verbatim quote spans (pii_config=2026-06-15.1).  (43470 spans scanned)",
+      "summary": "Two-tier PII / dual-use scan of verbatim quote spans (pii_config=2026-07-10.2).  (43470 spans scanned)",
       "n_findings": 3,
       "details": [
         {
           "status": "warn",
-          "message": "skills/meta-analysis-effect-size-estimation/SKILL.md: suspected low-confidence PII 'placeholder_subject' in span \u2014 route to human.",
-          "file": "skills/meta-analysis-effect-size-estimation/SKILL.md",
+          "message": "leaves/meta-analysis-effect-size-estimation/SKILL.md: suspected low-confidence PII 'placeholder_subject' in span \u2014 route to human.",
+          "file": "leaves/meta-analysis-effect-size-estimation/SKILL.md",
           "pattern": "placeholder_subject"
         },
         {
           "status": "warn",
-          "message": "skills/metabolite-trend-classification/SKILL.md: suspected low-confidence PII 'placeholder_subject' in span \u2014 route to human.",
-          "file": "skills/metabolite-trend-classification/SKILL.md",
+          "message": "leaves/metabolite-trend-classification/SKILL.md: suspected low-confidence PII 'placeholder_subject' in span \u2014 route to human.",
+          "file": "leaves/metabolite-trend-classification/SKILL.md",
           "pattern": "placeholder_subject"
         },
         {
           "status": "warn",
-          "message": "skills/study-size-weighted-averaging/SKILL.md: suspected low-confidence PII 'placeholder_subject' in span \u2014 route to human.",
-          "file": "skills/study-size-weighted-averaging/SKILL.md",
+          "message": "leaves/study-size-weighted-averaging/SKILL.md: suspected low-confidence PII 'placeholder_subject' in span \u2014 route to human.",
+          "file": "leaves/study-size-weighted-averaging/SKILL.md",
           "pattern": "placeholder_subject"
         }
       ]
@@ -102,7 +103,7 @@
         8
       ],
       "hard_gate": true,
-      "summary": "Every skill carries a source DOI + a license SPDX tag.  (5865 skills checked)",
+      "summary": "Every skill carries provenance (source DOI or repository) + a license SPDX tag.  (5867 skills checked)",
       "n_findings": 0,
       "details": []
     }

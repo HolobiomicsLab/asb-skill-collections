@@ -96,7 +96,7 @@ This command:
 | `plugins[].location` | string | Y | Path inside repo to the collection root, e.g., `collections/metabolomics/v1` |
 | `plugins[].require_open_access` | bool | Y | **v0 policy: always `true`** — excludes non-OA sources from public catalogue |
 | `plugins[].openness` | enum | Y | `"open"` \| `"mixed"` \| `"closed"` — the benchmark_tier.openness of all benchmarks in the collection |
-| `plugins[].skills_count` | int | Y | Count of SKILL.md files in `skills/` |
+| `plugins[].skills_count` | int | Y | Count of SKILL.md files in the unit's leaf dir (`leaves/`, or `skills/` for legacy units) |
 | `plugins[].tools_count` | int | Y | Count of tools in `tools.json` |
 | `plugins[].doi` | string | N | Zenodo DOI minted at release (see §2.4); TODO for v0 |
 | `plugins[].released_at` | string (ISO 8601) | N | Release timestamp (UTC with Z suffix) |

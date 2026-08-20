@@ -1,0 +1,2407 @@
+[
+ {
+  "slug": "accurate-mass-database-search",
+  "name": "accurate-mass-database-search",
+  "description": "Use when after peak detection and MS1 feature extraction from FIA-MS, GC-MS, LC-MS(/MS), or CE-MS data, when you need to identify unknown metabolites by matching observed m/z values to a reference database and want to recover HMDB identifiers, molecular formulas, and structural annotations for.",
+  "edam_operation": "http://edamontology.org/operation_3631",
+  "edam_topics": [
+   "http://edamontology.org/topic_3172",
+   "http://edamontology.org/topic_0121"
+  ],
+  "tools": [
+   "OpenMS",
+   "SmartPeak",
+   "SmartPeakCLI",
+   "pyOpenMS"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.0c03421"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "accurate-mass-metabolite-search-against-hmdb",
+  "name": "accurate-mass-metabolite-search-against-hmdb",
+  "description": "Use when after MS1 feature detection and spectra merging in an untargeted or semi-targeted metabolomics workflow, when you have a list of observed accurate m/z values from high-resolution mass spectrometry (e.",
+  "edam_operation": "http://edamontology.org/operation_3627",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3172"
+  ],
+  "tools": [
+   "SmartPeak",
+   "SmartPeakGUI",
+   "SmartPeakCLI",
+   "OpenMS",
+   "pyOpenMS",
+   "BFAIR"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.0c03421"
+  ],
+  "techniques": [
+   "direct-infusion-MS",
+   "NMR"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "acquisition-method-overlap-analysis",
+  "name": "acquisition-method-overlap-analysis",
+  "description": "Use when you have acquired the same sample(s) using multiple LC-MS, LC-IMS-MS, or direct infusion methods (e.",
+  "edam_operation": "http://edamontology.org/operation_3933",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0092"
+  ],
+  "tools": [
+   "IonToolPack",
+   "Comparador",
+   "Mirador",
+   "PeakQC"
+  ],
+  "dois": [
+   "10.1021/jasms.4c00146"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "acquisition-mode-enumeration-and-validation",
+  "name": "acquisition-mode-enumeration-and-validation",
+  "description": "Use when adopting a mass spectrometry-based analysis tool (e.",
+  "edam_operation": "",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0121"
+  ],
+  "tools": [
+   "Q-Exactive orbitrap",
+   "LipidMatch",
+   "Q-Exactive orbitrap UHPLC-HRMS/MS",
+   "Agilent Q-TOF UHPLC-HRMS/MS",
+   "Bruker Q-TOF UHPLC-HRMS/MS",
+   "SCIEX Q-TOF UHPLC-HRMS/MS",
+   "MZmine"
+  ],
+  "dois": [
+   "10.1186/s12859-017-1744-3"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "adduct-based-feature-consolidation",
+  "name": "adduct-based-feature-consolidation",
+  "description": "Use when after accurate mass searching has assigned multiple detected m/z features to the same metabolite via positive and negative adduct libraries, and before sample-level feature merging.",
+  "edam_operation": "http://edamontology.org/operation_3933",
+  "edam_topics": [
+   "http://edamontology.org/topic_3172",
+   "http://edamontology.org/topic_0091"
+  ],
+  "tools": [
+   "SmartPeak",
+   "SmartPeakGUI",
+   "SmartPeakCLI",
+   "OpenMS",
+   "pyOpenMS",
+   "BFAIR"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.0c03421"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "aromaticity-index-computation",
+  "name": "aromaticity-index-computation",
+  "description": "Use when after molecular formula assignment from FT-ICR MS peaks and elemental composition tabulation (C, H, O, N, S, P counts), when you need to quantify the degree of aromaticity and carbon-skeleton unsaturation for each detected compound to support Van Krevelen classification, chemodiversity.",
+  "edam_operation": "http://edamontology.org/operation_3629",
+  "edam_topics": [
+   "http://edamontology.org/topic_3172",
+   "http://edamontology.org/topic_0769",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "NumPy",
+   "pandas",
+   "MetaboDirect"
+  ],
+  "dois": [
+   "10.1186/s40168-023-01476-3"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "automated-feature-extraction-from-spectra",
+  "name": "automated-feature-extraction-from-spectra",
+  "description": "Use when when you have raw or processed direct-infusion MS (DI-MS) or ASAP-MS spectra as mz/intensity pairs and need to rapidly identify salient peaks for species authentication, sample scoring, or comparative profiling without manual inspection.",
+  "edam_operation": "http://edamontology.org/operation_3629",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "RapidMass",
+   "DI-MS",
+   "ASAP-MS"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.4c05062"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "baseline-model-implementation-for-comparison",
+  "name": "baseline-model-implementation-for-comparison",
+  "description": "Use when you are introducing a novel spectrum prediction model and need to demonstrate that performance improvements come from architectural innovation rather than experimental advantage.",
+  "edam_operation": "http://edamontology.org/operation_3439",
+  "edam_topics": [
+   "http://edamontology.org/topic_3172",
+   "http://edamontology.org/topic_0121"
+  ],
+  "tools": [
+   "PubChem",
+   "ms-pred (coleygroup)",
+   "MAGMa"
+  ],
+  "dois": [
+   "10.1038/s42256-024-00816-8"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "biochemical-transformation-matching",
+  "name": "biochemical-transformation-matching",
+  "description": "Use when after you have detected and assigned molecular formulas to peaks in a single FT-ICR MS sample, and you want to infer which biochemical or abiotic reactions are occurring by examining pairwise mass differences.",
+  "edam_operation": "http://edamontology.org/operation_3628",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3407"
+  ],
+  "tools": [
+   "MetaboDirect",
+   "Python (NumPy, pandas)",
+   "R (vegan package)",
+   "Cytoscape",
+   "KEGG database"
+  ],
+  "dois": [
+   "10.1186/s40168-023-01476-3"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "blank-sample-background-interference-estimation",
+  "name": "blank-sample-background-interference-estimation",
+  "description": "Use when after MS1 feature detection and accurate mass annotation, when you have identified a set of blank injections (negative controls) run in the same analytical sequence segment as your biological or study samples.",
+  "edam_operation": "http://edamontology.org/operation_3799",
+  "edam_topics": [
+   "http://edamontology.org/topic_0091",
+   "http://edamontology.org/topic_3370",
+   "http://edamontology.org/topic_3678"
+  ],
+  "tools": [
+   "SmartPeak",
+   "SmartPeakGUI",
+   "SmartPeakCLI",
+   "OpenMS",
+   "pyOpenMS",
+   "BFAIR"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.0c03421"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "compound-class-assignment-from-molecular-formula",
+  "name": "compound-class-assignment-from-molecular-formula",
+  "description": "Use when after peaks have been filtered (by m/z, isotopic presence, and formula assignment error) and you have a list of peaks with assigned molecular formulas.",
+  "edam_operation": "http://edamontology.org/operation_3767",
+  "edam_topics": [
+   "http://edamontology.org/topic_0154",
+   "http://edamontology.org/topic_3172",
+   "http://edamontology.org/topic_3407"
+  ],
+  "tools": [
+   "pandas",
+   "NumPy",
+   "Formularity",
+   "MetaboDirect"
+  ],
+  "dois": [
+   "10.1186/s40168-023-01476-3"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "cross-instrument-data-harmonization",
+  "name": "cross-instrument-data-harmonization",
+  "description": "Use when you have mass spectrometry spectral data from multiple instrument types (e.g., direct infusion MS, ambient ionization MS, laser desorption/ionization MS) and need to perform unified species discrimination or database scoring across all samples regardless of their source instrument.",
+  "edam_operation": "http://edamontology.org/operation_3214",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "RapidMass",
+   "DI-MS",
+   "ASAP-MS",
+   "LDI-MS"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.4c05062"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "dimension-scale-linking-and-cross-group-indexing",
+  "name": "dimension-scale-linking-and-cross-group-indexing",
+  "description": "Use when when exporting quantified MSI data as HDF5 containers following the Cardinal::HDF5 layout convention, and you need to establish bidirectional indexing between intensity data (feature-by-pixel matrix) and metadata groups (featureData, pixelData).",
+  "edam_operation": "http://edamontology.org/operation_3443",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0092"
+  ],
+  "tools": [
+   "LipidQMap",
+   "Cardinal",
+   "h5py"
+  ],
+  "dois": [
+   "10.1101/2025.10.15.682422v1"
+  ],
+  "techniques": [
+   "direct-infusion-MS",
+   "MS-imaging"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "diversity-visualization-by-treatment",
+  "name": "diversity-visualization-by-treatment",
+  "description": "Use when you have normalized peak-abundance matrices with sample metadata containing categorical treatment variables (e.",
+  "edam_operation": "http://edamontology.org/operation_3441",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0625"
+  ],
+  "tools": [
+   "MetaboDirect",
+   "vegan",
+   "SYNCSA"
+  ],
+  "dois": [
+   "10.1186/s40168-023-01476-3"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "embedding-space-representation",
+  "name": "embedding-space-representation",
+  "description": "Use when you have pairs or triplets of MS/MS spectra with associated metadata (compound structural information, Tanimoto similarity scores) and want to learn embeddings that simultaneously preserve spectral similarity relationships and reconstruct peak intensities.",
+  "edam_operation": "http://edamontology.org/operation_3432",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0091"
+  ],
+  "tools": [
+   "PyTorch",
+   "Transformer (torch.nn.Transformer or variant)",
+   "scikit-learn",
+   "matchms"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.3c00260"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "environment-dependency-management",
+  "name": "environment-dependency-management",
+  "description": "Use when when deploying Galaxy-M or similar multi-component metabolomics platforms that depend on heterogeneous runtime environments (Python, R, MATLAB, WINE) across multiple operating systems (Ubuntu 14.",
+  "edam_operation": "http://edamontology.org/operation_0338",
+  "edam_topics": [
+   "http://edamontology.org/topic_0091",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "Python 2.7",
+   "R 3.0.1",
+   "MATLAB Compiler Runtime 8.3",
+   "Galaxy",
+   "Python",
+   "R",
+   "MATLAB Compiler Runtime (MCR)",
+   "WINE",
+   "MSFileReader",
+   "MI-Pack",
+   "winetricks"
+  ],
+  "dois": [
+   "10.1186/s13742-016-0115-8"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "MS-imaging"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "experimental-design-metadata-integration",
+  "name": "experimental-design-metadata-integration",
+  "description": "Use when when you have LC-MS raw data and need to process it through a feature detection and quantification pipeline in KNIME, but lack a structured mapping between sample identifiers, experimental conditions, and the raw LC-MS runs.",
+  "edam_operation": "http://edamontology.org/operation_3891",
+  "edam_topics": [
+   "http://edamontology.org/topic_3172",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "KNIME Analytics Platform",
+   "OpenMS",
+   "ili app"
+  ],
+  "dois": [
+   "10.1038/nprot.2017.122"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "MS-imaging"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "extracted-ion-chromatogram-generation",
+  "name": "extracted-ion-chromatogram-generation",
+  "description": "Use when you have raw MS data (in Agilent .d, Thermo .raw, Bruker .",
+  "edam_operation": "http://edamontology.org/operation_3630",
+  "edam_topics": [
+   "http://edamontology.org/topic_3370",
+   "http://edamontology.org/topic_0091"
+  ],
+  "tools": [
+   "Mirador",
+   "IonToolPack",
+   "PeakQuant"
+  ],
+  "dois": [
+   "10.1021/jasms.4c00146"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "feature-list-harmonization-across-methods",
+  "name": "feature-list-harmonization-across-methods",
+  "description": "Use when you have feature lists in CSV format originating from different acquisition methods (e.",
+  "edam_operation": "http://edamontology.org/operation_3761",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0121"
+  ],
+  "tools": [
+   "IonToolPack",
+   "Comparador",
+   "Mirador",
+   "PeakQuant"
+  ],
+  "dois": [
+   "10.1021/jasms.4c00146"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "feature-quality-assessment-metrics",
+  "name": "feature-quality-assessment-metrics",
+  "description": "Use when after nontargeted peak detection and segmentation has generated a feature table from raw LC-MS data (mzML or vendor format), apply quality assessment when you need to rank or filter features by confidence before annotation, adduct grouping, or MS/MS matching.",
+  "edam_operation": "http://edamontology.org/operation_3435",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "masscube",
+   "Python"
+  ],
+  "dois": [
+   "10.1038/s41467-025-60640-5"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "noncommercial"
+ },
+ {
+  "slug": "feature-table-export-and-formatting",
+  "name": "feature-table-export-and-formatting",
+  "description": "Use when after completing feature detection, alignment, and optional filtering (blank subtraction, QC reproducibility, feature occurrence thresholds) in MZmine2 or Optimus, and you need to prepare the feature table and MS/MS spectra for GNPS-based molecular networking, bioassay integration, or.",
+  "edam_operation": "http://edamontology.org/operation_3632",
+  "edam_topics": [
+   "http://edamontology.org/topic_3172",
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "MZmine2",
+   "Optimus",
+   "OpenMS",
+   "GNPS",
+   "Jupyter notebook"
+  ],
+  "dois": [
+   "10.1021/acs.jnatprod.7b00737"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "MS-imaging"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "fiams-spectra-window-extraction-and-merging",
+  "name": "fiams-spectra-window-extraction-and-merging",
+  "description": "Use when you have raw FIA-MS full-scan data in mzML format and need to prepare it for untargeted metabolite discovery. Apply this skill when your goal is to detect and annotate unknown metabolites across a wide m/z range (e.",
+  "edam_operation": "http://edamontology.org/operation_3215",
+  "edam_topics": [
+   "http://edamontology.org/topic_3172",
+   "http://edamontology.org/topic_0121"
+  ],
+  "tools": [
+   "SmartPeak",
+   "SmartPeakGUI",
+   "SmartPeakCLI",
+   "OpenMS",
+   "pyOpenMS"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.0c03421"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "fragment-ion-peak-annotation",
+  "name": "fragment-ion-peak-annotation",
+  "description": "Use when you have experimental MS/MS spectra matched against a reference library (via cosine similarity or dot-product scoring) and need to map individual fragment peaks in the experimental spectrum to their corresponding m/z and intensity values in the matched library entry.",
+  "edam_operation": "http://edamontology.org/operation_3647",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0121"
+  ],
+  "tools": [
+   "TandemMatch",
+   "Mirador",
+   "IonToolPack"
+  ],
+  "dois": [
+   "10.1021/jasms.4c00146"
+  ],
+  "techniques": [
+   "direct-infusion-MS",
+   "ion-mobility-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "gradient-performance-encoding",
+  "name": "gradient-performance-encoding",
+  "description": "Use when when you have extracted retention times from the top detected MS1 features in a LC-MS run and need to evaluate whether the gradient spreads those compounds efficiently across the available chromatographic time window—particularly during iterative gradient optimization where you need a.",
+  "edam_operation": "http://edamontology.org/operation_3632",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "Python",
+   "Jupyter Notebook",
+   "bago",
+   "pyopenms",
+   "scikit-learn"
+  ],
+  "dois": [
+   "10.1101/2023.09.08.556930",
+   "10.1002/9780470508183"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "hierarchical-clustering-dendrogram-cutting",
+  "name": "hierarchical-clustering-dendrogram-cutting",
+  "description": "Use when after XCMS feature detection, grouping, retention time correction, and missing value filling have produced an aligned feature matrix, when you need to group features (m/z, retention time pairs) that likely originate from the same metabolite.",
+  "edam_operation": "http://edamontology.org/operation_3432",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0092"
+  ],
+  "tools": [
+   "RAMClustR",
+   "dynamicTreeCut",
+   "R",
+   "InterpretMSSpectrum",
+   "XCMS",
+   "MSFinder",
+   "Sirius"
+  ],
+  "dois": [
+   "10.1021/ac501530d"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "in-silico-fragment-m-z-calculation",
+  "name": "in-silico-fragment-m-z-calculation",
+  "description": "Use when when you have experimental UHPLC-HRMS/MS or direct infusion MS/MS data and need to identify lipid species by comparing observed fragment m/z values against a library of simulated fragments. Apply this skill when your lipid library is incomplete or specialized (e.",
+  "edam_operation": "http://edamontology.org/operation_3632",
+  "edam_topics": [
+   "http://edamontology.org/topic_0153",
+   "http://edamontology.org/topic_3172"
+  ],
+  "tools": [
+   "LipidMatch",
+   "MZmine",
+   "XCMS",
+   "MS-DIAL",
+   "Compound Discoverer"
+  ],
+  "dois": [
+   "10.1186/s12859-017-1744-3"
+  ],
+  "techniques": [
+   "GC-MS",
+   "direct-infusion-MS",
+   "NMR"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "in-silico-fragmentation-simulation-validation",
+  "name": "in-silico-fragmentation-simulation-validation",
+  "description": "Use when you have experimental peak lists (m/z, retention time, intensity) from UHPLC-HRMS/MS or direct infusion MS/MS data and need to assign lipid identities with confidence scores. Use it when your instrument produces high-resolution tandem mass spectra (e.",
+  "edam_operation": "http://edamontology.org/operation_3631",
+  "edam_topics": [
+   "http://edamontology.org/topic_0153",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "LipidMatch",
+   "MZmine",
+   "XCMS",
+   "MS-DIAL",
+   "Compound Discoverer",
+   "Q-Exactive orbitrap UHPLC-HRMS/MS",
+   "Agilent, Bruker, SCIEX Q-TOF"
+  ],
+  "dois": [
+   "10.1186/s12859-017-1744-3"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "instrument-platform-compatibility-mapping",
+  "name": "instrument-platform-compatibility-mapping",
+  "description": "Use when when adopting a mass spectrometry data processing tool (e.g., LipidMatch) and needing to verify whether your specific instrument platform (vendor + model) and acquisition mode combination (targeted, ddMS2-topN, AIF, direct infusion, imaging) have been formally validated.",
+  "edam_operation": "http://edamontology.org/operation_3443",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0091"
+  ],
+  "tools": [
+   "Q-Exactive orbitrap",
+   "LipidMatch",
+   "Agilent Q-TOF UHPLC-HRMS/MS",
+   "Bruker Q-TOF UHPLC-HRMS/MS",
+   "SCIEX Q-TOF UHPLC-HRMS/MS"
+  ],
+  "dois": [
+   "10.1186/s12859-017-1744-3"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "ion-image-quantification-workflow",
+  "name": "ion-image-quantification-workflow",
+  "description": "Use when when you have imzML mass spectrometry imaging data files and need to convert raw ion image intensities into quantitative lipid abundance (pmol/mm²) using known internal standards.",
+  "edam_operation": "http://edamontology.org/operation_3627",
+  "edam_topics": [
+   "http://edamontology.org/topic_0769",
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_3172"
+  ],
+  "tools": [
+   "LipidQMap",
+   "Cardinal"
+  ],
+  "dois": [
+   "10.1101/2025.10.15.682422v1"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "MS-imaging"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "knime-workflow-orchestration",
+  "name": "knime-workflow-orchestration",
+  "description": "Use when you have raw LC-MS data (mzML, NetCDF) from multiple runs that require sequential feature detection, alignment, quantification, and optional filtering (e.g., blank exclusion, QC reproducibility, retention-time outlier removal) before spatial mapping or annotation.",
+  "edam_operation": "http://edamontology.org/operation_3632",
+  "edam_topics": [
+   "http://edamontology.org/topic_0091",
+   "http://edamontology.org/topic_3370",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "KNIME",
+   "KNIME Analytics Platform",
+   "OpenMS",
+   "Python 2.7 + pandas, pymspec, pyopenms",
+   "ili app",
+   "GNPS"
+  ],
+  "dois": [
+   "10.1038/nprot.2017.122"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "lc-ms-dataset-acquisition-and-curation",
+  "name": "lc-ms-dataset-acquisition-and-curation",
+  "description": "Use when when beginning an untargeted LC-MS metabolomics study and need to assemble a cohort of mzML files for processing; particularly when establishing performance baselines across sample counts (10, 50, 100+ samples), validating reproducibility, or preparing data for publication.",
+  "edam_operation": "http://edamontology.org/operation_3945",
+  "edam_topics": [
+   "http://edamontology.org/topic_3172",
+   "http://edamontology.org/topic_0091"
+  ],
+  "tools": [
+   "asari",
+   "Python",
+   "pymzml",
+   "ThermoRawFileParser",
+   "ProteoWizard msconvert"
+  ],
+  "dois": [
+   "10.1038/s41467-023-39889-1"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "lipid-candidate-matching",
+  "name": "lipid-candidate-matching",
+  "description": "Use when you have peak-picked MS/MS data (e.g., from MZmine, XCMS, MS-DIAL, or Compound Discoverer) and need to identify lipid species present in your sample.",
+  "edam_operation": "http://edamontology.org/operation_3767",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3375"
+  ],
+  "tools": [
+   "MZmine",
+   "XCMS",
+   "MS-DIAL",
+   "Compound Discoverer",
+   "LipidMatch"
+  ],
+  "dois": [
+   "10.1186/s12859-017-1744-3"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "lipid-feature-annotation-and-sorting",
+  "name": "lipid-feature-annotation-and-sorting",
+  "description": "Use when after quantifying ion images in LipidQMap and before exporting to HDF5 format, when you need to organize per-feature metadata (lipid ID, class, adduct, m/z, internal standard flag) into aligned datasets that can be linked to intensity data via dimension scales and sorted for reproducible.",
+  "edam_operation": "http://edamontology.org/operation_3096",
+  "edam_topics": [
+   "http://edamontology.org/topic_0091",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "LipidQMap",
+   "Cardinal"
+  ],
+  "dois": [
+   "10.1101/2025.10.15.682422v1"
+  ],
+  "techniques": [
+   "direct-infusion-MS",
+   "MS-imaging"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "lipid-fingerprint-regeneration-neural-networks",
+  "name": "lipid-fingerprint-regeneration-neural-networks",
+  "description": "Use when you have MS/MS spectra with initial lipid annotations from spectral library matching (e.g., from XCMS + CAMERA or LipidIN's Expeditious Querying module) and seek to improve recall, precision, and annotation coverage.",
+  "edam_operation": "http://edamontology.org/operation_3799",
+  "edam_topics": [
+   "http://edamontology.org/topic_3172",
+   "http://edamontology.org/topic_0121"
+  ],
+  "tools": [
+   "XCMS",
+   "CAMERA",
+   "LipidIN Expeditious Querying (EQ) Module",
+   "WMYn (Wide-spectrum Modeling Yield network)"
+  ],
+  "dois": [
+   "10.1038/s41467-025-59683-5"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "lipid-mass-spectral-matching",
+  "name": "lipid-mass-spectral-matching",
+  "description": "Use when you have peak-picked LC-HRMS/MS or direct infusion MS/MS data (m/z, retention time, intensity) from Q-Exactive, Agilent, Bruker, or SCIEX instruments and need to annotate experimental fragment patterns to known lipid structures.",
+  "edam_operation": "http://edamontology.org/operation_3632",
+  "edam_topics": [
+   "http://edamontology.org/topic_3172",
+   "http://edamontology.org/topic_0091"
+  ],
+  "tools": [
+   "LipidMatch",
+   "MZmine",
+   "XCMS",
+   "MS-DIAL",
+   "Compound Discoverer",
+   "Q-Exactive (Orbitrap UHPLC-HRMS/MS)"
+  ],
+  "dois": [
+   "10.1186/s12859-017-1744-3"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "m-z-intensity-calibration",
+  "name": "m-z-intensity-calibration",
+  "description": "Use when you have raw or processed MS spectrum data (m/z and intensity pairs) from DI-MS, ASAP-MS, or other high-throughput mass spectrometry instruments that requires automated peak detection.",
+  "edam_operation": "http://edamontology.org/operation_3629",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0121"
+  ],
+  "tools": [
+   "RapidMass",
+   "DI-MS",
+   "ASAP-MS"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.4c05062"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "marker-feature-identification-and-validation",
+  "name": "marker-feature-identification-and-validation",
+  "description": "Use when when processing GC–MS or LC–MS data as m/z vs retention time chromatograms and you need to identify biomarker or chemical marker features without conventional peak picking, particularly when false positive detection rates from peak detection algorithms are problematic.",
+  "edam_operation": "http://edamontology.org/operation_3647",
+  "edam_topics": [
+   "http://edamontology.org/topic_0091",
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0625"
+  ],
+  "tools": [
+   "NPFimg",
+   "XCMS"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.1c03163?ref=",
+   "10.1021/acs.analchem.1c03163"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "mass-difference-network-construction",
+  "name": "mass-difference-network-construction",
+  "description": "Use when you have a preprocessed peak list (m/z values and assigned molecular formulas) from direct injection FT-ICR MS of a complex organic mixture (e.",
+  "edam_operation": "http://edamontology.org/operation_3680",
+  "edam_topics": [
+   "http://edamontology.org/topic_0154",
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0121"
+  ],
+  "tools": [
+   "MetaboDirect",
+   "Python (NumPy, pandas)",
+   "R (vegan package)",
+   "Cytoscape",
+   "NumPy",
+   "pandas",
+   "KEGG database"
+  ],
+  "dois": [
+   "10.1186/s40168-023-01476-3"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "NMR"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "mass-spectrometry-data-file-parsing",
+  "name": "mass-spectrometry-data-file-parsing",
+  "description": "Use when you receive raw MS data files from LC-MS, LC-IMS-MS, direct infusion, or DDA/DIA experiments and need to extract ion chromatograms, mobility heatmaps, quality metrics, or perform spectral matching.",
+  "edam_operation": "http://edamontology.org/operation_3434",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "Mirador",
+   "IonToolPack",
+   "PeakQC",
+   "TandemMatch",
+   "PeakQuant"
+  ],
+  "dois": [
+   "10.1021/jasms.4c00146"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "mass-spectrometry-data-loading",
+  "name": "mass-spectrometry-data-loading",
+  "description": "Use when you have raw MS data files from supported instruments (Agilent, Thermo, Bruker, or mzML format) and need to ingest them into IonToolPack for visualization, quality control, targeted extraction, or spectral library matching.",
+  "edam_operation": "http://edamontology.org/operation_3436",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0121"
+  ],
+  "tools": [
+   "IonToolPack",
+   "PeakQuant",
+   "Mirador",
+   "PeakQC",
+   "TandemMatch",
+   "Comparador"
+  ],
+  "dois": [
+   "10.1021/jasms.4c00146"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "mass-spectrometry-data-parsing",
+  "name": "mass-spectrometry-data-parsing",
+  "description": "Use when you have received raw or vendor-converted centroid mzML files from LC-MS, GC-MS, or DI-MS platforms and need to extract MS1 spectra before building mass tracks, performing peak detection, or constructing composite feature maps.",
+  "edam_operation": "http://edamontology.org/operation_3931",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0769",
+   "http://edamontology.org/topic_3370",
+   "http://edamontology.org/topic_0091"
+  ],
+  "tools": [
+   "pymzml",
+   "Python",
+   "ThermoRawFileParser",
+   "ProteoWizard (msconvert)",
+   "asari",
+   "GNPS LCMS Visualization Dashboard",
+   "pyteomics",
+   "mzmine",
+   "IDSL.IPA",
+   "R",
+   "RnetCDF",
+   "Spectra",
+   "matchms",
+   "spec2vec",
+   "Python 3.8",
+   "numpy",
+   "MEMO",
+   "memo-ms"
+  ],
+  "dois": [
+   "10.1038/s41467-023-39889-1",
+   "10.1038/s41592-021-01339-5",
+   "10.1021/acs.jproteome.2c00120",
+   "10.1186/s13321-023-00695-y",
+   "10.3389/fbinf.2022.842964"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "mass-spectrometry-feature-similarity-modeling",
+  "name": "mass-spectrometry-feature-similarity-modeling",
+  "description": "Use when when you have an untargeted metabolomics dataset with MS2 fragmentation spectra and need to annotate metabolites beyond what reference databases alone provide.",
+  "edam_operation": "http://edamontology.org/operation_3346",
+  "edam_topics": [
+   "http://edamontology.org/topic_3172",
+   "http://edamontology.org/topic_0091"
+  ],
+  "tools": [
+   "MrnAnnoAlgo3 (MetDNA3)"
+  ],
+  "dois": [
+   "10.1038/s41467-025-63536-6"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "noncommercial"
+ },
+ {
+  "slug": "mass-spectrometry-instrument-format-compatibility",
+  "name": "mass-spectrometry-instrument-format-compatibility",
+  "description": "Use when you have raw mass spectrometry data from an instrument not yet validated in your pipeline (e.",
+  "edam_operation": "http://edamontology.org/operation_3763",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0121"
+  ],
+  "tools": [
+   "RapidMass",
+   "DI-MS",
+   "ASAP-MS"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.4c05062"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "mass-spectrometry-outlier-detection",
+  "name": "mass-spectrometry-outlier-detection",
+  "description": "Use when you have multi-sample MS1 data (LC-MS, LC-IMS-MS, or direct infusion across any omics domain) and need to detect samples with abnormal global ion intensity patterns or unusual per-ion metric behavior (intensity distribution, signal-to-noise, retention time stability) that may indicate.",
+  "edam_operation": "http://edamontology.org/operation_3695",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "IonToolPack",
+   "PeakQC",
+   "Mirador"
+  ],
+  "dois": [
+   "10.1021/jasms.4c00146"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "mass-spectrometry-peak-identification-and-extraction",
+  "name": "mass-spectrometry-peak-identification-and-extraction",
+  "description": "Use when when you have raw mass spectrometry data from direct-infusion (DI-MS) or ambient surface analysis probe (ASAP-MS) instruments and need to identify which m/z peaks are biologically or chemically informative for sample classification, rather than processing the entire spectrum including.",
+  "edam_operation": "http://edamontology.org/operation_3215",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "RapidMass",
+   "DI-MS",
+   "ASAP-MS"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.4c05062"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "mass-spectrometry-peak-intensity-encoding",
+  "name": "mass-spectrometry-peak-intensity-encoding",
+  "description": "Use when working with imaging mass spectrometry (IMS) datasets where you need to (1) automatically identify marker ions without manual annotation, (2) reduce peak intensity dimensionality while preserving spatial relationships between measurement points, or (3) apply iterative peak picking.",
+  "edam_operation": "http://edamontology.org/operation_3645",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0625"
+  ],
+  "tools": [
+   "scanpy",
+   "STAGATE",
+   "pandas",
+   "h5py"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.4c06210"
+  ],
+  "techniques": [
+   "direct-infusion-MS",
+   "MS-imaging",
+   "ion-mobility-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "mass-spectrum-database-matching",
+  "name": "mass-spectrum-database-matching",
+  "description": "Use when you have centroided LC-MS/MS spectral data (in MGF, mzXML, mzML, or mzData format) and want to identify known or predicted natural product structures present in your sample.",
+  "edam_operation": "http://edamontology.org/operation_3631",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0121"
+  ],
+  "tools": [
+   "NPDtools 2.5.0",
+   "MetaMiner",
+   "antiSMASH",
+   "Dereplicator",
+   "ProteoWizard",
+   "NPDtools",
+   "joblib",
+   "VarQuest",
+   "RapidMass",
+   "DI-MS",
+   "ASAP-MS"
+  ],
+  "dois": [
+   "10.1038/s41467-018-06082-8",
+   "10.1021/acs.analchem.4c05062"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "mass-spectrum-peak-detection",
+  "name": "mass-spectrum-peak-detection",
+  "description": "Use when you have raw or processed MS spectrum data (mz/intensity pairs) from direct infusion MS (DI-MS), ASAP-MS, or other high-throughput ambient ionization methods, and need to identify which m/z signals represent true peaks of interest rather than noise or baseline drift.",
+  "edam_operation": "http://edamontology.org/operation_3215",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "RapidMass",
+   "DI-MS",
+   "ASAP-MS"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.4c05062"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "mass-track-construction-from-centroided-spectra",
+  "name": "mass-track-construction-from-centroided-spectra",
+  "description": "Use when when you have centroided mzML files from LC-MS metabolomics and need to construct high-mass-resolution mass tracks for each sample before alignment. Apply this skill at the start of an untargeted metabolomics workflow, before building a cross-sample MassGrid.",
+  "edam_operation": "http://edamontology.org/operation_3214",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3370"
+  ],
+  "tools": [
+   "Python",
+   "pymzml",
+   "khipu",
+   "JMS",
+   "HMDB 4",
+   "chromatograms.get_thousandth_bins",
+   "mass_functions.nn_cluster_by_mz_seeds",
+   "chromatograms.extract_single_track_fullrt_length",
+   "asari"
+  ],
+  "dois": [
+   "10.1038/s41467-023-39889-1"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "mass-track-extraction-and-binning",
+  "name": "mass-track-extraction-and-binning",
+  "description": "Use when when you have centroid mzML files from LC-MS metabolomics acquisition and need to construct sample-level mass tracks before cross-sample alignment. Specifically: you are starting fresh with vendor-converted or pre-processed mzML input;",
+  "edam_operation": "http://edamontology.org/operation_3632",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0769"
+  ],
+  "tools": [
+   "Python",
+   "pymzml",
+   "mass_functions.nn_cluster_by_mz_seeds",
+   "chromatograms.get_thousandth_bins",
+   "chromatograms.extract_massTracks_",
+   "ThermoRawFileParser",
+   "ProteoWizard msconvert"
+  ],
+  "dois": [
+   "10.1038/s41467-023-39889-1"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "metabolite-feature-clustering-by-retention-time",
+  "name": "metabolite-feature-clustering-by-retention-time",
+  "description": "Use when after XCMS feature detection, grouping, retention time correction, regrouping, and missing value filling on LC-MS or GC-MS data, when you have an aligned feature table with retention times and intensity profiles across multiple samples and need to collapse redundant features into.",
+  "edam_operation": "http://edamontology.org/operation_3933",
+  "edam_topics": [
+   "http://edamontology.org/topic_3172",
+   "http://edamontology.org/topic_0091"
+  ],
+  "tools": [
+   "RAMClustR",
+   "dynamicTreeCut",
+   "R",
+   "InterpretMSSpectrum",
+   "XCMS",
+   "MSFinder",
+   "Sirius"
+  ],
+  "dois": [
+   "10.1021/ac501530d"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "metabolite-feature-grouping-by-adduct-isotope",
+  "name": "metabolite-feature-grouping-by-adduct-isotope",
+  "description": "Use when immediately after generating a feature table (m/z, retention time, intensity) from centroided mzML data when you need to collapse multiple feature detections of the same compound (arising from different ionization states, charge states, or isotope patterns) into unified empirical compound.",
+  "edam_operation": "http://edamontology.org/operation_3767",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3172"
+  ],
+  "tools": [
+   "khipu",
+   "Python",
+   "Asari"
+  ],
+  "dois": [
+   "10.1371/journal.pcbi.1011912"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "metabolite-feature-grouping-by-compound",
+  "name": "metabolite-feature-grouping-by-compound",
+  "description": "Use when after XCMS feature detection and retention time correction, when you have a feature table (CSV or XCMS object) with m/z and retention time values aligned across samples.",
+  "edam_operation": "http://edamontology.org/operation_3763",
+  "edam_topics": [
+   "http://edamontology.org/topic_0091",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "RAMClustR",
+   "R",
+   "dynamicTreeCut",
+   "XCMS",
+   "InterpretMSSpectrum",
+   "MSFinder",
+   "Sirius"
+  ],
+  "dois": [
+   "10.1021/ac501530d"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "metabolite-identifier-mapping",
+  "name": "metabolite-identifier-mapping",
+  "description": "Use when after peak detection and MS1 feature picking from merged FIA-MS spectra (typically 0–30 s acquisition window), when you have a list of accurate monoisotopic masses and need to assign HMDB compound identifiers, molecular formulas, and structural annotations to support mzTab output.",
+  "edam_operation": "http://edamontology.org/operation_3627",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3172"
+  ],
+  "tools": [
+   "OpenMS",
+   "SmartPeak",
+   "SmartPeakCLI",
+   "pyOpenMS"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.0c03421"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "metabolomics-feature-preprocessing",
+  "name": "metabolomics-feature-preprocessing",
+  "description": "Use when when you have raw profile LC-MS data in .mzML format and need to prepare regions of interest (ROI) as input for a CNN-Transformer peak detection network.",
+  "edam_operation": "http://edamontology.org/operation_3215",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "Python",
+   "QuanFormer",
+   "Python (v3.8.1+)",
+   "PyTorch (v1.13.1)",
+   "R xcms (v4.4.0+)"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.4c04531"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "metabolomics-tool-deployment",
+  "name": "metabolomics-tool-deployment",
+  "description": "Use when you have a Galaxy installation (specifically Galaxy Master branch commit c429777c93680dcee449fe410f5360afbe673758 or compatible) and need to add metabolomics analysis capabilities including tools for XCMS integration, mass spectrometry file reading (via MSFileReader), and metabolite.",
+  "edam_operation": "http://edamontology.org/operation_3443",
+  "edam_topics": [
+   "http://edamontology.org/topic_3375",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "Python 2.7",
+   "R 3.0.1",
+   "MATLAB Compiler Runtime 8.3",
+   "Galaxy",
+   "R 3.0.1 (x86 64bit)",
+   "MSFileReader 3.0 sp2",
+   "WineHQ 1.7",
+   "MI-Pack (Metabolite Identification Package)",
+   "XCMS"
+  ],
+  "dois": [
+   "10.1186/s13742-016-0115-8"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "microbial-metabolomics-phage-impact-assessment",
+  "name": "microbial-metabolomics-phage-impact-assessment",
+  "description": "Use when you have normalized peak intensities (with assigned molecular formulas) from FT-ICR MS analysis of treated and control bacterial samples (or environmental microbial communities), grouped by two or more treatment factors (e.g., phage type: HP1, HS2, control;",
+  "edam_operation": "http://edamontology.org/operation_3799",
+  "edam_topics": [
+   "http://edamontology.org/topic_0602",
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0757"
+  ],
+  "tools": [
+   "vegan",
+   "MetaboDirect",
+   "R",
+   "R (prcomp, ggplot2)",
+   "FT-ICR MS"
+  ],
+  "dois": [
+   "10.1186/s40168-023-01476-3"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "missing-value-imputation-in-quantification-tables",
+  "name": "missing-value-imputation-in-quantification-tables",
+  "description": "Use when after feature alignment across multiple LC-MS/MS runs, when the unified feature list contains zeros or nulls for specific feature–sample pairs because peaks were not detected in those individual runs, but the feature was detected in other samples in the cohort.",
+  "edam_operation": "http://edamontology.org/operation_3557",
+  "edam_topics": [
+   "http://edamontology.org/topic_3370",
+   "http://edamontology.org/topic_0121"
+  ],
+  "tools": [
+   "MZmine2",
+   "Optimus",
+   "OpenMS"
+  ],
+  "dois": [
+   "10.1021/acs.jnatprod.7b00737"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "ms-ms-raw-data-loading",
+  "name": "ms-ms-raw-data-loading",
+  "description": "Use when when you have raw LC-MS/MS instrument output files (e.g., .mzML, .",
+  "edam_operation": "http://edamontology.org/operation_3435",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_3172"
+  ],
+  "tools": [
+   "MZmine2",
+   "Optimus",
+   "OpenMS",
+   "KNIME"
+  ],
+  "dois": [
+   "10.1021/acs.jnatprod.7b00737"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "ms-vendor-documentation-extraction",
+  "name": "ms-vendor-documentation-extraction",
+  "description": "Use when you need to determine the complete set of validated instrument/vendor and acquisition mode combinations for a mass spectrometry analysis tool, when assessing whether your specific instrument platform (vendor, model, acquisition method) is supported before committing to a workflow, or when.",
+  "edam_operation": "http://edamontology.org/operation_3763",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0121"
+  ],
+  "tools": [
+   "Q-Exactive orbitrap",
+   "LipidMatch",
+   "Q-Exactive orbitrap UHPLC-HRMS/MS",
+   "Agilent Q-TOF UHPLC-HRMS/MS",
+   "Bruker Q-TOF UHPLC-HRMS/MS",
+   "SCIEX Q-TOF UHPLC-HRMS/MS"
+  ],
+  "dois": [
+   "10.1186/s12859-017-1744-3"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "ms1-feature-detection-and-annotation",
+  "name": "ms1-feature-detection-and-annotation",
+  "description": "Use when you have FIA-MS, LC-MS, or GC-MS full-scan data in mzML format and need to identify unknown molecular features by accurate mass.",
+  "edam_operation": "http://edamontology.org/operation_3637",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3370",
+   "http://edamontology.org/topic_3172"
+  ],
+  "tools": [
+   "OpenMS",
+   "SmartPeak",
+   "SmartPeakCLI",
+   "pyOpenMS",
+   "BFAIR"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.0c03421"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "ms1-feature-peak-detection-in-full-scan",
+  "name": "ms1-feature-peak-detection-in-full-scan",
+  "description": "Use when you have merged MS1 spectra (output from spectral binning/merging steps) from a full-scan FIA-MS or LC-MS acquisition and need to identify distinct molecular features before accurate mass annotation or background filtering.",
+  "edam_operation": "http://edamontology.org/operation_3291",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0091"
+  ],
+  "tools": [
+   "SmartPeak",
+   "SmartPeakGUI",
+   "SmartPeakCLI",
+   "OpenMS",
+   "pyOpenMS",
+   "BFAIR"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.0c03421"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "multi-sample-cohort-assessment",
+  "name": "multi-sample-cohort-assessment",
+  "description": "Use when when you have MS1 mass spectrometry data from multiple samples (a cohort) acquired across an instrument run or batch, and you need to identify which samples deviate from cohort norms or which ion targets show anomalous behavior.",
+  "edam_operation": "http://edamontology.org/operation_3933",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0769"
+  ],
+  "tools": [
+   "IonToolPack",
+   "PeakQC"
+  ],
+  "dois": [
+   "10.1021/jasms.4c00146"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "multidimensional-feature-detection-and-alignment",
+  "name": "multidimensional-feature-detection-and-alignment",
+  "description": "Use when when you have acquired LC-IMS-MS/MS data (mzML or mzML.gz format) from multiple samples and need to detect features that exploit simultaneous separation in m/z, drift time, and retention time to improve detection sensitivity and reduce false positives.",
+  "edam_operation": "http://edamontology.org/operation_3632",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0121"
+  ],
+  "tools": [
+   "DEIMoS",
+   "Python",
+   "conda",
+   "pip",
+   "Snakemake",
+   "ProteoWizard msconvert"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.1c05017"
+  ],
+  "techniques": [
+   "direct-infusion-MS",
+   "ion-mobility-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "multiformat-data-export-to-pdf-csv",
+  "name": "multiformat-data-export-to-pdf-csv",
+  "description": "Use when you have raw MS data in vendor formats (Agilent .d, Thermo .raw, Bruker .",
+  "edam_operation": "http://edamontology.org/operation_3957",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_3375"
+  ],
+  "tools": [
+   "Mirador",
+   "IonToolPack"
+  ],
+  "dois": [
+   "10.1021/jasms.4c00146"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "mz-retention-time-tolerance-parameter-configuration",
+  "name": "mz-retention-time-tolerance-parameter-configuration",
+  "description": "Use when when invoking Asari to process centroid mzML files for the first time in a PCPFM experiment, or when RT and m/z accuracy characteristics of your LC-MS instrument differ from the pipeline defaults (e.",
+  "edam_operation": "http://edamontology.org/operation_3767",
+  "edam_topics": [
+   "http://edamontology.org/topic_3172",
+   "http://edamontology.org/topic_0091"
+  ],
+  "tools": [
+   "Asari",
+   "Python",
+   "PCPFM"
+  ],
+  "dois": [
+   "10.1371/journal.pcbi.1011912"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "mztab-format-generation",
+  "name": "mztab-format-generation",
+  "description": "Use when after completing peak detection, MS1 feature picking, and accurate mass database search (e.g., against HMDB) on FIA-MS or LC-MS(/MS) data.",
+  "edam_operation": "http://edamontology.org/operation_3631",
+  "edam_topics": [
+   "http://edamontology.org/topic_3172",
+   "http://edamontology.org/topic_0121"
+  ],
+  "tools": [
+   "OpenMS",
+   "SmartPeak",
+   "SmartPeakCLI",
+   "pyOpenMS",
+   "BFAIR"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.0c03421"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "nontargeted-metabolomics-data-processing",
+  "name": "nontargeted-metabolomics-data-processing",
+  "description": "Use when you have raw LC-MS data in vendor or mzML format and need to systematically discover and extract all detectable metabolite features across the full retention time range, without predefined target lists.",
+  "edam_operation": "http://edamontology.org/operation_3632",
+  "edam_topics": [
+   "http://edamontology.org/topic_0091",
+   "http://edamontology.org/topic_3370",
+   "http://edamontology.org/topic_0769"
+  ],
+  "tools": [
+   "masscube",
+   "Python"
+  ],
+  "dois": [
+   "10.1038/s41467-025-60640-5"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "MS-imaging"
+  ],
+  "license_tier": "noncommercial"
+ },
+ {
+  "slug": "parameter-range-filtering-for-chromatographic-data",
+  "name": "parameter-range-filtering-for-chromatographic-data",
+  "description": "Use when you have raw MS data in instrument-native or mzML format (Agilent .d, Thermo .raw, Bruker .d) and need to isolate specific analyte regions defined by precise m/z windows, RT windows (in seconds or minutes), and/or ion mobility arrival-time windows.",
+  "edam_operation": "http://edamontology.org/operation_3695",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "Mirador",
+   "IonToolPack",
+   "PeakQuant"
+  ],
+  "dois": [
+   "10.1021/jasms.4c00146"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "peak-detection-and-mass-alignment",
+  "name": "peak-detection-and-mass-alignment",
+  "description": "Use when when you have raw LC-MS/MS data files (.mzML, .raw, or vendor formats) from multiple samples and need to identify reproducible molecular features across the cohort before annotation or statistical analysis.",
+  "edam_operation": "http://edamontology.org/operation_3215",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0121"
+  ],
+  "tools": [
+   "MZmine2",
+   "Optimus",
+   "OpenMS"
+  ],
+  "dois": [
+   "10.1021/acs.jnatprod.7b00737"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "peak-integration-quality-assessment",
+  "name": "peak-integration-quality-assessment",
+  "description": "Use when you have a metabolomic feature table (rows=features, columns=samples) with peak height and peak area measurements from chromatographic processing, and you suspect data quality issues such as misaligned features or erratic peak integration across your sample cohort.",
+  "edam_operation": "http://edamontology.org/operation_3435",
+  "edam_topics": [
+   "http://edamontology.org/topic_3172",
+   "http://edamontology.org/topic_0091"
+  ],
+  "tools": [
+   "AVIR.R",
+   "R"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.3c04046"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "peak-labeling-and-annotation",
+  "name": "peak-labeling-and-annotation",
+  "description": "Use when immediately after automatic peak detection on a raw or processed MS spectrum when you have a list of candidate peaks with m/z and intensity values but lack systematic identifiers, confidence estimates, or ranked ordering.",
+  "edam_operation": "http://edamontology.org/operation_3632",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "RapidMass",
+   "DI-MS",
+   "ASAP-MS"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.4c05062"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "plant-species-authentication-via-mass-spectrometry",
+  "name": "plant-species-authentication-via-mass-spectrometry",
+  "description": "Use when when you have mass spectrometry raw data (DI-MS or ASAP-MS format) from plant samples that are easily confused due to morphological similarity, or when you need to verify or authenticate the species identity of a plant material against a reference database.",
+  "edam_operation": "http://edamontology.org/operation_3767",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0121"
+  ],
+  "tools": [
+   "RapidMass",
+   "DI-MS",
+   "ASAP-MS"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.4c05062"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "pure-component-spectrum-extraction",
+  "name": "pure-component-spectrum-extraction",
+  "description": "Use when analyzing GC-MS data containing overlapped peaks where two or more components co-elute within the same retention time window, making direct spectral assignment impossible.",
+  "edam_operation": "http://edamontology.org/operation_3214",
+  "edam_topics": [
+   "http://edamontology.org/topic_0769",
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0121"
+  ],
+  "tools": [
+   "PyTorch",
+   "Python 3",
+   "conda",
+   "GCMSFormer"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.3c05772"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "quality-control-metric-distribution-analysis",
+  "name": "quality-control-metric-distribution-analysis",
+  "description": "Use when after composite-map peak detection has produced an unfiltered peak list with SNR, peakshape (goodness_fitting), peak_height, and prominence values.",
+  "edam_operation": "http://edamontology.org/operation_3695",
+  "edam_topics": [
+   "http://edamontology.org/topic_3172",
+   "http://edamontology.org/topic_0769",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "Python",
+   "asari peaks module",
+   "scipy.signal.find_peaks",
+   "Python (pandas, numpy, matplotlib)",
+   "JMS (Json's Metabolite Services)"
+  ],
+  "dois": [
+   "10.1038/s41467-023-39889-1"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "retention-time-prediction-modeling",
+  "name": "retention-time-prediction-modeling",
+  "description": "Use when you have a set of small-molecule compounds (e.g., from MS/MS library matching or database annotation) that require retention time validation or ranking to resolve ambiguous identifications.",
+  "edam_operation": "http://edamontology.org/operation_3803",
+  "edam_topics": [
+   "http://edamontology.org/topic_0102",
+   "http://edamontology.org/topic_3172",
+   "http://edamontology.org/topic_3407"
+  ],
+  "tools": [
+   "Retip",
+   "Retip (R package)",
+   "pyRetip (Python package)",
+   "Retiplib",
+   "rcdk / rcdklibs"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.9b05765"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "CE-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "retention-time-window-clustering",
+  "name": "retention-time-window-clustering",
+  "description": "Use when after filtering LC-MS features by statistical significance (e.g., p-value < 0.01) and you need to link individual m/z features into structural clusters representing the same metabolite in different ionization states or isotopic forms.",
+  "edam_operation": "http://edamontology.org/operation_3632",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3172",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "Python",
+   "pandas",
+   "numpy",
+   "scipy",
+   "MamsiStructSearch",
+   "peakPantheR"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.5c01327",
+   "10.1371/journal.pcbi.1011814"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "sample-group-injection-aggregation",
+  "name": "sample-group-injection-aggregation",
+  "description": "Use when when you have picked and annotated MS1 features from replicate injections of the same sample and need to produce a unified feature matrix indexed by sample (not injection).",
+  "edam_operation": "http://edamontology.org/operation_3674",
+  "edam_topics": [
+   "http://edamontology.org/topic_0091",
+   "http://edamontology.org/topic_3172"
+  ],
+  "tools": [
+   "SmartPeak",
+   "SmartPeakGUI",
+   "SmartPeakCLI",
+   "OpenMS",
+   "pyOpenMS",
+   "BFAIR"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.0c03421"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "siamese-neural-network-architecture-design",
+  "name": "siamese-neural-network-architecture-design",
+  "description": "Use when when you have pairs of mass spectrometry spectra and need to predict their molecular structural similarity as a scalar Tanimoto score in the range [0, 1].",
+  "edam_operation": "http://edamontology.org/operation_3432",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "ms2deepscore",
+   "matchms",
+   "Python",
+   "PyTorch"
+  ],
+  "dois": [
+   "10.1101/2024.03.25.586580v5"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "software-support-matrix-construction",
+  "name": "software-support-matrix-construction",
+  "description": "Use when you need to determine the full scope of hardware and methodological compatibility for a bioinformatics tool before designing an analytical workflow.",
+  "edam_operation": "http://edamontology.org/operation_3096",
+  "edam_topics": [
+   "http://edamontology.org/topic_3050",
+   "http://edamontology.org/topic_0121"
+  ],
+  "tools": [
+   "Q-Exactive orbitrap",
+   "LipidMatch",
+   "Agilent Q-TOF UHPLC-HRMS/MS",
+   "Bruker Q-TOF UHPLC-HRMS/MS",
+   "SCIEX Q-TOF UHPLC-HRMS/MS",
+   "Waters instruments"
+  ],
+  "dois": [
+   "10.1186/s12859-017-1744-3"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "spatial-correlation-filtering-in-msi",
+  "name": "spatial-correlation-filtering-in-msi",
+  "description": "Use when after identifying candidate parent–adduct mass-difference pairs (via massdiff, histogram binning, and adductMatch), apply this skill to discriminate true molecular adducts from coincidental mass matches.",
+  "edam_operation": "http://edamontology.org/operation_3695",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0121"
+  ],
+  "tools": [
+   "mass2adduct",
+   "R",
+   "Cardinal"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.0c04720"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "MS-imaging"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "species-authentication-classification-evaluation",
+  "name": "species-authentication-classification-evaluation",
+  "description": "Use when when you have high-throughput mass spectrometry data (DI-MS, ASAP-MS, LDI-MS, or other ambient ionization formats) from unknown biological samples and need to determine their species identity against a curated reference database.",
+  "edam_operation": "http://edamontology.org/operation_3767",
+  "edam_topics": [
+   "http://edamontology.org/topic_0625",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "RapidMass",
+   "DI-MS",
+   "ASAP-MS",
+   "LDI-MS"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.4c05062"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "species-candidate-ranking-from-spectral-alignment",
+  "name": "species-candidate-ranking-from-spectral-alignment",
+  "description": "Use when you have an unknown sample spectrum (m/z peaks and intensities from DI-MS, ASAP-MS, or other high-throughput mass spectrometry modalities) and a reference species database of known spectra, and you need to identify the most likely species or authenticate the sample by ranking how well each.",
+  "edam_operation": "http://edamontology.org/operation_3945",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "RapidMass"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.4c05062"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "spectral-data-normalization-and-merging",
+  "name": "spectral-data-normalization-and-merging",
+  "description": "Use when you have acquired multiple MS1 spectra over a defined acquisition time range (e.g., 0–30 s in FIA-MS) and need to combine them into a unified spectrum before feature detection.",
+  "edam_operation": "http://edamontology.org/operation_3629",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0091"
+  ],
+  "tools": [
+   "OpenMS",
+   "SmartPeak",
+   "SmartPeakCLI",
+   "pyOpenMS"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.0c03421"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "spectral-data-preprocessing",
+  "name": "spectral-data-preprocessing",
+  "description": "Use when you have raw or processed MS spectrum data (mz/intensity pairs) from direct-injection MS (DI-MS), ASAP-MS, or other ambient ionization instruments (AI-MS, LDI-MS), and you need to identify peaks of interest, assign confidence scores, and prepare the data for database matching or species.",
+  "edam_operation": "http://edamontology.org/operation_3214",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "RapidMass",
+   "DI-MS",
+   "ASAP-MS"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.4c05062"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "spectral-database-search-and-scoring",
+  "name": "spectral-database-search-and-scoring",
+  "description": "Use when you have preprocessed mass spectrometry data (peak-picked, baseline-corrected) from DI-MS, ASAP-MS, or LDI-MS instruments and need to identify unknown samples by comparing their spectral fingerprints against a validated reference database of known species or compounds.",
+  "edam_operation": "http://edamontology.org/operation_3629",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "RapidMass",
+   "DI-MS",
+   "ASAP-MS",
+   "LDI-MS"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.4c05062"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "spectral-peak-detection-and-alignment",
+  "name": "spectral-peak-detection-and-alignment",
+  "description": "Use when after noise filtering and baseline correction have been applied to mass spectrometry data (DI-MS, ASAP-MS, LDI-MS, or other high-throughput MS formats in mzML, mzXML, or vendor formats).",
+  "edam_operation": "http://edamontology.org/operation_3630",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "RapidMass",
+   "DI-MS",
+   "ASAP-MS"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.4c05062"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "spectral-quality-metrics-extraction",
+  "name": "spectral-quality-metrics-extraction",
+  "description": "Use when you have multi-sample MS1 data (from Agilent, Thermo, Bruker, or mzML formats) and need to quantify ion-level quality attributes—such as signal consistency, noise characteristics, or chromatographic stability—to either flag outlier samples or validate data fitness for downstream.",
+  "edam_operation": "http://edamontology.org/operation_3664",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0121"
+  ],
+  "tools": [
+   "IonToolPack",
+   "PeakQC",
+   "Mirador"
+  ],
+  "dois": [
+   "10.1021/jasms.4c00146"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "tandem-mass-spectrometry-mirror-plot-construction",
+  "name": "tandem-mass-spectrometry-mirror-plot-construction",
+  "description": "Use when when you have raw LC-MS or LC-IMS-MS data in instrument format (Agilent .d, Thermo .raw, Bruker .",
+  "edam_operation": "http://edamontology.org/operation_3634",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "Mirador",
+   "IonToolPack",
+   "TandemMatch"
+  ],
+  "dois": [
+   "10.1021/jasms.4c00146"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "target-list-coordinate-mapping",
+  "name": "target-list-coordinate-mapping",
+  "description": "Use when you have a CSV-formatted target list with m/z, retention time, or ion mobility identifiers and need to locate and extract peak abundances from raw MS data files (Agilent .d, Thermo .raw, Bruker .d, mzML) acquired across LC-MS, LC-IMS-MS, DDA, DIA, or direct infusion modes.",
+  "edam_operation": "http://edamontology.org/operation_3705",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "IonToolPack",
+   "PeakQuant",
+   "Mirador"
+  ],
+  "dois": [
+   "10.1021/jasms.4c00146"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "targeted-peak-extraction-ms1",
+  "name": "targeted-peak-extraction-ms1",
+  "description": "Use when you have raw MS data in a supported instrument format (Agilent .d, Thermo .raw, Bruker .d, mzML) and a predefined list of molecular targets (CSV with m/z and/or retention time) that you need to quantify.",
+  "edam_operation": "http://edamontology.org/operation_3637",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3172"
+  ],
+  "tools": [
+   "IonToolPack",
+   "PeakQuant",
+   "PeakQC",
+   "Comparador"
+  ],
+  "dois": [
+   "10.1021/jasms.4c00146"
+  ],
+  "techniques": [
+   "LC-MS",
+   "direct-infusion-MS",
+   "ion-mobility-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "technical-specification-tabulation",
+  "name": "technical-specification-tabulation",
+  "description": "Use when when you need to verify whether a specific mass spectrometry instrument platform (vendor and model), acquisition mode (e.g., targeted, ddMS2-topN, AIF, direct infusion, imaging), or file format is compatible with a lipidomics or proteomics software tool;",
+  "edam_operation": "http://edamontology.org/operation_3763",
+  "edam_topics": [
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0121"
+  ],
+  "tools": [
+   "Q-Exactive orbitrap",
+   "LipidMatch",
+   "Agilent Q-TOF UHPLC-HRMS/MS",
+   "Bruker Q-TOF UHPLC-HRMS/MS",
+   "SCIEX Q-TOF UHPLC-HRMS/MS"
+  ],
+  "dois": [
+   "10.1186/s12859-017-1744-3"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "transformation-network-topology-analysis",
+  "name": "transformation-network-topology-analysis",
+  "description": "Use when when you have pre-processed FT-ICR MS peak lists with assigned molecular formulas and wish to move beyond univariate chemical composition analysis to understand metabolic transformation pathways and hub metabolites.",
+  "edam_operation": "http://edamontology.org/operation_3441",
+  "edam_topics": [
+   "http://edamontology.org/topic_3172",
+   "http://edamontology.org/topic_0659",
+   "http://edamontology.org/topic_3407"
+  ],
+  "tools": [
+   "MetaboDirect",
+   "Python (NumPy, pandas)",
+   "R (vegan package)",
+   "Cytoscape",
+   "FT-ICR MS",
+   "KEGG database"
+  ],
+  "dois": [
+   "10.1186/s40168-023-01476-3"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "transformer-model-training",
+  "name": "transformer-model-training",
+  "description": "Use when you have a dataset of augmented simulated overlapped GC-MS peaks and need to train a Transformer model to automatically deconvolve them into pure component mass spectra.",
+  "edam_operation": "http://edamontology.org/operation_3435",
+  "edam_topics": [
+   "http://edamontology.org/topic_0625",
+   "http://edamontology.org/topic_3520",
+   "http://edamontology.org/topic_0091"
+  ],
+  "tools": [
+   "PyTorch",
+   "Python 3",
+   "conda",
+   "GCMSFormer repository"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.3c05772"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ },
+ {
+  "slug": "unknown-sample-reference-comparison",
+  "name": "unknown-sample-reference-comparison",
+  "description": "Use when you have a preprocessed unknown sample spectrum (m/z peaks and intensities) from high-throughput mass spectrometry (DI-MS, ASAP-MS, or ambient ionization methods) and need to identify the species or authenticate a sample against a curated reference database of known spectra.",
+  "edam_operation": "http://edamontology.org/operation_3502",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3520"
+  ],
+  "tools": [
+   "RapidMass"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.4c05062"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "visual-pattern-recognition-in-spectral-data",
+  "name": "visual-pattern-recognition-in-spectral-data",
+  "description": "Use when after database search algorithms have scored unknown MS samples against reference species, and you need to visually inspect and confirm species assignments or identify ambiguous classifications.",
+  "edam_operation": "http://edamontology.org/operation_3552",
+  "edam_topics": [
+   "http://edamontology.org/topic_0081",
+   "http://edamontology.org/topic_3172"
+  ],
+  "tools": [
+   "RapidMass",
+   "DI-MS",
+   "ASAP-MS"
+  ],
+  "dois": [
+   "10.1021/acs.analchem.4c05062"
+  ],
+  "techniques": [
+   "direct-infusion-MS"
+  ],
+  "license_tier": "restricted"
+ },
+ {
+  "slug": "xcms-data-import-preprocessing",
+  "name": "xcms-data-import-preprocessing",
+  "description": "Use when you have raw LC-MS or GC-MS data files from a mass spectrometer (in mzML, NetCDF, or mzXML format) and need to detect chromatographic peaks, correct m/z bias via mass calibration (e.",
+  "edam_operation": "http://edamontology.org/operation_3215",
+  "edam_topics": [
+   "http://edamontology.org/topic_0121",
+   "http://edamontology.org/topic_3370"
+  ],
+  "tools": [
+   "xcms",
+   "MSnbase",
+   "Spectra",
+   "MsExperiment",
+   "BiocParallel"
+  ],
+  "dois": [
+   "10.1021/ac051437y"
+  ],
+  "techniques": [
+   "LC-MS",
+   "GC-MS",
+   "direct-infusion-MS"
+  ],
+  "license_tier": "open"
+ }
+]

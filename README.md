@@ -187,7 +187,8 @@ The `kb` backend needs a reachable Perspicacité (`PERSPICACITE_BASE`, default
 
 | File | Contents |
 |---|---|
-| `skills/<slug>/SKILL.md` | one evidence-grounded skill each (frontmatter: EDAM IRIs, `derived_from` DOIs, `evidence_spans`, `tools`, `attribution`) |
+| `leaves/<slug>/SKILL.md` | one evidence-grounded skill each (frontmatter: EDAM IRIs, `derived_from` DOIs, `evidence_spans`, `tools`, `attribution`). Shipped as data and retrieved on demand, so installing does not charge the corpus to the session's context. |
+| `skills/_router/SKILL.md` | the only advertised skill — searches the corpus and points at the leaf to read |
 | `tools/<slug>.yaml` | deduplicated software-tool records with EDAM + source DOIs |
 | `skills_index.json` / `tools_index.json` | machine search indexes |
 | `kb_bundle.json` | skill → source-paper KB slugs **+ `repo_urls`** (grounding map) |

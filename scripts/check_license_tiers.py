@@ -10,6 +10,15 @@ import sys
 import yaml
 
 from scripts.license_tier import ack_required, load_map
+# Invoked by path (`python scripts/x.py`), only `scripts/` lands on sys.path, so
+# the repo root has to be added before the sibling package can be imported.
+if __package__ in (None, ""):
+    import os.path as _p
+    import sys as _sys
+
+    _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
+
+from scripts import layout
 
 # The tier vocabulary has one home: governance/license_tiers.yaml. A hand-copied
 # set here silently rejects any tier added there.
@@ -34,7 +43,7 @@ def check_collection(collection_dir) -> list[str]:
         else:
             slug_to_index_tier[e.get("slug")] = e.get("license_tier")
 
-    for md in (d / "skills").glob("*/SKILL.md"):
+    for md in layout.iter_skill_md(d):
         text = md.read_text(encoding="utf-8")
         if not text.startswith("---\n"):
             continue

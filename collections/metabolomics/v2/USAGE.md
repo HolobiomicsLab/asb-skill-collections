@@ -58,11 +58,15 @@ jq '.[] | select(.slug=="<slug>") | .tools' skills_index.json
                                                             # direct-infusion · ms-generic
 ```
 
-Skills are auto-discovered from `skills/<slug>/SKILL.md` and become available to
-the agent. The entry point is `skills/_router/SKILL.md`. The full plugin loads
-all 5,865 skills eagerly; the technique packs are much smaller. Packs **overlap**
-(a multi-technique skill is in several), so install one full plugin *or* a few
-packs — not both — to avoid duplicate skills in context.
+Installing costs almost nothing in context. A plugin host advertises every
+skill under `skills/`, so the corpus instead ships in **`leaves/<slug>/SKILL.md`**
+and only `skills/_router/SKILL.md` is advertised — roughly 150 tokens rather than
+the ~450,000 the full corpus would cost. The router searches the corpus on demand
+and reads the one skill it needs.
+
+Packs **overlap** (a multi-technique skill is in several). They are now cheap
+enough to combine, but installing the full plugin plus a pack still gives you two
+routers over overlapping corpora — prefer one full plugin *or* a few packs.
 
 ### Any other agent / IDE (IDE-agnostic)
 
@@ -85,7 +89,7 @@ routing instruction. Because these UIs cap how many files you can upload, **do
 not upload all 5,865 skills**. Upload instead:
 
 1. `skills_index.json` + `tools_index.json` (the searchable catalogue), and
-2. only the handful of `skills/<slug>/SKILL.md` files relevant to your work
+2. only the handful of `leaves/<slug>/SKILL.md` files relevant to your work
    (find them first with the search in §2, then download those files).
 
 Then paste this **routing instruction** into the assistant's
@@ -161,7 +165,7 @@ jq -r '.[] | select(.description | test("library match";"i")) | .slug' skills_in
 
 ## 3. Use — apply the skill
 
-Read `skills/<slug>/SKILL.md`: the body is the procedure; the frontmatter lists
+Read `leaves/<slug>/SKILL.md`: the body is the procedure; the frontmatter lists
 `tools` (install/invoke targets), `derived_from` (source DOIs), and
 `evidence_spans` (verbatim anchors). Use `tools_index.json` for canonical
 install URLs.

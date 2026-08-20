@@ -64,6 +64,15 @@ from datetime import datetime, timezone
 from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any, Iterable
+# Invoked by path (`python scripts/x.py`), only `scripts/` lands on sys.path, so
+# the repo root has to be added before the sibling package can be imported.
+if __package__ in (None, ""):
+    import os.path as _p
+    import sys as _sys
+
+    _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
+
+from scripts import layout
 
 try:
     import yaml
@@ -301,7 +310,16 @@ _NORMALIZED_OA_TIERS = {_normalize_access_type(t) for t in _OA_TIERS} | {"green-
 # `access.verified_via` is a constant stamp, not evidence — it reads
 # `git_clone_succeeded_at_build` on entries that have no repo_url at all.
 _REPO_OA_TIERS = {"repo-oa", "repo-permissive", "repo-copyleft"}
-_NORMALIZED_OA_TIERS = _NORMALIZED_OA_TIERS | _REPO_OA_TIERS
+
+# link-only: the DOI resolves and is citable, but nothing was cloned and no
+# reuse right is claimed (CONTENT_POLICY.md §3).  It is the honest tier for a
+# source with no public repository -- a paywalled book, a journal placeholder,
+# an archived deposit we did not bind to source.  Because it asserts no clone,
+# it must NOT carry `access.verified_via`; the inverse of the repo-oa evidence
+# rule is enforced below.  Skills grounded solely on link-only entries carry a
+# weaker `grounding_tier`, they are not silently presented as repo-grounded.
+_LINK_ONLY_TIERS = {"link-only"}
+_NORMALIZED_OA_TIERS = _NORMALIZED_OA_TIERS | _REPO_OA_TIERS | _LINK_ONLY_TIERS
 
 
 def _read_frontmatter(text: str) -> tuple[dict[str, Any], str]:
@@ -346,16 +364,12 @@ def _similarity_ratio(a: str, b: str) -> float:
 
 
 def _iter_skill_md(collection_dir: Path) -> Iterable[Path]:
-    skills_dir = collection_dir / "skills"
-    root = skills_dir if skills_dir.is_dir() else collection_dir
-    for p in sorted(root.rglob("SKILL.md")):
-        # Skip infrastructure skills in `_`-prefixed dirs (e.g. `_router`),
-        # consistent with collect_metabolomics_collection.py's `_`-skip: they
-        # are routing/entry scaffolds, not paper-derived skills, so the
-        # provenance / verbatim gates do not apply to them.
-        if any(part.startswith("_") for part in p.relative_to(root).parts[:-1]):
-            continue
-        yield p
+    # Covers both layouts (leaves/ + skills/, or skills/ alone) and skips
+    # infrastructure skills in `_`-prefixed dirs, consistent with
+    # collect_metabolomics_collection.py's `_`-skip: they are routing/entry
+    # scaffolds, not paper-derived skills, so the provenance / verbatim gates
+    # do not apply to them.
+    return layout.iter_skill_md(collection_dir)
 
 
 def _collect_evidence_spans(fm: dict[str, Any], body: str) -> list[dict[str, Any]]:
@@ -389,6 +403,21 @@ def _collect_evidence_spans(fm: dict[str, Any], body: str) -> list[dict[str, Any
             if qm:
                 _push(qm.group(1), None, None)
     return spans
+
+
+def _skill_repo_url(fm: dict[str, Any]) -> str:
+    """The repository a skill grounds on, if it declares one.
+
+    Repository-only grounding (CONTENT_POLICY.md §3) makes a cloned repository
+    a first-class provenance basis, not a lesser one: a skill describing a tool
+    whose code is public is grounded on that code even when the tool has no
+    method paper. Only a non-empty http(s) URL counts as evidence.
+    """
+    for source in (fm.get("metadata") or {}, fm):
+        raw = str((source or {}).get("repo_url") or "").strip()
+        if raw.startswith(("https://", "http://")):
+            return raw
+    return ""
 
 
 def _skill_dois(fm: dict[str, Any]) -> list[str]:
@@ -525,6 +554,16 @@ def check_access_tier(corpus: dict[str, Any], require_open_access: bool = True) 
                 f"{doi}: access.type='{raw}' (normalized '{norm}') is not open-access. "
                 f"v0 (require_open_access=true) permits only {sorted(_OA_TIERS)} "
                 "(hyphen/underscore variants accepted; 'green'→'green-oa').",
+                doi=doi,
+                access_type=raw,
+            )
+        stamp = ((paper.get("access") or {}).get("verified_via") or "").strip()
+        if norm in _LINK_ONLY_TIERS and stamp:
+            res.add(
+                FAIL,
+                f"{doi}: access.type='{raw}' claims no clone, but "
+                f"access.verified_via='{stamp}' still asserts one. A link-only "
+                "entry must carry no clone stamp (CONTENT_POLICY.md §3).",
                 doi=doi,
                 access_type=raw,
             )
@@ -788,7 +827,7 @@ def check_provenance(collection_dir: Path) -> CheckResult:
         name="provenance_doi_license",
         gates=[8],
         hard_gate=True,
-        summary="Every skill carries a source DOI + a license SPDX tag.",
+        summary="Every skill carries provenance (source DOI or repository) + a license SPDX tag.",
     )
     n_skills = 0
     for sk_md in _iter_skill_md(collection_dir):
@@ -800,10 +839,12 @@ def check_provenance(collection_dir: Path) -> CheckResult:
             res.add(FAIL, f"{rel}: unreadable ({exc}).", file=rel)
             continue
         dois = _skill_dois(fm)
-        if not dois:
+        if not dois and not _skill_repo_url(fm):
             res.add(
                 FAIL,
-                f"{rel}: no source DOI (provenance.source_papers / derived_from / doi).",
+                f"{rel}: no provenance — needs a source DOI "
+                "(provenance.source_papers / derived_from / doi) or, for a tool with "
+                "no method paper, the repository it grounds on (metadata.repo_url).",
                 file=rel,
             )
         lic = _skill_license(fm)

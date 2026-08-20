@@ -26,8 +26,10 @@ software tools for computational LC-MS/MS; tag `metabolomics-v0.1.0`).
 /plugin install metabolomics@asb-skill-collections
 ```
 
-Skills are auto-discovered from `collections/metabolomics/v2/skills/<slug>/SKILL.md`;
-the entry point is `skills/_router/SKILL.md`. Nothing else to configure.
+The entry point is `skills/_router/SKILL.md` — the only leaf-facing skill a host
+advertises. The corpus ships beside it as data at
+`collections/metabolomics/v2/leaves/<slug>/SKILL.md` and is read on demand, so
+installing costs negligible context. Nothing else to configure.
 
 ### OpenAI Codex — clone + reference (AGENTS.md aware)
 
@@ -37,14 +39,14 @@ git clone https://github.com/HolobiomicsLab/asb-skill-collections.git
 ```
 
 Codex reads this `AGENTS.md` automatically. The skills are plain Markdown — to
-use one, open `collections/metabolomics/v2/skills/<slug>/SKILL.md` and follow it.
+use one, open `collections/metabolomics/v2/leaves/<slug>/SKILL.md` and follow it.
 Start from the search step below.
 
 ### GitHub Copilot — repo instructions
 
 Clone the repo (or add it to your workspace). Copilot reads
 [`.github/copilot-instructions.md`](.github/copilot-instructions.md), which
-points here. The skills are Markdown files under `collections/metabolomics/v2/skills/`.
+points here. The skills are Markdown files under `collections/metabolomics/v2/leaves/`.
 
 ### Any other agent — direct consumption
 
@@ -55,7 +57,7 @@ no build step.
 ### Chat assistants via the web UI (Claude · ChatGPT · Mistral)
 
 For end users without a CLI: upload `skills_index.json` + `tools_index.json` and
-your chosen `skills/<slug>/SKILL.md` files as the assistant's **knowledge**
+your chosen `leaves/<slug>/SKILL.md` files as the assistant's **knowledge**
 (Claude *Projects*, ChatGPT *Custom GPT / Project*, Mistral *Agent / Library*),
 then paste a short routing instruction. Don't upload all 5,865 skills — upload
 the indexes plus the few skills you need. Full steps:
@@ -83,7 +85,7 @@ jq -r '.[] | select(.description | test("library match";"i")) | .slug' \
   collections/metabolomics/v2/skills_index.json
 ```
 
-**2. Apply** — read `skills/<slug>/SKILL.md`. Its body is the procedure; its
+**2. Apply** — read `leaves/<slug>/SKILL.md`. Its body is the procedure; its
 frontmatter lists `tools` (install/invoke targets), `derived_from` (source DOIs),
 and `evidence_spans` (verbatim anchors). Use `tools_index.json` for canonical
 install URLs.

@@ -5,6 +5,9 @@ license: CC-BY-4.0
 metadata:
   role: meta
   delegates_to: _router
+derived_from:
+- doi: 10.5281/zenodo.20794027
+  title: ASB Metabolomics Skill Collection v2 (metabolomics-v0.1.0)
 schema_version: 0.2.0
 ---
 

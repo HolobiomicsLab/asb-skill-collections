@@ -1,16 +1,17 @@
 {
   "schema": "asbb-release-gate/1.0",
-  "generated_at": "2026-06-16T07:50:46.281132+00:00",
+  "generated_at": "2026-08-19T09:33:08.983743+00:00",
   "collection_dir": "collections/metabolomics/v1",
   "corpus_path": "collections/metabolomics/v1/corpus.yaml",
   "mode": "strict",
   "strict": true,
-  "promote_logic_source": "agentic_science_builder.release.promote",
+  "promote_logic_source": "vendored-fallback",
   "policy": {
     "oa_tiers": [
       "diamond",
       "gold-oa",
       "green-oa",
+      "link-only",
       "oa",
       "open-access",
       "repo-copyleft",
@@ -22,7 +23,7 @@
     "text_field_cap": 300,
     "ngram_jaccard_threshold": 0.3,
     "similarity_ratio_threshold": 0.92,
-    "pii_config_version": "2026-06-15.1",
+    "pii_config_version": "2026-07-10.2",
     "require_open_access": true
   },
   "overall_status": "pass",
@@ -72,7 +73,7 @@
         6
       ],
       "hard_gate": true,
-      "summary": "Two-tier PII / dual-use scan of verbatim quote spans (pii_config=2026-06-15.1).  (11122 spans scanned)",
+      "summary": "Two-tier PII / dual-use scan of verbatim quote spans (pii_config=2026-07-10.2).  (11122 spans scanned)",
       "n_findings": 0,
       "details": []
     },
@@ -83,7 +84,7 @@
         8
       ],
       "hard_gate": true,
-      "summary": "Every skill carries a source DOI + a license SPDX tag.  (1485 skills checked)",
+      "summary": "Every skill carries provenance (source DOI or repository) + a license SPDX tag.  (1485 skills checked)",
       "n_findings": 0,
       "details": []
     }

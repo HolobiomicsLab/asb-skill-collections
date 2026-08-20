@@ -3,6 +3,9 @@ import json, pathlib, sys
 import pytest, yaml
 
 sys.path.insert(0, str(pathlib.Path(__file__).parent.parent))
+
+from scripts import layout
+
 FIX = pathlib.Path(__file__).parent / "fixtures" / "mini_grounding"
 
 
@@ -81,7 +84,7 @@ def test_real_lcms_pack_builds(tmp_path):
     b = json.loads((unit / "kb_bundle.json").read_text())
     assert b["skills"] and (unit / "commands" / "ground.md").exists()
     # binder covers only this pack's skills
-    pack_slugs = {d.name for d in (unit / "skills").iterdir() if d.is_dir()}
+    pack_slugs = {d.name for d in layout.slug_dirs(unit)}
     assert set(b["skills"]).issubset(pack_slugs)
 
 

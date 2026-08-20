@@ -29,6 +29,7 @@ Usage:
 from __future__ import annotations
 import argparse, json, re, shutil
 from pathlib import Path
+from scripts import layout
 
 import yaml
 
@@ -52,7 +53,7 @@ def _iter_build_dirs(builds_root: Path):
 
 
 def _skill_slugs(collection_dir: Path) -> set[str]:
-    return {p.parent.name for p in (collection_dir / "skills").glob("*/SKILL.md")}
+    return layout.slugs(collection_dir)
 
 
 def _load_assembler(corpus_path: Path):
