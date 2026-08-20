@@ -1,4 +1,7 @@
-import pathlib, sys, textwrap, yaml
+import pathlib, sys, textwrap
+
+import pytest
+import yaml
 sys.path.insert(0, str(pathlib.Path(__file__).parent.parent))
 from scripts import derive_license_tiers as d
 
@@ -169,3 +172,187 @@ def test_passing_mention_of_noncommercial_does_not_become_nc():
 def test_custom_noncommercial_without_cc_phrases_is_unclassified():
     txt = "This software is provided for noncommercial research purposes only."
     assert d.classify_license_text(txt) is None     # falls through -> file-present-unclassified upstream
+
+
+# --- R packages declare their licence in DESCRIPTION, not LICENSE ------------
+
+@pytest.mark.parametrize("field,expected", [
+    ("MIT + file LICENSE", "MIT"),
+    ("GPL-3", "GPL-3.0-only"),
+    ("BSD_3_clause + file LICENSE", "BSD-3-Clause"),
+    ("Artistic-2.0", "Artistic-2.0"),
+    ("mit", "MIT"),
+])
+def test_an_r_description_licence_field_resolves(field, expected):
+    """`usethis::use_mit_license()` writes a LICENSE holding only YEAR and
+    COPYRIGHT HOLDER; the licence itself is only ever in DESCRIPTION."""
+    assert d.spdx_from_r_description(f"Package: x\nLicense: {field}\n") == expected
+
+
+@pytest.mark.parametrize("text", [
+    "Package: x\nLicense: file LICENSE\n",   # names a file, declares nothing
+    "Package: x\n",                          # no License field at all
+    "Package: x\nLicense: Some Bespoke Academic Terms\n",
+    "",
+])
+def test_an_r_description_that_declares_nothing_returns_none(text):
+    """The other side. A guess here would stamp a tier on an unread licence."""
+    assert d.spdx_from_r_description(text) is None
+
+
+def test_the_r_path_only_runs_when_the_licence_text_could_not_be_read():
+    """It must not override a LICENSE file the classifier *did* understand."""
+    out = d.detect_license(
+        "o", "r", None,
+        _fetch_api=lambda *a: None,
+        _contents=lambda *a: ["LICENSE", "DESCRIPTION"],
+        _fetch_file=lambda o, r, name, t: (
+            "Permission is hereby granted, free of charge" if name == "LICENSE"
+            else "License: GPL-3\n"),
+    )
+    assert out == ("MIT", "license-file")
+
+
+def test_an_r_stub_licence_is_rescued_by_the_description():
+    out = d.detect_license(
+        "o", "r", None,
+        _fetch_api=lambda *a: None,
+        _contents=lambda *a: ["LICENSE", "DESCRIPTION"],
+        _fetch_file=lambda o, r, name, t: (
+            "YEAR: 2024\nCOPYRIGHT HOLDER: someone\n" if name == "LICENSE"
+            else "Package: x\nLicense: MIT + file LICENSE\n"),
+    )
+    assert out == ("MIT", "r-description")
+
+
+def test_a_repo_with_no_description_still_reports_the_stub_honestly():
+    out = d.detect_license(
+        "o", "r", None,
+        _fetch_api=lambda *a: None,
+        _contents=lambda *a: ["LICENSE"],
+        _fetch_file=lambda *a: "YEAR: 2024\nCOPYRIGHT HOLDER: someone\n",
+    )
+    assert out == (None, "file-present-unclassified")
+
+
+def test_a_repo_with_no_licence_file_at_all_is_unchanged():
+    out = d.detect_license("o", "r", None, _fetch_api=lambda *a: None,
+                           _contents=lambda *a: [], _fetch_file=lambda *a: "")
+    assert out == (None, "none")
+
+
+def test_an_entry_with_no_repository_keeps_what_the_paper_resolver_established(tmp_path):
+    """Both scripts write license_tier / access.license / license_detection.
+
+    Only one of them has evidence for any given entry: this one reads a code
+    repository, `resolve_paper_license` reads the DOI registry. Overwriting a
+    registry-established CC-BY with `restricted` because there is no repo to
+    read is how 45 resolved licences got destroyed in one run.
+    """
+    c = tmp_path / "corpus.yaml"
+    c.write_text(textwrap.dedent('''
+        papers:
+        - name: from-registry
+          doi: 10.1/a
+          repo_url: ""
+          access: {license: CC-BY-4.0, type: open-access}
+          license_tier: open
+          license_detection: crossref-paper
+    ''').strip() + "\n", encoding="utf-8")
+    d.apply_to_corpus(c, token=None, _detect=lambda *a, **k: (None, "none"))
+    entry = yaml.safe_load(c.read_text())["papers"][0]
+    assert entry["license_tier"] == "open"
+    assert entry["access"]["license"] == "CC-BY-4.0"
+    assert entry["license_detection"] == "crossref-paper"
+
+
+def test_an_entry_with_a_repository_is_still_derived(tmp_path):
+    """The other side: skipping too much would make the script a no-op."""
+    c = tmp_path / "corpus.yaml"
+    c.write_text(textwrap.dedent('''
+        papers:
+        - name: from-repo
+          doi: 10.1/b
+          repo_url: https://github.com/o/r
+          access: {}
+          license_tier: restricted
+          license_detection: none
+    ''').strip() + "\n", encoding="utf-8")
+    d.apply_to_corpus(c, token=None, _detect=lambda *a, **k: ("MIT", "github-api"))
+    entry = yaml.safe_load(c.read_text())["papers"][0]
+    assert entry["license_tier"] == "open"
+    assert entry["license_detection"] == "github-api"
+
+
+def test_a_failed_lookup_never_erases_an_established_licence(tmp_path):
+    """Fifteen `readme-llm` licences were wiped by one re-run before this guard.
+
+    The GitHub API and the LICENSE text both came back empty, and the empty
+    answer was written straight over a licence somebody had already read.
+    """
+    c = tmp_path / "corpus.yaml"
+    c.write_text(textwrap.dedent('''
+        papers:
+        - name: read-from-readme
+          doi: 10.1/a
+          repo_url: https://github.com/o/r
+          access: {license: LGPL-3.0}
+          license_tier: open
+          license_detection: readme-llm
+    ''').strip() + "\n", encoding="utf-8")
+    d.apply_to_corpus(c, token=None, _detect=lambda *a, **k: (None, "none"))
+    entry = yaml.safe_load(c.read_text())["papers"][0]
+    assert entry["access"]["license"] == "LGPL-3.0"
+    assert entry["license_detection"] == "readme-llm"
+
+
+def test_a_failed_lookup_may_still_overwrite_an_unestablished_one(tmp_path):
+    """The other side: a `none` entry has nothing to protect, and pinning it
+    would freeze the corpus against every future improvement."""
+    c = tmp_path / "corpus.yaml"
+    c.write_text(textwrap.dedent('''
+        papers:
+        - name: never-established
+          doi: 10.1/b
+          repo_url: https://github.com/o/r
+          access: {license: null}
+          license_tier: restricted
+          license_detection: none
+    ''').strip() + "\n", encoding="utf-8")
+    d.apply_to_corpus(c, token=None, _detect=lambda *a, **k: (None, "file-present-unclassified"))
+    assert yaml.safe_load(c.read_text())["papers"][0]["license_detection"] == "file-present-unclassified"
+
+
+def test_a_successful_lookup_still_updates_an_established_licence(tmp_path):
+    """And a real answer must always win, or the corpus can never be corrected."""
+    c = tmp_path / "corpus.yaml"
+    c.write_text(textwrap.dedent('''
+        papers:
+        - name: now-known-properly
+          doi: 10.1/c
+          repo_url: https://github.com/o/r
+          access: {license: BSD}
+          license_tier: open
+          license_detection: readme-llm
+    ''').strip() + "\n", encoding="utf-8")
+    d.apply_to_corpus(c, token=None, _detect=lambda *a, **k: ("Apache-2.0", "github-api"))
+    entry = yaml.safe_load(c.read_text())["papers"][0]
+    assert entry["access"]["license"] == "Apache-2.0"
+    assert entry["license_detection"] == "github-api"
+
+
+@pytest.mark.parametrize("field,expected", [
+    ("GPL (>= 2)", "GPL-2.0-or-later"),
+    ("GPL (>= 3)", "GPL-3.0-or-later"),
+    ("LGPL (>= 2.1)", "LGPL-2.1-or-later"),
+    ("AGPL (>= 3)", "AGPL-3.0-or-later"),
+])
+def test_an_r_version_floor_is_kept_not_discarded(field, expected):
+    """`GPL (>= 2)` is "version 2 or later". Dropping the floor and mapping the
+    bare family would record a version the package never declared."""
+    assert d.spdx_from_r_description(f"License: {field}\n") == expected
+
+
+def test_a_version_floor_on_a_non_versioned_family_is_ignored():
+    """Only the GPL families carry a meaningful floor; MIT has no versions."""
+    assert d.spdx_from_r_description("License: MIT (>= 2)\n") == "MIT"

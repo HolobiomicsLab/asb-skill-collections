@@ -11,6 +11,12 @@ import yaml
 
 _DEFAULT_MAP = pathlib.Path(__file__).resolve().parent.parent / "governance" / "license_tiers.yaml"
 
+# What a detector reports when it could not establish a licence. Shared, because
+# two scripts write the same fields from different evidence -- a repository and a
+# DOI registry -- and each must be able to tell "unasked" from "answered". A
+# failed lookup must never overwrite a successful one.
+UNESTABLISHED_DETECTIONS = frozenset({None, "", "none", "file-present-unclassified"})
+
 
 def load_map(path: pathlib.Path | None = None) -> dict:
     """Load the SPDX-to-tier governance map (governance/license_tiers.yaml)."""
