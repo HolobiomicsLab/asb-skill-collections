@@ -16,6 +16,7 @@ metadata:
   - LIQUID
   - LIPID MAPS
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac706
   title: ADViSELipidomics

@@ -12,6 +12,7 @@ metadata:
   tools:
   - molDiscovery
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-021-23986-0
   title: moldiscovery

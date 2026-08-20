@@ -16,6 +16,7 @@ metadata:
     requires_ack: true
     ref: Masster Noncommercial and Commercial Services License 1.0.0
     url: https://github.com/zamboni-lab/masster-dist/blob/main/LICENSE
+  provenance_tier: repository
 schema_version: 0.2.0
 ---
 

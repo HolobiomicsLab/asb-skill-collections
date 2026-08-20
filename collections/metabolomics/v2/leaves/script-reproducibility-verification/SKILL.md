@@ -15,6 +15,7 @@ metadata:
   - R
   - PaIRKAT SimulationFunctions
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2021.04.23.440821v1
   title: PaIRKAT

@@ -19,6 +19,7 @@ metadata:
       (Wishart Lab).
     url: https://bitbucket.org/wishartlab/classyfire_api.git
   license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-016-0174-y
   title: ClassyFire

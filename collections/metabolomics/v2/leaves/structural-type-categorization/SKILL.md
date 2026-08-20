@@ -15,6 +15,7 @@ metadata:
   - webchem
   - uafR
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr

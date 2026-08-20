@@ -25,6 +25,7 @@ metadata:
   techniques:
   - LC-MS
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst

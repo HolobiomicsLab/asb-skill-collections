@@ -21,6 +21,7 @@ metadata:
   - LC-MS
   - ion-mobility-MS
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.09.08.556930
   title: BAGO

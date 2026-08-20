@@ -17,6 +17,7 @@ metadata:
   - LC-MS
   - MS-imaging
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART

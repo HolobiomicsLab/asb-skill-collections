@@ -21,6 +21,7 @@ metadata:
     requires_ack: true
     ref: CC-BY-NC-SA-4.0
     url: WandeRum/GSimp
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp

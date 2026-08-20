@@ -16,6 +16,7 @@ metadata:
   techniques:
   - LC-MS
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.07.06.547963v1
   title: Mass2SMILES

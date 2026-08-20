@@ -11,6 +11,7 @@ metadata:
   - Galaxy Genomics Framework
   - SECIMTools suite
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s12859-018-2134-1
   title: SECIMTools

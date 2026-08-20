@@ -14,6 +14,7 @@ metadata:
   - npm
   - OpenAPI specification
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41589-020-00724-z
   title: pairedomicsdatapla

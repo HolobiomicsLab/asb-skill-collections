@@ -15,6 +15,7 @@ metadata:
   techniques:
   - mass-spectrometry
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey

@@ -16,6 +16,7 @@ metadata:
   - Static code analysis tools (e.g., ast module in Python, or javac for Java)
   - Graphviz or NetworkX (Python)
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma

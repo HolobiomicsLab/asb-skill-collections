@@ -13,6 +13,7 @@ metadata:
   - antiSMASH v7.0.0
   - PFAM 35.0
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/gigascience/giaa154
   title: BiG-SLiCE

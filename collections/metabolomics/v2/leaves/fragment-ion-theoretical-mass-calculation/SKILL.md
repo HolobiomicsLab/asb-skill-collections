@@ -15,6 +15,7 @@ metadata:
   - LC-MS
   - NMR
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-59683-5
   title: LipidIN

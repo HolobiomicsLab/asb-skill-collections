@@ -14,6 +14,7 @@ metadata:
   - PyTorch
   - Hugging Face Transformers
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.48550/arxiv.2510.20615
   title: MS-BART

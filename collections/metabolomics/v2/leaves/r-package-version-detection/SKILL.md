@@ -13,6 +13,7 @@ metadata:
   - metaMS
   - DaDIA
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c05022
   title: DaDIA

@@ -16,6 +16,7 @@ metadata:
   - Git
   - Docker
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41589-019-0400-9
   title: BiG-SCAPE biosynthetic diversity

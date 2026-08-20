@@ -14,6 +14,7 @@ metadata:
   techniques:
   - NMR
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.estlett.5c00284
   title: MoleTrans

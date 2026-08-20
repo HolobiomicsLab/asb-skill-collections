@@ -17,6 +17,7 @@ metadata:
   - rasIntegration.py
   - constraint-based stoichiometric metabolic models (ENGRO2)
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE

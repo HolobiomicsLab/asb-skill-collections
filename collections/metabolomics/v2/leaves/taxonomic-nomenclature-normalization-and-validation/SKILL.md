@@ -20,6 +20,7 @@ metadata:
   - 5_addingOTL.R
   - Kotlin
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus

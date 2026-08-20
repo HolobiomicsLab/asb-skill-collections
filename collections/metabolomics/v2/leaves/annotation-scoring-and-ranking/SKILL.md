@@ -18,6 +18,7 @@ metadata:
   - LC-MS
   - NMR
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra

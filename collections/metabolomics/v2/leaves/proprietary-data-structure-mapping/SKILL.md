@@ -18,6 +18,7 @@ metadata:
   - LC-MS
   - ion-mobility-MS
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00313
   title: MZA

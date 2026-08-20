@@ -15,6 +15,7 @@ metadata:
   techniques:
   - MS-imaging
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.09.22.677919v1
   title: DIMPLE

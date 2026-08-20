@@ -17,6 +17,7 @@ metadata:
   - BOA
   - SPAdes / metaSPAdes
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator

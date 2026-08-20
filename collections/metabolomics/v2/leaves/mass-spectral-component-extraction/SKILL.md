@@ -15,6 +15,7 @@ metadata:
   techniques:
   - GC-MS
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41587-020-0700-3
   title: mshub

@@ -16,6 +16,7 @@ metadata:
   techniques:
   - NMR
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo11030163
   title: mwtab Python Library for RESTful Access

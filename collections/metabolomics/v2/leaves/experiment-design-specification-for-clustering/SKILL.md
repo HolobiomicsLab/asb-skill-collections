@@ -15,6 +15,7 @@ metadata:
   - dynamicTreeCut
   - XCMS
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust

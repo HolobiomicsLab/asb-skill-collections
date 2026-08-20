@@ -16,6 +16,7 @@ metadata:
   - LC-MS
   - GC-MS
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari

@@ -15,6 +15,7 @@ metadata:
   techniques:
   - mass-spectrometry
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.08.28.672951v2
   title: EnrichMET

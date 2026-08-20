@@ -13,6 +13,7 @@ metadata:
   - Python
   - Jupyter
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1009105
   title: ORA

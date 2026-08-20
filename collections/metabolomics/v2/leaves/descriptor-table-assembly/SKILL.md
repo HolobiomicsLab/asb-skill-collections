@@ -16,6 +16,7 @@ metadata:
   - BitterPredict.m
   - RDKit (implied from workflow)
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jafc.3c09767
   title: bittermass

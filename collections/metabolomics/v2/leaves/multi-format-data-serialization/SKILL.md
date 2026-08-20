@@ -19,6 +19,7 @@ metadata:
   - dendextend
   - kableExtra
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac059
   title: Metaboprep

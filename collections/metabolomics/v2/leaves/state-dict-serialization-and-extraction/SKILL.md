@@ -13,6 +13,7 @@ metadata:
   - PyTorch
   - FIDDLE
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

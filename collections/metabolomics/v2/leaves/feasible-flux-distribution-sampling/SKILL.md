@@ -28,6 +28,7 @@ metadata:
   - GLPK
   - MATLAB (optional)
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
