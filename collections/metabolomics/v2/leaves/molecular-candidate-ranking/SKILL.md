@@ -14,7 +14,7 @@ metadata:
   - ChemEmbed
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.02.07.637102v1
   title: ChemEmbed
@@ -43,7 +43,6 @@ attribution:
 
 # molecular-candidate-ranking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank reference database molecules by similarity to CNN-predicted molecular embeddings to identify the most likely candidate structures. This skill bridges model prediction and molecule identification by filtering and ordering matches using distance metrics.

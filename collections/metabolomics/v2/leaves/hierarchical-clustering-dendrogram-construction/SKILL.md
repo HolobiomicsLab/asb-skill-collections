@@ -15,7 +15,7 @@ metadata:
   - metaboprep
   - dendextend
   - ggplot2
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac059
   title: Metaboprep
@@ -44,7 +44,6 @@ attribution:
 
 # hierarchical-clustering-dendrogram-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a hierarchical dendrogram of metabolite features to identify correlated metabolites and assess feature independence within a metabolomics dataset. This skill is essential for quality control workflows to detect redundant or co-regulated features and inform outlier detection thresholds.

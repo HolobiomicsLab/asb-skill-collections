@@ -13,7 +13,7 @@ metadata:
   - MsBackendRawFileReader
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -49,7 +49,6 @@ attribution:
 
 # retention-time-index-calibration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calibrate observed LC retention times against internal retention time (iRT) standards by fitting a linear regression model to map MS scan retention times to iRT scores, enabling downstream RT-based peptide identification and method validation. This skill establishes a quantitative RT–iRT relationship for quality control and cross-run alignment in Orbitrap proteomics workflows.

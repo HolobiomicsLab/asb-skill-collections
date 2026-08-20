@@ -18,7 +18,7 @@ metadata:
   - data.table
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
@@ -52,7 +52,6 @@ attribution:
 
 # feature-wise-spectrum-count-aggregation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify and aggregate MS/MS spectrum counts per metabolomic feature before and after applying TIC-based filtering to assess the efficacy of spectral denoising. This skill validates that quality-control filters (e.g., top 80% TIC cutoff) reduce spectrum redundancy consistently across features.

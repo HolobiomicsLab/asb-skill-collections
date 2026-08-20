@@ -16,7 +16,7 @@ metadata:
   - baseline_corr
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
@@ -50,7 +50,6 @@ attribution:
 
 # peak-feature-retention-time-alignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align peak retention times across preprocessed 2D gas chromatography samples to a reference chromatogram using 2D correlation optimized warping (2DCOW), enabling accurate feature matching and downstream multivariate analysis. This skill corrects for instrumental and chemical drift that causes retention time shifts between chromatographic runs.

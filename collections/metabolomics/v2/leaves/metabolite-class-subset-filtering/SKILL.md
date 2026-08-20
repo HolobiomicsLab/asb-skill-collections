@@ -14,7 +14,7 @@ metadata:
   - count_fold_changes
   - ra_table
   - R base subset / logical indexing
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -43,7 +43,6 @@ attribution:
 
 # metabolite-class-subset-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter a metabolomics summary statistics dataframe to isolate metabolites belonging to a specific compound class and meeting statistical significance thresholds (padj ≤ 0.05). This subset becomes the basis for downstream frequency counting and visualization of altered metabolites within that class.

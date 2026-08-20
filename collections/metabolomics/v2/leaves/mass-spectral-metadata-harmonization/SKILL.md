@@ -24,7 +24,7 @@ metadata:
   - future / future.apply
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -59,7 +59,6 @@ attribution:
 
 # mass-spectral-metadata-harmonization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Harmonize and standardize metadata fields (SMILES, retention indices, polarity, molecular formula) across heterogeneous EI and MS/MS mass spectral libraries from NIST, MoNA, RIKEN, and SWGDRUG into a unified MSP format for MS-DIAL. This skill reconciles structural and retention data from multiple sources with different formats and completeness levels.

@@ -17,7 +17,7 @@ metadata:
   - KEGG database
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
@@ -53,7 +53,6 @@ attribution:
 
 # adduct-and-fragment-neutral-mass-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate neutral mass candidates from observed LC-MS peak m/z values by applying precomputed adduct and in-source fragment transformations from a reference table. This is the foundational step in mWISE's matching stage that enables annotation of peaks against the KEGG database.

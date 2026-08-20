@@ -19,7 +19,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
@@ -50,7 +50,6 @@ attribution:
 
 # spectral-database-integration-and-sampling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load experimental mass spectrometry spectral databases (MoNA, HMDB) and probabilistically sample compounds and their fragmentation patterns to seed realistic LC/GC-MS data simulation. This skill bridges real spectral repositories to synthetic peak generation, ensuring simulated data retains structural and chemical complexity of observed MS1 spectra.

@@ -16,7 +16,7 @@ metadata:
   - R
   - igraph
   - pcutils
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
@@ -49,7 +49,6 @@ attribution:
 
 # correlation-network-construction-omics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct correlation-based networks from high-dimensional omics feature abundance tables (>10,000 features) by computing pairwise correlations, applying statistical thresholding, and building graph objects with nodes representing features and weighted edges representing correlation strengths. This skill enables fast, scalable network construction and is essential when integrating multiple omics layers or identifying co-occurrence and co-abundance patterns.

@@ -16,7 +16,7 @@ metadata:
   - Spectra
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -53,7 +53,6 @@ attribution:
 
 # y-ion signal detection and noise assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detects and validates y-ion fragment signals in centroided tandem MS spectra by comparing peak intensities to local baseline noise, ensuring peptide fragmentation quality meets analytical thresholds. Applied to high-resolution Orbitrap data to verify that observed ion signals are tens to hundreds of times above the noise floor.

@@ -14,7 +14,7 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -43,7 +43,6 @@ attribution:
 
 # retention-time-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Restrict Gas Chromatography–Ion Mobility Spectrometry samples to a biologically or analytically relevant retention time window before downstream preprocessing. This reduces noise, memory consumption, and computation time by excluding regions with no informative signal.

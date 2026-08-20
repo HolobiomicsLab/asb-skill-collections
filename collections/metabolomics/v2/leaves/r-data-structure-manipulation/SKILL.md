@@ -15,7 +15,7 @@ metadata:
   - xcms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
@@ -50,7 +50,6 @@ attribution:
 
 # R data structure manipulation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and validate structured R objects (e.g., ncGTWinputs lists) that organize raw LC-MS profile data by feature and sample identifiers for downstream alignment analysis. This skill bridges xcms-processed output and ncGTW's graph-based realignment workflow.

@@ -17,7 +17,7 @@ metadata:
   - FSelector
   - mixOmics
   - siggenes
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
@@ -46,7 +46,6 @@ attribution:
 
 # group-comparison-statistics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply statistical tests to identify metabolic markers that differentiate between sample groups in large-scale metabolomic datasets. This skill encompasses 13 strategies including fold-change (FC), t-test, Wilcoxon rank sum (WRS), and machine-learning-based methods to rank and select features by their discriminatory power.

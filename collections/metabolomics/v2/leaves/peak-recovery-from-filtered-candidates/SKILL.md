@@ -15,7 +15,7 @@ metadata:
   - igraph
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
@@ -48,7 +48,6 @@ attribution:
 
 # peak-recovery-from-filtered-candidates
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Recover LC-MS peaks that were completely removed during cluster-based filtering to prevent loss of potentially valid metabolite annotations. This skill reconstructs a complete peak inventory before final diffusion-based ranking, ensuring no valid candidates are discarded by conservative filtering thresholds.

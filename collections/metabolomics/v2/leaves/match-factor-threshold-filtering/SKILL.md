@@ -18,7 +18,7 @@ metadata:
   - Agilent Unknowns Analysis
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -53,7 +53,6 @@ attribution:
 
 # match-factor-threshold-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Subset gas chromatography–mass spectrometry (GC-MS) compound identifications by Match.Factor score to reduce computational burden and focus downstream cheminformatics analysis on high-confidence hits. This filtering step narrows the search space before expensive operations like categorate() or mzExacto() are applied.

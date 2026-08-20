@@ -13,7 +13,7 @@ metadata:
   - lipidr
   - R
   - SummarizedExperiment
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
@@ -46,7 +46,6 @@ attribution:
 
 # lipid-sample-separation-visualization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Principal component analysis (PCA) applied to normalized and logged lipidomics intensity data to visualize sample clustering by phenotype and detect outlier samples with anomalous lipid profiles. This skill reveals whether biological groups (benign, cancer, metastasis) separate in reduced dimensionality space and identifies samples warranting removal due to high dispersion.

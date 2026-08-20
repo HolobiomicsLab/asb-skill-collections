@@ -15,7 +15,7 @@ metadata:
   - R base (stats::lm)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -52,7 +52,6 @@ attribution:
 
 # iRT-peptide-calibration-and-scoring
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates retention time (RT) linearity and instrument calibration by fitting a linear regression model to extracted ion chromatograms (XICs) of known iRT peptide standards, using their annotated iRT scores as the independent variable. The R-squared value (target ≥0.99) quantifies the degree of linear RT behavior across the peptide set.

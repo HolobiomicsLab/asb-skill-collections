@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
@@ -47,7 +47,6 @@ attribution:
 
 # metabolomic-feature-alignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align and integrate multiple metabolomic datasets from different analytical experiments into a unified feature matrix by matching features across datasets using retention time (RT) and mass-to-charge ratio (m/z) tolerance parameters. This skill is essential when combining data from separate LC-MS experiments that measure the same or overlapping sets of metabolites but require standardization to a common feature space.

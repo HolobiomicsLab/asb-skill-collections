@@ -21,7 +21,7 @@ metadata:
   techniques:
   - LC-MS
   - MS-imaging
-  license_tier: restricted
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -56,7 +56,7 @@ attribution:
 
 # metabolite-annotation-at-scale
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Systematic annotation of thousands to hundreds of thousands of mass-to-charge (m/z) values against public metabolite databases (HMDB, Lipidmaps) using tolerance-based matching with user-specified adducts and polarity filters. This skill enables structural identification of metabolites in large MS imaging and LC-MS datasets by matching observed m/z features to database entries within a defined parts-per-million (ppm) error threshold.

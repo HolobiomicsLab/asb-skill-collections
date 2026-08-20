@@ -15,7 +15,7 @@ metadata:
   - omu
   - ggplot2
   - KEGGREST
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -44,7 +44,6 @@ attribution:
 
 # metabolite-class-visualization-by-statistical-significance
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate a volcano plot visualization of metabolites stratified by hierarchical class and statistical significance (log2FoldChange and adjusted p-value) from omu_summary differential abundance output. This skill enables rapid interpretation of which metabolite classes are enriched or depleted in comparative metabolomics studies.

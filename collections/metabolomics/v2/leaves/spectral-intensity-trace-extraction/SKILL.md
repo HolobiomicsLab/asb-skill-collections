@@ -18,7 +18,7 @@ metadata:
   - MsBackendRawFileReader
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -54,7 +54,6 @@ attribution:
 
 # spectral-intensity-trace-extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract intensity traces (extracted ion chromatograms or full chromatograms) from Thermo Fisher Scientific Orbitrap .raw files to recover time-resolved signal profiles for targeted peptides or compounds. This skill bridges direct binary raw file access to quantitative time-series data used in quality control, retention time calibration, and peak detection workflows.

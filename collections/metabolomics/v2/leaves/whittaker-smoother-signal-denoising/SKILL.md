@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
@@ -51,7 +51,6 @@ attribution:
 
 # whittaker-smoother-signal-denoising
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply the Whittaker smoother algorithm to baseline-corrected GCxGC-MS chromatograms to reduce instrumental and chemical noise while preserving peak shapes. The algorithm uses a user-specified penalty order and smoothing factor (lambda) to balance fidelity to the observed signal against smoothness.

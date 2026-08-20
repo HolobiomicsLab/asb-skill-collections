@@ -17,7 +17,7 @@ metadata:
   - Agilent Unknowns Analysis
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -51,7 +51,6 @@ attribution:
 
 # metabolite-quantification-accuracy-assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that a mass spectrometry data extraction function (mzExacto) correctly retrieves m/z values, retention times, match factors, and peak areas for known query chemicals by comparing extracted dataframe outputs against expected compound identifiers and retention time/m/z reference standards. This skill ensures quantification accuracy before downstream chemical categorization or database lookups.

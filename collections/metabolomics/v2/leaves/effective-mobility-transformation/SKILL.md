@@ -19,7 +19,7 @@ metadata:
   - ROMANCE
   techniques:
   - CE-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
@@ -53,7 +53,6 @@ attribution:
 
 # effective-mobility-transformation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform CE-MS migration time data to effective mobility (µeff) scale to account for electroosmotic flow variations and produce highly reproducible peak positions across electrophoretic runs. This is essential for compound identification and quantification in capillary electrophoresis–mass spectrometry when migration times alone are unstable.

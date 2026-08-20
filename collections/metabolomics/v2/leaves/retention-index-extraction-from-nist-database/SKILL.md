@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -49,7 +49,6 @@ attribution:
 
 # retention-index-extraction-from-nist-database
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract Kovats retention index (RI) values from NIST ri.dat and USER.DBU database files, then assign experimental RI records to a compiled EI or MS2 mass spectral library object. This skill enables enrichment of spectral libraries with GC retention data for improved compound identification.

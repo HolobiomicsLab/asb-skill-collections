@@ -15,7 +15,7 @@ metadata:
   - R
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
@@ -49,7 +49,6 @@ attribution:
 
 # ei-spectrum-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize electron ionization mass spectra by scaling peak intensities to a base peak reference before library matching. This preprocessing step enables fair similarity scoring across spectra with different absolute intensities by converting raw m/z and intensity pairs to a relative intensity scale.

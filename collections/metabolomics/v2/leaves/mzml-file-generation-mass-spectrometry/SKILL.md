@@ -19,7 +19,7 @@ metadata:
   - MsBackendMzR
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
@@ -54,7 +54,6 @@ attribution:
 
 # mzML File Generation for Mass Spectrometry
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill exports denoised MS/MS spectra aggregated at the sample level into standardized mzML format files using Bioconductor's Spectra package and MsBackendMzR backend, preserving ion mode metadata (positive or negative ionization). It is essential for converting processed tandem mass spectrometry data into portable, machine-readable formats suitable for downstream metabolite annotation and spectral library matching.

@@ -16,7 +16,7 @@ metadata:
   - notame
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -53,7 +53,6 @@ attribution:
 
 # outlier-feature-classification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and classify molecular features with anomalous mass-to-charge (m/z) decimal values that fall outside the expected instrumental range, removing them from downstream analysis in untargeted LC-MS/MS metabolomics. This filtering step ensures that only features with physically plausible m/z values are retained for metabolite annotation and statistical testing.

@@ -19,7 +19,7 @@ metadata:
   - MS-DIAL
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -53,7 +53,6 @@ attribution:
 
 # parallel-computing-workflow-orchestration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Orchestrate computationally intensive mass spectrometry library compilation workflows across multiple processor cores using the R future package to reduce wall-clock time. This skill enables safe parallel execution of library reading, structure extraction, SMILES assignment, and retention index computation on large-scale MSP and MOL file sets without race conditions or data corruption.

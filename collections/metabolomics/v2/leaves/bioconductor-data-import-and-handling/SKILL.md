@@ -19,7 +19,7 @@ metadata:
   - Spectra
   techniques:
   - CE-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
@@ -54,7 +54,6 @@ attribution:
 
 # bioconductor-data-import-and-handling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Loading and structuring CE-MS experimental data from Bioconductor packages (msdata) into R objects (OnDiskMSnExp) suitable for downstream mass spectrometry processing and effective mobility transformation. This skill bridges raw mass spectrometry files and analytical workflows by leveraging standardized Bioconductor data containers.

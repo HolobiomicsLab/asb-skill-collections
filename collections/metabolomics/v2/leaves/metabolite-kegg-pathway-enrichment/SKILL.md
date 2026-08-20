@@ -18,7 +18,7 @@ metadata:
   - KEGG_Enrich_Plot
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
@@ -50,7 +50,6 @@ attribution:
 
 # metabolite-kegg-pathway-enrichment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill performs statistical enrichment analysis of metabolite compound lists against KEGG pathway databases to identify significantly over-represented metabolic pathways. It quantifies pathway associations using p-value filtering and fold-change values to support functional interpretation of metabolomic datasets.

@@ -19,7 +19,7 @@ metadata:
   - igraph
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
@@ -56,7 +56,6 @@ attribution:
 
 # annotation-benchmark-performance-evaluation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify the quality of untargeted LC-MS metabolite annotation workflows by computing precision, recall, and F1-score against curated reference peak benchmarks. This skill applies when you have both annotated peak predictions and a validated reference dataset, and need to assess whether the annotation pipeline recovers true metabolites and avoids false assignments.

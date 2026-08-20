@@ -16,7 +16,7 @@ metadata:
   - read.metabo
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -45,7 +45,6 @@ attribution:
 
 # random-forest-classification-for-metabolite-prediction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply the Omu random_forest wrapper to classify metabolites or samples in metabolomics count data and generate variable importance plots that rank metabolites by their predictive strength for a specified grouping factor. This skill is useful when you need to identify which metabolites are most discriminative between experimental groups in a two-factor design.

@@ -16,7 +16,7 @@ metadata:
   - mzR
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
@@ -48,7 +48,6 @@ attribution:
 
 # xml-structured-metadata-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct properly-formatted mzML XML structures with nested scan headers, precursor metadata, and base64-encoded binary product ion arrays for mass spectrometry data files. This skill is essential for generating standards-compliant MS data files that can be read by downstream analysis software.

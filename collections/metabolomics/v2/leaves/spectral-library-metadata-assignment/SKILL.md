@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -46,7 +46,6 @@ attribution:
 
 # spectral-library-metadata-assignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign experimental Kovats retention index (RI) values from NIST database files to compiled mass spectral library objects, filtering by capillary column polarity and statistical robustness. This enriches spectral libraries with validated chemical reference data needed for GC-MS compound identification workflows.

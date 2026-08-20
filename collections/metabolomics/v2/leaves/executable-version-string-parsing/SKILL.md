@@ -13,7 +13,7 @@ metadata:
   - RawFileReader
   - rawrr
   - system2
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -48,7 +48,6 @@ attribution:
 
 # executable-version-string-parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse version strings returned by a compiled executable (invoked via system call) to enable runtime inspection of wrapped binary dependencies. This skill bridges R and external compiled assemblies by extracting version metadata that documents the underlying implementation.

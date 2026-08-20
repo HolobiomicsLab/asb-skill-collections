@@ -16,7 +16,7 @@ metadata:
   - HMDB / MoNA databases
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
@@ -47,7 +47,6 @@ attribution:
 
 # condition-effect-matrix-generation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate a feature-table matrix encoding controlled intensity modulations across experimental conditions for LC/GC-MS metabolomics simulations. This skill produces a condition-only effect matrix that modulates peak intensities across conditions according to user-specified allocation parameters, enabling benchmarking of statistical and normalization methods.

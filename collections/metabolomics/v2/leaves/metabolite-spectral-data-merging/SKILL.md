@@ -21,7 +21,7 @@ metadata:
   - MS-DIAL
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -52,7 +52,6 @@ attribution:
 
 # metabolite-spectral-data-merging
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Merge multiple mass spectral libraries (EI or MS/MS) from heterogeneous public sources (NIST, MoNA, RIKEN, GNPS) and in-house standards into a single unified MSP file with harmonized structure, SMILES, and retention index (RI) annotations for downstream use in MS-DIAL or other metabolite identification pipelines.

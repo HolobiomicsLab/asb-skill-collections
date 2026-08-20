@@ -18,7 +18,7 @@ metadata:
   - colorRamps
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
@@ -52,7 +52,6 @@ attribution:
 
 # GCxGC Preprocessed Data Handling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill encompasses the assembly, alignment, and multivariate analysis of preprocessed two-dimensional gas chromatography–mass spectrometry (GCxGC-MS) data after individual samples have undergone smoothing, baseline correction, and peak alignment. It transforms aligned chromatogram objects into unified data structures suitable for multiway principal component analysis (MPCA) to reveal group differences in metabolite profiles.

@@ -19,7 +19,7 @@ metadata:
   - KEGG database
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
@@ -56,7 +56,6 @@ attribution:
 
 # metabolite-mass-to-charge-ratio-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Matches observed mass-to-charge ratio (m/z) values from untargeted LC-MS feature tables to KEGG metabolite database entries, accounting for adducts and in-source fragments. This is the first stage of the mWISE annotation workflow and produces candidate KEGG identifiers ranked by mass accuracy.

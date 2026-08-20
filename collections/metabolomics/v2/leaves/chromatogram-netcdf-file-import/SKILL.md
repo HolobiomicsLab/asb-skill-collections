@@ -15,7 +15,7 @@ metadata:
   - R
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
@@ -49,7 +49,6 @@ attribution:
 
 # chromatogram-netcdf-file-import
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Import raw two-dimensional gas chromatography data from NetCDF files and fold them into a 2D-TIC (Total Intensity Chromatogram) object for downstream preprocessing and analysis. This is the essential entry point for GCxGC-MS workflows, converting instrument output into an R-native data structure.

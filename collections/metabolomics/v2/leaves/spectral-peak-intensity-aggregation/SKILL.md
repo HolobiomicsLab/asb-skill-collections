@@ -18,7 +18,7 @@ metadata:
   - call_aggregate
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
@@ -52,7 +52,6 @@ attribution:
 
 # spectral-peak-intensity-aggregation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aggregate m/z peaks and their intensities across multiple replicate MS/MS spectra by grouping fragments within a specified mass tolerance and summing their intensities to produce a consensus spectrum. This is a foundational denoising step that reduces noise by consolidating signal across replicates before applying frequency-based filters.

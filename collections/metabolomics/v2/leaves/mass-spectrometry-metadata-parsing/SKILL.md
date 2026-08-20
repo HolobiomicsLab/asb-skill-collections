@@ -16,7 +16,7 @@ metadata:
   - rawrr
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -53,7 +53,6 @@ attribution:
 
 # mass-spectrometry-metadata-parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and deserialize instrument metadata from proprietary Thermo Fisher Scientific .raw files into structured R objects (lists, data frames) using the RawFileReader API. This skill bridges the gap between binary mass spectrometry data storage and downstream R-based statistical analysis by exposing file-level metadata such as instrument model, acquisition time range, scan count, and control software version.

@@ -16,7 +16,7 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -45,7 +45,6 @@ attribution:
 
 # hierarchical-clustering-parameter-optimization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize hierarchical clustering parameters (euclidean distance metric, drift time and retention time spread thresholds) to assign detected GC-IMS peaks to reproducible clusters across samples. This skill determines the correct distance metric and spread tolerances needed to group peaks with similar chromatographic and ion mobility properties.

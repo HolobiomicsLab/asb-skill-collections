@@ -14,7 +14,7 @@ metadata:
   - R
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
@@ -48,7 +48,6 @@ attribution:
 
 # chromatogram-baseline-correction-preprocessing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove instrumental baseline drift and chemical noise from GCxGC-MS chromatograms using asymmetric least squares (ALS) algorithm to enhance signal clarity and enable downstream peak alignment and multivariate analysis. This is a critical preprocessing step that must precede smoothing and peak alignment in comprehensive two-dimensional gas chromatography workflows.

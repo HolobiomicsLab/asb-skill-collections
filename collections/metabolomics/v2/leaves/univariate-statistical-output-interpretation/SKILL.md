@@ -18,7 +18,7 @@ metadata:
   - count_fold_changes
   - assign_hierarchy
   - ggplot2
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -47,7 +47,6 @@ attribution:
 
 # univariate-statistical-output-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret log2 fold-change and adjusted p-value outputs from univariate statistical tests (t-test or ANOVA) to identify metabolites with significant differential abundance between treatment groups. This skill enables extraction of biologically meaningful signals from metabolomics comparison outputs for downstream visualization and functional annotation.

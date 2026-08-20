@@ -14,7 +14,7 @@ metadata:
   - ChemEmbed
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.02.07.637102v1
   title: ChemEmbed
@@ -43,7 +43,6 @@ attribution:
 
 # embedding-similarity-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match CNN-predicted molecular embeddings against a reference database using pairwise similarity metrics to rank and filter candidate molecules by confidence score. This skill bridges model predictions to actionable molecular identification in mass spectrometry metabolite workflows.

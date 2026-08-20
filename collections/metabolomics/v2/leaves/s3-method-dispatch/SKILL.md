@@ -14,7 +14,7 @@ metadata:
   - assign_hierarchy
   - make_omelette
   - plate_omelette
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -45,7 +45,6 @@ attribution:
 
 # s3-method-dispatch
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use S3 method dispatch to dynamically route data-frame processing logic based on metadata class attributes, enabling flexible annotation and transformation pipelines that adapt to heterogeneous metabolomics data structures. This skill ensures that generic operations like KEGG_gather select the correct class-specific implementation (e.g., plate_omelette) without explicit conditional branching.

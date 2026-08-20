@@ -23,7 +23,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -57,7 +57,6 @@ attribution:
 
 # Tandem MS Data Reorganization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reorganize tandem mass spectrometry (MS/MS) library records by relocating chemical structure metadata (SMILES, InChIKey) from non-standard fields (e.g., Comment) into their proper schema fields, and separate mixed-polarity spectral records into polarity-specific outputs for downstream analysis in MS-DIAL or similar platforms.

@@ -17,7 +17,7 @@ metadata:
   - omu_summary
   - read.metabo
   - omu_anova
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -50,7 +50,6 @@ attribution:
 
 # treatment-group-comparison-design
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and execute univariate statistical comparisons between treatment groups in metabolomics count data using the omu package. This skill applies t-tests or Welch's test to identify metabolites with significant abundance differences across experimental conditions.

@@ -18,7 +18,7 @@ metadata:
   - xcms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
@@ -54,7 +54,6 @@ attribution:
 
 # LC-MS retention time alignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and correct misaligned retention time (RT) features in LC-MS data by applying neighbor-wise compound-specific graphical time warping (ncGTW) to generate individualized warping functions that replace XCMS global warping assumptions. This skill reduces coefficient of variation in peak-filled features and improves downstream grouping and quantification accuracy.

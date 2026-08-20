@@ -14,7 +14,7 @@ metadata:
   - mgcv
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
@@ -46,7 +46,6 @@ attribution:
 
 # Anchor Feature Pair Selection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify high-confidence mutually abundant feature pairs across two LC-MS metabolomics datasets by applying retention time windows, m/z tolerance, and abundance similarity thresholds to enable robust retention time mapping. This step bridges initial feature grouping and spline-based RT correction by establishing a trusted set of aligned landmarks.

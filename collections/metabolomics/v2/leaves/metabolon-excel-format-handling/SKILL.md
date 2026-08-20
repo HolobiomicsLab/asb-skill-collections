@@ -11,7 +11,7 @@ metadata:
   tools:
   - R
   - metaboprep
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac059
   title: Metaboprep
@@ -40,7 +40,6 @@ attribution:
 
 # metabolon-excel-format-handling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and import Metabolon untargeted metabolomics Excel workbooks (v1.1 and v1.2 formats) into structured R data objects for downstream quality control and analysis. This skill handles the specifics of Metabolon's OrigScale sheet layout and converts vendor-specific formats into a standardized Metaboprep object.

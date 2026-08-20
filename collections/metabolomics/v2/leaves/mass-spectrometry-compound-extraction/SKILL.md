@@ -20,7 +20,7 @@ metadata:
   - webchem
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -54,7 +54,6 @@ attribution:
 
 # mass-spectrometry-compound-extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract m/z, retention time, match factor, and peak area values for a set of known query chemicals from preprocessed GC-MS data by searching an advanced dictionary keyed on compound names and spectral signatures. This skill bridges the transition from raw mass spectrometry output to compound-level tabular data suitable for downstream chemical classification and risk assessment.

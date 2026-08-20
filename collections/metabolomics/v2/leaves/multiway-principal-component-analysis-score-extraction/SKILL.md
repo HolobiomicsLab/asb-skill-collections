@@ -15,7 +15,7 @@ metadata:
   - mixOmics
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
@@ -49,7 +49,6 @@ attribution:
 
 # Multiway Principal Component Analysis Score Extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract principal component scores from preprocessed GCxGC-MS chromatogram data after multiway PCA decomposition using Wold's approach. This skill recovers the projection of individual samples onto the reduced principal component space, enabling downstream sample-level visualization and classification.

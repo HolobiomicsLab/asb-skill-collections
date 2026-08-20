@@ -12,7 +12,7 @@ metadata:
   - lipidr
   - R
   - limma
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
@@ -45,7 +45,6 @@ attribution:
 
 # differential-expression-ranking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank lipid molecules by log fold-change from differential expression analysis to identify and visualize significantly enriched or depleted lipid classes and chain properties. This skill uses lipid set enrichment analysis (LSEA) to detect preferential regulation patterns across predefined lipid sets.

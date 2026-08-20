@@ -12,7 +12,7 @@ metadata:
   tools:
   - R
   - metaboprep
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac059
   title: Metaboprep
@@ -41,7 +41,6 @@ attribution:
 
 # S7 Object Construction and Validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and validate S7 class objects (specifically Metaboprep) from parsed metabolomic data components, ensuring correct integration of data matrices, sample metadata, and feature metadata into a coherent analytical container. This skill verifies object integrity through schema validation and dimensional consistency checks.

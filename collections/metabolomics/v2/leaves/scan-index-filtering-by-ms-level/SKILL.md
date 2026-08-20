@@ -14,7 +14,7 @@ metadata:
   - rawrr
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -52,7 +52,6 @@ attribution:
 
 # scan-index-filtering-by-ms-level
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter a scan index data.frame to retain only MS1-level (precursor-ion) scans from a Thermo Orbitrap raw file. This isolates full-scan survey spectra from tandem MS fragments, enabling focused analysis of parent ion m/z and intensity without interference from product-ion scans.

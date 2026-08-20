@@ -17,7 +17,7 @@ metadata:
   - ggplot2
   - dendextend
   - kableExtra
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac059
   title: Metaboprep
@@ -50,7 +50,6 @@ attribution:
 
 # metaboprep-object-manipulation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct, inspect, and transform Metaboprep objects—data structures that bundle metabolite abundance matrices, sample metadata, and feature metadata—through piped operations (batch normalization, quality control) and export them as tab-delimited or HTML outputs. This is the core workflow for standardizing (un)targeted metabolomic datasets before downstream analysis.

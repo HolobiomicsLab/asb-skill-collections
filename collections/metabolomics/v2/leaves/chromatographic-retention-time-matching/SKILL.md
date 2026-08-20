@@ -15,7 +15,7 @@ metadata:
   - spreadOut
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -52,7 +52,6 @@ attribution:
 
 # chromatographic-retention-time-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A GC-MS data processing skill that uses retention time (RT) and published m/z peaks to precisely identify and match query chemicals within preprocessed mass spectrometry datasets. This skill enables unambiguous chemical identification by aggregating multiple detection instances across samples that share matching retention times and mass spectral signatures.

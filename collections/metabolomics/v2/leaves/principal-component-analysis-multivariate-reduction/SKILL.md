@@ -12,7 +12,7 @@ metadata:
   - lipidr
   - R
   - SummarizedExperiment
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
@@ -45,7 +45,6 @@ attribution:
 
 # principal-component-analysis-multivariate-reduction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply PCA to normalized and log-transformed lipidomics data to reveal separation patterns between sample groups (e.g., benign vs. cancer phenotypes) and detect outlier samples with anomalous lipid profiles. This multivariate analysis serves as an unsupervised quality control and exploratory step prior to differential lipid abundance testing.

@@ -14,7 +14,7 @@ metadata:
   - rawrr
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -48,7 +48,6 @@ attribution:
 
 # C# Wrapper Method Validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that R functions can successfully invoke compiled C# wrapper methods through system calls and retrieve assembly metadata without requiring input data files. This skill confirms the two-layer R/C# architecture is functioning correctly and that the managed .NET assembly is properly dispatched.

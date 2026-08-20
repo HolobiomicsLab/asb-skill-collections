@@ -13,7 +13,7 @@ metadata:
   - RawFileReader
   - rawrr
   - system2()
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -48,7 +48,6 @@ attribution:
 
 # R Internal Function Implementation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement internal R functions (prefixed with `.`) that wrap external system calls or compiled dependencies, handling I/O serialization, parsing, and error validation to expose lower-level functionality through a stable R interface. This skill is essential when bridging R with .NET assemblies, command-line tools, or compiled libraries that require interprocess communication and result marshalling.

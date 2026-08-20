@@ -14,7 +14,7 @@ metadata:
   - LargeMetabo
   - R
   - mixOmics
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
@@ -43,7 +43,6 @@ attribution:
 
 # Batch-Effect Removal in Metabolomic Data
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove unwanted batch variations from integrated multi-batch metabolomic datasets using algorithm-specific correction methods. This skill is essential after data integration to harmonize feature intensities across analytical experiments and enable unbiased downstream analysis.

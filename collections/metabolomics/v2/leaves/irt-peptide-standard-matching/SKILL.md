@@ -15,7 +15,7 @@ metadata:
   - Biognosys iRT standard mix
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -51,7 +51,6 @@ attribution:
 
 # iRT peptide standard matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align observed retention times from iRT peptide standards in LC-MS/MS data to their known indexed retention time (iRT) scores, then fit a linear regression model to establish a calibrated RT-to-iRT mapping for the experimental run. This enables normalized retention time reporting and cross-experiment comparability.

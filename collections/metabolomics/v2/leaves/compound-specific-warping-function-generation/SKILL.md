@@ -18,7 +18,7 @@ metadata:
   - xcms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
@@ -54,7 +54,6 @@ attribution:
 
 # compound-specific-warping-function-generation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill detects and corrects misaligned LC-MS features produced by XCMS by generating individualized, compound-specific retention-time warping functions using neighbor-wise graphical time warping (ncGTW). It replaces global XCMS warping coefficients with RT-drift-aware, sample-neighbor-constrained warping functions to improve downstream peak grouping and filling accuracy.

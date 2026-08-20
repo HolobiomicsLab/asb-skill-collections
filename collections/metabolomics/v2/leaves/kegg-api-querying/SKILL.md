@@ -14,7 +14,7 @@ metadata:
   - KEGGREST
   - R
   - Omu
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -45,7 +45,6 @@ attribution:
 
 # kegg-api-querying
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Query the KEGG API via the KEGGREST package to retrieve functional orthology (KO numbers) and gene names for metabolite-annotated data frames. This skill integrates KEGG functional data into metabolomics count tables, enabling orthology-based downstream analysis.

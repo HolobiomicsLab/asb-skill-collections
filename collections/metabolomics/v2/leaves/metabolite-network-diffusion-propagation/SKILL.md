@@ -14,7 +14,7 @@ metadata:
   - R
   - FELLA
   - igraph
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
@@ -47,7 +47,6 @@ attribution:
 
 # metabolite-network-diffusion-propagation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Propagate candidate metabolite scores through a KEGG-derived metabolic network graph to prioritize annotations by network proximity and topology. This skill ranks metabolite identifications by diffusing association scores across the network, accounting for graph structure via z-score normalization, to produce a final ranked annotation table.

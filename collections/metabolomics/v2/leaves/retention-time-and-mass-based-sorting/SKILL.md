@@ -16,7 +16,7 @@ metadata:
   - mzExacto()
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -54,7 +54,6 @@ attribution:
 
 # retention-time-and-mass-based-sorting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Organize raw GC-MS CSV data by retention time and exact mass to enable intelligent aggregation and downstream chemical matching. This skill prepares unstructured mass spectrometry output into a sortable, queryable artifact indexed by both temporal (RT) and mass-based (m/z) properties.

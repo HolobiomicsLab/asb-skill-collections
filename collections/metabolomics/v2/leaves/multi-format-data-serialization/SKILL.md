@@ -18,7 +18,7 @@ metadata:
   - metaboprep
   - dendextend
   - kableExtra
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac059
   title: Metaboprep
@@ -49,7 +49,6 @@ attribution:
 
 # multi-format-data-serialization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Export processed metabolomic data and quality control outputs from an in-memory Metaboprep object into multiple serialized formats (tab-delimited text files, HTML reports) for downstream analysis, archival, and cross-platform compatibility. This skill bridges the gap between interactive R-based QC and format-agnostic data sharing.

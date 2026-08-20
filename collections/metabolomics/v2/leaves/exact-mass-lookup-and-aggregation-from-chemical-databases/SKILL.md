@@ -21,7 +21,7 @@ metadata:
   - uafR
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -56,7 +56,6 @@ attribution:
 
 # exact-mass-lookup-and-aggregation-from-chemical-databases
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve exact masses, published chemical names, and spectroscopic metadata for compounds detected in GC-MS data by querying PubChem, ChemSpider, and literature databases, then aggregate redundant peak representations by chemical identity and dominant m/z fragments. This skill bridges raw mass spectrometry output to downstream retention time and mass-based sorting in the uafR pipeline.

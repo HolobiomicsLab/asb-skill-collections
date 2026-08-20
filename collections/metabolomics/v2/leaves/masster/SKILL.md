@@ -10,7 +10,7 @@ metadata:
   techniques:
   - LC-MS
   repo_url: https://github.com/zamboni-lab/masster-dist
-  license_tier: open
+  license_tier: noncommercial
   tool_license:
     tier: noncommercial
     requires_ack: true
@@ -21,6 +21,7 @@ schema_version: 0.2.0
 
 # masster
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 Run the Zamboni-lab Masster untargeted LC-MS metabolomics workflow. This skill is a
 description of how to use the tool; it does not embed or redistribute the tool's code.
 

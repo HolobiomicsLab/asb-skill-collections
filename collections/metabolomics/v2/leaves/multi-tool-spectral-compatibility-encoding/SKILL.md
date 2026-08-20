@@ -18,7 +18,7 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -52,7 +52,6 @@ attribution:
 
 # multi-tool-spectral-compatibility-encoding
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encode clustered mass spectrometry spectra into multiple downstream software-compatible formats (.mat for MSFinder, .ms for Sirius) to enable parallel structural annotation workflows. This skill bridges RAMClustR output with independent interpretation engines that require proprietary input formats.

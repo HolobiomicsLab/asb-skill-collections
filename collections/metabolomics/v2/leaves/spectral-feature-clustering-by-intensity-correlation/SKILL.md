@@ -16,7 +16,7 @@ metadata:
   - CAMERA
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
@@ -47,7 +47,6 @@ attribution:
 
 # spectral-feature-clustering-by-intensity-correlation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Group co-eluting LC-MS features by intensity correlation and retention time proximity to identify features likely originating from the same metabolite. This clustering step reduces annotation complexity and enables downstream quasi-molecular adduct filtering.

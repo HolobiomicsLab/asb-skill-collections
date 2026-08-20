@@ -18,7 +18,7 @@ metadata:
   - omu_anova
   - count_fold_changes
   - transform_samples
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -51,7 +51,6 @@ attribution:
 
 # univariate-statistical-testing-for-metabolomics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply univariate statistical tests (t-test or ANOVA) to metabolomics count data to quantify differences in metabolite abundance between treatment groups, producing effect sizes, p-values, and adjusted significance thresholds. This skill generates interpretable statistics tables for hypothesis-driven metabolomics comparisons.

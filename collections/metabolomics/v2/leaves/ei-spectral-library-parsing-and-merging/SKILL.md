@@ -22,7 +22,7 @@ metadata:
   - ChemineR
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -57,7 +57,6 @@ attribution:
 
 # EI spectral library parsing and merging
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse electron ionization (EI) mass spectral libraries from multiple heterogeneous sources (NIST, RIKEN, MoNA, SWGDRUG), standardize their metadata fields (SMILES, retention indices, molecular formulas), and merge them into a unified MS-DIAL-compatible MSP file. This skill addresses the challenge that public EI libraries use inconsistent field organization, missing structure annotations, and vary in retention index coverage.

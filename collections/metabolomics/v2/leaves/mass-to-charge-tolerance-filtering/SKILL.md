@@ -18,7 +18,7 @@ metadata:
   - Spectra
   techniques:
   - CE-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
@@ -56,7 +56,6 @@ attribution:
 
 # mass-to-charge-tolerance-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter ion peaks in CE-MS data by specifying narrow m/z tolerance windows to ensure correct peak detection during extracted ion electropherogram (EIE) generation. This skill is essential when extracting migration times of known markers (e.g., EOF markers) where precise m/z ranges prevent false peak assignments.

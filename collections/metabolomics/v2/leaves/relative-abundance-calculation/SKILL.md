@@ -15,7 +15,7 @@ metadata:
   - pie_chart
   - ggplot2
   - R (base)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -44,7 +44,6 @@ attribution:
 
 # relative-abundance-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform frequency count tables of metabolite subsets into relative abundance (percentage) data to enable proportional comparison across compound classes or fold-change categories. This is essential for pie-chart and proportional visualizations in metabolomics workflows where raw counts obscure class-level distributions.

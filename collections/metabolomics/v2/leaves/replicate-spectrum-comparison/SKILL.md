@@ -16,7 +16,7 @@ metadata:
   - data.table
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
@@ -50,7 +50,6 @@ attribution:
 
 # replicate-spectrum-comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare and aggregate MS/MS spectra from replicate measurements of the same feature to identify recurrent fragments and calculate fragment frequencies across replicates. This skill enables consensus spectrum generation and noise reduction by quantifying fragment recurrence patterns.

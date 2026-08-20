@@ -15,7 +15,7 @@ metadata:
   - margheRita
   - R
   - ComplexHeatmap
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -55,7 +55,6 @@ attribution:
 
 # pathway-enrichment-visualization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate and visualize metabolic pathway enrichment results from Over Representation Analysis (ORA) of significant metabolites, ranked by statistical significance and filtered by robust effect size. This skill transforms ORA output into publication-ready barplots and tabular summaries for biological interpretation.

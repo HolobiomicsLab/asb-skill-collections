@@ -12,7 +12,7 @@ metadata:
   tools:
   - R
   - metaboprep
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac059
   title: Metaboprep
@@ -41,7 +41,6 @@ attribution:
 
 # cross-table-metadata-harmonization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reconcile and integrate sample and feature metadata tables with a primary abundance data matrix into a unified object structure, ensuring consistent identifiers and annotations across all three components. This skill is essential when importing heterogeneous metabolomics data formats (Metabolon Excel, Nightingale, Olink, SomaLogic) that separate measurements, sample descriptors, and feature annotations into separate files or sheets.

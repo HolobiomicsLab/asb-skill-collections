@@ -15,7 +15,7 @@ metadata:
   - metabCombiner
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
@@ -48,7 +48,6 @@ attribution:
 
 # retention-time-mapping-spline-fitting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fit a nonlinear generalized additive model (GAM) spline through retention time anchor points to map and correct systematic RT drift between two LC-MS datasets. This skill selects optimal basis dimension and filters outliers iteratively to produce a smooth, robust RT transformation function.

@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - MS-imaging
-  license_tier: restricted
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -56,7 +56,7 @@ attribution:
 
 # Mass Spectrometry Imaging Data Loading
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Load and initialize unprocessed MS imaging data (e.g., from Zenodo) into a Cardinal object, establishing the raw feature matrix, m/z axis, and spatial coordinates for downstream processing. This is the foundational step that materializes the high-dimensional m/z × spectrum matrix before normalization or peak refinement.

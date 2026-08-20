@@ -18,7 +18,7 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -47,7 +47,6 @@ attribution:
 
 # drift-retention-time-alignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aligns Gas Chromatography–Ion Mobility Spectrometry (GCIMS) samples across both drift time and retention time dimensions to correct for instrument and column degradation-induced misalignments. This skill is essential for preprocessing GCIMS data before peak detection and clustering.

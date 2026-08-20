@@ -16,7 +16,7 @@ metadata:
   - InterpretMSSpectrum
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -49,7 +49,6 @@ attribution:
 
 # retention-time-correlation-similarity-scoring
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute a combined similarity score for metabolomics features by integrating retention time proximity and quantitative correlation across samples, enabling unsupervised grouping of isotopologs and adducts from the same compound. This scoring approach grounds RAMClustR's feature clustering in two independent biological and physicochemical constraints.

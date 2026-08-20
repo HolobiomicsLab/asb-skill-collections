@@ -15,7 +15,7 @@ metadata:
   - rawrr
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -49,7 +49,6 @@ attribution:
 
 # R Internal Function Invocation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Invoke unexported R package internal functions (prefixed with :::) to access low-level assembly dispatch and configuration metadata without requiring raw data file inputs. This skill enables direct querying of bundled .NET assembly paths and version information in the rawrr package's two-layer R/C# architecture.

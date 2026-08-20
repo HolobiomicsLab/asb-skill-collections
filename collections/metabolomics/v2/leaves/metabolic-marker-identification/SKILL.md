@@ -18,7 +18,7 @@ metadata:
   - varSelRF
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
@@ -47,7 +47,6 @@ attribution:
 
 # metabolic-marker-identification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies discriminative metabolic markers from feature-by-sample metabolomic data matrices using statistical and machine-learning strategies. This skill applies one of 13 methods (fold change, t-test, PLS-DA, random forest, SAM, etc.) to rank metabolites by their capacity to distinguish between sample groups, producing ranked marker tables for downstream annotation and pathway analysis.

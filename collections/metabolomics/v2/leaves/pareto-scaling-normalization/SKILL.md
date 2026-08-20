@@ -15,7 +15,7 @@ metadata:
   - mzrtsim
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
@@ -46,7 +46,6 @@ attribution:
 
 # pareto-scaling-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Pareto scaling is a QC-based batch correction method for LC/GC-MS peak intensity data that normalizes each feature by subtracting its QC mean and dividing by the square root of its QC standard deviation, optionally after log transformation. It attenuates batch effects while preserving relative feature intensities.

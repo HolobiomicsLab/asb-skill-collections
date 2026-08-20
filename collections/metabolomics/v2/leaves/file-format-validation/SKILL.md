@@ -19,7 +19,7 @@ metadata:
   - JSON Schema validators (various)
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
@@ -62,7 +62,6 @@ attribution:
 
 # file-format-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that parsed spectral data conforms to MSP file format specification by reading back written records and comparing key fields (precursor m/z, peaks, metadata, delimiters) to the original input. This ensures round-trip fidelity and prevents downstream errors in spectral database operations.

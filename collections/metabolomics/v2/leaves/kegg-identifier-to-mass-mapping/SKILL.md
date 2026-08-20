@@ -19,7 +19,7 @@ metadata:
   - KEGG
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
@@ -56,7 +56,6 @@ attribution:
 
 # kegg-identifier-to-mass-mapping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build a lookup table (Cpd.Add) that associates KEGG compound identifiers with their exact masses and adduct/fragment modifications to enable mass-to-charge ratio matching in untargeted LC-MS annotation. This skill transforms static KEGG reference data into a dynamic, searchable resource indexed by observable m/z values.

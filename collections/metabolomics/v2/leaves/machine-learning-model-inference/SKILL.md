@@ -18,7 +18,7 @@ metadata:
   - Retip app
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.9b05765
   title: Retip
@@ -47,7 +47,6 @@ attribution:
 
 # machine-learning-model-inference
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a pre-trained machine learning model to molecular descriptor inputs to generate quantitative predictions (e.g., retention times) for compound annotation in metabolomics. This skill transforms chemical features into physico-chemical or chromatographic properties without retraining.

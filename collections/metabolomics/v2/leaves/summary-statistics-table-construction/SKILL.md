@@ -13,7 +13,7 @@ metadata:
   - uafR
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -45,7 +45,6 @@ attribution:
 
 # summary-statistics-table-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a summary table that aggregates counts or statistics across multiple filter conditions applied to a compound dataset. This skill is used to compare how data volume changes when different threshold criteria are applied to mass spectrometry results.

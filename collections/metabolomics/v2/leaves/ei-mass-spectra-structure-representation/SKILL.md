@@ -16,7 +16,7 @@ metadata:
   - NIST API
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
@@ -50,7 +50,6 @@ attribution:
 
 # ei-mass-spectra-structure-representation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse electron ionization mass spectral data from MSP (NIST MS Search) files into structured R data objects, extracting and validating precursor m/z, peak lists, and metadata annotations for downstream library search and spectral comparison workflows.

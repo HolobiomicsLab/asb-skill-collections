@@ -14,7 +14,7 @@ metadata:
   - R
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
@@ -48,7 +48,6 @@ attribution:
 
 # mass-spectrum-peak-list-handling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse, validate, and write mass spectral peak lists in MSP (NIST MS Search) format, ensuring compliance with MSP specification conventions for precursor m/z, peak intensities, metadata annotations, and delimiter formatting. This skill enables reproducible round-trip I/O of spectral databases for downstream library search and comparison workflows.

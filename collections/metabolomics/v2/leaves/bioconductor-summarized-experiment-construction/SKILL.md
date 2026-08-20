@@ -21,7 +21,7 @@ metadata:
   - mzrtsim
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -63,7 +63,6 @@ attribution:
 
 # bioconductor-summarized-experiment-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert a validated tab-delimited metabolomics data frame into a Bioconductor SummarizedExperiment object with automatically computed assays (primary compound areas, internal standard areas, and compound/IS ratios) and structured metadata. This skill bridges raw data import and downstream quality control analysis in mzQuality workflows.

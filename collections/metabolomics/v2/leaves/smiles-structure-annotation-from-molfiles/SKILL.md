@@ -24,7 +24,7 @@ metadata:
   - ChemmineOB
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -59,7 +59,6 @@ attribution:
 
 # SMILES structure annotation from MOL files
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert a folder of MOL files into a single SDF file, extract chemical structures, and assign SMILES strings to a mass spectral library record by matching on compound name or InChIKey. This skill bridges structural data (MOL format) with spectral records (MSP format) for integrated cheminformatics workflows.

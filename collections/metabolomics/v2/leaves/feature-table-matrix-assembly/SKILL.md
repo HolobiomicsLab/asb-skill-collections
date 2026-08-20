@@ -17,7 +17,7 @@ metadata:
   - R base
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
@@ -48,7 +48,6 @@ attribution:
 
 # feature-table-matrix-assembly
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a feature intensity matrix from baseline compound data by populating peaks across conditions and batches, then modulating intensities according to condition-specific and batch-specific effect profiles. This skill is essential for generating ground-truth LC/GC-MS peak-list simulations with known condition and batch effects for benchmarking normalisation and batch-correction algorithms.

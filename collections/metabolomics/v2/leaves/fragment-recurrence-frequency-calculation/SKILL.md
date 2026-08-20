@@ -20,7 +20,7 @@ metadata:
   - label_individual_spectrum
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
@@ -54,7 +54,6 @@ attribution:
 
 # fragment-recurrence-frequency-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate the recurrence frequency of each fragment across replicate MS/MS spectra by aggregating top-TIC consensus spectra and counting how often each m/z value appears. This frequency metric is used downstream for denoising and selecting high-confidence signal fragments.

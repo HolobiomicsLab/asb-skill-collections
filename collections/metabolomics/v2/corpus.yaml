@@ -328,9 +328,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: GPL-2.0-or-later
+    license: GPL-3.0-only
   license_tier: open
-  license_detection: readme-llm
+  license_detection: r-description
   license_evidence: 'License: GPL (>=2)'
 - name: TarMet
   doi: 10.1007/s11306-018-1363-7
@@ -385,9 +385,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0-only
+  license_tier: open
+  license_detection: r-description
 - name: WaveICA 2.0
   doi: 10.1007/s11306-021-01839-7
   title: WaveICA 2.0
@@ -536,9 +536,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: LGPL-3.0-only
+  license_tier: open
+  license_detection: r-description
 - name: WaveICA
   doi: 10.1016/j.aca.2019.02.010
   title: WaveICA
@@ -578,9 +578,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
 - name: ALISTER
   doi: 10.1016/j.cca.2024.117858
   title: ALISTER
@@ -620,9 +620,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
 - name: MSident
   doi: 10.1016/j.chemolab.2024.105063
   title: MSident
@@ -718,9 +718,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
 - name: AsRTNet
   doi: 10.1016/j.jece.2025.119962
   title: AsRTNet
@@ -760,9 +760,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
 - name: FlavorFormer
   doi: 10.1016/j.microc.2025.115372
   title: FlavorFormer
@@ -802,9 +802,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0-only
+  license_tier: open
+  license_detection: r-description
 - name: RAMClust
   doi: 10.1021/ac501530d
   title: RAMClust
@@ -816,9 +816,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0-only
+  license_tier: open
+  license_detection: r-description
 - name: MS-CleanR
   doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -830,9 +830,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: GPL-3.0
+    license: GPL-3.0-only
   license_tier: open
-  license_detection: readme-llm
+  license_detection: r-description
   license_evidence: GPL-3
 - name: CorrDec
   doi: 10.1021/acs.analchem.0c01980
@@ -931,9 +931,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0-only
+  license_tier: open
+  license_detection: r-description
 - name: 10.1021/acs.analchem.0c03895
   doi: 10.1021/acs.analchem.0c03895
   title: 10.1021/acs.analchem.0c03895
@@ -973,9 +973,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0-only
+  license_tier: open
+  license_detection: r-description
 - name: mass2adduct
   doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -1029,9 +1029,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0-only
+  license_tier: open
+  license_detection: r-description
 - name: EVA
   doi: 10.1021/acs.analchem.1c01309
   title: EVA
@@ -1336,9 +1336,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
 - name: CordBat
   doi: 10.1021/acs.analchem.2c05748
   title: CordBat
@@ -1350,9 +1350,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
 - name: khipu
   doi: 10.1021/acs.analchem.2c05810
   title: khipu
@@ -2162,9 +2162,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
 - name: LipidA-IDER
   doi: 10.1021/acs.analchem.5c00520
   title: LipidA-IDER
@@ -2218,9 +2218,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-2.0-only
+  license_tier: open
+  license_detection: r-description
 - name: mamsi
   doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -2288,9 +2288,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
 - name: Reverse Spectral Search
   doi: 10.1021/acs.analchem.5c02047
   title: Reverse Spectral Search
@@ -2541,9 +2541,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: CC-BY-NC-ND-4.0
-  license_tier: noncommercial
-  license_detection: readme-llm
+    license: GPL-3.0-only
+  license_tier: open
+  license_detection: r-description
   license_evidence: This work is licensed under the Attribution-NonCommercial-NoDerivatives
     4.0 International (CC BY-NC-ND 4.0)
 - name: DNN peak classifier
@@ -2585,9 +2585,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: r-description
 - name: Scannotation
   doi: 10.1021/acs.est.3c04764
   title: Scannotation
@@ -2795,9 +2795,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
 - name: lcmsWorld
   doi: 10.1021/acs.jproteome.0c00618
   title: lcmsWorld
@@ -3449,9 +3449,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
 - name: 10.1038/nbt.3597
   doi: 10.1038/nbt.3597
   title: 10.1038/nbt.3597
@@ -3632,9 +3632,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
 - name: Knowledge-guided MN (knowns→unknowns)
   doi: 10.1038/s41467-022-34537-6
   title: Knowledge-guided MN (knowns→unknowns)
@@ -4560,9 +4560,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: r-description
 - name: 10.1093/bib/bbac542
   doi: 10.1093/bib/bbac542
   title: 10.1093/bib/bbac542
@@ -4687,9 +4687,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-2.0-only
+  license_tier: open
+  license_detection: r-description
 - name: struct
   doi: 10.1093/bioinformatics/btaa1031
   title: struct
@@ -4757,9 +4757,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: GPL-3.0
+    license: GPL-3.0-only
   license_tier: open
-  license_detection: readme-llm
+  license_detection: r-description
   license_evidence: '[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)'
 - name: mspack
   doi: 10.1093/bioinformatics/btab636
@@ -4814,9 +4814,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
 - name: PeakBot
   doi: 10.1093/bioinformatics/btac344
   title: PeakBot
@@ -4842,9 +4842,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
 - name: MiMIR
   doi: 10.1093/bioinformatics/btac388
   title: MiMIR
@@ -4870,9 +4870,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: Artistic-2.0
+  license_tier: open
+  license_detection: r-description
 - name: homologueDiscoverer
   doi: 10.1093/bioinformatics/btac647
   title: homologueDiscoverer
@@ -4999,7 +4999,7 @@ papers:
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
-  license_detection: none
+  license_detection: file-present-unclassified
 - name: ESP
   doi: 10.1093/bioinformatics/btae490
   title: ESP
@@ -5165,9 +5165,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: r-description
 - name: LC retention order prediction
   doi: 10.1093/bioinformatics/bty590
   title: LC retention order prediction
@@ -5348,9 +5348,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0-only
+  license_tier: open
+  license_detection: r-description
 - name: MetENP
   doi: 10.1101/2020.11.20.391912
   title: MetENP
@@ -5586,9 +5586,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0-only
+  license_tier: open
+  license_detection: r-description
 - name: MCN
   doi: 10.1101/2024.08.02.606356v2
   title: MCN
@@ -5698,9 +5698,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
 - name: SingleFrag
   doi: 10.1101/2024.11.04.621329v1
   title: SingleFrag
@@ -5754,9 +5754,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: github-api
 - name: 10.1101/2025.04.28.651123v1.abstract
   doi: 10.1101/2025.04.28.651123v1.abstract
   title: 10.1101/2025.04.28.651123v1.abstract
@@ -5782,9 +5782,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0-only
+  license_tier: open
+  license_detection: r-description
 - name: EnrichMET
   doi: 10.1101/2025.08.28.672951v2
   title: EnrichMET
@@ -5963,9 +5963,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-2.0-only
+  license_tier: open
+  license_detection: r-description
 - name: mpactr
   doi: 10.1128/mra.00997-24
   title: mpactr
@@ -6155,9 +6155,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0-only
+  license_tier: open
+  license_detection: r-description
 - name: aird
   doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -6241,9 +6241,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
 - name: MDRB
   doi: 10.1186/s13020-024-01031-8
   title: MDRB
@@ -6849,9 +6849,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: r-description
 - name: MSMCE
   doi: 10.1371/journal.pone.0321239
   title: MSMCE
@@ -7269,7 +7269,7 @@ papers:
     verified_on: '2026-06-22'
     license: Artistic-2.0
   license_tier: open
-  license_detection: readme-llm
+  license_detection: r-description
   license_evidence: '[![license](https://img.shields.io/badge/license-Artistic--2.0-brightgreen.svg)](https://opensource.org/licenses/Artistic-2.0)'
 - name: JPA
   doi: 10.3390/metabo12030212
@@ -7408,9 +7408,9 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-2.0-only
+  license_tier: open
+  license_detection: r-description
 - name: molnetenhancer
   doi: 10.3390/metabo9070144
   title: molnetenhancer

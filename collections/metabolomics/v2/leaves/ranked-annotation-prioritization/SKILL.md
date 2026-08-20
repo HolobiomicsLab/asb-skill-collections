@@ -17,7 +17,7 @@ metadata:
   - igraph
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
@@ -50,7 +50,6 @@ attribution:
 
 # ranked-annotation-prioritization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill reconstructs the diffusion prioritization stage of metabolomics annotation, which combines network-propagated diffusion scores with recovered peaks to build a final ranked compound annotation table. It is essential for converting cluster-filtered KEGG candidates into a context-aware, metabolite-network-informed ranking that prioritizes biologically plausible annotations.

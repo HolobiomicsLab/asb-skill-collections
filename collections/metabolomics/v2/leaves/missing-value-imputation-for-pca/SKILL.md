@@ -16,7 +16,7 @@ metadata:
   - metaboprep
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac059
   title: Metaboprep
@@ -46,7 +46,6 @@ attribution:
 
 # missing-value-imputation-for-pca
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Impute missing values to the median prior to principal component analysis in metabolomic datasets to enable PCA-based outlier detection and dimensionality reduction. This preprocessing step is essential because PCA requires a complete data matrix and median imputation preserves the distributional properties needed for downstream SD-based outlier thresholding.

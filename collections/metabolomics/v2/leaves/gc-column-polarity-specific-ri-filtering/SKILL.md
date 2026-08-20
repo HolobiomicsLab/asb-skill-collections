@@ -20,7 +20,7 @@ metadata:
   - R statistical environment
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -55,7 +55,6 @@ attribution:
 
 # GC column polarity-specific retention index filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter and assign experimental retention indices (RI) from NIST reference data to combined EI spectral libraries based on GC column polarity (semi-polar, non-polar, or polar), retaining only capillary columns and rejecting RI values with standard deviation >30 across replicates. This ensures MS-DIAL-compatible libraries contain only validated, polarity-matched RI annotations.

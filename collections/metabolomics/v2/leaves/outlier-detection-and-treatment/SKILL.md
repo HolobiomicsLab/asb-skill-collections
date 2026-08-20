@@ -15,7 +15,7 @@ metadata:
   - metaboprep
   - ggplot2
   - dendextend
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac059
   title: Metaboprep
@@ -44,7 +44,6 @@ attribution:
 
 # outlier-detection-and-treatment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and handle statistical outliers in metabolomics datasets using hierarchical clustering, principal component analysis, and user-defined distance thresholds. This skill applies multiple complementary detection methods (total peak area, PCA-based, and feature correlation) to flag anomalous samples for exclusion or treatment before downstream analysis.

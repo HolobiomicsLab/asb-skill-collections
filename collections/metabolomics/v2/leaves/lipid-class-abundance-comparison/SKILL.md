@@ -14,7 +14,7 @@ metadata:
   - lipidr
   - limma
   - R
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
@@ -48,7 +48,6 @@ attribution:
 
 # lipid-class-abundance-comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare abundance patterns of lipid classes (e.g., phosphatidylcholines, cardiolipins, triglycerides) across sample groups to identify which lipid classes are systematically up- or down-regulated in disease versus control states. This skill enables discovery of lipid biomarker signatures by quantifying and visualizing differential regulation at the lipid class level rather than individual lipid species.

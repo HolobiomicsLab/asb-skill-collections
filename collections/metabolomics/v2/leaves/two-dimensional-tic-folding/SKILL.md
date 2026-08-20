@@ -14,7 +14,7 @@ metadata:
   - R
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
@@ -48,7 +48,6 @@ attribution:
 
 # two-dimensional-tic-folding
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Converts raw GCxGC chromatogram data from NetCDF format into a 2D-TIC (two-dimensional Total Intensity Chromatogram) object by folding the linear retention time axis according to the second-dimension modulation period. This is the foundational preprocessing step that restructures raw instrumental output into a matrix suitable for signal enhancement and multivariate analysis.

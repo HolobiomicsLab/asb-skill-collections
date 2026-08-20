@@ -15,7 +15,7 @@ metadata:
   - xcms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
@@ -47,7 +47,6 @@ attribution:
 
 # retention-time-drift-detection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect misaligned feature groups in LC-MS data caused by retention time (RT) drift and incorrect XCMS grouping parameters by comparing two XCMS grouping results with different bandwidth settings. This skill identifies features that failed to align correctly due to RT drift structures or suboptimal parameter choices, enabling targeted realignment before downstream analysis.

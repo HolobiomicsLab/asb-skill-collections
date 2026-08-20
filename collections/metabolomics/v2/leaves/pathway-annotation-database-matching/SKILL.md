@@ -18,7 +18,7 @@ metadata:
   - KEGG_Enrich_Plot
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
@@ -50,7 +50,6 @@ attribution:
 
 # pathway-annotation-database-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match metabolite compound lists to KEGG pathway databases and compute enrichment statistics to identify which biological pathways are significantly represented in a metabolomic dataset. This skill transforms a compound identifier list into a ranked table of enriched pathways with p-values and gene set membership.

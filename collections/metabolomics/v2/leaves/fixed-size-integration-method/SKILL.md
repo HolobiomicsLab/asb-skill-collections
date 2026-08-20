@@ -15,7 +15,7 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -44,7 +44,6 @@ attribution:
 
 # fixed-size-integration-method
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A peak integration strategy for GC-IMS data that uses a uniform window size across all detected peaks, rather than adapting to individual peak widths. This method is applied after peak detection and clustering to quantify peak intensities into a sample-by-peak matrix suitable for downstream statistical analysis.

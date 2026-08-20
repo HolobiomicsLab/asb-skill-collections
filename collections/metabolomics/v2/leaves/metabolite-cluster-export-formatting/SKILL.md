@@ -18,7 +18,7 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -52,7 +52,6 @@ attribution:
 
 # metabolite-cluster-export-formatting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Export RAMClustR-clustered mass spectrometry spectra into software-specific formats (.mat for MSFinder, .ms for Sirius) to enable downstream structural annotation and molecular weight inference. This skill bridges the output of unsupervised feature clustering with format requirements of specialized annotation tools.

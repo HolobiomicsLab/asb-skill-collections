@@ -14,7 +14,7 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -43,7 +43,6 @@ attribution:
 
 # peak-integration-parameter-optimization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize peak integration parameters—specifically fixed-size integration method and RIP saturation threshold—to produce a well-formed peak intensity matrix with minimal missing values. This skill bridges peak detection and feature table construction in GC-IMS preprocessing.

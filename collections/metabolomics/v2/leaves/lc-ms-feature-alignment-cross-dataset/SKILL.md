@@ -14,7 +14,7 @@ metadata:
   - mgcv
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
@@ -46,7 +46,6 @@ attribution:
 
 # lc-ms-feature-alignment-cross-dataset
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align and merge feature measurements from two independently acquired untargeted LC-MS metabolomics datasets by matching overlapping <m/z, retention time> pairs and constructing a unified combined table. This skill is essential when integrating disparately-acquired datasets to expand sample coverage while maintaining feature correspondence despite non-identical acquisition conditions.

@@ -17,7 +17,7 @@ metadata:
   techniques:
   - GC-MS
   - CE-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
@@ -51,7 +51,6 @@ attribution:
 
 # electron-ionization-spectral-comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare an unknown electron ionization mass spectrum against a library of reference spectra using the Similarity (EI Simple) algorithm to rank and identify likely matches. This skill enables rapid spectral annotation in R without requiring external NIST infrastructure.

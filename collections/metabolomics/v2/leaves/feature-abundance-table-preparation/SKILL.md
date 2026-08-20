@@ -15,7 +15,7 @@ metadata:
   - R
   - pcutils
   - igraph
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
@@ -48,7 +48,6 @@ attribution:
 
 # feature-abundance-table-preparation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare and format feature abundance tables (rows = features, columns = samples) for correlation-based network construction. This skill ensures data is in the correct orientation and structure for high-dimensional omics datasets containing thousands of features, enabling downstream correlation computation and network building.

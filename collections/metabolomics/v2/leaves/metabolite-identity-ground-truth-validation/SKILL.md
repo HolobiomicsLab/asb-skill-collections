@@ -14,7 +14,7 @@ metadata:
   - metabCombiner
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
@@ -46,7 +46,6 @@ attribution:
 
 # metabolite-identity-ground-truth-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate feature pair alignment scoring parameters by comparing predicted matches against known shared metabolite identities in reference metabolomics datasets. This skill ensures that the weighted similarity metric (combining retention time, m/z, and spectral similarity) correctly recovers ground-truth compound correspondences before applying it to the full dataset.

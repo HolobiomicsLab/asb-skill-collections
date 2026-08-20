@@ -18,7 +18,7 @@ metadata:
   - Spectra (Bioconductor)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -57,7 +57,6 @@ attribution:
 
 # C# Wrapper Invocation from R
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Invoke compiled C# wrapper methods from R via system calls to access functionality of .NET assemblies (such as the RawFileReader for Thermo Fisher Orbitrap data). This technique enables R to read proprietary binary file formats and extract structured data by delegating to managed code and serializing results back through temporary file I/O.

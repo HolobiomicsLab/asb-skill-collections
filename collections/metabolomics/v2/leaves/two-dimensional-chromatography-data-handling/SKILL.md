@@ -15,7 +15,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
@@ -49,7 +49,6 @@ attribution:
 
 # two-dimensional-chromatography-data-handling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Import, preprocess, and align two-dimensional gas chromatography-mass spectrometry (GCxGC-MS) data from NetCDF files into a unified matrix suitable for multivariate analysis. This skill handles the complete signal enhancement pipeline—smoothing, baseline correction, and peak alignment—to reduce instrumental and chemical noise and reveal metabolite differences between sample groups.

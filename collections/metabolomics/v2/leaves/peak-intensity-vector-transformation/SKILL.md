@@ -14,7 +14,7 @@ metadata:
   - mzrtsim
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
@@ -45,7 +45,6 @@ attribution:
 
 # peak-intensity-vector-transformation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 QC-based batch correction of LC/GC-MS peak intensity vectors using Pareto scaling normalization with optional log transformation. This skill attenuates batch effects by standardizing feature intensities relative to QC sample statistics.

@@ -16,7 +16,7 @@ metadata:
   - mgcv
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
@@ -48,7 +48,6 @@ attribution:
 
 # m-z-retention-time-correspondence-mapping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and validate overlapping features between two LC-MS metabolomics datasets by grouping features with similar m/z and retention time coordinates, then constructing a unified combined table with aligned feature pairs. This skill is essential for merging metabolomics measurements acquired under non-identical instrumental or temporal conditions.

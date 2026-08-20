@@ -16,7 +16,7 @@ metadata:
   - MsBackendRawFileReader
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -53,7 +53,6 @@ attribution:
 
 # Spectral Quality Assurance in Proteomics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates Orbitrap mass spectrometry spectral data by confirming instrument metadata (resolving power, AGC injection time) and quantifying signal-to-noise ratios for fragment ions relative to baseline noise. Essential for ensuring high-quality peptide fragmentation spectra suitable for identification and quantification workflows.

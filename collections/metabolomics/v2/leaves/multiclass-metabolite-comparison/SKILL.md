@@ -16,7 +16,7 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -53,7 +53,6 @@ attribution:
 
 # Multiclass metabolite comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Perform univariate statistical testing (ANOVA) across three or more sample classes to identify metabolic features with statistically significant abundance differences, followed by multiple-hypothesis correction and feature filtering. This skill is essential for discovering class-discriminative metabolites in untargeted LC-MS/MS metabolomics studies.

@@ -16,7 +16,7 @@ metadata:
   - mgcv
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
@@ -48,7 +48,6 @@ attribution:
 
 # retention-time-and-mz-weight-tuning
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize weighted scoring parameters (retention-time weight A, m/z weight B, and similarity-score weight C) for feature pair alignment in LC-MS metabolomics by systematic grid search and validation against known shared compound identities. This skill determines the parameter ranges that maximize correct identification of overlapping features between disparately-acquired datasets.

@@ -13,7 +13,7 @@ metadata:
   - LargeMetabo
   - R
   - ggplot2
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
@@ -42,7 +42,6 @@ attribution:
 
 # fold-change-calculation-metabolomics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fold-change (FC) marker identification is a method for ranking metabolic features by their abundance ratio between sample groups in a feature-by-sample metabolomic matrix. It is used to rapidly identify differential metabolites without statistical hypothesis testing, suitable for initial screening and biomarker discovery.

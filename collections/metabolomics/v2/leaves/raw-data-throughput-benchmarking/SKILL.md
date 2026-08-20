@@ -16,7 +16,7 @@ metadata:
   - .NET 8.0 Runtime
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -55,7 +55,6 @@ attribution:
 
 # raw-data-throughput-benchmarking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Measure the spectra-per-second throughput of raw mass spectrometry data reading operations using controlled benchmark experiments with varying scan counts. This skill quantifies I/O and parsing performance on proprietary binary formats (e.g., Thermo .raw files) to validate data access layer speed and guide pipeline optimization decisions.

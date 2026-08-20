@@ -20,7 +20,7 @@ metadata:
   - KEGG database
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
@@ -57,7 +57,6 @@ attribution:
 
 # peak-recovery-post-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Recovery of metabolite peaks that were completely removed during cluster-based filtering in untargeted LC-MS annotation pipelines. This skill restores potentially valid candidates that may have been over-filtered, improving annotation sensitivity without sacrificing specificity.

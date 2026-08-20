@@ -17,7 +17,7 @@ metadata:
   - rawDiag
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -54,7 +54,6 @@ attribution:
 
 # extracted-ion-chromatogram-processing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and process chromatographic traces for specific m/z values from Thermo Fisher Scientific raw files, enabling targeted detection and retention time annotation of peptide precursors. This skill bridges low-level binary data access with high-level peptide identification by isolating XIC signals at user-defined mass tolerance.

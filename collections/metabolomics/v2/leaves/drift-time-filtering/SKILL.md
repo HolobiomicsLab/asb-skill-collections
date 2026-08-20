@@ -17,7 +17,7 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -46,7 +46,6 @@ attribution:
 
 # drift-time-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Restrict Gas Chromatography–Ion Mobility Spectrometry (GCIMS) samples to a target drift time range to remove instrumental noise and out-of-range ion signals before downstream alignment and peak detection. This is a critical preprocessing step that reduces data dimensionality and improves signal quality.

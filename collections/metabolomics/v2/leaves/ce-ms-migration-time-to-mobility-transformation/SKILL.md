@@ -19,7 +19,7 @@ metadata:
   - Spectra
   techniques:
   - CE-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
@@ -54,7 +54,6 @@ attribution:
 
 # ce-ms-migration-time-to-mobility-transformation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform capillary electrophoresis–mass spectrometry (CE-MS) data from migration time scale to effective mobility scale using two-marker calibration, enabling reproducible peak alignment across runs despite electroosmotic flow variations. This skill applies the mobilityTransform function to OnDiskMSnExp objects and outputs unified .mzML files containing both positive and negative effective mobilities.

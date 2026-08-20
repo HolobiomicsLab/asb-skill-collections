@@ -13,7 +13,7 @@ metadata:
   - R
   - R (base)
   - Metabolomics Workbench API
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
@@ -46,7 +46,6 @@ attribution:
 
 # lipid-nomenclature-pattern-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Recover and standardize unparsed lipid molecule names that do not follow supported naming conventions by applying regular expression pattern matching. This skill enables successful parsing of molecules with full chemical names (e.g., Ceramides) into canonical lipidomics formats, expanding the set of analyzable lipids in a LipidomicsExperiment.

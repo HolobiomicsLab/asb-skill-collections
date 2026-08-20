@@ -16,7 +16,7 @@ metadata:
   - ggplot2
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c05748
   title: CordBat
@@ -48,7 +48,6 @@ attribution:
 
 # metabolite-data-log-transformation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Log2-transform raw metabolite abundance matrices prior to batch correction or statistical analysis in metabolomics. This preprocessing step stabilizes variance across the wide dynamic range typical of mass spectrometry data and prepares the matrix for concordance-based batch correction algorithms like CordBat.

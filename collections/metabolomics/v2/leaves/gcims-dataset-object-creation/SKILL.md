@@ -16,7 +16,7 @@ metadata:
   - LC-MS
   - GC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -46,7 +46,6 @@ attribution:
 
 # gcims-dataset-object-creation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Create a GCIMSDataset object in R from raw Gas Chromatography–Ion Mobility Spectrometry data files to enable downstream preprocessing (filtering, smoothing, alignment, peak detection). This is the foundational step that wraps raw GCIMS samples and their metadata into a unified object suitable for the GCIMS pipeline.

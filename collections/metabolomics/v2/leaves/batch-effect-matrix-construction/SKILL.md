@@ -17,7 +17,7 @@ metadata:
   - SummarizedExperiment
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
@@ -48,7 +48,6 @@ attribution:
 
 # batch-effect-matrix-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a simulated batch-effect matrix for LC/GC-MS metabolomics feature tables by applying nbatch batch factors with configurable intensity modulation profiles (linear, random) across nperbatch samples per batch. This enables controlled benchmarking of batch-correction algorithms on realistic MS data with known ground truth.

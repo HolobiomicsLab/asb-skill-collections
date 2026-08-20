@@ -16,7 +16,7 @@ metadata:
   - bcpareto
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
@@ -50,7 +50,6 @@ attribution:
 
 # log-transformation-preprocessing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply optional logarithmic transformation to peak intensity vectors in LC/GC-MS metabolomics data to stabilize variance and improve normality before batch correction. This preprocessing step is toggled conditionally based on data characteristics and is typically paired with Pareto scaling for robust QC-based batch effect attenuation.

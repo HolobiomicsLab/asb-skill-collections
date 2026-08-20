@@ -14,7 +14,7 @@ metadata:
   - metabCombiner
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
@@ -46,7 +46,6 @@ attribution:
 
 # feature-missingness-threshold-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove low-abundance or sparsely-detected metabolomic features from LC-MS datasets by applying a sample-wise missingness threshold. This filtering step eliminates features detected in fewer than a specified percentage of samples, reducing noise and improving feature quality before downstream alignment and scoring.

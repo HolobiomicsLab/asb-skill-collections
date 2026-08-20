@@ -19,7 +19,7 @@ metadata:
   - Metabolomics Workbench API
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
@@ -52,7 +52,6 @@ attribution:
 
 # lipidomics-data-mining
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 End-to-end mining and statistical analysis of lipidomics mass spectrometry datasets using lipidr in R, encompassing data import, quality control, multivariate and univariate analysis, and lipid set enrichment analysis to identify lipid classes and chain properties associated with biological conditions.

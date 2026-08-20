@@ -17,7 +17,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
@@ -49,7 +49,6 @@ attribution:
 
 # chromatographic-noise-modeling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate realistic background noise and optional matrix peaks in simulated LC/GC-MS .mzML files by applying stochastic noise models and overlaying biochemical background signals. This skill enables creation of ground-truth synthetic data for benchmarking peak detection, noise filtering, and batch correction methods in untargeted metabolomics.

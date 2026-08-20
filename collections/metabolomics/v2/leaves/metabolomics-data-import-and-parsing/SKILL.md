@@ -16,7 +16,7 @@ metadata:
   - amanida
   - webchem
   - metaboprep
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btab591
   title: Amanida
@@ -58,7 +58,6 @@ attribution:
 
 # metabolomics-data-import-and-parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Import metabolomics datasets from standard file formats (xls/xlsx, csv, txt) into a structured tibble suitable for meta-analysis, handling column mapping, missing data, and fold-change sign normalization. This is the critical first step that prepares raw study results (compound identifiers, p-values, fold-changes, sample sizes, references) for downstream quantitative or qualitative meta-analysis workflows.

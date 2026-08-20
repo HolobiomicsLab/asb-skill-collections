@@ -18,7 +18,7 @@ metadata:
   - cliqueMS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
@@ -55,7 +55,6 @@ attribution:
 
 # mass-to-charge-ratio-matching-against-kegg
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match observed m/z values from LC-MS peak-intensity matrices to KEGG database compounds by testing all possible neutral mass candidates derived from a precomputed adduct and in-source fragment table. This is the first critical step in untargeted metabolomics annotation, converting raw peaks into candidate metabolite identifiers.

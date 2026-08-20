@@ -16,7 +16,7 @@ metadata:
   - reproduce_figures notebooks
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -50,7 +50,6 @@ attribution:
 
 # regression-performance-metric-computation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute standard regression performance metrics (mean absolute error, R², and other statistics) on model predictions against ground-truth labels to quantify generalizability of graph neural network collision cross section predictions. This skill validates whether a trained model reproduces reported performance benchmarks.

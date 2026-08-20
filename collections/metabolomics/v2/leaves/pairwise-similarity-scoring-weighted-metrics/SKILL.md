@@ -16,7 +16,7 @@ metadata:
   - mgcv
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
@@ -48,7 +48,6 @@ attribution:
 
 # pairwise-similarity-scoring-weighted-metrics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute composite similarity scores for feature pair alignments in LC-MS metabolomics by combining weighted retention time, m/z, and cosine similarity components. This skill enables systematic parameter optimization to identify optimal weight ranges that maximize alignment accuracy against known compound identities.

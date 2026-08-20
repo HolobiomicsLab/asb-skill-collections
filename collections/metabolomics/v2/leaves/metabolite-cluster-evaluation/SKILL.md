@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -49,7 +49,6 @@ attribution:
 
 # metabolite-cluster-evaluation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate and compare molecular weight inference methods (findMain vs. RAMClustR scoring) on clustered LC-MS metabolomics features to assess agreement rates and resolve discordant predictions. This skill ensures that compound clusters are assigned reliable consensus molecular weights before downstream annotation.

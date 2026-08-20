@@ -22,7 +22,7 @@ metadata:
   - LC-MS
   - GC-MS
   - direct-infusion-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -56,7 +56,6 @@ attribution:
 
 # metabolite-feature-clustering-by-retention-time
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Groups mass spectrometry features derived from the same metabolite by clustering on retention time similarity and quantitative correlation patterns across samples. This resolves the problem that each compound produces multiple features due to isotopic peaks and adduction/fragmentation phenomena, enabling downstream spectral annotation and molecular weight inference.

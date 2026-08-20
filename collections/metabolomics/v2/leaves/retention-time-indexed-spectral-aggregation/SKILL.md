@@ -19,7 +19,7 @@ metadata:
   - rawDiag
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -57,7 +57,6 @@ attribution:
 
 # retention-time-indexed-spectral-aggregation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Programmatically extract and aggregate spectral properties (m/z, intensity, scan metadata) indexed by retention time from Thermo Orbitrap raw files using rawrr's readIndex() and readSpectrum() functions. This skill enables direct access to MS1 or MS2 scan data without external conversion, facilitating modular end-to-end analysis pipelines in R.

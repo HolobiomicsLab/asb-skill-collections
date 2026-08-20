@@ -18,7 +18,7 @@ metadata:
   - igraph
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
@@ -55,7 +55,6 @@ attribution:
 
 # network-diffusion-prioritization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Applies diffusion-based prioritization on a metabolite network graph to rank candidate annotations by propagating probability scores through network topology. This skill prioritizes likely metabolite identities by leveraging context-aware network information rather than raw matching scores alone.

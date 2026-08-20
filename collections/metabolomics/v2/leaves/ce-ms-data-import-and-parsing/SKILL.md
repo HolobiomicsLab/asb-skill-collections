@@ -20,7 +20,7 @@ metadata:
   - BiocManager
   techniques:
   - CE-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
@@ -54,7 +54,6 @@ attribution:
 
 # CE-MS data import and parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and parse raw capillary electrophoresis–mass spectrometry (CE-MS) data from standard formats (mzML, netCDF) into R memory structures that preserve spectral, mobility, and mass-to-charge information for downstream transformation and feature extraction. This is the foundational step that enables reproducible analysis of CE-MS electropherograms.

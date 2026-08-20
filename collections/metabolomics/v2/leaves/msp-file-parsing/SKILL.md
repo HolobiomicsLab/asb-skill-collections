@@ -15,7 +15,7 @@ metadata:
   - R
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
@@ -52,7 +52,6 @@ attribution:
 
 # msp-file-parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and validate electron ionization mass spectral library files in MSP format, extracting spectral records with their metadata annotations, peak lists, and precursor m/z values for downstream library search or format conversion workflows. This skill is essential for enabling reproducible mass spectral database operations in R environments.

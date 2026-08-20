@@ -18,7 +18,7 @@ metadata:
   - exactoThese
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -51,7 +51,6 @@ attribution:
 
 # chemical-match-score-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret structural similarity match scores from cheminformatics tools (ChemmineR, fmcsR) to identify and validate chemical compounds that meet structural equivalence thresholds. This skill bridges mass spectrometry identification with structural validation, enabling confident assignment of query chemicals to library compounds based on quantified atomic and molecular feature overlap.

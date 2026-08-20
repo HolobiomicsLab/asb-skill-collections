@@ -17,7 +17,7 @@ metadata:
   - KEGG database
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
@@ -53,7 +53,6 @@ attribution:
 
 # untargeted-lcms-peak-annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate detected LC-MS peaks by matching their mass-to-charge ratios against a KEGG compound database using precomputed adduct and in-source fragment tables. This skill addresses a major bottleneck in untargeted metabolomics by systematically resolving observed m/z values to candidate metabolites.

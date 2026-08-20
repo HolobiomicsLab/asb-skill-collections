@@ -13,7 +13,7 @@ metadata:
   - LargeMetabo
   - factoextra
   - ggplot2
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
@@ -46,7 +46,6 @@ attribution:
 
 # hierarchical-cluster-analysis-dendrogram-generation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply hierarchical clustering analysis (HCA) to metabolomic feature matrices to produce dendrograms that visualize sample groupings and separation by metabolic profile. This skill is used when you need to discover and display unsupervised clustering structure in high-dimensional metabolomic data without requiring prior knowledge of sample group labels.

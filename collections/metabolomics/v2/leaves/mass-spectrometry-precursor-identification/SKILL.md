@@ -17,7 +17,7 @@ metadata:
   - MsBackendRawFileReader
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -54,7 +54,6 @@ attribution:
 
 # Mass Spectrometry Precursor Identification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and extract precursor m/z values and retention times for peptide standards from Thermo Orbitrap raw files using extracted ion chromatograms (XIC) with tight mass tolerance. This skill enables validation of LC-MS method linearity and peptide behavior through comparison of experimental retention times against known reference standards.

@@ -16,7 +16,7 @@ metadata:
   - R
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
@@ -50,7 +50,6 @@ attribution:
 
 # xcms-output-replacement-workflow
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Replace XCMS-derived retention time (RT) corrections with ncGTW-computed warping functions to improve alignment accuracy for LC-MS feature groups affected by RT drift or misalignment. This workflow detects XCMS alignment failures and substitutes individualized, compound-specific warping functions that better capture RT structure across sample cohorts.

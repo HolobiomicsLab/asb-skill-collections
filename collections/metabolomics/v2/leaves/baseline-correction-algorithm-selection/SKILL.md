@@ -15,7 +15,7 @@ metadata:
   - R
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
@@ -49,7 +49,6 @@ attribution:
 
 # Baseline Correction Algorithm Selection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Selecting and applying an appropriate baseline correction algorithm to remove instrumental drift, column bleeding, and chemical noise from raw GCxGC-MS chromatographic signals. This skill determines which baseline correction approach (e.g., asymmetric least squares) best suits the noise characteristics and intensity profile of the 2D-TIC chromatogram before downstream preprocessing and multivariate analysis.

@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -47,7 +47,6 @@ attribution:
 
 # Reconstruct the total similarity score as the product of retention time and correlational similarity
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute pairwise total similarity scores for metabolomics features by multiplying retention time similarity and correlational similarity metrics. This scoring approach identifies features likely derived from the same compound (score → 1) versus different compounds (score → 0), enabling unsupervised feature clustering in non-targeted LC-MS and GC-MS data.

@@ -15,7 +15,7 @@ metadata:
   - NIST API
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
@@ -49,7 +49,6 @@ attribution:
 
 # Spectral Similarity Scoring (EI Simple)
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 The Similarity (EI Simple) algorithm computes pairwise similarity scores between a query electron ionization mass spectrum and library entries to identify and rank matching compounds. It is a core method for unbiased library searching in mass spectrometry when the query spectrum is not an exact match to any library entry.

@@ -18,7 +18,7 @@ metadata:
   - graphical time warping (GTW)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
@@ -50,7 +50,6 @@ attribution:
 
 # chromatographic-peak-detection-and-grouping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and group chromatographic peaks across LC-MS samples, then identify and correct misaligned feature groups using compound-specific warping functions. This skill bridges XCMS peak detection with ncGTW realignment to reduce coefficient-of-variation in aligned retention times.

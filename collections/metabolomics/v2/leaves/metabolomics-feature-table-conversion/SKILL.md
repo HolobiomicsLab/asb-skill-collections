@@ -16,7 +16,7 @@ metadata:
   - mzrtsim
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
@@ -49,7 +49,6 @@ attribution:
 
 # Wrap simulated metabolomics feature tables in SummarizedExperiment for Bioconductor integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert peak-list simulation output (feature tables with condition and batch effects) into a SummarizedExperiment object that exposes count data and sample metadata through standard Bioconductor accessors. This enables seamless downstream integration with Bioconductor normalization, batch correction, and analysis workflows.

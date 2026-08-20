@@ -20,7 +20,7 @@ metadata:
   - Sirius
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -53,7 +53,6 @@ attribution:
 
 # mass-spectrometry-feature-clustering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Groups multiple mass spectrometry features derived from the same compound using unsupervised clustering based on retention time similarity and quantitative correlation across samples. This skill resolves the isotopic peaks and adduction artifacts inherent to MS ionization into coherent molecular entities before annotation.

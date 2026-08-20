@@ -17,7 +17,7 @@ metadata:
   - Spectra
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
@@ -51,7 +51,6 @@ attribution:
 
 # spectral-consensus-spectrum-generation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate a consensus MS/MS spectrum by aggregating fragment m/z values and intensities across replicate spectra within a specified mass tolerance, producing a merged spectrum with fragment recurrence frequencies. This step is essential for denoising and downstream metabolite annotation in untargeted metabolomics.

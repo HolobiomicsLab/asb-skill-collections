@@ -17,7 +17,7 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -54,7 +54,6 @@ attribution:
 
 # mass-spectrometry-data-statistical-testing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply univariate statistical tests (parametric ANOVA or non-parametric alternatives) to LC-MS/MS metabolomic feature tables to identify metabolites with statistically significant abundance differences across sample classes, followed by multiple-testing correction and feature selection based on q-value thresholds.

@@ -15,7 +15,7 @@ metadata:
   - metaboprep
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac059
   title: Metaboprep
@@ -44,7 +44,6 @@ attribution:
 
 # sample-missingness-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter metabolomics samples from a Metaboprep object based on user-defined thresholds for missing data proportion. This step removes samples exceeding a missingness cutoff (e.g., ≥20%) to ensure adequate feature coverage before downstream analysis.

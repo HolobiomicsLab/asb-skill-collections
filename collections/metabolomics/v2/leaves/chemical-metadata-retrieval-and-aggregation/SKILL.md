@@ -17,7 +17,7 @@ metadata:
   - PubChem
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -52,7 +52,6 @@ attribution:
 
 # chemical-metadata-retrieval-and-aggregation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve published chemical metadata (synonyms, exact molecular mass, top m/z peaks, retention time ranges) from external databases (PubChem, webchem) and aggregate it with GC-MS sample data into a nested, searchable index keyed by compound name. This enables downstream sorting, filtering, and categorization of mass spectrometry detections.

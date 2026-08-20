@@ -15,7 +15,7 @@ metadata:
   - R
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
@@ -49,7 +49,6 @@ attribution:
 
 # chromatogram-alignment-warping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aligns preprocessed 2D gas chromatography samples to a reference chromatogram using 2D correlation optimized warping (2DCOW), which corrects for retention-time drift and nonlinear distortion across both chromatographic dimensions. This skill is essential after baseline correction and smoothing to enable accurate multivariate comparison of GCxGC-MS profiles.

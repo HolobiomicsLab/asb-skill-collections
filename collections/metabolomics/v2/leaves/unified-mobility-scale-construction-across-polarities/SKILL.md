@@ -19,7 +19,7 @@ metadata:
   - Spectra
   techniques:
   - CE-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
@@ -54,7 +54,6 @@ attribution:
 
 # unified-mobility-scale-construction-across-polarities
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform CE-MS migration time data to a unified effective mobility scale spanning both positive and negative polarities using two-marker calibration. This produces a single polarity-agnostic .mzML file with reproducible, system-independent mobility values replacing migration times.

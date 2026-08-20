@@ -16,7 +16,7 @@ metadata:
   - R
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
@@ -46,7 +46,6 @@ attribution:
 
 # feature-consolidation-across-batches
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Consolidate metabolomic features from multiple analytical experiments into a single aligned feature matrix by matching features across datasets using retention time and mass-to-charge ratio tolerance thresholds. This skill is essential for combining data from different LC-MS/MS batches or experimental runs into a unified matrix suitable for downstream analysis.

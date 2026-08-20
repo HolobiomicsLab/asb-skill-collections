@@ -25,7 +25,7 @@ metadata:
   - future / future.apply
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -59,7 +59,6 @@ attribution:
 
 # chemical-structure-smiles-assignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign SMILES (Simplified Molecular Input Line Entry System) chemical structure strings to mass spectral library entries using structure files derived from MOL or SDF files. This skill enables enrichment of MS libraries with standardized chemical structure notation needed for downstream metabolomics workflows like MS-DIAL.

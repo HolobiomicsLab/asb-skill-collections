@@ -17,7 +17,7 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -46,7 +46,6 @@ attribution:
 
 # R data structure processing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Process and transform R data structures (matrices, datasets, objects) through imputation, filtering, and normalization operations to prepare Gas Chromatography–Ion Mobility Spectrometry (GCIMS) sample data for downstream analysis. This skill ensures missing values are filled systematically and data conform to expected schemas.

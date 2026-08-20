@@ -19,7 +19,7 @@ metadata:
   - Sirius
   techniques:
   - direct-infusion-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -52,7 +52,6 @@ attribution:
 
 # metabolite-feature-grouping-by-compound
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Group mass spectrometry features derived from the same compound by leveraging retention time similarity and quantitative correlation across samples. This skill consolidates multiple ions, isotopes, and adducts representing a single metabolite into coherent clusters for downstream annotation and interpretation.

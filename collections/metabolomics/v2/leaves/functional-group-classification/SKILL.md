@@ -17,7 +17,7 @@ metadata:
   - fmcsR
   - webchem
   - uafR
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -50,7 +50,6 @@ attribution:
 
 # functional-group-classification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Classify query chemicals into categorical groups based on structural and functional properties using cheminformatics packages that assess atomic features, ring systems, and molecular weight. This skill enables researchers to systematically organize and filter chemical inventories by structural similarity and functional characteristics.

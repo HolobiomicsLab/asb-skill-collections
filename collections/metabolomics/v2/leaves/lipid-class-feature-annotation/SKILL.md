@@ -14,7 +14,7 @@ metadata:
   - R
   - Skyline
   - SummarizedExperiment
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
@@ -47,7 +47,6 @@ attribution:
 
 # Lipid Class and Feature Annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematic annotation and validation of lipid molecule names to ensure they follow supported naming patterns, enabling accurate parsing into lipid class, chain length, and unsaturation features for downstream enrichment analysis. This skill is essential for preparing raw lipidomics data for feature-level biological interpretation.

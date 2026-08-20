@@ -18,7 +18,7 @@ metadata:
   - Seurat
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -54,7 +54,7 @@ attribution:
 
 # Cardinal peak processing with SNR filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Apply Cardinal's peakProcess function to detect and filter MS imaging peaks using signal-to-noise ratio thresholds, generating a cleaned peak list suitable for downstream annotation and spatial analysis. This skill reduces noise-driven false positives in high-dimensional MS imaging datasets.

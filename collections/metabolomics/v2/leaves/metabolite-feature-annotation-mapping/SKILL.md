@@ -18,7 +18,7 @@ metadata:
   - batch_normalise
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac059
   title: Metaboprep
@@ -47,7 +47,6 @@ attribution:
 
 # metabolite-feature-annotation-mapping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map and annotate metabolite features from untargeted or targeted metabolomics data by associating raw mass spectrometry signals with metabolite identities, biochemical pathways, and external reference databases (KEGG, HMDB). This skill enables downstream biological interpretation by enriching feature tables with structured metadata.

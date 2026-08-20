@@ -16,7 +16,7 @@ metadata:
   - notame
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -53,7 +53,6 @@ attribution:
 
 # metabolite-cv-ratio-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate and apply coefficient-of-variation (CV) ratios between sample and QC groups to filter metabolomic features by reproducibility. This skill identifies features with elevated variability in real samples relative to quality-control replicates, retaining only those exceeding a ratio threshold (typically CV_non-QC / CV_QC > 1.0).

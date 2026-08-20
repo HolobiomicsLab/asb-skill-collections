@@ -19,7 +19,7 @@ metadata:
   - Agilent Unknowns Analysis
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -54,7 +54,6 @@ attribution:
 
 # ms-spectral-library-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match query chemicals against GC-MS sample data by comparing retention times, exact masses, and compound names to identify and extract best-match factors and quantified area values. This skill automates the lookup and validation of reference compounds in mass spectrometry datasets.

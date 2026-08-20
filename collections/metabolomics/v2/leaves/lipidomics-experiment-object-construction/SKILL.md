@@ -19,7 +19,7 @@ metadata:
   - Skyline
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
@@ -53,7 +53,6 @@ attribution:
 
 # lipidomics-experiment-object-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a LipidomicsExperiment object in R by parsing lipidomics data from Metabolomics Workbench API, Skyline CSV exports, or numerical matrices, combined with sample annotations. This object serves as the foundational data structure for downstream quality control, multivariate analysis, and differential expression workflows in lipidr.

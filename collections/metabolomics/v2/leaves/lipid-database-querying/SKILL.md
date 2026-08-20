@@ -19,7 +19,7 @@ metadata:
   - RefineLipids
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: noncommercial
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -53,7 +53,7 @@ attribution:
 
 # lipid-database-querying
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Match observed mass-to-charge ratios (m/z) from spatial metabolomics datasets against curated lipid structural databases (e.g., LipidMaps) using mass accuracy tolerance and adduct type constraints. This skill enables systematic identification of lipid species in untargeted MS imaging experiments.

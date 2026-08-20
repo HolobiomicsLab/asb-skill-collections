@@ -15,7 +15,7 @@ metadata:
   - mgcv
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
@@ -47,7 +47,6 @@ attribution:
 
 # feature-pair-alignment-parameter-optimization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically optimize the three-component weighted scoring function (retention time weight A, m/z weight B, similarity weight C) used to rank feature pair alignments in untargeted LC-MS metabolomics by grid search and validation against known shared metabolite identities. This skill is essential when combining disparately-acquired datasets where alignment quality directly determines downstream statistical power and metabolite identification accuracy.

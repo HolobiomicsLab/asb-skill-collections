@@ -16,7 +16,7 @@ metadata:
   - ra_table
   - pie_chart
   - ggplot2
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -45,7 +45,6 @@ attribution:
 
 # statistical-significance-threshold-application
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply adjusted p-value (padj) thresholds to metabolomics summary statistics to identify and isolate significantly altered metabolites for downstream analysis and visualization. This skill filters omu_summary output to retain only compounds meeting a user-defined statistical significance criterion, typically padj ≤ 0.05.

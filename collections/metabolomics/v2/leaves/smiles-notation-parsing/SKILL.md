@@ -17,7 +17,7 @@ metadata:
   - ChemmineR
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -48,7 +48,6 @@ attribution:
 
 # SMILES Notation Parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and standardize SMILES (Simplified Molecular Input Line Entry System) strings from mass spectral library records, typically sourced from Comment fields or structure databases. This skill reorganizes molecular structure information into a dedicated SMILES field required by downstream mass spectral analysis pipelines.

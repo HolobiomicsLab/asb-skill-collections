@@ -16,7 +16,7 @@ metadata:
   - Spectra
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -53,7 +53,6 @@ attribution:
 
 # scan-index-parsing-and-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse the complete scan index table from a Thermo Fisher Scientific Orbitrap .raw file and filter scans by acquisition method, precursor m/z, and collision energy to isolate targeted MS/MS cycles. This skill enables validation of acquisition consistency metrics such as inter-scan deltas and cycle structure in parallel reaction monitoring (PRM) workflows.

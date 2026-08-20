@@ -14,7 +14,7 @@ metadata:
   - R
   - ggplot2
   - metaboprep
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac059
   title: Metaboprep
@@ -44,7 +44,6 @@ attribution:
 
 # outlier-detection-via-multivariate-distance
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and enumerate sample outliers in metabolomic data using multivariate distance metrics (Mahalanobis or Euclidean) computed on principal component scores, applied at configurable standard deviation thresholds (typically 3–5 SD). This skill integrates missing-data imputation, PC selection via acceleration and parallel analysis, and systematic outlier flagging to support quality control workflows.

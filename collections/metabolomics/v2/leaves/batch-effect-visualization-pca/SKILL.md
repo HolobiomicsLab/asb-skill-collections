@@ -17,7 +17,7 @@ metadata:
   - dplyr
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c05748
   title: CordBat
@@ -49,7 +49,6 @@ attribution:
 
 # Batch-effect visualization via PCA
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Visualize the impact of batch correction on metabolomics sample clustering by performing PCA on uncorrected and corrected log2-transformed metabolite matrices, then comparing their principal component projections colored by batch and group metadata. This skill enables direct assessment of whether batch correction reduces batch-driven separation while preserving group structure.

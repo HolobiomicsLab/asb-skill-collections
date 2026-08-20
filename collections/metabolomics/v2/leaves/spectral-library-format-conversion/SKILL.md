@@ -23,7 +23,7 @@ metadata:
   - ChemmineOB
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -63,7 +63,6 @@ attribution:
 
 # spectral-library-format-conversion
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert mass spectral libraries between formats (MSP, MGF, MOL/SDF, text) and reorganize metadata fields to conform to downstream tool requirements such as MS-DIAL. This skill is essential when compiling heterogeneous spectral sources (NIST, MoNA, RIKEN, GNPS) into a unified, polarity-separated library.

@@ -21,7 +21,7 @@ metadata:
   - data.table
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
@@ -56,7 +56,6 @@ attribution:
 
 # Spectral Peak Frequency Threshold Optimization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically identify the optimal frequency threshold for MS/MS fragment denoising by applying Pareto front analysis to evaluate trade-offs between signal retention and noise reduction across a range of threshold values. This skill determines which fragments to retain in tandem mass spectra based on their recurrence frequency across replicate spectra.

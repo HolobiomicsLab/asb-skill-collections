@@ -23,7 +23,7 @@ metadata:
   - assign_hierarchy
   - omu_summary
   - R stats (base statistical functions)
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.08.28.672951v2
   title: EnrichMET
@@ -65,7 +65,6 @@ attribution:
 
 # multiple-hypothesis-correction-in-metabolomics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply adjusted p-value thresholds and multiple-testing corrections during metabolite set enrichment analysis to control false discovery rates across pathway and metabolite hypotheses. This prevents spurious pathway assignments when testing many metabolites and pathways simultaneously.

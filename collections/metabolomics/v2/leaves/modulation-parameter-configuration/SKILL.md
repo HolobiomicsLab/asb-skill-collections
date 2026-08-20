@@ -14,7 +14,7 @@ metadata:
   - R
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
@@ -48,7 +48,6 @@ attribution:
 
 # modulation-parameter-configuration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure the modulation parameter when importing raw GCxGC-MS chromatograms from NetCDF files to correctly fold the one-dimensional raw signal into a two-dimensional Total Intensity Chromatogram (2D-TIC). The modulation parameter specifies the period (in seconds) of the second dimension, which is critical for proper data structure and subsequent preprocessing.

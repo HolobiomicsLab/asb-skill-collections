@@ -18,7 +18,7 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -55,7 +55,6 @@ attribution:
 
 # PRM Acquisition Event Identification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and validate parallel reaction monitoring (PRM) acquisition cycles in Thermo Orbitrap raw files by extracting the scan index, filtering for targeted precursor ion acquisitions, and confirming consistent inter-scan spacing. This skill enables quality control of PRM method consistency and detection of complete acquisition cycles targeting specific peptide precursors.

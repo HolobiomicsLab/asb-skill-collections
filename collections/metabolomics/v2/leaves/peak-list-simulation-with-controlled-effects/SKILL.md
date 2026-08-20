@@ -21,7 +21,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
@@ -52,7 +52,6 @@ attribution:
 
 # peak-list-simulation-with-controlled-effects
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate synthetic LC/GC-MS feature tables with controlled condition and batch effects using the mzrtsim() function to benchmark normalization and batch correction methods. This skill produces ground-truth peak-list simulations where effect magnitudes and patterns are known and reproducible.

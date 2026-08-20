@@ -17,7 +17,7 @@ metadata:
   - future.apply
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -50,7 +50,6 @@ attribution:
 
 # Validate mass spectral library object structure and content
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a compiled mass spectral library object (EI or MS2) contains the expected field structure, populated key columns (especially SMILES and retention index fields), and correct row counts after pipeline transformation steps. This ensures data integrity before downstream processing or file export.

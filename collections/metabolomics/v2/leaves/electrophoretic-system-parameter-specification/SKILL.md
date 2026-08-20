@@ -15,7 +15,7 @@ metadata:
   - Spectra
   techniques:
   - CE-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
@@ -47,7 +47,6 @@ attribution:
 
 # electrophoretic-system-parameter-specification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Specification and provision of electrical and physical parameters that define a capillary electrophoresis–mass spectrometry (CE-MS) system for effective mobility transformation. These parameters (applied voltage, capillary length, electrical field ramp time) are required inputs to the mobilityTransform function and must be accurately documented to enable reproducible mobility calibration across analytical runs.

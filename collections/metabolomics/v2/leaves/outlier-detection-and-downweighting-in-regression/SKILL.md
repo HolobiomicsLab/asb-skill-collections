@@ -16,7 +16,7 @@ metadata:
   - metabCombiner
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
@@ -49,7 +49,6 @@ attribution:
 
 # outlier-detection-and-downweighting-in-regression
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Iteratively identify and downweight anomalous observations in generalized additive model (GAM) fitting by flagging points whose absolute error exceeds a threshold multiple of the mean absolute model error, then assigning them zero weight to stabilize spline coefficient estimation. This technique is applied during nonlinear retention time mapping in LC-MS metabolomics to prevent outlier anchor points from distorting the fitted spline.

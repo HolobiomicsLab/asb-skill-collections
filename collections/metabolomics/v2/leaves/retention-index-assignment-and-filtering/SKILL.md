@@ -22,7 +22,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -57,7 +57,6 @@ attribution:
 
 # Retention-Index Assignment and Filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assigns experimental Kovats retention indices (RI) to combined mass spectral libraries by extracting RI data from NIST reference files, then filters assigned RI values based on column type, polarity, and statistical quality thresholds. This enriches library records with validated RI metadata for improved compound identification in GC-MS workflows.

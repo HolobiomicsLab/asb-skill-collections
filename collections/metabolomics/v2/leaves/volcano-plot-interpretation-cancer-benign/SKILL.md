@@ -14,7 +14,7 @@ metadata:
   - lipidr
   - limma
   - R
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
@@ -48,7 +48,6 @@ attribution:
 
 # volcano-plot-interpretation-cancer-benign
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate and interpret volcano plots to visualize log2-fold-change and adjusted p-values in two-group differential lipidomics analysis comparing cancer to benign tissue samples. This skill identifies lipid classes with significant regulatory patterns (up- or down-regulation) that distinguish disease states.

@@ -14,7 +14,7 @@ metadata:
   - transform_samples
   - random_forest
   - randomForest
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -43,7 +43,6 @@ attribution:
 
 # metabolite-overdispersion-correction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Log-transform metabolomics count data column-wise to stabilize variance and address overdispersion before applying statistical or machine-learning methods. This preprocessing step is particularly useful when count data exhibits heteroscedasticity that could bias downstream analyses.

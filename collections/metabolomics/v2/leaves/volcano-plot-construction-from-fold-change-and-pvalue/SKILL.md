@@ -16,7 +16,7 @@ metadata:
   - assign_hierarchy
   - ggplot2
   - plot_volcano
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -45,7 +45,6 @@ attribution:
 
 # volcano-plot-construction-from-fold-change-and-pvalue
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a publication-ready volcano plot from metabolomics differential abundance results (log2 fold-change and adjusted p-values) using ggplot2. This skill enables visual identification of significantly altered metabolites across treatment contrasts with customizable aesthetic parameters (color, fill, shape, alpha) mapped to hierarchical metabolite classes.

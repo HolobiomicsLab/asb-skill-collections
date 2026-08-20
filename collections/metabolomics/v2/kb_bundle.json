@@ -604,7 +604,7 @@
       "repo_urls": [
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "4d-lcimmsms-feature-extraction": {
       "dois": [
@@ -750,7 +750,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "abundance-normalization-and-summary-statistics": {
       "dois": [
@@ -930,7 +930,7 @@
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/LargeMetabo/LargeMetabo"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "adduct-annotation-against-reference-library": {
       "dois": [
@@ -1056,7 +1056,7 @@
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/LargeMetabo/LargeMetabo"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "adduct-ion-mass-calculation": {
       "dois": [
@@ -1116,7 +1116,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "adduct-ionmode-consistency-checking": {
       "dois": [
@@ -1737,7 +1737,7 @@
       "repo_urls": [
         "https://github.com/hhabra/metabCombiner"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ancova-peak-association-analysis": {
       "dois": [
@@ -1858,7 +1858,7 @@
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/LargeMetabo/LargeMetabo"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "annotation-candidate-comparative-scoring": {
       "dois": [
@@ -1924,7 +1924,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "annotation-confidence-assessment": {
       "dois": [
@@ -2125,7 +2125,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "anova-pvalue-adjustment-fdr": {
       "dois": [
@@ -2804,7 +2804,7 @@
         "https://github.com/yufree/mzrtsim",
         "https://github.com/SydneyBioX/hRUV"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "assay-ratio-computation-verification": {
       "dois": [
@@ -2844,7 +2844,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "association-ranking-statistical-filtering": {
       "dois": [
@@ -3784,7 +3784,7 @@
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "baseline-and-noise-level-estimation-from-quartile-statistics": {
       "dois": [
@@ -3887,7 +3887,7 @@
       "repo_urls": [
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "baseline-method-comparison-and-benchmarking": {
       "dois": [
@@ -3994,7 +3994,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "batch-aware-normalization-workflows": {
       "dois": [
@@ -4328,7 +4328,7 @@
         "https://github.com/yufree/mzrtsim",
         "https://github.com/SydneyBioX/hRUV"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "batch-effect-correction-reference-based": {
       "dois": [
@@ -4347,7 +4347,7 @@
         "https://github.com/BorchLab/CordBat",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "batch-effect-correction-workflow": {
       "dois": [
@@ -4406,7 +4406,7 @@
         "https://github.com/yufree/mzrtsim",
         "https://github.com/SydneyBioX/hRUV"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "batch-effect-preprocessing-with-replicate-structure": {
       "dois": [
@@ -4446,7 +4446,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "batch-effect-variance-quantification": {
       "dois": [
@@ -4515,7 +4515,7 @@
         "https://github.com/BorchLab/CordBat",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "batch-file-processing-across-directories": {
       "dois": [
@@ -4867,7 +4867,7 @@
         "https://github.com/BorchLab/CordBat",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "batch-wise-normalization-application": {
       "dois": [
@@ -5538,7 +5538,7 @@
         "https://github.com/yufree/mzrtsim",
         "https://github.com/SydneyBioX/hRUV"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "binary-data-integrity-verification": {
       "dois": [
@@ -5857,7 +5857,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "bioconductor-object-structure-inspection": {
       "dois": [
@@ -5899,7 +5899,7 @@
         "https://github.com/SydneyBioX/hRUV",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "biodegradation-pathway-interpretation": {
       "dois": [
@@ -5936,7 +5936,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "biological-reactant-pair-mapping-kegg": {
       "dois": [
@@ -7209,7 +7209,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "c-sharp-wrapper-method-validation": {
       "dois": [
@@ -7231,7 +7231,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "calibration-coefficient-accuracy-assessment": {
       "dois": [
@@ -7729,7 +7729,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "cardinal-peak-processing-snr-filtering": {
       "dois": [
@@ -7752,7 +7752,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "cardinal-to-seurat-object-conversion": {
       "dois": [
@@ -7775,7 +7775,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "cascade-search-strategy-fdr-control": {
       "dois": [
@@ -8102,7 +8102,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ce-ms-eof-marker-identification": {
       "dois": [
@@ -8125,7 +8125,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ce-ms-migration-time-measurement": {
       "dois": [
@@ -8147,7 +8147,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ce-ms-migration-time-to-mobility-transformation": {
       "dois": [
@@ -8169,7 +8169,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "cell-type-protein-profiling-integration": {
       "dois": [
@@ -8325,7 +8325,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "changelog-maintenance-and-documentation": {
       "dois": [
@@ -9102,7 +9102,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chemical-identifier-verification": {
       "dois": [
@@ -9119,7 +9119,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chemical-informatics-data-format-conversion": {
       "dois": [
@@ -9185,7 +9185,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chemical-metadata-harmonization": {
       "dois": [
@@ -9249,7 +9249,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chemical-name-normalization-and-publish-database-integration": {
       "dois": [
@@ -9273,7 +9273,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chemical-noise-subformula-loss-filtering": {
       "dois": [
@@ -9892,7 +9892,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chemical-structure-smiles-assignment": {
       "dois": [
@@ -9918,7 +9918,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chemical-structure-standardization": {
       "dois": [
@@ -10108,7 +10108,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chemical-valence-constraint-validation": {
       "dois": [
@@ -10165,7 +10165,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "cheminformatics-library-querying": {
       "dois": [
@@ -10184,7 +10184,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "cheminformatics-substructure-matching-and-reaction-templates": {
       "dois": [
@@ -10321,7 +10321,7 @@
       "repo_urls": [
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chromatogram-and-ionization-intensity-modeling": {
       "dois": [
@@ -10362,7 +10362,7 @@
       "repo_urls": [
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chromatogram-baseline-correction-preprocessing": {
       "dois": [
@@ -10380,7 +10380,7 @@
       "repo_urls": [
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chromatogram-extraction-and-visualization": {
       "dois": [
@@ -10423,7 +10423,7 @@
       "repo_urls": [
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chromatogram-peak-boundary-detection": {
       "dois": [
@@ -10766,7 +10766,7 @@
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chromatographic-modality-classification": {
       "dois": [
@@ -10801,7 +10801,7 @@
         "https://github.com/yufree/mzrtsim",
         "https://github.com/SydneyBioX/hRUV"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chromatographic-peak-annotation-visualization": {
       "dois": [
@@ -10888,7 +10888,7 @@
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chromatographic-peak-detection-and-integration": {
       "dois": [
@@ -11315,7 +11315,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chromatographic-window-coverage-assessment": {
       "dois": [
@@ -11355,7 +11355,7 @@
       "repo_urls": [
         "https://github.com/sipss/GCIMS"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "chromatography-data-preprocessing": {
       "dois": [
@@ -12121,7 +12121,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "cluster-assignment-mapping": {
       "dois": [
@@ -12157,7 +12157,7 @@
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/LargeMetabo/LargeMetabo"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "cluster-statistics-integration": {
       "dois": [
@@ -12173,7 +12173,7 @@
       "repo_urls": [
         "https://github.com/sipss/GCIMS"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "cluster-validation-cdf-threshold-selection": {
       "dois": [
@@ -12390,7 +12390,7 @@
       "repo_urls": [
         "https://github.com/massspecdl/ChemEmbed"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "cnn-spectral-feature-extraction": {
       "dois": [
@@ -12559,7 +12559,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "coefficient-of-variation-computation": {
       "dois": [
@@ -13074,7 +13074,7 @@
       "repo_urls": [
         "https://github.com/hhabra/metabCombiner"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "command-line-interface-configuration-and-automation": {
       "dois": [
@@ -13890,7 +13890,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "compound-candidate-ranking": {
       "dois": [
@@ -14025,7 +14025,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "compound-database-lookup-and-curation": {
       "dois": [
@@ -14380,7 +14380,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "compound-library-construction-and-curation": {
       "dois": [
@@ -14398,7 +14398,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "compound-list-annotation-and-filtering": {
       "dois": [
@@ -14420,7 +14420,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "compound-metric-tabulation": {
       "dois": [
@@ -14576,7 +14576,7 @@
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "compound-specific-warping-function-generation": {
       "dois": [
@@ -14597,7 +14597,7 @@
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "compound-standard-ratio-normalization": {
       "dois": [
@@ -14635,7 +14635,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "compound-structural-similarity-retrieval": {
       "dois": [
@@ -15297,7 +15297,7 @@
         "https://github.com/yufree/mzrtsim",
         "https://github.com/SydneyBioX/hRUV"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "conditional-allocation-design-patterns": {
       "dois": [
@@ -17235,7 +17235,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "correlation-coefficient-computation-for-metabolomics": {
       "dois": [
@@ -17323,7 +17323,7 @@
       "repo_urls": [
         "https://github.com/Asa12138/MetaNet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "correlation-network-construction-omics": {
       "dois": [
@@ -17341,7 +17341,7 @@
       "repo_urls": [
         "https://github.com/Asa12138/MetaNet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "correlation-threshold-optimization": {
       "dois": [
@@ -17359,7 +17359,7 @@
       "repo_urls": [
         "https://github.com/Asa12138/MetaNet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "cosine-annealing-learning-rate-scheduling": {
       "dois": [
@@ -18790,7 +18790,7 @@
         "https://github.com/MRCIEU/metaboprep",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "cross-tool-performance-comparison": {
       "dois": [
@@ -19774,7 +19774,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "data-handoff-pipeline-orchestration": {
       "dois": [
@@ -19875,7 +19875,7 @@
       "repo_urls": [
         "https://github.com/ZhuMSLab/DecoMetDIA"
       ],
-      "license_tier": "noncommercial"
+      "license_tier": "open"
     },
     "data-lineage-preservation-in-etl-pipelines": {
       "dois": [
@@ -20115,7 +20115,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "data-structure-validation": {
       "dois": [
@@ -21382,7 +21382,7 @@
       "repo_urls": [
         "https://github.com/massspecdl/ChemEmbed"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "deep-learning-model-training": {
       "dois": [
@@ -22426,7 +22426,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "differential-lipid-expression-analysis": {
       "dois": [
@@ -22446,7 +22446,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "differential-metabolite-abundance-analysis": {
       "dois": [
@@ -22558,7 +22558,7 @@
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/LargeMetabo/LargeMetabo"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "dimension-scale-linking-and-cross-group-indexing": {
       "dois": [
@@ -22924,7 +22924,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "distance-matrix-generation-from-indexes": {
       "dois": [
@@ -22982,7 +22982,7 @@
       "repo_urls": [
         "https://github.com/massspecdl/ChemEmbed"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "distance-metric-computation-adjacency-index": {
       "dois": [
@@ -23934,7 +23934,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "dotnet-assembly-path-verification": {
       "dois": [
@@ -23956,7 +23956,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "dotnet-framework-compilation-in-containers": {
       "dois": [
@@ -24111,7 +24111,7 @@
       "repo_urls": [
         "https://github.com/sipss/GCIMS"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "drift-time-filtering": {
       "dois": [
@@ -24128,7 +24128,7 @@
       "repo_urls": [
         "https://github.com/sipss/GCIMS"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "drift-time-retention-time-distance-metric-selection": {
       "dois": [
@@ -24144,7 +24144,7 @@
       "repo_urls": [
         "https://github.com/sipss/GCIMS"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "drift-time-to-ccs-correlation-modeling": {
       "dois": [
@@ -24288,7 +24288,7 @@
       "repo_urls": [
         "https://github.com/hhabra/metabCombiner"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "duplicate-record-detection-and-deduplication": {
       "dois": [
@@ -24554,7 +24554,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "effective-mobility-transformation": {
       "dois": [
@@ -24577,7 +24577,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ei-mass-spectra-structure-representation": {
       "dois": [
@@ -24594,7 +24594,7 @@
       "repo_urls": [
         "https://github.com/AndreySamokhin/mssearchr"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ei-mass-spectrum-simulation": {
       "dois": [
@@ -24637,7 +24637,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ei-spectrum-normalization": {
       "dois": [
@@ -24653,7 +24653,7 @@
       "repo_urls": [
         "https://github.com/AndreySamokhin/mssearchr"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "eic-data-extraction-from-xcms": {
       "dois": [
@@ -24772,7 +24772,7 @@
       "repo_urls": [
         "https://github.com/AndreySamokhin/mssearchr"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "electronic-noise-detection-in-mass-spectra": {
       "dois": [
@@ -24869,7 +24869,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "elemental-composition-extraction": {
       "dois": [
@@ -24998,7 +24998,7 @@
       "repo_urls": [
         "https://github.com/massspecdl/ChemEmbed"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "embedding-space-dimensionality-reduction": {
       "dois": [
@@ -25477,7 +25477,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "enrichment-statistical-thresholding": {
       "dois": [
@@ -25499,7 +25499,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "enrichment-table-compilation": {
       "dois": [
@@ -26130,7 +26130,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "exact-mass-utilization-for-compound-identification": {
       "dois": [
@@ -26148,7 +26148,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "excel-file-parsing-for-metabolomics": {
       "dois": [
@@ -26230,7 +26230,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "execution-time-aggregation-by-category": {
       "dois": [
@@ -26303,7 +26303,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "experiment-metadata-organization-and-tracking": {
       "dois": [
@@ -26674,7 +26674,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "extracted-ion-electropherogram-generation": {
       "dois": [
@@ -26696,7 +26696,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "extraction-parameter-optimization-ppm-retention-time-ion-mobility": {
       "dois": [
@@ -26738,7 +26738,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "false-discovery-rate-control": {
       "dois": [
@@ -27124,7 +27124,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "feature-abundance-pattern-correlation-analysis": {
       "dois": [
@@ -27191,7 +27191,7 @@
       "repo_urls": [
         "https://github.com/Asa12138/MetaNet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "feature-abundance-threshold-comparison": {
       "dois": [
@@ -27485,7 +27485,7 @@
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/LargeMetabo/LargeMetabo"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "feature-condition-comparative-analysis": {
       "dois": [
@@ -27518,7 +27518,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "feature-consolidation-across-samples": {
       "dois": [
@@ -28247,7 +28247,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "feature-matrix-normalization": {
       "dois": [
@@ -28397,7 +28397,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "feature-metadata-parsing-and-integration": {
       "dois": [
@@ -28432,7 +28432,7 @@
       "repo_urls": [
         "https://github.com/hhabra/metabCombiner"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "feature-network-construction-and-partitioning": {
       "dois": [
@@ -28559,7 +28559,7 @@
       "repo_urls": [
         "https://github.com/hhabra/metabCombiner"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "feature-pair-mass-refinement": {
       "dois": [
@@ -28612,7 +28612,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "feature-pairing-confidence-scoring": {
       "dois": [
@@ -29241,7 +29241,7 @@
         "https://github.com/yufree/mzrtsim",
         "https://github.com/SydneyBioX/hRUV"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "feature-table-moniker-management": {
       "dois": [
@@ -29406,7 +29406,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "feature-table-subsetting-and-export": {
       "dois": [
@@ -29528,7 +29528,7 @@
         "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "feedforward-network-configuration": {
       "dois": [
@@ -30006,7 +30006,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/01dadada/RT-Transformer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "file-format-validation-proteomics": {
       "dois": [
@@ -30223,7 +30223,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "file-path-resolution-and-validation": {
       "dois": [
@@ -30678,7 +30678,7 @@
       "repo_urls": [
         "https://github.com/sipss/GCIMS"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "flat-file-parsing-and-loading": {
       "dois": [
@@ -30893,7 +30893,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "fold-change-frequency-aggregation": {
       "dois": [
@@ -30916,7 +30916,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "fold-change-log2-transformation": {
       "dois": [
@@ -31415,7 +31415,7 @@
         "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "fragment-intensity-aggregation": {
       "dois": [
@@ -31435,7 +31435,7 @@
         "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "fragment-ion-database-matching": {
       "dois": [
@@ -31777,7 +31777,7 @@
         "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "fragment-neutral-loss-annotation-matching": {
       "dois": [
@@ -31873,7 +31873,7 @@
         "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "fragment-to-structure-assembly": {
       "dois": [
@@ -32196,7 +32196,7 @@
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/LargeMetabo/LargeMetabo"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ft-icr-ms-analysis-tool-evaluation": {
       "dois": [
@@ -32508,7 +32508,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "functional-level-metabolic-annotation": {
       "dois": [
@@ -32584,7 +32584,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "functional-trait-diversity-analysis": {
       "dois": [
@@ -32776,7 +32776,7 @@
       "repo_urls": [
         "https://github.com/hhabra/metabCombiner"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "gap-filling-algorithm-selection": {
       "dois": [
@@ -32944,7 +32944,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "gc-ims-matrix-table-generation": {
       "dois": [
@@ -32960,7 +32960,7 @@
       "repo_urls": [
         "https://github.com/sipss/GCIMS"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "gc-ims-peak-alignment-evaluation": {
       "dois": [
@@ -32976,7 +32976,7 @@
       "repo_urls": [
         "https://github.com/sipss/GCIMS"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "gc-ms-abundance-preprocessing": {
       "dois": [
@@ -33267,7 +33267,7 @@
       "repo_urls": [
         "https://github.com/sipss/GCIMS"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "gcms-spectrum-deconvolution": {
       "dois": [
@@ -33303,7 +33303,7 @@
       "repo_urls": [
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "gcxgc-ms-multivariate-analysis": {
       "dois": [
@@ -33323,7 +33323,7 @@
       "repo_urls": [
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "gcxgc-preprocessed-data-handling": {
       "dois": [
@@ -33343,7 +33343,7 @@
       "repo_urls": [
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "genbank-accession-validation": {
       "dois": [
@@ -33574,7 +33574,7 @@
       "repo_urls": [
         "https://github.com/hhabra/metabCombiner"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "generic-hdf5-library-api-usage": {
       "dois": [
@@ -33840,7 +33840,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ggplot2-geom-treemap-rendering": {
       "dois": [
@@ -33885,7 +33885,7 @@
         "https://github.com/BorchLab/CordBat",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ggplot2-pie-chart-rendering": {
       "dois": [
@@ -33906,7 +33906,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ggplot2-theme-customization-for-publication": {
       "dois": [
@@ -33927,7 +33927,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "gibbs-sampler-implementation-and-convergence": {
       "dois": [
@@ -34962,7 +34962,7 @@
       "repo_urls": [
         "https://github.com/Asa12138/MetaNet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "graph-clustering-community-detection": {
       "dois": [
@@ -35029,7 +35029,7 @@
       "repo_urls": [
         "https://github.com/Asa12138/MetaNet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "graph-enrichment-operations": {
       "dois": [
@@ -35328,7 +35328,7 @@
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/DasSusanta/snakemake_ccs"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "graph-neural-network-model-training": {
       "dois": [
@@ -35536,7 +35536,7 @@
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "grid-search-evaluation-and-threshold-identification": {
       "dois": [
@@ -35553,7 +35553,7 @@
       "repo_urls": [
         "https://github.com/hhabra/metabCombiner"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ground-truth-intensity-calculation": {
       "dois": [
@@ -35572,7 +35572,7 @@
         "https://github.com/yufree/mzrtsim",
         "https://github.com/SydneyBioX/hRUV"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ground-truth-ordinal-validation": {
       "dois": [
@@ -35631,7 +35631,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "group-specification-and-subsetting": {
       "dois": [
@@ -36252,7 +36252,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "hierarchical-clustering-dendrogram-construction": {
       "dois": [
@@ -36271,7 +36271,7 @@
         "https://github.com/MRCIEU/metaboprep",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "hierarchical-clustering-dendrogram-cutting": {
       "dois": [
@@ -36294,7 +36294,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "hierarchical-clustering-dendrogram-generation": {
       "dois": [
@@ -36389,7 +36389,7 @@
       "repo_urls": [
         "https://github.com/sipss/GCIMS"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "hierarchical-database-indexing": {
       "dois": [
@@ -36490,7 +36490,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "hierarchical-normalisation-strategy": {
       "dois": [
@@ -37143,7 +37143,7 @@
         "https://github.com/MRCIEU/metaboprep",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "http-api-endpoint-design": {
       "dois": [
@@ -37572,7 +37572,7 @@
       "repo_urls": [
         "https://github.com/Asa12138/MetaNet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "igzip-compression-and-indexed-block-format": {
       "dois": [
@@ -38784,7 +38784,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "integration-test-development": {
       "dois": [
@@ -39150,7 +39150,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "interactive-application-accessibility-testing": {
       "dois": [
@@ -40579,7 +40579,7 @@
       "repo_urls": [
         "https://github.com/sipss/GCIMS"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ion-mode-specific-ccs-model-generation": {
       "dois": [
@@ -40694,7 +40694,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ion-tree-structure-optimization-and-trunk-establishment": {
       "dois": [
@@ -41063,7 +41063,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "irt-peptide-standard-matching": {
       "dois": [
@@ -41087,7 +41087,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "isf-feature-table-export": {
       "dois": [
@@ -42660,7 +42660,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "json-metadata-parsing": {
       "dois": [
@@ -42909,7 +42909,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "json-serialization-deserialization": {
       "dois": [
@@ -43352,7 +43352,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "kegg-candidate-network-integration": {
       "dois": [
@@ -43372,7 +43372,7 @@
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/LargeMetabo/LargeMetabo"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "kegg-data-retrieval-and-parsing": {
       "dois": [
@@ -43432,7 +43432,7 @@
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/LargeMetabo/LargeMetabo"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "kegg-pathway-prediction-from-spectra": {
       "dois": [
@@ -43764,7 +43764,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "la-icp-ms-image-denoising": {
       "dois": [
@@ -44391,7 +44391,7 @@
       "repo_urls": [
         "https://github.com/hhabra/metabCombiner"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "lc-ms-feature-extraction-and-alignment": {
       "dois": [
@@ -44574,7 +44574,7 @@
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/LargeMetabo/LargeMetabo"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "lc-ms-output-validation": {
       "dois": [
@@ -45111,7 +45111,7 @@
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "lcms-spectral-peak-classification": {
       "dois": [
@@ -45483,7 +45483,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "library-spectrum-database-format-parsing": {
       "dois": [
@@ -45516,7 +45516,7 @@
       "repo_urls": [
         "https://github.com/AndreySamokhin/mssearchr"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "linear-algebra-peak-reconstruction": {
       "dois": [
@@ -45677,7 +45677,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "linear-regression-model-fitting": {
       "dois": [
@@ -45942,7 +45942,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "lipid-chain-composition-enumeration": {
       "dois": [
@@ -45979,7 +45979,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "lipid-class-annotation-and-parsing": {
       "dois": [
@@ -46052,7 +46052,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "lipid-class-stratified-analysis": {
       "dois": [
@@ -46149,7 +46149,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "lipid-derivatization-chemistry-modeling": {
       "dois": [
@@ -46600,7 +46600,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "lipid-nomenclature-simplification": {
       "dois": [
@@ -46624,7 +46624,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "lipid-nomenclature-standardization": {
       "dois": [
@@ -46703,7 +46703,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "lipid-set-enrichment-analysis": {
       "dois": [
@@ -46722,7 +46722,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "lipid-similarity-scoring": {
       "dois": [
@@ -46887,7 +46887,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "lipidomics-experiment-object-construction": {
       "dois": [
@@ -46909,7 +46909,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "local-maxima-identification": {
       "dois": [
@@ -47107,7 +47107,7 @@
         "https://github.com/yufree/mzrtsim",
         "https://github.com/SydneyBioX/hRUV"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "logging-and-audit-trail-generation": {
       "dois": [
@@ -47403,7 +47403,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "m-z-array-processing": {
       "dois": [
@@ -47461,7 +47461,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "m-z-intensity-calibration": {
       "dois": [
@@ -47519,7 +47519,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "m-z-retention-time-correspondence-mapping": {
       "dois": [
@@ -47536,7 +47536,7 @@
       "repo_urls": [
         "https://github.com/hhabra/metabCombiner"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "m-z-retention-time-feature-matching": {
       "dois": [
@@ -47796,7 +47796,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "machine-learning-model-inference": {
       "dois": [
@@ -47814,7 +47814,7 @@
       "repo_urls": [
         "https://github.com/oloBion/Retip"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "machine-learning-model-selection-and-comparison": {
       "dois": [
@@ -48586,7 +48586,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-defect-filtering-for-chemical-validity": {
       "dois": [
@@ -48929,7 +48929,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "mass-feature-to-node-mapping": {
       "dois": [
@@ -49538,7 +49538,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectral-metadata-standardization": {
       "dois": [
@@ -49561,7 +49561,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectral-missing-word-fraction-computation": {
       "dois": [
@@ -49717,7 +49717,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometer-simulator-configuration": {
       "dois": [
@@ -49993,7 +49993,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-compound-annotation-database-generation": {
       "dois": [
@@ -50036,7 +50036,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-data-alignment": {
       "dois": [
@@ -50291,7 +50291,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-data-import": {
       "dois": [
@@ -50839,7 +50839,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-data-statistical-testing": {
       "dois": [
@@ -50861,7 +50861,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-data-structure-conversion": {
       "dois": [
@@ -50983,7 +50983,7 @@
         "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-data-visualization": {
       "dois": [
@@ -51196,7 +51196,7 @@
       "repo_urls": [
         "https://github.com/massspecdl/ChemEmbed"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-feature-annotation": {
       "dois": [
@@ -51236,7 +51236,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-feature-collapsing": {
       "dois": [
@@ -51354,7 +51354,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "mass-spectrometry-feature-extraction-ms1-ms2": {
       "dois": [
@@ -51607,7 +51607,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-file-format-parsing": {
       "dois": [
@@ -51951,7 +51951,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "mass-spectrometry-imaging-data-processing": {
       "dois": [
@@ -52295,7 +52295,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-matrix-background-simulation": {
       "dois": [
@@ -52314,7 +52314,7 @@
         "https://github.com/yufree/mzrtsim",
         "https://github.com/SydneyBioX/hRUV"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-metadata-caching": {
       "dois": [
@@ -52398,7 +52398,7 @@
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-metadata-parsing": {
       "dois": [
@@ -52421,7 +52421,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-metadata-validation": {
       "dois": [
@@ -52465,7 +52465,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-metric-engineering": {
       "dois": [
@@ -52891,7 +52891,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-prediction-modeling": {
       "dois": [
@@ -53083,7 +53083,7 @@
         "https://github.com/yufree/mzrtsim",
         "https://github.com/SydneyBioX/hRUV"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-raw-data-preprocessing": {
       "dois": [
@@ -53252,7 +53252,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-scoring-method-validation": {
       "dois": [
@@ -53272,7 +53272,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrometry-screening-workflows": {
       "dois": [
@@ -53758,7 +53758,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrum-binning-and-vectorization": {
       "dois": [
@@ -54074,7 +54074,7 @@
       "repo_urls": [
         "https://github.com/AndreySamokhin/mssearchr"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrum-peak-manipulation-merging": {
       "dois": [
@@ -54116,7 +54116,7 @@
       "repo_urls": [
         "https://github.com/AndreySamokhin/mssearchr"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-spectrum-peak-normalization": {
       "dois": [
@@ -54537,7 +54537,7 @@
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/LargeMetabo/LargeMetabo"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-to-charge-ratio-validation": {
       "dois": [
@@ -54558,7 +54558,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-to-charge-retention-time-feature-mapping": {
       "dois": [
@@ -54602,7 +54602,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mass-to-charge-tolerance-matching": {
       "dois": [
@@ -55194,7 +55194,7 @@
     "masster": {
       "dois": [],
       "kb_slugs": [],
-      "license_tier": "open",
+      "license_tier": "noncommercial",
       "repo_urls": [
         "https://github.com/zamboni-lab/masster-dist"
       ],
@@ -55219,7 +55219,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "matlab-data-structure-design": {
       "dois": [
@@ -55945,7 +55945,7 @@
       "repo_urls": [
         "https://github.com/hhabra/metabCombiner"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabdata-object-handling": {
       "dois": [
@@ -55961,7 +55961,7 @@
       "repo_urls": [
         "https://github.com/hhabra/metabCombiner"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolic-age-prediction-from-nmr-features": {
       "dois": [
@@ -56066,7 +56066,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolic-model-consensus-integration": {
       "dois": [
@@ -56358,7 +56358,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolic-reaction-classification-by-regulatory-layer": {
       "dois": [
@@ -56636,7 +56636,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "metabolite-annotation-by-chromatographic-behavior": {
       "dois": [
@@ -56654,7 +56654,7 @@
       "repo_urls": [
         "https://github.com/oloBion/Retip"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-annotation-confidence-assignment": {
       "dois": [
@@ -56972,7 +56972,7 @@
       "repo_urls": [
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-candidate-matching": {
       "dois": [
@@ -57085,7 +57085,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-chemodiversity-index-calculation-and-interpretation": {
       "dois": [
@@ -57137,7 +57137,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-class-visualization-by-statistical-significance": {
       "dois": [
@@ -57157,7 +57157,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-cluster-evaluation": {
       "dois": [
@@ -57177,7 +57177,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-cluster-export-formatting": {
       "dois": [
@@ -57198,7 +57198,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-cluster-identification-from-correlated-features": {
       "dois": [
@@ -57360,7 +57360,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-coverage-simulation": {
       "dois": [
@@ -57399,7 +57399,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-data-log-transformation": {
       "dois": [
@@ -57418,7 +57418,7 @@
         "https://github.com/BorchLab/CordBat",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-database-construction": {
       "dois": [
@@ -57756,7 +57756,7 @@
         "https://github.com/MRCIEU/metaboprep",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-feature-anova-analysis": {
       "dois": [
@@ -57777,7 +57777,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-feature-association-across-labels": {
       "dois": [
@@ -57818,7 +57818,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-feature-column-mapping": {
       "dois": [
@@ -57834,7 +57834,7 @@
       "repo_urls": [
         "https://github.com/hhabra/metabCombiner"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-feature-correspondence-validation": {
       "dois": [
@@ -57851,7 +57851,7 @@
       "repo_urls": [
         "https://github.com/hhabra/metabCombiner"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-feature-distribution-comparison": {
       "dois": [
@@ -57997,7 +57997,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-feature-intensity-normalization": {
       "dois": [
@@ -58324,7 +58324,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-fold-change-statistical-testing": {
       "dois": [
@@ -58586,7 +58586,7 @@
       "repo_urls": [
         "https://github.com/hhabra/metabCombiner"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-intensity-alignment": {
       "dois": [
@@ -58688,7 +58688,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-level-expression-summarization": {
       "dois": [
@@ -58808,7 +58808,7 @@
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/LargeMetabo/LargeMetabo"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-mass-to-charge-ratio-matching": {
       "dois": [
@@ -58831,7 +58831,7 @@
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/LargeMetabo/LargeMetabo"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-metadata-column-matching": {
       "dois": [
@@ -58920,7 +58920,7 @@
       "repo_urls": [
         "https://github.com/ZhuMSLab/DecoMetDIA"
       ],
-      "license_tier": "noncommercial"
+      "license_tier": "open"
     },
     "metabolite-network-construction": {
       "dois": [
@@ -58979,7 +58979,7 @@
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/LargeMetabo/LargeMetabo"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-network-format-conversion": {
       "dois": [
@@ -59054,7 +59054,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-pathway-annotation-mapping": {
       "dois": [
@@ -59322,7 +59322,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-quality-control-filtering": {
       "dois": [
@@ -59385,7 +59385,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-rank-performance-evaluation": {
       "dois": [
@@ -59525,7 +59525,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-score-projection": {
       "dois": [
@@ -59793,7 +59793,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-spectral-matching": {
       "dois": [
@@ -60024,7 +60024,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolite-target-list-formatting": {
       "dois": [
@@ -60204,7 +60204,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomic-data-format-standardization": {
       "dois": [
@@ -60248,7 +60248,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomic-data-preprocessing-optimization": {
       "dois": [
@@ -60386,7 +60386,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomic-feature-extraction-from-mzml": {
       "dois": [
@@ -60452,7 +60452,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomic-feature-matching": {
       "dois": [
@@ -60488,7 +60488,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomic-feature-statistical-hypothesis-testing": {
       "dois": [
@@ -60594,7 +60594,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomic-feature-table-processing": {
       "dois": [
@@ -60852,7 +60852,7 @@
         "https://github.com/BorchLab/CordBat",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomics-batch-effect-adjustment": {
       "dois": [
@@ -61062,7 +61062,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/RECETOX/MSMetaEnhancer"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomics-data-input-validation": {
       "dois": [
@@ -61139,7 +61139,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomics-data-loading-into-containers": {
       "dois": [
@@ -61308,7 +61308,7 @@
         "https://github.com/MRCIEU/metaboprep",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomics-data-quality-metrics": {
       "dois": [
@@ -61702,7 +61702,7 @@
         "https://github.com/yufree/mzrtsim",
         "https://github.com/SydneyBioX/hRUV"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomics-feature-table-curation": {
       "dois": [
@@ -62405,7 +62405,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metabolomics-workflow-step-enumeration": {
       "dois": [
@@ -62439,7 +62439,7 @@
         "https://github.com/MRCIEU/metaboprep",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metaboprep-object-manipulation": {
       "dois": [
@@ -62461,7 +62461,7 @@
         "https://github.com/MRCIEU/metaboprep",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metaboset-object-manipulation": {
       "dois": [
@@ -62563,7 +62563,7 @@
         "https://github.com/yufree/mzrtsim",
         "https://github.com/SydneyBioX/hRUV"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metadata-column-profiling-across-datasets": {
       "dois": [
@@ -62733,7 +62733,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "metadata-field-extraction-from-headers": {
       "dois": [
@@ -63149,7 +63149,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mibig-metadata-extraction": {
       "dois": [
@@ -63506,7 +63506,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "minimum-cost-flow-formulation": {
       "dois": [
@@ -63730,7 +63730,7 @@
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "missing-value-detection-and-quantification": {
       "dois": [
@@ -63849,7 +63849,7 @@
         "https://github.com/MRCIEU/metaboprep",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "missing-value-imputation-in-metabolomics": {
       "dois": [
@@ -64156,7 +64156,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "modality-contribution-quantification": {
       "dois": [
@@ -64855,7 +64855,7 @@
       "repo_urls": [
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "module-assignment-biclustering": {
       "dois": [
@@ -65092,7 +65092,7 @@
       "repo_urls": [
         "https://github.com/massspecdl/ChemEmbed"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "molecular-ccs-prediction-model-training": {
       "dois": [
@@ -65946,7 +65946,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "molecular-formula-database-filtering": {
       "dois": [
@@ -67515,7 +67515,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "molecular-weight-prediction-from-ei-ms": {
       "dois": [
@@ -67574,7 +67574,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "monte-carlo-dropout-uncertainty-quantification": {
       "dois": [
@@ -68079,7 +68079,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ms-dial-peak-character-estimation": {
       "dois": [
@@ -68650,7 +68650,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ms-quantitative-analysis-standards": {
       "dois": [
@@ -68776,7 +68776,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ms-spectral-similarity-calculation": {
       "dois": [
@@ -69027,7 +69027,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ms1-spectral-annotation-chemical-space": {
       "dois": [
@@ -69093,7 +69093,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ms2-annotation-interpretation": {
       "dois": [
@@ -69303,7 +69303,7 @@
         "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ms2-fragment-pattern-recognition": {
       "dois": [
@@ -69436,7 +69436,7 @@
         "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ms2-spectral-deconvolution-and-annotation": {
       "dois": [
@@ -69557,7 +69557,7 @@
         "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ms2-spectral-similarity-computation": {
       "dois": [
@@ -70117,7 +70117,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "msi-imaging-experiment-class-manipulation": {
       "dois": [
@@ -70464,7 +70464,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "msp-file-parsing": {
       "dois": [
@@ -70480,7 +70480,7 @@
       "repo_urls": [
         "https://github.com/AndreySamokhin/mssearchr"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "msp-file-parsing-and-serialization": {
       "dois": [
@@ -71025,7 +71025,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "multi-dimensional-data-encoding": {
       "dois": [
@@ -71212,7 +71212,7 @@
         "https://github.com/MRCIEU/metaboprep",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "multi-format-identifier-harmonization": {
       "dois": [
@@ -71276,7 +71276,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "multi-head-attention-mechanism-application": {
       "dois": [
@@ -72078,7 +72078,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "multi-way-join-operations-on-reference-tables": {
       "dois": [
@@ -72267,7 +72267,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "multicontrast-statistical-testing-lipidomics": {
       "dois": [
@@ -72286,7 +72286,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "multidimensional-coordinate-alignment": {
       "dois": [
@@ -72370,7 +72370,7 @@
       "repo_urls": [
         "https://github.com/massspecdl/ChemEmbed"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "multidimensional-ms-data-conversion": {
       "dois": [
@@ -72660,7 +72660,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/LeaveMeNotTonight/CMDN"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "multiple-linear-regression-model-application": {
       "dois": [
@@ -72826,7 +72826,7 @@
       "repo_urls": [
         "https://github.com/ZhuMSLab/DecoMetDIA"
       ],
-      "license_tier": "noncommercial"
+      "license_tier": "open"
     },
     "multiprocessing-process-spawning-and-pid-management": {
       "dois": [
@@ -73159,7 +73159,7 @@
       "repo_urls": [
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mwtab-file-parsing": {
       "dois": [
@@ -73243,7 +73243,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mz-retention-time-tolerance-parameter-configuration": {
       "dois": [
@@ -73398,7 +73398,7 @@
         "https://github.com/yufree/mzrtsim",
         "https://github.com/SydneyBioX/hRUV"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mzml-file-format-parsing": {
       "dois": [
@@ -73475,7 +73475,7 @@
         "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "mzml-file-import-xcms": {
       "dois": [
@@ -74591,7 +74591,7 @@
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "neighbourhood-density-computation": {
       "dois": [
@@ -74632,7 +74632,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "nested-json-path-resolution": {
       "dois": [
@@ -74733,7 +74733,7 @@
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/LargeMetabo/LargeMetabo"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "network-file-format-export": {
       "dois": [
@@ -74872,7 +74872,7 @@
         "https://github.com/cellbiomaths/MInfer",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "network-module-interaction-scoring": {
       "dois": [
@@ -74997,7 +74997,7 @@
       "repo_urls": [
         "https://github.com/Asa12138/MetaNet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "network-topology-analysis-for-bgc-deduplication": {
       "dois": [
@@ -75063,7 +75063,7 @@
       "repo_urls": [
         "https://github.com/Asa12138/MetaNet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "network-topology-validation": {
       "dois": [
@@ -76909,7 +76909,7 @@
       "repo_urls": [
         "https://github.com/Asa12138/MetaNet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "node-pair-edge-deduplication": {
       "dois": [
@@ -76945,7 +76945,7 @@
       "repo_urls": [
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "noise-estimation-snr-thresholding": {
       "dois": [
@@ -76999,7 +76999,7 @@
       "repo_urls": [
         "https://github.com/sipss/GCIMS"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "noise-model-implementation-and-selection": {
       "dois": [
@@ -77928,7 +77928,7 @@
       "repo_urls": [
         "https://github.com/Asa12138/MetaNet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "omics-network-visualization-preparation": {
       "dois": [
@@ -77946,7 +77946,7 @@
       "repo_urls": [
         "https://github.com/Asa12138/MetaNet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ondiskmsnexp-object-manipulation-and-export": {
       "dois": [
@@ -77968,7 +77968,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "one-hot-encoding-categorical-chromatography-features": {
       "dois": [
@@ -78311,7 +78311,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "orbitrap-spectrum-extraction-from-raw-files": {
       "dois": [
@@ -78336,7 +78336,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "orchestrator-architecture-design": {
       "dois": [
@@ -78583,7 +78583,7 @@
       "repo_urls": [
         "https://github.com/hhabra/metabCombiner"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "outlier-detection-and-treatment": {
       "dois": [
@@ -78602,7 +78602,7 @@
         "https://github.com/MRCIEU/metaboprep",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "outlier-detection-qc-sample-ratio-analysis": {
       "dois": [
@@ -78658,7 +78658,7 @@
         "https://github.com/MRCIEU/metaboprep",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "outlier-feature-classification": {
       "dois": [
@@ -78680,7 +78680,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "outlier-sample-identification-pca": {
       "dois": [
@@ -78698,7 +78698,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "outlier-sample-removal-quality-control": {
       "dois": [
@@ -78717,7 +78717,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "over-representation-analysis-pvalue-interpretation": {
       "dois": [
@@ -79380,7 +79380,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "pairwise-similarity-scoring-weighted-metrics": {
       "dois": [
@@ -79397,7 +79397,7 @@
       "repo_urls": [
         "https://github.com/hhabra/metabCombiner"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "pairwise-spectral-comparison": {
       "dois": [
@@ -79579,7 +79579,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "parallel-computing-workflow-orchestration": {
       "dois": [
@@ -79602,7 +79602,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "parallel-factor-generation-from-metadata": {
       "dois": [
@@ -79945,7 +79945,7 @@
         "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "pareto-scaling-multivariate-analysis": {
       "dois": [
@@ -79981,7 +79981,7 @@
         "https://github.com/yufree/mzrtsim",
         "https://github.com/SydneyBioX/hRUV"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "parser-error-reporting-diagnostics": {
       "dois": [
@@ -80082,7 +80082,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "pathway-annotation-mapping": {
       "dois": [
@@ -80215,7 +80215,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "pathway-feature-selection-information-gain": {
       "dois": [
@@ -80368,7 +80368,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "pathway-rank-stability-assessment": {
       "dois": [
@@ -80471,7 +80471,7 @@
         "https://github.com/MRCIEU/metaboprep",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "pca-dimensionality-reduction-unsupervised": {
       "dois": [
@@ -80992,7 +80992,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "peak-detection-and-mass-alignment": {
       "dois": [
@@ -81026,7 +81026,7 @@
       "repo_urls": [
         "https://github.com/sipss/GCIMS"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "peak-detection-in-lcms-data": {
       "dois": [
@@ -81205,7 +81205,7 @@
       "repo_urls": [
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "peak-filtering-and-preprocessing-lc-ms": {
       "dois": [
@@ -81348,7 +81348,7 @@
       "repo_urls": [
         "https://github.com/sipss/GCIMS"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "peak-integration-quality-assessment": {
       "dois": [
@@ -81537,7 +81537,7 @@
         "https://github.com/yufree/mzrtsim",
         "https://github.com/SydneyBioX/hRUV"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "peak-labeling-and-annotation": {
       "dois": [
@@ -81678,7 +81678,7 @@
         "https://github.com/yufree/mzrtsim",
         "https://github.com/SydneyBioX/hRUV"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "peak-m-z-indexing": {
       "dois": [
@@ -82263,7 +82263,7 @@
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/LargeMetabo/LargeMetabo"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "peak-recovery-post-filtering": {
       "dois": [
@@ -82286,7 +82286,7 @@
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/LargeMetabo/LargeMetabo"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "peak-removal-robustness-testing": {
       "dois": [
@@ -82545,7 +82545,7 @@
       "repo_urls": [
         "https://github.com/sipss/GCIMS"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "peak-table-row-count-comparison": {
       "dois": [
@@ -82643,7 +82643,7 @@
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/LargeMetabo/LargeMetabo"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "peak-validation-synthetic-data": {
       "dois": [
@@ -84619,7 +84619,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "positive-negative-class-balancing": {
       "dois": [
@@ -84808,7 +84808,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "ppm-mass-accuracy-filtering": {
       "dois": [
@@ -85182,7 +85182,7 @@
       "repo_urls": [
         "https://github.com/ZhuMSLab/DecoMetDIA"
       ],
-      "license_tier": "noncommercial"
+      "license_tier": "open"
     },
     "precursor-list-formatting-for-dda": {
       "dois": [
@@ -85626,7 +85626,7 @@
         "https://github.com/MRCIEU/metaboprep",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "principal-component-analysis-interpretation": {
       "dois": [
@@ -85662,7 +85662,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "principal-component-analysis-scaling": {
       "dois": [
@@ -85682,7 +85682,7 @@
         "https://github.com/BorchLab/CordBat",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "principal-component-extraction-from-pathway-subsets": {
       "dois": [
@@ -85769,7 +85769,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "probabilistic-classification-network-construction": {
       "dois": [
@@ -89060,7 +89060,7 @@
         "https://github.com/yufree/mzrtsim",
         "https://github.com/SydneyBioX/hRUV"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "quality-control-sample-designation": {
       "dois": [
@@ -89587,7 +89587,7 @@
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/LargeMetabo/LargeMetabo"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "query-language-grammar-design": {
       "dois": [
@@ -89848,7 +89848,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "r-data-frame-construction-and-validation": {
       "dois": [
@@ -89939,7 +89939,7 @@
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "r-data-structure-processing": {
       "dois": [
@@ -89956,7 +89956,7 @@
       "repo_urls": [
         "https://github.com/sipss/GCIMS"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "r-data-structure-serialization": {
       "dois": [
@@ -90124,7 +90124,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "r-internal-function-invocation": {
       "dois": [
@@ -90146,7 +90146,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "r-list-object-manipulation": {
       "dois": [
@@ -90169,7 +90169,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "r-list-object-serialization": {
       "dois": [
@@ -90193,7 +90193,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "r-matrix-manipulation": {
       "dois": [
@@ -90229,7 +90229,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "r-object-size-measurement-and-benchmarking": {
       "dois": [
@@ -90266,7 +90266,7 @@
       "repo_urls": [
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "r-package-api-usage": {
       "dois": [
@@ -90408,7 +90408,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "r-package-integration": {
       "dois": [
@@ -90525,7 +90525,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "r-pipe-operator-chaining": {
       "dois": [
@@ -90611,7 +90611,7 @@
         "https://github.com/yufree/mzrtsim",
         "https://github.com/SydneyBioX/hRUV"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "r-script-configuration-and-editing": {
       "dois": [
@@ -90798,7 +90798,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "r-wrapper-function-implementation": {
       "dois": [
@@ -90955,7 +90955,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "random-forest-regression-tuning": {
       "dois": [
@@ -91094,7 +91094,7 @@
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/LargeMetabo/LargeMetabo"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "ranked-candidate-prioritization": {
       "dois": [
@@ -91321,7 +91321,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "raw-file-data-extraction-via-api": {
       "dois": [
@@ -91346,7 +91346,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "raw-file-format-parsing": {
       "dois": [
@@ -91392,7 +91392,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "raw-file-routing-and-queuing": {
       "dois": [
@@ -91519,7 +91519,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "raw-vendor-file-format-handling": {
       "dois": [
@@ -91567,7 +91567,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "rc-object-construction-and-validation": {
       "dois": [
@@ -91590,7 +91590,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "rdkit-descriptor-and-fingerprint-calculation": {
       "dois": [
@@ -91690,7 +91690,7 @@
       "repo_urls": [
         "https://github.com/sipss/GCIMS"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "reaction-activity-score-computation": {
       "dois": [
@@ -92309,7 +92309,7 @@
       "repo_urls": [
         "https://github.com/massspecdl/ChemEmbed"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "reference-database-tolerance-mapping": {
       "dois": [
@@ -92733,7 +92733,7 @@
         "https://github.com/Chen-micslab/QCCAssisted4DSterol",
         "https://github.com/DasSusanta/snakemake_ccs"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "regulatory-relationship-inference": {
       "dois": [
@@ -92776,7 +92776,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "relative-abundance-preprocessing": {
       "dois": [
@@ -93037,7 +93037,7 @@
         "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "replicate-spectrum-comparison": {
       "dois": [
@@ -93057,7 +93057,7 @@
         "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "replicate-spectrum-concatenation": {
       "dois": [
@@ -93079,7 +93079,7 @@
         "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "repository-administration": {
       "dois": [
@@ -93816,7 +93816,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "retention-index-calibration-and-alignment": {
       "dois": [
@@ -93878,7 +93878,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "retention-order-prediction-model-execution": {
       "dois": [
@@ -94116,7 +94116,7 @@
       "repo_urls": [
         "https://github.com/hhabra/metabCombiner"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "retention-time-alignment-validation": {
       "dois": [
@@ -94149,7 +94149,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "retention-time-and-mass-sorting-of-chromatographic-peaks": {
       "dois": [
@@ -94169,7 +94169,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "retention-time-and-mz-based-alignment": {
       "dois": [
@@ -94201,7 +94201,7 @@
       "repo_urls": [
         "https://github.com/hhabra/metabCombiner"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "retention-time-based-feature-grouping": {
       "dois": [
@@ -94370,7 +94370,7 @@
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/LargeMetabo/LargeMetabo"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "retention-time-correction-and-alignment": {
       "dois": [
@@ -94431,7 +94431,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "retention-time-direction-matching": {
       "dois": [
@@ -94472,7 +94472,7 @@
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "retention-time-drift-time-m-z-querying": {
       "dois": [
@@ -94521,7 +94521,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "retention-time-feature-clustering": {
       "dois": [
@@ -94585,7 +94585,7 @@
       "repo_urls": [
         "https://github.com/sipss/GCIMS"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "retention-time-index-calibration": {
       "dois": [
@@ -94608,7 +94608,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "retention-time-indexed-spectral-aggregation": {
       "dois": [
@@ -94633,7 +94633,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "retention-time-intensity-data-extraction": {
       "dois": [
@@ -94652,7 +94652,7 @@
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "retention-time-intensity-extraction": {
       "dois": [
@@ -94703,7 +94703,7 @@
       "repo_urls": [
         "https://github.com/hhabra/metabCombiner"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "retention-time-mass-alignment": {
       "dois": [
@@ -94911,7 +94911,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "retention-time-peak-flagging": {
       "dois": [
@@ -95038,7 +95038,7 @@
       "repo_urls": [
         "https://github.com/oloBion/Retip"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "retention-time-prediction-optimization": {
       "dois": [
@@ -96172,7 +96172,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "s4-class-definition-and-inheritance": {
       "dois": [
@@ -96309,7 +96309,7 @@
         "https://github.com/MRCIEU/metaboprep",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "sample-batch-balancing-across-classification-dimensions": {
       "dois": [
@@ -96627,7 +96627,7 @@
         "https://github.com/MRCIEU/metaboprep",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "sample-pair-filtering-by-feature-reproducibility": {
       "dois": [
@@ -96704,7 +96704,7 @@
         "https://github.com/MRCIEU/metaboprep",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "sample-relationship-visualization": {
       "dois": [
@@ -96904,7 +96904,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "sampling-protocol-reconstruction": {
       "dois": [
@@ -96957,7 +96957,7 @@
       "repo_urls": [
         "https://github.com/sipss/GCIMS"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "savitzky-golay-filter-application": {
       "dois": [
@@ -96996,7 +96996,7 @@
       "repo_urls": [
         "https://github.com/sipss/GCIMS"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "sbml-model-manipulation": {
       "dois": [
@@ -97071,7 +97071,7 @@
       "repo_urls": [
         "https://github.com/Asa12138/MetaNet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "scan-filter-file-organization": {
       "dois": [
@@ -97114,7 +97114,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "scan-index-parsing-and-filtering": {
       "dois": [
@@ -97137,7 +97137,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "scan-number-mapping-dictionary-construction": {
       "dois": [
@@ -97865,7 +97865,7 @@
         "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "separation-efficiency-calculation-from-retention-times": {
       "dois": [
@@ -98202,7 +98202,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "shell-environment-setup-and-dependency-management": {
       "dois": [
@@ -98692,7 +98692,7 @@
         "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "signal-peptide-prediction-and-localization": {
       "dois": [
@@ -99087,7 +99087,7 @@
       "repo_urls": [
         "https://github.com/AndreySamokhin/mssearchr"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "similarity-score-computation-for-spectra": {
       "dois": [
@@ -99864,7 +99864,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "smiles-inchi-fasta-format-recognition": {
       "dois": [
@@ -99958,7 +99958,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "smiles-parsing-and-validation": {
       "dois": [
@@ -100255,7 +100255,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "smiles-structure-format-validation": {
       "dois": [
@@ -100344,7 +100344,7 @@
       "repo_urls": [
         "https://github.com/hhabra/metabCombiner"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "snakemake-dag-generation-and-execution": {
       "dois": [
@@ -100964,7 +100964,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "spatial-coordinate-metadata-extraction": {
       "dois": [
@@ -101124,7 +101124,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "spatial-metabolomics-integration": {
       "dois": [
@@ -101221,7 +101221,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "spatial-spectral-array-processing": {
       "dois": [
@@ -101666,7 +101666,7 @@
         "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectra-object-serialization-deserialization": {
       "dois": [
@@ -102151,7 +102151,7 @@
         "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-corpus-representation": {
       "dois": [
@@ -102293,7 +102293,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-data-filtering": {
       "dois": [
@@ -102578,7 +102578,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "noncommercial"
     },
     "spectral-data-object-construction": {
       "dois": [
@@ -102907,7 +102907,7 @@
         "https://github.com/yufree/mzrtsim",
         "https://github.com/SydneyBioX/hRUV"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-database-matching": {
       "dois": [
@@ -103420,7 +103420,7 @@
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/LargeMetabo/LargeMetabo"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-feature-consolidation": {
       "dois": [
@@ -103797,7 +103797,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-format-parsing-and-validation": {
       "dois": [
@@ -104085,7 +104085,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-ion-matching-across-vendors": {
       "dois": [
@@ -104239,7 +104239,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-library-data-modeling": {
       "dois": [
@@ -104346,7 +104346,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-library-indexing": {
       "dois": [
@@ -104493,7 +104493,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-library-matching-and-ranking": {
       "dois": [
@@ -104660,7 +104660,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-library-matching-with-cosine-similarity": {
       "dois": [
@@ -104717,7 +104717,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-library-metadata-assignment": {
       "dois": [
@@ -104736,7 +104736,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-library-metadata-reorganization": {
       "dois": [
@@ -104754,7 +104754,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-library-molecular-networking": {
       "dois": [
@@ -104807,7 +104807,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-library-polarity-separation": {
       "dois": [
@@ -104833,7 +104833,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-library-query-reference-pairing": {
       "dois": [
@@ -104981,7 +104981,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-match-scoring-algorithm-development": {
       "dois": [
@@ -105110,7 +105110,7 @@
         "https://github.com/01dadada/RT-Transformer",
         "https://github.com/chopralab/CLAW"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-metadata-grouping": {
       "dois": [
@@ -105816,7 +105816,7 @@
       "repo_urls": [
         "https://github.com/sipss/GCIMS"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-peak-data-extraction": {
       "dois": [
@@ -106165,7 +106165,7 @@
         "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-peak-grouping-mass-tolerance": {
       "dois": [
@@ -106185,7 +106185,7 @@
         "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-peak-intensity-aggregation": {
       "dois": [
@@ -106207,7 +106207,7 @@
         "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-peak-intensity-interpretation": {
       "dois": [
@@ -106387,7 +106387,7 @@
         "https://github.com/BalunasLab/mpact",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-peak-shape-modeling": {
       "dois": [
@@ -106407,7 +106407,7 @@
         "https://github.com/yufree/mzrtsim",
         "https://github.com/SydneyBioX/hRUV"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-peak-smoothing-artifact-removal": {
       "dois": [
@@ -106590,7 +106590,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-quality-control-assessment": {
       "dois": [
@@ -107423,7 +107423,7 @@
       "repo_urls": [
         "https://github.com/AndreySamokhin/mssearchr"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "spectral-similarity-scoring-parent-tp": {
       "dois": [
@@ -109498,7 +109498,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "statistical-significance-testing": {
       "dois": [
@@ -109584,7 +109584,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "statistical-simulation-execution": {
       "dois": [
@@ -110412,7 +110412,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "structure-annotation-via-similarity-ranking": {
       "dois": [
@@ -111323,7 +111323,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "summary-visualization-artifact-generation": {
       "dois": [
@@ -111422,7 +111422,7 @@
       "repo_urls": [
         "https://github.com/ZhuMSLab/DecoMetDIA"
       ],
-      "license_tier": "noncommercial"
+      "license_tier": "open"
     },
     "syntax-tree-construction-parsing": {
       "dois": [
@@ -111516,7 +111516,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "system-configuration-documentation": {
       "dois": [
@@ -111670,7 +111670,7 @@
         "https://github.com/MRCIEU/metaboprep",
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "tab-delimited-metabolomics-file-parsing": {
       "dois": [
@@ -112406,7 +112406,7 @@
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
         "https://github.com/FrigerioGianfranco/GetFeatistics"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "tandem-ms-feature-assessment": {
       "dois": [
@@ -113958,7 +113958,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "thermo-raw-binary-data-extraction": {
       "dois": [
@@ -114130,7 +114130,7 @@
       "repo_urls": [
         "https://github.com/massspecdl/ChemEmbed"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "threshold-based-library-validation": {
       "dois": [
@@ -115790,7 +115790,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "tree-based-model-validation": {
       "dois": [
@@ -116115,7 +116115,7 @@
       "repo_urls": [
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "two-dimensional-correlation-optimized-warping-parameter-tuning": {
       "dois": [
@@ -116133,7 +116133,7 @@
       "repo_urls": [
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "two-dimensional-ms-image-processing": {
       "dois": [
@@ -116189,7 +116189,7 @@
       "repo_urls": [
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "two-layer-architecture-dispatch-testing": {
       "dois": [
@@ -116212,7 +116212,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "two-layer-topology-traversal": {
       "dois": [
@@ -116494,7 +116494,7 @@
         "https://github.com/BiosystemEngineeringLab-IITB/dures",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "unified-vocabulary-construction": {
       "dois": [
@@ -116527,7 +116527,7 @@
       "repo_urls": [
         "https://github.com/mariallr/amanida"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "unit-test-coverage-for-conditional-workflows": {
       "dois": [
@@ -116900,7 +116900,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "univariate-statistical-testing-for-metabolomics": {
       "dois": [
@@ -116923,7 +116923,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "unknown-chemical-extraction-from-spectra": {
       "dois": [
@@ -117145,7 +117145,7 @@
         "https://github.com/LinShuhaiLAB/LipidIN",
         "https://github.com/LargeMetabo/LargeMetabo"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "untargeted-metabolomics-annotation": {
       "dois": [
@@ -117740,7 +117740,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "variance-estimation-within-and-between-groups": {
       "dois": [
@@ -118326,7 +118326,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/biodatalab/enrichmet"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "volcano-plot-construction-from-omics-data": {
       "dois": [
@@ -118384,7 +118384,7 @@
         "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "volume-mount-and-persistence-design": {
       "dois": [
@@ -118421,7 +118421,7 @@
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "wasserstein-distance-computation": {
       "dois": [
@@ -118752,7 +118752,7 @@
       "repo_urls": [
         "https://github.com/DanielQuiroz97/RGCxGC"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "wikidata-integration": {
       "dois": [
@@ -119453,7 +119453,7 @@
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "xcms-object-handling-and-preprocessing": {
       "dois": [
@@ -119474,7 +119474,7 @@
         "https://github.com/boecker-lab/sirius",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "xcms-output-replacement-workflow": {
       "dois": [
@@ -119493,7 +119493,7 @@
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "xcms-parameter-estimation": {
       "dois": [
@@ -119557,7 +119557,7 @@
         "https://github.com/AndreaRMICL/MWASTools",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "xcms-ramclustr-data-object-integration": {
       "dois": [
@@ -119755,7 +119755,7 @@
         "https://github.com/yufree/mzrtsim",
         "https://github.com/SydneyBioX/hRUV"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "y-ion-signal-detection-and-noise-assessment": {
       "dois": [
@@ -119778,7 +119778,7 @@
         "https://github.com/AutoFlowResearch/SmartPeak",
         "https://github.com/13479776/statTarget"
       ],
-      "license_tier": "restricted"
+      "license_tier": "open"
     },
     "yaml-configuration-handling": {
       "dois": [

@@ -15,7 +15,7 @@ metadata:
   - rawDiag
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -52,7 +52,6 @@ attribution:
 
 # mass-spectrometry-method-cycle-verification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that parallel reaction monitoring (PRM) or targeted MS/MS acquisition maintains consistent scan spacing across all monitoring cycles by extracting scan indices from raw Orbitrap files and validating inter-scan deltas. This skill ensures that the mass spectrometry method is executing as designed without drift or missed cycles.

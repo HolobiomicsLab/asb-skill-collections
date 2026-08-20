@@ -18,7 +18,7 @@ metadata:
   - Spectra
   techniques:
   - CE-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
@@ -53,7 +53,6 @@ attribution:
 
 # effective-mobility-calibration-single-marker
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform capillary electrophoresis–mass spectrometry (CE-MS) migration times to effective mobility values using a single calibration marker with known mobility (typically an EOF marker like Paracetamol with mobility = 0). This produces a reproducible, system-independent mobility scale that corrects for electroosmotic flow fluctuations.

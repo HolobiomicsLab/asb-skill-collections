@@ -18,7 +18,7 @@ metadata:
   - dynamic time warping (DTW)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
@@ -50,7 +50,6 @@ attribution:
 
 # Neighbor-wise constraint propagation in dynamic time warping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply neighbor-wise constraint edges during dynamic time warping alignment to enforce consistency of retention-time warping functions across adjacent LC-MS samples, improving alignment accuracy for compound-specific features that would otherwise diverge under sample-independent warping assumptions.

@@ -23,7 +23,7 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -58,7 +58,6 @@ attribution:
 
 # mass-spectral-metadata-standardization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Standardize and reorganize mass spectral library metadata (SMILES, retention indices, molecular formulas, polarity) from heterogeneous public sources (NIST, RIKEN, MoNA, SWGDRUG) into a unified, MS-DIAL-compatible MSP format with consistent field organization and validated structure assignments.

@@ -17,7 +17,7 @@ metadata:
   - Agilent Unknowns Analysis
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -52,7 +52,6 @@ attribution:
 
 # Compound Area Aggregation Across Samples
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aggregates chromatographic peak areas for the same compound across multiple GC-MS sample files by matching on retention time, exact mass, and published chemical names. This skill normalizes and combines area measurements for a single compound detected in replicate or related samples, enabling comparative analysis of compound abundances.

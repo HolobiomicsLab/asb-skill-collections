@@ -16,7 +16,7 @@ metadata:
   - knitr
   - ggplot2
   - metaboprep
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac059
   title: Metaboprep
@@ -47,7 +47,6 @@ attribution:
 
 # tab-delimited-export-formatting-for-metabolomics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Export processed metabolite data, sample metadata, and feature metadata from a Metaboprep object into tab-delimited text files (.txt/.tsv) for downstream analysis in external tools. This skill enables interoperability by converting in-memory R objects into portable, standard tabular formats.

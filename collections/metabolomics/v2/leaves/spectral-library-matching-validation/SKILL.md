@@ -18,7 +18,7 @@ metadata:
   - ChemmineR
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -52,7 +52,6 @@ attribution:
 
 # spectral-library-matching-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate and extract mass spectrometry compound identifications by searching preprocessed spectral libraries for known query chemicals using retention time, m/z values, and match factor thresholds. This skill ensures that retrieved compound metadata (m/z, RT, match factor, area) meets quality standards before downstream analysis.

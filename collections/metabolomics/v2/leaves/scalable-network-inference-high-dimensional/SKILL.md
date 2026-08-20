@@ -17,7 +17,7 @@ metadata:
   - pcutils
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
@@ -50,7 +50,6 @@ attribution:
 
 # Scalable Network Inference for High-Dimensional Feature Datasets
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct correlation-based networks from feature abundance tables containing >10,000 features using optimized vectorized matrix algorithms to compute pairwise correlations and p-values with reduced memory and runtime. This skill is essential when integrating multi-omics data or analyzing microbiome/metabolome datasets where traditional network tools become computationally prohibitive.

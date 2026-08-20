@@ -20,7 +20,7 @@ metadata:
   - data.table
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
@@ -55,7 +55,6 @@ attribution:
 
 # replicate-spectrum-aggregation-sample-level
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aggregates denoised replicate MS/MS spectra from a single sample into a unified Spectra object and exports it to standardized mzML format with ion mode annotation. This consolidation step produces sample-level consensus spectra suitable for downstream metabolite annotation and comparative analysis.

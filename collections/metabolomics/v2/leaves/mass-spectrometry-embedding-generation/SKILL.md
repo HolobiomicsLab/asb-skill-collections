@@ -15,7 +15,7 @@ metadata:
   - ChemEmbed
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2025.02.07.637102v1
   title: ChemEmbed
@@ -44,7 +44,6 @@ attribution:
 
 # mass-spectrometry-embedding-generation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract multidimensional molecular embedding vectors from preprocessed MS/MS spectra using a trained Convolutional Neural Network (CNN) model. These embeddings serve as feature representations for downstream metabolite identification and candidate matching against reference databases.

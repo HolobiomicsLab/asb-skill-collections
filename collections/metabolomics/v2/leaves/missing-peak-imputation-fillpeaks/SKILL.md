@@ -16,7 +16,7 @@ metadata:
   - compCV
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
@@ -48,7 +48,6 @@ attribution:
 
 # Missing-peak imputation (fillPeaks)
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 fillPeaks is a peak-filling operation that imputes missing intensity values for aligned features across samples in LC-MS data, enabling coefficient-of-variation reduction after retention time warping. It is essential for completing feature matrices before statistical comparison of alignment quality.

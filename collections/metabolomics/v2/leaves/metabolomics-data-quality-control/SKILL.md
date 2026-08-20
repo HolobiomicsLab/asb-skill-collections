@@ -16,7 +16,7 @@ metadata:
   - ggplot2
   - metaboprep
   - dendextend
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac059
   title: Metaboprep
@@ -47,7 +47,6 @@ attribution:
 
 # metabolomics-data-quality-control
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A systematic pipeline for filtering untargeted and targeted metabolomics datasets by applying user-defined thresholds on sample missingness, feature missingness, total peak area outliers, and principal component outliers. This skill removes low-quality samples and features while preserving data integrity for downstream analysis.

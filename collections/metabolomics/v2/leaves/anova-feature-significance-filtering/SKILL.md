@@ -15,7 +15,7 @@ metadata:
   - ComplexHeatmap
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -55,7 +55,6 @@ attribution:
 
 # anova-feature-significance-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply parametric ANOVA to rank metabolite features by statistical significance, then filter to retain only features meeting a stringent adjusted p-value (q-value) threshold to identify the most confident biomarkers for downstream pathway enrichment analysis.

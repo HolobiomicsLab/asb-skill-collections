@@ -15,7 +15,7 @@ metadata:
   - metabCombiner
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
@@ -48,7 +48,6 @@ attribution:
 
 # smoothing-spline-basis-selection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Select the optimal basis dimension (k) for a generalized additive model (GAM) B-spline by iteratively filtering outliers and applying cross-validation across candidate k values. This skill is essential when fitting nonlinear retention time (RT) mappings through anchor feature pairs in LC-MS metabolomics alignment, where robust outlier handling and principled model complexity selection determine mapping accuracy.

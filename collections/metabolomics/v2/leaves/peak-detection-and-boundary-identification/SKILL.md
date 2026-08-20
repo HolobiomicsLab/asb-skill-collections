@@ -19,7 +19,7 @@ metadata:
   - R
   techniques:
   - CE-MS
-  license_tier: restricted
+  license_tier: open
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
@@ -53,7 +53,6 @@ attribution:
 
 # peak-detection-and-boundary-identification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated detection and localization of metabolite peaks on the effective mobility (µeff) scale in CE-MS data, with precise boundary identification to extract peak properties (intensity, area, migration position). This skill converts migration time-dependent electropherograms into mobility-normalized space where peaks become reproducible and comparable across runs despite electroosmotic flow variations.
