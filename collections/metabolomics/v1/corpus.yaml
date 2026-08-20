@@ -11,7 +11,8 @@ summary:
 papers:
 - name: INTEGRATE
   doi: 10.1371/journal.pcbi.1009337
-  title: 'INTEGRATE: Model-based multi-omics data integration to characterize multi-level metabolic regulation'
+  title: 'INTEGRATE: Model-based multi-omics data integration to characterize multi-level
+    metabolic regulation'
   year: 2022
   category: Multiomics
   repo_url: https://github.com/qLSLab/integrate
@@ -23,9 +24,11 @@ papers:
     oa_route: gold
     verified_via: unpaywall_oa_status
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: NMR2Struct
   doi: 10.1021/acscentsci.4c01132
-  title: Accurate and Efficient Structure Elucidation from Routine One-Dimensional NMR Spectra Using Multitask Machine Learning
+  title: Accurate and Efficient Structure Elucidation from Routine One-Dimensional
+    NMR Spectra Using Multitask Machine Learning
   year: 2024
   category: NMR
   repo_url: https://github.com/MarklandGroup/NMR2Struct
@@ -37,9 +40,11 @@ papers:
     oa_route: diamond
     verified_via: unpaywall_oa_status
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: Spec2Vec
   doi: 10.1371/journal.pcbi.1008724
-  title: 'Spec2Vec: Improved mass spectral similarity scoring through learning of structural relationships'
+  title: 'Spec2Vec: Improved mass spectral similarity scoring through learning of
+    structural relationships'
   year: 2021
   category: Annotation
   repo_url: https://github.com/iomega/spec2vec
@@ -51,9 +56,11 @@ papers:
     oa_route: gold
     verified_via: unpaywall_oa_status
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: 13C-SpaceM
   doi: 10.1038/s42255-024-01118-4
-  title: Spatial single-cell isotope tracing reveals heterogeneity of de novo fatty acid synthesis in cancer
+  title: Spatial single-cell isotope tracing reveals heterogeneity of de novo fatty
+    acid synthesis in cancer
   year: 2024
   category: Imaging MS
   repo_url: https://github.com/Buglakova/13C-SpaceM
@@ -65,6 +72,7 @@ papers:
     oa_route: hybrid
     verified_via: unpaywall_best_oa_location
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: DeepSAT
   doi: 10.1186/s13321-023-00738-4
   title: 'DeepSAT: Learning Molecular Structures from Nuclear Magnetic Resonance Data'
@@ -79,9 +87,11 @@ papers:
     oa_route: gold
     verified_via: unpaywall_oa_status
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: MetaboDirect
   doi: 10.1186/s40168-023-01476-3
-  title: 'MetaboDirect: an analytical pipeline for the processing of FT-ICR MS-based metabolomic data'
+  title: 'MetaboDirect: an analytical pipeline for the processing of FT-ICR MS-based
+    metabolomic data'
   year: 2023
   category: FT-ICR MS
   repo_url: https://github.com/Coayala/MetaboDirect
@@ -93,6 +103,7 @@ papers:
     oa_route: gold
     verified_via: unpaywall_oa_status
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: Chemprop-IR
   doi: 10.1021/acs.jcim.1c00055
   title: Predicting Infrared Spectra with Message Passing Neural Networks
@@ -107,9 +118,11 @@ papers:
     oa_route: green
     verified_via: unpaywall_oa_status
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: MS2DeepScore
   doi: 10.1186/s13321-021-00558-4
-  title: 'MS2DeepScore: a novel deep learning similarity measure to compare tandem mass spectra'
+  title: 'MS2DeepScore: a novel deep learning similarity measure to compare tandem
+    mass spectra'
   year: 2021
   category: Annotation
   repo_url: https://github.com/matchms/ms2deepscore
@@ -121,6 +134,7 @@ papers:
     oa_route: gold
     verified_via: unpaywall_oa_status
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: MiMeNet
   doi: 10.1371/journal.pcbi.1009021
   title: 'MiMeNet: Exploring microbiome-metabolome relationships using neural networks'
@@ -135,9 +149,11 @@ papers:
     oa_route: gold
     verified_via: unpaywall_oa_status
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: NPLinker
   doi: 10.1371/journal.pcbi.1008920
-  title: Ranking microbial metabolomic and genomic links in the NPLinker framework using complementary scoring functions
+  title: Ranking microbial metabolomic and genomic links in the NPLinker framework
+    using complementary scoring functions
   year: 2021
   category: Biosynthetic Gene Clusters
   repo_url: https://github.com/NPLinker/nplinker
@@ -149,6 +165,7 @@ papers:
     oa_route: gold
     verified_via: unpaywall_oa_status
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: OpenTIMS, TimsPy, and TimsR
   doi: 10.1021/acs.jproteome.0c00962
   title: 'OpenTIMS, TimsPy, and TimsR: Open and Easy Access to timsTOF Raw Data'
@@ -163,10 +180,14 @@ papers:
     oa_route: hybrid
     verified_via: unpaywall_best_oa_location
     verified_on: '2026-06-15'
-  note: 'Non-OA reuse license ''cc-by-nc-nd'' (NoDerivatives/NonCommercial): excluded from v0 public release pending human license review per OPEN_ACCESS_POLICY.md §4.'
+  note: 'Non-OA reuse license ''cc-by-nc-nd'' (NoDerivatives/NonCommercial): excluded
+    from v0 public release pending human license review per OPEN_ACCESS_POLICY.md
+    §4.'
+  license_subject: paper
 - name: ORA
   doi: 10.1371/journal.pcbi.1009105
-  title: 'Pathway analysis in metabolomics: Recommendations for the use of over-representation analysis'
+  title: 'Pathway analysis in metabolomics: Recommendations for the use of over-representation
+    analysis'
   year: 2021
   category: Pathway, Enrichment and Ontology Tools
   repo_url: https://github.com/cwieder/metabolomics-ORA
@@ -178,6 +199,7 @@ papers:
     oa_route: gold
     verified_via: unpaywall_oa_status
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: CCSfind
   doi: 10.1002/jms.5040
   title: 'CCSfind: A tool for chemically informed LC-IM-MS database building'
@@ -192,10 +214,14 @@ papers:
     oa_route: hybrid
     verified_via: unpaywall_best_oa_location
     verified_on: '2026-06-15'
-  note: 'Non-OA reuse license ''cc-by-nc-nd'' (NoDerivatives/NonCommercial): excluded from v0 public release pending human license review per OPEN_ACCESS_POLICY.md §4.'
+  note: 'Non-OA reuse license ''cc-by-nc-nd'' (NoDerivatives/NonCommercial): excluded
+    from v0 public release pending human license review per OPEN_ACCESS_POLICY.md
+    §4.'
+  license_subject: paper
 - name: COMMIT
   doi: 10.1371/journal.pcbi.1009906
-  title: 'COMMIT: Consideration of metabolite leakage and community composition improves microbial community reconstructions'
+  title: 'COMMIT: Consideration of metabolite leakage and community composition improves
+    microbial community reconstructions'
   year: 2022
   category: Specialized
   repo_url: https://github.com/pwendering/COMMIT/tree/v1.0.0
@@ -207,6 +233,7 @@ papers:
     oa_route: gold
     verified_via: unpaywall_oa_status
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: HExpMetDB
   doi: 10.1289/EHP7722
   title: Risk-Based Chemical Ranking and Generating a Prioritized Human Exposome Database
@@ -221,6 +248,7 @@ papers:
     oa_route: diamond
     verified_via: unpaywall_oa_status
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: NP Analyst
   doi: 10.1021/acscentsci.1c01108
   title: 'NP Analyst: An Open Online Platform for Compound Activity Mapping'
@@ -235,9 +263,11 @@ papers:
     oa_route: diamond
     verified_via: unpaywall_oa_status
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: QComics
   doi: 10.1021/acs.analchem.3c03660
-  title: 'QComics: Recommendations and Guidelines for Robust, Easily Implementable and Reportable Quality Control of Metabolomics Data'
+  title: 'QComics: Recommendations and Guidelines for Robust, Easily Implementable
+    and Reportable Quality Control of Metabolomics Data'
   year: 2024
   category: Quality Control
   repo_url: https://github.com/ricoderks/QComics
@@ -249,9 +279,11 @@ papers:
     oa_route: hybrid
     verified_via: unpaywall_best_oa_location
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: patRoon 2
   doi: 10.21105/joss.04029
-  title: 'patRoon 2.0: Improved non-target analysis workflows including automated transformation product screening'
+  title: 'patRoon 2.0: Improved non-target analysis workflows including automated
+    transformation product screening'
   year: 2022
   category: Multifunctional
   repo_url: https://github.com/rickhelmus/patRoon
@@ -263,7 +295,9 @@ papers:
     oa_route: diamond
     verified_via: unpaywall_oa_status
     verified_on: '2026-06-15'
-  note: 'R tool (patRoon 2): build held pending the ASB R script-tracing fix; not in v1 skills. Add when the R path lands.'
+  note: 'R tool (patRoon 2): build held pending the ASB R script-tracing fix; not
+    in v1 skills. Add when the R path lands.'
+  license_subject: paper
 - name: xcms
   doi: 10.1021/acs.analchem.5c04338
   title: xcms
@@ -278,6 +312,7 @@ papers:
     verified_via: unpaywall_best_oa_location
     verified_on: '2026-06-15'
   wave: expansion-1
+  license_subject: paper
 - name: MS2DECIDE
   doi: 10.1002/cmtd.202400088
   title: MS2DECIDE
@@ -292,6 +327,7 @@ papers:
     verified_via: unpaywall_best_oa_location
     verified_on: '2026-06-15'
   wave: expansion-1
+  license_subject: paper
 - name: VIMMS 2.0
   doi: 10.21105/joss.03990
   title: VIMMS 2.0
@@ -306,6 +342,7 @@ papers:
     verified_via: unpaywall_best_oa_location
     verified_on: '2026-06-15'
   wave: expansion-1
+  license_subject: paper
 - name: QC4Metabolomics
   doi: 10.1021/acs.analchem.4c07078
   title: QC4Metabolomics
@@ -320,6 +357,7 @@ papers:
     verified_via: unpaywall_best_oa_location
     verified_on: '2026-06-15'
   wave: expansion-1
+  license_subject: paper
 - name: RASSP
   doi: 10.1021/acs.analchem.2c02093
   title: RASSP
@@ -334,6 +372,7 @@ papers:
     verified_via: unpaywall_best_oa_location
     verified_on: '2026-06-15'
   wave: expansion-1
+  license_subject: paper
 - name: PFdeltaScreen
   doi: 10.1007/s00216-023-05070-2
   title: PFdeltaScreen
@@ -348,6 +387,7 @@ papers:
     verified_via: unpaywall_best_oa_location
     verified_on: '2026-06-15'
   wave: expansion-1
+  license_subject: paper
 - name: MetaboAnnotatoR
   doi: 10.1021/acs.analchem.1c03032
   title: MetaboAnnotatoR
@@ -362,6 +402,7 @@ papers:
     verified_via: unpaywall_best_oa_location
     verified_on: '2026-06-15'
   wave: expansion-1
+  license_subject: paper
 - name: CMM-RT
   doi: 10.1186/s13321-022-00613-8
   title: CMM-RT
@@ -376,6 +417,7 @@ papers:
     verified_via: unpaywall_best_oa_location
     verified_on: '2026-06-15'
   wave: expansion-1
+  license_subject: paper
 - name: uafR
   doi: 10.1371/journal.pone.0306202
   title: uafR
@@ -390,6 +432,7 @@ papers:
     verified_via: unpaywall_best_oa_location
     verified_on: '2026-06-15'
   wave: expansion-1
+  license_subject: paper
 - name: MobiLipid
   doi: 10.1021/acs.analchem.4c01253
   title: MobiLipid
@@ -404,6 +447,7 @@ papers:
     verified_via: unpaywall_best_oa_location
     verified_on: '2026-06-15'
   wave: expansion-1
+  license_subject: paper
 - name: PCPFM
   doi: 10.1371/journal.pcbi.1011912
   title: PCPFM
@@ -418,6 +462,7 @@ papers:
     verified_via: unpaywall_best_oa_location
     verified_on: '2026-06-15'
   wave: expansion-1
+  license_subject: paper
 - name: mzPeak
   doi: 10.1021/acs.jproteome.5c00435
   title: mzPeak
@@ -432,6 +477,7 @@ papers:
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
   wave: expansion-2
+  license_subject: paper
 - name: rawrr
   doi: 10.1021/acs.jproteome.0c00866
   title: rawrr
@@ -446,6 +492,7 @@ papers:
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
   wave: expansion-2
+  license_subject: paper
 - name: mineMS2
   doi: 10.1186/s13321-025-01051-y
   title: mineMS2
@@ -460,6 +507,7 @@ papers:
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
   wave: expansion-2
+  license_subject: paper
 - name: IDSL_MINT
   doi: 10.1186/s13321-024-00804-5
   title: IDSL_MINT
@@ -474,6 +522,7 @@ papers:
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
   wave: expansion-2
+  license_subject: paper
 - name: QuantyFey
   doi: 10.1016/j.aca.2025.344571
   title: QuantyFey
@@ -488,6 +537,7 @@ papers:
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
   wave: expansion-2
+  license_subject: paper
 - name: Aird
   doi: 10.1186/s12859-021-04490-0
   title: Aird
@@ -502,6 +552,7 @@ papers:
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
   wave: expansion-2
+  license_subject: paper
 - name: Mol2CCS
   doi: 10.1186/s13321-024-00899-w
   title: Mol2CCS
@@ -516,6 +567,7 @@ papers:
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
   wave: expansion-2
+  license_subject: paper
 - name: MOCCal
   doi: 10.1021/acs.analchem.3c04290
   title: MOCCal
@@ -530,6 +582,7 @@ papers:
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
   wave: expansion-2
+  license_subject: paper
 - name: mspcompiler
   doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -544,6 +597,7 @@ papers:
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
   wave: expansion-2
+  license_subject: paper
 - name: M2S
   doi: 10.1021/acs.analchem.1c03592
   title: M2S
@@ -558,6 +612,7 @@ papers:
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
   wave: expansion-2
+  license_subject: paper
 - name: DeepION
   doi: 10.1021/acs.analchem.3c05002
   title: DeepION
@@ -572,6 +627,7 @@ papers:
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
   wave: expansion-2
+  license_subject: paper
 - name: Met-ID
   doi: 10.1021/acs.analchem.5c00633
   title: Met-ID
@@ -586,6 +642,7 @@ papers:
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
   wave: expansion-2
+  license_subject: paper
 - name: mass2adduct
   doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -600,6 +657,7 @@ papers:
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
   wave: expansion-2
+  license_subject: paper
 - name: MAMSI
   doi: 10.1021/acs.analchem.5c01327
   title: MAMSI
@@ -614,6 +672,7 @@ papers:
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
   wave: expansion-2
+  license_subject: paper
 - name: rtmsEcho
   doi: 10.1021/acs.analchem.5c03730
   title: rtmsEcho
@@ -628,6 +687,7 @@ papers:
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
   wave: expansion-2
+  license_subject: paper
 - name: SpecXplore
   doi: 10.1021/acs.analchem.3c04444
   title: SpecXplore
@@ -642,6 +702,7 @@ papers:
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
   wave: expansion-2
+  license_subject: paper
 - name: BitterMasS
   doi: 10.1021/acs.jafc.3c09767
   title: BitterMasS
@@ -656,6 +717,7 @@ papers:
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
   wave: expansion-2
+  license_subject: paper
 - name: BAM
   doi: 10.1021/acs.analchem.4c01565
   title: BAM
@@ -670,6 +732,7 @@ papers:
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
   wave: expansion-2
+  license_subject: paper
 - name: PS2MS
   doi: 10.1021/acs.analchem.3c05019
   title: PS2MS
@@ -684,6 +747,7 @@ papers:
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
   wave: expansion-2
+  license_subject: paper
 - name: mzQuality
   doi: 10.1021/jasms.5c00073
   title: mzQuality
@@ -698,6 +762,7 @@ papers:
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
   wave: expansion-2
+  license_subject: paper
 - name: mpactR
   doi: 10.1128/mra.00997-24
   title: mpactR
@@ -712,6 +777,7 @@ papers:
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
   wave: expansion-2
+  license_subject: paper
 - name: BinDiscover
   doi: 10.1186/s13321-023-00734-8
   title: BinDiscover
@@ -726,6 +792,7 @@ papers:
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
   wave: expansion-2
+  license_subject: paper
 - name: SpectriPy
   doi: 10.21105/joss.08070
   title: SpectriPy
@@ -740,6 +807,7 @@ papers:
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
   wave: expansion-2
+  license_subject: paper
 - name: MESSES
   doi: 10.3390/metabo13070842
   title: MESSES
@@ -754,34 +822,41 @@ papers:
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
   wave: expansion-2
+  license_subject: paper
 - name: matchms
   doi: 10.21105/joss.02411
   title: matchms
-  category: Core MS/MS data handling, cleaning & spectral-similarity scoring (foundation library)
+  category: Core MS/MS data handling, cleaning & spectral-similarity scoring (foundation
+    library)
   repo_url: matchms/matchms
   status: included
   wave: author-tool
-  authors: Florian Huber (first); Justin J.J. van der Hooft (senior); Simon Rogers co-author
+  authors: Florian Huber (first); Justin J.J. van der Hooft (senior); Simon Rogers
+    co-author
   access:
     type: gold-oa
     license: cc-by
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: SIRIUS
   doi: 10.1038/s41592-019-0344-8
   title: SIRIUS
-  category: MS2 molecular-formula + structure annotation (isotope/fragmentation-tree de novo formula; hosts CSI:FingerID, ZODIAC, CANOPUS, COSMIC)
+  category: MS2 molecular-formula + structure annotation (isotope/fragmentation-tree
+    de novo formula; hosts CSI:FingerID, ZODIAC, CANOPUS, COSMIC)
   repo_url: sirius-ms/sirius
   status: included
   wave: author-tool
-  authors: Kai Dührkop, Markus Fleischauer, Marcus Ludwig et al.; Sebastian Böcker (senior)
+  authors: Kai Dührkop, Markus Fleischauer, Marcus Ludwig et al.; Sebastian Böcker
+    (senior)
   access:
     type: open-access
     license: cc-by
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: MS2Query
   doi: 10.1038/s41467-023-37446-4
   title: MS2Query
@@ -789,27 +864,32 @@ papers:
   repo_url: iomega/ms2query
   status: included
   wave: author-tool
-  authors: Niek F. de Jonge (first); Florian Huber co-author; Justin J.J. van der Hooft (senior)
+  authors: Niek F. de Jonge (first); Florian Huber co-author; Justin J.J. van der
+    Hooft (senior)
   access:
     type: gold-oa
     license: cc-by
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: Ion Identity Molecular Networking
   doi: 10.1038/s41467-021-23953-9
   title: Ion Identity Molecular Networking
-  category: Network refinement — collapses adducts/ion species of one molecule via chromatographic peak-shape correlation
+  category: Network refinement — collapses adducts/ion species of one molecule via
+    chromatographic peak-shape correlation
   repo_url: mzmine/mzmine
   status: included
   wave: author-tool
-  authors: Robin Schmid (first), Daniel Petras, Louis-Félix Nothias; Pieter C. Dorrestein (senior); Tomáš Pluskal co-author
+  authors: Robin Schmid (first), Daniel Petras, Louis-Félix Nothias; Pieter C. Dorrestein
+    (senior); Tomáš Pluskal co-author
   access:
     type: gold-oa
     license: cc-by
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: TIMA
   doi: 10.3389/fpls.2019.01329
   title: TIMA
@@ -824,34 +904,41 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: CANOPUS-adjacent
   doi: 10.1038/s41587-021-01045-9
   title: CANOPUS-adjacent
-  category: MS2 structure-annotation confidence/FDR — calibrated confidence score for CSI:FingerID hits across a dataset
+  category: MS2 structure-annotation confidence/FDR — calibrated confidence score
+    for CSI:FingerID hits across a dataset
   repo_url: sirius-ms/sirius
   status: included
   wave: author-tool
-  authors: Martin A. Hoffmann (first), Louis-Félix Nothias, Marcus Ludwig, Pieter C. Dorrestein et al.; Kai Dührkop & Sebastian Böcker (senior)
+  authors: Martin A. Hoffmann (first), Louis-Félix Nothias, Marcus Ludwig, Pieter
+    C. Dorrestein et al.; Kai Dührkop & Sebastian Böcker (senior)
   access:
     type: open-access
     license: cc-by
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: MolNetEnhancer
   doi: 10.3390/metabo9070144
   title: MolNetEnhancer
-  category: Network annotation enrichment — fuses MN + MS2LDA + in-silico + ClassyFire to assign chemical classes per molecular family
+  category: Network annotation enrichment — fuses MN + MS2LDA + in-silico + ClassyFire
+    to assign chemical classes per molecular family
   repo_url: madeleineernst/pyMolNetEnhancer
   status: included
   wave: author-tool
-  authors: Madeleine Ernst (first), Kyo Bin Kang, Louis-Félix Nothias, Pieter C. Dorrestein; Justin J.J. van der Hooft (senior)
+  authors: Madeleine Ernst (first), Kyo Bin Kang, Louis-Félix Nothias, Pieter C. Dorrestein;
+    Justin J.J. van der Hooft (senior)
   access:
     type: gold-oa
     license: cc-by
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: MS2LDA
   doi: 10.1093/bioinformatics/btx582
   title: MS2LDA
@@ -866,10 +953,12 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: microbeMASST / fastMASST
   doi: 10.1038/s41564-023-01575-9
   title: microbeMASST / fastMASST
-  category: Repository-scale spectral search — taxonomically informed MASST over >60,000 microbial monocultures + all public GNPS/MassIVE data
+  category: Repository-scale spectral search — taxonomically informed MASST over >60,000
+    microbial monocultures + all public GNPS/MassIVE data
   repo_url: robinschmid/microbe_masst
   status: included
   wave: author-tool
@@ -880,10 +969,12 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: LOTUS
   doi: 10.7554/eLife.70780
   title: LOTUS
-  category: Annotation resource — open structure-organism pair knowledge base (>750k referenced pairs) backing taxonomy-informed annotation
+  category: Annotation resource — open structure-organism pair knowledge base (>750k
+    referenced pairs) backing taxonomy-informed annotation
   repo_url: lotusnprod/lotus-processor
   status: included
   wave: author-tool
@@ -894,10 +985,12 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: ENPKG
   doi: 10.1021/acscentsci.3c00800
   title: ENPKG
-  category: Annotation integration — sample-centric knowledge graph federating spectral + in-silico + taxonomy + bioactivity
+  category: Annotation integration — sample-centric knowledge graph federating spectral
+    + in-silico + taxonomy + bioactivity
   repo_url: enpkg/enpkg_full
   status: included
   wave: author-tool
@@ -908,48 +1001,58 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: MEMO
   doi: 10.3389/fbinf.2022.842964
   title: MEMO
-  category: Networking — RT-agnostic MS2 sample vectorization & clustering of chemodiverse datasets
+  category: Networking — RT-agnostic MS2 sample vectorization & clustering of chemodiverse
+    datasets
   repo_url: mandelbrot-project/memo
   status: included
   wave: author-tool
-  authors: Arnaud Gaudry; Florian Huber, Louis-Félix Nothias co-authors; Jean-Luc Wolfender & Pierre-Marie Allard (senior)
+  authors: Arnaud Gaudry; Florian Huber, Louis-Félix Nothias co-authors; Jean-Luc
+    Wolfender & Pierre-Marie Allard (senior)
   access:
     type: gold-oa
     license: cc-by
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: MZmine 2
   doi: 10.1186/1471-2105-11-395
   title: MZmine 2
-  category: Stage 0 — original modular LC/GC-MS preprocessing framework (peak detection, deconvolution, alignment, gap-filling)
+  category: Stage 0 — original modular LC/GC-MS preprocessing framework (peak detection,
+    deconvolution, alignment, gap-filling)
   repo_url: mzmine/mzmine2
   status: included
   wave: author-tool
-  authors: Tomáš Pluskal (first), Sandra Castillo, Alejandro Villar-Briones, Matej Orešič
+  authors: Tomáš Pluskal (first), Sandra Castillo, Alejandro Villar-Briones, Matej
+    Orešič
   access:
     type: gold-oa
     license: cc-by
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: biosynfoni
   doi: 10.1186/s13321-025-01081-6
   title: biosynfoni
-  category: Biosynthesis-informed molecular fingerprint (structure/NP-class encoding for annotation)
+  category: Biosynthesis-informed molecular fingerprint (structure/NP-class encoding
+    for annotation)
   repo_url: lucinamay/biosynfoni
   status: included
   wave: author-tool
-  authors: Lucina-May Nollen (first), David Meijer, Maria Sorokina; Justin J.J. van der Hooft (senior)
+  authors: Lucina-May Nollen (first), David Meijer, Maria Sorokina; Justin J.J. van
+    der Hooft (senior)
   access:
     type: gold-oa
     license: cc-by
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: PALS
   doi: 10.3390/metabo11020103
   title: PALS
@@ -957,13 +1060,15 @@ papers:
   repo_url: glasgowcompbio/PALS
   status: included
   wave: author-tool
-  authors: Karen McLuskey (first), Joe Wandy, Simon Rogers, Karl Burgess, Ronan Daly; Justin J.J. van der Hooft co-author
+  authors: Karen McLuskey (first), Joe Wandy, Simon Rogers, Karl Burgess, Ronan Daly;
+    Justin J.J. van der Hooft co-author
   access:
     type: gold-oa
     license: cc-by
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: asari
   doi: 10.1038/s41467-023-39889-1
   title: asari
@@ -977,6 +1082,7 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-16'
+  license_subject: paper
 - name: Spectra
   doi: 10.3390/metabo12020173
   title: Spectra
@@ -990,6 +1096,7 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-16'
+  license_subject: paper
 - name: mummichog
   doi: 10.1371/journal.pcbi.1003123
   title: mummichog
@@ -1003,6 +1110,7 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-16'
+  license_subject: paper
 - name: MetaboAnalystR
   doi: 10.1038/s41467-024-48009-6
   title: MetaboAnalystR
@@ -1016,10 +1124,12 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-16'
+  license_subject: paper
 - name: MassQL
   doi: 10.1038/s41592-025-02660-z
   title: MassQL
-  category: MS query language (DSL for m/z, RT, neutral-loss, fragment patterns across files to repositories)
+  category: MS query language (DSL for m/z, RT, neutral-loss, fragment patterns across
+    files to repositories)
   repo_url: mwang87/MassQueryLanguage
   status: included
   wave: toward-100-ccby
@@ -1029,6 +1139,7 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-16'
+  license_subject: paper
 - name: FeatureFinderMetabo
   doi: 10.1074/mcp.M113.031278
   title: FeatureFinderMetabo
@@ -1042,10 +1153,12 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-16'
+  license_subject: paper
 - name: DEREPLICATOR+
   doi: 10.1038/s41467-018-06082-8
   title: DEREPLICATOR+
-  category: in silico annotation / dereplication (MS/MS DB search of known natural products)
+  category: in silico annotation / dereplication (MS/MS DB search of known natural
+    products)
   repo_url: ablab/npdtools
   status: included
   wave: toward-100-ccby
@@ -1055,10 +1168,12 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-16'
+  license_subject: paper
 - name: MolDiscovery
   doi: 10.1038/s41467-021-23986-0
   title: MolDiscovery
-  category: in silico annotation (learned probabilistic fragmentation model for MS/MS DB search)
+  category: in silico annotation (learned probabilistic fragmentation model for MS/MS
+    DB search)
   repo_url: mohimanilab/molDiscovery
   status: included
   wave: toward-100-ccby
@@ -1068,10 +1183,12 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-16'
+  license_subject: paper
 - name: Paired Omics Data Platform
   doi: 10.1038/s41589-020-00724-z
   title: Paired Omics Data Platform
-  category: paired-omics (standardized links between (meta)genomic BGCs and MS/MS datasets)
+  category: paired-omics (standardized links between (meta)genomic BGCs and MS/MS
+    datasets)
   repo_url: iomega/paired-data-form
   status: included
   wave: toward-100-ccby
@@ -1081,6 +1198,7 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-16'
+  license_subject: paper
 - name: MSMetaEnhancer
   doi: 10.21105/joss.04494
   title: MSMetaEnhancer
@@ -1094,10 +1212,12 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-16'
+  license_subject: paper
 - name: MSHub
   doi: 10.1038/s41587-020-0700-3
   title: MSHub
-  category: preprocessing / deconvolution (unsupervised NMF auto-deconvolution of GC-MS; enables GC-MS molecular networking)
+  category: preprocessing / deconvolution (unsupervised NMF auto-deconvolution of
+    GC-MS; enables GC-MS molecular networking)
   repo_url: bittremieux/GNPS_GC
   status: included
   wave: toward-100-ccby
@@ -1107,6 +1227,7 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-16'
+  license_subject: paper
 - name: LipidMatch
   doi: 10.1186/s12859-017-1744-3
   title: LipidMatch
@@ -1120,6 +1241,7 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-16'
+  license_subject: paper
 - name: MZmine 3
   doi: 10.1038/s41587-023-01690-2
   title: MZmine 3
@@ -1132,9 +1254,14 @@ papers:
     type: repo-oa
     code_license: MIT
     is_oa: true
-    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed repo, no paper verbatim)
+    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed
+      repo, no paper verbatim)
     verified_via: github_license_api
     verified_on: '2026-06-16'
+    license: MIT
+  license_tier: open
+  license_detection: github-api
+  license_subject: tool
 - name: NPClassifier
   doi: 10.1021/acs.jnatprod.1c00399
   title: NPClassifier
@@ -1147,9 +1274,14 @@ papers:
     type: repo-oa
     code_license: MIT
     is_oa: true
-    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed repo, no paper verbatim)
+    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed
+      repo, no paper verbatim)
     verified_via: github_license_api
     verified_on: '2026-06-16'
+    license: MIT
+  license_tier: open
+  license_detection: github-api
+  license_subject: tool
 - name: pyteomics
   doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -1162,9 +1294,14 @@ papers:
     type: repo-oa
     code_license: Apache-2.0
     is_oa: true
-    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed repo, no paper verbatim)
+    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed
+      repo, no paper verbatim)
     verified_via: github_license_api
     verified_on: '2026-06-16'
+    license: Apache-2.0
+  license_tier: open
+  license_detection: github-api
+  license_subject: tool
 - name: spectrum_utils
   doi: 10.1021/acs.analchem.9b04884
   title: spectrum_utils
@@ -1177,9 +1314,14 @@ papers:
     type: repo-oa
     code_license: Apache-2.0
     is_oa: true
-    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed repo, no paper verbatim)
+    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed
+      repo, no paper verbatim)
     verified_via: github_license_api
     verified_on: '2026-06-16'
+    license: Apache-2.0
+  license_tier: open
+  license_detection: github-api
+  license_subject: tool
 - name: pymzML
   doi: 10.1093/bioinformatics/bty046
   title: pymzML
@@ -1192,9 +1334,14 @@ papers:
     type: repo-oa
     code_license: MIT
     is_oa: true
-    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed repo, no paper verbatim)
+    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed
+      repo, no paper verbatim)
     verified_via: github_license_api
     verified_on: '2026-06-16'
+    license: MIT
+  license_tier: open
+  license_detection: github-api
+  license_subject: tool
 - name: CoreMS
   doi: 10.5281/zenodo.14009575
   title: CoreMS
@@ -1207,9 +1354,14 @@ papers:
     type: repo-oa
     code_license: BSD-2-Clause
     is_oa: true
-    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed repo, no paper verbatim)
+    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed
+      repo, no paper verbatim)
     verified_via: github_license_api
     verified_on: '2026-06-16'
+    license: BSD-2-Clause
+  license_tier: open
+  license_detection: github-api
+  license_subject: tool
 - name: pyOpenMS-viz
   doi: 10.1021/acs.jproteome.4c00873
   title: pyOpenMS-viz
@@ -1222,9 +1374,14 @@ papers:
     type: repo-oa
     code_license: BSD-3-Clause
     is_oa: true
-    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed repo, no paper verbatim)
+    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed
+      repo, no paper verbatim)
     verified_via: github_license_api
     verified_on: '2026-06-16'
+    license: BSD-3-Clause
+  license_tier: open
+  license_detection: github-api
+  license_subject: tool
 - name: qemistree
   doi: 10.1038/s41589-020-00677-3
   title: qemistree
@@ -1237,9 +1394,14 @@ papers:
     type: repo-oa
     code_license: BSD-2-Clause
     is_oa: true
-    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed repo, no paper verbatim)
+    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed
+      repo, no paper verbatim)
     verified_via: github_license_api
     verified_on: '2026-06-16'
+    license: BSD-2-Clause
+  license_tier: open
+  license_detection: github-api
+  license_subject: tool
 - name: MAGMa
   doi: 10.5702/massspectrometry.S0033
   title: MAGMa
@@ -1252,9 +1414,14 @@ papers:
     type: repo-oa
     code_license: Apache-2.0
     is_oa: true
-    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed repo, no paper verbatim)
+    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed
+      repo, no paper verbatim)
     verified_via: github_license_api
     verified_on: '2026-06-16'
+    license: Apache-2.0
+  license_tier: open
+  license_detection: github-api
+  license_subject: tool
 - name: DEIMoS
   doi: 10.1021/acs.analchem.1c05017
   title: DEIMoS
@@ -1267,9 +1434,14 @@ papers:
     type: repo-oa
     code_license: BSD-3-Clause
     is_oa: true
-    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed repo, no paper verbatim)
+    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed
+      repo, no paper verbatim)
     verified_via: github_license_api
     verified_on: '2026-06-16'
+    license: BSD-3-Clause
+  license_tier: open
+  license_detection: github-api
+  license_subject: tool
 - name: FIDDLE
   doi: 10.1038/s41467-025-66060-9
   title: FIDDLE
@@ -1282,9 +1454,14 @@ papers:
     type: repo-oa
     code_license: Apache-2.0
     is_oa: true
-    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed repo, no paper verbatim)
+    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed
+      repo, no paper verbatim)
     verified_via: github_license_api
     verified_on: '2026-06-16'
+    license: Apache-2.0
+  license_tier: open
+  license_detection: github-api
+  license_subject: tool
 - name: NeatMS
   doi: 10.1021/acs.analchem.1c02220
   title: NeatMS
@@ -1297,9 +1474,14 @@ papers:
     type: repo-oa
     code_license: MIT
     is_oa: true
-    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed repo, no paper verbatim)
+    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed
+      repo, no paper verbatim)
     verified_via: github_license_api
     verified_on: '2026-06-16'
+    license: MIT
+  license_tier: open
+  license_detection: github-api
+  license_subject: tool
 - name: falcon
   doi: 10.1002/rcm.9153
   title: falcon
@@ -1312,9 +1494,14 @@ papers:
     type: repo-oa
     code_license: BSD-3-Clause
     is_oa: true
-    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed repo, no paper verbatim)
+    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed
+      repo, no paper verbatim)
     verified_via: github_license_api
     verified_on: '2026-06-16'
+    license: BSD-3-Clause
+  license_tier: open
+  license_detection: github-api
+  license_subject: tool
 - name: LipoCLEAN
   doi: 10.1021/acs.analchem.4c04040
   title: LipoCLEAN
@@ -1327,9 +1514,14 @@ papers:
     type: repo-oa
     code_license: MIT
     is_oa: true
-    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed repo, no paper verbatim)
+    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed
+      repo, no paper verbatim)
     verified_via: github_license_api
     verified_on: '2026-06-16'
+    license: MIT
+  license_tier: open
+  license_detection: github-api
+  license_subject: tool
 - name: MIST-CF
   doi: 10.1021/acs.jcim.3c01082
   title: MIST-CF
@@ -1342,9 +1534,14 @@ papers:
     type: repo-oa
     code_license: MIT
     is_oa: true
-    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed repo, no paper verbatim)
+    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed
+      repo, no paper verbatim)
     verified_via: github_license_api
     verified_on: '2026-06-16'
+    license: MIT
+  license_tier: open
+  license_detection: github-api
+  license_subject: tool
 - name: Nextflow4MS-DIAL
   doi: 10.1021/jasms.4c00364
   title: Nextflow4MS-DIAL
@@ -1357,9 +1554,14 @@ papers:
     type: repo-oa
     code_license: MIT
     is_oa: true
-    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed repo, no paper verbatim)
+    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed
+      repo, no paper verbatim)
     verified_via: github_license_api
     verified_on: '2026-06-16'
+    license: MIT
+  license_tier: open
+  license_detection: github-api
+  license_subject: tool
 - name: SLAW
   doi: 10.1021/acs.analchem.1c02687
   title: SLAW
@@ -1372,9 +1574,14 @@ papers:
     type: repo-oa
     code_license: GPL-2.0
     is_oa: true
-    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed repo, no paper verbatim)
+    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed
+      repo, no paper verbatim)
     verified_via: github_license_api
     verified_on: '2026-06-16'
+    license: GPL-2.0
+  license_tier: open
+  license_detection: github-api
+  license_subject: tool
 - name: TARDIS
   doi: 10.1021/acs.analchem.5c00567
   title: TARDIS
@@ -1387,6 +1594,11 @@ papers:
     type: repo-oa
     code_license: GPL-3.0
     is_oa: true
-    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed repo, no paper verbatim)
+    paper_license: non-cc-by (cited for attribution; skills grounded in the openly-licensed
+      repo, no paper verbatim)
     verified_via: github_license_api
     verified_on: '2026-06-16'
+    license: GPL-3.0
+  license_tier: open
+  license_detection: github-api
+  license_subject: tool
