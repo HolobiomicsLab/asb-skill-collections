@@ -9,10 +9,11 @@ derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 schema_version: 0.2.0
-license_tier: unknown
-license: null
-license_detection: null
-license_subject: null
+license_tier: open
+license: BSD-2-Clause
+license_detection: github-api
+license_subject: tool
+repo_url: https://github.com/EMSL-Computing/CoreMS
 techniques:
 - LC-MS
 - GC-MS

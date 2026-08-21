@@ -9,10 +9,11 @@ derived_from:
 source_repos:
 - ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 schema_version: 0.2.0
-license_tier: unknown
-license: null
-license_detection: null
-license_subject: null
+license_tier: open
+license: BSD-3-Clause
+license_detection: bioconda-package
+license_subject: tool
+repo_url: https://github.com/COMBINE-lab/salmon
 techniques:
 - LC-MS
 - ion-mobility-MS

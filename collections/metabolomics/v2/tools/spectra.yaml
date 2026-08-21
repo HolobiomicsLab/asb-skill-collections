@@ -29,10 +29,11 @@ source_repos:
 - sneumann/xcms
 - zmahnoor14/MAW
 schema_version: 0.2.0
-license_tier: unknown
-license: null
-license_detection: null
-license_subject: null
+license_tier: open
+license: Artistic-2.0
+license_detection: bioconductor-package
+license_subject: tool
+repo_url: https://github.com/RforMassSpectrometry/Spectra
 techniques:
 - LC-MS
 - GC-MS

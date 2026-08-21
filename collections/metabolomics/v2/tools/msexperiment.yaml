@@ -6,10 +6,11 @@ derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: Automated Integration and Quality Assessment of Chromatographic Peaks in LC–MS-Based Metabolomics and Lipidomics Using TARDIS
 schema_version: 0.2.0
-license_tier: unknown
-license: null
-license_detection: null
-license_subject: null
+license_tier: open
+license: Artistic-2.0
+license_detection: bioconductor-package
+license_subject: tool
+repo_url: https://github.com/RforMassSpectrometry/MsExperiment
 techniques:
 - LC-MS
 - GC-MS

@@ -8,10 +8,11 @@ derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
 schema_version: 0.2.0
-license_tier: unknown
-license: null
-license_detection: null
-license_subject: null
+license_tier: open
+license: MIT
+license_detection: bioconda-package
+license_subject: tool
+repo_url: https://github.com/bihealth/NeatMS
 techniques:
 - LC-MS
 - CE-MS

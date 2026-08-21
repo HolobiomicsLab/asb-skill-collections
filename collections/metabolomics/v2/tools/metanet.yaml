@@ -9,9 +9,10 @@ derived_from:
 source_repos:
 - Asa12138/MetaNet
 schema_version: 0.2.0
-license_tier: unknown
-license: null
-license_detection: null
-license_subject: null
+license_tier: open
+license: GPL-3.0-only
+license_detection: r-description
+license_subject: tool
+repo_url: Asa12138/MetaNet
 techniques:
 - mass-spectrometry

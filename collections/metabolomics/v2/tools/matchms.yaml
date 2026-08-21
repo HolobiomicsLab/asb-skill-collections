@@ -28,10 +28,11 @@ source_repos:
 - matchms/matchms
 - tingxiecsu/CSU-MS2
 schema_version: 0.2.0
-license_tier: unknown
-license: null
-license_detection: null
-license_subject: null
+license_tier: open
+license: Apache-2.0
+license_detection: bioconda-package
+license_subject: tool
+repo_url: https://github.com/matchms/matchms
 techniques:
 - LC-MS
 - GC-MS

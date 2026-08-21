@@ -20,10 +20,11 @@ source_repos:
 - kuwisdelu/Cardinal
 - swinnenteam/LipidQMap
 schema_version: 0.2.0
-license_tier: unknown
-license: null
-license_detection: null
-license_subject: null
+license_tier: open
+license: Artistic-2.0
+license_detection: github-api
+license_subject: tool
+repo_url: kuwisdelu/Cardinal
 techniques:
 - LC-MS
 - CE-MS

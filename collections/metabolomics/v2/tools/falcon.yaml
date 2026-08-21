@@ -6,10 +6,11 @@ derived_from:
 - doi: 10.1002/rcm.9153
   title: Large‐scale tandem mass spectrum clustering using fast nearest neighbor searching
 schema_version: 0.2.0
-license_tier: unknown
-license: null
-license_detection: null
-license_subject: null
+license_tier: open
+license: BSD-3-Clause
+license_detection: github-api
+license_subject: tool
+repo_url: https://github.com/bittremieuxlab/falcon
 techniques:
 - LC-MS
 - ion-mobility-MS

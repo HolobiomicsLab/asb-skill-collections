@@ -8,7 +8,8 @@ derived_from:
 source_repos:
 - lifs-tools/lipidspace
 schema_version: 0.2.0
-license_tier: unknown
-license: null
-license_detection: null
-license_subject: null
+license_tier: open
+license: MIT
+license_detection: github-api
+license_subject: tool
+repo_url: lifs-tools/lipidspace
