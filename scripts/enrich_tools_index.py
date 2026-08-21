@@ -11,7 +11,7 @@ detect_indent from propagate_license_tiers; does not fork the collector.
 
 Writes back, in collection_dir:
 - tools_index.json : + license_tier, license, license_detection, license_subject,
-                     source_paper_repos, used_by_skills  (- canonical_url)
+                     repo_url, source_paper_repos, used_by_skills  (- canonical_url)
 - skills_index.json: + tools_used
 - kb_bundle.json   : + tools_used on each skill record
 """
@@ -48,12 +48,17 @@ def load_tool_evidence(collection_dir) -> dict:
 
 
 def tool_license(tool_evidence) -> tuple:
-    """(tier, license, detection, subject) for a tool, from evidence about the tool.
+    """(tier, license, detection, subject, repo_url) from evidence about the tool.
 
-    ``tool_evidence`` is a ``{license, license_detection}`` mapping resolved from the
-    tool's own repository / DESCRIPTION / LICENSE file, or None when no such lookup
-    has been done. No lookup, or a lookup whose detection is not a tool detection,
-    yields the ``unknown`` tier with no licence recorded.
+    ``tool_evidence`` is a ``{license, license_detection, repo_url}`` mapping
+    resolved from the tool's own repository or package metadata by
+    ``resolve_tool_licenses.py``, or None when no such lookup has been done. No
+    lookup, or a lookup whose detection is not a tool detection, yields the
+    ``unknown`` tier with no licence and no repository recorded.
+
+    ``repo_url`` is recorded so the claim can be disputed. Every licence in the
+    catalogue was previously unauditable because no entry named the repository it
+    came from, which is how a wrong one went unnoticed.
 
     This deliberately has no access to the corpus. Tiers used to be inherited from
     the papers that cite a tool, aggregated most-restrictively, which recorded CAMERA
@@ -66,8 +71,8 @@ def tool_license(tool_evidence) -> tuple:
     det = ev.get("license_detection")
     tier = tool_tier_from_evidence(lic, det)
     if tier == TIER_UNKNOWN:
-        return (TIER_UNKNOWN, None, det if det not in UNESTABLISHED_DETECTIONS else None, None)
-    return (tier, lic, det, SUBJECT_TOOL)
+        return (TIER_UNKNOWN, None, None, None, None)
+    return (tier, lic, det, SUBJECT_TOOL, ev.get("repo_url") or None)
 
 
 def source_paper_repos(tool_slug, tools_dir) -> list:
@@ -127,11 +132,12 @@ def enrich(collection_dir) -> dict:
 
     tool_tiers: dict[str, int] = {}
     for t in tools:
-        tier, lic, det, subject = tool_license(tool_evidence.get(t["slug"]))
+        tier, lic, det, subject, repo = tool_license(tool_evidence.get(t["slug"]))
         t["license_tier"] = tier
         t["license"] = lic
         t["license_detection"] = det
         t["license_subject"] = subject
+        t["repo_url"] = repo
         t["source_paper_repos"] = source_paper_repos(t["slug"], d / "tools")
         # Named a tool's canonical home while holding a citing paper's repository.
         t.pop("canonical_url", None)
