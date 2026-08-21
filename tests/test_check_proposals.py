@@ -456,3 +456,30 @@ def test_main_exits_one_on_violation(tmp_path):
     fm["status"] = "accepted"
     _write_skill(col, fm)
     assert c.main([str(col)]) == 1
+
+
+# --- a tier is only as good as the evidence the gate passes to it ------------
+
+def _repository_proposal(tmp_path, repo_url):
+    col = _collection(tmp_path)
+    fm = _good_fm()
+    fm["metadata"]["provenance_tier"] = "repository"
+    fm["metadata"]["dois"] = []
+    if repo_url:
+        fm["metadata"]["repo_url"] = repo_url
+    _write_skill(col, fm)
+    return col
+
+
+def test_a_repository_tier_proposal_with_a_repo_url_passes(tmp_path):
+    """`check_provenance_tiers` was taught to pass `repo_url`; this gate was not,
+    so it rejected every valid repository-grounded proposal — a tier judged
+    without the evidence that backs it."""
+    col = _repository_proposal(tmp_path, "https://github.com/a/b")
+    assert [v for v in c.check_collection(str(col)) if "repo_url" in v] == []
+
+
+def test_a_repository_tier_proposal_without_a_repo_url_is_still_rejected(tmp_path):
+    """The other side: passing the field must not stop the invariant biting."""
+    col = _repository_proposal(tmp_path, None)
+    assert any("repository requires repo_url" in v for v in c.check_collection(str(col)))

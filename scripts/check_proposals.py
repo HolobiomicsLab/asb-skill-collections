@@ -104,11 +104,16 @@ def check_collection(collection_dir) -> list:
         # semantics: literature ⇒ >=1 doi, synthetic ⇒ synthesized_from,
         # community ⇒ related_skills key present.
         prov = meta.get("provenance_tier")
+        # Every field the vocabulary can require, or a tier is judged without
+        # the evidence that backs it: `repository` reads `repo_url`, and passing
+        # only some of them rejects a valid proposal.
         prov_violations = validate_provenance(
             prov,
             dois=meta.get("dois"),
             synthesized_from=meta.get("synthesized_from"),
-            related_skills=fm.get("related_skills") if "related_skills" in fm else None,
+            related_skills=(fm.get("related_skills") if "related_skills" in fm
+                            else meta.get("related_skills")),
+            repo_url=meta.get("repo_url"),
         )
         for msg in prov_violations:
             violations.append(f"{md}: {msg}")
