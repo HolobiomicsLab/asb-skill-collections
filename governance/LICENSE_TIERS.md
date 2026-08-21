@@ -102,6 +102,48 @@ did not say whose licence it was.
 evidence about a paper and yields `unknown` on the tool axis. Enforced by
 `scripts/check_tools_index.py`.
 
+### Where a tool licence is allowed to come from
+
+`scripts/resolve_tool_licenses.py` writes `tool_licenses.json`, and that file is the
+only thing `enrich_tools_index.py` will tier a tool from. Two routes, both evidence
+about the tool itself:
+
+| Route | Evidence | Network |
+|---|---|---|
+| `self_published` | The tool is the subject of a paper already in the corpus — matched on exact name equality, never substring — so that paper's repository is the tool's, and the licence already resolved from it is the tool's licence. | no |
+| `registry` | The tool's name matches a package in a curated life-science registry declared in `governance/tool_registries.yaml`. | yes, cached |
+
+Only *curated life-science* registries are consulted, and that restriction is the
+design. An exact name match is not by itself evidence: CRAN carries `AER` (Applied
+Econometrics with R) and `arrow` (Apache Arrow), and PyPI carries a deprecated
+`sklearn` shim. Matching a metabolomics tool name against a general-purpose index
+reproduces the wrong-entity attribution of issue #42 one registry further down. A
+registry that indexes only life-science software carries the domain constraint
+structurally.
+
+That is necessary but still not sufficient, and the measurement says so: of 94
+registry matches reviewed on 2026-08-21, four were different projects sharing a short
+name — `bart`, `grid`, `meteor`, `mist` — plus `ggplot`, where the corpus means the R
+package and the registry has a Python re-implementation. They are recorded as
+reviewed exclusions with reasons in `governance/tool_registries.yaml` rather than
+guessed at by a detector, because no automatic signal separates them yet: requiring
+the tool's own evidence to attest the package rejects 52 of the 94, CAMERA, mzmine,
+rdkit, MSnbase and nextflow among them. Finding one is issue #43, and it is the
+precondition for consulting a general-purpose registry at all.
+
+**Where the routes disagree, the registry wins on the licence string.** A package
+declares its own licence; a repository read infers one from whatever LICENSE file
+sits at the root. `sneumann/xcms` is the case: DESCRIPTION says `GPL (>= 2)`, GitHub
+reports NOASSERTION, and the LICENSE file classifies as LGPL-3.0 because it carries
+terms for a bundled component. The superseded reading is kept on the record. A
+disagreement in *tier*, though, is a contradiction rather than an override — the two
+sources would give a consumer materially different advice — so the tool resolves to
+`unknown` and the conflict is reported.
+
+Every resolved entry records the `repo_url` it came from, so the claim can be
+disputed. `check_tools_index.py` fails if `tools_index.json` drifts from the
+resolution it was derived from, or if a tool carries a tier with no entry behind it.
+
 ## The source-reuse axis
 
 `license_tier` answers *"what may I do with the tool?"*. It does **not** answer

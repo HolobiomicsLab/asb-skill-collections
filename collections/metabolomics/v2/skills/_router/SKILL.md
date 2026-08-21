@@ -100,10 +100,10 @@ Three machine indexes back both scripts, and are worth querying directly with
   `edam_operation`, `edam_topics`, `tools`, `dois`, `techniques`,
   `license_tier`.
 - **`tools_index.json`** — one row per tool: `slug`, `name`, `edam_topics`,
-  `dois`, `license_tier`, `license_subject`, `source_paper_repos`.
-  `source_paper_repos` holds the repositories of the papers that *cite* the tool.
-  It is not the tool's own home and must never be offered as one: no field yet
-  records that (issue #43).
+  `dois`, `license_tier`, `license_subject`, `repo_url`, `source_paper_repos`.
+  `repo_url` is the tool's own repository, present only where a licence was
+  resolved from it. `source_paper_repos` holds the repositories of the papers
+  that *cite* the tool — not the tool's home, and never to be offered as one.
 - **`workflows/workflows_index.json`** — one row per composite workflow: `slug`,
   `name`, `description`, `techniques`, `stages`, `member_tools`.
 
@@ -166,7 +166,8 @@ routing logic:
   *"no tool-level licence evidence — verify before redistributing"* (non-blocking).
   This is an open question, not a verdict: do not present it as a restriction on
   using the tool, and do not treat it as permission to redistribute the tool's
-  code. Every tool in this collection is currently `unknown` (issue #42).
+  code. 713 of the 909 tools in this collection are `unknown`: no registry or
+  source repository has been found for them yet (issue #43).
 
 All other routing behavior (technique, EDAM, tool name, keyword matching) is
 unchanged; tier-awareness is an additional layer applied after candidate

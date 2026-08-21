@@ -72,8 +72,9 @@ the indexes plus the few skills you need. Full steps:
 
 - `skills_index.json` — `slug, name, description, edam_operation, edam_topics, tools, dois`
 - `tools_index.json` — `slug, name, edam_topics, dois, license_tier, license_subject,
-  source_paper_repos` (`source_paper_repos` = repositories of the papers that cite the
-  tool, not the tool's own home)
+  repo_url, source_paper_repos` (`repo_url` = the tool's own repository, recorded only
+  where a licence was resolved from it; `source_paper_repos` = repositories of the
+  papers that cite the tool, which are not the tool's home)
 
 ```bash
 # skills that use a given tool
