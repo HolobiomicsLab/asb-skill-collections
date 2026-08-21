@@ -3,5 +3,8 @@ slug: sqlite
 evidence_spans:
 - It also parses some of the information out of the SQLite data base
 schema_version: 0.2.0
+license_tier: restricted
+license: null
+license_detection: null
 techniques:
 - LC-MS

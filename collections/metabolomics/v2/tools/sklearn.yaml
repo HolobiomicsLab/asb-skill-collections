@@ -10,5 +10,8 @@ derived_from:
 source_repos:
 - facundof2016/CCSP2.0
 schema_version: 0.2.0
+license_tier: noncommercial
+license: CC-BY-NC-ND-4.0
+license_detection: biorxiv_api-paper
 techniques:
 - ion-mobility-MS

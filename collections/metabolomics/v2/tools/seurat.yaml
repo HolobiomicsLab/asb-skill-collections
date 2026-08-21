@@ -9,6 +9,9 @@ derived_from:
 source_repos:
 - GenomicsMachineLearning/SpaMTP
 schema_version: 0.2.0
+license_tier: noncommercial
+license: CC-BY-NC-ND-4.0
+license_detection: crossref-paper
 techniques:
 - LC-MS
 - CE-MS

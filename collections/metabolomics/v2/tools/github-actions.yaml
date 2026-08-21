@@ -29,6 +29,9 @@ source_repos:
 - iomega/ms2query
 - systemsomicslab/MsdialWorkbench
 schema_version: 0.2.0
+license_tier: restricted
+license: null
+license_detection: none
 techniques:
 - LC-MS
 - CE-MS

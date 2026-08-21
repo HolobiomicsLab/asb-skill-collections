@@ -9,6 +9,9 @@ derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
 schema_version: 0.2.0
+license_tier: open
+license: GPL-3.0
+license_detection: github-api
 techniques:
 - LC-MS
 - mass-spectrometry

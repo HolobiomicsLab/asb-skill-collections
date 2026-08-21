@@ -9,6 +9,9 @@ derived_from:
 source_repos:
 - Karnovsky-Lab/DNEA
 schema_version: 0.2.0
+license_tier: open
+license: MIT
+license_detection: r-description
 techniques:
 - LC-MS
 - CE-MS

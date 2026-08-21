@@ -32,6 +32,9 @@ source_repos:
 - matchms/matchms
 - tyo-nu/MINE-Database
 schema_version: 0.2.0
+license_tier: open
+license: MIT
+license_detection: github-api
 techniques:
 - LC-MS
 - GC-MS

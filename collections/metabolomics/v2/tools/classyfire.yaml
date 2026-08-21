@@ -14,6 +14,9 @@ source_repos:
 - michaelwitting/RepoRT
 - zquinlan/concise
 schema_version: 0.2.0
+license_tier: open
+license: MIT
+license_detection: github-api
 techniques:
 - LC-MS
 - mass-spectrometry

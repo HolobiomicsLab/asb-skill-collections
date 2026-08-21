@@ -7,6 +7,9 @@ derived_from:
 - doi: 10.1021/acs.analchem.4c04040
   title: lipoclean
 schema_version: 0.2.0
+license_tier: open
+license: MIT
+license_detection: github-api
 techniques:
 - LC-MS
 - ion-mobility-MS

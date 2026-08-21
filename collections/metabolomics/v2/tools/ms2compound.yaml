@@ -10,5 +10,8 @@ derived_from:
 source_repos:
 - beherasan/MS2Compound
 schema_version: 0.2.0
+license_tier: open
+license: CC-BY-4.0
+license_detection: github-api
 techniques:
 - LC-MS

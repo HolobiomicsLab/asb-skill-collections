@@ -9,6 +9,9 @@ derived_from:
 source_repos:
 - ncats/metScribeR
 schema_version: 0.2.0
+license_tier: open
+license: GPL-2.0
+license_detection: github-api
 techniques:
 - LC-MS
 - NMR

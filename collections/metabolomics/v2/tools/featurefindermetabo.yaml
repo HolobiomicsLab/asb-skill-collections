@@ -6,5 +6,8 @@ derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: 'SLAW: A Scalable and Self-Optimizing Processing Workflow for Untargeted LC-MS'
 schema_version: 0.2.0
+license_tier: open
+license: GPL-2.0
+license_detection: github-api
 techniques:
 - LC-MS

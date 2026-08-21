@@ -15,5 +15,8 @@ source_repos:
 - ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 - ShinyFabio/ADViSELipidomics
 schema_version: 0.2.0
+license_tier: open
+license: MIT
+license_detection: github-api
 techniques:
 - mass-spectrometry

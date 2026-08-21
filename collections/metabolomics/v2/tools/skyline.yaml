@@ -26,6 +26,9 @@ source_repos:
 - fgcz/rawrr
 - lifs-tools/lipidcreator
 schema_version: 0.2.0
+license_tier: open
+license: MIT
+license_detection: license-file
 techniques:
 - LC-MS
 - CE-MS

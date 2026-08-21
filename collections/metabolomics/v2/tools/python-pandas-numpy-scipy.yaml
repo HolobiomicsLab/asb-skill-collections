@@ -13,6 +13,9 @@ source_repos:
 - chopralab/CLAW
 - metabolomicsworkbench/MetENP
 schema_version: 0.2.0
+license_tier: open
+license: GPL-3.0
+license_detection: license-file
 techniques:
 - LC-MS
 - mass-spectrometry

@@ -9,3 +9,6 @@ derived_from:
 source_repos:
 - ZhuMetLab/MetDNA2
 schema_version: 0.2.0
+license_tier: noncommercial
+license: CC-BY-NC-4.0
+license_detection: license-file

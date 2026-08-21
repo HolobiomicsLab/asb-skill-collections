@@ -12,6 +12,9 @@ derived_from:
 source_repos:
 - zmahnoor14/MAW
 schema_version: 0.2.0
+license_tier: open
+license: MIT
+license_detection: readme-llm
 techniques:
 - LC-MS
 - mass-spectrometry

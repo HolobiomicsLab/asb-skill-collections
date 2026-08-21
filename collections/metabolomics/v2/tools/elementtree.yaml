@@ -6,5 +6,8 @@ derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml
 schema_version: 0.2.0
+license_tier: open
+license: MIT
+license_detection: github-api
 techniques:
 - mass-spectrometry

@@ -10,5 +10,8 @@ derived_from:
 source_repos:
 - JunYang2021/MetCohort
 schema_version: 0.2.0
+license_tier: open
+license: AGPL-3.0
+license_detection: github-api
 techniques:
 - LC-MS

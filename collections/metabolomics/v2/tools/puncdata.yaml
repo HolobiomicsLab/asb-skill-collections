@@ -9,5 +9,8 @@ derived_from:
 source_repos:
 - WTVoe/puncdata
 schema_version: 0.2.0
+license_tier: open
+license: AGPL-3.0
+license_detection: license-file
 techniques:
 - mass-spectrometry
