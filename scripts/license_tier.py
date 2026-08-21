@@ -31,6 +31,12 @@ UNESTABLISHED_DETECTIONS = frozenset({None, "", "none", "file-present-unclassifi
 SUBJECT_TOOL = "tool"
 SUBJECT_PAPER = "paper"
 
+# No tool-level evidence was found. Distinct from `restricted`, which is a verdict:
+# a licence WAS established and it constrains reuse. `unknown` is an open question.
+# Collapsing the two is the tool-axis form of the None-vs-'none' mistake that
+# source_reuse_for_license() already avoids. See governance/LICENSE_TIERS.md.
+TIER_UNKNOWN = "unknown"
+
 # Detections that read a code repository, and so describe the *tool*.
 TOOL_DETECTIONS = frozenset({"github-api", "license-file", "r-description", "readme-llm"})
 # `verified_via` markers that identify the subject when the detection cannot:
@@ -103,8 +109,28 @@ def tier_for_license(name: str, _map: dict | None = None) -> str:
 
 def ack_required(tier: str) -> bool:
     """Only the noncommercial tier triggers a blocking runtime use acknowledgment.
-    'restricted' is labeled + link-only with a soft note, but does not block."""
+
+    'restricted' is labeled + link-only with a soft note, but does not block.
+    'unknown' likewise does not block: absence of evidence is not a prohibition on
+    use. It does forbid vendoring, which is a separate decision -- absence of a
+    grant is not a grant.
+    """
     return tier == "noncommercial"
+
+
+def tool_tier_from_evidence(license_name, detection, _map: dict | None = None) -> str:
+    """Tier for a TOOL, from evidence that must be about the tool itself.
+
+    Returns TIER_UNKNOWN unless the detection establishes a tool-level licence.
+    A `-paper` detection is evidence about a publication, and a publication's
+    licence says nothing about the software it cites: inheriting it recorded CAMERA
+    (GPL) as Apache-2.0 and scikit-learn (BSD) as noncommercial. See issue #42.
+    """
+    if detection in UNESTABLISHED_DETECTIONS or detection not in TOOL_DETECTIONS:
+        return TIER_UNKNOWN
+    if not license_name or not str(license_name).strip():
+        return TIER_UNKNOWN
+    return tier_for_license(license_name, _map)
 
 
 def source_reuse_for_license(spdx: str, _map: dict | None = None) -> str | None:
