@@ -54,3 +54,7 @@ governance/license_clarification/wave.yaml
 # curate.py writes a local audit snapshot; it is a dev-tool output, not a
 # release artifact like gate_report.json.
 collections/*/v*/curation_report.json
+
+# Resolved per-machine; the CI install pins its own dependencies explicitly.
+# Committed by accident in 59d470915 (a data commit) and untracked again here.
+uv.lock

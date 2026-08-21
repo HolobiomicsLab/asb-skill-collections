@@ -80,67 +80,11 @@ jobs:
           EOF
 
       # -- Gate 5: Description discipline lint --------------------------------
+      # The rules used to live here as a heredoc, so the only way to run them was
+      # to push. They are `scripts/lint_skill_descriptions.py` now, covered by
+      # tests/test_lint_skill_descriptions.py and runnable before the push.
       - name: Lint skill descriptions
-        run: |
-          python - <<'EOF'
-          import sys, pathlib, yaml
-
-          APPROVED_PREFIXES = (
-              "Use when", "Reference for", "Explains", "Decision support for"
-          )
-          MIN_LEN = 50
-          MAX_LEN = 300
-          MARKETING_TERMS = ["best", "state-of-the-art", "revolutionary", "leading", "superior"]
-
-          # Workflow super-skills and `_`-prefixed scaffolds (e.g. `_router`) are
-          # composites, gated separately by check_workflows — the release authority
-          # release_gate.py::_iter_skill_md exempts them from the leaf description
-          # lint, so this gate must too (they legitimately carry longer, composite
-          # descriptions). Kept consistent by tests/test_ci_gate_consistency.py.
-          def _is_leaf(p):
-              return "workflows" not in p.parts and not any(s.startswith("_") for s in p.parts[:-1])
-
-          failures = []
-          skill_files = list(pathlib.Path("collections").rglob("SKILL.md"))
-          skill_files += list(pathlib.Path("staged-collections").rglob("SKILL.md"))
-          skill_files = [p for p in skill_files if _is_leaf(p)]
-          for skill_md in skill_files:
-              text = skill_md.read_text()
-              if not text.startswith("---"):
-                  continue
-              try:
-                  parts = text.split("---", 2)
-                  fm = yaml.safe_load(parts[1])
-              except Exception:
-                  continue
-              desc = (fm.get("description") or "").strip()
-              if not desc:
-                  failures.append(f"{skill_md}: missing description")
-                  continue
-              if not any(desc.startswith(p) for p in APPROVED_PREFIXES):
-                  failures.append(
-                      f"{skill_md}: description must start with one of {APPROVED_PREFIXES}"
-                  )
-              if len(desc) < MIN_LEN:
-                  failures.append(
-                      f"{skill_md}: description too short ({len(desc)} < {MIN_LEN})"
-                  )
-              if len(desc) > MAX_LEN:
-                  failures.append(
-                      f"{skill_md}: description too long ({len(desc)} > {MAX_LEN})"
-                  )
-              for term in MARKETING_TERMS:
-                  if term.lower() in desc.lower():
-                      failures.append(
-                          f"{skill_md}: marketing term '{term}' in description"
-                      )
-          if failures:
-              print("FAIL: description discipline violations:")
-              for f in failures:
-                  print(f"  - {f}")
-              sys.exit(1)
-          print(f"PASS: description discipline OK ({len(skill_files)} skill files checked)")
-          EOF
+        run: python -m scripts.lint_skill_descriptions
 
       # -- Gate 2: No orphan skills (DOI resolution sample) ------------------
       - name: Check derived_from DOIs resolve (sample)
