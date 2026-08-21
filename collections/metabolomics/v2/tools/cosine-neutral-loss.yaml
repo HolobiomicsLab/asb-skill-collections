@@ -9,6 +9,9 @@ derived_from:
 source_repos:
 - bittremieux/cosine_neutral_loss
 schema_version: 0.2.0
+license_tier: restricted
+license: null
+license_detection: null
 techniques:
 - LC-MS
 - CE-MS

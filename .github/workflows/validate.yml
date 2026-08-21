@@ -299,3 +299,9 @@ jobs:
       # wired here once its producer had been run over the corpus.
       - name: Provenance-tier gate
         run: python -m scripts.check_provenance_tiers collections/metabolomics/v2
+
+      # The catalogue's own licence fields must agree with tools_index.json, and
+      # every tool a skill claims to use must exist. Wired once the enrichers had
+      # been run over the corpus; the last of the gates ported from the dev line.
+      - name: Tool-catalogue gate
+        run: python -m scripts.check_tools_index collections/metabolomics/v2

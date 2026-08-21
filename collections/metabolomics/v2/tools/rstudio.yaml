@@ -17,6 +17,9 @@ source_repos:
 - HuanLab/ISFrag
 - metabolomicstats/NormalizeMets
 schema_version: 0.2.0
+license_tier: open
+license: MIT
+license_detection: github-api
 techniques:
 - LC-MS
 - ion-mobility-MS

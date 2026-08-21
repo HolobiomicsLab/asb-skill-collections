@@ -11,6 +11,9 @@ derived_from:
 source_repos:
 - sneumann/xcms
 schema_version: 0.2.0
+license_tier: open
+license: LGPL-3.0
+license_detection: license-file
 techniques:
 - LC-MS
 - GC-MS

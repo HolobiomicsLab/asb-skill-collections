@@ -6,5 +6,8 @@ derived_from:
 - doi: 10.1021/acs.analchem.4c01253
   title: mobilipid
 schema_version: 0.2.0
+license_tier: restricted
+license: null
+license_detection: none
 techniques:
 - ion-mobility-MS

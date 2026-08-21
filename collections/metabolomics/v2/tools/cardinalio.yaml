@@ -9,6 +9,9 @@ derived_from:
 source_repos:
 - kuwisdelu/Cardinal
 schema_version: 0.2.0
+license_tier: open
+license: Artistic-2.0
+license_detection: github-api
 techniques:
 - MS-imaging
 - mass-spectrometry

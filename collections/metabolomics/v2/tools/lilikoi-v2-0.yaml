@@ -10,6 +10,9 @@ derived_from:
 source_repos:
 - lanagarmire/lilikoi2
 schema_version: 0.2.0
+license_tier: open
+license: GPL-3.0
+license_detection: github-api
 techniques:
 - LC-MS
 - GC-MS

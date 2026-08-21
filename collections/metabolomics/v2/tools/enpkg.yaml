@@ -6,5 +6,8 @@ derived_from:
 - doi: 10.1021/acscentsci.3c00800
   title: A Sample-Centric and Knowledge-Driven Computational Framework for Natural Products Drug Discovery
 schema_version: 0.2.0
+license_tier: open
+license: GPL-3.0
+license_detection: github-api
 techniques:
 - LC-MS

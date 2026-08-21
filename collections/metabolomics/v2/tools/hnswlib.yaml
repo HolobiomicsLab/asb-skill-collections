@@ -9,6 +9,9 @@ derived_from:
 source_repos:
 - Qiong-Yang/FastEI
 schema_version: 0.2.0
+license_tier: open
+license: Apache-2.0
+license_detection: github-api
 techniques:
 - LC-MS
 - mass-spectrometry

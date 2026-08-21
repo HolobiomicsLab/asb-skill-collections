@@ -9,6 +9,9 @@ derived_from:
 source_repos:
 - MoseleyBioinformaticsLab/mwtab
 schema_version: 0.2.0
+license_tier: open
+license: BSD-3-Clause-Clear
+license_detection: github-api
 techniques:
 - NMR
 - mass-spectrometry

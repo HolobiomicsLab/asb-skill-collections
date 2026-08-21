@@ -8,6 +8,9 @@ derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: 'MIST-CF: Chemical Formula Inference from Tandem Mass Spectra'
 schema_version: 0.2.0
+license_tier: open
+license: MIT
+license_detection: github-api
 techniques:
 - LC-MS
 - MS-imaging

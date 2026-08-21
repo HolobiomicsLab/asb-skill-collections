@@ -6,5 +6,8 @@ derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
 schema_version: 0.2.0
+license_tier: restricted
+license: null
+license_detection: none
 techniques:
 - MS-imaging

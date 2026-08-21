@@ -13,6 +13,9 @@ source_repos:
 - jcapelladesto/isoSCAN
 - thepanlab/Aerith
 schema_version: 0.2.0
+license_tier: open
+license: GPL-3.0
+license_detection: github-api
 techniques:
 - LC-MS
 - GC-MS

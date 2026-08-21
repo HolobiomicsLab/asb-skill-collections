@@ -11,6 +11,9 @@ derived_from:
 source_repos:
 - Wang-Bioinformatics-Lab/ModiFinder_base
 schema_version: 0.2.0
+license_tier: restricted
+license: null
+license_detection: file-present-unclassified
 techniques:
 - LC-MS
 - CE-MS

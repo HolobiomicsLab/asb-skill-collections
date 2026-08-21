@@ -34,6 +34,9 @@ source_repos:
 - samgoldman97/ms-pred
 - zmahnoor14/MAW
 schema_version: 0.2.0
+license_tier: open
+license: CC-BY-4.0
+license_detection: crossref-paper
 techniques:
 - LC-MS
 - GC-MS

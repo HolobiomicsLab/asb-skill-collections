@@ -25,6 +25,9 @@ source_repos:
 - idrblab/NOREVA;
 - sneumann/xcms
 schema_version: 0.2.0
+license_tier: open
+license: MIT
+license_detection: github-api
 techniques:
 - LC-MS
 - GC-MS

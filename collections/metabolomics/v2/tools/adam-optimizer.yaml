@@ -7,6 +7,9 @@ derived_from:
 - doi: 10.1371/journal.pcbi.1009021
   title: 'MiMeNet: Exploring microbiome-metabolome relationships using neural networks'
 schema_version: 0.2.0
+license_tier: open
+license: MIT
+license_detection: github-api
 techniques:
 - LC-MS
 - GC-MS
