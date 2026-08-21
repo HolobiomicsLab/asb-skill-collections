@@ -15,10 +15,11 @@ source_repos:
 - meowcat/MSNovelist
 - sirius-ms/sirius
 schema_version: 0.2.0
-license_tier: unknown
-license: null
-license_detection: null
-license_subject: null
+license_tier: open
+license: AGPL-3.0
+license_detection: github-api
+license_subject: tool
+repo_url: meowcat/MSNovelist
 techniques:
 - LC-MS
 - CE-MS

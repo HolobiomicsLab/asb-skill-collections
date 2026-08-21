@@ -8,19 +8,27 @@ from scripts import enrich_tools_index as e
 # --------------------------------------------------------------------------- #
 
 def test_a_tool_repository_lookup_yields_a_real_tier():
-    assert e.tool_license({"license": "MIT", "license_detection": "github-api"}) == (
-        "open", "MIT", "github-api", "tool")
+    assert e.tool_license({"license": "MIT", "license_detection": "github-api",
+                           "repo_url": "owner/tool"}) == (
+        "open", "MIT", "github-api", "tool", "owner/tool")
+
+
+def test_the_resolved_repository_is_recorded_so_the_claim_can_be_disputed():
+    """Every licence was previously unauditable: no entry named its source."""
+    *_, repo = e.tool_license({"license": "GPL-2.0-or-later", "repo_url": "sneumann/xcms",
+                               "license_detection": "bioconductor-package"})
+    assert repo == "sneumann/xcms"
 
 
 def test_an_r_description_lookup_yields_a_real_tier():
-    tier, lic, det, subject = e.tool_license(
+    tier, lic, det, subject, _ = e.tool_license(
         {"license": "GPL-3.0-only", "license_detection": "r-description"})
     assert (tier, lic, subject) == ("open", "GPL-3.0-only", "tool")
     assert det == "r-description"
 
 
 def test_a_noncommercial_tool_licence_survives():
-    tier, _, _, subject = e.tool_license(
+    tier, _, _, subject, _repo = e.tool_license(
         {"license": "CC-BY-NC-4.0", "license_detection": "license-file"})
     assert (tier, subject) == ("noncommercial", "tool")
 
@@ -33,7 +41,7 @@ def test_a_citing_papers_licence_is_never_the_tools_licence():
     """
     for detection in ("crossref-paper", "biorxiv_api-paper", "unpaywall-paper"):
         for licence in ("Apache-2.0", "MIT", "CC-BY-4.0", "CC-BY-NC-ND-4.0"):
-            tier, lic, _, subject = e.tool_license(
+            tier, lic, _, subject, _repo = e.tool_license(
                 {"license": licence, "license_detection": detection})
             assert tier == "unknown", f"{detection}/{licence} leaked onto the tool axis"
             assert lic is None and subject is None
@@ -43,9 +51,9 @@ def test_no_evidence_is_unknown_not_restricted():
     """`unknown` is an open question; `restricted` is a verdict. Not the same."""
     for evidence in (None, {}, {"license": None, "license_detection": "none"},
                      {"license": None, "license_detection": "file-present-unclassified"}):
-        tier, lic, det, subject = e.tool_license(evidence)
+        tier, lic, det, subject, repo = e.tool_license(evidence)
         assert tier == "unknown"
-        assert lic is None and det is None and subject is None
+        assert lic is None and det is None and subject is None and repo is None
 
 
 def test_source_paper_repos_reads_the_tool_yaml(tmp_path):
@@ -115,7 +123,8 @@ def _write_collection(tmp_path, with_evidence=True):
         "name: ToolOpen\nsource_repos:\n- some/citing-paper\n")
     if with_evidence:
         (d / "tool_licenses.json").write_text(json.dumps({
-            "t_open": {"license": "GPL-3.0-only", "license_detection": "github-api"}}))
+            "t_open": {"license": "GPL-3.0-only", "license_detection": "github-api",
+                       "repo_url": "https://github.com/x/tool-open"}}))
     return d
 
 
@@ -128,12 +137,14 @@ def test_enrich_writes_back_all_fields(tmp_path):
     assert tools["t_open"]["license_tier"] == "open"
     assert tools["t_open"]["license"] == "GPL-3.0-only"
     assert tools["t_open"]["license_subject"] == "tool"
+    assert tools["t_open"]["repo_url"] == "https://github.com/x/tool-open"
 
     # A tool with no lookup of its own is unknown, however well-licensed its papers.
     for slug in ("t_mix", "t_unmatched"):
         assert tools[slug]["license_tier"] == "unknown"
         assert tools[slug]["license"] is None
         assert tools[slug]["license_subject"] is None
+        assert tools[slug]["repo_url"] is None
 
     # The citing-paper repository is published under a name that says what it is.
     assert tools["t_open"]["source_paper_repos"] == ["some/citing-paper"]

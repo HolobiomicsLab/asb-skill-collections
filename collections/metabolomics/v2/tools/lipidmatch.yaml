@@ -13,10 +13,11 @@ source_repos:
 - GarrettLab-UF/LipidMatch
 - InnovativeOmics/Core-Match
 schema_version: 0.2.0
-license_tier: unknown
-license: null
-license_detection: null
-license_subject: null
+license_tier: open
+license: CC-BY-4.0
+license_detection: license-file
+license_subject: tool
+repo_url: GarrettLab-UF/LipidMatch
 techniques:
 - LC-MS
 - GC-MS

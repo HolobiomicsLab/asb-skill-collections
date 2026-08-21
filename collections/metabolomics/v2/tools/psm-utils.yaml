@@ -8,10 +8,11 @@ derived_from:
 source_repos:
 - compomics/ms2rescore
 schema_version: 0.2.0
-license_tier: unknown
-license: null
-license_detection: null
-license_subject: null
+license_tier: open
+license: Apache-2.0
+license_detection: bioconda-package
+license_subject: tool
+repo_url: https://github.com/compomics/psm_utils
 techniques:
 - LC-MS
 - mass-spectrometry

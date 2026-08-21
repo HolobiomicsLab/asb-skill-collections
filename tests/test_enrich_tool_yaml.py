@@ -15,7 +15,8 @@ from scripts import enrich_tool_yaml as e
 def test_tier_map_extracts_license_fields():
     tools_index = [
         {"slug": "t_open", "license_tier": "open", "license": "MIT",
-         "license_detection": "github-api", "license_subject": "tool"},
+         "license_detection": "github-api", "license_subject": "tool",
+         "repo_url": "owner/t-open"},
         {"slug": "t_nc", "license_tier": "noncommercial", "license": "CC-BY-NC-4.0",
          "license_detection": "readme-llm", "license_subject": "tool"},
         {"slug": "t_unknown", "license_tier": "unknown", "license": None,
@@ -23,7 +24,8 @@ def test_tier_map_extracts_license_fields():
     ]
     m = e.tier_map(tools_index)
     assert m["t_open"] == {"license_tier": "open", "license": "MIT",
-                           "license_detection": "github-api", "license_subject": "tool"}
+                           "license_detection": "github-api", "license_subject": "tool",
+                           "repo_url": "owner/t-open"}
     assert m["t_nc"]["license_tier"] == "noncommercial"
     assert m["t_unknown"]["license"] is None
     assert m["t_unknown"]["license_subject"] is None
@@ -33,7 +35,8 @@ def test_tier_map_defaults_missing_fields():
     # A tools_index entry that only carries the tier still yields a complete row.
     m = e.tier_map([{"slug": "t1", "license_tier": "open"}])
     assert m["t1"] == {"license_tier": "open", "license": None,
-                       "license_detection": None, "license_subject": None}
+                       "license_detection": None, "license_subject": None,
+                       "repo_url": None}
 
 
 # ---------------------------------------------------------------------------

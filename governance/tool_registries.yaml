@@ -1,0 +1,74 @@
+# Package registries consulted to resolve a TOOL's own licence and repository.
+# Human doc: LICENSE_TIERS.md § "A tool's licence may only come from the tool".
+version: 1
+
+# Only *curated life-science* registries are listed, and that is the whole point.
+# An exact name match is not by itself evidence that a package is the tool a paper
+# meant: CRAN carries `AER` (Applied Econometrics with R) and `arrow` (Apache
+# Arrow), PyPI carries a deprecated `sklearn` shim. Matching a metabolomics tool
+# name against a general-purpose index reproduces the wrong-entity attribution that
+# issue #42 was about, one registry further down. A registry that indexes only
+# life-science software supplies the domain constraint structurally, so the name
+# match carries it. General registries need a corroboration signal that does not
+# exist yet; see issue #43.
+registries:
+  - id: bioconductor
+    detection: bioconductor-package
+    # r-universe mirrors Bioconductor's metadata; bioconductor.org is not reachable
+    # from every network and offers no bulk name list.
+    index_url: https://bioc.r-universe.dev/api/ls
+    index_shape: name_list
+    package_url: https://bioc.r-universe.dev/api/packages/{name}
+    license_field: License
+    license_format: r_description_field
+    repo_fields: [URL, BugReports, RemoteUrl]
+
+  - id: bioconda
+    detection: bioconda-package
+    # channeldata.json carries licence and repository inline for every package, so
+    # the whole registry is one request and matching is offline afterwards.
+    index_url: https://conda.anaconda.org/bioconda/channeldata.json
+    index_shape: packages_map
+    license_field: license
+    license_format: spdx_or_text
+    repo_fields: [dev_url, home]
+
+# ---------------------------------------------------------------------------
+# Reviewed exclusions.
+#
+# Every registry match was checked by hand once, on 2026-08-21, across 94
+# matches. These are the ones where the registry package is a different project
+# that happens to share the tool's name. A collision on a short acronym is not
+# rare in a 12,000-package index.
+#
+# Recorded as reviewed data rather than inferred, because no automatic signal
+# currently separates these from the correct matches: requiring the tool's
+# evidence to attest the package (`library(X)`, `pip install X`, a repository
+# URL) rejects 52 of the 94, including CAMERA, mzmine, rdkit, MSnbase and
+# nextflow, so it trades roughly 48 correct resolutions for these 4. Finding a
+# corroboration signal that separates them is part of issue #43, and is the
+# precondition for consulting general-purpose registries at all.
+#
+# The review does not extend to matches added later. `resolve_tool_licenses.py`
+# reports the registry match count so a maintainer can see it move.
+# ---------------------------------------------------------------------------
+review:
+  date: '2026-08-21'
+  matches_reviewed: 94
+
+excluded_matches:
+  - tool: bart
+    registry: bioconda
+    reason: the corpus tool is MS-BART, a language model over mass spectra; the package is a bacterial read typer
+  - tool: grid
+    registry: bioconda
+    reason: the corpus tool is R's base grid graphics; the package is GRiD, a bacterial growth-rate index
+  - tool: meteor
+    registry: bioconda
+    reason: the corpus tool is MeTEor, an R app for time-series metabolomics; the package is a metagenomics profiler
+  - tool: mist
+    registry: bioconductor
+    reason: the corpus tool is MIST, a mass-spectra annotation model; the package does differential methylation for scDNAm
+  - tool: ggplot
+    registry: bioconda
+    reason: the corpus tool is the R package ggplot2; the package is an unmaintained Python re-implementation

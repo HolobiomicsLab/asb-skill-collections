@@ -58,3 +58,4 @@ collections/*/v*/curation_report.json
 # Resolved per-machine; the CI install pins its own dependencies explicitly.
 # Committed by accident in 59d470915 (a data commit) and untracked again here.
 uv.lock
+.cache/

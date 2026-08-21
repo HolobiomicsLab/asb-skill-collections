@@ -8,10 +8,11 @@ derived_from:
 source_repos:
 - PNNL-m-q/mza
 schema_version: 0.2.0
-license_tier: unknown
-license: null
-license_detection: null
-license_subject: null
+license_tier: open
+license: BSD-2-Clause
+license_detection: github-api
+license_subject: tool
+repo_url: PNNL-m-q/mza
 techniques:
 - LC-MS
 - ion-mobility-MS

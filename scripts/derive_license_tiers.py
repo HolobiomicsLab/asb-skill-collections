@@ -138,9 +138,18 @@ def spdx_from_r_description(text: str, _map=None) -> str | None:
     declares nothing and returns None rather than a guess.
     """
     match = _R_LICENSE_FIELD.search(text or "")
-    if not match:
+    return spdx_from_r_license_field(match.group(1), _map) if match else None
+
+
+def spdx_from_r_license_field(value: str, _map=None) -> str | None:
+    """SPDX id from the *value* of an R `License:` field, or None.
+
+    Split out because registries serve the field on its own -- r-universe returns
+    `GPL (>= 2) + file LICENSE` with no surrounding DESCRIPTION to search.
+    """
+    if not value:
         return None
-    field = _R_FILE_SUFFIX.sub("", match.group(1).strip())
+    field = _R_FILE_SUFFIX.sub("", value.strip())
     qualifier = _R_VERSION_QUALIFIER.search(field)
     declared = _R_VERSION_QUALIFIER.sub("", field).strip()
     if not declared or declared.lower().startswith("file "):

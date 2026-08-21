@@ -77,7 +77,7 @@ the machine indexes directly:
 | File | What it is |
 |---|---|
 | `skills_index.json` | one row/skill: `slug, name, description, edam_operation, edam_topics, tools, dois` |
-| `tools_index.json` | one row/tool: `slug, name, edam_topics, dois, license_tier, license_subject, source_paper_repos` |
+| `tools_index.json` | one row/tool: `slug, name, edam_topics, dois, license_tier, license_subject, repo_url, source_paper_repos` |
 | `kb_bundle.json` | skill → source DOIs + tools + `asb-paper-<doi>` KB slugs (grounding map) |
 | `collection.yaml` | the SkillCollection record (counts, curators, license) |
 | `corpus.yaml` | per-paper access basis (`repo-oa`) |

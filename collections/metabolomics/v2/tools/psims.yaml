@@ -6,9 +6,10 @@ derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
 schema_version: 0.2.0
-license_tier: unknown
-license: null
-license_detection: null
-license_subject: null
+license_tier: open
+license: Apache-2.0
+license_detection: bioconda-package
+license_subject: tool
+repo_url: https://github.com/mobiusklein/psims
 techniques:
 - ion-mobility-MS

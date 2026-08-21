@@ -1,0 +1,1402 @@
+{
+  "adviselipidomics": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "ShinyFabio/ADViSELipidomics",
+    "route": "self_published",
+    "matched": "ADViSELipidomics"
+  },
+  "aerith": {
+    "license": "GPL-3.0-only",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/xyz1396/Aerith",
+    "route": "registry:bioconductor",
+    "matched": "Aerith",
+    "superseded": {
+      "license": "GPL-3.0",
+      "license_detection": "github-api"
+    }
+  },
+  "alphatims": {
+    "license": "Apache-2.0",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/MannLabs/alphatims",
+    "route": "registry:bioconda",
+    "matched": "alphatims"
+  },
+  "ann-solo": {
+    "license": "Apache-2.0",
+    "license_detection": "github-api",
+    "repo_url": "bittremieux-lab/ANN-SoLo",
+    "route": "self_published",
+    "matched": "ANN-SoLo"
+  },
+  "annome": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "chrboku/AnnoMe",
+    "route": "self_published",
+    "matched": "AnnoMe"
+  },
+  "antismash": {
+    "license": "AGPL-3.0-or-later",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/antismash/antismash",
+    "route": "registry:bioconda",
+    "matched": "antismash"
+  },
+  "asics": {
+    "license": "GPL-2.0-or-later",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/bioc/ASICS",
+    "route": "registry:bioconductor",
+    "matched": "ASICS"
+  },
+  "autoccs": {
+    "license": "BSD-2-Clause",
+    "license_detection": "github-api",
+    "repo_url": "PNNL-Comp-Mass-Spec/AutoCCS",
+    "route": "self_published",
+    "matched": "AutoCCS"
+  },
+  "aws-cli": {
+    "license": "Apache-2.0",
+    "license_detection": "bioconda-package",
+    "repo_url": null,
+    "route": "registry:bioconda",
+    "matched": "awscli"
+  },
+  "big-scape": {
+    "license": "AGPL-3.0-or-later",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/medema-group/BiG-SCAPE",
+    "route": "registry:bioconda",
+    "matched": "bigscape"
+  },
+  "big-slice": {
+    "license": "AGPL-3.0-or-later",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/satriaphd/bigslice",
+    "route": "registry:bioconda",
+    "matched": "bigslice",
+    "superseded": {
+      "license": "AGPL-3.0",
+      "license_detection": "github-api"
+    }
+  },
+  "bigscape": {
+    "license": "AGPL-3.0-or-later",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/medema-group/BiG-SCAPE",
+    "route": "registry:bioconda",
+    "matched": "bigscape"
+  },
+  "biobase": {
+    "license": "Artistic-2.0",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/Bioconductor/Biobase",
+    "route": "registry:bioconductor",
+    "matched": "Biobase"
+  },
+  "biosynfoni": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "lucinamay/biosynfoni",
+    "route": "self_published",
+    "matched": "biosynfoni"
+  },
+  "camera": {
+    "license": "GPL-2.0-or-later",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/sneumann/CAMERA",
+    "route": "registry:bioconductor",
+    "matched": "CAMERA"
+  },
+  "cardinal": {
+    "license": "Artistic-2.0",
+    "license_detection": "github-api",
+    "repo_url": "kuwisdelu/Cardinal",
+    "route": "self_published",
+    "matched": "Cardinal"
+  },
+  "chemminer": {
+    "license": "Artistic-2.0",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/girke-lab/ChemmineR",
+    "route": "registry:bioconductor",
+    "matched": "ChemmineR"
+  },
+  "chemprop-ir": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "https://github.com/gfm-collab/chemprop-IR",
+    "route": "self_published",
+    "matched": "Chemprop-IR"
+  },
+  "cliquems": {
+    "license": "GPL-2.0-or-later",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/osenan/cliqueMS",
+    "route": "registry:bioconductor",
+    "matched": "cliqueMS"
+  },
+  "clumsid": {
+    "license": "MIT",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/tdepke/CluMSID",
+    "route": "registry:bioconductor",
+    "matched": "CluMSID"
+  },
+  "clusterprofiler": {
+    "license": "Artistic-2.0",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/YuLab-SMU/clusterProfiler",
+    "route": "registry:bioconductor",
+    "matched": "clusterProfiler"
+  },
+  "commit": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "https://github.com/pwendering/COMMIT",
+    "route": "self_published",
+    "matched": "COMMIT"
+  },
+  "complexheatmap": {
+    "license": "MIT",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/jokergoo/ComplexHeatmap",
+    "route": "registry:bioconductor",
+    "matched": "ComplexHeatmap"
+  },
+  "cordbat": {
+    "license": "MIT",
+    "license_detection": "r-description",
+    "repo_url": "BorchLab/CordBat",
+    "route": "self_published",
+    "matched": "CordBat"
+  },
+  "corems": {
+    "license": "BSD-2-Clause",
+    "license_detection": "github-api",
+    "repo_url": "https://github.com/EMSL-Computing/CoreMS",
+    "route": "self_published",
+    "matched": "corems"
+  },
+  "dbdipy": {
+    "license": "MIT",
+    "license_detection": "readme-llm",
+    "repo_url": "leopold-weidner/DBDIpy",
+    "route": "self_published",
+    "matched": "DBDIpy"
+  },
+  "decometdia": {
+    "license": "GPL-3.0-only",
+    "license_detection": "r-description",
+    "repo_url": "ZhuMSLab/DecoMetDIA",
+    "route": "self_published",
+    "matched": "DecoMetDIA"
+  },
+  "deimos": {
+    "license": "BSD-3-Clause",
+    "license_detection": "github-api",
+    "repo_url": "https://github.com/pnnl/deimos",
+    "route": "self_published",
+    "matched": "deimos"
+  },
+  "dereplicator": {
+    "license": "Apache-2.0",
+    "license_detection": "readme-llm",
+    "repo_url": "ablab/npdtools",
+    "route": "self_published",
+    "matched": "dereplicator"
+  },
+  "deseq2": {
+    "license": "LGPL-3.0-or-later",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/thelovelab/DESeq2",
+    "route": "registry:bioconductor",
+    "matched": "DESeq2"
+  },
+  "diffspectra": {
+    "license": "Apache-2.0",
+    "license_detection": "github-api",
+    "repo_url": "AzureLeon1/DiffSpectra",
+    "route": "self_published",
+    "matched": "DiffSpectra"
+  },
+  "dures": {
+    "license": "MIT",
+    "license_detection": "r-description",
+    "repo_url": "BiosystemEngineeringLab-IITB/dures",
+    "route": "self_published",
+    "matched": "DuReS"
+  },
+  "edger": {
+    "license": "GPL-2.0-or-later",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/bioc/edgeR",
+    "route": "registry:bioconductor",
+    "matched": "edgeR"
+  },
+  "elemcor": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "4dsoftware/elemcor",
+    "route": "self_published",
+    "matched": "ElemCor"
+  },
+  "falcon": {
+    "license": "BSD-3-Clause",
+    "license_detection": "github-api",
+    "repo_url": "https://github.com/bittremieuxlab/falcon",
+    "route": "self_published",
+    "matched": "falcon"
+  },
+  "fella": {
+    "license": "GPL-3.0-only",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/bioc/FELLA",
+    "route": "registry:bioconductor",
+    "matched": "FELLA"
+  },
+  "fgsea": {
+    "license": "MIT",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/alserglab/fgsea",
+    "route": "registry:bioconductor",
+    "matched": "fgsea"
+  },
+  "fiddle": {
+    "license": "Apache-2.0",
+    "license_detection": "github-api",
+    "repo_url": "https://github.com/JosieHong/FIDDLE",
+    "route": "self_published",
+    "matched": "fiddle"
+  },
+  "fmcsr": {
+    "license": "Artistic-2.0",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/girke-lab/fmcsR",
+    "route": "registry:bioconductor",
+    "matched": "fmcsR"
+  },
+  "fnicm": {
+    "license": "AFL-3.0",
+    "license_detection": "github-api",
+    "repo_url": "LiQi94/FNICM",
+    "route": "self_published",
+    "matched": "FNICM"
+  },
+  "gcims": {
+    "license": "MIT",
+    "license_detection": "r-description",
+    "repo_url": "sipss/GCIMS",
+    "route": "self_published",
+    "matched": "GCIMS"
+  },
+  "george": {
+    "license": "GPL-3.0",
+    "license_detection": "github-api",
+    "repo_url": "jcapelladesto/geoRge",
+    "route": "self_published",
+    "matched": "geoRge"
+  },
+  "getfeatistics": {
+    "license": "GPL-3.0",
+    "license_detection": "github-api",
+    "repo_url": "FrigerioGianfranco/GetFeatistics",
+    "route": "self_published",
+    "matched": "GetFeatistics"
+  },
+  "gleams": {
+    "license": "BSD-3-Clause",
+    "license_detection": "github-api",
+    "repo_url": "bittremieux-lab/GLEAMS",
+    "route": "self_published",
+    "matched": "GLEAMS"
+  },
+  "hruv": {
+    "license": "GPL-3.0",
+    "license_detection": "github-api",
+    "repo_url": "SydneyBioX/hRUV",
+    "route": "self_published",
+    "matched": "hRUV"
+  },
+  "hyperspec": {
+    "license": "BSD-3-Clause",
+    "license_detection": "github-api",
+    "repo_url": "wh-xu/Hyper-Spec",
+    "route": "self_published",
+    "matched": "HyperSpec"
+  },
+  "idsl-csa": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "idslme/IDSL.CSA",
+    "route": "self_published",
+    "matched": "IDSL.CSA"
+  },
+  "idsl-ufa": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "idslme/IDSL.UFA",
+    "route": "self_published",
+    "matched": "IDSL.UFA"
+  },
+  "impute": {
+    "license": "GPL-2.0-only",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/bioc/impute",
+    "route": "registry:bioconductor",
+    "matched": "impute"
+  },
+  "imzml-writer": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "VIU-Metabolomics/imzML_Writer",
+    "route": "self_published",
+    "matched": "imzML Writer"
+  },
+  "ipapy2": {
+    "license": "MIT",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/francescodc87/ipaPy2",
+    "route": "registry:bioconda",
+    "matched": "ipapy2"
+  },
+  "isfrag": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "HuanLab/ISFrag",
+    "route": "self_published",
+    "matched": "ISFrag"
+  },
+  "isoformswitchanalyzer": {
+    "license": "GPL-2.0-or-later",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/kvittingseerup/IsoformSwitchAnalyzeR",
+    "route": "registry:bioconductor",
+    "matched": "IsoformSwitchAnalyzeR"
+  },
+  "isofusion": {
+    "license": "GPL-3.0",
+    "license_detection": "github-api",
+    "repo_url": "xfcui/IsoFusion",
+    "route": "self_published",
+    "matched": "IsoFusion"
+  },
+  "isoscan": {
+    "license": "GPL-3.0",
+    "license_detection": "github-api",
+    "repo_url": "jcapelladesto/isoSCAN",
+    "route": "self_published",
+    "matched": "isoSCAN"
+  },
+  "jpa": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "HuanLab/JPA",
+    "route": "self_published",
+    "matched": "JPA"
+  },
+  "keggrest": {
+    "license": "Artistic-2.0",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/Bioconductor/KEGGREST",
+    "route": "registry:bioconductor",
+    "matched": "KEGGREST"
+  },
+  "largemetabo": {
+    "license": "MIT",
+    "license_detection": "r-description",
+    "repo_url": "LargeMetabo/LargeMetabo",
+    "route": "self_published",
+    "matched": "LargeMetabo"
+  },
+  "lcmsworld": {
+    "license": "AGPL-3.0",
+    "license_detection": "github-api",
+    "repo_url": "PGB-LIV/lcmsWorld",
+    "route": "self_published",
+    "matched": "lcmsWorld"
+  },
+  "lilikoi-v2-0": {
+    "license": "GPL-3.0",
+    "license_detection": "github-api",
+    "repo_url": "lanagarmire/lilikoi2",
+    "route": "self_published",
+    "matched": "Lilikoi V2.0"
+  },
+  "limma": {
+    "license": "GPL-2.0-or-later",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/bioc/limma",
+    "route": "registry:bioconductor",
+    "matched": "limma"
+  },
+  "lipidlynxx": {
+    "license": "GPL-3.0",
+    "license_detection": "github-api",
+    "repo_url": "SysMedOs/LipidLynxX",
+    "route": "self_published",
+    "matched": "LipidLynxX"
+  },
+  "lipidmatch": {
+    "license": "CC-BY-4.0",
+    "license_detection": "license-file",
+    "repo_url": "GarrettLab-UF/LipidMatch",
+    "route": "self_published",
+    "matched": "lipidmatch"
+  },
+  "lipidr": {
+    "license": "MIT",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/ahmohamed/lipidr",
+    "route": "registry:bioconductor",
+    "matched": "lipidr"
+  },
+  "lipidspace": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "lifs-tools/lipidspace",
+    "route": "self_published",
+    "matched": "LipidSpace"
+  },
+  "lipoclean": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "https://github.com/stavis1/LipoCLEAN",
+    "route": "self_published",
+    "matched": "lipoclean"
+  },
+  "madbyte": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "liningtonlab/madbyte",
+    "route": "self_published",
+    "matched": "MADByTE"
+  },
+  "magma": {
+    "license": "Apache-2.0",
+    "license_detection": "github-api",
+    "repo_url": "https://github.com/NLeSC/MAGMa",
+    "route": "self_published",
+    "matched": "magma"
+  },
+  "maplet": {
+    "license": "GPL-3.0",
+    "license_detection": "github-api",
+    "repo_url": "krumsieklab/maplet",
+    "route": "self_published",
+    "matched": "maplet"
+  },
+  "marr": {
+    "license": "GPL-3.0-or-later",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/Ghoshlab/marr",
+    "route": "registry:bioconductor",
+    "matched": "marr"
+  },
+  "mass2adduct": {
+    "license": "GPL-3.0",
+    "license_detection": "github-api",
+    "repo_url": "https://github.com/kbseah/mass2adduct",
+    "route": "self_published",
+    "matched": "mass2adduct"
+  },
+  "masscube": {
+    "license": "CC-BY-NC-4.0",
+    "license_detection": "license-file",
+    "repo_url": "huaxuyu/masscube",
+    "route": "self_published",
+    "matched": "MassCube"
+  },
+  "massdash": {
+    "license": "BSD-3-Clause",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/Roestlab/massdash",
+    "route": "registry:bioconda",
+    "matched": "massdash"
+  },
+  "massql": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "mwang87/MassQueryLanguage",
+    "route": "self_published",
+    "matched": "MassQL"
+  },
+  "massqlab": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "JohnsonDylan/MassQLab",
+    "route": "self_published",
+    "matched": "MassQLab"
+  },
+  "massspecwavelet": {
+    "license": "LGPL-2.0-or-later",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/zeehio/MassSpecWavelet",
+    "route": "registry:bioconductor",
+    "matched": "MassSpecWavelet"
+  },
+  "matchms": {
+    "license": "Apache-2.0",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/matchms/matchms",
+    "route": "registry:bioconda",
+    "matched": "matchms"
+  },
+  "mcfnmr": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "GeoMetabolomics-ICBM/mcfNMR",
+    "route": "self_published",
+    "matched": "mcfNMR"
+  },
+  "meister": {
+    "license": "GPL-3.0",
+    "license_detection": "github-api",
+    "repo_url": "richardxie1119/MEISTER",
+    "route": "self_published",
+    "matched": "MEISTER"
+  },
+  "metabcombiner": {
+    "license": "GPL-3.0-only",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://www.github.com/hhabra/metabCombiner",
+    "route": "registry:bioconductor",
+    "matched": "metabCombiner"
+  },
+  "metaboanalystr": {
+    "license": "GPL-3.0",
+    "license_detection": "license-file",
+    "repo_url": "xia-lab/MetaboAnalystR",
+    "route": "self_published",
+    "matched": "metaboanalystr"
+  },
+  "metaboannotator": {
+    "license": "GPL-3.0-only",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/gggraca/MetaboAnnotatoR",
+    "route": "registry:bioconductor",
+    "matched": "MetaboAnnotatoR",
+    "superseded": {
+      "license": "GPL-3.0",
+      "license_detection": "github-api"
+    }
+  },
+  "metabocoreutils": {
+    "license": "Artistic-2.0",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/RforMassSpectrometry/MetaboCoreUtils",
+    "route": "registry:bioconductor",
+    "matched": "MetaboCoreUtils"
+  },
+  "metabodirect": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "https://github.com/Coayala/MetaboDirect",
+    "route": "self_published",
+    "matched": "MetaboDirect"
+  },
+  "metabolabpy": {
+    "license": "GPL-3.0-or-later",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/ludwigc/metabolabpy",
+    "route": "registry:bioconda",
+    "matched": "metabolabpy",
+    "superseded": {
+      "license": "GPL-3.0",
+      "license_detection": "github-api"
+    }
+  },
+  "metaboprep": {
+    "license": "MIT",
+    "license_detection": "r-description",
+    "repo_url": "MRCIEU/metaboprep",
+    "route": "self_published",
+    "matched": "Metaboprep"
+  },
+  "metaboshiny": {
+    "license": "Apache-2.0",
+    "license_detection": "github-api",
+    "repo_url": "joannawolthuis/MetaboShiny",
+    "route": "self_published",
+    "matched": "MetaboShiny"
+  },
+  "metamapr": {
+    "license": "AGPL-3.0",
+    "license_detection": "license-file",
+    "repo_url": "dgrapov/MetaMapR",
+    "route": "self_published",
+    "matched": "MetaMapR"
+  },
+  "metams": {
+    "license": "GPL-2.0-or-later",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/yguitton/metaMS",
+    "route": "registry:bioconductor",
+    "matched": "metaMS"
+  },
+  "metanet": {
+    "license": "GPL-3.0-only",
+    "license_detection": "r-description",
+    "repo_url": "Asa12138/MetaNet",
+    "route": "self_published",
+    "matched": "MetaNet"
+  },
+  "metaxtract": {
+    "license": "Apache-2.0",
+    "license_detection": "github-api",
+    "repo_url": "Rappsilber-Laboratory/MetaXtract",
+    "route": "self_published",
+    "matched": "MetaXtract"
+  },
+  "metcohort": {
+    "license": "AGPL-3.0",
+    "license_detection": "github-api",
+    "repo_url": "JunYang2021/MetCohort",
+    "route": "self_published",
+    "matched": "MetCohort"
+  },
+  "metdatamodel": {
+    "license": "BSD-3-Clause",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/shuzhao-li/metDataModel",
+    "route": "registry:bioconda",
+    "matched": "metdatamodel"
+  },
+  "metfrag": {
+    "license": "LGPL-3.0",
+    "license_detection": "bioconda-package",
+    "repo_url": "http://c-ruttkies.github.io/MetFrag/",
+    "route": "registry:bioconda",
+    "matched": "metfrag"
+  },
+  "metnet": {
+    "license": "GPL-3.0-or-later",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/bioc/MetNet",
+    "route": "registry:bioconductor",
+    "matched": "MetNet",
+    "superseded": {
+      "license": "LGPL-2.1",
+      "license_detection": "github-api"
+    }
+  },
+  "metscriber": {
+    "license": "GPL-2.0",
+    "license_detection": "github-api",
+    "repo_url": "ncats/metScribeR",
+    "route": "self_published",
+    "matched": "metScribeR"
+  },
+  "mimenet": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "https://github.com/YDaiLab/MiMeNet",
+    "route": "self_published",
+    "matched": "MiMeNet"
+  },
+  "minfer": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "cellbiomaths/MInfer",
+    "route": "self_published",
+    "matched": "MInfer"
+  },
+  "mist-cf": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "https://github.com/samgoldman97/mist-cf",
+    "route": "self_published",
+    "matched": "mistcf"
+  },
+  "mixomics": {
+    "license": "GPL-2.0-or-later",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/mixOmicsTeam/mixOmics",
+    "route": "registry:bioconductor",
+    "matched": "mixOmics"
+  },
+  "mobilitytransformr": {
+    "license": "Artistic-2.0",
+    "license_detection": "r-description",
+    "repo_url": "LiesaSalzer/MobilityTransformR",
+    "route": "self_published",
+    "matched": "MobilityTransformR"
+  },
+  "moccal": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "https://github.com/HinesLab/MOCCal",
+    "route": "self_published",
+    "matched": "moccal"
+  },
+  "moletrans": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "JibaoLiu/MoleTrans",
+    "route": "self_published",
+    "matched": "MoleTrans"
+  },
+  "molnotator": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "ZzakB/MolNotator",
+    "route": "self_published",
+    "matched": "MolNotator"
+  },
+  "ms-cleanr": {
+    "license": "GPL-3.0-only",
+    "license_detection": "r-description",
+    "repo_url": "eMetaboHUB/MS-CleanR",
+    "route": "self_published",
+    "matched": "MS-CleanR"
+  },
+  "ms-entropy": {
+    "license": "Apache-2.0",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/YuanyueLi/MSEntropy",
+    "route": "registry:bioconda",
+    "matched": "ms-entropy"
+  },
+  "ms2compound": {
+    "license": "CC-BY-4.0",
+    "license_detection": "github-api",
+    "repo_url": "beherasan/MS2Compound",
+    "route": "self_published",
+    "matched": "MS2Compound"
+  },
+  "ms2deepscore": {
+    "license": "Apache-2.0",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/matchms/ms2deepscore",
+    "route": "registry:bioconda",
+    "matched": "ms2deepscore"
+  },
+  "ms2lda": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "vdhooftcompmet/MS2LDA",
+    "route": "self_published",
+    "matched": "MS2LDA"
+  },
+  "ms2query": {
+    "license": "Apache-2.0",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/iomega/ms2query",
+    "route": "registry:bioconda",
+    "matched": "ms2query"
+  },
+  "msbackendmgf": {
+    "license": "Artistic-2.0",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/RforMassSpectrometry/MsBackendMgf",
+    "route": "registry:bioconductor",
+    "matched": "MsBackendMgf"
+  },
+  "msdatahub": {
+    "license": "Artistic-2.0",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/RforMassSpectrometry/MsDataHub",
+    "route": "registry:bioconductor",
+    "matched": "MsDataHub"
+  },
+  "msentropy": {
+    "license": "Apache-2.0",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/YuanyueLi/MSEntropy",
+    "route": "registry:bioconda",
+    "matched": "ms-entropy"
+  },
+  "msexperiment": {
+    "license": "Artistic-2.0",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/RforMassSpectrometry/MsExperiment",
+    "route": "registry:bioconductor",
+    "matched": "MsExperiment"
+  },
+  "msfeast": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "kevinmildau/msFeaST",
+    "route": "self_published",
+    "matched": "msFeaST"
+  },
+  "msfeatures": {
+    "license": "Artistic-2.0",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/RforMassSpectrometry/MsFeatures",
+    "route": "registry:bioconductor",
+    "matched": "MsFeatures"
+  },
+  "mshub": {
+    "license": "BSD-3-Clause",
+    "license_detection": "github-api",
+    "repo_url": "bittremieux/GNPS_GC",
+    "route": "self_published",
+    "matched": "mshub"
+  },
+  "msi-explorer": {
+    "license": "BSD-3-Clause",
+    "license_detection": "github-api",
+    "repo_url": "MMV-Lab/MSI-Explorer",
+    "route": "self_published",
+    "matched": "MSI-Explorer"
+  },
+  "msigen": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "LabLaskin/MSIGen",
+    "route": "self_published",
+    "matched": "MSIGen"
+  },
+  "msmetaenhancer": {
+    "license": "MIT",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/RECETOX/MSMetaEnhancer",
+    "route": "registry:bioconda",
+    "matched": "msmetaenhancer"
+  },
+  "msnbase": {
+    "license": "Artistic-2.0",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/lgatto/MSnbase",
+    "route": "registry:bioconductor",
+    "matched": "MSnbase"
+  },
+  "msnovelist": {
+    "license": "AGPL-3.0",
+    "license_detection": "github-api",
+    "repo_url": "meowcat/MSNovelist",
+    "route": "self_published",
+    "matched": "MSNovelist"
+  },
+  "mspack": {
+    "license": "Apache-2.0",
+    "license_detection": "github-api",
+    "repo_url": "fhanau/mspack",
+    "route": "self_published",
+    "matched": "mspack"
+  },
+  "mspcompiler": {
+    "license": "MIT",
+    "license_detection": "r-description",
+    "repo_url": "https://github.com/QizhiSu/mspcompiler",
+    "route": "self_published",
+    "matched": "mspcompiler"
+  },
+  "multiassayexperiment": {
+    "license": "Artistic-2.0",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/waldronlab/MultiAssayExperiment",
+    "route": "registry:bioconductor",
+    "matched": "MultiAssayExperiment"
+  },
+  "multtest": {
+    "license": "LGPL-3.0-only",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/bioc/multtest",
+    "route": "registry:bioconductor",
+    "matched": "multtest"
+  },
+  "mwise": {
+    "license": "GPL-3.0-only",
+    "license_detection": "r-description",
+    "repo_url": "b2slab/mWISE",
+    "route": "self_published",
+    "matched": "mWISE"
+  },
+  "mza": {
+    "license": "BSD-2-Clause",
+    "license_detection": "github-api",
+    "repo_url": "PNNL-m-q/mza",
+    "route": "self_published",
+    "matched": "MZA"
+  },
+  "mzmine": {
+    "license": "MIT",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/mzmine/mzmine",
+    "route": "registry:bioconda",
+    "matched": "mzmine"
+  },
+  "mzmine-2": {
+    "license": "GPL-2.0",
+    "license_detection": "github-api",
+    "repo_url": "mzmine/mzmine2",
+    "route": "self_published",
+    "matched": "mzmine2"
+  },
+  "mzmine2": {
+    "license": "GPL-2.0",
+    "license_detection": "github-api",
+    "repo_url": "mzmine/mzmine2",
+    "route": "self_published",
+    "matched": "mzmine2"
+  },
+  "mzquality": {
+    "license": "GPL-3.0",
+    "license_detection": "github-api",
+    "repo_url": "https://github.com/hankemeierlab/mzQuality",
+    "route": "self_published",
+    "matched": "mzquality"
+  },
+  "mzr": {
+    "license": "Artistic-2.0",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/sneumann/mzR",
+    "route": "registry:bioconductor",
+    "matched": "mzR"
+  },
+  "mzrapp": {
+    "license": "GPL-3.0",
+    "license_detection": "github-api",
+    "repo_url": "YasinEl/mzRAPP",
+    "route": "self_published",
+    "matched": "mzRAPP"
+  },
+  "mzrtsim": {
+    "license": "GPL-2.0-only",
+    "license_detection": "r-description",
+    "repo_url": "yufree/mzrtsim",
+    "route": "self_published",
+    "matched": "mzrtsim"
+  },
+  "ncgtw": {
+    "license": "GPL-2.0-only",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/ChiungTingWu/ncGTW",
+    "route": "registry:bioconductor",
+    "matched": "ncGTW"
+  },
+  "neatms": {
+    "license": "MIT",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/bihealth/NeatMS",
+    "route": "registry:bioconda",
+    "matched": "neatms"
+  },
+  "nextflow": {
+    "license": "Apache-2.0",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/nextflow-io/nextflow",
+    "route": "registry:bioconda",
+    "matched": "nextflow"
+  },
+  "noreva": {
+    "license": "GPL-3.0",
+    "license_detection": "github-api",
+    "repo_url": "idrblab/NOREVA;",
+    "route": "self_published",
+    "matched": "NOREVA"
+  },
+  "normalizemets": {
+    "license": "GPL-3.0-only",
+    "license_detection": "r-description",
+    "repo_url": "metabolomicstats/NormalizeMets",
+    "route": "self_published",
+    "matched": "NormalizeMets"
+  },
+  "notame": {
+    "license": "MIT",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/hanhineva-lab/notame",
+    "route": "registry:bioconductor",
+    "matched": "notame"
+  },
+  "npanalyst": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "https://github.com/liningtonlab/npanalyst",
+    "route": "self_published",
+    "matched": "NP Analyst"
+  },
+  "nplinker": {
+    "license": "Apache-2.0",
+    "license_detection": "github-api",
+    "repo_url": "NPLinker/nplinker",
+    "route": "self_published",
+    "matched": "NPLinker"
+  },
+  "openms": {
+    "license": "BSD-3-Clause",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/OpenMS/OpenMS",
+    "route": "registry:bioconda",
+    "matched": "openms"
+  },
+  "opennau": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "zjuRong/openNAU",
+    "route": "self_published",
+    "matched": "OpenNAU"
+  },
+  "openpyxl": {
+    "license": "MIT",
+    "license_detection": "bioconda-package",
+    "repo_url": "http://openpyxl.readthedocs.org",
+    "route": "registry:bioconda",
+    "matched": "openpyxl"
+  },
+  "pairkat": {
+    "license": "GPL-3.0-only",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/Ghoshlab/pairkat",
+    "route": "registry:bioconductor",
+    "matched": "pairkat"
+  },
+  "paramounter": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "HuanLab/Paramounter",
+    "route": "self_published",
+    "matched": "Paramounter"
+  },
+  "patroon": {
+    "license": "GPL-3.0",
+    "license_detection": "github-api",
+    "repo_url": "rickhelmus/patRoon",
+    "route": "self_published",
+    "matched": "patRoon"
+  },
+  "pcamethods": {
+    "license": "GPL-3.0-or-later",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/hredestig/pcamethods",
+    "route": "registry:bioconductor",
+    "matched": "pcaMethods"
+  },
+  "peakqc": {
+    "license": "MIT",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/loosolab/PEAKQC",
+    "route": "registry:bioconda",
+    "matched": "peakqc",
+    "superseded": {
+      "license": "BSD-2-Clause",
+      "license_detection": "github-api"
+    }
+  },
+  "proteomm": {
+    "license": "MIT",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/bioc/ProteoMM",
+    "route": "registry:bioconductor",
+    "matched": "ProteoMM"
+  },
+  "psims": {
+    "license": "Apache-2.0",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/mobiusklein/psims",
+    "route": "registry:bioconda",
+    "matched": "psims"
+  },
+  "psm-utils": {
+    "license": "Apache-2.0",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/compomics/psm_utils",
+    "route": "registry:bioconda",
+    "matched": "psm-utils"
+  },
+  "pubchempy": {
+    "license": "MIT",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/mcs07/PubChemPy",
+    "route": "registry:bioconda",
+    "matched": "pubchempy"
+  },
+  "punc-data": {
+    "license": "AGPL-3.0",
+    "license_detection": "license-file",
+    "repo_url": "WTVoe/puncdata",
+    "route": "self_published",
+    "matched": "Punc’data"
+  },
+  "puncdata": {
+    "license": "AGPL-3.0",
+    "license_detection": "license-file",
+    "repo_url": "WTVoe/puncdata",
+    "route": "self_published",
+    "matched": "Punc’data"
+  },
+  "pyhmmer": {
+    "license": "MIT",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/althonos/pyhmmer",
+    "route": "registry:bioconda",
+    "matched": "pyhmmer"
+  },
+  "pyineta": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "edisonomics/PyINETA",
+    "route": "self_published",
+    "matched": "PyINETA"
+  },
+  "pymzml": {
+    "license": "MIT",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/pymzml/pymzML",
+    "route": "registry:bioconda",
+    "matched": "pymzml"
+  },
+  "pyopenms": {
+    "license": "BSD-3-Clause",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/OpenMS/OpenMS",
+    "route": "registry:bioconda",
+    "matched": "pyopenms"
+  },
+  "pyopenms-viz": {
+    "license": "BSD-3-Clause",
+    "license_detection": "github-api",
+    "repo_url": "https://github.com/OpenMS/pyopenms_viz",
+    "route": "self_published",
+    "matched": "pyopenmsviz"
+  },
+  "pyteomics": {
+    "license": "Apache-2.0",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/levitsky/pyteomics",
+    "route": "registry:bioconda",
+    "matched": "pyteomics"
+  },
+  "qcomics": {
+    "license": "GPL-3.0",
+    "license_detection": "github-api",
+    "repo_url": "https://github.com/ricoderks/QComics",
+    "route": "self_published",
+    "matched": "QComics"
+  },
+  "qcxms2": {
+    "license": "LGPL-3.0",
+    "license_detection": "github-api",
+    "repo_url": "grimme-lab/QCxMS2",
+    "route": "self_published",
+    "matched": "QCxMS2"
+  },
+  "rawrr": {
+    "license": "GPL-3.0-only",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/fgcz/rawrr",
+    "route": "registry:bioconductor",
+    "matched": "rawrr"
+  },
+  "rdkit": {
+    "license": "BSD",
+    "license_detection": "bioconda-package",
+    "repo_url": null,
+    "route": "registry:bioconda",
+    "matched": "rdkit"
+  },
+  "retip": {
+    "license": "CC-BY-4.0",
+    "license_detection": "r-description",
+    "repo_url": "oloBion/Retip",
+    "route": "self_published",
+    "matched": "Retip"
+  },
+  "rhdf5": {
+    "license": "Artistic-2.0",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/Huber-group-EMBL/rhdf5",
+    "route": "registry:bioconductor",
+    "matched": "rhdf5"
+  },
+  "roasmi": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "FangYuan717/ROASMI",
+    "route": "self_published",
+    "matched": "ROASMI"
+  },
+  "ruby": {
+    "license": "BSD",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://www.ruby-lang.org",
+    "route": "registry:bioconda",
+    "matched": "ruby"
+  },
+  "s4vectors": {
+    "license": "Artistic-2.0",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/Bioconductor/S4Vectors",
+    "route": "registry:bioconductor",
+    "matched": "S4Vectors"
+  },
+  "salmon": {
+    "license": "BSD-3-Clause",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/COMBINE-lab/salmon",
+    "route": "registry:bioconda",
+    "matched": "salmon"
+  },
+  "sand": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "edisonomics/SAND",
+    "route": "self_published",
+    "matched": "SAND"
+  },
+  "scannotation": {
+    "license": "MIT",
+    "license_detection": "license-file",
+    "repo_url": "scannotation/Scannotation_software",
+    "route": "self_published",
+    "matched": "Scannotation"
+  },
+  "simile": {
+    "license": "BSD-3-Clause",
+    "license_detection": "readme-llm",
+    "repo_url": "biorack/simile",
+    "route": "self_published",
+    "matched": "SIMILE"
+  },
+  "singularity": {
+    "license": "BSD",
+    "license_detection": "bioconda-package",
+    "repo_url": "http://singularity.lbl.gov",
+    "route": "registry:bioconda",
+    "matched": "singularity"
+  },
+  "sirius": {
+    "license": "AGPL-3.0",
+    "license_detection": "github-api",
+    "repo_url": "sirius-ms/sirius",
+    "route": "self_published",
+    "matched": "sirius"
+  },
+  "slaw": {
+    "license": "GPL-2.0",
+    "license_detection": "github-api",
+    "repo_url": "https://github.com/zamboni-lab/SLAW",
+    "route": "self_published",
+    "matched": "slaw"
+  },
+  "smartpeak": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "AutoFlowResearch/SmartPeak",
+    "route": "self_published",
+    "matched": "SmartPeak"
+  },
+  "smiter": {
+    "license": "MIT",
+    "license_detection": "github-api",
+    "repo_url": "LeidelLab/SMITER",
+    "route": "self_published",
+    "matched": "SMITER"
+  },
+  "snakemake": {
+    "license": "MIT",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/snakemake/snakemake",
+    "route": "registry:bioconda",
+    "matched": "snakemake"
+  },
+  "spatialmeta": {
+    "license": "BSD-3-Clause",
+    "license_detection": "github-api",
+    "repo_url": "WanluLiuLab/SpatialMETA",
+    "route": "self_published",
+    "matched": "SpatialMETA"
+  },
+  "spec2vec": {
+    "license": "Apache-2.0",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/iomega/spec2vec",
+    "route": "registry:bioconda",
+    "matched": "spec2vec"
+  },
+  "spectra": {
+    "license": "Artistic-2.0",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/RforMassSpectrometry/Spectra",
+    "route": "registry:bioconductor",
+    "matched": "Spectra"
+  },
+  "spectralentropy": {
+    "license": "Apache-2.0",
+    "license_detection": "github-api",
+    "repo_url": "YuanyueLi/SpectralEntropy",
+    "route": "self_published",
+    "matched": "Spectral entropy"
+  },
+  "spectripy": {
+    "license": "Artistic-2.0",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/RforMassSpectrometry/SpectriPy",
+    "route": "registry:bioconductor",
+    "matched": "SpectriPy"
+  },
+  "spectrum-utils": {
+    "license": "Apache-2.0",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/bittremieux/spectrum_utils",
+    "route": "registry:bioconda",
+    "matched": "spectrum_utils"
+  },
+  "stattarget": {
+    "license": "LGPL-3.0-or-later",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/bioc/statTarget",
+    "route": "registry:bioconductor",
+    "matched": "statTarget"
+  },
+  "summarizedexperiment": {
+    "license": "Artistic-2.0",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/Bioconductor/SummarizedExperiment",
+    "route": "registry:bioconductor",
+    "matched": "SummarizedExperiment"
+  },
+  "sva": {
+    "license": "Artistic-2.0",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/bioc/sva",
+    "route": "registry:bioconductor",
+    "matched": "sva"
+  },
+  "tardis": {
+    "license": "GPL-3.0",
+    "license_detection": "github-api",
+    "repo_url": "https://github.com/UGent-LIMET/TARDIS",
+    "route": "self_published",
+    "matched": "tardis"
+  },
+  "thermorawfileparser": {
+    "license": "Apache-2.0",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/compomics/ThermoRawFileParser",
+    "route": "registry:bioconda",
+    "matched": "thermorawfileparser"
+  },
+  "tqdm": {
+    "license": "MPL-2.0",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/tqdm/tqdm",
+    "route": "registry:bioconda",
+    "matched": "tqdm"
+  },
+  "trimgalore": {
+    "license": "GPL-3.0-only",
+    "license_detection": "bioconda-package",
+    "repo_url": "https://github.com/FelixKrueger/TrimGalore",
+    "route": "registry:bioconda",
+    "matched": "trim-galore"
+  },
+  "xcms": {
+    "license": "GPL-2.0-or-later",
+    "license_detection": "bioconductor-package",
+    "repo_url": "https://github.com/sneumann/xcms",
+    "route": "registry:bioconductor",
+    "matched": "xcms",
+    "superseded": {
+      "license": "LGPL-3.0",
+      "license_detection": "license-file"
+    }
+  }
+}

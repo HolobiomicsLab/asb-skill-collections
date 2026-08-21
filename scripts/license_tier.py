@@ -37,8 +37,12 @@ SUBJECT_PAPER = "paper"
 # source_reuse_for_license() already avoids. See governance/LICENSE_TIERS.md.
 TIER_UNKNOWN = "unknown"
 
-# Detections that read a code repository, and so describe the *tool*.
-TOOL_DETECTIONS = frozenset({"github-api", "license-file", "r-description", "readme-llm"})
+# Detections that read the tool itself -- its repository, or the package metadata
+# it publishes -- and so describe the *tool*. A registry detection is the stronger
+# of the two: it reads what the package declares for itself, where a repository
+# read infers from whatever LICENSE file happens to sit at the root.
+TOOL_DETECTIONS = frozenset({"github-api", "license-file", "r-description", "readme-llm",
+                             "bioconductor-package", "bioconda-package"})
 # `verified_via` markers that identify the subject when the detection cannot:
 # a clone reads the repository, Unpaywall reads the publication.
 TOOL_VERIFICATIONS = frozenset({"git_clone_succeeded_at_build"})

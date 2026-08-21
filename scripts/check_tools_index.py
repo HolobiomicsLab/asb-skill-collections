@@ -59,6 +59,36 @@ def _licence_provenance_violations(slug, tool, tier) -> list[str]:
     return out
 
 
+def _resolution_drift(collection_dir, tools) -> list[str]:
+    """tools_index must agree with the resolution it was derived from.
+
+    ``tool_licenses.json`` is the evidence; ``tools_index.json`` is derived from it
+    by ``enrich_tools_index.py``. Editing one without re-running the other leaves a
+    licence in the catalogue that no evidence supports, which is the whole failure
+    class this gate exists for. Skipped when no resolution has been run.
+    """
+    path = pathlib.Path(collection_dir) / "tool_licenses.json"
+    if not path.is_file():
+        return []
+    resolved = json.loads(path.read_text(encoding="utf-8"))
+    by_slug = {t.get("slug"): t for t in tools}
+    out = []
+    for slug, evidence in resolved.items():
+        tool = by_slug.get(slug)
+        if tool is None:
+            out.append(f"tool_licenses {slug!r}: no such tool in tools_index")
+        elif tool.get("license") != evidence.get("license"):
+            out.append(
+                f"tools_index {slug!r}: licence {tool.get('license')!r} does not match "
+                f"the resolved {evidence.get('license')!r}; re-run enrich_tools_index"
+            )
+    unbacked = [t.get("slug") for t in tools
+                if t.get("license_tier") != TIER_UNKNOWN and t.get("slug") not in resolved]
+    for slug in unbacked:
+        out.append(f"tools_index {slug!r}: tiered but absent from tool_licenses.json")
+    return out
+
+
 def check_collection(collection_dir) -> list[str]:
     d = pathlib.Path(collection_dir)
     violations: list[str] = []
@@ -88,6 +118,8 @@ def check_collection(collection_dir) -> list[str]:
                 violations.append(
                     f"tools_index {slug!r}: used_by_skills {ref!r} not in skills_index"
                 )
+
+    violations.extend(_resolution_drift(d, tools))
 
     # Per-tool YAML license_tier must equal its tools_index license_tier.
     # Tools that have no tools/<slug>.yaml are skipped (not every tool has one).
