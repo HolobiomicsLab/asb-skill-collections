@@ -166,8 +166,15 @@ routing logic:
   *"no tool-level licence evidence — verify before redistributing"* (non-blocking).
   This is an open question, not a verdict: do not present it as a restriction on
   using the tool, and do not treat it as permission to redistribute the tool's
-  code. 713 of the 909 tools in this collection are `unknown`: no registry or
-  source repository has been found for them yet (issue #43).
+  code. 693 of the 909 tools in this collection are `unknown`, of which 39 are
+  extraction artefacts rather than tools; 654 are software still awaiting a
+  licence lookup.
+
+Tools also carry **`entry_kind`** — `software`, `vendor_product` or `artefact`.
+A `vendor_product` is an instrument or a proprietary application: fine to
+recommend and fine to use, `restricted` because there is an agreement rather than
+an open licence behind it. An `artefact` is an extraction defect (a module path,
+a bare URL, a sentence fragment) and should not be offered as a tool at all.
 
 All other routing behavior (technique, EDAM, tool name, keyword matching) is
 unchanged; tier-awareness is an additional layer applied after candidate

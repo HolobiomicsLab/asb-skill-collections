@@ -71,8 +71,9 @@ the indexes plus the few skills you need. Full steps:
 **1. Search** the indexes at `collections/metabolomics/v2/` (most precise first):
 
 - `skills_index.json` — `slug, name, description, edam_operation, edam_topics, tools, dois`
-- `tools_index.json` — `slug, name, edam_topics, dois, license_tier, license_subject,
-  repo_url, source_paper_repos` (`repo_url` = the tool's own repository, recorded only
+- `tools_index.json` — `slug, name, edam_topics, dois, entry_kind, license_tier,
+  license_subject, repo_url, source_paper_repos` (`entry_kind` is `software` /
+  `vendor_product` / `artefact`) (`repo_url` = the tool's own repository, recorded only
   where a licence was resolved from it; `source_paper_repos` = repositories of the
   papers that cite the tool, which are not the tool's home)
 
