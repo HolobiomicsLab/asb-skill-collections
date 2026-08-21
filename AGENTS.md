@@ -71,7 +71,9 @@ the indexes plus the few skills you need. Full steps:
 **1. Search** the indexes at `collections/metabolomics/v2/` (most precise first):
 
 - `skills_index.json` — `slug, name, description, edam_operation, edam_topics, tools, dois`
-- `tools_index.json` — `slug, name, canonical_url, edam_topics, dois`
+- `tools_index.json` — `slug, name, edam_topics, dois, license_tier, license_subject,
+  source_paper_repos` (`source_paper_repos` = repositories of the papers that cite the
+  tool, not the tool's own home)
 
 ```bash
 # skills that use a given tool
@@ -123,7 +125,8 @@ fall back to **`local`** to clone the source and read it directly.
 
 ## License tiers
 
-Every skill carries a `license_tier` (`open` / `noncommercial` / `restricted`) in
+Every skill carries a `license_tier` (`open` / `noncommercial` / `restricted` /
+`unknown`) in
 `skills_index.json` and its `SKILL.md` frontmatter. The `asb-metabolomics` meta-skill
 enforces the `noncommercial` acknowledgment gate and routes tier logic; see
 [`governance/LICENSE_TIERS.md`](governance/LICENSE_TIERS.md) for the full policy.

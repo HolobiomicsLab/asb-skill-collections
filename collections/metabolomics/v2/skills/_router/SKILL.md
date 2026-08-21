@@ -99,8 +99,11 @@ Three machine indexes back both scripts, and are worth querying directly with
 - **`skills_index.json`** — one row per skill: `slug`, `name`, `description`,
   `edam_operation`, `edam_topics`, `tools`, `dois`, `techniques`,
   `license_tier`.
-- **`tools_index.json`** — one row per tool: `slug`, `name`, `canonical_url`,
-  `edam_topics`, `dois`.
+- **`tools_index.json`** — one row per tool: `slug`, `name`, `edam_topics`,
+  `dois`, `license_tier`, `license_subject`, `source_paper_repos`.
+  `source_paper_repos` holds the repositories of the papers that *cite* the tool.
+  It is not the tool's own home and must never be offered as one: no field yet
+  records that (issue #43).
 - **`workflows/workflows_index.json`** — one row per composite workflow: `slug`,
   `name`, `description`, `techniques`, `stages`, `member_tools`.
 
@@ -156,9 +159,14 @@ routing logic:
   `asb-metabolomics` gate (which checks `metadata.tool_license`) — the user must
   explicitly confirm a permitted (academic / noncommercial) purpose. Do not apply
   a `noncommercial` skill until the acknowledgment is confirmed.
-- **`restricted`** — show the soft note: *"no clear license detected — verify
-  before commercial use or redistribution"* (non-blocking). Proceed only after
-  surfacing this caveat.
+- **`restricted`** — show the soft note: *"licence established and it constrains
+  reuse — check it before commercial use or redistribution"* (non-blocking).
+  Proceed only after surfacing this caveat.
+- **`unknown`** — no tool-level licence evidence was found. Show the soft note:
+  *"no tool-level licence evidence — verify before redistributing"* (non-blocking).
+  This is an open question, not a verdict: do not present it as a restriction on
+  using the tool, and do not treat it as permission to redistribute the tool's
+  code. Every tool in this collection is currently `unknown` (issue #42).
 
 All other routing behavior (technique, EDAM, tool name, keyword matching) is
 unchanged; tier-awareness is an additional layer applied after candidate

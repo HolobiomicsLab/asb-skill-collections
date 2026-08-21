@@ -37,7 +37,7 @@ these vary per skill and are **not** bundled here. Common shapes:
 - **Standalone tools** — e.g. SIRIUS, GNPS/FBMN (web), MZmine (GUI/headless).
 
 Resolve the canonical install target from the skill body and from
-`tools_index.json` (`canonical_url`). To list everything a skill requires:
+`tools_index.json`. To list everything a skill requires:
 
 ```bash
 jq '.[] | select(.slug=="<slug>") | .tools' skills_index.json
@@ -77,7 +77,7 @@ the machine indexes directly:
 | File | What it is |
 |---|---|
 | `skills_index.json` | one row/skill: `slug, name, description, edam_operation, edam_topics, tools, dois` |
-| `tools_index.json` | one row/tool: `slug, name, canonical_url, edam_topics, dois` |
+| `tools_index.json` | one row/tool: `slug, name, edam_topics, dois, license_tier, license_subject, source_paper_repos` |
 | `kb_bundle.json` | skill → source DOIs + tools + `asb-paper-<doi>` KB slugs (grounding map) |
 | `collection.yaml` | the SkillCollection record (counts, curators, license) |
 | `corpus.yaml` | per-paper access basis (`repo-oa`) |
@@ -298,7 +298,8 @@ the underlying tool?*
 |---|---|
 | `open` | Commercial use OK (MIT, Apache-2.0, GPL, CC-BY, …) |
 | `noncommercial` | Academic / noncommercial only — **confirm permitted use before applying** the skill |
-| `restricted` | No clear license detected — **verify before commercial use or redistribution** |
+| `restricted` | Licence established and it constrains reuse — **check it before commercial use or redistribution** |
+| `unknown` | No tool-level licence evidence — describing and using are unaffected; **never redistribute** the tool's code |
 
 Discovery defaults to `open` skills; the `asb-metabolomics` meta-skill enforces
 the `noncommercial` acknowledgment gate. Non-open skills carry a one-line banner

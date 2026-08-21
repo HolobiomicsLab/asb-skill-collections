@@ -311,7 +311,8 @@ the underlying tool?*
 |---|---|
 | `open` | Commercial use OK (MIT, Apache-2.0, GPL, CC-BY, …) |
 | `noncommercial` | Academic / noncommercial only — **confirm permitted use before applying** the skill |
-| `restricted` | No clear license detected — **verify before commercial use or redistribution** |
+| `restricted` | Licence established and it constrains reuse — **check it before commercial use or redistribution** |
+| `unknown` | No tool-level licence evidence — describing and using are unaffected; **never redistribute** the tool's code |
 
 Discovery defaults to `open` skills; the `asb-metabolomics` meta-skill enforces
 the `noncommercial` acknowledgment gate. Non-open skills carry a one-line banner

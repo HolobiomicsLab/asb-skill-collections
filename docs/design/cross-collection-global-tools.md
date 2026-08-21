@@ -78,7 +78,9 @@ tools:
 New workflow `validate-tool-cross-coll.yml` runs on PRs touching `tools/` or any `tools.lock.yaml`:
 
 - Walks all collections.
-- For each tool slug appearing in 2+ collections, verifies `license_spdx`, `canonical_url`, `purl` (PURL identifier) are consistent.
+- For each tool slug appearing in 2+ collections, verifies `license_spdx`, `purl` (PURL identifier) are consistent.
+  A tool's own repository URL is not yet recorded anywhere (issue #43); `source_paper_repos` holds the
+  repositories of citing papers and is expected to differ between collections, so it is not compared.
 - Flags inconsistency as a PR error with the conflicting fields listed.
 
 ## Open questions
