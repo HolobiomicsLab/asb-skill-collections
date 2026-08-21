@@ -37,7 +37,7 @@ if __package__ in (None, ""):
 
 
 from asb_skill_collections import layout
-from scripts.normalize_skill import slugify
+from scripts.normalize_skill import skill_field, slugify
 
 LEDGER_SCHEMA = "asb-skill-proposals/1.0"
 
@@ -202,8 +202,8 @@ def main(argv=None) -> int:
     meta = fm.get("metadata") or {}
     ledger_meta = {
         "slug": slugify(fm.get("name") or ""),
-        "related_skills": list(fm.get("related_skills") or []),
-        "tools_used": list(meta.get("tools_used") or []),
+        "related_skills": list(skill_field(fm, "related_skills") or []),
+        "tools_used": list(skill_field(fm, "tools_used") or []),
         "license_tier": meta.get("license_tier"),
         "status": fm.get("status", "hold"),
     }

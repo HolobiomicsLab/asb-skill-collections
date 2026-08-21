@@ -96,6 +96,22 @@ def parse_skill_md(text: str) -> tuple[dict | None, str | None]:
     return (yaml.safe_load(fm_raw) or {}), body
 
 
+def skill_field(fm: dict, key: str):
+    """Read a field that skills may declare at top level or under ``metadata``.
+
+    ``related_skills`` is written both ways across the corpus, so a reader that
+    checks only one place drops it silently: the proposal gate looked in both and
+    the stager looked only at the top level, which is why every staged skill's
+    ledger entry recorded an empty ``related_skills`` while its SKILL.md declared
+    them. One accessor, used by both, is the fix.
+    """
+    fm = fm or {}
+    if key in fm:
+        return fm.get(key)
+    meta = fm.get("metadata")
+    return (meta or {}).get(key) if isinstance(meta, dict) else None
+
+
 def frontmatter_violations(fm: dict) -> list[str]:
     """Validate description + EDAM IRIs + license_tier against the CI gates."""
     violations: list[str] = []

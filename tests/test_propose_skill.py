@@ -186,3 +186,53 @@ def test_main_stages_files(tmp_path):
     assert rc == 0
     assert (col / "proposals" / "skills" / "my-new-skill" / "SKILL.md").is_file()
     assert (col / "proposals" / "wave-skills-2026-06-26.yaml").is_file()
+
+
+class TestLedgerReadsBothDeclarationSites:
+    """`related_skills` is written at top level by some skills and under
+    `metadata` by others. The stager read only the top level, so every skill
+    following the `metadata` convention -- which is all of the staged corpus --
+    got an empty `related_skills` in its ledger entry while its SKILL.md
+    declared them. Both sites, one accessor."""
+
+    def _stage(self, tmp_path, fm):
+        from scripts.propose_skill import stage_proposal
+        from scripts.normalize_skill import skill_field
+
+        ledger_meta = {
+            "slug": "s",
+            "related_skills": list(skill_field(fm, "related_skills") or []),
+            "tools_used": list(skill_field(fm, "tools_used") or []),
+        }
+        stage_proposal(tmp_path, fm, "body\n", ledger_meta, date="2026-08-21")
+        ledger = yaml.safe_load(
+            (tmp_path / "proposals" / "wave-skills-2026-08-21.yaml").read_text()
+        )
+        return ledger["proposals"][0]
+
+    def test_related_skills_under_metadata_reach_the_ledger(self, tmp_path):
+        entry = self._stage(
+            tmp_path,
+            {"name": "s", "metadata": {"related_skills": ["other-skill"]}},
+        )
+        assert entry["related_skills"] == ["other-skill"]
+
+    def test_related_skills_at_top_level_still_reach_the_ledger(self, tmp_path):
+        entry = self._stage(tmp_path, {"name": "s", "related_skills": ["other-skill"]})
+        assert entry["related_skills"] == ["other-skill"]
+
+    def test_absent_everywhere_is_an_empty_list_not_a_crash(self, tmp_path):
+        assert self._stage(tmp_path, {"name": "s"})["related_skills"] == []
+
+
+class TestSkillFieldAccessor:
+    def test_top_level_wins_over_metadata(self):
+        from scripts.normalize_skill import skill_field
+
+        fm = {"related_skills": ["top"], "metadata": {"related_skills": ["meta"]}}
+        assert skill_field(fm, "related_skills") == ["top"]
+
+    def test_a_non_mapping_metadata_does_not_raise(self):
+        from scripts.normalize_skill import skill_field
+
+        assert skill_field({"metadata": "not-a-mapping"}, "related_skills") is None
