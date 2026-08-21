@@ -16,16 +16,16 @@ def test_tier_map_extracts_license_fields():
     tools_index = [
         {"slug": "t_open", "license_tier": "open", "license": "MIT",
          "license_detection": "github-api", "license_subject": "tool",
-         "repo_url": "owner/t-open"},
+         "repo_url": "owner/t-open", "entry_kind": "software"},
         {"slug": "t_nc", "license_tier": "noncommercial", "license": "CC-BY-NC-4.0",
          "license_detection": "readme-llm", "license_subject": "tool"},
         {"slug": "t_unknown", "license_tier": "unknown", "license": None,
          "license_detection": None, "license_subject": None},
     ]
     m = e.tier_map(tools_index)
-    assert m["t_open"] == {"license_tier": "open", "license": "MIT",
-                           "license_detection": "github-api", "license_subject": "tool",
-                           "repo_url": "owner/t-open"}
+    assert m["t_open"] == {"entry_kind": "software", "license_tier": "open",
+                           "license": "MIT", "license_detection": "github-api",
+                           "license_subject": "tool", "repo_url": "owner/t-open"}
     assert m["t_nc"]["license_tier"] == "noncommercial"
     assert m["t_unknown"]["license"] is None
     assert m["t_unknown"]["license_subject"] is None
@@ -34,7 +34,7 @@ def test_tier_map_extracts_license_fields():
 def test_tier_map_defaults_missing_fields():
     # A tools_index entry that only carries the tier still yields a complete row.
     m = e.tier_map([{"slug": "t1", "license_tier": "open"}])
-    assert m["t1"] == {"license_tier": "open", "license": None,
+    assert m["t1"] == {"entry_kind": None, "license_tier": "open", "license": None,
                        "license_detection": None, "license_subject": None,
                        "repo_url": None}
 
@@ -115,7 +115,7 @@ def test_enrich_key_placement_after_schema_version(tmp_path):
     e.enrich(str(d))
     keys = list(yaml.safe_load((d / "tools" / "tool-a.yaml").read_text()).keys())
     sv = keys.index("schema_version")
-    assert keys[sv + 1:sv + 4] == ["license_tier", "license", "license_detection"]
+    assert keys[sv + 1:sv + 4] == ["entry_kind", "license_tier", "license"]
     assert keys.index("techniques") > keys.index("license_detection")
 
 

@@ -69,7 +69,8 @@
   "source_paper_repos": [
    "NPLinker/nplinker"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "adam-optimizer",
@@ -145,7 +146,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "adap",
@@ -189,7 +191,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "adviselipidomics",
@@ -227,7 +230,8 @@
   "source_paper_repos": [
    "ShinyFabio/ADViSELipidomics"
   ],
-  "repo_url": "ShinyFabio/ADViSELipidomics"
+  "repo_url": "ShinyFabio/ADViSELipidomics",
+  "entry_kind": "software"
  },
  {
   "slug": "aer",
@@ -273,7 +277,8 @@
   "source_paper_repos": [
    "FrigerioGianfranco/GetFeatistics"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "aerith",
@@ -319,7 +324,8 @@
   "source_paper_repos": [
    "thepanlab/Aerith"
   ],
-  "repo_url": "https://github.com/xyz1396/Aerith"
+  "repo_url": "https://github.com/xyz1396/Aerith",
+  "entry_kind": "software"
  },
  {
   "slug": "agilent-1290-infinity-uhplc-system",
@@ -331,9 +337,9 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "unknown",
+  "license_tier": "restricted",
   "license": null,
-  "license_detection": null,
+  "license_detection": "vendor-product",
   "used_by_skills": [
    "cohen-kappa-inter-rater-reliability",
    "concordance-score-calculation-cohen-kappa",
@@ -386,9 +392,10 @@
    "transcript-abundance-normalization-across-cell-lines",
    "transcriptomics-reaction-activity-scoring"
   ],
-  "license_subject": null,
+  "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "vendor_product"
  },
  {
   "slug": "agilent-6550-ifunnel-q-tof-mass-spectrometer",
@@ -400,9 +407,9 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "unknown",
+  "license_tier": "restricted",
   "license": null,
-  "license_detection": null,
+  "license_detection": "vendor-product",
   "used_by_skills": [
    "cohen-kappa-inter-rater-reliability",
    "concordance-score-calculation-cohen-kappa",
@@ -455,9 +462,10 @@
    "transcript-abundance-normalization-across-cell-lines",
    "transcriptomics-reaction-activity-scoring"
   ],
-  "license_subject": null,
+  "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "vendor_product"
  },
  {
   "slug": "agilent-masshunter",
@@ -471,9 +479,9 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "unknown",
+  "license_tier": "restricted",
   "license": null,
-  "license_detection": null,
+  "license_detection": "vendor-product",
   "used_by_skills": [
    "artifact-removal-in-ims-data",
    "frame-metadata-extraction-and-export",
@@ -499,11 +507,12 @@
    "spike-artifact-detection-and-removal",
    "tof-ms-signal-enhancement-low-abundance"
   ],
-  "license_subject": null,
+  "license_subject": "tool",
   "source_paper_repos": [
    "PNNL-Comp-Mass-Spec/PNNL-PreProcessor"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "vendor_product"
  },
  {
   "slug": "agilent-q-tof-uhplc-hrms-ms",
@@ -516,9 +525,9 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "unknown",
+  "license_tier": "restricted",
   "license": null,
-  "license_detection": null,
+  "license_detection": "vendor-product",
   "used_by_skills": [
    "acquisition-mode-enumeration-and-validation",
    "batch-script-execution-and-automation",
@@ -557,11 +566,12 @@
    "threshold-based-library-validation",
    "uhplc-hrms-ms-data-matching"
   ],
-  "license_subject": null,
+  "license_subject": "tool",
   "source_paper_repos": [
    "GarrettLab-UF/LipidMatch"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "vendor_product"
  },
  {
   "slug": "agilent-unknowns-analysis",
@@ -575,9 +585,9 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "unknown",
+  "license_tier": "restricted",
   "license": null,
-  "license_detection": null,
+  "license_detection": "vendor-product",
   "used_by_skills": [
    "chemical-identifier-unification",
    "chemical-identifier-verification",
@@ -614,9 +624,10 @@
    "summary-statistics-table-construction",
    "unique-compound-enumeration"
   ],
-  "license_subject": null,
+  "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "vendor_product"
  },
  {
   "slug": "airdpro-v5",
@@ -663,7 +674,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "airdpro-v6",
@@ -710,7 +722,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "alphatims",
@@ -785,7 +798,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/MannLabs/alphatims"
+  "repo_url": "https://github.com/MannLabs/alphatims",
+  "entry_kind": "software"
  },
  {
   "slug": "alvadesc",
@@ -841,7 +855,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "amanida",
@@ -885,7 +900,8 @@
   "source_paper_repos": [
    "mariallr/amanida"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "anaconda",
@@ -990,7 +1006,8 @@
    "zhanghailiangcsu/MSBERT",
    "zhanghailiangcsu/MWFormer"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ann-solo",
@@ -1047,7 +1064,8 @@
   "source_paper_repos": [
    "bittremieux-lab/ANN-SoLo"
   ],
-  "repo_url": "bittremieux-lab/ANN-SoLo"
+  "repo_url": "bittremieux-lab/ANN-SoLo",
+  "entry_kind": "software"
  },
  {
   "slug": "annome",
@@ -1073,7 +1091,8 @@
   "source_paper_repos": [
    "chrboku/AnnoMe"
   ],
-  "repo_url": "chrboku/AnnoMe"
+  "repo_url": "chrboku/AnnoMe",
+  "entry_kind": "software"
  },
  {
   "slug": "antismash",
@@ -1212,7 +1231,8 @@
    "NPLinker/nplinker",
    "ablab/npdtools"
   ],
-  "repo_url": "https://github.com/antismash/antismash"
+  "repo_url": "https://github.com/antismash/antismash",
+  "entry_kind": "software"
  },
  {
   "slug": "apache-maven-3-8",
@@ -1245,7 +1265,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "appveyor",
@@ -1276,7 +1297,8 @@
   "source_paper_repos": [
    "eugenemel/maven"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "arrow",
@@ -1331,7 +1353,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "asap-ms",
@@ -1370,7 +1393,8 @@
   "source_paper_repos": [
    "Katherine00689/RapidMass"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "asari-mass-functions-module-nn-cluster-by-mz-seeds",
@@ -1450,7 +1474,8 @@
   "source_paper_repos": [
    "shuzhao-li-lab/asari"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "asari-massgrid-class-build-grid-sample-wise-add-sample-build-grid-by-centroiding-bin-track-mzs",
@@ -1530,7 +1555,8 @@
   "source_paper_repos": [
    "shuzhao-li-lab/asari"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "asari-peaks-module",
@@ -1612,7 +1638,8 @@
   "source_paper_repos": [
    "shuzhao-li-lab/asari"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "asari",
@@ -1744,7 +1771,8 @@
   "source_paper_repos": [
    "shuzhao-li-lab/asari"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ase-ani",
@@ -1789,7 +1817,8 @@
   "source_paper_repos": [
    "DasSusanta/snakemake_ccs"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "asics",
@@ -1813,7 +1842,8 @@
   "source_paper_repos": [
    "GaelleLefort/ASICS"
   ],
-  "repo_url": "https://github.com/bioc/ASICS"
+  "repo_url": "https://github.com/bioc/ASICS",
+  "entry_kind": "software"
  },
  {
   "slug": "assign-hierarchy",
@@ -1860,7 +1890,8 @@
   "source_paper_repos": [
    "connor-reid-tiffany/Omu"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "autoccs",
@@ -1885,7 +1916,8 @@
   "source_paper_repos": [
    "PNNL-Comp-Mass-Spec/AutoCCS"
   ],
-  "repo_url": "PNNL-Comp-Mass-Spec/AutoCCS"
+  "repo_url": "PNNL-Comp-Mass-Spec/AutoCCS",
+  "entry_kind": "software"
  },
  {
   "slug": "autotuner",
@@ -1918,7 +1950,8 @@
   "source_paper_repos": [
    "KujawinskiLaboratory/Autotuner"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "avir-r",
@@ -1946,7 +1979,8 @@
   "source_paper_repos": [
    "HuanLab/AVIR"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "aws-cli",
@@ -1976,7 +2010,8 @@
   "source_paper_repos": [
    "meowcat/MSNovelist"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "bago",
@@ -2015,7 +2050,8 @@
   "source_paper_repos": [
    "huaxuyu/bago"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "bam",
@@ -2052,7 +2088,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "bart",
@@ -2084,7 +2121,8 @@
   "source_paper_repos": [
    "OpenDFM/MS-BART"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "base64enc",
@@ -2129,7 +2167,8 @@
   "source_paper_repos": [
    "yufree/mzrtsim"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "basicevaluationengine",
@@ -2168,7 +2207,8 @@
   "source_paper_repos": [
    "Wang-Bioinformatics-Lab/ModiFinder_base"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "benjamini-hochberg-fdr-correction",
@@ -2235,7 +2275,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "big-scape",
@@ -2312,7 +2353,8 @@
   "source_paper_repos": [
    "NPLinker/nplinker"
   ],
-  "repo_url": "https://github.com/medema-group/BiG-SCAPE"
+  "repo_url": "https://github.com/medema-group/BiG-SCAPE",
+  "entry_kind": "software"
  },
  {
   "slug": "big-slice",
@@ -2344,7 +2386,8 @@
   "source_paper_repos": [
    "medema-group/bigslice"
   ],
-  "repo_url": "https://github.com/satriaphd/bigslice"
+  "repo_url": "https://github.com/satriaphd/bigslice",
+  "entry_kind": "software"
  },
  {
   "slug": "bigscape",
@@ -2450,7 +2493,8 @@
   "source_paper_repos": [
    "NPLinker/nplinker"
   ],
-  "repo_url": "https://github.com/medema-group/BiG-SCAPE"
+  "repo_url": "https://github.com/medema-group/BiG-SCAPE",
+  "entry_kind": "software"
  },
  {
   "slug": "biobase",
@@ -2515,7 +2559,8 @@
    "antonvsdata/notame",
    "idrblab/NOREVA;"
   ],
-  "repo_url": "https://github.com/Bioconductor/Biobase"
+  "repo_url": "https://github.com/Bioconductor/Biobase",
+  "entry_kind": "software"
  },
  {
   "slug": "biocmanager",
@@ -2568,7 +2613,8 @@
    "idrblab/NOREVA;",
    "kilgain/MassSpec"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "bioconda",
@@ -2608,7 +2654,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "bioconductor",
@@ -2813,7 +2860,8 @@
    "sneumann/xcms",
    "xdomingoal/erah-devel"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "biocparallel",
@@ -2863,7 +2911,8 @@
   "source_paper_repos": [
    "kuwisdelu/Cardinal"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "bioinformatic-toolbox",
@@ -2893,7 +2942,8 @@
   "source_paper_repos": [
    "AdrianHaun/AriumMS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "biosynfoni",
@@ -2941,7 +2991,8 @@
   "source_paper_repos": [
    "lucinamay/biosynfoni"
   ],
-  "repo_url": "lucinamay/biosynfoni"
+  "repo_url": "lucinamay/biosynfoni",
+  "entry_kind": "software"
  },
  {
   "slug": "biotransformer",
@@ -3018,7 +3069,8 @@
    "https://bitbucket.org/wishartlab/biotransformer3.0jar.git",
    "rickhelmus/patRoon"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "biotransformerapi",
@@ -3046,7 +3098,8 @@
   "source_paper_repos": [
    "Le0nT1/CyProduct"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "biotranslator",
@@ -3096,7 +3149,8 @@
   "source_paper_repos": [
    "ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "bitterpredict-m",
@@ -3129,7 +3183,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "bitterpredict",
@@ -3162,7 +3217,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "black",
@@ -3196,7 +3252,8 @@
    "SysMedOs/LipidLynxX",
    "medema-group/BiG-SCAPE"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "blast",
@@ -3226,7 +3283,8 @@
   "source_paper_repos": [
    "mibig-secmet/mibig-json"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "bmxp",
@@ -3270,7 +3328,8 @@
   "source_paper_repos": [
    "broadinstitute/bmxp"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "bokeh",
@@ -3376,7 +3435,8 @@
   "source_paper_repos": [
    "Roestlab/massdash"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "bridgedb",
@@ -3443,7 +3503,8 @@
   "source_paper_repos": [
    "RECETOX/MSMetaEnhancer"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "bruker-q-tof-uhplc-hrms-ms",
@@ -3456,9 +3517,9 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "unknown",
+  "license_tier": "restricted",
   "license": null,
-  "license_detection": null,
+  "license_detection": "vendor-product",
   "used_by_skills": [
    "acquisition-mode-enumeration-and-validation",
    "batch-script-execution-and-automation",
@@ -3497,11 +3558,12 @@
    "threshold-based-library-validation",
    "uhplc-hrms-ms-data-matching"
   ],
-  "license_subject": null,
+  "license_subject": "tool",
   "source_paper_repos": [
    "GarrettLab-UF/LipidMatch"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "vendor_product"
  },
  {
   "slug": "bruker-solarix",
@@ -3513,9 +3575,9 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "unknown",
+  "license_tier": "restricted",
   "license": null,
-  "license_detection": null,
+  "license_detection": "vendor-product",
   "used_by_skills": [
    "abundance-normalization-and-summary-statistics",
    "algorithm-parameter-comparison-analysis",
@@ -3562,9 +3624,10 @@
    "time-domain-signal-apodization",
    "transient-window-function-application"
   ],
-  "license_subject": null,
+  "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "vendor_product"
  },
  {
   "slug": "c",
@@ -3578,7 +3641,8 @@
   "used_by_skills": [],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "calculator",
@@ -3623,7 +3687,8 @@
   "source_paper_repos": [
    "djdt/pewpew"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "camera",
@@ -3695,7 +3760,8 @@
    "LinShuhaiLAB/LipidIN",
    "b2slab/mWISE"
   ],
-  "repo_url": "https://github.com/sneumann/CAMERA"
+  "repo_url": "https://github.com/sneumann/CAMERA",
+  "entry_kind": "software"
  },
  {
   "slug": "canonical-correlation-analysis-cca",
@@ -3771,7 +3837,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "canopus",
@@ -3852,7 +3919,8 @@
    "luigiquiros/inventa",
    "sirius-ms/sirius"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "cardinal",
@@ -3980,7 +4048,8 @@
    "kuwisdelu/Cardinal",
    "swinnenteam/LipidQMap"
   ],
-  "repo_url": "kuwisdelu/Cardinal"
+  "repo_url": "kuwisdelu/Cardinal",
+  "entry_kind": "software"
  },
  {
   "slug": "cardinalio",
@@ -4025,7 +4094,8 @@
   "source_paper_repos": [
    "kuwisdelu/Cardinal"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "caret",
@@ -4071,7 +4141,8 @@
    "KelseyChetnik/MetaClean",
    "slfan2013/SERDA"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "casanovo",
@@ -4104,7 +4175,8 @@
   "source_paper_repos": [
    "Noble-Lab/casanovo"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "cca-canonical-correlation-analysis",
@@ -4176,7 +4248,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "centwave",
@@ -4220,7 +4293,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "cfm-id",
@@ -4278,7 +4352,8 @@
    "beherasan/MS2Compound",
    "https://gitlab.com/nexs-metabolomics/projects/dna_adductomics_database.git"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "cfmid",
@@ -4314,7 +4389,8 @@
   "source_paper_repos": [
    "aaronma2020/MSGO"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "chambm-pwiz-skyline-i-agree-to-the-vendor-licenses",
@@ -4345,7 +4421,8 @@
   "source_paper_repos": [
    "VIU-Metabolomics/imzML_Writer"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "chebi",
@@ -4375,7 +4452,8 @@
   "source_paper_repos": [
    "privrja/MassSpecBlocks"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "chem-spectra-app",
@@ -4410,7 +4488,8 @@
   "source_paper_repos": [
    "ComPlat/chem-spectra-app"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "chemecho",
@@ -4445,7 +4524,8 @@
   "source_paper_repos": [
    "biorack/chemecho"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "chemicalmixturefrommzml",
@@ -4509,7 +4589,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "chemistry-development-kit-cdk",
@@ -4584,7 +4665,8 @@
   "source_paper_repos": [
    "NPLinker/nplinker"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "chemminer",
@@ -4641,7 +4723,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/girke-lab/ChemmineR"
+  "repo_url": "https://github.com/girke-lab/ChemmineR",
+  "entry_kind": "software"
  },
  {
   "slug": "chemparse",
@@ -4691,7 +4774,8 @@
   "source_paper_repos": [
    "FanzhouKong/spectral_denoising"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "chemprop-ir",
@@ -4722,7 +4806,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/gfm-collab/chemprop-IR"
+  "repo_url": "https://github.com/gfm-collab/chemprop-IR",
+  "entry_kind": "software"
  },
  {
   "slug": "chemprop",
@@ -4754,7 +4839,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "chemspider",
@@ -4784,7 +4870,8 @@
   "source_paper_repos": [
    "privrja/MassSpecBlocks"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "cir",
@@ -4851,7 +4938,8 @@
   "source_paper_repos": [
    "RECETOX/MSMetaEnhancer"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "classyfire",
@@ -4899,7 +4987,8 @@
    "michaelwitting/RepoRT",
    "zquinlan/concise"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "cliquems",
@@ -4943,7 +5032,8 @@
   "source_paper_repos": [
    "b2slab/mWISE"
   ],
-  "repo_url": "https://github.com/osenan/cliqueMS"
+  "repo_url": "https://github.com/osenan/cliqueMS",
+  "entry_kind": "software"
  },
  {
   "slug": "clumsid",
@@ -4973,7 +5063,8 @@
   "source_paper_repos": [
    "LeaveMeNotTonight/CMDN"
   ],
-  "repo_url": "https://github.com/tdepke/CluMSID"
+  "repo_url": "https://github.com/tdepke/CluMSID",
+  "entry_kind": "software"
  },
  {
   "slug": "clumsiddata",
@@ -5003,7 +5094,8 @@
   "source_paper_repos": [
    "LeaveMeNotTonight/CMDN"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "clusterprofiler",
@@ -5080,7 +5172,8 @@
    "ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
    "emosca-cnr/margheRita"
   ],
-  "repo_url": "https://github.com/YuLab-SMU/clusterProfiler"
+  "repo_url": "https://github.com/YuLab-SMU/clusterProfiler",
+  "entry_kind": "software"
  },
  {
   "slug": "cobrapy-for-optgpsampler-uniform-sampling",
@@ -5147,7 +5240,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "cobrapy-optgpsampler-algorithm",
@@ -5216,7 +5310,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "cobrapy",
@@ -5285,7 +5380,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "coconut",
@@ -5316,7 +5412,8 @@
   "source_paper_repos": [
    "privrja/MassSpecBlocks"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "cohen-s-kappa-metric",
@@ -5385,7 +5482,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "color-jitter-augmentation",
@@ -5434,7 +5532,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "combat",
@@ -5475,7 +5574,8 @@
   "source_paper_repos": [
    "ShinyFabio/ADViSELipidomics"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "commit",
@@ -5509,7 +5609,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/pwendering/COMMIT"
+  "repo_url": "https://github.com/pwendering/COMMIT",
+  "entry_kind": "software"
  },
  {
   "slug": "commons-math3",
@@ -5583,7 +5684,8 @@
   "source_paper_repos": [
    "rformassspectrometry/Spectra"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "comparador",
@@ -5632,7 +5734,8 @@
   "source_paper_repos": [
    "pnnl/IonToolPack"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "comparems2",
@@ -5656,7 +5759,8 @@
   "source_paper_repos": [
    "524D/compareMS2"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "complexheatmap",
@@ -5732,7 +5836,8 @@
    "ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
    "emosca-cnr/margheRita"
   ],
-  "repo_url": "https://github.com/jokergoo/ComplexHeatmap"
+  "repo_url": "https://github.com/jokergoo/ComplexHeatmap",
+  "entry_kind": "software"
  },
  {
   "slug": "compound-discoverer",
@@ -5750,9 +5855,9 @@
    "NMR",
    "mass-spectrometry"
   ],
-  "license_tier": "unknown",
+  "license_tier": "restricted",
   "license": null,
-  "license_detection": null,
+  "license_detection": "vendor-product",
   "used_by_skills": [
    "acquisition-mode-enumeration-and-validation",
    "batch-script-execution-and-automation",
@@ -5791,11 +5896,12 @@
    "threshold-based-library-validation",
    "uhplc-hrms-ms-data-matching"
   ],
-  "license_subject": null,
+  "license_subject": "tool",
   "source_paper_repos": [
    "GarrettLab-UF/LipidMatch"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "vendor_product"
  },
  {
   "slug": "conda",
@@ -6087,7 +6193,8 @@
    "yuxuanliao/PACCS",
    "zxguocsu/GCMSFormer"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "consensus-clustering",
@@ -6159,7 +6266,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "constraint-based-stoichiometric-metabolic-models",
@@ -6228,7 +6336,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "converterbuilder",
@@ -6294,7 +6403,8 @@
   "source_paper_repos": [
    "RECETOX/MSMetaEnhancer"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "convolutional-neural-network-cnn",
@@ -6357,7 +6467,8 @@
   "source_paper_repos": [
    "massspecdl/ChemEmbed"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "convolutional-neural-network",
@@ -6406,7 +6517,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "cordbat",
@@ -6434,7 +6546,8 @@
   "source_paper_repos": [
    "BorchLab/CordBat"
   ],
-  "repo_url": "BorchLab/CordBat"
+  "repo_url": "BorchLab/CordBat",
+  "entry_kind": "software"
  },
  {
   "slug": "corems",
@@ -6502,7 +6615,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/EMSL-Computing/CoreMS"
+  "repo_url": "https://github.com/EMSL-Computing/CoreMS",
+  "entry_kind": "software"
  },
  {
   "slug": "cosine-neutral-loss-repository",
@@ -6523,7 +6637,8 @@
   "source_paper_repos": [
    "bittremieux/cosine_neutral_loss"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "cosine-neutral-loss",
@@ -6545,7 +6660,8 @@
   "source_paper_repos": [
    "bittremieux/cosine_neutral_loss"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "cox-nnet",
@@ -6587,7 +6703,8 @@
   "source_paper_repos": [
    "lanagarmire/lilikoi2"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "cox-ph",
@@ -6629,7 +6746,8 @@
   "source_paper_repos": [
    "lanagarmire/lilikoi2"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "cpat",
@@ -6679,7 +6797,8 @@
   "source_paper_repos": [
    "ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "crest",
@@ -6713,7 +6832,8 @@
   "source_paper_repos": [
    "grimme-lab/QCxMS2"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "csi-fingerid",
@@ -6759,7 +6879,8 @@
   "source_paper_repos": [
    "sirius-ms/sirius"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "cts",
@@ -6850,7 +6971,8 @@
    "RECETOX/MSMetaEnhancer",
    "rickhelmus/patRoon"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "cuda-toolkit",
@@ -6882,7 +7004,8 @@
   "source_paper_repos": [
    "Noble-Lab/casanovo"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "cuda",
@@ -6966,7 +7089,8 @@
    "sword-nan/SpecEmbedding",
    "wh-xu/Hyper-Spec"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "cudnn",
@@ -6995,7 +7119,8 @@
   "source_paper_repos": [
    "chensaian/TransG-Net"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "curl",
@@ -7030,7 +7155,8 @@
   "source_paper_repos": [
    "ComPlat/chem-spectra-app"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "cyclobranch",
@@ -7063,7 +7189,8 @@
   "source_paper_repos": [
    "privrja/MassSpecBlocks"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "cypreact",
@@ -7093,7 +7220,8 @@
   "source_paper_repos": [
    "https://bitbucket.org/Leon_Ti/cypreact.git"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "cyproduct",
@@ -7121,7 +7249,8 @@
   "source_paper_repos": [
    "Le0nT1/CyProduct"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "cytoscape-js",
@@ -7144,7 +7273,8 @@
   "source_paper_repos": [
    "dgrapov/MetaMapR"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "cytoscape",
@@ -7353,7 +7483,8 @@
    "Karnovsky-Lab/DNEA",
    "lanagarmire/lilikoi2"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "d3-js",
@@ -7385,7 +7516,8 @@
   "source_paper_repos": [
    "Wang-Bioinformatics-Lab/NetworkFamily_MultipleAlignment_Website"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "data-table",
@@ -7469,7 +7601,8 @@
    "BalunasLab/mpact",
    "BiosystemEngineeringLab-IITB/dures"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "dbdipy",
@@ -7506,7 +7639,8 @@
   "source_paper_repos": [
    "leopold-weidner/DBDIpy"
   ],
-  "repo_url": "leopold-weidner/DBDIpy"
+  "repo_url": "leopold-weidner/DBDIpy",
+  "entry_kind": "software"
  },
  {
   "slug": "dbnorm",
@@ -7542,7 +7676,8 @@
   "source_paper_repos": [
    "NBDZ/dbnorm"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "decision-tree-classifier-scikit-learn-or-equivalent-tree-based-ml-framework",
@@ -7577,7 +7712,8 @@
   "source_paper_repos": [
    "biorack/chemecho"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "decometdia",
@@ -7603,7 +7739,8 @@
   "source_paper_repos": [
    "ZhuMSLab/DecoMetDIA"
   ],
-  "repo_url": "ZhuMSLab/DecoMetDIA"
+  "repo_url": "ZhuMSLab/DecoMetDIA",
+  "entry_kind": "software"
  },
  {
   "slug": "deepmass2",
@@ -7636,7 +7773,8 @@
   "source_paper_repos": [
    "hcji/DeepMASS2_Data_Processing"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "deimos",
@@ -7703,7 +7841,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/pnnl/deimos"
+  "repo_url": "https://github.com/pnnl/deimos",
+  "entry_kind": "software"
  },
  {
   "slug": "deoptim",
@@ -7747,7 +7886,8 @@
   "source_paper_repos": [
    "BiosystemEngineeringLab-IITB/dures"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "depthcharge",
@@ -7779,7 +7919,8 @@
   "source_paper_repos": [
    "Noble-Lab/casanovo"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "dereplicator",
@@ -7827,7 +7968,8 @@
   "source_paper_repos": [
    "ablab/npdtools"
   ],
-  "repo_url": "ablab/npdtools"
+  "repo_url": "ablab/npdtools",
+  "entry_kind": "software"
  },
  {
   "slug": "deseq2",
@@ -7877,7 +8019,8 @@
   "source_paper_repos": [
    "ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
   ],
-  "repo_url": "https://github.com/thelovelab/DESeq2"
+  "repo_url": "https://github.com/thelovelab/DESeq2",
+  "entry_kind": "software"
  },
  {
   "slug": "devtools",
@@ -7999,7 +8142,8 @@
    "kilgain/MassSpec",
    "komorowskilab/MetaFetcheR"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "dgl",
@@ -8037,7 +8181,8 @@
   "source_paper_repos": [
    "HopkinsLaboratory/Graphormer-RT"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "di-ms",
@@ -8076,7 +8221,8 @@
   "source_paper_repos": [
    "Katherine00689/RapidMass"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "dia-nn",
@@ -8126,7 +8272,8 @@
   "source_paper_repos": [
    "Roestlab/massdash"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "diffspectra",
@@ -8153,7 +8300,8 @@
   "source_paper_repos": [
    "AzureLeon1/DiffSpectra"
   ],
-  "repo_url": "AzureLeon1/DiffSpectra"
+  "repo_url": "AzureLeon1/DiffSpectra",
+  "entry_kind": "software"
  },
  {
   "slug": "dimorphite-dl",
@@ -8197,7 +8345,8 @@
   "source_paper_repos": [
    "DasSusanta/snakemake_ccs"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "django",
@@ -8228,7 +8377,8 @@
   "source_paper_repos": [
    "RTKlab-BYU/MSConnect"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "docker-compose",
@@ -8287,7 +8437,8 @@
   "source_paper_repos": [
    "mwang87/NP-Classifier"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "docker-desktop-for-mac",
@@ -8333,7 +8484,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "docker-docker-build-docker-inspect-docker-system-df",
@@ -8376,7 +8528,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "docker-engine",
@@ -8422,7 +8575,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "docker",
@@ -8844,7 +8998,8 @@
    "vdhooftcompmet/MS2LDA",
    "volvox292/mass2smiles"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "dockerfile-multi-stage-build-with-target-flag",
@@ -8887,7 +9042,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "doparallel",
@@ -8929,7 +9085,8 @@
   "source_paper_repos": [
    "antonvsdata/notame"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "dplyr",
@@ -9029,7 +9186,8 @@
    "SydneyBioX/hRUV",
    "kilgain/MassSpec"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "dropms",
@@ -9104,7 +9262,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "drugbank-extraction-py",
@@ -9136,7 +9295,8 @@
   "source_paper_repos": [
    "corinnabrungs/msn_tree_library"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "drugbank",
@@ -9173,7 +9333,8 @@
   "source_paper_repos": [
    "daniellyz/meRgeION2"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "dures",
@@ -9216,7 +9377,8 @@
   "source_paper_repos": [
    "BiosystemEngineeringLab-IITB/dures"
   ],
-  "repo_url": "BiosystemEngineeringLab-IITB/dures"
+  "repo_url": "BiosystemEngineeringLab-IITB/dures",
+  "entry_kind": "software"
  },
  {
   "slug": "dynaconf",
@@ -9302,7 +9464,8 @@
   "source_paper_repos": [
    "NPLinker/nplinker"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "dynamic-time-warping-dtw",
@@ -9340,7 +9503,8 @@
   "source_paper_repos": [
    "ChiungTingWu/ncGTW"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "dynamictreecut",
@@ -9388,7 +9552,8 @@
   "source_paper_repos": [
    "cbroeckl/RAMClustR"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "edger",
@@ -9458,7 +9623,8 @@
    "ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
    "ShinyFabio/ADViSELipidomics"
   ],
-  "repo_url": "https://github.com/bioc/edgeR"
+  "repo_url": "https://github.com/bioc/edgeR",
+  "entry_kind": "software"
  },
  {
   "slug": "eflux",
@@ -9527,7 +9693,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "elastic-net-regression",
@@ -9599,7 +9766,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "elastic-net",
@@ -9675,7 +9843,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "elemcor",
@@ -9710,7 +9879,8 @@
   "source_paper_repos": [
    "4dsoftware/elemcor"
   ],
-  "repo_url": "4dsoftware/elemcor"
+  "repo_url": "4dsoftware/elemcor",
+  "entry_kind": "software"
  },
  {
   "slug": "elementtree",
@@ -9777,7 +9947,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "email-service",
@@ -9821,7 +9992,8 @@
   "source_paper_repos": [
    "czbiohub-sf/Rapid-QC-MS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "emperor",
@@ -9867,7 +10039,8 @@
   "source_paper_repos": [
    "mwang87/ReDU-MS2-Documentation"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "enpkg",
@@ -9901,7 +10074,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "entropy-search",
@@ -9952,7 +10126,8 @@
   "source_paper_repos": [
    "YuanyueLi/FlashEntropySearch"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
@@ -9996,7 +10171,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "envipat",
@@ -10054,7 +10230,8 @@
    "YasinEl/mzRAPP",
    "jcapelladesto/isoSCAN"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "environment",
@@ -10118,7 +10295,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "excalibur",
@@ -10158,7 +10336,8 @@
   "source_paper_repos": [
    "98104781/LSG"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "expressionset",
@@ -10200,7 +10379,8 @@
   "source_paper_repos": [
    "antonvsdata/notame"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "factoextra",
@@ -10241,7 +10421,8 @@
   "source_paper_repos": [
    "LargeMetabo/LargeMetabo"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "falcon",
@@ -10292,7 +10473,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/bittremieuxlab/falcon"
+  "repo_url": "https://github.com/bittremieuxlab/falcon",
+  "entry_kind": "software"
  },
  {
   "slug": "fastqc",
@@ -10342,7 +10524,8 @@
   "source_paper_repos": [
    "ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "featurefindermetabo",
@@ -10386,7 +10569,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "fella",
@@ -10430,7 +10614,8 @@
   "source_paper_repos": [
    "b2slab/mWISE"
   ],
-  "repo_url": "https://github.com/bioc/FELLA"
+  "repo_url": "https://github.com/bioc/FELLA",
+  "entry_kind": "software"
  },
  {
   "slug": "fgsea",
@@ -10471,7 +10656,8 @@
   "source_paper_repos": [
    "biodatalab/enrichmet"
   ],
-  "repo_url": "https://github.com/alserglab/fgsea"
+  "repo_url": "https://github.com/alserglab/fgsea",
+  "entry_kind": "software"
  },
  {
   "slug": "fiddle",
@@ -10539,7 +10725,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/JosieHong/FIDDLE"
+  "repo_url": "https://github.com/JosieHong/FIDDLE",
+  "entry_kind": "software"
  },
  {
   "slug": "figshare",
@@ -10585,7 +10772,8 @@
   "source_paper_repos": [
    "sword-nan/SpecEmbedding"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "filtering-augmentation",
@@ -10634,7 +10822,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "fimo",
@@ -10684,7 +10873,8 @@
   "source_paper_repos": [
    "ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "fisher-s-exact-test",
@@ -10725,7 +10915,8 @@
   "source_paper_repos": [
    "biodatalab/enrichmet"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "flake8",
@@ -10751,7 +10942,8 @@
   "source_paper_repos": [
    "medema-group/BiG-SCAPE"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "flask",
@@ -10790,7 +10982,8 @@
   "source_paper_repos": [
    "ComPlat/chem-spectra-app"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "flux-variability-analysis-fva",
@@ -10859,7 +11052,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "flux-variability-analysis",
@@ -10928,7 +11122,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "fmcsr",
@@ -10983,7 +11178,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/girke-lab/fmcsR"
+  "repo_url": "https://github.com/girke-lab/fmcsR",
+  "entry_kind": "software"
  },
  {
   "slug": "fnicm",
@@ -11006,7 +11202,8 @@
   "source_paper_repos": [
    "LiQi94/FNICM"
   ],
-  "repo_url": "LiQi94/FNICM"
+  "repo_url": "LiQi94/FNICM",
+  "entry_kind": "software"
  },
  {
   "slug": "foodmasst",
@@ -11065,7 +11262,8 @@
   "source_paper_repos": [
    "mwang87/MASST"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "formularity",
@@ -11140,7 +11338,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "freda",
@@ -11215,7 +11414,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "future-apply",
@@ -11270,7 +11470,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "future",
@@ -11325,7 +11526,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "galaxy-genomics-framework",
@@ -11351,7 +11553,8 @@
   "source_paper_repos": [
    "secimTools/SECIMTools"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "galaxy",
@@ -11389,7 +11592,8 @@
    "Viant-Metabolomics/Galaxy-M",
    "wanchanglin/ionflow"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "gcims",
@@ -11433,7 +11637,8 @@
   "source_paper_repos": [
    "sipss/GCIMS"
   ],
-  "repo_url": "sipss/GCIMS"
+  "repo_url": "sipss/GCIMS",
+  "entry_kind": "software"
  },
  {
   "slug": "gensim",
@@ -11558,7 +11763,8 @@
    "Qiong-Yang/FastEI",
    "vdhooftcompmet/MS2LDA"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "geodesic-interpolate",
@@ -11592,7 +11798,8 @@
   "source_paper_repos": [
    "grimme-lab/QCxMS2"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "george",
@@ -11627,7 +11834,8 @@
   "source_paper_repos": [
    "jcapelladesto/geoRge"
   ],
-  "repo_url": "jcapelladesto/geoRge"
+  "repo_url": "jcapelladesto/geoRge",
+  "entry_kind": "software"
  },
  {
   "slug": "get-models-sh",
@@ -11669,7 +11877,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "get-precmz-prodmz",
@@ -11693,7 +11902,8 @@
   "source_paper_repos": [
    "kslynn128171/MRMQuant"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "getfeatistics",
@@ -11741,7 +11951,8 @@
   "source_paper_repos": [
    "FrigerioGianfranco/GetFeatistics"
   ],
-  "repo_url": "FrigerioGianfranco/GetFeatistics"
+  "repo_url": "FrigerioGianfranco/GetFeatistics",
+  "entry_kind": "software"
  },
  {
   "slug": "ggplot",
@@ -11799,7 +12010,8 @@
   "source_paper_repos": [
    "BalunasLab/mpact"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ggplot2",
@@ -12064,7 +12276,8 @@
    "kilgain/MassSpec",
    "wesleyburr/subMaldi"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "git",
@@ -12282,7 +12495,8 @@
    "zhanghailiangcsu/MSBERT",
    "zhanghailiangcsu/MWFormer"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "github-actions-workflow-ci-build-yml",
@@ -12302,7 +12516,8 @@
   "source_paper_repos": [
    "fermo-metabolomics/FERMO"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "github-actions",
@@ -12458,7 +12673,8 @@
    "iomega/ms2query",
    "systemsomicslab/MsdialWorkbench"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "github-com-bittremieux-cosine-neutral-loss",
@@ -12478,7 +12694,8 @@
   "source_paper_repos": [
    "bittremieux/cosine_neutral_loss"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "github-com-hassounlab-esp",
@@ -12514,7 +12731,8 @@
   "source_paper_repos": [
    "HassounLab/ESP"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "github-com-jlichtarge-pcaglasso",
@@ -12543,7 +12761,8 @@
   "source_paper_repos": [
    "jlichtarge/pcaGLASSO"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "github-com-wanluliulab-spatialmeta",
@@ -12582,7 +12801,8 @@
   "source_paper_repos": [
    "WanluLiuLab/SpatialMETA"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "github-com-zsspython-lagf",
@@ -12605,7 +12825,8 @@
   "source_paper_repos": [
    "zsspython/LAGF"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "github-kbseah-mass2adduct",
@@ -12654,7 +12875,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "github",
@@ -12981,7 +13203,8 @@
    "xdomingoal/erah-devel",
    "zhangxiang1205/CorrDIA"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "gitlab",
@@ -13006,7 +13229,8 @@
    "hcji/TarMet",
    "tidymass/tidymass"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "gleams",
@@ -13034,7 +13258,8 @@
   "source_paper_repos": [
    "bittremieux-lab/GLEAMS"
   ],
-  "repo_url": "bittremieux-lab/GLEAMS"
+  "repo_url": "bittremieux-lab/GLEAMS",
+  "entry_kind": "software"
  },
  {
   "slug": "gnps-gc",
@@ -13079,7 +13304,8 @@
   "source_paper_repos": [
    "bittremieux/GNPS_GC"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "gnps-lcms-visualization-dashboard",
@@ -13117,7 +13343,8 @@
   "source_paper_repos": [
    "Wang-Bioinformatics-Lab/GNPS_LCMSDashboard"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "gnps-masst",
@@ -13178,7 +13405,8 @@
   "source_paper_repos": [
    "mwang87/MASST"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "gnps-molecular-networking",
@@ -13212,7 +13440,8 @@
   "source_paper_repos": [
    "mwang87/MetabolomicsSpectrumResolver"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "gnps-spectral-libraries",
@@ -13246,7 +13475,8 @@
   "source_paper_repos": [
    "mwang87/MetabolomicsSpectrumResolver"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "gnps-spectral-networking-molecular-networking",
@@ -13293,7 +13523,8 @@
   "source_paper_repos": [
    "ablab/npdtools"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "gnps",
@@ -13702,7 +13933,8 @@
    "sneumann/xcms",
    "zquinlan/concise"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "gnps2",
@@ -13816,7 +14048,8 @@
    "Wang-Bioinformatics-Lab/GNPS2_Workflows",
    "mwang87/ReDU-MS2-Documentation"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "gnuplot",
@@ -13840,7 +14073,8 @@
   "source_paper_repos": [
    "matteogiulietti/LipidOne"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "google-chrome",
@@ -13866,7 +14100,8 @@
   "source_paper_repos": [
    "lidawei1975/colmarvista"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "google-colab",
@@ -13892,7 +14127,8 @@
   "source_paper_repos": [
    "alexandrovteam/SpaceM"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "google-colaboratory",
@@ -13921,7 +14157,8 @@
   "source_paper_repos": [
    "facundof2016/CCSP2.0"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
@@ -13963,7 +14200,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "graphical-time-warping-gtw",
@@ -14001,7 +14239,8 @@
   "source_paper_repos": [
    "ChiungTingWu/ncGTW"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "graphormer",
@@ -14038,7 +14277,8 @@
   "source_paper_repos": [
    "HopkinsLaboratory/Graphormer-RT"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "grid",
@@ -14068,7 +14308,8 @@
   "source_paper_repos": [
    "LeaveMeNotTonight/CMDN"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "gunicorn",
@@ -14103,7 +14344,8 @@
   "source_paper_repos": [
    "ComPlat/chem-spectra-app"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "gx-fba",
@@ -14172,7 +14414,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "h2o",
@@ -14214,7 +14457,8 @@
   "source_paper_repos": [
    "lanagarmire/lilikoi2"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "h5py-2-7-1",
@@ -14244,7 +14488,8 @@
   "source_paper_repos": [
    "wabdelmoula/massNet"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "h5py",
@@ -14368,7 +14613,8 @@
    "bioinfo-ibms-pumc/SMART",
    "wabdelmoula/massNet"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "hacca",
@@ -14398,7 +14644,8 @@
   "source_paper_repos": [
    "LittleLittleCloud/haCCA"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "hassounlab-bam",
@@ -14434,7 +14681,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
@@ -14475,7 +14723,8 @@
   "source_paper_repos": [
    "swinnenteam/LipidQMap"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "hdf5",
@@ -14534,7 +14783,8 @@
   "source_paper_repos": [
    "PNNL-m-q/mza"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "hdf5plugin",
@@ -14614,7 +14864,8 @@
   "source_paper_repos": [
    "PNNL-m-q/mzapy"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "hierarchical-clustering-euclidean-distance-complete-linkage",
@@ -14686,7 +14937,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "hineslab-moccal",
@@ -14729,7 +14981,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "hmdb-4",
@@ -14811,7 +15064,8 @@
   "source_paper_repos": [
    "shuzhao-li-lab/asari"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "hmdb",
@@ -14887,7 +15141,8 @@
   "source_paper_repos": [
    "griquelme/tidyms"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "hnswlib",
@@ -14919,7 +15174,8 @@
   "source_paper_repos": [
    "Qiong-Yang/FastEI"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "homebrew",
@@ -14950,7 +15206,8 @@
   "source_paper_repos": [
    "eugenemel/maven"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "hruv",
@@ -14990,7 +15247,8 @@
   "source_paper_repos": [
    "SydneyBioX/hRUV"
   ],
-  "repo_url": "SydneyBioX/hRUV"
+  "repo_url": "SydneyBioX/hRUV",
+  "entry_kind": "software"
  },
  {
   "slug": "html",
@@ -15020,7 +15278,8 @@
   "source_paper_repos": [
    "RTKlab-BYU/MSConnect"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "htseq-v-0-6-1",
@@ -15089,7 +15348,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "https-doi-org-10-5281-zenodo-11243781",
@@ -15129,7 +15389,8 @@
   "source_paper_repos": [
    "emosca-cnr/margheRita"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "https-github-com-emosca-cnr-margherita",
@@ -15169,7 +15430,8 @@
   "source_paper_repos": [
    "emosca-cnr/margheRita"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "https-github-com-sdrogers-nplinker",
@@ -15241,7 +15503,8 @@
   "source_paper_repos": [
    "NPLinker/nplinker"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "https-github-com-shuzhao-li-asari",
@@ -15318,7 +15581,8 @@
   "source_paper_repos": [
    "shuzhao-li-lab/asari"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "hugging-face-transformers",
@@ -15350,7 +15614,8 @@
   "source_paper_repos": [
    "OpenDFM/MS-BART"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "human-metabolome-database-hmdb",
@@ -15384,7 +15649,8 @@
   "source_paper_repos": [
    "Leo-Cheng-Lab/ROIAL-NMR"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "hyperspec",
@@ -15419,7 +15685,8 @@
   "source_paper_repos": [
    "wh-xu/Hyper-Spec"
   ],
-  "repo_url": "wh-xu/Hyper-Spec"
+  "repo_url": "wh-xu/Hyper-Spec",
+  "entry_kind": "software"
  },
  {
   "slug": "i-van-krevelen",
@@ -15494,7 +15761,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "iceberg-model",
@@ -15531,7 +15799,8 @@
   "source_paper_repos": [
    "samgoldman97/ms-pred"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "iceberg-webui",
@@ -15590,7 +15859,8 @@
   "source_paper_repos": [
    "samgoldman97/ms-pred"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "iceberg",
@@ -15630,7 +15900,8 @@
   "source_paper_repos": [
    "samgoldman97/ms-pred"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "idsl-csa",
@@ -15666,7 +15937,8 @@
   "source_paper_repos": [
    "idslme/IDSL.CSA"
   ],
-  "repo_url": "idslme/IDSL.CSA"
+  "repo_url": "idslme/IDSL.CSA",
+  "entry_kind": "software"
  },
  {
   "slug": "idsl-ipa",
@@ -15719,7 +15991,8 @@
    "idslme/IDSL.IPA",
    "idslme/IDSL.UFA"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "idsl-ufa",
@@ -15748,7 +16021,8 @@
   "source_paper_repos": [
    "idslme/IDSL.UFA"
   ],
-  "repo_url": "idslme/IDSL.UFA"
+  "repo_url": "idslme/IDSL.UFA",
+  "entry_kind": "software"
  },
  {
   "slug": "idsm",
@@ -15815,7 +16089,8 @@
   "source_paper_repos": [
    "RECETOX/MSMetaEnhancer"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "igraph",
@@ -15912,7 +16187,8 @@
    "b2slab/mWISE",
    "biodatalab/enrichmet"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "image-processing-toolbox",
@@ -15942,7 +16218,8 @@
   "source_paper_repos": [
    "AdrianHaun/AriumMS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "impute",
@@ -15981,7 +16258,8 @@
   "source_paper_repos": [
    "idrblab/NOREVA;"
   ],
-  "repo_url": "https://github.com/bioc/impute"
+  "repo_url": "https://github.com/bioc/impute",
+  "entry_kind": "software"
  },
  {
   "slug": "imzml-writer",
@@ -16013,7 +16291,8 @@
   "source_paper_repos": [
    "VIU-Metabolomics/imzML_Writer"
   ],
-  "repo_url": "VIU-Metabolomics/imzML_Writer"
+  "repo_url": "VIU-Metabolomics/imzML_Writer",
+  "entry_kind": "software"
  },
  {
   "slug": "independentmassspectrometer",
@@ -16077,7 +16356,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "injectiondesign",
@@ -16110,7 +16390,8 @@
   "source_paper_repos": [
    "CSi-Studio/InjectionDesign"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "intensity-dependent-missing-value-augmentation",
@@ -16159,7 +16440,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "interactiveplotter",
@@ -16208,7 +16490,8 @@
   "source_paper_repos": [
    "Roestlab/massdash"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "interactivetwodimensionplotter",
@@ -16258,7 +16541,8 @@
   "source_paper_repos": [
    "Roestlab/massdash"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "interpretmsspectrum",
@@ -16306,7 +16590,8 @@
   "source_paper_repos": [
    "cbroeckl/RAMClustR"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "iokr",
@@ -16380,7 +16665,8 @@
   "source_paper_repos": [
    "NPLinker/nplinker"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ion-identity",
@@ -16435,7 +16721,8 @@
   "source_paper_repos": [
    "luigiquiros/inventa"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ionflow",
@@ -16459,7 +16746,8 @@
   "source_paper_repos": [
    "wanchanglin/ionflow"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "iontoolpack",
@@ -16509,7 +16797,8 @@
   "source_paper_repos": [
    "pnnl/IonToolPack"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ipapy2",
@@ -16535,7 +16824,8 @@
   "source_paper_repos": [
    "francescodc87/ipaPy2"
   ],
-  "repo_url": "https://github.com/francescodc87/ipaPy2"
+  "repo_url": "https://github.com/francescodc87/ipaPy2",
+  "entry_kind": "software"
  },
  {
   "slug": "ipbhalle-metfragweb",
@@ -16570,7 +16860,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "ipresto",
@@ -16605,7 +16896,8 @@
   "source_paper_repos": [
    "https://git.wur.nl/bioinformatics/iPRESTO.git"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "isfrag",
@@ -16641,7 +16933,8 @@
   "source_paper_repos": [
    "HuanLab/ISFrag"
   ],
-  "repo_url": "HuanLab/ISFrag"
+  "repo_url": "HuanLab/ISFrag",
+  "entry_kind": "software"
  },
  {
   "slug": "isoformswitchanalyzer",
@@ -16691,7 +16984,8 @@
   "source_paper_repos": [
    "ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
   ],
-  "repo_url": "https://github.com/kvittingseerup/IsoformSwitchAnalyzeR"
+  "repo_url": "https://github.com/kvittingseerup/IsoformSwitchAnalyzeR",
+  "entry_kind": "software"
  },
  {
   "slug": "isofusion",
@@ -16726,7 +17020,8 @@
   "source_paper_repos": [
    "xfcui/IsoFusion"
   ],
-  "repo_url": "xfcui/IsoFusion"
+  "repo_url": "xfcui/IsoFusion",
+  "entry_kind": "software"
  },
  {
   "slug": "isopairfinder",
@@ -16753,7 +17048,8 @@
   "source_paper_repos": [
    "kilgain/MassSpec"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "isoscan",
@@ -16789,7 +17085,8 @@
   "source_paper_repos": [
    "jcapelladesto/isoSCAN"
   ],
-  "repo_url": "jcapelladesto/isoSCAN"
+  "repo_url": "jcapelladesto/isoSCAN",
+  "entry_kind": "software"
  },
  {
   "slug": "java-21",
@@ -16824,7 +17121,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "java",
@@ -16868,7 +17166,8 @@
    "Le0nT1/CyProduct",
    "simeoni-biolab/MetNet"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "javafx-24",
@@ -16940,7 +17239,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "javascript",
@@ -16970,7 +17270,8 @@
   "source_paper_repos": [
    "RTKlab-BYU/MSConnect"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "javax-faces-2-2-12-jar",
@@ -16993,7 +17294,8 @@
   "source_paper_repos": [
    "albertogilf/ceuMassMediator"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "jdk-25",
@@ -17065,7 +17367,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "jfreechart",
@@ -17139,7 +17442,8 @@
   "source_paper_repos": [
    "rformassspectrometry/Spectra"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "jms",
@@ -17221,7 +17525,8 @@
   "source_paper_repos": [
    "shuzhao-li-lab/asari"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "joblib",
@@ -17275,7 +17580,8 @@
    "ablab/npdtools",
    "zsspython/LAGF"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "jopt-simple",
@@ -17349,7 +17655,8 @@
   "source_paper_repos": [
    "rformassspectrometry/Spectra"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "jorhelp-docker-image",
@@ -17380,7 +17687,8 @@
   "source_paper_repos": [
    "xfcui/IsoFusion"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "jpa-r-package",
@@ -17418,7 +17726,8 @@
   "source_paper_repos": [
    "HuanLab/JPA"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "jpa",
@@ -17459,7 +17768,8 @@
   "source_paper_repos": [
    "HuanLab/JPA"
   ],
-  "repo_url": "HuanLab/JPA"
+  "repo_url": "HuanLab/JPA",
+  "entry_kind": "software"
  },
  {
   "slug": "jsonschema",
@@ -17533,7 +17843,8 @@
   "source_paper_repos": [
    "MoseleyBioinformaticsLab/mwtab"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "jupyter-lab",
@@ -17562,7 +17873,8 @@
   "source_paper_repos": [
    "facundof2016/CCSP2.0"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "jupyter-notebook",
@@ -17598,7 +17910,8 @@
   "source_paper_repos": [
    "kevinmildau/msFeaST"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "jupyter-notebooks",
@@ -17630,7 +17943,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "jupyter",
@@ -17686,7 +18000,8 @@
   "source_paper_repos": [
    "griquelme/tidyms"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "kableextra",
@@ -17745,7 +18060,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "kaleido",
@@ -17783,7 +18099,8 @@
   "source_paper_repos": [
    "pmartR/PMart_ShinyApp"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "kegg-database",
@@ -17830,7 +18147,8 @@
   "source_paper_repos": [
    "b2slab/mWISE"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "kegg",
@@ -17889,7 +18207,8 @@
    "biodatalab/enrichmet",
    "simeoni-biolab/MetNet"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "keggrest",
@@ -18014,7 +18333,8 @@
    "biodatalab/enrichmet",
    "connor-reid-tiffany/Omu"
   ],
-  "repo_url": "https://github.com/Bioconductor/KEGGREST"
+  "repo_url": "https://github.com/Bioconductor/KEGGREST",
+  "entry_kind": "software"
  },
  {
   "slug": "keras-2-2-0",
@@ -18042,7 +18362,8 @@
   "source_paper_repos": [
    "wabdelmoula/massNet"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "keras",
@@ -18154,7 +18475,8 @@
    "slfan2013/SERDA",
    "wabdelmoula/massNet"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "khipu",
@@ -18306,7 +18628,8 @@
    "shuzhao-li-lab/asari",
    "shuzhao-li-lab/khipu"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "knime",
@@ -18362,7 +18685,8 @@
    "MolecularCartography/Optimus",
    "OpenMS/OpenMS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "knitr",
@@ -18444,7 +18768,8 @@
   "source_paper_repos": [
    "MRCIEU/metaboprep"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "largemetabo",
@@ -18487,7 +18812,8 @@
   "source_paper_repos": [
    "LargeMetabo/LargeMetabo"
   ],
-  "repo_url": "LargeMetabo/LargeMetabo"
+  "repo_url": "LargeMetabo/LargeMetabo",
+  "entry_kind": "software"
  },
  {
   "slug": "latent-dirichlet-allocation-lda",
@@ -18574,7 +18900,8 @@
   "source_paper_repos": [
    "vdhooftcompmet/MS2LDA"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "lcmsworld",
@@ -18598,7 +18925,8 @@
   "source_paper_repos": [
    "PGB-LIV/lcmsWorld"
   ],
-  "repo_url": "PGB-LIV/lcmsWorld"
+  "repo_url": "PGB-LIV/lcmsWorld",
+  "entry_kind": "software"
  },
  {
   "slug": "lda-latent-dirichlet-allocation",
@@ -18635,7 +18963,8 @@
   "source_paper_repos": [
    "HassounLab/ESP"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "lib2nist",
@@ -18691,7 +19020,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "lilikoi-v2-0",
@@ -18734,7 +19064,8 @@
   "source_paper_repos": [
    "lanagarmire/lilikoi2"
   ],
-  "repo_url": "lanagarmire/lilikoi2"
+  "repo_url": "lanagarmire/lilikoi2",
+  "entry_kind": "software"
  },
  {
   "slug": "limma",
@@ -18897,7 +19228,8 @@
    "idrblab/NOREVA;",
    "sneumann/xcms"
   ],
-  "repo_url": "https://github.com/bioc/limma"
+  "repo_url": "https://github.com/bioc/limma",
+  "entry_kind": "software"
  },
  {
   "slug": "lipid-map",
@@ -18965,7 +19297,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "lipid-maps",
@@ -19003,7 +19336,8 @@
   "source_paper_repos": [
    "ShinyFabio/ADViSELipidomics"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "lipidlynxx",
@@ -19028,7 +19362,8 @@
   "source_paper_repos": [
    "SysMedOs/LipidLynxX"
   ],
-  "repo_url": "SysMedOs/LipidLynxX"
+  "repo_url": "SysMedOs/LipidLynxX",
+  "entry_kind": "software"
  },
  {
   "slug": "lipidmatch",
@@ -19102,7 +19437,8 @@
    "GarrettLab-UF/LipidMatch",
    "InnovativeOmics/Core-Match"
   ],
-  "repo_url": "GarrettLab-UF/LipidMatch"
+  "repo_url": "GarrettLab-UF/LipidMatch",
+  "entry_kind": "software"
  },
  {
   "slug": "lipidqmap",
@@ -19145,7 +19481,8 @@
   "source_paper_repos": [
    "swinnenteam/LipidQMap"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "lipidr",
@@ -19187,7 +19524,8 @@
   "source_paper_repos": [
    "ahmohamed/lipidr"
   ],
-  "repo_url": "https://github.com/ahmohamed/lipidr"
+  "repo_url": "https://github.com/ahmohamed/lipidr",
+  "entry_kind": "software"
  },
  {
   "slug": "lipidsearch",
@@ -19200,9 +19538,9 @@
    "LC-MS",
    "mass-spectrometry"
   ],
-  "license_tier": "unknown",
+  "license_tier": "restricted",
   "license": null,
-  "license_detection": null,
+  "license_detection": "vendor-product",
   "used_by_skills": [
    "batch-effect-correction-in-metabolomics",
    "file-format-standardization",
@@ -19221,11 +19559,12 @@
    "species-identifier-annotation",
    "structured-data-matrix-construction"
   ],
-  "license_subject": null,
+  "license_subject": "tool",
   "source_paper_repos": [
    "ShinyFabio/ADViSELipidomics"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "vendor_product"
  },
  {
   "slug": "lipidspace",
@@ -19255,7 +19594,8 @@
   "source_paper_repos": [
    "lifs-tools/lipidspace"
   ],
-  "repo_url": "lifs-tools/lipidspace"
+  "repo_url": "lifs-tools/lipidspace",
+  "entry_kind": "software"
  },
  {
   "slug": "lipoclean",
@@ -19288,7 +19628,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/stavis1/LipoCLEAN"
+  "repo_url": "https://github.com/stavis1/LipoCLEAN",
+  "entry_kind": "software"
  },
  {
   "slug": "liquid",
@@ -19326,7 +19667,8 @@
   "source_paper_repos": [
    "ShinyFabio/ADViSELipidomics"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "lme4",
@@ -19372,7 +19714,8 @@
   "source_paper_repos": [
    "FrigerioGianfranco/GetFeatistics"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "local-code-artifact",
@@ -19392,7 +19735,8 @@
   "source_paper_repos": [
    "CNIC-Proteomics/TurboPutative"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "lotus-database",
@@ -19446,7 +19790,8 @@
   "source_paper_repos": [
    "luigiquiros/inventa"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "lowess",
@@ -19525,7 +19870,8 @@
   "source_paper_repos": [
    "shuzhao-li-lab/asari"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "lsg-lipid-spectrum-generator",
@@ -19562,7 +19908,8 @@
   "source_paper_repos": [
    "98104781/LSG"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "lsg",
@@ -19602,7 +19949,8 @@
   "source_paper_repos": [
    "98104781/LSG"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "madbyte",
@@ -19628,7 +19976,8 @@
   "source_paper_repos": [
    "liningtonlab/madbyte"
   ],
-  "repo_url": "liningtonlab/madbyte"
+  "repo_url": "liningtonlab/madbyte",
+  "entry_kind": "software"
  },
  {
   "slug": "mag-mass2motif-annotation-guidance",
@@ -19714,7 +20063,8 @@
   "source_paper_repos": [
    "vdhooftcompmet/MS2LDA"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mag",
@@ -19799,7 +20149,8 @@
   "source_paper_repos": [
    "vdhooftcompmet/MS2LDA"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "magma",
@@ -19856,7 +20207,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/NLeSC/MAGMa"
+  "repo_url": "https://github.com/NLeSC/MAGMa",
+  "entry_kind": "software"
  },
  {
   "slug": "magrittr",
@@ -19907,7 +20259,8 @@
    "BiosystemEngineeringLab-IITB/dures",
    "krumsieklab/maplet"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "make",
@@ -19992,7 +20345,8 @@
    "eugenemel/maven",
    "lotusnprod/lotus-processor"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mamsi-mamsistructsearch",
@@ -20053,7 +20407,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mamsistructsearch",
@@ -20114,7 +20469,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mann-whitney-u-test",
@@ -20183,7 +20539,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "manual-expert-review",
@@ -20265,7 +20622,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "maplet",
@@ -20289,7 +20647,8 @@
   "source_paper_repos": [
    "krumsieklab/maplet"
   ],
-  "repo_url": "krumsieklab/maplet"
+  "repo_url": "krumsieklab/maplet",
+  "entry_kind": "software"
  },
  {
   "slug": "margherita",
@@ -20332,7 +20691,8 @@
   "source_paper_repos": [
    "emosca-cnr/margheRita"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mariadb-10",
@@ -20362,7 +20722,8 @@
   "source_paper_repos": [
    "privrja/MassSpecBlocks"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "marr",
@@ -20402,7 +20763,8 @@
   "source_paper_repos": [
    "Ghoshlab/marr"
   ],
-  "repo_url": "https://github.com/Ghoshlab/marr"
+  "repo_url": "https://github.com/Ghoshlab/marr",
+  "entry_kind": "software"
  },
  {
   "slug": "mascot-generic-format-mgf",
@@ -20425,7 +20787,8 @@
   "source_paper_repos": [
    "beherasan/MS2Compound"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mass-functions-nn-cluster-by-mz-seeds",
@@ -20505,7 +20868,8 @@
   "source_paper_repos": [
    "shuzhao-li-lab/asari"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mass-query-language-massql",
@@ -20540,7 +20904,8 @@
   "source_paper_repos": [
    "biorack/chemecho"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mass2adduct",
@@ -20595,7 +20960,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/kbseah/mass2adduct"
+  "repo_url": "https://github.com/kbseah/mass2adduct",
+  "entry_kind": "software"
  },
  {
   "slug": "mass2chem",
@@ -20635,7 +21001,8 @@
   "source_paper_repos": [
    "shuzhao-li-lab/khipu"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "massbank-web-validator",
@@ -20663,7 +21030,8 @@
   "source_paper_repos": [
    "MassBank/MassBank-data"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "massbank-web",
@@ -20689,7 +21057,8 @@
   "source_paper_repos": [
    "MassBank/MassBank-data"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "massbank",
@@ -20748,7 +21117,8 @@
    "mwang87/MetabolomicsSpectrumResolver",
    "xdomingoal/erah-devel"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "masscube",
@@ -20795,7 +21165,8 @@
   "source_paper_repos": [
    "huaxuyu/masscube"
   ],
-  "repo_url": "huaxuyu/masscube"
+  "repo_url": "huaxuyu/masscube",
+  "entry_kind": "software"
  },
  {
   "slug": "massdash-loaders-resultsloader",
@@ -20844,7 +21215,8 @@
   "source_paper_repos": [
    "Roestlab/massdash"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "massdash-peakpickers-mrmtransitiongrouppicker",
@@ -20893,7 +21265,8 @@
   "source_paper_repos": [
    "Roestlab/massdash"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "massdash-peakpickers-pymrmtransitiongrouppicker",
@@ -20942,7 +21315,8 @@
   "source_paper_repos": [
    "Roestlab/massdash"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "massdash-plotting-interactiveplotter",
@@ -20991,7 +21365,8 @@
   "source_paper_repos": [
    "Roestlab/massdash"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "massdash-structs-featuremap",
@@ -21040,7 +21415,8 @@
   "source_paper_repos": [
    "Roestlab/massdash"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "massdash",
@@ -21090,7 +21466,8 @@
   "source_paper_repos": [
    "Roestlab/massdash"
   ],
-  "repo_url": "https://github.com/Roestlab/massdash"
+  "repo_url": "https://github.com/Roestlab/massdash",
+  "entry_kind": "software"
  },
  {
   "slug": "masshunter-profinder",
@@ -21102,9 +21479,9 @@
   "techniques": [
    "LC-MS"
   ],
-  "license_tier": "unknown",
+  "license_tier": "restricted",
   "license": null,
-  "license_detection": null,
+  "license_detection": "vendor-product",
   "used_by_skills": [
    "cohen-kappa-inter-rater-reliability",
    "concordance-score-calculation-cohen-kappa",
@@ -21157,9 +21534,10 @@
    "transcript-abundance-normalization-across-cell-lines",
    "transcriptomics-reaction-activity-scoring"
   ],
-  "license_subject": null,
+  "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "vendor_product"
  },
  {
   "slug": "massive",
@@ -21206,7 +21584,8 @@
   "source_paper_repos": [
    "mwang87/ReDU-MS2-Documentation"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "massql",
@@ -21327,7 +21706,8 @@
    "mwang87/MassQueryLanguage",
    "vdhooftcompmet/MS2LDA"
   ],
-  "repo_url": "mwang87/MassQueryLanguage"
+  "repo_url": "mwang87/MassQueryLanguage",
+  "entry_kind": "software"
  },
  {
   "slug": "massqlab",
@@ -21357,7 +21737,8 @@
   "source_paper_repos": [
    "JohnsonDylan/MassQLab"
   ],
-  "repo_url": "JohnsonDylan/MassQLab"
+  "repo_url": "JohnsonDylan/MassQLab",
+  "entry_kind": "software"
  },
  {
   "slug": "massspecwavelet",
@@ -21421,7 +21802,8 @@
   "source_paper_repos": [
    "sneumann/xcms"
   ],
-  "repo_url": "https://github.com/zeehio/MassSpecWavelet"
+  "repo_url": "https://github.com/zeehio/MassSpecWavelet",
+  "entry_kind": "software"
  },
  {
   "slug": "masst",
@@ -21452,7 +21834,8 @@
   "source_paper_repos": [
    "mohimanilab/MASSTplus"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "matchms",
@@ -21694,7 +22077,8 @@
    "matchms/matchms",
    "tingxiecsu/CSU-MS2"
   ],
-  "repo_url": "https://github.com/matchms/matchms"
+  "repo_url": "https://github.com/matchms/matchms",
+  "entry_kind": "software"
  },
  {
   "slug": "math-distance",
@@ -21724,7 +22108,8 @@
   "source_paper_repos": [
    "YuanyueLi/SpectralEntropy"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "matlab-compiler-runtime-8-3",
@@ -21739,9 +22124,9 @@
    "MS-imaging",
    "mass-spectrometry"
   ],
-  "license_tier": "unknown",
+  "license_tier": "restricted",
   "license": null,
-  "license_detection": null,
+  "license_detection": "vendor-product",
   "used_by_skills": [
    "environment-dependency-management",
    "galaxy-installation-configuration",
@@ -21749,11 +22134,12 @@
    "metabolomics-tool-deployment",
    "tool-xml-wrapper-integration"
   ],
-  "license_subject": null,
+  "license_subject": "tool",
   "source_paper_repos": [
    "Viant-Metabolomics/Galaxy-M"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "vendor_product"
  },
  {
   "slug": "matlab-r2024a",
@@ -21766,9 +22152,9 @@
    "LC-MS",
    "CE-MS"
   ],
-  "license_tier": "unknown",
+  "license_tier": "restricted",
   "license": null,
-  "license_detection": null,
+  "license_detection": "vendor-product",
   "used_by_skills": [
    "data-augmentation-metabolomics",
    "mass-spectrometry-file-format-conversion",
@@ -21779,11 +22165,12 @@
    "roi-detection-mass-spectrometry",
    "vendor-data-standardization"
   ],
-  "license_subject": null,
+  "license_subject": "tool",
   "source_paper_repos": [
    "AdrianHaun/AriumMS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "vendor_product"
  },
  {
   "slug": "matlab",
@@ -21800,9 +22187,9 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "unknown",
+  "license_tier": "restricted",
   "license": null,
-  "license_detection": null,
+  "license_detection": "vendor-product",
   "used_by_skills": [
    "batch-file-processing-orchestration",
    "cdf-file-format-parsing",
@@ -21828,12 +22215,13 @@
    "simulation-output-validation",
    "untargeted-metabolomics-dataset-integration"
   ],
-  "license_subject": null,
+  "license_subject": "tool",
   "source_paper_repos": [
    "KechrisLab/DisCoPad",
    "dickinsonlab/DIMPLE-code"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "vendor_product"
  },
  {
   "slug": "matplotlib-or-seaborn-for-visualization",
@@ -21869,7 +22257,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "matplotlib",
@@ -22276,7 +22665,8 @@
    "chopralab/CLAW",
    "zsspython/LAGF"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "maven-gui",
@@ -22307,7 +22697,8 @@
   "source_paper_repos": [
    "eugenemel/maven"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "maxquant",
@@ -22377,7 +22768,8 @@
   "source_paper_repos": [
    "fgcz/rawrr"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mbpls",
@@ -22436,7 +22828,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mcfnmr",
@@ -22466,7 +22859,8 @@
   "source_paper_repos": [
    "GeoMetabolomics-ICBM/mcfNMR"
   ],
-  "repo_url": "GeoMetabolomics-ICBM/mcfNMR"
+  "repo_url": "GeoMetabolomics-ICBM/mcfNMR",
+  "entry_kind": "software"
  },
  {
   "slug": "meister",
@@ -22494,7 +22888,8 @@
   "source_paper_repos": [
    "richardxie1119/MEISTER"
   ],
-  "repo_url": "richardxie1119/MEISTER"
+  "repo_url": "richardxie1119/MEISTER",
+  "entry_kind": "software"
  },
  {
   "slug": "melonnpan-elastic-net-linear-regression",
@@ -22566,7 +22961,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "melonnpan",
@@ -22642,7 +23038,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "memo-ms",
@@ -22698,7 +23095,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "memo",
@@ -22791,7 +23189,8 @@
   "source_paper_repos": [
    "luigiquiros/inventa"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mergeion2",
@@ -22829,7 +23228,8 @@
   "source_paper_repos": [
    "daniellyz/meRgeION2"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "messes",
@@ -22901,7 +23301,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "metabcombiner",
@@ -22944,7 +23345,8 @@
   "source_paper_repos": [
    "hhabra/metabCombiner"
   ],
-  "repo_url": "https://www.github.com/hhabra/metabCombiner"
+  "repo_url": "https://www.github.com/hhabra/metabCombiner",
+  "entry_kind": "software"
  },
  {
   "slug": "metaboanalyst",
@@ -23104,7 +23506,8 @@
    "cellbiomaths/MInfer",
    "scibiome/meteor"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "metaboanalystr",
@@ -23137,7 +23540,8 @@
   "source_paper_repos": [
    "xia-lab/MetaboAnalystR"
   ],
-  "repo_url": "xia-lab/MetaboAnalystR"
+  "repo_url": "xia-lab/MetaboAnalystR",
+  "entry_kind": "software"
  },
  {
   "slug": "metaboannotator",
@@ -23190,7 +23594,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/gggraca/MetaboAnnotatoR"
+  "repo_url": "https://github.com/gggraca/MetaboAnnotatoR",
+  "entry_kind": "software"
  },
  {
   "slug": "metabocoreutils",
@@ -23275,7 +23680,8 @@
    "LiesaSalzer/MobilityTransformR",
    "sneumann/xcms"
   ],
-  "repo_url": "https://github.com/RforMassSpectrometry/MetaboCoreUtils"
+  "repo_url": "https://github.com/RforMassSpectrometry/MetaboCoreUtils",
+  "entry_kind": "software"
  },
  {
   "slug": "metabodiff",
@@ -23320,7 +23726,8 @@
   "source_paper_repos": [
    "andreasmock/MetaboDiff"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "metabodirect",
@@ -23397,7 +23804,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/Coayala/MetaboDirect"
+  "repo_url": "https://github.com/Coayala/MetaboDirect",
+  "entry_kind": "software"
  },
  {
   "slug": "metabolabpy",
@@ -23421,7 +23829,8 @@
   "source_paper_repos": [
    "ludwigc/metabolabpy"
   ],
-  "repo_url": "https://github.com/ludwigc/metabolabpy"
+  "repo_url": "https://github.com/ludwigc/metabolabpy",
+  "entry_kind": "software"
  },
  {
   "slug": "metabolights",
@@ -23457,7 +23866,8 @@
   "source_paper_repos": [
    "mwang87/MetabolomicsSpectrumResolver"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "metabolomics-workbench-api",
@@ -23498,7 +23908,8 @@
   "source_paper_repos": [
    "ahmohamed/lipidr"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "metabolomics-workbench",
@@ -23532,7 +23943,8 @@
   "source_paper_repos": [
    "mwang87/MetabolomicsSpectrumResolver"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "metaboprep",
@@ -23572,7 +23984,8 @@
   "source_paper_repos": [
    "MRCIEU/metaboprep"
   ],
-  "repo_url": "MRCIEU/metaboprep"
+  "repo_url": "MRCIEU/metaboprep",
+  "entry_kind": "software"
  },
  {
   "slug": "metaboshiny",
@@ -23615,7 +24028,8 @@
   "source_paper_repos": [
    "joannawolthuis/MetaboShiny"
   ],
-  "repo_url": "joannawolthuis/MetaboShiny"
+  "repo_url": "joannawolthuis/MetaboShiny",
+  "entry_kind": "software"
  },
  {
   "slug": "metaclean",
@@ -23654,7 +24068,8 @@
   "source_paper_repos": [
    "KelseyChetnik/MetaClean"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "metadatamasst",
@@ -23713,7 +24128,8 @@
   "source_paper_repos": [
    "mwang87/MASST"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "metamapr",
@@ -23736,7 +24152,8 @@
   "source_paper_repos": [
    "dgrapov/MetaMapR"
   ],
-  "repo_url": "dgrapov/MetaMapR"
+  "repo_url": "dgrapov/MetaMapR",
+  "entry_kind": "software"
  },
  {
   "slug": "metaminer",
@@ -23784,7 +24201,8 @@
   "source_paper_repos": [
    "ablab/npdtools"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "metams",
@@ -23813,7 +24231,8 @@
   "source_paper_repos": [
    "HuanLab/DaDIA"
   ],
-  "repo_url": "https://github.com/yguitton/metaMS"
+  "repo_url": "https://github.com/yguitton/metaMS",
+  "entry_kind": "software"
  },
  {
   "slug": "metanet",
@@ -23848,7 +24267,8 @@
   "source_paper_repos": [
    "Asa12138/MetaNet"
   ],
-  "repo_url": "Asa12138/MetaNet"
+  "repo_url": "Asa12138/MetaNet",
+  "entry_kind": "software"
  },
  {
   "slug": "metanorm-r-package",
@@ -23879,7 +24299,8 @@
   "source_paper_repos": [
    "UGent-LIMET/Metanorm"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "metanorm",
@@ -23912,7 +24333,8 @@
   "source_paper_repos": [
    "UGent-LIMET/Metanorm"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "metaxtract",
@@ -23937,7 +24359,8 @@
   "source_paper_repos": [
    "Rappsilber-Laboratory/MetaXtract"
   ],
-  "repo_url": "Rappsilber-Laboratory/MetaXtract"
+  "repo_url": "Rappsilber-Laboratory/MetaXtract",
+  "entry_kind": "software"
  },
  {
   "slug": "metcohort",
@@ -23968,7 +24391,8 @@
   "source_paper_repos": [
    "JunYang2021/MetCohort"
   ],
-  "repo_url": "JunYang2021/MetCohort"
+  "repo_url": "JunYang2021/MetCohort",
+  "entry_kind": "software"
  },
  {
   "slug": "metcorr",
@@ -24011,7 +24435,8 @@
   "source_paper_repos": [
    "plyush1993/OUKS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "metdatamodel",
@@ -24051,7 +24476,8 @@
   "source_paper_repos": [
    "shuzhao-li-lab/khipu"
   ],
-  "repo_url": "https://github.com/shuzhao-li/metDataModel"
+  "repo_url": "https://github.com/shuzhao-li/metDataModel",
+  "entry_kind": "software"
  },
  {
   "slug": "metdna2-r-package",
@@ -24069,7 +24495,8 @@
   "source_paper_repos": [
    "ZhuMetLab/MetDNA2"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "meteor",
@@ -24102,7 +24529,8 @@
   "source_paper_repos": [
    "scibiome/meteor"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "metfrag",
@@ -24213,7 +24641,8 @@
    "rickhelmus/patRoon",
    "zmahnoor14/MAW"
   ],
-  "repo_url": "http://c-ruttkies.github.io/MetFrag/"
+  "repo_url": "http://c-ruttkies.github.io/MetFrag/",
+  "entry_kind": "software"
  },
  {
   "slug": "metnet",
@@ -24244,7 +24673,8 @@
   "source_paper_repos": [
    "simeoni-biolab/MetNet"
   ],
-  "repo_url": "https://github.com/bioc/MetNet"
+  "repo_url": "https://github.com/bioc/MetNet",
+  "entry_kind": "software"
  },
  {
   "slug": "metscriber",
@@ -24274,7 +24704,8 @@
   "source_paper_repos": [
    "ncats/metScribeR"
   ],
-  "repo_url": "ncats/metScribeR"
+  "repo_url": "ncats/metScribeR",
+  "entry_kind": "software"
  },
  {
   "slug": "mgcv",
@@ -24317,7 +24748,8 @@
   "source_paper_repos": [
    "hhabra/metabCombiner"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mibig",
@@ -24405,7 +24837,8 @@
   "source_paper_repos": [
    "NPLinker/nplinker"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "microbemasst",
@@ -24464,7 +24897,8 @@
   "source_paper_repos": [
    "mwang87/MASST"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "microbiomemasst",
@@ -24523,7 +24957,8 @@
   "source_paper_repos": [
    "mwang87/MASST"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "microsoft-visual-c-runtime-x64",
@@ -24536,9 +24971,9 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "unknown",
+  "license_tier": "restricted",
   "license": null,
-  "license_detection": null,
+  "license_detection": "vendor-product",
   "used_by_skills": [
    "artifact-removal-in-ims-data",
    "frame-metadata-extraction-and-export",
@@ -24564,11 +24999,12 @@
    "spike-artifact-detection-and-removal",
    "tof-ms-signal-enhancement-low-abundance"
   ],
-  "license_subject": null,
+  "license_subject": "tool",
   "source_paper_repos": [
    "PNNL-Comp-Mass-Spec/PNNL-PreProcessor"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "vendor_product"
  },
  {
   "slug": "mimenet",
@@ -24645,7 +25081,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/YDaiLab/MiMeNet"
+  "repo_url": "https://github.com/YDaiLab/MiMeNet",
+  "entry_kind": "software"
  },
  {
   "slug": "mimir",
@@ -24675,7 +25112,8 @@
   "source_paper_repos": [
    "DanieleBizzarri/MiMIR"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "minems2",
@@ -24702,7 +25140,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "minfer",
@@ -24733,7 +25172,8 @@
   "source_paper_repos": [
    "cellbiomaths/MInfer"
   ],
-  "repo_url": "cellbiomaths/MInfer"
+  "repo_url": "cellbiomaths/MInfer",
+  "entry_kind": "software"
  },
  {
   "slug": "miniconda",
@@ -24779,7 +25219,8 @@
   "source_paper_repos": [
    "LabLaskin/MSIGen"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mirador",
@@ -24828,7 +25269,8 @@
   "source_paper_repos": [
    "pnnl/IonToolPack"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "missforest",
@@ -24870,7 +25312,8 @@
   "source_paper_repos": [
    "antonvsdata/notame"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mist-cf",
@@ -24935,7 +25378,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/samgoldman97/mist-cf"
+  "repo_url": "https://github.com/samgoldman97/mist-cf",
+  "entry_kind": "software"
  },
  {
   "slug": "mist",
@@ -25011,7 +25455,8 @@
   "source_paper_repos": [
    "samgoldman97/mist"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mixomics",
@@ -25075,7 +25520,8 @@
    "DanielQuiroz97/RGCxGC",
    "LargeMetabo/LargeMetabo"
   ],
-  "repo_url": "https://github.com/mixOmicsTeam/mixOmics"
+  "repo_url": "https://github.com/mixOmicsTeam/mixOmics",
+  "entry_kind": "software"
  },
  {
   "slug": "mobilipid",
@@ -25114,7 +25560,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mobilitytransformr",
@@ -25153,7 +25600,8 @@
   "source_paper_repos": [
    "LiesaSalzer/MobilityTransformR"
   ],
-  "repo_url": "LiesaSalzer/MobilityTransformR"
+  "repo_url": "LiesaSalzer/MobilityTransformR",
+  "entry_kind": "software"
  },
  {
   "slug": "moccal",
@@ -25197,7 +25645,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/HinesLab/MOCCal"
+  "repo_url": "https://github.com/HinesLab/MOCCal",
+  "entry_kind": "software"
  },
  {
   "slug": "mode-shinyapp",
@@ -25220,7 +25669,8 @@
   "source_paper_repos": [
    "pmartR/MODE_ShinyApp"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "modifinder",
@@ -25261,7 +25711,8 @@
   "source_paper_repos": [
    "Wang-Bioinformatics-Lab/ModiFinder_base"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "molbar",
@@ -25295,7 +25746,8 @@
   "source_paper_repos": [
    "grimme-lab/QCxMS2"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "moldiscovery",
@@ -25321,7 +25773,8 @@
   "source_paper_repos": [
    "mohimanilab/molDiscovery"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "moletrans",
@@ -25354,7 +25807,8 @@
   "source_paper_repos": [
    "JibaoLiu/MoleTrans"
   ],
-  "repo_url": "JibaoLiu/MoleTrans"
+  "repo_url": "JibaoLiu/MoleTrans",
+  "entry_kind": "software"
  },
  {
   "slug": "molmass",
@@ -25404,7 +25858,8 @@
   "source_paper_repos": [
    "FanzhouKong/spectral_denoising"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "molnotator",
@@ -25438,7 +25893,8 @@
   "source_paper_repos": [
    "ZzakB/MolNotator"
   ],
-  "repo_url": "ZzakB/MolNotator"
+  "repo_url": "ZzakB/MolNotator",
+  "entry_kind": "software"
  },
  {
   "slug": "mona",
@@ -25494,7 +25950,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mongodb",
@@ -25545,7 +26002,8 @@
   "source_paper_repos": [
    "tyo-nu/MINE-Database"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "monte-carlo-dropout",
@@ -25616,7 +26074,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mordred",
@@ -25655,7 +26114,8 @@
   "source_paper_repos": [
    "HopkinsLaboratory/Graphormer-RT"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "motifdb",
@@ -25741,7 +26201,8 @@
   "source_paper_repos": [
    "vdhooftcompmet/MS2LDA"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mozilla-firefox",
@@ -25767,7 +26228,8 @@
   "source_paper_repos": [
    "lidawei1975/colmarvista"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mpactr",
@@ -25827,7 +26289,8 @@
   "source_paper_repos": [
    "BalunasLab/mpact"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mrmquant",
@@ -25851,7 +26314,8 @@
   "source_paper_repos": [
    "kslynn128171/MRMQuant"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mrmtransitiongrouppicker",
@@ -25901,7 +26365,8 @@
   "source_paper_repos": [
    "Roestlab/massdash"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mrnannoalgo3-metdna3",
@@ -25935,7 +26400,8 @@
   "source_paper_repos": [
    "ZhuMetLab/MrnAnnoAlgo3"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ms-cleanr",
@@ -25976,7 +26442,8 @@
   "source_paper_repos": [
    "eMetaboHUB/MS-CleanR"
   ],
-  "repo_url": "eMetaboHUB/MS-CleanR"
+  "repo_url": "eMetaboHUB/MS-CleanR",
+  "entry_kind": "software"
  },
  {
   "slug": "ms-dial-4",
@@ -26009,7 +26476,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ms-dial-5",
@@ -26042,7 +26510,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ms-dial-or-higher",
@@ -26079,7 +26548,8 @@
   "source_paper_repos": [
    "eMetaboHUB/MS-CleanR"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ms-dial-v4-00-or-higher",
@@ -26118,7 +26588,8 @@
   "source_paper_repos": [
    "eMetaboHUB/MS-CleanR"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ms-dial",
@@ -26369,7 +26840,8 @@
    "huaxuyu/bago",
    "systemsomicslab/MsdialWorkbench"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ms-distance",
@@ -26401,7 +26873,8 @@
   "source_paper_repos": [
    "YuanyueLi/SpectralEntropy"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ms-entropy",
@@ -26451,7 +26924,8 @@
   "source_paper_repos": [
    "FanzhouKong/spectral_denoising"
   ],
-  "repo_url": "https://github.com/YuanyueLi/MSEntropy"
+  "repo_url": "https://github.com/YuanyueLi/MSEntropy",
+  "entry_kind": "software"
  },
  {
   "slug": "ms-finder",
@@ -26493,7 +26967,8 @@
   "source_paper_repos": [
    "eMetaboHUB/MS-CleanR"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ms-pred-iceberg",
@@ -26531,7 +27006,8 @@
   "source_paper_repos": [
    "samgoldman97/ms-pred"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ms-pred-scarf-model",
@@ -26586,7 +27062,8 @@
   "source_paper_repos": [
    "samgoldman97/ms-pred"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ms-pred",
@@ -26627,7 +27104,8 @@
   "source_paper_repos": [
    "samgoldman97/ms-pred"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ms-rescore",
@@ -26667,7 +27145,8 @@
   "source_paper_repos": [
    "compomics/ms2rescore"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ms-search",
@@ -26721,7 +27200,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ms2compound",
@@ -26746,7 +27226,8 @@
   "source_paper_repos": [
    "beherasan/MS2Compound"
   ],
-  "repo_url": "beherasan/MS2Compound"
+  "repo_url": "beherasan/MS2Compound",
+  "entry_kind": "software"
  },
  {
   "slug": "ms2deepscore",
@@ -26855,7 +27336,8 @@
   "source_paper_repos": [
    "matchms/MS2DeepScore"
   ],
-  "repo_url": "https://github.com/matchms/ms2deepscore"
+  "repo_url": "https://github.com/matchms/ms2deepscore",
+  "entry_kind": "software"
  },
  {
   "slug": "ms2lda-preprocessing-generate-corpus",
@@ -26941,7 +27423,8 @@
   "source_paper_repos": [
    "vdhooftcompmet/MS2LDA"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "ms2lda-preprocessing-load-and-clean",
@@ -27027,7 +27510,8 @@
   "source_paper_repos": [
    "vdhooftcompmet/MS2LDA"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "ms2lda",
@@ -27178,7 +27662,8 @@
    "mwang87/MetabolomicsSpectrumResolver",
    "vdhooftcompmet/MS2LDA"
   ],
-  "repo_url": "vdhooftcompmet/MS2LDA"
+  "repo_url": "vdhooftcompmet/MS2LDA",
+  "entry_kind": "software"
  },
  {
   "slug": "ms2mp",
@@ -27203,7 +27688,8 @@
   "source_paper_repos": [
    "ucasaccn/MS2MP"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ms2query",
@@ -27268,7 +27754,8 @@
   "source_paper_repos": [
    "iomega/ms2query"
   ],
-  "repo_url": "https://github.com/iomega/ms2query"
+  "repo_url": "https://github.com/iomega/ms2query",
+  "entry_kind": "software"
  },
  {
   "slug": "msbackendmgf",
@@ -27334,7 +27821,8 @@
   "source_paper_repos": [
    "sneumann/xcms"
   ],
-  "repo_url": "https://github.com/RforMassSpectrometry/MsBackendMgf"
+  "repo_url": "https://github.com/RforMassSpectrometry/MsBackendMgf",
+  "entry_kind": "software"
  },
  {
   "slug": "msbackendmzr",
@@ -27407,7 +27895,8 @@
   "source_paper_repos": [
    "rformassspectrometry/Spectra"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "msconvert-proteowizard",
@@ -27467,7 +27956,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "msconvert",
@@ -27718,7 +28208,8 @@
    "guomics-lab/iDIA-QC",
    "xfcui/IsoFusion"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "msdata",
@@ -27757,7 +28248,8 @@
   "source_paper_repos": [
    "LiesaSalzer/MobilityTransformR"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "msdatahub",
@@ -27821,7 +28313,8 @@
   "source_paper_repos": [
    "sneumann/xcms"
   ],
-  "repo_url": "https://github.com/RforMassSpectrometry/MsDataHub"
+  "repo_url": "https://github.com/RforMassSpectrometry/MsDataHub",
+  "entry_kind": "software"
  },
  {
   "slug": "msentropy",
@@ -27896,7 +28389,8 @@
    "YuanyueLi/FlashEntropySearch",
    "YuanyueLi/SpectralEntropy"
   ],
-  "repo_url": "https://github.com/YuanyueLi/MSEntropy"
+  "repo_url": "https://github.com/YuanyueLi/MSEntropy",
+  "entry_kind": "software"
  },
  {
   "slug": "msexperiment",
@@ -27959,7 +28453,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/RforMassSpectrometry/MsExperiment"
+  "repo_url": "https://github.com/RforMassSpectrometry/MsExperiment",
+  "entry_kind": "software"
  },
  {
   "slug": "msfeast",
@@ -27995,7 +28490,8 @@
   "source_paper_repos": [
    "kevinmildau/msFeaST"
   ],
-  "repo_url": "kevinmildau/msFeaST"
+  "repo_url": "kevinmildau/msFeaST",
+  "entry_kind": "software"
  },
  {
   "slug": "msfeatures",
@@ -28063,7 +28559,8 @@
   "source_paper_repos": [
    "sneumann/xcms"
   ],
-  "repo_url": "https://github.com/RforMassSpectrometry/MsFeatures"
+  "repo_url": "https://github.com/RforMassSpectrometry/MsFeatures",
+  "entry_kind": "software"
  },
  {
   "slug": "msfiddle",
@@ -28131,7 +28628,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "msfinder",
@@ -28179,7 +28677,8 @@
   "source_paper_repos": [
    "cbroeckl/RAMClustR"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "msflo",
@@ -28222,7 +28721,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "msfragger",
@@ -28240,7 +28740,8 @@
   "source_paper_repos": [
    "laurenfields/MSIght"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "msgo-model",
@@ -28273,7 +28774,8 @@
   "source_paper_repos": [
    "aaronma2020/MSGO"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mshub",
@@ -28317,7 +28819,8 @@
   "source_paper_repos": [
    "bittremieux/GNPS_GC"
   ],
-  "repo_url": "bittremieux/GNPS_GC"
+  "repo_url": "bittremieux/GNPS_GC",
+  "entry_kind": "software"
  },
  {
   "slug": "msi-explorer",
@@ -28352,7 +28855,8 @@
   "source_paper_repos": [
    "MMV-Lab/MSI-Explorer"
   ],
-  "repo_url": "MMV-Lab/MSI-Explorer"
+  "repo_url": "MMV-Lab/MSI-Explorer",
+  "entry_kind": "software"
  },
  {
   "slug": "msigen",
@@ -28398,7 +28902,8 @@
   "source_paper_repos": [
    "LabLaskin/MSIGen"
   ],
-  "repo_url": "LabLaskin/MSIGen"
+  "repo_url": "LabLaskin/MSIGen",
+  "entry_kind": "software"
  },
  {
   "slug": "msmetaenhancer",
@@ -28465,7 +28970,8 @@
   "source_paper_repos": [
    "RECETOX/MSMetaEnhancer"
   ],
-  "repo_url": "https://github.com/RECETOX/MSMetaEnhancer"
+  "repo_url": "https://github.com/RECETOX/MSMetaEnhancer",
+  "entry_kind": "software"
  },
  {
   "slug": "msmssim",
@@ -28495,7 +29001,8 @@
   "source_paper_repos": [
    "LeaveMeNotTonight/CMDN"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "msnbase",
@@ -28592,7 +29099,8 @@
    "LiesaSalzer/MobilityTransformR",
    "rformassspectrometry/Spectra"
   ],
-  "repo_url": "https://github.com/lgatto/MSnbase"
+  "repo_url": "https://github.com/lgatto/MSnbase",
+  "entry_kind": "software"
  },
  {
   "slug": "msnovelist",
@@ -28651,7 +29159,8 @@
    "meowcat/MSNovelist",
    "sirius-ms/sirius"
   ],
-  "repo_url": "meowcat/MSNovelist"
+  "repo_url": "meowcat/MSNovelist",
+  "entry_kind": "software"
  },
  {
   "slug": "mspack",
@@ -28680,7 +29189,8 @@
   "source_paper_repos": [
    "fhanau/mspack"
   ],
-  "repo_url": "fhanau/mspack"
+  "repo_url": "fhanau/mspack",
+  "entry_kind": "software"
  },
  {
   "slug": "mspcompiler",
@@ -28736,7 +29246,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/QizhiSu/mspcompiler"
+  "repo_url": "https://github.com/QizhiSu/mspcompiler",
+  "entry_kind": "software"
  },
  {
   "slug": "msprep",
@@ -28776,7 +29287,8 @@
   "source_paper_repos": [
    "Ghoshlab/marr"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "msroiaug",
@@ -28806,7 +29318,8 @@
   "source_paper_repos": [
    "AdrianHaun/AriumMS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mssearchr",
@@ -28842,7 +29355,8 @@
   "source_paper_repos": [
    "AndreySamokhin/mssearchr"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "msthunder",
@@ -28873,7 +29387,8 @@
   "source_paper_repos": [
    "LQZ0123/MSThunder"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "msys2",
@@ -28904,7 +29419,8 @@
   "source_paper_repos": [
    "eugenemel/maven"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mtbls2",
@@ -28937,7 +29453,8 @@
   "source_paper_repos": [
    "KujawinskiLaboratory/Autotuner"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "multiabler",
@@ -28966,7 +29483,8 @@
   "source_paper_repos": [
    "holab-hku/MultiABLER"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "multiassayexperiment",
@@ -29011,7 +29529,8 @@
   "source_paper_repos": [
    "andreasmock/MetaboDiff"
   ],
-  "repo_url": "https://github.com/waldronlab/MultiAssayExperiment"
+  "repo_url": "https://github.com/waldronlab/MultiAssayExperiment",
+  "entry_kind": "software"
  },
  {
   "slug": "multimodalspectraltransformer",
@@ -29043,7 +29562,8 @@
   "source_paper_repos": [
    "mpriessner/MultiModalSpectralTransformer"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "multiprocessing",
@@ -29086,7 +29606,8 @@
   "source_paper_repos": [
    "OpenMS/OpenMS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "multtest",
@@ -29125,7 +29646,8 @@
   "source_paper_repos": [
    "idrblab/NOREVA;"
   ],
-  "repo_url": "https://github.com/bioc/multtest"
+  "repo_url": "https://github.com/bioc/multtest",
+  "entry_kind": "software"
  },
  {
   "slug": "mwastools",
@@ -29167,7 +29689,8 @@
   "source_paper_repos": [
    "AndreaRMICL/MWASTools"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mwise",
@@ -29211,7 +29734,8 @@
   "source_paper_repos": [
    "b2slab/mWISE"
   ],
-  "repo_url": "b2slab/mWISE"
+  "repo_url": "b2slab/mWISE",
+  "entry_kind": "software"
  },
  {
   "slug": "mwtab",
@@ -29285,7 +29809,8 @@
   "source_paper_repos": [
    "MoseleyBioinformaticsLab/mwtab"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mysql-8",
@@ -29315,7 +29840,8 @@
   "source_paper_repos": [
    "privrja/MassSpecBlocks"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mza",
@@ -29373,7 +29899,8 @@
   "source_paper_repos": [
    "PNNL-m-q/mza"
   ],
-  "repo_url": "PNNL-m-q/mza"
+  "repo_url": "PNNL-m-q/mza",
+  "entry_kind": "software"
  },
  {
   "slug": "mzembed",
@@ -29400,7 +29927,8 @@
   "source_paper_repos": [
    "ReviveMed/mzEmbed"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mzexacto",
@@ -29454,7 +29982,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "mzmine-2",
@@ -29524,7 +30053,8 @@
    "idslme/IDSL.IPA",
    "mzmine/mzmine2"
   ],
-  "repo_url": "mzmine/mzmine2"
+  "repo_url": "mzmine/mzmine2",
+  "entry_kind": "software"
  },
  {
   "slug": "mzmine-3",
@@ -29561,7 +30091,8 @@
   "source_paper_repos": [
    "huaxuyu/bago"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mzmine",
@@ -29814,7 +30345,8 @@
    "luigiquiros/inventa",
    "mzmine/mzmine2"
   ],
-  "repo_url": "https://github.com/mzmine/mzmine"
+  "repo_url": "https://github.com/mzmine/mzmine",
+  "entry_kind": "software"
  },
  {
   "slug": "mzmine2",
@@ -29891,7 +30423,8 @@
    "luigiquiros/inventa",
    "mzmine/mzmine2"
   ],
-  "repo_url": "mzmine/mzmine2"
+  "repo_url": "mzmine/mzmine2",
+  "entry_kind": "software"
  },
  {
   "slug": "mzmine3",
@@ -29973,7 +30506,8 @@
    "Functional-Metabolomics-Lab/FBMN-STATS",
    "luigiquiros/inventa"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mzmldataloader",
@@ -30023,7 +30557,8 @@
   "source_paper_repos": [
    "Roestlab/massdash"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "mzquality",
@@ -30085,7 +30620,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/hankemeierlab/mzQuality"
+  "repo_url": "https://github.com/hankemeierlab/mzQuality",
+  "entry_kind": "software"
  },
  {
   "slug": "mzr",
@@ -30148,7 +30684,8 @@
    "jcapelladesto/isoSCAN",
    "thepanlab/Aerith"
   ],
-  "repo_url": "https://github.com/sneumann/mzR"
+  "repo_url": "https://github.com/sneumann/mzR",
+  "entry_kind": "software"
  },
  {
   "slug": "mzrapp",
@@ -30190,7 +30727,8 @@
   "source_paper_repos": [
    "YasinEl/mzRAPP"
   ],
-  "repo_url": "YasinEl/mzRAPP"
+  "repo_url": "YasinEl/mzRAPP",
+  "entry_kind": "software"
  },
  {
   "slug": "mzrtsim",
@@ -30235,7 +30773,8 @@
   "source_paper_repos": [
    "yufree/mzrtsim"
   ],
-  "repo_url": "yufree/mzrtsim"
+  "repo_url": "yufree/mzrtsim",
+  "entry_kind": "software"
  },
  {
   "slug": "nanobind",
@@ -30282,7 +30821,8 @@
   "source_paper_repos": [
    "OpenMS/OpenMS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "napari",
@@ -30317,7 +30857,8 @@
   "source_paper_repos": [
    "MMV-Lab/MSI-Explorer"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ncbi-e-utilities",
@@ -30345,7 +30886,8 @@
   "source_paper_repos": [
    "mibig-secmet/mibig-json"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ncgtw",
@@ -30384,7 +30926,8 @@
   "source_paper_repos": [
    "ChiungTingWu/ncGTW"
   ],
-  "repo_url": "https://github.com/ChiungTingWu/ncGTW"
+  "repo_url": "https://github.com/ChiungTingWu/ncGTW",
+  "entry_kind": "software"
  },
  {
   "slug": "neatms",
@@ -30430,7 +30973,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/bihealth/NeatMS"
+  "repo_url": "https://github.com/bihealth/NeatMS",
+  "entry_kind": "software"
  },
  {
   "slug": "ned",
@@ -30505,7 +31049,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "net-6",
@@ -30540,7 +31085,8 @@
   "source_paper_repos": [
    "systemsomicslab/MsdialWorkbench"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "net-8-0",
@@ -30613,7 +31159,8 @@
   "source_paper_repos": [
    "fgcz/rawrr"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "net-framework-4-8",
@@ -30660,7 +31207,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "net-framework",
@@ -30747,7 +31295,8 @@
    "PNNL-Comp-Mass-Spec/PNNL-PreProcessor",
    "systemsomicslab/MsdialWorkbench"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "net-standard",
@@ -30781,7 +31330,8 @@
   "source_paper_repos": [
    "systemsomicslab/MsdialWorkbench"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "netgsa-r-package",
@@ -30804,7 +31354,8 @@
   "source_paper_repos": [
    "Karnovsky-Lab/DNEA"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "networkx",
@@ -30913,7 +31464,8 @@
    "ablab/npdtools",
    "shuzhao-li-lab/khipu"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "neural-networks-mlpnn-with-relu-activation",
@@ -30985,7 +31537,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "neural-networks",
@@ -31057,7 +31610,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "nextflow-22-10-0",
@@ -31098,7 +31652,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "nextflow",
@@ -31182,7 +31737,8 @@
    "ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
    "Wang-Bioinformatics-Lab/Reverse_metabolomics_library_generation"
   ],
-  "repo_url": "https://github.com/nextflow-io/nextflow"
+  "repo_url": "https://github.com/nextflow-io/nextflow",
+  "entry_kind": "software"
  },
  {
   "slug": "nist",
@@ -31236,7 +31792,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "nmrbox",
@@ -31265,7 +31822,8 @@
   "source_paper_repos": [
    "edisonomics/SAND"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "nmrfx",
@@ -31300,7 +31858,8 @@
   "source_paper_repos": [
    "nanalysis/nmrfx"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "nmrpipe",
@@ -31329,7 +31888,8 @@
   "source_paper_repos": [
    "edisonomics/SAND"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "noreva",
@@ -31370,7 +31930,8 @@
   "source_paper_repos": [
    "idrblab/NOREVA;"
   ],
-  "repo_url": "idrblab/NOREVA;"
+  "repo_url": "idrblab/NOREVA;",
+  "entry_kind": "software"
  },
  {
   "slug": "norine",
@@ -31400,7 +31961,8 @@
   "source_paper_repos": [
    "privrja/MassSpecBlocks"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "normalizemets",
@@ -31443,7 +32005,8 @@
   "source_paper_repos": [
    "metabolomicstats/NormalizeMets"
   ],
-  "repo_url": "metabolomicstats/NormalizeMets"
+  "repo_url": "metabolomicstats/NormalizeMets",
+  "entry_kind": "software"
  },
  {
   "slug": "norvisualization",
@@ -31482,7 +32045,8 @@
   "source_paper_repos": [
    "idrblab/NOREVA;"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "notame",
@@ -31525,7 +32089,8 @@
   "source_paper_repos": [
    "antonvsdata/notame"
   ],
-  "repo_url": "https://github.com/hanhineva-lab/notame"
+  "repo_url": "https://github.com/hanhineva-lab/notame",
+  "entry_kind": "software"
  },
  {
   "slug": "np-atlas",
@@ -31555,7 +32120,8 @@
   "source_paper_repos": [
    "privrja/MassSpecBlocks"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "npanalyst",
@@ -31575,7 +32141,8 @@
   "used_by_skills": [],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/liningtonlab/npanalyst"
+  "repo_url": "https://github.com/liningtonlab/npanalyst",
+  "entry_kind": "software"
  },
  {
   "slug": "npclassifier",
@@ -31610,7 +32177,8 @@
   "source_paper_repos": [
    "zquinlan/concise"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "npdtools-2-5-0",
@@ -31658,7 +32226,8 @@
   "source_paper_repos": [
    "ablab/npdtools"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "npdtools",
@@ -31706,7 +32275,8 @@
   "source_paper_repos": [
    "ablab/npdtools"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "npfimg",
@@ -31753,7 +32323,8 @@
   "source_paper_repos": [
    "poomcj/NPFimg"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "nplinker",
@@ -31861,7 +32432,8 @@
   "source_paper_repos": [
    "NPLinker/nplinker"
   ],
-  "repo_url": "NPLinker/nplinker"
+  "repo_url": "NPLinker/nplinker",
+  "entry_kind": "software"
  },
  {
   "slug": "npm",
@@ -31905,7 +32477,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "numba",
@@ -32031,7 +32604,8 @@
   "source_paper_repos": [
    "sword-nan/SpecEmbedding"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "numpy-1-15-4",
@@ -32061,7 +32635,8 @@
   "source_paper_repos": [
    "wabdelmoula/massNet"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "numpy-or-scipy",
@@ -32135,7 +32710,8 @@
   "source_paper_repos": [
    "NPLinker/nplinker"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "numpy",
@@ -32865,7 +33441,8 @@
    "zsspython/LAGF",
    "zza1211/NMRformer"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "omu-omu-summary-function",
@@ -32910,7 +33487,8 @@
   "source_paper_repos": [
    "connor-reid-tiffany/Omu"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "onnxruntime",
@@ -32960,7 +33538,8 @@
   "source_paper_repos": [
    "Roestlab/massdash"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "open-tree-of-life",
@@ -33014,7 +33593,8 @@
   "source_paper_repos": [
    "luigiquiros/inventa"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "openms-topp-tools",
@@ -33057,7 +33637,8 @@
   "source_paper_repos": [
    "OpenMS/OpenMS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "openms",
@@ -33314,7 +33895,8 @@
    "OpenMS/OpenMS",
    "fgcz/rawrr"
   ],
-  "repo_url": "https://github.com/OpenMS/OpenMS"
+  "repo_url": "https://github.com/OpenMS/OpenMS",
+  "entry_kind": "software"
  },
  {
   "slug": "opennau",
@@ -33350,7 +33932,8 @@
   "source_paper_repos": [
    "zjuRong/openNAU"
   ],
-  "repo_url": "zjuRong/openNAU"
+  "repo_url": "zjuRong/openNAU",
+  "entry_kind": "software"
  },
  {
   "slug": "openpyxl",
@@ -33385,7 +33968,8 @@
   "source_paper_repos": [
    "Leo-Cheng-Lab/ROIAL-NMR"
   ],
-  "repo_url": "http://openpyxl.readthedocs.org"
+  "repo_url": "http://openpyxl.readthedocs.org",
+  "entry_kind": "software"
  },
  {
   "slug": "opentims",
@@ -33399,7 +33983,8 @@
   "used_by_skills": [],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "opentimspy",
@@ -33413,7 +33998,8 @@
   "used_by_skills": [],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "optgpsampler-algorithm",
@@ -33482,7 +34068,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "optgpsampler",
@@ -33551,7 +34138,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "optimus",
@@ -33589,7 +34177,8 @@
   "source_paper_repos": [
    "DorresteinLaboratory/Bioactive_Molecular_Networks"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "orca",
@@ -33644,7 +34233,8 @@
    "grimme-lab/QCxMS2",
    "pmartR/PMart_ShinyApp"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "orgmassspecr",
@@ -33674,7 +34264,8 @@
   "source_paper_repos": [
    "LeaveMeNotTonight/CMDN"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "oswdataaccess",
@@ -33723,7 +34314,8 @@
   "source_paper_repos": [
    "Roestlab/massdash"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ouks",
@@ -33767,7 +34359,8 @@
   "source_paper_repos": [
    "plyush1993/OUKS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pacman",
@@ -33798,7 +34391,8 @@
   "source_paper_repos": [
    "eugenemel/maven"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pairkat",
@@ -33826,7 +34420,8 @@
   "source_paper_repos": [
    "CharlieCarpenter/PaIRKAT"
   ],
-  "repo_url": "https://github.com/Ghoshlab/pairkat"
+  "repo_url": "https://github.com/Ghoshlab/pairkat",
+  "entry_kind": "software"
  },
  {
   "slug": "pals-pathway-activity-level-scoring",
@@ -33871,7 +34466,8 @@
   "source_paper_repos": [
    "glasgowcompbio/PALS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pals-viewer",
@@ -33916,7 +34512,8 @@
   "source_paper_repos": [
    "glasgowcompbio/PALS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pals",
@@ -33960,7 +34557,8 @@
   "source_paper_repos": [
    "glasgowcompbio/PALS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pandas-1-1-1",
@@ -33990,7 +34588,8 @@
   "source_paper_repos": [
    "wabdelmoula/massNet"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pandas-for-tabular-data-manipulation-and-aggregation",
@@ -34024,7 +34623,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "pandas-or-equivalent-tabular-data-library",
@@ -34052,7 +34652,8 @@
   "source_paper_repos": [
    "mibig-secmet/mibig-json"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "pandas",
@@ -34677,7 +35278,8 @@
    "zsspython/LAGF",
    "zza1211/NMRformer"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "parallel-computing-toolbox",
@@ -34690,9 +35292,9 @@
    "LC-MS",
    "CE-MS"
   ],
-  "license_tier": "unknown",
+  "license_tier": "restricted",
   "license": null,
-  "license_detection": null,
+  "license_detection": "vendor-product",
   "used_by_skills": [
    "data-augmentation-metabolomics",
    "mass-spectrometry-file-format-conversion",
@@ -34703,11 +35305,12 @@
    "roi-detection-mass-spectrometry",
    "vendor-data-standardization"
   ],
-  "license_subject": null,
+  "license_subject": "tool",
   "source_paper_repos": [
    "AdrianHaun/AriumMS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "vendor_product"
  },
  {
   "slug": "parallel",
@@ -34761,7 +35364,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "paramounter",
@@ -34792,7 +35396,8 @@
   "source_paper_repos": [
    "HuanLab/Paramounter"
   ],
-  "repo_url": "HuanLab/Paramounter"
+  "repo_url": "HuanLab/Paramounter",
+  "entry_kind": "software"
  },
  {
   "slug": "patroon",
@@ -34838,7 +35443,8 @@
   "source_paper_repos": [
    "rickhelmus/patRoon"
   ],
-  "repo_url": "rickhelmus/patRoon"
+  "repo_url": "rickhelmus/patRoon",
+  "entry_kind": "software"
  },
  {
   "slug": "pbapply",
@@ -34882,7 +35488,8 @@
   "source_paper_repos": [
    "BiosystemEngineeringLab-IITB/dures"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pcamethods",
@@ -34925,7 +35532,8 @@
   "source_paper_repos": [
    "idrblab/NOREVA;"
   ],
-  "repo_url": "https://github.com/hredestig/pcamethods"
+  "repo_url": "https://github.com/hredestig/pcamethods",
+  "entry_kind": "software"
  },
  {
   "slug": "pcutils",
@@ -34960,7 +35568,8 @@
   "source_paper_repos": [
    "Asa12138/MetaNet"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "peakqc",
@@ -35010,7 +35619,8 @@
   "source_paper_repos": [
    "pnnl/IonToolPack"
   ],
-  "repo_url": "https://github.com/loosolab/PEAKQC"
+  "repo_url": "https://github.com/loosolab/PEAKQC",
+  "entry_kind": "software"
  },
  {
   "slug": "peakquant",
@@ -35059,7 +35669,8 @@
   "source_paper_repos": [
    "pnnl/IonToolPack"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "perl-prima",
@@ -35083,7 +35694,8 @@
   "source_paper_repos": [
    "matteogiulietti/LipidOne"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "perl",
@@ -35107,7 +35719,8 @@
   "source_paper_repos": [
    "matteogiulietti/LipidOne"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pewlib",
@@ -35156,7 +35769,8 @@
   "source_paper_repos": [
    "djdt/pewpew"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pewpew",
@@ -35205,7 +35819,8 @@
   "source_paper_repos": [
    "djdt/pewpew"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pfam",
@@ -35270,7 +35885,8 @@
    "ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
    "medema-group/bigslice"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pheatmap",
@@ -35346,7 +35962,8 @@
    "LeaveMeNotTonight/CMDN",
    "sneumann/xcms"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "php",
@@ -35376,7 +35993,8 @@
   "source_paper_repos": [
    "privrja/MassSpecBlocks"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pillow",
@@ -35414,7 +36032,8 @@
   "source_paper_repos": [
    "Wang-Bioinformatics-Lab/ModiFinder_base"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pip",
@@ -35642,7 +36261,8 @@
    "tingxiecsu/CSU-MS2",
    "yuxuanliao/PACCS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "plage-method-within-pals",
@@ -35683,7 +36303,8 @@
   "source_paper_repos": [
    "glasgowcompbio/PALS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "plantmasst",
@@ -35742,7 +36363,8 @@
   "source_paper_repos": [
    "mwang87/MASST"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "plotly-or-equivalent-interactive-plotting-library",
@@ -35785,7 +36407,8 @@
   "source_paper_repos": [
    "czbiohub-sf/Rapid-QC-MS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "plotly",
@@ -35874,7 +36497,8 @@
   "source_paper_repos": [
    "Wang-Bioinformatics-Lab/NetworkFamily_MultipleAlignment_Website"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pmartr",
@@ -35971,7 +36595,8 @@
   "source_paper_repos": [
    "pmartR/PMart_ShinyApp"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pnnl-preprocessor",
@@ -36017,7 +36642,8 @@
   "source_paper_repos": [
    "PNNL-Comp-Mass-Spec/PNNL-PreProcessor"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "poetry",
@@ -36084,7 +36710,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "poisson-noise-augmentation",
@@ -36133,7 +36760,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "postgresql",
@@ -36221,7 +36849,8 @@
   "source_paper_repos": [
    "vdhooftcompmet/MS2LDA"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "prcomp",
@@ -36249,7 +36878,8 @@
   "source_paper_repos": [
    "BorchLab/CordBat"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "prepare-wikidata-lotus-prefect-py",
@@ -36281,7 +36911,8 @@
   "source_paper_repos": [
    "corinnabrungs/msn_tree_library"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "prima-panel",
@@ -36315,7 +36946,8 @@
   "source_paper_repos": [
    "funkam/PRIMA"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "probability-product-kernel-ppk",
@@ -36389,7 +37021,8 @@
   "source_paper_repos": [
    "NPLinker/nplinker"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "proc",
@@ -36413,7 +37046,8 @@
   "source_paper_repos": [
    "slfan2013/SERDA"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "proforma-2-0",
@@ -36483,7 +37117,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "proteomm",
@@ -36525,7 +37160,8 @@
   "source_paper_repos": [
    "idrblab/NOREVA;"
   ],
-  "repo_url": "https://github.com/bioc/ProteoMM"
+  "repo_url": "https://github.com/bioc/ProteoMM",
+  "entry_kind": "software"
  },
  {
   "slug": "proteowizard-library-and-tools",
@@ -36553,7 +37189,8 @@
   "source_paper_repos": [
    "ProteoWizard/pwiz"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "proteowizard-msconvert",
@@ -36664,7 +37301,8 @@
    "LabLaskin/MSIGen",
    "jcapelladesto/isoSCAN"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "proteowizard-pwiz-skyline",
@@ -36699,7 +37337,8 @@
   "source_paper_repos": [
    "ComPlat/chem-spectra-app"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "proteowizard",
@@ -36944,7 +37583,8 @@
    "hcji/TarMet",
    "shuzhao-li-lab/asari"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "proteoxchange-repository",
@@ -36978,7 +37618,8 @@
   "source_paper_repos": [
    "mwang87/MetabolomicsSpectrumResolver"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ps2ms",
@@ -37016,7 +37657,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "psims",
@@ -37056,7 +37698,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/mobiusklein/psims"
+  "repo_url": "https://github.com/mobiusklein/psims",
+  "entry_kind": "software"
  },
  {
   "slug": "psm-utils",
@@ -37096,7 +37739,8 @@
   "source_paper_repos": [
    "compomics/ms2rescore"
   ],
-  "repo_url": "https://github.com/compomics/psm_utils"
+  "repo_url": "https://github.com/compomics/psm_utils",
+  "entry_kind": "software"
  },
  {
   "slug": "pubchem-standardization",
@@ -37126,7 +37770,8 @@
   "source_paper_repos": [
    "michaelwitting/RepoRT"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pubchem",
@@ -37320,7 +37965,8 @@
    "samgoldman97/ms-pred",
    "zmahnoor14/MAW"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pubchempy",
@@ -37407,7 +38053,8 @@
   "source_paper_repos": [
    "zmahnoor14/MAW"
   ],
-  "repo_url": "https://github.com/mcs07/PubChemPy"
+  "repo_url": "https://github.com/mcs07/PubChemPy",
+  "entry_kind": "software"
  },
  {
   "slug": "punc-data",
@@ -37442,7 +38089,8 @@
   "source_paper_repos": [
    "WTVoe/puncdata"
   ],
-  "repo_url": "WTVoe/puncdata"
+  "repo_url": "WTVoe/puncdata",
+  "entry_kind": "software"
  },
  {
   "slug": "puncdata",
@@ -37477,7 +38125,8 @@
   "source_paper_repos": [
    "WTVoe/puncdata"
   ],
-  "repo_url": "WTVoe/puncdata"
+  "repo_url": "WTVoe/puncdata",
+  "entry_kind": "software"
  },
  {
   "slug": "purrr",
@@ -37504,7 +38153,8 @@
   "source_paper_repos": [
    "kilgain/MassSpec"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pwiz-bindings-cli-dll",
@@ -37551,7 +38201,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pwiz",
@@ -37579,7 +38230,8 @@
   "source_paper_repos": [
    "ProteoWizard/pwiz"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "py4cytoscape",
@@ -37654,7 +38306,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pyarrow",
@@ -37709,7 +38362,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pybaf2sql",
@@ -37755,7 +38409,8 @@
   "source_paper_repos": [
    "LabLaskin/MSIGen"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pycharm",
@@ -37780,7 +38435,8 @@
   "source_paper_repos": [
    "SysMedOs/LipidLynxX"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pycombat",
@@ -37849,7 +38505,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pyeva",
@@ -37877,7 +38534,8 @@
   "source_paper_repos": [
    "HuanLab-backup/EVA"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pyg",
@@ -37922,7 +38580,8 @@
    "RiverCCC/ABCoRT",
    "yuxuanliao/PACCS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pyhmmer",
@@ -37954,7 +38613,8 @@
   "source_paper_repos": [
    "medema-group/bigslice"
   ],
-  "repo_url": "https://github.com/althonos/pyhmmer"
+  "repo_url": "https://github.com/althonos/pyhmmer",
+  "entry_kind": "software"
  },
  {
   "slug": "pyineta",
@@ -37994,7 +38654,8 @@
   "source_paper_repos": [
    "edisonomics/PyINETA"
   ],
-  "repo_url": "edisonomics/PyINETA"
+  "repo_url": "edisonomics/PyINETA",
+  "entry_kind": "software"
  },
  {
   "slug": "pymolnetenhancer",
@@ -38037,7 +38698,8 @@
   "source_paper_repos": [
    "madeleineernst/pyMolNetEnhancer"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pymrmtransitiongrouppicker",
@@ -38087,7 +38749,8 @@
   "source_paper_repos": [
    "Roestlab/massdash"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pymzml",
@@ -38334,7 +38997,8 @@
    "shuzhao-li-lab/asari",
    "zsspython/LAGF"
   ],
-  "repo_url": "https://github.com/pymzml/pymzML"
+  "repo_url": "https://github.com/pymzml/pymzML",
+  "entry_kind": "software"
  },
  {
   "slug": "pyopenms-viz",
@@ -38409,7 +39073,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/OpenMS/pyopenms_viz"
+  "repo_url": "https://github.com/OpenMS/pyopenms_viz",
+  "entry_kind": "software"
  },
  {
   "slug": "pyopenms",
@@ -38612,7 +39277,8 @@
    "AutoFlowResearch/SmartPeak",
    "huaxuyu/bago"
   ],
-  "repo_url": "https://github.com/OpenMS/OpenMS"
+  "repo_url": "https://github.com/OpenMS/OpenMS",
+  "entry_kind": "software"
  },
  {
   "slug": "pyqt5",
@@ -38643,7 +39309,8 @@
   "source_paper_repos": [
    "Leo-Cheng-Lab/ROIAL-NMR"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pyrwr",
@@ -38669,7 +39336,8 @@
   "source_paper_repos": [
    "computational-chemical-biology/ChemWalker"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pyteomics",
@@ -38820,7 +39488,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/levitsky/pyteomics"
+  "repo_url": "https://github.com/levitsky/pyteomics",
+  "entry_kind": "software"
  },
  {
   "slug": "pytest",
@@ -39062,7 +39731,8 @@
    "matchms/matchms",
    "tyo-nu/MINE-Database"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "python-2-7",
@@ -39091,7 +39761,8 @@
   "source_paper_repos": [
    "Viant-Metabolomics/Galaxy-M"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "python-3-11-7",
@@ -39119,7 +39790,8 @@
   "source_paper_repos": [
    "HassounLab/MVP"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "python-3-6-12",
@@ -39149,7 +39821,8 @@
   "source_paper_repos": [
    "wabdelmoula/massNet"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "python-3-6",
@@ -39172,7 +39845,8 @@
   "source_paper_repos": [
    "Dingxian666/Norm-ISWSVR"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "python-3-7",
@@ -39208,7 +39882,8 @@
   "source_paper_repos": [
    "aaronma2020/MSGO"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "python-3-8-1",
@@ -39242,7 +39917,8 @@
   "source_paper_repos": [
    "LinShuhaiLAB/QuanFormer"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "python-3-8-2",
@@ -39267,7 +39943,8 @@
   "source_paper_repos": [
    "zsspython/LAGF"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "python-3-8",
@@ -39335,7 +40012,8 @@
   "source_paper_repos": [
    "wh-xu/Hyper-Spec"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "python-3-9-0",
@@ -39358,7 +40036,8 @@
   "source_paper_repos": [
    "RaoboXu/Lipidwizard"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "python-3-9",
@@ -39388,7 +40067,8 @@
   "source_paper_repos": [
    "Leo-Cheng-Lab/ROIAL-NMR"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "python-3",
@@ -39534,7 +40214,8 @@
    "yuxuanliao/PACCS",
    "zxguocsu/GCMSFormer"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "python-deep-learning-framework-pytorch-or-tensorflow",
@@ -39570,7 +40251,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "python-json-module-for-parsing-json-files",
@@ -39598,7 +40280,8 @@
   "source_paper_repos": [
    "mibig-secmet/mibig-json"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "python-numpy-pandas",
@@ -39674,7 +40357,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "python-numpy-scipy-stats-pandas-matplotlib-seaborn",
@@ -39748,7 +40432,8 @@
   "source_paper_repos": [
    "NPLinker/nplinker"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "python-pandas-numpy-scipy",
@@ -39797,7 +40482,8 @@
    "chopralab/CLAW",
    "metabolomicsworkbench/MetENP"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "python-scikit-learn-seaborn-or-matplotlib-for-visualization",
@@ -39869,7 +40555,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "python-scikit-learn",
@@ -39941,7 +40628,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "python",
@@ -42172,7 +42860,8 @@
    "zsspython/LAGF",
    "zza1211/NMRformer"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pytorch-2-2",
@@ -42213,7 +42902,8 @@
   "source_paper_repos": [
    "zhanghailiangcsu/MSBERT"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pytorch-cu118",
@@ -42245,7 +42935,8 @@
   "source_paper_repos": [
    "yfWang01/FlavorFormer"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pytorch-geometric-pyg",
@@ -42289,7 +42980,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pytorch-geometric",
@@ -42319,7 +43011,8 @@
   "source_paper_repos": [
    "tingxiecsu/CSU-MS2"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pytorch-or-equivalent-deep-learning-framework-inferred-from-gnn-contrastive-learning-context",
@@ -42367,7 +43060,8 @@
   "source_paper_repos": [
    "Chen-micslab/QCCAssisted4DSterol"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "pytorch-or-tensorflow",
@@ -42414,7 +43108,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pytorch",
@@ -42790,7 +43485,8 @@
    "zxguocsu/GCMSFormer",
    "zza1211/NMRformer"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pyvis",
@@ -42850,7 +43546,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "pyyaml",
@@ -42885,7 +43582,8 @@
   "source_paper_repos": [
    "ZzakB/MolNotator"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "q-exactive-orbitrap",
@@ -42898,9 +43596,9 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "unknown",
+  "license_tier": "restricted",
   "license": null,
-  "license_detection": null,
+  "license_detection": "vendor-product",
   "used_by_skills": [
    "acquisition-mode-enumeration-and-validation",
    "batch-script-execution-and-automation",
@@ -42939,11 +43637,12 @@
    "threshold-based-library-validation",
    "uhplc-hrms-ms-data-matching"
   ],
-  "license_subject": null,
+  "license_subject": "tool",
   "source_paper_repos": [
    "GarrettLab-UF/LipidMatch"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "vendor_product"
  },
  {
   "slug": "q2-qemistree",
@@ -42975,7 +43674,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "qcomics",
@@ -43009,7 +43709,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/ricoderks/QComics"
+  "repo_url": "https://github.com/ricoderks/QComics",
+  "entry_kind": "software"
  },
  {
   "slug": "qcxms2",
@@ -43043,7 +43744,8 @@
   "source_paper_repos": [
    "grimme-lab/QCxMS2"
   ],
-  "repo_url": "grimme-lab/QCxMS2"
+  "repo_url": "grimme-lab/QCxMS2",
+  "entry_kind": "software"
  },
  {
   "slug": "qmake",
@@ -43074,7 +43776,8 @@
   "source_paper_repos": [
    "eugenemel/maven"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "qr-code-generation-library",
@@ -43108,7 +43811,8 @@
   "source_paper_repos": [
    "mwang87/MetabolomicsSpectrumResolver"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "qt5",
@@ -43139,7 +43843,8 @@
   "source_paper_repos": [
    "eugenemel/maven"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "quick",
@@ -43184,7 +43889,8 @@
   "source_paper_repos": [
    "DasSusanta/snakemake_ccs"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "r-3-0-1",
@@ -43213,7 +43919,8 @@
   "source_paper_repos": [
    "Viant-Metabolomics/Galaxy-M"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "r-4-0-2",
@@ -43287,7 +43994,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "r-4-1-2",
@@ -43329,7 +44037,8 @@
   "source_paper_repos": [
    "plyush1993/OUKS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "r-base-stats-tidyverse-or-similar",
@@ -43367,7 +44076,8 @@
   "source_paper_repos": [
    "chopralab/CLAW"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "r-gui",
@@ -43411,7 +44121,8 @@
   "source_paper_repos": [
    "YuJenL/SMART"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "r-or-language-used-by-pairkat-scripts",
@@ -43439,7 +44150,8 @@
   "source_paper_repos": [
    "CharlieCarpenter/PaIRKAT"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "r-package-amanida",
@@ -43465,7 +44177,8 @@
   "source_paper_repos": [
    "mariallr/easy-amanida"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "r-shiny",
@@ -43519,7 +44232,8 @@
    "Lab-XUE/EISA-EXPOSOME",
    "databio2022/GraphBio"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "r-vegan-package",
@@ -43595,7 +44309,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "r-version-or-higher",
@@ -43648,7 +44363,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "r",
@@ -43690,7 +44406,8 @@
   "source_paper_repos": [
    "LargeMetabo/LargeMetabo"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ramclustr",
@@ -43774,7 +44491,8 @@
   "source_paper_repos": [
    "cbroeckl/RAMClustR"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "random-forest-regression",
@@ -43846,7 +44564,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "random-forest",
@@ -43922,7 +44641,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "random-missing-value-augmentation",
@@ -43971,7 +44691,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "randomforest",
@@ -44018,7 +44739,8 @@
   "source_paper_repos": [
    "connor-reid-tiffany/Omu"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "rankprod",
@@ -44068,7 +44790,8 @@
   "source_paper_repos": [
    "ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "rapidmass",
@@ -44108,7 +44831,8 @@
   "source_paper_repos": [
    "Katherine00689/RapidMass"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "raw-file-uploader-rtklab-byu-raw-file-uploader",
@@ -44138,7 +44862,8 @@
   "source_paper_repos": [
    "RTKlab-BYU/MSConnect"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "rawfilereader",
@@ -44212,7 +44937,8 @@
   "source_paper_repos": [
    "fgcz/rawrr"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "rawrr",
@@ -44286,7 +45012,8 @@
   "source_paper_repos": [
    "fgcz/rawrr"
   ],
-  "repo_url": "https://github.com/fgcz/rawrr"
+  "repo_url": "https://github.com/fgcz/rawrr",
+  "entry_kind": "software"
  },
  {
   "slug": "raxport",
@@ -44331,7 +45058,8 @@
   "source_paper_repos": [
    "thepanlab/Aerith"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "rcdk",
@@ -44363,7 +45091,8 @@
   "source_paper_repos": [
    "michaelwitting/RepoRT"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "rdkit-2020-03-4",
@@ -44392,7 +45121,8 @@
   "source_paper_repos": [
    "chensaian/TransG-Net"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "rdkit-or-similar-cheminformatics-library-for-molecular-fingerprint-computation",
@@ -44426,7 +45156,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "rdkit-pypi",
@@ -44463,7 +45194,8 @@
   "source_paper_repos": [
    "01dadada/RT-Transformer"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "rdkit",
@@ -45053,7 +45785,8 @@
    "zhanghailiangcsu/MWFormer",
    "zmahnoor14/MAW"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "reactiveextensions",
@@ -45086,7 +45819,8 @@
   "source_paper_repos": [
    "systemsomicslab/MsdialWorkbench"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "reactiveproperty",
@@ -45119,7 +45853,8 @@
   "source_paper_repos": [
    "systemsomicslab/MsdialWorkbench"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "readr",
@@ -45193,7 +45928,8 @@
    "biodatalab/enrichmet",
    "kilgain/MassSpec"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "readxl",
@@ -45245,7 +45981,8 @@
    "LeaveMeNotTonight/CMDN",
    "biodatalab/enrichmet"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "redis",
@@ -45292,7 +46029,8 @@
   "source_paper_repos": [
    "OpenMS/OpenMS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "redu",
@@ -45339,7 +46077,8 @@
   "source_paper_repos": [
    "mwang87/ReDU-MS2-Documentation"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "relu-activation",
@@ -45414,7 +46153,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "reshape2",
@@ -45444,7 +46184,8 @@
   "source_paper_repos": [
    "LeaveMeNotTonight/CMDN"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "resnet18",
@@ -45493,7 +46234,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "rest-client-gem",
@@ -45521,7 +46263,8 @@
   "source_paper_repos": [
    "https://bitbucket.org/wishartlab/classyfire_api.git"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "rest-client",
@@ -45549,7 +46292,8 @@
   "source_paper_repos": [
    "https://bitbucket.org/wishartlab/classyfire_api.git"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "resultsloader",
@@ -45598,7 +46342,8 @@
   "source_paper_repos": [
    "Roestlab/massdash"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "reticulate",
@@ -45625,7 +46370,8 @@
   "source_paper_repos": [
    "slfan2013/SERDA"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "retip",
@@ -45653,7 +46399,8 @@
   "source_paper_repos": [
    "oloBion/Retip"
   ],
-  "repo_url": "oloBion/Retip"
+  "repo_url": "oloBion/Retip",
+  "entry_kind": "software"
  },
  {
   "slug": "reverse-search",
@@ -45678,7 +46425,8 @@
   "source_paper_repos": [
    "Philipbear/reverse_search"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "rgcxgc",
@@ -45719,7 +46467,8 @@
   "source_paper_repos": [
    "DanielQuiroz97/RGCxGC"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "rhdf5",
@@ -45777,7 +46526,8 @@
   "source_paper_repos": [
    "PNNL-m-q/mza"
   ],
-  "repo_url": "https://github.com/Huber-group-EMBL/rhdf5"
+  "repo_url": "https://github.com/Huber-group-EMBL/rhdf5",
+  "entry_kind": "software"
  },
  {
   "slug": "ricoderks-qcomics",
@@ -45808,7 +46558,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "riken",
@@ -45863,7 +46614,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "rjson",
@@ -45936,7 +46688,8 @@
   "source_paper_repos": [
    "fgcz/rawrr"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "rmarkdown",
@@ -45976,7 +46729,8 @@
   "source_paper_repos": [
    "MRCIEU/metaboprep"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "rmsi",
@@ -46010,7 +46764,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "rmsicleanup",
@@ -46044,7 +46799,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "rmsiproc",
@@ -46078,7 +46834,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "roasmi",
@@ -46108,7 +46865,8 @@
   "source_paper_repos": [
    "FangYuan717/ROASMI"
   ],
-  "repo_url": "FangYuan717/ROASMI"
+  "repo_url": "FangYuan717/ROASMI",
+  "entry_kind": "software"
  },
  {
   "slug": "roipeaks",
@@ -46138,7 +46896,8 @@
   "source_paper_repos": [
    "AdrianHaun/AriumMS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "rpref",
@@ -46182,7 +46941,8 @@
   "source_paper_repos": [
    "BiosystemEngineeringLab-IITB/dures"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "rq-redis-queue",
@@ -46225,7 +46985,8 @@
   "source_paper_repos": [
    "OpenMS/OpenMS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "rstudio",
@@ -46298,7 +47059,8 @@
    "HuanLab/ISFrag",
    "metabolomicstats/NormalizeMets"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "rtklab-byu-proteomics-data-processor",
@@ -46328,7 +47090,8 @@
   "source_paper_repos": [
    "RTKlab-BYU/MSConnect"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "rtklab-byu-raw-file-uploader",
@@ -46358,7 +47121,8 @@
   "source_paper_repos": [
    "RTKlab-BYU/MSConnect"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "ruby",
@@ -46386,7 +47150,8 @@
   "source_paper_repos": [
    "https://bitbucket.org/wishartlab/classyfire_api.git"
   ],
-  "repo_url": "https://www.ruby-lang.org"
+  "repo_url": "https://www.ruby-lang.org",
+  "entry_kind": "software"
  },
  {
   "slug": "rust",
@@ -46441,7 +47206,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ruv-iii",
@@ -46481,7 +47247,8 @@
   "source_paper_repos": [
    "SydneyBioX/hRUV"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "s4vectors",
@@ -46578,7 +47345,8 @@
    "BiosystemEngineeringLab-IITB/dures",
    "rformassspectrometry/Spectra"
   ],
-  "repo_url": "https://github.com/Bioconductor/S4Vectors"
+  "repo_url": "https://github.com/Bioconductor/S4Vectors",
+  "entry_kind": "software"
  },
  {
   "slug": "safari",
@@ -46604,7 +47372,8 @@
   "source_paper_repos": [
    "lidawei1975/colmarvista"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "salmon",
@@ -46657,7 +47426,8 @@
   "source_paper_repos": [
    "ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
   ],
-  "repo_url": "https://github.com/COMBINE-lab/salmon"
+  "repo_url": "https://github.com/COMBINE-lab/salmon",
+  "entry_kind": "software"
  },
  {
   "slug": "sand",
@@ -46686,7 +47456,8 @@
   "source_paper_repos": [
    "edisonomics/SAND"
   ],
-  "repo_url": "edisonomics/SAND"
+  "repo_url": "edisonomics/SAND",
+  "entry_kind": "software"
  },
  {
   "slug": "scannotation",
@@ -46713,7 +47484,8 @@
   "source_paper_repos": [
    "scannotation/Scannotation_software"
   ],
-  "repo_url": "scannotation/Scannotation_software"
+  "repo_url": "scannotation/Scannotation_software",
+  "entry_kind": "software"
  },
  {
   "slug": "scanpy",
@@ -46762,7 +47534,8 @@
   "source_paper_repos": [
    "bioinfo-ibms-pumc/SMART"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "scarf",
@@ -46828,7 +47601,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "scfba",
@@ -46897,7 +47671,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "sciex-multiquant-v3-0-3",
@@ -46909,9 +47684,9 @@
   "techniques": [
    "mass-spectrometry"
   ],
-  "license_tier": "unknown",
+  "license_tier": "restricted",
   "license": null,
-  "license_detection": null,
+  "license_detection": "vendor-product",
   "used_by_skills": [
    "injection-sequence-annotation",
    "instrumental-drift-detection",
@@ -46928,9 +47703,10 @@
    "signal-trend-assessment-across-injections",
    "tabular-data-parsing-and-structure-conversion"
   ],
-  "license_subject": null,
+  "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "vendor_product"
  },
  {
   "slug": "sciex-multiquant",
@@ -46943,9 +47719,9 @@
    "LC-MS",
    "mass-spectrometry"
   ],
-  "license_tier": "unknown",
+  "license_tier": "restricted",
   "license": null,
-  "license_detection": null,
+  "license_detection": "vendor-product",
   "used_by_skills": [
    "injection-sequence-annotation",
    "instrumental-drift-detection",
@@ -46962,9 +47738,10 @@
    "signal-trend-assessment-across-injections",
    "tabular-data-parsing-and-structure-conversion"
   ],
-  "license_subject": null,
+  "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "vendor_product"
  },
  {
   "slug": "sciex-q-tof-uhplc-hrms-ms",
@@ -46977,9 +47754,9 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "unknown",
+  "license_tier": "restricted",
   "license": null,
-  "license_detection": null,
+  "license_detection": "vendor-product",
   "used_by_skills": [
    "acquisition-mode-enumeration-and-validation",
    "batch-script-execution-and-automation",
@@ -47018,11 +47795,12 @@
    "threshold-based-library-validation",
    "uhplc-hrms-ms-data-matching"
   ],
-  "license_subject": null,
+  "license_subject": "tool",
   "source_paper_repos": [
    "GarrettLab-UF/LipidMatch"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "vendor_product"
  },
  {
   "slug": "scikit-bio",
@@ -47077,7 +47855,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "scikit-learn-0-23-2",
@@ -47107,7 +47886,8 @@
   "source_paper_repos": [
    "wabdelmoula/massNet"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "scikit-learn-mlpregressor",
@@ -47182,7 +47962,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "scikit-learn-nearestneighbors-for-knn-index-construction",
@@ -47221,7 +48002,8 @@
   "source_paper_repos": [
    "WanluLiuLab/SpatialMETA"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "scikit-learn-python",
@@ -47296,7 +48078,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "scikit-learn",
@@ -47573,7 +48356,8 @@
    "huaxuyu/bago",
    "ressomlab/MetFID"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "scipy-1-0-0",
@@ -47603,7 +48387,8 @@
   "source_paper_repos": [
    "wabdelmoula/massNet"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport",
@@ -47633,7 +48418,8 @@
   "source_paper_repos": [
    "GeoMetabolomics-ICBM/mcfNMR"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "scipy-signal-detrend",
@@ -47714,7 +48500,8 @@
   "source_paper_repos": [
    "shuzhao-li-lab/asari"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "scipy-signal-find-peaks",
@@ -47797,7 +48584,8 @@
   "source_paper_repos": [
    "shuzhao-li-lab/asari"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "scipy-spearman-correlation",
@@ -47869,7 +48657,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "scipy",
@@ -48108,7 +48897,8 @@
    "zsspython/LAGF",
    "zza1211/NMRformer"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "sdf-file-parser-molecular-structure-library",
@@ -48143,7 +48933,8 @@
   "source_paper_repos": [
    "https://gitlab.com/nexs-metabolomics/projects/dna_adductomics_database.git"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "seaborn-0-9-0",
@@ -48173,7 +48964,8 @@
   "source_paper_repos": [
    "wabdelmoula/massNet"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "seaborn-clustermap",
@@ -48245,7 +49037,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "seaborn",
@@ -48451,7 +49244,8 @@
   "source_paper_repos": [
    "chopralab/CLAW"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "semantic-release",
@@ -48477,7 +49271,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "seurat",
@@ -48524,7 +49319,8 @@
   "source_paper_repos": [
    "GenomicsMachineLearning/SpaMTP"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "shiny",
@@ -48618,7 +49414,8 @@
    "ncats/metScribeR",
    "pmartR/PMart_ShinyApp"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "shinyscreen",
@@ -48646,7 +49443,8 @@
   "source_paper_repos": [
    "https://gitlab.com/uniluxembourg/lcsb/eci/shinyscreen.git"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "signal-processing-toolbox",
@@ -48676,7 +49474,8 @@
   "source_paper_repos": [
    "AdrianHaun/AriumMS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "signalp",
@@ -48726,7 +49525,8 @@
   "source_paper_repos": [
    "ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "simile",
@@ -48766,7 +49566,8 @@
   "source_paper_repos": [
    "biorack/simile"
   ],
-  "repo_url": "biorack/simile"
+  "repo_url": "biorack/simile",
+  "entry_kind": "software"
  },
  {
   "slug": "singularity",
@@ -48856,7 +49657,8 @@
    "ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
    "meowcat/MSNovelist"
   ],
-  "repo_url": "http://singularity.lbl.gov"
+  "repo_url": "http://singularity.lbl.gov",
+  "entry_kind": "software"
  },
  {
   "slug": "sirius",
@@ -49075,7 +49877,8 @@
    "zmahnoor14/MAW",
    "zquinlan/concise"
   ],
-  "repo_url": "sirius-ms/sirius"
+  "repo_url": "sirius-ms/sirius",
+  "entry_kind": "software"
  },
  {
   "slug": "sklearn",
@@ -49104,7 +49907,8 @@
   "source_paper_repos": [
    "facundof2016/CCSP2.0"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "skyline",
@@ -49234,7 +50038,8 @@
    "fgcz/rawrr",
    "lifs-tools/lipidcreator"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "slack-api",
@@ -49278,7 +50083,8 @@
   "source_paper_repos": [
    "czbiohub-sf/Rapid-QC-MS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "slaw-grouping-module",
@@ -49322,7 +50128,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "slaw",
@@ -49366,7 +50173,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/zamboni-lab/SLAW"
+  "repo_url": "https://github.com/zamboni-lab/SLAW",
+  "entry_kind": "software"
  },
  {
   "slug": "slurm",
@@ -49400,7 +50208,8 @@
   "source_paper_repos": [
    "meowcat/MSNovelist"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "smart",
@@ -49449,7 +50258,8 @@
   "source_paper_repos": [
    "bioinfo-ibms-pumc/SMART"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "smartpeak",
@@ -49490,7 +50300,8 @@
   "source_paper_repos": [
    "AutoFlowResearch/SmartPeak"
   ],
-  "repo_url": "AutoFlowResearch/SmartPeak"
+  "repo_url": "AutoFlowResearch/SmartPeak",
+  "entry_kind": "software"
  },
  {
   "slug": "smartpeakcli",
@@ -49531,7 +50342,8 @@
   "source_paper_repos": [
    "AutoFlowResearch/SmartPeak"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "smartpeakgui",
@@ -49570,7 +50382,8 @@
   "source_paper_repos": [
    "AutoFlowResearch/SmartPeak"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "smiter",
@@ -49605,7 +50418,8 @@
   "source_paper_repos": [
    "LeidelLab/SMITER"
   ],
-  "repo_url": "LeidelLab/SMITER"
+  "repo_url": "LeidelLab/SMITER",
+  "entry_kind": "software"
  },
  {
   "slug": "snakemake",
@@ -49702,7 +50516,8 @@
    "biosustain/snakemake_UmetaFlow",
    "skinniderlab/clm"
   ],
-  "repo_url": "https://github.com/snakemake/snakemake"
+  "repo_url": "https://github.com/snakemake/snakemake",
+  "entry_kind": "software"
  },
  {
   "slug": "spamtp",
@@ -49748,7 +50563,8 @@
   "source_paper_repos": [
    "GenomicsMachineLearning/SpaMTP"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "spatialmeta",
@@ -49791,7 +50607,8 @@
   "source_paper_repos": [
    "WanluLiuLab/SpatialMETA"
   ],
-  "repo_url": "WanluLiuLab/SpatialMETA"
+  "repo_url": "WanluLiuLab/SpatialMETA",
+  "entry_kind": "software"
  },
  {
   "slug": "spec2vec",
@@ -49992,7 +50809,8 @@
   "source_paper_repos": [
    "vdhooftcompmet/MS2LDA"
   ],
-  "repo_url": "https://github.com/iomega/spec2vec"
+  "repo_url": "https://github.com/iomega/spec2vec",
+  "entry_kind": "software"
  },
  {
   "slug": "spectra-hash",
@@ -50037,7 +50855,8 @@
   "source_paper_repos": [
    "eMetaboHUB/FragHub"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "spectra",
@@ -50271,7 +51090,8 @@
    "sneumann/xcms",
    "zmahnoor14/MAW"
   ],
-  "repo_url": "https://github.com/RforMassSpectrometry/Spectra"
+  "repo_url": "https://github.com/RforMassSpectrometry/Spectra",
+  "entry_kind": "software"
  },
  {
   "slug": "spectral-denoising",
@@ -50321,7 +51141,8 @@
   "source_paper_repos": [
    "FanzhouKong/spectral_denoising"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "spectral-similarity",
@@ -50353,7 +51174,8 @@
   "source_paper_repos": [
    "YuanyueLi/SpectralEntropy"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "spectralentropy",
@@ -50385,7 +51207,8 @@
   "source_paper_repos": [
    "YuanyueLi/SpectralEntropy"
   ],
-  "repo_url": "YuanyueLi/SpectralEntropy"
+  "repo_url": "YuanyueLi/SpectralEntropy",
+  "entry_kind": "software"
  },
  {
   "slug": "spectraverse-analysis-repository",
@@ -50412,7 +51235,8 @@
   "source_paper_repos": [
    "skinniderlab/spectraverse-analysis"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "spectripy",
@@ -50445,7 +51269,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/RforMassSpectrometry/SpectriPy"
+  "repo_url": "https://github.com/RforMassSpectrometry/SpectriPy",
+  "entry_kind": "software"
  },
  {
   "slug": "spectrum-utils-0-3-5",
@@ -50495,7 +51320,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "spectrum-utils",
@@ -50570,7 +51396,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/bittremieux/spectrum_utils"
+  "repo_url": "https://github.com/bittremieux/spectrum_utils",
+  "entry_kind": "software"
  },
  {
   "slug": "sphinx",
@@ -50654,7 +51481,8 @@
   "source_paper_repos": [
    "pluskal-lab/DreaMS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "spreadout",
@@ -50708,7 +51536,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "sql",
@@ -50752,7 +51581,8 @@
   "source_paper_repos": [
    "mwang87/MassQueryLanguage"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "sqlalchemy",
@@ -50794,7 +51624,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "sqlite",
@@ -50810,7 +51641,8 @@
   "used_by_skills": [],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "sqlite3",
@@ -50877,7 +51709,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "sqmassloader",
@@ -50926,7 +51759,8 @@
   "source_paper_repos": [
    "Roestlab/massdash"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "sra-toolkit",
@@ -50976,7 +51810,8 @@
   "source_paper_repos": [
    "ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "stagate",
@@ -51025,7 +51860,8 @@
   "source_paper_repos": [
    "bioinfo-ibms-pumc/SMART"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "star-aligner-v-2-6-1d",
@@ -51094,7 +51930,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "statistical-analysis-libraries-scipy-stats-for-enrichment-tests",
@@ -51121,7 +51958,8 @@
   "source_paper_repos": [
    "metabolomicsworkbench/MetENP"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "statistical-total-correlation-spectroscopy-stocsy",
@@ -51163,7 +52001,8 @@
   "source_paper_repos": [
    "AndreaRMICL/MWASTools"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "statistics-and-machine-learning-toolbox",
@@ -51176,9 +52015,9 @@
    "LC-MS",
    "CE-MS"
   ],
-  "license_tier": "unknown",
+  "license_tier": "restricted",
   "license": null,
-  "license_detection": null,
+  "license_detection": "vendor-product",
   "used_by_skills": [
    "data-augmentation-metabolomics",
    "mass-spectrometry-file-format-conversion",
@@ -51189,11 +52028,12 @@
    "roi-detection-mass-spectrometry",
    "vendor-data-standardization"
   ],
-  "license_subject": null,
+  "license_subject": "tool",
   "source_paper_repos": [
    "AdrianHaun/AriumMS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "vendor_product"
  },
  {
   "slug": "stats",
@@ -51237,7 +52077,8 @@
   "source_paper_repos": [
    "BiosystemEngineeringLab-IITB/dures"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "stattarget",
@@ -51281,7 +52122,8 @@
   "source_paper_repos": [
    "idrblab/NOREVA;"
   ],
-  "repo_url": "https://github.com/bioc/statTarget"
+  "repo_url": "https://github.com/bioc/statTarget",
+  "entry_kind": "software"
  },
  {
   "slug": "streamlit",
@@ -51357,7 +52199,8 @@
    "OpenMS/OpenMS",
    "Roestlab/massdash"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "stringr",
@@ -51384,7 +52227,8 @@
   "source_paper_repos": [
    "kilgain/MassSpec"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "summarizedexperiment",
@@ -51499,7 +52343,8 @@
    "krumsieklab/maplet",
    "yufree/mzrtsim"
   ],
-  "repo_url": "https://github.com/Bioconductor/SummarizedExperiment"
+  "repo_url": "https://github.com/Bioconductor/SummarizedExperiment",
+  "entry_kind": "software"
  },
  {
   "slug": "sva",
@@ -51568,7 +52413,8 @@
    "ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
    "NBDZ/dbnorm"
   ],
-  "repo_url": "https://github.com/bioc/sva"
+  "repo_url": "https://github.com/bioc/sva",
+  "entry_kind": "software"
  },
  {
   "slug": "symfony",
@@ -51598,7 +52444,8 @@
   "source_paper_repos": [
    "privrja/MassSpecBlocks"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "syncsa",
@@ -51674,7 +52521,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "syrupy",
@@ -51724,7 +52572,8 @@
   "source_paper_repos": [
    "Roestlab/massdash"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "t-sne-t-distributed-stochastic-neighbor-embedding",
@@ -51793,7 +52642,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "t-sne",
@@ -51864,7 +52714,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "tandemmatch",
@@ -51915,7 +52766,8 @@
   "source_paper_repos": [
    "pnnl/IonToolPack"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "tardis",
@@ -51975,7 +52827,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/UGent-LIMET/TARDIS"
+  "repo_url": "https://github.com/UGent-LIMET/TARDIS",
+  "entry_kind": "software"
  },
  {
   "slug": "tensorflow-1-8-0",
@@ -52003,7 +52856,8 @@
   "source_paper_repos": [
    "wabdelmoula/massNet"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "tensorflow-2-3-0",
@@ -52047,7 +52901,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "tensorflow-or-pytorch",
@@ -52122,7 +52977,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "tensorflow-serving",
@@ -52194,7 +53050,8 @@
   "source_paper_repos": [
    "mwang87/NP-Classifier"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "tensorflow",
@@ -52392,7 +53249,8 @@
    "volvox292/mass2smiles",
    "wabdelmoula/massNet"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "thermorawfileparser",
@@ -52462,7 +53320,8 @@
   ],
   "license_subject": "tool",
   "source_paper_repos": [],
-  "repo_url": "https://github.com/compomics/ThermoRawFileParser"
+  "repo_url": "https://github.com/compomics/ThermoRawFileParser",
+  "entry_kind": "software"
  },
  {
   "slug": "tibble",
@@ -52489,7 +53348,8 @@
   "source_paper_repos": [
    "kilgain/MassSpec"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "tidyr",
@@ -52542,7 +53402,8 @@
    "GenomicsMachineLearning/SpaMTP",
    "kilgain/MassSpec"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "tidyverse",
@@ -52589,7 +53450,8 @@
    "LeaveMeNotTonight/CMDN",
    "scibiome/meteor"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "timar",
@@ -52646,7 +53508,8 @@
   "source_paper_repos": [
    "luigiquiros/inventa"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "tissuemasst",
@@ -52705,7 +53568,8 @@
   "source_paper_repos": [
    "mwang87/MASST"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "tomcat",
@@ -52740,7 +53604,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "topncontroller",
@@ -52805,7 +53670,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "torch-1-7-1",
@@ -52841,7 +53707,8 @@
   "source_paper_repos": [
    "aaronma2020/MSGO"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "torch-cluster",
@@ -52889,7 +53756,8 @@
    "01dadada/RT-Transformer",
    "RiverCCC/ABCoRT"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "torch-geometric",
@@ -52926,7 +53794,8 @@
   "source_paper_repos": [
    "01dadada/RT-Transformer"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "torch-scatter",
@@ -52974,7 +53843,8 @@
    "01dadada/RT-Transformer",
    "RiverCCC/ABCoRT"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "torch-sparse",
@@ -53022,7 +53892,8 @@
    "01dadada/RT-Transformer",
    "RiverCCC/ABCoRT"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "torch",
@@ -53088,7 +53959,8 @@
    "aaronma2020/MSGO",
    "chensaian/TransG-Net"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "torchmetrics",
@@ -53119,7 +53991,8 @@
   "source_paper_repos": [
    "RiverCCC/ABCoRT"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "tqdm-joblib",
@@ -53144,7 +54017,8 @@
   "source_paper_repos": [
    "zsspython/LAGF"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "tqdm",
@@ -53187,7 +54061,8 @@
    "01dadada/RT-Transformer",
    "zsspython/LAGF"
   ],
-  "repo_url": "https://github.com/tqdm/tqdm"
+  "repo_url": "https://github.com/tqdm/tqdm",
+  "entry_kind": "software"
  },
  {
   "slug": "transformer-architecture",
@@ -53237,7 +54112,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "transformer",
@@ -53319,7 +54195,8 @@
    "NeoNexusX/HyperCCS",
    "samgoldman97/mist"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "treelib",
@@ -53358,7 +54235,8 @@
   "source_paper_repos": [
    "shuzhao-li-lab/khipu"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "trelliscope",
@@ -53381,7 +54259,8 @@
   "source_paper_repos": [
    "pmartR/MODE_ShinyApp"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "trfba",
@@ -53450,7 +54329,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "trimgalore",
@@ -53500,7 +54380,8 @@
   "source_paper_repos": [
    "ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
   ],
-  "repo_url": "https://github.com/FelixKrueger/TrimGalore"
+  "repo_url": "https://github.com/FelixKrueger/TrimGalore",
+  "entry_kind": "software"
  },
  {
   "slug": "trove4j",
@@ -53574,7 +54455,8 @@
   "source_paper_repos": [
    "rformassspectrometry/Spectra"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ubuntu",
@@ -53604,7 +54486,8 @@
   "source_paper_repos": [
    "LQZ0123/MSThunder"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ultramassexplorer",
@@ -53679,7 +54562,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "unimod",
@@ -53750,7 +54634,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "vegan-r-package",
@@ -53823,7 +54708,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "vegan",
@@ -53899,7 +54785,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "vim",
@@ -53932,7 +54819,8 @@
   "source_paper_repos": [
    "scibiome/meteor"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "vimms",
@@ -53999,7 +54887,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "visual-studio-code",
@@ -54042,7 +54931,8 @@
    "SysMedOs/LipidLynxX",
    "systemsomicslab/MsdialWorkbench"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "visual-studio",
@@ -54079,7 +54969,8 @@
   "source_paper_repos": [
    "systemsomicslab/MsdialWorkbench"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "wavelet-toolbox",
@@ -54109,7 +55000,8 @@
   "source_paper_repos": [
    "AdrianHaun/AriumMS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "webassembly",
@@ -54135,7 +55027,8 @@
   "source_paper_repos": [
    "lidawei1975/colmarvista"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "webchem",
@@ -54216,7 +55109,8 @@
   "source_paper_repos": [
    "mariallr/amanida"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "webworker",
@@ -54242,7 +55136,8 @@
   "source_paper_repos": [
    "lidawei1975/colmarvista"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "wgcna",
@@ -54345,7 +55240,8 @@
   "source_paper_repos": [
    "andreasmock/MetaboDiff"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "windows",
@@ -54376,7 +55272,8 @@
   "source_paper_repos": [
    "LQZ0123/MSThunder"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "wine",
@@ -54425,7 +55322,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "word2vec",
@@ -54469,7 +55367,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "wpf-windows-presentation-foundation",
@@ -54504,7 +55403,8 @@
   "source_paper_repos": [
    "systemsomicslab/MsdialWorkbench"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "xcms-centwave",
@@ -54535,7 +55435,8 @@
   "source_paper_repos": [
    "HuanLab/Paramounter"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "xcms",
@@ -55099,7 +56000,8 @@
    "poomcj/NPFimg",
    "sneumann/xcms"
   ],
-  "repo_url": "https://github.com/sneumann/xcms"
+  "repo_url": "https://github.com/sneumann/xcms",
+  "entry_kind": "software"
  },
  {
   "slug": "xlsxwriter",
@@ -55131,7 +56033,8 @@
   "source_paper_repos": [
    "Leo-Cheng-Lab/ROIAL-NMR"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "xml-etree-elementtree",
@@ -55198,7 +56101,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "artefact"
  },
  {
   "slug": "xquartz",
@@ -55244,7 +56148,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "xtb",
@@ -55280,7 +56185,8 @@
   "source_paper_repos": [
    "grimme-lab/QCxMS2"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "ysi2950-bioanalyzer",
@@ -55349,7 +56255,8 @@
   ],
   "license_subject": null,
   "source_paper_repos": [],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "zenodo-org-records-10997887",
@@ -55374,7 +56281,8 @@
   "source_paper_repos": [
    "pluskal-lab/DreaMS"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  },
  {
   "slug": "zenodo",
@@ -55526,6 +56434,7 @@
    "matchms/matchms",
    "sneumann/xcms"
   ],
-  "repo_url": null
+  "repo_url": null,
+  "entry_kind": "software"
  }
 ]

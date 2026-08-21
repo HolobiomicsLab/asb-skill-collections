@@ -1,0 +1,103 @@
+# What kind of thing a `tools_index.json` entry is. Human doc: LICENSE_TIERS.md
+# § "Not every catalogue entry is software".
+#
+# The catalogue is assembled by extraction from papers, so an entry may be a
+# software package, a vendor instrument, a proprietary application, or a fragment
+# a paper happened to name. All four used to sit in one bucket, which made the
+# `unknown` licence count read as outstanding lookup work when much of it is not.
+#
+# This vocabulary is data, not code, so it can be reviewed and extended without
+# touching a detector. `scripts/classify_tool_entries.py` reads it.
+version: 1
+
+kinds: [software, vendor_product, artefact]
+
+# ---------------------------------------------------------------------------
+# vendor_product -- instruments and proprietary applications.
+#
+# These are legitimate catalogue entries and legitimate to use: a lab uses the
+# instrument it owns and the software it licensed. What they are not is
+# redistributable, and there is no repository to resolve a licence from, so they
+# take the `restricted` tier rather than `unknown` -- the licence question has an
+# answer here ("your purchase or licence agreement"), it is simply not an SPDX id.
+# ---------------------------------------------------------------------------
+
+# Matched only as a WHOLE WORD. `ThermoRawFileParser` is Apache-2.0 open source
+# and must not be caught by `thermo`; `Agilent MassHunter` must be.
+vendors:
+  - agilent
+  - bruker
+  - sciex
+  - thermo
+  - waters
+  - shimadzu
+  - perkinelmer
+  - jeol
+  - leco
+  - varian
+
+# Instrument families and hardware nouns. A name carrying one of these describes
+# a machine, whoever built it.
+instrument_terms:
+  - mass spectrometer
+  - spectrometer
+  - orbitrap
+  - q-exactive
+  - qexactive
+  - timstof
+  - tripletof
+  - zenotof
+  - synapt
+  - exploris
+  - uhplc
+  - uplc
+  - hplc
+  - gc-ms system
+  - lc-ms system
+
+# Proprietary applications that carry no vendor word in their name. Curated: a
+# name alone cannot say whether software is proprietary, and guessing in either
+# direction is worse than a reviewed list. Open-source tools with vendor-adjacent
+# names -- Skyline, ProteoWizard, ThermoRawFileParser -- are deliberately absent.
+proprietary_products:
+  - masshunter
+  - masshunter profinder
+  - compound discoverer
+  - xcalibur
+  - masslynx
+  - progenesis qi
+  - chromeleon
+  - tracefinder
+  - freestyle
+  - lipidsearch
+  - multiquant
+  - solarix
+  - matlab
+  - simca
+  - mnova
+  - chemdraw
+  - visual c++ runtime
+  - statistics and machine learning toolbox
+  - parallel computing toolbox
+
+# ---------------------------------------------------------------------------
+# artefact -- an extraction defect rather than a tool.
+#
+# Kept in the catalogue because skills reference these slugs and removing a row
+# would break that referential integrity; labelled so they stop counting as
+# unresolved licence work. Whether to remove them, and cascade the reference
+# updates, is a separate decision.
+# ---------------------------------------------------------------------------
+artefact_shapes:
+  # a.b.c -- a module or class path, not a tool name
+  - id: module_path
+    pattern: '^[A-Za-z_][\w]*(\.[A-Za-z_][\w]*){2,}$'
+  # a bare URL or owner/repo
+  - id: repository_path
+    pattern: '(?i)^(https?://|(?:www\.)?(?:github|gitlab|bitbucket)\.com[/_])|^[\w.\-]+/[\w.\-]+$'
+  # a function call copied out of a code block
+  - id: function_call
+    pattern: '\(\s*\)\s*$'
+  # a sentence fragment describing what something is for
+  - id: descriptive_phrase
+    pattern: '^\S+(\s+\S+){4,}$'

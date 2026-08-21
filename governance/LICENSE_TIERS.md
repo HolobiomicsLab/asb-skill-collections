@@ -102,6 +102,42 @@ did not say whose licence it was.
 evidence about a paper and yields `unknown` on the tool axis. Enforced by
 `scripts/check_tools_index.py`.
 
+### Not every catalogue entry is software
+
+The catalogue is assembled by extraction from papers, so an entry may be a software
+package, a vendor instrument, a proprietary application, or a fragment a paper
+happened to name. `entry_kind` says which, from the vocabulary in
+`governance/tool_entry_kinds.yaml`:
+
+| `entry_kind` | What it is | Tier |
+|---|---|---|
+| `software` | A tool with a licence to find | resolved, or `unknown` while it is not |
+| `vendor_product` | An instrument or a proprietary application | `restricted` |
+| `artefact` | An extraction defect: a module path, a bare URL, a function call, a sentence fragment | `unknown` |
+
+**Instruments and vendor software are legitimate entries and legitimate to use.** A
+lab uses the instrument it owns and the software it licensed; nothing here
+discourages that. What they are not is redistributable, and there is no repository
+to resolve an SPDX id from — so they take `restricted`, whose meaning is exactly
+"use is governed by an agreement rather than an open licence", and not `unknown`,
+which would claim a lookup is outstanding when none is possible.
+
+Artefacts stay in the catalogue because skills reference their slugs and removing a
+row would break that. Labelling them stops them counting as unresolved licence work.
+
+The distinction is what makes the `unknown` count mean something. Of 909 entries: 195
+`open`, 20 `restricted`, 1 `noncommercial`, and 693 `unknown` — of which 39 are
+artefacts, leaving **654 pieces of software genuinely awaiting a licence lookup**.
+
+Vendor terms are matched as whole words, never inside a token: `Thermo Xcalibur` is a
+vendor product and `ThermoRawFileParser` is Apache-2.0 open source. Proprietary
+applications that carry no vendor word are a curated list, because a name alone
+cannot say whether software is proprietary and guessing either way is worse than a
+reviewed entry — Skyline, ProteoWizard and msconvert are deliberately absent from it.
+The vocabulary is measured against the 196 tools whose licences were resolved from
+their own repositories: none of them may classify as anything but `software`, and
+`tests/test_classify_tool_entries.py` fails if a carelessly added term makes one.
+
 ### Where a tool licence is allowed to come from
 
 `scripts/resolve_tool_licenses.py` writes `tool_licenses.json`, and that file is the

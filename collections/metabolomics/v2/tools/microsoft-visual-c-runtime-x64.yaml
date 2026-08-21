@@ -8,10 +8,11 @@ derived_from:
 source_repos:
 - PNNL-Comp-Mass-Spec/PNNL-PreProcessor
 schema_version: 0.2.0
-license_tier: unknown
+entry_kind: vendor_product
+license_tier: restricted
 license: null
-license_detection: null
-license_subject: null
+license_detection: vendor-product
+license_subject: tool
 repo_url: null
 techniques:
 - LC-MS

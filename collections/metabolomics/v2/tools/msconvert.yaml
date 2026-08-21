@@ -47,6 +47,7 @@ source_repos:
 - guomics-lab/iDIA-QC
 - xfcui/IsoFusion
 schema_version: 0.2.0
+entry_kind: software
 license_tier: unknown
 license: null
 license_detection: null

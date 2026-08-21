@@ -28,6 +28,7 @@ source_repos:
 - matchms/matchms
 - tingxiecsu/CSU-MS2
 schema_version: 0.2.0
+entry_kind: software
 license_tier: open
 license: Apache-2.0
 license_detection: bioconda-package
