@@ -21,7 +21,8 @@ metadata:
   - GC-MS
   - CE-MS
   - direct-infusion-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b05765
   title: Retip
@@ -50,7 +51,6 @@ attribution:
 
 # retention-time-prediction-modeling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build and apply machine learning models to predict liquid chromatography retention times (RT) for small molecules from molecular descriptors, enabling compound annotation and false positive filtering in untargeted metabolomics workflows. Retip integrates six ensemble algorithms (Random Forest, BRNN, XGBoost, lightGBM, Keras, H2O AutoML) trained on reference RT data to generate predictive RT scores that disambiguate structural isomers and validate MS-based identifications.

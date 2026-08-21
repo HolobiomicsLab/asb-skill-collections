@@ -16,7 +16,8 @@ metadata:
   - ggplot2
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
@@ -49,7 +50,6 @@ attribution:
 
 # distance-matrix-computation-for-samples
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute pairwise distance matrices between metabolomic samples to quantify dissimilarity and enable downstream clustering and visualization. This is a foundational step in sample separation workflows where hierarchical or other clustering methods require inter-sample distances as input.

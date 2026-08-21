@@ -18,7 +18,8 @@ metadata:
   - ComplexHeatmap
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -58,7 +59,6 @@ attribution:
 
 # metabolic-pathway-database-querying
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Query metabolic pathway databases (KEGG, Reactome) with a set of metabolite identifiers (PubChemCIDs or chemical names) to identify which biochemical pathways are represented, annotated, and statistically enriched within your detected feature set. This skill bridges mass spectrometry-derived metabolite lists to curated biological pathway knowledge.

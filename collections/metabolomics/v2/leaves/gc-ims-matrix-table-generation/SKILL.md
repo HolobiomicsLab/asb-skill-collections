@@ -15,7 +15,8 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -44,7 +45,6 @@ attribution:
 
 # gc-ims-matrix-table-generation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and format integrated peak intensities from Gas Chromatography–Ion Mobility Spectrometry samples into a peak_table_matrix where rows represent clusters and columns represent samples. This skill produces the quantitative feature table required for downstream statistical or multivariate analysis.

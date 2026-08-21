@@ -14,7 +14,8 @@ metadata:
   - MS-Dial
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -51,7 +52,6 @@ attribution:
 
 # mz-decimal-extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and classify the decimal portion of mass-to-charge (m/z) values from MS-Dial feature tables to identify and filter features with inappropriate m/z ratios. This skill enables quality control by removing features whose decimal m/z values fall outside acceptable ranges, a common preprocessing step in untargeted LC-MS/MS metabolomics.

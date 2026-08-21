@@ -22,6 +22,7 @@ metadata:
   - statTarget
   - ProteoMM
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA

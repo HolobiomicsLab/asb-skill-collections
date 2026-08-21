@@ -15,7 +15,8 @@ metadata:
   - PubChem
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -50,7 +51,6 @@ attribution:
 
 # data-structure-design-for-spectral-searches
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and construct nested data structures that organize raw GC-MS spectral data into searchable indexes keyed by chemical identity, retention time, and exact mass. This skill enables downstream functions to perform rapid intelligent sorting, aggregation, and chemical metadata retrieval across multi-sample datasets.

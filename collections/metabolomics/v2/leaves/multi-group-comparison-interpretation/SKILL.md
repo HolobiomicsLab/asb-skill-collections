@@ -16,7 +16,8 @@ metadata:
   - R
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
@@ -50,7 +51,6 @@ attribution:
 
 # multi-group-comparison-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret ANOVA-style multi-group differential expression results in lipidomics by extracting and filtering significant molecules, then contextualizing findings within the biological sample grouping structure. This skill involves validating whether the grouping variable meaningfully stratifies the lipid molecular profile.

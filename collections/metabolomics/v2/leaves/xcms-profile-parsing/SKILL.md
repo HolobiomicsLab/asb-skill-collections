@@ -16,7 +16,8 @@ metadata:
   - xcms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
@@ -48,7 +49,6 @@ attribution:
 
 # xcms-profile-parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and structure raw LC-MS profile data from xcms-processed files into organized feature-by-sample objects for downstream realignment analysis. This skill extracts retention time and intensity profiles needed by ncGTW to detect and correct misaligned feature groups.

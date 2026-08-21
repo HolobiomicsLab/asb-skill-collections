@@ -10,6 +10,7 @@ metadata:
   tools:
   - NMRFx
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx

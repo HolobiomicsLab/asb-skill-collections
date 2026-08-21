@@ -15,7 +15,8 @@ metadata:
   - R
   - pcutils
   - igraph
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
@@ -49,7 +50,6 @@ attribution:
 
 # Reconstruct topological and stability metric computation for a constructed network
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute comprehensive topological and stability metrics from a network object to characterize global and node-level network properties. MetaNet's metrics module calculates degree, centrality, clustering coefficients, path lengths, robustness, and perturbation-response metrics for in-depth network characterization.

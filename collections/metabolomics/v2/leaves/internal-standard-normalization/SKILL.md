@@ -20,6 +20,7 @@ metadata:
   - RlaPlots
   - PcaPlots
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s11306-018-1347-7
   title: NormalizeMets
@@ -35,7 +36,7 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_eclipse_cq
-    doi: 10.1093/bioinformatics/btaf290/8128335
+    doi: 10.1093/bioinformatics/btaf290
     title: Eclipse
   - build: coll_normalizemets_cq
     doi: 10.1007/s11306-018-1347-7

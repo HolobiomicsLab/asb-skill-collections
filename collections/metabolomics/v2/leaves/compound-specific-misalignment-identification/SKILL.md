@@ -15,7 +15,8 @@ metadata:
   - xcms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
@@ -47,7 +48,6 @@ attribution:
 
 # compound-specific-misalignment-identification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies misaligned feature groups produced by XCMS grouping using ncGTW's misalignDetect() function, which compares two XCMS results with different bandwidth parameters to detect retention time (RT) drift artifacts. This skill enables correction of alignment errors that arise when XCMS assumes all m/z bins in a sample share a single warping function, improving accuracy for downstream peak-regrouping and peak-filling.

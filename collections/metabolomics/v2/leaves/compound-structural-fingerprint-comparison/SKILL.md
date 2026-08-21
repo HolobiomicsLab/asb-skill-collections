@@ -17,7 +17,8 @@ metadata:
   - uafR
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -50,7 +51,6 @@ attribution:
 
 # compound-structural-fingerprint-comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill uses cheminformatics packages (ChemmineR, fmcsR, webchem) to compute structural similarity scores between query chemicals and a reference library, identifying best-matched compounds based on atomic fingerprints and molecular features. It is essential when you need to assess whether structurally similar compounds are correctly distinguished or grouped during chemical categorization.

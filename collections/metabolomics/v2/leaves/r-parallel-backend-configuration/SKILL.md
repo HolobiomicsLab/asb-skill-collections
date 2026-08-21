@@ -17,7 +17,8 @@ metadata:
   - parallel
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -49,7 +50,6 @@ attribution:
 
 # Configure R Parallel Backend with future::plan() for Multisession Workers
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure the future package's multisession parallel backend to spawn multiple R worker sessions, enabling parallel execution of downstream library-reading and data-processing operations on multi-core systems. This skill is essential for reducing runtime on time-consuming mass spectral library compilation workflows.

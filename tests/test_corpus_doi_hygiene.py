@@ -65,3 +65,58 @@ if __name__ == "__main__":
     import pytest
 
     sys.exit(pytest.main([__file__, "-q"]))
+
+
+# --- artefact shapes made of legal DOI characters ----------------------------
+#
+# The canonical regex above bans `?` and `#`. It cannot ban these, because a
+# trailing path segment and a trailing `.svg` are built from characters a real
+# DOI may contain — 18 of them shipped past it. What separates an artefact from
+# a real DOI is not the string but whether it resolves, so the guard here reuses
+# `repair_corpus_dois`' candidate generator: a corpus DOI must not have a
+# plausible repair sitting in front of it, because that means nobody checked.
+
+from scripts.repair_corpus_dois import repair_candidates  # noqa: E402
+
+
+def test_no_corpus_doi_looks_like_a_scraping_artefact():
+    offenders = []
+    for cf in _corpus_files():
+        doc = yaml.safe_load(cf.read_text()) or {}
+        for paper in doc.get("papers") or []:
+            doi = str(paper.get("doi") or "").strip()
+            if doi and repair_candidates(doi):
+                offenders.append(f"{cf.name}: {doi} -> {repair_candidates(doi)}")
+    assert not offenders, (
+        "corpus DOIs that look like URL or badge artefacts; run "
+        f"`python scripts/repair_corpus_dois.py --apply` and review: {offenders}"
+    )
+
+
+def test_a_real_doi_is_not_mistaken_for_an_artefact():
+    """The other side: over-firing here would rewrite working DOIs."""
+    for doi in ("10.1177/14690667231164766", "10.1002/9780470508183",
+                "10.1101/060012", "10.1093/bioinformatics/btac355"):
+        assert repair_candidates(doi) == []
+
+
+def test_no_corpus_doi_appears_twice():
+    """One work, one entry.
+
+    The indexes are string-keyed on the DOI, so two rows for one work split its
+    skills across both and neither half sees the other's grounding — the same
+    hazard this module's header describes for `?ref=` cruft. Repairing a DOI
+    onto one that already exists is the easy way to create it, which is why
+    `repair_corpus_dois` refuses a repair that would collide.
+    """
+    offenders = []
+    for cf in _corpus_files():
+        doc = yaml.safe_load(cf.read_text()) or {}
+        seen = {}
+        for paper in doc.get("papers") or []:
+            doi = str(paper.get("doi") or "").strip()
+            if not doi:
+                continue
+            seen[doi] = seen.get(doi, 0) + 1
+        offenders += [f"{cf.name}: {d} x{n}" for d, n in seen.items() if n > 1]
+    assert not offenders, f"duplicate corpus DOIs: {offenders}"

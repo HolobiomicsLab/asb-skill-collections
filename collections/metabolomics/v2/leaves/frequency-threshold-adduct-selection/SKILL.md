@@ -14,7 +14,8 @@ metadata:
   - mWISE
   - R
   - CAMERA
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
@@ -45,7 +46,6 @@ attribution:
 
 # frequency-threshold-adduct-selection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A filtering step that selects adducts and fragments for metabolite annotation based on observed frequency thresholds, optionally retaining quasi-molecular adducts with minimum occurrence frequency above a user-defined cutoff. This is applied during cluster-based candidate filtering to improve specificity by removing rare or low-confidence adduct assignments.

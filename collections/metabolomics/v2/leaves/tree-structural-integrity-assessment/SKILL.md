@@ -14,6 +14,7 @@ metadata:
   - q2-qemistree
   - QIIME 2 artifact inspection tools
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree

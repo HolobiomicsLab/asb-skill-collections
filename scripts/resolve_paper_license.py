@@ -37,17 +37,16 @@ import pathlib
 
 import yaml
 
-from scripts.license_tier import tier_for_license
+from scripts.license_tier import SUBJECT_PAPER, UNESTABLISHED_DETECTIONS, tier_for_license
 from scripts.preprint_license import (
     STATUS_RESOLVED,
     fetch_json,
     resolve_registry_license,
 )
 
-# What `derive_license_tiers.detect_license` reports when it could not establish a
-# licence from the repository. Anything in this set means "unasked or unanswered",
-# never "refused" — kept in one place and pinned by test_resolve_paper_license.py.
-UNESTABLISHED_DETECTIONS = {None, "", "none", "file-present-unclassified"}
+# Re-exported for callers and tests; the vocabulary itself lives in
+# scripts/license_tier.py, shared with the repository-side resolver.
+UNESTABLISHED_DETECTIONS = UNESTABLISHED_DETECTIONS
 
 # Access tiers this script may promote out of. `link-only` records that nothing
 # was cloned, which a paper licence can legitimately supersede; a tier asserting
@@ -110,6 +109,7 @@ def apply_outcome(paper: dict, outcome: dict) -> bool:
     access["license"] = outcome["spdx"]
     paper["license_tier"] = tier_for_license(outcome["spdx"])
     paper["license_detection"] = f"{outcome['registry']}-paper"
+    paper["license_subject"] = SUBJECT_PAPER
     paper["source_reuse"] = outcome["source_reuse"]
     if outcome["promotes"]:
         access["type"] = OPEN_ACCESS_TYPE

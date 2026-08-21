@@ -14,7 +14,8 @@ metadata:
   - omu (omu_summary function)
   - assign_hierarchy
   - omu
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -47,7 +48,6 @@ attribution:
 
 # metabolite-count-normalization-and-transformation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize and transform metabolite abundance counts in a data frame to prepare them for statistical testing or visualization. This skill applies column-wise (sample) or row-wise (metabolite) transformations such as log transformation, mean-centering, Pareto scaling, or relative abundance conversion to meet assumptions of downstream analyses.

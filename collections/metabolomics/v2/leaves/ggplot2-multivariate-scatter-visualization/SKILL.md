@@ -15,7 +15,8 @@ metadata:
   - CordBat
   - R
   - dplyr
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05748
   title: CordBat
@@ -48,7 +49,6 @@ attribution:
 
 # ggplot2-multivariate-scatter-visualization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Create publication-ready 2D scatter plots of multivariate data (e.g., PCA scores) colored by categorical metadata (batch, group) to visually assess sample clustering and batch correction efficacy. This skill enables side-by-side comparison of uncorrected vs. corrected metabolomics data in reduced dimensionality space.

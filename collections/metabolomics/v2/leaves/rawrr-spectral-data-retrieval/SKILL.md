@@ -19,7 +19,8 @@ metadata:
   - tartare
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -62,7 +63,6 @@ attribution:
 
 # rawrr-spectral-data-retrieval
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Programmatically extract spectral data (m/z, intensity, retention time, scan metadata) directly from Thermo Fisher Scientific Orbitrap .raw files using the rawrr R package, without requiring external file conversion. This enables modular end-to-end proteomics pipelines in R that operate on vendor-native binary data.

@@ -15,6 +15,7 @@ metadata:
   - PMart ShinyApp
   - Shiny
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.3c00512
   title: PMart

@@ -19,7 +19,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -51,7 +52,6 @@ attribution:
 
 # Metabolite Tandem MS/MS Library Curation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compile and organize tandem mass spectral libraries from multiple sources (NIST, RIKEN, MoNA, GNPS) into polarity-separated msp files compatible with MS-DIAL by reading, enriching with structural metadata (SMILES, molecular formula), and separating positive and negative ionization modes.

@@ -13,6 +13,7 @@ metadata:
   - pip
   - conda
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41587-025-02663-3
   title: DreaMS

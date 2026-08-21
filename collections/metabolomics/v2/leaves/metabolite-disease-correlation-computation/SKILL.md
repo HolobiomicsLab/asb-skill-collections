@@ -15,6 +15,7 @@ metadata:
   - DeepMSProfiler
   - SciPy / NumPy
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler

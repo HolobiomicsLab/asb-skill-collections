@@ -17,7 +17,8 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -57,7 +58,6 @@ attribution:
 
 # chemical-structure-similarity-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match query chemical compounds to reference compound type categories using structural similarity scoring via flexmatch common substructure (FMCS) algorithms. This skill identifies best-matching compound classifications when a query set is compared against a restricted type library, returning match scores and compound identifiers for downstream chemical categorization workflows.

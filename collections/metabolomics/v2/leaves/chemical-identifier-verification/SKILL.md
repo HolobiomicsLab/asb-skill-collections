@@ -16,7 +16,8 @@ metadata:
   - spreadOut
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -50,7 +51,6 @@ attribution:
 
 # chemical-identifier-verification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a set of query chemicals can be correctly retrieved and identified from GC-MS data using retention time, m/z peaks, and match factor thresholds. This skill validates whether mass spectrometry search algorithms accurately extract compound-specific metadata (exact mass, retention time, match factor, area) from preprocessed spectral dictionaries.

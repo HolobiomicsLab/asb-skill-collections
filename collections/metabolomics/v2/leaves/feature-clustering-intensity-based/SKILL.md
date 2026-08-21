@@ -18,7 +18,8 @@ metadata:
   - igraph
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
@@ -55,7 +56,6 @@ attribution:
 
 # feature-clustering-intensity-based
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Cluster LC-MS features that likely derive from the same metabolite by leveraging intensity patterns across samples, a preprocessing step in mWISE that prepares candidates for downstream filtering and diffusion-based prioritization. This skill reduces annotation redundancy by grouping related peaks before network-based ranking.

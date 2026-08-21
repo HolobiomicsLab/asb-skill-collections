@@ -15,7 +15,8 @@ metadata:
   - KEGG / Reactome
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -55,7 +56,6 @@ attribution:
 
 # Pathway Over-Representation Analysis (ORA)
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 ORA identifies metabolic pathways that are significantly enriched among a set of significant metabolites (e.g., those meeting stringent ANOVA q-value thresholds) when tested against the complete set of detected metabolites in an untargeted LC-MS/MS study. This provides biological interpretation of which canonical metabolic processes are disrupted or altered in the experimental condition.

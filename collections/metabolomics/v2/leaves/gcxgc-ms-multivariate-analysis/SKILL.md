@@ -16,7 +16,8 @@ metadata:
   - colorRamps
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
@@ -50,7 +51,6 @@ attribution:
 
 # GCxGC-MS Multivariate Analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Applies multiway principal component analysis (MPCA) to preprocessed two-dimensional gas chromatography–mass spectrometry data to reveal multivariate structure and group differences in metabolite profiles. This skill extracts and interprets principal component scores and loadings from chromatographic intensity matrices to identify discriminative metabolite patterns.

@@ -18,13 +18,14 @@ metadata:
   - Zenodo Dataset (DOI:10.5281/zenodo.11199061)
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
 - doi: 10.5281/zenodo.11199061
   title: ''
-- doi: 10.5281/zenodo.11199061.svg
+- doi: 10.5281/zenodo.11199061
   title: ''
 evidence_spans: []
 claims: []
@@ -43,7 +44,7 @@ attribution:
   all_source_dois:
   - 10.1186/s13321-024-00899-w
   - 10.5281/zenodo.11199061
-  - 10.5281/zenodo.11199061.svg
+  - 10.5281/zenodo.11199061
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias
@@ -52,7 +53,6 @@ attribution:
 
 # Graph Neural Network Model Loading
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load pre-trained graph neural network models from serialized files (.h5 format) or retrain them using provided training pipelines and hyperparameters for collision cross section prediction tasks. This skill enables reproducible inference and generalizability evaluation by ensuring consistent model state across experimental runs.
@@ -92,7 +92,7 @@ First, clone or access the enveda/ccs-prediction GitHub repository and install d
 - **train-test.py** (Executes GNN training and prediction pipeline with specified datasets, hyperparameters, and output paths) — https://github.com/enveda/ccs-prediction
 - **Poetry** (Dependency and environment manager for installing GNN training framework and pre-commit hooks)
 - **Makefile** (Provides pre-configured training commands (e.g., make train-metlin-test-metlin) for common model configurations) — https://github.com/enveda/ccs-prediction
-- **Zenodo Dataset (DOI:10.5281/zenodo.11199061)** (Hosts pre-computed predictions and model outputs for direct download without retraining) — https://zenodo.org/badge/DOI/10.5281/zenodo.11199061.svg
+- **Zenodo Dataset (DOI:10.5281/zenodo.11199061)** (Hosts pre-computed predictions and model outputs for direct download without retraining) — https://zenodo.org/badge/DOI/10.5281/zenodo.11199061
 
 ## Examples
 

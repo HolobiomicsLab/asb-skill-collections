@@ -14,7 +14,8 @@ metadata:
   - uafR
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -46,7 +47,6 @@ attribution:
 
 # unique-compound-enumeration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enumerate and count unique chemical compounds in a mass spectrometry dataset after applying quality-based filtering thresholds. This skill isolates high-confidence identifications from GC-MS outputs by retaining only compounds that meet specified Match.Factor criteria, enabling comparison of compound set size across threshold levels.

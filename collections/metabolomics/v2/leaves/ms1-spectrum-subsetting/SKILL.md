@@ -16,7 +16,8 @@ metadata:
   - Spectra
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -54,7 +55,6 @@ attribution:
 
 # MS1-level spectrum subsetting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter a scan index data.frame to retain only MS1-level mass spectrometry scans, enabling targeted analysis of precursor ion spectra. This skill is essential when downstream analysis (base-peak extraction, retention time alignment, chromatogram construction) requires isolation of survey scans from a mixed MS1/MS2 dataset.

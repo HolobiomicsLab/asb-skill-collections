@@ -19,6 +19,7 @@ metadata:
   techniques:
   - LC-MS
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu
@@ -32,7 +33,7 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_dbdipy_cq
-    doi: 10.1093/bioinformatics/btad088/7036334
+    doi: 10.1093/bioinformatics/btad088
     title: DBDIpy
   - build: coll_khipu_cq
     doi: 10.1021/acs.analchem.2c05810

@@ -18,7 +18,8 @@ metadata:
   - Spectra
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -56,7 +57,6 @@ attribution:
 
 # mass-spectrometry-scan-indexing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate a tabular index of all scans in a Thermo Fisher Scientific raw file, enabling programmatic filtering and selective extraction of spectral data by MS level, scan type, or scan number. This foundational operation bridges raw binary data and downstream analysis by providing scan metadata (retention time, MS level, scan type) without loading all spectral arrays into memory.

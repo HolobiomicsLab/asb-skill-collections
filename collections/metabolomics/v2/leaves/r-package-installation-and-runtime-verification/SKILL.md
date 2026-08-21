@@ -18,7 +18,8 @@ metadata:
   - MsBackendRawFileReader
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -57,7 +58,6 @@ attribution:
 
 # R Package Installation and Runtime Verification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Install an R package and verify that all required external dependencies (compiled executables, .NET runtimes, system libraries) are correctly configured before attempting data access operations. This skill ensures that downstream analysis workflows can invoke system-level tools without runtime failures.

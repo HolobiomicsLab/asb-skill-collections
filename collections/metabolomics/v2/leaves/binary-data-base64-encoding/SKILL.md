@@ -14,7 +14,8 @@ metadata:
   - mzrtsim
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
@@ -46,7 +47,6 @@ attribution:
 
 # binary-data-base64-encoding
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encode mass spectrometry spectral data matrices as Base64-formatted binary strings for embedding in mzML XML file structures. This skill bridges raw numerical MS intensity arrays with the mzML standard's requirement for compact, XML-compatible binary representation.

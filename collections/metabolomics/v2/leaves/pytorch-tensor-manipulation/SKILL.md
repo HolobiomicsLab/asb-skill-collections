@@ -13,6 +13,7 @@ metadata:
   - DGL
   - RDKit
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c03177
   title: retention_time_gnn

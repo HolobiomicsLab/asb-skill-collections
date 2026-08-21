@@ -14,7 +14,8 @@ metadata:
   - R
   - igraph
   - pcutils
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
@@ -47,7 +48,6 @@ attribution:
 
 # correlation-threshold-optimization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Select and apply correlation coefficient thresholds to filter network edges from high-dimensional feature abundance tables, retaining only statistically or biologically significant correlations. This step bridges pairwise correlation computation and final network construction, controlling sparsity, interpretability, and computational load.

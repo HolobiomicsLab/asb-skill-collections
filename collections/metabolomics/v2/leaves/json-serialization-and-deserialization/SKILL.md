@@ -14,7 +14,8 @@ metadata:
   - jsonlite
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -49,7 +50,6 @@ attribution:
 
 # json-serialization-and-deserialization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert R list objects containing mass spectrometry metadata (e.g., instrument model, file name, time range, number of scans) extracted from Thermo Fisher Scientific .raw file headers into JSON format and write to disk, or read JSON files back into R objects for downstream analysis. This bridges vendor binary formats with interoperable text-based interchange.

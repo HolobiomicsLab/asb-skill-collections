@@ -15,7 +15,8 @@ metadata:
   - xcms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
@@ -47,7 +48,6 @@ attribution:
 
 # chromatographic-misalignment-detection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and identify misaligned feature groups in LC-MS data that result from overly simplistic alignment assumptions in XCMS, using higher-resolution alignment results and statistical p-value thresholding to flag features with inconsistent sample subset patterns.

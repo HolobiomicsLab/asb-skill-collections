@@ -16,6 +16,7 @@ metadata:
   - Docker / docker-compose
   - NP Classifier models (Keras/HDF5)
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier

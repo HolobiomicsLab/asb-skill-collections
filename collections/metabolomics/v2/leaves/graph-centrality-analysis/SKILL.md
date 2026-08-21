@@ -14,7 +14,8 @@ metadata:
   - R
   - pcutils
   - igraph
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
@@ -48,7 +49,6 @@ attribution:
 
 # graph-centrality-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute node-level centrality metrics (degree, betweenness, closeness, eigenvector centrality) from a network object to identify topologically influential nodes. This skill is essential for ranking nodes by their structural importance in network characterization and for prioritizing hub or bridge nodes in multi-omics networks.

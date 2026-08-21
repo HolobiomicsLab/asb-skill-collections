@@ -16,7 +16,8 @@ metadata:
   - notame
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -53,7 +54,6 @@ attribution:
 
 # feature-abundance-normalization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize LC-MS/MS metabolomic feature abundance matrices to remove systematic variation and improve comparability across samples while preserving biological signal. This is a critical preprocessing step that corrects for instrument drift, batch effects, and sample loading differences in untargeted metabolomics workflows.

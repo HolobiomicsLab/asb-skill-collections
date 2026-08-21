@@ -12,7 +12,8 @@ metadata:
   tools:
   - CordBat
   - R
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05748
   title: CordBat
@@ -43,7 +44,6 @@ attribution:
 
 # batch-vector-preparation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a categorical batch assignment vector from metabolomics sample metadata to label each observation with its batch provenance. This vector is a required input to concordance-based batch correction workflows and must align dimensionally with the metabolite matrix rows.

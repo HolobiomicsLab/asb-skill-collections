@@ -23,8 +23,9 @@ metadata:
   techniques:
   - mass-spectrometry
   license_tier: open
+  provenance_tier: literature
 derived_from:
-- doi: 10.1093/bioinformatics/btad078/7067745
+- doi: 10.1093/bioinformatics/btad078
   title: ChemWalker
 - doi: 10.48550/arxiv.2507.06853
   title: ''
@@ -38,7 +39,7 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_chemwalker_cq
-    doi: 10.1093/bioinformatics/btad078/7067745
+    doi: 10.1093/bioinformatics/btad078
     title: ChemWalker
   - build: coll_diffspectra_cq
     doi: 10.48550/arxiv.2507.06853
@@ -47,9 +48,9 @@ provenance:
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bioinformatics/btad078/7067745
+  original_doi: 10.1093/bioinformatics/btad078
   all_source_dois:
-  - 10.1093/bioinformatics/btad078/7067745
+  - 10.1093/bioinformatics/btad078
   - 10.48550/arxiv.2507.06853
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []

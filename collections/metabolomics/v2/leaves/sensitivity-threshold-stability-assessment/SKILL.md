@@ -20,7 +20,8 @@ metadata:
   - data.table
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
@@ -55,7 +56,6 @@ attribution:
 
 # sensitivity-threshold-stability-assessment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill systematically evaluates the stability and robustness of a frequency threshold parameter across a spectrum of values (0.00–1.00 in 0.01 increments) using Pareto front analysis to identify optimal trade-offs between signal retention and noise reduction in tandem mass spectrometry spectra. It combines multi-objective optimization with statistical significance testing to pinpoint threshold values that maximize denoising performance while minimizing signal loss.

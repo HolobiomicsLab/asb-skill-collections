@@ -18,7 +18,8 @@ metadata:
   - rawDiag
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -55,7 +56,6 @@ attribution:
 
 # raw-file-data-extraction-via-api
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract spectral, chromatographic, and metadata records from proprietary Thermo Fisher Scientific Orbitrap .raw files using the rawrr R package's programmatic API, which wraps the RawFileReader .NET assembly. This skill enables modular, reproducible access to raw mass spectrometry data for quality control, method optimization, and end-to-end proteomics pipelines in R without relying on GUI software.

@@ -23,6 +23,7 @@ metadata:
   techniques:
   - LC-MS
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41538-022-00137-3
   title: foodMASST

@@ -18,6 +18,7 @@ metadata:
   - SLURM
   - Python (train.py, evaluation.py)
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-022-01486-3
   title: MSNovelist

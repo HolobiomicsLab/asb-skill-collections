@@ -13,7 +13,8 @@ metadata:
   - LargeMetabo
   - factoextra
   - ggplot2
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
@@ -46,7 +47,6 @@ attribution:
 
 # metabolite-sample-clustering-visualization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Visualize the hierarchical clustering and separation of metabolomic samples using the Sample_Separation function with HCA (hierarchical clustering analysis) method to group samples by their metabolomic profiles and identify sample separation patterns.

@@ -16,7 +16,8 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -45,7 +46,6 @@ attribution:
 
 # savitzky-golay-smoothing-application
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply Savitzky-Golay polynomial smoothing independently to both drift time and retention time dimensions of Gas Chromatography–Ion Mobility Spectrometry data to reduce noise while preserving signal features prior to alignment. This is a preprocessing step that removes high-frequency noise without over-smoothing peaks or distorting the underlying chromatographic and ion mobility structure.

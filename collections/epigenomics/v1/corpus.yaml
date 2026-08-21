@@ -2,7 +2,8 @@ schema: asb-corpus/1.0
 collection: epigenomics
 version: 1
 generated_on: '2026-06-15'
-source: asb-corpus-omics/epigenomics_candidates*.json (web-discovered, adoption-first, OA-filtered)
+source: asb-corpus-omics/epigenomics_candidates*.json (web-discovered, adoption-first,
+  OA-filtered)
 policy: OPEN_ACCESS_POLICY.md (OA-only; access.type verified per DOI)
 summary:
   total: 11
@@ -22,6 +23,7 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: methylKit
   doi: 10.1186/gb-2012-13-10-r87
   title: methylKit
@@ -35,6 +37,7 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: cooltools
   doi: 10.1371/journal.pcbi.1012067
   title: cooltools
@@ -48,6 +51,7 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: ArchR
   doi: 10.1038/s41588-021-00790-6
   title: ArchR
@@ -61,10 +65,12 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: Juicer
   doi: 10.1016/j.cels.2016.07.002
   title: Juicer
-  category: 3D genome (Hi-C) processing — reads to .hic, HiCCUPS loops, Arrowhead domains
+  category: 3D genome (Hi-C) processing — reads to .hic, HiCCUPS loops, Arrowhead
+    domains
   repo_url: aidenlab/juicer
   status: included
   wave: v0-expansion
@@ -74,6 +80,7 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: TOBIAS
   doi: 10.1038/s41467-020-18035-1
   title: TOBIAS
@@ -87,6 +94,7 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: SEACR
   doi: 10.1186/s13072-019-0287-4
   title: SEACR
@@ -100,6 +108,7 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: chromVAR
   doi: 10.1038/nmeth.4401
   title: chromVAR
@@ -113,6 +122,7 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: HiC-Pro
   doi: 10.1186/s13059-015-0831-x
   title: HiC-Pro
@@ -126,10 +136,12 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: ChAMP
   doi: 10.1093/bioinformatics/btx513
   title: ChAMP
-  category: 'end-to-end Illumina array pipeline: QC, BMIQ, cell-type correction, DMP/DMR/DMB, CNA'
+  category: 'end-to-end Illumina array pipeline: QC, BMIQ, cell-type correction, DMP/DMR/DMB,
+    CNA'
   repo_url: YuanTian1991/ChAMP
   status: included
   wave: v0-expansion
@@ -139,10 +151,12 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper
 - name: SnapATAC2
   doi: 10.1038/s41592-023-02139-9
   title: SnapATAC2
-  category: 'scalable single-cell epigenomics: preprocessing, spectral embedding, clustering, peak/differential analysis'
+  category: 'scalable single-cell epigenomics: preprocessing, spectral embedding,
+    clustering, peak/differential analysis'
   repo_url: scverse/SnapATAC2
   status: included
   wave: v0-expansion
@@ -152,3 +166,4 @@ papers:
     is_oa: true
     verified_via: unpaywall_oa_locations
     verified_on: '2026-06-15'
+  license_subject: paper

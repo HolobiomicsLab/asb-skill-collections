@@ -18,7 +18,8 @@ metadata:
   - Spectra
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
@@ -54,7 +55,6 @@ attribution:
 
 # mass-spectrometry-data-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates that MS/MS spectral denoising workflows correctly reduce fragment and spectrum counts according to expected thresholds and filter parameters. This skill involves reproducibly verifying intermediate data transformations (TIC-based filtering, intra-spectrum grouping, fragment frequency labeling) to ensure denoising does not introduce systematic errors or lose signal.

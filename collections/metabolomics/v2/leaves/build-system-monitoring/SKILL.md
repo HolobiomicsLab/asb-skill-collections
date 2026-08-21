@@ -16,12 +16,13 @@ metadata:
   - Docker Hub
   - Zenodo
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma
 - doi: 10.5281/zenodo.1043226
   title: ''
-- doi: 10.5281/zenodo.1043226.svg
+- doi: 10.5281/zenodo.1043226
   title: ''
 evidence_spans:
 - MAGMa is a abbreviation for 'Ms Annotation based on in silico Generated Metabolites'.
@@ -42,7 +43,7 @@ attribution:
   all_source_dois:
   - 10.5702/massspectrometry.S0033
   - 10.5281/zenodo.1043226
-  - 10.5281/zenodo.1043226.svg
+  - 10.5281/zenodo.1043226
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias
@@ -109,6 +110,6 @@ Locate the README file in the target repository (e.g., https://github.com/NLeSC/
 - [other] Workflow for badge endpoint retrieval: "For each badge endpoint, retrieve the current status value by accessing the endpoint URL and parsing the response (status field, numerical score, or version string as applicable)"
 - [readme] README contains live badge links: ".. image:: https://travis-ci.org/NLeSC/MAGMa.svg?branch=master
     :target: https://travis-ci.org/NLeSC/MAGMa"
-- [readme] Zenodo DOI badge in README: ".. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.1043226.svg
+- [readme] Zenodo DOI badge in README: ".. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.1043226
    :target: https://doi.org/10.5281/zenodo.1043226"
 - [other] Expected output structure: "Tabulate the results in a structured table with columns for badge name, endpoint URL, retrieved status value, and timestamp of retrieval"

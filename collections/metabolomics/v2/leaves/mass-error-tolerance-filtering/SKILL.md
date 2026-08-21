@@ -17,7 +17,8 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -51,7 +52,7 @@ attribution:
 
 # mass-error-tolerance-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Applies a parts-per-million (ppm) error threshold during metabolite annotation to match experimental m/z values against a reference database, accepting only matches within the specified mass tolerance. This filter reduces false-positive annotations by rejecting candidates whose theoretical m/z deviates beyond the tolerance window.

@@ -14,7 +14,8 @@ metadata:
   - fmcsR
   - webchem
   - uafR
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -47,7 +48,6 @@ attribution:
 
 # structural-type-categorization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A cheminformatics workflow that categorizes query chemicals against a reference library by computing structural similarity scores and identifying best-matched compounds in each library group. Uses ChemmineR, fmcsR, and webchem to enable structural matching and assessment across chemical types.

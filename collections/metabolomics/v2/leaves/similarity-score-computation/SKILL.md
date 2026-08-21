@@ -15,7 +15,8 @@ metadata:
   - NIST API
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
@@ -49,7 +50,6 @@ attribution:
 
 # Similarity-Score Computation for EI Mass Spectral Library Search
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute normalized similarity scores between a query electron ionization mass spectrum and library entries using the Identity (EI Normal) or Similarity (EI Simple) algorithm. This skill enables ranking of potential compound matches in spectral databases by their computed similarity to the query spectrum.

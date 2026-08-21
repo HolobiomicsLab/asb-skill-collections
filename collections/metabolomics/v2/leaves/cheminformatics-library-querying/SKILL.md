@@ -18,7 +18,8 @@ metadata:
   - uafR
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -51,7 +52,6 @@ attribution:
 
 # cheminformatics-library-querying
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Query a structured chemical library against a set of query compounds to retrieve categorical metadata, structural similarity scores, and database presence flags using cheminformatics packages. This skill enables systematic identification of compounds matching specific structural or property criteria across multiple external databases (PubChem, LOTUS, KEGG, FEMA, FDA/SPL).

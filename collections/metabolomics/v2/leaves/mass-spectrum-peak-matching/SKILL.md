@@ -15,7 +15,8 @@ metadata:
   - NIST API
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
@@ -49,7 +50,6 @@ attribution:
 
 # mass-spectrum-peak-matching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Peak matching is the core operation in electron ionization (EI) mass spectral library search, where m/z values and intensity pairs from a query spectrum are compared against library entries using algorithm-specific scoring (Identity EI Normal or Similarity EI Simple) to rank candidate matches. This skill bridges raw spectral data to ranked library hits, enabling compound identification in metabolomics and analytical chemistry.

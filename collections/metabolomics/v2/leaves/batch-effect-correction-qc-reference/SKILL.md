@@ -18,7 +18,8 @@ metadata:
   - SummarizedExperiment
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
@@ -49,7 +50,6 @@ attribution:
 
 # batch-effect-correction-qc-reference
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 QC-based batch correction uses quality control (QC) sample intensities as a stable reference to normalize peak intensity vectors in LC/GC-MS data, attenuating systematic batch effects across runs. The bcpareto() implementation applies Pareto scaling (normalization by QC standard deviation) with optional log transformation to correct for instrument drift and matrix effects.

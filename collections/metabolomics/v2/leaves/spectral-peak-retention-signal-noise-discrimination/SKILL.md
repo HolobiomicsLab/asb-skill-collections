@@ -18,7 +18,8 @@ metadata:
   - data.table
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
@@ -53,7 +54,6 @@ attribution:
 
 # spectral-peak-retention-signal-noise-discrimination
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Applies a user-defined frequency threshold to MS/MS fragment ions from replicate spectra, retaining signal-associated peaks and filtering noise-associated fragments based on their recurrence frequency across replicates. This discriminates true analyte fragments from random or spurious peaks.

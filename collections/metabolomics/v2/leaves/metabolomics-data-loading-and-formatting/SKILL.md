@@ -18,7 +18,8 @@ metadata:
   - assign_hierarchy
   techniques:
   - NMR
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -47,7 +48,6 @@ attribution:
 
 # metabolomics-data-loading-and-formatting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and structure raw metabolomics count data and metadata into R using specialized functions that ensure proper class assignment and hierarchical organization. This skill establishes the foundation for downstream statistical analysis and visualization of metabolite abundance patterns.

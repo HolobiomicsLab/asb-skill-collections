@@ -17,7 +17,8 @@ metadata:
   - igraph
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
@@ -50,7 +51,6 @@ attribution:
 
 # KEGG Candidate Network Integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate KEGG metabolite candidates into a metabolic network graph and apply diffusion-based scoring to prioritize annotations by propagating confidence scores through network topology. This skill transforms a flat list of candidate compounds into a ranked, network-contextualized annotation table.

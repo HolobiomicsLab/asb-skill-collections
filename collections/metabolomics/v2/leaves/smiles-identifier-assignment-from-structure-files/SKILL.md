@@ -21,7 +21,8 @@ metadata:
   - ChemineOB
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -56,7 +57,6 @@ attribution:
 
 # SMILES Identifier Assignment from Structure Files
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assigns SMILES (Simplified Molecular Input Line Entry System) identifiers to mass spectral library records by matching molecular structures extracted from SDF files to compound names or InChI keys. This enriches spectral records with canonicalized chemical structure notation required for MS-DIAL compatibility and downstream cheminformatics workflows.

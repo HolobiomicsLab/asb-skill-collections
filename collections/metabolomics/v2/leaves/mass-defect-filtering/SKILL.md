@@ -16,7 +16,8 @@ metadata:
   - notame
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -53,7 +54,6 @@ attribution:
 
 # mass-defect-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove spurious or artifact features from untargeted metabolomics data by filtering on the decimal portion of m/z values. This quality-control filter excludes features with m/z decimal values falling within specified ranges (commonly [4, 8]), retaining only features with biologically plausible mass-to-charge ratios for downstream metabolite identification.

@@ -15,6 +15,7 @@ metadata:
   - GitHub Actions
   - MassBank-data repository
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/jms.1777
   title: MassBank

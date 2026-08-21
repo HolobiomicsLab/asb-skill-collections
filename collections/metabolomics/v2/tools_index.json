@@ -776,7 +776,7 @@
   "canonical_url": "https://github.com/broadinstitute/bmxp",
   "edam_topics": [],
   "dois": [
-   "10.1093/bioinformatics/btaf290/8128335"
+   "10.1093/bioinformatics/btaf290"
   ],
   "techniques": [
    "LC-MS",
@@ -1792,7 +1792,7 @@
   "canonical_url": "https://github.com/leopold-weidner/DBDIpy",
   "edam_topics": [],
   "dois": [
-   "10.1093/bioinformatics/btad088/7036334"
+   "10.1093/bioinformatics/btad088"
   ],
   "techniques": [
    "LC-MS",
@@ -2383,7 +2383,7 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.0c02998",
-   "10.1093/bioinformatics/btab231/6214530"
+   "10.1093/bioinformatics/btab231"
   ],
   "techniques": [
    "LC-MS",
@@ -2860,7 +2860,7 @@
    "10.1515/jib-2025-0047",
    "10.1101/2021.12.05.471237v2",
    "10.1093/bib/bbac455",
-   "10.1093/bioinformatics/btac059/6522114",
+   "10.1093/bioinformatics/btac059",
    "10.1021/acs.analchem.2c04632",
    "10.1093/bioadv/vbae175",
    "10.1128/mra.00129-19",
@@ -3374,7 +3374,7 @@
   "canonical_url": "https://github.com/wabdelmoula/massNet",
   "edam_topics": [],
   "dois": [
-   "10.1093/bioinformatics/btac032/6510930"
+   "10.1093/bioinformatics/btac032"
   ],
   "techniques": [
    "MS-imaging"
@@ -3386,7 +3386,7 @@
   "canonical_url": "https://github.com/PNNL-m-q/mza",
   "edam_topics": [],
   "dois": [
-   "10.1093/bioinformatics/btac032/6510930",
+   "10.1093/bioinformatics/btac032",
    "10.1021/acs.jproteome.2c00313",
    "10.1021/acs.jproteome.2c00313",
    "10.1021/acs.jproteome.8b00717",
@@ -4376,7 +4376,7 @@
   "canonical_url": "https://github.com/wabdelmoula/massNet",
   "edam_topics": [],
   "dois": [
-   "10.1093/bioinformatics/btac032/6510930"
+   "10.1093/bioinformatics/btac032"
   ],
   "techniques": []
  },
@@ -4388,7 +4388,7 @@
   "dois": [
    "10.1021/jacs.9b13786",
    "10.1021/acs.analchem.9b02983",
-   "10.1093/bioinformatics/btac032/6510930",
+   "10.1093/bioinformatics/btac032",
    "10.1021/acs.analchem.1c02220",
    "10.1021/acs.jnatprod.1c00399",
    "10.3390/metabo13080944"
@@ -4444,7 +4444,7 @@
   "canonical_url": "https://github.com/MRCIEU/metaboprep",
   "edam_topics": [],
   "dois": [
-   "10.1093/bioinformatics/btac059/6522114",
+   "10.1093/bioinformatics/btac059",
    "10.1021/acs.analchem.5c00567"
   ],
   "techniques": [
@@ -4821,7 +4821,7 @@
   "edam_topics": [],
   "dois": [
    "10.1021/acs.analchem.5c01726",
-   "10.1093/bioinformatics/btab741/6409851"
+   "10.1093/bioinformatics/btab741"
   ],
   "techniques": [
    "LC-MS",
@@ -4904,7 +4904,7 @@
   "canonical_url": "https://github.com/krumsieklab/maplet",
   "edam_topics": [],
   "dois": [
-   "10.1093/bioinformatics/btab741/6409851"
+   "10.1093/bioinformatics/btab741"
   ],
   "techniques": []
  },
@@ -5645,7 +5645,7 @@
   "canonical_url": "https://github.com/MRCIEU/metaboprep",
   "edam_topics": [],
   "dois": [
-   "10.1093/bioinformatics/btac059/6522114"
+   "10.1093/bioinformatics/btac059"
   ],
   "techniques": [
    "LC-MS",
@@ -6988,7 +6988,7 @@
   "canonical_url": "https://github.com/fhanau/mspack",
   "edam_topics": [],
   "dois": [
-   "10.1093/bioinformatics/btab636/6363791"
+   "10.1093/bioinformatics/btab636"
   ],
   "techniques": [
    "ion-mobility-MS"
@@ -7238,7 +7238,7 @@
   "dois": [
    "10.1021/acs.jproteome.2c00120",
    "10.1186/1471-2105-11-395",
-   "10.1093/bioinformatics/btab231/6214530"
+   "10.1093/bioinformatics/btab231"
   ],
   "techniques": [
    "LC-MS",
@@ -7378,7 +7378,7 @@
   "canonical_url": "https://github.com/YasinEl/mzRAPP",
   "edam_topics": [],
   "dois": [
-   "10.1093/bioinformatics/btab231/6214530"
+   "10.1093/bioinformatics/btab231"
   ],
   "techniques": [
    "LC-MS",
@@ -7871,7 +7871,7 @@
   "canonical_url": "https://github.com/wabdelmoula/massNet",
   "edam_topics": [],
   "dois": [
-   "10.1093/bioinformatics/btac032/6510930"
+   "10.1093/bioinformatics/btac032"
   ],
   "techniques": [
    "MS-imaging"
@@ -7906,7 +7906,7 @@
    "10.1021/acs.analchem.3c04419",
    "10.1371/journal.pcbi.1011814",
    "10.1007/s10489-022-04351-0",
-   "10.1093/bioinformatics/btac032/6510930",
+   "10.1093/bioinformatics/btac032",
    "10.3389/fbinf.2022.842964",
    "10.1186/s40168-023-01476-3",
    "10.1371/journal.pcbi.1009021",
@@ -8212,7 +8212,7 @@
   "canonical_url": "https://github.com/wabdelmoula/massNet",
   "edam_topics": [],
   "dois": [
-   "10.1093/bioinformatics/btac032/6510930"
+   "10.1093/bioinformatics/btac032"
   ],
   "techniques": [
    "MS-imaging"
@@ -9199,7 +9199,7 @@
   "canonical_url": "https://github.com/computational-chemical-biology/ChemWalker",
   "edam_topics": [],
   "dois": [
-   "10.1093/bioinformatics/btad078/7067745"
+   "10.1093/bioinformatics/btad078"
   ],
   "techniques": [
    "LC-MS",
@@ -9282,7 +9282,7 @@
   "canonical_url": "https://github.com/wabdelmoula/massNet",
   "edam_topics": [],
   "dois": [
-   "10.1093/bioinformatics/btac032/6510930"
+   "10.1093/bioinformatics/btac032"
   ],
   "techniques": [
    "MS-imaging"
@@ -9504,15 +9504,15 @@
    "10.1021/jasms.4c00152",
    "10.1101/2022.08.09.503345",
    "10.1093/bioinformatics/bty080",
-   "10.1093/bioinformatics/btad078/7067745",
+   "10.1093/bioinformatics/btad078",
    "10.1021/acs.analchem.4c05039",
    "10.1021/jacs.9b13786",
    "10.1021/acs.analchem.5c01594",
-   "10.1093/bioinformatics/btad088/7036334",
+   "10.1093/bioinformatics/btad088",
    "10.1038/s41467-024-51433-3",
    "10.1021/acs.analchem.1c05017",
    "10.1038/s41467-018-06082-8",
-   "10.1093/bioinformatics/btaf290/8128335",
+   "10.1093/bioinformatics/btaf290",
    "10.1021/acs.analchem.1c01309",
    "10.1038/s41467-023-39279-7",
    "10.1074/mcp.M113.031278",
@@ -9533,7 +9533,7 @@
    "10.1371/journal.pcbi.1011814",
    "10.1101/2023.07.06.547963v1",
    "10.1038/s41467-025-60640-5",
-   "10.1093/bioinformatics/btac032/6510930",
+   "10.1093/bioinformatics/btac032",
    "10.1186/s13321-024-00878-1",
    "10.1186/s13321-023-00695-y",
    "10.3389/fbinf.2022.842964",
@@ -10491,7 +10491,7 @@
   "canonical_url": "https://github.com/MRCIEU/metaboprep",
   "edam_topics": [],
   "dois": [
-   "10.1093/bioinformatics/btac059/6522114"
+   "10.1093/bioinformatics/btac059"
   ],
   "techniques": [
    "LC-MS",
@@ -10825,7 +10825,7 @@
   "canonical_url": "https://github.com/wabdelmoula/massNet",
   "edam_topics": [],
   "dois": [
-   "10.1093/bioinformatics/btac032/6510930"
+   "10.1093/bioinformatics/btac032"
   ],
   "techniques": [
    "MS-imaging"
@@ -10902,7 +10902,7 @@
   "canonical_url": "https://github.com/wabdelmoula/massNet",
   "edam_topics": [],
   "dois": [
-   "10.1093/bioinformatics/btac032/6510930"
+   "10.1093/bioinformatics/btac032"
   ],
   "techniques": [
    "MS-imaging"
@@ -11003,7 +11003,7 @@
   "canonical_url": "https://github.com/wabdelmoula/massNet",
   "edam_topics": [],
   "dois": [
-   "10.1093/bioinformatics/btac032/6510930"
+   "10.1093/bioinformatics/btac032"
   ],
   "techniques": [
    "MS-imaging"
@@ -11198,7 +11198,7 @@
   "dois": [
    "10.1038/s41467-020-15960-z",
    "10.1021/acs.jproteome.0c00082",
-   "10.1093/bioinformatics/btab231/6214530",
+   "10.1093/bioinformatics/btab231",
    "10.1021/acs.jproteome.0c00866",
    "10.1016/j.aca.2018.08.002"
   ],
@@ -11757,7 +11757,7 @@
   "edam_topics": [],
   "dois": [
    "10.1101/2020.12.21.423723",
-   "10.1093/bioinformatics/btab741/6409851",
+   "10.1093/bioinformatics/btab741",
    "10.1021/jasms.5c00073",
    "10.1021/acs.analchem.5c01213"
   ],
@@ -11880,7 +11880,7 @@
   "canonical_url": "https://github.com/wabdelmoula/massNet",
   "edam_topics": [],
   "dois": [
-   "10.1093/bioinformatics/btac032/6510930"
+   "10.1093/bioinformatics/btac032"
   ],
   "techniques": []
  },
@@ -11934,7 +11934,7 @@
    "10.1021/acs.analchem.9b02983",
    "10.1038/s42256-024-00816-8",
    "10.1101/2023.07.06.547963v1",
-   "10.1093/bioinformatics/btac032/6510930",
+   "10.1093/bioinformatics/btac032",
    "10.1007/s11306-020-01726-7",
    "10.1371/journal.pcbi.1009021",
    "10.1021/acs.analchem.1c02220",
@@ -12554,7 +12554,7 @@
    "10.1186/1471-2105-15-s11-s5",
    "10.1093/bioinformatics/btac441",
    "10.1021/jasms.5c00073",
-   "10.1093/bioinformatics/btab231/6214530",
+   "10.1093/bioinformatics/btab231",
    "10.1093/bioinformatics/btaa037",
    "10.1021/acs.analchem.1c02220",
    "10.1021/acs.analchem.1c03163",

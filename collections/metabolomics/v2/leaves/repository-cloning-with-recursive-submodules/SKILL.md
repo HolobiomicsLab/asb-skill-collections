@@ -17,6 +17,7 @@ metadata:
   - Homebrew
   - pacman
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12080684
   title: MAVEN2

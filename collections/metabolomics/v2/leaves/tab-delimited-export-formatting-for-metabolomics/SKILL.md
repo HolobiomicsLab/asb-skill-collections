@@ -16,9 +16,10 @@ metadata:
   - knitr
   - ggplot2
   - metaboprep
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
-- doi: 10.1093/bioinformatics/btac059/6522114
+- doi: 10.1093/bioinformatics/btac059
   title: Metaboprep
 evidence_spans:
 - library(metaboprep)
@@ -30,15 +31,15 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_metaboprep_cq
-    doi: 10.1093/bioinformatics/btac059/6522114
+    doi: 10.1093/bioinformatics/btac059
     title: Metaboprep
   dedup_kept_from: coll_metaboprep_cq
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bioinformatics/btac059/6522114
+  original_doi: 10.1093/bioinformatics/btac059
   all_source_dois:
-  - 10.1093/bioinformatics/btac059/6522114
+  - 10.1093/bioinformatics/btac059
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias
@@ -47,7 +48,6 @@ attribution:
 
 # tab-delimited-export-formatting-for-metabolomics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Export processed metabolite data, sample metadata, and feature metadata from a Metaboprep object into tab-delimited text files (.txt/.tsv) for downstream analysis in external tools. This skill enables interoperability by converting in-memory R objects into portable, standard tabular formats.

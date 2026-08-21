@@ -17,7 +17,8 @@ metadata:
   - Spectra
   techniques:
   - CE-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
@@ -52,7 +53,6 @@ attribution:
 
 # OnDiskMSnExp Object Manipulation and Export
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load raw CE-MS data as an OnDiskMSnExp object, apply mobility transformation to convert migration times to effective mobility scale, and export the transformed data to a single .mzML file containing both positive and negative ion modes. This skill bridges memory-efficient in-memory representation with standardized output formats for downstream analysis.

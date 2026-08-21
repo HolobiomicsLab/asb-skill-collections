@@ -20,7 +20,8 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
@@ -55,7 +56,6 @@ attribution:
 
 # migration-time-extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract migration time (MT) coordinates of marker peaks (e.g., EOF markers) from CE-MS data files by generating Extracted Ion Electropherograms (EIE) and applying xcms peak detection with specified m/z and MT range constraints. This preprocessing step is essential for calibrating and normalizing migration time scales before effective mobility transformation.

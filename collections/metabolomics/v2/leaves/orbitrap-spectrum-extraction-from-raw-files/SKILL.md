@@ -18,7 +18,8 @@ metadata:
   - ThermoRawFileParser
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -55,7 +56,6 @@ attribution:
 
 # orbitrap-spectrum-extraction-from-raw-files
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract individual MS/MS spectra from Thermo Fisher Scientific Orbitrap .raw files with full instrument metadata (resolving power, AGC target, injection time) and centroided m/z–intensity arrays. This skill enables reproducible access to raw spectral data and quality assessment of peptide fragmentation in bottom-up proteomics workflows.

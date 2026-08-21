@@ -19,7 +19,8 @@ metadata:
   - Biobase
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -58,7 +59,6 @@ attribution:
 
 # MS-DIAL output parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and load MS-DIAL peak tables (feature tables with m/z, retention time, and intensity values) into a structured metabolomics data object for downstream preprocessing and analysis. This is the critical entry point for untargeted LC-MS/MS workflows, converting vendor-independent MS-DIAL output into a format compatible with quality control, filtering, and statistical analysis pipelines.

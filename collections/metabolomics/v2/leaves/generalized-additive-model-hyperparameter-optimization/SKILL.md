@@ -16,7 +16,8 @@ metadata:
   - metabCombiner
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
@@ -49,7 +50,6 @@ attribution:
 
 # generalized-additive-model-hyperparameter-optimization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize the basis dimension (k) and outlier detection parameters of a GAM spline fitted to retention time anchor points in LC-MS metabolomics. This skill selects the best model complexity through cross-validation while iteratively downweighting high-error points, balancing fit quality against overfitting.

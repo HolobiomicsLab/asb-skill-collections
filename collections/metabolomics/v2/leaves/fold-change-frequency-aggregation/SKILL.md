@@ -18,7 +18,8 @@ metadata:
   - ra_table
   - pie_chart
   - plot_bar
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -47,7 +48,6 @@ attribution:
 
 # fold-change-frequency-aggregation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aggregate fold-change results from univariate statistical testing into frequency counts of increased vs. decreased metabolites, stratified by compound class or other hierarchical metadata. This enables compact summary tables and downstream visualization of the direction and magnitude of metabolic shifts.

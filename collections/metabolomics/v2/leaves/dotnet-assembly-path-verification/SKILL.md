@@ -11,7 +11,8 @@ metadata:
   - rawrr
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -45,7 +46,6 @@ attribution:
 
 # dotnet-assembly-path-verification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a .NET assembly bundled with an R package is correctly deployed and accessible by calling internal dispatch functions to retrieve the assembly path and version string without requiring raw data input. This validates the two-layer R/C# architecture before attempting data processing.

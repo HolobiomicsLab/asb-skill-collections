@@ -15,7 +15,8 @@ metadata:
   - xcms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
@@ -47,7 +48,6 @@ attribution:
 
 # retention-time-intensity-data-extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and organize raw LC-MS retention time and intensity profiles from xcms-processed source files for specific feature groups using the ncGTW loadProfile() function. This skill is essential for reconstructing raw profile data needed to realign misaligned features detected by xcms.

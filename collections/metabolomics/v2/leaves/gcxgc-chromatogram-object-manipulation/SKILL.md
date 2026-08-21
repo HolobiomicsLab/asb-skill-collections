@@ -18,7 +18,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
@@ -52,7 +53,6 @@ attribution:
 
 # GCxGC Chromatogram Object Manipulation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load, preprocess, and transform two-dimensional gas chromatography-mass spectrometry (GCxGC-MS) chromatogram objects through a sequence of signal enhancement and alignment operations in R using the RGCxGC package. This skill chains baseline correction, smoothing, peak alignment, and object joining to prepare raw NetCDF chromatogram data for multivariate analysis.

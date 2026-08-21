@@ -12,7 +12,8 @@ metadata:
   tools:
   - R
   - GCIMS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -41,7 +42,6 @@ attribution:
 
 # peak-table-imputation-missing-value-handling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Imputes NA values in GCIMS peak table matrices using cluster statistics to fill missing intensity measurements. This step is essential after peak clustering to ensure a complete, analyzable peak intensity matrix for downstream statistical analysis.

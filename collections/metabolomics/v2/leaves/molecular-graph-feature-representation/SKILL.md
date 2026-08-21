@@ -13,6 +13,7 @@ metadata:
   - chemprop-IR
   - RDKit
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR

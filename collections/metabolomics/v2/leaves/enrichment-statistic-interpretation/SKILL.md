@@ -14,7 +14,8 @@ metadata:
   - lipidr
   - R
   - limma
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
@@ -47,7 +48,6 @@ attribution:
 
 # enrichment-statistic-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret lipid set enrichment analysis (LSEA) results ranked by log fold-change to identify significantly enriched or depleted lipid classes and chain properties in differential lipidomics experiments. This skill extracts and visualizes enrichment statistics to reveal preferential regulation patterns across lipid molecular features.

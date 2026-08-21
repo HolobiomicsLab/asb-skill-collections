@@ -18,7 +18,8 @@ metadata:
   - mzR
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
@@ -50,7 +51,6 @@ attribution:
 
 # mass-spectrometry-matrix-background-simulation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate realistic background-only .mzML files for LC/GC-MS data, containing either pure noise or noise combined with matrix ion peaks, without analyte signals. This skill produces ground-truth reference files for benchmarking feature detection and noise modeling in untargeted metabolomics workflows.

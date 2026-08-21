@@ -16,6 +16,7 @@ metadata:
   techniques:
   - LC-MS
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c00786
   title: Rapid QC-MS

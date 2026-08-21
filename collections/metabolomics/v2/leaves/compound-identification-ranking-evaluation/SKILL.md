@@ -19,6 +19,7 @@ metadata:
   - GC-MS
   - NMR
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.microc.2025.115372
   title: FlavorFormer

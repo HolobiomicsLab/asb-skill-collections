@@ -11,6 +11,60 @@ import yaml
 
 _DEFAULT_MAP = pathlib.Path(__file__).resolve().parent.parent / "governance" / "license_tiers.yaml"
 
+# What a detector reports when it could not establish a licence. Shared, because
+# two scripts write the same fields from different evidence -- a repository and a
+# DOI registry -- and each must be able to tell "unasked" from "answered". A
+# failed lookup must never overwrite a successful one.
+UNESTABLISHED_DETECTIONS = frozenset({None, "", "none", "file-present-unclassified"})
+
+# --------------------------------------------------------------------------- #
+# Which licence a recorded value is about.                                     #
+#                                                                              #
+# `access.license` is written by two resolvers with different evidence: one    #
+# reads a code repository, the other a DOI registry. The value alone does not  #
+# say which -- `MIT` could be the tool's licence and `CC-BY-4.0` the paper's,  #
+# and a corpus can hold both. Without the distinction a repository lookup can  #
+# substitute a tool licence for a paper one and no guard fires, because a      #
+# value is still present. See governance/LICENSE_TIERS.md and issue #35.       #
+# --------------------------------------------------------------------------- #
+
+SUBJECT_TOOL = "tool"
+SUBJECT_PAPER = "paper"
+
+# Detections that read a code repository, and so describe the *tool*.
+TOOL_DETECTIONS = frozenset({"github-api", "license-file", "r-description", "readme-llm"})
+# `verified_via` markers that identify the subject when the detection cannot:
+# a clone reads the repository, Unpaywall reads the publication.
+TOOL_VERIFICATIONS = frozenset({"git_clone_succeeded_at_build"})
+PAPER_VERIFICATION_PREFIX = "unpaywall"
+
+
+def licence_subject(entry: dict) -> str | None:
+    """Whether a corpus entry's recorded licence is the tool's or the paper's.
+
+    Derived, never guessed: from `license_detection` where it says, and from
+    `access.verified_via` where it does not. Returns None when the entry records
+    no licence, or when nothing in it identifies the subject -- an explicit
+    "unknown" rather than a default, so a new detection source shows up as
+    unlabelled instead of being silently filed under one axis.
+    """
+    access = entry.get("access") or {}
+    if entry.get("license_subject") in (SUBJECT_TOOL, SUBJECT_PAPER):
+        return entry["license_subject"]
+    if not access.get("license"):
+        return None
+    detection = entry.get("license_detection")
+    if detection in TOOL_DETECTIONS:
+        return SUBJECT_TOOL
+    if str(detection or "").endswith("-paper"):
+        return SUBJECT_PAPER
+    verified = str(access.get("verified_via") or "")
+    if verified in TOOL_VERIFICATIONS:
+        return SUBJECT_TOOL
+    if verified.startswith(PAPER_VERIFICATION_PREFIX):
+        return SUBJECT_PAPER
+    return None
+
 
 def load_map(path: pathlib.Path | None = None) -> dict:
     """Load the SPDX-to-tier governance map (governance/license_tiers.yaml)."""

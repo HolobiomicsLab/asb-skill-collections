@@ -16,6 +16,7 @@ metadata:
   techniques:
   - CE-MS
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: mummichog

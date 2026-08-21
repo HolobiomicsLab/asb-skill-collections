@@ -21,7 +21,8 @@ metadata:
   - spectrum_utils
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
@@ -78,7 +79,6 @@ attribution:
 
 # spectral-metadata-extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and validate key spectral metadata fields (precursor m/z, peaks, annotations) from mass spectral records parsed from MSP library files. This skill ensures structural and semantic correctness of spectral data before downstream analysis or file export.

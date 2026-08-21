@@ -15,7 +15,8 @@ metadata:
   - PubChem
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -50,7 +51,6 @@ attribution:
 
 # chemical-identifier-unification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Unifies fragmented chemical identifiers across GC-MS samples by querying external chemical databases (PubChem, webchem) to retrieve published synonyms, exact masses, and retention time ranges, then constructs a searchable index keyed by retention-time–mass composites. This enables consistent matching and aggregation of the same chemical across multiple files and detection peaks.

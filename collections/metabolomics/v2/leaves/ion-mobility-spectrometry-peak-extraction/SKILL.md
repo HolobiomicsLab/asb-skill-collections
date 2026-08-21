@@ -16,7 +16,8 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -45,7 +46,6 @@ attribution:
 
 # ion-mobility-spectrometry-peak-extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extraction of intensity values for detected peaks across Gas Chromatography–Ion Mobility Spectrometry samples into a peak intensity matrix suitable for downstream analysis. This skill bridges peak detection and clustering to produce a quantitative feature table where rows represent peaks/clusters and columns represent samples.

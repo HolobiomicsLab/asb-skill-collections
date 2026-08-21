@@ -17,7 +17,8 @@ metadata:
   - XCMS
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -51,7 +52,6 @@ attribution:
 
 # feature-metadata-extraction-from-clustering-objects
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract spectral metadata (m/z, intensity pairs, retention time, molecular weight, cluster assignment) from RAMClustR clustering objects to enable downstream format conversion and structural annotation. This skill bridges unsupervised feature clustering and software-specific spectral export formats (MSFinder .mat, Sirius .ms).

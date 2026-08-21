@@ -19,7 +19,8 @@ metadata:
   - Enrich_Plot
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
@@ -51,7 +52,6 @@ attribution:
 
 # enrichment-statistical-thresholding
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply p-value cutoffs to filter pathway enrichment results and retain only statistically significant associations between metabolites and biological pathways. This skill ensures that downstream pathway visualization and interpretation focus on robust, reproducible enrichment signals rather than noise.

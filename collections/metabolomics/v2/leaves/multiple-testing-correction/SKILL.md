@@ -26,12 +26,13 @@ metadata:
   - R (base stats and Bioconductor)
   - qvalue package
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.08.28.672951v2
   title: EnrichMET
 - doi: 10.1101/2020.11.20.391912
   title: ''
-- doi: 10.1093/bioinformatics/btad523/7248906
+- doi: 10.1093/bioinformatics/btad523
   title: ''
 evidence_spans:
 - simplifies pathway enrichment analysis by allowing the complete workflow to be executed
@@ -52,7 +53,7 @@ provenance:
     doi: 10.1101/2020.11.20.391912
     title: MetENP
   - build: coll_metgwas_1_0_cq
-    doi: 10.1093/bioinformatics/btad523/7248906
+    doi: 10.1093/bioinformatics/btad523
     title: metGWAS 1.0
   dedup_kept_from: coll_enrichmet_cq
 schema_version: 0.2.0
@@ -62,7 +63,7 @@ attribution:
   all_source_dois:
   - 10.1101/2025.08.28.672951v2
   - 10.1101/2020.11.20.391912
-  - 10.1093/bioinformatics/btad523/7248906
+  - 10.1093/bioinformatics/btad523
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias

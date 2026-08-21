@@ -16,7 +16,8 @@ metadata:
   - Agilent Unknowns Analysis
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -48,7 +49,6 @@ attribution:
 
 # compound-data-subsetting-by-threshold
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill filters a compound list from GC-MS data by applying quantitative quality thresholds (e.g., Match.Factor ≥65, ≥80, ≥90) to retain only compounds meeting specified matching criteria. It is essential for reducing false positives and focusing analysis on high-confidence chemical identifications.

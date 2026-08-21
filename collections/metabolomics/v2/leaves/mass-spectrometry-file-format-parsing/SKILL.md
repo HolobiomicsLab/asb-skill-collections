@@ -22,6 +22,7 @@ metadata:
   - LC-MS
   - ion-mobility-MS
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
@@ -42,7 +43,7 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_eclipse_cq
-    doi: 10.1093/bioinformatics/btaf290/8128335
+    doi: 10.1093/bioinformatics/btaf290
     title: Eclipse
   - build: coll_matchms_cq
     doi: 10.1186/s13321-024-00878-1

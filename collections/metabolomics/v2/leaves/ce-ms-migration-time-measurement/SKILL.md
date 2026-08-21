@@ -17,7 +17,8 @@ metadata:
   - msdata
   techniques:
   - CE-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
@@ -49,7 +50,6 @@ attribution:
 
 # CE-MS migration time measurement
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and record migration times (retention times) of analytes from capillary electrophoresis–mass spectrometry (CE-MS) datasets, serving as the primary input for subsequent effective mobility transformation. Migration times vary with electroosmotic flow fluctuations and must be precisely measured to enable calibration against EOF markers.

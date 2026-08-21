@@ -16,7 +16,8 @@ metadata:
   - rawDiag
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -51,7 +52,6 @@ attribution:
 
 # system-call-invocation-via-system2
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Invoke external compiled executables (e.g., .NET assemblies, C# wrappers) from R using the system2() function, capture their output via text connections, and parse results back into R objects. This is essential for accessing binary file formats and vendor-supplied APIs that lack native R bindings.

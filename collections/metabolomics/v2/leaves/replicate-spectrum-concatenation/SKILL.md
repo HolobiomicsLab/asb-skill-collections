@@ -18,7 +18,8 @@ metadata:
   - mzR
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
@@ -52,7 +53,6 @@ attribution:
 
 # replicate-spectrum-concatenation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Concatenate MS/MS spectra across all replicate injections for a given feature to create a unified spectrum object that pools signal across technical replicates. This step unifies fragmentation data before downstream denoising and consensus spectrum generation.

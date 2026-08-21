@@ -20,7 +20,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
@@ -52,7 +53,6 @@ attribution:
 
 # spectral-peak-shape-modeling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply chromatographic peak-shape modeling (Gaussian or exponentially-modified Gaussian) to simulated LC/GC-MS data to generate realistic retention-time profiles with configurable tailing and peak-width parameters. This skill is essential for raw mass spectrometry data simulation when ground-truth peak intensity and chromatographic behavior must be computationally generated from spectral databases.

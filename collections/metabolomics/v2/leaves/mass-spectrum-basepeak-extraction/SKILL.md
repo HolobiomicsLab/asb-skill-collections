@@ -17,7 +17,8 @@ metadata:
   - MsBackendRawFileReader
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -55,7 +56,6 @@ attribution:
 
 # mass-spectrum-basepeak-extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Programmatically extract base-peak m/z and intensity values from individual MS1 scans in Thermo Orbitrap raw files using the rawrr package. This skill enables construction of scan-indexed base-peak tables without external file conversion, facilitating direct integration of raw spectral data into R-based proteomics pipelines.

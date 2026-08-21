@@ -20,7 +20,8 @@ metadata:
   - data.table
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
@@ -55,7 +56,6 @@ attribution:
 
 # pareto-front-multi-objective-optimization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply Pareto front analysis to identify optimal trade-offs between competing objectives (signal retention vs. noise reduction) across a parameter space, with differential evolution as a fallback when Pareto dominance is insufficient to select a single solution. This skill is essential when tuning frequency thresholds for MS/MS spectrum denoising where both false-positive and false-negative errors must be simultaneously minimized.

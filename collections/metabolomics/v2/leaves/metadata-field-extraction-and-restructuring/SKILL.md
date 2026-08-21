@@ -16,7 +16,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -47,7 +48,6 @@ attribution:
 
 # metadata-field-extraction-and-restructuring
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and restructure embedded metadata fields from mass spectral library records into standardized fields required by downstream pipeline steps. This skill is essential when source library formats embed critical information (such as SMILES strings) in unstructured or non-standard fields (such as Comment fields) that must be isolated and placed into the expected schema before compilation and use in MS-DIAL.

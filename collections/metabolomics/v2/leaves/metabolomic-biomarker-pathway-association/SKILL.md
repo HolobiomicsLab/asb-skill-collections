@@ -15,7 +15,8 @@ metadata:
   - KEGG_Enrich_PlotPanel
   - Enrichment
   - KEGG_Enrich_Plot
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
@@ -47,7 +48,6 @@ attribution:
 
 # metabolomic-biomarker-pathway-association
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill links identified metabolomic biomarkers to biological pathways through enrichment analysis, enabling interpretation of marker compounds in the context of KEGG or custom databases. It transforms a list of compound identifiers and their fold-change values into pathway statistics and visualizations.

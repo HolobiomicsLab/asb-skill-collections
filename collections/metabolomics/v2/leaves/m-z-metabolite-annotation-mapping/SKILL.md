@@ -21,7 +21,8 @@ metadata:
   techniques:
   - LC-MS
   - MS-imaging
-  license_tier: restricted
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -55,7 +56,7 @@ attribution:
 
 # m/z-metabolite-annotation-mapping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Maps mass-to-charge (m/z) ratios from full-scan MS data to metabolite identities by searching against a reference database (e.g. LipidMaps, HMDB) with specified mass tolerance and adduct type. This is the primary step for converting raw m/z features into annotated metabolite identities in spatial metabolomics and LC-MS workflows.

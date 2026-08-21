@@ -12,7 +12,8 @@ metadata:
   tools:
   - lipidr
   - R
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
@@ -45,7 +46,6 @@ attribution:
 
 # outlier-sample-identification-pca
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify anomalous samples in lipidomics datasets by performing PCA on normalized and log-transformed lipid abundance data, then visually inspecting score plots for samples with large dispersion relative to the primary sample grouping (e.g., SampleType). Outlier samples are those with unusual PC scores that may warrant removal prior to downstream statistical analysis.

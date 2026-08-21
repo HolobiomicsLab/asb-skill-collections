@@ -18,7 +18,8 @@ metadata:
   - InterpretMSSpectrum
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -54,7 +55,6 @@ attribution:
 
 # xcms-object-handling-and-preprocessing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare raw mass spectrometry data for downstream metabolomics analysis by applying XCMS feature detection, alignment, retention time correction, and missing value imputation. This preprocessing pipeline transforms raw NetCDF/mzML files into a grouped feature matrix suitable for clustering and annotation.

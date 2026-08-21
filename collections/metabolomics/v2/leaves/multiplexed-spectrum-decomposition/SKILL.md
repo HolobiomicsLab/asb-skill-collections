@@ -14,12 +14,13 @@ metadata:
   - DecoMetDIA
   techniques:
   - LC-MS
-  license_tier: noncommercial
+  license_tier: open
   tool_license:
     tier: noncommercial
     requires_ack: true
     ref: CC-BY-NC-ND-4.0
     url: ZhuMSLab/DecoMetDIA
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b02655
   title: DecoMetDIA
@@ -48,7 +49,6 @@ attribution:
 
 # multiplexed-spectrum-decomposition
 
-> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Algorithmic separation of overlapping MS/MS spectra acquired under SWATH-MS multiplexing into individual component spectra to enable untargeted metabolite identification. This skill is essential when precursor ion windows capture multiple co-eluting analytes whose fragment spectra overlap in m/z and intensity space.

@@ -15,7 +15,8 @@ metadata:
   - metabCombiner
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
@@ -47,7 +48,6 @@ attribution:
 
 # metabdata-object-handling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and validate metabData objects from untargeted LC-MS metabolomics dataframes by detecting and mapping required columns (m/z, retention time, feature ID, adduct, samples) and applying retention time, missingness, and duplicate filters. This is the foundational data formatting step that prepares raw peak-picked LC-MS tables for downstream feature alignment.

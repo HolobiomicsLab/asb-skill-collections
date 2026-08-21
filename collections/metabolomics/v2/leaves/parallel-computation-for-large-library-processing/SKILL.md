@@ -22,7 +22,8 @@ metadata:
   - RIKEN
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -56,7 +57,6 @@ attribution:
 
 # parallel-computation-for-large-library-processing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and execute parallel computing workflows in R to accelerate time-consuming mass spectral library compilation tasks (structure extraction, SMILES assignment, RI calculation) across multi-core systems. This skill is essential when processing hundreds of thousands of molecular records from multiple commercial and public sources (NIST, MoNA, RIKEN, SWGDRUG) that would otherwise require several hours on a single core.

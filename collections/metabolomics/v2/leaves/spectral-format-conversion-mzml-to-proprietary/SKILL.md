@@ -17,7 +17,8 @@ metadata:
   - R
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -51,7 +52,6 @@ attribution:
 
 # spectral-format-conversion-mzml-to-proprietary
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert clustered mass spectrometry spectral data from RAMClustR-processed objects into vendor-specific formats (.mat for MSFinder, .ms for Sirius) to enable downstream structural annotation and molecular weight inference in specialized software environments.

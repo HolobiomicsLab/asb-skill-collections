@@ -14,7 +14,8 @@ metadata:
   - GCIMS
   techniques:
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -43,7 +44,6 @@ attribution:
 
 # saturation-threshold-configuration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure the RIP (Reactant Ion Peak) saturation threshold parameter during peak integration in GC-IMS preprocessing to control which saturated peaks are retained or excluded from the peak table. This parameter directly affects the quality and completeness of the final intensity matrix used in downstream analysis.

@@ -16,7 +16,8 @@ metadata:
   - Integrate_Data
   - Sample_Separation
   - R (≥ 3.5.0)
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
@@ -45,7 +46,6 @@ attribution:
 
 # metabolomic-data-normalization-post-integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove unwanted batch effects from integrated multi-batch metabolomic datasets using algorithm-specific correction methods (BMC/PAMR, ComBat/EB, or GlobalNorm). This skill is essential after combining feature matrices from multiple analytical experiments to restore biological signal and enable valid downstream statistical and marker identification analyses.

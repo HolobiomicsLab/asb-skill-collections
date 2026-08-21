@@ -10,7 +10,8 @@ metadata:
   tools:
   - RawFileReader
   - rawrr
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -45,7 +46,6 @@ attribution:
 
 # dotnet-assembly-path-resolution
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Locate and validate the file path to a cached .NET assembly at runtime, then retrieve and report its version string. This skill enables R packages wrapping compiled C# dependencies to inspect and confirm the presence and identity of the underlying managed code without requiring user-supplied paths.

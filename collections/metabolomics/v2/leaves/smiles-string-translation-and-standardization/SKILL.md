@@ -17,6 +17,7 @@ metadata:
   - Python 3
   - RDKit (implied dependency)
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus

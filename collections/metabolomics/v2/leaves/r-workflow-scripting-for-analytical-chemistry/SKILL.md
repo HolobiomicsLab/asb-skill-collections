@@ -22,7 +22,8 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
@@ -57,7 +58,6 @@ attribution:
 
 # R workflow scripting for analytical chemistry
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct multi-step R pipelines that chain specialized analytical chemistry packages (xcms, MSnbase, Spectra, MetaboCoreUtils) to process raw mass spectrometry or capillary electrophoresis–mass spectrometry data through signal detection, peak picking, and feature extraction. This skill is essential when raw instrumental data must be transformed into standardized, reproducible feature tables for downstream chemometric or metabolomic analysis.

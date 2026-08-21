@@ -19,7 +19,8 @@ metadata:
   - R
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -56,7 +57,7 @@ attribution:
 
 # cardinal-to-seurat-object-conversion
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Convert a processed Cardinal object (containing mass-spectrometry imaging data with spatial annotations and segmentation results) into a SpaMTP-compatible Seurat object to enable downstream statistical analysis, metabolite annotation, and integrative spatial-omics workflows. This bridging step unifies spatial metabolomics data with the mature Seurat ecosystem for differential expression, pathway analysis, and visualization.

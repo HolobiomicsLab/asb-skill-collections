@@ -15,9 +15,10 @@ metadata:
   - metaboprep
   - dendextend
   - ggplot2
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
-- doi: 10.1093/bioinformatics/btac059/6522114
+- doi: 10.1093/bioinformatics/btac059
   title: Metaboprep
 evidence_spans:
 - library(metaboprep)
@@ -27,15 +28,15 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_metaboprep_cq
-    doi: 10.1093/bioinformatics/btac059/6522114
+    doi: 10.1093/bioinformatics/btac059
     title: Metaboprep
   dedup_kept_from: coll_metaboprep_cq
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bioinformatics/btac059/6522114
+  original_doi: 10.1093/bioinformatics/btac059
   all_source_dois:
-  - 10.1093/bioinformatics/btac059/6522114
+  - 10.1093/bioinformatics/btac059
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias
@@ -44,7 +45,6 @@ attribution:
 
 # hierarchical-clustering-dendrogram-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a hierarchical dendrogram of metabolite features to identify correlated metabolites and assess feature independence within a metabolomics dataset. This skill is essential for quality control workflows to detect redundant or co-regulated features and inform outlier detection thresholds.

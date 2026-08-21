@@ -14,7 +14,8 @@ metadata:
   - KEGGREST
   - R
   - Omu
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -45,7 +46,6 @@ attribution:
 
 # data-frame-augmentation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Augment a metabolomics count data frame with functional orthology and gene information retrieved from the KEGG API via S3 dispatch. This enriches metabolite-annotated tables with KO numbers and associated gene names to enable downstream functional analysis.

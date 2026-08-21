@@ -23,6 +23,7 @@ metadata:
   techniques:
   - ion-mobility-MS
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/cem.70040
   title: PACCS
@@ -39,7 +40,7 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_massnet_cq
-    doi: 10.1093/bioinformatics/btac032/6510930
+    doi: 10.1093/bioinformatics/btac032
     title: massNet
   - build: coll_paccs_cq
     doi: 10.1002/cem.70040

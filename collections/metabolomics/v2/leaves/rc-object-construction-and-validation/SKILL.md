@@ -19,7 +19,8 @@ metadata:
   - Sirius
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -52,7 +53,6 @@ attribution:
 
 # rc-object-construction-and-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and validate RAMClustR (RC) objects by ingesting feature tables (MS-only or MS+idMS/MS) and experimental design metadata, then verify that clustered features group by retention time similarity and quantitative correlation. This skill bridges raw XCMS or CSV feature data into an RC object ready for downstream molecular weight inference and annotation.

@@ -18,7 +18,8 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -55,7 +56,7 @@ attribution:
 
 # Seurat Assay Metadata Extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Extract feature-level metadata (m/z values, annotation columns, and derived attributes) from a Seurat object's assay slot to enable downstream filtering, refinement, and statistical analysis of spatial metabolomics data. This skill bridges the gap between Cardinal MSI objects and Seurat-based annotation workflows by preserving and accessing feature-level metadata that would otherwise be inaccessible through standard Seurat accessors.

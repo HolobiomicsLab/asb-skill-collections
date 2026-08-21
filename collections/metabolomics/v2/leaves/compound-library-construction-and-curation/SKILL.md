@@ -17,7 +17,8 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -54,7 +55,6 @@ attribution:
 
 # compound-library-construction-and-curation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assemble and organize chemical reference libraries (e.g., GroupA, GroupB, or restricted type sets) as data structures for downstream structural matching and categorical enrichment. This skill ensures that query chemicals can be accurately matched against well-curated compound sets using cheminformatics tools.

@@ -20,7 +20,8 @@ metadata:
   - Seurat
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -57,7 +58,7 @@ attribution:
 
 # Lipid Category Classification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Simplifies complex lipid nomenclature annotations into standardized Lipid Maps categories and classes using the RefineLipids function. This skill reduces annotation redundancy in spatial metabolomics datasets, enabling clearer biological interpretation when multiple isomers or nomenclature variants map to the same lipid category.

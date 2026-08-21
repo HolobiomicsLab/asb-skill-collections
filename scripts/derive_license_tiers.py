@@ -23,7 +23,8 @@ if __package__ in (None, ""):
     _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
 
 
-from scripts.license_tier import tier_for_license
+from scripts.license_tier import (SUBJECT_PAPER, SUBJECT_TOOL, UNESTABLISHED_DETECTIONS,
+                                  licence_subject, load_map, tier_for_license)
 
 _GH_API = "https://api.github.com/repos/{}/{}/license"
 _LICENSE_FILE_RE = re.compile(r"^(licen[sc]e|copying|notice)(\.[\w.-]+)?$", re.I)
@@ -115,18 +116,65 @@ def _gh_file(owner, repo, path, token):
         return ""
 
 
+_R_DESCRIPTION = "DESCRIPTION"
+_R_LICENSE_FIELD = re.compile(r"^License:\s*(.+)$", re.M)
+# `MIT + file LICENSE` -> `MIT`; `GPL (>= 2)` -> `GPL`. The suffix points at a
+# stub file and the qualifier is a version floor; neither changes which licence
+# it is.
+_R_FILE_SUFFIX = re.compile(r"\s*\+\s*file\s+\S+\s*$", re.IGNORECASE)
+_R_VERSION_QUALIFIER = re.compile(r"\s*\(([^)]*)\)\s*$")
+# `GPL (>= 2)` is "version 2 or later", which SPDX spells `GPL-2.0-or-later`.
+# Dropping the floor and mapping the bare family would record the wrong version.
+_R_VERSION_FLOOR = re.compile(r">=\s*(\d+(?:\.\d+)?)")
+_R_VERSIONED_FAMILIES = {"gpl": "GPL", "lgpl": "LGPL", "agpl": "AGPL"}
+
+
+def spdx_from_r_description(text: str, _map=None) -> str | None:
+    """SPDX id from an R package's DESCRIPTION `License:` field, or None.
+
+    R keeps the licence in DESCRIPTION, not LICENSE: `usethis::use_mit_license()`
+    writes a LICENSE containing only YEAR and COPYRIGHT HOLDER, which no text
+    classifier can read. A field naming only a file (`License: file LICENSE`)
+    declares nothing and returns None rather than a guess.
+    """
+    match = _R_LICENSE_FIELD.search(text or "")
+    if not match:
+        return None
+    field = _R_FILE_SUFFIX.sub("", match.group(1).strip())
+    qualifier = _R_VERSION_QUALIFIER.search(field)
+    declared = _R_VERSION_QUALIFIER.sub("", field).strip()
+    if not declared or declared.lower().startswith("file "):
+        return None
+    family = _R_VERSIONED_FAMILIES.get(declared.lower())
+    floor = _R_VERSION_FLOOR.search(qualifier.group(1)) if qualifier else None
+    if family and floor:
+        version = floor.group(1)
+        return f"{family}-{version if '.' in version else version + '.0'}-or-later"
+    aliases = (_map or load_map()).get("r_license_aliases") or {}
+    for name, spdx in aliases.items():
+        if name.lower() == declared.lower():
+            return spdx
+    return None
+
+
 def detect_license(owner, repo, token, _fetch_api=_gh_fetch, _contents=_gh_contents, _fetch_file=_gh_file):
-    """(license_id, source) where source ∈ {github-api, license-file, file-present-unclassified, none}."""
+    """(license_id, source) where source ∈ {github-api, license-file, r-description, file-present-unclassified, none}."""
     spdx = _fetch_api(owner, repo, token)
     if spdx:
         return (spdx, "github-api")
     names = _contents(owner, repo, token)
     lic_files = [n for n in names if _LICENSE_FILE_RE.match(n)]
-    if not lic_files:
-        return (None, "none")
-    text = _fetch_file(owner, repo, lic_files[0], token)
-    cls = classify_license_text(text)
-    return (cls, "license-file") if cls else (None, "file-present-unclassified")
+    if lic_files:
+        cls = classify_license_text(_fetch_file(owner, repo, lic_files[0], token))
+        if cls:
+            return (cls, "license-file")
+    # Last resort, and only for what the text could not settle: an R package's
+    # real declaration lives in DESCRIPTION.
+    if _R_DESCRIPTION in names:
+        cls = spdx_from_r_description(_fetch_file(owner, repo, _R_DESCRIPTION, token))
+        if cls:
+            return (cls, "r-description")
+    return (None, "file-present-unclassified") if lic_files else (None, "none")
 
 
 def tier_for_repo(repo_url, token=None, cache=None, _detect=detect_license):
@@ -150,14 +198,37 @@ def apply_to_corpus(corpus_path, token, cache=None, _detect=detect_license) -> d
     doc = yaml.safe_load(path.read_text(encoding="utf-8"))
     summary: dict[str, int] = {}
     for p in doc.get("papers", []):
-        if p.get("license_locked"):
+        # An entry with no repository is not this script's question, and writing
+        # `restricted` / `none` over it destroys whatever the *paper* licence
+        # resolver established from the registry (`resolve_paper_license.py`).
+        # Both write the same fields; only one of them has evidence per entry.
+        if p.get("license_locked") or not str(p.get("repo_url") or "").strip():
             t = p.get("license_tier", "restricted")
             summary[t] = summary.get(t, 0) + 1
             continue
         tier, lic, src = tier_for_repo(p.get("repo_url"), token=token, cache=cache, _detect=_detect)
+        # A lookup that found nothing must not erase one that did. The licence
+        # *value* is what matters, not the detection label beside it: in
+        # metabolomics/v1 the recorded licences carry `license_detection: null`
+        # because they came from Unpaywall rather than from a repository, and a
+        # guard keyed only on the label wiped nineteen of them.
+        recorded = (p.get("access") or {}).get("license")
+        # This script reads a repository, so it may only speak about the tool.
+        # Writing over a licence that describes the *paper* substitutes one axis
+        # for the other, and nothing downstream can tell that it happened.
+        if licence_subject(p) == SUBJECT_PAPER:
+            kept = p.get("license_tier") or "restricted"
+            summary[kept] = summary.get(kept, 0) + 1
+            continue
+        if lic is None and (recorded
+                            or p.get("license_detection") not in UNESTABLISHED_DETECTIONS):
+            kept = p.get("license_tier", "restricted")
+            summary[kept] = summary.get(kept, 0) + 1
+            continue
         p["license_tier"] = tier
         p.setdefault("access", {})["license"] = lic
         p["license_detection"] = src
+        p["license_subject"] = SUBJECT_TOOL
         summary[tier] = summary.get(tier, 0) + 1
     path.write_text(yaml.safe_dump(doc, sort_keys=False, allow_unicode=True), encoding="utf-8")
     return summary

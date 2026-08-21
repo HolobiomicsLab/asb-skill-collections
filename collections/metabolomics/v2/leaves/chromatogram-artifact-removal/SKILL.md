@@ -14,7 +14,8 @@ metadata:
   - R
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
@@ -48,7 +49,6 @@ attribution:
 
 # chromatogram-artifact-removal
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove instrumental noise and baseline drift from 2D-TIC (two-dimensional Total Intensity Chromatogram) GCxGC-MS data using asymmetric least squares baseline correction and Whittaker smoothing to enhance signal quality and reveal metabolite differences. This preprocessing step is essential before peak alignment and multivariate analysis.

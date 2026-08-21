@@ -14,7 +14,8 @@ metadata:
   - LargeMetabo
   - factoextra
   - ggplot2
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
@@ -47,7 +48,6 @@ attribution:
 
 # cluster-assignment-extraction-and-labeling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and record cluster assignments for individual samples after performing hierarchical clustering analysis (HCA) on metabolomic feature matrices. This skill captures the step of translating a dendrogram into discrete, labeled cluster memberships for downstream analysis.

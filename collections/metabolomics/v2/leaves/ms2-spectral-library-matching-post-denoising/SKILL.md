@@ -22,7 +22,8 @@ metadata:
   - Spectra
   techniques:
   - CE-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
@@ -57,7 +58,6 @@ attribution:
 
 # MS/MS Spectral Library Matching Post-Denoising
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match experimental denoised MS/MS spectra against a curated reference library using modified dot product and fragment matching metrics to assign metabolite annotations with confidence filtering. This skill applies after denoising to evaluate whether noise removal improves spectral similarity and annotation quality.

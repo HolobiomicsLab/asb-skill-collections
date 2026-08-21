@@ -16,7 +16,8 @@ metadata:
   - data.table
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
@@ -50,7 +51,6 @@ attribution:
 
 # spectral-peak-grouping-mass-tolerance
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Merge MS/MS spectral peaks (m/z and intensity) within a specified mass tolerance to reduce fragment redundancy and noise in tandem mass spectrometry data. This intra-spectrum grouping step consolidates nearby m/z values by averaging their positions and summing their intensities, typically reducing fragment counts by 10–20% before downstream denoising.

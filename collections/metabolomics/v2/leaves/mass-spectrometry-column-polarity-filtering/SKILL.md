@@ -14,7 +14,8 @@ metadata:
   - NIST
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -43,7 +44,6 @@ attribution:
 
 # mass-spectrometry-column-polarity-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter and assign experimental Kovats retention index (RI) values to a compiled EI mass spectral library based on gas chromatography column polarity. This skill ensures that only RI measurements from appropriate capillary GC columns are retained and that RI records meeting quality thresholds are propagated into the final library.

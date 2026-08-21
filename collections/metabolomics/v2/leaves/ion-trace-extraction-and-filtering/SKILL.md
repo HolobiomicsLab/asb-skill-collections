@@ -18,7 +18,8 @@ metadata:
   - R
   techniques:
   - CE-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
@@ -52,7 +53,6 @@ attribution:
 
 # ion-trace-extraction-and-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and filter ion traces from CE-MS raw data by m/z value and effective mobility window to isolate target analyte signals. This skill transforms raw electropherogram data into clean, mobility-resolved ion chromatograms suitable for peak detection and quantification.

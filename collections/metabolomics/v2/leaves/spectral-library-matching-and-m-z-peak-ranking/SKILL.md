@@ -20,7 +20,8 @@ metadata:
   - uafR
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -55,7 +56,6 @@ attribution:
 
 # spectral-library-matching-and-m-z-peak-ranking
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and rank chemical compounds in GC-MS data by matching observed mass spectra against published libraries and prioritizing peaks by match factor and m/z accuracy. This skill converts raw Agilent Unknowns Analysis output into a structured, ranked list of candidate identifications suitable for downstream cheminformatic filtering.

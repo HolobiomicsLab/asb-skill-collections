@@ -20,7 +20,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -54,7 +55,6 @@ attribution:
 
 # mass-spectral-similarity-scoring-across-samples
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute combined retention time and intensity-correlation similarity scores to group mass spectrometry features derived from the same compound. This skill combines approximate retention time matching with quantitative trend correlation across samples to identify co-eluting, co-varying features that represent isotopes, adducts, and fragments of a single metabolite.

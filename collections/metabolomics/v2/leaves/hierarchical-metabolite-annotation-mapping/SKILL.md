@@ -16,7 +16,8 @@ metadata:
   - omu_summary
   - plot_volcano
   - plot_bar
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -45,7 +46,6 @@ attribution:
 
 # hierarchical-metabolite-annotation-mapping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign standardized hierarchical metabolite classifications (KEGG, KO_Number, Prokaryote, or Eukaryote ontologies) to a metabolomics count matrix to enable comparative analysis and visualization by metabolic class. This enables downstream statistical filtering, enrichment queries, and class-stratified plotting.

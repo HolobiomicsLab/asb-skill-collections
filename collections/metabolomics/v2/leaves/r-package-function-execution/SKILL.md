@@ -15,6 +15,7 @@ metadata:
   techniques:
   - NMR
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c04232
   title: ASICS

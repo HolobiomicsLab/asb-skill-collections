@@ -25,7 +25,8 @@ metadata:
   techniques:
   - GC-MS
   - NMR
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -60,7 +61,6 @@ attribution:
 
 # chemical-name-normalization-and-publish-database-integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize chemical compound names from GC-MS output and enrich them with standardized metadata (exact mass, retention time, fragment patterns, literature references) from PubChem, ChemSpider, and other curated databases. This skill ensures that tentatively identified compounds from Agilent Unknowns Analysis are mapped to canonical identities and linked to physicochemical properties required for downstream chemical inference and subsetting.

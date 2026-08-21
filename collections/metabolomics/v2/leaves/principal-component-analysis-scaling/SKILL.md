@@ -16,7 +16,8 @@ metadata:
   - R
   - ggplot2
   - dplyr
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05748
   title: CordBat
@@ -48,7 +49,6 @@ attribution:
 
 # principal-component-analysis-scaling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Perform scaled principal component analysis (PCA) on metabolomics data matrices to project high-dimensional metabolite measurements into a lower-dimensional space while standardizing features to unit variance. This technique is used to visualize batch effects, group separation, and the efficacy of batch correction methods like CordBat on metabolomic samples.

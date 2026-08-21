@@ -16,7 +16,8 @@ metadata:
   - mgcv
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
@@ -48,7 +49,6 @@ attribution:
 
 # metabolite-feature-correspondence-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill identifies high-confidence anchor feature pairs across two disparately-acquired LC-MS metabolomics datasets by applying retention time windows, m/z tolerance, and abundance thresholds to establish a validated correspondence basis for subsequent RT mapping and alignment scoring. It is essential for bridging non-identical instrumental and acquisition conditions in untargeted metabolomics.

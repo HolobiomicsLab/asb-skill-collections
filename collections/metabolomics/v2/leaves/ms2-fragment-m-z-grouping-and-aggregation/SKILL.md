@@ -18,7 +18,8 @@ metadata:
   - extract_raw_spectra
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
@@ -52,7 +53,6 @@ attribution:
 
 # MS2 Fragment m/z Grouping and Aggregation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill groups MS/MS fragments across replicate spectra by m/z tolerance, merges nearby peaks, and aggregates their intensities to generate a consensus spectrum with fragment recurrence frequencies. It is applied to denoise tandem mass spectrometry data by identifying reproducible signal fragments across replicates.

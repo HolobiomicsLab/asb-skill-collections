@@ -16,7 +16,8 @@ metadata:
   - omu_summary
   - read.metabo
   - count_fold_changes
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -49,7 +50,6 @@ attribution:
 
 # metabolite-fold-change-calculation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate log2 fold changes and statistical measures (p-values, adjusted p-values, standard error, standard deviation) for metabolites across treatment groups in metabolomics datasets. This skill quantifies the magnitude and significance of metabolite abundance differences between experimental conditions.

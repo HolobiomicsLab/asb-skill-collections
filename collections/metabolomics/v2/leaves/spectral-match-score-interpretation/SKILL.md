@@ -18,7 +18,8 @@ metadata:
   - uafR
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -55,7 +56,6 @@ attribution:
 
 # spectral-match-score-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpreting and applying Match.Factor thresholds and structural match scores (>0.95) to filter and validate chemical identifications in GC-MS and cheminformatics workflows. This skill bridges mass spectrometry confidence metrics with structural matching results to establish compound identity with quantifiable confidence.

@@ -15,7 +15,8 @@ metadata:
   - MsBackendRawFileReader
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -52,7 +53,6 @@ attribution:
 
 # inter-scan-interval-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates that parallel reaction monitoring (PRM) acquisition maintains consistent scan spacing across all targeted cycles by extracting scan indices from a Thermo Fisher Scientific .raw file, filtering for a specific precursor m/z and scan type, and confirming that inter-scan deltas match the expected cycle length. This skill detects acquisition irregularities that would indicate missed or duplicated scans in targeted proteomics workflows.

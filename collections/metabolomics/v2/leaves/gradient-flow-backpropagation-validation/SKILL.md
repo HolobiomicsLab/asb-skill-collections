@@ -14,6 +14,7 @@ metadata:
   - PyTorch
   - IsoFusion
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.26599/bdma.2024.9020059
   title: IsoFusion

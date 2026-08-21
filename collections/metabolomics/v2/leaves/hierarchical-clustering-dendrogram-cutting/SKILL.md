@@ -20,7 +20,8 @@ metadata:
   - Sirius
   techniques:
   - direct-infusion-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -54,7 +55,6 @@ attribution:
 
 # hierarchical-clustering-dendrogram-cutting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Group mass spectrometry features derived from the same compound by hierarchical clustering on retention time and intensity correlation similarity scores, then partition the resulting dendrogram using dynamic tree cutting to yield feature clusters. This skill is applied to metabolomics feature tables after XCMS alignment to collapse isotopic peaks, adducts, and fragments into compound-level clusters.

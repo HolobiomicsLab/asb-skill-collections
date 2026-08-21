@@ -19,6 +19,7 @@ metadata:
   - R
   - PubChem
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-023-00695-y
   title: MAW

@@ -15,7 +15,8 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -44,7 +45,6 @@ attribution:
 
 # chromatography-data-decimation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reduce memory footprint and computational cost of Gas Chromatography–Ion Mobility Spectrometry (GCIMS) data by systematically subsampling the drift time and retention time dimensions. Decimation is applied after filtering and smoothing to enable faster downstream alignment and peak detection without losing essential spectral structure.

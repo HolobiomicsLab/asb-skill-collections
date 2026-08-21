@@ -16,7 +16,8 @@ metadata:
   - mzrtsim
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
@@ -49,7 +50,6 @@ attribution:
 
 # assay-matrix-formatting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform simulated LC/GC-MS peak list feature tables into a matrix format suitable for storage in the 'counts' assay slot of a SummarizedExperiment object. This enables seamless integration with Bioconductor workflows and standard accessors for downstream metabolomics analysis.

@@ -15,7 +15,8 @@ metadata:
   - Agilent Unknowns Analysis
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -50,7 +51,6 @@ attribution:
 
 # mass-spectrometry-data-formatting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform raw GC-MS CSV output into a searchable, nested data structure indexed by compound identity and analytical features. This skill prepares mass spectrometry data for downstream sorting, aggregation, and cheminformatics queries by integrating retention time, m/z peaks, and published chemical metadata.

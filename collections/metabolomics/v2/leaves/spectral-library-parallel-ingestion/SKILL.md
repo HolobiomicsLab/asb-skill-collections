@@ -17,7 +17,8 @@ metadata:
   - parallel
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -49,7 +50,6 @@ attribution:
 
 # spectral-library-parallel-ingestion
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parallelize the reading and merging of multiple MSP spectral library files using the R future and future.apply packages with multisession workers. This skill accelerates in-house or batch library compilation by distributing file I/O across multiple CPU cores while guaranteeing structure and content identity with serial execution.

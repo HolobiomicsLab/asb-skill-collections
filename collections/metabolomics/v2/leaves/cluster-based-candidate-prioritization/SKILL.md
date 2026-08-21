@@ -17,7 +17,8 @@ metadata:
   - cliqueMS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
@@ -48,7 +49,6 @@ attribution:
 
 # cluster-based-candidate-prioritization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill groups co-eluting LC-MS features by intensity correlation and retention time proximity, then filters candidate metabolite annotations to retain only quasi-molecular adducts while removing in-source fragments and low-frequency adducts. It reduces annotation ambiguity by enforcing cluster-level coherence and adduct plausibility.

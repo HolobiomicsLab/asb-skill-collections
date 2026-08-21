@@ -17,7 +17,8 @@ metadata:
   - omu_summary
   - pie_chart
   - ggplot2
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -46,7 +47,6 @@ attribution:
 
 # metabolite-change-direction-categorization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Categorize significantly altered metabolites by direction of change (increased vs. decreased) and count their frequencies within compound classes. This skill enables visualization and quantification of metabolite response patterns in metabolomics experiments filtered by statistical significance thresholds.

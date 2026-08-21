@@ -10,8 +10,15 @@ not constrain each other.
 | Tier | Meaning | Invariant (enforced) |
 |---|---|---|
 | `literature` | Synthesized from one or more peer-reviewed source papers | requires ≥1 `doi` |
+| `repository` | Taken from an open source tool's own code and documentation, where no paper stands behind it | requires `repo_url` |
 | `synthetic` | Derived from other skills (composed / specialized / merged), not from a paper directly | requires `synthesized_from` (the source skill slugs) |
 | `community` | Contributed or curated outside the ASB literature pipeline | requires a `related_skills` key to be present (an empty list is allowed) |
+
+`repository` is distinct from `community`: the content came from the tool itself, not from a
+contributor's expertise. It was added on 2026-08-20, when a skill grounded on an open
+repository with no paper behind it (`masster`) turned out to fit none of the first three and
+so had no recorded origin at all — the vocabulary predated the corpus's own `repo-oa`
+admission route.
 
 The canonical kernel is `scripts/provenance_tier.py` (`VALID`, `DEFAULT="literature"`,
 `validate_entry(...)`); the CI gate `scripts/check_provenance_tiers.py` enforces both

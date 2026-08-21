@@ -17,7 +17,8 @@ metadata:
   - Retip app
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b05765
   title: Retip
@@ -46,7 +47,6 @@ attribution:
 
 # metabolite-annotation-by-chromatographic-behavior
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Predict retention times for small molecules in HPLC–MS analysis using machine learning models trained on molecular descriptors, enabling compound annotation and false positive removal in untargeted metabolomics workflows. Retip accepts fingerprints and physicochemical properties as input and outputs predicted retention times (in minutes or normalized units) for comparison against observed chromatographic behavior.

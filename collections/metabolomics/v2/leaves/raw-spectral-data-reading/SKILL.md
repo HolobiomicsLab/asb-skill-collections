@@ -18,7 +18,8 @@ metadata:
   - Spectra
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -56,7 +57,6 @@ attribution:
 
 # raw-spectral-data-reading
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Direct programmatic access to spectral attributes (m/z, intensity, retention time, scan metadata) from proprietary Thermo Fisher Scientific .raw binary files without conversion to exchange formats. Enables modular end-to-end proteomics analysis pipelines in R by bridging the gap between instrument data and statistical analysis environments.

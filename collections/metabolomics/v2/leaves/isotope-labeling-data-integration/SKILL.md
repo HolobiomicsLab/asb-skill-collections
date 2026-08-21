@@ -27,6 +27,7 @@ metadata:
   - LC-MS
   - GC-MS
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2021.12.05.471237v2
   title: isopair

@@ -26,7 +26,8 @@ metadata:
   - ChemmineOB
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -61,7 +62,6 @@ attribution:
 
 # spectral-library-compilation-and-merging
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compile and merge mass spectral libraries (EI or MS/MS) from heterogeneous public sources (NIST, MoNA, RIKEN, GNPS, SWGDRUG) into unified, annotated MSP files for use in MS-DIAL. The skill orchestrates library loading, structure assignment, retention index curation, and polarity-specific separation.

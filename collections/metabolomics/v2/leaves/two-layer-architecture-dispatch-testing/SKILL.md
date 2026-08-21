@@ -16,7 +16,8 @@ metadata:
   - MsBackendRawFileReader
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -50,7 +51,6 @@ attribution:
 
 # Two-Layer Architecture Dispatch Testing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that an R package's internal assembly dispatch mechanism successfully invokes compiled C# wrapper methods and retrieves assembly metadata (path and version) without requiring raw data file input. This tests the R↔.NET interop layer that underpins cross-platform mass spectrometry data access.

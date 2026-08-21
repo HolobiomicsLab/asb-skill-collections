@@ -19,7 +19,8 @@ metadata:
   - spatstat
   - MInfer
   - tidygraph
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
@@ -60,7 +61,6 @@ attribution:
 
 # network-layout-algorithm-selection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Select and apply an appropriate layout algorithm from MetaNet's 40+ options to assign spatial coordinates to network nodes for static or interactive visualization. The choice of algorithm affects how node relationships are spatially represented and the interpretability of the resulting visualization.

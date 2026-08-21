@@ -15,7 +15,8 @@ metadata:
   - spectra_inference_dataset_loader.py
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.02.07.637102v1
   title: ChemEmbed
@@ -44,7 +45,6 @@ attribution:
 
 # deep-learning-model-loading-and-prediction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load a pre-trained Convolutional Neural Network model and apply it to preprocessed mass spectrometry spectra to generate multidimensional molecular embedding vectors. This skill transforms normalized MS/MS peak data into high-dimensional feature representations suitable for metabolite candidate matching.

@@ -20,7 +20,8 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -54,7 +55,6 @@ attribution:
 
 # MGF Metadata Completion from SMILES
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Complete missing Molecular Formula (MF) fields in MGF-format mass spectral libraries by calculating MF from existing SMILES strings. This is essential for libraries like GNPS that lack comprehensive metadata annotation required by downstream MS-DIAL processing.

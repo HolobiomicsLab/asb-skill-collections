@@ -17,7 +17,8 @@ metadata:
   - Seurat
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -52,7 +53,7 @@ attribution:
 
 # Cardinal Object Structure Understanding
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Comprehending the internal structure and slots of a Cardinal MSImagingExperiment object—including spectral intensities, feature metadata (m/z values), spatial coordinates, and optional segmentation results—is foundational for correct extraction, transformation, and downstream analysis in spatial mass spectrometry imaging workflows.

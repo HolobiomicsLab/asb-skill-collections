@@ -13,6 +13,7 @@ metadata:
   - TensorFlow 2.3.0
   - TensorFlow Serving
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier

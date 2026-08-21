@@ -14,7 +14,8 @@ metadata:
   - R base lm()
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -51,7 +52,6 @@ attribution:
 
 # linear-regression-fitting-for-chromatography
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fit a linear regression model to retention time (RT) data extracted from liquid chromatography–mass spectrometry (LC-MS) runs using calibrant peptides (e.g., iRT standards) to quantify the linearity of RT behavior and validate chromatographic reproducibility. This skill produces an R-squared value that measures how well the fitted model explains variance in observed retention times.

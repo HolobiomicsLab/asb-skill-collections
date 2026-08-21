@@ -10,7 +10,8 @@ metadata:
   tools:
   - RGCxGC
   - R
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
@@ -44,7 +45,6 @@ attribution:
 
 # R Object Slot Inspection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Inspect and validate the internal structure of S4 R objects returned by data import functions, verifying that slots contain expected data types, dimensions, and metadata. This skill is essential for confirming correct parsing of instrument output files (e.g., NetCDF chromatograms) before downstream preprocessing.

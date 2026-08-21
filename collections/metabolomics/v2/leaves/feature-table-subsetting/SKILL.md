@@ -18,7 +18,8 @@ metadata:
   - OUKS
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -63,7 +64,6 @@ attribution:
 
 # feature-table-subsetting
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Partition a feature table into two complementary subsets based on a filtering criterion (e.g., m/z decimal values, mass defects, or coefficient of variation), retaining both the filtered-out and retained features for separate downstream analysis. This skill is essential in untargeted metabolomics to isolate features meeting quality or chemical criteria while preserving rejected features for audit trails and alternative interpretations.

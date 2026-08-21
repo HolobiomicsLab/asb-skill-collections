@@ -19,7 +19,8 @@ metadata:
   techniques:
   - LC-MS
   - MS-imaging
-  license_tier: restricted
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -53,7 +54,7 @@ attribution:
 
 # Spatial Metabolomics Feature Annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Assign metabolite identities to mass-to-charge (m/z) features in spatial metabolomics datasets by matching observed m/z values against a reference database (e.g., LipidMaps, HMDB) within a specified mass error tolerance and adduct assumption. This skill enables interpretation of spatial MS imaging data by linking ion signals to known chemical structures.

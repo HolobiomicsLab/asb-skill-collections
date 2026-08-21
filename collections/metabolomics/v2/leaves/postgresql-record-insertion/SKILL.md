@@ -16,6 +16,7 @@ metadata:
   - gensim
   - Django
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA

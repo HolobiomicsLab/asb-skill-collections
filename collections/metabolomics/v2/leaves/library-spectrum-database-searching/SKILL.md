@@ -15,7 +15,8 @@ metadata:
   - NIST API
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
@@ -49,7 +50,6 @@ attribution:
 
 # library-spectrum-database-searching
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Search electron ionization mass spectra against reference libraries using spectral similarity algorithms to identify unknown compounds. This skill compares a query mass spectrum against library entries using standardized matching algorithms, returning ranked candidate identifications with quantitative similarity scores.

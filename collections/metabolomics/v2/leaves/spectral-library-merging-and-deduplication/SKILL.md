@@ -20,7 +20,8 @@ metadata:
   - LC-MS
   - GC-MS
   - ion-mobility-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -52,7 +53,6 @@ attribution:
 
 # spectral-library-merging-and-deduplication
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Merge and organize multiple mass spectral libraries (EI, MS/MS) from heterogeneous sources (NIST, RIKEN, MoNA, GNPS) into unified, polarity-separated msp files compatible with MS-DIAL. This skill handles format conversion, structure annotation, and deduplication across public and commercial library resources.

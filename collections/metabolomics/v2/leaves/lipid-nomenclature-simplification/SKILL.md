@@ -19,7 +19,8 @@ metadata:
   - Seurat
   techniques:
   - MS-imaging
-  license_tier: restricted
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -56,7 +57,7 @@ attribution:
 
 # lipid-nomenclature-simplification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Simplify complex lipid nomenclature annotations into standardized Lipid Maps categories and classes, reducing annotation redundancy while preserving metabolite identity. This skill is essential when spatial metabolomic datasets contain multiple isomer names per m/z and you need a unified, interpretable annotation system for downstream analysis.

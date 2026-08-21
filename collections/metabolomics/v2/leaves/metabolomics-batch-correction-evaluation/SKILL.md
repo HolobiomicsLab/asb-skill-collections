@@ -16,7 +16,8 @@ metadata:
   - R
   - ggplot2
   - dplyr
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05748
   title: CordBat
@@ -48,7 +49,6 @@ attribution:
 
 # metabolomics-batch-correction-evaluation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate the efficacy of batch correction in metabolomics data by comparing PCA visualizations of uncorrected versus corrected metabolite matrices, assessing whether batch effects are removed while preserving biologically meaningful group structure.

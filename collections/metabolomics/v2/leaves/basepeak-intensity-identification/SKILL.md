@@ -17,7 +17,8 @@ metadata:
   - MsBackendRawFileReader
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -55,7 +56,6 @@ attribution:
 
 # Base-Peak Intensity Identification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract the base-peak m/z and intensity values (maximum intensity peak) from individual MS1 scans in Thermo Fisher raw files and organize them into a tabular data frame. This skill enables direct access to fundamental spectral descriptors without conversion to exchange formats.

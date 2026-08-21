@@ -16,7 +16,8 @@ metadata:
   - R
   - igraph
   - pcutils
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
@@ -49,7 +50,6 @@ attribution:
 
 # igraph-object-creation-manipulation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert thresholded correlation matrices into igraph network objects and perform flexible node/edge manipulation for downstream topological analysis and visualization. This skill bridges correlation computation and network characterization by constructing validated igraph objects with proper node and edge attributes.

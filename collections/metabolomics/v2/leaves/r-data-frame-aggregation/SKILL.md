@@ -17,7 +17,8 @@ metadata:
   - Spectra
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -55,7 +56,6 @@ attribution:
 
 # R Data Frame Aggregation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Consolidate programmatically extracted spectral attributes from individual scans into a single tabular data frame using R subsetting operators and iteration. This is essential for transforming per-scan raw instrument data into analysis-ready tabular formats suitable for downstream statistical and visualization workflows.

@@ -15,7 +15,8 @@ metadata:
   - mgcv
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
@@ -48,7 +49,6 @@ attribution:
 
 # metabcombiner-object-construction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a metabCombiner object by grouping feature pairs from two LC-MS metabolomics datasets by m/z tolerance and creating an aligned combined table with structured columns for downstream processing. This is the foundational step that establishes the feature pair alignment scaffold before scoring and reduction.

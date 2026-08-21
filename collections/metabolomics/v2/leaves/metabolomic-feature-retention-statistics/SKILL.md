@@ -15,7 +15,8 @@ metadata:
   - margheRita
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -52,7 +53,6 @@ attribution:
 
 # metabolomic-feature-retention-statistics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify and report the feature count and coefficient-of-variation distribution before and after applying a CV-ratio filter to metabolomic feature matrices. This skill documents the filtering outcome and provides summary statistics needed to assess data reduction and filter efficacy.

@@ -19,7 +19,8 @@ metadata:
   - RefineLipids
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -56,7 +57,7 @@ attribution:
 
 # annotation-complexity-comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Quantify and compare the reduction in annotation complexity (count of isomer/metabolite assignments per m/z) before and after applying lipid nomenclature simplification. This skill validates whether refinement strategies like RefineLipids successfully collapse redundant or over-specific lipid annotations into standardized categories.

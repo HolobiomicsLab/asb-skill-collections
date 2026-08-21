@@ -17,7 +17,8 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -48,7 +49,6 @@ attribution:
 
 # molecular-weight-inference-comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate and reconcile molecular weight predictions from two independent scoring methods (findMain and RAMClustR) applied to high-resolution LC-MS metabolomics data in positive ionization mode. This skill quantifies agreement rate and resolves discordant predictions using a decision rule.

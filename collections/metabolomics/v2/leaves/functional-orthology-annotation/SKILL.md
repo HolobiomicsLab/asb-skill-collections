@@ -15,7 +15,8 @@ metadata:
   - KEGGREST
   - R
   - assign_hierarchy
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -46,7 +47,6 @@ attribution:
 
 # functional-orthology-annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve and annotate metabolite-associated functional orthology (KO numbers) and gene names from the KEGG API using S3 dispatch methods. This skill augments metabolomics count data frames with ortholog identifiers and gene information to enable functional interpretation of metabolite variation.

@@ -18,7 +18,8 @@ metadata:
   - PubChem
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -53,7 +54,6 @@ attribution:
 
 # retention-time-and-mass-sorting-of-chromatographic-peaks
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Organizes raw GC-MS peak data from Agilent Unknowns Analysis output by retention time and exact mass, aggregating redundant peaks across samples and associating them with published chemical metadata (names, m/z fragments, exact mass, literature RT). This preprocessing prepares CSV input for downstream chemical identification and quantitation in the uafR pipeline.

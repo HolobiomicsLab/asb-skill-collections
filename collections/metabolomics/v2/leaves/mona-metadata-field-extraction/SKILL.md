@@ -15,7 +15,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -45,7 +46,6 @@ attribution:
 
 # MoNA metadata field extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract SMILES notation embedded in the Comment field of MoNA mass spectral library records and relocate it to the dedicated SMILES metadata field for proper organization and downstream processing. This skill is essential when working with MoNA EI or LC-MS/MS libraries where structural information is stored in an unstructured comment rather than a dedicated metadata slot.

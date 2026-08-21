@@ -18,7 +18,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -53,7 +54,6 @@ attribution:
 
 # exact-mass-utilization-for-compound-identification
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill applies exact mass matching and retention time correlation to identify compounds in GC-MS datasets by comparing measured m/z values and retention times against reference chemical metadata. It is used to validate analytical results and retrieve match factors and area quantifications for target compounds from mass spectrometry samples.

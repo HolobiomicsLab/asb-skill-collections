@@ -23,6 +23,7 @@ metadata:
   - SmilesDrawer
   - PHP/Symfony
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-021-00530-2
   title: MassSpecBlocks

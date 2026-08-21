@@ -15,6 +15,7 @@ metadata:
   techniques:
   - LC-MS
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.01.26.634927v3
   title: mzLearn

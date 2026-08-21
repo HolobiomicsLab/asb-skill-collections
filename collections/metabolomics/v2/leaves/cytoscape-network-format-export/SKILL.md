@@ -15,6 +15,7 @@ metadata:
   - MetaMapR
   - cytoscape.js
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btv194
   title: MetaMapR

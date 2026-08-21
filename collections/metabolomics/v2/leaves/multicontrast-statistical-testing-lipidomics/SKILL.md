@@ -14,7 +14,8 @@ metadata:
   - lipidr
   - limma
   - R
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
@@ -48,7 +49,6 @@ attribution:
 
 # multicontrast-statistical-testing-lipidomics
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Perform two-group and multi-group differential expression analysis on lipidomics data using the limma package to identify lipid classes with significant regulation patterns across biological contrasts (e.g., cancer vs. benign, cancer vs. metastasis). This skill detects which lipid molecular species and classes are systematically up- or down-regulated between sample groups.

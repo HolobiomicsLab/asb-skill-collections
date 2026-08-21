@@ -18,7 +18,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
@@ -52,7 +53,6 @@ attribution:
 
 # noise-artifact-reduction-optimization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove instrumental and chemical noise from two-dimensional gas chromatography–mass spectrometry (GCxGC-MS) data through coordinated application of smoothing and baseline correction algorithms. This skill reduces background interference and enhances signal-to-noise ratio prior to peak alignment and multivariate analysis.

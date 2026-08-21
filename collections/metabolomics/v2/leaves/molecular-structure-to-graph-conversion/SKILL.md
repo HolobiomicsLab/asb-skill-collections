@@ -16,6 +16,7 @@ metadata:
   - pandas
   - scikit-learn
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s10489-022-04351-0
   title: Mass Spectrum Transformer

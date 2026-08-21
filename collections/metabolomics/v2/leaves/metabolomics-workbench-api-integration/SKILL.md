@@ -13,7 +13,8 @@ metadata:
   - lipidr
   - Metabolomics Workbench API
   - R
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
@@ -48,7 +49,6 @@ attribution:
 
 # metabolomics-workbench-api-integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve and parse public lipidomics datasets directly from Metabolomics Workbench into a structured LipidomicsExperiment object using the lipidr R package's API integration. This skill enables rapid access to standardized lipidomics data without manual download and reformatting.

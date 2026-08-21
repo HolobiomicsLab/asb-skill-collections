@@ -15,7 +15,8 @@ metadata:
   - metabCombiner
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
@@ -48,7 +49,6 @@ attribution:
 
 # gam-model-diagnostic-evaluation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate and select the optimal generalized additive model (GAM) spline fit for retention time mapping by applying iterative outlier filtering and cross-validation across multiple basis dimensions. This skill ensures that the fitted spline captures true anchor point relationships while down-weighting anomalous measurements that would distort RT alignment.

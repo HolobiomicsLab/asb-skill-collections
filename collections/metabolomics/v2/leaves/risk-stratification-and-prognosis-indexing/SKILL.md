@@ -17,6 +17,7 @@ metadata:
   - Cox-nnet
   - Cox-PH
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/gigascience/giaa162
   title: Lilikoi V2.0

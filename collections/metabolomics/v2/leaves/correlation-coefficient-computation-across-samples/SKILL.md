@@ -16,7 +16,8 @@ metadata:
   - dynamicTreeCut
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -45,7 +46,6 @@ attribution:
 
 # correlation-coefficient-computation-across-samples
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute Pearson correlation coefficients between quantitative feature profiles across all samples to measure co-variation patterns. This metric is multiplied with retention time similarity to produce the total similarity score used for hierarchical clustering of metabolomic features.

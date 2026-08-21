@@ -21,7 +21,8 @@ metadata:
   - data.table
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
@@ -57,7 +58,6 @@ attribution:
 
 # ms2-spectra-tic-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter tandem mass spectrometry replicate spectra by retaining only those with Total Ion Current (TIC) in the top x% (typically 80%) of the distribution for a given precursor feature. This reduces spectral redundancy and noise before consensus spectrum generation and fragment frequency calculation.

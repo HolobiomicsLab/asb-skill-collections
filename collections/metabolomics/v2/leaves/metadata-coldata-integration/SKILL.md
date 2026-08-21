@@ -16,7 +16,8 @@ metadata:
   - mzrtsim
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
@@ -49,7 +50,6 @@ attribution:
 
 # metadata-coldata-integration
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and integrate sample-level metadata (colData) into a SummarizedExperiment object to expose simulated LC/GC-MS feature tables through standard Bioconductor accessors. This skill bridges peak list simulation output with the SummarizedExperiment data structure, enabling downstream batch correction and normalization workflows.

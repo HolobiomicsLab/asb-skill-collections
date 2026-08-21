@@ -15,7 +15,8 @@ metadata:
   - tartare
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -50,7 +51,6 @@ attribution:
 
 # file-path-normalization-and-validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize and validate file paths to binary raw mass spectrometry files before passing them to external executables or APIs. This skill ensures consistent path representation across platforms and verifies file existence, preventing runtime failures when rawrr functions invoke the RawFileReader .NET assembly.

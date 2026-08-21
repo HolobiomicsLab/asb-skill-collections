@@ -17,8 +17,9 @@ metadata:
   - TensorFlow / Keras
   - scikit-learn
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
-- doi: 10.1093/bib/bbad229/7199559
+- doi: 10.1093/bib/bbad229
   title: SPIFFED
 evidence_spans: []
 claims: []
@@ -27,15 +28,15 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_spiffed_cq
-    doi: 10.1093/bib/bbad229/7199559
+    doi: 10.1093/bib/bbad229
     title: SPIFFED
   dedup_kept_from: coll_spiffed_cq
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bib/bbad229/7199559
+  original_doi: 10.1093/bib/bbad229
   all_source_dois:
-  - 10.1093/bib/bbad229/7199559
+  - 10.1093/bib/bbad229
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias

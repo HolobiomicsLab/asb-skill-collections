@@ -13,7 +13,8 @@ metadata:
   - R
   - ggplot2
   - Omu (plot_variable_importance, PCA_plot, plot_bar)
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -45,7 +46,6 @@ attribution:
 
 # ggplot2-customization-for-statistical-plots
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Customize ggplot2 statistical visualizations (e.g., variable importance plots from random forest models) by layering ggplot2 themes and removing default visual elements to produce publication-ready figures. This skill is essential when wrapper functions return ggplot2 objects that require aesthetic refinement without altering the underlying data or statistical computation.

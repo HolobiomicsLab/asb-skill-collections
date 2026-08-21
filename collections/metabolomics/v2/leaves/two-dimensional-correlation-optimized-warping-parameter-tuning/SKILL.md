@@ -14,7 +14,8 @@ metadata:
   - R
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
@@ -48,7 +49,6 @@ attribution:
 
 # two-dimensional-correlation-optimized-warping-parameter-tuning
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Tune segment and maximum warping parameters for the 2D correlation optimized warping (2D COW) algorithm to align preprocessed GCxGC-MS chromatograms. This skill addresses the critical decision of parameter selection that controls both the granularity of alignment segments and the allowed deformation in first and second dimensions, balancing alignment fidelity against overfitting.

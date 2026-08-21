@@ -16,7 +16,8 @@ metadata:
   - .NET 8.0 runtime
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -55,7 +56,6 @@ attribution:
 
 # orbitrap-spectrum-acquisition-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and interpret spectral metadata and ion trap instrumentation parameters from Thermo Orbitrap raw files to characterize acquisition conditions, charge collection, and scan-level performance metrics. This skill bridges raw binary data access with quantitative understanding of mass spectrometry instrument behavior during data acquisition.

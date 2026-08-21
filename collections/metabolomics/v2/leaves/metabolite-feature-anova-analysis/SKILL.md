@@ -14,7 +14,8 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -51,7 +52,6 @@ attribution:
 
 # metabolite-feature-anova-analysis
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Perform univariate ANOVA across sample class groups (e.g., AA, DD, MM) to identify metabolic features with statistically significant abundance differences, followed by multiple-testing correction and feature selection. This skill is essential when comparing metabolite profiles across three or more distinct phenotypic or clinical classes in untargeted LC-MS/MS metabolomics studies.

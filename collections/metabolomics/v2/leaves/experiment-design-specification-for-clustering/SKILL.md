@@ -14,7 +14,8 @@ metadata:
   - R
   - dynamicTreeCut
   - XCMS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -47,7 +48,6 @@ attribution:
 
 # experiment-design-specification-for-clustering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Define and encode the experimental design metadata (sample groupings, batch information, QC tags, run order) required by RAMClustR to properly normalize feature intensities and perform unsupervised clustering of metabolomics features. This specification bridges raw feature tables and clustering by capturing which samples belong to which experimental conditions, batches, and quality control cohorts.

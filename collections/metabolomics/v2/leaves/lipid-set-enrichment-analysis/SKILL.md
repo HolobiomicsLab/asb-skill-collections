@@ -13,7 +13,8 @@ metadata:
   - lipidr
   - R
   - limma
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
@@ -46,7 +47,6 @@ attribution:
 
 # Lipid Set Enrichment Analysis (LSEA) Ranked by Log Fold-Change
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Lipid set enrichment analysis (LSEA) identifies significantly enriched or depleted lipid classes and chain properties by ranking individual lipid molecules according to log fold-change from differential expression results. This technique reveals coordinated regulation patterns across predefined lipid sets that may not be apparent from individual lipid statistics alone.

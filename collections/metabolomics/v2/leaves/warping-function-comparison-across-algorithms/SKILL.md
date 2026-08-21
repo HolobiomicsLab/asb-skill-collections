@@ -16,7 +16,8 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
@@ -48,7 +49,6 @@ attribution:
 
 # warping-function-comparison-across-algorithms
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare retention time (RT) warping functions produced by different LC-MS alignment algorithms (e.g., ncGTW vs. XCMS) by measuring their impact on coefficient of variation (CV) before and after peak-filling. This skill identifies which algorithm produces lower CV values and more accurate feature alignment for downstream quantitative analysis.

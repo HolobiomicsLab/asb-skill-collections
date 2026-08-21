@@ -21,7 +21,8 @@ metadata:
   - NIST Library Installation
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -56,7 +57,6 @@ attribution:
 
 # Kovats Retention Index Extraction and Assignment
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract experimental Kovats retention indices (RI) from NIST reference files and assign them to combined EI spectral library records based on GC column polarity, using median RI values and filtering by column type and variance thresholds to improve library metadata quality for MS-DIAL.

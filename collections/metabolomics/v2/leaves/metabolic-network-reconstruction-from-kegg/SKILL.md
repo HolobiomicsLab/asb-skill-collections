@@ -13,6 +13,7 @@ metadata:
   - KEGG
   - Java
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0246962
   title: MetNet

@@ -16,7 +16,8 @@ metadata:
   - omu pie_chart function
   - count_fold_changes
   - ra_table
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -48,7 +49,6 @@ attribution:
 
 # ggplot2-pie-chart-rendering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate publication-ready pie chart visualizations of metabolite class frequency distributions from omu metabolomics analysis, using ggplot2 to render filtered and normalized count data as proportional segments with customizable styling.

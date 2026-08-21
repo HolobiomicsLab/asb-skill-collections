@@ -18,7 +18,8 @@ metadata:
   - xcms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
@@ -54,7 +55,6 @@ attribution:
 
 # graphical-time-warping-parameter-tuning
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize ncGTW alignment parameters (parSamp for parallel sample grouping and bpParam for worker configuration) to generate compound-specific retention-time warping functions that replace XCMS global warping assumptions. This skill addresses LC-MS feature misalignment caused by XCMS's single warping function per m/z bin, especially in large cohorts or long acquisition runs.

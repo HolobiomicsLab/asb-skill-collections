@@ -19,7 +19,8 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.02.07.637102v1
   title: ChemEmbed
@@ -48,7 +49,6 @@ attribution:
 
 # CNN Inference on Spectral Data
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load preprocessed MS/MS spectra and pass them through a trained Convolutional Neural Network to extract multidimensional molecular embedding vectors for each spectrum. This is a core inference step in metabolite identification pipelines that converts raw mass spectrometry measurements into structured feature representations for downstream candidate matching.

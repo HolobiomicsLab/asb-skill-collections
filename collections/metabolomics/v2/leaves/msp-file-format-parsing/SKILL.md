@@ -22,7 +22,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -57,7 +58,6 @@ attribution:
 
 # msp-file-format-parsing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse mass spectral library files in MSP (NIST text) format into structured R objects for downstream enrichment, validation, and conversion. This skill transforms human-readable MSP text files into machine-manipulable library objects that preserve spectral metadata, molecular structure information, and retention indices.

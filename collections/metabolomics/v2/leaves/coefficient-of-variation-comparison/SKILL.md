@@ -16,7 +16,8 @@ metadata:
   - notame
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -53,7 +54,6 @@ attribution:
 
 # coefficient-of-variation-comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter metabolomic features by comparing coefficient of variation (CV) between sample and quality control (QC) groups, retaining only features where the CV ratio (non-QC/QC) exceeds a threshold. This approach removes low-variance features that fail to differentiate between study samples and analytical controls, improving data quality for downstream statistical testing.

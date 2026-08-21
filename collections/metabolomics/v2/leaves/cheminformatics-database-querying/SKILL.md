@@ -15,7 +15,8 @@ metadata:
   - R
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -52,7 +53,6 @@ attribution:
 
 # cheminformatics-database-querying
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Query structural and categorical metadata for chemical compounds by name against integrated cheminformatics databases and libraries, using exact mass and functional group data to classify compounds and retrieve bioactivity or occurrence information. This skill bridges mass spectrometry peak identification with chemical property lookups and structural matching.

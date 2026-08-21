@@ -16,7 +16,8 @@ metadata:
   - rawrr
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -53,7 +54,6 @@ attribution:
 
 # json-format-conversion
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert R list objects extracted from Thermo Fisher Scientific binary raw files into JSON format for serialization and storage. This skill enables portable exchange and downstream parsing of structured proteomics metadata and spectral summaries.

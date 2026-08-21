@@ -21,7 +21,8 @@ metadata:
   - data.table
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
@@ -56,7 +57,6 @@ attribution:
 
 # signal-noise-trade-off-evaluation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematic evaluation of frequency thresholds for MS/MS spectrum denoising using Pareto front analysis to identify optimal trade-offs between signal retention (matched fragments preserved) and noise reduction (unmatched fragments removed). Applied after consensus spectrum generation to select a single frequency threshold that maximizes annotation quality without excessive signal loss.

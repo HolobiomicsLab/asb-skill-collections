@@ -17,6 +17,7 @@ metadata:
   techniques:
   - mass-spectrometry
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3389/fmolb.2022.1028334
   title: Inventa

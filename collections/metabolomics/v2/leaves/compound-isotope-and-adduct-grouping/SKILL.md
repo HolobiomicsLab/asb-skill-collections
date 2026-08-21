@@ -21,7 +21,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -55,7 +56,6 @@ attribution:
 
 # compound-isotope-and-adduct-grouping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Group mass spectrometry features derived from the same compound by clustering features that share similar retention time and quantitative trends across samples, thereby collapsing isotopic peaks and adduct variants into single compound representations. This skill is essential for reducing feature redundancy and improving metabolite annotation confidence in untargeted LC-MS/GC-MS metabolomics.

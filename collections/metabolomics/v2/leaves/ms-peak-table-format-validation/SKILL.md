@@ -18,7 +18,8 @@ metadata:
   - uafR spreadOut()
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -53,7 +54,6 @@ attribution:
 
 # MS Peak Table Format Validation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates that a raw GC-MS peak table (typically CSV output from Agilent Unknowns Analysis) conforms to the required schema before downstream processing. This skill ensures input data integrity by confirming the presence and correctness of critical columns and data types needed for intelligent sorting and chemical identification.

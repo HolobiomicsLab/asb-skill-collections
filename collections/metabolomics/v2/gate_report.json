@@ -1,6 +1,6 @@
 {
   "schema": "asbb-release-gate/1.0",
-  "generated_at": "2026-08-20T00:00:55.474278+00:00",
+  "generated_at": "2026-08-20T21:11:40.979516+00:00",
   "collection_dir": "collections/metabolomics/v2",
   "corpus_path": "collections/metabolomics/v2/corpus.yaml",
   "mode": "strict",
@@ -50,7 +50,7 @@
         15
       ],
       "hard_gate": true,
-      "summary": "Every included paper's access.type is in the OA allowed set (v0 OA-only).  (568 included papers checked)",
+      "summary": "Every included paper's access.type is in the OA allowed set (v0 OA-only).  (566 included papers checked)",
       "n_findings": 0,
       "details": []
     },

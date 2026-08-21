@@ -16,6 +16,7 @@ metadata:
   techniques:
   - NMR
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c01652
   title: mcfNMR

@@ -15,7 +15,8 @@ metadata:
   - randomForest
   - ggplot2
   - Omu
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool
@@ -44,7 +45,6 @@ attribution:
 
 # machine-learning-model-evaluation-with-confusion-matrices
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate a trained random forest classifier on metabolomics data by computing and visualizing a confusion matrix to assess prediction accuracy across treatment groups. This skill generates variable importance plots and model diagnostics essential for validating whether the classifier correctly distinguishes metabolite profiles between experimental conditions.

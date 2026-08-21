@@ -25,6 +25,7 @@ metadata:
   techniques:
   - LC-MS
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding

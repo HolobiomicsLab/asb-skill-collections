@@ -20,7 +20,8 @@ metadata:
   - Bioconductor Spectra
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -59,7 +60,6 @@ attribution:
 
 # Mass Spectrometry File Format Handling
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Direct programmatic access to proprietary Thermo Fisher Scientific .raw files (Orbitrap FTMS data) via the rawrr R package wrapping the RawFileReader .NET assembly. This skill enables end-to-end raw data reading in R without requiring GUI-based software, supporting modular proteomics pipelines.

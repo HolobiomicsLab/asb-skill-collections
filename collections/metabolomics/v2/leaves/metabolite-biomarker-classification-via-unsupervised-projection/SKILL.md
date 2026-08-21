@@ -17,7 +17,8 @@ metadata:
   - colorRamps
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
@@ -51,7 +52,6 @@ attribution:
 
 # metabolite-biomarker-classification-via-unsupervised-projection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and visualize principal component scores from preprocessed GCxGC-MS chromatogram data to reveal multivariate metabolite structure and separate sample groups (e.g., carriage vs. control) in an unsupervised manner. This skill uses multiway PCA to project high-dimensional chromatographic signals into a reduced score space where biomarker patterns become interpretable.

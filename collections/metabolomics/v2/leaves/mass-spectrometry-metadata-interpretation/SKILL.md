@@ -25,7 +25,8 @@ metadata:
   - Spectra
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
@@ -74,7 +75,6 @@ attribution:
 
 # mass-spectrometry-metadata-interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret and validate mass spectrometry file formats, centroiding status, and metadata to ensure compatibility with natural product discovery pipelines. This skill bridges raw instrument output and downstream metabologenomic analysis by verifying spectral data readiness and extracting critical acquisition parameters.

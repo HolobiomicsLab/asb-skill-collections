@@ -38,6 +38,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: NA
   doi: 10.1002/anie.202507483
   title: NA
@@ -66,6 +67,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: ms2decide
   doi: 10.1002/cmtd.202400088
   title: ms2decide
@@ -80,6 +82,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: LipidOne 2.0
   doi: 10.1002/cpz1.70009
   title: LipidOne 2.0
@@ -96,6 +99,7 @@ papers:
   license_detection: readme-llm
   license_evidence: 'This is free software, licensed under: The (two-clause) FreeBSD
     License'
+  license_subject: tool
 - name: GutUDB
   doi: 10.1002/imt2.195
   title: GutUDB
@@ -152,6 +156,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MS2Rescore (immunopeptidome rescoring)
   doi: 10.1002/pmic.202300336
   title: MS2Rescore (immunopeptidome rescoring)
@@ -166,6 +171,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MassQLab
   doi: 10.1002/rcm.10132
   title: MassQLab
@@ -180,6 +186,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: falcon
   doi: 10.1002/rcm.9153
   title: falcon
@@ -194,6 +201,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MS-VIS
   doi: 10.1002/rcm.9253
   title: MS-VIS
@@ -208,6 +216,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: 10.1007/978-3-319-47656-8_6
   doi: 10.1007/978-3-319-47656-8_6
   title: 10.1007/978-3-319-47656-8_6
@@ -262,6 +271,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: pfdeltascreen
   doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
@@ -276,6 +286,7 @@ papers:
     license: LGPL-2.1
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Mass Spectrum Transformer
   doi: 10.1007/s10489-022-04351-0
   title: Mass Spectrum Transformer
@@ -304,6 +315,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: 10.1007/s11306-017-1244-5
   doi: 10.1007/s11306-017-1244-5
   title: 10.1007/s11306-017-1244-5
@@ -328,10 +340,11 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: GPL-2.0-or-later
+    license: GPL-3.0-only
   license_tier: open
-  license_detection: readme-llm
+  license_detection: r-description
   license_evidence: 'License: GPL (>=2)'
+  license_subject: tool
 - name: TarMet
   doi: 10.1007/s11306-018-1363-7
   title: TarMet
@@ -346,6 +359,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MetaboShiny
   doi: 10.1007/s11306-020-01717-8
   title: MetaboShiny
@@ -360,6 +374,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MetFID
   doi: 10.1007/s11306-020-01726-7
   title: MetFID
@@ -385,9 +400,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0-only
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: WaveICA 2.0
   doi: 10.1007/s11306-021-01839-7
   title: WaveICA 2.0
@@ -402,6 +418,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: IonFlow
   doi: 10.1007/s11306-021-01841-z
   title: IonFlow
@@ -472,6 +489,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: 10.1007/s12561-013-9081-1
   doi: 10.1007/s12561-013-9081-1
   title: 10.1007/s12561-013-9081-1
@@ -536,9 +554,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: LGPL-3.0-only
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: WaveICA
   doi: 10.1016/j.aca.2019.02.010
   title: WaveICA
@@ -553,6 +572,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: quantyfey
   doi: 10.1016/j.aca.2025.344571
   title: quantyfey
@@ -567,6 +587,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: DIATAGe
   doi: 10.1016/j.aca.2025.344698
   title: DIATAGe
@@ -578,9 +599,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: ALISTER
   doi: 10.1016/j.cca.2024.117858
   title: ALISTER
@@ -595,6 +617,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: LipiDex
   doi: 10.1016/j.cels.2018.03.011
   title: LipiDex
@@ -609,6 +632,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: GCIMS
   doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS
@@ -620,9 +644,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: MSident
   doi: 10.1016/j.chemolab.2024.105063
   title: MSident
@@ -651,6 +676,7 @@ papers:
     license: LGPL-3.0
   license_tier: open
   license_detection: license-file
+  license_subject: tool
 - name: MInfer
   doi: 10.1016/j.cmpb.2025.108672
   title: MInfer
@@ -665,6 +691,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: PharmMet DB
   doi: 10.1016/j.dmd.2025.100183
   title: PharmMet DB
@@ -707,6 +734,7 @@ papers:
     license: GPL-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MultiABLER
   doi: 10.1016/j.isci.2023.106881
   title: MultiABLER
@@ -718,9 +746,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: AsRTNet
   doi: 10.1016/j.jece.2025.119962
   title: AsRTNet
@@ -749,6 +778,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: RGCxGC
   doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
@@ -760,9 +790,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: FlavorFormer
   doi: 10.1016/j.microc.2025.115372
   title: FlavorFormer
@@ -791,6 +822,7 @@ papers:
     license: LGPL-3.0
   license_tier: open
   license_detection: license-file
+  license_subject: tool
 - name: CAMERA
   doi: 10.1021/ac202450g
   title: CAMERA
@@ -802,9 +834,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0-only
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: RAMClust
   doi: 10.1021/ac501530d
   title: RAMClust
@@ -816,9 +849,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0-only
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: MS-CleanR
   doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
@@ -830,10 +864,11 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: GPL-3.0
+    license: GPL-3.0-only
   license_tier: open
-  license_detection: readme-llm
+  license_detection: r-description
   license_evidence: GPL-3
+  license_subject: tool
 - name: CorrDec
   doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
@@ -850,6 +885,7 @@ papers:
   license_detection: readme-llm
   license_evidence: The source code is licensed under GNU LESSER GENERAL PUBLIC LICENSE
     (LGPL) version 3.
+  license_subject: tool
 - name: MetIDfyR
   doi: 10.1021/acs.analchem.0c02281
   title: MetIDfyR
@@ -864,6 +900,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: LiPydomics
   doi: 10.1021/acs.analchem.0c02560
   title: LiPydomics
@@ -878,6 +915,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: isoSCAN
   doi: 10.1021/acs.analchem.0c02998
   title: isoSCAN
@@ -892,6 +930,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MRMkit
   doi: 10.1021/acs.analchem.0c03060
   title: MRMkit
@@ -920,6 +959,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: metabCombiner
   doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
@@ -931,9 +971,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0-only
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: 10.1021/acs.analchem.0c03895
   doi: 10.1021/acs.analchem.0c03895
   title: 10.1021/acs.analchem.0c03895
@@ -948,6 +989,7 @@ papers:
   license_tier: open
   license_detection: crossref-paper
   source_reuse: full
+  license_subject: paper
 - name: GNN-RT
   doi: 10.1021/acs.analchem.0c04071
   title: GNN-RT
@@ -962,6 +1004,7 @@ papers:
     license: AGPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: ASICS
   doi: 10.1021/acs.analchem.0c04232
   title: ASICS
@@ -973,9 +1016,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0-only
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: mass2adduct
   doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -990,6 +1034,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: DaDIA
   doi: 10.1021/acs.analchem.0c05022
   title: DaDIA
@@ -1018,6 +1063,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: mWISE
   doi: 10.1021/acs.analchem.1c00238
   title: mWISE
@@ -1029,9 +1075,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0-only
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: EVA
   doi: 10.1021/acs.analchem.1c01309
   title: EVA
@@ -1046,6 +1093,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: 10.1021/acs.analchem.1c01465
   doi: 10.1021/acs.analchem.1c01465
   title: 10.1021/acs.analchem.1c01465
@@ -1060,6 +1108,7 @@ papers:
   license_tier: noncommercial
   license_detection: crossref-paper
   source_reuse: limited
+  license_subject: paper
 - name: ISFrag
   doi: 10.1021/acs.analchem.1c01644
   title: ISFrag
@@ -1074,6 +1123,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Pew2
   doi: 10.1021/acs.analchem.1c02138
   title: Pew2
@@ -1088,6 +1138,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: neatms
   doi: 10.1021/acs.analchem.1c02220
   title: neatms
@@ -1102,6 +1153,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: slaw
   doi: 10.1021/acs.analchem.1c02687
   title: slaw
@@ -1116,6 +1168,7 @@ papers:
     license: GPL-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: metaboannotator
   doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
@@ -1130,6 +1183,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: 10.1021/acs.analchem.1c03163
   doi: 10.1021/acs.analchem.1c03163
   title: 10.1021/acs.analchem.1c03163
@@ -1171,6 +1225,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Paramounter
   doi: 10.1021/acs.analchem.1c04758
   title: Paramounter
@@ -1185,6 +1240,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: deimos
   doi: 10.1021/acs.analchem.1c05017
   title: deimos
@@ -1199,6 +1255,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: automRm
   doi: 10.1021/acs.analchem.1c05224
   title: automRm
@@ -1213,6 +1270,7 @@ papers:
     license: MIT
   license_tier: open
   license_locked: true
+  license_subject: tool
 - name: MSIannotator
   doi: 10.1021/acs.analchem.2c00557
   title: MSIannotator
@@ -1241,6 +1299,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: rassp
   doi: 10.1021/acs.analchem.2c02093
   title: rassp
@@ -1325,6 +1384,7 @@ papers:
     license: GPL-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: mspcompiler
   doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -1336,9 +1396,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: CordBat
   doi: 10.1021/acs.analchem.2c05748
   title: CordBat
@@ -1350,9 +1411,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: khipu
   doi: 10.1021/acs.analchem.2c05810
   title: khipu
@@ -1395,6 +1457,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: DNMS2Purifier
   doi: 10.1021/acs.analchem.3c00736
   title: DNMS2Purifier
@@ -1451,6 +1514,7 @@ papers:
     license: BSD-2-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: LipidSpace
   doi: 10.1021/acs.analchem.3c02449
   title: LipidSpace
@@ -1465,6 +1529,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: RI-based-CPSC
   doi: 10.1021/acs.analchem.3c02583
   title: RI-based-CPSC
@@ -1493,6 +1558,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: SAND
   doi: 10.1021/acs.analchem.3c03078
   title: SAND
@@ -1507,6 +1573,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: retention_time_gnn
   doi: 10.1021/acs.analchem.3c03177
   title: retention_time_gnn
@@ -1535,6 +1602,7 @@ papers:
     license: GPL-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: QComics
   doi: 10.1021/acs.analchem.3c03660
   title: QComics
@@ -1549,6 +1617,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: AVIR
   doi: 10.1021/acs.analchem.3c04046
   title: AVIR
@@ -1563,6 +1632,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: FNICM
   doi: 10.1021/acs.analchem.3c04131
   title: FNICM
@@ -1577,6 +1647,7 @@ papers:
     license: AFL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: moccal
   doi: 10.1021/acs.analchem.3c04290
   title: moccal
@@ -1591,6 +1662,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Lipid Wizard
   doi: 10.1021/acs.analchem.3c04419
   title: Lipid Wizard
@@ -1619,6 +1691,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MINNO
   doi: 10.1021/acs.analchem.3c04501
   title: MINNO
@@ -1647,6 +1720,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: ICEBERG / fragmentation graph generation
   doi: 10.1021/acs.analchem.3c04654
   title: ICEBERG / fragmentation graph generation
@@ -1661,6 +1735,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: AnnoSM
   doi: 10.1021/acs.analchem.3c04946
   title: AnnoSM
@@ -1717,6 +1792,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: NP3 MS Workflow
   doi: 10.1021/acs.analchem.3c05829
   title: NP3 MS Workflow
@@ -1731,6 +1807,7 @@ papers:
     license: AGPL-3.0
   license_tier: open
   license_detection: license-file
+  license_subject: tool
 - name: LipiDex 2
   doi: 10.1021/acs.analchem.4c00359
   title: LipiDex 2
@@ -1773,6 +1850,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: license-file
+  license_subject: tool
 - name: mobilipid
   doi: 10.1021/acs.analchem.4c01253
   title: mobilipid
@@ -1815,6 +1893,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MetaPhenotype
   doi: 10.1021/acs.analchem.4c02038
   title: MetaPhenotype
@@ -1843,6 +1922,7 @@ papers:
     license: CC-BY-NC-4.0
   license_tier: noncommercial
   license_detection: license-file
+  license_subject: tool
 - name: MSBERT
   doi: 10.1021/acs.analchem.4c02426
   title: MSBERT
@@ -1857,6 +1937,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MRMQuant
   doi: 10.1021/acs.analchem.4c02462
   title: MRMQuant
@@ -1885,6 +1966,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MWFormer
   doi: 10.1021/acs.analchem.4c03781
   title: MWFormer
@@ -1899,6 +1981,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: PyINETA
   doi: 10.1021/acs.analchem.4c03966
   title: PyINETA
@@ -1913,6 +1996,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: lipoclean
   doi: 10.1021/acs.analchem.4c04040
   title: lipoclean
@@ -1927,6 +2011,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: PPGB-MS2
   doi: 10.1021/acs.analchem.4c04375
   title: PPGB-MS2
@@ -1955,6 +2040,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MetCohort
   doi: 10.1021/acs.analchem.4c04906
   title: MetCohort
@@ -1969,6 +2055,7 @@ papers:
     license: AGPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: PRIMA-Panel
   doi: 10.1021/acs.analchem.4c04938
   title: PRIMA-Panel
@@ -1997,6 +2084,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: license-file
+  license_subject: tool
 - name: RapidMass
   doi: 10.1021/acs.analchem.4c05062
   title: RapidMass
@@ -2025,6 +2113,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: NMRformer
   doi: 10.1021/acs.analchem.4c05632
   title: NMRformer
@@ -2039,6 +2128,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Graphormer-RT
   doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT
@@ -2081,6 +2171,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MS2MP
   doi: 10.1021/acs.analchem.4c06875
   title: MS2MP
@@ -2123,6 +2214,7 @@ papers:
     license: GPL-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: geoRge
   doi: 10.1021/acs.analchem.5b03628
   title: geoRge
@@ -2137,6 +2229,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: LAGF
   doi: 10.1021/acs.analchem.5c00060
   title: LAGF
@@ -2162,9 +2255,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: LipidA-IDER
   doi: 10.1021/acs.analchem.5c00520
   title: LipidA-IDER
@@ -2193,6 +2287,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: metid
   doi: 10.1021/acs.analchem.5c00633
   title: metid
@@ -2207,6 +2302,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: mzrtsim
   doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
@@ -2218,9 +2314,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-2.0-only
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: mamsi
   doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -2235,6 +2332,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: LongitudinalProf-MSMS-Method
   doi: 10.1021/acs.analchem.5c01414
   title: LongitudinalProf-MSMS-Method
@@ -2263,6 +2361,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: CSU-MS2
   doi: 10.1021/acs.analchem.5c01594
   title: CSU-MS2
@@ -2288,9 +2387,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: Reverse Spectral Search
   doi: 10.1021/acs.analchem.5c02047
   title: Reverse Spectral Search
@@ -2305,6 +2405,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: ChemEcho
   doi: 10.1021/acs.analchem.5c02591
   title: ChemEcho
@@ -2319,6 +2420,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: license-file
+  license_subject: tool
 - name: SpecEmbedding
   doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding
@@ -2347,6 +2449,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: SMART 2.0
   doi: 10.1021/acs.analchem.5c03225
   title: SMART 2.0
@@ -2361,6 +2464,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: UCL-MetIsoLib
   doi: 10.1021/acs.analchem.5c03390
   title: UCL-MetIsoLib
@@ -2375,6 +2479,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: CRB-FCC
   doi: 10.1021/acs.analchem.5c03451
   title: CRB-FCC
@@ -2389,6 +2494,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: HyperCCS
   doi: 10.1021/acs.analchem.5c03492
   title: HyperCCS
@@ -2403,6 +2509,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: SONAR-MSI
   doi: 10.1021/acs.analchem.5c03682
   title: SONAR-MSI
@@ -2431,6 +2538,7 @@ papers:
   license_tier: open
   license_detection: crossref-paper
   source_reuse: full
+  license_subject: paper
 - name: HDSE-MS
   doi: 10.1021/acs.analchem.5c04111
   title: HDSE-MS
@@ -2447,6 +2555,7 @@ papers:
   license_detection: readme-llm
   license_evidence: This project is licensed under the MIT License - see the [LICENSE](LICENSE)
     file for details.
+  license_subject: tool
 - name: Spectraverse
   doi: 10.1021/acs.analchem.5c06256
   title: Spectraverse
@@ -2461,6 +2570,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: 10.1021/acs.analchem.5c06841
   doi: 10.1021/acs.analchem.5c06841
   title: 10.1021/acs.analchem.5c06841
@@ -2475,6 +2585,7 @@ papers:
   license_tier: noncommercial
   license_detection: crossref-paper
   source_reuse: limited
+  license_subject: paper
 - name: eRah
   doi: 10.1021/acs.analchem.6b02927
   title: eRah
@@ -2489,6 +2600,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: CANOPUS
   doi: 10.1021/acs.analchem.8b04698
   title: CANOPUS
@@ -2503,6 +2615,7 @@ papers:
     license: AGPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Deep MS/MS similarity
   doi: 10.1021/acs.analchem.8b05405
   title: Deep MS/MS similarity
@@ -2517,6 +2630,7 @@ papers:
     license: AGPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: 10.1021/acs.analchem.9b01842
   doi: 10.1021/acs.analchem.9b01842
   title: 10.1021/acs.analchem.9b01842
@@ -2541,11 +2655,12 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: CC-BY-NC-ND-4.0
-  license_tier: noncommercial
-  license_detection: readme-llm
+    license: GPL-3.0-only
+  license_tier: open
+  license_detection: r-description
   license_evidence: This work is licensed under the Attribution-NonCommercial-NoDerivatives
     4.0 International (CC BY-NC-ND 4.0)
+  license_subject: tool
 - name: DNN peak classifier
   doi: 10.1021/acs.analchem.9b02983
   title: DNN peak classifier
@@ -2574,6 +2689,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Retip
   doi: 10.1021/acs.analchem.9b05765
   title: Retip
@@ -2585,9 +2701,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: CC-BY-4.0
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: Scannotation
   doi: 10.1021/acs.est.3c04764
   title: Scannotation
@@ -2602,6 +2719,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: license-file
+  license_subject: tool
 - name: CMDN
   doi: 10.1021/acs.est.5c08558
   title: CMDN
@@ -2630,6 +2748,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: bittermass
   doi: 10.1021/acs.jafc.3c09767
   title: bittermass
@@ -2644,6 +2763,7 @@ papers:
   license_tier: open
   license_detection: crossref-paper
   source_reuse: full
+  license_subject: paper
 - name: Chemprop-IR
   doi: 10.1021/acs.jcim.1c00055
   title: Chemprop-IR
@@ -2658,6 +2778,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: CyProduct
   doi: 10.1021/acs.jcim.1c00144
   title: CyProduct
@@ -2686,6 +2807,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: QC-GN2oMS2
   doi: 10.1021/acs.jcim.4c00446
   title: QC-GN2oMS2
@@ -2700,6 +2822,7 @@ papers:
     license: BSD-2-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: CIDMD
   doi: 10.1021/acs.jcim.4c00760
   title: CIDMD
@@ -2742,6 +2865,7 @@ papers:
     license: no LICENSE file found (verified 2026-06-24)
   license_tier: restricted
   license_locked: true
+  license_subject: tool
 - name: MADByTE
   doi: 10.1021/acs.jnatprod.0c01076
   title: MADByTE
@@ -2756,6 +2880,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: npclassifier
   doi: 10.1021/acs.jnatprod.1c00399
   title: npclassifier
@@ -2770,6 +2895,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Bioactivity-Based Molecular Networking
   doi: 10.1021/acs.jnatprod.7b00737
   title: Bioactivity-Based Molecular Networking
@@ -2784,6 +2910,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: license-file
+  license_subject: tool
 - name: lipidr
   doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
@@ -2795,9 +2922,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: lcmsWorld
   doi: 10.1021/acs.jproteome.0c00618
   title: lcmsWorld
@@ -2812,6 +2940,7 @@ papers:
     license: AGPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: 10.1021/acs.jproteome.0c00866
   doi: 10.1021/acs.jproteome.0c00866
   title: 10.1021/acs.jproteome.0c00866
@@ -2826,6 +2955,7 @@ papers:
   license_tier: open
   license_detection: crossref-paper
   source_reuse: full
+  license_subject: paper
 - name: Omics Untargeted Key Script
   doi: 10.1021/acs.jproteome.1c00392
   title: Omics Untargeted Key Script
@@ -2840,6 +2970,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: 10.1021/acs.jproteome.1c00425
   doi: 10.1021/acs.jproteome.1c00425
   title: 10.1021/acs.jproteome.1c00425
@@ -2881,6 +3012,7 @@ papers:
     license: BSD-2-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: compareMS2 2.0
   doi: 10.1021/acs.jproteome.2c00457
   title: compareMS2 2.0
@@ -2895,6 +3027,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: CloMet
   doi: 10.1021/acs.jproteome.2c00602
   title: CloMet
@@ -2909,6 +3042,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: HyperSpec
   doi: 10.1021/acs.jproteome.2c00612
   title: HyperSpec
@@ -2923,6 +3057,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: PMart
   doi: 10.1021/acs.jproteome.3c00512
   title: PMart
@@ -2937,6 +3072,7 @@ papers:
     license: BSD-2-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Tidy-Direct-to-MS
   doi: 10.1021/acs.jproteome.3c00784
   title: Tidy-Direct-to-MS
@@ -2951,6 +3087,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MassDash
   doi: 10.1021/acs.jproteome.4c00026
   title: MassDash
@@ -2965,6 +3102,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MODE
   doi: 10.1021/acs.jproteome.4c00650
   title: MODE
@@ -2979,6 +3117,7 @@ papers:
     license: BSD-2-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MSConnect
   doi: 10.1021/acs.jproteome.4c00854
   title: MSConnect
@@ -2993,6 +3132,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: pyopenmsviz
   doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -3007,6 +3147,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MS-RT
   doi: 10.1021/acs.jproteome.4c00881
   title: MS-RT
@@ -3021,6 +3162,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MSIght
   doi: 10.1021/acs.jproteome.4c01140
   title: MSIght
@@ -3035,6 +3177,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Aird-MSI
   doi: 10.1021/acs.jproteome.5c00423
   title: Aird-MSI
@@ -3049,6 +3192,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: mzpeak
   doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak
@@ -3063,6 +3207,7 @@ papers:
   license_tier: open
   license_detection: crossref-paper
   source_reuse: full
+  license_subject: paper
 - name: metScribeR
   doi: 10.1021/acs.jproteome.5c00548
   title: metScribeR
@@ -3077,6 +3222,7 @@ papers:
     license: GPL-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: ANN-SoLo
   doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo
@@ -3091,6 +3237,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: pyteomics
   doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics
@@ -3105,6 +3252,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: CEU Mass Mediator 3.0
   doi: 10.1021/acs.jproteome.8b00720
   title: CEU Mass Mediator 3.0
@@ -3119,6 +3267,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Skyline (small molecules)
   doi: 10.1021/acs.jproteome.9b00640
   title: Skyline (small molecules)
@@ -3133,6 +3282,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: NP Analyst
   doi: 10.1021/acscentsci.1c01108
   title: NP Analyst
@@ -3147,6 +3297,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: ENPKG (Experimental Natural Products Knowledge Graph)
   doi: 10.1021/acscentsci.3c00800
   title: ENPKG (Experimental Natural Products Knowledge Graph)
@@ -3161,6 +3312,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: NMR2Struct
   doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
@@ -3175,6 +3327,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: 10.1021/acscentsci.9b00085
   doi: 10.1021/acscentsci.9b00085
   title: 10.1021/acscentsci.9b00085
@@ -3228,6 +3381,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: macroMS
   doi: 10.1021/jasms.1c00013
   title: macroMS
@@ -3242,6 +3396,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: POMICS
   doi: 10.1021/jasms.1c00315
   title: POMICS
@@ -3270,6 +3425,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: SpectraX
   doi: 10.1021/jasms.3c00322
   title: SpectraX
@@ -3312,6 +3468,7 @@ papers:
     license: BSD-2-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: BreathXplorer
   doi: 10.1021/jasms.4c00152
   title: BreathXplorer
@@ -3326,6 +3483,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MSIGen
   doi: 10.1021/jasms.4c00178
   title: MSIGen
@@ -3340,6 +3498,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: PNNL PreProcessor
   doi: 10.1021/jasms.4c00220
   title: PNNL PreProcessor
@@ -3368,6 +3527,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Norm ISWSVR
   doi: 10.1021/jasms.4c00467
   title: Norm ISWSVR
@@ -3382,6 +3542,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: license-file
+  license_subject: tool
 - name: mzquality
   doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -3396,6 +3557,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Punc’data
   doi: 10.1021/jasms.5c00151
   title: Punc’data
@@ -3410,6 +3572,7 @@ papers:
     license: AGPL-3.0
   license_tier: open
   license_detection: license-file
+  license_subject: tool
 - name: QCxMS2
   doi: 10.1021/jasms.5c00234
   title: QCxMS2
@@ -3424,6 +3587,7 @@ papers:
     license: LGPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MMSA
   doi: 10.1021/jasms.5c00237
   title: MMSA
@@ -3449,9 +3613,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: 10.1038/nbt.3597
   doi: 10.1038/nbt.3597
   title: 10.1038/nbt.3597
@@ -3479,6 +3644,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: OpenMS
   doi: 10.1038/nmeth.3959
   title: OpenMS
@@ -3507,6 +3673,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: license-file
+  license_subject: tool
 - name: 10.1038/protex.2015.102
   doi: 10.1038/protex.2015.102
   title: 10.1038/protex.2015.102
@@ -3536,6 +3703,7 @@ papers:
   license_detection: readme-llm
   license_evidence: NPDtools version 2.5.0 was released under the Apache 2.0 License
     on November 28, 2019
+  license_subject: tool
 - name: 10.1038/s41467-019-11311-9
   doi: 10.1038/s41467-019-11311-9
   title: 10.1038/s41467-019-11311-9
@@ -3550,6 +3718,7 @@ papers:
   license_tier: open
   license_detection: crossref-paper
   source_reuse: full
+  license_subject: paper
 - name: 10.1038/s41467-019-13680-7
   doi: 10.1038/s41467-019-13680-7
   title: 10.1038/s41467-019-13680-7
@@ -3564,6 +3733,7 @@ papers:
   license_tier: open
   license_detection: crossref-paper
   source_reuse: full
+  license_subject: paper
 - name: LipidCreator
   doi: 10.1038/s41467-020-15960-z
   title: LipidCreator
@@ -3578,6 +3748,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: license-file
+  license_subject: tool
 - name: Ion Identity Molecular Networking (IIMN)
   doi: 10.1038/s41467-021-23953-9
   title: Ion Identity Molecular Networking (IIMN)
@@ -3592,6 +3763,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: moldiscovery
   doi: 10.1038/s41467-021-23986-0
   title: moldiscovery
@@ -3621,6 +3793,7 @@ papers:
   license_tier: open
   license_detection: readme-llm
   license_evidence: '[Modified BSD](https://github.com/biorack/simile/blob/main/license.txt)'
+  license_subject: tool
 - name: tidyMass
   doi: 10.1038/s41467-022-32155-w
   title: tidyMass
@@ -3632,9 +3805,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: Knowledge-guided MN (knowns→unknowns)
   doi: 10.1038/s41467-022-34537-6
   title: Knowledge-guided MN (knowns→unknowns)
@@ -3649,6 +3823,7 @@ papers:
     license: CC-BY-NC-4.0
   license_tier: noncommercial
   license_detection: license-file
+  license_subject: tool
 - name: ms2query
   doi: 10.1038/s41467-023-37446-4
   title: ms2query
@@ -3663,6 +3838,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: FastEI
   doi: 10.1038/s41467-023-39279-7
   title: FastEI
@@ -3677,6 +3853,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: asari
   doi: 10.1038/s41467-023-39889-1
   title: asari
@@ -3719,6 +3896,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: license-file
+  license_subject: tool
 - name: Casanovo
   doi: 10.1038/s41467-024-49731-x
   title: Casanovo
@@ -3733,6 +3911,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: FERMO
   doi: 10.1038/s41467-024-50111-8
   title: FERMO
@@ -3747,6 +3926,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: DeepMSProfiler
   doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler
@@ -3762,6 +3942,7 @@ papers:
   license_tier: open
   license_detection: readme-llm
   license_evidence: '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)'
+  license_subject: tool
 - name: MS-DIAL 5
   doi: 10.1038/s41467-024-54137-w
   title: MS-DIAL 5
@@ -3778,6 +3959,7 @@ papers:
   license_detection: readme-llm
   license_evidence: The source code is licensed under GNU LESSER GENERAL PUBLIC LICENSE
     (LGPL) version 3.
+  license_subject: tool
 - name: iDIA-QC
   doi: 10.1038/s41467-024-54871-1
   title: iDIA-QC
@@ -3792,6 +3974,7 @@ papers:
     license: AFL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: LipidIN
   doi: 10.1038/s41467-025-59683-5
   title: LipidIN
@@ -3806,6 +3989,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MassCube
   doi: 10.1038/s41467-025-60640-5
   title: MassCube
@@ -3820,6 +4004,7 @@ papers:
     license: CC-BY-NC-4.0
   license_tier: noncommercial
   license_detection: license-file
+  license_subject: tool
 - name: MetDNA3
   doi: 10.1038/s41467-025-63536-6
   title: MetDNA3
@@ -3836,6 +4021,7 @@ papers:
   license_detection: readme-llm
   license_evidence: This work is licensed under the Attribution-NonCommercial-NoDerivatives
     4.0 International (CC BY-NC-ND 4.0).
+  license_subject: tool
 - name: SpatialMETA
   doi: 10.1038/s41467-025-63915-z
   title: SpatialMETA
@@ -3850,6 +4036,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: GNPS Drug Library
   doi: 10.1038/s41467-025-65993-5
   title: GNPS Drug Library
@@ -3878,6 +4065,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MetaboLM
   doi: 10.1038/s41467-025-66163-3
   title: MetaboLM
@@ -3934,6 +4122,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Reverse metabolomics
   doi: 10.1038/s41586-023-06906-8
   title: Reverse metabolomics
@@ -3962,6 +4151,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: CANOPUS-adjacent — COSMIC
   doi: 10.1038/s41587-021-01045-9
   title: CANOPUS-adjacent — COSMIC
@@ -3976,6 +4166,7 @@ papers:
     license: AGPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: mzmine3
   doi: 10.1038/s41587-023-01690-2
   title: mzmine3
@@ -3990,6 +4181,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MASST
   doi: 10.1038/s41587-023-01985-4
   title: MASST
@@ -4018,6 +4210,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: BiG-SCAPE biosynthetic diversity
   doi: 10.1038/s41589-019-0400-9
   title: BiG-SCAPE biosynthetic diversity
@@ -4032,6 +4225,7 @@ papers:
     license: AGPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: qemistree
   doi: 10.1038/s41589-020-00677-3
   title: qemistree
@@ -4046,6 +4240,7 @@ papers:
     license: BSD-2-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Paired Omics Data Platform (PoDP)
   doi: 10.1038/s41589-020-00724-z
   title: Paired Omics Data Platform (PoDP)
@@ -4060,6 +4255,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: sirius
   doi: 10.1038/s41592-019-0344-8
   title: sirius
@@ -4074,6 +4270,7 @@ papers:
     license: AGPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: ReDU
   doi: 10.1038/s41592-020-0916-7
   title: ReDU
@@ -4102,6 +4299,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Spectral entropy
   doi: 10.1038/s41592-021-01331-z
   title: Spectral entropy
@@ -4116,6 +4314,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: GNPS Dashboard
   doi: 10.1038/s41592-021-01339-5
   title: GNPS Dashboard
@@ -4144,6 +4343,7 @@ papers:
     license: AGPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: GLEAMS
   doi: 10.1038/s41592-022-01496-1
   title: GLEAMS
@@ -4158,6 +4358,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Flash entropy search
   doi: 10.1038/s41592-023-02012-9
   title: Flash entropy search
@@ -4172,6 +4373,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: RepoRT (retention-time repository)
   doi: 10.1038/s41592-023-02143-z
   title: RepoRT (retention-time repository)
@@ -4186,6 +4388,7 @@ papers:
     license: CC-BY-SA-4.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MEISTER
   doi: 10.1038/s41592-024-02171-3
   title: MEISTER
@@ -4200,6 +4403,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Spectral Denoising
   doi: 10.1038/s41592-025-02646-x
   title: Spectral Denoising
@@ -4214,6 +4418,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MassQL
   doi: 10.1038/s41592-025-02785-1
   title: MassQL
@@ -4228,6 +4433,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MSnLib
   doi: 10.1038/s41592-025-02813-0
   title: MSnLib
@@ -4242,6 +4448,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: GNPS molecular networking protocol
   doi: 10.1038/s41596-020-0317-5
   title: GNPS molecular networking protocol
@@ -4270,6 +4477,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: FBMN-STATS
   doi: 10.1038/s41596-024-01046-3
   title: FBMN-STATS
@@ -4284,6 +4492,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: GNPS2 drug-metabolism toolkit
   doi: 10.1038/s41596-025-01237-6
   title: GNPS2 drug-metabolism toolkit
@@ -4312,6 +4521,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Dbnorm
   doi: 10.1038/s41598-021-84824-3
   title: Dbnorm
@@ -4326,6 +4536,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: SIMPEL
   doi: 10.1038/s42003-024-05844-z
   title: SIMPEL
@@ -4340,6 +4551,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Spec2Mol
   doi: 10.1038/s42004-023-00932-3
   title: Spec2Mol
@@ -4354,6 +4566,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: SigmaCCS
   doi: 10.1038/s42004-023-00939-w
   title: SigmaCCS
@@ -4368,6 +4581,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: TeFT
   doi: 10.1038/s42004-024-01189-0
   title: TeFT
@@ -4424,6 +4638,7 @@ papers:
     license: AGPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MIST (chemical formula transformer)
   doi: 10.1038/s42256-023-00708-3
   title: MIST (chemical formula transformer)
@@ -4438,6 +4653,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: ICEBERG
   doi: 10.1038/s42256-024-00816-8
   title: ICEBERG
@@ -4452,6 +4668,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MSGo
   doi: 10.1038/s42256-025-01140-5
   title: MSGo
@@ -4466,6 +4683,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: VInSMoC
   doi: 10.1038/s43588-025-00923-5
   title: VInSMoC
@@ -4480,6 +4698,7 @@ papers:
     license: CC-BY-NC-4.0
   license_tier: noncommercial
   license_detection: license-file
+  license_subject: tool
 - name: MetaboPAC
   doi: 10.1039/d2mo00168c
   title: MetaboPAC
@@ -4508,6 +4727,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: FeatureFinderMetabo
   doi: 10.1074/mcp.M113.031278
   title: FeatureFinderMetabo
@@ -4549,6 +4769,7 @@ papers:
     license: CC-BY-4.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: LargeMetabo
   doi: 10.1093/bib/bbac455
   title: LargeMetabo
@@ -4560,9 +4781,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: 10.1093/bib/bbac542
   doi: 10.1093/bib/bbac542
   title: 10.1093/bib/bbac542
@@ -4577,8 +4799,9 @@ papers:
   license_tier: open
   license_detection: crossref-paper
   source_reuse: full
+  license_subject: paper
 - name: SPIFFED
-  doi: 10.1093/bib/bbad229/7199559
+  doi: 10.1093/bib/bbad229
   title: SPIFFED
   repo_url: bio-it-station/SPIFFED
   status: included
@@ -4606,8 +4829,9 @@ papers:
   license_tier: open
   license_detection: readme-llm
   license_evidence: '[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)'
+  license_subject: tool
 - name: MetaMOPE
-  doi: 10.1093/bioadv/vbad061/7172446
+  doi: 10.1093/bioadv/vbad061
   title: MetaMOPE
   repo_url: CMDM-Lab/MetaMOPE
   status: included
@@ -4634,6 +4858,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MeTEor
   doi: 10.1093/bioadv/vbae178
   title: MeTEor
@@ -4648,6 +4873,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Protomix
   doi: 10.1093/bioadv/vbae192
   title: Protomix
@@ -4662,6 +4888,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: AnnoMe
   doi: 10.1093/bioadv/vbag111
   title: AnnoMe
@@ -4676,6 +4903,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: ncGTW
   doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
@@ -4687,9 +4915,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-2.0-only
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: struct
   doi: 10.1093/bioinformatics/btaa1031
   title: struct
@@ -4704,8 +4933,9 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: M2R
-  doi: 10.1093/bioinformatics/btab060/6125380
+  doi: 10.1093/bioinformatics/btab060
   title: M2R
   repo_url: e-weglarz-tomczak/m2r
   status: included
@@ -4718,8 +4948,9 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: mzRAPP
-  doi: 10.1093/bioinformatics/btab231/6214530
+  doi: 10.1093/bioinformatics/btab231
   title: mzRAPP
   repo_url: YasinEl/mzRAPP
   status: included
@@ -4732,6 +4963,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: AutoCCS
   doi: 10.1093/bioinformatics/btab429
   title: AutoCCS
@@ -4746,6 +4978,7 @@ papers:
     license: BSD-2-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Amanida
   doi: 10.1093/bioinformatics/btab591
   title: Amanida
@@ -4757,12 +4990,13 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: GPL-3.0
+    license: GPL-3.0-only
   license_tier: open
-  license_detection: readme-llm
+  license_detection: r-description
   license_evidence: '[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)'
+  license_subject: tool
 - name: mspack
-  doi: 10.1093/bioinformatics/btab636/6363791
+  doi: 10.1093/bioinformatics/btab636
   title: mspack
   repo_url: fhanau/mspack
   status: included
@@ -4775,8 +5009,9 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: maplet
-  doi: 10.1093/bioinformatics/btab741/6409851
+  doi: 10.1093/bioinformatics/btab741
   title: maplet
   repo_url: krumsieklab/maplet
   status: included
@@ -4789,8 +5024,9 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: massNet
-  doi: 10.1093/bioinformatics/btac032/6510930
+  doi: 10.1093/bioinformatics/btac032
   title: massNet
   repo_url: wabdelmoula/massNet
   status: included
@@ -4804,7 +5040,7 @@ papers:
   license_tier: restricted
   license_detection: none
 - name: Metaboprep
-  doi: 10.1093/bioinformatics/btac059/6522114
+  doi: 10.1093/bioinformatics/btac059
   title: Metaboprep
   repo_url: MRCIEU/metaboprep
   status: included
@@ -4814,9 +5050,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: PeakBot
   doi: 10.1093/bioinformatics/btac344
   title: PeakBot
@@ -4831,8 +5068,9 @@ papers:
     license: CC-BY-NC-4.0
   license_tier: noncommercial
   license_detection: license-file
+  license_subject: tool
 - name: MAFFIN
-  doi: 10.1093/bioinformatics/btac355/6593484
+  doi: 10.1093/bioinformatics/btac355
   title: MAFFIN
   repo_url: HuanLab/MAFFIN
   status: included
@@ -4842,9 +5080,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: MiMIR
   doi: 10.1093/bioinformatics/btac388
   title: MiMIR
@@ -4859,6 +5098,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MobilityTransformR
   doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
@@ -4870,11 +5110,12 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: Artistic-2.0
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: homologueDiscoverer
-  doi: 10.1093/bioinformatics/btac647/6722615
+  doi: 10.1093/bioinformatics/btac647
   title: homologueDiscoverer
   repo_url: kevinmildau/homologueDiscoverer
   status: included
@@ -4901,8 +5142,9 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: ChemWalker
-  doi: 10.1093/bioinformatics/btad078/7067745
+  doi: 10.1093/bioinformatics/btad078
   title: ChemWalker
   repo_url: computational-chemical-biology/ChemWalker
   status: included
@@ -4915,8 +5157,9 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: DBDIpy
-  doi: 10.1093/bioinformatics/btad088/7036334
+  doi: 10.1093/bioinformatics/btad088
   title: DBDIpy
   repo_url: leopold-weidner/DBDIpy
   status: included
@@ -4930,6 +5173,7 @@ papers:
   license_tier: open
   license_detection: readme-llm
   license_evidence: '[![PyPi license](https://badgen.net/pypi/license/pip/)]([https://pypi.com/project/pip/](https://opensource.org/licenses/MIT/))'
+  license_subject: tool
 - name: 3DMolMS
   doi: 10.1093/bioinformatics/btad354
   title: 3DMolMS
@@ -4944,6 +5188,7 @@ papers:
     license: CC-BY-NC-4.0
   license_tier: noncommercial
   license_detection: license-file
+  license_subject: tool
 - name: ipaPy2
   doi: 10.1093/bioinformatics/btad455
   title: ipaPy2
@@ -4958,8 +5203,9 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: metGWAS 1.0
-  doi: 10.1093/bioinformatics/btad523/7248906
+  doi: 10.1093/bioinformatics/btad523
   title: metGWAS 1.0
   repo_url: saifurbd28/metGWAS-1.0
   status: included
@@ -4999,7 +5245,7 @@ papers:
     verified_on: '2026-06-22'
     license: null
   license_tier: restricted
-  license_detection: none
+  license_detection: file-present-unclassified
 - name: ESP
   doi: 10.1093/bioinformatics/btae490
   title: ESP
@@ -5014,6 +5260,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: msFeaST
   doi: 10.1093/bioinformatics/btae584
   title: msFeaST
@@ -5028,6 +5275,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MetAssimulo 2.0
   doi: 10.1093/bioinformatics/btaf045
   title: MetAssimulo 2.0
@@ -5043,7 +5291,7 @@ papers:
   license_tier: restricted
   license_detection: none
 - name: Eclipse
-  doi: 10.1093/bioinformatics/btaf290/8128335
+  doi: 10.1093/bioinformatics/btaf290
   title: Eclipse
   repo_url: broadinstitute/bmxp
   status: included
@@ -5056,6 +5304,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: license-file
+  license_subject: tool
 - name: JESTR
   doi: 10.1093/bioinformatics/btaf354
   title: JESTR
@@ -5070,6 +5319,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: 10.1093/bioinformatics/btr597
   doi: 10.1093/bioinformatics/btr597
   title: 10.1093/bioinformatics/btr597
@@ -5097,6 +5347,7 @@ papers:
     license: Artistic-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MetaMapR
   doi: 10.1093/bioinformatics/btv194
   title: MetaMapR
@@ -5111,6 +5362,7 @@ papers:
     license: AGPL-3.0
   license_tier: open
   license_detection: license-file
+  license_subject: tool
 - name: MWASTools
   doi: 10.1093/bioinformatics/btx477
   title: MWASTools
@@ -5139,6 +5391,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: ChemDistiller
   doi: 10.1093/bioinformatics/bty080
   title: ChemDistiller
@@ -5154,6 +5407,7 @@ papers:
   license_tier: open
   license_detection: readme-llm
   license_evidence: The code is released under permissive BSD type license.
+  license_subject: tool
 - name: MetaboDiff
   doi: 10.1093/bioinformatics/bty344
   title: MetaboDiff
@@ -5165,9 +5419,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: LC retention order prediction
   doi: 10.1093/bioinformatics/bty590
   title: LC retention order prediction
@@ -5182,6 +5437,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: license-file
+  license_subject: tool
 - name: MetumpX untargeted MS support package
   doi: 10.1093/bioinformatics/btz765
   title: MetumpX untargeted MS support package
@@ -5196,6 +5452,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: BiG-SLiCE
   doi: 10.1093/gigascience/giaa154
   title: BiG-SLiCE
@@ -5210,6 +5467,7 @@ papers:
     license: AGPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Lilikoi V2.0
   doi: 10.1093/gigascience/giaa162
   title: Lilikoi V2.0
@@ -5224,6 +5482,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MIBiG 3.0
   doi: 10.1093/nar/gkac1049
   title: MIBiG 3.0
@@ -5253,6 +5512,7 @@ papers:
       authors (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
   license_tier: noncommercial
   license_locked: true
+  license_subject: tool
 - name: MetaboAnalyst 6.0
   doi: 10.1093/nar/gkae253
   title: MetaboAnalyst 6.0
@@ -5267,6 +5527,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: license-file
+  license_subject: tool
 - name: CFM-ID
   doi: 10.1093/nar/gku436
   title: CFM-ID
@@ -5296,7 +5557,7 @@ papers:
   license_tier: restricted
   license_detection: none
 - name: NPOmix
-  doi: 10.1093/pnasnexus/pgac257/6847575
+  doi: 10.1093/pnasnexus/pgac257
   title: NPOmix
   repo_url: tiagolbiotech/NPOmix_python
   status: included
@@ -5309,6 +5570,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: LipidLynxX
   doi: 10.1101/2020.04.09.033894
   title: LipidLynxX
@@ -5323,6 +5585,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Metabolomics Spectrum Resolver
   doi: 10.1101/2020.05.09.086066
   title: Metabolomics Spectrum Resolver
@@ -5337,6 +5600,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: rawrr
   doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -5348,9 +5612,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0-only
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: MetENP
   doi: 10.1101/2020.11.20.391912
   title: MetENP
@@ -5365,6 +5630,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: hRUV
   doi: 10.1101/2020.12.21.423723
   title: hRUV
@@ -5379,6 +5645,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MetaFetcheR
   doi: 10.1101/2021.02.28.433248v2
   title: MetaFetcheR
@@ -5393,6 +5660,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: PaIRKAT
   doi: 10.1101/2021.04.23.440821v1
   title: PaIRKAT
@@ -5435,6 +5703,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: 10.1101/2022.08.09.503345
   doi: 10.1101/2022.08.09.503345
   title: 10.1101/2022.08.09.503345
@@ -5449,6 +5718,7 @@ papers:
   license_tier: noncommercial
   license_detection: biorxiv_api-paper
   source_reuse: limited
+  license_subject: paper
 - name: InjectionDesign
   doi: 10.1101/2023.02.26.530140v1.article-info
   title: InjectionDesign
@@ -5491,6 +5761,7 @@ papers:
   license_tier: noncommercial
   license_detection: biorxiv_api-paper
   source_reuse: limited
+  license_subject: paper
 - name: Mass2SMILES
   doi: 10.1101/2023.07.06.547963v1
   title: Mass2SMILES
@@ -5519,6 +5790,7 @@ papers:
     license: CC-BY-NC-4.0
   license_tier: noncommercial
   license_detection: license-file
+  license_subject: tool
 - name: MS2DeepScore 2.0
   doi: 10.1101/2024.03.25.586580v5
   title: MS2DeepScore 2.0
@@ -5533,6 +5805,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: plantMASST
   doi: 10.1101/2024.05.13.593988v1
   title: plantMASST
@@ -5575,6 +5848,7 @@ papers:
   license_tier: open
   license_detection: crossref-paper
   source_reuse: full
+  license_subject: paper
 - name: MargheRita
   doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -5586,9 +5860,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0-only
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: MCN
   doi: 10.1101/2024.08.02.606356v2
   title: MCN
@@ -5617,6 +5892,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Recon8D
   doi: 10.1101/2024.08.17.608400v2
   title: Recon8D
@@ -5659,6 +5935,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: NPLinker
   doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -5673,6 +5950,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: 10.1101/2024.10.14.618269
   doi: 10.1101/2024.10.14.618269
   title: 10.1101/2024.10.14.618269
@@ -5687,6 +5965,7 @@ papers:
   license_tier: noncommercial
   license_detection: crossref-paper
   source_reuse: limited
+  license_subject: paper
 - name: SpaMTP
   doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP
@@ -5698,9 +5977,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: SingleFrag
   doi: 10.1101/2024.11.04.621329v1
   title: SingleFrag
@@ -5729,6 +6009,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: mzLearn
   doi: 10.1101/2025.01.26.634927v3
   title: mzLearn
@@ -5743,6 +6024,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: license-file
+  license_subject: tool
 - name: ChemEmbed
   doi: 10.1101/2025.02.07.637102v1
   title: ChemEmbed
@@ -5754,9 +6036,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: github-api
+  license_subject: tool
 - name: 10.1101/2025.04.28.651123v1.abstract
   doi: 10.1101/2025.04.28.651123v1.abstract
   title: 10.1101/2025.04.28.651123v1.abstract
@@ -5771,6 +6054,7 @@ papers:
   license_tier: open
   license_detection: crossref-paper
   source_reuse: full
+  license_subject: paper
 - name: MetaNet
   doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
@@ -5782,9 +6066,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0-only
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: EnrichMET
   doi: 10.1101/2025.08.28.672951v2
   title: EnrichMET
@@ -5799,6 +6084,7 @@ papers:
     license: AGPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: DIMPLE
   doi: 10.1101/2025.09.22.677919v1
   title: DIMPLE
@@ -5827,6 +6113,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: LipidQMap
   doi: 10.1101/2025.10.15.682422v1
   title: LipidQMap
@@ -5855,6 +6142,7 @@ papers:
   license_tier: noncommercial
   license_detection: crossref-paper
   source_reuse: limited
+  license_subject: paper
 - name: MetaboliteChat
   doi: 10.1101/2025.11.07.687008v1
   title: MetaboliteChat
@@ -5869,6 +6157,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MetaXtract
   doi: 10.1101/2025.11.12.687968v1
   title: MetaXtract
@@ -5883,6 +6172,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MVP
   doi: 10.1101/2025.11.12.688047v1
   title: MVP
@@ -5911,6 +6201,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MetaboliticsDB
   doi: 10.1109/tcbbio.2025.3563807
   title: MetaboliticsDB
@@ -5939,6 +6230,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: 10.1111/jipb.13774-cyan
   doi: 10.1111/jipb.13774-cyan
   title: 10.1111/jipb.13774-cyan
@@ -5963,9 +6255,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-2.0-only
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: mpactr
   doi: 10.1128/mra.00997-24
   title: mpactr
@@ -5980,6 +6273,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: BiG-MAP
   doi: 10.1128/msystems.00937-21
   title: BiG-MAP
@@ -5994,6 +6288,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: license-file
+  license_subject: tool
 - name: 10.1145/2939672.2939778
   doi: 10.1145/2939672.2939778
   title: 10.1145/2939672.2939778
@@ -6034,6 +6329,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: mzmine2
   doi: 10.1186/1471-2105-11-395
   title: mzmine2
@@ -6048,6 +6344,7 @@ papers:
     license: GPL-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: 10.1186/1471-2105-15-s11-s5
   doi: 10.1186/1471-2105-15-s11-s5
   title: 10.1186/1471-2105-15-s11-s5
@@ -6088,6 +6385,7 @@ papers:
   license_tier: restricted
   license_detection: crossref-paper
   source_reuse: full
+  license_subject: paper
 - name: 10.1186/s12859-017-1547-6
   doi: 10.1186/s12859-017-1547-6
   title: 10.1186/s12859-017-1547-6
@@ -6102,6 +6400,7 @@ papers:
   license_tier: open
   license_detection: crossref-paper
   source_reuse: full
+  license_subject: paper
 - name: lipidmatch
   doi: 10.1186/s12859-017-1744-3
   title: lipidmatch
@@ -6116,6 +6415,7 @@ papers:
     license: CC-BY-4.0
   license_tier: open
   license_detection: license-file
+  license_subject: tool
 - name: SECIMTools
   doi: 10.1186/s12859-018-2134-1
   title: SECIMTools
@@ -6130,6 +6430,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: ElemCor
   doi: 10.1186/s12859-019-2669-9
   title: ElemCor
@@ -6144,6 +6445,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: marr
   doi: 10.1186/s12859-021-04336-9
   title: marr
@@ -6155,9 +6457,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-3.0-only
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: aird
   doi: 10.1186/s12859-021-04490-0
   title: aird
@@ -6172,6 +6475,7 @@ papers:
     license: MulanPSL-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: mzBucket
   doi: 10.1186/s12859-022-04833-5
   title: mzBucket
@@ -6186,6 +6490,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Pickaxe
   doi: 10.1186/s12859-023-05149-8
   title: Pickaxe
@@ -6200,6 +6505,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: GlyKAn AZ
   doi: 10.1186/s12859-023-05346-5
   title: GlyKAn AZ
@@ -6214,6 +6520,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: G-Aligner
   doi: 10.1186/s12859-023-05525-4
   title: G-Aligner
@@ -6230,6 +6537,7 @@ papers:
   license_detection: readme-llm
   license_evidence: G-Aligner is an open-source tool, using [***Mulan Permissive Software
     License，Version 2 (Mulan PSL v2)***](http://license.coscl.org.cn/MulanPSL2)
+  license_subject: tool
 - name: DNEA
   doi: 10.1186/s12859-024-05994-1
   title: DNEA
@@ -6241,9 +6549,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: file-present-unclassified
+    license: MIT
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: MDRB
   doi: 10.1186/s13020-024-01031-8
   title: MDRB
@@ -6287,6 +6596,7 @@ papers:
       authors (Wishart Lab).
   license_tier: noncommercial
   license_locked: true
+  license_subject: tool
 - name: BioTransformer 1.0
   doi: 10.1186/s13321-019-0375-2
   title: BioTransformer 1.0
@@ -6302,6 +6612,7 @@ papers:
       authors (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
   license_tier: noncommercial
   license_locked: true
+  license_subject: tool
 - name: 10.1186/s13321-020-00449-0
   doi: 10.1186/s13321-020-00449-0
   title: 10.1186/s13321-020-00449-0
@@ -6316,6 +6627,7 @@ papers:
   license_tier: open
   license_detection: crossref-paper
   source_reuse: full
+  license_subject: paper
 - name: patRoon
   doi: 10.1186/s13321-020-00477-w
   title: patRoon
@@ -6330,6 +6642,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: COCONUT
   doi: 10.1186/s13321-020-00478-9
   title: COCONUT
@@ -6346,6 +6659,7 @@ papers:
   license_detection: readme-llm
   license_evidence: COCONUT infrastructure code is licensed under the MIT license
     - see the LICENSE.
+  license_subject: tool
 - name: ChemSpectra
   doi: 10.1186/s13321-020-00481-0
   title: ChemSpectra
@@ -6360,6 +6674,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MassSpecBlocks
   doi: 10.1186/s13321-021-00530-2
   title: MassSpecBlocks
@@ -6374,6 +6689,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MS2DeepScore
   doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -6388,6 +6704,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: cmmrt
   doi: 10.1186/s13321-022-00613-8
   title: cmmrt
@@ -6417,6 +6734,7 @@ papers:
   license_tier: open
   license_detection: readme-llm
   license_evidence: '[![License](https://img.shields.io/badge/License-MIT%202.0-blue.svg)](https://opensource.org/licenses/MIt)'
+  license_subject: tool
 - name: UmetaFlow
   doi: 10.1186/s13321-023-00724-w
   title: UmetaFlow
@@ -6431,6 +6749,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: bindiscover
   doi: 10.1186/s13321-023-00734-8
   title: bindiscover
@@ -6445,6 +6764,7 @@ papers:
   license_tier: open
   license_detection: crossref-paper
   source_reuse: full
+  license_subject: paper
 - name: DeepSAT
   doi: 10.1186/s13321-023-00738-4
   title: DeepSAT
@@ -6459,6 +6779,7 @@ papers:
   license_tier: open
   license_detection: crossref-paper
   source_reuse: full
+  license_subject: paper
 - name: Mass-Suite
   doi: 10.1186/s13321-023-00741-9
   title: Mass-Suite
@@ -6473,6 +6794,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: idslmint
   doi: 10.1186/s13321-024-00804-5
   title: idslmint
@@ -6515,6 +6837,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: mol2ccs
   doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
@@ -6529,6 +6852,7 @@ papers:
     license: GPL-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: ROASMI
   doi: 10.1186/s13321-025-00968-8
   title: ROASMI
@@ -6543,6 +6867,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Shinyscreen
   doi: 10.1186/s13321-025-01044-x
   title: Shinyscreen
@@ -6557,6 +6882,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_locked: true
+  license_subject: tool
 - name: minems2
   doi: 10.1186/s13321-025-01051-y
   title: minems2
@@ -6585,6 +6911,7 @@ papers:
     license: GPL-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: NPClassScore
   doi: 10.1186/s40168-022-01444-3
   title: NPClassScore
@@ -6599,6 +6926,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MetaboDirect
   doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
@@ -6613,6 +6941,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: HExpMetDB
   doi: 10.1289/EHP7722
   title: HExpMetDB
@@ -6640,6 +6969,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: mummichog
   doi: 10.1371/journal.pcbi.1003123
   title: mummichog
@@ -6670,6 +7000,7 @@ papers:
   license_detection: readme-llm
   license_evidence: All content of GSimp is licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike
     4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+  license_subject: tool
 - name: Spec2Vec
   doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
@@ -6684,6 +7015,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: 10.1371/journal.pcbi.1008920
   doi: 10.1371/journal.pcbi.1008920
   title: 10.1371/journal.pcbi.1008920
@@ -6698,6 +7030,7 @@ papers:
   license_tier: open
   license_detection: crossref-paper
   source_reuse: full
+  license_subject: paper
 - name: MiMeNet
   doi: 10.1371/journal.pcbi.1009021
   title: MiMeNet
@@ -6712,6 +7045,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: ORA
   doi: 10.1371/journal.pcbi.1009105
   title: ORA
@@ -6726,6 +7060,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: POMAShiny
   doi: 10.1371/journal.pcbi.1009148
   title: POMAShiny
@@ -6740,6 +7075,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: INTEGRATE
   doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
@@ -6754,6 +7090,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: COMMIT
   doi: 10.1371/journal.pcbi.1009906
   title: COMMIT
@@ -6768,6 +7105,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: iPRESTO
   doi: 10.1371/journal.pcbi.1010462
   title: iPRESTO
@@ -6782,6 +7120,7 @@ papers:
     license: AGPL-3.0
   license_tier: open
   license_locked: true
+  license_subject: tool
 - name: 10.1371/journal.pcbi.1011814
   doi: 10.1371/journal.pcbi.1011814
   title: 10.1371/journal.pcbi.1011814
@@ -6796,6 +7135,7 @@ papers:
   license_tier: open
   license_detection: crossref-paper
   source_reuse: full
+  license_subject: paper
 - name: pcpfm
   doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
@@ -6810,6 +7150,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: license-file
+  license_subject: tool
 - name: 10.1371/journal.pntd.0006215
   doi: 10.1371/journal.pntd.0006215
   title: 10.1371/journal.pntd.0006215
@@ -6824,6 +7165,7 @@ papers:
   license_tier: open
   license_detection: crossref-paper
   source_reuse: full
+  license_subject: paper
 - name: MetNet
   doi: 10.1371/journal.pone.0246962
   title: MetNet
@@ -6838,6 +7180,7 @@ papers:
     license: LGPL-2.1
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: uafr
   doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -6849,9 +7192,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: MIT
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: MSMCE
   doi: 10.1371/journal.pone.0321239
   title: MSMCE
@@ -6866,6 +7210,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: GetFeatistics
   doi: 10.1515/jib-2025-0047
   title: GetFeatistics
@@ -6880,6 +7225,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: 10.1529/biophysj.103.038422
   doi: 10.1529/biophysj.103.038422
   title: 10.1529/biophysj.103.038422
@@ -6907,6 +7253,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: 10.21105/joss.02411
   doi: 10.21105/joss.02411
   title: 10.21105/joss.02411
@@ -6921,6 +7268,7 @@ papers:
   license_tier: open
   license_detection: crossref-paper
   source_reuse: full
+  license_subject: paper
 - name: subMALDI
   doi: 10.21105/joss.02694
   title: subMALDI
@@ -6935,6 +7283,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: vimms
   doi: 10.21105/joss.03990
   title: vimms
@@ -6949,6 +7298,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: msmetaenhancer
   doi: 10.21105/joss.04494
   title: msmetaenhancer
@@ -6963,6 +7313,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: spectripy
   doi: 10.21105/joss.08070
   title: spectripy
@@ -6977,6 +7328,7 @@ papers:
     license: Artistic-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: OpenNAU
   doi: 10.21147/j.issn.1000-9604.2023.05.11
   title: OpenNAU
@@ -6991,6 +7343,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: 10.25345/C5FD2F
   doi: 10.25345/C5FD2F
   title: 10.25345/C5FD2F
@@ -7018,6 +7371,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Spectro
   doi: 10.26434/chemrxiv-2024-37v2j
   title: Spectro
@@ -7046,6 +7400,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: IsoFusion
   doi: 10.26599/bdma.2024.9020059
   title: IsoFusion
@@ -7060,6 +7415,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MEMO (MS2-BasEd saMple vectOrization)
   doi: 10.3389/fbinf.2022.842964
   title: MEMO (MS2-BasEd saMple vectOrization)
@@ -7074,6 +7430,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: DNA adduct database
   doi: 10.3389/fchem.2022.908572
   title: DNA adduct database
@@ -7088,6 +7445,7 @@ papers:
     license: no license found (verified 2026-06-24)
   license_tier: restricted
   license_locked: true
+  license_subject: tool
 - name: GraphBio
   doi: 10.3389/fgene.2022.957317
   title: GraphBio
@@ -7102,6 +7460,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: Inventa
   doi: 10.3389/fmolb.2022.1028334
   title: Inventa
@@ -7116,6 +7475,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: TurboPutative
   doi: 10.3389/fmolb.2022.952149
   title: TurboPutative
@@ -7158,6 +7518,7 @@ papers:
     license: AGPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: CorrDIA
   doi: 10.3390/app13105969
   title: CorrDIA
@@ -7200,6 +7561,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: notame
   doi: 10.3390/metabo10040135
   title: notame
@@ -7214,6 +7576,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: 10.3390/metabo10100416
   doi: 10.3390/metabo10100416
   title: 10.3390/metabo10100416
@@ -7228,6 +7591,7 @@ papers:
   license_tier: open
   license_detection: crossref-paper
   source_reuse: full
+  license_subject: paper
 - name: pals
   doi: 10.3390/metabo11020103
   title: pals
@@ -7242,6 +7606,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: mwtab Python Library for RESTful Access
   doi: 10.3390/metabo11030163
   title: mwtab Python Library for RESTful Access
@@ -7256,6 +7621,7 @@ papers:
     license: BSD-3-Clause-Clear
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: spectra
   doi: 10.3390/metabo12020173
   title: spectra
@@ -7269,8 +7635,9 @@ papers:
     verified_on: '2026-06-22'
     license: Artistic-2.0
   license_tier: open
-  license_detection: readme-llm
+  license_detection: r-description
   license_evidence: '[![license](https://img.shields.io/badge/license-Artistic--2.0-brightgreen.svg)](https://opensource.org/licenses/Artistic-2.0)'
+  license_subject: tool
 - name: JPA
   doi: 10.3390/metabo12030212
   title: JPA
@@ -7285,6 +7652,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MAVEN2
   doi: 10.3390/metabo12080684
   title: MAVEN2
@@ -7299,6 +7667,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: ConCISE
   doi: 10.3390/metabo12121275
   title: ConCISE
@@ -7313,6 +7682,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: messes
   doi: 10.3390/metabo13070842
   title: messes
@@ -7327,6 +7697,7 @@ papers:
     license: BSD-3-Clause
   license_tier: open
   license_detection: license-file
+  license_subject: tool
 - name: SMetaS
   doi: 10.3390/metabo13080941
   title: SMetaS
@@ -7369,6 +7740,7 @@ papers:
   license_tier: open
   license_detection: crossref-paper
   source_reuse: full
+  license_subject: paper
 - name: DisCo P-ad
   doi: 10.3390/metabo15010028
   title: DisCo P-ad
@@ -7397,6 +7769,7 @@ papers:
     license: GPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: RaMP
   doi: 10.3390/metabo8010016
   title: RaMP
@@ -7408,9 +7781,10 @@ papers:
     is_oa: true
     verified_via: git_clone_succeeded_at_build
     verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+    license: GPL-2.0-only
+  license_tier: open
+  license_detection: r-description
+  license_subject: tool
 - name: molnetenhancer
   doi: 10.3390/metabo9070144
   title: molnetenhancer
@@ -7425,6 +7799,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: WiPP GC-MS peak picking workflow
   doi: 10.3390/metabo9090171
   title: WiPP GC-MS peak picking workflow
@@ -7439,6 +7814,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: PlantMetSuite
   doi: 10.3390/plants12152880
   title: PlantMetSuite
@@ -7467,6 +7843,7 @@ papers:
     license: BSD-2-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: NetAurHPD
   doi: 10.48550/arxiv.2410.22030
   title: NetAurHPD
@@ -7481,6 +7858,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MADGEN
   doi: 10.48550/arxiv.2501.01950
   title: MADGEN
@@ -7495,6 +7873,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: SpecTUS
   doi: 10.48550/arxiv.2502.05114
   title: SpecTUS
@@ -7523,6 +7902,7 @@ papers:
     license: MIT
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: DiffSpectra
   doi: 10.48550/arxiv.2507.06853
   title: DiffSpectra
@@ -7537,6 +7917,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: MS2toImg
   doi: 10.48550/arxiv.2510.09716
   title: MS2toImg
@@ -7579,22 +7960,10 @@ papers:
   license_tier: open
   license_detection: datacite-paper
   source_reuse: full
+  license_subject: paper
 - name: 10.5281/zenodo.1043226
   doi: 10.5281/zenodo.1043226
   title: 10.5281/zenodo.1043226
-  repo_url: ''
-  status: included
-  wave: v2-expansion
-  access:
-    type: link-only
-    is_oa: null
-    verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
-- name: 10.5281/zenodo.1043226.svg
-  doi: 10.5281/zenodo.1043226.svg
-  title: 10.5281/zenodo.1043226.svg
   repo_url: ''
   status: included
   wave: v2-expansion
@@ -7619,19 +7988,7 @@ papers:
   license_tier: open
   license_detection: datacite-paper
   source_reuse: full
-- name: 10.5281/zenodo.11199061.svg
-  doi: 10.5281/zenodo.11199061.svg
-  title: 10.5281/zenodo.11199061.svg
-  repo_url: ''
-  status: included
-  wave: v2-expansion
-  access:
-    type: link-only
-    is_oa: null
-    verified_on: '2026-06-22'
-    license: null
-  license_tier: restricted
-  license_detection: none
+  license_subject: paper
 - name: 10.5281/zenodo.12602805
   doi: 10.5281/zenodo.12602805
   title: 10.5281/zenodo.12602805
@@ -7646,6 +8003,7 @@ papers:
   license_tier: open
   license_detection: datacite-paper
   source_reuse: full
+  license_subject: paper
 - name: corems
   doi: 10.5281/zenodo.14009575
   title: corems
@@ -7660,6 +8018,7 @@ papers:
     license: BSD-2-Clause
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: 10.5281/zenodo.14712886
   doi: 10.5281/zenodo.14712886
   title: 10.5281/zenodo.14712886
@@ -7674,6 +8033,7 @@ papers:
   license_tier: open
   license_detection: datacite-paper
   source_reuse: full
+  license_subject: paper
 - name: 10.5281/zenodo.14778327
   doi: 10.5281/zenodo.14778327
   title: 10.5281/zenodo.14778327
@@ -7688,6 +8048,7 @@ papers:
   license_tier: open
   license_detection: datacite-paper
   source_reuse: full
+  license_subject: paper
 - name: 10.5281/zenodo.14822624
   doi: 10.5281/zenodo.14822624
   title: 10.5281/zenodo.14822624
@@ -7715,6 +8076,7 @@ papers:
   license_tier: open
   license_detection: datacite-paper
   source_reuse: full
+  license_subject: paper
 - name: 10.5281/zenodo.16076914
   doi: 10.5281/zenodo.16076914
   title: 10.5281/zenodo.16076914
@@ -7729,6 +8091,7 @@ papers:
   license_tier: open
   license_detection: datacite-paper
   source_reuse: full
+  license_subject: paper
 - name: 10.5281/zenodo.16257786
   doi: 10.5281/zenodo.16257786
   title: 10.5281/zenodo.16257786
@@ -7743,6 +8106,7 @@ papers:
   license_tier: open
   license_detection: datacite-paper
   source_reuse: full
+  license_subject: paper
 - name: 10.5281/zenodo.17284940
   doi: 10.5281/zenodo.17284940
   title: 10.5281/zenodo.17284940
@@ -7757,6 +8121,7 @@ papers:
   license_tier: open
   license_detection: datacite-paper
   source_reuse: full
+  license_subject: paper
 - name: 10.5281/zenodo.17819145
   doi: 10.5281/zenodo.17819145
   title: 10.5281/zenodo.17819145
@@ -7771,6 +8136,7 @@ papers:
   license_tier: open
   license_detection: datacite-paper
   source_reuse: full
+  license_subject: paper
 - name: 10.5281/zenodo.18494293
   doi: 10.5281/zenodo.18494293
   title: 10.5281/zenodo.18494293
@@ -7785,6 +8151,7 @@ papers:
   license_tier: open
   license_detection: datacite-paper
   source_reuse: full
+  license_subject: paper
 - name: 10.5281/zenodo.19181279
   doi: 10.5281/zenodo.19181279
   title: 10.5281/zenodo.19181279
@@ -7812,6 +8179,7 @@ papers:
   license_tier: open
   license_detection: datacite-paper
   source_reuse: full
+  license_subject: paper
 - name: 10.5281/zenodo.363932874
   doi: 10.5281/zenodo.363932874
   title: 10.5281/zenodo.363932874
@@ -7825,9 +8193,9 @@ papers:
     license: null
   license_tier: restricted
   license_detection: none
-- name: 10.5281/zenodo.3924422.svg
-  doi: 10.5281/zenodo.3924422.svg
-  title: 10.5281/zenodo.3924422.svg
+- name: 10.5281/zenodo.3924422
+  doi: 10.5281/zenodo.3924422
+  title: 10.5281/zenodo.3924422
   repo_url: ''
   status: included
   wave: v2-expansion
@@ -7852,6 +8220,7 @@ papers:
   license_tier: open
   license_detection: datacite-paper
   source_reuse: full
+  license_subject: paper
 - name: 10.5281/zenodo.5501673
   doi: 10.5281/zenodo.5501673
   title: 10.5281/zenodo.5501673
@@ -7866,6 +8235,7 @@ papers:
   license_tier: open
   license_detection: datacite-paper
   source_reuse: full
+  license_subject: paper
 - name: 10.5281/zenodo.5607185
   doi: 10.5281/zenodo.5607185
   title: 10.5281/zenodo.5607185
@@ -7880,6 +8250,7 @@ papers:
   license_tier: open
   license_detection: datacite-paper
   source_reuse: full
+  license_subject: paper
 - name: 10.5281/zenodo.5794106
   doi: 10.5281/zenodo.5794106
   title: 10.5281/zenodo.5794106
@@ -7894,6 +8265,7 @@ papers:
   license_tier: open
   license_detection: datacite-paper
   source_reuse: full
+  license_subject: paper
 - name: 10.5281/zenodo.6784251
   doi: 10.5281/zenodo.6784251
   title: 10.5281/zenodo.6784251
@@ -7908,6 +8280,7 @@ papers:
   license_tier: open
   license_detection: datacite-paper
   source_reuse: full
+  license_subject: paper
 - name: 10.5281/zenodo.7565700
   doi: 10.5281/zenodo.7565700
   title: 10.5281/zenodo.7565700
@@ -7935,6 +8308,7 @@ papers:
     license: Apache-2.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool
 - name: 10.6084/m9.figshare.28876751.v2
   doi: 10.6084/m9.figshare.28876751.v2
   title: 10.6084/m9.figshare.28876751.v2
@@ -7949,6 +8323,7 @@ papers:
   license_tier: open
   license_detection: datacite-paper
   source_reuse: full
+  license_subject: paper
 - name: lotus
   doi: 10.7554/eLife.70780
   title: lotus
@@ -7963,3 +8338,4 @@ papers:
     license: AGPL-3.0
   license_tier: open
   license_detection: github-api
+  license_subject: tool

@@ -20,6 +20,7 @@ metadata:
   - LC-MS
   - GC-MS
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1515/jib-2025-0047
   title: GetFeatistics

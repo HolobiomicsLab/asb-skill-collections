@@ -18,7 +18,8 @@ metadata:
   - R (>= 3.5.0)
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
@@ -50,7 +51,6 @@ attribution:
 
 # compound-list-annotation-and-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate a compound list (m/z-based identifiers) against metabolite databases and filter results by mass tolerance and database match criteria to prepare compounds for downstream enrichment or pathway analysis. This skill bridges mass spectrometry feature detection and functional interpretation.

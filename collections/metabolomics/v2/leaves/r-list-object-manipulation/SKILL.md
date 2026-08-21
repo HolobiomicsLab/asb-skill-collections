@@ -14,7 +14,8 @@ metadata:
   - jsonlite
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -49,7 +50,6 @@ attribution:
 
 # R List Object Manipulation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert R list objects returned from binary file readers (such as rawrr::readFileHeader()) into serialized formats like JSON, enabling interoperability with downstream analysis tools and reproducible storage of extracted metadata. This skill bridges proprietary binary data access with standard data exchange formats.

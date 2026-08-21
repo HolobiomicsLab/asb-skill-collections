@@ -18,7 +18,8 @@ metadata:
   - Bioconductor ExperimentHub
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -56,7 +57,6 @@ attribution:
 
 # MS1 scan extraction and filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract base-peak m/z and intensity values from MS1-level scans in Thermo Fisher Scientific raw files and organize them into tabular data frames using rawrr accessor functions. This skill closes the gap for direct raw data reading in R, enabling modular end-to-end proteomics pipeline development without intermediate format conversion.

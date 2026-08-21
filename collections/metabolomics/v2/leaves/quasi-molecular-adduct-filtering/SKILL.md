@@ -18,7 +18,8 @@ metadata:
   - igraph
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
@@ -55,7 +56,6 @@ attribution:
 
 # quasi-molecular-adduct-filtering
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter LC-MS feature candidates to retain only quasi-molecular ion adducts (e.g., MH, MNa, MK) after feature clustering, removing in-source fragments and low-frequency adducts. This step reduces annotation candidate noise and improves specificity before diffusion-based prioritization.

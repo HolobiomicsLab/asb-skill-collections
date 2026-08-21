@@ -15,7 +15,8 @@ metadata:
   - metabCombiner
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
@@ -47,7 +48,6 @@ attribution:
 
 # metabolite-feature-column-mapping
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map and validate required LC-MS metabolomics feature columns (m/z, retention time, feature ID, adduct annotation, samples) from heterogeneous input data frames into a standardized metabData object. This is the mandatory first step before filtering and alignment, ensuring that disparate data sources conform to a common schema.

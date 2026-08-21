@@ -17,7 +17,8 @@ metadata:
   - jsonlite
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -61,7 +62,6 @@ attribution:
 
 # raw-file-header-extraction
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and deserialize metadata from Thermo Fisher Scientific binary .raw files into R list objects using the readFileHeader() function, retrieving instrument configuration, acquisition time range, and scan counts without loading full spectral data.

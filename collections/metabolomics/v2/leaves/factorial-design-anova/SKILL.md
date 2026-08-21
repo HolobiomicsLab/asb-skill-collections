@@ -12,7 +12,8 @@ metadata:
   - lipidr
   - limma
   - R
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
@@ -46,7 +47,6 @@ attribution:
 
 # Perform multi-group differential expression analysis using factorial ANOVA-style design
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply ANOVA-style multi-group differential expression analysis to lipidomics data using formula-based design matrices to test whether categorical variables (e.g., cancer stage, sample type) significantly affect lipid molecular profiles. This skill enables comparison across ≥2 groups while controlling for confounding variables.

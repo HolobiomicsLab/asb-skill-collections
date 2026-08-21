@@ -14,7 +14,8 @@ metadata:
   - MsBackendRawFileReader
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -49,7 +50,6 @@ attribution:
 
 # Thermo Fisher Orbitrap metadata interpretation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract, parse, and serialize instrument metadata from proprietary Thermo Fisher Scientific .raw file headers into interpretable R objects and JSON format. This skill bridges access to raw binary Orbitrap data—including instrument model, scan counts, time ranges, and acquisition parameters—without requiring conversion to exchange formats.

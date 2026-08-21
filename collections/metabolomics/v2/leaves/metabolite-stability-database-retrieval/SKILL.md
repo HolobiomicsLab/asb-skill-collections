@@ -15,6 +15,7 @@ metadata:
   - RStudio
   - ALISTER (web application)
   license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.cca.2024.117858
   title: ALISTER

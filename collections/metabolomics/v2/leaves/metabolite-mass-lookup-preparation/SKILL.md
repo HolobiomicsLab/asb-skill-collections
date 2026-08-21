@@ -16,7 +16,8 @@ metadata:
   - KEGG database
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
@@ -52,7 +53,6 @@ attribution:
 
 # metabolite-mass-lookup-preparation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build a compound–adduct lookup table (Cpd.Add) by combining KEGG database exact masses with adduct and fragment knowledge, enabling subsequent mass-to-charge ratio matching in untargeted LC-MS annotation. This is the prerequisite data structure for the matching stage of the mWISE workflow.

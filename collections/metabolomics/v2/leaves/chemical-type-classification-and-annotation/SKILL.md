@@ -15,7 +15,8 @@ metadata:
   - uafR
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -52,7 +53,6 @@ attribution:
 
 # chemical-type-classification-and-annotation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Classify and annotate query chemicals against a user-defined or restricted library of compound type categories using structural matching and categorical database lookups. This skill identifies best-matching compound types for GC-MS detected chemicals and enriches them with cross-database metadata (PubChem, LOTUS, KEGG, FEMA, FDA/SPL).

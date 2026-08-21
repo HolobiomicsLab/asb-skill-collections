@@ -15,7 +15,8 @@ metadata:
   - CAMERA
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
@@ -46,7 +47,6 @@ attribution:
 
 # retention-time-co-elution-detection
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Group co-eluting LC-MS features by retention time proximity and intensity correlation to identify candidate ions arising from the same metabolite. This clustering step precedes candidate filtering and reduces false positive annotations by consolidating fragments and adducts into quasi-molecular ion clusters.

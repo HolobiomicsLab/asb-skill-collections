@@ -14,7 +14,8 @@ metadata:
   - xcms
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btaa037
   title: ncGTW
@@ -46,7 +47,6 @@ attribution:
 
 # bandwidth-parameter-effect-comparison
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare XCMS grouping results produced with different bandwidth (bw) parameters to detect misaligned feature groups in retention time. This skill identifies features that fail to align consistently across parameter settings, revealing systematic alignment failures in LC-MS data.

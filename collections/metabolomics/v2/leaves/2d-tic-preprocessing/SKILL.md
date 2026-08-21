@@ -16,7 +16,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
@@ -50,7 +51,6 @@ attribution:
 
 # 2D-TIC preprocessing
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A multi-stage preprocessing pipeline for two-dimensional total intensity chromatogram (2D-TIC) objects that applies smoothing, baseline correction, and peak alignment to remove instrumental noise and artifacts from GCxGC-MS data before multivariate analysis.

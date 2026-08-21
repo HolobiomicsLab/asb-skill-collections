@@ -16,7 +16,8 @@ metadata:
   - data.table
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
@@ -50,7 +51,6 @@ attribution:
 
 # fragment-intensity-aggregation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Merges m/z-proximal MS/MS fragments within individual spectra by averaging their mass-to-charge ratios and summing their intensities, reducing fragment redundancy while preserving signal strength. This intra-spectrum grouping is a foundational denoising step that reduces fragment count while maintaining spectral information fidelity.

@@ -20,8 +20,9 @@ metadata:
   techniques:
   - mass-spectrometry
   license_tier: open
+  provenance_tier: literature
 derived_from:
-- doi: 10.1093/bioinformatics/btab231/6214530
+- doi: 10.1093/bioinformatics/btab231
   title: mzRAPP
 evidence_spans:
 - 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
@@ -37,15 +38,15 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_mzrapp_cq
-    doi: 10.1093/bioinformatics/btab231/6214530
+    doi: 10.1093/bioinformatics/btab231
     title: mzRAPP
   dedup_kept_from: coll_mzrapp_cq
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bioinformatics/btab231/6214530
+  original_doi: 10.1093/bioinformatics/btab231
   all_source_dois:
-  - 10.1093/bioinformatics/btab231/6214530
+  - 10.1093/bioinformatics/btab231
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias

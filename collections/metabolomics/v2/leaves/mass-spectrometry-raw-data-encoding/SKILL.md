@@ -18,7 +18,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
@@ -50,7 +51,6 @@ attribution:
 
 # Mass Spectrometry Raw Data Encoding
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encode simulated LC/GC-MS raw mass spectrometry data matrices into Base64 format and write them to standardized .mzML file structures for downstream metabolomics analysis. This skill bridges in-memory peak intensity matrices (with realistic chromatographic profiles, noise, and matrix background) to portable, binary-encoded MS data files.

@@ -17,7 +17,8 @@ metadata:
   - MS-Dial
   techniques:
   - mass-spectrometry
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -54,7 +55,6 @@ attribution:
 
 # metabolomic-feature-imputation
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Replace missing values in metabolomic feature tables using a minimum-value-based random substitution strategy, after applying upstream feature and sample-level filtering. This skill is applied after excluding features with incorrect m/z values and samples/features with excessive missingness, to recover measurable but undetected metabolite signals without artificially amplifying noise.

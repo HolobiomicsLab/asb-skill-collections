@@ -19,7 +19,8 @@ metadata:
   - Sirius
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
@@ -53,7 +54,6 @@ attribution:
 
 # spectral-data-export-and-format-conversion
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Export clustered mass spectrometry spectral data from RAMClustR RC objects into standardized formats (.msp, .mat, .ms) suitable for downstream annotation and interpretation by external software. This enables seamless integration of metabolomics feature clustering results with spectrum matching and structure elucidation tools.

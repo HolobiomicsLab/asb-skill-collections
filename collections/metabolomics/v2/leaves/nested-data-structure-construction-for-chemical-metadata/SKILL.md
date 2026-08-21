@@ -18,7 +18,8 @@ metadata:
   - PubChem
   techniques:
   - GC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
@@ -53,7 +54,6 @@ attribution:
 
 # nested-data-structure-construction-for-chemical-metadata
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a nested list object from GC-MS peak data that encapsulates chemical identifiers, retention times, match factors, exact masses, and literature metadata indexed by retention time and m/z. This structure bridges raw instrument output with downstream cheminformatics query and categorization workflows.

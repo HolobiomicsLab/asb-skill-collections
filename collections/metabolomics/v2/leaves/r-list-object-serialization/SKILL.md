@@ -13,7 +13,8 @@ metadata:
   - rjson
   - readFileHeader()
   - rawrr
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -50,7 +51,6 @@ attribution:
 
 # R List Object Serialization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert R list objects extracted from binary proteomics data files into JSON format for portability, validation, and downstream integration. This skill bridges in-memory R data structures with file-based interchange formats, enabling modular end-to-end analysis pipeline development.

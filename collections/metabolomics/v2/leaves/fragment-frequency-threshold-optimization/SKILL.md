@@ -23,7 +23,8 @@ metadata:
   - patchwork
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
@@ -58,7 +59,6 @@ attribution:
 
 # fragment-frequency-threshold-optimization
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize the frequency cutoff threshold applied during MS/MS spectrum denoising to balance signal retention and noise reduction. This skill determines the minimal recurrence frequency at which fragment ions should be retained in consensus spectra, using statistical and Pareto front analysis methods.

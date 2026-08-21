@@ -349,3 +349,9 @@ jobs:
       # -- Gate: License-tier enforcement ------
       - name: License-tier gate
         run: python -m scripts.check_license_tiers collections/metabolomics/v2
+
+      # Every published skill must be able to show where its content came from,
+      # and the SKILL.md must agree with the index. Ported from the dev line and
+      # wired here once its producer had been run over the corpus.
+      - name: Provenance-tier gate
+        run: python -m scripts.check_provenance_tiers collections/metabolomics/v2

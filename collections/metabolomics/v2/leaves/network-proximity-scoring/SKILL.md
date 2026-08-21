@@ -17,6 +17,7 @@ metadata:
   - label_propagation (Yuto Yamaguchi)
   - MSEA (metabolomic set enrichment analysis)
   license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41525-020-0132-5
   title: metPropagate

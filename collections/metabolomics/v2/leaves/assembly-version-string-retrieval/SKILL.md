@@ -10,7 +10,8 @@ metadata:
   tools:
   - RawFileReader
   - rawrr
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -44,7 +45,6 @@ attribution:
 
 # assembly-version-string-retrieval
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve the version string and file path of a precompiled .NET assembly bundled with an R package without requiring input data files. This skill verifies that internal R-to-C# dispatch mechanisms are functioning correctly and that managed code dependencies are properly deployed.

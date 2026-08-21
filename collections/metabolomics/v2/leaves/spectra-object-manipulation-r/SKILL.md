@@ -16,7 +16,8 @@ metadata:
   - dplyr
   techniques:
   - LC-MS
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
@@ -50,7 +51,6 @@ attribution:
 
 # Spectra Object Manipulation in R
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load, filter, and manipulate tandem MS/MS spectra as S4 Spectra objects in R, applying intensity thresholds and mass tolerance constraints to prepare concatenated replicate spectra for denoising and analysis.

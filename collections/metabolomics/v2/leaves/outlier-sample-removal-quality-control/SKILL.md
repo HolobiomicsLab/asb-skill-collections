@@ -13,7 +13,8 @@ metadata:
   - lipidr
   - limma
   - R
-  license_tier: restricted
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
@@ -47,7 +48,6 @@ attribution:
 
 # outlier-sample-removal-quality-control
 
-> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and remove anomalous samples from a LipidomicsExperiment object prior to differential analysis to improve statistical power and reliability of lipid biomarker discovery. This quality control step prevents outlier samples from inflating variance and obscuring genuine lipid class regulation patterns.
