@@ -1,6 +1,5 @@
 name: metaMS
 slug: metams
-canonical_url: https://github.com/HuanLab/DaDIA
 version_used: 1.25.1
 evidence_spans:
 - metaMS Version 1.25.1
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - HuanLab/DaDIA
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

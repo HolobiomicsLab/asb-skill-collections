@@ -1,6 +1,5 @@
 name: lcmsWorld
 slug: lcmsworld
-canonical_url: https://github.com/PGB-LIV/lcmsWorld
 evidence_spans:
 - lcmsWorld is a 3d viewer for LC-MS data
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - PGB-LIV/lcmsWorld
 schema_version: 0.2.0
-license_tier: open
-license: AGPL-3.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

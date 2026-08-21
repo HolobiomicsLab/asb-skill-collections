@@ -1,6 +1,5 @@
 name: Bokeh
 slug: bokeh
-canonical_url: https://github.com/Roestlab/massdash
 evidence_spans:
 - The main area will be populated with interactive Bokeh figures
 - integrates seamlessly with various plotting library backends (matpotlib, bokeh and plotly)
@@ -16,9 +15,10 @@ derived_from:
 source_repos:
 - Roestlab/massdash
 schema_version: 0.2.0
-license_tier: open
-license: BSD-3-Clause
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - ion-mobility-MS

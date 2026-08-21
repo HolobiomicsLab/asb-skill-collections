@@ -1,6 +1,5 @@
 name: PALS Viewer
 slug: pals-viewer
-canonical_url: https://github.com/glasgowcompbio/PALS
 evidence_spans:
 - PALS Viewer
 - To access our interactive Web application PALS Viewer, please visit [https://pals.glasgowcompbio.org/app/]
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - glasgowcompbio/PALS
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - NMR

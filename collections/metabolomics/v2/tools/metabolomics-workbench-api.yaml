@@ -1,6 +1,5 @@
 name: Metabolomics Workbench API
 slug: metabolomics-workbench-api
-canonical_url: https://github.com/ahmohamed/lipidr
 evidence_spans:
 - Through integration with Metabolomics Workbench API, `lipidr` allows users, to quickly explore public lipidomics experiments.
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - ahmohamed/lipidr
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: r-description
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - mass-spectrometry

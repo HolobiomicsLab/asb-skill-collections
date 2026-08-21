@@ -1,6 +1,5 @@
 name: pip
 slug: pip
-canonical_url: https://github.com/HassounLab/JESTR1
 evidence_spans:
 - pip install -e .[dev]
 - and [pip](https://pypi.org/project/pip/)
@@ -36,9 +35,10 @@ source_repos:
 - tingxiecsu/CSU-MS2
 - yuxuanliao/PACCS
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - direct-infusion-MS

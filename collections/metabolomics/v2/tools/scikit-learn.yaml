@@ -1,6 +1,5 @@
 name: scikit-learn
 slug: scikit-learn
-canonical_url: https://github.com/01dadada/RT-Transformer
 version_used: 0.23.2
 evidence_spans:
 - a :class:`sklearn.preprocessing.StandardScaler` object used to scale the data
@@ -41,9 +40,10 @@ source_repos:
 - huaxuyu/bago
 - ressomlab/MetFID
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

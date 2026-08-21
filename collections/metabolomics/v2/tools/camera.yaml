@@ -1,6 +1,5 @@
 name: CAMERA
 slug: camera
-canonical_url: https://github.com/LinShuhaiLAB/LipidIN
 evidence_spans:
 - 'CAMERA: an'
 - The default table of adducts and fragments is built using information from CAMERA R package
@@ -13,9 +12,10 @@ source_repos:
 - LinShuhaiLAB/LipidIN
 - b2slab/mWISE
 schema_version: 0.2.0
-license_tier: open
-license: Apache-2.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

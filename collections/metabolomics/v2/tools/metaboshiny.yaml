@@ -1,6 +1,5 @@
 name: MetaboShiny
 slug: metaboshiny
-canonical_url: https://github.com/joannawolthuis/MetaboShiny
 evidence_spans:
 - Welcome to the info page on MetaboShiny
 - Welcome to the info page on MetaboShiny! We are currently on BioRXiv
@@ -11,9 +10,10 @@ derived_from:
 source_repos:
 - joannawolthuis/MetaboShiny
 schema_version: 0.2.0
-license_tier: open
-license: Apache-2.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

@@ -1,6 +1,5 @@
 name: Google Colaboratory
 slug: google-colaboratory
-canonical_url: https://github.com/facundof2016/CCSP2.0
 evidence_spans:
 - a Google Colaboratory Jupyter notebook that is well suited for beginners
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - facundof2016/CCSP2.0
 schema_version: 0.2.0
-license_tier: noncommercial
-license: CC-BY-NC-ND-4.0
-license_detection: biorxiv_api-paper
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - ion-mobility-MS

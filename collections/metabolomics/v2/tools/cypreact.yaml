@@ -1,6 +1,5 @@
 name: CypReact
 slug: cypreact
-canonical_url: https://bitbucket.org/Leon_Ti/cypreact.git
 evidence_spans:
 - 'To run the CypReact tool, the user should use command in the terminal as: ->java -jar "PathOfCypReactBundle"'
 - java -jar "PathOfCypReactBundle"
@@ -10,6 +9,7 @@ derived_from:
 source_repos:
 - https://bitbucket.org/Leon_Ti/cypreact.git
 schema_version: 0.2.0
-license_tier: restricted
-license: no LICENSE file found (verified 2026-06-24)
+license_tier: unknown
+license: null
 license_detection: null
+license_subject: null

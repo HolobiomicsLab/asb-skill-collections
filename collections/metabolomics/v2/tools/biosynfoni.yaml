@@ -1,6 +1,5 @@
 name: biosynfoni
 slug: biosynfoni
-canonical_url: https://github.com/lucinamay/biosynfoni
 evidence_spans:
 - biosynfoni
 - a biosynformatic molecular fingerprint tailored to natural product chem- and bioinformatic research
@@ -10,6 +9,7 @@ derived_from:
 source_repos:
 - lucinamay/biosynfoni
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null

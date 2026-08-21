@@ -1,6 +1,5 @@
 name: MassBank
 slug: massbank
-canonical_url: https://github.com/daniellyz/meRgeION2
 evidence_spans:
 - search and annotate an unknown spectrum in their local database or public databases (i.e. drug structures in GNPS, MASSBANK and DrugBANK)
 - MassBank Library Spectra
@@ -16,9 +15,10 @@ source_repos:
 - mwang87/MetabolomicsSpectrumResolver
 - xdomingoal/erah-devel
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

@@ -1,6 +1,5 @@
 name: Skyline
 slug: skyline
-canonical_url: https://github.com/13479776/statTarget
 evidence_spans:
 - LipidCreator is a plugin for Skyline supporting targeted workflow development in lipidomics
 - LipidCreator is a plugin for [Skyline](https://skyline.ms/project/home/software/Skyline/begin.view) supporting targeted workflow development in lipidomics.
@@ -26,9 +25,10 @@ source_repos:
 - fgcz/rawrr
 - lifs-tools/lipidcreator
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: license-file
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

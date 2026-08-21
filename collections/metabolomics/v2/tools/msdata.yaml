@@ -1,6 +1,5 @@
 name: msdata
 slug: msdata
-canonical_url: https://github.com/LiesaSalzer/MobilityTransformR
 evidence_spans:
 - The CE-MS test data are from the `r BiocStyle::Biocpkg("msdata")` package
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - LiesaSalzer/MobilityTransformR
 schema_version: 0.2.0
-license_tier: open
-license: Artistic-2.0
-license_detection: r-description
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

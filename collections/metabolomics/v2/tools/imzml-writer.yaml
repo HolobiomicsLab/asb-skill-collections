@@ -1,6 +1,5 @@
 name: imzML Writer
 slug: imzml-writer
-canonical_url: https://github.com/VIU-Metabolomics/imzML_Writer
 evidence_spans:
 - iw_utils.RAW_to_mzML(raw_data_path)
 - 'imzML Writer is available as: (1) A distributable package on pypi (for CLI, stable GUI, `pip install imzML-Writer`)'
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - VIU-Metabolomics/imzML_Writer
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - MS-imaging
 - mass-spectrometry

@@ -1,6 +1,5 @@
 name: pROC
 slug: proc
-canonical_url: https://github.com/slfan2013/SERDA
 version_used: 1.17.0.1
 evidence_spans:
 - packageVersion("pROC") [1] ‘1.17.0.1’
@@ -10,6 +9,7 @@ derived_from:
 source_repos:
 - slfan2013/SERDA
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null

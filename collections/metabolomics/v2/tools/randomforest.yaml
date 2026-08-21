@@ -1,6 +1,5 @@
 name: randomForest
 slug: randomforest
-canonical_url: https://github.com/connor-reid-tiffany/Omu
 evidence_spans:
 - Omu has a function, ```random_forest```, which is a wrapper built around the function ```randomForest``` from the R package randomForest
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - connor-reid-tiffany/Omu
 schema_version: 0.2.0
-license_tier: open
-license: GPL-2.0-only
-license_detection: r-description
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - mass-spectrometry

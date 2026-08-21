@@ -1,6 +1,5 @@
 name: hdf5plugin
 slug: hdf5plugin
-canonical_url: https://github.com/PNNL-m-q/mzapy
 evidence_spans:
 - '* ``hdf5plugin``'
 - h5py and optionally hdf5plugin <https://hdf5plugin.readthedocs.io/en/latest/>
@@ -12,9 +11,10 @@ derived_from:
 source_repos:
 - PNNL-m-q/mzapy
 schema_version: 0.2.0
-license_tier: open
-license: BSD-2-Clause
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - ion-mobility-MS

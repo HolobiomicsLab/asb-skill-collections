@@ -7,9 +7,10 @@ derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: r-description
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

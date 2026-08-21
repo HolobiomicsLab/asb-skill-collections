@@ -1,6 +1,5 @@
 name: igraph
 slug: igraph
-canonical_url: https://github.com/LargeMetabo/LargeMetabo
 evidence_spans:
 - integrates fgsea for fast MetSEA, igraph for topology-based metrics
 - several R packages are utilized in the background processes, including ggplot2, igraph, MASS
@@ -20,9 +19,10 @@ source_repos:
 - b2slab/mWISE
 - biodatalab/enrichmet
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: file-present-unclassified
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

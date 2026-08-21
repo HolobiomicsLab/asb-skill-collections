@@ -1,6 +1,5 @@
 name: R Shiny
 slug: r-shiny
-canonical_url: https://github.com/Lab-XUE/EISA-EXPOSOME
 evidence_spans:
 - We provide a Rshiny program for EISA-EXPOSOME
 - We provide a Rshiny program for EISA-EXPOSOME, which runs with the interface shown below
@@ -14,9 +13,10 @@ source_repos:
 - Lab-XUE/EISA-EXPOSOME
 - databio2022/GraphBio
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

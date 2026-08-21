@@ -1,6 +1,5 @@
 name: spectraverse-analysis repository
 slug: spectraverse-analysis-repository
-canonical_url: https://github.com/skinniderlab/spectraverse-analysis
 evidence_spans:
 - github.com/skinniderlab/spectraverse-analysis
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - skinniderlab/spectraverse-analysis
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

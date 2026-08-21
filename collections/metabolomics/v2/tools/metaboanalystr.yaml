@@ -1,6 +1,5 @@
 name: MetaboAnalystR
 slug: metaboanalystr
-canonical_url: https://github.com/xia-lab/MetaboAnalystR
 version_used: '4.0'
 evidence_spans:
 - 'MetaboAnalystR 4.0: a unified LC-MS workflow for global metabolomics'
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - xia-lab/MetaboAnalystR
 schema_version: 0.2.0
-license_tier: open
-license: GPL-3.0
-license_detection: license-file
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

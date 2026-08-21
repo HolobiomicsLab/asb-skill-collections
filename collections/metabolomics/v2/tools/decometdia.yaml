@@ -1,6 +1,5 @@
 name: DecoMetDIA
 slug: decometdia
-canonical_url: https://github.com/ZhuMSLab/DecoMetDIA
 evidence_spans:
 - DecoMetDIA was developed to process SWATH-MS based data for metabolomics.
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - ZhuMSLab/DecoMetDIA
 schema_version: 0.2.0
-license_tier: open
-license: GPL-3.0-only
-license_detection: r-description
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

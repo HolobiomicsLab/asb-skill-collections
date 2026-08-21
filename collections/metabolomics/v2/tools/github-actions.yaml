@@ -1,6 +1,5 @@
 name: GitHub Actions
 slug: github-actions
-canonical_url: https://github.com/MassBank/MassBank-data
 evidence_spans:
 - To conduct tests, please refer to section `test:` of GitHub Actions
 - GitHub Actions 'Build and Publish' workflow (distribute.yaml)
@@ -29,9 +28,10 @@ source_repos:
 - iomega/ms2query
 - systemsomicslab/MsdialWorkbench
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

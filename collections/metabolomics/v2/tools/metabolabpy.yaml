@@ -1,6 +1,5 @@
 name: metabolabpy
 slug: metabolabpy
-canonical_url: https://github.com/ludwigc/metabolabpy
 evidence_spans:
 - github.com__ludwigc__metabolabpy
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - ludwigc/metabolabpy
 schema_version: 0.2.0
-license_tier: open
-license: GPL-3.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - NMR

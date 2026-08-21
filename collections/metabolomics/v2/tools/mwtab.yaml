@@ -1,6 +1,5 @@
 name: mwtab
 slug: mwtab
-canonical_url: https://github.com/MoseleyBioinformaticsLab/mwtab
 evidence_spans:
 - The ``mwtab`` package is a Python library that facilitates reading and writing files in
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - MoseleyBioinformaticsLab/mwtab
 schema_version: 0.2.0
-license_tier: open
-license: BSD-3-Clause-Clear
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - NMR
 - mass-spectrometry

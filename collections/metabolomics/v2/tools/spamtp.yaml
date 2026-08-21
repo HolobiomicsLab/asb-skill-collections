@@ -1,6 +1,5 @@
 name: SpaMTP
 slug: spamtp
-canonical_url: https://github.com/GenomicsMachineLearning/SpaMTP
 evidence_spans:
 - Install SpaMTP if not previously installed devtools::install_github("GenomicsMachineLearning/SpaMTP")
 - Install SpaMTP if not previously installed devtools::install_github("GenomicsMachineLearning/SpaMTP")
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - GenomicsMachineLearning/SpaMTP
 schema_version: 0.2.0
-license_tier: noncommercial
-license: CC-BY-NC-ND-4.0
-license_detection: crossref-paper
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

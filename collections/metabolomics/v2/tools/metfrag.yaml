@@ -1,6 +1,5 @@
 name: metFrag
 slug: metfrag
-canonical_url: https://github.com/FrigerioGianfranco/GetFeatistics
 evidence_spans:
 - 'such as metFrag for example, check it out: https://github.com/rickhelmus/patRoon'
 - compound database dereplication using SIRIUS OR MetFrag
@@ -25,9 +24,10 @@ source_repos:
 - rickhelmus/patRoon
 - zmahnoor14/MAW
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

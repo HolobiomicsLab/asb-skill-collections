@@ -1,6 +1,5 @@
 name: Google Chrome
 slug: google-chrome
-canonical_url: https://github.com/lidawei1975/colmarvista
 evidence_spans:
 - 'For Google Chrome: 1. Right-click the Google Chrome icon and select "Properties."'
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - lidawei1975/colmarvista
 schema_version: 0.2.0
-license_tier: open
-license: GPL-3.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - NMR

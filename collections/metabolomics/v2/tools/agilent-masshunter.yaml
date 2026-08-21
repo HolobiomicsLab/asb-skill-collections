@@ -1,6 +1,5 @@
 name: Agilent MassHunter
 slug: agilent-masshunter
-canonical_url: https://github.com/PNNL-Comp-Mass-Spec/PNNL-PreProcessor
 evidence_spans:
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files)
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files
@@ -11,9 +10,10 @@ derived_from:
 source_repos:
 - PNNL-Comp-Mass-Spec/PNNL-PreProcessor
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

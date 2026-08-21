@@ -1,6 +1,5 @@
 name: MetaNet
 slug: metanet
-canonical_url: https://github.com/Asa12138/MetaNet
 evidence_spans:
 - MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers.
 - MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers
@@ -10,8 +9,9 @@ derived_from:
 source_repos:
 - Asa12138/MetaNet
 schema_version: 0.2.0
-license_tier: open
-license: GPL-3.0-only
-license_detection: r-description
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - mass-spectrometry

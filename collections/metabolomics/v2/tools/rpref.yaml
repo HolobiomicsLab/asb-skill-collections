@@ -1,6 +1,5 @@
 name: rPref
 slug: rpref
-canonical_url: https://github.com/BiosystemEngineeringLab-IITB/dures
 evidence_spans:
 - invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim"
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - BiosystemEngineeringLab-IITB/dures
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: r-description
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

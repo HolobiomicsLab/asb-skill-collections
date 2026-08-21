@@ -1,6 +1,5 @@
 name: PyTorch or equivalent deep learning framework (inferred from GNN/contrastive learning context)
 slug: pytorch-or-equivalent-deep-learning-framework-inferred-from-gnn-contrastive-learning-context
-canonical_url: https://github.com/Chen-micslab/QCCAssisted4DSterol
 evidence_spans:
 - Our method integrates contrastive learning with masked graph modeling
 derived_from:
@@ -9,6 +8,7 @@ derived_from:
 source_repos:
 - Chen-micslab/QCCAssisted4DSterol
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null

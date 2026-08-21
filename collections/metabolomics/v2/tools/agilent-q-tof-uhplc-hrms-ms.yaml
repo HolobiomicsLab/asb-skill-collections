@@ -1,6 +1,5 @@
 name: Agilent Q-TOF UHPLC-HRMS/MS
 slug: agilent-q-tof-uhplc-hrms-ms
-canonical_url: https://github.com/GarrettLab-UF/LipidMatch
 evidence_spans:
 - Agilent, Bruker and SCIEX Q-TOF UHPLC-HRMS/MS experiments
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - GarrettLab-UF/LipidMatch
 schema_version: 0.2.0
-license_tier: open
-license: CC-BY-4.0
-license_detection: license-file
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - direct-infusion-MS

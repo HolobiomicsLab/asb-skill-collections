@@ -1,6 +1,5 @@
 name: Google Colab
 slug: google-colab
-canonical_url: https://github.com/alexandrovteam/SpaceM
 evidence_spans:
 - we [present interactively using Google Collab](https://colab.research.google.com/drive/1CKdHDUkGIpAcBzrSfuCodMF_l2xbVAKT?usp=sharing)
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - alexandrovteam/SpaceM
 schema_version: 0.2.0
-license_tier: open
-license: Apache-2.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - MS-imaging

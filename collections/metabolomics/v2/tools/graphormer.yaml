@@ -1,6 +1,5 @@
 name: Graphormer
 slug: graphormer
-canonical_url: https://github.com/HopkinsLaboratory/Graphormer-RT
 evidence_spans:
 - Graphormer-RT is an extension to the Graphormer package, with documentation, and the original code on Github
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - HopkinsLaboratory/Graphormer-RT
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

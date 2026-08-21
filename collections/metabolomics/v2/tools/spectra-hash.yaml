@@ -1,6 +1,5 @@
 name: spectra-hash
 slug: spectra-hash
-canonical_url: https://github.com/eMetaboHUB/FragHub
 evidence_spans:
 - direct integration of spectra-hash (https://github.com/berlinguyinca/spectra-hash) into fraghub
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - eMetaboHUB/FragHub
 schema_version: 0.2.0
-license_tier: noncommercial
-license: CC-BY-NC-4.0
-license_detection: license-file
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

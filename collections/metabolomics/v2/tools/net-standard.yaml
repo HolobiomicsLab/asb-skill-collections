@@ -1,6 +1,5 @@
 name: .NET Standard
 slug: net-standard
-canonical_url: https://github.com/systemsomicslab/MsdialWorkbench
 version_used: '2.0'
 evidence_spans:
 - The .NET class libraries adhere at least to the specifications of .NET Standard 2.0
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - systemsomicslab/MsdialWorkbench
 schema_version: 0.2.0
-license_tier: open
-license: LGPL-3.0
-license_detection: readme-llm
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - mass-spectrometry

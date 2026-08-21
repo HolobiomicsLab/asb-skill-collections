@@ -1,6 +1,5 @@
 name: MSHub
 slug: mshub
-canonical_url: https://github.com/bittremieux/GNPS_GC
 evidence_spans:
 - MSHub auto-deconvolution
 - Auto-deconvolution and molecular networking of gas chromatography–mass spectrometry data
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - bittremieux/GNPS_GC
 schema_version: 0.2.0
-license_tier: open
-license: BSD-3-Clause
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

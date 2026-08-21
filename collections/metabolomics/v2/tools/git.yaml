@@ -1,6 +1,5 @@
 name: git
 slug: git
-canonical_url: https://github.com/Chen-micslab/QCCAssisted4DSterol
 evidence_spans:
 - 'Step 0: Install git (if you have not done so before)'
 - git clone --recursive git@github.com:eugenemel/maven.git maven
@@ -39,9 +38,10 @@ source_repos:
 - zhanghailiangcsu/MSBERT
 - zhanghailiangcsu/MWFormer
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: file-present-unclassified
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

@@ -1,6 +1,5 @@
 name: HMDB
 slug: hmdb
-canonical_url: https://github.com/griquelme/tidyms
 evidence_spans:
 - we recommend that you download the JMS-compliant versions of the HMDB and LMSD using the `download extras` command
 derived_from:
@@ -11,9 +10,10 @@ derived_from:
 source_repos:
 - griquelme/tidyms
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: license-file
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

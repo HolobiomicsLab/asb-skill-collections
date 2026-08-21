@@ -1,6 +1,5 @@
 name: JPA R Package
 slug: jpa-r-package
-canonical_url: https://github.com/HuanLab/JPA
 evidence_spans:
 - '''JPA'' is written in R and its source code is publicly available at <https://github.com/HuanLab/JPA.git>.'
 derived_from:
@@ -9,6 +8,7 @@ derived_from:
 source_repos:
 - HuanLab/JPA
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null

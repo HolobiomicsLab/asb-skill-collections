@@ -1,6 +1,5 @@
 name: pymzml
 slug: pymzml
-canonical_url: https://github.com/shuzhao-li-lab/asari
 version_used: 2.5.2
 evidence_spans:
 - The default method uses `pymzml` to parse mzML files.
@@ -24,9 +23,10 @@ source_repos:
 - shuzhao-li-lab/asari
 - zsspython/LAGF
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: file-present-unclassified
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

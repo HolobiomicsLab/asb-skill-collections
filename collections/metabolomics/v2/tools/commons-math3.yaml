@@ -1,6 +1,5 @@
 name: commons-math3
 slug: commons-math3
-canonical_url: https://github.com/rformassspectrometry/Spectra
 version_used: 3.4.1
 evidence_spans:
 - commons-math3-3.4.1
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - rformassspectrometry/Spectra
 schema_version: 0.2.0
-license_tier: open
-license: Artistic-2.0
-license_detection: r-description
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - NMR

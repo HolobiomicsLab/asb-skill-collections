@@ -1,6 +1,5 @@
 name: Seurat
 slug: seurat
-canonical_url: https://github.com/GenomicsMachineLearning/SpaMTP
 evidence_spans:
 - library(Seurat)
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - GenomicsMachineLearning/SpaMTP
 schema_version: 0.2.0
-license_tier: noncommercial
-license: CC-BY-NC-ND-4.0
-license_detection: crossref-paper
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

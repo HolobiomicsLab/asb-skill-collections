@@ -9,9 +9,10 @@ derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

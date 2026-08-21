@@ -1,6 +1,5 @@
 name: molmass
 slug: molmass
-canonical_url: https://github.com/FanzhouKong/spectral_denoising
 version_used: 2021.6.18
 evidence_spans:
 - molmass==2021.6.18
@@ -11,8 +10,9 @@ derived_from:
 source_repos:
 - FanzhouKong/spectral_denoising
 schema_version: 0.2.0
-license_tier: open
-license: Apache-2.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

@@ -1,6 +1,5 @@
 name: LipidMatch
 slug: lipidmatch
-canonical_url: https://github.com/GarrettLab-UF/LipidMatch
 version_used: '4.2'
 evidence_spans:
 - 'put Modular.r into two directories (replace existing code): `LipidMatch-4.2\Flow\LipidMatch_Distribution`'
@@ -14,9 +13,10 @@ source_repos:
 - GarrettLab-UF/LipidMatch
 - InnovativeOmics/Core-Match
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

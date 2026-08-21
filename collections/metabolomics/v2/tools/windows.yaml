@@ -1,6 +1,5 @@
 name: Windows
 slug: windows
-canonical_url: https://github.com/LQZ0123/MSThunder
 evidence_spans:
 - A case file named “Pesticides” can be run in the Windows environment
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - LQZ0123/MSThunder
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - NMR

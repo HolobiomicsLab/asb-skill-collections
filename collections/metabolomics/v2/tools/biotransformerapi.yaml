@@ -1,6 +1,5 @@
 name: BioTransformerAPI
 slug: biotransformerapi
-canonical_url: https://github.com/Le0nT1/CyProduct
 evidence_spans:
 - there is a class called BioTransformerAPI in the jar file
 derived_from:
@@ -9,6 +8,7 @@ derived_from:
 source_repos:
 - Le0nT1/CyProduct
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null

@@ -1,6 +1,5 @@
 name: mixOmics
 slug: mixomics
-canonical_url: https://github.com/DanielQuiroz97/RGCxGC
 evidence_spans:
 - '"igraph", "MASS", "mixOmics", "SOMbrero", "varSelRF"'
 - Supervised models can be done with the [mixOmics](https://bioconductor.org/packages/release/bioc/html/mixOmics.html) functions.
@@ -13,9 +12,10 @@ source_repos:
 - DanielQuiroz97/RGCxGC
 - LargeMetabo/LargeMetabo
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: r-description
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

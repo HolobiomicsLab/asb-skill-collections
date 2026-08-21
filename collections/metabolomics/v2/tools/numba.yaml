@@ -1,6 +1,5 @@
 name: Numba
 slug: numba
-canonical_url: https://github.com/sword-nan/SpecEmbedding
 evidence_spans:
 - making extensive use of Numpy [24] and Numba [25]
 - by making extensive use of Numpy [24] and Numba [25], the library
@@ -17,9 +16,10 @@ derived_from:
 source_repos:
 - sword-nan/SpecEmbedding
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

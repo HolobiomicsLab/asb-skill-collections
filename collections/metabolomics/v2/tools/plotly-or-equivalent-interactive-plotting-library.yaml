@@ -1,6 +1,5 @@
 name: Plotly or equivalent interactive plotting library
 slug: plotly-or-equivalent-interactive-plotting-library
-canonical_url: https://github.com/czbiohub-sf/Rapid-QC-MS
 evidence_spans:
 - '**Interactive data visualization** of internal standard retention time, _m/z_, and intensity across samples'
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - czbiohub-sf/Rapid-QC-MS
 schema_version: 0.2.0
-license_tier: open
-license: BSD-3-Clause
-license_detection: license-file
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

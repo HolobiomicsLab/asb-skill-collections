@@ -1,6 +1,5 @@
 name: RStudio
 slug: rstudio
-canonical_url: https://github.com/Fraunhofer-ITMP/alister
 evidence_spans:
 - '[![](https://img.shields.io/badge/Shiny-shinyapps.io-blue?style=flat&labelColor=white&logo=RStudio&logoColor=blue)]'
 - we recommend using RStudio to complete the installation and usage of ISFrag
@@ -17,9 +16,10 @@ source_repos:
 - HuanLab/ISFrag
 - metabolomicstats/NormalizeMets
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - ion-mobility-MS

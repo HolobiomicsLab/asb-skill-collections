@@ -1,6 +1,5 @@
 name: Zenodo
 slug: zenodo
-canonical_url: https://github.com/Chen-micslab/QCCAssisted4DSterol
 version_used: '10.5281'
 evidence_spans:
 - Zenodo release [![DOI](https://zenodo.org/badge/125496536.svg)](https://zenodo.org/badge/latestdoi/125496536)
@@ -24,9 +23,10 @@ source_repos:
 - matchms/matchms
 - sneumann/xcms
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

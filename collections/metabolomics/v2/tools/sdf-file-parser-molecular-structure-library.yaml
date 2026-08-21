@@ -1,6 +1,5 @@
 name: SDF file parser / molecular structure library
 slug: sdf-file-parser-molecular-structure-library
-canonical_url: https://gitlab.com/nexs-metabolomics/projects/dna_adductomics_database.git
 evidence_spans:
 - SDF format
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - https://gitlab.com/nexs-metabolomics/projects/dna_adductomics_database.git
 schema_version: 0.2.0
-license_tier: restricted
-license: no license found (verified 2026-06-24)
+license_tier: unknown
+license: null
 license_detection: null
+license_subject: null
 techniques:
 - mass-spectrometry

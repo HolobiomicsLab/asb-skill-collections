@@ -1,6 +1,5 @@
 name: Image Processing Toolbox
 slug: image-processing-toolbox
-canonical_url: https://github.com/AdrianHaun/AriumMS
 evidence_spans:
 - 'Required toolboxes for the app version: Bioinformatic Toolbox, Statistics And Machine Learning Toolbox, Wavelet Toolbox, Image Processing Toolbox, Signal Processing Toolbox, Parallel Computing'
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - AdrianHaun/AriumMS
 schema_version: 0.2.0
-license_tier: open
-license: BSD-3-Clause
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

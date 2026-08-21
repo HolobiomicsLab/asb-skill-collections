@@ -1,6 +1,5 @@
 name: MAG
 slug: mag
-canonical_url: https://github.com/vdhooftcompmet/MS2LDA
 evidence_spans:
 - Automated annotation of **M2M** using **MAG**
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - vdhooftcompmet/MS2LDA
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

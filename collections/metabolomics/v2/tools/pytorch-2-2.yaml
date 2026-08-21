@@ -1,6 +1,5 @@
 name: PyTorch 2.2
 slug: pytorch-2-2
-canonical_url: https://github.com/zhanghailiangcsu/MSBERT
 evidence_spans:
 - '[Pytorch](https://pytorch.org/) 2.2'
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - zhanghailiangcsu/MSBERT
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

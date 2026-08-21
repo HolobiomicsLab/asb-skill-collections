@@ -1,6 +1,5 @@
 name: netgsa R package
 slug: netgsa-r-package
-canonical_url: https://github.com/Karnovsky-Lab/DNEA
 evidence_spans:
 - subsequently test them for enrichment across experimental conditions using the [netgsa R package](https://cran.rstudio.com/web/packages/netgsa/index.html)
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - Karnovsky-Lab/DNEA
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: r-description
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

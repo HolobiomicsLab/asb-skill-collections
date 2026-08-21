@@ -1,6 +1,5 @@
 name: h5py
 slug: h5py
-canonical_url: https://github.com/PNNL-m-q/mza
 version_used: 2.7.1
 evidence_spans:
 - h5py(2.7.1)
@@ -25,9 +24,10 @@ source_repos:
 - bioinfo-ibms-pumc/SMART
 - wabdelmoula/massNet
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - direct-infusion-MS

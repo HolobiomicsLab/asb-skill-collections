@@ -1,6 +1,5 @@
 name: RamClustR
 slug: ramclustr
-canonical_url: https://github.com/cbroeckl/RAMClustR
 evidence_spans:
 - An example of feature annotation using LC-MS AIF chromatograms processed using xcms and RamClustR packages
 - ramclustR function is built to use xcms data
@@ -14,9 +13,10 @@ derived_from:
 source_repos:
 - cbroeckl/RAMClustR
 schema_version: 0.2.0
-license_tier: open
-license: GPL-3.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

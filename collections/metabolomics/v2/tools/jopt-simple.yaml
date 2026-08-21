@@ -1,6 +1,5 @@
 name: jopt-simple
 slug: jopt-simple
-canonical_url: https://github.com/rformassspectrometry/Spectra
 version_used: '4.3'
 evidence_spans:
 - jopt-simple-4.3
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - rformassspectrometry/Spectra
 schema_version: 0.2.0
-license_tier: open
-license: Artistic-2.0
-license_detection: r-description
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - NMR

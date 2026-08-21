@@ -1,6 +1,5 @@
 name: Python
 slug: python
-canonical_url: https://github.com/01dadada/RT-Transformer
 version_used: '3.8'
 evidence_spans:
 - '**Python**'
@@ -286,9 +285,10 @@ source_repos:
 - zsspython/LAGF
 - zza1211/NMRformer
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

@@ -1,6 +1,5 @@
 name: MetaMiner
 slug: metaminer
-canonical_url: https://github.com/ablab/npdtools
 evidence_spans:
 - MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel RiPPs
 - MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally modified Peptides (RiPPs)
@@ -11,9 +10,10 @@ derived_from:
 source_repos:
 - ablab/npdtools
 schema_version: 0.2.0
-license_tier: open
-license: Apache-2.0
-license_detection: readme-llm
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - direct-infusion-MS

@@ -1,6 +1,5 @@
 name: GNPS2
 slug: gnps2
-canonical_url: https://github.com/NPLinker/nplinker
 evidence_spans:
 - These workflows are also available for you to run on federated GNPS2 instances and locally on any computing environment or in the cloud.
 - It currently accepts data from both GNPS1 (https://gnps.ucsd.edu) and GNPS2 (https://gnps2.org) workflows.
@@ -17,9 +16,10 @@ source_repos:
 - Wang-Bioinformatics-Lab/GNPS2_Workflows
 - mwang87/ReDU-MS2-Documentation
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - MS-imaging

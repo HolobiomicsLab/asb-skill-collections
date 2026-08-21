@@ -1,6 +1,5 @@
 name: JPA
 slug: jpa
-canonical_url: https://github.com/HuanLab/JPA
 evidence_spans:
 - JPA is a comprehensive and integrated metabolomics data processing software.
 - JPA is a comprehensive and integrated metabolomics data processing software
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - HuanLab/JPA
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - NMR

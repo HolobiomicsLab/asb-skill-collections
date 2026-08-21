@@ -1,6 +1,5 @@
 name: mgcv
 slug: mgcv
-canonical_url: https://github.com/hhabra/metabCombiner
 evidence_spans:
 - a modified form of the `gam` function implemented in the *mgcv* R package
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - hhabra/metabCombiner
 schema_version: 0.2.0
-license_tier: open
-license: GPL-3.0-only
-license_detection: r-description
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - mass-spectrometry

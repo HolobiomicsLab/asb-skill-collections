@@ -1,6 +1,5 @@
 name: Punc'data
 slug: punc-data
-canonical_url: https://github.com/WTVoe/puncdata
 evidence_spans:
 - Punc'data is an interactive attribution and vizualization tool made for high resolution mass spectrometry results.
 - Punc'data is an interactive attribution and vizualization tool made for high resolution mass spectrometry results
@@ -10,8 +9,9 @@ derived_from:
 source_repos:
 - WTVoe/puncdata
 schema_version: 0.2.0
-license_tier: open
-license: AGPL-3.0
-license_detection: license-file
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - mass-spectrometry

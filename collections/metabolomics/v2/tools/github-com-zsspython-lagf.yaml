@@ -1,6 +1,5 @@
 name: github.com/zsspython/LAGF
 slug: github-com-zsspython-lagf
-canonical_url: https://github.com/zsspython/LAGF
 evidence_spans:
 - 'Source: github:github.com__zsspython__LAGF'
 - github.com__zsspython__LAGF
@@ -10,6 +9,7 @@ derived_from:
 source_repos:
 - zsspython/LAGF
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null

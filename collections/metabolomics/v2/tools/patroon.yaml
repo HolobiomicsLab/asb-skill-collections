@@ -1,6 +1,5 @@
 name: patRoon
 slug: patroon
-canonical_url: https://github.com/rickhelmus/patRoon
 evidence_spans:
 - The `generateTPs` function is used to obtain TPs for a particular set of parents.
 - componTP <- generateComponents(algorithm = "tp",
@@ -11,9 +10,10 @@ derived_from:
 source_repos:
 - rickhelmus/patRoon
 schema_version: 0.2.0
-license_tier: open
-license: GPL-3.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

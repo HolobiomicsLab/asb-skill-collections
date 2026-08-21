@@ -1,6 +1,5 @@
 name: github.com/bittremieux/cosine_neutral_loss
 slug: github-com-bittremieux-cosine-neutral-loss
-canonical_url: https://github.com/bittremieux/cosine_neutral_loss
 evidence_spans:
 - github.com__bittremieux__cosine_neutral_loss
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - bittremieux/cosine_neutral_loss
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
 license_detection: null
+license_subject: null
 techniques:
 - CE-MS

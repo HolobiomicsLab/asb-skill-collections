@@ -1,6 +1,5 @@
 name: Maven GUI
 slug: maven-gui
-canonical_url: https://github.com/eugenemel/maven
 evidence_spans:
 - 'Maven GUI: Metabolomics Analysis and Visualization Engine'
 derived_from:
@@ -9,6 +8,7 @@ derived_from:
 source_repos:
 - eugenemel/maven
 schema_version: 0.2.0
-license_tier: open
-license: GPL-3.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null

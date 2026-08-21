@@ -1,6 +1,5 @@
 name: Bioconductor
 slug: bioconductor
-canonical_url: https://github.com/AndreaRMICL/MWASTools
 evidence_spans:
 - 'marr: An R/Bioconductor package for Maximum Rank Reproducibility'
 - '`marr`: An R/Bioconductor package for Maximum Rank Reproducibility'
@@ -32,9 +31,10 @@ source_repos:
 - sneumann/xcms
 - xdomingoal/erah-devel
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

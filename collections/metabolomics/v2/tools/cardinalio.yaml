@@ -1,6 +1,5 @@
 name: CardinalIO
 slug: cardinalio
-canonical_url: https://github.com/kuwisdelu/Cardinal
 evidence_spans:
 - 'We can read an example of a "continuous" imzML file from the `CardinalIO` package:'
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - kuwisdelu/Cardinal
 schema_version: 0.2.0
-license_tier: open
-license: Artistic-2.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - MS-imaging
 - mass-spectrometry

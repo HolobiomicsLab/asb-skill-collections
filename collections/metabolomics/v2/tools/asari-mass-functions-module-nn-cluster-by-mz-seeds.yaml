@@ -1,6 +1,5 @@
 name: asari mass_functions module (nn_cluster_by_mz_seeds)
 slug: asari-mass-functions-module-nn-cluster-by-mz-seeds
-canonical_url: https://github.com/shuzhao-li-lab/asari
 evidence_spans:
 - a nearest neighbor (NN) clustering is performed to establish the number of mass tracks. See [mass_functions.nn_cluster_by_mz_seeds](mass_functions.nn_cluster_by_mz_seeds).
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - shuzhao-li-lab/asari
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: file-present-unclassified
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

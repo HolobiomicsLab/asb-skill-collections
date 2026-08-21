@@ -1,6 +1,5 @@
 name: limma
 slug: limma
-canonical_url: https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 evidence_spans:
 - allows the identification of differentially abundant lipids in simple and complex experimental designs
 - This step of the workflow requires the `limma` package to be installed.
@@ -25,9 +24,10 @@ source_repos:
 - idrblab/NOREVA;
 - sneumann/xcms
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

@@ -1,6 +1,5 @@
 name: MrnAnnoAlgo3 (MetDNA3)
 slug: mrnannoalgo3-metdna3
-canonical_url: https://github.com/ZhuMetLab/MrnAnnoAlgo3
 evidence_spans:
 - '`MrnAnnoAlgo3` is the core algorithm module of **MetDNA3**, designed to annotate metabolites'
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - ZhuMetLab/MrnAnnoAlgo3
 schema_version: 0.2.0
-license_tier: noncommercial
-license: CC-BY-NC-ND-4.0
-license_detection: readme-llm
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

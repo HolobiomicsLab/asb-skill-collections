@@ -1,6 +1,5 @@
 name: SmartPeakCLI
 slug: smartpeakcli
-canonical_url: https://github.com/AutoFlowResearch/SmartPeak
 evidence_spans:
 - SmartPeak CLI provides an equivalent of SmartPeak GUI application, however with a possibility to run in headless mode
 - SmartPeak CLI provides an equivalent of SmartPeak GUI application
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - AutoFlowResearch/SmartPeak
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

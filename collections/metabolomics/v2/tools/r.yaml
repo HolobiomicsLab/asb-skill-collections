@@ -1,6 +1,5 @@
 name: R (>=)
 slug: r
-canonical_url: https://github.com/LargeMetabo/LargeMetabo
 evidence_spans:
 - Dependent on R (>= 3.5.0)
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - LargeMetabo/LargeMetabo
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: r-description
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

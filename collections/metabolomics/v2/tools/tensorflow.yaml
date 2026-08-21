@@ -1,6 +1,5 @@
 name: TensorFlow
 slug: tensorflow
-canonical_url: https://github.com/JainLab/Manuscript-DNNs-for-Classification-of-LCMS-Peaks
 version_used: 2.3.0
 evidence_spans:
 - tensorflow version 2.3.0 installed to convert the keras models into HDF5 TF2 models
@@ -36,9 +35,10 @@ source_repos:
 - volvox292/mass2smiles
 - wabdelmoula/massNet
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: file-present-unclassified
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

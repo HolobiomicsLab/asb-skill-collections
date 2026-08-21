@@ -1,6 +1,5 @@
 name: Python 3
 slug: python-3
-canonical_url: https://github.com/ComPlat/chem-spectra-app
 evidence_spans:
 - Use the file pyproject.toml to determine the version of Python required.
 - '[python3](https://www.python.org/)'
@@ -29,9 +28,10 @@ source_repos:
 - yuxuanliao/PACCS
 - zxguocsu/GCMSFormer
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: file-present-unclassified
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

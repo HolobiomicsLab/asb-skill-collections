@@ -1,6 +1,5 @@
 name: asari peaks module
 slug: asari-peaks-module
-canonical_url: https://github.com/shuzhao-li-lab/asari
 evidence_spans:
 - See [peaks.evaluate_gaussian_peak_on_intensity_list](peaks.evaluate_gaussian_peak_on_intensity_list), [peaks.__peaks_cSelectivity_stats_](peaks.__peaks_cSelectivity_stats_),
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - shuzhao-li-lab/asari
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: file-present-unclassified
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

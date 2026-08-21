@@ -1,6 +1,5 @@
 name: Mass Query Language (MassQL)
 slug: mass-query-language-massql
-canonical_url: https://github.com/biorack/chemecho
 evidence_spans:
 - The Mass Query Language (MassQL) is a domain specific language used to describe fragmentation patterns
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - biorack/chemecho
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

@@ -1,6 +1,5 @@
 name: Spec2Vec
 slug: spec2vec
-canonical_url: https://github.com/vdhooftcompmet/MS2LDA
 evidence_spans:
 - we introduce Spec2Vec, a novel spectral similarity score
 - spec2vec (https://github.com/iomega/spec2vec). Both packages are freely available and can be installed via conda
@@ -20,9 +19,10 @@ derived_from:
 source_repos:
 - vdhooftcompmet/MS2LDA
 schema_version: 0.2.0
-license_tier: open
-license: Apache-2.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

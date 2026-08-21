@@ -1,6 +1,5 @@
 name: torch
 slug: torch
-canonical_url: https://github.com/01dadada/RT-Transformer
 version_used: 1.4.0
 evidence_spans:
 - torch >= 1.4.0
@@ -18,9 +17,10 @@ source_repos:
 - aaronma2020/MSGO
 - chensaian/TransG-Net
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

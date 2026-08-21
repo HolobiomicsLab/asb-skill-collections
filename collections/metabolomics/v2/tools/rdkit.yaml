@@ -1,6 +1,5 @@
 name: RDKit
 slug: rdkit
-canonical_url: https://github.com/DasSusanta/snakemake_ccs
 version_used: 2020.03.4
 evidence_spans:
 - Tanimoto similarity (Jaccard index) based on daylight-like molecular fingerprints, version 2020.03.2, 2048 bits, derived using rdkit
@@ -94,9 +93,10 @@ source_repos:
 - zhanghailiangcsu/MWFormer
 - zmahnoor14/MAW
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

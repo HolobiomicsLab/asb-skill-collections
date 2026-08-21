@@ -1,6 +1,5 @@
 name: MsBackendMzR
 slug: msbackendmzr
-canonical_url: https://github.com/rformassspectrometry/Spectra
 evidence_spans:
 - Backends such as the `MsBackendMzR` for example retrieve the data on the fly from the raw MS data files
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - rformassspectrometry/Spectra
 schema_version: 0.2.0
-license_tier: open
-license: Artistic-2.0
-license_detection: r-description
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - mass-spectrometry

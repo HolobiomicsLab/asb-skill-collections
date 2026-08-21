@@ -1,6 +1,5 @@
 name: HTML
 slug: html
-canonical_url: https://github.com/RTKlab-BYU/MSConnect
 evidence_spans:
 - The platform is built with Python, Django, JavaScript, and HTML
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - RTKlab-BYU/MSConnect
 schema_version: 0.2.0
-license_tier: open
-license: Apache-2.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - mass-spectrometry

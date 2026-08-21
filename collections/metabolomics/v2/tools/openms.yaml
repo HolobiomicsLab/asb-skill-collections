@@ -1,6 +1,5 @@
 name: OpenMS
 slug: openms
-canonical_url: https://github.com/AutoFlowResearch/SmartPeak
 evidence_spans:
 - '[Optimus](https://github.com/MolecularCartography/Optimus) (using OpenMS)'
 - or [Optimus](https://github.com/MolecularCartography/Optimus) (using OpenMS)
@@ -31,9 +30,10 @@ source_repos:
 - OpenMS/OpenMS
 - fgcz/rawrr
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: file-present-unclassified
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

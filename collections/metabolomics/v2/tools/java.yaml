@@ -1,6 +1,5 @@
 name: Java
 slug: java
-canonical_url: https://github.com/Le0nT1/CyProduct
 evidence_spans:
 - Java -jar CyProduct.jar QueryMolecule enzymeList OutputFolderPath
 - MetNet is a Java tool
@@ -13,8 +12,9 @@ source_repos:
 - Le0nT1/CyProduct
 - simeoni-biolab/MetNet
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

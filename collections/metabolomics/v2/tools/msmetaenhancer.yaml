@@ -1,6 +1,5 @@
 name: MSMetaEnhancer
 slug: msmetaenhancer
-canonical_url: https://github.com/RECETOX/MSMetaEnhancer
 evidence_spans:
 - MSMetaEnhancer is a tool used for `.msp` files annotation
 - 'Converter Builder: Automatically discovers and instantiates available converters'
@@ -13,9 +12,10 @@ derived_from:
 source_repos:
 - RECETOX/MSMetaEnhancer
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - mass-spectrometry

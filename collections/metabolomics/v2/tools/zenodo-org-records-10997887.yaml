@@ -1,6 +1,5 @@
 name: zenodo.org/records/10997887
 slug: zenodo-org-records-10997887
-canonical_url: https://github.com/pluskal-lab/DreaMS
 evidence_spans:
 - https://zenodo.org/records/10997887
 - https://zenodo.org/records/13843034
@@ -10,6 +9,7 @@ derived_from:
 source_repos:
 - pluskal-lab/DreaMS
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null

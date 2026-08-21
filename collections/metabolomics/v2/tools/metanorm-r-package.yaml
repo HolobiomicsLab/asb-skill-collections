@@ -1,6 +1,5 @@
 name: Metanorm R package
 slug: metanorm-r-package
-canonical_url: https://github.com/UGent-LIMET/Metanorm
 evidence_spans:
 - The R package implements three (new) robust normalization methods (tGAM, rGAM and rLOESS)
 derived_from:
@@ -9,6 +8,7 @@ derived_from:
 source_repos:
 - UGent-LIMET/Metanorm
 schema_version: 0.2.0
-license_tier: noncommercial
-license: CC-BY-NC-ND-4.0
-license_detection: crossref-paper
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null

@@ -1,6 +1,5 @@
 name: geoRge
 slug: george
-canonical_url: https://github.com/jcapelladesto/geoRge
 evidence_spans:
 - library(geoRge)
 - hits <- database_query(geoRgeR = s2, adducts = negative, db = db)
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - jcapelladesto/geoRge
 schema_version: 0.2.0
-license_tier: open
-license: GPL-3.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

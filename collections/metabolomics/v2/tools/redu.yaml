@@ -1,6 +1,5 @@
 name: ReDU
 slug: redu
-canonical_url: https://github.com/mwang87/ReDU-MS2-Documentation
 evidence_spans:
 - Validation of the ReDU sample information template using the drag-and-drop validator
 - ReDU only interacts with MassIVE
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - mwang87/ReDU-MS2-Documentation
 schema_version: 0.2.0
-license_tier: restricted
-license: CC-BY-2.0
-license_detection: crossref-paper
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

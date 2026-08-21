@@ -1,6 +1,5 @@
 name: MassDash
 slug: massdash
-canonical_url: https://github.com/Roestlab/massdash
 evidence_spans:
 - MassDash is a modular and flexible python package that has a streamlit graphical user interface (GUI)
 - ':mod:`massdash.loaders`: Classes for loading data'
@@ -11,9 +10,10 @@ derived_from:
 source_repos:
 - Roestlab/massdash
 schema_version: 0.2.0
-license_tier: open
-license: BSD-3-Clause
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - ion-mobility-MS

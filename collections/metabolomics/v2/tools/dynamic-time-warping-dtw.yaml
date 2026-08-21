@@ -1,6 +1,5 @@
 name: dynamic time warping (DTW)
 slug: dynamic-time-warping-dtw
-canonical_url: https://github.com/ChiungTingWu/ncGTW
 evidence_spans:
 - graphical time warping (GTW) [@gtw16], a popular dynamic time warping (DTW) based alignment method
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - ChiungTingWu/ncGTW
 schema_version: 0.2.0
-license_tier: open
-license: GPL-2.0-only
-license_detection: r-description
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

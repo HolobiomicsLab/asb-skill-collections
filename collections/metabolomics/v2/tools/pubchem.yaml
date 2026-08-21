@@ -1,6 +1,5 @@
 name: PubChem
 slug: pubchem
-canonical_url: https://github.com/RECETOX/MSMetaEnhancer
 evidence_spans:
 - all ids are converted to a unique one, in this case the PubChem ID
 - By inputting the chemical formula and your experimental spectrum, the WebUI will rank it against all candidates from PubChem.
@@ -34,9 +33,10 @@ source_repos:
 - samgoldman97/ms-pred
 - zmahnoor14/MAW
 schema_version: 0.2.0
-license_tier: open
-license: CC-BY-4.0
-license_detection: crossref-paper
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

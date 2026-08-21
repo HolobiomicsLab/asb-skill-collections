@@ -1,6 +1,5 @@
 name: PubChemPy
 slug: pubchempy
-canonical_url: https://github.com/zmahnoor14/MAW
 evidence_spans:
 - Final candidate selection is done in Python using RDKit and PubChemPy
 - We then ran an automated search against PubChem [42] using pubchempy [43] for spectra which still missed InChI or SMILES annotations.
@@ -12,9 +11,10 @@ derived_from:
 source_repos:
 - zmahnoor14/MAW
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: readme-llm
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - mass-spectrometry

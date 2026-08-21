@@ -1,6 +1,5 @@
 name: Docker
 slug: docker
-canonical_url: https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 version_used: 2.2.7
 evidence_spans:
 - docker pull proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses
@@ -63,9 +62,10 @@ source_repos:
 - vdhooftcompmet/MS2LDA
 - volvox292/mass2smiles
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

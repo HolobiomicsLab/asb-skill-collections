@@ -1,6 +1,5 @@
 name: KEGG database
 slug: kegg-database
-canonical_url: https://github.com/b2slab/mWISE
 evidence_spans:
 - matching mass-to-charge ratio values to KEGG database
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - b2slab/mWISE
 schema_version: 0.2.0
-license_tier: open
-license: GPL-3.0-only
-license_detection: r-description
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - direct-infusion-MS

@@ -1,6 +1,5 @@
 name: MetaboAnalyst
 slug: metaboanalyst
-canonical_url: https://github.com/13479776/statTarget
 evidence_spans:
 - web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst [29]
 - web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst [29], and DropMS [30]
@@ -24,9 +23,10 @@ source_repos:
 - cellbiomaths/MInfer
 - scibiome/meteor
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS
