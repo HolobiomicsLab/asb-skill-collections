@@ -16,28 +16,24 @@ def _tools():
     return json.loads((FIX / "tools_index.json").read_text())
 
 
-def test_resolve_repo_urls_merges_corpus_and_tools_dedup():
+def test_resolve_repo_urls_takes_the_papers_repository():
     from scripts.build_grounding_bundle import resolve_repo_urls
-    urls = resolve_repo_urls(["10.1021/acs.jnatprod.7b00737"], _corpus(), _tools())
-    assert urls == [
-        "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
-        "https://github.com/CCMS-UCSD/GNPS_Workflows",
-    ]
+    urls = resolve_repo_urls(["10.1021/acs.jnatprod.7b00737"], _corpus())
+    assert urls == ["https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks"]
 
 
 def test_resolve_repo_urls_drops_empty():
     from scripts.build_grounding_bundle import resolve_repo_urls
-    assert resolve_repo_urls(["10.1000/norepo"], _corpus(), _tools()) == []
+    assert resolve_repo_urls(["10.1000/norepo"], _corpus()) == []
 
 
 def test_filter_and_enrich_bundle():
     from scripts.build_grounding_bundle import filter_and_enrich_bundle
     full = json.loads((FIX / "kb_bundle.json").read_text())
-    out = filter_and_enrich_bundle(full, {"bioactivity-score-aggregation", "norepo-skill"}, _corpus(), _tools())
+    out = filter_and_enrich_bundle(full, {"bioactivity-score-aggregation", "norepo-skill"}, _corpus())
     assert set(out["skills"]) == {"bioactivity-score-aggregation", "norepo-skill"}
     assert out["skills"]["bioactivity-score-aggregation"]["repo_urls"] == [
         "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
-        "https://github.com/CCMS-UCSD/GNPS_Workflows",
     ]
     assert out["skills"]["norepo-skill"]["repo_urls"] == []
     assert out["distinct_dois"] == ["10.1000/norepo", "10.1021/acs.jnatprod.7b00737"]
@@ -63,11 +59,27 @@ def test_render_grounding_doc_names_unit():
 def test_resolve_repo_urls_normalizes_and_dedups_shorthand():
     from scripts.build_grounding_bundle import resolve_repo_urls
     urls = resolve_repo_urls(
-        ["10.x/y"],
-        [{"doi": "10.x/y", "repo_url": "owner/repo"}],
-        [{"dois": ["10.x/y"], "canonical_url": "https://github.com/owner/repo"}],
+        ["10.x/y", "10.x/z"],
+        [{"doi": "10.x/y", "repo_url": "owner/repo"},
+         {"doi": "10.x/z", "repo_url": "https://github.com/owner/repo"}],
     )
     assert urls == ["https://github.com/owner/repo"]
+
+
+def test_resolve_repo_urls_uses_only_the_skills_own_papers():
+    """A repository reached through a shared tool is not this skill's grounding.
+
+    Tool records used to contribute their `canonical_url` here, which was the
+    repository of *some* paper citing the tool. A skill grounded on paper A could
+    then be handed paper B's repository to read. Issue #42.
+    """
+    from scripts.build_grounding_bundle import resolve_repo_urls
+    urls = resolve_repo_urls(
+        ["10.x/mine"],
+        [{"doi": "10.x/mine", "repo_url": "owner/mine"},
+         {"doi": "10.x/theirs", "repo_url": "owner/theirs"}],
+    )
+    assert urls == ["https://github.com/owner/mine"]
 
 
 def test_real_lcms_pack_builds(tmp_path):

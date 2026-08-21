@@ -35,23 +35,24 @@ def _normalize_repo_url(u):
     return u
 
 
-def resolve_repo_urls(skill_dois, corpus_papers, tools_index):
-    doi_set = {d for d in skill_dois}
+def resolve_repo_urls(skill_dois, corpus_papers):
+    """Repositories to clone as `repo`-tier grounding for a skill: its own papers'.
+
+    Tool records used to contribute here too, via their `canonical_url`. That field
+    held the repository of *some* paper citing the tool, not necessarily one of this
+    skill's papers and never the tool's own home, so a skill grounded on paper A
+    could be handed paper B's repository to read. Issue #42.
+    """
     out = []
     by_doi = {p.get("doi"): p for p in corpus_papers}
     for d in skill_dois:
         url = _normalize_repo_url((by_doi.get(d) or {}).get("repo_url"))
         if url and url not in out:
             out.append(url)
-    for t in tools_index:
-        if doi_set.intersection(t.get("dois") or []):
-            url = _normalize_repo_url(t.get("canonical_url"))
-            if url and url not in out:
-                out.append(url)
     return out
 
 
-def filter_and_enrich_bundle(full_bundle, skill_slugs, corpus_papers, tools_index):
+def filter_and_enrich_bundle(full_bundle, skill_slugs, corpus_papers):
     src = full_bundle.get("skills") or {}
     kept = {}
     dois = set()
@@ -60,7 +61,7 @@ def filter_and_enrich_bundle(full_bundle, skill_slugs, corpus_papers, tools_inde
         if rec is None:
             continue
         rec = dict(rec)
-        rec["repo_urls"] = resolve_repo_urls(rec.get("dois") or [], corpus_papers, tools_index)
+        rec["repo_urls"] = resolve_repo_urls(rec.get("dois") or [], corpus_papers)
         kept[slug] = rec
         dois.update(rec.get("dois") or [])
     out = {k: full_bundle[k] for k in ("collection", "version", "perspicacite_kb_mode", "kb_prefix") if k in full_bundle}
@@ -114,18 +115,13 @@ def _read_corpus(collection_dir):
     p = collection_dir / "corpus.yaml"
     return (yaml.safe_load(p.read_text())["papers"]) if p.is_file() and yaml else []
 
-def _read_tools(collection_dir):
-    p = collection_dir / "tools_index.json"
-    return json.loads(p.read_text()) if p.is_file() else []
-
-
 def build_unit(unit_dir, collection_dir, bind_script):
     unit_dir, collection_dir, bind_script = Path(unit_dir), Path(collection_dir), Path(bind_script)
     if not any(d.is_dir() for d in layout.skill_dirs(unit_dir)):
         raise ValueError(f"no skill dir in unit {unit_dir}")
     slugs = {d.name for d in layout.slug_dirs(unit_dir)}
     full = json.loads((collection_dir / "kb_bundle.json").read_text())
-    bundle = filter_and_enrich_bundle(full, slugs, _read_corpus(collection_dir), _read_tools(collection_dir))
+    bundle = filter_and_enrich_bundle(full, slugs, _read_corpus(collection_dir))
     written = []
     (unit_dir / "kb_bundle.json").write_text(json.dumps(bundle, indent=2) + "\n"); written.append("kb_bundle.json")
     (unit_dir / "bin").mkdir(exist_ok=True)

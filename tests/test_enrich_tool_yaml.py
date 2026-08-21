@@ -15,25 +15,25 @@ from scripts import enrich_tool_yaml as e
 def test_tier_map_extracts_license_fields():
     tools_index = [
         {"slug": "t_open", "license_tier": "open", "license": "MIT",
-         "license_detection": "github-api"},
+         "license_detection": "github-api", "license_subject": "tool"},
         {"slug": "t_nc", "license_tier": "noncommercial", "license": "CC-BY-NC-4.0",
-         "license_detection": "readme-llm"},
-        {"slug": "t_restricted", "license_tier": "restricted", "license": None,
-         "license_detection": "none"},
+         "license_detection": "readme-llm", "license_subject": "tool"},
+        {"slug": "t_unknown", "license_tier": "unknown", "license": None,
+         "license_detection": None, "license_subject": None},
     ]
     m = e.tier_map(tools_index)
     assert m["t_open"] == {"license_tier": "open", "license": "MIT",
-                           "license_detection": "github-api"}
+                           "license_detection": "github-api", "license_subject": "tool"}
     assert m["t_nc"]["license_tier"] == "noncommercial"
-    assert m["t_restricted"]["license"] is None
-    assert m["t_restricted"]["license_detection"] == "none"
+    assert m["t_unknown"]["license"] is None
+    assert m["t_unknown"]["license_subject"] is None
 
 
 def test_tier_map_defaults_missing_fields():
     # A tools_index entry that only carries the tier still yields a complete row.
     m = e.tier_map([{"slug": "t1", "license_tier": "open"}])
     assert m["t1"] == {"license_tier": "open", "license": None,
-                       "license_detection": None}
+                       "license_detection": None, "license_subject": None}
 
 
 # ---------------------------------------------------------------------------
@@ -62,7 +62,7 @@ def _write_collection(tmp_path):
         techniques:
         - LC-MS
         """))
-    # tool B: minimal record, no canonical_url, no techniques.
+    # tool B: minimal record, no retired canonical_url, no techniques.
     (tools / "tool-b.yaml").write_text(textwrap.dedent("""\
         name: ToolB
         slug: tool-b
@@ -75,9 +75,9 @@ def _write_collection(tmp_path):
         """))
     tools_index = [
         {"slug": "tool-a", "license_tier": "open", "license": "MIT",
-         "license_detection": "github-api"},
-        {"slug": "tool-b", "license_tier": "restricted", "license": None,
-         "license_detection": "none"},
+         "license_detection": "github-api", "license_subject": "tool"},
+        {"slug": "tool-b", "license_tier": "unknown", "license": None,
+         "license_detection": None, "license_subject": None},
     ]
     import json
     (d / "tools_index.json").write_text(json.dumps(tools_index, indent=2))
@@ -92,12 +92,16 @@ def test_enrich_writes_license_fields(tmp_path):
     assert a["license_tier"] == "open"
     assert a["license"] == "MIT"
     assert a["license_detection"] == "github-api"
-    assert b["license_tier"] == "restricted"
+    assert a["license_subject"] == "tool"
+    assert b["license_tier"] == "unknown"
     assert b["license"] is None
-    assert b["license_detection"] == "none"
+    assert b["license_detection"] is None
+    assert b["license_subject"] is None
     # untouched fields survive
     assert a["techniques"] == ["LC-MS"]
-    assert a["canonical_url"] == "https://github.com/x/tool-a"
+    assert a["source_repos"] == ["x/tool-a"]
+    # the retired key is dropped, and its value was already in source_repos
+    assert "canonical_url" not in a
     assert summary["enriched"] == 2
 
 
