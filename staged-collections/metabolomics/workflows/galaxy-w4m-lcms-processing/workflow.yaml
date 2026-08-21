@@ -1,0 +1,421 @@
+schema_version: 0.3.0
+workflow_id: galaxy_w4m_lcms_processing
+kind: composite-workflow
+techniques:
+- LC-MS
+- GC-MS
+steps:
+- id: import_raw
+  goal: raw open-format files -> an MSnbase object the xcms chain accepts
+  edam_operation: http://edamontology.org/operation_3215
+  primary_skill: xcms-data-import-preprocessing
+  skills:
+  - xcms-data-import-preprocessing
+  - mzml-file-import-xcms
+  - mass-spectrometry-data-format-import
+  tools:
+  - MSnbase readMSData
+  - Mz(X)ML Shaper
+  inputs:
+  - type: mzML
+  - type: mzXML
+  - type: netCDF
+  outputs:
+  - type: rdata
+    flavour: rdata.msnbase.raw
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-ac051437y
+    - asb-paper-10-1186-s13321-024-00878-1
+    dois:
+    - 10.1021/ac051437y
+    - 10.1186/s13321-024-00878-1
+  after: []
+  candidate_tools:
+  - BiocParallel
+  - MSnbase
+  - MassSpecWavelet
+  - MsDataHub
+  - MsExperiment
+  - Python
+  - Spectra
+  - matchms
+  - xcms
+- id: parameter_optimisation
+  goal: design-of-experiments search for peak-picking, grouping and alignment parameters
+  edam_operation: http://edamontology.org/operation_3435
+  primary_skill: parameter-tuning-metabolomics
+  skills:
+  - parameter-tuning-metabolomics
+  - peak-picking-parameter-configuration
+  - chromatographic-alignment-parameter-selection
+  tools:
+  - IPO for xcmsSet
+  - IPO for group and retcor
+  inputs:
+  - type: mzML
+  outputs:
+  - type: tabular
+    flavour: ipo-parameters
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-ac051437y
+    - asb-paper-10-1021-acs-analchem-1c03032
+    - asb-paper-10-1101-812370
+    dois:
+    - 10.1021/ac051437y
+    - 10.1021/acs.analchem.1c03032
+    - 10.1101/812370
+  after: []
+  candidate_tools:
+  - MSconvert
+  - MZmine2
+  - MassBank
+  - MetaboAnnotatoR
+  - MsExperiment
+  - MsFeatures
+  - R
+  - R (version or higher)
+  - XCMS
+  - mtbls2
+  - xcms
+- id: peak_detection
+  goal: detect chromatographic peaks per sample and merge the per-sample objects
+  edam_operation: http://edamontology.org/operation_3441
+  primary_skill: lc-ms-profile-data-segmentation
+  skills:
+  - lc-ms-profile-data-segmentation
+  - chromatographic-peak-detection-wavelet
+  - chromatographic-profile-quality-assessment
+  tools:
+  - xcms findChromPeaks
+  - xcms refineChromPeaks
+  - xcms findChromPeaks Merger
+  inputs:
+  - type: rdata
+    flavour: rdata.msnbase.raw
+  outputs:
+  - type: rdata
+    flavour: rdata.xcms.findchrompeaks
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-ac051437y
+    - asb-paper-10-1021-acs-analchem-4c04531
+    - asb-paper-10-1021-acs-analchem-5c00567
+    dois:
+    - 10.1021/ac051437y
+    - 10.1021/acs.analchem.4c04531
+    - 10.1021/acs.analchem.5c00567
+  after:
+  - import_raw
+  - parameter_optimisation
+  candidate_tools:
+  - MassSpecWavelet
+  - MsDataHub
+  - ProteoWizard/MSConvert
+  - PyTorch
+  - Python
+  - QuanFormer
+  - R
+  - Spectra
+  - TARDIS
+  - knitr
+  - xcms
+  - xcms (R package) with centWave algorithm
+  inputs_from:
+    import_raw:
+    - rdata:rdata.msnbase.raw
+    parameter_optimisation:
+    - tabular:ipo-parameters
+- id: correspondence
+  goal: group peaks across samples into features
+  edam_operation: http://edamontology.org/operation_3632
+  primary_skill: lc-ms-feature-grouping-by-retention-time
+  skills:
+  - lc-ms-feature-grouping-by-retention-time
+  - mass-chromatogram-alignment
+  tools:
+  - xcms groupChromPeaks
+  inputs:
+  - type: rdata
+    flavour: rdata.xcms.findchrompeaks
+  outputs:
+  - type: rdata
+    flavour: rdata.xcms.group
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-ac051437y
+    dois:
+    - 10.1021/ac051437y
+  after:
+  - peak_detection
+  candidate_tools:
+  - MsExperiment
+  - MsFeatures
+  - Spectra
+  - xcms
+  inputs_from:
+    peak_detection:
+    - rdata:rdata.xcms.findchrompeaks
+- id: rt_alignment
+  goal: correct retention-time drift, then repeat correspondence against the corrected
+    times
+  edam_operation: http://edamontology.org/operation_3632
+  primary_skill: retention-time-correction-and-alignment
+  skills:
+  - retention-time-correction-and-alignment
+  - retention-time-alignment-correction
+  tools:
+  - xcms adjustRtime
+  - xcms groupChromPeaks
+  inputs:
+  - type: rdata
+    flavour: rdata.xcms.group
+  outputs:
+  - type: rdata
+    flavour: rdata.xcms.group
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-4c04906
+    - asb-paper-10-1021-acs-analchem-5c00567
+    dois:
+    - 10.1021/acs.analchem.4c04906
+    - 10.1021/acs.analchem.5c00567
+  after:
+  - correspondence
+  candidate_tools:
+  - MetCohort
+  - R
+  - Spectra
+  - TARDIS
+  - kableExtra
+  - knitr
+  - xcms
+  inputs_from:
+    correspondence:
+    - rdata:rdata.xcms.group
+- id: gap_filling
+  goal: integrate the areas of peaks missing from the feature matrix
+  edam_operation: http://edamontology.org/operation_3214
+  primary_skill: missing-peak-imputation-fillpeaks
+  skills:
+  - missing-peak-imputation-fillpeaks
+  tools:
+  - xcms fillChromPeaks
+  inputs:
+  - type: rdata
+    flavour: rdata.xcms.group
+  outputs:
+  - type: rdata
+    flavour: rdata.xcms.fillpeaks
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1093-bioinformatics-btaa037
+    dois:
+    - 10.1093/bioinformatics/btaa037
+  after:
+  - rt_alignment
+  candidate_tools:
+  - R
+  - compCV
+  - ncGTW
+  - xcms
+  inputs_from:
+    rt_alignment:
+    - rdata:rdata.xcms.group
+- id: annotation
+  goal: group features into pseudospectra and annotate isotopes and adducts
+  edam_operation: http://edamontology.org/operation_3432
+  primary_skill: spectral-feature-clustering-by-intensity-correlation
+  skills:
+  - spectral-feature-clustering-by-intensity-correlation
+  - metabolite-mass-to-charge-ratio-matching
+  - adduct-fragment-table-construction
+  tools:
+  - CAMERA.annotate
+  - CAMERA.groupFWHM
+  - CAMERA.groupCorr
+  - CAMERA.findIsotopes
+  - CAMERA.findAdducts
+  - CAMERA.combinexsAnnos
+  inputs:
+  - type: rdata
+    flavour: rdata.xcms.fillpeaks
+  outputs:
+  - type: rdata
+    flavour: rdata.camera
+  - type: tabular
+    flavour: three-table
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-1c00238
+    dois:
+    - 10.1021/acs.analchem.1c00238
+  after:
+  - gap_filling
+  candidate_tools:
+  - CAMERA
+  - FELLA
+  - KEGG database
+  - R
+  - cliqueMS
+  - igraph
+  - mWISE
+  inputs_from:
+    gap_filling:
+    - rdata:rdata.xcms.fillpeaks
+- id: table_conformance
+  goal: make the dataMatrix, sampleMetadata and variableMetadata agree before any
+    statistics
+  edam_operation: http://edamontology.org/operation_3891
+  primary_skill: feature-metadata-parsing-and-integration
+  skills:
+  - feature-metadata-parsing-and-integration
+  - metadata-structure-checking
+  - cross-table-metadata-harmonization
+  tools:
+  - Check Format
+  - Table Merge
+  - W4M concatenate
+  - xcms get a sampleMetadata file
+  inputs:
+  - type: tabular
+    flavour: three-table
+  outputs:
+  - type: tabular
+    flavour: three-table
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1007-s11306-020-01717-8
+    - asb-paper-10-1093-bioinformatics-btac059-6522114
+    - asb-paper-10-3390-metabo12030212
+    dois:
+    - 10.1007/s11306-020-01717-8
+    - 10.1093/bioinformatics/btac059
+    - 10.3390/metabo12030212
+  after:
+  - annotation
+  candidate_tools:
+  - CAMERA
+  - JPA
+  - MSnbase
+  - MetaboShiny
+  - R
+  - XCMS
+  - metaboprep
+  inputs_from:
+    annotation:
+    - tabular:three-table
+- id: normalisation
+  goal: normalise intensities and correct batch and drift effects using the pooled
+    QC samples
+  edam_operation: http://edamontology.org/operation_3434
+  primary_skill: batch-effect-correction-qc-reference
+  skills:
+  - batch-effect-correction-qc-reference
+  - batch-effect-correction-and-adjustment
+  - compound-reliability-rsd-filtering
+  tools:
+  - Normalization
+  - Parsec batch correction
+  - Batch Dispersion
+  - Intensity Check
+  inputs:
+  - type: tabular
+    flavour: three-table
+  outputs:
+  - type: tabular
+    flavour: three-table
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1007-s11306-020-01717-8
+    - asb-paper-10-1021-acs-analchem-5c01213
+    - asb-paper-10-1021-jasms-5c00073
+    dois:
+    - 10.1007/s11306-020-01717-8
+    - 10.1021/acs.analchem.5c01213
+    - 10.1021/jasms.5c00073
+  after:
+  - table_conformance
+  candidate_tools:
+  - BiocManager
+  - MetaboShiny
+  - R
+  - SummarizedExperiment
+  - XCMS
+  - mzQuality
+  - mzQualityDashboard
+  - mzrtsim
+  - xcms
+  inputs_from:
+    table_conformance:
+    - tabular:three-table
+- id: statistics
+  goal: univariate, multivariate and signature analysis on the corrected matrix
+  edam_operation: http://edamontology.org/operation_3695
+  primary_skill: pls-pls-da-classification-modeling
+  skills:
+  - pls-pls-da-classification-modeling
+  - metabolomic-biomarker-pathway-association
+  tools:
+  - Biosigner
+  - mixmodel
+  - Metabolites Correlation Analysis
+  - Heatmap
+  inputs:
+  - type: tabular
+    flavour: three-table
+  outputs:
+  - type: tabular
+    flavour: statistics
+  - type: pdf
+  grounding:
+    kb_slugs:
+    - asb-paper-10-1021-acs-analchem-5c03225
+    - asb-paper-10-1093-bib-bbac455
+    dois:
+    - 10.1021/acs.analchem.5c03225
+    - 10.1093/bib/bbac455
+  after:
+  - normalisation
+  candidate_tools:
+  - Enrichment
+  - KEGG_Enrich_Plot
+  - KEGG_Enrich_PlotPanel
+  - R
+  - SMART Statistical Analysis module
+  - ggplot2
+  - igraph
+  inputs_from:
+    normalisation:
+    - tabular:three-table
+verification:
+  per_step_outputs:
+  - 'import_raw: rdata.msnbase.raw'
+  - 'parameter_optimisation: ipo-parameters'
+  - 'peak_detection: rdata.xcms.findchrompeaks'
+  - 'correspondence: rdata.xcms.group'
+  - 'rt_alignment: rdata.xcms.group'
+  - 'gap_filling: rdata.xcms.fillpeaks'
+  - 'annotation: rdata.camera'
+  - 'table_conformance: three-table'
+  - 'normalisation: three-table'
+  - 'statistics: statistics'
+  final_outputs:
+  - path: dataMatrix.tsv
+    type: file
+  - path: sampleMetadata.tsv
+    type: file
+  - path: variableMetadata.tsv
+    type: file
+  - path: workflow-invocation.json
+    type: file
+provenance:
+  derived_from_workflows: []
+  bound_by: index
+  structure_source:
+    kind: repository
+    repo_url: https://github.com/workflow4metabolomics/tools-metabolomics
+    repo_ref: master
+    observed: '2026-08-21'
+    method: stage order read from the Galaxy wrappers' declared input/output datatypes

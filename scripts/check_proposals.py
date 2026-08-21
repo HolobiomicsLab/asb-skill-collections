@@ -48,7 +48,11 @@ if __package__ in (None, ""):
     _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
 
 
-from scripts.normalize_skill import contributor_violations, frontmatter_violations
+from scripts.normalize_skill import (
+    contributor_violations,
+    frontmatter_violations,
+    skill_field,
+)
 from scripts.provenance_tier import validate_entry as validate_provenance
 
 # A super-skill orchestrates other skills; a plain skill stands alone.
@@ -111,8 +115,7 @@ def check_collection(collection_dir) -> list:
             prov,
             dois=meta.get("dois"),
             synthesized_from=meta.get("synthesized_from"),
-            related_skills=(fm.get("related_skills") if "related_skills" in fm
-                            else meta.get("related_skills")),
+            related_skills=skill_field(fm, "related_skills"),
             repo_url=meta.get("repo_url"),
         )
         for msg in prov_violations:

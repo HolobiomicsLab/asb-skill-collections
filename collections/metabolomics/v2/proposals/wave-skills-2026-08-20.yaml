@@ -1,14 +1,15 @@
 schema: asb-skill-proposals/1.0
 proposals:
 - slug: galaxy-workflow4metabolomics-reproducible-processing
-  related_skills: []
+  related_skills:
+  - w4m-three-table-format-conformance
   tools_used: []
-  license_tier: null
+  license_tier: open
   status: hold
   submitted_on: '2026-08-20'
 - slug: metabolomicshub-cross-repository-dataset-search
   related_skills: []
   tools_used: []
-  license_tier: null
+  license_tier: open
   status: hold
   submitted_on: '2026-08-20'

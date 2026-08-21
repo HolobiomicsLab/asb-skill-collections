@@ -1,0 +1,16 @@
+schema: asb-skill-proposals/1.0
+proposals:
+- slug: metabolomicshub-announcement-authoring
+  related_skills:
+  - metabolomicshub-cross-repository-dataset-search
+  tools_used: []
+  license_tier: open
+  status: hold
+  submitted_on: '2026-08-21'
+- slug: w4m-three-table-format-conformance
+  related_skills:
+  - galaxy-workflow4metabolomics-reproducible-processing
+  tools_used: []
+  license_tier: open
+  status: hold
+  submitted_on: '2026-08-21'
