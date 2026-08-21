@@ -1,6 +1,5 @@
 name: ionflow
 slug: ionflow
-canonical_url: https://github.com/wanchanglin/ionflow
 evidence_spans:
 - github.com__wanchanglin__ionflow
 derived_from:
@@ -9,6 +8,7 @@ derived_from:
 source_repos:
 - wanchanglin/ionflow
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null

@@ -1,6 +1,5 @@
 name: factoextra
 slug: factoextra
-canonical_url: https://github.com/LargeMetabo/LargeMetabo
 evidence_spans:
 - several R packages are utilized in the background processes, including factoextra, FSelector, genefilter
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - LargeMetabo/LargeMetabo
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: r-description
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - mass-spectrometry

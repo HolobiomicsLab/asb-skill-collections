@@ -1,6 +1,5 @@
 name: maplet
 slug: maplet
-canonical_url: https://github.com/krumsieklab/maplet
 evidence_spans:
 - maplet is an R package for statistical data analysis with a special focus on metabolomics datasets.
 derived_from:
@@ -9,6 +8,7 @@ derived_from:
 source_repos:
 - krumsieklab/maplet
 schema_version: 0.2.0
-license_tier: open
-license: GPL-3.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null

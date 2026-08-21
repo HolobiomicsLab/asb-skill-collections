@@ -1,6 +1,5 @@
 name: tqdm
 slug: tqdm
-canonical_url: https://github.com/01dadada/RT-Transformer
 version_used: 4.45.0
 evidence_spans:
 - tqdm==4.45.0
@@ -14,8 +13,9 @@ source_repos:
 - 01dadada/RT-Transformer
 - zsspython/LAGF
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

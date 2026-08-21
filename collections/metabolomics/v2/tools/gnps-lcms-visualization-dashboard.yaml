@@ -1,6 +1,5 @@
 name: GNPS LCMS Visualization Dashboard
 slug: gnps-lcms-visualization-dashboard
-canonical_url: https://github.com/Wang-Bioinformatics-Lab/GNPS_LCMSDashboard
 evidence_spans:
 - GNPS LCMS Visualization Dashboard
 - GNPS Analysis Tasks - [mzspec:GNPS:TASK-d93bdbb5cdda40e48975e6e18a45c3ce
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - Wang-Bioinformatics-Lab/GNPS_LCMSDashboard
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: file-present-unclassified
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

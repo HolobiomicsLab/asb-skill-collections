@@ -1,6 +1,5 @@
 name: BioTransformer
 slug: biotransformer
-canonical_url: https://bitbucket.org/wishartlab/biotransformer.git
 evidence_spans:
 - This is version 3.0.0 of BioTransformer. BioTransformer is a software tool that predicts small molecule metabolism
 - BioTransformer's environmental microbial degradation module uses data from the EAWAG's Biodegradation and Biocatalysis Database
@@ -17,9 +16,10 @@ source_repos:
 - https://bitbucket.org/wishartlab/biotransformer3.0jar.git
 - rickhelmus/patRoon
 schema_version: 0.2.0
-license_tier: noncommercial
-license: Academic use free; commercial use/redistribution by permission of the authors (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
+license_tier: unknown
+license: null
 license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

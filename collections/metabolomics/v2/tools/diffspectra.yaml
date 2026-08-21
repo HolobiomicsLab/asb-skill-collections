@@ -1,6 +1,5 @@
 name: DiffSpectra
 slug: diffspectra
-canonical_url: https://github.com/AzureLeon1/DiffSpectra
 evidence_spans:
 - github.com/AzureLeon1/DiffSpectra
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - AzureLeon1/DiffSpectra
 schema_version: 0.2.0
-license_tier: open
-license: Apache-2.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - NMR
 - mass-spectrometry

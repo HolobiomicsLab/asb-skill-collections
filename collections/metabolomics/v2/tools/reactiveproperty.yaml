@@ -1,6 +1,5 @@
 name: ReactiveProperty
 slug: reactiveproperty
-canonical_url: https://github.com/systemsomicslab/MsdialWorkbench
 evidence_spans:
 - utilizing packages such as ReactiveExtensions and ReactiveProperty
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - systemsomicslab/MsdialWorkbench
 schema_version: 0.2.0
-license_tier: open
-license: LGPL-3.0
-license_detection: readme-llm
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - mass-spectrometry

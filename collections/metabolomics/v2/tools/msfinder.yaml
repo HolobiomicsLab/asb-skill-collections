@@ -1,6 +1,5 @@
 name: MSFinder
 slug: msfinder
-canonical_url: https://github.com/cbroeckl/RAMClustR
 evidence_spans:
 - The 'mat' contains spectra in .mat format suitable for import into MSFinder software
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - cbroeckl/RAMClustR
 schema_version: 0.2.0
-license_tier: open
-license: GPL-3.0-only
-license_detection: r-description
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

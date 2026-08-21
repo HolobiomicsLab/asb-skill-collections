@@ -513,7 +513,11 @@ def extract_tools(
             {
                 "name": name,
                 "slug": rec.get("slug") or _slugify(name),
-                "canonical_url": rec.get("canonical_url") or "",
+                # The extractor's repo claim for this tool. Folded into
+                # `source_repos` below rather than published as the tool's
+                # canonical home: it is a repository belonging to the paper being
+                # extracted, not to the tool it cites. See issue #42.
+                "extracted_repo_url": rec.get("canonical_url") or "",
                 "version_used": rec.get("version_used") or "",
                 "edam_topics": edam_topics,
                 "evidence_spans": evidence,
@@ -597,7 +601,6 @@ def render_tool_yaml(rec: dict) -> str:
     data = {
         "name": rec["name"],
         "slug": rec["slug"],
-        "canonical_url": rec["canonical_url"],
         "version_used": rec["version_used"],
         "edam_topics": rec["edam_topics"],
         "evidence_spans": rec["evidence_spans"],
@@ -795,9 +798,7 @@ def assemble(
                 trec["_repos"] = set()
                 tools_by_name[key] = trec
             canon = tools_by_name[key]
-            # prefer a non-empty canonical_url / version
-            if not canon["canonical_url"] and trec["canonical_url"]:
-                canon["canonical_url"] = trec["canonical_url"]
+            # prefer a non-empty version
             if not canon["version_used"] and trec["version_used"]:
                 canon["version_used"] = trec["version_used"]
             for t in trec["edam_topics"]:
@@ -816,8 +817,8 @@ def assemble(
                     canon["_derived_from"].append(df)
             if trec["source_repo_url"]:
                 canon["_repos"].add(trec["source_repo_url"])
-            if trec["canonical_url"]:
-                canon["_repos"].add(trec["canonical_url"])
+            if trec["extracted_repo_url"]:
+                canon["_repos"].add(trec["extracted_repo_url"])
 
         build_report.append((bname, paper_doi, n_skills_here))
 

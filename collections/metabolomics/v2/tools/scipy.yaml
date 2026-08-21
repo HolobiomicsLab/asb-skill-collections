@@ -1,6 +1,5 @@
 name: scipy
 slug: scipy
-canonical_url: https://github.com/FanzhouKong/spectral_denoising
 version_used: 1.4.1
 evidence_spans:
 - An additional cosine score implementation [in S3 Text] relies on scipy [41]
@@ -31,9 +30,10 @@ source_repos:
 - zsspython/LAGF
 - zza1211/NMRformer
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: file-present-unclassified
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

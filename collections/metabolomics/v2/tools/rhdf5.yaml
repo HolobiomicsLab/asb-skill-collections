@@ -1,6 +1,5 @@
 name: rhdf5
 slug: rhdf5
-canonical_url: https://github.com/PNNL-m-q/mza
 evidence_spans:
 - using generic HDF5 libraries available (e.g., h5py and rhdf5)
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - PNNL-m-q/mza
 schema_version: 0.2.0
-license_tier: open
-license: BSD-2-Clause
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - ion-mobility-MS

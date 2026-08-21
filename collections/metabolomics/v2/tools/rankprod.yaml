@@ -1,6 +1,5 @@
 name: RankProd
 slug: rankprod
-canonical_url: https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 evidence_spans:
 - 'Differential expression analyss | R packages: DESeq2, edger, RankProd'
 derived_from:
@@ -9,6 +8,7 @@ derived_from:
 source_repos:
 - ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null

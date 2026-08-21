@@ -93,10 +93,37 @@ def test_the_bootstrap_comes_before_the_first_sibling_import(rel):
     )
 
 
-def test_the_release_gate_runs_by_path_without_pythonpath():
-    """The gate is the one CI blocks on; prove it end to end, not just --help."""
+def test_the_release_gate_runs_by_path_without_pythonpath(tmp_path):
+    """The gate is the one CI blocks on; prove it end to end, not just --help.
+
+    The report goes to `tmp_path`: the gate defaults it to
+    `<collection_dir>/gate_report.json`, which is tracked, so the default left
+    every `pytest` run with a timestamp-only diff in the working tree and a real
+    change could hide in the noise.
+    """
+    report = tmp_path / "gate_report.json"
     proc = subprocess.run(
-        [sys.executable, "scripts/release_gate.py", "collections/epigenomics/v1", "--strict"],
+        [sys.executable, "scripts/release_gate.py", "collections/epigenomics/v1",
+         "--strict", "--report", str(report)],
         cwd=REPO, env=_clean_env(), capture_output=True, text=True,
     )
     assert proc.returncode == 0, proc.stderr.strip()[-600:] or proc.stdout.strip()[-600:]
+    assert report.is_file(), "the gate did not honour --report"
+
+
+def test_running_the_gate_leaves_the_tracked_tree_clean():
+    """Guards the guard above: a test must not rewrite a tracked artefact.
+
+    Asserted on the real gate rather than on this file's source, so the next
+    caller that forgets `--report` is caught too.
+    """
+    tracked = REPO / "collections" / "epigenomics" / "v1" / "gate_report.json"
+    before = tracked.read_bytes() if tracked.is_file() else None
+    subprocess.run(
+        [sys.executable, "-m", "pytest", "tests/test_scripts_are_path_invocable.py",
+         "-q", "-p", "no:cacheprovider",
+         "-k", "release_gate_runs_by_path"],
+        cwd=REPO, env=_clean_env(), capture_output=True, text=True,
+    )
+    after = tracked.read_bytes() if tracked.is_file() else None
+    assert after == before, f"{tracked.relative_to(REPO)} was rewritten by the test run"

@@ -1,6 +1,5 @@
 name: MATLAB Compiler Runtime 8.3
 slug: matlab-compiler-runtime-8-3
-canonical_url: https://github.com/Viant-Metabolomics/Galaxy-M
 evidence_spans:
 - '[MATLAB Compiler Runtime (MCR) (version 8.3)]'
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - Viant-Metabolomics/Galaxy-M
 schema_version: 0.2.0
-license_tier: open
-license: GPL-2.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - direct-infusion-MS

@@ -1,6 +1,5 @@
 name: LSG (Lipid Spectrum Generator)
 slug: lsg-lipid-spectrum-generator
-canonical_url: https://github.com/98104781/LSG
 evidence_spans:
 - https://github.com/98104781/LSG/releases/tag/v1.3.0
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - 98104781/LSG
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

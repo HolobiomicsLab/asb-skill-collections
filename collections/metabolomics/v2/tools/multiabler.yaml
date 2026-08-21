@@ -1,6 +1,5 @@
 name: MultiABLER
 slug: multiabler
-canonical_url: https://github.com/holab-hku/MultiABLER
 evidence_spans:
 - MultiABLER is a set of R functions forms a seamless workflow
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - holab-hku/MultiABLER
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

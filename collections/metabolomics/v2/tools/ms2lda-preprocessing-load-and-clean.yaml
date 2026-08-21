@@ -1,6 +1,5 @@
 name: MS2LDA.Preprocessing.load_and_clean
 slug: ms2lda-preprocessing-load-and-clean
-canonical_url: https://github.com/vdhooftcompmet/MS2LDA
 evidence_spans:
 - from MS2LDA.Preprocessing import load_and_clean
 - '::: MS2LDA.Preprocessing.load_and_clean'
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - vdhooftcompmet/MS2LDA
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - ion-mobility-MS

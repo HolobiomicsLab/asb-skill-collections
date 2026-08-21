@@ -1,6 +1,5 @@
 name: cosine_neutral_loss repository
 slug: cosine-neutral-loss-repository
-canonical_url: https://github.com/bittremieux/cosine_neutral_loss
 evidence_spans:
 - Code repository implements cosine similarity, modified cosine similarity, and neutral loss similarity measures
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - bittremieux/cosine_neutral_loss
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
 license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

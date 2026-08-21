@@ -1,6 +1,5 @@
 name: Snakemake
 slug: snakemake
-canonical_url: https://github.com/DasSusanta/snakemake_ccs
 evidence_spans:
 - snakemake --configfile config/config_fast.yaml --jobs 1 --dry-run -p
 - A Snakemake configuration file in YAML format is required.
@@ -21,9 +20,10 @@ source_repos:
 - biosustain/snakemake_UmetaFlow
 - skinniderlab/clm
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

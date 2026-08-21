@@ -35,7 +35,7 @@ def demo_root(tmp_path):
          "stages": ["a", "b"], "member_tools": ["XCMS", "SIRIUS"]},
     ]))
     (col / "tools_index.json").write_text(json.dumps([
-        {"slug": "xcms", "name": "XCMS", "canonical_url": "https://x", "edam_topics": []},
+        {"slug": "xcms", "name": "XCMS", "edam_topics": []},
     ]))
     (col / "skills" / "alpha-detect" / "SKILL.md").write_text("# alpha\nbody\n")
     (col / "workflows" / "full-pipeline" / "SKILL.md").write_text("# pipeline\nstages\n")

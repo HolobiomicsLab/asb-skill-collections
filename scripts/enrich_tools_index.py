@@ -1,13 +1,17 @@
 """Enrich the tool catalog with consumer license fields + bidirectional
-skill<->tool links, by DOI intersection against the corpus.
+skill<->tool links.
 
-Idempotent, key-order / indent preserving post-processor over committed
-artifacts (the propagate_license_tiers.py / stamp_skill_license.py pattern).
-Reuses _ORDER, corpus license mapping, and detect_indent from
-propagate_license_tiers; does not fork the collector or touch tools/<slug>.yaml.
+Skill<->tool links are made by DOI intersection against the corpus. Licence fields
+are NOT: a tool's licence must come from the tool, never from a paper that cites it
+(issue #42, governance/LICENSE_TIERS.md).
+
+Idempotent, key-order / indent preserving post-processor over committed artifacts
+(the propagate_license_tiers.py / stamp_skill_license.py pattern). Reuses
+detect_indent from propagate_license_tiers; does not fork the collector.
 
 Writes back, in collection_dir:
-- tools_index.json : + license_tier, license, license_detection, used_by_skills
+- tools_index.json : + license_tier, license, license_detection, license_subject,
+                     source_paper_repos, used_by_skills  (- canonical_url)
 - skills_index.json: + tools_used
 - kb_bundle.json   : + tools_used on each skill record
 """
@@ -26,43 +30,60 @@ if __package__ in (None, ""):
     _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
 
 
-from scripts.propagate_license_tiers import _ORDER, detect_indent
+from scripts.license_tier import (SUBJECT_TOOL, TIER_UNKNOWN, UNESTABLISHED_DETECTIONS,
+                                  tool_tier_from_evidence)
+from scripts.propagate_license_tiers import detect_indent
 
 
-def corpus_by_doi(corpus_path) -> dict:
-    """doi -> full paper dict, as shaped in corpus.yaml (papers list)."""
-    doc = yaml.safe_load(pathlib.Path(corpus_path).read_text(encoding="utf-8"))
-    out = {}
-    for p in doc.get("papers", []):
-        doi = p.get("doi")
-        if doi:
-            out[doi] = p
-    return out
+def load_tool_evidence(collection_dir) -> dict:
+    """``{slug: {license, license_detection}}`` resolved from each tool itself.
 
-
-def tool_license(tool_dois, corpus_papers) -> tuple:
-    """Most-restrictive (tier, license, detection) across a tool's matched corpus
-    DOIs. Conservative default ("restricted", None, None) when nothing matches.
-
-    license comes from access.license; detection from top-level license_detection
-    (mirrors corpus_tier_by_doi / check_license_tiers conventions).
+    Read from ``tool_licenses.json`` when a resolver has produced one; absent, every
+    tool is unknown. Deliberately not derived from the corpus: see tool_license().
     """
-    best = None  # (rank, tier, license, detection)
-    for d in tool_dois or []:
-        p = corpus_papers.get(d)
-        if not p:
-            continue
-        tier = p.get("license_tier")
-        if tier not in _ORDER:
-            continue
-        rank = _ORDER[tier]
-        if best is None or rank > best[0]:
-            lic = (p.get("access") or {}).get("license")
-            det = p.get("license_detection")
-            best = (rank, tier, lic, det)
-    if best is None:
-        return ("restricted", None, None)
-    return (best[1], best[2], best[3])
+    path = pathlib.Path(collection_dir) / "tool_licenses.json"
+    if not path.is_file():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def tool_license(tool_evidence) -> tuple:
+    """(tier, license, detection, subject) for a tool, from evidence about the tool.
+
+    ``tool_evidence`` is a ``{license, license_detection}`` mapping resolved from the
+    tool's own repository / DESCRIPTION / LICENSE file, or None when no such lookup
+    has been done. No lookup, or a lookup whose detection is not a tool detection,
+    yields the ``unknown`` tier with no licence recorded.
+
+    This deliberately has no access to the corpus. Tiers used to be inherited from
+    the papers that cite a tool, aggregated most-restrictively, which recorded CAMERA
+    (GPL) as Apache-2.0 because a paper using CAMERA is Apache-2.0, and scikit-learn
+    (BSD) as noncommercial because one preprint citing it is CC-BY-NC-ND. A citing
+    paper's licence is evidence about the paper. See issue #42 and LICENSE_TIERS.md.
+    """
+    ev = tool_evidence or {}
+    lic = ev.get("license")
+    det = ev.get("license_detection")
+    tier = tool_tier_from_evidence(lic, det)
+    if tier == TIER_UNKNOWN:
+        return (TIER_UNKNOWN, None, det if det not in UNESTABLISHED_DETECTIONS else None, None)
+    return (tier, lic, det, SUBJECT_TOOL)
+
+
+def source_paper_repos(tool_slug, tools_dir) -> list:
+    """Repositories of the papers that cite this tool, from tools/<slug>.yaml.
+
+    These are *not* the tool's own repository, and the distinction is the point.
+    `tools_index.json` previously published one of them per tool under the key
+    `canonical_url`, which named CAMERA's home as `LinShuhaiLAB/LipidIN` and Agilent
+    MassHunter's as `PNNL-Comp-Mass-Spec/PNNL-PreProcessor`. Every one of those 700
+    values was already a member of this list, so nothing is lost by naming it.
+    """
+    path = pathlib.Path(tools_dir) / f"{tool_slug}.yaml"
+    if not path.is_file():
+        return []
+    rec = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    return sorted({str(r) for r in (rec.get("source_repos") or []) if r})
 
 
 def link_maps(skills_index, tools_index) -> tuple:
@@ -98,15 +119,22 @@ def enrich(collection_dir) -> dict:
     skills = json.loads(si_raw)
     kb = json.loads(kb_raw)
 
-    papers = corpus_by_doi(d / "corpus.yaml")
     tools_used, used_by = link_maps(skills, tools)
+    # Tool-level licence evidence, keyed by slug. Empty until a resolver that reads
+    # each tool's own repository is wired in (issue #43); every tool is `unknown`
+    # until then, which is what the catalogue actually knows.
+    tool_evidence = load_tool_evidence(d)
 
     tool_tiers: dict[str, int] = {}
     for t in tools:
-        tier, lic, det = tool_license(t.get("dois"), papers)
+        tier, lic, det, subject = tool_license(tool_evidence.get(t["slug"]))
         t["license_tier"] = tier
         t["license"] = lic
         t["license_detection"] = det
+        t["license_subject"] = subject
+        t["source_paper_repos"] = source_paper_repos(t["slug"], d / "tools")
+        # Named a tool's canonical home while holding a citing paper's repository.
+        t.pop("canonical_url", None)
         t["used_by_skills"] = used_by.get(t["slug"], [])
         tool_tiers[tier] = tool_tiers.get(tier, 0) + 1
 
@@ -131,7 +159,7 @@ def main(argv=None) -> int:
     import argparse
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--collection", required=True,
-                    help="collection dir with tools_index.json + skills_index.json + kb_bundle.json + corpus.yaml")
+                    help="collection dir with tools_index.json + skills_index.json + kb_bundle.json + tools/")
     a = ap.parse_args(argv)
     res = enrich(a.collection)
     print(json.dumps(res, indent=2))

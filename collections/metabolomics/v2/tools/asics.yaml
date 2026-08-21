@@ -1,6 +1,5 @@
 name: ASICS
 slug: asics
-canonical_url: https://github.com/GaelleLefort/ASICS
 evidence_spans:
 - The **R** package `ASICS` is a fully automated procedure to identify and quantify metabolites in $^1$H 1D-NMR spectra
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - GaelleLefort/ASICS
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - NMR

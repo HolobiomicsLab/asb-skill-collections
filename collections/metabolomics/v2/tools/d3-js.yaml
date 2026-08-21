@@ -1,6 +1,5 @@
 name: D3.js
 slug: d3-js
-canonical_url: https://github.com/Wang-Bioinformatics-Lab/NetworkFamily_MultipleAlignment_Website
 evidence_spans:
 - interactive visualization and analysis
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - Wang-Bioinformatics-Lab/NetworkFamily_MultipleAlignment_Website
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: file-present-unclassified
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - mass-spectrometry

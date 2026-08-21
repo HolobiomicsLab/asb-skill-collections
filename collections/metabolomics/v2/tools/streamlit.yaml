@@ -1,6 +1,5 @@
 name: Streamlit
 slug: streamlit
-canonical_url: https://github.com/OpenMS/OpenMS
 evidence_spans:
 - streamlit graphical user interface (GUI)
 - OpenMS Streamlit Template's **online mode only**
@@ -13,9 +12,10 @@ source_repos:
 - OpenMS/OpenMS
 - Roestlab/massdash
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: file-present-unclassified
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - ion-mobility-MS

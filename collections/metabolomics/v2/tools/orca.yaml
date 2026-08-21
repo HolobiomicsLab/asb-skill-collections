@@ -1,6 +1,5 @@
 name: orca
 slug: orca
-canonical_url: https://github.com/grimme-lab/QCxMS2
 version_used: 6.0.0
 evidence_spans:
 - Remove orca in favor of Kaleido
@@ -14,9 +13,10 @@ source_repos:
 - grimme-lab/QCxMS2
 - pmartR/PMart_ShinyApp
 schema_version: 0.2.0
-license_tier: open
-license: BSD-2-Clause
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

@@ -1,6 +1,5 @@
 name: PRIMA-Panel
 slug: prima-panel
-canonical_url: https://github.com/funkam/PRIMA
 evidence_spans:
 - Pre-Analytical Investigator for NMR-based Metabolomics (PRIMA-Panel)
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - funkam/PRIMA
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

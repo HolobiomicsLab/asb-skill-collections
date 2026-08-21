@@ -1,6 +1,5 @@
 name: RGCxGC
 slug: rgcxgc
-canonical_url: https://github.com/DanielQuiroz97/RGCxGC
 evidence_spans:
 - The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional gas chromatography data.
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - DanielQuiroz97/RGCxGC
 schema_version: 0.2.0
-license_tier: open
-license: CC-BY-4.0
-license_detection: crossref-paper
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

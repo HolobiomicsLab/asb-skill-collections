@@ -1,6 +1,5 @@
 name: MASST
 slug: masst
-canonical_url: https://github.com/mohimanilab/MASSTplus
 evidence_spans:
 - MASST+ is an improvement on GNPS Mass Spectrometry Search Tool (MASST)
 - MASST+ is an improvement on GNPS Mass Spectrometry Search Tool
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - mohimanilab/MASSTplus
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - NMR

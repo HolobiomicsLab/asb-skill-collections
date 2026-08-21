@@ -1,6 +1,5 @@
 name: mcfNMR
 slug: mcfnmr
-canonical_url: https://github.com/GeoMetabolomics-ICBM/mcfNMR
 evidence_spans:
 - mcfNMR is a tool for recovering constituent compounds from an NMR spectrum
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - GeoMetabolomics-ICBM/mcfNMR
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - NMR

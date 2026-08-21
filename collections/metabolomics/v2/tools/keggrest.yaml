@@ -1,6 +1,5 @@
 name: KEGGREST
 slug: keggrest
-canonical_url: https://github.com/biodatalab/enrichmet
 evidence_spans:
 - pathway to metabolite mappings are obtained from the KEGG resource using the KEGGREST package
 - query the KEGG database [59] using the R package KEGGREST [60]
@@ -17,9 +16,10 @@ source_repos:
 - biodatalab/enrichmet
 - connor-reid-tiffany/Omu
 schema_version: 0.2.0
-license_tier: open
-license: AGPL-3.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

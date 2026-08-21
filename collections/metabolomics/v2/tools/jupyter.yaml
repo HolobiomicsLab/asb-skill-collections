@@ -1,6 +1,5 @@
 name: Jupyter
 slug: jupyter
-canonical_url: https://github.com/griquelme/tidyms
 evidence_spans:
 - The Python code to generate the results is contained within the Jupyter notebook
 - Jupyter notebook **src/reproducible_simulations.ipynb**
@@ -15,9 +14,10 @@ derived_from:
 source_repos:
 - griquelme/tidyms
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

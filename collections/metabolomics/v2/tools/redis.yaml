@@ -1,6 +1,5 @@
 name: Redis
 slug: redis
-canonical_url: https://github.com/OpenMS/OpenMS
 evidence_spans:
 - Redis queue is purely additive and only activates in online Docker deployments
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - OpenMS/OpenMS
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: file-present-unclassified
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - MS-imaging

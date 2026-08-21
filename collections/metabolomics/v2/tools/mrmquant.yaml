@@ -1,6 +1,5 @@
 name: MRMQuant
 slug: mrmquant
-canonical_url: https://github.com/kslynn128171/MRMQuant
 version_used: '2.7'
 evidence_spans:
 - Be sure to use the latest version (currently MRMQuant v2.7).
@@ -10,8 +9,9 @@ derived_from:
 source_repos:
 - kslynn128171/MRMQuant
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

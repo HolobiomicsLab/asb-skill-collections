@@ -1,6 +1,5 @@
 name: Python 3.8.1
 slug: python-3-8-1
-canonical_url: https://github.com/LinShuhaiLAB/QuanFormer
 evidence_spans:
 - written in Python (v3.8.1)
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - LinShuhaiLAB/QuanFormer
 schema_version: 0.2.0
-license_tier: open
-license: Apache-2.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

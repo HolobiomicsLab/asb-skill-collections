@@ -1,6 +1,5 @@
 name: MEISTER
 slug: meister
-canonical_url: https://github.com/richardxie1119/MEISTER
 evidence_spans:
 - github.com/richardxie1119/MEISTER
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - richardxie1119/MEISTER
 schema_version: 0.2.0
-license_tier: open
-license: GPL-3.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

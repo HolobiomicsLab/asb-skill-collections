@@ -1,6 +1,5 @@
 name: MEMO
 slug: memo
-canonical_url: https://github.com/luigiquiros/inventa
 evidence_spans:
 - 'Similarity Component (SC): a score considering the spectral dissimilarity of the samples within the set'
 - '**M**\ s2 bas\ **E**\ d sa\ **M**\ ple vect\ **O**\ rization (**MEMO**) is a method allowing a Retention Time (RT) agnostic alignment'
@@ -12,9 +11,10 @@ derived_from:
 source_repos:
 - luigiquiros/inventa
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

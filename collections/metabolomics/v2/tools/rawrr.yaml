@@ -1,6 +1,5 @@
 name: rawrr
 slug: rawrr
-canonical_url: https://github.com/fgcz/rawrr
 evidence_spans:
 - rawrr::readSpectrum
 - Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file
@@ -14,9 +13,10 @@ derived_from:
 source_repos:
 - fgcz/rawrr
 schema_version: 0.2.0
-license_tier: open
-license: CC-BY-4.0
-license_detection: crossref-paper
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - ion-mobility-MS

@@ -1,6 +1,5 @@
 name: FNICM
 slug: fnicm
-canonical_url: https://github.com/LiQi94/FNICM
 evidence_spans:
 - FNICM is a tool to identify core nodes from significantly perturbed subnetwork.
 derived_from:
@@ -9,6 +8,7 @@ derived_from:
 source_repos:
 - LiQi94/FNICM
 schema_version: 0.2.0
-license_tier: open
-license: AFL-3.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null

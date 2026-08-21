@@ -1,6 +1,5 @@
 name: https://github.com/shuzhao-li/asari
 slug: https-github-com-shuzhao-li-asari
-canonical_url: https://github.com/shuzhao-li-lab/asari
 evidence_spans:
 - 'Source code: [https://github.com/shuzhao-li/asari](https://github.com/shuzhao-li/asari)'
 - The preannotaion is done via another package khipu (https://github.com/shuzhao-li-lab/khipu)
@@ -11,6 +10,7 @@ derived_from:
 source_repos:
 - shuzhao-li-lab/asari
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: file-present-unclassified
+license_detection: null
+license_subject: null

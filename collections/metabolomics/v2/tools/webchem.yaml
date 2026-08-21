@@ -1,6 +1,5 @@
 name: webchem
 slug: webchem
-canonical_url: https://github.com/mariallr/amanida
 evidence_spans:
 - the package will retrieve the PubChem ID from the ID using `webchem`
 - uafR taps into an amazing set of cheminformatics packages -- ChemmineR, fmcsR, webchem
@@ -14,9 +13,10 @@ derived_from:
 source_repos:
 - mariallr/amanida
 schema_version: 0.2.0
-license_tier: open
-license: CC-BY-4.0
-license_detection: crossref-paper
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - GC-MS
 - NMR

@@ -1,6 +1,5 @@
 name: KNIME
 slug: knime
-canonical_url: https://github.com/MolecularCartography/Optimus
 evidence_spans:
 - KNIME Basics
 - how you installed OpenMS (e.g., from within KNIME, binary installers, self compiled)
@@ -15,9 +14,10 @@ source_repos:
 - MolecularCartography/Optimus
 - OpenMS/OpenMS
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: file-present-unclassified
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

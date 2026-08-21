@@ -1,6 +1,5 @@
 name: Convolutional Neural Network (CNN)
 slug: convolutional-neural-network-cnn
-canonical_url: https://github.com/massspecdl/ChemEmbed
 evidence_spans:
 - perform predictions using a trained Convolutional Neural Network (CNN) model
 - Integrating this capability with a convolutional neural network, we build an end-to-end model
@@ -12,9 +11,10 @@ derived_from:
 source_repos:
 - massspecdl/ChemEmbed
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - NMR

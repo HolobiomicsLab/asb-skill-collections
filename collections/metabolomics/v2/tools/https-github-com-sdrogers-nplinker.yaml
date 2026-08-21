@@ -1,6 +1,5 @@
 name: https://github.com/sdrogers/nplinker
 slug: https-github-com-sdrogers-nplinker
-canonical_url: https://github.com/NPLinker/nplinker
 evidence_spans:
 - The NPLinker source code and documentation can be found at https://github.com/sdrogers/nplinker
 derived_from:
@@ -9,6 +8,7 @@ derived_from:
 source_repos:
 - NPLinker/nplinker
 schema_version: 0.2.0
-license_tier: open
-license: CC-BY-4.0
-license_detection: crossref-paper
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null

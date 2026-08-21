@@ -1,6 +1,5 @@
 name: Cardinal
 slug: cardinal
-canonical_url: https://github.com/GenomicsMachineLearning/SpaMTP
 version_used: '3.6'
 evidence_spans:
 - library(Cardinal)
@@ -21,9 +20,10 @@ source_repos:
 - kuwisdelu/Cardinal
 - swinnenteam/LipidQMap
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: file-present-unclassified
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

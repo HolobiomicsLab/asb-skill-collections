@@ -1,6 +1,5 @@
 name: Cytoscape
 slug: cytoscape
-canonical_url: https://github.com/Karnovsky-Lab/DNEA
 evidence_spans:
 - '[Cytoscape](https://cytoscape.org/)'
 - users need to download Cytoscape from http://www.cytoscape.org/download.php
@@ -25,9 +24,10 @@ source_repos:
 - Karnovsky-Lab/DNEA
 - lanagarmire/lilikoi2
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: file-present-unclassified
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

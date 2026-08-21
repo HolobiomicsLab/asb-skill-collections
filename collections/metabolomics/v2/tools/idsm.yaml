@@ -1,6 +1,5 @@
 name: IDSM
 slug: idsm
-canonical_url: https://github.com/RECETOX/MSMetaEnhancer
 evidence_spans:
 - 'fetched from the following services: CIR, CTS, PubChem, IDSM, and BridgeDb'
 - '[IDSM](https://idsm.elixir-czech.cz/)'
@@ -11,9 +10,10 @@ derived_from:
 source_repos:
 - RECETOX/MSMetaEnhancer
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - mass-spectrometry

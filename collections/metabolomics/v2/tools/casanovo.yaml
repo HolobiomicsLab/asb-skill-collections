@@ -1,6 +1,5 @@
 name: Casanovo
 slug: casanovo
-canonical_url: https://github.com/Noble-Lab/casanovo
 evidence_spans:
 - Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing.
 - Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - Noble-Lab/casanovo
 schema_version: 0.2.0
-license_tier: open
-license: CC-BY-4.0
-license_detection: crossref-paper
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - MS-imaging

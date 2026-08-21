@@ -1,6 +1,5 @@
 name: TensorFlow Serving
 slug: tensorflow-serving
-canonical_url: https://github.com/mwang87/NP-Classifier
 evidence_spans:
 - We pass through tensorflow serving at this url
 - 'We pass through tensorflow serving at this url:'
@@ -14,9 +13,10 @@ derived_from:
 source_repos:
 - mwang87/NP-Classifier
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - NMR
 - mass-spectrometry

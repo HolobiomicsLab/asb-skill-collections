@@ -1,6 +1,5 @@
 name: Python >=3.9
 slug: python-3-9
-canonical_url: https://github.com/Leo-Cheng-Lab/ROIAL-NMR
 evidence_spans:
 - Python>=3.9
 - '[Python](https://www.anaconda.com/download/)>=3.9'
@@ -10,8 +9,9 @@ derived_from:
 source_repos:
 - Leo-Cheng-Lab/ROIAL-NMR
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - NMR

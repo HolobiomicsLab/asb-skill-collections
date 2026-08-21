@@ -1,6 +1,5 @@
 name: GitHub
 slug: github
-canonical_url: https://github.com/13479776/statTarget
 evidence_spans:
 - 'Source: github:gitlab.gwdg.de__joerg.buescher__automrm'
 - 'Source: github:arina-iva__DI-MS2_scripts'
@@ -174,9 +173,10 @@ source_repos:
 - xdomingoal/erah-devel
 - zhangxiang1205/CorrDIA
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

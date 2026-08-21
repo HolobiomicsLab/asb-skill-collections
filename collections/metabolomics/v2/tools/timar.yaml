@@ -1,6 +1,5 @@
 name: timaR
 slug: timar
-canonical_url: https://github.com/luigiquiros/inventa
 evidence_spans:
 - 'tima_results_filename: timaR reponderated output format. - for performing in silico annotations and taxonomically informed reponderation.'
 - 'tima_results_filename: timaR reponderated output format'
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - luigiquiros/inventa
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

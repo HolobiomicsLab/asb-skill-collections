@@ -1,6 +1,5 @@
 name: tidyverse
 slug: tidyverse
-canonical_url: https://github.com/LeaveMeNotTonight/CMDN
 evidence_spans:
 - tidyverse
 - library(tidyverse)
@@ -13,9 +12,10 @@ source_repos:
 - LeaveMeNotTonight/CMDN
 - scibiome/meteor
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

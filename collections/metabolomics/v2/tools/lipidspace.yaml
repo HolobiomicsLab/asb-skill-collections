@@ -1,6 +1,5 @@
 name: LipidSpace
 slug: lipidspace
-canonical_url: https://github.com/lifs-tools/lipidspace
 evidence_spans:
 - LipidSpace is a stand-alone tool to analyze and compare lipidomes
 derived_from:
@@ -9,6 +8,7 @@ derived_from:
 source_repos:
 - lifs-tools/lipidspace
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null

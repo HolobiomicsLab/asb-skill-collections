@@ -1,6 +1,5 @@
 name: Python 3.6.12
 slug: python-3-6-12
-canonical_url: https://github.com/wabdelmoula/massNet
 evidence_spans:
 - Python(3.6.12)
 - 1- Python(3.6.12)
@@ -10,8 +9,9 @@ derived_from:
 source_repos:
 - wabdelmoula/massNet
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - MS-imaging

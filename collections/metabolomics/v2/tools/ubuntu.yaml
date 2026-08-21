@@ -1,6 +1,5 @@
 name: Ubuntu
 slug: ubuntu
-canonical_url: https://github.com/LQZ0123/MSThunder
 version_used: '20.04'
 evidence_spans:
 - available through our experiments conducted on an Ubuntu 20.04 environment
@@ -10,8 +9,9 @@ derived_from:
 source_repos:
 - LQZ0123/MSThunder
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

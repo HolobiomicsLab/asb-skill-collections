@@ -1,6 +1,5 @@
 name: https://github.com/emosca-cnr/margheRita
 slug: https-github-com-emosca-cnr-margherita
-canonical_url: https://github.com/emosca-cnr/margheRita
 evidence_spans:
 - 'Source code: https://github.com/emosca-cnr/margheRita'
 - devtools::install_github("antonvsdata/notame")
@@ -11,6 +10,7 @@ derived_from:
 source_repos:
 - emosca-cnr/margheRita
 schema_version: 0.2.0
-license_tier: open
-license: CC-BY-4.0
-license_detection: crossref-paper
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null

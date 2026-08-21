@@ -1,6 +1,5 @@
 name: margheRita
 slug: margherita
-canonical_url: https://github.com/emosca-cnr/margheRita
 evidence_spans:
 - The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
@@ -11,9 +10,10 @@ derived_from:
 source_repos:
 - emosca-cnr/margheRita
 schema_version: 0.2.0
-license_tier: open
-license: CC-BY-4.0
-license_detection: crossref-paper
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - mass-spectrometry

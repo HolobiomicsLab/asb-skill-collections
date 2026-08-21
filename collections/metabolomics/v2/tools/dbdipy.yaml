@@ -1,6 +1,5 @@
 name: DBDIpy
 slug: dbdipy
-canonical_url: https://github.com/leopold-weidner/DBDIpy
 evidence_spans:
 - DBDIpy is an open-source Python library for the curation and interpretation of dielectric barrier discharge ionisation mass spectrometric datasets
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - leopold-weidner/DBDIpy
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: readme-llm
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

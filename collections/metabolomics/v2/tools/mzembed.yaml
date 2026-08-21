@@ -1,6 +1,5 @@
 name: mzEmbed
 slug: mzembed
-canonical_url: https://github.com/ReviveMed/mzEmbed
 evidence_spans:
 - mzEmbed, a framework for developing pre-trained generative models and fine-tuning them for specific tasks for untargeted metabolomics datasets
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - ReviveMed/mzEmbed
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: license-file
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - ion-mobility-MS

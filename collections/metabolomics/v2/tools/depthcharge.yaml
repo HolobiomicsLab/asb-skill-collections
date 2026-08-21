@@ -1,6 +1,5 @@
 name: DepthCharge
 slug: depthcharge
-canonical_url: https://github.com/Noble-Lab/casanovo
 version_used: 0.4.10
 evidence_spans:
 - Upgraded minimum DepthCharge version to 0.4.10.
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - Noble-Lab/casanovo
 schema_version: 0.2.0
-license_tier: open
-license: CC-BY-4.0
-license_detection: crossref-paper
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - MS-imaging

@@ -1,6 +1,5 @@
 name: 10.5281/zenodo.4680579
 slug: 10-5281-zenodo-4680579
-canonical_url: https://github.com/NPLinker/nplinker
 version_used: '10.5281'
 evidence_spans:
 - while the version used for the analysis in this work can be found at http://doi.org/10.5281/zenodo.4680579
@@ -10,6 +9,7 @@ derived_from:
 source_repos:
 - NPLinker/nplinker
 schema_version: 0.2.0
-license_tier: open
-license: CC-BY-4.0
-license_detection: crossref-paper
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null

@@ -1,6 +1,5 @@
 name: MADByTE
 slug: madbyte
-canonical_url: https://github.com/liningtonlab/madbyte
 evidence_spans:
 - MADByTE stands for **M**etabolomics **A**nd **D**ereplication **By** **T**wo-dimensional **E**xperiments.
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - liningtonlab/madbyte
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - NMR

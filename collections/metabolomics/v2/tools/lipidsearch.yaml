@@ -1,6 +1,5 @@
 name: LipidSearch
 slug: lipidsearch
-canonical_url: https://github.com/ShinyFabio/ADViSELipidomics
 evidence_spans:
 - outputs from LipidSearch and LIQUID for lipid identification and quantification
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - ShinyFabio/ADViSELipidomics
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - mass-spectrometry

@@ -1,6 +1,5 @@
 name: DIA-NN
 slug: dia-nn
-canonical_url: https://github.com/Roestlab/massdash
 evidence_spans:
 - search results information obtained from DIA-NN for the selected precursor
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - Roestlab/massdash
 schema_version: 0.2.0
-license_tier: open
-license: BSD-3-Clause
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - ion-mobility-MS

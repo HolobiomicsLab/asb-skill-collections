@@ -1,6 +1,5 @@
 name: HyperSpec
 slug: hyperspec
-canonical_url: https://github.com/wh-xu/Hyper-Spec
 evidence_spans:
 - github.com__wh-xu__Hyper-Spec
 - github.com/wh-xu/Hyper-Spec
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - wh-xu/Hyper-Spec
 schema_version: 0.2.0
-license_tier: open
-license: BSD-3-Clause
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - NMR

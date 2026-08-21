@@ -1,6 +1,5 @@
 name: enviPat
 slug: envipat
-canonical_url: https://github.com/YasinEl/mzRAPP
 evidence_spans:
 - isoSCAN makes use of __enviPat__ package
 - mzRAPP extracts and validates chromatographic peaks for which boundaries are provided for all (enviPat predicted) isotopologues
@@ -13,9 +12,10 @@ source_repos:
 - YasinEl/mzRAPP
 - jcapelladesto/isoSCAN
 schema_version: 0.2.0
-license_tier: open
-license: GPL-3.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

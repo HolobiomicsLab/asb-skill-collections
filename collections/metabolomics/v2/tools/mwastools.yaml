@@ -1,6 +1,5 @@
 name: MWASTools
 slug: mwastools
-canonical_url: https://github.com/AndreaRMICL/MWASTools
 evidence_spans:
 - Here, we present a package to perform MWAS using univariate hypothesis testing
 - '"MWASTools" is an R package designed to provide an integrated and user-friendly pipeline'
@@ -11,9 +10,10 @@ derived_from:
 source_repos:
 - AndreaRMICL/MWASTools
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - NMR

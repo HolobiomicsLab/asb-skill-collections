@@ -1,6 +1,5 @@
 name: SIRIUS
 slug: sirius
-canonical_url: https://github.com/boecker-lab/sirius
 evidence_spans:
 - ConCISE utlizes the structural annotations provided by in silico tools such as [SIRIUS]
 - SIRIUS is a java-based software framework for the analysis of LC-MS/MS data
@@ -39,9 +38,10 @@ source_repos:
 - zmahnoor14/MAW
 - zquinlan/concise
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

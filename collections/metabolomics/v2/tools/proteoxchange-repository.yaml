@@ -1,6 +1,5 @@
 name: ProteoXchange Repository
 slug: proteoxchange-repository
-canonical_url: https://github.com/mwang87/MetabolomicsSpectrumResolver
 evidence_spans:
 - ProteoXchange Repository Data
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - mwang87/MetabolomicsSpectrumResolver
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

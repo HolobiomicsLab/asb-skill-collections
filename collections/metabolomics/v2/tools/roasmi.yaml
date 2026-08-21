@@ -1,6 +1,5 @@
 name: ROASMI
 slug: roasmi
-canonical_url: https://github.com/FangYuan717/ROASMI
 evidence_spans:
 - ROASMI is a Retention Order model to Assist Small Molecule Identification
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - FangYuan717/ROASMI
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

@@ -1,6 +1,5 @@
 name: Scannotation
 slug: scannotation
-canonical_url: https://github.com/scannotation/Scannotation_software
 evidence_spans:
 - Scannotation is an automated and user-friendly suspect screening tool for the rapid pre-annotation of LC-HRMS datasets.
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - scannotation/Scannotation_software
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: license-file
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

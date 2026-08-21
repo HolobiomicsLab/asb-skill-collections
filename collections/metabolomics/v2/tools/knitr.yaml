@@ -1,6 +1,5 @@
 name: knitr
 slug: knitr
-canonical_url: https://github.com/MRCIEU/metaboprep
 evidence_spans:
 - '%\VignetteEngine{knitr::rmarkdown}'
 - knitr::include_graphics
@@ -12,9 +11,10 @@ derived_from:
 source_repos:
 - MRCIEU/metaboprep
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: r-description
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - ion-mobility-MS

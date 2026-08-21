@@ -1,6 +1,5 @@
 name: Python 3.6
 slug: python-3-6
-canonical_url: https://github.com/Dingxian666/Norm-ISWSVR
 version_used: '3.6'
 evidence_spans:
 - '![Python 3.6](https://img.shields.io/badge/python-3.6-green.svg)'
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - Dingxian666/Norm-ISWSVR
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: license-file
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

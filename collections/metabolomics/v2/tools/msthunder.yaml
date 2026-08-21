@@ -1,6 +1,5 @@
 name: MSThunder
 slug: msthunder
-canonical_url: https://github.com/LQZ0123/MSThunder
 evidence_spans:
 - MSThunder provide a deep learning-based nontargeted analytical framework for the accurate and rapid identification of unknown organic pollutants in water
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - LQZ0123/MSThunder
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - NMR

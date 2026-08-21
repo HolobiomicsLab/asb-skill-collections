@@ -1,6 +1,5 @@
 name: Python 3.9.0
 slug: python-3-9-0
-canonical_url: https://github.com/RaoboXu/Lipidwizard
 version_used: 3.9.0
 evidence_spans:
 - python 3.9.0
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - RaoboXu/Lipidwizard
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

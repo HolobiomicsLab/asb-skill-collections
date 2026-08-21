@@ -1,6 +1,5 @@
 name: Anaconda
 slug: anaconda
-canonical_url: https://github.com/LabLaskin/MSIGen
 version_used: '3.6'
 evidence_spans:
 - Install [Anaconda](https://www.anaconda.com/).
@@ -26,9 +25,10 @@ source_repos:
 - zhanghailiangcsu/MSBERT
 - zhanghailiangcsu/MWFormer
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

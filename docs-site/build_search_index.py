@@ -313,7 +313,9 @@ def index_tools() -> list[dict]:
             continue
         slug = data.get("slug") or tpath.stem
         name = data.get("name") or slug
-        canonical_url = data.get("canonical_url") or ""
+        # Repositories of the papers that cite this tool -- not the tool's own
+        # home. `canonical_url` claimed the latter while holding the former (#42).
+        source_repos = [str(r) for r in (data.get("source_repos") or []) if r]
         license_spdx = data.get("license_spdx") or ""
         evidence_spans = data.get("evidence_spans") or []
         if isinstance(evidence_spans, list):
@@ -332,7 +334,7 @@ def index_tools() -> list[dict]:
                     evidence_text,
                     source_doi,
                     coll_label,
-                    canonical_url,
+                    " ".join(source_repos),
                 ],
             )
         )
@@ -340,7 +342,7 @@ def index_tools() -> list[dict]:
             {
                 "slug": slug,
                 "name": name,
-                "canonical_url": canonical_url,
+                "source_paper_repos": source_repos,
                 "license_spdx": license_spdx,
                 "evidence_text": evidence_text,
                 "collection": coll_label,

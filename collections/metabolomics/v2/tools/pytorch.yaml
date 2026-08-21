@@ -1,6 +1,5 @@
 name: PyTorch
 slug: pytorch
-canonical_url: https://github.com/Chen-micslab/QCCAssisted4DSterol
 version_used: '2.6'
 evidence_spans:
 - PyTorch must be installed separately. Check the `official PyTorch website
@@ -90,9 +89,10 @@ source_repos:
 - zxguocsu/GCMSFormer
 - zza1211/NMRformer
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

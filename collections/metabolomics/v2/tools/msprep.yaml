@@ -1,6 +1,5 @@
 name: MSPrep
 slug: msprep
-canonical_url: https://github.com/Ghoshlab/marr
 evidence_spans:
 - The **msprepCOPD** data in the **marr** package was pre-processed using the MSPrep software
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - Ghoshlab/marr
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - mass-spectrometry

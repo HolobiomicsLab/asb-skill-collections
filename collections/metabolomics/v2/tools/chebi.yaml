@@ -1,6 +1,5 @@
 name: ChEBI
 slug: chebi
-canonical_url: https://github.com/privrja/MassSpecBlocks
 evidence_spans:
 - find structures on other chemical projects like ChEBI
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - privrja/MassSpecBlocks
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - mass-spectrometry

@@ -1,6 +1,5 @@
 name: Python 3.11.7
 slug: python-3-11-7
-canonical_url: https://github.com/HassounLab/MVP
 evidence_spans:
 - 'python_version: 3.11.7'
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - HassounLab/MVP
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

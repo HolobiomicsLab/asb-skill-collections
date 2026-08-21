@@ -1,5 +1,6 @@
 """CI gate: the enriched tool catalog is internally consistent. Verifies that
-every tool ``license_tier`` is valid, every skill ``tools_used`` slug resolves to
+every tool ``license_tier`` is valid, that no tool's licence was inherited from a
+paper, that no retired key has returned, every skill ``tools_used`` slug resolves to
 a real tool, and every tool ``used_by_skills`` slug resolves to a real skill.
 Exit 1 on violations. Mirrors scripts/check_license_tiers.py and
 scripts/check_provenance_tiers.py.
@@ -11,8 +12,51 @@ import pathlib
 import sys
 
 import yaml
+# Invoked by path (`python scripts/x.py`), only `scripts/` lands on sys.path, so
+# the repo root has to be added before the sibling package can be imported.
+if __package__ in (None, ""):
+    import os.path as _p
+    import sys as _sys
 
-_VALID = {"open", "noncommercial", "restricted"}
+    _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
+
+from scripts.license_tier import SUBJECT_TOOL, TIER_UNKNOWN, TOOL_DETECTIONS, load_map
+
+# The tier vocabulary has one home: governance/license_tiers.yaml. A hand-copied set
+# here silently rejects any tier added there -- which is how `unknown` would have
+# been rejected the moment it was introduced.
+_VALID = set(load_map()["tiers"])
+
+# Held a citing paper's repository under a name claiming it was the tool's. See #42.
+_RETIRED_TOOL_KEYS = ("canonical_url",)
+
+
+def _licence_provenance_violations(slug, tool, tier) -> list[str]:
+    """A resolved tool tier must rest on evidence about the tool itself.
+
+    Two-sided: a resolved tier needs a tool detection and a `tool` subject, and an
+    `unknown` tier must not still carry a licence. Without this, a paper's licence
+    can be written onto the tool axis and nothing fires, because a value is present.
+    """
+    out = []
+    detection = tool.get("license_detection")
+    subject = tool.get("license_subject")
+    if tier == TIER_UNKNOWN:
+        if tool.get("license"):
+            out.append(f"tools_index {slug!r}: tier is unknown but a licence is recorded")
+        if subject is not None:
+            out.append(f"tools_index {slug!r}: tier is unknown but license_subject is set")
+        return out
+    if detection not in TOOL_DETECTIONS:
+        out.append(
+            f"tools_index {slug!r}: tier {tier!r} rests on detection {detection!r}, "
+            f"which is not evidence about the tool"
+        )
+    if subject != SUBJECT_TOOL:
+        out.append(
+            f"tools_index {slug!r}: tier {tier!r} but license_subject is {subject!r}"
+        )
+    return out
 
 
 def check_collection(collection_dir) -> list[str]:
@@ -29,8 +73,16 @@ def check_collection(collection_dir) -> list[str]:
     # Every tool license_tier is valid; every used_by_skills slug resolves.
     for t in tools:
         slug = t.get("slug")
-        if t.get("license_tier") not in _VALID:
+        tier = t.get("license_tier")
+        if tier not in _VALID:
             violations.append(f"tools_index {slug!r}: missing/invalid license_tier")
+        violations.extend(_licence_provenance_violations(slug, t, tier))
+        for key in _RETIRED_TOOL_KEYS:
+            if key in t:
+                violations.append(
+                    f"tools_index {slug!r}: retired key {key!r} is back; a citing "
+                    f"paper's repository is not the tool's (see source_paper_repos)"
+                )
         for ref in t.get("used_by_skills") or []:
             if ref not in skill_slugs:
                 violations.append(

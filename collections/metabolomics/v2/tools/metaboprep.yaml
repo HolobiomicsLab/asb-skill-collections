@@ -1,6 +1,5 @@
 name: metaboprep
 slug: metaboprep
-canonical_url: https://github.com/MRCIEU/metaboprep
 evidence_spans:
 - library(metaboprep)
 - quality_control(m, source_layer = "input", sample_missingness = 0.2, feature_missingness = 0.2)
@@ -11,9 +10,10 @@ derived_from:
 source_repos:
 - MRCIEU/metaboprep
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: r-description
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - mass-spectrometry

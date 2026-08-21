@@ -1,6 +1,5 @@
 name: Flask
 slug: flask
-canonical_url: https://github.com/ComPlat/chem-spectra-app
 evidence_spans:
 - export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run
 - export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run --host=0.0.0.0 --port=3007
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - ComPlat/chem-spectra-app
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - MS-imaging

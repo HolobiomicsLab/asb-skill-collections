@@ -1,6 +1,5 @@
 name: Python 3.8+
 slug: python-3-8
-canonical_url: https://github.com/wh-xu/Hyper-Spec
 version_used: '3.8'
 evidence_spans:
 - _falcon_ requires Python 3.8+ and is available on the Linux and OSX platforms.
@@ -15,9 +14,10 @@ derived_from:
 source_repos:
 - wh-xu/Hyper-Spec
 schema_version: 0.2.0
-license_tier: open
-license: BSD-3-Clause
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - ion-mobility-MS

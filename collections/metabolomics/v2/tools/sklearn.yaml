@@ -1,6 +1,5 @@
 name: Sklearn
 slug: sklearn
-canonical_url: https://github.com/facundof2016/CCSP2.0
 version_used: 1.0.2
 evidence_spans:
 - The current version of CCSP 2.0 requires Sklearn V1.0.2 or later
@@ -10,8 +9,9 @@ derived_from:
 source_repos:
 - facundof2016/CCSP2.0
 schema_version: 0.2.0
-license_tier: noncommercial
-license: CC-BY-NC-ND-4.0
-license_detection: biorxiv_api-paper
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - ion-mobility-MS

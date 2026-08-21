@@ -1,6 +1,5 @@
 name: edgeR
 slug: edger
-canonical_url: https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 evidence_spans:
 - allows the identification of differentially abundant lipids in simple and complex experimental designs
 - 'Genes, miRNA, isoforms, proteins, lipids | Data preprocessing | R packages: edger, limma, sva'
@@ -15,8 +14,9 @@ source_repos:
 - ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 - ShinyFabio/ADViSELipidomics
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - mass-spectrometry

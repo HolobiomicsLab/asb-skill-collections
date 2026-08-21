@@ -9,9 +9,10 @@ derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 schema_version: 0.2.0
-license_tier: open
-license: BSD-2-Clause
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

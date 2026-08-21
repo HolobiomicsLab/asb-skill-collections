@@ -1,6 +1,5 @@
 name: assign_hierarchy
 slug: assign-hierarchy
-canonical_url: https://github.com/connor-reid-tiffany/Omu
 evidence_spans:
 - To assign hierarchical class data, use the ```assign_hierarchy``` function and pick the correct identifier, either "KEGG", "KO_Number", "Prokaryote", or "Eukaryote"
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - connor-reid-tiffany/Omu
 schema_version: 0.2.0
-license_tier: open
-license: GPL-2.0-only
-license_detection: r-description
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - NMR

@@ -1,6 +1,5 @@
 name: dures
 slug: dures
-canonical_url: https://github.com/BiosystemEngineeringLab-IITB/dures
 evidence_spans:
 - devtools::install_github("BiosystemEngineeringLab-IITB/dures", auth_token = NULL)
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - BiosystemEngineeringLab-IITB/dures
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: r-description
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

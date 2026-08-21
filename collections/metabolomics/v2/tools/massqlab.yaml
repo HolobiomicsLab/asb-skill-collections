@@ -1,6 +1,5 @@
 name: MassQLab
 slug: massqlab
-canonical_url: https://github.com/JohnsonDylan/MassQLab
 evidence_spans:
 - github.com__JohnsonDylan__MassQLab
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - JohnsonDylan/MassQLab
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

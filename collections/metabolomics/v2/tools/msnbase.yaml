@@ -1,6 +1,5 @@
 name: MSnbase
 slug: msnbase
-canonical_url: https://github.com/LiesaSalzer/MobilityTransformR
 evidence_spans:
 - The transformation is performed using functionality from the packages `r BiocStyle::Biocpkg("MSnbase")`
 - extension of the of *in-memory* and *on-disk* data representations from the `r Biocpkg("MSnbase")` package
@@ -13,9 +12,10 @@ source_repos:
 - LiesaSalzer/MobilityTransformR
 - rformassspectrometry/Spectra
 schema_version: 0.2.0
-license_tier: open
-license: Artistic-2.0
-license_detection: r-description
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

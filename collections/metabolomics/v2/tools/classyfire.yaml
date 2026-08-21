@@ -1,6 +1,5 @@
 name: ClassyFire
 slug: classyfire
-canonical_url: https://github.com/michaelwitting/RepoRT
 evidence_spans:
 - use NPClassifier instead of ClassyFire by checking the box in the GUI
 - You can copy the InChiKey's from the GNPS DBResult file into the Fiehn Labs' classyfire Batch identifier
@@ -14,9 +13,10 @@ source_repos:
 - michaelwitting/RepoRT
 - zquinlan/concise
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - mass-spectrometry

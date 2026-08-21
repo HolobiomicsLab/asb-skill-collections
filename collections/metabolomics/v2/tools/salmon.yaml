@@ -1,6 +1,5 @@
 name: Salmon
 slug: salmon
-canonical_url: https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 evidence_spans:
 - Genes, miRNA, isoforms | Align and Assembly | Salmon, samtools, STAR, Hisat2, StringTie2
 - It then employs [salmon](../modules/nf-core/salmon) in order to obtain quantification files
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - ASAGlab/MOI--An-integrated-solution-for-omics-analyses
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - ion-mobility-MS

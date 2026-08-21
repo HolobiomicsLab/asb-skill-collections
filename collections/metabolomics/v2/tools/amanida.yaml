@@ -1,6 +1,5 @@
 name: amanida
 slug: amanida
-canonical_url: https://github.com/mariallr/amanida
 evidence_spans:
 - This vignette illustrates `Amanida` R package, which contains a collection of functions for computing a weighted meta-analysis
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - mariallr/amanida
 schema_version: 0.2.0
-license_tier: open
-license: CC-BY-4.0
-license_detection: crossref-paper
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - mass-spectrometry

@@ -1,6 +1,5 @@
 name: GNPS Spectral Networking / Molecular Networking
 slug: gnps-spectral-networking-molecular-networking
-canonical_url: https://github.com/ablab/npdtools
 evidence_spans:
 - Spectral network can be easily run through GNPS. Detailed instructions can be found in the [GNPS documentation]
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - ablab/npdtools
 schema_version: 0.2.0
-license_tier: open
-license: Apache-2.0
-license_detection: readme-llm
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

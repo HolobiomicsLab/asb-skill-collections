@@ -1,6 +1,5 @@
 name: Python >= 3.8.2
 slug: python-3-8-2
-canonical_url: https://github.com/zsspython/LAGF
 version_used: 3.8.2
 evidence_spans:
 - Python >= 3.8.2
@@ -10,8 +9,9 @@ derived_from:
 source_repos:
 - zsspython/LAGF
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

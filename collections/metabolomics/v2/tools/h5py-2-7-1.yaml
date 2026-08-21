@@ -1,6 +1,5 @@
 name: h5py 2.7.1
 slug: h5py-2-7-1
-canonical_url: https://github.com/wabdelmoula/massNet
 evidence_spans:
 - h5py(2.7.1)
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - wabdelmoula/massNet
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - MS-imaging

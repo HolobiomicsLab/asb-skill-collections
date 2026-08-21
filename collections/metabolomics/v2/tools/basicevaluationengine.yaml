@@ -1,6 +1,5 @@
 name: BasicEvaluationEngine
 slug: basicevaluationengine
-canonical_url: https://github.com/Wang-Bioinformatics-Lab/ModiFinder_base
 evidence_spans:
 - eval_engine = BasicEvaluationEngine(default_method="is_max")
 - eval_engine = BasicEvaluationEngine(default_method="average_distance")
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - Wang-Bioinformatics-Lab/ModiFinder_base
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: file-present-unclassified
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - ion-mobility-MS

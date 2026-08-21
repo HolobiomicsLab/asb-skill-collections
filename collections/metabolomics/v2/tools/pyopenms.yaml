@@ -1,6 +1,5 @@
 name: pyopenms
 slug: pyopenms
-canonical_url: https://github.com/AutoFlowResearch/SmartPeak
 version_used: 2.7.0
 evidence_spans:
 - A :class:`MSExperiment` object (supported by :mod:`pyopenms`)
@@ -24,9 +23,10 @@ source_repos:
 - AutoFlowResearch/SmartPeak
 - huaxuyu/bago
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

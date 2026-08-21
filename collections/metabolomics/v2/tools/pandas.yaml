@@ -1,6 +1,5 @@
 name: Pandas
 slug: pandas
-canonical_url: https://github.com/FangYuan717/ROASMI
 version_used: 2.0.3
 evidence_spans:
 - Spec2Vec was optimised by making extensive use of Numpy [24] and Numba [25], the library matching was implemented using Pandas [40]
@@ -73,9 +72,10 @@ source_repos:
 - zsspython/LAGF
 - zza1211/NMRformer
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

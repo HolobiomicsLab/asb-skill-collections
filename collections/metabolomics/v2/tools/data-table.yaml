@@ -1,6 +1,5 @@
 name: data.table
 slug: data-table
-canonical_url: https://github.com/BalunasLab/mpact
 evidence_spans:
 - invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
 - invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim"
@@ -14,9 +13,10 @@ source_repos:
 - BalunasLab/mpact
 - BiosystemEngineeringLab-IITB/dures
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: r-description
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

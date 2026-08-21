@@ -68,7 +68,7 @@ The index is a single JSON object with the shape:
   "skills": [{"name": "...", "description": "...", "when_to_use_negative": "...",
               "edam_topics": [...], "collection": "...", "summary": "...",
               "source_dois": [...], "md_path": "...", "search_text": "..."}, ...],
-  "tools":  [{"slug": "...", "name": "...", "canonical_url": "...",
+  "tools":  [{"slug": "...", "name": "...", "source_paper_repos": [...],
               "license_spdx": "...", "evidence_text": "...", "collection": "...",
               "source_doi": "...", "yaml_path": "...", "search_text": "..."}, ...]
 }

@@ -1,6 +1,12 @@
 # SPDX-or-name -> consumer license tier. Human doc: LICENSE_TIERS.md.
 version: 1
-tiers: [open, noncommercial, restricted]
+# The tool axis. `unknown` is NOT a synonym for `restricted`:
+#   restricted - a licence WAS established and it constrains reuse
+#                (CC-BY-ND, a proprietary EULA, all-rights-reserved-by-declaration)
+#   unknown    - no tool-level evidence was found. An open question, not a verdict.
+# Collapsing them is the same mistake `source_reuse` already avoids by keeping
+# None (unknown) apart from 'none' (a known refusal). See LICENSE_TIERS.md.
+tiers: [open, noncommercial, restricted, unknown]
 spdx:
   MIT: open
   Apache-2.0: open
@@ -76,6 +82,9 @@ r_license_aliases:
   MPL-2.0: MPL-2.0
   Unlimited: Unlicense
 
+# Applies only when a licence STRING is in hand but unrecognised. Absence of any
+# evidence is `unknown` and is decided by the caller, not here -- tier_for_license()
+# is never asked "what if I know nothing?".
 fallback:
   noncommercial_keywords: [noncommercial, "non-commercial", "cc-by-nc", polyform-noncommercial]
   default: restricted

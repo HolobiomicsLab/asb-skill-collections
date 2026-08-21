@@ -1,6 +1,5 @@
 name: MODE ShinyApp
 slug: mode-shinyapp
-canonical_url: https://github.com/pmartR/MODE_ShinyApp
 evidence_spans:
 - github.com__pmartR__MODE_ShinyApp
 derived_from:
@@ -9,6 +8,7 @@ derived_from:
 source_repos:
 - pmartR/MODE_ShinyApp
 schema_version: 0.2.0
-license_tier: open
-license: BSD-2-Clause
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null

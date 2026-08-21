@@ -1,6 +1,5 @@
 name: black
 slug: black
-canonical_url: https://github.com/SysMedOs/LipidLynxX
 evidence_spans:
 - We use black for auto formatting
 - LipidLynxX source code use [code style Black](https://github.com/psf/black) for all python codes
@@ -13,8 +12,9 @@ source_repos:
 - SysMedOs/LipidLynxX
 - medema-group/BiG-SCAPE
 schema_version: 0.2.0
-license_tier: open
-license: AGPL-3.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - mass-spectrometry

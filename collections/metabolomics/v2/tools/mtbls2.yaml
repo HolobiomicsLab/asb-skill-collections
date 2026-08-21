@@ -1,6 +1,5 @@
 name: mtbls2
 slug: mtbls2
-canonical_url: https://github.com/KujawinskiLaboratory/Autotuner
 evidence_spans:
 - library(mtbls2)
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - KujawinskiLaboratory/Autotuner
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - mass-spectrometry

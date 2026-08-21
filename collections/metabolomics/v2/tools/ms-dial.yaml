@@ -1,6 +1,5 @@
 name: MS-DIAL
 slug: ms-dial
-canonical_url: https://github.com/FrigerioGianfranco/GetFeatistics
 evidence_spans:
 - '`MS-DIAL <http://prime.psc.riken.jp/compms/msdial/main.html>`_'
 - open source tools such as XCMS and MS-Dial
@@ -38,9 +37,10 @@ source_repos:
 - huaxuyu/bago
 - systemsomicslab/MsdialWorkbench
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

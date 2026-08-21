@@ -1,6 +1,5 @@
 name: MSI-Explorer
 slug: msi-explorer
-canonical_url: https://github.com/MMV-Lab/MSI-Explorer
 evidence_spans:
 - The MSI-Explorer napari plugin is a powerful tool designed for targeted biochemical annotations in MSI data.
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - MMV-Lab/MSI-Explorer
 schema_version: 0.2.0
-license_tier: open
-license: BSD-3-Clause
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - CE-MS
 - MS-imaging

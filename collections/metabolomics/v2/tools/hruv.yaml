@@ -1,6 +1,5 @@
 name: hRUV
 slug: hruv
-canonical_url: https://github.com/SydneyBioX/hRUV
 evidence_spans:
 - '`hRUV` is a package for normalisation of multiple batches of metabolomics data'
 - '`hRUV` is a package for normalisation of multiple batches of metabolomics data in a hierarchical strategy'
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - SydneyBioX/hRUV
 schema_version: 0.2.0
-license_tier: open
-license: GPL-3.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

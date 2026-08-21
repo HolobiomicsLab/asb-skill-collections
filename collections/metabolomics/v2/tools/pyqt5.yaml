@@ -1,6 +1,5 @@
 name: PyQt5
 slug: pyqt5
-canonical_url: https://github.com/Leo-Cheng-Lab/ROIAL-NMR
 version_used: 5.15.11
 evidence_spans:
 - PyQt5 5.15.11
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - Leo-Cheng-Lab/ROIAL-NMR
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - NMR

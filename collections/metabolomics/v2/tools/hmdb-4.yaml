@@ -1,6 +1,5 @@
 name: HMDB 4
 slug: hmdb-4
-canonical_url: https://github.com/shuzhao-li-lab/asari
 evidence_spans:
 - known compound database (default HMDB 4)
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - shuzhao-li-lab/asari
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: file-present-unclassified
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

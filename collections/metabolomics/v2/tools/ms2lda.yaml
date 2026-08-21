@@ -1,6 +1,5 @@
 name: MS2LDA
 slug: ms2lda
-canonical_url: https://github.com/glasgowcompbio/PALS
 evidence_spans:
 - MS2LDA Reference Motifs
 - Map MS2LDA substructural information to mass spectral molecular networks
@@ -23,9 +22,10 @@ source_repos:
 - mwang87/MetabolomicsSpectrumResolver
 - vdhooftcompmet/MS2LDA
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - ion-mobility-MS

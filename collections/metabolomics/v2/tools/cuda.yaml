@@ -1,6 +1,5 @@
 name: CUDA
 slug: cuda
-canonical_url: https://github.com/HassounLab/JESTR1
 version_used: '11.8'
 evidence_spans:
 - HyperSpec requires `Python 3.8+` with `CUDA` environment
@@ -23,9 +22,10 @@ source_repos:
 - sword-nan/SpecEmbedding
 - wh-xu/Hyper-Spec
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - CE-MS

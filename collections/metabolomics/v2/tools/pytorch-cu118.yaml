@@ -1,6 +1,5 @@
 name: PyTorch+cu118
 slug: pytorch-cu118
-canonical_url: https://github.com/yfWang01/FlavorFormer
 evidence_spans:
 - Python 3.13.2 and Pytorch (version 2.7.0+cu118)
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - yfWang01/FlavorFormer
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - NMR

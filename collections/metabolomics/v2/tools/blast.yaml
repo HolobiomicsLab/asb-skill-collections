@@ -1,6 +1,5 @@
 name: BLAST
 slug: blast
-canonical_url: https://github.com/mibig-secmet/mibig-json
 evidence_spans:
 - GenBank/RefSeq databases
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - mibig-secmet/mibig-json
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

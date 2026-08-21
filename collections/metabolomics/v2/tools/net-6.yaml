@@ -1,6 +1,5 @@
 name: .NET 6
 slug: net-6
-canonical_url: https://github.com/systemsomicslab/MsdialWorkbench
 evidence_spans:
 - we primarily utilize the frameworks of .NET Framework 4.7.2, .NET Core 3.1, and .NET 6
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - systemsomicslab/MsdialWorkbench
 schema_version: 0.2.0
-license_tier: open
-license: LGPL-3.0
-license_detection: readme-llm
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - ion-mobility-MS

@@ -1,6 +1,5 @@
 name: Optimus
 slug: optimus
-canonical_url: https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks
 evidence_spans:
 - '[Optimus](https://github.com/MolecularCartography/Optimus) (using OpenMS)'
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - DorresteinLaboratory/Bioactive_Molecular_Networks
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: license-file
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - direct-infusion-MS

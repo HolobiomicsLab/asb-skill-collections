@@ -1,6 +1,5 @@
 name: MolNotator
 slug: molnotator
-canonical_url: https://github.com/ZzakB/MolNotator
 evidence_spans:
 - from MolNotator.duplicate_filter import duplicate_filter
 - from MolNotator.sample_slicer import sample_slicer
@@ -10,8 +9,9 @@ derived_from:
 source_repos:
 - ZzakB/MolNotator
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS

@@ -1,6 +1,5 @@
 name: pwiz
 slug: pwiz
-canonical_url: https://github.com/ProteoWizard/pwiz
 evidence_spans:
 - github.com__ProteoWizard__pwiz
 derived_from:
@@ -9,9 +8,10 @@ derived_from:
 source_repos:
 - ProteoWizard/pwiz
 schema_version: 0.2.0
-license_tier: open
-license: Apache-2.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - ion-mobility-MS

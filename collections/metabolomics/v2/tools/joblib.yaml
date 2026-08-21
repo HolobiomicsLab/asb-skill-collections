@@ -1,6 +1,5 @@
 name: joblib
 slug: joblib
-canonical_url: https://github.com/ablab/npdtools
 version_used: 0.15.1
 evidence_spans:
 - For parallel processing of multiple spectra or/and sequence files, MetaMiner requires `joblib` Python library
@@ -14,9 +13,10 @@ source_repos:
 - ablab/npdtools
 - zsspython/LAGF
 schema_version: 0.2.0
-license_tier: restricted
+license_tier: unknown
 license: null
-license_detection: none
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - direct-infusion-MS

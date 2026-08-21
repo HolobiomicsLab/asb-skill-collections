@@ -1,6 +1,5 @@
 name: SAND
 slug: sand
-canonical_url: https://github.com/edisonomics/SAND
 evidence_spans:
 - Any user is welcome to make new modificaitons on the SAND code, particularly its version for NMRBox
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - edisonomics/SAND
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - NMR

@@ -2,9 +2,12 @@
 per-tool records ``tools/<slug>.yaml``.
 
 ``tools_index.json`` already carries ``license_tier`` / ``license`` /
-``license_detection`` (written by ``enrich_tools_index.py``); the 909 generated
-``tools/<slug>.yaml`` records do not. This post-processor joins by ``slug`` and
-writes those three fields into each tool YAML, idempotently and style-preserving.
+``license_detection`` / ``license_subject`` (written by ``enrich_tools_index.py``);
+the 909 generated ``tools/<slug>.yaml`` records do not. This post-processor joins by
+``slug`` and writes those fields into each tool YAML, idempotently and
+style-preserving. It also drops ``canonical_url``, which held a citing paper's
+repository under a name claiming it was the tool's own (issue #42); the same value is
+kept, honestly named, in ``source_repos``.
 
 Design mirrors ``propagate_license_tiers.py`` / ``enrich_tools_index.py``:
 - idempotent, format-preserving writer over committed artifacts;
@@ -20,7 +23,13 @@ import pathlib
 
 import yaml
 
-_LICENSE_KEYS = ("license_tier", "license", "license_detection")
+_LICENSE_KEYS = ("license_tier", "license", "license_detection", "license_subject")
+
+# Retired keys, stripped on every pass. `canonical_url` was a copy of one arbitrary
+# member of `source_repos` -- a repository belonging to a paper that cites the tool,
+# not to the tool. All 700 populated values were already in `source_repos`, so
+# removing the key loses nothing and stops the claim being restated.
+_RETIRED_KEYS = ("canonical_url",)
 
 
 def _yaml_dump(data: dict) -> str:
@@ -31,30 +40,28 @@ def _yaml_dump(data: dict) -> str:
 
 
 def tier_map(tools_index) -> dict:
-    """``{slug: {license_tier, license, license_detection}}`` from the index.
+    """``{slug: {license_tier, license, license_detection, license_subject}}``.
 
-    Missing ``license`` / ``license_detection`` default to ``None`` so every row
-    is complete; entries without a ``slug`` are skipped.
+    Missing values default to ``None`` so every row is complete; entries without a
+    ``slug`` are skipped.
     """
     out: dict[str, dict] = {}
     for t in tools_index:
         slug = t.get("slug")
         if not slug:
             continue
-        out[slug] = {
-            "license_tier": t.get("license_tier"),
-            "license": t.get("license"),
-            "license_detection": t.get("license_detection"),
-        }
+        out[slug] = {k: t.get(k) for k in _LICENSE_KEYS}
     return out
 
 
 def _reorder_with_license(data: dict, fields: dict) -> dict:
-    """Return a new dict with the three license fields placed right after
+    """Return a new dict with the license fields placed right after
     ``schema_version`` (or appended if absent), preserving all other key order.
+    Retired keys are dropped.
     """
-    # Strip any existing license keys so we can re-place them deterministically.
-    base = {k: v for k, v in data.items() if k not in _LICENSE_KEYS}
+    # Strip existing license keys so we can re-place them deterministically.
+    drop = set(_LICENSE_KEYS) | set(_RETIRED_KEYS)
+    base = {k: v for k, v in data.items() if k not in drop}
     rebuilt: dict = {}
     inserted = False
     for k, v in base.items():

@@ -1,6 +1,5 @@
 name: chambm/pwiz-skyline-i-agree-to-the-vendor-licenses
 slug: chambm-pwiz-skyline-i-agree-to-the-vendor-licenses
-canonical_url: https://github.com/VIU-Metabolomics/imzML_Writer
 evidence_spans:
 - docker pull chambm/pwiz-skyline-i-agree-to-the-vendor-licenses
 derived_from:
@@ -9,8 +8,9 @@ derived_from:
 source_repos:
 - VIU-Metabolomics/imzML_Writer
 schema_version: 0.2.0
-license_tier: open
-license: MIT
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - mass-spectrometry

@@ -1,6 +1,5 @@
 name: Lilikoi v2.0
 slug: lilikoi-v2-0
-canonical_url: https://github.com/lanagarmire/lilikoi2
 version_used: '2.0'
 evidence_spans:
 - The new Lilikoi v2.0 R package has implemented a deep-learning method for classification, in addition to popular machine learning methods.
@@ -10,9 +9,10 @@ derived_from:
 source_repos:
 - lanagarmire/lilikoi2
 schema_version: 0.2.0
-license_tier: open
-license: GPL-3.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - GC-MS

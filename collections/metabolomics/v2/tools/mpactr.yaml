@@ -1,6 +1,5 @@
 name: mpactr
 slug: mpactr
-canonical_url: https://github.com/BalunasLab/mpact
 evidence_spans:
 - library(mpactr)
 - The goal of mpactr is to correct for errors that occur during the pre-processing of raw tandem MS/MS data.
@@ -11,9 +10,10 @@ derived_from:
 source_repos:
 - BalunasLab/mpact
 schema_version: 0.2.0
-license_tier: open
-license: GPL-2.0
-license_detection: github-api
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - LC-MS
 - ion-mobility-MS

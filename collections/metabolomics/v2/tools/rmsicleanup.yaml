@@ -6,9 +6,10 @@ derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: 'rMSIcleanup: an open-source tool for matrix-related peak annotation in mass spectrometry imaging and its application to silver-assisted laser desorption/ionization'
 schema_version: 0.2.0
-license_tier: open
-license: CC-BY-4.0
-license_detection: crossref-paper
+license_tier: unknown
+license: null
+license_detection: null
+license_subject: null
 techniques:
 - MS-imaging
 - NMR
