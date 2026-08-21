@@ -6,10 +6,11 @@ derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: 'INTEGRATE: Model-based multi-omics data integration to characterize multi-level metabolic regulation'
 schema_version: 0.2.0
-license_tier: unknown
+entry_kind: vendor_product
+license_tier: restricted
 license: null
-license_detection: null
-license_subject: null
+license_detection: vendor-product
+license_subject: tool
 repo_url: null
 techniques:
 - LC-MS

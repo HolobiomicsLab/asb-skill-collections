@@ -10,6 +10,7 @@ derived_from:
 source_repos:
 - b2slab/mWISE
 schema_version: 0.2.0
+entry_kind: software
 license_tier: open
 license: GPL-3.0-only
 license_detection: r-description

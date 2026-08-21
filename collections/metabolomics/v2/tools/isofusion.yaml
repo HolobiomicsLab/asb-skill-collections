@@ -8,6 +8,7 @@ derived_from:
 source_repos:
 - xfcui/IsoFusion
 schema_version: 0.2.0
+entry_kind: software
 license_tier: open
 license: GPL-3.0
 license_detection: github-api

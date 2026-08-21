@@ -7,6 +7,7 @@ derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: 'mzPeak: Designing a Scalable, Interoperable, and Future-Ready Mass Spectrometry Data Format'
 schema_version: 0.2.0
+entry_kind: software
 license_tier: unknown
 license: null
 license_detection: null
