@@ -20,7 +20,8 @@ if __package__ in (None, ""):
 
     _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
 
-from scripts.license_tier import SUBJECT_TOOL, TIER_UNKNOWN, TOOL_DETECTIONS, load_map
+from scripts.license_tier import (DETECTION_VENDOR_PRODUCT, SUBJECT_TOOL, TIER_UNKNOWN,
+                                  TOOL_DETECTIONS, load_map)
 
 # The tier vocabulary has one home: governance/license_tiers.yaml. A hand-copied set
 # here silently rejects any tier added there -- which is how `unknown` would have
@@ -82,8 +83,11 @@ def _resolution_drift(collection_dir, tools) -> list[str]:
                 f"tools_index {slug!r}: licence {tool.get('license')!r} does not match "
                 f"the resolved {evidence.get('license')!r}; re-run enrich_tools_index"
             )
+    # A vendor product is tiered from the entry-kind vocabulary, not from a licence
+    # lookup, so it is legitimately absent from the resolution.
     unbacked = [t.get("slug") for t in tools
-                if t.get("license_tier") != TIER_UNKNOWN and t.get("slug") not in resolved]
+                if t.get("license_tier") != TIER_UNKNOWN and t.get("slug") not in resolved
+                and t.get("license_detection") != DETECTION_VENDOR_PRODUCT]
     for slug in unbacked:
         out.append(f"tools_index {slug!r}: tiered but absent from tool_licenses.json")
     return out
