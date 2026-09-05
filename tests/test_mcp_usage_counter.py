@@ -27,6 +27,7 @@ import pytest
 REPO_ROOT = pathlib.Path(__file__).parent.parent
 sys.path.insert(0, str(REPO_ROOT))
 
+pytest.importorskip("mcp", reason="the MCP server needs the 'mcp' extra")
 server = pytest.importorskip(
     "asb_skill_collections.asb_mcp_server",
     reason="the MCP server needs the 'mcp' extra",
