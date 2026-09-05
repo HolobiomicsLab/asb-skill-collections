@@ -31,6 +31,14 @@ Checks implemented (mapped to the §5 checklist + §6 safety gates):
                                 ``pii_patterns.json``).
   4. PROVENANCE              — gate 8.  Every skill carries a source DOI + a
                                 license tag.
+  5. LAYOUT / PACKAGING      — gate 10.  Every promoted skill directory holds
+                                ``SKILL.md`` and at most a pointer-form
+                                ``skill_kb.json``; the sidecar stays inside a
+                                per-skill and a collection-level byte budget
+                                (both FAIL loudly, neither truncates); and
+                                ``skills_index.json``, when the collection ships
+                                one, reconciles with the leaf directories on
+                                disk.
 
 Enforcement modes (CONTENT_POLICY.md §7):
   * default (advisory, staged-collections PRs): WARNs and FAILs are reported but
@@ -951,6 +959,172 @@ def check_workflows(collection_dir: Path) -> CheckResult:
 
 
 # --------------------------------------------------------------------------- #
+# Layout / packaging (gate 10).                                               #
+# --------------------------------------------------------------------------- #
+#: The only two files a promoted skill directory may hold.  ``SKILL.md`` is the
+#: skill; ``skill_kb.json`` is the pointer-form knowledge-base sidecar written
+#: by ``asb collection promote``.  Everything else — a ``docs/`` tree, a
+#: ``README.md``, a stray ``tools.json`` — is a Tier-1/Tier-2 intermediate that
+#: CONTENT_POLICY.md §5 keeps out of the public collection, so its presence is
+#: a packaging failure rather than a matter of taste.
+_KB_SIDECAR_FILENAME = "skill_kb.json"
+_ALLOWED_SKILL_FILES = frozenset({"SKILL.md", _KB_SIDECAR_FILENAME})
+
+#: Per-skill sidecar budget.  The promoter refuses to write a sidecar over this
+#: size rather than truncating it, and the gate refuses to ship one: a
+#: truncated pointer list is indistinguishable from a short one, which is
+#: exactly the confusion the knowledge-base status enum exists to prevent.
+_KB_SIDECAR_MAX_BYTES = 64 * 1024
+
+#: Collection-level budget over every sidecar in the collection.  The largest
+#: shipped collection holds 5,859 leaves; at the audited p99 sidecar size
+#: (7,446 B) that totals roughly 43 MB, so 64 MiB leaves room to grow while
+#: still refusing a collection whose sidecars have drifted an order of
+#: magnitude past what was measured.
+_COLLECTION_KB_MAX_BYTES = 64 * 1024 * 1024
+
+
+def _index_slugs(index_path: Path) -> tuple[set[str], str | None]:
+    """Slugs declared by ``skills_index.json``, or an error string.
+
+    Tolerates the two shapes the index has worn — a bare list of entries, and
+    an object wrapping one under ``skills`` — and accepts plain strings as
+    slugs.  An entry that declares no slug is drift, not a shape this reads
+    around, so it is reported rather than skipped.
+    """
+    try:
+        data = json.loads(index_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        return set(), f"unreadable ({exc})"
+    if isinstance(data, dict):
+        data = data.get("skills", [])
+    if not isinstance(data, list):
+        return set(), "not a list of entries"
+    slugs: set[str] = set()
+    for i, entry in enumerate(data):
+        if isinstance(entry, str):
+            slugs.add(entry)
+        elif isinstance(entry, dict) and isinstance(entry.get("slug"), str):
+            slugs.add(entry["slug"])
+        else:
+            return slugs, f"entry {i} declares no slug"
+    return slugs, None
+
+
+def check_layout(
+    collection_dir: Path,
+    per_skill_max_bytes: int = _KB_SIDECAR_MAX_BYTES,
+    collection_max_bytes: int = _COLLECTION_KB_MAX_BYTES,
+) -> CheckResult:
+    """Every shipped skill directory holds ``SKILL.md`` + at most a sidecar.
+
+    Three things nothing checked before this gate existed:
+
+    * **A forbidden-files list.**  The one-file-per-skill invariant was a
+      convention.  A build that leaked a ``docs/`` tree into a promoted bundle
+      would have shipped it.
+    * **A byte budget.**  Both budgets FAIL loudly; neither truncates.  A
+      truncated sidecar still parses, so truncation would ship a knowledge-base
+      manifest that silently understates itself.
+    * **``skills_index.json`` ↔ leaf-directory consistency** (gate 10).  An
+      index entry with no skill on disk is a broken advertisement; a leaf the
+      index never names is unreachable through the router.  The check is
+      inert when the collection ships no index — most do not, and absence is
+      not drift.
+    """
+    res = CheckResult(
+        name="layout_packaging",
+        gates=[10],
+        hard_gate=True,
+        summary=(
+            "Each skill dir holds SKILL.md (+ optional skill_kb.json) within budget; "
+            "skills_index.json matches the leaf directories."
+        ),
+    )
+    n_skills = 0
+    total_kb_bytes = 0
+    for sk_md in _iter_skill_md(collection_dir):
+        skill_dir = sk_md.parent
+        if skill_dir == Path(collection_dir):
+            # `iter_skill_md` falls back to the collection root when no skill
+            # directory exists; the root is not a skill bundle, so the
+            # file-set rule does not apply to it.
+            continue
+        n_skills += 1
+        rel_dir = str(skill_dir.relative_to(collection_dir))
+        for path in sorted(skill_dir.rglob("*")):
+            if not path.is_file():
+                continue
+            rel = path.relative_to(skill_dir).as_posix()
+            if rel in _ALLOWED_SKILL_FILES:
+                continue
+            res.add(
+                FAIL,
+                f"{rel_dir}: unexpected file {rel!r} — a promoted skill directory "
+                f"may hold only {sorted(_ALLOWED_SKILL_FILES)}.",
+                file=f"{rel_dir}/{rel}",
+            )
+        sidecar = skill_dir / _KB_SIDECAR_FILENAME
+        if sidecar.is_file():
+            size = sidecar.stat().st_size
+            total_kb_bytes += size
+            if size > per_skill_max_bytes:
+                res.add(
+                    FAIL,
+                    f"{rel_dir}: {_KB_SIDECAR_FILENAME} is {size} B, over the "
+                    f"{per_skill_max_bytes} B per-skill budget — refuse and rebuild "
+                    "it smaller; do not truncate.",
+                    file=f"{rel_dir}/{_KB_SIDECAR_FILENAME}",
+                    bytes=size,
+                    budget=per_skill_max_bytes,
+                )
+    if total_kb_bytes > collection_max_bytes:
+        res.add(
+            FAIL,
+            f"knowledge-base sidecars total {total_kb_bytes} B, over the "
+            f"{collection_max_bytes} B collection budget.",
+            bytes=total_kb_bytes,
+            budget=collection_max_bytes,
+        )
+
+    index_path = Path(collection_dir) / "skills_index.json"
+    if index_path.is_file():
+        indexed, error = _index_slugs(index_path)
+        if error:
+            res.add(FAIL, f"skills_index.json: {error}.", file="skills_index.json")
+        leaves = layout.leaf_dir(collection_dir)
+        on_disk = {
+            d.name
+            for d in (sorted(leaves.iterdir()) if leaves.is_dir() else [])
+            if d.is_dir() and not d.name.startswith("_") and (d / "SKILL.md").is_file()
+        }
+        for slug in sorted(indexed - on_disk):
+            res.add(
+                FAIL,
+                f"skills_index.json names {slug!r}, which has no SKILL.md under "
+                f"{leaves.name}/.",
+                file="skills_index.json",
+                slug=slug,
+            )
+        for slug in sorted(on_disk - indexed):
+            res.add(
+                FAIL,
+                f"{leaves.name}/{slug} is not named in skills_index.json — it cannot "
+                "be reached through the router.",
+                file="skills_index.json",
+                slug=slug,
+            )
+        res.summary = f"{res.summary}  ({len(indexed)} indexed, {len(on_disk)} on disk)"
+    else:
+        res.add(PASS, "No skills_index.json — index consistency is not applicable.")
+
+    res.summary = f"{res.summary}  ({n_skills} skills checked)"
+    if n_skills == 0:
+        res.add(WARN, "No SKILL.md files found in collection.")
+    return res
+
+
+# --------------------------------------------------------------------------- #
 # Corpus / collection loaders.                                                #
 # --------------------------------------------------------------------------- #
 def _load_yaml(path: Path) -> dict[str, Any]:
@@ -989,6 +1163,7 @@ def run_gate(
         check_pii_dual_use(collection_dir, collection_meta),
         check_provenance(collection_dir),
         check_workflows(collection_dir),
+        check_layout(collection_dir),
     ]
 
     counts = {PASS: 0, WARN: 0, FAIL: 0}
@@ -997,7 +1172,7 @@ def run_gate(
     overall = FAIL if counts[FAIL] else (WARN if counts[WARN] else PASS)
 
     mode = "strict" if strict else "advisory"
-    # Hard gates (2,5,6,8,15) are never overridable (§8.2); in strict mode any
+    # Hard gates (2,5,6,8,10,15) are never overridable (§8.2); in strict mode any
     # FAIL on these blocks.  In advisory mode (staged PRs) everything is reported
     # but the process exits 0.
     blocking_fail = strict and counts[FAIL] > 0
@@ -1019,12 +1194,15 @@ def run_gate(
             "similarity_ratio_threshold": _SIMILARITY_RATIO_THRESHOLD,
             "pii_config_version": PII_CONFIG["version"],
             "require_open_access": True,
+            "kb_sidecar_max_bytes": _KB_SIDECAR_MAX_BYTES,
+            "collection_kb_max_bytes": _COLLECTION_KB_MAX_BYTES,
+            "allowed_skill_files": sorted(_ALLOWED_SKILL_FILES),
         },
         "overall_status": overall,
         "blocking": blocking_fail,
         "exit_code": 1 if blocking_fail else 0,
         "summary_counts": counts,
-        "hard_gate_ids": [2, 5, 6, 8, 15],
+        "hard_gate_ids": [2, 5, 6, 8, 10, 15],
         "checks": [c.to_dict() for c in checks],
     }
     return report
