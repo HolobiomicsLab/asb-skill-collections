@@ -641,7 +641,8 @@ def check_strip_verbatim(
             doi = span["doi"] or skill_dois[0]
 
             if not _is_non_oa(doi):
-                # OPEN_ACCESS_POLICY.md §4: OA papers (any _OA_TIERS literal) pass
+                # OPEN_ACCESS_POLICY.md "Per-paper access tier rules" /
+                # "Open-access": OA papers (any _OA_TIERS literal) pass
                 # through UNCHANGED — unlimited verbatim with attribution.  No
                 # per-span or cumulative cap is enforced.  §3 guidance suggests
                 # snippets ≤300 chars; exceeding it is an advisory WARN (curator
@@ -660,7 +661,8 @@ def check_strip_verbatim(
                     )
             else:
                 # Non-OA (hybrid / closed / paywalled / unknown): hard caps.
-                # Per-span text-field cap is 300 (OPEN_ACCESS_POLICY.md §4 table;
+                # Per-span text-field cap is 300 (OPEN_ACCESS_POLICY.md
+                # "Hybrid / quotation" rules and TL;DR table;
                 # the 150-char _PER_SPAN_CAP applies to claim source_excerpts,
                 # stripped by promote.py Pass 2 — not to evidence-span text).
                 if span_len > _TEXT_FIELD_CAP:

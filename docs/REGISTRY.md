@@ -580,7 +580,7 @@ The promotion step is manual (move the directory), not automated. This allows:
 
 - **Double-fire bug:** `release.yml` and `mirror-to-hf.yml` both trigger on `*-v[0-9]*` tags. `mirror-to-hf.yml` should become dispatch-only. (Not fixed in this doc; flagged for a separate step.)
 - **indicium-adapters availability:** Gate 9 (verify-claims) skips gracefully if the package is not published yet. Expected to resolve during Phase 1.
-- **OPEN_ACCESS_POLICY.md missing:** Referenced in `AgenticScienceBuilder/release/promote.py` but not yet committed. Will be authored as part of Phase 0.1 (`POLICY-content.md`).
+- **OPEN_ACCESS_POLICY.md** — resolved: authored at [`governance/OPEN_ACCESS_POLICY.md`](../governance/OPEN_ACCESS_POLICY.md) (commit `5f0ad0e6a`); `governance/CONTENT_POLICY.md` followed in `ce0d53854`.
 
 ---
 
