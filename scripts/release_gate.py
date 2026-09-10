@@ -5,7 +5,8 @@ This is the checkpoint between the private Tier-2 intermediates and the public
 Tier-3 artifacts (CONTENT_POLICY.md §5). It takes a single collection directory
 (e.g. ``collections/metabolomics/v1``) plus the source-corpus metadata
 (``corpus.yaml``), runs the v0-active content checks, and writes a structured
-``gate_report.json`` with one ``pass|warn|fail`` verdict per check.
+``gate_report.json`` bound to the checked tree, inputs, inventory and policy.
+Checks report pass, warn, fail, uncheckable or not_applicable, with item counts.
 
 Checks implemented (mapped to the §5 checklist + §6 safety gates):
 
@@ -34,9 +35,11 @@ Checks implemented (mapped to the §5 checklist + §6 safety gates):
 
 Enforcement modes (CONTENT_POLICY.md §7):
   * default (advisory, staged-collections PRs): WARNs and FAILs are reported but
-    the process exits 0 — the curator reviews and may merge.
+    nonempty diagnostic runs exit 0 — never a release verification.
   * ``--strict`` (hard-block, promotion to collections/ + release tag): any FAIL
-    causes exit code 1.  Hard gates (2,5,6,8,15) are never overridable (§8).
+    causes exit code 1. Empty required measurements exit 1 in either mode.
+    ``--verify`` rechecks a receipt without writing; 0 means verified, 1 means
+    failed/uncheckable, and CLI usage errors use 2.
 
 Dependencies: Python 3 stdlib + PyYAML.  numpy is optional and unused by the
 default code path (a hook is provided for a future embedding-similarity pass).
@@ -73,6 +76,7 @@ if __package__ in (None, ""):
     _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
 
 from asb_skill_collections import layout
+from scripts import release_receipt as receipt
 
 try:
     import yaml
@@ -234,14 +238,17 @@ PII_CONFIG: dict[str, Any] = {
 # --------------------------------------------------------------------------- #
 _NGRAM_JACCARD_THRESHOLD = 0.30  # >0.30 3-gram Jaccard overlap → flag
 _SIMILARITY_RATIO_THRESHOLD = 0.92  # SequenceMatcher ratio proxy for cosine
-_GATE_REPORT_SCHEMA = "asbb-release-gate/1.0"
+_GATE_REPORT_SCHEMA = "asbb-release-gate/1.1"
+_GATE_POLICY_VERSION = "asbb-content-gate/1.1"
+_DIAGNOSTIC_SCOPE = "diagnostic run, not a release verification"
 
 
 # --------------------------------------------------------------------------- #
 # Result model.                                                               #
 # --------------------------------------------------------------------------- #
 PASS, WARN, FAIL = "pass", "warn", "fail"
-_SEVERITY = {PASS: 0, WARN: 1, FAIL: 2}
+UNCHECKABLE, NOT_APPLICABLE = "uncheckable", "not_applicable"
+_SEVERITY = {PASS: 0, WARN: 1, FAIL: 2, UNCHECKABLE: 3, NOT_APPLICABLE: 0}
 
 
 @dataclass
@@ -254,6 +261,10 @@ class CheckResult:
     hard_gate: bool = False  # never-overridable per §8.2
     summary: str = ""
     details: list[dict[str, Any]] = field(default_factory=list)
+    scope: str = "items"
+    required: bool = True
+    counts: dict[str, int] = field(default_factory=lambda: dict(checked=0, skipped=0, missing=0, failed=0))
+    coverage: dict[str, int] = field(default_factory=dict)
 
     def add(self, status: str, message: str, **extra: Any) -> None:
         """Record a finding and escalate this check's overall status."""
@@ -263,7 +274,23 @@ class CheckResult:
         if _SEVERITY[status] > _SEVERITY[self.status]:
             self.status = status
 
+    def record_item(self, findings_start: int) -> None:
+        """Count a measured item once, even when it produces several failures."""
+        self.counts["checked"] += 1
+        self.counts["failed"] += any(d["status"] == FAIL for d in self.details[findings_start:])
+
+    def finish(self) -> CheckResult:
+        """Distinguish required missing measurements from optional absent scopes."""
+        if self.required and (not self.counts["checked"] or self.counts["missing"]
+                              or self.coverage.get("missing_files")):
+            self.add(UNCHECKABLE, f"{self.name}: required {self.scope} measurement unavailable "
+                     f"(checked={self.counts['checked']}, missing={self.counts['missing']}).")
+        elif not self.counts["checked"] and self.status == PASS:
+            self.status = NOT_APPLICABLE
+        return self
+
     def to_dict(self) -> dict[str, Any]:
+        """Serialize the check's verdict, measurement scope and coverage."""
         return {
             "name": self.name,
             "status": self.status,
@@ -272,6 +299,10 @@ class CheckResult:
             "summary": self.summary or self.name,
             "n_findings": len(self.details),
             "details": self.details,
+            "scope": self.scope,
+            "required": self.required,
+            "counts": self.counts,
+            "coverage": self.coverage,
         }
 
 
@@ -523,10 +554,12 @@ def _access_tier_from_corpus(corpus: dict[str, Any]) -> dict[str, str]:
 # Check 1 — ACCESS-TIER (OA).  Gates 2 / 15 (hard).                            #
 # --------------------------------------------------------------------------- #
 def check_access_tier(corpus: dict[str, Any], require_open_access: bool = True) -> CheckResult:
+    """Check included corpus papers' access declarations and count paper items."""
     res = CheckResult(
         name="access_tier_oa",
         gates=[2, 15],
         hard_gate=True,
+        scope="included papers",
         summary="Every included paper's access.type is in the OA allowed set (v0 OA-only).",
     )
     # A repo-* access tier claims a clone happened; only a non-empty repo_url is
@@ -536,9 +569,12 @@ def check_access_tier(corpus: dict[str, Any], require_open_access: bool = True) 
     checked = 0
     for i, paper in enumerate(papers):
         if not isinstance(paper, dict):
+            res.counts["missing"] += 1
             continue
         if paper.get("status") != "included":
+            res.counts["skipped"] += 1
             continue
+        findings_start = len(res.details)
         checked += 1
         doi = paper.get("doi") or f"[paper {i}]"
         raw = ((paper.get("access") or {}).get("type") or "").strip().lower()
@@ -588,10 +624,9 @@ def check_access_tier(corpus: dict[str, Any], require_open_access: bool = True) 
                 doi=doi,
                 access_type=raw,
             )
+        res.record_item(findings_start)
     res.summary = f"{res.summary}  ({checked} included papers checked)"
-    if checked == 0 and not res.details:
-        res.add(WARN, "No papers with status=included found in corpus to validate.")
-    return res
+    return res.finish()
 
 
 # --------------------------------------------------------------------------- #
@@ -600,10 +635,13 @@ def check_access_tier(corpus: dict[str, Any], require_open_access: bool = True) 
 def check_strip_verbatim(
     collection_dir: Path, access_by_doi: dict[str, str]
 ) -> CheckResult:
+    """Check extracted evidence spans against the existing caps and similarity rules."""
     res = CheckResult(
         name="strip_verbatim_similarity",
         gates=[5, 6],
         hard_gate=True,
+        scope="evidence spans",
+        coverage=dict(inspected_files=0, files_without_spans=0, missing_files=0),
         summary=(
             "OA papers exempt from caps (unlimited verbatim w/ attribution; "
             f">{_TEXT_FIELD_CAP}-char spans → advisory WARN).  Non-OA and link-only "
@@ -627,14 +665,18 @@ def check_strip_verbatim(
     for sk_md in _iter_skill_md(collection_dir):
         try:
             text = sk_md.read_text(encoding="utf-8")
-        except OSError as exc:
-            res.add(WARN, f"{sk_md}: unreadable ({exc}).", file=str(sk_md))
+        except (OSError, UnicodeError) as exc:
+            res.coverage["missing_files"] += 1
+            res.add(UNCHECKABLE, f"{sk_md}: unreadable ({exc}).", file=str(sk_md))
             continue
+        res.coverage["inspected_files"] += 1
         fm, body = _read_frontmatter(text)
         rel = str(sk_md.relative_to(collection_dir))
         skill_dois = _skill_dois(fm) or [""]
         spans = _collect_evidence_spans(fm, body)
+        res.coverage["files_without_spans"] += not spans
         for span in spans:
+            findings_start = len(res.details)
             total_spans += 1
             span_text = span["text"]
             span_len = len(span_text)
@@ -720,8 +762,10 @@ def check_strip_verbatim(
                         ratio=round(ratio, 3),
                     )
 
+            res.record_item(findings_start)
+
     res.summary = f"{res.summary}  ({total_spans} verbatim spans scanned)"
-    return res
+    return res.finish()
 
 
 # --------------------------------------------------------------------------- #
@@ -730,10 +774,13 @@ def check_strip_verbatim(
 def check_pii_dual_use(
     collection_dir: Path, collection_meta: dict[str, Any]
 ) -> CheckResult:
+    """Scan real quote spans for PII/dual-use signals and report file coverage separately."""
     res = CheckResult(
         name="pii_dual_use",
         gates=[6],  # §6 content-safety gate (no numeric §5 row; tracked as gate 6 content-safety)
         hard_gate=True,
+        scope="evidence spans",
+        coverage=dict(inspected_files=0, files_without_spans=0, missing_files=0),
         summary=(
             "Two-tier PII / dual-use scan of verbatim quote spans "
             f"(pii_config={PII_CONFIG['version']})."
@@ -750,11 +797,17 @@ def check_pii_dual_use(
     for sk_md in _iter_skill_md(collection_dir):
         try:
             text = sk_md.read_text(encoding="utf-8")
-        except OSError:
+        except (OSError, UnicodeError) as exc:
+            res.coverage["missing_files"] += 1
+            res.add(UNCHECKABLE, f"{sk_md}: unreadable ({exc}).", file=str(sk_md))
             continue
+        res.coverage["inspected_files"] += 1
         fm, body = _read_frontmatter(text)
         rel = str(sk_md.relative_to(collection_dir))
-        for span in _collect_evidence_spans(fm, body):
+        spans = _collect_evidence_spans(fm, body)
+        res.coverage["files_without_spans"] += not spans
+        for span in spans:
+            findings_start = len(res.details)
             n_spans += 1
             span_text = span["text"]
             low = span_text.lower()
@@ -830,30 +883,35 @@ def check_pii_dual_use(
                         file=rel,
                         pattern=label,
                     )
+            res.record_item(findings_start)
 
     res.summary = f"{res.summary}  ({n_spans} spans scanned)"
-    return res
+    return res.finish()
 
 
 # --------------------------------------------------------------------------- #
 # Check 4 — PROVENANCE.  Gate 8 (hard).                                        #
 # --------------------------------------------------------------------------- #
 def check_provenance(collection_dir: Path) -> CheckResult:
+    """Check readable leaves for source provenance and license declarations."""
     res = CheckResult(
         name="provenance_doi_license",
         gates=[8],
         hard_gate=True,
+        scope="leaf skills",
         summary="Every skill carries provenance (source DOI or repository) + a license SPDX tag.",
     )
     n_skills = 0
     for sk_md in _iter_skill_md(collection_dir):
-        n_skills += 1
+        findings_start = len(res.details)
         rel = str(sk_md.relative_to(collection_dir))
         try:
             fm, _ = _read_frontmatter(sk_md.read_text(encoding="utf-8"))
-        except OSError as exc:
-            res.add(FAIL, f"{rel}: unreadable ({exc}).", file=rel)
+        except (OSError, UnicodeError) as exc:
+            res.counts["missing"] += 1
+            res.add(UNCHECKABLE, f"{rel}: unreadable ({exc}).", file=rel)
             continue
+        n_skills += 1
         dois = _skill_dois(fm)
         if not dois and not _skill_repo_url(fm):
             res.add(
@@ -866,10 +924,9 @@ def check_provenance(collection_dir: Path) -> CheckResult:
         lic = _skill_license(fm)
         if not lic:
             res.add(FAIL, f"{rel}: no license tag (license / license_spdx / metadata.license).", file=rel)
+        res.record_item(findings_start)
     res.summary = f"{res.summary}  ({n_skills} skills checked)"
-    if n_skills == 0:
-        res.add(WARN, "No SKILL.md files found in collection.")
-    return res
+    return res.finish()
 
 
 def check_workflows(collection_dir: Path) -> CheckResult:
@@ -884,12 +941,20 @@ def check_workflows(collection_dir: Path) -> CheckResult:
         name="composite_workflows",
         gates=[],
         hard_gate=False,
+        required=False,
+        scope="composite workflows",
         summary="Composite workflow super-skills resolve to real leaves with a valid DAG.",
     )
     wf_root = collection_dir / "workflows"
     if not wf_root.is_dir():
-        res.add(PASS, "No workflows/ subtree (n/a).")
-        return res
+        res.add(NOT_APPLICABLE, "No workflows/ subtree; no workflow validation performed.")
+        return res.finish()
+    workflows = [path for path in sorted(wf_root.iterdir())
+                 if path.is_dir() and not path.name.startswith("_") and path.name != "bin"]
+    if not workflows:
+        res.add(NOT_APPLICABLE, "workflows/ present but empty; no workflow validation performed.")
+        return res.finish()
+    res.required = True
     # Leaf slug resolution needs the leaf index. A staging subtree (workflows only) has no
     # skills_index.json — its leaves live in the released collection — so degrade to a loud
     # WARN and run the structural checks (DAG / collisions / tool leaks) rather than a false
@@ -906,21 +971,22 @@ def check_workflows(collection_dir: Path) -> CheckResult:
         res.add(WARN, "no skills_index.json in this subtree — leaf-slug resolution deferred "
                       "to validate_workflows.py --collection <released>; structural checks only.")
     n = 0
-    for d in sorted(wf_root.iterdir()):
-        if not d.is_dir() or d.name.startswith("_") or d.name == "bin":
-            continue
-        n += 1
+    for d in workflows:
+        findings_start = len(res.details)
         name = d.name
         sk_md, wf_y = d / "SKILL.md", d / "workflow.yaml"
         if not (sk_md.is_file() and wf_y.is_file()):
-            res.add(FAIL, f"{name}: missing SKILL.md or workflow.yaml", file=name)
+            res.add(UNCHECKABLE, f"{name}: missing SKILL.md or workflow.yaml", file=name)
+            res.counts["missing"] += 1
             continue
         try:
             fm, _ = _read_frontmatter(sk_md.read_text(encoding="utf-8"))
             wf = yaml.safe_load(wf_y.read_text(encoding="utf-8")) or {}
         except (OSError, yaml.YAMLError) as exc:
-            res.add(FAIL, f"{name}: unreadable ({exc})", file=name)
+            res.add(UNCHECKABLE, f"{name}: unreadable ({exc})", file=name)
+            res.counts["missing"] += 1
             continue
+        n += 1
         meta = fm.get("metadata", {}) or {}
         if meta.get("kind") != "composite-workflow":
             res.add(FAIL, f"{name}: metadata.kind != composite-workflow", file=name)
@@ -944,10 +1010,9 @@ def check_workflows(collection_dir: Path) -> CheckResult:
         for t in (meta.get("member_tools") or []):
             if str(t).endswith(".py"):
                 res.add(WARN, f"{name}: script-filename as tool: {t}", file=name)
+        res.record_item(findings_start)
     res.summary = f"{res.summary}  ({n} workflows checked)"
-    if n == 0:
-        res.add(PASS, "workflows/ present but empty.")
-    return res
+    return res.finish()
 
 
 # --------------------------------------------------------------------------- #
@@ -957,50 +1022,222 @@ def _load_yaml(path: Path) -> dict[str, Any]:
     try:
         data = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
         return data if isinstance(data, dict) else {}
-    except (OSError, yaml.YAMLError):
+    except (OSError, ValueError, yaml.YAMLError):
         return {}
 
 
-def _resolve_corpus(collection_dir: Path, explicit: Path | None) -> tuple[dict[str, Any], Path | None]:
+def _resolve_corpus_path(collection_dir: Path, explicit: Path | None) -> Path | None:
     if explicit:
-        return _load_yaml(explicit), explicit
+        return explicit.resolve()
     for cand in (collection_dir / "corpus.yaml", collection_dir.parent / "corpus.yaml"):
         if cand.is_file():
-            return _load_yaml(cand), cand
-    return {}, None
+            return cand
+    return None
 
 
 # --------------------------------------------------------------------------- #
 # Driver.                                                                      #
 # --------------------------------------------------------------------------- #
+def _policy_snapshot() -> dict:
+    policy = {
+        "version": _GATE_POLICY_VERSION,
+        "oa_tiers": sorted(_NORMALIZED_OA_TIERS),
+        "per_span_cap": _PER_SPAN_CAP,
+        "cumulative_cap": _CUMULATIVE_CAP,
+        "text_field_cap": _TEXT_FIELD_CAP,
+        "ngram_jaccard_threshold": _NGRAM_JACCARD_THRESHOLD,
+        "similarity_ratio_threshold": _SIMILARITY_RATIO_THRESHOLD,
+        "pii_config_version": PII_CONFIG["version"],
+        "require_open_access": True,
+    }
+    policy["config_sha256"] = receipt.digest({
+        **policy, "pii": PII_CONFIG, "verbatim_pattern": _EVIDENCE_VERBATIM_RE.pattern,
+        "capped_tiers": sorted(_CAPPED_VERBATIM_TIERS), "promote_source": _PROMOTE_SOURCE,
+    })
+    sources = [Path(__file__), Path(receipt.__file__), Path(layout.__file__)]
+    policy["implementation_sha256"] = receipt.digest([receipt.file_record(p, p.name) for p in sources])
+    return policy
+
+
+def _check_inventory(collection_dir: Path, corpus: dict, descriptor: dict) -> tuple[CheckResult, dict]:
+    res = CheckResult("collection_inventory", scope="inventory fields", hard_gate=True)
+    try:
+        inventory = receipt.read_inventory(collection_dir, corpus)
+    except (OSError, ValueError, TypeError, KeyError, AttributeError) as exc:
+        res.add(UNCHECKABLE, f"Cannot measure collection inventory: {exc}")
+        return res.finish(), {}
+    for key, actual in inventory.items():
+        start = len(res.details)
+        for alias in (f"n_{key}", f"{key}_count"):
+            if alias in descriptor and (type(descriptor[alias]) is not int or descriptor[alias] != actual):
+                res.add(FAIL, f"collection.yaml {alias}={descriptor[alias]!r}; measured {actual}.")
+        for message in _index_inventory_errors(collection_dir, key):
+            res.add(FAIL, message)
+        res.record_item(start)
+    return res.finish(), inventory
+
+
+def _index_inventory_errors(collection_dir: Path, key: str) -> list[str]:
+    index_path = collection_dir / f"{key}_index.json"
+    if key not in ("skills", "tools") or not index_path.is_file():
+        return []
+    try:
+        rows = json.loads(index_path.read_text(encoding="utf-8"))
+        declared = [row["slug"] for row in rows]
+        if key == "skills":
+            actual = {path.parent.name for path in _iter_skill_md(collection_dir)}
+        elif (collection_dir / "tools").is_dir():
+            actual = {path.stem for path in (collection_dir / "tools").glob("*.yaml")}
+        else:
+            actual = set(declared)
+        if len(declared) != len(set(declared)) or set(declared) != actual:
+            return [f"{index_path.name} inventory does not match materialized {key}."]
+    except (OSError, ValueError, TypeError, KeyError) as exc:
+        return [f"Cannot read {index_path.name} inventory: {exc}"]
+    return []
+
+
+def _capture_binding(collection_dir: Path, corpus: Path | None, report_path: Path) -> tuple[CheckResult, dict]:
+    res = CheckResult("target_binding", scope="payload files", hard_gate=True)
+    try:
+        binding = receipt.capture_target(collection_dir, report_path)
+        binding["corpus"] = receipt.corpus_record(collection_dir, corpus)
+        res.counts["checked"] = sum("sha256" in entry for entry in binding["payload"]["entries"])
+        return res.finish(), binding
+    except (OSError, ValueError) as exc:
+        res.add(UNCHECKABLE, f"Cannot bind target files: {exc}")
+        return res.finish(), {}
+
+
+def _check_cut_inputs(record: dict, inputs: list[Path], collection_dir: Path) -> tuple[CheckResult, dict | None]:
+    res = CheckResult("cut_input_closure", scope="source input files", hard_gate=True)
+    expected = record["inputs"]
+    if not inputs:
+        res.counts["missing"] = receipt.input_file_count(expected)
+        res.add(UNCHECKABLE, "Cut source inputs unavailable; provide --inputs for full closure verification.")
+        return res.finish(), None
+    try:
+        actual = receipt.capture_inputs(inputs, collection_dir)
+    except (OSError, ValueError) as exc:
+        res.counts["missing"] = receipt.input_file_count(expected)
+        res.add(UNCHECKABLE, f"Cannot read cut source inputs: {exc}")
+        return res.finish(), None
+    res.counts["checked"] = receipt.input_file_count(actual)
+    if actual != expected:
+        res.add(FAIL, "Cut source input closure mismatch.")
+        res.counts.update(_input_file_differences(expected, actual))
+    return res.finish(), actual
+
+
+def _input_file_differences(expected: dict, actual: dict) -> dict:
+    def files(snapshot):
+        return {(i, root["name"], section, row["path"]): row for i, root in enumerate(snapshot["roots"])
+                for section in ("entries", "ancestors") for row in root[section] if "sha256" in row}
+    old, new = files(expected), files(actual)
+    return {"missing": len(old.keys() - new.keys()),
+            "failed": sum(row != old.get(key) for key, row in new.items())}
+
+
+def _check_cut(collection_dir: Path, binding: dict, context: dict) -> tuple[list[CheckResult], dict | None]:
+    res = CheckResult("cut_manifest", scope="manifest bindings", hard_gate=True, required=False)
+    if not binding.get("manifest"):
+        return [res.finish()], None
+    res.required = True
+    try:
+        record = receipt.read_cut_record(collection_dir)
+        start = len(res.details)
+        excluded = binding["payload"]["excluded_paths"]
+        output = [row for row in record["output"]["entries"] if row["path"] not in excluded]
+        if output != binding["payload"]["entries"]:
+            res.add(FAIL, "Cut manifest final payload digest mismatch.")
+        res.record_item(start)
+        start = len(res.details)
+        if record["inventory"] != context["inventory"]:
+            res.add(FAIL, "Cut manifest inventory mismatch.")
+        res.record_item(start)
+        closure, actual = _check_cut_inputs(record, context["inputs"], collection_dir)
+        return [res.finish(), closure], actual
+    except (OSError, ValueError, TypeError, KeyError, AttributeError) as exc:
+        res.add(UNCHECKABLE, f"Malformed or unavailable cut manifest: {exc}")
+        return [res.finish()], None
+
+
+def _readable_check(check, *args) -> CheckResult:
+    try:
+        return check(*args)
+    except (OSError, ValueError, TypeError, KeyError, AttributeError) as exc:
+        res = CheckResult(check.__name__, hard_gate=True)
+        res.add(UNCHECKABLE, f"Required measurement could not run: {exc}")
+        return res.finish()
+
+
+def _check_gate_inputs(collection_dir: Path, corpus_path: Path | None) -> CheckResult:
+    res = CheckResult("gate_input_files", scope="gate input files", hard_gate=True)
+    if corpus_path is None or not corpus_path.is_file():
+        res.counts["missing"] += 1
+        res.add(UNCHECKABLE, "Required corpus.yaml is unavailable.")
+    paths = [p for p in (corpus_path, collection_dir / "collection.yaml") if p and p.is_file()]
+    for path in paths:
+        try:
+            value = yaml.safe_load(path.read_text(encoding="utf-8"))
+            if not isinstance(value, dict):
+                raise ValueError("expected a YAML mapping")
+            res.record_item(len(res.details))
+        except (OSError, ValueError, yaml.YAMLError) as exc:
+            res.counts["missing"] += 1
+            res.add(UNCHECKABLE, f"Cannot read {path.name}: {exc}")
+    return res.finish()
+
+
 def run_gate(
     collection_dir: Path,
     corpus_path: Path | None,
     strict: bool,
+    *,
+    report_path: Path | None = None,
+    inputs: list[Path] | None = None,
 ) -> dict[str, Any]:
-    corpus, resolved_corpus = _resolve_corpus(collection_dir, corpus_path)
-    access_by_doi = _access_tier_from_corpus(corpus)
-
+    """Measure content and integrity, returning a receipt without writing files."""
+    collection_dir = collection_dir.resolve()
+    report_path = _absolute_report_path(report_path or collection_dir / "gate_report.json")
+    inputs = [path.resolve() for path in inputs or []]
+    resolved_corpus = _resolve_corpus_path(collection_dir, corpus_path)
+    binding_check, binding = _capture_binding(collection_dir, resolved_corpus, report_path)
+    corpus = _load_yaml(resolved_corpus) if resolved_corpus else {}
     collection_meta = _load_yaml(collection_dir / "collection.yaml")
-
+    try:
+        access_by_doi = _access_tier_from_corpus(corpus)
+    except (TypeError, AttributeError):
+        access_by_doi = {}
     checks = [
-        check_access_tier(corpus, require_open_access=True),
-        check_strip_verbatim(collection_dir, access_by_doi),
-        check_pii_dual_use(collection_dir, collection_meta),
-        check_provenance(collection_dir),
-        check_workflows(collection_dir),
+        _readable_check(check_access_tier, corpus),
+        _readable_check(check_strip_verbatim, collection_dir, access_by_doi),
+        _readable_check(check_pii_dual_use, collection_dir, collection_meta),
+        _readable_check(check_provenance, collection_dir),
+        _readable_check(check_workflows, collection_dir),
+        _check_gate_inputs(collection_dir, resolved_corpus),
+        binding_check,
     ]
-
-    counts = {PASS: 0, WARN: 0, FAIL: 0}
+    inventory_check, inventory = _check_inventory(collection_dir, corpus, collection_meta)
+    checks.append(inventory_check)
+    cut_checks, input_snapshot = _check_cut(collection_dir, binding, {"inventory": inventory, "inputs": inputs})
+    checks.extend(cut_checks)
+    binding["cut_inputs"] = input_snapshot
+    checks.append(_check_stable_target(collection_dir, (resolved_corpus, report_path, inputs), binding))
+    unit_type = collection_meta.get("unit_type", "skills")
+    counts = {status: 0 for status in _SEVERITY}
     for c in checks:
         counts[c.status] += 1
-    overall = FAIL if counts[FAIL] else (WARN if counts[WARN] else PASS)
-
+    overall = max((c.status for c in checks), key=lambda status: _SEVERITY[status])
+    if unit_type != "skills":
+        overall = UNCHECKABLE
     mode = "strict" if strict else "advisory"
-    # Hard gates (2,5,6,8,15) are never overridable (§8.2); in strict mode any
-    # FAIL on these blocks.  In advisory mode (staged PRs) everything is reported
-    # but the process exits 0.
-    blocking_fail = strict and counts[FAIL] > 0
+    blocking_fail = overall == UNCHECKABLE or (strict and counts[FAIL] > 0)
+    scope = "content-policy checks and bound artifact integrity" if strict else _DIAGNOSTIC_SCOPE
+    if unit_type in ("data-only", "empty"):
+        scope += f"; declared {unit_type} unit: no skill validation is available"
+    elif unit_type != "skills":
+        scope += f"; unsupported collection unit_type: {unit_type!r}"
 
     report: dict[str, Any] = {
         "schema": _GATE_REPORT_SCHEMA,
@@ -1010,16 +1247,14 @@ def run_gate(
         "mode": mode,
         "strict": strict,
         "promote_logic_source": _PROMOTE_SOURCE,
-        "policy": {
-            "oa_tiers": sorted(_NORMALIZED_OA_TIERS),
-            "per_span_cap": _PER_SPAN_CAP,
-            "cumulative_cap": _CUMULATIVE_CAP,
-            "text_field_cap": _TEXT_FIELD_CAP,
-            "ngram_jaccard_threshold": _NGRAM_JACCARD_THRESHOLD,
-            "similarity_ratio_threshold": _SIMILARITY_RATIO_THRESHOLD,
-            "pii_config_version": PII_CONFIG["version"],
-            "require_open_access": True,
-        },
+        "policy": _policy_snapshot(),
+        "binding": binding,
+        "inventory": inventory,
+        "unit_type": unit_type,
+        "input_paths": [str(path) for path in inputs],
+        "verification_scope": scope,
+        "release_verified": strict and not blocking_fail,
+        "zero_item_checks": [c.name for c in checks if not c.counts["checked"]],
         "overall_status": overall,
         "blocking": blocking_fail,
         "exit_code": 1 if blocking_fail else 0,
@@ -1027,29 +1262,94 @@ def run_gate(
         "hard_gate_ids": [2, 5, 6, 8, 15],
         "checks": [c.to_dict() for c in checks],
     }
+    report["receipt_sha256"] = receipt.digest(report)
     return report
 
 
+def _check_stable_target(collection_dir: Path, paths: tuple, before: dict) -> CheckResult:
+    corpus, report_path, inputs = paths
+    check = CheckResult("target_stability", scope="target and input snapshots", hard_gate=True)
+    try:
+        after = receipt.capture_target(collection_dir, report_path)
+        after["corpus"] = receipt.corpus_record(collection_dir, corpus)
+        after["cut_inputs"] = receipt.capture_inputs(inputs, collection_dir) if before.get("cut_inputs") else None
+        if after != before:
+            check.add(FAIL, "Target or source inputs changed during gate measurement; run again.")
+        check.record_item(0)
+    except (OSError, ValueError) as exc:
+        check.add(UNCHECKABLE, f"Cannot confirm target stability: {exc}")
+    return check.finish()
+
+
+def verify_receipt(collection_dir: Path, report_path: Path, *, corpus_path=None, inputs=None) -> dict:
+    """Recompute a strict receipt's bindings and checks without rewriting it."""
+    try:
+        saved = json.loads(report_path.read_text(encoding="utf-8"))
+        if saved["schema"] != _GATE_REPORT_SCHEMA:
+            raise ValueError("Unsupported receipt schema; run the gate to create a bound receipt")
+        expected = receipt.digest({key: value for key, value in saved.items() if key != "receipt_sha256"})
+        if saved["receipt_sha256"] != expected:
+            raise ValueError("Receipt digest mismatch")
+        if saved["strict"] is not True or saved["release_verified"] is not True:
+            return {"status": UNCHECKABLE, "exit_code": 1, "reason": "Receipt is not a strict release verification"}
+        if corpus_path is None and saved["binding"].get("corpus"):
+            record = saved["binding"]["corpus"]
+            corpus_path = (collection_dir / record["path"] if record["location"] == "collection"
+                           else Path(record["path"]))
+        paths = inputs if inputs is not None else [Path(path) for path in saved["input_paths"]]
+        current = run_gate(collection_dir, corpus_path, True, report_path=report_path, inputs=paths)
+        keys = ("binding", "policy", "inventory", "unit_type", "checks", "overall_status", "release_verified")
+        changed = [key for key in keys if current[key] != saved[key]]
+        if changed or not current["release_verified"]:
+            return {"status": FAIL, "exit_code": 1, "reason": "Receipt mismatch: " + ", ".join(changed)}
+        return {"status": "verified", "exit_code": 0, "reason": "Strict receipt and target re-verified"}
+    except (OSError, ValueError, TypeError, KeyError, AttributeError) as exc:
+        return {"status": UNCHECKABLE, "exit_code": 1, "reason": f"Unreadable or malformed receipt: {exc}"}
+
+
 def _print_human_summary(report: dict[str, Any]) -> None:
-    icon = {PASS: "PASS", WARN: "WARN", FAIL: "FAIL"}
+    icon = {status: status.upper() for status in _SEVERITY}
     print(f"ASBB release gate — {report['mode']} mode")
+    print(f"  scope      : {report['verification_scope']}")
     print(f"  collection : {report['collection_dir']}")
     print(f"  corpus     : {report['corpus_path']}")
     print(f"  reuse      : {report['promote_logic_source']}")
     print("  checks:")
     for c in report["checks"]:
         hard = " [hard-gate]" if c["hard_gate"] else ""
-        print(f"    {icon[c['status']]:>4}  {c['name']} (gates {c['gates']}){hard} — {c['n_findings']} finding(s)")
+        counts = " / ".join(f"{key}={value}" for key, value in c["counts"].items())
+        print(f"    {icon[c['status']]:>4}  {c['name']} (gates {c['gates']}){hard} — {counts} [{c['scope']}]")
+        if c["coverage"]:
+            print("            coverage: " + ", ".join(f"{key}={value}" for key, value in c["coverage"].items()))
         for d in c["details"]:
             print(f"            · [{icon[d['status']]}] {d['message']}")
     print(f"  overall    : {icon[report['overall_status']]}  (exit {report['exit_code']})")
     if report["blocking"]:
-        print("  RESULT     : BLOCKED — strict mode + at least one FAIL on a hard gate.")
+        print("  RESULT     : BLOCKED — failed or uncheckable required release measurements.")
     elif report["overall_status"] == FAIL:
         print("  RESULT     : advisory — FAIL(s) reported, exit 0 (curator review).")
 
 
+def _validate_report_path(report_path: Path) -> None:
+    if report_path.name in (receipt.MANIFEST_NAME, "SKILL.md", "collection.yaml", "corpus.yaml") or report_path.is_symlink():
+        raise ValueError("The report cannot replace a source file, manifest or symlink")
+    if not report_path.exists():
+        return
+    try:
+        previous = json.loads(report_path.read_text(encoding="utf-8"))
+        if previous.get("schema") in ("asbb-release-gate/1.0", _GATE_REPORT_SCHEMA):
+            return
+    except (OSError, ValueError, AttributeError):
+        pass
+    raise ValueError(f"Report would overwrite a non-receipt payload: {report_path}")
+
+
+def _absolute_report_path(path: Path) -> Path:
+    return path.parent.resolve() / path.name
+
+
 def main(argv: list[str] | None = None) -> int:
+    """Run the content gate or read-only receipt verification, returning its CLI code."""
     parser = argparse.ArgumentParser(
         prog="release_gate.py",
         description=(
@@ -1072,13 +1372,17 @@ def main(argv: list[str] | None = None) -> int:
     mode.add_argument(
         "--strict",
         action="store_true",
-        help="Hard-block: any FAIL exits 1 (promotion to collections/ + release tag).",
+        help="Strict verification: 0 verified, 1 failed/uncheckable, 2 usage error.",
     )
     mode.add_argument(
         "--advisory",
         action="store_true",
-        help="Advisory (default): report WARN/FAIL but exit 0 (staged-collections PRs).",
+        help="Advisory (default): nonempty diagnostics exit 0; empty required measurements exit 1.",
     )
+    mode.add_argument("--verify", action="store_true",
+                      help="Re-verify the saved strict receipt and input closure without writing (0/1/2).")
+    parser.add_argument("--inputs", type=Path, nargs="+", default=None,
+                        help="Source directories, in cut order, required when MANIFEST.gen.json is present.")
     parser.add_argument(
         "--report",
         type=Path,
@@ -1092,18 +1396,23 @@ def main(argv: list[str] | None = None) -> int:
     )
     args = parser.parse_args(argv)
 
-    collection_dir: Path = args.collection_dir
+    collection_dir: Path = args.collection_dir.resolve()
     if not collection_dir.is_dir():
         sys.stderr.write(f"error: collection_dir not found: {collection_dir}\n")
         return 2
 
     strict = bool(args.strict)  # --advisory and default both → strict=False
-    report = run_gate(collection_dir, args.corpus, strict)
-
-    report_path = args.report or (collection_dir / "gate_report.json")
+    report_path = _absolute_report_path(args.report or collection_dir / "gate_report.json")
+    if args.verify:
+        result = verify_receipt(collection_dir, report_path, corpus_path=args.corpus, inputs=args.inputs)
+        if not args.quiet:
+            print(f"ASBB receipt verification: {result['status']} (exit {result['exit_code']}) — {result['reason']}")
+        return result["exit_code"]
     try:
+        _validate_report_path(report_path)
+        report = run_gate(collection_dir, args.corpus, strict, report_path=report_path, inputs=args.inputs)
         report_path.write_text(json.dumps(report, indent=2, sort_keys=False) + "\n", encoding="utf-8")
-    except OSError as exc:
+    except (OSError, ValueError) as exc:
         sys.stderr.write(f"error: could not write report to {report_path}: {exc}\n")
         return 2
 
