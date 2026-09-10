@@ -102,7 +102,7 @@ agent at `collections/metabolomics/v2/` and read the indexes. See
 ## 🌍 Install beyond Claude Code
 
 Other agent runtimes have no `/plugin install`. Use the bundled `asbb` CLI from a
-local clone to materialize a pack into the runtime's own location.
+local clone to materialize a marketplace plugin or pack into the runtime's own location.
 
 ```bash
 git clone https://github.com/HolobiomicsLab/asb-skill-collections.git
@@ -120,13 +120,15 @@ python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --runtime a
 # Vendor into a project for Claude Code: --runtime claude  (add --user for ~/.claude)
 ```
 
-**Rules/instruction IDEs** (a `SKILL.md` is rendered into their format — run from
-the target project):
+**Rules/instruction IDEs** (rendered instructions backed by a complete unit — run
+from the target project, making the checkout importable and naming it explicitly):
 
 ```bash
-python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --runtime cursor          # .cursor/rules/*.mdc
-python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --runtime cline           # .clinerules/*.md
-python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --runtime vscode-copilot  # .github/instructions/*.instructions.md
+ASB_COLLECTIONS_REPO=/path/to/asb-skill-collections
+export PYTHONPATH="$ASB_COLLECTIONS_REPO${PYTHONPATH:+:$PYTHONPATH}"
+python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --repo "$ASB_COLLECTIONS_REPO" --runtime cursor          # .cursor/rules/*.mdc
+python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --repo "$ASB_COLLECTIONS_REPO" --runtime cline           # .clinerules/*.md
+python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --repo "$ASB_COLLECTIONS_REPO" --runtime vscode-copilot  # .github/instructions/*.instructions.md
 ```
 
 **Anything else** (pi, Antigravity, or a runtime without a preset):
@@ -135,10 +137,28 @@ python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --runtime v
 python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --dest ~/some/skills/dir
 ```
 
-Skill-native installs **symlink** by default (a `git pull` in the clone updates
-them); add `--copy` for a self-contained copy. `--dry-run` previews, `--force`
-overwrites unmanaged files, and `asbb uninstall <pack> --runtime <id>` cleanly
-removes exactly what was installed (tracked in `~/.asbb/installed.json`).
+Skill-native installs **symlink** the advertised skill directories by default:
+keep the source checkout in place. `--copy`, `--dest`, and every rules target
+copy the source unit into `<target-root>/.asbb-units/<marketplace-name>/`, including
+its router, leaves, indexes, scripts and supporting files. Small host adapters at
+the existing skill names point to that unit using relative paths. Run the unit's
+commands from its collection root, as explained in the adapter. Local hidden
+content (including caches), bytecode, proposals and outputs are excluded; source symlinks
+are refused. The exact copy contract is in [REGISTRY.md §4](docs/REGISTRY.md#4-the-asbb-cli-helper-local-installation).
+
+Re-run the same `install` command to update a copy and remove stale owned entries;
+there is no separate `sync` command. `~/.asbb/installed.json` records the source
+version, SHA256, destination and owned entries. `--dry-run` previews writes and
+cleanup. `--force` permits unmanaged collisions, but cannot override path safety
+or another recorded owner's entries.
+
+Remove an installation with `python3 -m asb_skill_collections.asbb_cli uninstall
+<pack> --runtime <id>` or `uninstall <pack> --dest <original-directory>`; both
+accept `--dry-run`. Match the original project cwd and, for a user-wide Claude
+install, `--user`. Invalid or escaped records refuse the entire operation before
+deletion. Installed copies can be moved for use; managing them again requires
+the original recorded root. These checks exercise local files and adapters;
+they do not establish compatibility with a live version of every host.
 
 > For **Claude Code**, the plugin marketplace above remains the recommended path.
 

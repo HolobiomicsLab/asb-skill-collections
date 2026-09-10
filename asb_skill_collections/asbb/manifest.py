@@ -22,13 +22,18 @@ def save(home: Path, data: dict) -> None:
     p.write_text(json.dumps(data, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
-def record(home, slug, runtime, dest_root, entries, mode) -> None:
+def record(home, slug, runtime, dest_root, entries, mode, *, source=None, symlinks=None) -> None:
+    """Record owned destination entries and optional source/link provenance."""
     data = load(home)
     data.setdefault(slug, {})[runtime] = {
         "dest_root": str(dest_root),
         "entries": [str(e) for e in entries],
         "mode": mode,
     }
+    if source is not None:
+        data[slug][runtime]["source"] = source
+    if symlinks:
+        data[slug][runtime]["symlinks"] = symlinks
     save(home, data)
 
 

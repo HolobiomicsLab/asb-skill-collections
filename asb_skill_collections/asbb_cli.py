@@ -6,13 +6,13 @@ Subcommands:
                                 checkout). The thin programmatic surface, also
                                 exposed over MCP by asb_mcp_server.py.
   registry / verify / doctor  — registry utilities (Phase 1.7 stubs).
-  install / uninstall         — materialize packs into NON-Claude runtimes
+  install / uninstall         — materialize local units into runtime targets
                                 (Codex, Gemini, Copilot, Cursor, Cline,
                                 VS Code Copilot, or any dir via --dest).
 
 For Claude Code the canonical install path remains the plugin marketplace::
 
-    /plugin install <slug>@HolobiomicsLab/asb-skill-collections
+    /plugin install <marketplace-name>@asb-skill-collections
 
 `install` resolves packs from a LOCAL checkout (run from a clone or pass
 --repo); the published wheel ships only this package, not the packs.
@@ -37,8 +37,10 @@ def _cmd_registry(args: argparse.Namespace) -> int:
     action = getattr(args, "registry_action", None) or "list"
     print(f"asbb registry {action}: {_TO_BUILD}")
     print(
-        "Install collections via the plugin marketplace, NOT this CLI:\n"
-        "  /plugin install <slug>-v<N>@HolobiomicsLab/asb-skill-collections"
+        "For Claude Code's native plugin installation:\n"
+        "  /plugin marketplace add HolobiomicsLab/asb-skill-collections\n"
+        "  /plugin install <marketplace-name>@asb-skill-collections\n"
+        "For local runtime targets, use asbb install --list-runtimes."
     )
     return 0
 
@@ -136,6 +138,9 @@ def _cmd_install(args) -> int:
         return 1
     try:
         pack = resolve_pack(repo, args.pack)
+    except ValueError as e:
+        print(f"error: {e}", file=sys.stderr)
+        return 1
     except KeyError:
         slugs = ", ".join(list_pack_slugs(repo))
         print(f"error: unknown pack {args.pack!r}; valid: {slugs}", file=sys.stderr)
@@ -148,7 +153,9 @@ def _cmd_install(args) -> int:
         return 1
     where = opts.dest_override or target.dest(opts)
     verb = "would install" if opts.dry_run else "installed"
-    print(f"{verb} {len(written)} skill(s) from {args.pack} -> {where}")
+    print(f"{verb} {len(written)} managed entry(ies) from {args.pack} -> {where}")
+    if target.kind == "skill" and not opts.copy:
+        print("symlink mode: keep the source checkout in place; use --copy for a standalone unit")
     return 0
 
 
@@ -164,8 +171,13 @@ def _cmd_uninstall(args) -> int:
         print(f"error: unknown runtime {args.runtime!r}", file=sys.stderr)
         return 1
     opts = _install_opts(args)
-    removed = uninstall(args.pack, target, opts)
-    print(f"removed {len(removed)} entry(ies) for {args.pack}")
+    try:
+        removed = uninstall(args.pack, target, opts)
+    except ValueError as e:
+        print(f"error: {e}", file=sys.stderr)
+        return 1
+    verb = "would remove" if opts.dry_run else "removed"
+    print(f"{verb} {len(removed)} entry(ies) for {args.pack}")
     return 0
 
 
@@ -174,7 +186,7 @@ def build_parser() -> argparse.ArgumentParser:
         prog="asbb",
         description=(
             "asb-skill-collections CLI: registry/verify/doctor utilities + "
-            "install/uninstall for non-Claude runtimes "
+            "install/uninstall for local runtime targets "
             "(for Claude Code, use /plugin install)."
         ),
     )
@@ -236,19 +248,20 @@ def build_parser() -> argparse.ArgumentParser:
 
     # asbb install <pack> --runtime ... | --dest DIR
     p_install = sub.add_parser(
-        "install", help="Install a pack into a non-Claude runtime.")
-    p_install.add_argument("pack", nargs="?", help="Marketplace pack slug.")
+        "install", help="Install or update a local collection/pack.",
+        description="Install a local unit; repeat with the same target to sync and clean stale entries.")
+    p_install.add_argument("pack", nargs="?", help="Marketplace plugin/pack name.")
     p_install.add_argument("--runtime", help="Target runtime id (see --list-runtimes).")
-    p_install.add_argument("--dest", help="Install into an arbitrary directory (copy).")
+    p_install.add_argument("--dest", help="Target root for a self-contained copy.")
     p_install.add_argument("--repo", help="Path to an asb-skill-collections checkout.")
     p_install.add_argument("--user", action="store_true",
                            help="For --runtime claude: use ~/.claude/skills.")
     p_install.add_argument("--copy", action="store_true",
-                           help="Copy skill dirs instead of symlinking.")
+                           help="Copy the complete unit and install small host adapters.")
     p_install.add_argument("--force", action="store_true",
                            help="Overwrite unmanaged files at the destination.")
     p_install.add_argument("--dry-run", action="store_true", dest="dry_run",
-                           help="Print intended writes; change nothing.")
+                           help="Preview writes and stale-entry removals; change nothing.")
     p_install.add_argument("--list-runtimes", action="store_true", dest="list_runtimes",
                            help="List available runtimes and exit.")
     p_install.add_argument("--home", help=argparse.SUPPRESS)  # test hook
@@ -257,9 +270,13 @@ def build_parser() -> argparse.ArgumentParser:
     # asbb uninstall <pack> --runtime ... | --dest DIR
     p_uninstall = sub.add_parser(
         "uninstall", help="Remove a previously installed pack from a runtime.")
-    p_uninstall.add_argument("pack", help="Marketplace pack slug.")
+    p_uninstall.add_argument("pack", help="Marketplace plugin/pack name.")
     p_uninstall.add_argument("--runtime", help="Target runtime id.")
     p_uninstall.add_argument("--dest", help="The directory it was installed into.")
+    p_uninstall.add_argument("--user", action="store_true",
+                             help="For --runtime claude: use ~/.claude/skills.")
+    p_uninstall.add_argument("--dry-run", action="store_true",
+                             help="Print intended removals; change nothing.")
     p_uninstall.add_argument("--repo", help=argparse.SUPPRESS)  # accepted for compat
     p_uninstall.add_argument("--home", help=argparse.SUPPRESS)
     p_uninstall.set_defaults(func=_cmd_uninstall)

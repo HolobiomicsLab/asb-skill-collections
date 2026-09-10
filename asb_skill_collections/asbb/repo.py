@@ -5,6 +5,8 @@ import json
 from dataclasses import dataclass
 from pathlib import Path
 
+from .unit import unit_version
+
 MARKETPLACE_REL = Path(".claude-plugin") / "marketplace.json"
 
 
@@ -13,6 +15,12 @@ class PackRef:
     slug: str
     source: str          # repo-relative, e.g. "packs/demo/pack"
     skills_dir: Path     # absolute <repo>/<source>/skills
+    version: str | None = None
+
+    @property
+    def unit_dir(self) -> Path:
+        """The marketplace source root containing advertisements and assets."""
+        return self.skills_dir.parent
 
 
 def find_repo_root(start: Path) -> Path:
@@ -34,14 +42,26 @@ def list_pack_slugs(repo: Path) -> list[str]:
     return [p["name"] for p in _load_marketplace(repo).get("plugins", [])]
 
 
+def _source_root(repo: Path, source: str) -> Path:
+    root = Path(repo).resolve()
+    relative = Path(source)
+    unit = (root / relative).resolve()
+    if relative.is_absolute() or ".." in relative.parts or not unit.is_relative_to(root):
+        raise ValueError(f"refusing marketplace source outside {root}: {source}")
+    return unit
+
+
 def resolve_pack(repo: Path, slug: str) -> PackRef:
+    """Resolve a marketplace name to a source contained in the local checkout."""
     for p in _load_marketplace(repo).get("plugins", []):
         if p["name"] == slug:
             source = p["source"]
             if source.startswith("./"):
                 source = source[2:]
-            skills_dir = (Path(repo) / source / "skills").resolve()
-            return PackRef(slug=slug, source=source, skills_dir=skills_dir)
+            unit_dir = _source_root(repo, source)
+            skills_dir = unit_dir / "skills"
+            return PackRef(slug=slug, source=source, skills_dir=skills_dir,
+                           version=unit_version(unit_dir, p.get("version")))
     raise KeyError(slug)
 
 
