@@ -603,7 +603,16 @@ XSD prefixes. Both ship. No third file is required.
 > nor `https://w3id.org/asb` resolves — both return 404 (checked 2026-09-13). A w3id IRI is designed to
 > be minted before it redirects, so this does not block a tag and the identifiers stay stable, but every
 > `@id` in the deposited collection is a dead link until the redirect config is submitted to the w3id.org
-> repository. Tracked as the `w3id-registration` register item; the PR text is already drafted.
+> repository. Tracked as the `w3id-registration` register item.
+>
+> **Corrected 2026-09-14.** This line used to end "the PR text is already drafted". What was
+> drafted (`W3ID_REDIRECT_PRS.md` in the hub) registers `/asb` and `/indicium`, which appear in
+> **0** files of the published tree -- their contexts are in the staged, unpublished
+> `metabolomics/v1`. The namespace this release binds, `holobiomicslab/asb-skill`, had no draft
+> until `W3ID_HOLOBIOMICSLAB_PR.md`, which also records two corrections that apply to all three:
+> `perma-id/w3id.org` now takes `ids/<name>/`, not a root-level directory, and the two older
+> drafts remain blocked on `HolobiomicsLab/indicium` being public (still private, all four of
+> their targets 404 on 2026-09-14). The `/holobiomicslab` targets all return 200.
 
 **If v1 ships claim records**, the ontology pin becomes real and belongs here — at that point snapshot the
 generated Turtle from the framework (`docs/ontology/asb_spine.ttl`), not a hand-copy in this repo. The
