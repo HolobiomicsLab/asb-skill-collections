@@ -67,8 +67,18 @@ def _unit_identity(rec, slug, runtime):
     }
 
 
-def _recorded_unit(rec, slug, runtime, *, allow_missing=False):
-    root = recorded_root(rec["dest_root"])
+def _recorded_unit(rec, slug, runtime, *, allow_missing=False, root=None):
+    """Return the record's unit, by default beneath the root it records.
+
+    ``root`` overrides only *where to look*, never *what counts*: the receipt is
+    still compared against the identity the record states, recorded root
+    included. That is deliberate. A unit that was moved carries its receipt
+    unchanged, so the receipt keeps naming the root it was installed into even
+    though it no longer sits there — matching it is how a moved unit is
+    recognised as the same unit, and refusing to relax it is how a *copy*, whose
+    original is still in place, stays unclaimable.
+    """
+    root = recorded_root(rec["dest_root"]) if root is None else root
     expected = unit_relative(slug, runtime, rec["version"], rec["source_digest"])
     if rec["unit"] != expected:
         raise ValueError("unit path does not match its recorded owner and revision")
@@ -83,10 +93,10 @@ def _recorded_unit(rec, slug, runtime, *, allow_missing=False):
     return unit
 
 
-def _owned_entry(rec, slug, runtime, rel):
-    root = recorded_root(rec["dest_root"])
+def _owned_entry(rec, slug, runtime, rel, *, root=None):
+    root = recorded_root(rec["dest_root"]) if root is None else root
     final = _resolve(root, rel)
-    unit = _recorded_unit(rec, slug, runtime)
+    unit = _recorded_unit(rec, slug, runtime, root=root)
     owner = rec.get("entry_owners", {}).get(rel, {})
     if (owner.get("pack"), owner.get("runtime"), owner.get("version")) != (
         slug,
@@ -109,6 +119,45 @@ def _owned_entry(rec, slug, runtime, rel):
     return final
 
 
+def _holds_unit(rec, slug, runtime, root) -> bool:
+    try:
+        _recorded_unit(rec, slug, runtime, root=root)
+    except (KeyError, ValueError, OSError):
+        return False
+    return True
+
+
+def _moved_root(rec, slug, runtime, candidate):
+    """Return the root an installation was moved to, when the move is provable.
+
+    An installed unit that is moved on disk takes its receipt with it, so the
+    receipt still names the root it was installed into while the unit itself now
+    sits under ``candidate``. Record, receipt and candidate then agree on pack,
+    runtime, revision and unit path, and only the location differs — which is
+    what makes the moved unit the *same* unit rather than a lookalike.
+
+    Two conditions are load-bearing. The candidate is only ever the directory the
+    caller named, never one read back out of a receipt, so no planted file can
+    nominate what the installer operates on. And the recorded root must have
+    stopped holding the unit: a copy leaves its original in place and therefore
+    never qualifies, which is what keeps a byte-identical backup from being
+    claimed and deleted.
+
+    Returns None when there is no such proof, leaving every caller on the
+    recorded root and the existing refusals intact. Detecting the move and
+    writing the new root back into the manifest is a separate concern.
+    """
+    if not rec or candidate is None:
+        return None
+    try:
+        recorded = recorded_root(rec["dest_root"])
+    except (KeyError, TypeError, ValueError):
+        return None
+    if candidate == recorded or _holds_unit(rec, slug, runtime, recorded):
+        return None
+    return candidate if _holds_unit(rec, slug, runtime, candidate) else None
+
+
 def _other_claims(home, slug, runtime, root, rel):
     return any(
         (owner, rid) != (slug, runtime)
@@ -126,7 +175,7 @@ def _overlapping(rel, other):
     return parts[: len(others)] == others or others[: len(parts)] == parts
 
 
-def _plan_entries(pack, target, unit, assets):
+def _plan_entries(pack, target, root, unit, assets):
     planned = {}
     shipped = {rel for rel, _ in assets}
     for directory in iter_skill_dirs(pack):
@@ -149,7 +198,10 @@ def _plan_entries(pack, target, unit, assets):
                 f"{clash} already planned for this install"
             )
         fm, body = parse_skill_md(directory / "SKILL.md")
-        body = bind_body(body, unit, f"skills/{name}/SKILL.md")
+        entry_file = _resolve(root, rel)
+        if target.kind == "skill":
+            entry_file = entry_file / "SKILL.md"
+        body = bind_body(body, unit, f"skills/{name}/SKILL.md", entry_file)
         planned[rel] = (
             f"---\n{yaml.safe_dump(fm, sort_keys=False)}---\n\n{body}"
             if target.kind == "skill"
@@ -158,17 +210,27 @@ def _plan_entries(pack, target, unit, assets):
     return planned
 
 
-def _check_conflicts(pack, target, opts, rec, planned):
+def _check_conflicts(pack, target, opts, rec, planned, moved=None):
     root = target.dest(opts).resolve()
     for rel in planned:
         final = _resolve(root, rel)
         if not final.exists() and not final.is_symlink():
             continue
         owned = False
-        if rec and rec.get("dest_root") == str(root) and rel in rec.get("entries", ()):
+        here = bool(rec) and (rec.get("dest_root") == str(root) or moved == root)
+        if here and rel in rec.get("entries", ()):
             try:
-                _owned_entry(rec, pack.slug, target.id, rel)
-                owned = not _other_claims(opts.home, pack.slug, target.id, root, rel)
+                # Competing claims are compared against the root every record
+                # names, not the one this installation was moved to: a pack that
+                # travelled alongside this one still records the old root.
+                _owned_entry(rec, pack.slug, target.id, rel, root=root)
+                owned = not _other_claims(
+                    opts.home,
+                    pack.slug,
+                    target.id,
+                    recorded_root(rec["dest_root"]),
+                    rel,
+                )
             except (KeyError, ValueError, OSError):
                 pass
         if not owned and not opts.force:
@@ -192,12 +254,17 @@ def _write_unit(stage, assets, planned, target, identity):
         entry.write_text(text, encoding="utf-8")
 
 
-def _materialise_unit(unit, assets, planned, target, previous, identity):
+def _materialise_unit(unit, assets, planned, target, previous, identity, moved=None):
     if unit.exists():
         try:
             owned = (
                 previous
-                and _recorded_unit(previous, identity["pack"], identity["runtime"])
+                and _recorded_unit(
+                    previous,
+                    identity["pack"],
+                    identity["runtime"],
+                    root=moved,
+                )
                 == unit
             )
             owned = owned and content_identity(unit) == previous["unit_digest"]
@@ -237,14 +304,17 @@ def _place_entries(root, unit, planned, target, opts):
     return owners
 
 
-def _clean_entries(rec, slug, runtime, entries, home):
+def _clean_entries(rec, slug, runtime, entries, home, *, root=None):
     removed = []
     for rel in entries:
         try:
-            root = recorded_root(rec["dest_root"])
-            if not _absent(_resolve(root, rel)):
-                final = _owned_entry(rec, slug, runtime, rel)
-                if _other_claims(home, slug, runtime, root, rel):
+            recorded = recorded_root(rec["dest_root"])
+            actual = recorded if root is None else root
+            if not _absent(_resolve(actual, rel)):
+                final = _owned_entry(rec, slug, runtime, rel, root=actual)
+                # Competing claims are still read against the recorded root: a
+                # pack that moved alongside this one records that same root.
+                if _other_claims(home, slug, runtime, recorded, rel):
                     raise ValueError("another installed pack claims this entry")
                 _remove_existing(final)
             removed.append(rel)
@@ -253,9 +323,9 @@ def _clean_entries(rec, slug, runtime, entries, home):
     return removed
 
 
-def _clean_unit(rec, slug, runtime):
+def _clean_unit(rec, slug, runtime, *, root=None):
     try:
-        unit = _recorded_unit(rec, slug, runtime, allow_missing=True)
+        unit = _recorded_unit(rec, slug, runtime, allow_missing=True, root=root)
         if not unit.exists():
             return True
         if content_identity(unit) != rec["unit_digest"]:
@@ -269,16 +339,24 @@ def _clean_unit(rec, slug, runtime):
         return False
 
 
-def _clean_snapshot(rec, slug, runtime, home):
-    removed = _clean_entries(rec, slug, runtime, rec.get("entries", ()), home)
+def _clean_snapshot(rec, slug, runtime, home, *, root=None):
+    removed = _clean_entries(
+        rec, slug, runtime, rec.get("entries", ()), home, root=root
+    )
     remaining = {key: value for key, value in rec.items() if key != "retained_units"}
     remaining["entries"] = [rel for rel in rec.get("entries", ()) if rel not in removed]
-    if not remaining["entries"] and _clean_unit(rec, slug, runtime):
+    if not remaining["entries"] and _clean_unit(rec, slug, runtime, root=root):
         return None, removed
     return remaining, removed
 
 
 def _clean_previous(previous, current, home):
+    """Retire what the superseded record still owns, at the root it records.
+
+    No relocation here, on purpose. The superseded record names the place this
+    installation was moved *from*; pointing its cleanup at where the unit is now
+    would aim it straight at the entries this install has just written.
+    """
     if not previous:
         return []
     snapshots = list(previous.get("retained_units", ()))
@@ -330,8 +408,15 @@ def install(pack: PackRef, target: Target, opts: InstallOpts) -> list[str]:
     unit = _resolve(root, unit_rel)
     if unit.resolve() != unit:
         raise ValueError(f"unit path follows a symlink: {unit}")
-    planned = _plan_entries(pack, target, unit, assets)
-    _check_conflicts(pack, target, opts, previous, planned)
+    planned = _plan_entries(pack, target, root, unit, assets)
+    # Only an explicitly named destination states where an installation is now;
+    # without one the record remains the sole statement, as uninstall documents.
+    moved = (
+        _moved_root(previous, pack.slug, target.id, root)
+        if opts.dest_override is not None
+        else None
+    )
+    _check_conflicts(pack, target, opts, previous, planned, moved)
     if opts.dry_run:
         print(f"would copy complete unit to {unit}")
         for rel in planned:
@@ -345,7 +430,7 @@ def install(pack: PackRef, target: Target, opts: InstallOpts) -> list[str]:
         pack=pack.slug,
         runtime=target.id,
     )
-    _materialise_unit(unit, assets, planned, target, previous, identity)
+    _materialise_unit(unit, assets, planned, target, previous, identity, moved)
     owners = _place_entries(root, unit, planned, target, opts)
     retained = _clean_previous(
         previous, {**identity, "entries": list(planned)}, opts.home
@@ -378,21 +463,32 @@ def uninstall(slug: str, target: Target, opts: InstallOpts) -> list[str]:
     rec = manifest.get(opts.home, slug, target.id)
     if not rec:
         return []
+    moved = None
     if opts.dest_override is not None:
         # --dest names the directory to operate on. When the record contradicts
-        # it, the command is ambiguous: refuse rather than empty the other one.
+        # it, the command is ambiguous: refuse rather than empty the other one —
+        # unless the directory named holds the very unit the record placed, and
+        # the recorded root no longer does. That is an installation that was
+        # moved wholesale, and refusing it left no way to remove one at all.
         # Without --dest the record is the only statement of where to look, and
         # each entry is validated against it below.
         root = target.dest(opts).resolve()
-        if rec.get("dest_root") != str(root):
+        moved = _moved_root(rec, slug, target.id, root)
+        if rec.get("dest_root") != str(root) and moved != root:
             raise ValueError(
                 f"{slug} is installed at {rec.get('dest_root')}, not at {root}; "
                 "uninstall it from the destination it was installed into"
             )
-    active, removed = _clean_snapshot(rec, slug, target.id, opts.home)
+    active, removed = _clean_snapshot(rec, slug, target.id, opts.home, root=moved)
     retained = []
     for snapshot in rec.get("retained_units", ()):
-        pending, cleaned = _clean_snapshot(snapshot, slug, target.id, opts.home)
+        pending, cleaned = _clean_snapshot(
+            snapshot,
+            slug,
+            target.id,
+            opts.home,
+            root=_moved_root(snapshot, slug, target.id, moved) if moved else None,
+        )
         removed.extend(rel for rel in cleaned if rel not in removed)
         if pending:
             retained.append(pending)
