@@ -32,7 +32,7 @@ contributors:
   orcid: https://orcid.org/0000-0001-6711-6719
 skills_count: 5859
 tools_count: 909
-workflows_count: 10
+workflows_count: 21
 skills:
 - 2d-nmr-pulse-sequence-implementation
 - 2d-tic-preprocessing
