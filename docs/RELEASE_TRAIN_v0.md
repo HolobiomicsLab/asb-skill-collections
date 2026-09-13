@@ -118,7 +118,7 @@ TAG: metabolomics-v1
 ```bash
 pytest tests/ -v
 ```
-Runs gates: 1, 2, 5, 6, 8, 9, 10 (same as validate.yml; gates 3, 4, 7, 11–14 not automated in v0).
+The suite tests gate behavior; a target-specific content receipt comes from `python scripts/release_gate.py <collection> --strict`. It writes `gate_report.json` (override with `--report`), schema `asbb-release-gate/1.1`, with per-check `checked / skipped / missing / failed` item counts and separate inspected-file coverage. The receipt binds the final payload tree (excluding only that receipt and `MANIFEST.gen.json`), the manifest digest when present, source inputs, recomputed inventory and policy/configuration version. Supply `--inputs <source-dir> [...]` for an ASB cut's source closure. `--verify` rechecks the saved strict receipt without writing; strict gating and re-verification return 0 for verified, 1 for failed or uncheckable, and 2 for usage errors. Empty required measurements are uncheckable and return 1 in both modes. Nonempty advisory runs retain exit 0 and state “diagnostic run, not a release verification”. This receipt establishes the stated content/integrity checks, not publication approval.
 
 **If pytest fails:** release.yml **stops**. The tag is pushed but the workflow fails. The maintainer must fix the code, amend the collection in `collections/`, re-run pytest locally to confirm, then (optionally) re-push to `main` and re-tag.
 

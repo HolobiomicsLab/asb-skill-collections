@@ -482,7 +482,7 @@ Health check: Perspicacité KB endpoint reachability, marketplace.json HTTP avai
 
 ### 4.2 asbb verify-collection
 
-Pre-release validation for a collection directory (used in the release gate):
+The content gate (`python scripts/release_gate.py <collection> --strict`) produces `gate_report.json`, or the `--report` destination, with scoped item counts, separate file coverage, payload/manifest digests, input closure, recomputed inventory and policy/configuration version. Only the selected receipt and `MANIFEST.gen.json` are excluded from the payload digest. Recheck a saved strict receipt with `--verify` and the same `--report` override; ASB cut manifests require source directories via `--inputs`. Strict gating and re-verification use exits 0 verified, 1 failed/uncheckable, 2 usage error. Advisory mode retains 0 for nonempty diagnostics and explicitly states “diagnostic run, not a release verification”; empty required measurements exit 1 in either mode. Optional absent workflows are `not_applicable`. A `collection.yaml` declaration of `unit_type: data-only` or `unit_type: empty` identifies a nonskill unit but cannot obtain skill validation or a passing release receipt from zero skill checks. Additional registry validation is documented below:
 
 ```bash
 asbb verify-collection collections/metabolomics/v1 \
