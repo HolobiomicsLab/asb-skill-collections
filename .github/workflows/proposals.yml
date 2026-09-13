@@ -14,7 +14,16 @@ name: Proposals
 on:
   pull_request:
     paths:
+      # A proposal is staged at collections/<slug>/v<N>/proposals/skills/... —
+      # the path COMMUNITY_SKILLS.md §2 documents, the one check_proposals reads,
+      # and the one the four staged metabolomics proposals actually occupy. The
+      # first pattern below used to read 'collections/*/proposals/**', whose '*'
+      # cannot cross a '/', so it matched only the legacy unversioned directory
+      # and this job never ran on a real proposal PR.
+      - 'collections/*/v*/proposals/**'
       - 'collections/*/proposals/**'
+      - 'scripts/check_proposals.py'
+      - '.github/workflows/proposals.yml'
 
 permissions:
   contents: read

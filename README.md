@@ -230,7 +230,9 @@ with a serverless fallback**:
 
 - **`kb` (Perspicacité)** — RAG over the source paper's full text **+ supplementary
   information**, persistent and citable. The per-paper KB (`asb-paper-<doi>`) is auto-created
-  and ingested on first use via the MCP tools `ensure_kb` / `ground_paper`.
+  and ingested on first use by `perspicacite_kb_bind.py prepare`, which calls the
+  Perspicacité HTTP API directly (`POST /api/kb`, then `/api/kb/<slug>/dois`); queries
+  go through `/api/chat` scoped to the bound KB. No MCP server is required.
 - **`local` (serverless)** — **no server**: `git clone` the skill's source repo + best-effort
   open-access paper, then read the files directly.
 

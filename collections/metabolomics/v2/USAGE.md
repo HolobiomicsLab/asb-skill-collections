@@ -305,8 +305,10 @@ The shared resolver finds the same index from either location and searches
 `member_tools`. The older `workflows/bin/semantic_search.py` copy is outside the
 unified path; use the collection-level script above.
 
-Then read that workflow's `workflows/<slug>/SKILL.md` and follow its stages, applying
-each stage's `primary_skill` from the atomic collection. See
+Then read that workflow's `workflows/<slug>/SKILL.md` and follow its stages. Each
+stage lists its **Candidate leaf skills** from the atomic collection with the
+preferred one marked `(primary)`; the frontmatter carries `stage_count` and the
+flat `member_skills` list, not a per-stage field. See
 `workflows/_workflow_router/SKILL.md` for the full protocol.
 
 ---

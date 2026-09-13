@@ -209,7 +209,7 @@ The release gate is the checkpoint between private Tier 2 and public Tier 3. Eve
 ### Gate Procedure
 
 **Entry:** Capsule paths + corpus metadata, run on local ASB checkout
-**Exit:** `release-gate-report.json` (PASS|WARN|FAIL) + artifacts for promotion to `staged-collections/`
+**Exit:** `gate_report.json` (PASS|WARN|FAIL) + artifacts for promotion to `staged-collections/`
 **Enforcement:** Advisory on PRs to `staged-collections/`; **hard-blocking** on promotion to `collections/` and on the release tag
 
 ### Gate Checklist (14 gates; v0 activates gates 1,2,5,6,8,9,10,12,15; gates 3,4,7,11-14 documented but non-blocking)
