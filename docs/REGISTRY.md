@@ -485,11 +485,16 @@ marketplace.json HTTP availability, Zenodo API status.~~
 
 > **Status of the two commands above, checked 2026-09-13.** Neither produces the
 > output shown. Both `asbb registry list` and `asbb registry validate` print
-> `(Phase 1.7 stub — not yet implemented)` and **exit 0**; the sample output in this
-> section is a specification, not a transcript. `asbb doctor` behaves the same way,
-> and its exit 0 is the actively misleading one: a health check that reports success
-> having checked nothing is indistinguishable from a healthy system to any script or
-> CI step that reads its status. Neither command's `--help` says it is a stub.
+> `(Phase 1.7 stub — not yet implemented)`; the sample output in this section is a
+> specification, not a transcript. `asbb verify` and `asbb doctor` are the same stub.
+>
+> **Corrected the same day:** all four used to print on stdout and **exit 0**. A
+> command that answers *is this consistent?* — and a health check most of all — must
+> not report success having looked at nothing, because no caller can tell that from a
+> healthy answer. They now print on **stderr** and **exit 1**, and name the command
+> that does the work (`python scripts/release_gate.py <collection> --strict`). Nothing
+> in CI or any script invoked them and no test pinned their output, so the change
+> breaks nothing. Neither command's `--help` says it is a stub.
 >
 > Nothing in CI depends on them, and no test pins their output, so correcting them
 > breaks nothing. What actually reconciles the registry today is

@@ -495,8 +495,9 @@ Three separate errors are corrected here.
 
 1. **`asbb registry verify` is not a command.** `asbb registry` accepts only `list`
    and `validate` (`verify` is an `invalid choice`), and both are Phase-1.7 stubs
-   that print a placeholder and return 0. Fixing the verb would not have enforced
-   anything either.
+   that print a placeholder and — since 2026-09-13 — exit 1 rather than 0, so that a
+   caller cannot read "consistent" out of a command that looked at nothing. Fixing the
+   verb would not have enforced anything either.
 2. **`release_gate.py` is not wired into this workflow at all** — in advisory mode or
    any other. The gate runs at promotion (§7.2) and at release, never on a
    `staged-collections/` PR.

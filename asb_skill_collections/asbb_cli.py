@@ -35,7 +35,14 @@ _TO_BUILD = "(Phase 1.7 stub — not yet implemented)"
 def _cmd_registry(args: argparse.Namespace) -> int:
     """`asbb registry` — inspect the published collection registry."""
     action = getattr(args, "registry_action", None) or "list"
-    print(f"asbb registry {action}: {_TO_BUILD}")
+    # Stubs exit 1, not 0. A command that answers "is this consistent?" — or that
+    # claims to list what is published — must not report success having looked at
+    # nothing: a caller cannot tell that from a healthy answer. See docs/REGISTRY.md
+    # §4.1. What actually reconciles the registry is scripts/release_gate.py
+    # (catalogue_membership, layout, unit_closure) plus scripts/regen_catalogue.py
+    # and scripts/check_advertised_counts.py.
+    print(f"asbb registry {action}: {_TO_BUILD}", file=sys.stderr)
+    print("  use: python scripts/release_gate.py <collection> --strict", file=sys.stderr)
     # This line used to say installing was "NOT this CLI", which the same
     # binary contradicts: `asbb install` is the route for non-Claude runtimes.
     print(
@@ -43,20 +50,24 @@ def _cmd_registry(args: argparse.Namespace) -> int:
         "  Claude Code   /plugin install <slug>@HolobiomicsLab/asb-skill-collections\n"
         "  other runtimes  asbb install <slug> --runtime <id>  (see `asbb install --help`)"
     )
-    return 0
+    return 1
 
 
 def _cmd_verify(args: argparse.Namespace) -> int:
     """`asbb verify` — validate a collection / catalogue / marketplace."""
     target = getattr(args, "target", None) or "."
-    print(f"asbb verify {target}: {_TO_BUILD}")
-    return 0
+    print(f"asbb verify {target}: {_TO_BUILD}", file=sys.stderr)
+    print(f"  use: python scripts/release_gate.py {target} --strict", file=sys.stderr)
+    return 1
 
 
 def _cmd_doctor(args: argparse.Namespace) -> int:
     """`asbb doctor` — health check (DOI resolution, KB reachability, manifest)."""
-    print(f"asbb doctor: {_TO_BUILD}")
-    return 0
+    # The exit code matters more here than in the others: a health check that
+    # reports success having checked nothing is indistinguishable, to any script
+    # or CI step, from a healthy system.
+    print(f"asbb doctor: {_TO_BUILD}", file=sys.stderr)
+    return 1
 
 
 def _cmd_search(args) -> int:
