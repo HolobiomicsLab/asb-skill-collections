@@ -49,18 +49,45 @@ def _tokenize(text: str) -> list[str]:
     return toks
 
 
-def skill_doc(entry: dict) -> str:
+# The searchable document has two shapes, because the collection asks two
+# different questions of it.
+#
+# For **relatedness** the inherited tool inventory is signal: two skills built
+# on the same tool chain usually *are* related, and that is what
+# ``related_skills`` wants to surface.
+#
+# For **duplication** the same field is noise. Skills harvested from one paper
+# inherit that paper's whole tool list, so co-provenance alone drives the score
+# and the ranking measures "came from the same paper", not "says the same
+# thing". Measured over ``metabolomics/v2`` (5,859 skills, nearest-neighbour
+# cosine): with the tool list, 59 skills (1.01%) exceed 0.85 while the corpus's
+# clearest genuine duplicate pair — ``qc-summary-data-extraction`` /
+# ``qc-summary-table-extraction`` — sits *below* it at 0.78; drop the tool list
+# and that pair becomes the corpus maximum (0.717), 41 skills (0.70%) exceed
+# 0.60, and the pairs above 0.60 are mostly real duplicates
+# (``…-rsd-filtering`` / ``…-filtering-by-rsd-threshold``,
+# ``collision-cross-section-calibration`` / ``…-calibration-ccs``, and so on).
+_DOC_TEXT_FIELDS = ("slug", "name", "description")
+_DOC_LIST_FIELDS = ("tools", "tools_used", "edam_topics", "techniques")
+_DOC_LIST_FIELDS_NO_TOOLS = ("edam_topics", "techniques")
+
+
+def skill_doc(entry: dict, *, include_tools: bool = True) -> str:
     """Join an index entry's searchable fields into one text document.
 
-    Folds ``name`` + ``description`` + ``tools`` + ``edam_topics`` +
-    ``techniques`` (and ``slug`` for good measure). Tolerant of missing keys.
+    Folds ``slug`` + ``name`` + ``description`` + ``edam_topics`` +
+    ``techniques``, and — unless ``include_tools`` is false — ``tools`` /
+    ``tools_used``. Tolerant of missing keys. Pass ``include_tools=False`` to
+    ask the *duplication* question rather than the *relatedness* one; see the
+    note above and :func:`duplicate_candidates`.
     """
     parts: list[str] = []
-    for key in ("slug", "name", "description"):
+    for key in _DOC_TEXT_FIELDS:
         val = entry.get(key)
         if isinstance(val, str) and val:
             parts.append(val)
-    for key in ("tools", "tools_used", "edam_topics", "techniques"):
+    list_fields = _DOC_LIST_FIELDS if include_tools else _DOC_LIST_FIELDS_NO_TOOLS
+    for key in list_fields:
         val = entry.get(key)
         if isinstance(val, (list, tuple)):
             parts.extend(str(v) for v in val if v)
@@ -101,16 +128,20 @@ def _cosine(a: dict, b: dict) -> float:
     return dot / (na * nb)
 
 
-def lexical_match(text: str, skills_index: list[dict], *, k: int = 10) -> list[dict]:
+def lexical_match(
+    text: str, skills_index: list[dict], *, k: int = 10, include_tools: bool = True
+) -> list[dict]:
     """Rank ``skills_index`` against ``text`` by TF-IDF cosine similarity.
 
     Returns up to ``k`` hits ``{slug, score, backend:"lexical"}`` sorted by
     descending score; entries with zero overlap are dropped. Never raises.
+    ``include_tools`` is passed through to :func:`skill_doc` — scores from the
+    two document shapes are on different scales and must not be compared.
     """
     entries = [e for e in (skills_index or []) if e.get("slug")]
     if not entries:
         return []
-    doc_tokens = [_tokenize(skill_doc(e)) for e in entries]
+    doc_tokens = [_tokenize(skill_doc(e, include_tools=include_tools)) for e in entries]
     # the query joins the corpus so IDF reflects both query and documents
     query_tokens = _tokenize(text)
     idf, doc_vecs = _tf_idf_vectors(doc_tokens + [query_tokens])
@@ -172,6 +203,11 @@ def near_duplicates(candidates: list[dict], *, threshold: float = 0.0) -> list[s
     or merge instead of adding a new skill". The default (``0.0``) is a no-op
     that flags nothing — near-duplicate detection is opt-in by passing a
     positive threshold. Order is preserved from ``candidates``.
+
+    The threshold is only meaningful against the scale the candidates were
+    scored on. Pair this with :func:`duplicate_candidates` and
+    :data:`DUPLICATE_THRESHOLD`; a threshold calibrated for one document shape
+    applied to scores from the other silently flags the wrong pairs.
     """
     if threshold <= 0.0:
         return []
@@ -214,5 +250,47 @@ def match_skills(text: str, collection_dir, *, k: int = 10) -> list[dict]:
     over ``skills_index.json`` and returns up to ``k`` hits ``{slug, score,
     backend:"lexical"}``, best first. Always returns a list and never raises — a
     broken/empty collection yields ``[]``.
+
+    This answers the *relatedness* question, tool inventory included. For the
+    *duplication* question use :func:`duplicate_candidates`.
     """
     return lexical_match(text, _load_skills_index(collection_dir), k=k)
+
+
+#: Default cut for :func:`duplicate_candidates` + :func:`near_duplicates`.
+#:
+#: Set from the measured distribution rather than chosen, and measured on the
+#: path that actually runs: a contributor's *prose* (name + description) scored
+#: against the collection's documents, which is a different scale from
+#: document-vs-document. Re-proposing each of ``metabolomics/v2``'s 5,859
+#: skills from its own prose, with the self-match removed, the best remaining
+#: candidate has p50 0.345, p95 0.522, p99 0.621, max 0.753. At 0.60 that is
+#: 86 proposals in 5,859 (1.47%) carrying a warning, and it clears three of the
+#: five duplicate pairs identified by hand (the ``qc-summary-*`` twins at 0.71,
+#: the ``retention-time-and-mass-*`` twins at 0.71, the
+#: ``structure-organism-pair-*`` twins at 0.64).
+#:
+#: For contrast, **0.85 flags nothing at all on this path** — 0 of 5,859, with
+#: or without the tool list — because it was set against document-vs-document
+#: scores, which run about 0.2 higher. A threshold read off the wrong scale is
+#: a warning that can never fire.
+#:
+#: It is an **advisory** cut for a human contributor, not a gate: a flag asks
+#: "should this annotate or merge into that skill instead?", and nothing is
+#: refused on the strength of it.
+DUPLICATE_THRESHOLD = 0.60
+
+
+def duplicate_candidates(text: str, collection_dir, *, k: int = 5) -> list[dict]:
+    """Rank the collection for the *duplication* question, not relatedness.
+
+    Same lexical core as :func:`match_skills`, scored over the **tool-free**
+    document (see the note by :func:`skill_doc`): skills harvested from one
+    paper inherit its whole tool list, so with tools in the document the top of
+    the ranking measures shared provenance instead of shared meaning. Feed the
+    result to :func:`near_duplicates` with :data:`DUPLICATE_THRESHOLD`. Scores
+    are not comparable with :func:`match_skills` scores.
+    """
+    return lexical_match(
+        text, _load_skills_index(collection_dir), k=k, include_tools=False
+    )

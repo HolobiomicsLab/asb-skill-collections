@@ -406,7 +406,7 @@ the underlying tool?*
 
 Discovery defaults to `open` skills; the `asb-metabolomics` meta-skill enforces
 the `noncommercial` acknowledgment gate. Non-open skills carry a one-line banner
-in their body. Full policy: [`governance/LICENSE_TIERS.md`](../../governance/LICENSE_TIERS.md).
+in their body. Full policy: [`governance/LICENSE_TIERS.md`](../../../governance/LICENSE_TIERS.md).
 
 ```bash
 # list only open-tier skills

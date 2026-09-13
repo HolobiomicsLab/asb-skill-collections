@@ -39,6 +39,15 @@ No contributor self-merges; CI checks structure; a maintainer judges fit.
    `scripts/propose_skill.py`. Lighter-weight intake (issue first) is described in
    [`CONTRIBUTING.md`](../.github/CONTRIBUTING.md).
 
+   The near-duplicate warning is **advisory and never refuses a proposal** — it asks
+   the contributor whether to annotate or merge into an existing skill instead. It
+   is scored on a deliberately *tool-free* document (`scripts/skill_match.py`,
+   `duplicate_candidates` + `DUPLICATE_THRESHOLD`): skills distilled from one paper
+   inherit that paper's whole tool list, so a ranking that counts tools measures
+   shared provenance rather than shared meaning. The cut is read off the measured
+   distribution of that exact call — re-proposing each of `metabolomics/v2`'s 5,859
+   skills from its own prose, 1.5% carry a warning.
+
 2. **Staging.** Staged proposals land on the proposal rail, never directly in the
    shipped tree:
    - `collections/<slug>/v<N>/proposals/skills/<skill-slug>/SKILL.md` — the
