@@ -159,10 +159,15 @@ asbb search --list-collections
 ```
 
 `search`/`get` read the checkout you cloned (point elsewhere with
-`ASB_COLLECTIONS_ROOT` / `--repo`); the ranking matches each collection's
-`bin/semantic_search.py` keyword mode — no API key. Without installing anything,
+`ASB_COLLECTIONS_ROOT` / `--repo`); search shares the measured, versioned selector
+with MCP and the collection-level router and semantic keyword scripts — no API key. Without installing anything,
 the same surface is `python3 -m asb_skill_collections.asbb_cli search …` from the
 clone.
+
+Each keyword hit explains its score, matched fields and filters, and carries a
+qualified collection/version/target/slug. The router's `--json` output uses the
+same dictionaries. See [offline selection](docs/selection.md) for the measured
+comparison, workflow paths and the temporary `ASB_SELECTOR_RULE=router` option.
 
 > **Not on PyPI in v0.** `asb-skill-collections` is unpublished by
 > [design decision 5](https://github.com/HolobiomicsLab/AgenticScienceBuilder) —

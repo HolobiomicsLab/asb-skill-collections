@@ -163,6 +163,15 @@ jq -r '.[] | select(.description | test("library match";"i")) | .slug' skills_in
 
 ### Semantic retrieval & the embedding cache
 
+For offline retrieval, the collection-level `bin/search_skills.py`,
+`bin/semantic_search.py --mode keyword`, `asbb search` and MCP use one versioned
+selector. Add `--json` to the router command for the same result dictionaries,
+including matched fields, filters and qualified collection/target/slug. See
+[the selector contract and measured comparison](../../../docs/selection.md).
+The package rule is the measured default; the previous router rule remains
+available through `--selector router` (or `ASB_SELECTOR_RULE=router` for `asbb`)
+for one release and is deprecated.
+
 `bin/semantic_search.py` ranks by **meaning** (`text-embedding-3-large`, the model
 Perspicacité uses) when an embedding cache is present, and falls back to a keyword
 index search otherwise — so it always works offline (the `mode` field in the output
@@ -196,11 +205,19 @@ super-skill** instead of a single atomic skill. The 21 workflows live under
 atomic skills above. Pick one with the workflow router:
 
 ```bash
-cd workflows
+# From the collection root; --mode keyword makes this explicitly offline.
 python bin/semantic_search.py --query "<the user's goal>" \
-  --collection . --target workflows [--technique LC-MS] --k 3
-# or browse workflows_index.json (one row per workflow: stages, member_tools, coverage_gaps)
+  --collection . --target workflows --mode keyword --k 3
+# Add --technique LC-MS when that technique is required.
+# From inside workflows/, use the same collection-level script:
+python ../bin/semantic_search.py --query "<the user's goal>" \
+  --collection . --target workflows --mode keyword --k 3
+# Or browse workflows/workflows_index.json from the collection root.
 ```
+
+The shared resolver finds the same index from either location and searches
+`member_tools`. The older `workflows/bin/semantic_search.py` copy is outside the
+unified path; use the collection-level script above.
 
 Then read that workflow's `workflows/<slug>/SKILL.md` and follow its stages, applying
 each stage's `primary_skill` from the atomic collection. See
