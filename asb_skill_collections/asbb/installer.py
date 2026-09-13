@@ -7,7 +7,7 @@ import json
 import shutil
 import sys
 import tempfile
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 import yaml
 
@@ -101,6 +101,12 @@ def _other_claims(home, slug, runtime, root, rel):
     )
 
 
+def _overlapping(rel, other):
+    """Report whether two destination-relative entry paths claim the same tree."""
+    parts, others = PurePosixPath(rel).parts, PurePosixPath(other).parts
+    return parts[: len(others)] == others or others[: len(parts)] == parts
+
+
 def _plan_entries(pack, target, unit, assets):
     planned = {}
     shipped = {rel for rel, _ in assets}
@@ -113,6 +119,16 @@ def _plan_entries(pack, target, unit, assets):
         rel = name if target.kind == "skill" else target.filename(name)
         if rel in (UNITS_DIR, ENTRIES_DIR):
             raise ValueError(f"entry name is reserved for installer state: {rel}")
+        # Two advertised skills reaching the same destination path would leave
+        # the dict holding one of them: the other is dropped without a word, and
+        # a nested pair only surfaces as a FileExistsError once staging is under
+        # way. Refuse the whole plan while nothing has been written.
+        clash = next((other for other in planned if _overlapping(rel, other)), None)
+        if clash is not None:
+            raise ValueError(
+                f"entry {name} resolves to {rel}, which overlaps the destination "
+                f"{clash} already planned for this install"
+            )
         fm, body = parse_skill_md(directory / "SKILL.md")
         body = bind_body(body, unit, f"skills/{name}/SKILL.md")
         planned[rel] = (
@@ -277,6 +293,11 @@ def install(pack: PackRef, target: Target, opts: InstallOpts) -> list[str]:
     source_root = pack.source_dir.resolve()
     if root == source_root or source_root in root.parents:
         raise ValueError("destination cannot be inside its source pack")
+    if root in source_root.parents:
+        # The reverse containment is the same hazard read the other way: entries
+        # are placed by removing whatever occupies their name, so a destination
+        # holding the pack can delete the source it is still reading.
+        raise ValueError("destination cannot contain its source pack")
     assets = inventory(pack.source_dir, source=True)
     if any(
         Path(rel).parts[0] in (ENTRIES_DIR, UNITS_DIR, RECEIPT_FILE)

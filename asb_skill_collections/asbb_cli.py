@@ -143,6 +143,13 @@ def _cmd_install(args) -> int:
         slugs = ", ".join(list_pack_slugs(repo))
         print(f"error: unknown pack {args.pack!r}; valid: {slugs}", file=sys.stderr)
         return 1
+    except ValueError as e:
+        # resolve_pack refuses a marketplace source that leaves the checkout
+        # (absolute, parent-relative, or through a symlink). The refusal was
+        # reaching the user as a traceback: install() already converts the same
+        # class of refusal into a message and exit 1, and so must this.
+        print(f"error: {e}", file=sys.stderr)
+        return 1
     opts = _install_opts(args)
     try:
         written = install(pack, target, opts)
