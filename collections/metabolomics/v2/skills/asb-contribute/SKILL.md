@@ -63,18 +63,27 @@ python scripts/skill_feedback.py --kind defect --target <slug> \
   --collection metabolomics/v2
 ```
 
-It returns the title, body, labels and fingerprint, with home directories,
-credentials and clinical identifiers already removed, and it names the
-categories it stripped.
+It returns the title, body, labels and fingerprint. Its `payload` and `preview`
+are the same mapping of title, labels and body; there is no second preview
+renderer. Before constructing them, the helper passes target, collection,
+symptom, expectation and context through one outbound boundary. It removes
+complete POSIX and Windows paths, recognised credential and authorization
+shapes, email addresses, and the release gate's high-confidence clinical
+identifiers. For an absolute target inside `collections/`, it keeps only the
+collection/version/skill suffix; an absolute target outside the collection is
+replaced in full. The result names the categories it stripped.
 
-### 4. Show the user the exact body, then ask
+### 4. Show the user the exact payload, then ask
 
-Print the rendered body verbatim — not a summary of it. The user is deciding
-whether to publish this text, and they can only decide that by reading it.
+Print the `preview` title, labels and body verbatim — not a summary and not a
+fresh rendering. These are the exact values in `payload` that the filing command
+will publish. Invite edits, then regenerate and show the complete payload again
+before asking for consent.
 
-State plainly what redaction does and does not do: it removes paths, tokens and
-clinical identifiers; **it cannot recognise a sensitive sample name**, so they
-are the last check. Invite edits before filing.
+State plainly what redaction does and does not do: it removes the path,
+credential, authorization, email and high-confidence clinical-identifier shapes
+listed above; **it cannot recognise an arbitrary sensitive sample name**, so the
+user is the last check.
 
 Then make the case once, briefly and honestly. Something like: *this collection
 is grounded in published work and given away under CC-BY; it improves only when
@@ -86,8 +95,12 @@ not imply an obligation.
 
 ```bash
 gh issue create --repo HolobiomicsLab/asb-skill-collections \
-  --title "<title>" --body-file <path> --label usage-feedback --label needs-triage
+  --title "<payload title>" --body-file <payload body path> \
+  --label "<comma-separated payload labels>"
 ```
+
+Use the approved payload values unchanged, including every label shown in its
+preview. Do not rebuild or edit the title or body between approval and filing.
 
 Corroborating instead:
 
@@ -95,9 +108,9 @@ Corroborating instead:
 gh issue comment <number> --body-file <path>
 ```
 
-No `gh`, or no consent to use it: hand the user the rendered body and the
-`new/choose` URL for the repository, and stop. Filing on their behalf without a
-yes is publishing their words under their name.
+No `gh`, or no consent to use it: hand the user the approved title, labels and
+body with the `new/choose` URL for the repository, and stop. Filing on their
+behalf without a yes is publishing their words under their name.
 
 ### 6. Offer the fix, when there is one
 
