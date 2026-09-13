@@ -229,11 +229,11 @@ v1 intention, not a v0 check (§9).
 | **3** | **Indicium schema version pinned** | A | Collection YAML lists `schema_versions.indicium: <real-tag>` from indicium repo | gate check: git tag exists | warn-only (gate 3 not activated v0). **Unachievable as written:** the indicium repository has zero tags and no collection declares `schema_versions`. At v1 the pin is a commit SHA — §7.4 |
 | **4** | **Profile reproducibility** | A | Generation manifest includes `profile_hash`, `llm`, `seed` enabling exact rebuild | manifest validation | warn-only (gate 4 not activated v0) |
 | **5** | **Verbatim quotation caps** | A | Sum of `evidence_span` lengths across all skills/claims ≤ corpus-size-dependent cap (§5.3) | gate check: char count | hard-block (fail if exceeded) |
-| **6** | **Similarity check (verbatim vs original)** | A | N-gram overlap + embedding cosine for each `evidence_span` vs Tier-1 source ≤ threshold (§5.4) | gate check: automated similarity scan | hard-block (flag/block spans for rewrite) |
+| **6** | **Similarity check (verbatim vs original)** | A | N-gram overlap + embedding cosine for each `evidence_span` vs Tier-1 source ≤ threshold (§5.4) | gate check: `check_strip_verbatim_similarity` | **caps half: hard-block, live.** **Similarity half: inert** — it compares each span to the skill's own body, not the Tier-1 source, and cannot reach either threshold; 0 FAIL / 0 WARN over 47,241 spans. Measured 2026-09-13, §5.3a |
 | **7** | **Claim fidelity (indicium round-trip)** | A | Every skill claim resolves in `benchmark/claims/` ground truth; `trace_status: exact_match` | gate check: indicium `verify-claims` | warn-only (gate 7 not activated v0) |
 | **8** | **DOI & license resolution** | A | Every artifact lists source DOI(s) + license SPDX tag; Zenodo lookup succeeds or entry is public preprint | gate check: CrossRef/Zenodo API | hard-block (fail if DOI invalid) |
 | **9** | **Indicium adapters published** | A | All four indicium adapters (sepio, sssom, prov, claims) are publicly available + versioned | gate check: lookup on PyPI/GitHub | warn-only (adapters not published yet) |
-| **10** | **Registry consistency** | A | `marketplace.json` ↔ `catalogue.jsonld` ↔ filesystem reconciliation passes; no duplicates, IRI conflicts, or missing files | CI validate.yml → asbb registry verify | hard-block (fail if drift) |
+| **10** | **Registry consistency** | A | `marketplace.json` ↔ `catalogue.jsonld` ↔ filesystem reconciliation passes; no duplicates, IRI conflicts, or missing files | release_gate.py `check_catalogue_membership` + `check_layout` + `check_unit_closure` (**not** `asbb registry verify`, which is not a command — §7.1) | hard-block (fail if drift) |
 | **11** | **Leaderboard schema valid** | A | `benchmark/leaderboard.jsonld` validates against JSONLD context; CiTO link types recognized | gate check: JSONLD parser + CiTO vocab | warn-only (gate 11 not activated v0) |
 | **12** | **Contamination / held-out audit** | A | For open-tier releases: no held-out test splits mixed into public outputs; for closed-tier: held-out marker present (v1+ only; v0 open-only) | (v1) gate check: output file audit | **FORMALLY WAIVED for v0** — no contamination check is implemented and no held-out split is declared; v0 is open-tier only, so the criterion's closed-tier half does not apply (waiver logged in §9 + release notes) |
 | **13** | **Independent co-reviewer (gate §9 waiver)** | A+H | (v1) If `is_coauthor: true` on any collection attestation, a second verified reviewer (non-coauthor, ≥Reviewer tier) has signed off | CR-P0-02 attestation review | **FORMALLY WAIVED for v0** — self-merge permitted; no second reviewer required pre-tag (waiver logged in §9 + release notes) |
@@ -295,7 +295,93 @@ derived_from:
 - **Manual review:** If ONE exceeds, flag in the gate report with a WARN; curator assesses and either removes the span or provides rewrite + justification
 - **Acceptable pairs:** <30% n-gram overlap OR <0.92 cosine (OR both below) passes automatically
 
-**Tool:** `src/agentic_science_builder/release/similarity_check.py` (integrated into `release_gate.py`).
+**Tool:** ~~`src/agentic_science_builder/release/similarity_check.py` (integrated into
+`release_gate.py`).~~ **That file does not exist**, in this repository or in the
+framework. The check is `check_strip_verbatim_similarity` in `scripts/release_gate.py`.
+
+### 5.3a What the shipped check actually does (measured 2026-09-13)
+
+The section above describes an intended gate. Three things differ in the code, and the
+third means the similarity half of gate 6 **has never fired and cannot fire**.
+
+1. **No embedding cosine.** `_similarity_ratio` is
+   `difflib.SequenceMatcher(None, a.lower(), b.lower()).ratio()` — a character-level
+   edit-similarity proxy, not `text-embedding-3-small`. The code says so itself
+   (`release_gate.py:306-310`: *"NOT a semantic embedding cosine"*). No embedding model
+   is called anywhere in the gate, and no API key is required to run it.
+2. **The comparand is not the source paragraph.** Both the Jaccard and the ratio compare
+   each span against **the skill's own `SKILL.md` body**, because the Tier-1 source
+   paragraph is not available at gate time — the gate's own comment
+   (`release_gate.py:637-643`) records this.
+3. **The arithmetic cannot reach either threshold.** A span is compared to a document
+   one to two orders of magnitude longer, so `SequenceMatcher`'s `2M/(L+N)` is bounded
+   near `2L/(L+N)`: even a *perfect copy* of body text scores 0.043–0.059, and
+   `difflib`'s `autojunk` heuristic (active for bodies ≥200 characters) drops it to
+   0.005–0.018. Measured over all 35,670 spans ≥60 characters in
+   `collections/metabolomics/v2`: ratio median 0.0074, max **0.3042**; Jaccard median
+   0.0208, max **0.0702**. The FAIL condition needs Jaccard >0.30 **and** ratio ≥0.92;
+   the WARN condition needs either. Neither is reachable. Across all four collections —
+   7,715 skills, 47,241 spans — the similarity half has produced **0 FAIL and 0 WARN**,
+   and that is a property of the arithmetic, not of the corpus.
+
+**Gate 5 is unaffected and is live.** The per-span (150 char) and cumulative (1500 char)
+caps in the same check are enforced and do fail. Only the similarity half is inert.
+
+**Why it was not "fixed" for v0.** The obvious repair — compare the span against the
+best-matching body window of the span's own length instead of the whole body — was
+implemented and measured on 2026-09-13 over the full released collection. It is
+arithmetically correct and it is unusable: it produces **28,510 FAIL + 382 WARN** on
+`metabolomics/v2` (99.6% of skills red; 37,747 findings across all four collections)
+with a **0% true-positive rate**. Every finding was classified, not sampled: 28,289 of
+them match on the very `- [sec] paraphrase: "quote"` line the span was *extracted
+from*, because `_collect_evidence_spans` reads spans out of the body's own Evidence
+bullets — 79.3% of spans are literal substrings of their own body by construction, so
+the best-matching window is the extraction site and scores exactly 1.000. The rest are
+the frontmatter span's own rendered Evidence block, attributed quotations, code inside
+fenced examples, and sentences of the skill's own generated prose. A real
+`--strict` run with only the window swapped was verified to exit 1 and set
+`release_verified: false` on `transcriptomics/v1` and `metabolomics/v2`.
+
+**Decision (2026-09-13): do not rescale the window; do not ship the repair.** The
+defect is *what* is compared, not *how far*. Rescaling does not supply the Tier-1
+source paragraph; it only makes the self-comparison succeed. Closing this properly at
+v1 requires either fetching the source paragraph at gate time, or — at minimum —
+excluding the span's own extraction site, the Evidence block, fenced code and
+attributed quotations from the window set before any rescale. Until then this section
+stands as the honest record: **gate 6's similarity half is inert, and the release does
+not rely on it.** Gate 6's other half, the PII/dual-use scan (§6), is live and passing.
+
+### 5.3b Known limits of the span scan (measured 2026-09-13)
+
+Two coverage facts, recorded so that "the gate scanned every quoted span" is not read
+into §5.3 or §6.
+
+- **Evidence lines whose label contains a colon are never scanned.**
+  `_EVIDENCE_VERBATIM_RE` is `^(\s*-\s+\[[^\]]*\][^:]*?):\s*"[^"]*"\s*$` — the
+  `[^:]*?` forbids a colon before the separating one, so a bullet such as
+  `- [other] Workflow step: aggregate peak counts…: "…"` is not recognised as evidence.
+  **2,324 verbatim-shaped lines across 1,664 of the 5,861 skill files** are invisible to
+  both the PII scan and the verbatim caps. Running the full Tier-1 and Tier-2 pattern
+  set plus the email regex over all 2,324 of them yields **zero findings of any
+  severity**, and none exceeds the 1500-char cumulative cap on its own (largest
+  per-file unscanned total: 910 characters), so nothing about the v0 verdict changes.
+  The regex is left alone for v0: it is shared with `promote.py`, and widening it moves
+  `policy.config_sha256` (it is recorded there as `verbatim_pattern`) for no measured
+  benefit.
+- **Composite-workflow `SKILL.md` files are excluded, vacuously.** `layout.iter_skill_md`
+  always skips `workflows/`, so the 22 workflow skill files are scanned by neither the
+  PII check nor the provenance check. They carry **0 evidence spans between them**, so
+  including them would add nothing to scan. The real gap there is that their
+  `license:` field is declared and never verified — tracked separately, not a span
+  issue.
+
+**One latent hazard, recorded with its margin.** The Tier-1 hard-fail pattern
+`nhs_number` matches any bare 10-digit run, and a DOI suffix is a bare digit run: it
+matches `1608041113` inside `10.1073/pnas.1608041113`. 34 evidence spans in the
+released collection quote a DOI; the longest digit run in any of them is **8**. The
+release therefore clears a hard gate by two digits, and a future span quoting a
+10-digit DOI suffix would hard-block a release on a false positive. Fix at v1 by
+excluding a digit run preceded by `10.\d{4,9}/\S*` before applying `nhs_number`.
 
 ---
 
@@ -357,16 +443,33 @@ derived_from:
 
 PII patterns, dual-use keywords and author allowlist are versioned in a committed
 config file: `scripts/pii_config.py` (the `PII_CONFIG` dict, currently
-`version: 2026-07-10.2`, 14 hard-fail/advisory patterns). It is mirrored byte-for-byte
+`version: 2026-09-13.1`, 14 hard-fail/advisory patterns). It is mirrored byte-for-byte
 into the released collection at `collections/<slug>/v<N>/scripts/pii_config.py`, and
 `tests/test_pack_closure.py` fails if the two copies drift.
 
-Every release records which version ran, and the record is tamper-evident:
-`release_gate.py` writes `policy.pii.version` into `gate_report.json` and folds the
-whole config into `receipt_sha256`. A reviewer asking *which patterns gated this
-release* reads `policy.pii` in the report and re-checks it with
-`release_gate.py <collection> --verify`; the pattern set cannot be swapped after the
-fact without breaking the receipt.
+Every release records which version ran, and the record is tamper-evident.
+`release_gate.py` writes ~~`policy.pii.version`~~ **`policy.pii_config_version`** into
+`gate_report.json` and folds the whole `PII_CONFIG` dict into `policy.config_sha256`,
+which in turn enters `receipt_sha256`. A reviewer asking *which patterns gated this
+release* reads those two fields — ~~`policy.pii`~~, **which the report does not
+carry**: schema `asbb-release-gate/1.1` emits the version string and the digest, not
+the pattern bodies — and re-checks them with `release_gate.py <collection> --verify`.
+The pattern set cannot be swapped after the fact without breaking the receipt, but
+recovering *what the patterns were* needs the committed `pii_config.py` at that
+version, not the report alone. (Corrected 2026-09-13; the `policy.pii` key was
+described from an earlier schema.) Note also that `policy.implementation_sha256`
+hashes `release_gate.py`, `release_receipt.py` and `layout.py` — **not**
+`pii_config.py`, whose integrity rides on `config_sha256` alone.
+
+**Version history.** `2026-09-13.1` tightened `placeholder_subject` to
+`(?-i:[A-Z])` for its label letter. The gate compiles every pattern with
+`IGNORECASE`, so the bare `[A-Z]` also matched lowercase and the trailing *s* of an
+ordinary plural satisfied it: the rule fired on the phrase "weighting by number of
+participants" in three skills, quoted verbatim from a CC-BY paper. That is the same
+defect `named_patient_dx` was already fixed for. All the enumerated-individual cases
+the rule exists for (`Subject 12`, `Patient_A`, `Subject_123`, `Participant B`,
+including §6.1's own fixture) still match; the three false positives no longer do,
+and `pii_dual_use` is PASS with zero findings across all four collections.
 
 ---
 
@@ -376,11 +479,63 @@ fact without breaking the receipt.
 
 **Trigger:** Any PR that adds or modifies files in `staged-collections/`.
 
-**Workflow:** `.github/workflows/validate.yml` runs:
-- `asbb registry verify` (gates 1,2,5,6,8,10)
-- `release_gate.py` with `--advisory` flag (gates 3,4,7,11-14 suppress hard-blocks; all output as PR comments)
+**Workflow (corrected 2026-09-13).** ~~`.github/workflows/validate.yml` runs
+`asbb registry verify` (gates 1,2,5,6,8,10) and `release_gate.py --advisory`
+(gates 3,4,7,11-14 suppress hard-blocks; all output as PR comments).~~
+Neither command runs in that workflow. What `validate.yml` actually runs, on every
+PR to `main` and every push to `main` — not on a `staged-collections/` path filter —
+is: the test suite; `scripts.skill_index`; `marketplace.json` validation;
+`scripts.lint_skill_descriptions`; a sampled `derived_from` DOI resolution; EDAM IRI
+resolution; RO-Crate validation; the indicium round-trip (inert — the CLI is not on
+PyPI, so it emits a `::warning::` and never blocks); LinkML schema validation; and the
+license-tier, provenance-tier and tool-catalogue gates over
+`collections/metabolomics/v2`.
 
-**Result:** One PR comment listing all WARN + FAIL findings, with links to line numbers. Merge is **NOT blocked**; curator reviews and may merge if they accept the warnings.
+Three separate errors are corrected here.
+
+1. **`asbb registry verify` is not a command.** `asbb registry` accepts only `list`
+   and `validate` (`verify` is an `invalid choice`), and both are Phase-1.7 stubs
+   that print a placeholder and return 0. Fixing the verb would not have enforced
+   anything either.
+2. **`release_gate.py` is not wired into this workflow at all** — in advisory mode or
+   any other. The gate runs at promotion (§7.2) and at release, never on a
+   `staged-collections/` PR.
+3. **The gate numbers in that list are not this document's gate numbers.** They are
+   `validate.yml`'s own header numbering, which follows Release Design Doc v2 §14.
+   The two schemes collide rather than agree: in that header gate 6 is *EDAM IRI
+   resolution* and gate 10 is *plugin manifest validation*, where §5 above numbers
+   gate 6 the *similarity check* and gate 10 *registry consistency*. Read any gate
+   number in a workflow file against that workflow's own header, never against §5.
+
+**What actually reconciles the registry** is the release gate, not a registry
+subcommand: `check_catalogue_membership` (each `collection.yaml`'s advertised members
+against `catalogue.jsonld` and the files on disk), `check_layout` (each skill
+directory's permitted file set and byte budget, and `skills_index.json` against the
+leaf directories), and `check_unit_closure` (each pack index against its leaves, and
+every declared helper against its declaring unit). All three run only where
+`release_gate.py` runs.
+
+**Result:** there is no advisory PR comment today, because no advisory run is wired.
+Merge is **NOT blocked** by a release-gate finding for the trivial reason that the
+release gate is not consulted. Curator review of a staged PR is unassisted.
+
+**Wiring it is drafted and held for v1.** A `--advisory` run over a workflows-only
+tree such as `staged-collections/metabolomics` exits 1 today: five collection-scoped
+checks (`access_tier_oa`, `strip_verbatim_similarity`, `pii_dual_use`,
+`provenance_doi_license`, `gate_input_files`) have no subject in a tree with no
+`collection.yaml`, no `corpus.yaml` and no leaf skills, and `CheckResult.finish()`
+cannot distinguish *the subject is missing* from *there is no subject of this kind
+here* — both give `checked == 0` and report `uncheckable`, and
+`blocking_fail = overall == UNCHECKABLE` is deliberately unconditioned on `--strict`
+(pinned by `tests/test_release_gate_receipt.py::test_advisory_empty_target_also_blocks`).
+So the exit code is correct and the classification is the gap. A patch adding a
+`not_applicable` verdict for workflows-only targets, plus the `validate.yml` steps to
+post one PR comment, was drafted and measured on 2026-09-13: it matches exactly one
+directory in the repository, leaves all four shipped collections byte-identical in
+their gate summaries (only `policy.implementation_sha256` moves, because the gate
+file itself is hashed), and keeps the suite at 1618 passed / 3 skipped. It is held
+out of the v0 release train because it changes the gate for no v0 benefit; it lands
+with the v1 wiring.
 
 **No override needed:** Curator can merge a PR with WARNs at any time (this is a staging area).
 

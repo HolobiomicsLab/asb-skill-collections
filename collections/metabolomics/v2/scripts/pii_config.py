@@ -13,7 +13,7 @@ from typing import Any
 # records the version used and folds this dict into ``receipt_sha256``.       #
 # --------------------------------------------------------------------------- #
 PII_CONFIG: dict[str, Any] = {
-    "version": "2026-07-10.2",
+    "version": "2026-09-13.1",
     "source": "scripts/pii_config.py::PII_CONFIG",
     # Tier 1 — HARD FAIL when found inside a verbatim quote span.
     "hard_fail_patterns": {
@@ -99,7 +99,14 @@ PII_CONFIG: dict[str, Any] = {
     ),
     # Tier 2 — WARN-only suspected-PII signals (low confidence).
     "warn_patterns": {
-        "placeholder_subject": r"\b(?:Subject|Patient|Participant)[_\s\-]?(?:[A-Z]\b|\d{1,3}\b)",
+        # The label letter is wrapped in (?-i:...) for the same reason as
+        # ``named_patient_dx`` above: the gate compiles with IGNORECASE, so a bare
+        # [A-Z] also matches lowercase and the trailing "s" of an ordinary plural
+        # satisfies it ("number of participants", "patients were enrolled"). The
+        # rule targets an enumerated individual (Subject 12, Patient_A), never a
+        # headcount. Measured 2026-09-13 on collections/metabolomics/v2: 3 hits,
+        # all three the same quoted phrase "weighting by number of participants".
+        "placeholder_subject": r"\b(?:Subject|Patient|Participant)[_\s\-]?(?:(?-i:[A-Z])\b|\d{1,3}\b)",
         "initials_in_clinical": r"\bpatient\s+[A-Z]\.\s*[A-Z]\.",
     },
     # Words that put a dual-use keyword into a neutral / defensive frame → keep

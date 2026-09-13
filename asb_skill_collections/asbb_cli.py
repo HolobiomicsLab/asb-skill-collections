@@ -174,7 +174,14 @@ def _cmd_uninstall(args) -> int:
         print(f"error: unknown runtime {args.runtime!r}", file=sys.stderr)
         return 1
     opts = _install_opts(args)
-    removed = uninstall(args.pack, target, opts)
+    try:
+        removed = uninstall(args.pack, target, opts)
+    except (FileExistsError, ValueError) as e:
+        # Same contract as _cmd_install above: a refusal is a message and exit 1,
+        # never a traceback. The commonest way to reach here is a moved install —
+        # the recorded dest_root no longer matches --dest — so name the recovery.
+        print(f"error: {e}", file=sys.stderr)
+        return 1
     print(f"removed {len(removed)} entry(ies) for {args.pack}")
     return 0
 

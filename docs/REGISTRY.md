@@ -477,8 +477,25 @@ Metabolomics Skills Collection (metabolomics-v1)
 Validates local catalogue.jsonld + marketplace.json against schemas.
 - `--remote`: also checks Zenodo DOI resolution + w3id.org IRI reachability
 
-**`asbb registry doctor`**
-Health check: Perspicacité KB endpoint reachability, marketplace.json HTTP availability, Zenodo API status.
+~~**`asbb registry doctor`** — Health check: Perspicacité KB endpoint reachability,
+marketplace.json HTTP availability, Zenodo API status.~~
+**This subcommand has never existed.** `asbb registry` accepts only `list` and
+`validate`; anything else is an argparse `invalid choice` and exits 2. (Struck
+2026-09-13. `asbb doctor` is a separate top-level command, and it too is a stub.)
+
+> **Status of the two commands above, checked 2026-09-13.** Neither produces the
+> output shown. Both `asbb registry list` and `asbb registry validate` print
+> `(Phase 1.7 stub — not yet implemented)` and **exit 0**; the sample output in this
+> section is a specification, not a transcript. `asbb doctor` behaves the same way,
+> and its exit 0 is the actively misleading one: a health check that reports success
+> having checked nothing is indistinguishable from a healthy system to any script or
+> CI step that reads its status. Neither command's `--help` says it is a stub.
+>
+> Nothing in CI depends on them, and no test pins their output, so correcting them
+> breaks nothing. What actually reconciles the registry today is
+> `scripts/release_gate.py` — `check_catalogue_membership`, `check_layout` and
+> `check_unit_closure` — together with `scripts/regen_catalogue.py` and
+> `scripts/check_advertised_counts.py`. See `governance/CONTENT_POLICY.md` §7.1.
 
 ### 4.2 asbb verify-collection
 
