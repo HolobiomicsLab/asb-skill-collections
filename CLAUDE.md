@@ -11,10 +11,12 @@ computational LC-MS/MS metabolomics.
 /plugin install metabolomics@asb-skill-collections
 ```
 
-Two skills are advertised; the corpus ships as data at
+Three skills are advertised; the corpus ships as data at
 `collections/metabolomics/v2/leaves/<slug>/SKILL.md` and is read on demand. Start at
 the `asb-metabolomics` meta-skill (guide + license-tier governance), which hands off
-to `skills/_router/SKILL.md` for routing.
+to `skills/_router/SKILL.md` for routing. The third, `asb-contribute`, is the
+contribution route: it turns a skill that proved wrong, stale or missing into a
+redacted report you approve before anything is filed.
 
 ## Use
 

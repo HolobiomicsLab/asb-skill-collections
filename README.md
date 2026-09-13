@@ -26,7 +26,7 @@ Metabolomics** ([26181](https://www.dagstuhl.de/en/seminars/seminar-calendar/sem
 
 > **This release — `metabolomics-v0.2.0` (preliminary):**
 > [`collections/metabolomics/v2`](collections/metabolomics/v2) — **5,859 skills**
-> across **909 tools** distilled from **568 papers**, for computational
+> across **909 tools** distilled from **566 papers**, for computational
 > metabolomics — predominantly **LC-MS/MS**, but also LC-MS, GC-MS,
 > mass-spectrometry imaging, ion mobility and lipidomics, with some **NMR** and
 > multi-omics / statistics / pathway tools. New in this version: **21 composite

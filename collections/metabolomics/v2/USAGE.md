@@ -215,7 +215,7 @@ vocabulary and current counts:
 
 | tag | skills | | tag | skills |
 |---|---|---|---|---|
-| `LC-MS` (incl. LC-MS/MS) | 2616 | | `MS-imaging` | 291 |
+| `LC-MS` (incl. LC-MS/MS) | 2617 | | `MS-imaging` | 291 |
 | `GC-MS` | 367 | | `NMR` | 276 |
 | `ion-mobility-MS` | 385 | | `CE-MS` | 113 |
 | `mass-spectrometry` (generic) | 804 | | `direct-infusion-MS` | 97 |

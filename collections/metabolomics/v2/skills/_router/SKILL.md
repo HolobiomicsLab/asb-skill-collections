@@ -43,9 +43,10 @@ The 5,859 leaf skills live in **`leaves/<slug>/SKILL.md`**, and the 21 composite
 workflows in **`workflows/<slug>/SKILL.md`** — neither is under `skills/`.
 That is deliberate: a plugin host loads the name and description of every skill
 under `skills/` into the session prompt, so advertising all of them would cost
-several hundred thousand tokens before you have done anything. Only this router
-and the `asb-metabolomics` licence gate are advertised; the corpus ships beside
-them as data and you retrieve from it on demand.
+several hundred thousand tokens before you have done anything. Only this router,
+the `asb-metabolomics` licence gate and the `asb-contribute` contribution route
+are advertised; the corpus ships beside them as data and you retrieve from it on
+demand.
 
 So: **do not enumerate `leaves/`, and do not read `skills_index.json` whole**
 (it is several megabytes). Search it with the script below, then read the one

@@ -38,7 +38,7 @@
     {
       "name": "metabolomics-ce-ms",
       "source": "./packs/metabolomics/ce-ms",
-      "description": "ASB Metabolomics — CE-MS. CE-MS subset of the ASB metabolomics collection: 114 evidence-grounded skills (lighter than the full collection; skills may also appear in other technique packs).",
+      "description": "ASB Metabolomics — CE-MS. CE-MS subset of the ASB metabolomics collection: 113 evidence-grounded skills (lighter than the full collection; skills may also appear in other technique packs).",
       "version": "0.1.0",
       "author": {
         "name": "Holobiomics Lab",
@@ -92,7 +92,7 @@
     {
       "name": "metabolomics-ion-mobility",
       "source": "./packs/metabolomics/ion-mobility",
-      "description": "ASB Metabolomics — ion-mobility-MS. ion-mobility-MS subset of the ASB metabolomics collection: 390 evidence-grounded skills (lighter than the full collection; skills may also appear in other technique packs).",
+      "description": "ASB Metabolomics — ion-mobility-MS. ion-mobility-MS subset of the ASB metabolomics collection: 385 evidence-grounded skills (lighter than the full collection; skills may also appear in other technique packs).",
       "version": "0.1.0",
       "author": {
         "name": "Holobiomics Lab",
@@ -110,7 +110,7 @@
     {
       "name": "metabolomics-lc-ms",
       "source": "./packs/metabolomics/lc-ms",
-      "description": "ASB Metabolomics — LC-MS. LC-MS subset of the ASB metabolomics collection: 2621 evidence-grounded skills (lighter than the full collection; skills may also appear in other technique packs).",
+      "description": "ASB Metabolomics — LC-MS. LC-MS subset of the ASB metabolomics collection: 2616 evidence-grounded skills (lighter than the full collection; skills may also appear in other technique packs).",
       "version": "0.1.0",
       "author": {
         "name": "Holobiomics Lab",
@@ -146,7 +146,7 @@
     {
       "name": "metabolomics-ms-imaging",
       "source": "./packs/metabolomics/ms-imaging",
-      "description": "ASB Metabolomics — MS-imaging. MS-imaging subset of the ASB metabolomics collection: 292 evidence-grounded skills (lighter than the full collection; skills may also appear in other technique packs).",
+      "description": "ASB Metabolomics — MS-imaging. MS-imaging subset of the ASB metabolomics collection: 291 evidence-grounded skills (lighter than the full collection; skills may also appear in other technique packs).",
       "version": "0.1.0",
       "author": {
         "name": "Holobiomics Lab",

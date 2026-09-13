@@ -1,7 +1,7 @@
 # About this collection — content & selection
 
-**ASB Metabolomics Skill Collection v2** (`metabolomics-v0.2.0`) — 5,858
-evidence-grounded skills across 909 software-tool records, distilled from 568
+**ASB Metabolomics Skill Collection v2** (`metabolomics-v0.2.0`) — 5,859
+evidence-grounded skills across 909 software-tool records, distilled from 566
 peer-reviewed method papers by the [AgenticScienceBuilder](https://github.com/HolobiomicsLab/AgenticScienceBuilder)
 (ASB) pipeline. This page describes **what is in the collection** and **how it
 was selected**. For the exact build command and models, see
@@ -19,12 +19,12 @@ spanning several analytical platforms. Each skill/tool is tagged with a
 
 | Technique | Skills | Tools |
 |---|---|---|
-| LC-MS (incl. LC-MS/MS) | 2,621 | 651 |
+| LC-MS (incl. LC-MS/MS) | 2,617 | 651 |
 | GC-MS | 367 | 205 |
-| CE-MS | 114 | 180 |
+| CE-MS | 113 | 180 |
 | direct-infusion-MS | 97 | 101 |
-| MS-imaging | 292 | 157 |
-| ion-mobility-MS | 390 | 241 |
+| MS-imaging | 291 | 157 |
+| ion-mobility-MS | 385 | 241 |
 | NMR | 276 | 192 |
 | mass-spectrometry (generic) | 804 | 374 |
 
@@ -40,17 +40,17 @@ IRIs for retrieval. The most frequent **topics** across the collection:
 
 | EDAM topic | Skills |
 |---|---|
-| Metabolomics (`topic_3172`) | 1,838 |
-| Proteomics experiment* (`topic_3520`) | 2,583 |
-| Proteomics* (`topic_0121`) | 1,783 |
-| Bioinformatics (`topic_0091`) | 1,771 |
-| Small molecules (`topic_0154`) | 423 |
-| Analytical chemistry (`topic_3370`) | 347 |
-| Endocrinology and metabolism (`topic_3407`) | 308 |
-| Molecular interactions, pathways and networks (`topic_0602`) | 304 |
-| Drug metabolism (`topic_3375`) | 226 |
-| Lipids (`topic_0153`) | 120 |
-| NMR (`topic_0593`) | 97 |
+| Metabolomics (`topic_3172`) | 1,831 |
+| Proteomics experiment* (`topic_3520`) | 2,576 |
+| Proteomics* (`topic_0121`) | 1,776 |
+| Bioinformatics (`topic_0091`) | 1,764 |
+| Small molecules (`topic_0154`) | 417 |
+| Analytical chemistry (`topic_3370`) | 340 |
+| Endocrinology and metabolism (`topic_3407`) | 301 |
+| Molecular interactions, pathways and networks (`topic_0602`) | 299 |
+| Drug metabolism (`topic_3375`) | 219 |
+| Lipids (`topic_0153`) | 116 |
+| NMR (`topic_0593`) | 94 |
 
 \* EDAM's "Proteomics experiment"/"Proteomics" topics are commonly applied to
 mass-spectrometry methodology in general; their high count reflects shared
