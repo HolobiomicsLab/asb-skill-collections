@@ -10,8 +10,9 @@ Idempotent, key-order / indent preserving post-processor over committed artifact
 detect_indent from propagate_license_tiers; does not fork the collector.
 
 Writes back, in collection_dir:
-- tools_index.json : + license_tier, license, license_detection, license_subject,
-                     repo_url, source_paper_repos, used_by_skills  (- canonical_url)
+- tools_index.json : + entry_kind, license_tier, license, license_detection,
+                     license_subject, repo_url, source_paper_repos, used_by_skills
+                     (- canonical_url)
 - skills_index.json: + tools_used
 - kb_bundle.json   : + tools_used on each skill record
 """
@@ -30,8 +31,9 @@ if __package__ in (None, ""):
     _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
 
 
-from scripts.license_tier import (SUBJECT_TOOL, TIER_UNKNOWN, UNESTABLISHED_DETECTIONS,
-                                  tool_tier_from_evidence)
+from scripts.classify_tool_entries import KIND_VENDOR, classify_all
+from scripts.license_tier import (DETECTION_VENDOR_PRODUCT, SUBJECT_TOOL, TIER_UNKNOWN,
+                                  UNESTABLISHED_DETECTIONS, tool_tier_from_evidence)
 from scripts.propagate_license_tiers import detect_indent
 
 
@@ -125,6 +127,7 @@ def enrich(collection_dir) -> dict:
     kb = json.loads(kb_raw)
 
     tools_used, used_by = link_maps(skills, tools)
+    kinds = classify_all(tools)
     # Tool-level licence evidence, keyed by slug. Empty until a resolver that reads
     # each tool's own repository is wired in (issue #43); every tool is `unknown`
     # until then, which is what the catalogue actually knows.
@@ -133,6 +136,10 @@ def enrich(collection_dir) -> dict:
     tool_tiers: dict[str, int] = {}
     for t in tools:
         tier, lic, det, subject, repo = tool_license(tool_evidence.get(t["slug"]))
+        kind = kinds[t["slug"]]["kind"]
+        if tier == TIER_UNKNOWN and kind == KIND_VENDOR:
+            tier, det, subject = "restricted", DETECTION_VENDOR_PRODUCT, SUBJECT_TOOL
+        t["entry_kind"] = kind
         t["license_tier"] = tier
         t["license"] = lic
         t["license_detection"] = det
@@ -158,7 +165,16 @@ def enrich(collection_dir) -> dict:
     si_path.write_text(json.dumps(skills, indent=detect_indent(si_raw), ensure_ascii=False), encoding="utf-8")
     kb_path.write_text(json.dumps(kb, indent=detect_indent(kb_raw), ensure_ascii=False), encoding="utf-8")
 
-    return {"tools": len(tools), "skills_linked": skills_linked, "tool_tiers": tool_tiers}
+    entry_kinds: dict[str, int] = {}
+    for record in kinds.values():
+        entry_kinds[record["kind"]] = entry_kinds.get(record["kind"], 0) + 1
+    unresolved_software = sum(
+        1 for t in tools
+        if t["license_tier"] == TIER_UNKNOWN and t["entry_kind"] != KIND_VENDOR
+        and kinds[t["slug"]]["kind"] == "software")
+    return {"tools": len(tools), "skills_linked": skills_linked, "tool_tiers": tool_tiers,
+            "entry_kinds": dict(sorted(entry_kinds.items())),
+            "unresolved_software": unresolved_software}
 
 
 def main(argv=None) -> int:

@@ -357,6 +357,17 @@ def uninstall(slug: str, target: Target, opts: InstallOpts) -> list[str]:
     rec = manifest.get(opts.home, slug, target.id)
     if not rec:
         return []
+    if opts.dest_override is not None:
+        # --dest names the directory to operate on. When the record contradicts
+        # it, the command is ambiguous: refuse rather than empty the other one.
+        # Without --dest the record is the only statement of where to look, and
+        # each entry is validated against it below.
+        root = target.dest(opts).resolve()
+        if rec.get("dest_root") != str(root):
+            raise ValueError(
+                f"{slug} is installed at {rec.get('dest_root')}, not at {root}; "
+                "uninstall it from the destination it was installed into"
+            )
     active, removed = _clean_snapshot(rec, slug, target.id, opts.home)
     retained = []
     for snapshot in rec.get("retained_units", ()):

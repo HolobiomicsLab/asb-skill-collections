@@ -10,6 +10,7 @@ derived_from:
 source_repos:
 - antonvsdata/notame
 schema_version: 0.2.0
+entry_kind: software
 license_tier: open
 license: MIT
 license_detection: bioconductor-package

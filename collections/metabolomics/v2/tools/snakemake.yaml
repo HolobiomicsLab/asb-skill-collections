@@ -20,6 +20,7 @@ source_repos:
 - biosustain/snakemake_UmetaFlow
 - skinniderlab/clm
 schema_version: 0.2.0
+entry_kind: software
 license_tier: open
 license: MIT
 license_detection: bioconda-package

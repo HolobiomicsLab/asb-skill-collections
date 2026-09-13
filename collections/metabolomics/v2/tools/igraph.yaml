@@ -19,6 +19,7 @@ source_repos:
 - b2slab/mWISE
 - biodatalab/enrichmet
 schema_version: 0.2.0
+entry_kind: software
 license_tier: unknown
 license: null
 license_detection: null

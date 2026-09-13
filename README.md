@@ -99,12 +99,14 @@ agent at `collections/metabolomics/v2/` and read the indexes. See
 
 ## Runtime adapters — experimental, not verified end to end
 
-The intended release installer creates a content-addressed, source-independent
-snapshot and points its host entries into that snapshot. Rerun `install` after
-updating the checkout; there is no separate update command. `uninstall` removes
-unchanged owned entries and snapshots while preserving conflicts. This behaviour
-was verified for `--runtime agents`; Codex, Copilot CLI, Gemini CLI, Cursor,
-Cline and VS Code were not launched, so their adapters remain experimental.
+Other agent runtimes have no `/plugin install`; the bundled `asbb` CLI
+materialises a marketplace pack into the runtime's own location from a local
+clone. It creates a content-addressed, source-independent snapshot and points
+its host entries into that snapshot. Rerun `install` after updating the
+checkout; there is no separate update command. `uninstall` removes unchanged
+owned entries and snapshots while preserving conflicts. This behaviour was
+verified for `--runtime agents`; Codex, Copilot CLI, Gemini CLI, Cursor, Cline
+and VS Code were not launched, so their adapters remain experimental.
 
 The exact managed-install and local Claude Code commands that were exercised are
 in the [usage guide](collections/metabolomics/v2/USAGE.md#1-install-one-domain-collection).
@@ -129,13 +131,15 @@ python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --runtime a
 # Vendor into a project for Claude Code: --runtime claude  (add --user for ~/.claude)
 ```
 
-**Rules/instruction IDEs** (a `SKILL.md` is rendered into their format — run from
-the target project):
+**Rules/instruction IDEs** (rendered instructions backed by a complete unit — run
+from the target project, making the checkout importable and naming it explicitly):
 
 ```bash
-python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --runtime cursor          # .cursor/rules/*.mdc
-python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --runtime cline           # .clinerules/*.md
-python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --runtime vscode-copilot  # .github/instructions/*.instructions.md
+ASB_COLLECTIONS_REPO=/path/to/asb-skill-collections
+export PYTHONPATH="$ASB_COLLECTIONS_REPO${PYTHONPATH:+:$PYTHONPATH}"
+python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --repo "$ASB_COLLECTIONS_REPO" --runtime cursor          # .cursor/rules/*.mdc
+python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --repo "$ASB_COLLECTIONS_REPO" --runtime cline           # .clinerules/*.md
+python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --repo "$ASB_COLLECTIONS_REPO" --runtime vscode-copilot  # .github/instructions/*.instructions.md
 ```
 
 **Anything else** (pi, Antigravity, or a runtime without a preset):

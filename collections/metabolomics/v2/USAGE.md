@@ -86,6 +86,14 @@ skills plus the workflow router, 909 tool records and 6,867 files in total
 (70 MB on the rehearsal filesystem). It also contained the indexes, search and
 grounding helpers, and no internal symlinks.
 
+| File | What it is |
+|---|---|
+| `skills_index.json` | one row/skill: `slug, name, description, edam_operation, edam_topics, tools, dois` |
+| `tools_index.json` | one row/tool: `slug, name, edam_topics, dois, entry_kind, license_tier, license_subject, repo_url, source_paper_repos` |
+| `kb_bundle.json` | skill → source DOIs + tools + `asb-paper-<doi>` KB slugs (grounding map) |
+| `collection.yaml` | the SkillCollection record (counts, curators, license) |
+| `corpus.yaml` | per-paper access basis (`repo-oa`) |
+
 To test the installed copy itself, change to the installed router and run its
 packaged search helper:
 

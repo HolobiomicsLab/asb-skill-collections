@@ -37,12 +37,24 @@ SUBJECT_PAPER = "paper"
 # source_reuse_for_license() already avoids. See governance/LICENSE_TIERS.md.
 TIER_UNKNOWN = "unknown"
 
+# Set on entries the entry-kind vocabulary identifies as a vendor instrument or a
+# proprietary application. Declared before TOOL_DETECTIONS, which includes it.
+DETECTION_VENDOR_PRODUCT = "vendor-product"
+
 # Detections that read the tool itself -- its repository, or the package metadata
 # it publishes -- and so describe the *tool*. A registry detection is the stronger
 # of the two: it reads what the package declares for itself, where a repository
 # read infers from whatever LICENSE file happens to sit at the root.
 TOOL_DETECTIONS = frozenset({"github-api", "license-file", "r-description", "readme-llm",
-                             "bioconductor-package", "bioconda-package"})
+                             "bioconductor-package", "bioconda-package",
+                             # An instrument or a proprietary application, identified
+                             # from the vendor vocabulary in
+                             # governance/tool_entry_kinds.yaml. There is no SPDX id
+                             # to find and no repository to read, but the licence
+                             # question still has an answer -- the purchase or licence
+                             # agreement -- so the subject is the tool and the tier is
+                             # `restricted`, not `unknown`.
+                             DETECTION_VENDOR_PRODUCT})
 # `verified_via` markers that identify the subject when the detection cannot:
 # a clone reads the repository, Unpaywall reads the publication.
 TOOL_VERIFICATIONS = frozenset({"git_clone_succeeded_at_build"})

@@ -8,6 +8,7 @@ derived_from:
 source_repos:
 - czbiohub-sf/Rapid-QC-MS
 schema_version: 0.2.0
+entry_kind: artefact
 license_tier: unknown
 license: null
 license_detection: null

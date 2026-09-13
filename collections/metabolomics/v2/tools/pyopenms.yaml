@@ -23,6 +23,7 @@ source_repos:
 - AutoFlowResearch/SmartPeak
 - huaxuyu/bago
 schema_version: 0.2.0
+entry_kind: software
 license_tier: open
 license: BSD-3-Clause
 license_detection: bioconda-package

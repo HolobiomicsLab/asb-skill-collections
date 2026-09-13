@@ -17,6 +17,7 @@ source_repos:
 - idslme/IDSL.IPA
 - mzmine/mzmine2
 schema_version: 0.2.0
+entry_kind: software
 license_tier: open
 license: GPL-2.0
 license_detection: github-api

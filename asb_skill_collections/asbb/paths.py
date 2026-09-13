@@ -1,5 +1,6 @@
 """Canonical containment checks for installer-owned paths."""
 
+import os
 from pathlib import Path
 
 
@@ -10,6 +11,11 @@ def resolve_within(root: Path, rel: str) -> Path:
     Keeping the lexical path lets callers unlink a validated symlink itself.
     """
     root = Path(root).resolve()
+    # A stored record can hold anything, including a null or a number where a
+    # relative path belongs. Refuse it like any other unsafe entry, so callers
+    # report and skip it instead of meeting a TypeError from pathlib.
+    if not isinstance(rel, (str, os.PathLike)):
+        raise ValueError(f"refusing non-path entry {rel!r} beneath {root}")
     relative = Path(rel)
     if relative.is_absolute() or ".." in relative.parts or not relative.parts:
         raise ValueError(f"refusing unsafe relative path {rel!r} beneath {root}")
