@@ -1,6 +1,6 @@
 ---
 name: metabolomics-ms-imaging-router
-description: Use when a task needs a skill from ASB Metabolomics — MS-imaging — search this unit's 292 evidence-grounded skills, then apply and optionally ground the one that fits.
+description: Use when a task needs a skill from ASB Metabolomics — MS-imaging — search this unit's 291 evidence-grounded skills, then apply and optionally ground the one that fits.
 license: CC-BY-4.0
 metadata:
   skills_count: 291
@@ -13,7 +13,7 @@ schema_version: 0.2.0
 
 # ASB Metabolomics — MS-imaging — router
 
-Entry point for **292 evidence-grounded skills**, each distilled from a
+Entry point for **291 evidence-grounded skills**, each distilled from a
 peer-reviewed method paper and its public code repository.
 
 ## How this unit is laid out

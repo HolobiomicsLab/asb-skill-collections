@@ -1,6 +1,6 @@
 ---
 name: metabolomics-ce-ms-router
-description: Use when a task needs a skill from ASB Metabolomics — CE-MS — search this unit's 114 evidence-grounded skills, then apply and optionally ground the one that fits.
+description: Use when a task needs a skill from ASB Metabolomics — CE-MS — search this unit's 113 evidence-grounded skills, then apply and optionally ground the one that fits.
 license: CC-BY-4.0
 metadata:
   skills_count: 113
@@ -13,7 +13,7 @@ schema_version: 0.2.0
 
 # ASB Metabolomics — CE-MS — router
 
-Entry point for **114 evidence-grounded skills**, each distilled from a
+Entry point for **113 evidence-grounded skills**, each distilled from a
 peer-reviewed method paper and its public code repository.
 
 ## How this unit is laid out
