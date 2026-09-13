@@ -3,6 +3,7 @@ name: spectral-data-filtering
 description: Use when you have loaded a full set of MS scans (e.g., all MS1 scans from readAllScanMS1 in Aerith) and need to restrict analysis to a specific retention-time window (e.g., 9–10 min with 0.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

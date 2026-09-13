@@ -3,6 +3,7 @@ name: full-scan-acquisition-strategy
 description: Use when you need to assess MS1-level ionization efficiency, peak detection sensitivity, and chromatographic separation without the overhead of MS/MS fragmentation. Use it to benchmark full-scan detection across chemically diverse samples (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0091

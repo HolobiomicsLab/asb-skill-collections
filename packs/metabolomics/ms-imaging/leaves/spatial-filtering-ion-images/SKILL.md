@@ -3,6 +3,7 @@ name: spatial-filtering-ion-images
 description: Use when preparing raw ion image data from mass spectrometry imaging for deep learning-based representation learning.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3564
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -41,6 +42,7 @@ attribution:
 
 # spatial-filtering-ion-images
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply spatial filtering (e.g., Gaussian or morphological filters) to ion images in mass spectrometry imaging as part of data augmentation to reduce noise and smooth pixel intensity variations while preserving ion localization patterns. This preprocessing step is used to generate augmented image pairs for contrastive representation learning in DeepION.

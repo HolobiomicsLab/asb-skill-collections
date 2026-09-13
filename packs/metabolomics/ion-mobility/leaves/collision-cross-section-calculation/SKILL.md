@@ -3,6 +3,7 @@ name: collision-cross-section-calculation
 description: Use when you have raw or processed arrival-time data from a traveling-wave ion mobility mass spectrometry (TWIM-MS) platform and need to convert it into standardized collision cross section (CCS) values for comparative analysis across samples or datasets.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

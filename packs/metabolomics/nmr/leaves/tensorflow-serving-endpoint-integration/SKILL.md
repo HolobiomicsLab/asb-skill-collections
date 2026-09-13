@@ -3,6 +3,7 @@ name: tensorflow-serving-endpoint-integration
 description: Use when you have nuclear magnetic resonance (NMR) peak data (1H and 13C measurements) that you need to classify using a deployed SMART 3 model, and you want to submit peaks programmatically rather than through a web UI.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0593

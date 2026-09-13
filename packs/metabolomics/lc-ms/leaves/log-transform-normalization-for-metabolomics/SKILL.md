@@ -3,6 +3,7 @@ name: log-transform-normalization-for-metabolomics
 description: Use when after chromatographic peak detection, fill-in of missing peaks, and retention-time-based grouping in LC-MS metabolomics workflows, apply log2 transformation when refining feature groups using correlation of abundances across samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0625

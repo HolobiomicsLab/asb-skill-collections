@@ -3,6 +3,7 @@ name: feature-list-harmonization-across-methods
 description: Use when you have feature lists in CSV format originating from different acquisition methods (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3761
   edam_topics:
   - http://edamontology.org/topic_3520

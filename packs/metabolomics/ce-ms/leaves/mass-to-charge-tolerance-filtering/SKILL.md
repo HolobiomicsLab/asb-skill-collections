@@ -3,6 +3,7 @@ name: mass-to-charge-tolerance-filtering
 description: Use when extracting migration times of specific analyte or reference markers (e.g., Paracetamol EOF marker) from CE-MS files using peak-picking workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

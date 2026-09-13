@@ -3,6 +3,7 @@ name: mass-difference-adduct-matching
 description: Use when after correlation-based feature pairing has identified feature groups with matching temporal intensity profiles through direct-injection or plasma ionization mass spectrometry experiments. You have a set of putative feature-pair candidates and need to assign specific chemical identities (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_3370

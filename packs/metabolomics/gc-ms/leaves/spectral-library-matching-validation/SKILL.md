@@ -3,6 +3,7 @@ name: spectral-library-matching-validation
 description: Use when you have GC-MS data preprocessed into a structured spread format and need to confirm that a set of known or suspected compounds are correctly identified in your samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3172

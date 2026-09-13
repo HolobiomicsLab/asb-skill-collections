@@ -3,6 +3,7 @@ name: neutral-mass-derivation-from-mz
 description: Use when after adduct configuration is complete and before querying formula databases. Use it whenever you have m/z peak lists from mass spectrometry data and need to identify the neutral mass underlying each observed ion, particularly when multiple adduct types are active in the same experiment.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

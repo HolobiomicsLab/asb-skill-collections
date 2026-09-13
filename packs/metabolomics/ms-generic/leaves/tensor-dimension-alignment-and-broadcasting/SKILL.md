@@ -3,6 +3,7 @@ name: tensor-dimension-alignment-and-broadcasting
 description: Use when when implementing a multi-task deep learning model that predicts charge, isotope count, and retention time simultaneously from mass spectrometry data, and separate feature extraction branches produce tensors of different semantic dimensions that must be integrated.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_topics:
   - http://edamontology.org/topic_3520
   tools:

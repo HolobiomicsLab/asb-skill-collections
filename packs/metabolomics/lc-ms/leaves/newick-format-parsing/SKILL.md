@@ -3,6 +3,7 @@ name: newick-format-parsing
 description: Use when you have a Chemical Feature Tree artifact (phylogeny) output from q2-qemistree's make-hierarchy method and need to verify its structural validity, count nodes (leaves and internal nodes), measure tree depth, and assess branching patterns before using it for alpha- or beta-diversity.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0567
   edam_topics:
   - http://edamontology.org/topic_0092

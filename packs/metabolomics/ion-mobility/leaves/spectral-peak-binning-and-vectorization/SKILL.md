@@ -3,6 +3,7 @@ name: spectral-peak-binning-and-vectorization
 description: Use when you have raw MS/MS spectra with variable numbers of peaks at continuous m/z values and need to feed them to a neural network (e.g., Siamese network for similarity prediction) that requires fixed-size vector input.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

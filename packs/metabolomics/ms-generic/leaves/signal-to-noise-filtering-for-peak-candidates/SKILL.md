@@ -3,6 +3,7 @@ name: signal-to-noise-filtering-for-peak-candidates
 description: Use when immediately after peak detection in the IDSL.IPA workflow, when you have a list of candidate peaks extracted from EIC data and need to remove noise-dominated signals before downstream peak property evaluation and annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -43,6 +44,7 @@ attribution:
 
 # signal-to-noise-filtering-for-peak-candidates
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter detected peaks from LC/HRMS EIC candidates using signal-to-noise ratio (S/N) thresholds to remove low-confidence detections and retain only chemically meaningful signals. This skill is critical for reducing false positives in untargeted metabolomics workflows where peak detection must operate across thousands of m/z traces.

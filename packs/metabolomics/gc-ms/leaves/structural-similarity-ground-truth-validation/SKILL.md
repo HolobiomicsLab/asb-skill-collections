@@ -3,6 +3,7 @@ name: structural-similarity-ground-truth-validation
 description: Use when you have a spectral library with structural ground truth (InChIKey or SMILES annotations for ≥50% of spectra) and want to benchmark whether a new or existing spectral similarity scorer ranks structurally related compounds higher than unrelated ones.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3520

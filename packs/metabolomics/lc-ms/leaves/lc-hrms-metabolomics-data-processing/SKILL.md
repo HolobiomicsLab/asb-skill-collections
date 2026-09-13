@@ -3,6 +3,7 @@ name: lc-hrms-metabolomics-data-processing
 description: Use when you have LC-HRMS raw data files (.mzML or .abf format) from metabolomics experiments and need to extract, align, and annotate features in a reproducible manner across multiple computational environments.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0121

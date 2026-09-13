@@ -3,6 +3,7 @@ name: chromatogram-visualization-generation
 description: Use when after importing mass spectrometry data in .raw, .d, or mzXML format into R and before peak analysis or quality control steps.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0091

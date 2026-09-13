@@ -3,6 +3,7 @@ name: reaction-pathway-interpolation
 description: Use when after CREST (version >= 3.0.2) has identified an ensemble of low-energy conformers and stationary points (minima and transition states), and before submitting interpolated geometries to ORCA (version >= 6.0.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0321
   edam_topics:
   - http://edamontology.org/topic_0176

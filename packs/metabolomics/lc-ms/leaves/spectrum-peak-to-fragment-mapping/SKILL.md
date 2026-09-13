@@ -3,6 +3,7 @@ name: spectrum-peak-to-fragment-mapping
 description: Use when when you have a tandem mass spectrum (MS/MS) and a ProForma 2.0 peptidoform string (e.g., DLTDYLM[Oxidation]K) and need to identify which observed spectrum peaks correspond to expected b-ion and y-ion fragments, in order to validate peptide identification or annotate spectrum quality.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0121

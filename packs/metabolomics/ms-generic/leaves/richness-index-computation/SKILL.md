@@ -3,6 +3,7 @@ name: richness-index-computation
 description: Use when you have a normalized peak-abundance matrix from FT-ICR MS data (peaks as rows, samples as columns) and need to compare the number and diversity of detected molecular species across experimental conditions—for example, to test whether inoculation or environmental perturbation alters the.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3172

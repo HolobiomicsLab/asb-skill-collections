@@ -3,6 +3,7 @@ name: prm-acquisition-event-identification
 description: Use when you have a Thermo Fisher Scientific .raw file containing PRM data and need to verify that acquisition of a specific precursor ion (e.g., LGGNEQVTR++ at m/z 487.2567) is happening at regular intervals consistent with your instrument method design.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

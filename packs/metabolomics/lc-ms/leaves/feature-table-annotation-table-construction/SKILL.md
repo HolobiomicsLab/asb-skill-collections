@@ -3,6 +3,7 @@ name: feature-table-annotation-table-construction
 description: Use when after feature extraction from XCMS or MS-Dial when you have a feature intensity table (samples × features), a feature info table with m/z and retention time measurements, and access to a reference compound database with known m/z, retention time, and compound metadata.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0625

@@ -3,6 +3,7 @@ name: biochemical-transformation-matching
 description: Use when after you have detected and assigned molecular formulas to peaks in a single FT-ICR MS sample, and you want to infer which biochemical or abiotic reactions are occurring by examining pairwise mass differences.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3628
   edam_topics:
   - http://edamontology.org/topic_0121

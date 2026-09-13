@@ -3,6 +3,7 @@ name: gcf-mf-link-scoring-computation
 description: Use when you have paired GCF and MF datasets with strain membership information and need to rank candidate GCF–MF links to identify which biosynthetic gene clusters likely produce detected metabolites.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0621

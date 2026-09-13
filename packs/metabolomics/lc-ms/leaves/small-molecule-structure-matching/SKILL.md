@@ -3,6 +3,7 @@ name: small-molecule-structure-matching
 description: Use when you have observed compounds (from LC-MS, GC-MS, or spectroscopy) and a set of predicted metabolite structures from BioTransformer, and need to assign identities to the observed compounds by matching their experimental features (mass-to-charge ratio, retention time, spectral signature) to.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0209
@@ -41,6 +42,7 @@ attribution:
 
 # small-molecule-structure-matching
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Match predicted metabolite structures against observed spectral, chromatographic, or mass-based features using structural similarity or mass-to-charge alignment to assign candidate identities. This skill leverages BioTransformer's metabolism predictions as the basis for metabolite identification by ranking and filtering candidate structures by probability score and experimental match criteria.

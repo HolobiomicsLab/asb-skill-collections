@@ -3,6 +3,7 @@ name: background-distribution-threshold-derivation
 description: Use when when you have trained predictive models (e.g., neural networks) on paired microbiome-metabolome data and need to identify which metabolites are genuinely well-predicted above chance.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3174

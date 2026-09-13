@@ -3,6 +3,7 @@ name: pathway-annotation-mapping
 description: Use when you have a metabolomics dataset with metabolite identifiers in mixed formats (e.g., common names, KEGG accessions, HMDB IDs) and need to assign each metabolite to its canonical pathway(s) before performing pathway-level classification, feature selection, or prognosis modeling.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_0625

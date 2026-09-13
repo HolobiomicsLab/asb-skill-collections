@@ -3,6 +3,7 @@ name: missing-peak-imputation-fillpeaks
 description: Use when apply fillPeaks after retention time alignment (whether XCMS or ncGTW) when feature matrices contain missing peaks across samples due to alignment gaps or detection failures.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3172

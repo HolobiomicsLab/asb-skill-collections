@@ -3,6 +3,7 @@ name: metabolite-feature-flagging
 description: Use when after drift correction and before imputation, when you have a MetaboSet object with LC-MS peak abundances and need to remove features with insufficient detection consistency across QC samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -50,6 +51,7 @@ attribution:
 
 # metabolite-feature-flagging
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A quality-control filtering step that identifies and marks LC-MS metabolite features failing to meet minimum detection-rate thresholds across QC samples, preventing low-confidence features from downstream multivariate analysis. This skill operationalizes the flag_detection function in the notame workflow to enforce reproducibility criteria on feature abundance data.

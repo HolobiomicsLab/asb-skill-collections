@@ -3,6 +3,7 @@ name: binary-file-format-parsing
 description: Use when you encounter a proprietary or undocumented binary file (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -39,6 +40,7 @@ attribution:
 
 # binary-file-format-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and validate binary file format headers by reading fixed-size byte blocks, extracting and verifying magic integers and metadata fields, and deserializing structured header content into machine-readable output. This skill is essential for interpreting proprietary or domain-specific file formats (e.g., NMR data archives) where header structure and endianness detection are prerequisites for downstream analysis.

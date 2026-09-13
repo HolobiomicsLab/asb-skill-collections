@@ -3,6 +3,7 @@ name: bayesian-model-update-with-experimental-data
 description: Use when you have completed one or more LC-MS gradient runs, extracted separation efficiency metrics from the resulting MS1 and MS2 spectra, and need to incorporate those real experimental observations into your Gaussian process model to improve the next gradient proposal.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -52,6 +53,7 @@ attribution:
 
 # bayesian-model-update-with-experimental-data
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Iteratively update a Gaussian process regression model with newly acquired LC-MS experimental data to refine predictions of separation efficiency and identify optimal gradient parameters. This skill enables closed-loop optimization where each new gradient trial yields MS1/MS2 spectra, separation metrics, and model retraining until convergence or a predefined stopping criterion is reached.

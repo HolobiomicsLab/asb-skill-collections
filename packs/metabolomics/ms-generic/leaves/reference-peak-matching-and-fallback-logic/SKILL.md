@@ -3,6 +3,7 @@ name: reference-peak-matching-and-fallback-logic
 description: Use when when performing m/z domain calibration on FT-ICR or high-resolution MS data and the initial calibration attempt finds fewer than 5 reference m/z matches within the standard PPM window (typically ±1–5 ppm).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

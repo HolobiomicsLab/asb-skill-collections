@@ -3,6 +3,7 @@ name: post-hoc-model-interpretability
 description: Use when after training a GNN model on molecular structures with continuous targets (e.g., CCS values), when you need to understand which node-level (atom) or edge-level (bond) features contribute most to individual or aggregate predictions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3938
   edam_topics:
   - http://edamontology.org/topic_0154

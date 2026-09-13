@@ -3,6 +3,7 @@ name: internal-standardization-lipid-mapping
 description: Use when you have (LC-)IM-MS lipidomics data from samples spiked with U13C-labeled yeast extract, measured CCS values for both labeled and unlabeled lipids, and need to quantify systematic CCS bias between your instrument and a reference library before applying bias correction.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -43,6 +44,7 @@ attribution:
 
 # internal-standardization-lipid-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map measured ion mobility-mass spectrometry lipid signals to a deuterated CCS library using U13C-labeled internal standards to establish bias correction factors for each lipid class–adduct combination. This skill enables quality control and systematic bias quantification without requiring external calibration beyond vendor-specific requirements.

@@ -3,6 +3,7 @@ name: probability-prediction-metric-computation
 description: Use when after running ModiFinder's probability generation on a known compound–modified compound pair, you have a vector of per-atom modification probabilities and need to validate whether the predicted probability peaks align with the true modification sites.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0593
@@ -48,6 +49,7 @@ attribution:
 
 # Probability-Prediction Metric Computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute evaluation metrics (is_max and average_distance) that quantify how well predicted modification site probability distributions match ground-truth structural modifications. This skill bridges probabilistic predictions from spectral alignment to interpretable performance scores.

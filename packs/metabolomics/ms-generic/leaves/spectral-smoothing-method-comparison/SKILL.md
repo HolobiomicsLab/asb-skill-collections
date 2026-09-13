@@ -3,6 +3,7 @@ name: spectral-smoothing-method-comparison
 description: Use when when you have raw mass spectra in an MSImagingArrays object and need to decide between Savitzky-Golay and Gaussian smoothing methods based on their effects on peak shape fidelity and baseline noise. Apply this skill when peak preservation is a priority (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0121

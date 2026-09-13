@@ -3,6 +3,7 @@ name: derivatizing-matrix-ionization-rule-application
 description: Use when when working with mass spectrometry imaging data from metabolites treated with derivatizing matrices (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3370

@@ -3,6 +3,7 @@ name: reference-database-tolerance-mapping
 description: Use when you have calculated pairwise mass differences from MS peaks (via massdiff()) and binned them into a histogram, and now need to identify which observed mass differences correspond to known molecular adducts (e.g., [M+Na]+, [M+H]+, matrix-related species) rather than random noise.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

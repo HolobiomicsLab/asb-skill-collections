@@ -3,6 +3,7 @@ name: signal-to-noise-ratio-assessment
 description: Use when when preparing a 1D 1H NMR spectral peak list for input to the NMRformer metabolite identification model, and you have access to peak intensity measurements and noise level estimates.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

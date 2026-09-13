@@ -3,6 +3,7 @@ name: graph-based-identity-transfer
 description: Use when when you have spectral library matches (seed identities with high confidence scores) mapped to initial candidate structures from in silico fragmentation, and you want to propagate those identities to related structures in the fragmentation candidate graph to improve annotation coverage.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0593

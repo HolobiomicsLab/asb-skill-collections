@@ -3,6 +3,7 @@ name: spectral-clustering-and-feature-grouping
 description: Use when you have raw MS/MS feature data with m/z, retention time, and fragmentation spectra from an untargeted metabolomics experiment, and you need to annotate reaction-derived metabolites of xenobiotics without relying on a priori targeted methods.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_0718
@@ -56,6 +57,7 @@ attribution:
 
 # spectral-clustering-and-feature-grouping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Groups MS features by fragmentation pattern similarity and spectral entropy to propagate metabolite annotations across co-eluting or structurally related compounds in untargeted metabolomics. This is the core step in the CMDN pipeline that enables high-throughput xenobiotic metabolite discovery by clustering unknown features and assigning them to reaction pathways via reference spectra.

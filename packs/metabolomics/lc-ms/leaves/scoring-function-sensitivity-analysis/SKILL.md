@@ -3,6 +3,7 @@ name: scoring-function-sensitivity-analysis
 description: Use when you have two or more complementary scoring functions (e.g., strain correlation and IOKR scores) that you wish to combine, and you need to determine which combination strategy and parameters maximize enrichment of known true links in a validation set.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091

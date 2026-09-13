@@ -3,6 +3,7 @@ name: quality-metric-computation-from-mass-spectrometry-data
 description: Use when you have raw DIA mass spectrometry files (.raw, .d, or .wiff format) from timsTOF, TripleTOF, or Orbitrap instruments and need to assess their quality before downstream proteomics analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

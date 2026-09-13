@@ -3,6 +3,7 @@ name: reproducibility-statistic-computation-rank-based
 description: Use when you have high-dimensional replicate experiment data (metabolomics, proteomics, or genomics) with multiple biological or technical replicates per sample, and you need to assess which features are reproducible across replicates and which sample pairs show consistent reproducibility patterns.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -48,6 +49,7 @@ attribution:
 
 # Compute rank-based reproducibility statistics for replicate experiments
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply the Maximum Rank Reproducibility (marr) procedure to quantify reproducibility of features (metabolites/genes) across technical or biological replicate samples, producing percent-reproducible rankings and filtered reproducibility tables stratified by feature-wise and sample-pair-wise thresholds.

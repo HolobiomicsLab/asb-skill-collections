@@ -3,6 +3,7 @@ name: chromatographic-peak-detection-gradient-descent
 description: Use when you have LC-HRMS profile-mode data (retention time × m/z matrix format) and need to automatically identify chromatographic peak locations and boundaries prior to feature extraction, reference matching, or training a peak-classification CNN model.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -42,6 +43,7 @@ attribution:
 
 # chromatographic-peak-detection-gradient-descent
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Detects chromatographic peaks in LC-HRMS profile-mode data by applying smoothing followed by gradient-descent algorithms to identify local maxima, estimate peak borders and centers. This preprocesses data for reference matching or CNN model training in untargeted metabolomics workflows.

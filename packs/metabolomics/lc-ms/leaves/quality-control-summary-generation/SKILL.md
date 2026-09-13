@@ -3,6 +3,7 @@ name: quality-control-summary-generation
 description: Use when after applying one or more mpactr filters (mispicked, group, CV, or insource) to a peak table in a chained filtering workflow.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

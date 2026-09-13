@@ -3,6 +3,7 @@ name: ion-mobility-mass-spectrometry-data-preprocessing
 description: Use when when you have raw IM-MS data from drift tube (DT) or SLIM instruments in Agilent MassHunter (.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -51,6 +52,7 @@ attribution:
 
 # ion-mobility-mass-spectrometry-data-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preprocessing pipeline for IM-MS data that removes noise, corrects artifacts, and interpolates ion mobility dimensions to prepare raw Agilent MassHunter (.d) or UIMF files for downstream omics analysis. This skill combines low-intensity thresholding, spike removal, multidimensional smoothing, and saturation repair to enhance signal quality in complex samples.

@@ -3,6 +3,7 @@ name: mass-spectrometry-adduct-assignment
 description: Use when when processing in-silico or experimental MS spectra records from databases with incomplete metadata, specifically when the adduct field is null or absent but the ionmode field (positive/negative polarity) is present.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -42,6 +43,7 @@ attribution:
 
 # mass-spectrometry-adduct-assignment
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Automatically assign ionization adducts ([M+H]+ or [M-H]-) to mass spectra with missing adduct annotations by inferring the appropriate adduct from the ionization mode (positive or negative). This standardization step ensures consistency and prevents downstream analysis errors caused by missing or inconsistent adduct information.

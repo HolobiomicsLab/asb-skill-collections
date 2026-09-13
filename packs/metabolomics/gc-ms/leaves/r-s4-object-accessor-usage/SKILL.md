@@ -3,6 +3,7 @@ name: r-s4-object-accessor-usage
 description: Use when you have constructed or received a SummarizedExperiment object (or similar S4 class) containing MS feature tables, counts matrices, or sample-level metadata, and need to retrieve specific slots (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3437
   edam_topics:
   - http://edamontology.org/topic_0091

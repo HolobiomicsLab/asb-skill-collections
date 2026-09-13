@@ -3,6 +3,7 @@ name: extracted-ion-chromatogram-parameter-extraction
 description: Use when after isolating TIC peak regions via sliding window analysis and peak expansion (isolatePeaks), apply this skill when you need dataset-specific XCMS parameter estimates.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

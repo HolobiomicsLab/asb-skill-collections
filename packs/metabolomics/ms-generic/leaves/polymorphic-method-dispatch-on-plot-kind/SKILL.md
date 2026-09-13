@@ -3,6 +3,7 @@ name: polymorphic-method-dispatch-on-plot-kind
 description: Use when when building a plotting library that must support multiple visualization types (1D spectra, chromatograms, mobilograms, 2D peak maps) across heterogeneous rendering backends, and you want users to specify plot type via a single kind parameter rather than importing backend-specific classes.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520

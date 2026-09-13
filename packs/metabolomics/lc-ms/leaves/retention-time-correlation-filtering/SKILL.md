@@ -3,6 +3,7 @@ name: retention-time-correlation-filtering
 description: Use when you have detected multiple LC-MS features (m/z peaks) across a chromatogram and need to distinguish true chemical relationships (isotopes differing by 1.003 Da, adducts with characteristic mass shifts, neutral loss fragments) from noise or unrelated peaks.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -42,6 +43,7 @@ attribution:
 
 # retention-time-correlation-filtering
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Filter and group LC-MS features by retention time proximity to identify related ion species (isotopes, adducts, in-source fragments). This skill removes spurious or unrelated features and clusters true feature families for confident annotation.

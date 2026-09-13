@@ -3,6 +3,7 @@ name: lipid-ontology-category-mapping
 description: Use when you have a list of detected lipids (e.g., from LC-MS/MS lipidomics data) with associated statistical measures (p-values, fold-changes), and you need to test whether specific lipid ontology categories (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0153

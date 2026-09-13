@@ -3,6 +3,7 @@ name: model-artifact-persistence
 description: Use when after a deep neural network model has completed training on LC-MS spectral peak classification data and you need to preserve the learned weights and architecture for downstream inference, validation on held-out test sets, or sharing with collaborators.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -44,6 +45,7 @@ attribution:
 
 # model-artifact-persistence
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Save trained deep neural network model weights and architecture to disk after training completion, ensuring reproducibility and enabling future inference without retraining. This skill is essential for capturing the learned state of a DNN classifier so it can be retrieved and applied to new LC-MS spectral peak data.

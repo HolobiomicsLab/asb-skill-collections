@@ -3,6 +3,7 @@ name: mz-decimal-extraction
 description: Use when after loading a feature table with m/z values from MS-Dial output when you need to identify and remove features with anomalous decimal m/z values.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091

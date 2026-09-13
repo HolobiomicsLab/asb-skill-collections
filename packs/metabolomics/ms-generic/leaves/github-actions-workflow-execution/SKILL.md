@@ -3,6 +3,7 @@ name: github-actions-workflow-execution
 description: Use when you have a GitHub repository containing scientific records (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -44,6 +45,7 @@ attribution:
 
 # github-actions-workflow-execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute automated validation workflows on a GitHub repository using GitHub Actions to test all records against a validator tool, generating pass/fail status reports. This skill enables continuous integration of quality control for scientific data repositories by triggering scheduled or event-driven validation jobs that persist results as machine-readable outputs and status badges.

@@ -3,6 +3,7 @@ name: natural-isotope-abundance-propagation
 description: Use when you have LC-MS fractional abundances of measured isotopologues (FAM) from a stable isotope labeling experiment and need to recover the true mass distribution vectors (MDV) that reflect only the contribution from the isotopic tracer. Use this skill when naturally occurring isotopes (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3172

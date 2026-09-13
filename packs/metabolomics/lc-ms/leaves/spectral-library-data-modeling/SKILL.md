@@ -3,6 +3,7 @@ name: spectral-library-data-modeling
 description: Use when when migrating an existing file-based spectral library (stored as JSON, CSV, or binary formats) into a production system that requires frequent subset queries by metadata filters, similarity scoring across large spectral collections, or integration into downstream tools like MS2Query that.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

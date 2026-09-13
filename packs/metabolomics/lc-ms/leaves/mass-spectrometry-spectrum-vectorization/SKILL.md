@@ -3,6 +3,7 @@ name: mass-spectrometry-spectrum-vectorization
 description: Use when you have high-resolution MS/MS spectra in mzML, mzXML, or MGF format and need to cluster or search across millions of spectra. The vectorization step is necessary before constructing nearest-neighbor indexes or computing pairwise distance matrices for spectrum clustering.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: peak-m-z-indexing
 description: Use when when you have LC-MS-MS metabolomics data in MGF format and need to prepare it for unsupervised analysis (e.g., topic modeling with LDA).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172

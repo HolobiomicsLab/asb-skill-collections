@@ -3,6 +3,7 @@ name: missing-value-imputation-with-na
 description: Use when you are implementing a custom MsBackend subclass for the Spectra package and need to ensure that spectraData() returns all core spectra variables (e.g., centroided, polarity, collisionEnergy) regardless of which ones are explicitly stored in your backend.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3391
   edam_topics:
   - http://edamontology.org/topic_0121

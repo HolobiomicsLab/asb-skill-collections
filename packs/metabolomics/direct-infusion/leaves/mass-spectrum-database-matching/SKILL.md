@@ -3,6 +3,7 @@ name: mass-spectrum-database-matching
 description: Use when you have centroided LC-MS/MS spectral data (in MGF, mzXML, mzML, or mzData format) and want to identify known or predicted natural product structures present in your sample.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -61,6 +62,7 @@ attribution:
 
 # mass-spectrum-database-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match tandem mass spectra against structure databases of known natural products to identify peptidic natural products (PNPs) and ribosomally synthesized post-translationally modified peptides (RiPPs). This skill uses database search pipelines like Dereplicator to return scored identifications with annotated modifications.

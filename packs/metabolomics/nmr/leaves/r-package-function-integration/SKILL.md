@@ -3,6 +3,7 @@ name: r-package-function-integration
 description: Use when you have a published predictive model with known coefficients and feature requirements (e.g., MetaboAge from a peer-reviewed study), a target R package with an established data pipeline (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3172

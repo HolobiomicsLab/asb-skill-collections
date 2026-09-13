@@ -3,6 +3,7 @@ name: lc-ms-data-preprocessing
 description: 'Use when you have raw mzML files and corresponding feature tables (CSV format, mzmine-formatted) from untargeted LCMS experiments, and you need to convert them into uniformly-shaped peak matrices (2 × 120 per peak: margin + signal regions) as input for neural network classification of MS1 peak.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

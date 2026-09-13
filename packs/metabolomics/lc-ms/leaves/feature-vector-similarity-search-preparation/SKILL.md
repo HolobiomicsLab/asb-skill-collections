@@ -3,6 +3,7 @@ name: feature-vector-similarity-search-preparation
 description: Use when you have millions of MS/MS spectra in mzML, mzXML, or MGF format and need to identify similar spectra for clustering, but exhaustive pairwise cosine-similarity computation would be prohibitively slow.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520

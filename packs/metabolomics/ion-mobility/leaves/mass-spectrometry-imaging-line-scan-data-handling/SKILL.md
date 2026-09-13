@@ -3,6 +3,7 @@ name: mass-spectrometry-imaging-line-scan-data-handling
 description: Use when you have raw line-scan MSI data from a vendor instrument (Agilent, Bruker, Thermo, or open-source .mzML format) and need to extract ion images for specified m/z targets with spatial binning and tolerance-based filtering.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0121

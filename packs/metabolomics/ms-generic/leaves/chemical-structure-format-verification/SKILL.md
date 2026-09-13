@@ -3,6 +3,7 @@ name: chemical-structure-format-verification
 description: Use when working with mass spectrometry spectral libraries (GNPS, MoNA, MTBLS1572, MassBank) that have been preprocessed by prior teams but may contain formatting errors or entries with missing/null SMILES fields.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -45,6 +46,7 @@ attribution:
 
 # chemical-structure-format-verification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates SMILES strings for structural and syntactic correctness to remove malformed entries from spectral datasets before embedding model training. This filtering step ensures data quality and prevents invalid chemical notation from corrupting downstream spectral embeddings.

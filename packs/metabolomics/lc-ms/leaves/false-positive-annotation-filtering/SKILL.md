@@ -3,6 +3,7 @@ name: false-positive-annotation-filtering
 description: Use when after high-scoring spectral library matching (e.g., EQ module output) of LC-MS/MS data yields candidate lipid annotations; when spectral similarity alone produces false positives and you have computed relative retention time intervals across species cohorts;
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

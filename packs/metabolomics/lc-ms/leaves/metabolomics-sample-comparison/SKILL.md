@@ -3,6 +3,7 @@ name: metabolomics-sample-comparison
 description: Use when you have a MemoMatrix (sample-by-fingerprint matrix) from aligned MS2 spectra and need to visually compare sample similarity or clustering patterns, especially when samples show poor feature overlap, strong retention time shifts across different LC methods, or were acquired on different.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3935
   edam_topics:
   - http://edamontology.org/topic_3172

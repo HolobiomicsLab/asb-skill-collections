@@ -3,6 +3,7 @@ name: repository-environment-setup
 description: Use when when you have received a GitHub repository URL for a computational workflow (e.g., ENPKG full workflow) and need to prepare your local machine to execute the workflow.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_0091

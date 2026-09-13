@@ -3,6 +3,7 @@ name: lc-ms-output-validation
 description: Use when after executing a Nextflow-based LC-HRMS metabolomics workflow with Docker or Singularity containerization on .mzML LC-MS data, before proceeding to downstream statistical or visualization analyses.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3172

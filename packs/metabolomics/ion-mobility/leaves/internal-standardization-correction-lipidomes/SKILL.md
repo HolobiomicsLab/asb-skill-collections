@@ -3,6 +3,7 @@ name: internal-standardization-correction-lipidomes
 description: Use when you have IM-MS lipidomics data from samples spiked with U13C-labeled internal standards (fully labeled yeast extract) and measured CCS values need bias assessment or correction.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -43,6 +44,7 @@ attribution:
 
 # internal-standardization-correction-lipidomes
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assess and correct collision cross section (CCS) bias in ion mobility-mass spectrometry (IM-MS) lipidomics data using U13C-labeled internal standards and a reference DTCCS_N2 library. This skill eliminates the need for external calibration beyond vendor-specific requirements by leveraging lipid class-stratified bias calculation and per-class linear correction functions.

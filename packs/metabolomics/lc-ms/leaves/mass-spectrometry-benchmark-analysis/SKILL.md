@@ -3,6 +3,7 @@ name: mass-spectrometry-benchmark-analysis
 description: Use when you have implemented or modified a tandem mass spectrometry formula inference model and need to measure whether a specific architectural change (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0601

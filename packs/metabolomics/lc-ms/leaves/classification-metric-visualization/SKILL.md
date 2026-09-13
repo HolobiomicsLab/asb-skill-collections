@@ -3,6 +3,7 @@ name: classification-metric-visualization
 description: Use when after training or evaluating a classification model (e.g., a Siamese neural network for spectrum similarity prediction) and obtaining a prediction array and corresponding ground-truth label array.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091

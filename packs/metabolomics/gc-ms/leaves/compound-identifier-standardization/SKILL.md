@@ -3,6 +3,7 @@ name: compound-identifier-standardization
 description: Use when ingesting compound metadata from multiple sources (PubChem, DrugBank, LOTUS, Dictionary of Natural Products, DrugCentral) that lack uniform column naming, have incomplete structure information, or contain only compound names without structural data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_0154

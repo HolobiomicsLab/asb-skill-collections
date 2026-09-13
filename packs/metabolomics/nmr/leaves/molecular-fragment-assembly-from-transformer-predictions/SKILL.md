@@ -3,6 +3,7 @@ name: molecular-fragment-assembly-from-transformer-predictions
 description: Use when when you have encoded spectral features (from a CNN featurizer applied to 1D 1H and/or 13C NMR spectra) and a set of candidate molecular fragments predicted for a molecule with ≤19 heavy atoms, and you need to determine the correct connectivity and assembly order to recover the.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0362
   edam_topics:
   - http://edamontology.org/topic_3172

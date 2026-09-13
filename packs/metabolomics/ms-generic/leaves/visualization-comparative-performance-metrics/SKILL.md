@@ -3,6 +3,7 @@ name: visualization-comparative-performance-metrics
 description: Use when you have execution-time data for the same set of plotting operations (e.g., chromatogram, spectrum, peakmap rendering) across two or more backend implementations (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0337
   edam_topics:
   - http://edamontology.org/topic_3520

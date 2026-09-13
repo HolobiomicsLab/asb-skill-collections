@@ -3,6 +3,7 @@ name: network-topology-comparison
 description: Use when after executing a molecular networking workflow on GC-MS data that has been processed through auto-deconvolution, and a published reference network exists from a prior analysis of the same or analogous dataset.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3439
   edam_topics:
   - http://edamontology.org/topic_3520

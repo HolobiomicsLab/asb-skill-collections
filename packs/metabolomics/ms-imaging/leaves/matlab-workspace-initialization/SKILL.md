@@ -3,6 +3,7 @@ name: matlab-workspace-initialization
 description: Use when when you have mass spectrometry imaging root datasets paired with accompanying .mat workspace files (as in the B73 and Oaxacan Green genotypes from Sama et al.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -39,6 +40,7 @@ attribution:
 
 # matlab-workspace-initialization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and initialize pre-computed MATLAB workspace files (.mat) containing mass spectrometry imaging datasets and their analysis state to enable reproducible linear-axis analysis of root developmental metabolomes. This skill bridges raw CDF data with downstream DIMPLE pipeline execution by restoring a known computational environment.

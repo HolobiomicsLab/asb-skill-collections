@@ -3,6 +3,7 @@ name: structure-prediction-from-mass-spectra
 description: Use when you have GNPS-style MGF spectral files from MS/MS experiments and need to predict the molecular structure (as SMILES) of unknown compounds.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -42,6 +43,7 @@ attribution:
 
 # structure-prediction-from-mass-spectra
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Predict molecular structures and functional groups from tandem mass spectrometry (MS/MS) data using a deep learning transformer model trained on spectral fragmentation patterns. This skill enables automated SMILES generation from GNPS-style MGF spectral files, bridging high-resolution MS data to chemical structure inference.

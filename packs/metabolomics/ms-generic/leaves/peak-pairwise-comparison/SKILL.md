@@ -3,6 +3,7 @@ name: peak-pairwise-comparison
 description: Use when after molecular formula assignment and peak filtering are complete, when you have a filtered peak list (m/z values and molecular formulas) and want to discover biochemical transformations without prior knowledge of reaction networks.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172

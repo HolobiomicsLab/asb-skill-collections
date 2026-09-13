@@ -3,6 +3,7 @@ name: dot-product-similarity-computation
 description: Use when when performing open modification spectral library searching and you need to sensitively match query spectra that may carry unknown post-translational or chemical modifications to an unmodified spectral library.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121

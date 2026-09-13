@@ -3,6 +3,7 @@ name: grid-search-evaluation-and-threshold-identification
 description: Use when you have a fitted alignment model (e.g., metabCombiner object with pre-aligned feature pair candidates and RT spline mapping) and known shared compound identities (ground truth) from reference datasets, and you need to determine which combination of three or more continuous parameters (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: c-sharp-wrapper-invocation-from-r
 description: Use when when you need to read proprietary or binary data formats (e.g., Thermo Fisher .raw files) from R but the native implementation is in .NET/C#, and direct language bindings are unavailable or impractical. Use this when the target assembly requires Windows/.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

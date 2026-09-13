@@ -3,6 +3,7 @@ name: msms-spectrum-object-instantiation
 description: Use when when you have successfully resolved a USI string to extract raw spectrum data from an online proteomics/metabolomics repository (PRIDE, MassIVE, etc.) and need to construct a spectrum object that exposes spectrum data as Python attributes and methods for downstream processing (filtering.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

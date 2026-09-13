@@ -3,6 +3,7 @@ name: missing-value-imputation-by-data-recursion
 description: Use when after sample alignment and feature grouping in untargeted LC-MS workflows, when the aligned feature table contains missing intensity values (NA or zero entries) due to features falling below the detection limit in some samples but being present above-threshold in others.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3172

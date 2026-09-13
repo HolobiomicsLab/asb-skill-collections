@@ -3,6 +3,7 @@ name: low-resolution-mass-spectrometry-analysis
 description: Use when you have low-resolution MS data (e.g., from quadrupole instruments) in vendor format, a list of target compounds with known monoisotopic m/z and retention times, and need to extract per-isotopologue area and intensity values.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: semantic-role-assignment-for-mass-spectrometry-data
 description: Use when you have uploaded a delimited data file (comma-, semicolon-, or tab-separated) with a header row into Punc'data and need to ensure that each column is correctly mapped to its semantic role (m/z, intensity, formula, or other mass spectrometry attributes) before proceeding to analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

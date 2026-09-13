@@ -3,6 +3,7 @@ name: pathway-database-querying
 description: 'Use when when preparing to run ORA on a metabolomics study: you have a list of detected metabolites from your experiment and need to determine which metabolites from the full pathway database should serve as the statistical background, and which pathways contain how many metabolites overall.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0602

@@ -3,6 +3,7 @@ name: ms-instrument-data-preprocessing
 description: Use when you have raw mass spectrometry data files from a mass spectrometer instrument and need to feed them into a peptide feature detection pipeline (e.g., IsoFusion) that accepts only MS1 format input.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

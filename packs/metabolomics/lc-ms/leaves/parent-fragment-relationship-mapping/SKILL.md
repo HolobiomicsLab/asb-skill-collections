@@ -3,6 +3,7 @@ name: parent-fragment-relationship-mapping
 description: Use when after ISF features have been identified in Part 4 of the ISFrag workflow and you need to export or visualize the hierarchical structure of detected in-source fragments relative to their parent ions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0091

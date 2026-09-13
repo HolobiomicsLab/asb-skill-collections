@@ -3,6 +3,7 @@ name: workflow-orchestration-and-parallelization
 description: Use when when you have a multi-step computational chemistry or molecular modeling pipeline (3+ sequential or parallel stages) that must process many molecules, each requiring repeated tool invocations with different parameters, and you need reproducibility, fault tolerance, and the ability to.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3501
   edam_topics:
   - http://edamontology.org/topic_3314
@@ -48,6 +49,7 @@ attribution:
 
 # workflow-orchestration-and-parallelization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use Snakemake to orchestrate multi-stage computational chemistry pipelines with automatic parallelization across HPC nodes, enabling efficient end-to-end prediction of molecular properties (e.g., collisional cross sections) from SMILES input through ionization, conformation generation, filtering, and quantum calculations.

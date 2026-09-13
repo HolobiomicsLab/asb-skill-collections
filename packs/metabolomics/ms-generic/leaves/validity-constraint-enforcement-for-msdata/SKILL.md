@@ -3,6 +3,7 @@ name: validity-constraint-enforcement-for-msdata
 description: Use when when designing a custom MsBackend subclass (e.g., MsBackendTest) that stores spectral data in multiple slots (a data.frame for spectra variables, NumericList objects for m/z and intensity peaks). Use this skill to guard against slot desynchronization—e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

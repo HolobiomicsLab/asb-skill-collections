@@ -3,6 +3,7 @@ name: feature-wise-spectrum-count-aggregation
 description: Use when when you have extracted concatenated MS/MS spectra for multiple features from replicate mzML files and need to verify that a TIC-based filtering step (e.g., top x% TIC extraction) reduces per-feature spectrum counts to expected target levels.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

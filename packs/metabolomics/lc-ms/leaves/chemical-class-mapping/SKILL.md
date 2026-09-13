@@ -3,6 +3,7 @@ name: chemical-class-mapping
 description: Use when you have a GNPS molecular network (GML or GraphML format) and wish to annotate network nodes with chemical class labels to support metabolite family interpretation. Use it specifically when you need to overlay chemical classification schemes (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_0154

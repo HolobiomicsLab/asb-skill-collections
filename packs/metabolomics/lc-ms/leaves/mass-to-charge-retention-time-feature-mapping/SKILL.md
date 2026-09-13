@@ -3,6 +3,7 @@ name: mass-to-charge-retention-time-feature-mapping
 description: Use when you have centroided data-dependent acquisition (DDA) mzML files from LC- or GC-HRMS measurements and need to convert continuous raw mass spectrometric signals into discrete, quantifiable chromatographic features (m/z, RT, intensity, charge, isotope) before PFAS-specific prioritization or.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3520

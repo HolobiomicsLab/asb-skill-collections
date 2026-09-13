@@ -3,6 +3,7 @@ name: peak-boundary-identification-in-extracted-ion-data
 description: Use when after extracting ion chromatograms and ion mobilograms from raw diaPASEF or DIA data within specified m/z, retention time, and ion mobility windows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121

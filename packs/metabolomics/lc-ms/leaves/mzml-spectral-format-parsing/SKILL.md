@@ -3,6 +3,7 @@ name: mzml-spectral-format-parsing
 description: Use when you have mzML-format raw data files (from any mass spectrometry vendor or conversion tool) and need to ingest them into MS-DIAL version 5 or later for untargeted metabolomics or lipidomics analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: ranked-annotation-prioritization
 description: Use when you have completed cluster-based filtering of KEGG candidate assignments in untargeted LC-MS metabolomics and need to rank those candidates by biological plausibility using a metabolite interaction network. Specifically, use it after `clusterBased.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_0121

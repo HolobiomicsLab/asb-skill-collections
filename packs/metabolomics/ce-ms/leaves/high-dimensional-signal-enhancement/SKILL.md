@@ -3,6 +3,7 @@ name: high-dimensional-signal-enhancement
 description: Use when when you have raw or preprocessed mass spectrometry imaging (MSI) data with limited spatial resolution, high noise, or incomplete molecular coverage, and you want to enhance signal fidelity to support multiscale tissue–single-cell mapping or brain biochemical profiling.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0121

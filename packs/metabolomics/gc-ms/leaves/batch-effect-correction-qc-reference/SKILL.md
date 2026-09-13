@@ -3,6 +3,7 @@ name: batch-effect-correction-qc-reference
 description: Use when your peak intensity matrix exhibits batch-to-batch variation (retention time drift, signal intensity fluctuation across injection sequences), you have QC samples injected at regular intervals throughout the analysis, and you want to preserve biological signal differences while removing.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0091

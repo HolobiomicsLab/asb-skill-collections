@@ -3,6 +3,7 @@ name: energy-based-formula-scoring
 description: Use when you have an unknown MS/MS spectrum (precursor m/z and fragment peak list) and a set of candidate molecular formulae, and you need to rank them by likelihood without access to a spectrum database or precomputed fragmentation trees.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3172

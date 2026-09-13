@@ -3,6 +3,7 @@ name: neural-network-input-preparation
 description: Use when when you have annotated representative LCMS samples (raw mzML files + labeled feature tables in mzmine CSV format) and need to convert them into balanced or unbalanced peak matrix batches with fixed dimensions for neural network training.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_3520

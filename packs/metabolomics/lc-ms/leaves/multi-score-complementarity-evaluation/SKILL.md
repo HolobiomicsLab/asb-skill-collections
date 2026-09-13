@@ -3,6 +3,7 @@ name: multi-score-complementarity-evaluation
 description: Use when you have two or more independent scoring functions ranking the same set of candidate links (GCF-MF pairs, BGC-spectrum associations, etc.), and you want to determine whether they capture complementary information that justifies combining them.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0160

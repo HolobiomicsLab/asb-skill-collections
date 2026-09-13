@@ -3,6 +3,7 @@ name: fatty-acyl-chain-variant-identification
 description: Use when when a metabolite feature has been assigned a top-rank lipid annotation (e.g., LPC(14:0)) but you need to assess whether related lipid species containing the same fatty acyl chain(s) (e.g., PC fragments with 14:0 acyl chains) also match the observed spectrum with lower scores.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0153

@@ -3,6 +3,7 @@ name: lchrms-chromatographic-peak-boundary-extraction
 description: Use when you have a set of target molecules with known molecular formula, main adduct, and experimentally determined retention time boundaries, and you want to extract their chromatographic peaks and isotopologues from LC-HRMS mzML files to generate a ground-truth benchmark for validating.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172

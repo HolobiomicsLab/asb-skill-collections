@@ -3,6 +3,7 @@ name: neural-network-model-deployment-in-python
 description: Use when you have a trained conformer-based peak-picking model (in ONNX format) and need to apply it to chromatographic or ion-mobility mass spectrometry data (TransitionGroup objects) to detect peak boundaries and apex positions, generating TransitionGroupFeature records for downstream analysis or.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_0121

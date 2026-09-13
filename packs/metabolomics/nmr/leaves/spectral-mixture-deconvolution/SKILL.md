@@ -3,6 +3,7 @@ name: spectral-mixture-deconvolution
 description: Use when you have an NMR spectrum of a mixture sample and a library of reference spectra for individual compounds, and you need to determine which compounds are present and in what proportions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3172

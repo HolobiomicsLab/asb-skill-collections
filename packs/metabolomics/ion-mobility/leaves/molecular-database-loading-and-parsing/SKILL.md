@@ -3,6 +3,7 @@ name: molecular-database-loading-and-parsing
 description: Use when when setting up a ViMMS chemical sampling environment and you need to restrict the chemical search space to a specific m/z range (e.g., 100–1000) and MS level (e.g., MS1 only) before generating virtual LC-MS/MS data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

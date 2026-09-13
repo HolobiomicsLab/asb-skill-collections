@@ -3,6 +3,7 @@ name: replicate-spectrum-aggregation-sample-level
 description: Use when after frequency-based denoising has been applied to individual replicate spectra within each feature (via generate_denoised_spectra), you have a collection of denoised fragment ion lists per feature per scan.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

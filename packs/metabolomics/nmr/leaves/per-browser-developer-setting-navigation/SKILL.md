@@ -3,6 +3,7 @@ name: per-browser-developer-setting-navigation
 description: Use when you are attempting to run a web application (such as COLMARvista) locally by opening index.html directly in a browser, the application uses WebWorker and/or WebAssembly components, and these fail to load due to default file-access policies.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_topics: []
   tools:
   - Google Chrome

@@ -3,6 +3,7 @@ name: retention-time-calibration-lowess-regression
 description: 'Use when after mass track construction and before composite map building, when you need to align retention times across multiple LC-MS samples. Trigger conditions: (1) you have identified high-selectivity landmark peaks (mSelectivity > 0.99) in a reference sample;'
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -49,6 +50,7 @@ attribution:
 
 # retention-time-calibration-lowess-regression
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Uses LOWESS (Locally Weighted Scatterplot Smoothing) regression on high-selectivity landmark peaks to derive a retention-time mapping function between a reference sample and each current sample, enabling accurate RT alignment across LC-MS runs. This skill is essential for correcting systematic RT drift and enabling reliable feature matching in untargeted metabolomics.

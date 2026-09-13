@@ -3,6 +3,7 @@ name: tree-based-model-validation
 description: Use when after training a decision tree classifier on ChemEcho sparse feature vectors (representing tandem mass spectra fragmentation patterns), especially when the goal is to deploy predictions as executable queries or to validate that learned splits correspond to chemically meaningful.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -47,6 +48,7 @@ attribution:
 
 # tree-based-model-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate and interpret shallow decision trees trained on sparse ChemEcho feature vectors by examining prediction accuracy, decision splits, and convertibility to domain-specific queries (MassQL). This skill ensures that tree-based models on interpretable mass spectrometry features are trustworthy and actionable for fragmentation-pattern prediction.

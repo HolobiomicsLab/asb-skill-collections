@@ -3,6 +3,7 @@ name: metabolite-cv-ratio-calculation
 description: Use when after normalizing a metabolomic feature matrix when you have both non-QC (study) samples and QC (quality-control) replicates in the same experiment. Use it to remove features that are poorly reproducible or show inconsistent signal across samples relative to instrument/technical variation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091

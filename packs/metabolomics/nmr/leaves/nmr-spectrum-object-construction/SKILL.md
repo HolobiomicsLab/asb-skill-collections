@@ -3,6 +3,7 @@ name: nmr-spectrum-object-construction
 description: Use when you have Bruker NMR spectral files (raw instrumental output) and need to prepare them for automated metabolite identification and quantification.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -44,6 +45,7 @@ attribution:
 
 # NMR Spectrum Object Construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert raw Bruker NMR spectral data files into a structured Spectra object, a required intermediate representation that enables downstream metabolite identification and quantification in the ASICS pipeline. This skill bridges raw instrumental output and quantitative analysis.

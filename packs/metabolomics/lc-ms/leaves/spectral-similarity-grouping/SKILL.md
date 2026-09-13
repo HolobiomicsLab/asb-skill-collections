@@ -3,6 +3,7 @@ name: spectral-similarity-grouping
 description: Use when when you have computed a sparse pairwise distance matrix from nearest neighbor indexes of high-resolution MS/MS spectra and need to partition them into clusters such that spectra within each cluster correspond to similar fragmentation patterns (e.g., same peptide or metabolite).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

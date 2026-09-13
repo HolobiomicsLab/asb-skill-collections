@@ -3,6 +3,7 @@ name: chemical-shift-reference-matching
 description: Use when when preparing an input spectral peak list for NMRformer or similar Transformer-based peak assignment models, and you have observed peaks whose chemical shifts do not align with known metabolite signatures.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0593

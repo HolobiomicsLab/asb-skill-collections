@@ -3,6 +3,7 @@ name: marker-feature-identification-and-validation
 description: Use when when processing GC–MS or LC–MS data as m/z vs retention time chromatograms and you need to identify biomarker or chemical marker features without conventional peak picking, particularly when false positive detection rates from peak detection algorithms are problematic.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3647
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -49,6 +50,7 @@ attribution:
 
 # marker-feature-identification-and-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated identification of multivariate chemo-/biomarker features from two-dimensional chromatography–mass spectrometry maps using image processing and machine learning, bypassing conventional peak picking to reduce false detections. This skill combines visual feature extraction with quantitative marker discrimination to detect analytes at parts-per-billion sensitivity.

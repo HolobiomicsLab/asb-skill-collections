@@ -3,6 +3,7 @@ name: mass-calibration-coefficient-computation
 description: Use when after successfully matching at least 5 reference m/z points (from a .ref file) to spectrum peaks within a PPM error window (starting at ±1.0 ppm and widened iteratively to ±1.5, ±3, ±5, ±7, or ±10 ppm if needed).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

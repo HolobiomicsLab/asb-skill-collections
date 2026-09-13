@@ -3,6 +3,7 @@ name: metabolomics-feature-table-curation
 description: Use when you have a raw feature table (TSV/CSV) derived from LC-MS peak detection (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3172

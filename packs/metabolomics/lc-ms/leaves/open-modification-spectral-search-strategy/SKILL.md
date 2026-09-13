@@ -3,6 +3,7 @@ name: open-modification-spectral-search-strategy
 description: Use when when searching an unknown query MS/MS spectrum against a large spectral library (>100k spectra) for both unmodified and modified peptides, and computational speed is critical without sacrificing sensitivity or FDR control.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0121

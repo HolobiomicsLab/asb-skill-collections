@@ -3,6 +3,7 @@ name: peak-property-validation
 description: Use when after converting a CSV file of molecule definitions into a peak properties dictionary using csv_to_peak_properties, or after loading a serialized peak properties dictionary from pickle/JSON storage, before passing it to SMITER simulation functions (e.g., smiter.synthetic_mzml.write_mzml).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3172

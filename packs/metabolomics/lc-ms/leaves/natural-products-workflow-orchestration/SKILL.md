@@ -3,6 +3,7 @@ name: natural-products-workflow-orchestration
 description: Use when you have LC-MS/MS DDA metabolomics data (positive and/or negative ionization modes) and sample metadata (originating taxon) for one or more samples, and you need to generate a Wikidata-connected RDF knowledge graph for integrated natural products analysis, taxonomy-aware compound.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0154

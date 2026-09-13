@@ -3,6 +3,7 @@ name: mass-spectrum-peak-annotation-and-normalization
 description: Use when you have raw MS/MS spectra in MSP format or as numpy arrays and need to standardize them for comparison or library matching. Specifically, use it before performing electronic or chemical denoising, or before computing entropy-similarity metrics between query and reference spectra.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

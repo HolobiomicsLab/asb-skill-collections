@@ -3,6 +3,7 @@ name: api-adapter-layer-design
 description: Use when when you have multiple mass spectrometry data formats (mzML, mzXML, or others) that must be ingested into a single format-agnostic processing engine (e.g., mspack compression), and you need to avoid replicating the core logic for each format.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

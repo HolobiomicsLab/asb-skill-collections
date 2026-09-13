@@ -3,6 +3,7 @@ name: molecular-structure-encoding
 description: Use when you have molecular structures (SMILES strings or molecular graphs) that need to be input to a transformer model for property prediction (e.g., Collision Cross Section), and the model requires tokenized or embedded representations rather than raw chemical notation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_0154

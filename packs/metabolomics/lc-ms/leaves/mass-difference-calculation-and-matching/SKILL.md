@@ -3,6 +3,7 @@ name: mass-difference-calculation-and-matching
 description: Use when you have centroided data-dependent acquisition (DDA) MS2 spectra from LC- or GC-HRMS and need to annotate detected features with PFAS-specific diagnostic fragments. Use it after feature detection (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

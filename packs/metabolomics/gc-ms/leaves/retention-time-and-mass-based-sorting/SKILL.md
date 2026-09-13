@@ -3,6 +3,7 @@ name: retention-time-and-mass-based-sorting
 description: 'Use when you have raw GC-MS output in CSV format (with columns: Component.RT, Base.Peak.MZ, Component.Area, Compound.Name, Match.Factor, File.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0599

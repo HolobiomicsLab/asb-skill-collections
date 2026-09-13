@@ -3,6 +3,7 @@ name: deep-learning-training-convergence-monitoring
 description: Use when training a CNN model from scratch on LCMS peak classification tasks (or similar image-like batched data) where you need to confirm the model reaches target performance (e.g., AUC ROC > 0.9) without overfitting.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0625

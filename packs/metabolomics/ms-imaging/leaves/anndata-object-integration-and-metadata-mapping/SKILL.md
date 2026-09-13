@@ -3,6 +3,7 @@ name: anndata-object-integration-and-metadata-mapping
 description: Use when you have preprocessed and filtered ST and SM AnnData objects with spatial coordinates and features, and you need to establish spot-level correspondence between the two modalities to enable downstream joint analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3198
   edam_topics:
   - http://edamontology.org/topic_3179

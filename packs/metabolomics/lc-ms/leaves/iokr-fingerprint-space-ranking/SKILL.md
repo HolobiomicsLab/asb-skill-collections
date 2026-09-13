@@ -3,6 +3,7 @@ name: iokr-fingerprint-space-ranking
 description: Use when when you have paired MS2 spectra and BGCs with structural candidates (e.g., from MIBiG homology), and you want to rank which BGC likely produces which spectrum using a compound-class-agnostic method.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_0154

@@ -3,6 +3,7 @@ name: feature-group-isotope-annotation
 description: Use when you have a feature table from nontargeted LC-MS peak detection (containing m/z, retention time, and intensity values) and need to disambiguate whether detected features represent the same molecular entity under different ionization/modification states or are true independent signals.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -42,6 +43,7 @@ attribution:
 
 # feature-group-isotope-annotation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Annotate LC-MS features as isotopes, adducts, or in-source fragments by detecting characteristic mass shifts and neutral loss patterns within retention time windows. This enables confident grouping of related features for downstream metabolite identification.

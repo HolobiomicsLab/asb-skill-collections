@@ -3,6 +3,7 @@ name: cross-method-rt-calibration
 description: Use when when you have predicted retention times from a DNN model trained on one chromatographic method (CM) and need to rank or filter metabolite candidates on a different chromatographic method, but have only a small set of calibration molecules (≥10) with known RTs on both source and target.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0081
@@ -42,6 +43,7 @@ attribution:
 
 # cross-method-rt-calibration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A Bayesian meta-learning approach that projects retention times between different chromatographic methods using minimal calibration data (as few as 10 molecules), enabling accurate RT prediction and metabolite annotation scoring across LC-MS platforms without extensive retraining.

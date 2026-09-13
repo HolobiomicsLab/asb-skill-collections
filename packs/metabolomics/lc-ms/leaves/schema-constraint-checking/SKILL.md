@@ -3,6 +3,7 @@ name: schema-constraint-checking
 description: Use when a user uploads a JSON project file to the platform and you need to verify it matches the required format defined in app/public/schema.json before accepting it into the database.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0091

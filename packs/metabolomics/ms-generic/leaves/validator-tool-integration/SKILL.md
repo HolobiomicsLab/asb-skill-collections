@@ -3,6 +3,7 @@ name: validator-tool-integration
 description: Use when you have a repository of structured records (e.g., mass spectrometry data, metadata, or domain-specific formats) and need to enforce validation rules systematically across all records.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -40,6 +41,7 @@ attribution:
 
 # validator-tool-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate a dedicated validator tool into a continuous integration (CI) workflow to automatically validate all records in a repository against a defined schema or specification. This skill ensures data quality and consistency are checked on every commit or pull request without manual intervention.

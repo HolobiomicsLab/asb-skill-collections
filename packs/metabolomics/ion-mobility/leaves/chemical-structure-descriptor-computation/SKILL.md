@@ -3,6 +3,7 @@ name: chemical-structure-descriptor-computation
 description: Use when when you have a set of molecular structures (N-Me derived unsaturated sterol lipids or structurally similar organic molecules with C=C bonds) represented as SMILES or molecular geometry files, and you need to train or apply a machine-learning model to predict an instrument-dependent.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0337
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -45,6 +46,7 @@ attribution:
 
 # Chemical Structure Descriptor Computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute quantum chemistry-derived structural descriptors (3D conformations, electronic properties) for organic molecules to serve as features for machine-learning models such as collision cross section (CCS) prediction. This skill bridges ab initio or semi-empirical quantum calculations with downstream supervised learning for physicochemical property estimation.

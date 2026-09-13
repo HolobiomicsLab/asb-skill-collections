@@ -3,6 +3,7 @@ name: molecular-fingerprint-generation
 description: Use when when you have annotated chemical structures (SMILES or InChI strings) from a curated MS/MS dataset and need to compute pairwise structural similarity scores (Tanimoto or other metrics) as training labels, or when preparing molecular representations for comparison against mass spectral data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_0154

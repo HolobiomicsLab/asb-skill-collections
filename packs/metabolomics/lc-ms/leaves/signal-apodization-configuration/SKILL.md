@@ -3,6 +3,7 @@ name: signal-apodization-configuration
 description: Use when when processing raw Bruker Solarix transient files (.d format) destined for FT-MS analysis, especially for ESI-negative or low-abundance natural organic matter samples where baseline noise and side-lobe artifacts around intense peaks degrade peak picking and formula assignment accuracy.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0121

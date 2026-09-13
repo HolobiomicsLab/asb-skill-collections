@@ -3,6 +3,7 @@ name: spectral-adduct-ionmode-validation
 description: Use when when processing raw or aggregated mass spectra datasets (from .mgf, .msp, .json, or .
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -42,6 +43,7 @@ attribution:
 
 # spectral-adduct-ionmode-validation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Validates and filters mass spectra by ensuring adduct annotations are consistent with ionization mode polarity (positive adducts only in positive-mode spectra, negative adducts only in negative-mode spectra), and removes spectra with missing or malformed adduct fields. This quality control step prevents downstream analysis errors from mismatched ionization chemistry.

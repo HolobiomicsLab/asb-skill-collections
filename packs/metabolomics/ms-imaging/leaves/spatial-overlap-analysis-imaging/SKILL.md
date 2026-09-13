@@ -3,6 +3,7 @@ name: spatial-overlap-analysis-imaging
 description: Use when when annotating matrix-related peaks in MSI datasets where candidate peaks have identical or near-identical m/z values (isobaric ions), or when multiple peaks exhibit overlapping spatial distributions across the tissue image that could confound downstream annotation filtering.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_3370

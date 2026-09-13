@@ -3,6 +3,7 @@ name: metabolite-mass-database-matching
 description: Use when after features have been grouped into empirical compounds (empCpds) with inferred molecular formulas and adduct assignments by khipu, and you need to assign putative metabolite identities at the formula level.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_3172

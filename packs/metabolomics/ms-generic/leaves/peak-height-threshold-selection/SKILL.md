@@ -3,6 +3,7 @@ name: peak-height-threshold-selection
 description: Use when when applying iterative peak detection (local-maximum or Gaussian-fit methods) to 1D extracted ion chromatograms (XICs), arrival time distributions (ATDs), or MS1 spectra from MZA-format files, and you need to decide which peaks to retain based on their intensity.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3634
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: spectral-data-exploration
 description: Use when you have completed msFeaST pipeline preprocessing and generated a JSON output file (dashboard_data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0570
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: tof-ms-signal-enhancement-low-abundance
 description: Use when your raw TOF-MS data (Agilent MassHunter .d format) exhibits jagged, artifact-prone peaks in low-abundance ions that compromise peak quality assessment or when you need to improve signal-to-noise before ion mobility demultiplexing or peak deconvolution.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3630
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -49,6 +50,7 @@ attribution:
 
 # TOF-MS Signal Enhancement for Low-Abundance Ions
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Multidimensional smoothing is a preprocessing operation that removes noise artifacts from jagged peaks common in low-abundance ion signals while preserving real signal integrity in time-of-flight mass spectrometry data. Applied within the PNNL PreProcessor workflow, it enhances signal quality across drift time, retention time, and spectral dimensions before downstream analysis.

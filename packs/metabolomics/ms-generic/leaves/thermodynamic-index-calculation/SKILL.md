@@ -3,6 +3,7 @@ name: thermodynamic-index-calculation
 description: Use when after molecular formula assignment and filtering of FT-ICR MS peaks, when you have elemental composition (C, H, O, N, S, P counts) and need to characterize metabolite thermodynamic stability, degree of oxidation, aromaticity, and unsaturation to compare compound reactivity across samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

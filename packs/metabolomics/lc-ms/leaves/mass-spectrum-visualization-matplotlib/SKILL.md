@@ -3,6 +3,7 @@ name: mass-spectrum-visualization-matplotlib
 description: Use when you have an annotated MsmsSpectrum object (with fragment assignments via ProForma 2.0) and need to produce a high-resolution, static PNG figure showing both the observed spectrum and color-highlighted fragment ion matches for inclusion in a manuscript or supplementary materials.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520

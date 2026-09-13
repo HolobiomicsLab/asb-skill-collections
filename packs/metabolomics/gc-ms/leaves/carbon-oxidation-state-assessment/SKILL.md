@@ -3,6 +3,7 @@ name: carbon-oxidation-state-assessment
 description: Use when after molecular formula assignment from FT-ICR MS peak data, when you need to classify metabolites by their redox state to predict bioavailability or lability, or when generating thermodynamic indices for chemodiversity analysis and environmental metabolomic interpretation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172

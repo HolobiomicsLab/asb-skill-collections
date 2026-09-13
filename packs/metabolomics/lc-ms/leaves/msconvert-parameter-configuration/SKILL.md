@@ -3,6 +3,7 @@ name: msconvert-parameter-configuration
 description: Use when you have acquired raw mass spectrometry data from ThermoFisher, Agilent, or compatible vendors in their native formats (.raw, .d, or equivalent) and need to prepare it for nontargeted analysis using MSThunder on a Linux system.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -45,6 +46,7 @@ attribution:
 
 # msconvert-parameter-configuration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and execute MSConvert command-line conversion of vendor-specific raw mass spectrometry data (ThermoFisher .raw, Agilent .d) into MSThunder-compatible formats on a Linux system. This skill bridges proprietary vendor formats and open analytical frameworks by applying appropriate output format parameters and validating file integrity post-conversion.

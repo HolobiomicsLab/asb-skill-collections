@@ -3,6 +3,7 @@ name: precision-recall-curve-generation-and-interpretation
 description: Use when you have computed spectral similarity scores from multiple methods (e.g., MS2DeepScore, Spec2Vec, modified cosine) on the same set of spectrum pairs, have assigned ground-truth structural similarity labels (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091

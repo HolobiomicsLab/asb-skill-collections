@@ -3,6 +3,7 @@ name: selectivity-metric-computation-chromatographic
 description: Use when after peak detection on composite mass tracks when you need to evaluate whether a detected peak represents a pure, interference-free signal on its m/z channel.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -43,6 +44,7 @@ attribution:
 
 # selectivity-metric-computation-chromatographic
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute chromatographic selectivity metrics (cSelectivity) to assess the purity and interference-free nature of detected elution peaks on mass tracks. This metric is essential for filtering low-quality peaks and tracking peak confidence across LC-MS metabolomics workflows.

@@ -3,6 +3,7 @@ name: msimagingexperiment-object-validation
 description: Use when after reading an imzML file (continuous or processed format) using readMSIData() and before proceeding to preprocessing or statistical analysis steps. Use this skill whenever you need to confirm that a parsed imaging dataset meets expected structural requirements—e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520

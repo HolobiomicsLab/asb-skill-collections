@@ -3,6 +3,7 @@ name: peak-list-filtering-for-quality-control
 description: Use when you have extracted a raw peak list (chemical shifts in a TXT file, one per row) from a 1D 1H NMR spectrum and intend to pass it to NMRformer or a similar deep learning model for metabolite identification.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

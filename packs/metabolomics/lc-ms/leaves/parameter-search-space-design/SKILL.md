@@ -3,6 +3,7 @@ name: parameter-search-space-design
 description: Use when when beginning an untargeted LC-MS analysis and either (1) the dataset characteristics (sample complexity, instrument platform, or polarity) differ from previously optimized cohorts, (2) multiple peak-picking algorithms (Centwave, FeatureFinderMetabo, ADAP) are available and their relative.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3370

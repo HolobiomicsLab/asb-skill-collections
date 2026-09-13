@@ -3,6 +3,7 @@ name: mass-range-window-restriction
 description: Use when you have loaded an MsmsSpectrum object and need to focus analysis on a biologically or chemically relevant mass window.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

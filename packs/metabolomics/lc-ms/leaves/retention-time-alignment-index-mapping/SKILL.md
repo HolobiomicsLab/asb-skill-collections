@@ -3,6 +3,7 @@ name: retention-time-alignment-index-mapping
 description: Use when when processing multiple LC-MS samples with varying scan numbers or retention-time drift, before constructing composite mass tracks for peak detection.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -44,6 +45,7 @@ attribution:
 
 # Retention-time alignment index mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Maps scan numbers across LC-MS samples to a reference retention-time coordinate system using sample-specific calibration dictionaries, enabling synchronized intensity summation across aligned mass tracks for downstream composite peak detection. This step is critical for accurate composite-map construction when samples have different scan acquisition patterns or retention-time drift.

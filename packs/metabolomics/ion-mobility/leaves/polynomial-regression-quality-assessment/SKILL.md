@@ -3,6 +3,7 @@ name: polynomial-regression-quality-assessment
 description: Use when after fitting a polynomial calibration model to tunemix reference data in DEIMoS, assess whether the model explains sufficient variance in the m/z–drift-time–CCS relationship.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121

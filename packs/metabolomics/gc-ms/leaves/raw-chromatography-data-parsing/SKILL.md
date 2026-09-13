@@ -3,6 +3,7 @@ name: raw-chromatography-data-parsing
 description: Use when you have raw GC-MS output files (vendor formats or netCDF) from a chromatography instrument and need to prepare them for automated peak deconvolution and spectral analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0091

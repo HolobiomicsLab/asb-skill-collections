@@ -3,6 +3,7 @@ name: spectrum-filtering-with-deletion-logging
 description: Use when processing heterogeneous mass spectrometry libraries (e.g., from OMSLs) where chemical identifiers are unevenly populated across records.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0637
@@ -42,6 +43,7 @@ attribution:
 
 # spectrum-filtering-with-deletion-logging
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 This skill removes mass spectra that fail structural completeness checks (lacking all three of SMILES, InChI, and InChIKey simultaneously) while preserving detailed audit logs of each deletion decision. It standardizes spectral datasets by enforcing chemical identifier requirements and maintaining traceable records of quality control decisions.

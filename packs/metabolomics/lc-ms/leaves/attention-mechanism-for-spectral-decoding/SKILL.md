@@ -3,6 +3,7 @@ name: attention-mechanism-for-spectral-decoding
 description: Use when when you have pretrained encoder-produced embeddings from MS/MS spectra and need to decode them into canonical SMILES strings representing molecular structures.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3761
   edam_topics:
   - http://edamontology.org/topic_0154

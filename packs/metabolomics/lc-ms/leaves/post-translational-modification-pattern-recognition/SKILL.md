@@ -3,6 +3,7 @@ name: post-translational-modification-pattern-recognition
 description: Use when you have centroided LC-MS/MS spectra (in MGF, mzXML, mzML, or mzData format) and genomically-predicted precursor peptide sequences, and you need to identify which predicted RiPPs are actually expressed and modified in the sample.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121

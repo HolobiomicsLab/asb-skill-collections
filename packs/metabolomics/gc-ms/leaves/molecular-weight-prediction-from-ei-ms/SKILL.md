@@ -3,6 +3,7 @@ name: molecular-weight-prediction-from-ei-ms
 description: Use when you have EI-MS spectrum data (m/z and intensity pairs) from a sample and need a direct, model-based prediction of molecular weight.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

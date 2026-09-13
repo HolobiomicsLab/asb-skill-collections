@@ -3,6 +3,7 @@ name: in-memory-optimization-for-large-datasets
 description: Use when you are repeatedly querying or iterating over multidimensional MS data stored in MZA HDF5 format (retention time, drift time, m/z dimensions) and profiling shows that repeated disk I/O for the same metadata or scan ranges dominates runtime.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3520

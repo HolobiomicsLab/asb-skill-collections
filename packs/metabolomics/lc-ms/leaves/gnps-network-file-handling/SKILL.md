@@ -3,6 +3,7 @@ name: gnps-network-file-handling
 description: Use when you have a GNPS molecular network job and need to programmatically load the network structure, merge external annotations (chemical class, MS2LDA substructural motifs), and export a unified annotated network for visualization in Cytoscape or other graph analysis tools.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_0092

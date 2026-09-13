@@ -3,6 +3,7 @@ name: tanimoto-similarity-scoring-implementation
 description: Use when when you have paired mass spectrometry spectra (e.g., from GNPS, MoNA, MassBank, or MSnLib) and need to predict continuous structural similarity scores (0–1 range) between them, especially when traditional spectral-distance metrics (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0570
   edam_topics:
   - http://edamontology.org/topic_0593

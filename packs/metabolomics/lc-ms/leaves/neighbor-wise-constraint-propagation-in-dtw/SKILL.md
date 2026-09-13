@@ -3,6 +3,7 @@ name: neighbor-wise-constraint-propagation-in-dtw
 description: Use when when XCMS or other DTW-based aligners have produced misaligned LC-MS feature groups across hundreds of samples or long acquisition periods (>1 week), particularly when individual m/z bins or compounds show inconsistent retention-time drift patterns across neighboring samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3172

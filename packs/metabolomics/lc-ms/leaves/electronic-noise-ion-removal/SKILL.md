@@ -3,6 +3,7 @@ name: electronic-noise-ion-removal
 description: Use when working with raw MS/MS spectra that contain ions with repeated (identical) intensity values—a hallmark of electronic noise rather than true metabolite fragments.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

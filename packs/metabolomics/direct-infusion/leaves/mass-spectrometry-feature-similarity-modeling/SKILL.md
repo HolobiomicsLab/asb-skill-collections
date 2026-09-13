@@ -3,6 +3,7 @@ name: mass-spectrometry-feature-similarity-modeling
 description: Use when when you have an untargeted metabolomics dataset with MS2 fragmentation spectra and need to annotate metabolites beyond what reference databases alone provide.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3346
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -39,6 +40,7 @@ attribution:
 
 # mass-spectrometry-feature-similarity-modeling
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Build and leverage data-driven feature similarity networks from experimental mass spectrometry (MS2) data to enrich metabolite annotations by propagating identity confidence scores across co-occurring or spectrally similar metabolite nodes. This skill integrates MS2 similarity patterns as a complementary layer within a two-layer metabolite annotation topology.

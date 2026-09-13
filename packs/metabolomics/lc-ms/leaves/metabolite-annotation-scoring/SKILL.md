@@ -3,6 +3,7 @@ name: metabolite-annotation-scoring
 description: Use when you have a feature table with candidate metabolite annotations (m/z, retention time, chemical identifiers) from MS/MS spectra or external tools (SIRIUS, GNPS), sample metadata linking samples to organisms, and you need to prioritize candidates by both annotation quality AND biological.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -53,6 +54,7 @@ attribution:
 
 # metabolite-annotation-scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank candidate metabolite annotations by combining spectral/structural confidence scores with taxonomic likelihood weights, ensuring only biochemically plausible metabolites are prioritized for the sample's organism and its phylogenetic relatives. This skill integrates mass spectrometry evidence with biological context to reduce false-positive annotations.

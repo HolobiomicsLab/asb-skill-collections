@@ -3,6 +3,7 @@ name: coefficient-of-variation-comparison
 description: Use when after normalization of a metabolomic feature matrix but before statistical testing, when you have both QC (technical replicate) and non-QC (study) samples and need to remove features with unstable or poorly reproducible signal patterns.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

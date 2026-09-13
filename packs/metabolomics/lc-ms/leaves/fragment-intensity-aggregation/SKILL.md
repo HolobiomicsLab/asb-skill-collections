@@ -3,6 +3,7 @@ name: fragment-intensity-aggregation
 description: Use when after extracting raw MS/MS spectra from mzML files but before consensus spectrum generation, when you observe high-resolution fragment lists where nearby peaks (within a specified mass tolerance, typically 0.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

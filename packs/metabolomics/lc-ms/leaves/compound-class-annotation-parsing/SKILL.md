@@ -3,6 +3,7 @@ name: compound-class-annotation-parsing
 description: Use when after submitting a fingerprint or spectrum query to the CANOPUS web service and receiving a structured response.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_0153

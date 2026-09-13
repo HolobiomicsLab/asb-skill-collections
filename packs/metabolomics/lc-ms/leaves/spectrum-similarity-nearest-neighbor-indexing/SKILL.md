@@ -3,6 +3,7 @@ name: spectrum-similarity-nearest-neighbor-indexing
 description: Use when when you have thousands to millions of high-resolution tandem MS/MS spectra (in mzML, mzXML, or MGF format) that need to be clustered or compared, and exhaustive pairwise distance computation is computationally prohibitive.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

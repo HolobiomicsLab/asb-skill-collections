@@ -3,6 +3,7 @@ name: ms2-fragmentation-spectrum-parsing
 description: Use when you have raw MS2 spectra in common formats (mzML, mzXML, msp, MGF, JSON) and need to convert them into normalized, queryable spectral objects for downstream analysis such as MS2 fingerprinting, spectral similarity scoring, or sample comparison.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3439
   edam_topics:
   - http://edamontology.org/topic_0121

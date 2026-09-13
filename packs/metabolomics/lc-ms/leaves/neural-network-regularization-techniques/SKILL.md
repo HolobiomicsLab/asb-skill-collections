@@ -3,6 +3,7 @@ name: neural-network-regularization-techniques
 description: Use when when training a deep neural network on paired MS/MS spectra to predict structural similarity scores, especially when the training dataset is moderate-sized (109,734 spectra across 15,062 molecules) and overfitting risk is high.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_3520

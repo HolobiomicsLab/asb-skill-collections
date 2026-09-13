@@ -3,6 +3,7 @@ name: domain-context-to-application-routing
 description: Use when when a user submits one or more MS/MS spectra and has declared or implied a domain context (microbial, plant, tissue, microbiome, food, or metadata aggregation), and the search must be executed against the appropriate domain-curated spectral library.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

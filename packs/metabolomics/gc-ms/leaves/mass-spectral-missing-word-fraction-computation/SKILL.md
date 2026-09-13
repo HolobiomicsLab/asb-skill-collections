@@ -3,6 +3,7 @@ name: mass-spectral-missing-word-fraction-computation
 description: Use when when applying a pre-trained Spec2Vec Word2Vec model to new mass spectra (particularly those outside the model's training distribution), you need to assess whether peaks and neutral losses in query spectra have been seen during model training.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3172

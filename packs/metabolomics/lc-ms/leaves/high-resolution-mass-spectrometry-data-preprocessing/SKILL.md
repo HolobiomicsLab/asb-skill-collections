@@ -3,6 +3,7 @@ name: high-resolution-mass-spectrometry-data-preprocessing
 description: Use when you have acquired high-resolution MS/MS spectra in mzML, mzXML, or MGF format and need to prepare them for large-scale clustering or similarity searching.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3647
   edam_topics:
   - http://edamontology.org/topic_0121

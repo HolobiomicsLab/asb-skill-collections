@@ -3,6 +3,7 @@ name: round-trip-data-integrity-verification
 description: Use when you have implemented or are validating a reader/writer library for a mass spectrometry file format (such as mzPeak, mzML, or similar), and need to confirm that data parsed from disk can be written back without loss of information.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: hyperparameter-sweep-configuration
 description: Use when when implementing multiple competing model architectures (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3664
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -48,6 +49,7 @@ attribution:
 
 # Hyperparameter-sweep-configuration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure and execute systematic hyperparameter sweeps across multiple baseline spectrum prediction models using identical covariate sets and search spaces to enable fair comparative evaluation. This ensures that performance differences reflect architectural choices rather than tuning disparities.

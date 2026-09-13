@@ -3,6 +3,7 @@ name: multi-charge-state-ccs-handling
 description: Use when your TWIM-MS dataset contains ions with multiple charge states (e.g., +1, +2, +3 for the same molecular species) and you need CCS values that correctly account for the relationship between drift time, m/z, and charge state.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121

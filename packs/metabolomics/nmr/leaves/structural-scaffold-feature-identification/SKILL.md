@@ -3,6 +3,7 @@ name: structural-scaffold-feature-identification
 description: Use when you have 2D NMR spectral data (HSQC, HMBC, COSY) from multiple samples in a library or mixture and need to identify which structural scaffolds are shared across samples, prioritize samples for further analysis based on scaffold novelty or frequency, or characterize the core structural.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3680
   edam_topics:
   - http://edamontology.org/topic_0593

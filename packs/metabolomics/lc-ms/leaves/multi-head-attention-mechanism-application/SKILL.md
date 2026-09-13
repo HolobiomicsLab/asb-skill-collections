@@ -3,6 +3,7 @@ name: multi-head-attention-mechanism-application
 description: Use when you have embedded sequences of chemical formulae (tokenized and converted to dense vectors) from tandem MS/MS spectra and need to learn context-dependent representations that capture dependencies between formula tokens at multiple semantic levels.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0593

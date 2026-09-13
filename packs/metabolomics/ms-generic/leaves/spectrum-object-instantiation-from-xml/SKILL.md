@@ -3,6 +3,7 @@ name: spectrum-object-instantiation-from-xml
 description: Use when when you have parsed XML elements from an mzML or mzML.gz file (via ElementTree or a similar XML parser) and need to convert those elements into pymzML Spectrum objects for spectrum-level operations such as random access, spectral comparison, or data extraction.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

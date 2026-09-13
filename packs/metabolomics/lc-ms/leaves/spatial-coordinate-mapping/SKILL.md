@@ -3,6 +3,7 @@ name: spatial-coordinate-mapping
 description: Use when after LC-MS feature detection, alignment, quantification, and optional filtering/normalization are complete, and you have intensity values for molecular features that correspond to spatial positions (e.g., tissue coordinates, imaging pixel locations).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3359
   edam_topics:
   - http://edamontology.org/topic_0121

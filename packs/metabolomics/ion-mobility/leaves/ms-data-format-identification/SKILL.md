@@ -3,6 +3,7 @@ name: ms-data-format-identification
 description: 'Use when when receiving raw MS data files of unknown or mixed acquisition modalities and needing to route each to its corresponding analysis pipeline. Specifically, apply this skill when: (1) input files arrive without documented instrument type or chromatographic/mobility dimensionality;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520

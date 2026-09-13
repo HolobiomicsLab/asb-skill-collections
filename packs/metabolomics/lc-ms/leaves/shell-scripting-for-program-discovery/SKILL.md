@@ -3,6 +3,7 @@ name: shell-scripting-for-program-discovery
 description: Use when a scientific application (such as QCxMS2) requires multiple external programs with specific version constraints and you need to programmatically verify their presence and compatibility before executing calculations.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3363
   edam_topics:
   - http://edamontology.org/topic_0091

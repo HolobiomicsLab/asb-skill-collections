@@ -3,6 +3,7 @@ name: mass-action-law-flux-prediction
 description: Use when when you have quantified intracellular metabolite abundances (LC-MS normalized values) from multiple samples and need to predict how differences in substrate availability translate into differences in metabolic flux for specific reactions in a constraint-based metabolic model.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3929
   edam_topics:
   - http://edamontology.org/topic_0602

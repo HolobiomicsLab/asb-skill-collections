@@ -3,6 +3,7 @@ name: tomcat-application-server-initialization
 description: Use when when you need to deploy a Java web application packaged in a Tomcat Docker container to a specified HTTP endpoint, and must verify that the container starts successfully, the Tomcat server initializes, and the application becomes accessible at the mapped host port before proceeding with.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -43,6 +44,7 @@ attribution:
 
 # tomcat-application-server-initialization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Initialize and verify a Tomcat application server instance running a containerized Java web application (MetFrag webapp) by launching the Docker container with appropriate port mapping and waiting for the server to become ready. This skill ensures the Tomcat service on port 8080 is properly exposed to the host and ready to serve HTTP requests.

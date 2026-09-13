@@ -3,6 +3,7 @@ name: metabolite-ion-consolidation
 description: Use when after chromatographic peak detection in LC-MS data, when you have hundreds or thousands of features and need to consolidate ions presumed to originate from the same metabolite.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3370

@@ -3,6 +3,7 @@ name: python-data-structure-engineering
 description: Use when you have raw mass spectrometry quantification tables (feature abundance matrices), sample metadata tables, and spectral data files (e.g., from the omsw_pleurotus dataset) that must be ingested into the msFeaST pipeline;
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3750
   edam_topics:
   - http://edamontology.org/topic_0091

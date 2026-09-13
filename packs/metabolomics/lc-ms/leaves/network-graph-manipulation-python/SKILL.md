@@ -3,6 +3,7 @@ name: network-graph-manipulation-python
 description: Use when you have a molecular network graph exported from GNPS (as GraphML, JSON, or adjacency format) and separate experimental data (bioassay activity matrix, feature quantification table, or MS/MS annotations) indexed by feature ID, retention time, or m/z.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0121

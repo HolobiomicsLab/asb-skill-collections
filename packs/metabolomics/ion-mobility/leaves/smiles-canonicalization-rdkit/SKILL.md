@@ -3,6 +3,7 @@ name: smiles-canonicalization-rdkit
 description: Use when when processing raw SMILES strings from external databases or user input that may contain non-canonical tautomeric forms, variable stereochemical notation, or redundant representations of the same chemical structure.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3929
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -54,6 +55,7 @@ attribution:
 
 # SMILES Canonicalization via RDKit
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Standardize raw SMILES strings into canonical form using RDKit's MolToSmiles function, removing stereochemical ambiguities and tautomeric variations to ensure consistent molecular representation across structure curation pipelines.

@@ -3,6 +3,7 @@ name: mass-spectrometry-library-indexing
 description: Use when you have a large MS/MS experiment (mzML format) requiring lipid annotation and need to match experimental spectra against >10 million theoretical lipid fragments.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0121

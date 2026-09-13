@@ -3,6 +3,7 @@ name: network-based-metabolite-identification
 description: Use when when you have m/z values from spatially-resolved mass spectrometry imaging (MSI) and need to predict their molecular formulae with high precision.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3860
   edam_topics:
   - http://edamontology.org/topic_0769
@@ -41,6 +42,7 @@ attribution:
 
 # network-based-metabolite-identification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A method for assigning molecular formulae to mass-to-charge (m/z) values in spatially-resolved metabolomics by leveraging a large knowledge network of interconnected formulae and their biological relationships. This skill uses multiple linear regression and network scoring to achieve higher precision than traditional LC-MS annotation approaches.

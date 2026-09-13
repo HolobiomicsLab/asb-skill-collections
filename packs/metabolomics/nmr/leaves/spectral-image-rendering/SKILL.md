@@ -3,6 +3,7 @@ name: spectral-image-rendering
 description: Use when when you have parsed and validated spectral data (jcamp, RAW, or mzML format) from NMR/IR/MS instruments and need to create visual representations with peak annotations for inspection, annotation, or publication.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3500

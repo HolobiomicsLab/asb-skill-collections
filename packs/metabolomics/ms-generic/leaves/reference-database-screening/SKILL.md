@@ -3,6 +3,7 @@ name: reference-database-screening
 description: Use when after a CNN model has generated predicted molecular embeddings from mass spectrometry data, use this skill to match those predictions against a curated reference database of known molecular embeddings.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0602

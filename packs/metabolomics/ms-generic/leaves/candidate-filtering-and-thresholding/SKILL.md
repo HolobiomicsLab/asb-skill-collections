@@ -3,6 +3,7 @@ name: candidate-filtering-and-thresholding
 description: Use when after generating candidate molecular formula and adduct pairs for detected m/z features, when you have observed isotopic patterns from feature detection and need to reduce annotation ambiguity by eliminating candidates with poor isotopic fit.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: roc-curve-auc-metric-evaluation
 description: Use when after training a NeatMS CNN model on labeled MS1 peaks and generating predictions on a held-out test set, compute ROC-AUC to assess whether the model achieves the target discrimination threshold (AUC ≥ 0.9) without evidence of overfitting.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091

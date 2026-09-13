@@ -3,6 +3,7 @@ name: mass-spectrometry-image-preprocessing
 description: Use when you have raw or preprocessed single-channel (2D array) or multi-channel (spectral) ion images from mass spectrometry imaging (MSI) data and need to train a contrastive deep learning model.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -46,6 +47,7 @@ attribution:
 
 # mass-spectrometry-image-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Augment ion images from mass spectrometry imaging data by applying four stochastic transformations (color jitter, filtering, Poisson noise, random missing value) to generate two contrastive variants for self-supervised deep learning. This skill is essential for preparing MSI data to train representation models that learn robust, low-dimensional embeddings of ion spatial distributions.

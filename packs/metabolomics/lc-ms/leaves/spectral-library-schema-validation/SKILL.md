@@ -3,6 +3,7 @@ name: spectral-library-schema-validation
 description: Use when after harmonizing MS/MS spectra and metadata fields (compound identifiers, adduct annotations, collision energies, instrument types) to a common schema, and before exporting the spectral library to standardized formats (mzML, mzTab, or repository-native format).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: mass-spectrometry-data-extraction
 description: Use when you have native Thermo Fisher RAW mass spectrometry files and need to extract scan-level metadata (retention time, total ion current, scan mode), MS1/MS2 peak lists with m/z and intensity arrays, or instrument/LC/MS method details for downstream computational analysis, QC, or cross-sample.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0121

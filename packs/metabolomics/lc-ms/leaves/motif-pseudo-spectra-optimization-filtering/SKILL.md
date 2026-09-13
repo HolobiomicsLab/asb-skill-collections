@@ -3,6 +3,7 @@ name: motif-pseudo-spectra-optimization-filtering
 description: Use when after LDA has converged and inferred Mass2Motifs from preprocessed mass spectrometry spectral data, when the raw motif-fragment distributions contain noise or low-confidence associations that obscure the dominant fragmentation patterns.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

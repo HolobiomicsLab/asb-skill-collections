@@ -3,6 +3,7 @@ name: spectral-artifact-identification-in-tandem-ms
 description: Use when you have a raw or preprocessed peak table from tandem MS/MS data (e.g., from Progenesis QI, MS-DIAL, or Bruker Metaboscape) and observe features that may represent detector artifacts, incorrectly merged/split isotopic patterns, or sample carryover contaminants (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

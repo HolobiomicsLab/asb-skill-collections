@@ -3,6 +3,7 @@ name: file-format-conversion-validation
 description: Use when when you have raw mzML or mzXML mass spectrometry data files that need to be archived or transmitted with minimal storage footprint, and you must verify that the decompressed output exactly reproduces the original input at the byte level.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0943

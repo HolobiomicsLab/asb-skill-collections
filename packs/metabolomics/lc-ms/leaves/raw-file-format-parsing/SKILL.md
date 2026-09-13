@@ -3,6 +3,7 @@ name: raw-file-format-parsing
 description: Use when you have native Thermo Fisher RAW files and need to recover file-level metadata (instrument details, run statistics), scan headers (retention time, total ion current, scan mode for MS1 or MS2), or peak lists (m/z and intensity arrays) in tabular or array form suitable for computational.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121

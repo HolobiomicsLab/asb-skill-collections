@@ -3,6 +3,7 @@ name: data-interchange-format-conversion
 description: Use when you have deconvoluted or processed MS/MS spectra from SWATH-MS data that need to be (1) ingested into tools requiring open formats (e.g., spectral library matching, metabolite identification pipelines), (2) archived in public repositories, or (3) shared across different analysis platforms.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

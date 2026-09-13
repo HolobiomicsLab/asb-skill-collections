@@ -3,6 +3,7 @@ name: targeted-dia-data-extraction-from-raw-spectra
 description: Use when when you have raw diaPASEF mzML files, a transition list with target analytes (protein, peptide, charge state), and search results (DIA-NN, OpenSwath output) containing feature metadata (retention time, ion mobility, m/z coordinates), and you need to isolate and visualize signal for.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

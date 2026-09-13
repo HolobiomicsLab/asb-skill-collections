@@ -3,6 +3,7 @@ name: biological-reactant-pair-mapping-kegg
 description: Use when constructing or enriching a chemical formula database that must capture not just structural similarity (DBEdges) but also biological co-occurrence patterns.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0601
@@ -41,6 +42,7 @@ attribution:
 
 # biological-reactant-pair-mapping-kegg
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and link chemical formulae that participate together in metabolic reactions by retrieving reactant pairs from KEGG and constructing BioEdges—graph edges that encode biological relationships between compounds. This skill bridges chemical structure databases with metabolic context, enabling formula assignment methods to score candidates based on whether they co-occur in known biochemical transformations.

@@ -3,6 +3,7 @@ name: color-palette-application-greens
 description: Use when when rendering a treemap of qc_summary() output showing ion counts and percentages by filter status (passed/failed), and you need a perceptually uniform, colorblind-friendly palette that clearly distinguishes filter categories while using sequential intensity to reinforce the magnitude of.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0573
   edam_topics:
   - http://edamontology.org/topic_3172

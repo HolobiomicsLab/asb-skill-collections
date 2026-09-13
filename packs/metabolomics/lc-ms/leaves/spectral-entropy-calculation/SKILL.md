@@ -3,6 +3,7 @@ name: spectral-entropy-calculation
 description: Use when when you have preprocessed MS/MS spectral peak data (m/z and intensity pairs) and need to compute a complexity metric for individual spectra prior to similarity comparisons, or when benchmarking compound identification performance against dot product–based methods.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

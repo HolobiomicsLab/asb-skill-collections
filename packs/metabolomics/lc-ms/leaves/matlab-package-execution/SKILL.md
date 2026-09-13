@@ -3,6 +3,7 @@ name: matlab-package-execution
 description: Use when you have two separate LC-MS untargeted metabolomic feature datasets (each with retention time and m/z values) and need to establish feature-to-feature correspondence between them.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: python-environment-setup
 description: Use when when you have cloned a scientific Python repository (e.g., ROIAL-NMR) and need to verify that the documented dependencies can be installed and the main entrypoint is invokable without errors. Use this skill before attempting to run the application's core analysis workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0227
   edam_topics:
   - http://edamontology.org/topic_0769

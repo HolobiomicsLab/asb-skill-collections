@@ -3,6 +3,7 @@ name: data-structure-validation
 description: Use when after converting or filtering objects (e.g., transformation products to suspect lists, feature groups through componentization) and before passing them to downstream functions like screenSuspects or generateComponents.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: spectral-similarity-ranking
 description: Use when you have a query MS/MS spectrum and need to identify the -matching library spectrum from a large spectral database, particularly when the research goal requires distinguishing between exact matches and structural analogues without separate workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3520

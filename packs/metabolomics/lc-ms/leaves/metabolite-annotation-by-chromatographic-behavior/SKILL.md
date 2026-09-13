@@ -3,6 +3,7 @@ name: metabolite-annotation-by-chromatographic-behavior
 description: Use when when you have an untargeted metabolomics dataset from HPLC–MS (e.g., mzML, NetCDF) with detected peaks of unknown identity, and you need to disambiguate or validate tentative compound annotations by comparing observed retention time against machine-learning predicted retention time.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3903
   edam_topics:
   - http://edamontology.org/topic_3370

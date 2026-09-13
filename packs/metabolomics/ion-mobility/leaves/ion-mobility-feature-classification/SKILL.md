@@ -3,6 +3,7 @@ name: ion-mobility-feature-classification
 description: Use when you have high-dimensional TWIM-MS data (arrival time and m/z dimensions) from a multi-omic sample and need to associate experimental features with biomolecular classes *before* running peak detection or feature identification pipelines.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0121

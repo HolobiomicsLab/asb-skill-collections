@@ -3,6 +3,7 @@ name: xcms-parameter-estimation
 description: Use when you have raw untargeted metabolomics data (at least 3 samples in mzML, mzXML, or CDF format) from qTOF, orbitrap, or Fourier transform ion cyclotron resonance mass analyzers and need to obtain optimized XCMS processing parameters tailored to your specific instrument and dataset rather than.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3370

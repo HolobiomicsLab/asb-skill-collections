@@ -3,6 +3,7 @@ name: spectral-library-match-classification
 description: 'Use when when you have run MS2Query on query MS/MS spectra and obtained results with library matches that need to be disambiguated into two categories: (1) exact matches (precursor m/z difference near zero) versus (2) analog matches (chemically related but different precursor m/z).'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

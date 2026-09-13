@@ -3,6 +3,7 @@ name: integrative-omics-pathway-enrichment
 description: Use when you have a preprocessed peak table with statistically significant or differentially abundant metabolites (e.g., from ANCOVA or PLS/PLS-DA), and you want to move beyond individual peak-level interpretation to understand which biological pathways or metabolic networks are perturbed.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3501
   edam_topics:
   - http://edamontology.org/topic_0625

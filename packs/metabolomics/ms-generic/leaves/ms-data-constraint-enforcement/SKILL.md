@@ -3,6 +3,7 @@ name: ms-data-constraint-enforcement
 description: 'Use when implementing or validating a new MsBackend class that stores m/z and intensity values, or when assigning peak data to an existing backend. Triggers include: (1) implementing a replacement method (e.g., mz<- or intensity<-) for a backend class;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: spectral-entropy-similarity-computation
 description: Use when you need to measure the similarity between two MS/MS spectra as a continuous value that reflects both peak presence/absence and intensity patterns, particularly when comparing noisy versus denoised spectrum variants, or when ranking candidate reference library matches during compound.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172

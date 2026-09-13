@@ -3,6 +3,7 @@ name: inchikey-extraction-from-spectral-library
 description: Use when you have a GNPS DBResult file from spectral library matching that lacks ClassyFire superclass, class, and subclass columns, and you need to restore chemical ontology annotations by submitting compound identifiers to external batch classification services for re-annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_0625

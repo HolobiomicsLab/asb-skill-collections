@@ -3,6 +3,7 @@ name: mwtab-to-json-conversion
 description: Use when you have mwTab-formatted files from the Metabolomics Workbench containing MS or NMR experimental metadata and data blocks that need to be converted to JSON for integration with REST APIs, web applications, or downstream tools that expect JSON input.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3172

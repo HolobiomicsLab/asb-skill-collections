@@ -3,6 +3,7 @@ name: search-mode-configuration-optimization
 description: Use when when you have a calibrated FT-ICR mass spectrum (e.g., ESI-NEG mode) and need to decide between rapid single-assignment (first_hit=True) and exhaustive multi-assignment (first_hit=False) modes.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3647
   edam_topics:
   - http://edamontology.org/topic_0121

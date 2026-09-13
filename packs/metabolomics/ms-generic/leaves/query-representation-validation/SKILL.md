@@ -3,6 +3,7 @@ name: query-representation-validation
 description: Use when after parsing a MassQL query string into an abstract syntax tree or intermediate representation, before executing it against mass spectrometry data files (mzML, mzXML, etc.). Validation is essential when the query contains complex MS-specific patterns (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0337
   edam_topics:
   - http://edamontology.org/topic_3520

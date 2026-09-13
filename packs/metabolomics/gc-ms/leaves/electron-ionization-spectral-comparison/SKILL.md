@@ -3,6 +3,7 @@ name: electron-ionization-spectral-comparison
 description: Use when you have a query electron ionization (EI) mass spectrum in msp format and wish to identify it by matching against a reference spectral library. Apply this skill when you need ranked similarity scores between the query and each library entry to prioritize candidate identifications.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

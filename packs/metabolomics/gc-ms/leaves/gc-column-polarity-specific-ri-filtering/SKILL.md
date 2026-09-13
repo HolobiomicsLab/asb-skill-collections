@@ -3,6 +3,7 @@ name: gc-column-polarity-specific-ri-filtering
 description: Use when you have a combined EI mass spectral library (MSP format) lacking experimental RI values, access to NIST ri.dat and USER.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0337
   edam_topics:
   - http://edamontology.org/topic_0091

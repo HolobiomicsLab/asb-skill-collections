@@ -3,6 +3,7 @@ name: r-data-structure-processing
 description: Use when you have a peak table matrix with NA values that need to be imputed using cluster statistics, or when a GCIMSDataset object requires filtering by retention time (0–1100 s) and drift time (5–16 ms) ranges, or when you need to apply smoothing, decimation, or baseline correction to raw GCIMS.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

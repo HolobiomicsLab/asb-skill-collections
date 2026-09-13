@@ -3,6 +3,7 @@ name: regression-metric-computation-and-comparison
 description: Use when you have trained two or more regression models (e.g., original vs. alternative GNN architectures) on the same training set and need to evaluate which generalizes better on held-out test data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091

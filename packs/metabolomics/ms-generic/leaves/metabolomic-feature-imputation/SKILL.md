@@ -3,6 +3,7 @@ name: metabolomic-feature-imputation
 description: Use when when a preprocessed metabolomic feature table (e.g., MS-Dial output) retains features and samples that passed filtering for missingness thresholds and m/z validity, but still contain scattered missing values (NA). This skill is appropriate after sample-level filtering (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3662
   edam_topics:
   - http://edamontology.org/topic_3172

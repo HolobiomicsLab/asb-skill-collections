@@ -3,6 +3,7 @@ name: molecular-formula-property-derivation
 description: Use when you have filtered FT-ICR MS peak data with valid molecular formula assignments (C, H, O, N, S, P elemental counts) and need to quantify molecular properties that predict metabolite reactivity, bioavailability, and biochemical role.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172

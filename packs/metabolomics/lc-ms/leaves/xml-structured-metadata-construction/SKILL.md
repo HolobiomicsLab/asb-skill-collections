@@ -3,6 +3,7 @@ name: xml-structured-metadata-construction
 description: Use when when you have synthesized or assembled mass spectrometry spectral data (m/z values, intensities, retention times) and need to encode it as a portable, standard mzML file format rather than a proprietary binary or text representation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3932
   edam_topics:
   - http://edamontology.org/topic_3520

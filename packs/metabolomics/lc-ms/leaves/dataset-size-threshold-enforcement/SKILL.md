@@ -3,6 +3,7 @@ name: dataset-size-threshold-enforcement
 description: Use when when you have partitioned public MS/MS files from MassIVE using the ReDU File Selector into one or more filtered groups (G1–G6) and need to verify that each group's file count complies with computational constraints before submitting to GNPS molecular networking (3000 file limit) or.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -47,6 +48,7 @@ attribution:
 
 # dataset-size-threshold-enforcement
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enforce workflow-specific file count limits on filtered MS/MS file cohorts to prevent computational overload and ensure successful execution of downstream molecular networking or library search analyses. This skill partitions large datasets into compliant subsets and documents the rationale for subdivision.

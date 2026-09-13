@@ -3,6 +3,7 @@ name: metabolite-rank-performance-evaluation
 description: Use when after training an ensemble model (MLP, GNN, or ESP) on spectral data, use this skill to measure performance on test spectra where ground-truth metabolite identities are known. Essential for comparing model variants (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0602

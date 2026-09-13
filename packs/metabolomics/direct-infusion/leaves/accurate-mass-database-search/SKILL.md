@@ -3,6 +3,7 @@ name: accurate-mass-database-search
 description: Use when after peak detection and MS1 feature extraction from FIA-MS, GC-MS, LC-MS(/MS), or CE-MS data, when you need to identify unknown metabolites by matching observed m/z values to a reference database and want to recover HMDB identifiers, molecular formulas, and structural annotations for.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3172

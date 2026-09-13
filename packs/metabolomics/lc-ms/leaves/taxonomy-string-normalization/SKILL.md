@@ -3,6 +3,7 @@ name: taxonomy-string-normalization
 description: Use when when preparing a metadata table (TSV format with species, genus, and family columns) for natural product metabolomics analysis where the Literature Component score must query known compounds by taxon.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_3307

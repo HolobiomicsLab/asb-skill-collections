@@ -3,6 +3,7 @@ name: retention-time-calibration-integration
 description: Use when you have LC-MS data from authentic standards run in positive and negative ESI modes, converted to .mzML format, and you need to build an in-house metabolite reference library for untargeted identification workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0189

@@ -3,6 +3,7 @@ name: record-filtering-by-field-value
 description: Use when when you have a table of JSON records and need to select a subset matching a specific condition—for example, filtering records where 'status=active' before building a string value, or filtering 'experiment_type=MS' before constructing a matrix of dictionary objects.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091

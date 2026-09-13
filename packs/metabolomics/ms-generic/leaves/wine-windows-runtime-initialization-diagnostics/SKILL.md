@@ -3,6 +3,7 @@ name: wine-windows-runtime-initialization-diagnostics
 description: Use when you are deploying a Windows .NET application (e.g., AirdPro CLI) inside a Docker container on a non-Windows host and need to understand whether Wine initialization completes, how long it takes (documented as >30 minutes), whether .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0121

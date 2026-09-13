@@ -3,6 +3,7 @@ name: peptide-isotopic-envelope-calculation
 description: Use when you have a peptide sequence, precursor charge state, and observed m/z spectrum and need to generate the expected isotopic distribution to match against observed precursor or fragment ion peaks. This is especially critical in SIP workflows where incorporation probabilities (e.g., 0.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

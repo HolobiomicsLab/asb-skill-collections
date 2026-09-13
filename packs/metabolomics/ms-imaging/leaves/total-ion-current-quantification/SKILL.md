@@ -3,6 +3,7 @@ name: total-ion-current-quantification
 description: Use when you have loaded a mass spectrometry imaging pixel array (NumPy format) and need to correct for variations in total ion signal across pixels before generating ion images or ratio images.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3564
   edam_topics:
   - http://edamontology.org/topic_0769

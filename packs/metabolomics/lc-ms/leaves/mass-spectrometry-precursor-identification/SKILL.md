@@ -3,6 +3,7 @@ name: mass-spectrometry-precursor-identification
 description: Use when when you need to locate and extract quantitative retention time and intensity data for known peptide standards (e.g., iRT peptides) from a Thermo .raw file to validate LC-MS retention time linearity, assess method reproducibility, or establish retention time calibration curves.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: library-import-validation
 description: Use when you have raw .msp spectral library files (e.g., from MassBank or custom sources) and need to convert them into a structured CSV library format for use in metabolite annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0091

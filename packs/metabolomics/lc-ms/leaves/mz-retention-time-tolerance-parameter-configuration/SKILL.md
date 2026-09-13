@@ -3,6 +3,7 @@ name: mz-retention-time-tolerance-parameter-configuration
 description: Use when when invoking Asari to process centroid mzML files for the first time in a PCPFM experiment, or when RT and m/z accuracy characteristics of your LC-MS instrument differ from the pipeline defaults (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172

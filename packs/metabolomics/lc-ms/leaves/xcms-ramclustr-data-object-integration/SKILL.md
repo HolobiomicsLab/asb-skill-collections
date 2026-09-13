@@ -3,6 +3,7 @@ name: xcms-ramclustr-data-object-integration
 description: Use when when you have raw LC-MS all-ion fragmentation (AIF) chromatograms in centroid mode and need to prepare them for metabolite annotation using fragment ion matching.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

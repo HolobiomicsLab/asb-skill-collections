@@ -3,6 +3,7 @@ name: lipid-library-curation
 description: Use when you have obtained MobiLipid or a similar IM-MS lipidomics package that bundles a CCS reference library for labeled lipids, and you need to verify library integrity, validate that all expected lipid species are present with plausible numeric CCS values, and prepare a canonical curated.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -42,6 +43,7 @@ attribution:
 
 # Reconstruct and Validate Collision Cross Section Reference Library for Labeled Lipids
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Curate and validate a structured collision cross section (CCS) reference library for isotope-labeled lipids (e.g., U13C) by extracting, parsing, and quality-checking CCS values from a distributed package. This skill ensures the library meets physical and structural constraints required for downstream CCS bias assessment in ion mobility–mass spectrometry (IM-MS) lipidomics.

@@ -3,6 +3,7 @@ name: mass-spectra-tokenization-unified-vocabulary
 description: Use when when you have paired mass spectra and molecular structure data and need to train a unified model for structure elucidation. Use this skill at the data preparation stage before pretraining, when you want both modalities to share representational capacity rather than operate in isolation.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_2429
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -40,6 +41,7 @@ attribution:
 
 # mass-spectra-tokenization-unified-vocabulary
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Tokenize mass spectra and molecular structures using a unified vocabulary that enables joint end-to-end pretraining, fine-tuning, and alignment in a single sequence-to-sequence model. This skill bridges spectroscopy and chemistry by converting both modalities into a shared token space, eliminating the need for separate encoders.

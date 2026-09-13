@@ -3,6 +3,7 @@ name: raw-file-header-extraction
 description: Use when beginning an LC-MS data analysis pipeline and you need to rapidly inspect instrument metadata, acquisition parameters, or scan statistics from proprietary Thermo .raw files without the I/O overhead of loading full spectra.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121

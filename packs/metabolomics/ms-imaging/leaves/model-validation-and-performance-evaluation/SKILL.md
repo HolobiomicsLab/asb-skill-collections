@@ -3,6 +3,7 @@ name: model-validation-and-performance-evaluation
 description: Use when after training a MEISTER deep learning reconstruction model on mass spectrometry data, you must validate performance on independent test sets before applying the model to new experimental or clinical samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121

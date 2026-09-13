@@ -3,6 +3,7 @@ name: mass-spectrometry-deconvolution-algorithm-application
 description: Use when you have raw DDA, DIA (MS^E, AIF, SWATH-MS), or MS1-only mass spectrometry data in mzML, mzXML, or netCDF format and need to deconvolute fragmentation spectra by linking precursor ions to their fragment ions based on retention time and m/z relationships.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3370

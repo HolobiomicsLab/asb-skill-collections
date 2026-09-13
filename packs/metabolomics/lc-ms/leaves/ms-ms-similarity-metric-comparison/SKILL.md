@@ -3,6 +3,7 @@ name: ms-ms-similarity-metric-comparison
 description: Use when when you have MS/MS spectra from both query compounds and a reference library and need to decide which similarity metric will maximize identification accuracy (true positive rank, precision@k) or when benchmarking a new compound identification workflow against a known-good reference.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3945
   edam_topics:
   - http://edamontology.org/topic_0121

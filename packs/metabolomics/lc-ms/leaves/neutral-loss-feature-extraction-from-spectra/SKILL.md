@@ -3,6 +3,7 @@ name: neutral-loss-feature-extraction-from-spectra
 description: Use when you have MS2 spectra data (MGF/mzML format) and aligned feature tables, and your analysis goal is to compare samples that may have poor MS1 feature overlap, strong retention-time shifts across runs, or were acquired on different LC-MS platforms.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121

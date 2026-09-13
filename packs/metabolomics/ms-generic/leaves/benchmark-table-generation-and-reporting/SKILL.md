@@ -3,6 +3,7 @@ name: benchmark-table-generation-and-reporting
 description: Use when when you need to quantify and document the computational cost of a multi-stage analysis pipeline (such as MetaboDirect) across varying input sizes (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3172

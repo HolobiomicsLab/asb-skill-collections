@@ -3,6 +3,7 @@ name: dual-branch-feature-fusion
 description: Use when when you have molecular input data available in two or more distinct formats (e.g., RDKit-extracted fingerprints AND torch_geometric Graph objects representing molecular topology) and your prediction target (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -55,6 +56,7 @@ attribution:
 
 # dual-branch-feature-fusion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fuse complementary molecular representations (fingerprint and graph-structured data) through parallel processing branches that independently embed each modality before combining them in a learned fusion layer. This dual-branch strategy exploits both the compactness of fixed-length fingerprints and the topological richness of molecular graphs to improve retention time prediction accuracy.

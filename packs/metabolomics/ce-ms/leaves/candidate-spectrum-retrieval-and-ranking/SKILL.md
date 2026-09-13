@@ -3,6 +3,7 @@ name: candidate-spectrum-retrieval-and-ranking
 description: Use when when you have a large reference MS/MS spectral library (>10k spectra) and need to perform open modification searches on query spectra without exhaustively comparing against every library entry.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121

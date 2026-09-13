@@ -3,6 +3,7 @@ name: missing-value-imputation-strategy-selection
 description: Use when after mark_nas() has replaced non-NA missing-value codes (e.g., 0, 1) with R's NA in the exprs matrix of a MetaboSet object, and you need to decide whether to apply random forest imputation, simple imputation strategies, or defer imputation.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -51,6 +52,7 @@ attribution:
 
 # Missing-Value Imputation Strategy Selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Select and apply an appropriate missing-value imputation strategy (random forest, simple imputation, or other methods) for LC-MS metabolomics data based on data quality, missingness patterns, and analytical requirements. This skill bridges NA marking and imputation execution by determining which algorithm best preserves feature relationships while minimizing bias.

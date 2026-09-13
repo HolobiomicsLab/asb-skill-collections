@@ -3,6 +3,7 @@ name: unit-test-fixture-design-and-execution
 description: Use when when implementing or modifying a numerical compression/decompression component (e.g., Numpress for mass-spectrometry m/z and intensity arrays) and you need to verify that round-trip encoding and decoding preserves numerical fidelity.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0234
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -40,6 +41,7 @@ attribution:
 
 # unit-test-fixture-design-and-execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and execute unit test fixtures to validate encoder/decoder round-trip correctness for numerical data compression algorithms. This skill ensures that encoded data can be faithfully decoded back to the original input within machine precision tolerances.

@@ -3,6 +3,7 @@ name: spectral-noise-reduction-msi
 description: Use when you have imported raw MSI spectral data in imzML format and observe high background noise or low signal-to-noise ratio that would obscure biochemical annotations or ROI analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3520

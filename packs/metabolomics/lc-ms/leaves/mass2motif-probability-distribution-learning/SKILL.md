@@ -3,6 +3,7 @@ name: mass2motif-probability-distribution-learning
 description: Use when when you have preprocessed MS/MS spectra converted to a bag-of-fragments format (fragments and neutral losses extracted, noise filtered) and you seek to discover recurring fragmentation patterns without prior compound identification.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0091

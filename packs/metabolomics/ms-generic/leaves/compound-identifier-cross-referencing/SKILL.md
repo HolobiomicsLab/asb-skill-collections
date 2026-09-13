@@ -3,6 +3,7 @@ name: compound-identifier-cross-referencing
 description: 'Use when when you have prepared raw mass spectrometry transition data (precursor m/z, product m/z, intensity, retention time, compound identifiers) and need to verify it conforms to EISA-EXPOSOME''s required schema before database import. Specifically: you are building or validating a custom .xlsx/.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

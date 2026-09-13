@@ -3,6 +3,7 @@ name: peptide-mass-calculation-average
 description: Use when you have a list of polypeptide sequences (one per line or CSV format) and need to compute average mass (weighted by natural isotope abundances) to compare against experimental LC-MS or MS/MS data where the full isotopic distribution—not just the most abundant peak—is relevant for peptide.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0399
   edam_topics:
   - http://edamontology.org/topic_0121

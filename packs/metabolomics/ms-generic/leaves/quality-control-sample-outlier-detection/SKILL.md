@@ -3,6 +3,7 @@ name: quality-control-sample-outlier-detection
 description: Use when you have a SummarizedExperiment object containing pooled quality control samples with measured compound and internal standard peak areas.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3674
   edam_topics:
   - http://edamontology.org/topic_0091

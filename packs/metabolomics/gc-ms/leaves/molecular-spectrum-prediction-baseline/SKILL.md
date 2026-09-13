@@ -3,6 +3,7 @@ name: molecular-spectrum-prediction-baseline
 description: Use when you have multiple mass spectrum prediction models to compare and need to establish a level playing field by implementing at least one well-characterized baseline (such as NEIMS) with both FFN and GNN encoder variants.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

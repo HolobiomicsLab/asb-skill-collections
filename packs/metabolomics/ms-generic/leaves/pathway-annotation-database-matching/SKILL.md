@@ -3,6 +3,7 @@ name: pathway-annotation-database-matching
 description: Use when after marker identification or metabolite annotation has produced a curated list of compound IDs (e.g., KEGG IDs or CAS numbers) and you need to determine which metabolic pathways are statistically overrepresented in your dataset.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3501
   edam_topics:
   - http://edamontology.org/topic_0602

@@ -3,6 +3,7 @@ name: retention-index-assignment-and-filtering
 description: Use when after combining multiple EI or MS2 mass spectral libraries and you have access to NIST RI reference files (ri.dat and USER.DBU) and need to assign experimental retention indices to compounds.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0625

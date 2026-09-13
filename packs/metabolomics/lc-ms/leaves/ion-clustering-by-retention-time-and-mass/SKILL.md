@@ -3,6 +3,7 @@ name: ion-clustering-by-retention-time-and-mass
 description: Use when your peak table contains suspected mispicked ions—ions with similar m/z and retention time that likely represent the same metabolite split across multiple features due to preprocessing errors.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: feature-table-alignment-and-integration
 description: Use when you have aligned feature tables (CSV format) paired with MS2 spectral data (MGF or mzML files) and need to compare chemodiverse samples with poor feature overlap or strong retention-time shifts across different LC methods or mass spectrometer technologies (e.g., Orbitrap vs. Q-ToF).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121

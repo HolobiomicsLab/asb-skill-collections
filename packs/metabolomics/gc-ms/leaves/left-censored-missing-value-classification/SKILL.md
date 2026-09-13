@@ -3,6 +3,7 @@ name: left-censored-missing-value-classification
 description: Use when you have a metabolomics dataset (LC/MS or GC/MS) with missing values and need to determine which are below the limit of detection (LOD) or limit of quantification (LOQ). Left-censored classification is necessary when the missingness is informative—i.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -45,6 +46,7 @@ attribution:
 
 # left-censored-missing-value-classification
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Identify and flag left-censored missing values in metabolomics data by distinguishing them from other missingness mechanisms (MCAR/MAR) based on detection limits and instrumental thresholds. This classification is essential for selecting appropriate imputation strategies, as left-censored missingness violates MCAR assumptions and requires truncated distributional methods.

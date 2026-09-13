@@ -3,6 +3,7 @@ name: genome-annotation-format-comparison
 description: Use when when running metabologenomic RiPP detection pipelines (MetaMiner) on the same genomic dataset but with different input sequence formats (e.g., contigs.fasta vs. antiSMASH .final.gbk output), or when unexpected null results occur and input format choice is a plausible cause.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3227
   edam_topics:
   - http://edamontology.org/topic_0080

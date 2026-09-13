@@ -3,6 +3,7 @@ name: targeted-proteomics-feature-filtering
 description: Use when you have loaded transition group chromatogram data from sqMass files and need to restrict the analyte selection dropdowns (protein, peptide, charge state) to only those features passing a specified Q-value threshold (default 1%), or when you need to selectively display or hide MS1 and MS2.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

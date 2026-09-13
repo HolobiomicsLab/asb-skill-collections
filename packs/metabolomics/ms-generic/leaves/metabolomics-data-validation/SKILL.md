@@ -3,6 +3,7 @@ name: metabolomics-data-validation
 description: Use when you have raw or semi-processed m/z peak lists (positive and negative ion mode) and a sample metadata table, and you need to confirm they meet MetaboShiny's structural and semantic requirements before loading them into the normalization pipeline.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3391

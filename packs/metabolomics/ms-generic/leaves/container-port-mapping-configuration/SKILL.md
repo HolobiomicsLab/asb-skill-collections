@@ -3,6 +3,7 @@ name: container-port-mapping-configuration
 description: Use when you need to deploy a containerized web application (such as MetFrag webapp on Tomcat) and make it accessible at a specific HTTP endpoint on the host machine. Use this skill when you have a Docker image with an internal service listening on a known port (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_topics: []
   tools:
   - MetFrag
@@ -38,6 +39,7 @@ attribution:
 
 # container-port-mapping-configuration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure Docker port mapping to expose containerized web services (e.g., Tomcat application servers) to a host network interface at a specified HTTP endpoint. This skill bridges the container's internal service port to an externally accessible host port, enabling network connectivity verification and downstream integration.

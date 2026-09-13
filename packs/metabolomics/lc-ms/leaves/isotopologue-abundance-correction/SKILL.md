@@ -3,6 +3,7 @@ name: isotopologue-abundance-correction
 description: 'Use when you have LC-MS data from isotope labeling experiments where FAM measurements must be transformed to MDV values. Specifically, apply this when: (1) you have measured fractional abundances of isotopologues (FAM) in XLSX format from a high-resolution instrument (e.g., Orbitrap);'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0091

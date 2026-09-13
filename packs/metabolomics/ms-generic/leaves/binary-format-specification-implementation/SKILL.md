@@ -3,6 +3,7 @@ name: binary-format-specification-implementation
 description: Use when you have a compressed file format (e.g., igzip) with a custom binary header structure that encodes metadata (index-to-offset mappings) in a fixed layout, and you need to parse or generate compliant files.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3359
   edam_topics:
   - http://edamontology.org/topic_3520

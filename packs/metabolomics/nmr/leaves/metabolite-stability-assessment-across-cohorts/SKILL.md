@@ -3,6 +3,7 @@ name: metabolite-stability-assessment-across-cohorts
 description: Use when you have uploaded a pre-analytical data table containing sample metadata, processing timestamps (pre- and post-centrifugation), and NMR metabolomic measurements for a cohort of peripheral blood samples (plasma/serum), and you need to quantify the magnitude and direction of metabolite.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_0769
@@ -40,6 +41,7 @@ attribution:
 
 # metabolite-stability-assessment-across-cohorts
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify how pre- and post-centrifugation processing delays affect metabolite concentrations and data quality across a sample cohort using NMR metabolomic measurements. This skill produces stratified performance reports that identify which metabolites are stable or degraded over defined delay windows, enabling prioritization of processing protocols.

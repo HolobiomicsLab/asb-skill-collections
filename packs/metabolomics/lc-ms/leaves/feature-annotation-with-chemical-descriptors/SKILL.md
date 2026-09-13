@@ -3,6 +3,7 @@ name: feature-annotation-with-chemical-descriptors
 description: Use when you have a feature list (m/z values, retention times, and optionally molecular formulas or neutral masses) from LC- or GC-HRMS data and need to rapidly identify features matching characteristic chemical signatures (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_0625

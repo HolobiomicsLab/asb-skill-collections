@@ -3,6 +3,7 @@ name: pca-dimensionality-reduction-unsupervised
 description: Use when you have a feature-by-sample matrix (rows = annotated chemical features such as m/z, retention time, GNPS spectral library matches;
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3935
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -49,6 +50,7 @@ attribution:
 
 # pca-dimensionality-reduction-unsupervised
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Unsupervised principal components analysis (PCA) of chemical annotation matrices from mass spectrometry data to compute principal coordinate scores and loadings, enabling low-dimensional visualization and interactive exploration of sample relationships without class labels. This skill is applied to metabolomics and natural products datasets where chemical feature patterns across samples must be discovered and visualized.

@@ -3,6 +3,7 @@ name: mass-spectrometry-peak-classification
 description: Use when you have raw mzML files and feature tables (CSV format from mzMine or XCMS) from untargeted LCMS experiments and need to distinguish true metabolite peaks from false positives introduced by the peak-picking algorithm.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3172

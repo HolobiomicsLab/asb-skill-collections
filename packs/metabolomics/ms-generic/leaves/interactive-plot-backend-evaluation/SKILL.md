@@ -3,6 +3,7 @@ name: interactive-plot-backend-evaluation
 description: Use when you have mass spectrometry data (chromatograms, spectra, peak maps, mobilograms) that you want to visualize interactively using pyOpenMS-viz, and you need to select between bokeh and plotly backends based on execution time and feature parity.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3520

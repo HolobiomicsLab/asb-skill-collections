@@ -3,6 +3,7 @@ name: ms-spectra-extraction-and-preprocessing
 description: 'Use when you have raw LC-MS/MS data in mzML or mzXML format and need to: (1) identify the top-abundance MS1 signals in an LC run, (2) compute a single scalar metric (separation efficiency) that summarizes how well compounds are resolved across the chromatogram, and (3) feed that metric into a.'
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -52,6 +53,7 @@ attribution:
 
 # MS spectra extraction and preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and convert MS1 and MS2 spectra from raw LC-MS data files (mzML/mzXML) into standardized spectrum objects, then compute retention-time-based separation efficiency metrics to enable iterative gradient optimization. This preprocessing step transforms unstructured mass spectrometry data into quantifiable features for Bayesian optimization of LC gradients.

@@ -3,6 +3,7 @@ name: metabolite-identifier-conversion
 description: Use when your metabolomics dataset contains metabolite identifiers in multiple formats (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_0625

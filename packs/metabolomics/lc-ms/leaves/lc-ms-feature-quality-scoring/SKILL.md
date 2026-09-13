@@ -3,6 +3,7 @@ name: lc-ms-feature-quality-scoring
 description: Use when immediately after peak detection and feature table generation from LC-MS data, when you need to rank or filter features by confidence before annotation or statistical analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -42,6 +43,7 @@ attribution:
 
 # lc-ms-feature-quality-scoring
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Compute per-feature quality scores for LC-MS detected features by evaluating peak shape, chromatographic metrics, signal-to-noise ratio, and coherence of isotopes/adducts. This skill produces a quality-annotated feature table with diagnostic flags (pass/fail/warning) suitable for downstream filtering and confidence assessment.

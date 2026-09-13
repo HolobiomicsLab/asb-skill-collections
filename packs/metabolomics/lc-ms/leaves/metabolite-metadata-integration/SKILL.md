@@ -3,6 +3,7 @@ name: metabolite-metadata-integration
 description: Use when when you have separate quantification data (abundance matrix), sample metadata (phenotypes, treatment groups, experimental conditions), and spectral data (MS/MS fragmentation patterns or other spectral features) that must be combined for mass spectrometry-based metabolite analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0091

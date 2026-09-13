@@ -3,6 +3,7 @@ name: installation-requirement-validation
 description: Use when before attempting to run QCxMS2 for the first time, after updating any external dependencies (xtb, CREST, molbar, orca, geodesic_interpolate), or when troubleshooting unexplained calculation failures.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_0003

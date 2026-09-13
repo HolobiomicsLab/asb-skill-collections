@@ -3,6 +3,7 @@ name: double-bond-positional-isomer-generation
 description: Use when when constructing a comprehensive lipid spectral reference library that must disambiguate lipids differing only in carbon-carbon double-bond position (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_3172

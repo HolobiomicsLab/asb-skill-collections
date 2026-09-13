@@ -3,6 +3,7 @@ name: ablation-study-design-and-interpretation
 description: Use when when you have a neural network or machine learning model with multiple tunable hyperparameters (layer size, regularization strength, dropout) or design choices (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3174

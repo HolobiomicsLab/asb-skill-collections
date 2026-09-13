@@ -3,6 +3,7 @@ name: tcn-encoder-input-preprocessing
 description: Use when when reproducing or auditing FIDDLE's formula prediction pipeline, or when implementing the TCN encoder in your own codebase and need to confirm that the precursor m/z (env[:, 0]) has been removed from the feature vector to avoid leakage of mass information into the model's learned.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3520

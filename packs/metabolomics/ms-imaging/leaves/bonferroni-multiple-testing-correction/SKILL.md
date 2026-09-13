@@ -3,6 +3,7 @@ name: bonferroni-multiple-testing-correction
 description: Use when when you have performed many pairwise correlation tests between candidate parent and adduct ion intensity pairs in MSI data and need to identify statistically significant relationships while controlling for multiple-comparison bias.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0091

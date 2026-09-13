@@ -3,6 +3,7 @@ name: spectrum-object-schema-design
 description: Use when when building a mass spectrometry data import pipeline that must ingest spectra from multiple file formats and produce a unified, queryable representation suitable for metadata validation, peak filtering, and similarity comparisons.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: m-z-retention-time-correspondence-mapping
 description: Use when you have two peak-picked, conventionally aligned untargeted LC-MS metabolomics datasets (as metabData objects) acquired under different conditions or at different times, and you need to determine which features in dataset X correspond to which features in dataset Y so their sample.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3370

@@ -3,6 +3,7 @@ name: lc-ms-roi-annotation-interpretation
 description: Use when when you have extracted LC-MS ROI windows (m/z × retention time snippets) from raw mzML data and need to distinguish genuine metabolite peaks from noise or artifacts.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: mass-spectrum-peak-matching
 description: Use when when you have a query electron ionization mass spectrum (as m/z and intensity pairs) and need to identify it against a spectral library stored in msp format.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3520

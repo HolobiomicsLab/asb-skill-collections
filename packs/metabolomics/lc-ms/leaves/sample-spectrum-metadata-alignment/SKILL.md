@@ -3,6 +3,7 @@ name: sample-spectrum-metadata-alignment
 description: Use when you have a GNPS task ID from a completed molecular networking workflow (METABOLOMICS-SNETS, METABOLOMICS-SNETS-V2, FEATURE-BASED-MOLECULAR-NETWORKING on GNPS1, or classical_networking_workflow / feature_based_molecular_networking_workflow on GNPS2) and need to access the resulting spectral.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3520

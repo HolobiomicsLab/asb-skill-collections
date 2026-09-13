@@ -3,6 +3,7 @@ name: mass-chromatogram-alignment
 description: Use when after chromatographic peak detection on preprocessed LC-MS data, when you have detected features (peaks) in multiple samples and need to establish which peaks across samples represent the same molecular species.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3370

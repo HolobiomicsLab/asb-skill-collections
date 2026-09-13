@@ -3,6 +3,7 @@ name: matrix-ion-spatial-distribution-visualization
 description: Use when after rMSIcleanup has classified ions as matrix-related or non-matrix, and you need to audit, validate, or communicate the annotation decisions. Use it when overlapping or isobaric peaks are present in the dataset and you must document misclassification risks per annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0570
   edam_topics:
   - http://edamontology.org/topic_3520

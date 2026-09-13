@@ -3,6 +3,7 @@ name: chromatographic-baseline-estimation
 description: Use when you have extracted ion chromatogram (EIC) candidate data from untargeted LC/HRMS files (mzXML, mzML, or netCDF format) and need to identify genuine peaks within each EIC.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -43,6 +44,7 @@ attribution:
 
 # chromatographic-baseline-estimation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Estimation of the baseline signal intensity in LC/HRMS chromatograms to enable accurate peak detection and signal-to-noise ratio calculation. This is a prerequisite step in the IDSL.IPA peak detection workflow that distinguishes genuine peaks from noise by establishing a noise floor reference.

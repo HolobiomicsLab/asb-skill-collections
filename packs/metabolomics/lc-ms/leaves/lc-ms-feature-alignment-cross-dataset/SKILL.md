@@ -3,6 +3,7 @@ name: lc-ms-feature-alignment-cross-dataset
 description: Use when you have two peak-picked, conventionally aligned LC-MS metabolomics datasets (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172

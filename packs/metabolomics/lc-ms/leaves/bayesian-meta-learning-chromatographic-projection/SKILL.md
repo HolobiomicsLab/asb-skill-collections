@@ -3,6 +3,7 @@ name: bayesian-meta-learning-chromatographic-projection
 description: Use when you have experimental retention times (RTs) for a small set of calibration molecules (≥10) measured on both a source chromatographic method and a target method, and you need to predict RTs for candidate metabolites on the target method to rank annotation candidates.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3664
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -40,6 +41,7 @@ attribution:
 
 # Bayesian meta-learning chromatographic projection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a Bayesian meta-learning approach to project retention times between chromatographic methods using minimal calibration data (≥10 molecules), enabling confident metabolite annotation candidate ranking when switching between analytical platforms or instruments.

@@ -3,6 +3,7 @@ name: log-transformation-preprocessing
 description: Use when apply log transformation when peak intensity distributions are right-skewed with heteroscedastic variance (intensity-dependent noise), particularly in QC-based batch correction workflows where variance stabilization improves the effectiveness of subsequent Pareto scaling normalization.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3370

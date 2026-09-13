@@ -3,6 +3,7 @@ name: feature-hashing-dimensionality-reduction
 description: Use when you have high-resolution tandem mass spectra (mzML, mzXML, or MGF format) and need to cluster or index millions of spectra efficiently without exhaustive pairwise comparison.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

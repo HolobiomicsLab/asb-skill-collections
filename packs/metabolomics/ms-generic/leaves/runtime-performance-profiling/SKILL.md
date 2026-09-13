@@ -3,6 +3,7 @@ name: runtime-performance-profiling
 description: 'Use when when you need to empirically validate that one mass spectrometry data processing library achieves higher throughput than competing alternatives. Specifically: you have multiple candidate libraries (e.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_3375

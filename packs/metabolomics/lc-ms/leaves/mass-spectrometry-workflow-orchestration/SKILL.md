@@ -3,6 +3,7 @@ name: mass-spectrometry-workflow-orchestration
 description: Use when you have a collection of mzML or mzML.gz files from LC-IMS-MS/MS experiments and need to apply a consistent, reproducible sequence of feature detection, alignment, CCS calibration, isotope detection, and MS/MS deconvolution operations across multiple samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

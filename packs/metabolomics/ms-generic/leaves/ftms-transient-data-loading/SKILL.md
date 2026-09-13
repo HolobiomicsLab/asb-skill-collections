@@ -3,6 +3,7 @@ name: ftms-transient-data-loading
 description: Use when you have a Bruker Solarix FT-ICR transient file in .d format (e.g., ESI_NEG_SRFA.d containing ser and fid files in CompassXtract format) and need to programmatically load it into a Python environment for signal processing, calibration, and mass spectrum generation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

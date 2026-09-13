@@ -3,6 +3,7 @@ name: confidence-score-assignment-and-filtering
 description: Use when after matching MRM transitions against a lipid reference database, when you have candidate lipid identities for each transition and need to rank them by quality and select a single match per transition for export to the labelled lipid-identity table.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3766
   edam_topics:
   - http://edamontology.org/topic_3172

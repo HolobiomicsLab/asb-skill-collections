@@ -3,6 +3,7 @@ name: confusion-matrix-generation
 description: Use when after training or evaluating a classification model (e.g., MS2DeepScore or other neural networks) when you have paired arrays of predicted class labels and ground-truth labels and need to assess per-class prediction accuracy, false positive/negative rates, or class imbalance effects.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0091

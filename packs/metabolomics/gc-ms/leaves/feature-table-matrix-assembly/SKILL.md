@@ -3,6 +3,7 @@ name: feature-table-matrix-assembly
 description: Use when when you need to generate a realistic LC/GC-MS feature table (peak intensity matrix) with controlled, quantifiable condition effects (e.g., differential metabolite abundance across disease states) and batch effects (e.g., instrument drift, sample processing day).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3635
   edam_topics:
   - http://edamontology.org/topic_3520

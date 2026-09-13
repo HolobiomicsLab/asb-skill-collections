@@ -3,6 +3,7 @@ name: machine-learning-model-application-to-lipidomics
 description: Use when you have MS-DIAL lipid identifications from an Orbitrap or TOF mass spectrometer and need to remove spurious or low-confidence assignments before downstream metabolomics analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0092

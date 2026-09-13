@@ -3,6 +3,7 @@ name: feature-statistical-annotation
 description: Use when after LC-MS feature detection, alignment, and quantification are complete and you have a feature table with m/z and retention time attributes. Use this skill when you have access to a reference list of molecules of interest (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3172

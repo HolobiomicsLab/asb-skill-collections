@@ -3,6 +3,7 @@ name: build-status-documentation
 description: Use when when you need to validate that a development build release workflow (such as dev_build_release.yml for a mass spectrometry data processing project) executes without failure and generates artifacts for downstream testing or distribution.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_0091

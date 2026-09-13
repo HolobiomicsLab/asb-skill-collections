@@ -3,6 +3,7 @@ name: gpu-accelerated-computation
 description: 'Use when when processing large-scale mass spectrometry datasets (>1 million spectra) where CPU-based clustering runtime would exceed minutes to hours, and when the analysis pipeline includes: (1) encoding raw spectra into high-dimensional binary vectors, (2) computing pairwise distance matrices.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0121

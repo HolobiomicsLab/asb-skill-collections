@@ -3,6 +3,7 @@ name: peak-prominence-calculation-local-maxima
 description: Use when when processing LC-MS mass tracks (EICs) and you need to identify genuine chromatographic peaks rather than noise artifacts.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -44,6 +45,7 @@ attribution:
 
 # Peak prominence calculation using local maxima
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and quantify elution peaks on composite mass tracks by identifying local maxima and computing prominence—the vertical distance from each peak to the lowest contour line connecting it to higher peaks—with adaptive thresholds based on noise and signal intensity characteristics.

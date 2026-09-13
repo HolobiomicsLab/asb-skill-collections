@@ -3,6 +3,7 @@ name: missing-value-imputation-in-quantification-tables
 description: Use when after feature alignment across multiple LC-MS/MS runs, when the unified feature list contains zeros or nulls for specific feature–sample pairs because peaks were not detected in those individual runs, but the feature was detected in other samples in the cohort.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3557
   edam_topics:
   - http://edamontology.org/topic_3370

@@ -3,6 +3,7 @@ name: spectral-peak-intensity-aggregation
 description: Use when you have multiple replicate MS/MS spectra for the same metabolic feature (e.g., 66 top-TIC spectra for feature 1982) and need to identify robust peaks by merging nearby m/z values and pooling their signal strength.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: molecular-fingerprint-representation-learning
 description: Use when when you have labeled mass-spectrometry spectral data (precursor m/z and fragment m/z–intensity pairs) paired with known molecular structures (as InChIKeys or SMILES), and need to perform metabolite annotation by ranking candidate compounds based on spectral similarity.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -46,6 +47,7 @@ attribution:
 
 # molecular-fingerprint-representation-learning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train and apply a CNN-based model to predict molecular fingerprints from mass-spectrometry data, enabling compound annotation through learned spectral-to-fingerprint representation mapping. This skill converts raw m/z and intensity arrays into fixed-length fingerprint vectors that encode structural similarity for metabolite identification.

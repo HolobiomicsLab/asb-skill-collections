@@ -3,6 +3,7 @@ name: lc-ms-feature-grouping-and-compounding
 description: Use when after chromatographic peak detection on preprocessed LC-MS data, when you have hundreds or thousands of individual m/z × retention-time peaks and need to associate them into biologically meaningful feature groups.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0121

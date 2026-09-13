@@ -3,6 +3,7 @@ name: lc-ms-quality-metric-computation
 description: Use when after performing peak detection on centroided .mzML LC-MS data with screening_mode=FALSE in TARDIS.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

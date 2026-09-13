@@ -3,6 +3,7 @@ name: mass-spectrometry-query-semantics
 description: Use when when you need to express complex mass spectrometry search patterns (e.g., isotope envelope detection, neutral loss patterns, intensity relationships across m/z ranges) in a human-readable format that can be executed against spectral data files (mzML, mzXML) or spectral repositories.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

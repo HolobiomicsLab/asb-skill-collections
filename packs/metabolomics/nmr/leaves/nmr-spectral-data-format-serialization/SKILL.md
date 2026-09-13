@@ -3,6 +3,7 @@ name: nmr-spectral-data-format-serialization
 description: Use when you have generated 1D FID time-domain data and Fourier-transformed frequency-domain 1H NMR spectra, or computed 2D COSY/HSQC correlation matrices, and need to write them to disk in a format that standard NMR software (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_1812
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -40,6 +41,7 @@ attribution:
 
 # nmr-spectral-data-format-serialization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Serialize simulated 1D and 2D 1H NMR spectral arrays into standard data interchange formats (HDF5 or netCDF) to ensure compatibility with downstream NMR analysis pipelines and long-term data archival. This skill bridges NMR simulation engines and format-agnostic metabolomic workflows.

@@ -3,6 +3,7 @@ name: molecular-property-data-structuring
 description: Use when you have a CSV file with rows of molecule definitions (chemical formulas, retention times, intensities, or other peak properties) and need to feed them into SMITER's simulation workflow.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: peak-filtering-and-preprocessing-lc-ms
 description: Use when you have raw LC-MS/MS spectra from vendor instruments (mzML, mzXML, MGF, or MSP format) with variable peak quality and intensity distributions, and you plan to perform library matching, molecular networking, or spectral similarity comparison.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3630
   edam_topics:
   - http://edamontology.org/topic_3520

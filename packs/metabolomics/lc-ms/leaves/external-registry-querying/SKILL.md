@@ -3,6 +3,7 @@ name: external-registry-querying
 description: Use when your project JSON document contains genome identifiers but lacks organism name or taxonomic annotations. The platform needs to auto-populate these fields to enable browsing and cross-linking with public genomic databases. Trigger this skill when you have genome IDs (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_0621

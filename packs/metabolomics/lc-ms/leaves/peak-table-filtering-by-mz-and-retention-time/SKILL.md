@@ -3,6 +3,7 @@ name: peak-table-filtering-by-mz-and-retention-time
 description: Use when you have a table of detected chromatographic peaks (e.g., from CentWave peak detection in xcms) and need to isolate a single target m/z (e.g., m/z 304.1131 for a pesticide) or a narrow m/z range, or when you must restrict analysis to a known retention time window (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3370

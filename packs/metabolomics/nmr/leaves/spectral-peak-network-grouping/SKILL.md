@@ -3,6 +3,7 @@ name: spectral-peak-network-grouping
 description: Use when after peak picking has been completed on INADEQUATE NMR spectra and you need to group correlated peaks into compound-specific networks before matching against a metabolite database.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0593

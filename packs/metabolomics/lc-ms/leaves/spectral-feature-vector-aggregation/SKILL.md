@@ -3,6 +3,7 @@ name: spectral-feature-vector-aggregation
 description: Use when you have generated per-sample MS2 fingerprints (as spec2vec document representations counting MS2 peaks and neutral losses to precursor in each sample) and need to align them into a single matrix for downstream cross-sample comparison, filtering, or visualization (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3209
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: cross-language-interface-design
 description: Use when when you have domain-specific functionality (e.g., spectral similarity scoring, peak detection algorithms) implemented in one language (Python) but need to make it callable and composable within an R-based analytical pipeline (Spectra objects);
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0224
   edam_topics:
   - http://edamontology.org/topic_3520

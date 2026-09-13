@@ -3,6 +3,7 @@ name: true-positive-false-positive-rate-calculation
 description: Use when you have a trained NeatMS neural network model (.h5 format) and need to assess its classification performance at a specific decision threshold (e.g., 0.01) to determine what fraction of true peaks are retained (TPR) versus what fraction of incorrect peaks are incorrectly accepted (FPR).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: tandem-ms-data-reorganization
 description: Use when importing MS/MS spectral libraries (particularly from MoNA or GNPS) where SMILES or chemical structure identifiers are embedded in free-text or non-standard Comment fields rather than in dedicated SMILES/InChIKey fields, or when positive and negative ionization mode spectra are commingled.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0091

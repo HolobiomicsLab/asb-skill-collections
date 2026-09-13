@@ -3,6 +3,7 @@ name: r-statistical-model-serialization
 description: Use when after training a customized R statistical or machine learning model on annotated training data, you need to persist the trained model object for reuse in downstream analysis workflows without retraining.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -42,6 +43,7 @@ attribution:
 
 # R statistical model serialization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Serialize trained R statistical models to .rds binary files for persistence and downstream reuse in reproducible bioinformatic workflows. This skill ensures trained models (e.g., machine learning classifiers) can be saved, version-controlled, and reliably loaded in production pipelines.

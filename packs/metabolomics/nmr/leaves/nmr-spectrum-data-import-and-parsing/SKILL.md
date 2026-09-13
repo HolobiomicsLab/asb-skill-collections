@@ -3,6 +3,7 @@ name: nmr-spectrum-data-import-and-parsing
 description: Use when you have raw 1D ¹H NMR spectroscopy output consisting of (1) a CSV file with chemical shift and intensity columns and (2) a TXT file listing detected peak chemical shifts, and you need to load and validate these into memory before passing them to a metabolite identification model like.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3501
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: breath-volatile-peak-classification
 description: Use when after feature extraction and alignment when you have a numerical feature table (CSV or dataframe) with intensity values across retention time or m/z dimensions, and you need to identify and rank peaks by signal quality and prominence rather than relying on all extracted features equally.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172

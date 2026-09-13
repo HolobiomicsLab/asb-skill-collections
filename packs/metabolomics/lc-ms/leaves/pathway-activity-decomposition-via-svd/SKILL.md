@@ -3,6 +3,7 @@ name: pathway-activity-decomposition-via-svd
 description: Use when when you have a metabolite intensity matrix (samples × metabolites) with compound annotations and need to score pathway activity levels for pathway enrichment analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0602

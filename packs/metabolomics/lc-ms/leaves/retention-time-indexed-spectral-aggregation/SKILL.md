@@ -3,6 +3,7 @@ name: retention-time-indexed-spectral-aggregation
 description: Use when you have Thermo Fisher Scientific .raw files from an LC-MS experiment and need to extract spectral features (base-peak m/z, intensity, scan-level properties) indexed by retention time for downstream statistical analysis, method optimization, or diagnostic visualization.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3520

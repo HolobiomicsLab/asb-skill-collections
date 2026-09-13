@@ -3,6 +3,7 @@ name: targeted-metabolite-detection-parameter-optimization
 description: Use when when you have centroided .mzML LC–MS runs and a target list (compound ID, theoretical m/z, expected RT, polarity) but are uncertain whether your m/z and RT windows are wide enough to capture all targets without false positives.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_3172

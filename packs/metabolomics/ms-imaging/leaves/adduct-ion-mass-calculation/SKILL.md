@@ -3,6 +3,7 @@ name: adduct-ion-mass-calculation
 description: Use when when you have derivatized metabolite structures (SMILES or mol format) and need to predict their ionization products in MS imaging, particularly when the derivatizing matrix produces non-standard adducts (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

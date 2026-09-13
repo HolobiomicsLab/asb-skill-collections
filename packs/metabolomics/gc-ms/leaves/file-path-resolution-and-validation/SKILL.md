@@ -3,6 +3,7 @@ name: file-path-resolution-and-validation
 description: Use when when initializing a SmartPeak session from a sequence file, you need to load and validate the workflow.csv and sequence.csv files that are co-located in the session directory.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: feature-quality-assessment-metrics
 description: Use when after nontargeted peak detection and segmentation has generated a feature table from raw LC-MS data (mzML or vendor format), apply quality assessment when you need to rank or filter features by confidence before annotation, adduct grouping, or MS/MS matching.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -43,6 +44,7 @@ attribution:
 
 # feature-quality-assessment-metrics
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Comprehensive evaluation of LC-MS detected features using quality metrics to filter and rank chromatographic peaks by reliability. This skill assesses feature integrity, noise characteristics, and signal consistency to support confident downstream annotation and metabolite identification.

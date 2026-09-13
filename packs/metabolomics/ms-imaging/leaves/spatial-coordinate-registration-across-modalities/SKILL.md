@@ -3,6 +3,7 @@ name: spatial-coordinate-registration-across-modalities
 description: Use when when you have preprocessed spatial transcriptomics (ST) and spatial metabolomics (SM) datasets in AnnData format with spatial coordinates, and need to align them to a common resolution before joint downstream analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3352
   edam_topics:
   - http://edamontology.org/topic_3173

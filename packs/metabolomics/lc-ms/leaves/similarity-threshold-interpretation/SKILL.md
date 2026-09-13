@@ -3,6 +3,7 @@ name: similarity-threshold-interpretation
 description: Use when when you have computed Spec2Vec similarity scores (typically cosine similarity in [0, 1] range) between discovered Mass2Motifs and a spectral library, and need to decide which matches are sufficiently confident to include in per-motif annotation output.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0091

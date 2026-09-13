@@ -3,6 +3,7 @@ name: model-generalizability-evaluation
 description: Use when you have a pre-trained or newly retrained graph neural network for collision cross section prediction and need to measure whether its performance generalizes across different molecular datasets (e.g., training on METLIN but evaluating on CCSBase).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3675
   edam_topics:
   - http://edamontology.org/topic_0091

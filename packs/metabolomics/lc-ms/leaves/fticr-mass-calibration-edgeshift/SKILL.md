@@ -3,6 +3,7 @@ name: fticr-mass-calibration-edgeshift
 description: Use when you have FTICR-MS direct injection (mzML) data with identified chromatographic peaks and need to correct systematic m/z bias.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: cohen-kappa-inter-rater-reliability
 description: Use when when you have two independent predictions of categorical outcomes (up/down/no-change variation signs) across multiple sample pairs and need to measure agreement beyond what would be expected by chance.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3407

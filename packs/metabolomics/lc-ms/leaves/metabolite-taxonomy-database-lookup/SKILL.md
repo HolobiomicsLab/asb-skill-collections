@@ -3,6 +3,7 @@ name: metabolite-taxonomy-database-lookup
 description: Use when when you have MS/MS-annotated features from a natural extract (via SIRIUS, CANOPUS, or ISDB) and need to compute the Literature Component or Class Component of a priority rank—i.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_0602

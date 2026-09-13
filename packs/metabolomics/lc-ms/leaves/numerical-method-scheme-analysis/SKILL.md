@@ -3,6 +3,7 @@ name: numerical-method-scheme-analysis
 description: Use when when correcting LC-MS isotope labeling data and existing numerical schemes (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: matlab-data-structure-design
 description: Use when you have multiple CDF files containing mass spectrometry imaging data (spectra, m/z arrays, and spatial coordinates) that need to be ingested into MATLAB for the DIMPLE pipeline or similar linear-axis mass spectrometry imaging analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -42,6 +43,7 @@ attribution:
 
 # MATLAB Data Structure Design for Mass Spectrometry Imaging
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and organize MATLAB data structures to aggregate batch-processed CDF imaging files into a unified workspace format compatible with downstream mass spectrometry analysis pipelines. This skill ensures that spectral intensities, m/z values, and spatial metadata are coherently structured for linear imaging workflows.

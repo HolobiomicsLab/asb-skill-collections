@@ -3,6 +3,7 @@ name: ft-icr-ms-analysis-tool-evaluation
 description: Use when you are evaluating or selecting FT-ICR MS software for a specific metabolomics workflow and need to assess which tools support your required analytical dimensions (e.g., Van Krevelen diagrams, PERMANOVA, thermodynamic indices, chemodiversity metrics, transformation networks).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0362
   edam_topics:
   - http://edamontology.org/topic_0769

@@ -3,6 +3,7 @@ name: transfer-learning-encoder-freezing
 description: Use when you have a pretrained spectrum encoder (e.g., TCN on mass spectrometry data) that has learned useful representations, and you need to train new components (e.g., a rescoring module) for a related but distinct task (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

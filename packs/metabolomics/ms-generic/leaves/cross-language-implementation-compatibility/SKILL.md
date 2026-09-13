@@ -3,6 +3,7 @@ name: cross-language-implementation-compatibility
 description: Use when when a new file format specification has multiple language implementations and you need to validate that all implementations correctly interpret the specification.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0121

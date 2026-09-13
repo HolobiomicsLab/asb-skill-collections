@@ -3,6 +3,7 @@ name: usi-spectrum-retrieval-and-loading
 description: Use when you have a USI accession (e.g., 'mzspec:MSV000082283:f07074:scan:5475' or 'mzspec:PXD000561:Adult_Frontalcortex_bRP_Elite_85_f09:scan:17555') pointing to a publicly deposited tandem mass spectrometry scan in a GNPS or ProteomeXchange repository, and you need to retrieve and instantiate.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_0121

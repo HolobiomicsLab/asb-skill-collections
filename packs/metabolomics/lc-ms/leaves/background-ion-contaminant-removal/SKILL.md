@@ -3,6 +3,7 @@ name: background-ion-contaminant-removal
 description: Use when you have a feature table from LC-MS data alongside blank (solvent-only) sample runs, and you want to remove features whose intensity in study samples is not substantially higher than their intensity in blanks.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

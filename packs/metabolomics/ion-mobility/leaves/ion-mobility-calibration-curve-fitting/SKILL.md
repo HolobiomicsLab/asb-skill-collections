@@ -3,6 +3,7 @@ name: ion-mobility-calibration-curve-fitting
 description: Use when you have TWIM-MS experimental data with arrival times and m/z values, and access to calibrant reference standards with known CCS values (typically loaded from a calibration template).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_0121

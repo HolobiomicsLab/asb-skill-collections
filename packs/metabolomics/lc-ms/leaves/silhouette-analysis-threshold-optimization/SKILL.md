@@ -3,6 +3,7 @@ name: silhouette-analysis-threshold-optimization
 description: Use when when you have a pre-computed hierarchical dendrogram from structural clustering (e.g., of LC-MS features based on m/z and retention time) and want to compare or validate the cluster assignments produced by a fixed constant-threshold method.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0621

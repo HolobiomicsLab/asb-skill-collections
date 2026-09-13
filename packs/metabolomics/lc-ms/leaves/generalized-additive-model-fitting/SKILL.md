@@ -3,6 +3,7 @@ name: generalized-additive-model-fitting
 description: Use when when a feature table from LC-MS metabolomic profiling contains QC (quality control) sample annotations and exhibits systematic signal drift correlated with run order or batch number.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

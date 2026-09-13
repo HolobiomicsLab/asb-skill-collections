@@ -3,6 +3,7 @@ name: regression-performance-metric-computation
 description: Use when after generating collision cross section predictions on a validation or test set using a trained graph neural network model, and you need to quantify prediction accuracy and compare against reported performance metrics in the literature or prior experimental runs.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091

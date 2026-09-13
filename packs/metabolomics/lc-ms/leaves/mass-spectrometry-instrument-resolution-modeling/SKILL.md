@@ -3,6 +3,7 @@ name: mass-spectrometry-instrument-resolution-modeling
 description: Use when when correcting LC-MS fractional abundances of measured isotopologues (FAM) from isotope labeling experiments where instrument resolution (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

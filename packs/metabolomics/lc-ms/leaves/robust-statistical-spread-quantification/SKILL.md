@@ -3,6 +3,7 @@ name: robust-statistical-spread-quantification
 description: Use when after drift correction of LC-MS peak intensity data, when you need to identify metabolic features with excessive internal spread (within-group variability in QC samples) or poor biological-to-technical reproducibility (QC-versus-sample spread).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -48,6 +49,7 @@ attribution:
 
 # robust-statistical-spread-quantification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify the internal variability and reproducibility of LC-MS metabolic features using robust statistical metrics (RSD*, D-ratio) that are less sensitive to outliers than classical RSD, enabling reliable identification of low-quality features in non-targeted metabolomics data.

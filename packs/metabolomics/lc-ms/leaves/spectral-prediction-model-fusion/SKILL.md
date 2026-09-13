@@ -3,6 +3,7 @@ name: spectral-prediction-model-fusion
 description: Use when you have pre-trained MLP and GNN spectral prediction models evaluated on the same ESI/LC-MS test dataset, and you seek to improve average rank performance beyond either baseline model alone.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_0625

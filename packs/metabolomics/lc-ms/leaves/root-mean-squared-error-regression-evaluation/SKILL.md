@@ -3,6 +3,7 @@ name: root-mean-squared-error-regression-evaluation
 description: Use when you have a trained regression model (e.g., a neural network or similar predictor) and a held-out test set with ground-truth continuous labels, and you need to measure whether the model's predictions match the true values.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_3958

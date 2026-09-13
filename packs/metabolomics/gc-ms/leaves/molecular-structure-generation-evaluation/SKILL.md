@@ -3,6 +3,7 @@ name: molecular-structure-generation-evaluation
 description: Use when you have access to pre-trained MSGO model weights (PFAS or lipid variants) and a set of 300+ real mass spectra (LC–QTOF or similar), and need to verify whether the model can generate correct molecular structures for unknown chemicals.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0625

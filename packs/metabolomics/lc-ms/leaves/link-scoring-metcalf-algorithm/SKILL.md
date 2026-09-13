@@ -3,6 +3,7 @@ name: link-scoring-metcalf-algorithm
 description: Use when you have loaded GCFs (from AntiSMASH via BigScape clustering), GNPS spectra, and molecular families (from GNPS molecular networking), and need to compute pairwise scoring between genomic and metabolomic entities to identify putative gene cluster–metabolite associations.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0621

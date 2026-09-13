@@ -3,6 +3,7 @@ name: chromatogram-peak-boundary-detection
 description: Use when when you have loaded a TransitionGroup (extracted ion chromatogram or mobilogram from DIA-MS data) and need to identify precise peak boundaries and apex positions for feature extraction.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

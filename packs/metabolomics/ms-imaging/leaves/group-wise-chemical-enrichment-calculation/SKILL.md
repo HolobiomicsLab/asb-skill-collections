@@ -3,6 +3,7 @@ name: group-wise-chemical-enrichment-calculation
 description: Use when when comparing GNPS chemical annotations across two or more groups of samples (defined by ReDU sample-information categories such as sample type, extraction method, or ionization source) where the groups contain different numbers of files.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -48,6 +49,7 @@ attribution:
 
 # group-wise-chemical-enrichment-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize chemical annotation prevalence across sample groups with unequal file counts by computing per-group enrichment percentages, enabling fair comparative analysis of metabolite distribution in public mass spectrometry repositories.

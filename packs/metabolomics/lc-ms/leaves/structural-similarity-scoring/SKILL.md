@@ -3,6 +3,7 @@ name: structural-similarity-scoring
 description: Use when when you have a collection of mass spectra with annotated chemical structures (SMILES/InChI) and need to generate structural similarity labels to train or validate a model that predicts molecular similarity from spectral pairs.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_0154

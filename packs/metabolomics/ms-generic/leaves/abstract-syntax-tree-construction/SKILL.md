@@ -3,6 +3,7 @@ name: abstract-syntax-tree-construction
 description: Use when you have a tokenized sequence of domain-specific language tokens and need to construct a hierarchical, unambiguous representation that can be validated against language design principles (expressiveness, precision, scalability, readability) and passed to downstream execution engines.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_0091

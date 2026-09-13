@@ -3,6 +3,7 @@ name: neighbourhood-density-computation
 description: Use when after library-matching has produced ranked candidate spectra with MS2Deepscore embeddings.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520

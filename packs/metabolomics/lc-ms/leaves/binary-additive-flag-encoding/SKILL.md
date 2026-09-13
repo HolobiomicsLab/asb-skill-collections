@@ -3,6 +3,7 @@ name: binary-additive-flag-encoding
 description: Use when constructing HPLC column feature vectors from raw metadata that includes additive composition flags (e.g., presence/absence or concentration of formic acid, acetic acid, TFA, or phosphoric acid in mobile phase eluents A and B).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -42,6 +43,7 @@ attribution:
 
 # binary-additive-flag-encoding
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Converts HPLC eluent additive presence flags (formic acid, acetic acid, trifluoroacetic acid, phosphoric acid) into binary indicators (0 or 1) for use in chromatographic column feature vectors. This encoding enables machine learning models to incorporate categorical additive composition information into method-independent retention time prediction.

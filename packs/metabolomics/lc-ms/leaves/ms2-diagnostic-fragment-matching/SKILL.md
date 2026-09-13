@@ -3,6 +3,7 @@ name: ms2-diagnostic-fragment-matching
 description: Use when you have centroided MS2 spectra from data-dependent LC- or GC-HRMS measurements and need to rapidly prioritize potential PFAS features within a larger feature set.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3647
   edam_topics:
   - http://edamontology.org/topic_0121

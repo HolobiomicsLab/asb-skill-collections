@@ -3,6 +3,7 @@ name: entry-point-script-validation
 description: Use when after installing a Python package or cloning its repository, to verify that the primary command-line interface is functional and discoverable before attempting analysis workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_3375

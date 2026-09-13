@@ -3,6 +3,7 @@ name: mzml-to-imzml-format-conversion
 description: Use when you have mzML files generated from raw vendor mass spectrometry imaging data and need to create imzML output compatible with software like Cardinal MSI, METASPACE, M2aia, or SCiLS Lab.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

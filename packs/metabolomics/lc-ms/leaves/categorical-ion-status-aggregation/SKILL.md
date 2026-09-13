@@ -3,6 +3,7 @@ name: categorical-ion-status-aggregation
 description: Use when after running qc_summary() on a filtered mpactr object when you need to understand the distribution of ions across filter status categories (passed vs. failed filters) and want to visualize or report the count and percentage composition of each status group.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520

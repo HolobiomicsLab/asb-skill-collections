@@ -3,6 +3,7 @@ name: dia-file-format-parsing
 description: Use when you have raw DIA mass spectrometry files in timsTOF (.d), TripleTOF (.wiff), or Orbitrap (.raw) format and need to extract precursor ion chromatogram (PIC) data as input for quality metric computation or machine learning-based file quality prediction.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: peptide-charge-state-prediction
 description: Use when you have raw mass spectrometry data in MS1 format and need to assign charge states to peptide ions without manual curation or rule-based heuristics.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

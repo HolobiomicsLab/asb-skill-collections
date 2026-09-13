@@ -3,6 +3,7 @@ name: docker-container-volume-mounting
 description: 'Use when when you have vendor raw mass spectrometry files on the host machine that need to be processed by a containerized tool (e.g., AirdPro), and the container must read input from and write output to specific host paths. Typical trigger: you have a .'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

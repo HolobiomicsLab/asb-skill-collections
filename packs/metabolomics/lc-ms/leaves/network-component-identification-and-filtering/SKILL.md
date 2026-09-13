@@ -3,6 +3,7 @@ name: network-component-identification-and-filtering
 description: Use when you have a GNPS GraphML molecular network and need to isolate cohesive subsets of spectra (components) before analyzing which fragmentation patterns explain them.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -44,6 +45,7 @@ attribution:
 
 # network-component-identification-and-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and filter distinct network components (connected components, cliques, and high-similarity node pairs) from MS/MS molecular networks, applying cosine similarity and minimum size thresholds to isolate spectra groups suitable for pattern explanation analysis.

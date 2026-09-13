@@ -3,6 +3,7 @@ name: data-column-recognition-and-mapping
 description: Use when when uploading a delimited CSV or similar tabular file to Punc'data containing high-resolution mass spectrometry results, and the column headers are present but their semantic roles (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

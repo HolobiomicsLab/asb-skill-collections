@@ -3,6 +3,7 @@ name: xcms-ramclustr-object-integration
 description: Use when you have centroid-mode LC–MS all-ion fragmentation (AIF) data already processed through xcms for feature detection and retention-time correction, and a corresponding RamClustR object that groups co-eluting fragment ions into putative spectral clusters.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3663
   edam_topics:
   - http://edamontology.org/topic_3172

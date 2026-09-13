@@ -3,6 +3,7 @@ name: unit-test-development-for-spectral-loaders
 description: Use when when you have implemented parser functions for one or more mass spectrometry file formats and need to verify that metadata and peak lists are correctly extracted and converted into matchms Spectrum objects before committing to a feature branch.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_3520

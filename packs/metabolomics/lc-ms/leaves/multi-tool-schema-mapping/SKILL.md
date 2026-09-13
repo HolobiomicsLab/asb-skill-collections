@@ -3,6 +3,7 @@ name: multi-tool-schema-mapping
 description: Use when you have peak/feature table outputs from one or more peak-picking tools (MZmine, XCMS, MS-DIAL, Compound Discoverer) with different column names and metadata structures, and you need to ingest them into LipidMatch or another unified lipidomics pipeline that requires consistent column.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

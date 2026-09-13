@@ -3,6 +3,7 @@ name: metabolomics-software-benchmarking
 description: Use when you have completed peak picking with two or more competing tools (e.g., IDSL.IPA, MZmine 2, xcms, MS-DIAL) on the same LC/HRMS dataset(s) and need to quantify which performs better. Use this skill when tool selection claims require validation (e.g., 'IDSL.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -48,6 +49,7 @@ attribution:
 
 # metabolomics-software-benchmarking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantitatively compare peak-picking tools on untargeted LC/HRMS data by extracting and tabulating performance metrics (sensitivity, specificity, precision, recall, runtime, accuracy) across multiple algorithms. This skill enables practitioners to select the most appropriate tool for their population-scale metabolomics workflow based on empirical evidence rather than anecdotal claims.

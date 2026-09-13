@@ -3,6 +3,7 @@ name: fragment-assembly-transformer-architecture
 description: Use when when you have 1D NMR spectra (1H and/or 13C) of an unknown compound with up to ~19 heavy atoms and need to predict both molecular formula and connectivity without manual structure hypothesis generation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3803
   edam_topics:
   - http://edamontology.org/topic_3324

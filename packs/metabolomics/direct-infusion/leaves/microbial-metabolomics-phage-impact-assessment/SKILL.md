@@ -3,6 +3,7 @@ name: microbial-metabolomics-phage-impact-assessment
 description: 'Use when you have normalized peak intensities (with assigned molecular formulas) from FT-ICR MS analysis of treated and control bacterial samples (or environmental microbial communities), grouped by two or more treatment factors (e.g., phage type: HP1, HS2, control;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0602

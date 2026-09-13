@@ -3,6 +3,7 @@ name: spectral-entropy-quality-assessment
 description: Use when after feature detection and alignment in untargeted MS data processing, when you need to filter or rank candidate metabolite annotations by spectral quality before committing to xenobiotic metabolite assignments. Use when combining fragmentation similarity scores (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -54,6 +55,7 @@ attribution:
 
 # spectral-entropy-quality-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate spectral entropy from MS/MS fragmentation patterns to assess the complexity and confidence of spectral annotations in untargeted metabolomics. High entropy indicates well-resolved, information-rich spectra suitable for reliable metabolite identification; low entropy may signal noise, poor fragmentation, or ambiguous annotations.

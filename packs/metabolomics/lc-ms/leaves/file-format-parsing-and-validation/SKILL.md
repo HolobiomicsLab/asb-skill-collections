@@ -3,6 +3,7 @@ name: file-format-parsing-and-validation
 description: Use when you have peak/feature tables from one or more of MZmine, XCMS, MS-DIAL, or Compound Discoverer and need to ingest them into LipidMatch for lipid identification. The input files are in tabular format (CSV, TSV, or Excel) and their upstream tool origin may be unknown or mixed.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

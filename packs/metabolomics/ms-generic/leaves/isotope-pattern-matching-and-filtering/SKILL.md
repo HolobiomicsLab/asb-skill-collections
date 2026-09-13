@@ -3,6 +3,7 @@ name: isotope-pattern-matching-and-filtering
 description: Use when you have high-resolution centroided mzML files from Orbitrap or similar instruments, a target compound list with known formulas and monoisotopic m/z values, and need to quantify isotopologue abundances (M+0, M+1, M+2, etc.) for stable isotope labeling experiments.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_3365

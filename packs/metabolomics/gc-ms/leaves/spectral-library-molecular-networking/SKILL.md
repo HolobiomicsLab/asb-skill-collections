@@ -3,6 +3,7 @@ name: spectral-library-molecular-networking
 description: Use when you have deconvolved GC-MS spectra (from overlapping chromatographic peaks) in MGF or mzTab format and want to group chemically related compounds, visualize their similarity relationships, and identify spectral families without prior library matching.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

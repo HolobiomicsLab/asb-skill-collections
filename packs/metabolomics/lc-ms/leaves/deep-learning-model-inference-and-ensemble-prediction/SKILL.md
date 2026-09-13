@@ -3,6 +3,7 @@ name: deep-learning-model-inference-and-ensemble-prediction
 description: Use when you have a trained deep learning model and want to quantify prediction uncertainty for each input pair or decision point. Use this when you need to identify low-confidence predictions (high IQR) and filter them out to reduce error in specific score ranges (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3474

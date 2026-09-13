@@ -3,6 +3,7 @@ name: published-metabolic-profile-implementation
 description: Use when you have Nightingale Health 1H-NMR metabolomics measurements for a new cohort and wish to compute one or more established metabolic risk scores (mortality, MetaboAge, cardiovascular event, type-2 diabetes, COVID-19 severity) without recalibration.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0091

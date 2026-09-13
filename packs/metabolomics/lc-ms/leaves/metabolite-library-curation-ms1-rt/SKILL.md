@@ -3,6 +3,7 @@ name: metabolite-library-curation-ms1-rt
 description: Use when when you have processed authentic standards with LC-MS in positive and negative ESI modes, converted results to .mzML format, and need to build a validated in-house reference library with MS1 m/z and RT measurements for use in untargeted metabolomics compound identification workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3172

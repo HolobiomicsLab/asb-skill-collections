@@ -3,6 +3,7 @@ name: mass-spectrometry-data-parsing-mzml-bruker
 description: Use when you have raw mass spectrometry data in mzML or Bruker .d format and need to ingest it into a tabular format (pandas DataFrame) for visualization, statistical analysis, or integration with other Python-based mass spectrometry tools.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

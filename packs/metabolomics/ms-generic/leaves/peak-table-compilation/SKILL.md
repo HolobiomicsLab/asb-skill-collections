@@ -3,6 +3,7 @@ name: peak-table-compilation
 description: Use when after peak detection has been applied to untargeted or targeted mass spectrometry data and peaks have been matched against metabolite databases and reference spectra.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3370

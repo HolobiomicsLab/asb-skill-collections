@@ -3,6 +3,7 @@ name: spectrum-fingerprint-contrastive-learning
 description: Use when when you have paired tandem MS spectra and corresponding molecular structures (SMILES or fingerprints), and you want to build a retrieval system for metabolite structure annotation that can rank candidate structures for novel spectra by embedding similarity rather than spectral matching.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: separation-technique-workflow-alignment
 description: Use when when evaluating whether an MS data processing platform (such as mzmine) supports the full range of separation/ionization techniques your laboratory uses, or when assessing whether gaps exist in the software architecture that would require external pre- or post-processing for specific.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_topics:
   - http://edamontology.org/topic_3520
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: peak-and-neutral-loss-counting
 description: Use when when you have matchms-processed MS2 spectra from multiple samples and need to create comparable sample-level signatures for cross-sample analysis, particularly when samples are chemodiverse, have poor feature overlap, or exhibit strong retention time shifts across LC methods or MS.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

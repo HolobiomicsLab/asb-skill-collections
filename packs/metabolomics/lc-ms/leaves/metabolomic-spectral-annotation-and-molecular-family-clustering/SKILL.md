@@ -3,6 +3,7 @@ name: metabolomic-spectral-annotation-and-molecular-family-clustering
 description: Use when when you have raw or GNPS-processed MS2 spectral data from microbial strains and need to organize spectra into molecular families (grouped by spectral similarity) while preserving strain provenance, as a prerequisite for linking metabolomic families to gene cluster families (GCFs) via.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172

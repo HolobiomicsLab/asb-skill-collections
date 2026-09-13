@@ -3,6 +3,7 @@ name: mass-spectrometry-file-inventory-management
 description: Use when you have uploaded MS/MS data to MassIVE with validated sample-information metadata and need to subset public files by sample attributes (organism, tissue type, extraction method, ionization source, pre-MS separation) to create reproducible, manageable cohorts for molecular networking.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -48,6 +49,7 @@ attribution:
 
 # mass-spectrometry-file-inventory-management
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Organize and partition public tandem MS/MS files from MassIVE into logical cohorts by filtering sample-information metadata, enforcing workflow-appropriate file count thresholds, and assembling a manifest for downstream molecular networking or library search analysis. This skill bridges repository-scale data discovery with reproducible reuse by enabling researchers to filter, group, and validate MS/MS file subsets before large-scale analysis.

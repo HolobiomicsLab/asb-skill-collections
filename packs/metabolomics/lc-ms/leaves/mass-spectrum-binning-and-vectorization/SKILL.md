@@ -3,6 +3,7 @@ name: mass-spectrum-binning-and-vectorization
 description: Use when when preparing MS/MS spectra for neural network training or inference, particularly when you need to feed variable-length spectra into a Siamese network or embedding model that requires fixed-dimensional input.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

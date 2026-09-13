@@ -3,6 +3,7 @@ name: gc-ms-chromatogram-processing
 description: Use when when working with raw GC-MS data in NetCDF (ANDI) format that requires peak detection, baseline removal, and retention time alignment before spectral matching against reference libraries such as PNNLMetV20191015.MSL.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0625

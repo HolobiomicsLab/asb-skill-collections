@@ -3,6 +3,7 @@ name: http-api-integration-with-external-services
 description: Use when when your application needs to enrich or predict spectral properties (NMR peaks, molecular structure) by querying external databases, and you have peak data (chemical shift, multiplicity, integration) that must be transformed into a remote service's query format, validated, and the.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0593

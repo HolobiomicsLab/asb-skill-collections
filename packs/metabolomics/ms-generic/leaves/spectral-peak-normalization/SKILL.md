@@ -3,6 +3,7 @@ name: spectral-peak-normalization
 description: Use when when preparing query spectra and library spectra for similarity-based matching via dot product scoring, particularly in open modification spectral library searches where you need to match modified query spectra to unmodified library counterparts without the results being biased by.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

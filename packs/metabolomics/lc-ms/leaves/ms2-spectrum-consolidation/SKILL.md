@@ -3,6 +3,7 @@ name: ms2-spectrum-consolidation
 description: Use when after sample alignment and feature grouping steps in untargeted LC-MS workflows, when you have DDA-mode raw files with both MS1 and MS2 scans and need to link tandem mass spectra to quantified features for annotation and structural characterization.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

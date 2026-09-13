@@ -3,6 +3,7 @@ name: multiplexed-spectrum-decomposition
 description: Use when you have SWATH-MS data (mzML or vendor binary format) where precursor isolation windows intentionally capture multiple co-eluting compounds, resulting in multiplexed MS/MS spectra that contain mixed fragment ion peaks from unknown metabolites.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

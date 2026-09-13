@@ -3,6 +3,7 @@ name: paired-omics-data-structure-mapping
 description: Use when when you have a paired omics project document (JSON format) that combines MS/MS mass spectrometry data with genome identifiers, biosynthetic gene cluster information, sample preparation, extraction method, and instrumentation metadata, and you need to verify it conforms to the platform's.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0091

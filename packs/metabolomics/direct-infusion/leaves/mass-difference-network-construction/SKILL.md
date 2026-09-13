@@ -3,6 +3,7 @@ name: mass-difference-network-construction
 description: Use when you have a preprocessed peak list (m/z values and assigned molecular formulas) from direct injection FT-ICR MS of a complex organic mixture (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3680
   edam_topics:
   - http://edamontology.org/topic_0154

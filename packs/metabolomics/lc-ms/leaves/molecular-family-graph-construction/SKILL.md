@@ -3,6 +3,7 @@ name: molecular-family-graph-construction
 description: Use when you have downloaded and extracted a GNPS archive (from METABOLOMICS-SNETS, METABOLOMICS-SNETS-V2, FEATURE-BASED-MOLECULAR-NETWORKING for GNPS1, or classical_networking_workflow/feature_based_molecular_networking_workflow for GNPS2) and need to construct a queryable molecular family graph.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: multidimensional-ms-data-conversion
 description: 'Use when you have acquired untargeted MS data with orthogonal separations (LC, ion mobility) and/or data-independent acquisition (DIA) from Thermo, Agilent, or Bruker instruments, and you need to: (1) store multidimensional spectra in a vendor-neutral, platform-agnostic format;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

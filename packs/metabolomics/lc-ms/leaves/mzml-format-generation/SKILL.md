@@ -3,6 +3,7 @@ name: mzml-format-generation
 description: Use when after completing a virtual LC-MS/MS acquisition simulation using ViMMS (e.g., after calling env.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3650
   edam_topics:
   - http://edamontology.org/topic_3370

@@ -3,6 +3,7 @@ name: chromatographic-peak-shape-comparison
 description: Use when after retention-time-based and abundance-correlation-based feature grouping have produced composite feature groups, and you need to identify which features within a group actually represent different compounds.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

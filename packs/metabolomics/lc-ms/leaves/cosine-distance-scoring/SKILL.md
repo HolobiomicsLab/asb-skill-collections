@@ -3,6 +3,7 @@ name: cosine-distance-scoring
 description: Use when when you have preprocessed mass spectra (peak-filtered, metadata-cleaned) in supported formats (mzML, mzXML, msp, MGF, JSON) and need to compare all or many pairs of spectra to identify similar compounds, search spectral libraries, or build a similarity network for spectral clustering or.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

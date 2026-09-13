@@ -3,6 +3,7 @@ name: annotation-pipeline-data-preparation
 description: Use when when you have raw PubChem compound records or other public chemical structure databases and need to supply candidate metabolite structures to a mass spectrometry annotation workflow like MAGMa.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0218

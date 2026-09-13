@@ -3,6 +3,7 @@ name: structured-report-generation
 description: Use when after applying jsonschema validation to a parsed mwTab file against MS or NMR schema definitions, when you have collected validation errors, warnings, and metadata column matching results and need to communicate findings to data curators or submitters in a structured, machine-readable.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0091

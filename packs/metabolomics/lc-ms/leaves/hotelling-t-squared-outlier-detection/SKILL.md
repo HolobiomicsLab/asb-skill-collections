@@ -3,6 +3,7 @@ name: hotelling-t-squared-outlier-detection
 description: Use when after data normalization (Step 7) on the preprocessed feature matrix when you need to identify and flag anomalous samples before statistical testing or biomarker discovery.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3172

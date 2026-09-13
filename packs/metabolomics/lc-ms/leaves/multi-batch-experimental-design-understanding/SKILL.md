@@ -3,6 +3,7 @@ name: multi-batch-experimental-design-understanding
 description: Use when your metabolomics experiment includes samples acquired across multiple instrument runs, different preparation dates, or distinct sample cohorts.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

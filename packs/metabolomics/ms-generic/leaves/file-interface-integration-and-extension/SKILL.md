@@ -3,6 +3,7 @@ name: file-interface-integration-and-extension
 description: Use when when you need to parse mzML data stored in a format beyond the built-in mzML, mzML.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0121

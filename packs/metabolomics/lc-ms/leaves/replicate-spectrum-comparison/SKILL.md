@@ -3,6 +3,7 @@ name: replicate-spectrum-comparison
 description: Use when you have multiple MS/MS spectra (replicates) for a single metabolic feature (same m/z and RT window) and need to identify which fragments are reproducibly detected across replicates versus noise.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

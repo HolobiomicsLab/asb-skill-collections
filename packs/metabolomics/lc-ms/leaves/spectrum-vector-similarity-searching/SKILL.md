@@ -3,6 +3,7 @@ name: spectrum-vector-similarity-searching
 description: Use when when clustering large collections (thousands to millions) of tandem mass spectra and you need to compute a sparse pairwise distance matrix for density-based clustering.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3258
   edam_topics:
   - http://edamontology.org/topic_3520

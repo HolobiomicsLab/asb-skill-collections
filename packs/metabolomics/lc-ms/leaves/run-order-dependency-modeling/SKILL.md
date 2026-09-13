@@ -3,6 +3,7 @@ name: run-order-dependency-modeling
 description: Use when your feature table includes QC (quality control) sample replicates distributed throughout the analytical run sequence, and you observe systematic intensity variation correlated with sample injection order or batch identifier—typical indicators of instrumental drift in untargeted LC-MS.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_0091

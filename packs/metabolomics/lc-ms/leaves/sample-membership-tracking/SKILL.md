@@ -3,6 +3,7 @@ name: sample-membership-tracking
 description: Use when when aligning detected features across multiple LC-IMS-MS/MS samples and you need to identify which input samples contributed to each consensus feature cluster, especially to filter out spurious or low-confidence alignments, validate clustering completeness, or perform sample-specific.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3938
   edam_topics:
   - http://edamontology.org/topic_3520

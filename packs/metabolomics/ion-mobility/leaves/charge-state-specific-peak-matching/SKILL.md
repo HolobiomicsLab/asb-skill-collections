@@ -3,6 +3,7 @@ name: charge-state-specific-peak-matching
 description: Use when you have peak-picked features with m/z, drift_time, retention_time, and intensity columns, and you need to identify monoisotopic peaks and their charge-state-specific isotopologue members (e.g., singly charged C13-substituted species).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3643
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: diagnostic-fragment-annotation
 description: Use when when you have centroided, data-dependent acquisition (ddMS2) spectra in mzML format with extracted precursor m/z values and associated fragment ion lists, and you need to discriminate PFAS features from background signals using characteristic fragmentation patterns.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3663
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: query-language-grammar-design
 description: Use when when you need to enable non-programmer mass spectrometry users to express complex spectral search patterns (e.g., isotope patterns, precursor mass constraints, scan-type filters) without writing procedural code.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0361
   edam_topics:
   - http://edamontology.org/topic_0121

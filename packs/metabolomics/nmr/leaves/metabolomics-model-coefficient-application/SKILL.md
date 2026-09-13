@@ -3,6 +3,7 @@ name: metabolomics-model-coefficient-application
 description: Use when you have a matrix of Nightingale Health 1H-NMR metabolomics measurements (samples × features) and need to generate predicted metabolic scores published in peer-reviewed studies (MetaboAge, mortality score, cardiovascular event risk, Type-2 diabetes score, COVID-severity score, or surrogate.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3659
   edam_topics:
   - http://edamontology.org/topic_0769

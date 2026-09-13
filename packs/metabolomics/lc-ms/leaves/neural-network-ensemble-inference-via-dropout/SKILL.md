@@ -3,6 +3,7 @@ name: neural-network-ensemble-inference-via-dropout
 description: Use when when you have a trained neural network and need to quantify prediction uncertainty or improve accuracy by filtering low-confidence predictions. Particularly useful when input spectra pairs have variable quality or when downstream tasks (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3407

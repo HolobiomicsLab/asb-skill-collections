@@ -3,6 +3,7 @@ name: feature-network-construction-and-partitioning
 description: Use when you have a preprocessed LC-MS feature table (m/z, retention time, intensity columns) and need to identify which features belong together as isotopes or adducts of the same neutral compound.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -46,6 +47,7 @@ attribution:
 
 # feature-network-construction-and-partitioning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a graph of mass spectrometry features by matching isotope and adduct patterns, then partition it into connected subnetworks to group related ions into empirical compounds. This skill transforms a flat feature list into a structured annotation intermediate suitable for neutral mass inference and metabolite identification.

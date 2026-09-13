@@ -3,6 +3,7 @@ name: internal-standard-intensity-calibration
 description: Use when you have added a known internal standard compound to your nano-DESI MSI sample and want to correct for pixel-to-pixel variation in ionization efficiency or sample deposition.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

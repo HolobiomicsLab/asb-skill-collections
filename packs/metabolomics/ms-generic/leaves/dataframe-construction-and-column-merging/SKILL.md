@@ -3,6 +3,7 @@ name: dataframe-construction-and-column-merging
 description: Use when when implementing a new MsBackend subclass and need to return complete spectra data as a single DataFrame object that combines required core variables with backend-specific metadata columns, while avoiding cyclic function calls between spectraData() and spectraVariables().
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

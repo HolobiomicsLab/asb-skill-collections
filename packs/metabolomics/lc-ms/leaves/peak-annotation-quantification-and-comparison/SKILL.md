@@ -3,6 +3,7 @@ name: peak-annotation-quantification-and-comparison
 description: Use when you have a tandem mass spectrum (MsmsSpectrum) from a known peptide and need to determine what fraction of observed peaks can be explained by expected fragment ions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0121

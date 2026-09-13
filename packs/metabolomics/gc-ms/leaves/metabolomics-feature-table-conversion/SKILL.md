@@ -3,6 +3,7 @@ name: metabolomics-feature-table-conversion
 description: Use when you have generated a feature table via mzrtsim() with simulated LC/GC-MS abundances, condition assignments, and batch labels, and you need to pass it to Bioconductor tools (e.g., for batch correction, normalization, or statistical analysis) that expect SummarizedExperiment-class input.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3172

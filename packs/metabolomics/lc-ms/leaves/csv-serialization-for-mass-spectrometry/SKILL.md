@@ -3,6 +3,7 @@ name: csv-serialization-for-mass-spectrometry
 description: Use when you have generated or curated a lipid spectral library (with precursor m/z, adduct information, charge states, retention times, and fragmentation patterns) and need to export it for use in either Excalibur-based DDA experiments on an Orbitrap mass spectrometer, or in Skyline for targeted.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -40,6 +41,7 @@ attribution:
 
 # CSV Serialization for Mass Spectrometry
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill conditionally exports lipid spectral library data to CSV format in two distinct schemas: Excalibur-compatible precursor lists for DDA analysis on Orbitrap instruments, or Skyline-compatible transition lists for targeted proteomics workflows. The choice of schema determines which columns and row structures are serialized, enabling downstream instrument-specific or software-specific analysis.

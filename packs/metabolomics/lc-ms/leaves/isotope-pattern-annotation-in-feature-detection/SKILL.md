@@ -3,6 +3,7 @@ name: isotope-pattern-annotation-in-feature-detection
 description: Use when when performing feature detection on centroided DDA mzML files from LC- or GC-HRMS and you need to confirm the elemental composition or differentiate between candidate features—particularly for PFAS screening where isotopic signatures (chlorine, bromine, fluorine) are diagnostic.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

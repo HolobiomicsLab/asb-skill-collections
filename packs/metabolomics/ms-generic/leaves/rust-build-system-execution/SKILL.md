@@ -3,6 +3,7 @@ name: rust-build-system-execution
 description: Use when you have obtained a Rust source repository (e.g., mzpeak_prototyping) and need to compile it into a working command-line converter tool or library. Use this skill when the source includes a Cargo.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: ion-filter-status-categorization
 description: Use when after applying one or more mpactr filters (filter_mispicked_ions, filter_group, filter_cv, filter_insource_ions) to a peak table, when you need to quantify how many ions passed or failed each filter and summarize the overall filtering impact by status distribution.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

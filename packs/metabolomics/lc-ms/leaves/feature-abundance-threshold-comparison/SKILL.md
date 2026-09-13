@@ -3,6 +3,7 @@ name: feature-abundance-threshold-comparison
 description: Use when after loading an MZmine3-exported feature quantification table and identifying blank sample columns, when you need to remove features with significant intensity in procedural blanks before proceeding to batch correction and statistical analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

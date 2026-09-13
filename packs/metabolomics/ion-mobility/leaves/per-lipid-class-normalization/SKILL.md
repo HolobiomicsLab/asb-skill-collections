@@ -3,6 +3,7 @@ name: per-lipid-class-normalization
 description: Use when you have IM-MS lipidomic data from samples spiked with U13C-labeled internal standards (e.g., fully labeled yeast extract), measured CCS values stratified by lipid class and adduct type, and access to the DTCCS_N2 reference library for U13C lipids.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -44,6 +45,7 @@ attribution:
 
 # Per-Lipid-Class CCS Bias Calculation and Correction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute and correct collision cross section (CCS) bias in ion mobility–mass spectrometry (IM-MS) lipidomics by stratifying measured CCS values by lipid class, deriving per-class bias from U13C-labeled internal standards against the DTCCS_N2 library, and applying linear regression–based correction functions to all lipids in each class.

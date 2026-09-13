@@ -3,6 +3,7 @@ name: mass-spectrometry-qc-criteria-definition
 description: 'Use when when setting up a new LC-MS QC workflow or modifying existing QC rules: you have access to internal standards and target analytes, know their expected retention times and m/z values, and need to establish pass/fail boundaries for sample acceptance before or concurrent with instrument runs.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3437
   edam_topics:
   - http://edamontology.org/topic_3520

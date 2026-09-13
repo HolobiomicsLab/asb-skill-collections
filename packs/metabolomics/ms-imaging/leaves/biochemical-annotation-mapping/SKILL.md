@@ -3,6 +3,7 @@ name: biochemical-annotation-mapping
 description: Use when you have loaded MSI data into napari, defined one or more ROIs of biological interest (e.g., tumor margin, specific tissue layer), extracted mean or summed intensity spectra from those regions, and need to identify the putative biochemical compounds corresponding to detected m/z peaks.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3860
   edam_topics:
   - http://edamontology.org/topic_3520

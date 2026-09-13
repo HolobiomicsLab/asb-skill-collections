@@ -3,6 +3,7 @@ name: mass-error-calculation
 description: 'Use when when screening LC-HRMS datasets for suspect compounds: you have detected features with measured m/z values and a database of reference compounds with theoretical m/z values, and you need to rank candidate matches by mass accuracy before proceeding to retention time and fragmentation.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3370

@@ -3,6 +3,7 @@ name: tissue-spatial-analysis-pipeline-execution
 description: Use when you have raw IMC (protein imaging) and SIMS (metabolite imaging) data from tissue regions that require spatial co-registration, single-cell-level intensity quantification, and joint analysis of protein–metabolite relationships.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -46,6 +47,7 @@ attribution:
 
 # tissue-spatial-analysis-pipeline-execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute a documented multi-stage pipeline for integrating spatial imaging data (IMC protein and SIMS metabolite) at single-cell resolution, including image registration, segmentation, feature extraction, and joint embedding. This skill enables reproducible re-execution of the ScSpaMet framework to regenerate published spatial metabolomics and proteomics results.

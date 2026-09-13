@@ -3,6 +3,7 @@ name: intensity-drift-artifact-detection
 description: Use when processing raw MS intensity tables from long measurement sequences where you observe systematic, time-dependent changes in signal magnitude (e.g., progressive increase or decrease in peak intensity across a run).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0121

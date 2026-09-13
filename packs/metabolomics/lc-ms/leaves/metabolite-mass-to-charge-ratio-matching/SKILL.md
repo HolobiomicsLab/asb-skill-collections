@@ -3,6 +3,7 @@ name: metabolite-mass-to-charge-ratio-matching
 description: Use when you have a negative-mode or positive-mode LC-MS feature table with observed m/z values and peak intensities, and you need to identify which metabolites (by KEGG ID) are likely represented.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

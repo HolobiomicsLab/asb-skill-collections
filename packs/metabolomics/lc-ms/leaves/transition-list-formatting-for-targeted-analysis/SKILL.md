@@ -3,6 +3,7 @@ name: transition-list-formatting-for-targeted-analysis
 description: Use when you have generated or assembled a lipid spectral library with precursor m/z values, adduct information, and fragmentation patterns, and you need to import those spectra into Skyline for targeted data-independent or parallel-reaction-monitoring (PRM) analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -41,6 +42,7 @@ attribution:
 
 # transition-list-formatting-for-targeted-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Serialize lipid spectral library data (precursor m/z, product ion m/z, and transition metadata) into Skyline-compatible CSV format to enable targeted proteomics or metabolomics analysis. This skill bridges computational spectral generation and instrument-ready transition lists for targeted mass spectrometry workflows.

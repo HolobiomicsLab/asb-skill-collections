@@ -3,6 +3,7 @@ name: mass-spectral-feature-alignment
 description: Use when when you have separate LC-MS peak tables for unlabeled (C12) and labeled (C13) isotope tracer experiments and need to identify which features correspond to the same metabolite across the two labeling conditions.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -54,6 +55,7 @@ attribution:
 
 # mass-spectral-feature-alignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align unlabeled (C12) and labeled (C13) mass spectrometry peak tables by matching m/z and retention time coordinates within specified tolerances, enabling pairing of isotope-labeled feature pairs for tracer metabolomics. This skill identifies candidate intermediate metabolites by recognizing which peaks shift systematically between unlabeled and labeled sample groups.

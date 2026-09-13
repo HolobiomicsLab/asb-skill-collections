@@ -3,6 +3,7 @@ name: model-checkpoint-serialization
 description: Use when after successfully training a spectrum prediction model (FFN encoder, GNN encoder, intensity predictor, or fragment generator) to completion or at intermediate milestones, and before using that model for inference on test sets, structural elucidation queries, or transfer learning.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0091

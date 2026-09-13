@@ -3,6 +3,7 @@ name: physicochemical-property-computation
 description: Use when you have one or more peptide or protein sequences in string format and need to calculate their mass, isotopic envelope (m/z and intensity pairs), charge state behavior, isoelectric point, or predicted chromatographic retention.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0400
   edam_topics:
   - http://edamontology.org/topic_0121

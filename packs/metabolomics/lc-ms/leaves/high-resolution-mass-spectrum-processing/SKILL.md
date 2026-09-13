@@ -3,6 +3,7 @@ name: high-resolution-mass-spectrum-processing
 description: Use when when you have high-resolution tandem mass spectra from proteomics experiments and need to search against a spectral library for both unmodified peptides and those with unknown or variable post-translational modifications.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0121

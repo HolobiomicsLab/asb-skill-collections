@@ -3,6 +3,7 @@ name: mass-spectrum-peak-list-handling
 description: Use when you have raw or preprocessed electron ionization (EI) mass spectral data that must be stored in, retrieved from, or validated against the MSP file format (used by NIST MS Search and similar spectral library tools).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0121

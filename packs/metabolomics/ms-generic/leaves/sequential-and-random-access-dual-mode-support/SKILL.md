@@ -3,6 +3,7 @@ name: sequential-and-random-access-dual-mode-support
 description: Use when when parsing mzML or other blockwise-structured scientific data files where analysis requires both sequential scanning (e.g., iterating all spectra) and random direct access by identifier (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

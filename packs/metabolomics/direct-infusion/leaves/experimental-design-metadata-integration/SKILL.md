@@ -3,6 +3,7 @@ name: experimental-design-metadata-integration
 description: Use when when you have LC-MS raw data and need to process it through a feature detection and quantification pipeline in KNIME, but lack a structured mapping between sample identifiers, experimental conditions, and the raw LC-MS runs.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3172

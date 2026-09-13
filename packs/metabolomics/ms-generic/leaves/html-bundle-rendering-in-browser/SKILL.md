@@ -3,6 +3,7 @@ name: html-bundle-rendering-in-browser
 description: Use when you have a dashboard_data.json file (JSON export from the msFeaST pipeline) and need to interactively explore quantification tables, metadata, and spectral data on a desktop machine (macOS, Linux, or Windows).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520

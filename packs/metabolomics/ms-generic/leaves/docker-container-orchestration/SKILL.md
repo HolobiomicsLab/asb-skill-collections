@@ -3,6 +3,7 @@ name: docker-container-orchestration
 description: Use when your analysis requires msconvert or another ProteoWizard tool on macOS, but native installation is infeasible or licensing-restricted. You need to convert vendor raw mass spectrometry files (.raw) to the open mzML format without installing ProteoWizard directly on your system.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3375

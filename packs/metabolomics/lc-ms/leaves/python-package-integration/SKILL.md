@@ -3,6 +3,7 @@ name: python-package-integration
 description: Use when when you have LC-MS/MS data in MZmine-generated MGF and CSV files (for positive and/or negative ionization modes) and need to apply a sequence of deduplication, annotation, and dereplication steps defined in a MolNotator YAML configuration file to predict actual molecules and build.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

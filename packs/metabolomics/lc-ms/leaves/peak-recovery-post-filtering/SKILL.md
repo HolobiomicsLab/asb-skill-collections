@@ -3,6 +3,7 @@ name: peak-recovery-post-filtering
 description: Use when after applying cluster-based filtering with quasi-molecular adduct constraints and frequency thresholds on LC-MS feature candidates, when some peaks have been entirely removed from the candidate pool and you want to prevent loss of true metabolites that failed to meet filtering criteria.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3172

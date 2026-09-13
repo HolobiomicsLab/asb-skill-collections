@@ -3,6 +3,7 @@ name: time-and-memory-complexity-visualization
 description: Use when when deploying a metabolomics processing tool (such as asari) and needing to predict resource requirements or validate claimed scalability on laptop-class hardware (≤16 GB RAM, single CPU core).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -45,6 +46,7 @@ attribution:
 
 # time-and-memory-complexity-visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify and visualize how wall-clock runtime and peak memory usage scale with increasing sample numbers in LC-MS metabolomics data processing, enabling empirical verification of claimed computational efficiency on resource-constrained hardware.

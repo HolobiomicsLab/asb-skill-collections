@@ -3,6 +3,7 @@ name: metabolite-cluster-identification-from-correlated-features
 description: Use when after preprocessing, imputation, and batch correction of LC-MS peak tables when you need to group redundant or related feature measurements (e.g., [M+H]+ and [M+Na]+ adducts, or isotope peaks) into metabolite-level clusters before statistical testing or identification.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -48,6 +49,7 @@ attribution:
 
 # metabolite-cluster-identification-from-correlated-features
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Groups correlated metabolic features into clusters based on mass-to-charge ratio proximity, retention time co-elution, and abundance correlation, then assigns each cluster a representative Cluster_ID derived from the feature with highest median peak area. This skill identifies putative metabolites that may represent the same compound across different ionization modes or adducts in non-targeted LC-MS data.

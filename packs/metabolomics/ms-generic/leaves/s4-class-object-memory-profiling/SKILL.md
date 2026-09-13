@@ -3,6 +3,7 @@ name: s4-class-object-memory-profiling
 description: Use when when designing or optimizing S4-based data backends (such as MsBackend subclasses) and you need to decide whether to pre-populate all slots with complete data structures or defer initialization until data access.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_0121

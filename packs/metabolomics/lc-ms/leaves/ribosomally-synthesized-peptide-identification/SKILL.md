@@ -3,6 +3,7 @@ name: ribosomally-synthesized-peptide-identification
 description: Use when you have LC-MS/MS spectral data (in MGF, mzXML, mzML, or mzData format) and corresponding genomic sequence data (raw FASTA nucleotide sequences or genome mining tool outputs like antiSMASH .final.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3646
   edam_topics:
   - http://edamontology.org/topic_0121

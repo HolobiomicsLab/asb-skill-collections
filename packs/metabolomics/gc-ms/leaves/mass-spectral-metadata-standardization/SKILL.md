@@ -3,6 +3,7 @@ name: mass-spectral-metadata-standardization
 description: Use when you have acquired EI or MS/MS spectral libraries from multiple public sources (NIST, RIKEN, MoNA, SWGDRUG, GNPS) with inconsistent metadata field layouts, missing or misplaced SMILES entries, undocumented retention indices, or mixed polarity modes, and you need to merge them into a single.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0091

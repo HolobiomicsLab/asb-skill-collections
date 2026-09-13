@@ -3,6 +3,7 @@ name: hdf5-file-structure-traversal
 description: Use when when you have converted multidimensional mass spectrometry data (or other complex data) into MZA HDF5 format and need to understand the file hierarchy, validate the conversion output, extract metadata tables and array structure, or access spectra across different programming environments.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0091

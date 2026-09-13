@@ -3,6 +3,7 @@ name: retention-time-calibration-via-lowess-regression
 description: Use when after mass track extraction and alignment across samples, when preparing to detect elution peaks on composite mass tracks. Use this when inter-sample retention time variation exceeds acceptable alignment tolerance (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -52,6 +53,7 @@ attribution:
 
 # retention-time-calibration-via-lowess-regression
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A statistically guided approach to correct sample-level retention time drift in LC-MS metabolomics by identifying high-confidence landmark peaks and applying LOWESS (locally weighted scatterplot smoothing) regression with boundary extension. This ensures consistent peak alignment across samples before composite feature detection.

@@ -3,6 +3,7 @@ name: feature-consolidation-across-samples
 description: Use when you have extracted multiple per-sample feature tables (in CSV format, each with feature ID, m/z, intensity, and retention time columns) and need to identify which features are the same compound detected across different breath samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_0121

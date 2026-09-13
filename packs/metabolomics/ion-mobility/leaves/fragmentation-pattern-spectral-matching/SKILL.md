@@ -3,6 +3,7 @@ name: fragmentation-pattern-spectral-matching
 description: Use when when you have detected m/z values from LC-IM-MS/MS that match a candidate CCS prediction database but require structural confirmation. Apply this skill to disambiguate isomers (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3647
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -43,6 +44,7 @@ attribution:
 
 # fragmentation-pattern-spectral-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match experimental MS/MS fragmentation spectra against theoretical or database spectra to confirm molecular structure identity and isomer stereochemistry. This skill filters candidate identifications by spectral similarity and fragmentation pattern coherence, enabling high-confidence assignment of sterol isomers in LC-IM-MS/MS data.

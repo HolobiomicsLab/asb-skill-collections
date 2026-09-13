@@ -3,6 +3,7 @@ name: retention-time-intensity-data-extraction
 description: Use when you have xcms-processed LC-MS data with detected misaligned feature groups and need to recover the underlying raw retention time–intensity profiles for each feature and sample combination prior to realignment.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3520

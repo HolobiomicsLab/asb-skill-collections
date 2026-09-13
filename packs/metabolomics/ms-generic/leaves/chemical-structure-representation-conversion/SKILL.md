@@ -3,6 +3,7 @@ name: chemical-structure-representation-conversion
 description: Use when when you have .msp mass spectrometry metadata containing chemical identifiers (e.g., compound names or SMILES strings) and need to compute derived chemical properties (e.g., InChI, InChIKey, molecular formula) locally without network latency or service availability constraints.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3697
   edam_topics:
   - http://edamontology.org/topic_3307

@@ -3,6 +3,7 @@ name: hrms-data-format-parsing
 description: Use when you have raw or processed HRMS/MS data from Q-Exactive, Agilent Q-TOF, Bruker Q-TOF, or SCIEX Q-TOF instruments in formats such as mzML, CSV peaklists, or vendor-specific formats, and you need to extract experimental fragment m/z values and their intensities for comparison against.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

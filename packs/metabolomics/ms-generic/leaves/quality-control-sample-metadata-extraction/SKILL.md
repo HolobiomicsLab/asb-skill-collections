@@ -3,6 +3,7 @@ name: quality-control-sample-metadata-extraction
 description: Use when you have txt files exported from Sciex MultiQuant (>v3.0.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0091

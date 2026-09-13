@@ -3,6 +3,7 @@ name: metabolomics-data-output-formatting
 description: Use when after completing feature annotation with the annotateRC function on LC–MS All-ion fragmentation (AIF) datasets, when you need to persist ranked metabolite candidates, matched ion spectra, and global summary tables to disk for archival, manual review, or integration into downstream.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172

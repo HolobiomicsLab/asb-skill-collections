@@ -3,6 +3,7 @@ name: xcms-profile-parsing
 description: Use when you have xcms-processed LC-MS data with detected feature groups (from xcms grouping), suspect retention time misalignment across samples due to long acquisition periods or large sample cohorts, and need to feed raw profiles into ncGTW's realignment algorithm.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3932
   edam_topics:
   - http://edamontology.org/topic_0091

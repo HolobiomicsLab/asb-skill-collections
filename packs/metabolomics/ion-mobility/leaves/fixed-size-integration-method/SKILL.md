@@ -3,6 +3,7 @@ name: fixed-size-integration-method
 description: Use when you have aligned and baseline-corrected GC-IMS data with detected and clustered peaks, and you want to extract peak intensities using a consistent integration window.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3370

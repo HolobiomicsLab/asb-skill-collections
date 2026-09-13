@@ -3,6 +3,7 @@ name: mass-spectrometry-scan-indexing
 description: Use when you have a Thermo Fisher Scientific .raw file and need to (1) enumerate all scans and their metadata, (2) identify which scans are MS1 vs. MSn to enable level-specific filtering, (3) retrieve scan ranges or specific scan numbers for targeted spectral extraction, or (4) plan.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0121

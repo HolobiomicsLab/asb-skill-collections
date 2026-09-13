@@ -3,6 +3,7 @@ name: spectral-metadata-validation
 description: Use when processing heterogeneous mass spectral datasets from multiple open libraries (e.g., MassBank, UNPD, GMD) where structural identifiers, precursor m/z, and adduct information are frequently incomplete or inconsistent across records.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -43,6 +44,7 @@ attribution:
 
 # spectral-metadata-validation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Validates and filters mass spectra based on completeness and consistency of structural and experimental metadata (SMILES, InChI, InChIKey, precursor m/z, adduct information). This skill identifies spectra that lack critical identifiers or have conflicting ionmode/adduct pairs, enabling removal of low-quality records before downstream analysis.

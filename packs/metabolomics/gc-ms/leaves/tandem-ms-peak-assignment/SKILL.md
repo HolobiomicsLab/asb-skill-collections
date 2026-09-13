@@ -3,6 +3,7 @@ name: tandem-ms-peak-assignment
 description: Use when when you have experimental tandem MS spectra (with peak m/z and intensity values) and need to annotate each peak with its chemical formula (SCARF) or molecular fragment origin (ICEBERG), particularly for structural elucidation campaigns where understanding the fragmentation pathway is.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

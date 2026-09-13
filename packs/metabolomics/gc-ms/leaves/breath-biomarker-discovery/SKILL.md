@@ -3,6 +3,7 @@ name: breath-biomarker-discovery
 description: Use when you have GC–MS data from human breath samples and need to identify marker metabolites for disease diagnosis, phenotyping, or biomarker discovery without a predefined target list. Your data is noisy or conventional peak picking has produced high false-positive rates.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0637
@@ -47,6 +48,7 @@ attribution:
 
 # breath-biomarker-discovery
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated identification of multivariate chemo-/biomarker features in untargeted GC–MS analysis of human breath samples using image processing and machine learning on two-dimensional MS maps (m/z vs retention time). This skill bypasses conventional peak picking to reduce false detections and enable detection at parts per billion levels.

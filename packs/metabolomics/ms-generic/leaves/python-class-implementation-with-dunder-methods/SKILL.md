@@ -3,6 +3,7 @@ name: python-class-implementation-with-dunder-methods
 description: Use when you have mzML spectral data stored in a non-standard format (SQLite database, custom binary store, or indexed archive) and need pymzML's Reader to parse and iterate over spectra as if they were in native mzML files. Specifically, when FileInterface.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: ionization-mode-peak-retention-comparison
 description: Use when when you have loaded a raw mass spectrum (e.g. ESI_NEG_SRFA.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

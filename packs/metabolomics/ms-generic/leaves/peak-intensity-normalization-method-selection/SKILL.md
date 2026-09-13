@@ -3,6 +3,7 @@ name: peak-intensity-normalization-method-selection
 description: Use when after peak filtering (by m/z, isotopic presence, formula assignment error, and sample prevalence) and before multivariate analysis (PCA, NMDS, PERMANOVA) when comparing peak abundance patterns across samples with potential differences in ionization efficiency, ion suppression, or total ion.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

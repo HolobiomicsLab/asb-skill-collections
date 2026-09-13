@@ -3,6 +3,7 @@ name: metadata-field-validation
 description: Use when you have received new or updated MassBank records (in plain-text or structured format) that must be integrated into the MassBank-data repository and you need to ensure they conform to the MassBank format specification before acceptance.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3071
@@ -40,6 +41,7 @@ attribution:
 
 # metadata-field-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated validation of structured metadata records against a defined schema and rule set to ensure content conformance before integration into a curated repository. This skill enforces data type, format, presence, and value-range constraints across all fields in a record.

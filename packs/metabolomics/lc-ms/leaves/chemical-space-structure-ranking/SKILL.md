@@ -3,6 +3,7 @@ name: chemical-space-structure-ranking
 description: Use when you have an unknown compound's mass spectrum (m/z peaks and intensities in .
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -40,6 +41,7 @@ attribution:
 
 # chemical-space-structure-ranking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank candidate metabolites from a structural database by computing semantic similarity scores between an unknown compound's mass spectrum encoding and a reference database of known metabolite spectra, using chemical space constraints to filter and prioritize structurally related candidates for annotation.

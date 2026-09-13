@@ -3,6 +3,7 @@ name: gradient-space-optimization-search
 description: Use when after fitting a Gaussian Process regression model to prior LC-MS gradient runs (retention times, separation efficiency scores, or compound identification counts).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -49,6 +50,7 @@ attribution:
 
 # Reconstruct the acquisition-function dispatch that proposes the next gradient
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill applies Bayesian optimization acquisition functions (Expected Improvement, Probability of Improvement, Upper Confidence Bound, and exploration/exploitation variants) to a fitted Gaussian Process model to select the next LC gradient proposal. It is used to efficiently navigate the gradient parameter space and converge on optimal separation conditions within ~10 experimental runs.

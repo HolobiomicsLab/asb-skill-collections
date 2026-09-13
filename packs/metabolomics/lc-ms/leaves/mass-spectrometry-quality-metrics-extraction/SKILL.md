@@ -3,6 +3,7 @@ name: mass-spectrometry-quality-metrics-extraction
 description: Use when you have centroided .mzML LC–MS data, a validated target compound list with adjusted expected retention times (e.g., after a screening mode run), and need to quantify peak quality and integration reliability across multiple sample runs to support metabolomics or lipidomics workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3520

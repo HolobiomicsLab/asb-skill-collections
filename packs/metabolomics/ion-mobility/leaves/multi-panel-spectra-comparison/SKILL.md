@@ -3,6 +3,7 @@ name: multi-panel-spectra-comparison
 description: Use when when you need to visually compare two or more spectra (MS1, MS2, or extracted ion chromatograms) across different retention times, m/z ranges, or ion mobility bins in a single figure. Apply this skill after extracting spectra arrays from MZA files (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0121

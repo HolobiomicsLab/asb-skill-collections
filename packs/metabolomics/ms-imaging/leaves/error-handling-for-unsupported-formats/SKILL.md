@@ -3,6 +3,7 @@ name: error-handling-for-unsupported-formats
 description: Use when building a file format dispatcher or initialization routine that must accept user-provided file paths and map them to format-specific processing modules.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

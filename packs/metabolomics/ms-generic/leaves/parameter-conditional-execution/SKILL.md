@@ -3,6 +3,7 @@ name: parameter-conditional-execution
 description: Use when when a post-processing step (such as dereplication) risks removing true positive signals due to overly strict thresholds, and you need the option to retain raw or unfiltered output without code branching.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3370

@@ -3,6 +3,7 @@ name: baseline-noise-estimation-chromatogram
 description: Use when after auditing and optionally rescaling a mass track (composite mass chromatogram) when you need to subtract background signal and set dynamic prominence thresholds for peak detection.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -43,6 +44,7 @@ attribution:
 
 # baseline-noise-estimation-chromatogram
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Estimate baseline and noise level from low-intensity regions of a mass track to enable adaptive filtering and peak detection thresholding in LC-MS metabolomics. This step prepares the chromatogram for robust, data-driven peak calling by establishing intensity thresholds that adapt to the signal characteristics of individual mass tracks.

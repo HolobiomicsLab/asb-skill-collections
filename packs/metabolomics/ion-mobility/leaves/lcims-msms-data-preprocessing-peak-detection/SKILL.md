@@ -3,6 +3,7 @@ name: lcims-msms-data-preprocessing-peak-detection
 description: Use when you have loaded mzML.gz or HDF5-formatted raw LC-IMS-MS/MS data and need to identify discrete peaks before feature alignment. Use it if your goal is to reduce noise, increase signal-to-noise ratio, and prepare multi-dimensional data for cross-sample feature matching and CCS calibration.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: mass-calibration-against-reference-standards
 description: Use when when processing raw FT-ICR transient data (e.g., ESI_NEG_SRFA.d) that requires assignment of molecular formulas to experimental m/z peaks. Calibration is necessary before SearchMolecularFormulas because uncalibrated mass error will cause false formula rejections or incorrect assignments.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

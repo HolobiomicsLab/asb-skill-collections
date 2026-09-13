@@ -3,6 +3,7 @@ name: suspect-database-matching
 description: Use when you have LC-MS peak/feature data, a curated suspect compound database with known m/z, retention time, and fragment ion coordinates, and you observe that traditional peak extraction algorithms have failed to detect ions corresponding to suspected contaminants or chemicals of interest.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3628
   edam_topics:
   - http://edamontology.org/topic_0091

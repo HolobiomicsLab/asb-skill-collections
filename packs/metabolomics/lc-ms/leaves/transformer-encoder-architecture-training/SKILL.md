@@ -3,6 +3,7 @@ name: transformer-encoder-architecture-training
 description: Use when you have paired tandem MS spectra and either (1) molecular fingerprints or structures as labels for supervised fingerprint prediction, or (2) both spectra and unpaired structure/SMILES libraries and want to train embeddings for database-free structure lookup.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2476
   edam_topics:
   - http://edamontology.org/topic_0625

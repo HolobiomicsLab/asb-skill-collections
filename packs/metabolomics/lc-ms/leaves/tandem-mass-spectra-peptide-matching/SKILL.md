@@ -3,6 +3,7 @@ name: tandem-mass-spectra-peptide-matching
 description: Use when you have centroided LC-MS/MS spectra (in MGF, mzXML, mzML, or mzData format) and wish to identify peptidic natural products or ribosomally synthesized and post-translationally modified peptides (RiPPs) against a known structure database or custom RiPP structure database.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0121

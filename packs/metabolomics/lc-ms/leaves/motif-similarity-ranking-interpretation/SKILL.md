@@ -3,6 +3,7 @@ name: motif-similarity-ranking-interpretation
 description: Use when after executing MassQL queries against a MotifDB reference database and retrieving ranked motif matches, when you need to determine which database entries represent true structural correspondence versus spurious matches, and to decide whether a motif's top-ranking hit is sufficiently.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: sciex-multiquant-data-export-format-recognition
 description: Use when you have txt files exported from Sciex MultiQuant (>v3.0.3) containing QCpool samples measured at regular intervals during mass spectrometry sequences, and you need to validate whether the file structure is compatible with the QComics package before parsing and quality assessment.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_3520

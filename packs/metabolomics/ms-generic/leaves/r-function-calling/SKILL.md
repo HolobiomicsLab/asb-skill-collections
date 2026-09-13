@@ -3,6 +3,7 @@ name: r-function-calling
 description: Use when after AutoTuner has completed peak identification (TIC analysis), peak isolation, and EIC parameter extraction on at least 3 raw mass spectrometry samples (qTOF, orbitrap, or FTICR formats converted to mzML/mzXML/CDF), and you need to export the tuned parameters in a format ready for XCMS.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

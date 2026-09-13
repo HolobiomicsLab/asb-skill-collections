@@ -3,6 +3,7 @@ name: raw-spectral-data-input-handling-without-peak-picking
 description: Use when when you have raw mass spectrometry imaging data (full m/z profiles with intensity arrays) and want to classify spatial regions (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -46,6 +47,7 @@ attribution:
 
 # raw-spectral-data-input-handling-without-peak-picking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Skill to accept and preprocess raw mass spectrometry imaging (MSI) data directly into a deep learning classifier without performing prior peak picking or feature extraction. This avoids information loss from peak detection thresholding and enables probabilistic end-to-end learning on full spectral tensors.

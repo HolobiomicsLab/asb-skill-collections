@@ -3,6 +3,7 @@ name: condition-effect-matrix-generation
 description: 'Use when you need to create a synthetic feature table with known, ground-truth condition effects for method validation when: (1) testing normalization or batch-correction algorithms that must not confound condition signal with batch noise;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

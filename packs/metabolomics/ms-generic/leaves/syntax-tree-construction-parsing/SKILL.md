@@ -3,6 +3,7 @@ name: syntax-tree-construction-parsing
 description: Use when you have a domain-specific language (DSL) grammar specification and raw query strings that must be converted into structured intermediate representations for validation, transformation, or execution.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_0091

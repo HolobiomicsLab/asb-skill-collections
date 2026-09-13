@@ -3,6 +3,7 @@ name: feature-annotation-consolidation
 description: Use when after chromatographic peak detection and feature detection in LC-MS preprocessing, when you have a set of detected features (m/z, retention time, intensity) and need to consolidate redundant or related ion signals into compound-level feature groups before downstream statistical or.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3520

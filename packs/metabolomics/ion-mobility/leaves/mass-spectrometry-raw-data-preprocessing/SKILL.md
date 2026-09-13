@@ -3,6 +3,7 @@ name: mass-spectrometry-raw-data-preprocessing
 description: Use when when you have raw DIA mass spectrometry data files (.raw, .d, .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: siamese-network-architecture-modification
 description: Use when when you need to reduce overfitting in a Siamese neural network trained on mass spectrometry spectral pairs by adding weight regularization, or when users require flexible control over L1 and L2 penalty coefficients rather than hard-coded defaults.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_0091

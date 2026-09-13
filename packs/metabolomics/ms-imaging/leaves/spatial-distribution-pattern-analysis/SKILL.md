@@ -3,6 +3,7 @@ name: spatial-distribution-pattern-analysis
 description: Use when when you have loaded MSI peak data with associated m/z values and need to disambiguate matrix ions from analyte ions. Apply this skill when chemical formula alone is insufficient (e.g., overlapping or isobaric peaks exist) and you have pixel-level spatial intensity maps for each ion.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520

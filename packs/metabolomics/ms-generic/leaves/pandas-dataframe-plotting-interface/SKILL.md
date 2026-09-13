@@ -3,6 +3,7 @@ name: pandas-dataframe-plotting-interface
 description: Use when you have mass spectrometry data (retention time, m/z, intensity, or mobility dimensions) already loaded into a Pandas DataFrame and need to produce publication-ready or exploratory visualizations. Use this when you want to leverage Pandas' native .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520

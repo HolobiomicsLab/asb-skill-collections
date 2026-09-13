@@ -3,6 +3,7 @@ name: abundance-normalization-and-summary-statistics
 description: Use when after peaks have been assigned to heteroatom classes (e.g., CHO, CHON, CHOS, CHOP) and you need to compare molecular composition across samples, classes, or time series.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3172

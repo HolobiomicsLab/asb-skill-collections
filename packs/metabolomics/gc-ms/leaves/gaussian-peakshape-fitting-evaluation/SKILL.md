@@ -3,6 +3,7 @@ name: gaussian-peakshape-fitting-evaluation
 description: Use when after peak detection on mass track segments using find_peaks, when you need to distinguish genuine chromatographic peaks from noise-induced false positives or irregular shapes.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -44,6 +45,7 @@ attribution:
 
 # Gaussian peakshape fitting and evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluates detected elution peaks against expected Gaussian shape to filter for chromatographic quality and reduce false positives. Applied after peak detection to retain only peaks with peakshape scores above a threshold (default > 0.5), ensuring detected features represent genuine metabolites rather than noise or artifacts.

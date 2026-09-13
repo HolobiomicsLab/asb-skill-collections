@@ -3,6 +3,7 @@ name: r-data-object-serialization
 description: Use when you have mzPeak files (Parquet-based archives containing mass spectrometry spectra and chromatogram data) that you want to analyze in R, and you need to convert the Arrow columnar representation into native R objects that can be passed to downstream analysis functions (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

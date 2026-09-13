@@ -3,6 +3,7 @@ name: r-data-structure-conversion
 description: Use when you have preprocessed MSI data in Cardinal format (post-peakBin) and need to apply mass2adduct's adduct-detection workflow, OR you have exported MSI intensity data as CSV from third-party software (SCiLS, MSiReader) and must convert it into a standardized R object for downstream analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3364
   edam_topics:
   - http://edamontology.org/topic_3520

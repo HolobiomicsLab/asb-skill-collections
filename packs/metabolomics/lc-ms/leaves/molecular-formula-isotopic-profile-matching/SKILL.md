@@ -3,6 +3,7 @@ name: molecular-formula-isotopic-profile-matching
 description: Use when you have detected peaks from untargeted LC/HRMS analysis (via IDSL.IPA or equivalent peak picker) with m/z and retention time values, and you need to assign molecular formulas to those peaks.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

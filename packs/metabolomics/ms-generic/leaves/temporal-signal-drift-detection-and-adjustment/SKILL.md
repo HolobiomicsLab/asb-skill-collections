@@ -3,6 +3,7 @@ name: temporal-signal-drift-detection-and-adjustment
 description: Use when raw MS quantification data (feature-by-sample intensity matrix) shows systematic variation in detector response across the run sequence—i.e., when the same analyte produces different intensities at different timepoints in the measurement despite constant sample concentration.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121

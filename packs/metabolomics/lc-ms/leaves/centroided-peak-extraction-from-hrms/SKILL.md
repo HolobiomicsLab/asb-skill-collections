@@ -3,6 +3,7 @@ name: centroided-peak-extraction-from-hrms
 description: Use when you have centroided data-dependent acquisition (DDA/ddMS2) mzML files from LC- or GC-HRMS measurements and need to systematically detect and characterize MS1 features across the mass-to-charge and retention-time dimensions prior to compound prioritization or suspect screening.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3634
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: background-ion-blank-comparison
 description: Use when after generating an initial LC-MS feature table (from Asari or similar peak detection) and before normalization or statistical analysis, especially when blank samples (e.g., solvent-only or buffer-only runs) were acquired alongside study samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0625

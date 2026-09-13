@@ -3,6 +3,7 @@ name: structural-cluster-annotation-metabolomics
 description: Use when after identifying statistically significant LC-MS features (e.g., via MB-VIP with p < 0.01 and permutation testing), when you need to consolidate multiple ionization and isotopic forms of the same metabolite into structural groups for annotation and pathway mapping.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: record-grouping-and-collation
 description: Use when you have multiple rows in a table that describe the same logical entity (e.g., multiple measurements from the same sample, or repeated attributes under a common identifier) and need to merge them into a single dictionary entry keyed by that shared field.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

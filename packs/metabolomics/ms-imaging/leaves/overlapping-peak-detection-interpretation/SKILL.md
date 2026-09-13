@@ -3,6 +3,7 @@ name: overlapping-peak-detection-interpretation
 description: Use when annotating matrix-related signals in MSI datasets where chemical formulas or spatial distributions alone are ambiguous, or when multiple ions share nominal m/z values (isobaric peaks).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

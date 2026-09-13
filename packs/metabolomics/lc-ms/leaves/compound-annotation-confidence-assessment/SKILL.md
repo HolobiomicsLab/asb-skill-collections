@@ -3,6 +3,7 @@ name: compound-annotation-confidence-assessment
 description: Use when you have MS/MS spectra matched to a reference library via both identity search (exact or high-similarity matches) and fuzzy/analog search (structurally related compounds with similar fragmentation), and you need to prioritize which annotations to trust for downstream reporting, validation.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -42,6 +43,7 @@ attribution:
 
 # compound-annotation-confidence-assessment
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Evaluate and rank MS/MS spectral annotations produced by identity and fuzzy search methods, assigning confidence scores that distinguish high-confidence direct matches from lower-confidence analog/structural analogs. This skill is essential for prioritizing validated compound identities in nontargeted metabolomics workflows.

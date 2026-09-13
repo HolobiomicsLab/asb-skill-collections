@@ -3,6 +3,7 @@ name: module-coverage-mapping
 description: Use when evaluating whether a mass spectrometry data analysis platform (such as mzmine) provides complete module coverage across all advertised separation and ionisation techniques.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520

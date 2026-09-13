@@ -3,6 +3,7 @@ name: multi-sample-cohort-assessment
 description: Use when when you have MS1 mass spectrometry data from multiple samples (a cohort) acquired across an instrument run or batch, and you need to identify which samples deviate from cohort norms or which ion targets show anomalous behavior.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3520

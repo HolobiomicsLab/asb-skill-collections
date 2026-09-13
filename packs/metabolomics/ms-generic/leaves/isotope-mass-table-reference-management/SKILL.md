@@ -3,6 +3,7 @@ name: isotope-mass-table-reference-management
 description: 'Use when when building a mass spectrometry analysis pipeline that requires exact mass lookups, molecular formula validation, or isotope abundance predictions. Specifically: (1) you are constructing a MolecularFormula class that needs to validate element symbols against known isotopes;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

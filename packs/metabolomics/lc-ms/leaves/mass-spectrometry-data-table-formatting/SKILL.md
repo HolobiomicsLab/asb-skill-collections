@@ -3,6 +3,7 @@ name: mass-spectrometry-data-table-formatting
 description: Use when when you have raw or processed TWIM-MS data (arrival time and m/z values) from a mass spectrometry instrument and need to organize it into a feature table before biomolecular class assignment or CCS calculations.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_3520

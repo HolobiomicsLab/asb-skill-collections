@@ -3,6 +3,7 @@ name: volcano-plot-construction-from-omics-data
 description: Use when after statistical analysis (e.g., edgeR) has produced a results table containing lipid identities, fold-change values, and p-values for pairwise or multi-condition comparisons.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0571
   edam_topics:
   - http://edamontology.org/topic_3172

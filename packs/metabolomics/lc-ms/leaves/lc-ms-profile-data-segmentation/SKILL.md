@@ -3,6 +3,7 @@ name: lc-ms-profile-data-segmentation
 description: Use when you have raw profile (not centroided) LC-MS data in .mzML format and need to prepare it for automated peak detection using a trained object detection network.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0121

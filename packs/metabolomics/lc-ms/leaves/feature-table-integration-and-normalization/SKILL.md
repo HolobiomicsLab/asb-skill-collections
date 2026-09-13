@@ -3,6 +3,7 @@ name: feature-table-integration-and-normalization
 description: Use when when you have MS1 feature tables from heterogeneous sources—e.g., XCMS peak detection output mixed with vendor software (MS-DIAL, MZmine2) results—and need to merge them into a single, format-normalized table for ISFrag analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3370

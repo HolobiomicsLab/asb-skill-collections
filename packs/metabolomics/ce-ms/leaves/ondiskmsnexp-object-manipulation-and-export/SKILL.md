@@ -3,6 +3,7 @@ name: ondiskmsnexp-object-manipulation-and-export
 description: Use when you have raw CE-MS data and need to (1) transform migration time values to effective mobility using two calibration markers (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

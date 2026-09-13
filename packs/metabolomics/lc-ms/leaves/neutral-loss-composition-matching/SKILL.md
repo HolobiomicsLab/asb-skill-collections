@@ -3,6 +3,7 @@ name: neutral-loss-composition-matching
 description: Use when after LDA modeling has inferred a set of Mass2Motifs (in JSON format) from preprocessed MS/MS spectra and you need to annotate these motifs by retrieving matching entries from a MotifDB reference database.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121

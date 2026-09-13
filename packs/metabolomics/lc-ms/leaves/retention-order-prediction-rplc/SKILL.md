@@ -3,6 +3,7 @@ name: retention-order-prediction-rplc
 description: Use when when you have a set of small molecules (as SMILES or structures) that need to be identified or ranked by their elution order in RPLC systems with acidic pH (~2.7), and you want to assess model confidence in retention predictions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3365
   edam_topics:
   - http://edamontology.org/topic_3172

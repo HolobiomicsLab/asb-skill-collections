@@ -3,6 +3,7 @@ name: spectral-alignment-scoring
 description: Use when you have paired MS/MS spectra (known compound and its structural analog) with assigned precursor m/z, charge, and SMILES; you want to quantify which parts of the molecular structure could have undergone modification by scoring peak alignment quality.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -51,6 +52,7 @@ attribution:
 
 # spectral-alignment-scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute alignment similarity scores between known and modified compound MS/MS spectra using cosine-based metrics and fragment annotation engines. This skill quantifies how well peak-to-fragment mappings align across spectra, enabling probabilistic localization of structural modification sites.

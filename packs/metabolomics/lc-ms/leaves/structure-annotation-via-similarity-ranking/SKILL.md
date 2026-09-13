@@ -3,6 +3,7 @@ name: structure-annotation-via-similarity-ranking
 description: Use when you have an unknown tandem MS spectrum and seek to assign a chemical structure by matching against a curated reference database (e.g., NIST, GNPS, or custom metabolite libraries) without requiring an exact spectral match.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0121

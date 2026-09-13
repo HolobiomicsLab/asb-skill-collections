@@ -3,6 +3,7 @@ name: xcms-feature-extraction-and-grouping
 description: Use when you have raw mzXML LC/MS files from replicated metabolomics experiments (e.g., 12 samples across labeled/unlabeled conditions) and need to extract, align, and group peaks before downstream feature filtering (e.g., fold-change or isotope enrichment analysis).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0091

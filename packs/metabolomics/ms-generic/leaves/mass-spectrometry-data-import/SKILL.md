@@ -3,6 +3,7 @@ name: mass-spectrometry-data-import
 description: Use when when beginning a new mass spectrometry analysis workflow with raw spectral data files in mzML, mzXML, msp, MGF, or JSON format.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

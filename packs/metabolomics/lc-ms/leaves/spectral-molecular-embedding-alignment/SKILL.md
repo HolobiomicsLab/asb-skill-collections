@@ -3,6 +3,7 @@ name: spectral-molecular-embedding-alignment
 description: Use when you have MS/MS spectra in MGF or similar format and a reference library of molecular structures (SMILES or SDF), and your goal is to retrieve the most likely structures for an unknown compound spectrum by learning a joint embedding space rather than using traditional spectral similarity or.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3814
   edam_topics:
   - http://edamontology.org/topic_0092
@@ -52,6 +53,7 @@ attribution:
 
 # spectral-molecular-embedding-alignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align MS/MS spectral embeddings and molecular structure embeddings in a shared latent space using contrastive learning, enabling cross-modal retrieval of candidate compounds from a structure library ranked by cosine similarity. This skill is essential when you have paired MS/MS spectra and molecular structures and need to identify unknowns by spectrum-to-structure matching rather than by spectral library matching alone.

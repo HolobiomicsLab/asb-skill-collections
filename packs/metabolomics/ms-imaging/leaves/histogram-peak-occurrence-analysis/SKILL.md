@@ -3,6 +3,7 @@ name: histogram-peak-occurrence-analysis
 description: Use when after you have computed a histogram of pairwise mass differences from MSI peak data and want to identify which mass shifts occur most frequently and whether they correspond to known chemical adducts.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

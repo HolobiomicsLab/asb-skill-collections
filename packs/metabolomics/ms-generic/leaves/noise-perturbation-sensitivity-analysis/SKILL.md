@@ -3,6 +3,7 @@ name: noise-perturbation-sensitivity-analysis
 description: Use when when comparing pathway analysis methods on metabolomics peak data and you need evidence that one method is more robust than another to the noise and missing peaks that are prevalent in real metabolomics experiments.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3359
   edam_topics:
   - http://edamontology.org/topic_0091

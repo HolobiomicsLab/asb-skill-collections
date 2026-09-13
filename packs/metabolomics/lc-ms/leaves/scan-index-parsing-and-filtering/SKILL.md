@@ -3,6 +3,7 @@ name: scan-index-parsing-and-filtering
 description: Use when you have a Thermo Orbitrap .raw file and need to (1) verify that a targeted acquisition method (e.g., PRM) maintains consistent scan spacing across all cycles; (2) extract only scans matching a specific precursor ion and fragmentation method;
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0121

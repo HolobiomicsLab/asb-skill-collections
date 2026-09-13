@@ -3,6 +3,7 @@ name: dependency-manifest-extraction
 description: Use when a bioinformatics package claims to install a large number of tools (e.g., ~89 for untargeted metabolomics pipelines) but the article or main documentation does not enumerate them explicitly.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3198
   edam_topics:
   - http://edamontology.org/topic_0602

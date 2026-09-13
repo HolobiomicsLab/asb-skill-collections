@@ -3,6 +3,7 @@ name: quality-metrics-summarization
 description: Use when after running QC analysis on NMR or MS metabolomic data and obtaining per-feature CV values, use this skill to validate that the dataset meets FDA thresholds (CV < 0.30 for discovery, CV < 0.15 for quantification) and to report the proportion of features meeting each threshold.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -42,6 +43,7 @@ attribution:
 
 # quality-metrics-summarization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute and report cumulative distributions of quality control metrics (e.g., coefficient of variation) across metabolomic features to validate dataset reproducibility against regulatory thresholds. This skill aggregates pre-computed per-feature QC values into interpretable summary statistics and visualizations that confirm fitness for downstream analysis.

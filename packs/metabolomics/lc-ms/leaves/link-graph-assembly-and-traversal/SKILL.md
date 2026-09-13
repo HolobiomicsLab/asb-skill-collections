@@ -3,6 +3,7 @@ name: link-graph-assembly-and-traversal
 description: Use when after running a scoring algorithm (e.g., MetcalfScoring) on paired genomic and metabolomic datasets.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3439
   edam_topics:
   - http://edamontology.org/topic_0625

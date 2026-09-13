@@ -3,6 +3,7 @@ name: repository-code-integration
 description: Use when you have identified a published method (e.g., MIST-CF for chemical formula ranking from mass spectra) whose source code and trained weights are available in a public repository, and you need to apply that method to new experimental data (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0573
   edam_topics:
   - http://edamontology.org/topic_3172

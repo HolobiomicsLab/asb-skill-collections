@@ -3,6 +3,7 @@ name: chemical-match-score-interpretation
 description: Use when when you have query chemicals identified by GC-MS (with Match.Factor values) and need to verify structural similarity against a reference chemical library to confirm compound identity or detect structural analogs (e.g., isomers or homologs).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0154

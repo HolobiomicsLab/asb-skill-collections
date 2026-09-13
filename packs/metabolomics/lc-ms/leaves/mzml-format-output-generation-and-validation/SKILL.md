@@ -3,6 +3,7 @@ name: mzml-format-output-generation-and-validation
 description: Use when after running a ViMMS simulation loop with a fragmentation controller (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3650
   edam_topics:
   - http://edamontology.org/topic_3520

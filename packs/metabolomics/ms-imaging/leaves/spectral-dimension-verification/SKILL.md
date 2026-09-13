@@ -3,6 +3,7 @@ name: spectral-dimension-verification
 description: Use when after reading an imzML file (continuous or processed format) using readMSIData() in Cardinal, verify the resulting MSImagingExperiment object before performing normalization, baseline reduction, peak-picking, or statistical analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3520

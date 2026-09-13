@@ -3,6 +3,7 @@ name: spectral-query-formulation
 description: Use when you have a query mass spectrum (or representative metabolite spectrum from public data) and need to identify it by searching against large spectral reference databases (millions to billions of spectra).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -43,6 +44,7 @@ attribution:
 
 # spectral-query-formulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Formulate and submit mass spectra queries to billion-scale spectral databases using MASST+, enabling fast identification of unknown metabolites by matching against millions of reference spectra with configurable mass tolerance and scoring parameters. This skill is essential when screening unknown mass spectra against comprehensive metabolomics libraries at scale.

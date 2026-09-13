@@ -3,6 +3,7 @@ name: vendor-data-standardization
 description: Use when you have raw MS data files directly from a vendor instrument (Thermo .raw, Agilent .d, Waters .ms, etc.) and need to process them through AriumMS or any other metabolomics pipeline that accepts only .mzXML or .mzML formats.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3643
   edam_topics:
   - http://edamontology.org/topic_0769

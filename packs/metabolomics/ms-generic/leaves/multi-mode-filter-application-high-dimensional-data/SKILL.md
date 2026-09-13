@@ -3,6 +3,7 @@ name: multi-mode-filter-application-high-dimensional-data
 description: Use when you have high-dimensional biological data (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -48,6 +49,7 @@ attribution:
 
 # Multi-mode filter application to high-dimensional biological data
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply the MarrFilterData() function in three complementary filtering modes—by features, by sample pairs, or by both simultaneously—to subset high-dimensional replicate experiment data based on reproducibility thresholds computed across pairwise signal ranks. This skill enables targeted retention of reproducible signals at either the feature level (100×c_s% threshold), the sample-pair level (100×c_m% threshold), or both, producing filtered subsets suitable for downstream statistical or biological interpretation.

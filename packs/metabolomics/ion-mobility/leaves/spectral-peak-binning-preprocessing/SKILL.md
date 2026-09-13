@@ -3,6 +3,7 @@ name: spectral-peak-binning-preprocessing
 description: Use when when you have raw high-resolution tandem mass spectra (mzML, mzXML, or MGF format) that you intend to cluster or compare at scale, and you need to convert continuous m/z and intensity measurements into discrete bins suitable for feature hashing or similarity searching.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

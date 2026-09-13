@@ -3,6 +3,7 @@ name: structural-identifier-completeness-checking
 description: Use when preprocessing open mass spectrometry libraries (OMSLs) or aggregated spectral datasets where structural identifiers are inconsistently populated.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0630
@@ -44,6 +45,7 @@ attribution:
 
 # structural-identifier-completeness-checking
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 A filtering skill that removes mass spectra lacking complete chemical structure identifiers (SMILES, InChI, and InChIKey) from spectral datasets. This ensures that downstream analysis workflows receive only spectra with sufficient structural annotation to support reliable compound identification and cross-database mapping.

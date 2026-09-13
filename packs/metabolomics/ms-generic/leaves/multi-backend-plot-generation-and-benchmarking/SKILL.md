@@ -3,6 +3,7 @@ name: multi-backend-plot-generation-and-benchmarking
 description: Use when when you have a suite of Sphinx gallery example scripts targeting multiple plotting library backends and need to verify that all examples execute successfully within expected time constraints and produce output across matplotlib (static), bokeh (interactive), and plotly (interactive).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0337
   edam_topics:
   - http://edamontology.org/topic_3520

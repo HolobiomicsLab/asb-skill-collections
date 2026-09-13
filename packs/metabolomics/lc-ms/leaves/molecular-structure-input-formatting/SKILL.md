@@ -3,6 +3,7 @@ name: molecular-structure-input-formatting
 description: Use when when you have a molecular structure in any representation (drawn structure, PDB file, common name) and need to input it into mass spectrum prediction tools like ICEBERG or SCARF, or when screening candidates from chemical databases like PubChem.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3961
   edam_topics:
   - http://edamontology.org/topic_0176

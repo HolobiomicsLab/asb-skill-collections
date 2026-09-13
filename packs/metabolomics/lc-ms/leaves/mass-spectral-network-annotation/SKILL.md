@@ -3,6 +3,7 @@ name: mass-spectral-network-annotation
 description: Use when you have a GNPS molecular network (classical or feature-based) and MS2LDA LDA experiment output (Mass2Motif assignments with probability and overlap scores) from the same experiment, and you want to annotate network nodes with structural motifs and chemical classes to infer molecular.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: stable-isotope-probing-abundance-modeling
 description: Use when you have a high-resolution mass spectrum (FT scan) containing a peptide precursor at known charge state with known or suspected stable isotope labeling (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: core-spectra-variable-definition-and-population
 description: Use when when implementing a custom MsBackend class for the Spectra package, you must define these two methods to satisfy the MsBackend virtual class API contract.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520

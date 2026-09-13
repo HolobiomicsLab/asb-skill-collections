@@ -3,6 +3,7 @@ name: spectral-peak-grouping-mass-tolerance
 description: Use when after extracting raw MS/MS spectra from mzML files when you observe high fragment counts per spectrum (e.g., 98 fragments) and want to reduce noise from instrument measurement uncertainty.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3634
   edam_topics:
   - http://edamontology.org/topic_0121

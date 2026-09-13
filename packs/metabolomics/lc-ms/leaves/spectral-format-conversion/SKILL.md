@@ -3,6 +3,7 @@ name: spectral-format-conversion
 description: Use when when raw spectral data exists in one mass spectrometry file format but downstream analysis requires a different format; when integrating spectra from multiple sources or instruments that produce heterogeneous file formats;
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3370

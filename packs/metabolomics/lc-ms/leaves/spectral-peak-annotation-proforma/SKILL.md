@@ -3,6 +3,7 @@ name: spectral-peak-annotation-proforma
 description: Use when you have an annotated or raw tandem mass spectrometry spectrum and need to identify which observed peaks correspond to expected peptide fragment ions from a known or predicted peptidoform. Use it before spectrum visualization if you want highlighted, labeled fragment matches;
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3647
   edam_topics:
   - http://edamontology.org/topic_0121

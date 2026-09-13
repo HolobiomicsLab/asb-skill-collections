@@ -3,6 +3,7 @@ name: spectral-library-matching-annotation
 description: Use when you have MS2 spectral data (precursor m/z, retention time, and fragment ion patterns) from UPLC-HRMS analysis of environmental or biological samples and need to assign compound identities by comparing against known reference spectra.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0089
@@ -44,6 +45,7 @@ attribution:
 
 # spectral-library-matching-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match experimental MS2 spectra against reference spectral libraries and retrieve compound annotations with confidence scores using deep learning-based candidate ranking. This skill is essential for identifying unknown organic pollutants in nontargeted mass spectrometry workflows where reference spectra are available in GNPS or similar databases.

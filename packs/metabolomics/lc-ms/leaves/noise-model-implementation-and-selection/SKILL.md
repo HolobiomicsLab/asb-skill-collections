@@ -3,6 +3,7 @@ name: noise-model-implementation-and-selection
 description: Use when when constructing synthetic LC-MS/MS runs in SMITER, you must choose a noise model before calling write_mzml.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: lc-ms-eic-plot-interpretation
 description: Use when after executing TARDIS in screening_mode = TRUE on centroided .mzML files with a defined target compound list.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0091

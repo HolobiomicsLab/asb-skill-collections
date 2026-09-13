@@ -3,6 +3,7 @@ name: lcms-feature-probability-scoring
 description: Use when you have an untargeted LC/MS feature table (m/z, retention time, intensity columns) and need to move beyond single-hit matching to probabilistic annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3520

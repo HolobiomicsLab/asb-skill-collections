@@ -3,6 +3,7 @@ name: lipid-database-query-and-annotation
 description: Use when you have parsed MRM transition data (m/z values, retention times, transition parameters) from mass spectrometry experiments and need to map each detected transition to a known lipid identity.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0153

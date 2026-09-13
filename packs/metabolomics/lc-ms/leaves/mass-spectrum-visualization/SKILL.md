@@ -3,6 +3,7 @@ name: mass-spectrum-visualization
 description: Use when when you have extracted m/z and intensity arrays from an MZA file (or similar HDF5-backed MS data structure) and need to visually inspect a single MS1 or MS2 spectrum, verify peak characteristics, or diagnose data quality issues before downstream analysis (peak fitting, isotope pattern.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0121

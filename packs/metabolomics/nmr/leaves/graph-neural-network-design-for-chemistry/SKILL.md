@@ -3,6 +3,7 @@ name: graph-neural-network-design-for-chemistry
 description: Use when you have 1D or 2D NMR spectra (1H and/or 13C) and need to predict unknown molecular structure (formula and connectivity) up to ~19 heavy atoms; or you have a set of molecular fragment-structure pairs and need to model how fragments assemble into complete structures.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3894
   edam_topics:
   - http://edamontology.org/topic_0154

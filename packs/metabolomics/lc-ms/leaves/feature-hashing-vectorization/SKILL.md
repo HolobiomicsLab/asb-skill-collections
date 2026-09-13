@@ -3,6 +3,7 @@ name: feature-hashing-vectorization
 description: Use when when you have high-resolution tandem MS/MS spectra in mzML, mzXML, or MGF format and need to cluster or search millions of spectra efficiently.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: variational-autoencoder-training
 description: Use when after preprocessing and normalizing joint ST/SM AnnData objects using joint_adata_sm_st and normalize_total_joint_adata_sm_st, when you need to align spatial transcriptomics and metabolomics data to a unified latent resolution for multi-omics integration and cross-modal spatial pattern.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3308

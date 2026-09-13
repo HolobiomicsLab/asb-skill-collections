@@ -3,6 +3,7 @@ name: spectral-molecular-family-linking
 description: Use when when you have pre-processed genomic data (GCFs from AntiSMASH/BigScape clustering) and metabolomic data (spectra and molecular families from GNPS molecular networking) and need to systematically score and rank putative relationships between biosynthetic gene clusters and their.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0621

@@ -3,6 +3,7 @@ name: artifact-removal-in-ims-data
 description: Use when processing raw IM-MS data (UIMF or Agilent MassHunter .d format) that exhibits jagged peaks in low-abundance ions, isolated high-intensity noise spikes, or saturated detector signals that distort elution and mobility profiles.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -51,6 +52,7 @@ attribution:
 
 # artifact-removal-in-ims-data
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove noise, spike, and saturation artifacts from ion mobility-mass spectrometry (IM-MS) data to enhance signal quality and recover low-abundance molecular signatures. This skill applies integrated noise filtering, spike removal, and saturation repair algorithms to improve peak deconvolution and quantitative accuracy in multiplexed IM-MS acquisitions.

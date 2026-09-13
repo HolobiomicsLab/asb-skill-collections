@@ -3,6 +3,7 @@ name: transformer-input-preprocessing
 description: Use when preparing chemical formulae (e.g., 'C6H12O6') as inputs to a transformer-based neural network for MS/MS spectrum scoring. Use it specifically when the transformer must rank multiple candidate formulae against an observed mass spectrum and element composition constraints are important;
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

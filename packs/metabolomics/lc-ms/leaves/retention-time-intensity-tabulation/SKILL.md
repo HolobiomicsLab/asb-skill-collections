@@ -3,6 +3,7 @@ name: retention-time-intensity-tabulation
 description: Use when when you have a resolved mzML or mzXML spectrum file and need to visualize or analyze the temporal intensity profile of a specific analyte (defined by its m/z value).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -40,6 +41,7 @@ attribution:
 
 # retention-time-intensity-tabulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and tabulate retention time paired with summed intensity values for a target mass-to-charge ratio across all scans in a resolved mzML/mzXML spectrum file. This skill produces a two-column chromatographic profile (retention_time, intensity) suitable for visualization and downstream analysis of LC-MS data.

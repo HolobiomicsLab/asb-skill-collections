@@ -3,6 +3,7 @@ name: spectral-similarity-network-generation
 description: Use when after feature detection and alignment across LC-MS/MS runs (via MZmine2 or Optimus) have produced a feature quantification table and MGF file with MS/MS spectra, and you need to discover molecular relationships and detect unknown compounds through spectral clustering and library matching.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3520

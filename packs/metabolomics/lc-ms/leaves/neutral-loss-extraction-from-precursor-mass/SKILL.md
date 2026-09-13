@@ -3,6 +3,7 @@ name: neutral-loss-extraction-from-precursor-mass
 description: Use when after loading and noise-filtering raw MS/MS spectra (in .mgf, .mzML, or .msp format) and before applying LDA for Mass2Motif inference.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

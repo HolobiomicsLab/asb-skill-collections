@@ -3,6 +3,7 @@ name: fragment-ion-mass-matching
 description: Use when you have a tandem mass spectrum (MSMS) of a known or hypothesized peptide, along with its ProForma 2.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0121

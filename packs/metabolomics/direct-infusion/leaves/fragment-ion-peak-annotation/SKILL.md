@@ -3,6 +3,7 @@ name: fragment-ion-peak-annotation
 description: Use when you have experimental MS/MS spectra matched against a reference library (via cosine similarity or dot-product scoring) and need to map individual fragment peaks in the experimental spectrum to their corresponding m/z and intensity values in the matched library entry.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3647
   edam_topics:
   - http://edamontology.org/topic_3520

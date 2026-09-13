@@ -3,6 +3,7 @@ name: metabolomic-peak-quality-assessment
 description: Use when after peak detection in untargeted LC/HRMS workflows, when you have a list of candidate peaks with signal intensity profiles and need to filter them according to data quality thresholds (signal-to-noise ratio, peak width, baseline separation, and isotopic pairing consistency) before.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -43,6 +44,7 @@ attribution:
 
 # metabolomic-peak-quality-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate detected peaks from LC/HRMS data using quantitative chromatographic properties and signal quality metrics to filter peaks meeting sensitivity, specificity, and reproducibility standards. This skill ensures high-confidence peak lists suitable for population-scale untargeted metabolomics studies.

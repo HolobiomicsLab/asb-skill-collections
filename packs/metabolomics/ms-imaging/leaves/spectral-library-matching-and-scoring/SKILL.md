@@ -3,6 +3,7 @@ name: spectral-library-matching-and-scoring
 description: Use when when you have extracted a mean or ROI spectrum from MSI data (via centroid or profile mode conversion) and need to identify the biochemical composition by comparing against curated reference libraries such as LIPID MAPS, HMDB, or a custom metabolite database.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

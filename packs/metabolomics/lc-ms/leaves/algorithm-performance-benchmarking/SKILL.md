@@ -3,6 +3,7 @@ name: algorithm-performance-benchmarking
 description: Use when you have refactored or reimplemented a core computational method (e.g., entropy similarity calculation) and need to verify that the new implementation produces mathematically equivalent results to the original before deploying it to production.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_3520

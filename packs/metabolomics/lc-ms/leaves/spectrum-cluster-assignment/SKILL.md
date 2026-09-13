@@ -3,6 +3,7 @@ name: spectrum-cluster-assignment
 description: 'Use when you have computed a sparse pairwise distance matrix from nearest neighbor indexes and need to group spectra into clusters. Use this skill when: (1) you have a sparse similarity or distance matrix as input;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

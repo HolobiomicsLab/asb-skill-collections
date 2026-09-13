@@ -3,6 +3,7 @@ name: feature-count-verification-across-adducts-and-isotopologues
 description: Use when after mzRAPP has exported a benchmark CSV file from centroided mzML files and you need to confirm the benchmark was constructed correctly before using it to evaluate NPP tool performance. Specifically, when you have a reference expectation (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3520

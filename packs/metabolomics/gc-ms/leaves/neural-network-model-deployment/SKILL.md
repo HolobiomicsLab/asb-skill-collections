@@ -3,6 +3,7 @@ name: neural-network-model-deployment
 description: Use when you have LC-MS feature tables (m/z and retention time columns) and corresponding .mzXML or .mzML files, and you need to automatically classify whether extracted ion chromatograms represent genuine metabolomic features or false positives.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0593

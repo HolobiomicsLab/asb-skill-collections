@@ -3,6 +3,7 @@ name: retention-time-alignment
 description: Use when after peak detection in untargeted metabolomics when you have identified ion signals across mass-to-charge and retention-time dimensions from replicate injections of the same samples, and you need to group peaks from different runs that represent the same metabolite before building a.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0218

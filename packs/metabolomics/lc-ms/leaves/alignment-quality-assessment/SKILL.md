@@ -3,6 +3,7 @@ name: alignment-quality-assessment
 description: Use when after retention time and m/z-based clustering have been applied to group features across samples in a multi-sample metabolomics study.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172

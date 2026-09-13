@@ -3,6 +3,7 @@ name: oracle-mode-structural-constraint-integration
 description: Use when when you have loaded both a known compound and its modified analog with MS/MS spectra, initially generated baseline modification probability scores, and then obtained or confirmed the structure of the modified compound.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -50,6 +51,7 @@ attribution:
 
 # oracle-mode-structural-constraint-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A refinement workflow in ModiFinder that uses the known structure of a modified compound to propagate structural constraints through peak-to-fragment mappings, improving annotation accuracy and modification site localization confidence. This oracle-mode approach re-annotates spectra after setting a compound's structure as known, yielding updated probability scores that reflect structural guidance.

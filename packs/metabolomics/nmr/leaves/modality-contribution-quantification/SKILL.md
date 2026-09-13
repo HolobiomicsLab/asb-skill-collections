@@ -3,6 +3,7 @@ name: modality-contribution-quantification
 description: Use when when you have a trained multitask model that accepts multiple input modalities (e.g., 1D NMR spectra in different nuclei or complementary analytical techniques) and you need to understand their relative importance for the downstream prediction task (e.g., molecular structure elucidation).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3474

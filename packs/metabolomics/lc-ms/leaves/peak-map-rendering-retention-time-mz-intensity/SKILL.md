@@ -3,6 +3,7 @@ name: peak-map-rendering-retention-time-mz-intensity
 description: Use when when you have loaded mass spectrometry data (from mzML or Bruker .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0564
   edam_topics:
   - http://edamontology.org/topic_0121

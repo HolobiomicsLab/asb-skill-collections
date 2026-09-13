@@ -3,6 +3,7 @@ name: ion-species-confirmation-validation
 description: Use when after you have identified candidate ion-species pairs through pointwise correlation analysis of XIC temporal profiles and exact mass difference refinement, and you have MS2 fragment spectra available for those candidates.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0121

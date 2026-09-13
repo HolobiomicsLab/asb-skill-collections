@@ -3,6 +3,7 @@ name: interactive-filter-control-design-web
 description: Use when when you have a web-based visualization of aligned mass spectrometry peaks (m/z, intensity, retention time, alignment quality metrics) and need users to interactively explore subsets of those peaks by applying constraints on intensity thresholds, alignment score cutoffs, or peak.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -44,6 +45,7 @@ attribution:
 
 # Interactive Filter Control Design for Web
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement dynamic, real-time filter controls (sliders, checkboxes, range inputs) on a web visualization layer that allow users to adjust threshold parameters and see filtered peak alignments update instantly. This skill bridges user-facing interaction design with backend data filtering logic to support exploratory analysis of mass spectrometry alignments.

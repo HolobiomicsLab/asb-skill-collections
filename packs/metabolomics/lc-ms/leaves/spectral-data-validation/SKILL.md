@@ -3,6 +3,7 @@ name: spectral-data-validation
 description: Use when when raw spectra have been imported from common MS/MS file formats but contain inconsistent, missing, or malformed metadata fields that could compromise spectral similarity comparisons or cause downstream pipeline failures.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

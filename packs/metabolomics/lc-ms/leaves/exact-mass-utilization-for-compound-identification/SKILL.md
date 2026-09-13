@@ -3,6 +3,7 @@ name: exact-mass-utilization-for-compound-identification
 description: Use when you have a GC-MS dataset in CSV format with retention times, base peak m/z values, component areas, and compound names, and you need to identify whether specific query chemicals are present in your samples and retrieve their -match factors (scoring the confidence of the spectral match) and.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: mass-tolerance-parameter-calibration
 description: Use when when converting raw line-scan mass spectrometry imaging data (Agilent .d, Bruker .tsf/.baf/.tdf, Thermo .raw, or .mzML formats) and must decide which m/z values from a reference mass list correspond to peaks in the raw spectra.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

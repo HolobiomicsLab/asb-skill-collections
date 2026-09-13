@@ -3,6 +3,7 @@ name: metabolomic-feature-tree-construction
 description: Use when when you have preprocessed LC-MS/MS data (MGF file with MS1 and MS2 spectra and a feature abundance table from MZmine2 or similar peak detection tool) and need to perform chemical phylogeny-based diversity analyses or meta-analyses comparing metabolomic profiles across multiple samples or.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3934
   edam_topics:
   - http://edamontology.org/topic_0637

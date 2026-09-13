@@ -3,6 +3,7 @@ name: isotopic-signature-detection-and-filtering
 description: Use when after DEIMoS isotope detection has assigned potential isotopic signatures to detected features in aligned MS1 data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3375

@@ -3,6 +3,7 @@ name: feature-intensity-normalization-and-batch-correction
 description: Use when after blank masking and sample dropping, when you have a feature table with intensity values that exhibit systematic variation across sample collection batches or instrument runs.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

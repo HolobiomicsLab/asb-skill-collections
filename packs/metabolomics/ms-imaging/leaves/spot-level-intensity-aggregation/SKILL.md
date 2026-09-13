@@ -3,6 +3,7 @@ name: spot-level-intensity-aggregation
 description: Use when after loading spatial metabolomics data (from CSV, imzML, or merged positive/negative ion modes) into an AnnData object, and before filtering or alignment steps.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

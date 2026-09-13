@@ -3,6 +3,7 @@ name: compound-database-lookup-and-curation
 description: Use when after feature extraction from LC–MS raw data (via XCMS, MS-Dial, or equivalent) has yielded a feature intensity table (samples × features) and feature metadata table (m/z, retention time, feature ID).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0769

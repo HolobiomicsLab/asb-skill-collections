@@ -3,6 +3,7 @@ name: peak-quality-metric-interpretation-alignment
 description: Use when when you have loaded aligned peak-alignment data from a molecular networking task and need to distinguish high-confidence, reproducible peak alignments from noise or spurious matches.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -43,6 +44,7 @@ attribution:
 
 # peak-quality-metric-interpretation-alignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret and apply alignment quality metrics to filter and validate aligned peaks across multiple mass spectra in molecular networking data. This skill ensures that only peaks meeting reproducibility and confidence thresholds are retained for downstream analysis.

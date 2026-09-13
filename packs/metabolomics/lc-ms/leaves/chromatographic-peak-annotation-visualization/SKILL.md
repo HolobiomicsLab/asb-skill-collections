@@ -3,6 +3,7 @@ name: chromatographic-peak-annotation-visualization
 description: Use when after running tardisPeaks() with screening_mode=TRUE on centroided .mzML LC-MS data, when you need to visually inspect whether the 10 target compounds (internal standards and endogenous metabolites) were correctly detected within their expected m/z and retention time windows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3520

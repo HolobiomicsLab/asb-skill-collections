@@ -3,6 +3,7 @@ name: biomolecular-class-label-assignment
 description: Use when you have raw or processed TWIM-MS data with arrival time and m/z values for multiple features, but lack prior structural identification (e.g., from spectral libraries or databases).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0625

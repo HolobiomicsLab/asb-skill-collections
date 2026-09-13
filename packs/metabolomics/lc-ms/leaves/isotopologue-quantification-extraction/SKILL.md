@@ -3,6 +3,7 @@ name: isotopologue-quantification-extraction
 description: Use when you have GC-CI-MS or LC-MS data in mzML format targeting a defined set of compounds with known monoisotopic mass, retention time, and chemical formula, and you need per-isotopologue (M+0, M+1, M+2, etc.) quantification metrics (area, maxo intensity, abundance).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

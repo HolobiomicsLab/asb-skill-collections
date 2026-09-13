@@ -3,6 +3,7 @@ name: interactive-plot-embedding
 description: Use when you have resolved USI (Unified Spectrum Identifier) spectrum data from a supported repository (GNPS, MassBank, MetaboLights, Metabolomics Workbench, ProteoXchange, or MS2LDA) and need to create a figure suitable for journal publication or supplementary materials that retains a link to the.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3172

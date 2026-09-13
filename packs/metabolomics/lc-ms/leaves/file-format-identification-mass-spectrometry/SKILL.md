@@ -3,6 +3,7 @@ name: file-format-identification-mass-spectrometry
 description: Use when you have raw MS data files from one or more instrument vendors (Agilent, Bruker, Thermo Fisher, or mzML-formatted) and need to convert them to a vendor-agnostic HDF5-based storage format for downstream software development, machine learning, or cross-platform data access.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

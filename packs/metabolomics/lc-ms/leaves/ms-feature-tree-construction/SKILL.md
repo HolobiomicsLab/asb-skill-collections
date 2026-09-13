@@ -3,6 +3,7 @@ name: ms-feature-tree-construction
 description: Use when you have untargeted LC-MS/MS metabolomic data (peak-detected .mzXML/.mzML/.mzDATA files processed through MZmine2) and need to relate MS1 features by chemical similarity rather than sequence homology.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

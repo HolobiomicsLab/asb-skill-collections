@@ -3,6 +3,7 @@ name: precision-recall-optimization-in-spectral-annotation
 description: Use when you have extracted fragmentation patterns from a collection of MS/MS spectra (using mineMS2) and have partitioned spectra into components via GNPS molecular networking (e.g., connected components, cliques, or high-similarity pairs with cosine > threshold).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3941
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -45,6 +46,7 @@ attribution:
 
 # precision-recall-optimization-in-spectral-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and rank fragmentation patterns that optimally explain MS/MS spectral components by balancing recall (proportion of component spectra explained) and precision (proportion of explained spectra that belong to the component), using F1-score and other metrics to isolate patterns with perfect or near-perfect explanatory power. This skill is essential when coupled to GNPS molecular networks to annotate network components with chemically interpretable fragmentation patterns.

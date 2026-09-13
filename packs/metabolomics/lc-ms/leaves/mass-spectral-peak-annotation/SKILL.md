@@ -3,6 +3,7 @@ name: mass-spectral-peak-annotation
 description: Use when you have centroided MS2 spectra (in mzML format from data-dependent acquisition) and a list of known or suspect PFAS diagnostic fragment masses, and you need to systematically flag which detected features contain fragments characteristic of PFAS compounds (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_3520

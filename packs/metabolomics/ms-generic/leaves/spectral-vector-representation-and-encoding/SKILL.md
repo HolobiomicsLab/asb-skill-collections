@@ -3,6 +3,7 @@ name: spectral-vector-representation-and-encoding
 description: Use when when you have a set of mass spectra (query or library) that need to be searched against a large spectral reference database, and you want to use fast approximate nearest neighbor methods rather than exhaustive pairwise comparisons.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

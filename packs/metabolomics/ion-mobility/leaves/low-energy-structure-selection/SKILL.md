@@ -3,6 +3,7 @@ name: low-energy-structure-selection
 description: Use when after generating an ensemble of 3D conformers via RDKit conformation sampling, when you need to reduce the conformer set size before expensive quantum-chemical calculations (e.g., QUICK).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0337
   edam_topics:
   - http://edamontology.org/topic_3314
@@ -42,6 +43,7 @@ attribution:
 
 # Low-Energy Structure Selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Select and rank molecular conformers by computed single-point energies using a neural network potential, retaining the lowest-energy subset for downstream quantum-chemical calculations. This filtering step reduces computational cost while preserving conformational diversity relevant to collision cross section prediction.

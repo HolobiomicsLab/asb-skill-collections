@@ -3,6 +3,7 @@ name: dda-fragmentation-strategy-simulation
 description: Use when you have real mzML LC-MS/MS data (e.g., from a Beer sample or HMDB reference set) and want to test whether a proposed TopN DDA strategy (or variant) can accurately reproduce the observed acquisition patterns, or you want to compare multiple acquisition controllers on the same chemical.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

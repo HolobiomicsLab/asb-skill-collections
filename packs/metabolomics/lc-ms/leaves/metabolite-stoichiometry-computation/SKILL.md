@@ -3,6 +3,7 @@ name: metabolite-stoichiometry-computation
 description: Use when when you have quantified intracellular metabolite abundances (LC-MS normalized values) for multiple cell lines or samples, a metabolic network model with reaction stoichiometry, and you need to predict how substrate availability translates into metabolic flux differences.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0602

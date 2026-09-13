@@ -3,6 +3,7 @@ name: retention-time-agnostic-spectral-alignment
 description: Use when you have MS2 fragmentation spectra from multiple samples (in .mgf, .mzML, or .mzXML format) and want to compare them despite poor feature overlap, strong RT shifts between acquisitions, or use of different LC-MS platforms (e.g., Orbitrap vs. Q-ToF).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3932
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: spectrum-processing-pipeline-construction
 description: Use when you have raw mass spectrometry spectra (in MGF, mzML, or similar formats) that must undergo standardized preprocessing before library matching, similarity searching, or performance benchmarking.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: model-metadata-schema-inspection
 description: Use when when preparing to send peak data (1H and 13C NMR measurements) to a machine learning classification endpoint and you need to verify the current model's input/output names and schema, especially before implementing or updating code that constructs JSON payloads for the /api/smart3/search.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_topics: []
   tools:
   - TensorFlow Serving

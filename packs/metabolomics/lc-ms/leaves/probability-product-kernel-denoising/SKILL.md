@@ -3,6 +3,7 @@ name: probability-product-kernel-denoising
 description: Use when you have raw MS2 spectra (m/z and intensity pairs) that you want to match against a large training dataset of annotated library spectra (e.g., GNPS), and you need to reduce noise and computational burden before applying kernel-based scoring methods such as IOKR.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3172

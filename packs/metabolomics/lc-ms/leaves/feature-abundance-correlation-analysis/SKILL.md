@@ -3,6 +3,7 @@ name: feature-abundance-correlation-analysis
 description: Use when after initial retention-time-based feature grouping (e.g., using SimilarRtimeParam with a 20-second window), apply this skill when you need to split large feature groups into more homogeneous sub-groups.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091

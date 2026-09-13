@@ -3,6 +3,7 @@ name: combined-table-extraction-and-inspection
 description: Use when after constructing a metabCombiner object by grouping features from two metabData objects by m/z, and before proceeding to anchor selection, RT mapping, or alignment scoring.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0091

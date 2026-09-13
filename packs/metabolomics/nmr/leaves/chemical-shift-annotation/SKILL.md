@@ -3,6 +3,7 @@ name: chemical-shift-annotation
 description: Use when when you have preprocessed 1H NMR spectral data with unidentified peaks and need to determine metabolite identity by exploiting the correlation structure of NMR signals.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -45,6 +46,7 @@ attribution:
 
 # chemical-shift-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use Statistical Total Correlation Spectroscopy (STOCSY) to assign chemical identity to unknown NMR signals by analyzing their covariance and correlation patterns across a reference spectrum. This workflow converts ambiguous δ shifts into metabolite assignments by identifying characteristic multiplet patterns.

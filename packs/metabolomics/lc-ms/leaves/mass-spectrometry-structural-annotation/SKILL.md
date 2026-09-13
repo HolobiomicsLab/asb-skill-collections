@@ -3,6 +3,7 @@ name: mass-spectrometry-structural-annotation
 description: Use when after identifying statistically significant features (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0121

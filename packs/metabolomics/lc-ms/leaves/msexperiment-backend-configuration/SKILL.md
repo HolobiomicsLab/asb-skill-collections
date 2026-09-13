@@ -3,6 +3,7 @@ name: msexperiment-backend-configuration
 description: Use when you have multiple centroided .mzML LC-MS files that need to be loaded into a unified object for targeted peak integration, and you need to distinguish QC runs from sample runs to compute per-group quality metrics (e.g., average SNR, peak correlation, area under curve per QC cohort).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0091

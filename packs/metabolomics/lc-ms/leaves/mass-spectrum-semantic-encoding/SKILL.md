@@ -3,6 +3,7 @@ name: mass-spectrum-semantic-encoding
 description: Use when when you have an unknown compound's mass spectrum (m/z peaks and intensities in .mgf or equivalent format) and need to identify structurally related metabolites from a reference database by computing similarity in learned semantic space rather than direct spectral matching.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -40,6 +41,7 @@ attribution:
 
 # mass-spectrum-semantic-encoding
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encode mass spectra into learned semantic vector representations using deep-learning models trained on mass spectral language, enabling similarity-based metabolite annotation and chemical space exploration for unknown compounds.

@@ -3,6 +3,7 @@ name: peak-quality-assessment-by-selectivity-and-snr-metrics
 description: Use when after elution peaks have been detected on composite mass tracks using local maxima and prominence thresholds, and before mapping detected features back to individual samples or performing pre-annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0769
@@ -54,6 +55,7 @@ attribution:
 
 # peak-quality-assessment-by-selectivity-and-snr-metrics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate detected LC-MS peaks on composite mass tracks using selectivity (mSelectivity >0.99) and signal-to-noise ratio (SNR >2) metrics alongside Gaussian peakshape quality (>0.5) to filter spurious or low-confidence features before downstream annotation. This statistical approach prioritizes high-confidence peaks while minimizing retention of noise-driven artifacts.

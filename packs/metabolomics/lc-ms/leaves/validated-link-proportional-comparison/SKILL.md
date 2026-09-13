@@ -3,6 +3,7 @@ name: validated-link-proportional-comparison
 description: Use when when you have scored GCF-MF (gene cluster family–molecular family) links using two or more complementary scoring approaches (e.g., standardised strain correlation and IOKR), and you need to determine whether combining scores improves discrimination of true links from false positives.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3397

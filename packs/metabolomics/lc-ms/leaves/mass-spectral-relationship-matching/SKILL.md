@@ -3,6 +3,7 @@ name: mass-spectral-relationship-matching
 description: Use when after peak detection and feature table generation when you have a collection of m/z, retention time, and intensity values and need to identify which features are related variants (isotopes, adducts, or fragments) of the same parent compound.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3648
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -42,6 +43,7 @@ attribution:
 
 # mass-spectral-relationship-matching
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Annotate and group LC-MS features as isotopes, adducts, or in-source fragments by matching mass shifts and neutral loss patterns within retention time windows. This skill enables confident assignment of feature relationships that reflect the same underlying molecular entity.

@@ -3,6 +3,7 @@ name: spectral-alignment-optimization
 description: Use when when you have two MS/MS fragmentation spectra (with precursor m/z values and fragment ion lists) and need to establish correspondence between their fragment ions beyond simple pairwise comparison.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0121

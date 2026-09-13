@@ -3,6 +3,7 @@ name: package-metadata-compilation
 description: Use when when a package README or publication claims to install a large, fixed number of tools (e.g., 'approximately 89 tools') but does not enumerate them explicitly.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0769

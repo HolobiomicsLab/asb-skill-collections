@@ -3,6 +3,7 @@ name: cosine-similarity-scoring-computation
 description: Use when when you have imported and filtered mass spectrometry spectral data (from mzML, mzXML, msp, MGF, or JSON formats) and need to identify similar or related spectra within a dataset or against a reference library.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3258
   edam_topics:
   - http://edamontology.org/topic_3520

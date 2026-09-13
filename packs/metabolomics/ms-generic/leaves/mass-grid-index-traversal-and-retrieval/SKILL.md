@@ -3,6 +3,7 @@ name: mass-grid-index-traversal-and-retrieval
 description: Use when when you have constructed a MassGrid (m/z-aligned mass tracks across multiple samples) and need to retrieve all sample-specific mass tracks for a given m/z value in order to sum their intensities, apply retention time calibration, or construct composite mass track objects for peak.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -43,6 +44,7 @@ attribution:
 
 # mass-grid-index-traversal-and-retrieval
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve aligned mass tracks from a MassGrid structure by m/z index and access their corresponding intensity vectors across samples. This skill enables efficient lookup and aggregation of sample-specific mass track data during composite map construction for peak detection.

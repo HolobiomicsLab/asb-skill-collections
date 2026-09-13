@@ -3,6 +3,7 @@ name: galaxy-installation-configuration
 description: Use when you have a Galaxy Master branch installation (or specific commit c429777c93680dcee449fe410f5360afbe673758) and need to add metabolomics tools from Galaxy-M.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0121

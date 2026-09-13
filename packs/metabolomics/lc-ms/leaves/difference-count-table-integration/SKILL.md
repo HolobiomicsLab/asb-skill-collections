@@ -3,6 +3,7 @@ name: difference-count-table-integration
 description: Use when when analyzing tandem MS/MS spectra with SIMILE V2 and you want to leverage both fragment ion mass differences and neutral loss patterns to improve spectral similarity scoring.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

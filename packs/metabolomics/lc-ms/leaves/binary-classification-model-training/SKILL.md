@@ -3,6 +3,7 @@ name: binary-classification-model-training
 description: Use when you have curated a labeled dataset of MS/MS spectra annotated as 'relevant' (compounds of interest obtained from reference standards) or 'other' (reference standards or non-target compounds), and you need to build a classifier to automatically distinguish these two classes on unknown.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0091

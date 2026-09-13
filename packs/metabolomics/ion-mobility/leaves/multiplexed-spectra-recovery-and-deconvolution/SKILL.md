@@ -3,6 +3,7 @@ name: multiplexed-spectra-recovery-and-deconvolution
 description: Use when you have raw IM-MS data in UIMF or Agilent MassHunter .d format acquired from a multiplexed (interleaved) ion mobility experiment, and you need to recover individual, demultiplexed frames to reconstruct conventional IM-MS spectra for downstream omics analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -54,6 +55,7 @@ attribution:
 
 # multiplexed-spectra-recovery-and-deconvolution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Recover conventional IM-MS spectra from multiplexed acquisitions using demultiplexing and artifact removal algorithms with selectable pulse coverage parameters. This skill applies the PNNL PreProcessor's integrated demultiplexing strategy to decompose interleaved ion mobility frames and maximize sensitivity for low-level signals in drift tube and SLIM instruments.

@@ -3,6 +3,7 @@ name: mass-spectrometry-quantification-extraction
 description: Use when you have raw LipidSearch or LIQUID output files (CSV or TSV format) containing lipid identifiers and per-sample quantification measurements, and you need to convert them into a machine-readable data matrix for downstream statistical analysis, normalization, or differential abundance.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0153

@@ -3,6 +3,7 @@ name: chemical-structure-fingerprint-comparison
 description: Use when when you have MS/MS spectra with known chemical structures (InChIKeys or SMILES) and want to validate whether a novel or existing spectral similarity scoring method actually reflects true chemical structural similarity.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0625

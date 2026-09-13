@@ -3,6 +3,7 @@ name: chromatographic-peak-quality-assessment
 description: Use when when you have a feature table (CSV with m/z and retention time columns) and corresponding LC-MS raw data files (.mzXML or .mzML) from an untargeted metabolomics experiment, and need to filter out spurious peaks before downstream statistical or biological interpretation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3643
   edam_topics:
   - http://edamontology.org/topic_0769

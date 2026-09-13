@@ -3,6 +3,7 @@ name: csv-to-dictionary-conversion
 description: Use when you have a CSV file containing molecule definitions (chemical formula, m/z, intensity, retention time, or other peak properties) and need to prepare it for SMITER's simulation workflow.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3750
   edam_topics:
   - http://edamontology.org/topic_0769

@@ -3,6 +3,7 @@ name: spectral-library-integration-workflow
 description: Use when when you have experimental UHPLC-HRMS/MS data targeting lipid species not adequately covered by LipidMatch's built-in library (500,000+ species across 60+ lipid types), or when working with specialized applications requiring custom lipid definitions (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: spectral-library-annotation-augmentation
 description: Use when you have a GNPS DBResult file containing spectral library matches with InChIKey identifiers but lacking ClassyFire ontology columns (superclass, class, subclass), and you need to restore this taxonomic context for consensus classification or chemical ontology annotation workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0625

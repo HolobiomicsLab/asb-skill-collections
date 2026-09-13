@@ -3,6 +3,7 @@ name: neutral-loss-calculation-from-precursor-fragment-pairs
 description: Use when during MS/MS spectral preprocessing when converting raw spectra from .mgf, .msp, or .mzML formats into a bag-of-fragments corpus for LDA modeling. Use it after fragment ion masses have been extracted and normalized within each spectrum, and before noise filtering and corpus generation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

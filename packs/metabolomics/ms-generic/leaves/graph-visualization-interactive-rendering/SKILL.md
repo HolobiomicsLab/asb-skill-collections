@@ -3,6 +3,7 @@ name: graph-visualization-interactive-rendering
 description: Use when after constructing a NetworkX graph object from structural clusters (via MamsiStructSearch), when you need to interactively explore feature relationships or publish a static network diagram showing isotopologue links, adduct relationships, and cross-assay connections.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0091

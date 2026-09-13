@@ -3,6 +3,7 @@ name: spectral-library-export-and-formatting
 description: Use when after theoretical spectra have been generated for lipid–adduct combinations with enumerated fragment masses and intensities, and you need to deploy them for downstream MS/MS analysis on Orbitrap (DDA via Excalibur) or SkyLine (targeted/PRM) workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -42,6 +43,7 @@ attribution:
 
 # spectral-library-export-and-formatting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Export computationally generated lipid mass spectra into standardized formats (MSP, CSV) compatible with targeted and data-dependent acquisition workflows on Orbitrap instruments. This skill bridges in-memory spectral libraries to instrument-ready precursor lists and transition libraries.

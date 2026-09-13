@@ -3,6 +3,7 @@ name: drift-retention-time-alignment
 description: Use when you have GCIMS samples exhibiting misalignment across drift time (typically 5–16 ms range) and retention time (typically 0–1100 s range) caused by pressure/temperature fluctuations or chromatographic column degradation, and you need to normalize sample positions before downstream peak.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0625

@@ -3,6 +3,7 @@ name: probability-threshold-tuning-for-chemical-detection
 description: Use when you have a trained NeatMS neural network model (.h5 format) and need to select an operating threshold for peak classification on your LCMS dataset.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

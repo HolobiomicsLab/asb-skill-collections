@@ -3,6 +3,7 @@ name: chromatographic-peak-detection-msw
 description: Use when you have raw mzML files from an FTICR-MS or other direct-injection MS instrument and need to identify discrete chromatographic peaks across the m/z and retention-time dimensions. Use this skill when you must isolate individual ion signals before applying calibration corrections (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_3172

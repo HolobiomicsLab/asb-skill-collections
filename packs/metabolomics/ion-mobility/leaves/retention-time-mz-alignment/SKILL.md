@@ -3,6 +3,7 @@ name: retention-time-mz-alignment
 description: Use when processing raw LC/MS data (mzML or mzXML format) from multi-sample cohorts where retention time or intensity drift is suspected due to batch effects, instrument calibration drift, or variable run order.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0625

@@ -3,6 +3,7 @@ name: module-dispatch-architecture-analysis
 description: Use when when you need to understand how a multi-instrument mass spectrometry platform (like mzmine) decides which processing module receives a given dataset based on its declared data type (LC vs. GC vs. IMS vs. MS imaging).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3439
   edam_topics:
   - http://edamontology.org/topic_0121

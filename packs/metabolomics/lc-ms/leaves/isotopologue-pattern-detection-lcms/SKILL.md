@@ -3,6 +3,7 @@ name: isotopologue-pattern-detection-lcms
 description: Use when after filtering LC-MS features by statistical significance (e.g., p-value < 0.01) and you wish to group features that represent the same metabolite at different isotopologue states.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0091

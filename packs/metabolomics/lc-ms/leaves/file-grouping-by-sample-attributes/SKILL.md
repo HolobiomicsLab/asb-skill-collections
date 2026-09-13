@@ -3,6 +3,7 @@ name: file-grouping-by-sample-attributes
 description: Use when you have a validated ReDU sample-information metadata table (gnps_metadata.tsv) loaded from a MassIVE accession, and you need to partition public MS/MS files into multiple analysis cohorts by one or more sample attributes.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -49,6 +50,7 @@ attribution:
 
 # file-grouping-by-sample-attributes
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Partition a collection of public mass spectrometry files from MassIVE into logical cohorts by filtering on validated sample-information metadata (extraction method, ionization source, organism, tissue type, pre-MS separation, etc.), then assign filtered subsets to named groups while enforcing workflow-specific file-count thresholds. This skill enables downstream co-analysis of public tandem MS data via GNPS molecular networking or library search.

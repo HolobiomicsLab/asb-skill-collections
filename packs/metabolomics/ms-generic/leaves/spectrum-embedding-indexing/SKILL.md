@@ -3,6 +3,7 @@ name: spectrum-embedding-indexing
 description: Use when you have pre-computed Word2vec embeddings of mass spectra and need to retrieve the k most similar spectra from a library of hundreds of thousands to millions of candidates.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

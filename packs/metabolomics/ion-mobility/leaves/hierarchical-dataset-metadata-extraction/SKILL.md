@@ -3,6 +3,7 @@ name: hierarchical-dataset-metadata-extraction
 description: Use when when you have received an MZA-format HDF5 file (or other hierarchical HDF5-based scientific data) and need to understand its internal structure before downstream processing, share it across programming languages (Python, R), or document its schema for reproducibility.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520

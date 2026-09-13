@@ -3,6 +3,7 @@ name: fragment-ion-database-matching
 description: Use when you have centroid-mode LC-MS AIF chromatograms processed through xcms and RAMClustR, a feature table with target m/z and retention time values, and access to fragment libraries (e.g., LipidPos for lipids).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_0091

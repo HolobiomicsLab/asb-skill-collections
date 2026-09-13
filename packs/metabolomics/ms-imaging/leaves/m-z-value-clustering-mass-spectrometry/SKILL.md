@@ -3,6 +3,7 @@ name: m-z-value-clustering-mass-spectrometry
 description: Use when processing extracted peak lists from MSI data and you need to annotate matrix-related signals but suspect that multiple ions with the same or very similar m/z values (isobaric ions) are present.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

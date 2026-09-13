@@ -3,6 +3,7 @@ name: chemical-structure-transformation-documentation
 description: Use when when you have access to source code or algorithmic documentation of a metabolite generation pipeline (such as MAGMa's job subproject) and need to understand, validate, or reconstruct the transformations that convert a parent compound into enumerated metabolite candidates.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0225
   edam_topics:
   - http://edamontology.org/topic_0153

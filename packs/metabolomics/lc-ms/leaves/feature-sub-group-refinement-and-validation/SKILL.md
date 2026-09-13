@@ -3,6 +3,7 @@ name: feature-sub-group-refinement-and-validation
 description: Use when after initial retention-time-based feature grouping (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

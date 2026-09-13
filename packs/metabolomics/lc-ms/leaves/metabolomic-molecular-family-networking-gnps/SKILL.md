@@ -3,6 +3,7 @@ name: metabolomic-molecular-family-networking-gnps
 description: Use when when you have untargeted LC-MS/MS spectral data from microbial or environmental samples and aim to group related metabolites into molecular families for natural product discovery, especially when integrating with genomic biosynthetic gene cluster (BGC) annotations to link chemistry to.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0154

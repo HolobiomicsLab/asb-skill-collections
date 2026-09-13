@@ -3,6 +3,7 @@ name: spectral-data-object-construction-and-integration
 description: Use when you have centroided mzML files from LC–MS experiments and need to perform targeted metabolomics or lipidomics analysis. Specifically, use it when you require polarity filtering, QC-sample stratification, or batch-aware peak detection—all of which depend on sampleData$type annotations (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3209
   edam_topics:
   - http://edamontology.org/topic_0091

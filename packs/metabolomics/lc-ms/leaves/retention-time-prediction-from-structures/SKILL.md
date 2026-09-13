@@ -3,6 +3,7 @@ name: retention-time-prediction-from-structures
 description: Use when you have molecular structures (SMILES or SDF format) for which you need to predict retention time in liquid chromatography, especially when your target dataset contains fewer than ~500 annotated examples.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3791
   edam_topics:
   - http://edamontology.org/topic_3174
@@ -42,6 +43,7 @@ attribution:
 
 # retention-time-prediction-from-structures
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use a pre-trained graph neural network (GNN) to predict liquid chromatography retention times from molecular structures, enabling rapid screening on small training datasets without retraining from scratch. This approach leverages transfer learning to generalize across different chromatographic methods and chemical libraries.

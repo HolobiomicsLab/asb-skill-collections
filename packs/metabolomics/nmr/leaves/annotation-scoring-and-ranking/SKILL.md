@@ -3,6 +3,7 @@ name: annotation-scoring-and-ranking
 description: Use when you have experimental mass spectra from untargeted metabolomics and need to assign compound identities with confidence estimates.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3172

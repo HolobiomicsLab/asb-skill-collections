@@ -3,6 +3,7 @@ name: biotransformation-prediction-across-microbiota-contexts
 description: Use when you have one or more small-molecule chemical structures (as SMILES, MOL, or SDF) and need to systematically explore their fate across mammalian biotransformation, human gut microbial degradation, or environmental (soil/aquatic) microbial degradation.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -40,6 +41,7 @@ attribution:
 
 # biotransformation-prediction-across-microbiota-contexts
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Predict small-molecule metabolism across three distinct biological compartments—mammalian, gut microbiota, and soil/aquatic microbiota—using BioTransformer 3.0.0 to generate metabolite structures, reaction types, and metabolic pathway information. This skill enables computational metabolite identification and pathway elucidation when characterizing how xenobiotics or natural products are transformed across different microenvironments.

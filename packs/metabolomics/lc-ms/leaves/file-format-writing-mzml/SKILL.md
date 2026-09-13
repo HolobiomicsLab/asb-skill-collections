@@ -3,6 +3,7 @@ name: file-format-writing-mzml
 description: Use when after completing an Environment simulation or replay with scan-level MS2 acquisition control, and evaluation data has been collected in memory.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3650
   edam_topics:
   - http://edamontology.org/topic_3172

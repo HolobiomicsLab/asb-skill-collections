@@ -3,6 +3,7 @@ name: multimodal-spot-correspondence-mapping
 description: Use when when you have paired spatial transcriptome and metabolome datasets in h5ad format with spatial coordinate matrices (obsm['spatial']) and you need to establish spot-level correspondence across modalities for downstream integration or co-analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0080
@@ -41,6 +42,7 @@ attribution:
 
 # multimodal-spot-correspondence-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align spatial transcriptome and metabolome spots via high-correlated feature pair identification combined with modified spatial morphological alignment to achieve accurate spot-to-spot correspondence mapping between modalities. This enables integrated analysis of multi-omics spatial data with preserved coordinate fidelity.

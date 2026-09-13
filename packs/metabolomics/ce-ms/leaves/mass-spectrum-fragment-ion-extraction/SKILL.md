@@ -3,6 +3,7 @@ name: mass-spectrum-fragment-ion-extraction
 description: Use when you have an experimental MS/MS spectrum (e.g., from MassBank or acquired data) for a single metabolite with known accurate precursor m/z and adduct type, and you need to generate a library entry with scored fragments for use in metabolite annotation pipelines.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0091

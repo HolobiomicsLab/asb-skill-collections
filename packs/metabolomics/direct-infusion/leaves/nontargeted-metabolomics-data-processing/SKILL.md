@@ -3,6 +3,7 @@ name: nontargeted-metabolomics-data-processing
 description: Use when you have raw LC-MS data in vendor or mzML format and need to systematically discover and extract all detectable metabolite features across the full retention time range, without predefined target lists.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -45,6 +46,7 @@ attribution:
 
 # nontargeted-metabolomics-data-processing
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Nontargeted metabolomics data processing is a workflow for extracting chromatographic features from raw LC-MS data without prior knowledge of target analytes. It combines peak detection, segmentation, feature quality evaluation, and annotation to generate a comprehensive feature table suitable for discovery and comparative metabolomics studies.

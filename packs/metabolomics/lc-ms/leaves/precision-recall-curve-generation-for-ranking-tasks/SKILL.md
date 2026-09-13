@@ -3,6 +3,7 @@ name: precision-recall-curve-generation-for-ranking-tasks
 description: Use when when you have computed similarity scores (e.g., MS2DeepScore, Spec2Vec, modified Cosine) between pairs of spectra or compounds and want to compare their ability to retrieve chemically related pairs. Apply this skill if you have ground-truth structural similarity labels (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0092

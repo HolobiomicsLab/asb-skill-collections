@@ -3,6 +3,7 @@ name: spectral-data-preprocessing
 description: Use when you have raw or processed MS spectrum data (mz/intensity pairs) from direct-injection MS (DI-MS), ASAP-MS, or other ambient ionization instruments (AI-MS, LDI-MS), and you need to identify peaks of interest, assign confidence scores, and prepare the data for database matching or species.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -43,6 +44,7 @@ attribution:
 
 # spectral-data-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Spectral data preprocessing transforms raw or processed mass spectrometry spectra (m/z and intensity pairs) into cleaned, annotated datasets suitable for downstream analysis. This skill integrates loading, peak detection, labeling, and result aggregation into a structured output table for species authentication and metabolite identification workflows.

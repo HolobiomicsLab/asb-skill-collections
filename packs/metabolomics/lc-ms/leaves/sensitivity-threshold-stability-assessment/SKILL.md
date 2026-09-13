@@ -3,6 +3,7 @@ name: sensitivity-threshold-stability-assessment
 description: 'Use when you have labeled MS/MS spectra from replicate measurements and need to determine a frequency threshold for denoising that balances competing objectives: retaining true fragment signals while removing noise.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

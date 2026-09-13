@@ -3,6 +3,7 @@ name: score-distribution-analysis-and-statistical-significance-testing
 description: Use when after computing a scoring function over all possible genomic-metabolomic candidate pairs (e.g., all 2966 MIBiG-GNPS BGC-spectrum pairs), when you have a subset of known validated links and need to assess whether the scoring function ranks them significantly higher than expected by chance.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: molecular-descriptor-extraction
 description: Use when you have a collection of chemical structures in SMILES format and need to create paired structure–spectrum training data for a generative model, but do not have experimental MS/MS spectra available.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -63,6 +64,7 @@ attribution:
 
 # molecular-descriptor-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract in silico mass spectral descriptors (fragmentation patterns, peaks) from chemical structure inputs using computational fragmentation prediction tools. This enables generation of paired chemical structure–spectrum training datasets for machine learning models that predict molecular identity from tandem MS data.

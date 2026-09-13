@@ -3,6 +3,7 @@ name: metabolite-annotation-at-scale
 description: Use when you have extracted a large feature set of m/z values (hundreds to tens of thousands) from a Cardinal MSImagingExperiment object or similar MS dataset and need to assign putative metabolite identities using public structural databases.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -53,6 +54,7 @@ attribution:
 
 # metabolite-annotation-at-scale
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Systematic annotation of thousands to hundreds of thousands of mass-to-charge (m/z) values against public metabolite databases (HMDB, Lipidmaps) using tolerance-based matching with user-specified adducts and polarity filters. This skill enables structural identification of metabolites in large MS imaging and LC-MS datasets by matching observed m/z features to database entries within a defined parts-per-million (ppm) error threshold.

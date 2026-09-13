@@ -3,6 +3,7 @@ name: dda-mode-metabolomics-data-processing
 description: Use when when you have LC-MS/MS data collected in DDA mode and suspect that MS/MS spectra contain chimeric (multiply-charged or co-fragmented) ion signals that will degrade downstream spectral matching, library searching, or metabolite identification.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -42,6 +43,7 @@ attribution:
 
 # dda-mode-metabolomics-data-processing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Purify chimeric MS/MS spectra from untargeted metabolomics data acquired in Data-Dependent Acquisition (DDA) mode using DNMS2Purifier, a bioinformatic solution that removes or flags co-fragmented ion signals that confound spectral interpretation and compound identification.

@@ -3,6 +3,7 @@ name: batch-normalization-implementation
 description: Use when apply batch normalization after dense hidden layers (but not the final embedding layer) in a deep neural network trained on MS/MS spectral data, particularly when the network processes high-dimensional binned spectra (9948-dimensional vectors) and you need to stabilize gradient flow across.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: mass-defect-filtering
 description: Use when after MS-Dial peak picking and feature table construction, when you observe a high proportion of features with anomalous m/z decimal values that are inconsistent with known metabolite ionization patterns.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

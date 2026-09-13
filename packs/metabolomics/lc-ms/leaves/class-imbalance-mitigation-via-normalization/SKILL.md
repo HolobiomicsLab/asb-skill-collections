@@ -3,6 +3,7 @@ name: class-imbalance-mitigation-via-normalization
 description: Use when preparing training batches for a neural network classifier on LCMS peak data where class counts are unequal (e.g., more high-quality peaks than low-quality peaks).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

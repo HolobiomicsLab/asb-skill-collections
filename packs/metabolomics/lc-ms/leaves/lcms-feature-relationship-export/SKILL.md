@@ -3,6 +3,7 @@ name: lcms-feature-relationship-export
 description: Use when after ISFrag has completed identification of in-source fragment features (Part 4 output), when you need to serialize and inspect the hierarchical fragmentation relationships among identified ISF features, or when preparing data for visualization or external analysis of fragment lineage and.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3370

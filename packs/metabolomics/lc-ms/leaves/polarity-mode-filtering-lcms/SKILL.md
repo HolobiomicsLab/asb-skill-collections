@@ -3,6 +3,7 @@ name: polarity-mode-filtering-lcms
 description: Use when you have a comprehensive target list (containing compounds from both positive and negative ionization modes) but need to screen or detect peaks in a single LC-MS run acquired in a specific polarity mode.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

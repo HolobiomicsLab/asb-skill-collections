@@ -3,6 +3,7 @@ name: substructural-motif-annotation
 description: Use when you have created a GNPS molecular network (classical or feature-based workflow) and separately run an MS2LDA experiment on the corresponding MGF file, and you want to associate each network node with its constituent substructural motifs and visualize which motifs are shared between.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_3520

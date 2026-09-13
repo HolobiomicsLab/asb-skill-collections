@@ -3,6 +3,7 @@ name: high-throughput-spectral-data-processing
 description: Use when when you have MGF-formatted mass spectrometry peak files (typically from proteomics experiments) numbering in the millions of spectra that require grouping into similar MS/MS clusters, and runtime must be kept under 15 minutes rather than hours.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0121

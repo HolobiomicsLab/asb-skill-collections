@@ -3,6 +3,7 @@ name: gaussian-peak-shape-evaluation
 description: Use when after peak detection on a composite mass track has identified candidate peaks in a mass chromatogram, and before compiling the final feature table.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -44,6 +45,7 @@ attribution:
 
 # Gaussian Peak Shape Evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantifies the goodness-of-fit of detected LC-MS peaks to a Gaussian model to filter out poorly shaped peaks and retain high-quality features. This metric serves as one of three orthogonal quality thresholds (alongside SNR and prominence) in asari's peak quality filtering pipeline.

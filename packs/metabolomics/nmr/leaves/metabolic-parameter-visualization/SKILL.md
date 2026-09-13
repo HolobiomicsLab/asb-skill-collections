@@ -3,6 +3,7 @@ name: metabolic-parameter-visualization
 description: Use when when you have paired NMR metabolite measurements and corresponding processing metadata (pre-centrifugation delay, post-centrifugation delay, sample type, cohort) for a blood sample cohort and need to determine which metabolites remain stable across the expected or observed delay range, or.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0337
   edam_topics:
   - http://edamontology.org/topic_0769
@@ -41,6 +42,7 @@ attribution:
 
 # metabolic-parameter-visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Create interactive visualizations of metabolic parameter stability across processing delay timepoints in peripheral blood samples (plasma/serum) to identify which metabolites are sensitive to pre- and post-centrifugation delays. This skill enables rapid, exploratory assessment of pre-analytical effects on NMR-measured metabolites through dynamic filtering and stratified performance reporting.

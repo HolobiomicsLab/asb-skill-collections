@@ -3,6 +3,7 @@ name: metabolic-feature-identification-from-tandem-spectra
 description: Use when when processing data with available MS2 spectra (DDA acquisition) after MS1 peak picking has been completed, and you seek to identify additional metabolic features or validate existing peak picking results through MS2 recognition.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3646
   edam_topics:
   - http://edamontology.org/topic_3172

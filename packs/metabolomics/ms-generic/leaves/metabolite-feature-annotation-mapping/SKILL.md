@@ -3,6 +3,7 @@ name: metabolite-feature-annotation-mapping
 description: Use when after importing raw metabolomics data (e.g., from Metabolon, Nightingale, SomaLogic, or Olink platforms) into a Metaboprep object, but before quality control or statistical analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_0639

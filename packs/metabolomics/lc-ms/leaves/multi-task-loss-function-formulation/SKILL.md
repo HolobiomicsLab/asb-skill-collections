@@ -3,6 +3,7 @@ name: multi-task-loss-function-formulation
 description: Use when when training an object detection network that must predict both discrete labels (e.g., true peak vs. false peak) and continuous coordinates (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3925
   edam_topics:
   - http://edamontology.org/topic_3520

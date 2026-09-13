@@ -3,6 +3,7 @@ name: mass-spectrometry-feature-table-construction
 description: Use when you have vendor-independent centroided mzML files from LC- or GC-HRMS data acquired in data-dependent acquisition (ddMS2) mode and need to extract detected features with m/z, retention time, and intensity attributes as input for non-target screening or PFAS prioritization workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121

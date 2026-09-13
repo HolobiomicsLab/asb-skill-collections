@@ -3,6 +3,7 @@ name: chemical-space-similarity-computation
 description: Use when you have retrieved multiple candidate structures from a molecular structure database (e.g., PubChem, HMDB) for an unknown compound, and you have predictions of structurally related metabolites from a deep-learning mass spectral model (e.g., DeepMASS2).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -39,6 +40,7 @@ attribution:
 
 # chemical-space-similarity-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute chemical-space similarity metrics between candidate molecular structures and predicted structurally related metabolites to reorder database candidates by proximity in chemical space. This skill enables ranking of molecular structure database hits by leveraging deep-learning predicted semantic neighbors, improving the likelihood of identifying the correct metabolite among candidates.

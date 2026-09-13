@@ -3,6 +3,7 @@ name: metadata-extraction-from-spectral-data
 description: Use when you have raw mass spectrometry files in one of the supported formats (mzML, mzXML, msp, metabolomics-USI, MGF, JSON) and need to parse out metadata fields (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

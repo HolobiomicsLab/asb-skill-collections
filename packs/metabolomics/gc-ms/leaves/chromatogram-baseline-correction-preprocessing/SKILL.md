@@ -3,6 +3,7 @@ name: chromatogram-baseline-correction-preprocessing
 description: Use when you have raw or folded 2D-TIC chromatogram data (typically imported from NetCDF files into RGCxGC chromatogram objects) that exhibits baseline drift, chemical noise, or instrumental artifacts that would obscure true metabolite peaks.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0625

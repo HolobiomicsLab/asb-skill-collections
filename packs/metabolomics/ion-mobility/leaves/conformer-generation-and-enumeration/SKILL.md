@@ -3,6 +3,7 @@ name: conformer-generation-and-enumeration
 description: Use when you have SMILES strings of molecules at specific ionization states (e.g., protonated or deprotonated adducts) and need to predict collision cross section values for mass spectrometry-based metabolite annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0488
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -47,6 +48,7 @@ attribution:
 
 # conformer-generation-and-enumeration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate and enumerate three-dimensional conformations for ionized molecular species to prepare for quantum mechanical property prediction. This skill creates multiple low-energy structural variants needed for accurate collisional cross section (CCS) calculations in metabolite annotation workflows.

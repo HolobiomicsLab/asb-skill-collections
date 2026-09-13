@@ -3,6 +3,7 @@ name: metabolomics-data-processing
 description: Use when when you have raw or partially processed metabolomics data (feature tables with sample metadata) and need to apply quality-control metrics, normalization, statistical inference, or advanced classification/variable selection without relying on a Galaxy instance.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: multi-task-auxiliary-target-generation
 description: Use when training neural network models (MLP or GNN) for metabolite annotation on mass spectrometry data and you have access to a large unlabeled or weakly labeled spectral dataset.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3465
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: dataframe-construction-from-backend-sources
 description: Use when when implementing a new MsBackend subclass that stores only a subset of core spectra variables (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_topics: []
   tools:
   - S4Vectors

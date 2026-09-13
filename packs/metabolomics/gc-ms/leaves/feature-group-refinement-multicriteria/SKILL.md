@@ -3,6 +3,7 @@ name: feature-group-refinement-multicriteria
 description: 'Use when after initial retention-time-based feature grouping (e.g., ±20 s window) when you need to separate co-eluting features that are chemically distinct. Triggers include: (1) large feature groups (>2–3 members) suspected to contain multiple compounds;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3172

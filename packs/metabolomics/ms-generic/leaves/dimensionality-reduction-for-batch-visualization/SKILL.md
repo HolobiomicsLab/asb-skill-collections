@@ -3,6 +3,7 @@ name: dimensionality-reduction-for-batch-visualization
 description: Use when after data preprocessing and standardization of a metabolomics feature matrix, when you need to detect and visually characterize batch effects arising from known experimental conditions, unknown latent groups, or hidden substructures before formal statistical testing.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3935
   edam_topics:
   - http://edamontology.org/topic_0091

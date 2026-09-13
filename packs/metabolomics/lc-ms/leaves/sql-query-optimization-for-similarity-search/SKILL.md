@@ -3,6 +3,7 @@ name: sql-query-optimization-for-similarity-search
 description: Use when when migrating spectral library data from file-based formats (JSON, CSV, binary) into a persistent store and need to support fast filtered queries on metadata and similarity computations against query spectra.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

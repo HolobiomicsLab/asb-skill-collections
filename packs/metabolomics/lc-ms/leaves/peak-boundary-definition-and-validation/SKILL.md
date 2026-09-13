@@ -3,6 +3,7 @@ name: peak-boundary-definition-and-validation
 description: Use when after nontargeted peak detection has identified candidate peaks in LC-MS chromatograms, when you need to establish exact peak start/end retention times and extract peak-level metadata (intensity, width, shape) for downstream feature quality evaluation and annotation workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -42,6 +43,7 @@ attribution:
 
 # peak-boundary-definition-and-validation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Define and validate precise chromatographic peak boundaries in LC-MS data to extract quantitatively accurate peak characteristics (m/z, retention time, intensity, peak width). This skill ensures that detected peaks are correctly segmented and quality-evaluated before downstream feature annotation and metabolite identification.

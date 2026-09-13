@@ -3,6 +3,7 @@ name: msi-data-table-export
 description: Use when after calculating mean intensity values across all spectra in an MSI dataset (or within a manually selected ROI), and you need to store the resulting m/z–intensity table in a portable format for downstream ROI analysis, database annotation, or external statistical pipelines.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3750
   edam_topics:
   - http://edamontology.org/topic_3520

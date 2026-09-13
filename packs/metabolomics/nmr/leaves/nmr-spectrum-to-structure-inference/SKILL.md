@@ -3,6 +3,7 @@ name: nmr-spectrum-to-structure-inference
 description: Use when you have 1D NMR spectra (¹H or ¹³C or both) for an unknown organic compound with ≤19 heavy atoms and need to rapidly predict its molecular formula and connectivity graph without manual peak interpretation or exhaustive combinatorial search.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3346
   edam_topics:
   - http://edamontology.org/topic_0154

@@ -3,6 +3,7 @@ name: signal-residual-deconvolution
 description: Use when analyzing 1D signal arrays (e.g., extracted ion chromatograms, arrival time distributions, or MS1 spectra intensity profiles) where multiple peaks may overlap or where peak shape information (amplitude, position, width) is required beyond simple local-maximum detection.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0121

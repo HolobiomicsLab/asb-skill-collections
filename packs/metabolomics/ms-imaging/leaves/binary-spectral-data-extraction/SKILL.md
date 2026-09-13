@@ -3,6 +3,7 @@ name: binary-spectral-data-extraction
 description: Use when you have parsed imzML XML metadata and loaded the corresponding .ibd binary intensity file, and need to extract specific ion images at one or more target m/z values.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -48,6 +49,7 @@ attribution:
 
 # binary-spectral-data-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract mass-to-charge (m/z) image slices from binary imzML/ibd Imaging Mass Spectrometry data files at user-specified masses within a defined mass window tolerance. This skill enables selective ion image construction for downstream quantification and spatial analysis of LA-ICP-MS or IMS datasets.

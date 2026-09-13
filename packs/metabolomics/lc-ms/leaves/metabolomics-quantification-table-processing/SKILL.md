@@ -3,6 +3,7 @@ name: metabolomics-quantification-table-processing
 description: Use when you have a quantification table (rows = metabolite features, columns = samples with abundance values), corresponding metadata table (sample annotations, groupings), and spectral data files, and you need to produce a unified JSON dashboard artifact that can be loaded into an interactive.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_0091

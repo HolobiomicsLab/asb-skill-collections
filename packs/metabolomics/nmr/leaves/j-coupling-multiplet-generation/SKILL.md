@@ -3,6 +3,7 @@ name: j-coupling-multiplet-generation
 description: Use when you have parsed metabolite identities with known spin-system coupling constants (J-values) and chemical shifts, and need to generate the theoretical multiplet patterns that will form the basis of a simulated 1D or 2D NMR spectrum.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -38,6 +39,7 @@ attribution:
 
 # j-coupling-multiplet-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate theoretical spin multiplets from metabolite spin systems by applying J-coupling constants and chemical shifts, using first-order or density-matrix NMR simulation to produce realistic multiplet patterns for 1H NMR spectral reconstruction. This skill is essential for converting metabolite structural information into realistic spectral peak shapes that can be combined into simulated metabolomic NMR spectra.

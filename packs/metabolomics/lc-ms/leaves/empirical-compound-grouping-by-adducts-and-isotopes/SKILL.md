@@ -3,6 +3,7 @@ name: empirical-compound-grouping-by-adducts-and-isotopes
 description: Use when after feature table normalization and imputation are complete, immediately before MS1 and MS2 annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172

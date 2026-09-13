@@ -3,6 +3,7 @@ name: transformation-product-prediction
 description: Use when after parent chemical suspects have been identified in a non-target screening workflow, use this skill when you need to screen for downstream products formed by chemical or biological transformation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3172

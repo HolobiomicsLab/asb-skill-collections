@@ -3,6 +3,7 @@ name: mass-track-construction-from-centroided-spectra
 description: Use when when you have centroided mzML files from LC-MS metabolomics and need to construct high-mass-resolution mass tracks for each sample before alignment. Apply this skill at the start of an untargeted metabolomics workflow, before building a cross-sample MassGrid.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -53,6 +54,7 @@ attribution:
 
 # mass-track-construction-from-centroided-spectra
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and organize ion chromatograms (mass tracks) from individual LC-MS samples by parsing centroided mzML spectra, binning m/z values at 0.001 amu resolution, and clustering nearby m/z values to establish anchor tracks for isotopologues and adducts. This step precedes cross-sample alignment and is essential for tracking reproducibility between features and their underlying extracted ion currents (EICs).

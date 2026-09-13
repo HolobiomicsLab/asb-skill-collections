@@ -3,6 +3,7 @@ name: metabolite-identifier-mapping
 description: Use when after peak detection and MS1 feature picking from merged FIA-MS spectra (typically 0–30 s acquisition window), when you have a list of accurate monoisotopic masses and need to assign HMDB compound identifiers, molecular formulas, and structural annotations to support mzTab output.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_0121

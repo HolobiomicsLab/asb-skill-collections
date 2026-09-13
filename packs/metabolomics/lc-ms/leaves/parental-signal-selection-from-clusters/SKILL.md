@@ -3,6 +3,7 @@ name: parental-signal-selection-from-clusters
 description: Use when after feature clustering has grouped LC-MS peaks by MS-DIAL peak character estimation, you need to reduce the cluster to a single representative feature per biological entity.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3172

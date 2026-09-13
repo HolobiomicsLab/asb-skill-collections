@@ -3,6 +3,7 @@ name: lc-ms-data-calibration
 description: Use when when you have paired LC-MS measurements from labeled and unlabeled samples of the same analytes, and you need to isolate the true isotopic labeling contribution by removing confounding signal from naturally occurring isotopes and tracer isotopic impurity.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0625

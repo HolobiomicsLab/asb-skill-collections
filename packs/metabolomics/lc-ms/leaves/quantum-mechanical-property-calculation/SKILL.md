@@ -3,6 +3,7 @@ name: quantum-mechanical-property-calculation
 description: Use when when you have interpolated or optimized molecular geometries (from geodesic_interpolate or CREST conformer ensembles) and need to compute ab initio electronic energies, orbital properties, or transition state characteristics to populate a fragmentation reaction network or validate.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0321
   edam_topics:
   - http://edamontology.org/topic_2275

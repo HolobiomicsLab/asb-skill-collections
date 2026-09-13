@@ -3,6 +3,7 @@ name: diffusion-model-inference
 description: Use when when you have multi-modal spectroscopic data (IR, Raman, UV-Vis, mass spectra, or NMR) and need to recover the underlying molecular structure without relying on finite spectral libraries or autoregressive SMILES generation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3680
   edam_topics:
   - http://edamontology.org/topic_0154

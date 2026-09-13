@@ -3,6 +3,7 @@ name: spectral-data-compression-by-frame-and-mobility
 description: Use when you have raw IM-MS data in Agilent MassHunter (.d) or UIMF format from drift tube (DT) or SLIM instruments, and you need to reduce data volume while preserving signal integrity for subsequent HRdm demultiplexing and peak deconvolution.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -48,6 +49,7 @@ attribution:
 
 # spectral-data-compression-by-frame-and-mobility
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reduce IM-MS data dimensionality and file size by compressing raw spectral intensity values along the frame (retention time) and ion mobility dimensions prior to demultiplexing and peak deconvolution. This preprocessing step improves computational efficiency and prepares data for downstream high-resolution demultiplexing workflows.

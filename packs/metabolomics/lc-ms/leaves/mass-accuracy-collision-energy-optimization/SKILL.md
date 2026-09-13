@@ -3,6 +3,7 @@ name: mass-accuracy-collision-energy-optimization
 description: Use when you have defined a set of lipid targets (species, adducts, chain compositions) for PRM or MRM analysis and need to generate precursor-to-fragment transition rules that will maximize signal intensity and specificity on your mass spectrometer (Thermo QExactive HF, Agilent QTOF, or.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3630
   edam_topics:
   - http://edamontology.org/topic_0153

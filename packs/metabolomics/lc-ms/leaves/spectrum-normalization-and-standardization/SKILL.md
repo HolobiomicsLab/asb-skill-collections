@@ -3,6 +3,7 @@ name: spectrum-normalization-and-standardization
 description: Use when you have raw MS2 spectra in common formats (mzML, mzXML, msp, MGF, JSON) from one or more metabolomics samples, and you need to prepare them for MS2 fingerprint generation, similarity scoring, or cross-sample comparison.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

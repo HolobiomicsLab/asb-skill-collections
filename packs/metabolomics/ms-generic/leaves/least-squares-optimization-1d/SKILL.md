@@ -3,6 +3,7 @@ name: least-squares-optimization-1d
 description: Use when when you have a 1D signal array (e.g., extracted ion chromatogram, arrival time distribution, or MS1 spectrum intensity profile) and need to identify and quantify overlapping or adjacent peaks with precise position, height, and width estimates.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

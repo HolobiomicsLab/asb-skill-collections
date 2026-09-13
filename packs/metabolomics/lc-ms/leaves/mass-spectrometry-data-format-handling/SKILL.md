@@ -3,6 +3,7 @@ name: mass-spectrometry-data-format-handling
 description: Use when you have raw MRM sample files from an LC-MS/MS instrument and need to programmatically identify and tabulate all precursor m/z and product m/z pairs for each MRM transition.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -52,6 +53,7 @@ attribution:
 
 # mass-spectrometry-data-format-handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract precursor and product m/z values from LC-MS/MS MRM (multiple reaction monitoring) raw data files using specialized utility software. This skill transforms raw instrument output into structured m/z pair tables, which serve as the foundation for subsequent MRM transition quantification workflows.

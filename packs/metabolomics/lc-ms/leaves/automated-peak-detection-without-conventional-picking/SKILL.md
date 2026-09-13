@@ -3,6 +3,7 @@ name: automated-peak-detection-without-conventional-picking
 description: Use when you have a two-dimensional GC–MS or LC–MS dataset (m/z vs retention time) and need to identify discriminative analyte features without relying on conventional peak picking algorithms. This is especially valuable when analyzing complex, low-abundance samples (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -48,6 +49,7 @@ attribution:
 
 # Automated Peak Detection Without Conventional Picking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill applies image processing and machine learning to chromatography–mass spectrometry data to automatically identify multivariate marker features directly from two-dimensional MS maps (m/z vs retention time), bypassing conventional peak picking which suffers from false detections. It is particularly suited for untargeted metabolomics of complex samples like human breath at parts per billion sensitivity levels.

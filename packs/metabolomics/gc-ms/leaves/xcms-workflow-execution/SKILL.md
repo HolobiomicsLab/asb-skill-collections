@@ -3,6 +3,7 @@ name: xcms-workflow-execution
 description: Use when you have raw LC-MS data files (mzML, netCDF, or raw vendor formats) from multiple samples and need to extract, align, and quantify chromatographic features across the cohort.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0091

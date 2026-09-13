@@ -3,6 +3,7 @@ name: ms-instrument-type-classification
 description: Use when when evaluating or designing a mass spectrometry data analysis platform, and you need to verify that every supported separation/ionisation technique (LC, GC, IMS, MS Imaging) is covered by at least one processing module.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3370

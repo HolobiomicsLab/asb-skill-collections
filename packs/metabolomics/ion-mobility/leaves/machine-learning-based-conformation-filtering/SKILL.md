@@ -3,6 +3,7 @@ name: machine-learning-based-conformation-filtering
 description: Use when when you have generated multiple 3D conformations for a molecule or set of ionized adducts (e.g., via RDKit) and need to retain only the most energetically favorable structures before expensive quantum calculations.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -47,6 +48,7 @@ attribution:
 
 # machine-learning-based-conformation-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter low-energy molecular conformations from an ensemble using neural network potentials (ANI) trained on quantum chemical data. This reduces the computational burden of subsequent quantum mechanical calculations for predicting molecular properties like collision cross sections.

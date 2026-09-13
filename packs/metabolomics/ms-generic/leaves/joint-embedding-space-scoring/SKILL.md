@@ -3,6 +3,7 @@ name: joint-embedding-space-scoring
 description: Use when you have a mass spectrum from an untargeted metabolomics experiment and a set of candidate molecules (e.g., downloaded from PubChem) that may explain that spectrum. You want to rank these candidates by likelihood of correctness to prioritize manual annotation or further validation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

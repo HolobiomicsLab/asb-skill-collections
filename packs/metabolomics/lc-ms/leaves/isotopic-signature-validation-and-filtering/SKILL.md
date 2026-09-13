@@ -3,6 +3,7 @@ name: isotopic-signature-validation-and-filtering
 description: Use when after isotope detection has enumerated C13 isotopologue patterns across m/z, drift time, and retention time dimensions, and you need to reduce false positives by retaining only well-populated isotopic signature clusters before annotation or export.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: cascade-search-strategy-implementation
 description: Use when when performing open modification spectral library searches on high-resolution mass spectra where computational cost is prohibitive if every query is scored against every library spectrum.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121

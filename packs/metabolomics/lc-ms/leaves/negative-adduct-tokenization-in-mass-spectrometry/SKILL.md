@@ -3,6 +3,7 @@ name: negative-adduct-tokenization-in-mass-spectrometry
 description: Use when you have negative-mode MS/MS spectra with annotated molecular formulas and negative adducts (from repositories like MassIVE or MetaboLights), and your current formula inference model is restricted to positive mode only.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3648
   edam_topics:
   - http://edamontology.org/topic_3172

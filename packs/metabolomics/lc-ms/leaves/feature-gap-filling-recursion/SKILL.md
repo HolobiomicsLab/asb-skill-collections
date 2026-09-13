@@ -3,6 +3,7 @@ name: feature-gap-filling-recursion
 description: Use when after sample alignment has established consensus m/z and retention time coordinates, and after grouping of isotopologues and adducts is complete.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3630
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: ggplot2-geom-treemap-rendering
 description: Use when after running qc_summary() on a filtered mpactr object and aggregating ion counts by filter status category (passed/failed).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0337
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: ranked-result-extraction-and-display
 description: Use when after running annotateRC on LC–MS AIF data when you need to inspect whether a feature has multiple plausible annotations (e.g., isobaric lipids, isomers with the same fatty-acyl chain) or when the rank-1 annotation confidence is borderline and alternatives should be evaluated.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3172

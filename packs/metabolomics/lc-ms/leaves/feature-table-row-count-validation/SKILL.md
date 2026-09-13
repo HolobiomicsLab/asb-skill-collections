@@ -3,6 +3,7 @@ name: feature-table-row-count-validation
 description: Use when after peak quality filtering has been applied to a composite map peak detection output using SNR (>2), goodness-of-fit (peakshape > 0.5), minimum peak height (default 1e5), and prominence (≥20% of peak_height) thresholds.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -43,6 +44,7 @@ attribution:
 
 # feature-table-row-count-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate the effectiveness of peak quality filtering by comparing row counts between the full unfiltered feature table and the filtered feature table to confirm appropriate selectivity. This quantitative check ensures that filtering thresholds (SNR, peak shape, height, prominence) have been applied and are reducing the feature list to a reasonable degree.

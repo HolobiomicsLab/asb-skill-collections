@@ -3,6 +3,7 @@ name: ms2-fingerprint-vector-generation
 description: Use when you have LC-MS/MS data in mzML, mzXML, or MGF format from one or more metabolomics samples and need to compare samples that may have poor overlap in detected features, strong retention time shifts between runs, or were acquired on different LC methods or MS technologies (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

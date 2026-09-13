@@ -3,6 +3,7 @@ name: ccs-reference-data-extraction
 description: Use when you have obtained or need to prepare a DTCCS_N2 reference library for U13C-labeled lipids (typically provided as part of a lipidomics tool distribution) and need to extract, validate, and normalize its contents into a machine-readable table format before using it for CCS bias calculation.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -41,6 +42,7 @@ attribution:
 
 # ccs-reference-data-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and validate collision cross section (CCS) reference values for labeled lipids from a structured library file, converting them into a curated reference table for use in ion mobility–mass spectrometry quality control workflows. This skill ensures that CCS bias assessment and correction algorithms have access to canonicalized, numerically validated reference data.

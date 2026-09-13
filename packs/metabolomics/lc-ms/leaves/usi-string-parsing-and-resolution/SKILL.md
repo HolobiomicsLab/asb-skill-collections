@@ -3,6 +3,7 @@ name: usi-string-parsing-and-resolution
 description: Use when you have a USI string referencing a spectrum in an online public repository (PRIDE, MassIVE, etc.) and need to load its raw spectral data without downloading the entire dataset file.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

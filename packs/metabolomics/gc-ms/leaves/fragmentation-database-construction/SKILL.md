@@ -3,6 +3,7 @@ name: fragmentation-database-construction
 description: Use when when you have completed ORCA single-point energy calculations on interpolated reaction pathway geometries and need to convert quantum mechanical fragment energies and molecular properties into a structured fragmentation channel database suitable for automated EI mass spectrum simulation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3456
   edam_topics:
   - http://edamontology.org/topic_3375

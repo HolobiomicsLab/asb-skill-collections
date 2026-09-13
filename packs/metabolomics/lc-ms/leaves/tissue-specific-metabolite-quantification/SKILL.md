@@ -3,6 +3,7 @@ name: tissue-specific-metabolite-quantification
 description: Use when you have LC-IM-MS/MS raw data from multiple tissue samples and need to identify and quantify unsaturated sterol lipids at the isomer level (distinguishing double-bond position and stereochemistry).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -45,6 +46,7 @@ attribution:
 
 # tissue-specific-metabolite-quantification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify sterol isomers at the tissue level by matching LC-IM-MS/MS 4D features (retention time, m/z, drift time, intensity) against a quantum chemistry-assisted CCS prediction database, filtering by collision cross section tolerance and MS/MS fragmentation patterns, then assigning confidence scores and tissue-specific abundance values. This skill enables resolution of sterol structural isomers (double-bond position and stereochemistry) across different tissue samples.

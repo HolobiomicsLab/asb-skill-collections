@@ -3,6 +3,7 @@ name: imzml-continuous-format-parsing
 description: Use when you have acquired raw mass spectrometry imaging data in imzML continuous format (e.g., from CardinalIO or other MSI instruments) and need to load it into R as a structured MSImagingExperiment object to perform statistical analysis, normalization, or visualization.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

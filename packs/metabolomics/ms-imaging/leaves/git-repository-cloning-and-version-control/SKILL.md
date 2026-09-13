@@ -3,6 +3,7 @@ name: git-repository-cloning-and-version-control
 description: Use when when you need to reproduce a computational workflow described in a GitHub repository, validate CI/CD pipeline definitions (e.g., GitHub Actions workflows), inspect source code structure, or execute local versions of automated tests.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0226
   edam_topics:
   - http://edamontology.org/topic_0091

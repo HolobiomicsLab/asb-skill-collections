@@ -3,6 +3,7 @@ name: r-package-installation-and-runtime-verification
 description: Use when before running any R function that wraps compiled C# methods or system executables (e.g., rawrr::readSpectrum), especially when the package depends on language runtimes (.NET, Mono) or proprietary third-party assemblies that must be downloaded and configured separately.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3693
   edam_topics:
   - http://edamontology.org/topic_3520

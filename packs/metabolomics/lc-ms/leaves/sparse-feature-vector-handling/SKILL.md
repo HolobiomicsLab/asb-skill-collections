@@ -3,6 +3,7 @@ name: sparse-feature-vector-handling
 description: Use when when you have tandem mass spectra (mz/intensity pairs with precursor m/z) and need to train an interpretable model (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -44,6 +45,7 @@ attribution:
 
 # Sparse Feature Vector Handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert tandem mass spectra into sparse, high-dimensional feature vectors where each dimension represents a unique peak m/z or neutral loss formula, enabling direct chemical interpretation and compatibility with tree-based machine learning models. This skill is essential when interpretability of learned fragmentation patterns is required.

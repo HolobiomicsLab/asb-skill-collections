@@ -3,6 +3,7 @@ name: gaussian-process-regression-model-fitting
 description: Use when after you have accumulated experimental MS data from ≥2 LC gradient trials, extracted separation efficiency metrics (retention time spacing) from each trial, and encoded each gradient as a feature vector.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3463
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -51,6 +52,7 @@ attribution:
 
 # gaussian-process-regression-model-fitting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fit a Gaussian process regression model to LC gradient encodings and separation efficiency metrics to enable probabilistic prediction of gradient performance and acquisition function-driven selection of the next gradient to evaluate. This skill is the core inference step in BAGO's iterative Bayesian optimization loop.

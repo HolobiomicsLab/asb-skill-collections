@@ -3,6 +3,7 @@ name: mass-spectrometry-feature-collapsing
 description: Use when after XCMS CentWave feature extraction when your feature table contains redundant entries — multiple features with highly similar m/z and retention time values that represent the same metabolite.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3172

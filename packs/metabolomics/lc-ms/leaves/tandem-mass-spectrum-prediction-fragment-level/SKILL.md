@@ -3,6 +3,7 @@ name: tandem-mass-spectrum-prediction-fragment-level
 description: Use when you have a molecular structure (SMILES, InChI, or chemical formula) and need to predict its collision-induced dissociation (CID) tandem mass spectrum with fragment-level resolution. Use this when chemical-formula-level predictions (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3634
   edam_topics:
   - http://edamontology.org/topic_0769

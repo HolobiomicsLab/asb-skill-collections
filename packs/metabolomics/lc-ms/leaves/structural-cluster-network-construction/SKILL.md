@@ -3,6 +3,7 @@ name: structural-cluster-network-construction
 description: Use when after you have identified statistically significant LC-MS features and run MamsiStructSearch to generate structural clusters (isotopologue groups, adduct groups, cross-assay links) and computed correlation cluster assignments.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3083
   edam_topics:
   - http://edamontology.org/topic_0121

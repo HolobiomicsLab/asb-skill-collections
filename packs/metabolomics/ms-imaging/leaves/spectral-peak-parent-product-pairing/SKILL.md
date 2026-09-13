@@ -3,6 +3,7 @@ name: spectral-peak-parent-product-pairing
 description: Use when you have mass spectrometry imaging data with a histogram of pairwise mass differences that have already been matched to known adducts (via adductMatch), and you need to retrieve the actual mass peak pairs corresponding to a specific adduct of interest—particularly when you want to test.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

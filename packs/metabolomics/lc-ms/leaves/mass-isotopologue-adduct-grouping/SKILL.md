@@ -3,6 +3,7 @@ name: mass-isotopologue-adduct-grouping
 description: Use when after sample alignment has established consensus retention time and m/z coordinates across all samples, and you need to identify and merge peaks that represent isotopologues (e.g., ¹³C variants) or adducts (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

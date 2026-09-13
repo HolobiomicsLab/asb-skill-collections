@@ -3,6 +3,7 @@ name: spectral-peak-filtering-by-quality-threshold
 description: Use when you have raw or annotated MS/MS spectra (in MGF, mzML, or mzXML format) destined for de novo peptide sequencing with Casanovo. Use it specifically when your dataset contains variable spectral quality (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

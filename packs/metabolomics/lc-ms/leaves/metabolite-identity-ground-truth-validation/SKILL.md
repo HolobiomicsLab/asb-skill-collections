@@ -3,6 +3,7 @@ name: metabolite-identity-ground-truth-validation
 description: Use when after constructing candidate feature pair alignments and retention-time spline mappings in a multi-dataset LC-MS metabolomics integration workflow, when you have access to independent ground-truth annotations (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3941
   edam_topics:
   - http://edamontology.org/topic_0091

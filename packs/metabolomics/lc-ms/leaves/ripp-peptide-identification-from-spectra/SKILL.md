@@ -3,6 +3,7 @@ name: ripp-peptide-identification-from-spectra
 description: Use when you have LC-MS/MS spectra (MGF, mzXML, mzML, or mzData format) and either raw genome nucleotide sequences or antiSMASH/BOA genome mining tool output, and you need to identify which RiPPs are present in your sample.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0121

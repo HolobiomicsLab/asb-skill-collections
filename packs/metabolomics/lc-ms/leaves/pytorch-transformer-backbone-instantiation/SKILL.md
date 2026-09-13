@@ -3,6 +3,7 @@ name: pytorch-transformer-backbone-instantiation
 description: Use when when building a graph-based molecular property prediction model that must process both molecular structures (as heterogeneous graphs) and tabular metadata (chromatographic column parameters).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0570
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -45,6 +46,7 @@ attribution:
 
 # PyTorch Transformer Backbone Instantiation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Initialize a PyTorch Graph Transformer backbone (Graphormer module) with configured hidden dimensions, attention heads, and encoder layers for molecular graph and chromatographic parameter featurization. This skill prepares the core neural architecture before assembling compound embeddings and forward passes for retention-time prediction.

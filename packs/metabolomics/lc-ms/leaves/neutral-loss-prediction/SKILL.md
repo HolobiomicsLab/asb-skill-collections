@@ -3,6 +3,7 @@ name: neutral-loss-prediction
 description: Use when you have LC-HRMS features with fragmentation data (observed m/z shifts, mass deficits, or tandem MS spectra) and a suspect compound database with known or predictable neutral loss fragments (e.g., H₂O, CO₂, CH₄, or structure-specific losses).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0625

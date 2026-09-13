@@ -3,6 +3,7 @@ name: software-performance-characterization-and-scaling-analysis
 description: Use when when a tool claims to be 'scalable' or 'performance-conscious' but lacks published performance benchmarks, or when you need to confirm that runtime and memory scale linearly (or predictably) with sample count before deploying the tool on large LC-MS datasets (e.g., >100 samples).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -45,6 +46,7 @@ attribution:
 
 # Software Performance Characterization and Scaling Analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Empirically measure and verify how a computational tool (wall-clock time, peak resident memory) scales with increasing input size, validating performance claims and identifying bottlenecks. Essential for confirming scalability assertions in software designed for high-throughput metabolomics data processing.

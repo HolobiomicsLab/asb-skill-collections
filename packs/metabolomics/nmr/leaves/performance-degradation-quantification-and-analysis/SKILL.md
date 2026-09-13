@@ -3,6 +3,7 @@ name: performance-degradation-quantification-and-analysis
 description: Use when you have a pretrained model with documented performance on a bounded input domain (e.g., molecules ≤19 heavy atoms, sequences <1000 bp) and you need to establish whether and how much accuracy drops on held-out test cases outside that domain boundary.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: chemical-structure-validation
 description: Use when after compound database dereplication with SIRIUS or MetFrag has produced candidate annotations (CSV or JSON format), and you need to filter implausible structures, compute standardized molecular descriptors, and rank candidates by confidence before reporting final metabolite.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3172

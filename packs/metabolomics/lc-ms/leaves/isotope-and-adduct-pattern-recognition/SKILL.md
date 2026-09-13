@@ -3,6 +3,7 @@ name: isotope-and-adduct-pattern-recognition
 description: Use when when processing MS1 mass tracks from a single sample and you have already constructed per-bin mass tracks with consensus m/z and intensity vectors.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -45,6 +46,7 @@ attribution:
 
 # isotope-and-adduct-pattern-recognition
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies and groups related mass tracks by recognizing characteristic m/z differences corresponding to 13C/12C isotopes, sodium/hydrogen (Na/H) adducts, and other mass-pattern relationships. This anchors mass tracks to a common neutral mass, reducing redundancy and improving feature annotation in high-resolution LC-MS metabolomics.

@@ -3,6 +3,7 @@ name: lc-hrms-data-preprocessing-pipeline
 description: Use when you have raw LC-HRMS metabolomics data in .mzML or .abf format and need to perform peak detection, feature alignment, and metabolite annotation in a reproducible, containerized environment.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0625

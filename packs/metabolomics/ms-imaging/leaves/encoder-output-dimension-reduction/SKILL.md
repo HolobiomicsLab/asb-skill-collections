@@ -3,6 +3,7 @@ name: encoder-output-dimension-reduction
 description: 'Use when you have 512-dimensional representation vectors output from paired ResNet18 encoders processing augmented ion images, and you need to: (1) introduce an intermediate projection space to enable contrastive loss optimization without trivial/collapsed solutions, (2) further compress learned.'
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -42,6 +43,7 @@ attribution:
 
 # Encoder Output Dimension Reduction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reduce high-dimensional encoder representations (512-dim vectors from ResNet18) to lower-dimensional spaces suitable for downstream analysis, contrastive learning, or final task-specific embeddings. This skill is essential for avoiding representation collapse during self-supervised learning and for producing interpretable, compact ion image representations in mass spectrometry imaging.

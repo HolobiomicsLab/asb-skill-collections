@@ -3,6 +3,7 @@ name: peak-border-center-estimation
 description: Use when you have LC-HRMS chromatograms in retention time × m/z matrix format and need to automatically localize chromatographic peak positions and extents prior to matching against a reference peak library or generating CNN training instances.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -42,6 +43,7 @@ attribution:
 
 # peak-border-center-estimation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Estimate chromatographic peak borders and centers from LC-HRMS profile mode data using smoothing and gradient-descent algorithms. This skill prepares detected peaks for matching against reference feature lists and training data generation.

@@ -3,6 +3,7 @@ name: stable-isotope-labelling-feature-detection
 description: Use when you have XCMS-processed LC/MS peak tables from paired unlabeled (12C) and labeled (13C) metabolic samples with replicate measurements, and you want to systematically detect which features show significant enrichment in the labeled condition relative to the unlabeled control.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172

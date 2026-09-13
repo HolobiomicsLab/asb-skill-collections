@@ -3,6 +3,7 @@ name: mass-spectrometry-domain-specific-language-comprehension
 description: Use when you need to translate user-facing mass spectrometry query intent (e.g., 'find all MS2 spectra with a precursor ion at m/z 572.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

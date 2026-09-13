@@ -3,6 +3,7 @@ name: filter-outcome-aggregation-and-counting
 description: Use when after applying one or more mpactr filters (mispicked, group, cv, insource) to a feature table, you need to quantify the distribution of ions by their pass/fail status across filters to understand filtering impact, identify potential over-filtering, or communicate QC results via treemap or.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091

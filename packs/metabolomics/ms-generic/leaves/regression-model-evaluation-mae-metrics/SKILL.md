@@ -3,6 +3,7 @@ name: regression-model-evaluation-mae-metrics
 description: Use when when you have trained a regression model on experimental retention times or similar continuous molecular property predictions and need to quantify its generalization performance on held-out test data.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3664
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -40,6 +41,7 @@ attribution:
 
 # regression-model-evaluation-mae-metrics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate regression models for continuous-valued prediction tasks (e.g., retention time) by computing mean absolute error (MAE) and median absolute error (MdAE) on held-out test sets, with reported uncertainty bounds. This skill is essential for assessing predictive performance when absolute deviations from ground truth are the primary concern.

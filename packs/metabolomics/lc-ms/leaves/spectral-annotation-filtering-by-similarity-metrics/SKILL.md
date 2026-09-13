@@ -3,6 +3,7 @@ name: spectral-annotation-filtering-by-similarity-metrics
 description: Use when after running GNPS molecular networking, SIRIUS compound identification, or ISDB in silico annotation on LC-MS/MS data, when you have provisional annotations for features but need to filter them to retain only high-confidence matches before calculating novelty scores, detecting chemical.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

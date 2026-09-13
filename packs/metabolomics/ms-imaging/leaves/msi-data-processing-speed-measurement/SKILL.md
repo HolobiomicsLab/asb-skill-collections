@@ -3,6 +3,7 @@ name: msi-data-processing-speed-measurement
 description: Use when when you need to validate that MSI software (e.g., LipidQMap) achieves documented processing speeds on your target hardware, or when you need to establish a performance baseline before deploying the software for high-throughput imaging studies.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -40,6 +41,7 @@ attribution:
 
 # msi-data-processing-speed-measurement
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Measure the end-to-end processing latency of mass spectrometry imaging (MSI) software when opening large imzML files and performing ion image import and quantification. This skill benchmarks real-world performance on target hardware to verify that processing speed meets documented specifications.

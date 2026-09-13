@@ -3,6 +3,7 @@ name: structured-data-serialization
 description: Use when when you have mwTab-formatted Mass Spectrometry or Nuclear Magnetic Resonance experimental data from the Metabolomics Workbench that must be converted to JSON for API integration, data sharing across systems, or validation against a defined JSON schema.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_3172

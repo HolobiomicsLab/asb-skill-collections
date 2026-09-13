@@ -3,6 +3,7 @@ name: graph-based-knowledge-representation
 description: Use when annotating metabolites in untargeted metabolomics experiments where both established biochemical pathways and experimental MS2 similarity patterns must be simultaneously leveraged.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_0362
   edam_topics:
   - http://edamontology.org/topic_0599
@@ -41,6 +42,7 @@ attribution:
 
 # graph-based-knowledge-representation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Construct and integrate knowledge-driven and data-driven graph layers to represent metabolite relationships and enable recursive annotation propagation. This skill bridges biochemical ontologies and experimental similarity patterns into a unified interactive networking topology for metabolite annotation.

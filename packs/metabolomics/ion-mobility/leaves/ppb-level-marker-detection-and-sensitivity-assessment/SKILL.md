@@ -3,6 +3,7 @@ name: ppb-level-marker-detection-and-sensitivity-assessment
 description: Use when you have raw GC–MS or LC–MS data in two-dimensional m/z vs retention time format and need to identify marker features at parts-per-billion sensitivity without relying on conventional peak picking.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -49,6 +50,7 @@ attribution:
 
 # ppb-level marker detection and sensitivity assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated identification of multivariate chemo-/biomarker features in GC–MS data at parts-per-billion concentration levels using image processing and machine learning on two-dimensional m/z vs retention time maps. This skill replaces conventional peak picking with a comprehensive signal characterization approach that reduces false detections and enables detection at ultra-trace concentrations.

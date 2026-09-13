@@ -3,6 +3,7 @@ name: post-translational-modification-detection
 description: Use when when you have tandem mass spectrometry data (LC-MS/MS in MGF, mzML, mzXML, or mzData format) paired with either genome sequences or precursor peptide predictions, and you want to confirm the presence and identity of modified ribosomally synthesized and post-translationally modified.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3520

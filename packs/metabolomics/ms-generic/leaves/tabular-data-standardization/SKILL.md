@@ -3,6 +3,7 @@ name: tabular-data-standardization
 description: Use when when you have received raw MRM lipidomics export files in vendor-specific formats (TSV, CSV) with inconsistent column naming, unparsed lipid identifiers (e.g., 'PC(36:1)' as a single string), and unknown data quality issues.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3172

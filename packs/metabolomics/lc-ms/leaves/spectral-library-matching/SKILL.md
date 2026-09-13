@@ -3,6 +3,7 @@ name: spectral-library-matching
 description: 'Use when you have one or more MS/MS spectra in .mgf format (or USI identifiers) and need to: (1) identify unknowns by searching against domain-curated reference data; (2) assign Level 2 metabolomics annotations via GNPS library matches; (3) aggregate matches across organism lineages (e.'
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -88,6 +89,7 @@ attribution:
 
 # spectral-library-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match mass spectrometry spectra against domain-specific reference libraries using cosine similarity scoring to identify compounds and assign taxonomic or sample-origin metadata. This skill enables single-spectrum or batch searches across curated domain MASSTs (microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST) and federated public repositories (GNPS libraries, MassIVE, Metabolomics Workbench, MetaboLights, NORMAN).

@@ -3,6 +3,7 @@ name: windows-desktop-application-deployment
 description: Use when when you have cloned a .NET Framework or .NET Core WPF project from a GitHub repository and need to compile it into an executable binary for Windows deployment. Specifically, when the project uses ReactiveExtensions/ReactiveProperty packages, declares a .NET Framework 4.7.2 or .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3222
   edam_topics:
   - http://edamontology.org/topic_0091

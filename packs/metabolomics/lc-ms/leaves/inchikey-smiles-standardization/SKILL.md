@@ -3,6 +3,7 @@ name: inchikey-smiles-standardization
 description: Use when when you have raw MS/MS spectra from repositories like GNPS that lack or have inconsistent chemical structure annotations (InChI/SMILES), and you need to produce a curated dataset with uniform 14-character InChIKey and SMILES/InChI annotations for downstream machine learning or similarity.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_3172

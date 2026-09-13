@@ -3,6 +3,7 @@ name: retention-time-peak-matching
 description: Use when after drift correction and quality flagging, when you have a feature abundance matrix with associated metadata (Feature_ID, m/z, retention time) and need to identify which features likely represent the same underlying metabolite or adduct series before statistical analysis or metabolite.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -47,6 +48,7 @@ attribution:
 
 # Retention-time-peak-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify correlated metabolic features within a retention-time window by matching m/z values and temporal proximity, forming the basis for downstream feature clustering in LC-MS metabolomics. This skill groups isotopologues, adducts, and in-source fragments that co-elute but have different mass signatures.

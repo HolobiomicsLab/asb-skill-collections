@@ -3,6 +3,7 @@ name: spectral-format-parsing-and-validation
 description: Use when you have raw or unprocessed MS/MS spectral data in standard metabolomics formats (MGF, mzML, mzXML, msp, or JSON) and need to import them into a Python-based workflow for MS2 fingerprint generation, peak counting, or spectral similarity scoring.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

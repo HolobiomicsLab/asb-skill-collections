@@ -3,6 +3,7 @@ name: dataframe-and-numericlist-manipulation
 description: Use when you are implementing a new MsBackend subclass and need to store spectra metadata (sample names, retention times, precursor m/z, etc.) separately from peak data (m/z and intensity pairs) while maintaining row-wise alignment.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3365
   edam_topics:
   - http://edamontology.org/topic_3520

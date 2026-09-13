@@ -3,6 +3,7 @@ name: molecular-network-feature-annotation
 description: Use when when you have both (1) a molecular network graph from GNPS with MS/MS feature nodes and edges, and (2) a quantitative bioassay matrix (fractions × bioactivity measurements) from parallel LC-MS/MS fractionation of the same sample extract.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_0602

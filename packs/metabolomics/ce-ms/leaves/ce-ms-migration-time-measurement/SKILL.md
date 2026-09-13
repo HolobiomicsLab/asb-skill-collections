@@ -3,6 +3,7 @@ name: ce-ms-migration-time-measurement
 description: Use when when processing raw CE-MS data and need to establish a baseline migration time scale before transforming to effective mobility.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0121

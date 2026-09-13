@@ -3,6 +3,7 @@ name: metabolite-structural-annotation-integration
 description: Use when after statistical analysis (e.g., MB-PLS with permutation testing) has identified a subset of significant LC-MS features (p < 0.05 or similar threshold) that require structural interpretation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0218

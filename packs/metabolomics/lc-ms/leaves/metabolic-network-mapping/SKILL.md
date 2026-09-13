@@ -3,6 +3,7 @@ name: metabolic-network-mapping
 description: Use when you have an untargeted metabolomics feature table (with m/z, retention time, and statistical significance values) and want to predict which metabolic pathways and functional modules are active in your sample, but you lack confident metabolite identifications or wish to bypass the.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3501
   edam_topics:
   - http://edamontology.org/topic_0159
@@ -41,6 +42,7 @@ attribution:
 
 # metabolic-network-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Map untargeted metabolomics feature table m/z values onto a metabolic network structure to predict functional activity and pathway involvement without requiring explicit metabolite identification. This approach leverages network organization to infer functional modules directly from feature-level data.

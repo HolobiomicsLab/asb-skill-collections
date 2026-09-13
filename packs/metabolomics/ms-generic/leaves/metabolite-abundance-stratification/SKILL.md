@@ -3,6 +3,7 @@ name: metabolite-abundance-stratification
 description: Use when you have a peak-abundance matrix from FT-ICR MS (peaks as rows, samples as columns with raw peak intensities) and need to compute abundance-based diversity indices or functional diversity metrics that are sensitive to relative vs. absolute peak heights.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

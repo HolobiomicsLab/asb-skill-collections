@@ -3,6 +3,7 @@ name: metabolic-age-prediction-from-nmr-features
 description: Use when you have Nightingale Health 1H-NMR metabolomics data (feature matrix with named metabolite columns) and need to compute predicted metabolic age for each sample, typically to assess whether individuals' metabolic profiles align with or diverge from age-expected trajectories.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3659
   edam_topics:
   - http://edamontology.org/topic_3172

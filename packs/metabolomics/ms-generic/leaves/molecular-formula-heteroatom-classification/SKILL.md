@@ -3,6 +3,7 @@ name: molecular-formula-heteroatom-classification
 description: Use when after molecular formula assignment has been completed on detected peaks in a processed mass spectrum object.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172

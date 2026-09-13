@@ -3,6 +3,7 @@ name: microbiome-metabolome-data-preprocessing
 description: Use when when starting with raw paired microbiome (16S rRNA, metagenomic taxonomic or functional features) and metabolome (LC-MS/MS, NMR) count tables from the same biospecimens, and planning to train prediction models or co-abundance networks.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3174

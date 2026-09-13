@@ -3,6 +3,7 @@ name: word2vec-model-inference-unknown-word-handling
 description: Use when when applying a pre-trained Word2Vec model to mass spectra at inference time (e.g., library matching or molecular networking), especially when the query spectra may contain fragment peaks or neutral losses not represented in the model's training vocabulary.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

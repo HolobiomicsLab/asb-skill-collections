@@ -3,6 +3,7 @@ name: peak-quality-metric-computation
 description: Use when you have completed XCMS preprocessing (getEIC() and fillPeaks()) on untargeted LC-MS metabolomics data and need to assign per-peak quality scores prior to manual curation, classifier training, or downstream statistical analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -47,6 +48,7 @@ attribution:
 
 # peak-quality-metric-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute 12 chromatographic peak-quality metrics from XCMS-derived extracted ion chromatograms (EICs) and peak objects to quantify peak morphology, consistency, and noise resilience in untargeted LC-MS metabolomics data. These metrics serve as input features for machine learning classifiers that detect low-quality peak integrations.

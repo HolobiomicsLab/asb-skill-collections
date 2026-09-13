@@ -3,6 +3,7 @@ name: molecular-similarity-calculation
 description: Use when you have two or more molecular structures (represented as SMILES or spectral data) and need to rank transformation product candidates by structural plausibility, filter isomeric or duplicate TP predictions, or group features into components based on chemical relatedness.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3640
   edam_topics:
   - http://edamontology.org/topic_3375

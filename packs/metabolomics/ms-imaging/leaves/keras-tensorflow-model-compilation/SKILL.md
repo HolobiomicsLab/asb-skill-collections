@@ -3,6 +3,7 @@ name: keras-tensorflow-model-compilation
 description: Use when you have defined a Keras model architecture (convolutional and dense layers) accepting raw mass spectrometry imaging data tensors and need to prepare it for training on tumor/non-tumor probabilistic classification without prior peak picking.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -49,6 +50,7 @@ attribution:
 
 # keras-tensorflow-model-compilation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compile a Keras neural network model with TensorFlow backend, specifying loss function and optimizer compatible with the target framework version, to prepare the model for training on mass spectrometry imaging data. This skill ensures the model is properly configured before accepting raw MSI tensors and outputting probability distributions.

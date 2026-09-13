@@ -3,6 +3,7 @@ name: tabular-data-export
 description: Use when you have extracted MS1 or MS2 peak lists and scan headers from Thermo Fisher RAW files using MetaXtract and need to load them into pandas, NumPy, or external analysis tools.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: cumulative-distribution-visualization
 description: 'Use when when you have per-feature quality metrics (such as CV values from NMR or MS reproducibility analysis) and need to: (1) confirm that a specified proportion of features meet regulatory thresholds (e.g., 99% < 0.30, 92% < 0.15 for CV);'
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -42,6 +43,7 @@ attribution:
 
 # cumulative-distribution-visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Visualize the empirical cumulative distribution of a continuous quality metric (e.g., coefficient of variation) across features to assess reproducibility against regulatory thresholds. This skill enables rapid validation of whether a dataset meets predefined FDA or domain-specific quality gates.

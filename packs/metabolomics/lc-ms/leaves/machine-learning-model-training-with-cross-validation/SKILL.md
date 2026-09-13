@@ -3,6 +3,7 @@ name: machine-learning-model-training-with-cross-validation
 description: Use when when you have a labeled peak quality matrix (with known pass/fail labels), need to objectively compare performance across multiple classification algorithms (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -51,6 +52,7 @@ attribution:
 
 # machine-learning-model-training-with-cross-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train and compare multiple machine learning classifiers using k-fold cross-validation with repetitions to identify the best-performing algorithm for peak quality assessment in LC-MS metabolomics data. This skill applies statistical ranking and evaluation metrics to select a robust classifier from a candidate algorithm pool.

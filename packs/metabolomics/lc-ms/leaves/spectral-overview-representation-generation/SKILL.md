@@ -3,6 +3,7 @@ name: spectral-overview-representation-generation
 description: Use when you have processed LC-MS/MS spectral data (as a .mgf file with feature identifiers) and computed pairwise ms2deepscore similarity scores, and you need to create a 2-D projection suitable for dashboard visualization or high-level pattern discovery without losing similarity structure.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3935
   edam_topics:
   - http://edamontology.org/topic_3520

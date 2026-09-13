@@ -3,6 +3,7 @@ name: deep-learning-model-training-and-validation
 description: Use when you have paired mass-spectrometry spectral data (m/z and intensity arrays) with known molecular fingerprints or InChIKeys, and need to train a supervised deep learning model to predict fingerprints for novel spectra.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -43,6 +44,7 @@ attribution:
 
 # deep-learning-model-training-and-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train and validate a CNN-based model on labeled mass-spectrometry data to predict compound fingerprints, using appropriate loss functions and monitoring validation performance to prevent overfitting. This skill is essential for building metabolite annotation predictors that map spectral features to molecular fingerprint vectors.

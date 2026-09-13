@@ -3,6 +3,7 @@ name: reconstruction-algorithm-implementation
 description: Use when when you have raw or preprocessed mass spectrometry data (feature matrices or transient files) acquired at lower mass resolution or with signal degradation, and you possess high-resolution reference MSI data or simulated ground truth to train a reconstruction model.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0121

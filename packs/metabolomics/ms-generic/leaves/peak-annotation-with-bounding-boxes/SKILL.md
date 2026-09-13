@@ -3,6 +3,7 @@ name: peak-annotation-with-bounding-boxes
 description: Use when you have isolated reference peaks from training chromatograms (ground-truth, single compounds per sample) and need to create a diverse, labelled training set large enough to train a CNN peak detector.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -42,6 +43,7 @@ attribution:
 
 # peak-annotation-with-bounding-boxes
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Generate large-scale labelled training datasets for CNN peak detection by iteratively combining matched reference features from LC-HRMS chromatograms, assigning each synthetic instance a peak type (chromatographic peak with isomeric variants or background), bounding box, and peak center. This augmentation strategy enables the CNN to generalize across peak morphologies and background noise types.

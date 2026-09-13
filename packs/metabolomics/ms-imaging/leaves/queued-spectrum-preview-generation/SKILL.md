@@ -3,6 +3,7 @@ name: queued-spectrum-preview-generation
 description: Use when when you have queued one or more spectral processing operations (e.g., smooth(), normalize(), reduceBaseline()) on an MSImagingArrays object and need to inspect the effect on representative spectra before processing the full dataset.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3520

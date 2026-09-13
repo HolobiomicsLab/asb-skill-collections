@@ -3,6 +3,7 @@ name: word2vec-embedding-training-mass-spectrometry
 description: Use when you have a large collection of preprocessed MS/MS spectra (typically >10,000 spectra) with diverse chemical structures and you need to learn embeddings that capture fragmentation patterns and neutral loss relationships.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_0121

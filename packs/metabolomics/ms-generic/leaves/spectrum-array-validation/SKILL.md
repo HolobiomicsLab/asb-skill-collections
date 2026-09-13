@@ -3,6 +3,7 @@ name: spectrum-array-validation
 description: Use when after applying any sequence of spectrum preprocessing operations (set_mz_range, remove_precursor_peak, filter_intensity, scale_intensity) to an MsmsSpectrum object, to confirm that the resulting arrays fall within specified m/z windows, intensity bounds, and peak count limits before.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3437
   edam_topics:
   - http://edamontology.org/topic_3520

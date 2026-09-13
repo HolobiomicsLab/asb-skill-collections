@@ -3,6 +3,7 @@ name: mass-spectral-fingerprint-generation
 description: Use when you have unaligned MS2 spectra from one or more samples (in formats like .mgf, .mzML, or .mzXML) and need to compare them in a retention-time-agnostic manner.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3172

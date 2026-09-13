@@ -3,6 +3,7 @@ name: replicate-spectrum-concatenation
 description: Use when after extracting raw MS/MS spectra from mzML files for individual features (identified by precursor m/z and retention time) and you have multiple replicate spectra for the same feature that need to be pooled for consensus analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

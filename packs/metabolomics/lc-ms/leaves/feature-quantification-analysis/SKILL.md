@@ -3,6 +3,7 @@ name: feature-quantification-analysis
 description: Use when when you have loaded search result files from one or more DIA-MS analysis tools and need to assess the quantitative performance of identified features.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0121

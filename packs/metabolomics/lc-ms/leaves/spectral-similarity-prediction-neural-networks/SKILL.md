@@ -3,6 +3,7 @@ name: spectral-similarity-prediction-neural-networks
 description: Use when when you have paired MS/MS spectra with known structural similarity labels (Tanimoto scores from molecular fingerprints) and need to predict structural similarity for new spectrum pairs faster than fingerprint-based methods, or when you want to assess model prediction confidence per.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0362
   edam_topics:
   - http://edamontology.org/topic_0593

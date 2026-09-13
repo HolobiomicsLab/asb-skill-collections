@@ -3,6 +3,7 @@ name: dependency-version-parsing
 description: 'Use when before launching a multi-tool computational workflow (e.g., QCxMS2 mass spectra calculations) that depends on external programs with version-sensitive APIs or features. Apply this skill when: (1) the workflow has explicit minimum version requirements for one or more dependencies;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091

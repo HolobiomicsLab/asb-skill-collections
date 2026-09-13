@@ -3,6 +3,7 @@ name: statistical-distribution-analysis-across-cohorts
 description: Use when when you have prediction scores (softmax probabilities, uncertainties) from a trained deep learning model evaluated on a heterogeneous dataset and you need to determine whether prediction confidence or accuracy varies systematically across structurally distinct or novel compound.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -43,6 +44,7 @@ attribution:
 
 # Statistical Distribution Analysis Across Cohorts
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Stratify a model's prediction outputs (confidence scores, uncertainties) by a categorical grouping variable (e.g., structural novelty, compound class) and compute and visualize distributional statistics to reveal how model behavior varies across cohorts. This skill enables detection of systematic prediction bias or confidence degradation in out-of-distribution or novel compound subsets.

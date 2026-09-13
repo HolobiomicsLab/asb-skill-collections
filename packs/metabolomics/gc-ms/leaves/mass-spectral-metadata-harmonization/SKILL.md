@@ -3,6 +3,7 @@ name: mass-spectral-metadata-harmonization
 description: Use when you have multiple mass spectral libraries in different formats (NIST MSP + MOL folder, MoNA MSP, RIKEN MSP, SWGDRUG MSP) and need to merge them into a single, MS-DIAL-compatible MSP file with consistent SMILES assignments, Kovats retention indices (RI), and polarity annotations across all.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: cross-tool-performance-comparison
 description: Use when when you have raw tandem MS metabolomics data in vendor formats (.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

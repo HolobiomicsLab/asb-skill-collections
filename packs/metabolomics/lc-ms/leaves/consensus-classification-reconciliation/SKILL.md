@@ -3,6 +3,7 @@ name: consensus-classification-reconciliation
 description: Use when you have spectral features annotated by both in silico structural prediction tools (e.g., SIRIUS/CANOPUS) and spectral library matching (GNPS), and you need a single authoritative chemical classification per feature rather than a list of competing candidates.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3346
   edam_topics:
   - http://edamontology.org/topic_0154

@@ -3,6 +3,7 @@ name: compound-class-assignment-from-molecular-formula
 description: Use when after peaks have been filtered (by m/z, isotopic presence, and formula assignment error) and you have a list of peaks with assigned molecular formulas.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0154

@@ -3,6 +3,7 @@ name: network-based-functional-prediction
 description: Use when you have an untargeted metabolomics feature table with m/z values, retention times, intensity measurements, and p-values from statistical testing, but lack or wish to bypass metabolite identification.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3501
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -43,6 +44,7 @@ attribution:
 
 # network-based-functional-prediction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Predict metabolic functional activity and pathway activation directly from untargeted metabolomics feature tables by propagating activity signals through a metabolic network graph, without requiring explicit metabolite identification. This approach leverages mass-to-network node mapping and graph-based algorithms to infer biochemical pathway engagement from feature intensities and statistical significance.

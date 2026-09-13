@@ -3,6 +3,7 @@ name: coefficient-of-variation-threshold-analysis
 description: 'Use when you have per-feature CV values from quality control analysis of NMR or MS metabolomic data and need to: (1) establish whether your dataset meets FDA reproducibility standards for downstream biomarker discovery or quantification; (2) benchmark data quality against regulatory thresholds;'
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -44,6 +45,7 @@ attribution:
 
 # coefficient-of-variation-threshold-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluates the reproducibility and quality of NMR metabolomic features by computing cumulative distributions of coefficient of variation (CV) values and assessing compliance with FDA regulatory thresholds (CV < 0.30 for biomarker discovery, CV < 0.15 for quantification). This skill validates data quality across high-throughput metabolic profiling datasets.

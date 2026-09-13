@@ -3,6 +3,7 @@ name: mass-spectrometry-peak-data-loading
 description: Use when when you have raw or parsed MS spectra data (m/z values, intensity values, and spectral metadata) and need to integrate it into a Spectra object for downstream processing.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520

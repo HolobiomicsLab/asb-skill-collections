@@ -3,6 +3,7 @@ name: mass-spectrometry-intensity-drift-correction
 description: Use when mS quantification data exhibits intensity drift—a systematic decline or variation in detector response across the run sequence. Intensity drift is particularly common in long measurement sessions and compromises the accuracy of feature-by-sample intensity matrices.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0121

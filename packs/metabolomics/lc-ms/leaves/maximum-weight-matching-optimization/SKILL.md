@@ -3,6 +3,7 @@ name: maximum-weight-matching-optimization
 description: Use when you have computed pairwise similarity or mass difference scores between all fragment ions across two tandem mass spectra and need to select the non-overlapping set of ion pair matches.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

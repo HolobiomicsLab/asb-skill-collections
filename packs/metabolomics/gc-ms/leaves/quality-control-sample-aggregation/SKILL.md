@@ -3,6 +3,7 @@ name: quality-control-sample-aggregation
 description: Use when you have a feature intensity matrix (peak vector) and a corresponding set of QC sample indices from a multi-batch LC/GC-MS experiment, and you need to establish batch-invariant reference statistics before applying QC-based batch correction methods such as bcpareto(), bccenter(), or.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: mass-spectrometry-molecular-formula-handling
 description: 'Use when you have raw or processed FT-ICR MS spectra with detected peaks (m/z values) and need to: (1) assign elemental compositions to each peak, (2) filter assignments by mass error tolerance and isotopic presence, or (3) prepare a peak table with molecular formula annotations for chemodiversity.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3370

@@ -3,6 +3,7 @@ name: mass-spectrometry-data-loading-and-formatting
 description: Use when you have raw or curated mass spectrometry data (MS1, MS2, or MSMS) in mzML, mzXML, CDF, MGF, MSP formats, or from a MassBank/MetaboLights repository, and need to convert it into an in-memory or on-disk spectral object that supports filtering, comparison, and annotation workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0121

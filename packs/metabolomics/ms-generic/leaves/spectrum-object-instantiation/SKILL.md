@@ -3,6 +3,7 @@ name: spectrum-object-instantiation
 description: Use when after successfully parsing raw spectral data from one of the supported file formats (mzML, mzXML, msp, metabolomics-USI, MGF, JSON) into intermediate dictionaries containing m/z arrays, intensity arrays, and metadata key-value pairs.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0121

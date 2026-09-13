@@ -3,6 +3,7 @@ name: mahalanobis-distance-calculation
 description: Use when after data normalization (Box-Cox transformation) and before hypothesis testing in Step 9 of untargeted metabolomic workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

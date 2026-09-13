@@ -3,6 +3,7 @@ name: raw-mass-spectrometry-data-ingestion
 description: Use when you have raw mass spectrometry data in mzML, abf (Reifycs), or cdf (NetCDF) format and need to load it into MS-DIAL or a similar open-source metabolomics platform.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3370

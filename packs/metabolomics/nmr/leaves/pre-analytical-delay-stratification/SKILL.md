@@ -3,6 +3,7 @@ name: pre-analytical-delay-stratification
 description: Use when when you have NMR metabolite measurements paired with documented pre-centrifugation and post-centrifugation delay times, and need to assess how processing delays affect metabolic parameter stability within a plasma or serum sample cohort.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -39,6 +40,7 @@ attribution:
 
 # pre-analytical-delay-stratification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interactive stratification and visualization of NMR metabolic parameters by processing delay intervals (pre- and post-centrifugation) to assess stability and identify minor/major metabolite changes across time-points. Used in quality control workflows for peripheral blood sample metabolomics studies.

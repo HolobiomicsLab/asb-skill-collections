@@ -3,6 +3,7 @@ name: cohort-performance-reporting
 description: Use when you have NMR metabolite measurements from peripheral blood samples (plasma/serum) paired with processing delay metadata (pre-centrifugation and post-centrifugation times) and need to benchmark metabolic parameter stability across delay windows.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_2945
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -39,6 +40,7 @@ attribution:
 
 # cohort-performance-reporting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate stratified performance reports for metabolite cohorts under varying pre-analytical conditions (processing delays, sample type, centrifugation timing). This skill quantifies metabolic parameter stability across delay bins or continuous timepoints, flagging minor and major deviations to support pre-analytical method validation.

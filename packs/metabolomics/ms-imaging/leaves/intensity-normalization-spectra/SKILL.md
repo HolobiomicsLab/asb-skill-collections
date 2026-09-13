@@ -3,6 +3,7 @@ name: intensity-normalization-spectra
 description: Use when after noise reduction when working with imported imzML MSI data where pixel-to-pixel or sample-to-sample intensity variations due to instrumental sensitivity or sample loading differences must be corrected before mean intensity calculation, ROI analysis, or metabolite annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

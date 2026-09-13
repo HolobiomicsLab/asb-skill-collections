@@ -3,6 +3,7 @@ name: sparse-matrix-computation
 description: Use when clustering large collections of high-resolution MS/MS spectra (thousands to millions) and you have already converted spectra to low-dimensional vectors via feature hashing.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: file-format-detection-and-routing
 description: Use when when you receive a mass spectrometry imaging dataset in unknown or mixed vendor formats and need to apply format-specific preprocessing before generating ion images.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121

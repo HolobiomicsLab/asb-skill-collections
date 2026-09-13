@@ -3,6 +3,7 @@ name: adduct-mass-difference-ranking
 description: Use when you have computed a histogram of mass differences from all pairwise mass comparisons in your MALDI-MS imaging dataset and need to prioritize which mass differences are most frequent and likely represent genuine molecular adducts (e.g., metabolite + matrix ions) rather than noise.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

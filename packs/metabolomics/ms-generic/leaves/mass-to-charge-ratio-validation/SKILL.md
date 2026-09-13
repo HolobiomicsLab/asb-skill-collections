@@ -3,6 +3,7 @@ name: mass-to-charge-ratio-validation
 description: Use when after loading MS-Dial feature tables (e.g., Urine_RP_NEG_norm.txt or Urine_RP_POS_norm.txt) and before sample-level filtering or imputation, whenever the feature abundance matrix contains m/z values acquired across multiple chromatographic runs or polarities.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

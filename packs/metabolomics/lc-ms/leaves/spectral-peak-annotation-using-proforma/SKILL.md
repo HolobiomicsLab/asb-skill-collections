@@ -3,6 +3,7 @@ name: spectral-peak-annotation-using-proforma
 description: Use when you have a tandem mass spectrum with observed m/z peaks and a known peptide sequence (as a ProForma string, optionally with post-translational modifications), and you want to determine which observed peaks correspond to expected fragment ions (b-type, y-type, a-type) within a specified.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0121

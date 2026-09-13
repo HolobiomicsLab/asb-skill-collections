@@ -3,6 +3,7 @@ name: msp-file-parsing
 description: Use when you have a Mass Spectrum Point (MSP) file containing electron ionization mass spectral records with header fields and peak intensity pairs, and you need to load it into an R data structure for library searching, format validation, or round-trip conversion.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

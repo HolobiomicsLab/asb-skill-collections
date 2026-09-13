@@ -3,6 +3,7 @@ name: formula-based-network-construction
 description: Use when you have a formula-assigned dataset from FT-ICR MS (or other compound-annotated mass spectrometry) and you want to characterize molecular transformations and their co-occurrence patterns—particularly in studies of DOM reactivity, fermentation, or oxidative treatment of organic mixtures.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3762
   edam_topics:
   - http://edamontology.org/topic_3172

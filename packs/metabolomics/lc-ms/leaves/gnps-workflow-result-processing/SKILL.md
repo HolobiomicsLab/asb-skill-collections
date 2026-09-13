@@ -3,6 +3,7 @@ name: gnps-workflow-result-processing
 description: Use when when you have run a spectral networking job on GNPS (e.g. ProteoSAFe-METABOLOMICS-SNETS-V2) and need to reuse the network output files locally with MetaMiner or another tool that accepts spectral network input directories.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_0749

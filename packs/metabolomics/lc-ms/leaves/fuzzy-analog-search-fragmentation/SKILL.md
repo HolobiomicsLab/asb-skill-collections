@@ -3,6 +3,7 @@ name: fuzzy-analog-search-fragmentation
 description: Use when when you have experimental MS/MS spectra and want to discover structurally similar compounds beyond exact spectral library matches—particularly useful for identifying chemical analogs, homologs, or isomers that share fragmentation logic but differ in molecular structure.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -42,6 +43,7 @@ attribution:
 
 # fuzzy-analog-search-fragmentation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Identify structurally related compounds with similar MS/MS fragmentation patterns but different molecular identities by performing fuzzy (analog) search against a spectral library. This complements identity search to discover chemical analogs and detect novel compounds with known fragmentation signatures.

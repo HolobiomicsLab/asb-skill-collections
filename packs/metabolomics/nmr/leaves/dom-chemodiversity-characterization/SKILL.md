@@ -3,6 +3,7 @@ name: dom-chemodiversity-characterization
 description: Use when you have a formula-assigned FT-ICR MS dataset (molecular formulas already assigned to individual mass features) and seek to understand the chemodiversity landscape and transformation relationships within DOM.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172

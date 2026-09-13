@@ -3,6 +3,7 @@ name: multi-assay-cross-linking-validation
 description: Use when you have statistically significant features from multiple LC-MS assays with different ionization modes (e.g., positive and negative ESI) and need to collapse redundant feature representations into single structural entities.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_0121

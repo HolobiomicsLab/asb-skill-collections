@@ -3,6 +3,7 @@ name: dda-precursor-fragment-ion-grouping
 description: Use when when you have raw DDA mass spectrometry data (mzML, mzXML, or netCDF format) where precursor ions have been fragmented and you need to associate each fragment ion back to its parent precursor ion to generate coherent, precursor-specific fragmentation spectra for chemical annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

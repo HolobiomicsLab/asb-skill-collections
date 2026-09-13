@@ -3,6 +3,7 @@ name: ground-truth-intensity-calculation
 description: Use when when generating synthetic LC/GC-MS .mzML files with companion ground-truth peak tables for method validation, you need to calculate the absolute maximum intensity that each simulated peak would exhibit in the raw mass spectrometry matrix.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0091

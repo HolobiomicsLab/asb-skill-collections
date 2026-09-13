@@ -3,6 +3,7 @@ name: gallery-benchmark-data-extraction
 description: Use when you have access to a computation-times table or performance log documenting rendering execution times for multiple visualization examples across different plotting backends (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0091

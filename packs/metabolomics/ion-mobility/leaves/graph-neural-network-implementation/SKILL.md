@@ -3,6 +3,7 @@ name: graph-neural-network-implementation
 description: Use when when your input includes molecular structures (SMILES, conformers) and you need to predict a continuous property (e.g., CCS, binding affinity, solubility) that depends on molecular connectivity and spatial relationships.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3314
@@ -62,6 +63,7 @@ attribution:
 
 # graph-neural-network-implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a graph neural network (GNN) using PyTorch Geometric to encode molecular structure and predict molecular properties (collision cross section) from graph-based representations of conformers. This skill is essential when molecular topology and connectivity must inform property prediction beyond simple numerical features.

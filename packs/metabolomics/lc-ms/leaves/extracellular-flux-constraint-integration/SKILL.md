@@ -3,6 +3,7 @@ name: extracellular-flux-constraint-integration
 description: Use when you have constraint-based metabolic models of multiple cell lines, experimental measurements of extracellular metabolite concentrations at two timepoints (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3660
   edam_topics:
   - http://edamontology.org/topic_0602

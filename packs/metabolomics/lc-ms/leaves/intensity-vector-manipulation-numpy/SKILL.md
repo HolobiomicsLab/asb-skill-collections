@@ -3,6 +3,7 @@ name: intensity-vector-manipulation-numpy
 description: Use when you have extracted mass tracks (EICs) from multiple LC-MS samples aligned into a MassGrid structure, and you need to combine their intensity vectors into a single composite intensity vector for peak detection on the aggregate signal rather than per-sample.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -43,6 +44,7 @@ attribution:
 
 # Intensity vector manipulation with NumPy
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aggregate and align intensity vectors from multiple mass tracks across LC-MS samples using NumPy array operations to construct a composite intensity profile for peak detection. This skill applies retention time calibration, element-wise summation, and vector consolidation to create unified composite mass tracks suitable for statistics-guided peak detection.

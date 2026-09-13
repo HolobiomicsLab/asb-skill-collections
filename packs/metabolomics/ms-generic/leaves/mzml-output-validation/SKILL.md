@@ -3,6 +3,7 @@ name: mzml-output-validation
 description: Use when after running AirdPro's CLI conversion pipeline (run-cli.sh with -i and -o arguments) to confirm the vendor raw file conversion to mzML has succeeded.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_3520

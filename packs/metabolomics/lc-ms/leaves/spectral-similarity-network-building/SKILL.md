@@ -3,6 +3,7 @@ name: spectral-similarity-network-building
 description: Use when when you have detected LC-MS/MS features (MS1 peaks with MS2 fragmentation spectra) from untargeted metabolomics experiments and seek to organize them into a chemical hierarchy for comparative metabolomic analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3945
   edam_topics:
   - http://edamontology.org/topic_3172

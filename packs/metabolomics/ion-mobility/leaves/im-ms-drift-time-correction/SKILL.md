@@ -3,6 +3,7 @@ name: im-ms-drift-time-correction
 description: Use when when you have IM-MS lipidomics data acquired on samples spiked with U13C-labeled internal standards (fully labeled yeast extract) and need to quantify systematic CCS bias and apply lipid class-specific bias correction to all measured CCS values, particularly when multiple lipids per lipid.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -41,6 +42,7 @@ attribution:
 
 # IM-MS Drift Time Correction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated assessment and correction of collision cross section (CCS) bias in ion mobility–mass spectrometry analyses using internal U13C-labeled lipid standards and linear regression-based correction functions. This skill eliminates the need for external calibration beyond vendor-specific requirements by leveraging a DT CCS N2 library.

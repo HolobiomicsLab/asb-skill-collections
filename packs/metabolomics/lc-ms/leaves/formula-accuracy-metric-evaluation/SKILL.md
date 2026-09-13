@@ -3,6 +3,7 @@ name: formula-accuracy-metric-evaluation
 description: Use when when training or validating a deep learning model for molecular formula prediction from tandem MS/MS spectra, use this metric to track whether the model's predicted formula (including hydrogen atoms) exactly matches the annotated ground-truth formula.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0121

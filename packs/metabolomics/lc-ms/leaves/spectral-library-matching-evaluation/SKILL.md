@@ -3,6 +3,7 @@ name: spectral-library-matching-evaluation
 description: Use when you have a trained spectral embedding model (e.g., MSBERT, Spec2Vec) and need to benchmark its library matching accuracy against reference spectra on a test dataset.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

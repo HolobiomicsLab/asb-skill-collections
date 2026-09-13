@@ -3,6 +3,7 @@ name: metabolite-database-matching
 description: Use when after peak networks have been identified and clustered from INADEQUATE spectra (typically via the clustering and finding modules), use this skill when you need to assign chemical identities to unknown peak networks by comparing them against reference spectral signatures in a simulated.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3375

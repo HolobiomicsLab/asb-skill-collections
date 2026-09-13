@@ -3,6 +3,7 @@ name: gpu-acceleration-cuda-configuration
 description: Use when when clustering or encoding large MS/MS spectra datasets (>1 million spectra) where CPU-only runtime exceeds practical thresholds (hours to days).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3791
   edam_topics:
   - http://edamontology.org/topic_0121

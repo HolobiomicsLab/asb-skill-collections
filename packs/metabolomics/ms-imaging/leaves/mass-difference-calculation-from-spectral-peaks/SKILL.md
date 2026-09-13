@@ -3,6 +3,7 @@ name: mass-difference-calculation-from-spectral-peaks
 description: Use when you have a list of detected masses (m/z peaks) from MALDI-MS imaging data and want to systematically search for adduct relationships. Apply this skill when you suspect that observed peaks include not just parent metabolites but also their adducts with matrix ions (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

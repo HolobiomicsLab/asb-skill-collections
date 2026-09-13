@@ -3,6 +3,7 @@ name: chemical-identifier-mapping
 description: Use when you have .msp spectral library files with compound names but lack standardized chemical identifiers (SMILES, InChI, InChI Key, CAS number, IUPAC names, or molecular formulas).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_0154

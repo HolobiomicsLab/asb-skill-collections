@@ -3,6 +3,7 @@ name: qiime2-artifact-handling
 description: Use when you have raw mass-spectrometry files (MGF, BIOM, mzXML, mzML) or feature abundance tables from external tools (MZmine2, peak detection software) and need to convert them into QIIME 2's typed artifact format before running downstream plugins like q2-qemistree, diversity analyses, or.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: metabolite-biomarker-classification-via-unsupervised-projection
 description: Use when after preprocessing GCxGC-MS chromatograms (smoothing, baseline correction, peak alignment) when you need to uncover latent metabolite patterns that distinguish biological groups without prior class labels. Specifically useful for exploratory separation of disease states (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3935
   edam_topics:
   - http://edamontology.org/topic_0593

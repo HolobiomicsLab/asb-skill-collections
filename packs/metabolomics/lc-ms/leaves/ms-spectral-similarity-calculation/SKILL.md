@@ -3,6 +3,7 @@ name: ms-spectral-similarity-calculation
 description: Use when when comparing two or more MS/MS spectra for compound identification, library matching, or spectral validation. Triggered when raw spectral data requires quantitative similarity assessment before database lookup, or when validating that two spectra originate from the same chemical compound.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0091

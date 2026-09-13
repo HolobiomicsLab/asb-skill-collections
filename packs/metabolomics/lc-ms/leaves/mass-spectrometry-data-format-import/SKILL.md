@@ -3,6 +3,7 @@ name: mass-spectrometry-data-format-import
 description: Use when you have raw mass spectrometry data in one of the supported spectral formats (mzML, mzXML, msp, MGF, JSON, or metabolomics-USI) and need to load it into a Python environment for cleaning, processing, or similarity comparison.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

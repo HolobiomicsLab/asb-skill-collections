@@ -3,6 +3,7 @@ name: molecular-class-annotation-for-networks
 description: Use when after molecular formulas have been assigned to detected peaks (via CoreMS, Formularity, or equivalent) and you are constructing biochemical transformation networks where node interpretation requires understanding what chemical classes are being transformed.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: mass-spectrometry-feature-deconvolution
 description: Use when you have a peak table from LC-MS peak picking software (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -47,6 +48,7 @@ attribution:
 
 # Reconstruct the feature clustering algorithm producing Cluster_ID assignments
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Group correlated LC-MS metabolic features into clusters based on mass-to-charge ratio proximity, retention time co-elution, and abundance correlation, then assign cluster identifiers named after the highest-abundance feature in each cluster. This skill resolves isotopologues, adducts, and in-source fragments that represent the same underlying metabolite.

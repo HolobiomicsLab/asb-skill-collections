@@ -3,6 +3,7 @@ name: annotation-confidence-scoring
 description: Use when after recursive annotation propagation has assigned metabolite labels to previously unannotated nodes in a two-layer metabolomic network, and before reporting final annotated metabolite identities.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -40,6 +41,7 @@ attribution:
 
 # annotation-confidence-scoring
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Validate and score confidence in propagated metabolite annotations by checking consistency with spectral similarity scores and chemical class rules within each network layer. This ensures that recursive annotation propagation produces reliable, layer-specific metabolite labels suitable for downstream metabolomic analysis.

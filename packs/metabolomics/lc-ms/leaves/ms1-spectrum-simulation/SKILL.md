@@ -3,6 +3,7 @@ name: ms1-spectrum-simulation
 description: Use when when you need to generate synthetic LC-MS/MS data to test fragmentation strategies, validate acquisition controllers, or benchmark peak-picking and spectral matching algorithms before deployment on real mass spectrometers.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3370

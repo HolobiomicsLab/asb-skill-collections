@@ -3,6 +3,7 @@ name: targeted-transition-list-generation
 description: Use when you have a set of lipid targets defined by species name, acyl chain composition, and expected adducts, and you need to configure a targeted mass spectrometry workflow (PRM or MRM) in Skyline.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0153

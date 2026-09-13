@@ -3,6 +3,7 @@ name: peak-parameter-optimization-for-targeted-compounds
 description: Use when you have centroided high-resolution Orbitrap or GC-CI-MS mzML files and a formulaTable of target compounds with known m/z, retention time, and molecular formula, and you need to extract isotopologue abundances and quantification metrics (area, maxo intensity, ppm error) for each labeled.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0769

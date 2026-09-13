@@ -3,6 +3,7 @@ name: spectral-similarity-matching-algorithms
 description: Use when when you have experimental MS/MS spectra (from mzML or .rda preprocessed format) and need to annotate them against a reference fragmentation library.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: tensor-preprocessing-normalization
 description: Use when when you have raw MS/MS spectral data in the form of intensity arrays indexed by m/z values and need to feed them into the Spec2Mol encoder neural network. Apply this skill before encoder inference to ensure spectral inputs conform to the encoder's expected dimensionality and value ranges.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0121

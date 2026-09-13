@@ -3,6 +3,7 @@ name: ms-ms-ion-interpretation
 description: Use when when you have two MS/MS spectra (each with a precursor m/z and a list of fragment ion m/z values) and need to identify which fragment ions correspond between them, especially when structural differences make simple monotonic alignment unreliable.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3938
   edam_topics:
   - http://edamontology.org/topic_0121

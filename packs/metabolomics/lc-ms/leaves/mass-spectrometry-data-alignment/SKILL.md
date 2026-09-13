@@ -3,6 +3,7 @@ name: mass-spectrometry-data-alignment
 description: Use when you have two LC-MS feature tables (each containing m/z, retention time, and intensity columns) from the same or related biological samples and need to identify which features in dataset A correspond to which features in dataset B.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

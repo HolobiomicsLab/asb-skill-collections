@@ -3,6 +3,7 @@ name: mzml-mzxml-spectrum-reading
 description: Use when when you have raw mzML or mzXML files containing uncompressed m/z and intensity arrays and need to load spectra into a uniform data contract before compression, cross-format comparison, or algorithmic processing.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

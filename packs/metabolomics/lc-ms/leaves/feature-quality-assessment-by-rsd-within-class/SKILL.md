@@ -3,6 +3,7 @@ name: feature-quality-assessment-by-rsd-within-class
 description: Use when after blank subtraction and background drift removal in an MS-DIAL peak list, when you need to exclude features with high within-class measurement variability. Apply this when you have replicate samples assigned to distinct classes (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

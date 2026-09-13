@@ -3,6 +3,7 @@ name: feature-clustering-intensity-based
 description: Use when after matching mass-to-charge ratios to a KEGG database and obtaining multiple candidate metabolites per feature, but before filtering quasi-molecular adducts.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

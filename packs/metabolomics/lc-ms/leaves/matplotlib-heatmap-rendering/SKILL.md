@@ -3,6 +3,7 @@ name: matplotlib-heatmap-rendering
 description: Use when when you have a confusion matrix (predicted vs. ground-truth labels) or similarity matrix (pairwise scores between spectra) and need to communicate classification accuracy or chemical similarity patterns through a visual heatmap.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

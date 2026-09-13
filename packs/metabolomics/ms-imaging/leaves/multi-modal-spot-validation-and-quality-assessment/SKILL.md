@@ -3,6 +3,7 @@ name: multi-modal-spot-validation-and-quality-assessment
 description: Use when after performing spot_align_byknn to map SM spots to ST spots, validate that all SM spots have been successfully assigned and that the Euclidean distance distributions between SM spots and their assigned nearest ST neighbors are reasonable (no outliers or failed assignments that would.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3173

@@ -3,6 +3,7 @@ name: metadata-structure-transformation
 description: Use when you have raw tabular experimental metadata (mass spectrometry or NMR sample descriptions, sample-to-treatment mappings, instrument parameters, etc.) that needs to be deposited into a structured online repository like Metabolomics Workbench, but the raw format does not conform to the.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3750
   edam_topics:
   - http://edamontology.org/topic_3391

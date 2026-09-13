@@ -3,6 +3,7 @@ name: cross-omics-strain-mapping
 description: Use when when you have paired genomics (AntiSMASH BGC annotations) and metabolomics (GNPS spectra and molecular families) data from the same microbial strains and need to identify which biosynthetic pathways produce which observed natural products.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_0102

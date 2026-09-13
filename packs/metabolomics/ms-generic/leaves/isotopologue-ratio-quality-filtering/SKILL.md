@@ -3,6 +3,7 @@ name: isotopologue-ratio-quality-filtering
 description: Use when when extracting isotopologue patterns from centroided mzML files in non-targeted metabolomics workflows, apply this filter after detecting candidate isotopologue peaks but before finalizing the benchmark dataset.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3172

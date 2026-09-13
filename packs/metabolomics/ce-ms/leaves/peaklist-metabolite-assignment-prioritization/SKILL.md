@@ -3,6 +3,7 @@ name: peaklist-metabolite-assignment-prioritization
 description: Use when you have extracted m/z and retention time (m/z-RT) information for peaks from untargeted LC/HRMS data (using tools like IDSL.IPA) and need to assign molecular formula identities to those peaks.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0599

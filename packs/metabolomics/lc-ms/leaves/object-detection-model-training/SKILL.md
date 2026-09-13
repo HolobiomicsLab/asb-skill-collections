@@ -3,6 +3,7 @@ name: object-detection-model-training
 description: Use when you have annotated LC-MS ROI snippets with ground-truth peak/non-peak labels and boundary coordinates (peak start/end positions), and you need to build a model that can discriminate true peaks from false peaks while precisely localizing peak boundaries for area integration in future LC-MS.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0121

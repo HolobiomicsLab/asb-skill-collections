@@ -3,6 +3,7 @@ name: metabolite-abundance-normalization
 description: Use when after loading a raw metabolite abundance table (rows=metabolites, columns=samples) from Metabolomics Workbench format and before mapping metabolites to pathway identifiers or computing enrichment statistics.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: retention-time-prediction
 description: Use when you have MS1-formatted mass spectrometry files from a liquid chromatography–mass spectrometry (LC-MS) experiment and need to predict the retention time of peptide ions without relying on spectral libraries, empirical models, or manual feature engineering.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

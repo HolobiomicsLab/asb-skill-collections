@@ -3,6 +3,7 @@ name: top-n-accuracy-and-auc-metric-calculation
 description: Use when you have a ranked candidate list (e.g., BGCs sorted by IOKR or strain-correlation score) for each test spectrum, a known ground-truth BGC for each spectrum, and you want to measure retrieval performance across multiple recall depths (top-1 through top-200) and overall discrimination.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0091

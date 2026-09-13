@@ -3,6 +3,7 @@ name: dropout-regularization-application
 description: Use when when training a deep neural network on mass spectrometry spectral data where overfitting is a risk (especially with data augmentation applied), and when you need both regularization during training AND uncertainty quantification at inference time via multiple forward passes with dropout.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2426
   edam_topics:
   - http://edamontology.org/topic_3172

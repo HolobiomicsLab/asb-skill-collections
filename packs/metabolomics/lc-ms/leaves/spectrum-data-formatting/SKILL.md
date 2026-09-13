@@ -3,6 +3,7 @@ name: spectrum-data-formatting
 description: Use when you have acquired raw or semi-processed mass spectra and need to search them against curated domain-specific databases (microbeMASST, plantMASST, etc.) using standalone web applications or batch APIs.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3370

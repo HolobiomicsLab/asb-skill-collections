@@ -3,6 +3,7 @@ name: ms2-spectral-similarity-scoring
 description: Use when after temporal intensity profile correlation and exact mass difference refinement have identified candidate ion-species pairs in direct-injection plasma ionization MS data (e.g., DBDI-MS, DBDI-FT-ICR-MS).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

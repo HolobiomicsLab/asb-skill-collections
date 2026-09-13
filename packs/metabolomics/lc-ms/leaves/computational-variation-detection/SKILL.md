@@ -3,6 +3,7 @@ name: computational-variation-detection
 description: Use when after peak detection and feature alignment in a metabolomic LC–MS/MS or GC–MS workflow, when you have a feature table (rows=metabolic features, columns=samples) split into separate .csv files for peak height and peak area.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3172

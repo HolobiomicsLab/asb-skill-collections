@@ -3,6 +3,7 @@ name: input-type-classification
 description: Use when a web application receives mass spectrometry data through heterogeneous identifier formats and must automatically determine which loader (Task ID, USI, or FBMN) should process the input.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -40,6 +41,7 @@ attribution:
 
 # input-type-classification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Classify mass spectrometry data input identifiers (Task ID, USI, or FBMN format) to route them to the correct data loader and retrieval pathway. This skill enables a web application to accept multiple standardized input formats and dispatch them to specialized parsers without manual user intervention.

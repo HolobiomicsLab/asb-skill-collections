@@ -3,6 +3,7 @@ name: open-modification-spectrum-matching
 description: Use when when you have a query mass spectrum with unknown or unanticipated post-translational modifications and need to match it against an unmodified spectral library.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3647
   edam_topics:
   - http://edamontology.org/topic_0121

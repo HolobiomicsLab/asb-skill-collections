@@ -3,6 +3,7 @@ name: summary-visualization-artifact-generation
 description: Use when you have completed batch spectral searches against multiple domain-specific MASST tools (via Fast Search API or individual domain searches) and need to combine and visualize the aggregated match results in a format compatible with metadataMASST web interface or downstream analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_0121

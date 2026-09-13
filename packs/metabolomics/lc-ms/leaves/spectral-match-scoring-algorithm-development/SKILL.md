@@ -3,6 +3,7 @@ name: spectral-match-scoring-algorithm-development
 description: Use when when building or extending MS/MS library search tools that must re-rank top candidate spectra (e.g., top 2000 from MS2Deepscore) to identify the analogue or exact match.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3172

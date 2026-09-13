@@ -3,6 +3,7 @@ name: transformer-based-fragment-assembly
 description: Use when when you have CNN-encoded spectral features (¹H and/or ¹³C NMR) and a set of predicted or candidate molecular fragments, and you need to determine which fragments are present and how they connect to form a valid molecular structure.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0593

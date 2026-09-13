@@ -3,6 +3,7 @@ name: low-resolution-compound-identification
 description: Use when you have low-resolution GC-MS data (e.g., ANDI NetCDF format) with detected peaks that lack high mass accuracy, and you need to assign compound identities using a combination of retention index (RI) calibration and mass spectral library matching.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0769

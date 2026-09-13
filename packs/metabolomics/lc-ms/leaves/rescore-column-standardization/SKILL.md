@@ -3,6 +3,7 @@ name: rescore-column-standardization
 description: Use when after running FIDDLE v2.0.0 inference on MS/MS spectra and obtaining ranked formula candidates with confidence scores, apply this skill when the rescore model outputs columns named Rescore (0), Rescore (1), ...
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

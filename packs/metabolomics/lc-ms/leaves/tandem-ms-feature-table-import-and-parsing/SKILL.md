@@ -3,6 +3,7 @@ name: tandem-ms-feature-table-import-and-parsing
 description: Use when when you have raw feature tables exported from a tandem LC-MS/MS preprocessing tool (e.g., Progenesis QI, MS-DIAL, Bruker Metaboscape) and need to combine them with sample metadata (group assignments, replicate structure) before applying feature filtering or quality control workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3370

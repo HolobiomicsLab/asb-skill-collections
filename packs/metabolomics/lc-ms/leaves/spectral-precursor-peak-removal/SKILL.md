@@ -3,6 +3,7 @@ name: spectral-precursor-peak-removal
 description: Use when after loading a raw MsmsSpectrum object from a tandem mass spectrometry experiment (e.g., via USI) and before intensity filtering or scaling.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121

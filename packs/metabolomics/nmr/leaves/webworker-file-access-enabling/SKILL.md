@@ -3,6 +3,7 @@ name: webworker-file-access-enabling
 description: Use when you need to run a local HTML file that uses WebWorker or WebAssembly (such as COLMARvista for NMR spectra analysis) and the browser raises cross-origin or file-access policy errors preventing WebWorker initialization or WebAssembly module loading.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_topics: []
   tools:
   - Google Chrome

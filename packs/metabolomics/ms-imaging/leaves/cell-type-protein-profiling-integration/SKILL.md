@@ -3,6 +3,7 @@ name: cell-type-protein-profiling-integration
 description: Use when you have co-registered IMC (protein imaging mass cytometry) and SIMS (secondary ion mass spectrometry for metabolites) data from the same tissue regions, cell segmentation masks, and need to assign cell types based on protein expression patterns, then overlay those assignments onto.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -42,6 +43,7 @@ attribution:
 
 # cell-type-protein-profiling-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate cell-type assignments derived from single-cell proteomics clustering with spatial metabolomics data to enable joint analysis of protein and metabolite modalities at single-cell resolution. This skill bridges high-dimensional protein intensity profiles with co-registered spatial metabolite distributions to support systems-level biological interpretation.

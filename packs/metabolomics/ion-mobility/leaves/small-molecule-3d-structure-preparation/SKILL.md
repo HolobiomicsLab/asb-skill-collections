@@ -3,6 +3,7 @@ name: small-molecule-3d-structure-preparation
 description: Use when when you have ionized adduct structures (SMILES or MOL format) from a prior ionization-state determination step and need to create multiple low-energy 3D conformations before filtering with machine-learning potentials (ASE-ANI) or quantum calculations.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0432
   edam_topics:
   - http://edamontology.org/topic_3314
@@ -43,6 +44,7 @@ attribution:
 
 # small-molecule-3d-structure-preparation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate and optimize 3D conformer ensembles from ionized molecular structures using RDKit's distance-geometry algorithm and force-field minimization. This skill is essential for preparing small molecules for downstream quantum chemical or neural-network-based energy filtering in high-throughput CCS prediction workflows.

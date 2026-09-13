@@ -3,6 +3,7 @@ name: motif-to-node-mapping
 description: Use when you have a GNPS-generated classical or feature-based mass spectral molecular network (graphml or JSON format) and a corresponding MS2LDA experiment with Mass2Motif assignments on the same spectra, and you want to visualize and quantify which structural motifs are shared within and across.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_3520

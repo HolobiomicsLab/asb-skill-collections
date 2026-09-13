@@ -3,6 +3,7 @@ name: metabolite-metadata-column-matching
 description: Use when validating mwTab files deposited to the Metabolomics Workbench and you need to verify that metadata columns match standard naming conventions and contain values in the expected format.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: ms2lda-feature-annotation
 description: Use when after creating a GNPS mass spectral molecular network and running an MS2LDA experiment, use this skill when you want to identify and visualize which substructural motifs (Mass2Motifs) are shared across clustered spectra, particularly to highlight fragmentation pattern similarities between.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0121

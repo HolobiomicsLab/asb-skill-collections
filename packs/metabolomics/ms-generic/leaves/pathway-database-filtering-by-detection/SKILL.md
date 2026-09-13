@@ -3,6 +3,7 @@ name: pathway-database-filtering-by-detection
 description: Use when you have run a metabolomics experiment with incomplete coverage of a reference pathway database (e.g., 10–100% of database metabolites detected), and you plan to use ORA for pathway enrichment. The skill is essential if your detection method has known sensitivity limits (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0602

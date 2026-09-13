@@ -3,6 +3,7 @@ name: lc-ms-data-pipeline-architecture
 description: Use when you have vendor-format LC-MS acquisition files (.raw, .d, .ms) from instrument runs and need to set up an end-to-end data quality control system that converts proprietary formats into open mzML, processes spectral data, and surfaces QC failures in real time.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0091

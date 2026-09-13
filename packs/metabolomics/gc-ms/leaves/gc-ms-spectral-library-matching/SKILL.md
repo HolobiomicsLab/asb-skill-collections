@@ -3,6 +3,7 @@ name: gc-ms-spectral-library-matching
 description: Use when when you have GC-MS data with detected peaks that require structural annotation, retention index calibration has been applied (typically using FAMES standards), and you need to assign compound identities with confidence scores.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0599

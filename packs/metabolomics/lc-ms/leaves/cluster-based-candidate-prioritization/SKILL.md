@@ -3,6 +3,7 @@ name: cluster-based-candidate-prioritization
 description: Use when after mass-to-charge matching has produced a large table of candidate KEGG metabolites with multiple adduct assignments per feature. Use it when you observe that multiple candidate ions co-elute and share similar intensity profiles, suggesting they derive from the same parent metabolite;
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_0121

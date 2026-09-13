@@ -3,6 +3,7 @@ name: synthetic-spectrum-generation
 description: Use when when you need to create benchmark LC-MS/MS datasets with controlled, known composition for testing MS analysis algorithms, validating retention-time or fragmentation predictions, or predicting co-elution and co-fragmentation challenges before conducting real experiments.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

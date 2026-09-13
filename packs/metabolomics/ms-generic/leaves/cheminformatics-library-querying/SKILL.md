@@ -3,6 +3,7 @@ name: cheminformatics-library-querying
 description: Use when you have a list of query chemicals (compound names or SMILES) and a reference library organized by chemical groups (e.g., Types A–E, GroupA/GroupB), and you need to assess which library compounds are structurally similar to your queries, retrieve their categorical annotations (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0346
   edam_topics:
   - http://edamontology.org/topic_0154

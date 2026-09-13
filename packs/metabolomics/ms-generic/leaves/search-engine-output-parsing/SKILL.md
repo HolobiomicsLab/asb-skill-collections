@@ -3,6 +3,7 @@ name: search-engine-output-parsing
 description: Use when you have PSM output files from one or more search engines (e.g., MaxQuant msms.txt, MSGFPlus .mzid, Sage .sage.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121

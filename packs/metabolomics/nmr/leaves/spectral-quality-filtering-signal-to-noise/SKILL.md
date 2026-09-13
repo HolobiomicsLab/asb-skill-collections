@@ -3,6 +3,7 @@ name: spectral-quality-filtering-signal-to-noise
 description: Use when you have raw spectroscopic datasets (NMR, HSQC, COSY, IR) in standardized array or DataFrame format and need to curate them for multimodal transformer training.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

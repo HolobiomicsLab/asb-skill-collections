@@ -3,6 +3,7 @@ name: feature-annotation-augmentation
 description: Use when when a traditional peak extraction pipeline (e.g., XCMS) has generated a feature table from LC-MS data but fails to detect known or suspected compounds present in your sample. Specifically, when you have a suspect database (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3634
   edam_topics:
   - http://edamontology.org/topic_0625

@@ -3,6 +3,7 @@ name: in-silico-fragment-m-z-calculation
 description: Use when when you have experimental UHPLC-HRMS/MS or direct infusion MS/MS data and need to identify lipid species by comparing observed fragment m/z values against a library of simulated fragments. Apply this skill when your lipid library is incomplete or specialized (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0153

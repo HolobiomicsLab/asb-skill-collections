@@ -3,6 +3,7 @@ name: spectral-intensity-thresholding
 description: Use when you have loaded raw INADEQUATE NMR spectrum data and need to distinguish true molecular peaks from noise and instrumental artifacts.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

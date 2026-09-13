@@ -3,6 +3,7 @@ name: peak-extraction-rescue-algorithms
 description: Use when traditional peak extraction algorithms have produced a feature table that you suspect is incomplete or missing known suspects from your target database (e.g., T3DB).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0091

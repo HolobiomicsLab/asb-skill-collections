@@ -3,6 +3,7 @@ name: retention-time-based-ion-association
 description: Use when when processing Data Dependent Acquisition (DDA) raw mass spectrometry data (mzML or mzXML format) and you need to deconvolute fragmentation spectra by matching precursor ions to their corresponding fragment ions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

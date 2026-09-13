@@ -3,6 +3,7 @@ name: metabolite-adduct-correlation-spatial-analysis
 description: Use when you have annotated mass-difference peaks with known adduct identities (via mass-matching to reference adduct tables) and possess MSI intensity matrices where each peak's abundance is measured across multiple tissue pixels or voxels.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

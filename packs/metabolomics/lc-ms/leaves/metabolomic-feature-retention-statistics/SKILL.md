@@ -3,6 +3,7 @@ name: metabolomic-feature-retention-statistics
 description: Use when after applying the CV_ratio() filtering function to a normalized metabolomic feature matrix (e.g., Urine_RP_NEG_norm.txt) in margheRita, generate retention statistics to report how many features passed the threshold (CV ratio > 1.0) and characterize the distribution of retained CV ratios.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

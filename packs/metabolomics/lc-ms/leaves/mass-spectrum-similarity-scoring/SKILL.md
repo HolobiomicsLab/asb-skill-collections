@@ -3,6 +3,7 @@ name: mass-spectrum-similarity-scoring
 description: Use when when you have a query MS/MS spectrum (m/z and intensity pairs) that you need to match against a library of reference spectra, and you want to identify the -matching library entry while accounting for unmatched peaks that may indicate spectral contamination or chimerism.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

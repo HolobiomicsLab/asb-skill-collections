@@ -3,6 +3,7 @@ name: peak-shape-assessment
 description: Use when after peak detection in a nontargeted LC-MS workflow when you have a feature table with detected peaks and need to filter low-quality features or understand why certain features have inconsistent intensity or poor annotation confidence.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -42,6 +43,7 @@ attribution:
 
 # peak-shape-assessment
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Evaluate the morphological quality of detected LC-MS peaks by extracting and analyzing peak shape attributes (e.g., symmetry, width, definition) as part of comprehensive feature quality scoring. This skill surfaces problematic peaks that may indicate instrumental artifacts, co-elution, or poor signal quality before downstream annotation.

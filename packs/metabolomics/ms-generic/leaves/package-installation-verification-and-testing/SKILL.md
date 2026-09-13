@@ -3,6 +3,7 @@ name: package-installation-verification-and-testing
 description: Use when a Python package has been relocated to a new repository location, reorganized to conform to new organizational standards (e.g., metabolomics-cloud conventions), or its dependencies, metadata, or CI/CD workflows have been modified.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -41,6 +42,7 @@ attribution:
 
 # package-installation-verification-and-testing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a relocated or migrated Python package installs correctly in a clean environment and executes core functionality without errors. This skill bridges codebase migration (e.g., to a new GitHub organization) and production readiness by confirming that all dependencies resolve, build succeeds, and representative workflows run correctly.

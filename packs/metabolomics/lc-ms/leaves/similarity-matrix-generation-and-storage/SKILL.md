@@ -3,6 +3,7 @@ name: similarity-matrix-generation-and-storage
 description: Use when when you have cleaned and filtered mass spectrometry spectral data (in mzML, mzXML, msp, MGF, or JSON format) and need to identify or rank spectra by similarity for library matching, metabolite annotation, or network analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3809
   edam_topics:
   - http://edamontology.org/topic_3520

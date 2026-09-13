@@ -3,6 +3,7 @@ name: gcms-spectrum-deconvolution
 description: Use when input GC-MS data (netCDF or mzML format) exhibits overlapping chromatographic peaks where multiple analytes co-elute at the same retention time, resulting in composite mass spectra that conflate signals from distinct molecular species.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0091

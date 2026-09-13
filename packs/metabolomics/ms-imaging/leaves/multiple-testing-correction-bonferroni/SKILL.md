@@ -3,6 +3,7 @@ name: multiple-testing-correction-bonferroni
 description: Use when when you have computed raw p-values for multiple independent statistical tests (e.g., Pearson correlation tests across all pairwise ion combinations in MSI data) and need to report which results remain significant after accounting for multiple comparisons.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3520

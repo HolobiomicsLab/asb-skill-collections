@@ -3,6 +3,7 @@ name: cluster-statistics-integration
 description: Use when after peak clustering has been performed on aligned GCIMS samples and a peak table matrix has been constructed, but the matrix contains NA values because some samples did not yield detected peaks at certain cluster positions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0593

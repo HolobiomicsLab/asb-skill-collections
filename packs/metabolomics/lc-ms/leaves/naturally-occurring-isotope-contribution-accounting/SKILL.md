@@ -3,6 +3,7 @@ name: naturally-occurring-isotope-contribution-accounting
 description: Use when you have raw fractional abundances of measured isotopologues (FAM) from LC-MS instruments in an isotope labeling experiment and need to correct them to obtain true mass distribution vectors (MDV) reflecting only the contribution from the isotopic tracer.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

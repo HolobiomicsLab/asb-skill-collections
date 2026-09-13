@@ -3,6 +3,7 @@ name: structure-prediction-from-spectra
 description: Use when you have experimental mass spectrometry spectra (LC–QTOF or similar format) from unknown compounds and need to predict their molecular structures.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0154

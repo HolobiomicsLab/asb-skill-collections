@@ -3,6 +3,7 @@ name: quantum-chemistry-based-fragmentation-prediction
 description: Use when when you have SMILES strings or molecular formulae for N-Me derivatized unsaturated sterol lipids and need to generate theoretical MS/MS spectra (predicted fragment m/z values and intensities) to compare against experimental LC-IM-MS/MS data before performing CCS prediction or downstream.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3637
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -44,6 +45,7 @@ attribution:
 
 # quantum-chemistry-based-fragmentation-prediction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Predicts MS/MS fragmentation patterns and collision-induced dissociation (CID) pathways for N-Me derivatized unsaturated sterol lipids using quantum chemistry calculations and RDKit-based double-bond recognition. This workflow generates theoretical m/z values and relative intensity annotations to support isomer-level lipid identification in 4D sterolomics.

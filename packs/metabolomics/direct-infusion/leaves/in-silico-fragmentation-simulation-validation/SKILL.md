@@ -3,6 +3,7 @@ name: in-silico-fragmentation-simulation-validation
 description: Use when you have experimental peak lists (m/z, retention time, intensity) from UHPLC-HRMS/MS or direct infusion MS/MS data and need to assign lipid identities with confidence scores. Use it when your instrument produces high-resolution tandem mass spectra (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0153

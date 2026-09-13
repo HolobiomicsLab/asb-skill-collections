@@ -3,6 +3,7 @@ name: stable-isotope-labeling-proteomics
 description: Use when when you have mass spectrometry data (MS1/MS2 scans from ThermoFisher .raw files, mzML, or MGF) from cells or organisms cultured with stable isotope-enriched substrates (e.g., 13C, 15N, 2H) at any enrichment level (natural 1.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0121

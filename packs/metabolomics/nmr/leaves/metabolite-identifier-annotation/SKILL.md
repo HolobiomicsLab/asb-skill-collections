@@ -3,6 +3,7 @@ name: metabolite-identifier-annotation
 description: Use when you have observed compounds (from LC-MS/MS, GC-MS, NMR, or other analytical techniques) with unknown identity and you want to assign candidate metabolite structures by comparing them to computationally predicted metabolism pathways.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -43,6 +44,7 @@ attribution:
 
 # metabolite-identifier-annotation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 This skill leverages BioTransformer's metabolism prediction engine to assign candidate metabolite identities to observed compounds by ranking predicted structures and matching them against experimental spectral or mass-to-charge data. It bridges computational prediction and experimental validation, enabling systematic annotation of unknown metabolites with structure, organism context, and confidence scores.

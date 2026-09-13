@@ -3,6 +3,7 @@ name: database-schema-design-for-spectral-data
 description: Use when you have MS/MS spectral library data currently stored in file-based formats (JSON, CSV, binary, MGF, MSP) and need to migrate to database-backed storage to support fast queries by metadata filters (precursor m/z, ion mode, retention time) and computed similarity scores against query.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

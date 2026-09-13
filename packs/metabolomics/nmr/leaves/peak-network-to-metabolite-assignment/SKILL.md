@@ -3,6 +3,7 @@ name: peak-network-to-metabolite-assignment
 description: Use when after peak clustering has produced peak network groups (ideally from the same compound) and you need to assign chemical identities.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172

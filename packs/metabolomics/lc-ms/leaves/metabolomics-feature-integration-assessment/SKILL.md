@@ -3,6 +3,7 @@ name: metabolomics-feature-integration-assessment
 description: Use when after XCMS peak picking and fillPeaks() when you have xcmsEIC and filled xcmsSet objects and need to systematically flag low-quality or unreliable peak integrations prior to statistical modeling or machine learning classification.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0599
@@ -48,6 +49,7 @@ attribution:
 
 # metabolomics-feature-integration-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute 12 peak-quality metrics from XCMS-derived EIC and peak objects to systematically assess the quality of integrated chromatographic peaks in untargeted LC-MS metabolomics data. This skill enables automated detection of low-quality peak integrations before downstream analysis.

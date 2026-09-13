@@ -3,6 +3,7 @@ name: chromatographic-peak-detection-and-integration
 description: 'Use when after loading centroided .mzML LC-MS data and defining a target list (compound ID, name, m/z, RT, polarity) when you need to: (1) automatically locate and integrate peaks for known compounds across multiple runs; (2) generate per-target and per-run quantitative metrics;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

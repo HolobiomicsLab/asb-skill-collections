@@ -3,6 +3,7 @@ name: mass-spectrometry-metadata-extraction
 description: Use when you have peak/feature tables from one or more of MZmine, XCMS, MS-DIAL, or Compound Discoverer and need to integrate them into a unified lipidomics workflow (e.g., LipidMatch).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

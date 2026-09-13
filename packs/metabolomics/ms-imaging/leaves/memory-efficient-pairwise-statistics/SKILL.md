@@ -3,6 +3,7 @@ name: memory-efficient-pairwise-statistics
 description: Use when you have an MSI intensity matrix (msimat object) and an annotated mass-difference table (massdiff object with known or hypothesized parent–adduct ion pairs) where the number of peak pairs exceeds available RAM.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3463
   edam_topics:
   - http://edamontology.org/topic_3520

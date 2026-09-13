@@ -3,6 +3,7 @@ name: feature-table-moniker-registration-and-versioning
 description: Use when after Asari completes feature detection and produces multiple feature table variants (full and quality-filtered preferred tables) from centroid mzML files within a PCPFM experiment.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3941
   edam_topics:
   - http://edamontology.org/topic_3172

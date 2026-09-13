@@ -3,6 +3,7 @@ name: cross-spectrum-negative-generation-within-mz-window
 description: Use when when preparing augmented training data for a Siamese rescore model that must learn to rank correct molecular formulas above incorrect ones;
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3520

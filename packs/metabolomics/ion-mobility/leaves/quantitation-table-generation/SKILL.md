@@ -3,6 +3,7 @@ name: quantitation-table-generation
 description: Use when you have raw MS data in a supported instrument format (Agilent .d, Thermo .raw, Bruker .d, mzML) and a defined list of m/z, retention time, or other identifiers for which you need to extract and quantify peak abundances across one or more samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121

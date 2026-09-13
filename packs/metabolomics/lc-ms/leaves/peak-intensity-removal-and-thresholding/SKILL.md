@@ -3,6 +3,7 @@ name: peak-intensity-removal-and-thresholding
 description: Use when when you have imported raw mass spectrometry spectral data (in formats like mzML, mzXML, msp, MGF, or JSON) and need to clean peak lists before metadata validation, similarity scoring, or library comparison.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

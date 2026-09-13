@@ -3,6 +3,7 @@ name: kernel-regression-learning-from-spectral-fingerprint-pairs
 description: Use when when you have a training set of MS2 spectra with known chemical structures (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0218

@@ -3,6 +3,7 @@ name: spectrum-metadata-extraction-validation
 description: Use when when ingesting heterogeneous MS spectral data from multiple open-access libraries (OMS libraries) where metadata completeness and correctness are uncertain.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -43,6 +44,7 @@ attribution:
 
 # spectrum-metadata-extraction-validation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Extract and validate critical metadata fields (NAME, PRECURSORMZ, IONMODE, ADDUCT, SMILES, InChI, InChIKey) from mass spectrometry data files (MSP, MGF, JSON, CSV), applying consistency checks to remove spectra with missing or conflicting chemical identifiers and ion-mode/adduct incompatibilities. This ensures only complete, internally consistent spectra are retained for downstream analysis.

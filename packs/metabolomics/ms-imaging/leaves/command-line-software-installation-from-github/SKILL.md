@@ -3,6 +3,7 @@ name: command-line-software-installation-from-github
 description: Use when you need to install a Python package that is distributed via GitHub but not yet (or only occasionally) published to PyPI, such as pyBaf2Sql for Bruker .baf/.d mass spectrometry imaging data conversion.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3675
   edam_topics:
   - http://edamontology.org/topic_0091

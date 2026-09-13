@@ -3,6 +3,7 @@ name: score-distribution-visualization
 description: Use when after computing link scores (e.g., strain correlation, IOKR, or combined scores) across GCF-MF pairs, use this skill to assess whether scores achieve sufficient separation between validated links and the background population.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3697

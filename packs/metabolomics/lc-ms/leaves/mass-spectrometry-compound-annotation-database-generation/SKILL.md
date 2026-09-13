@@ -3,6 +3,7 @@ name: mass-spectrometry-compound-annotation-database-generation
 description: Use when after generating transformation products using generateTPs() with structural information (SMILES), when you need to screen for predicted TP compounds in environmental MS/MS data via MetFrag's in-silico fragmentation annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_0625

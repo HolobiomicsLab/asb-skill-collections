@@ -3,6 +3,7 @@ name: spectral-intensity-trace-extraction
 description: Use when you have a Thermo Fisher Orbitrap .raw file and need to recover the intensity profile of a specific m/z value or peptide across the LC separation dimension (chromatogram), particularly when calibrating retention times against internal standards (iRT peptides), performing quality control.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

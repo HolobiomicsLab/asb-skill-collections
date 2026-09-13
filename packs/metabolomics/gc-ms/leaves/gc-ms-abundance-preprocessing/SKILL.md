@@ -3,6 +3,7 @@ name: gc-ms-abundance-preprocessing
 description: Use when after autoQ has extracted isotopologue peak area measurements from mz(X)ML files and you need to prepare the integrations data frame for visualization with metBarPlot or comparative analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_3172

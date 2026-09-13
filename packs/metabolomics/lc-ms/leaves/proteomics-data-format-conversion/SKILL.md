@@ -3,6 +3,7 @@ name: proteomics-data-format-conversion
 description: Use when you have vendor raw files (e.g., .raw from Thermo, .d from Agilent, .wiff2 from Sciex) that need to be converted to a standard format for analysis pipelines, data sharing, or when you require the high compression rates and fast decoding provided by Aird format.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3650
   edam_topics:
   - http://edamontology.org/topic_0121

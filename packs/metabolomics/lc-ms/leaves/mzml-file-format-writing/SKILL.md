@@ -3,6 +3,7 @@ name: mzml-file-format-writing
 description: Use when you have peak properties (mass, intensity, retention time) for biomolecules, selected noise and fragmentation models, and instrument parameters (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121

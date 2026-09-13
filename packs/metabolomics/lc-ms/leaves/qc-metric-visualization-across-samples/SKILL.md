@@ -3,6 +3,7 @@ name: qc-metric-visualization-across-samples
 description: Use when you have processed LC-MS peak detection output or feature tables containing internal standard identifications with retention times, m/z values, and intensity measurements across multiple samples, and you need to visually monitor whether internal standards are within acceptable QC.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0571
   edam_topics:
   - http://edamontology.org/topic_3520

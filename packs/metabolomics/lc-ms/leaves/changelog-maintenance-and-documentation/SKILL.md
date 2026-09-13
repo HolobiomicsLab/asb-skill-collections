@@ -3,6 +3,7 @@ name: changelog-maintenance-and-documentation
 description: Use when you have added or modified user-facing parameters to a model class (such as L1/L2 regularization in SiameseModel), written unit tests to verify the new functionality, and need to communicate these changes to users and maintain a historical record.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0091

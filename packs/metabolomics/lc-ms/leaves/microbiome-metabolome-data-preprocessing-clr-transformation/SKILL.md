@@ -3,6 +3,7 @@ name: microbiome-metabolome-data-preprocessing-clr-transformation
 description: Use when you have paired microbiome and metabolomic abundance tables (samples × features) with relative abundance or raw count values, and you are preparing data for downstream regression or neural network modeling of microbe-metabolite relationships.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3697

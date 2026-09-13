@@ -3,6 +3,7 @@ name: metabolite-pubchemcid-annotation-mapping
 description: Use when after metabolite annotation has been completed (level-1 confidence via spectral library matching in margheRita or equivalent), and you need to perform pathway enrichment analysis on a subset of significant features (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_0602

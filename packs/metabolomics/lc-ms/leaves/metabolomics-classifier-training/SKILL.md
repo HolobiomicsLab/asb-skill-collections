@@ -3,6 +3,7 @@ name: metabolomics-classifier-training
 description: Use when you have a preprocessed metabolomics feature matrix (expression matrix with metabolite abundances as columns and samples as rows) with corresponding binary or multi-class sample labels, and you need to train and compare classifier performance to select the -performing model for disease.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0769

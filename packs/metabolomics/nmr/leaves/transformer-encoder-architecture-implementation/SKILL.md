@@ -3,6 +3,7 @@ name: transformer-encoder-architecture-implementation
 description: Use when when processing sequential spectroscopic data (1H NMR spectra) where both local chemical shift patterns and global spectral dependencies are needed for compound classification.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0218
@@ -43,6 +44,7 @@ attribution:
 
 # Transformer Encoder Architecture Implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a multi-head Transformer encoder block that models global dependencies across sequences, integrated with CNN feature extraction to capture both local patterns and long-range spectral relationships in 1H NMR data. This hybrid approach enables compound identification in complex mixtures by fusing local convolutional features with attention-based global context.

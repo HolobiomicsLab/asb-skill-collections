@@ -3,6 +3,7 @@ name: metabolite-feature-grouping-by-adduct-isotope
 description: Use when immediately after generating a feature table (m/z, retention time, intensity) from centroided mzML data when you need to collapse multiple feature detections of the same compound (arising from different ionization states, charge states, or isotope patterns) into unified empirical compound.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0121

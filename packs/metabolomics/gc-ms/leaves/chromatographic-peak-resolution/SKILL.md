@@ -3,6 +3,7 @@ name: chromatographic-peak-resolution
 description: Use when when you have loaded raw GC-MS data in netCDF or mzML format and visual or statistical inspection reveals overlapping chromatographic peaks (i.e., multiple m/z ions co-eluting at the same retention time window).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0091

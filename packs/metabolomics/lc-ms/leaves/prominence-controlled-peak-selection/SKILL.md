@@ -3,6 +3,7 @@ name: prominence-controlled-peak-selection
 description: Use when after initial peak detection on composite mass tracks via local maxima and smoothing, when you have unfiltered peak lists (JSON or structured format) containing prominence values and need to reduce the number of detected features while maintaining signal quality.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0769
@@ -46,6 +47,7 @@ attribution:
 
 # prominence-controlled-peak-selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply prominence thresholds to peaks detected on composite mass chromatograms to retain only elution features with sufficient signal prominence relative to their local baseline. This is a key filtering step in asari's statistics-guided peak detection that reduces false positives while preserving genuine metabolite signals.

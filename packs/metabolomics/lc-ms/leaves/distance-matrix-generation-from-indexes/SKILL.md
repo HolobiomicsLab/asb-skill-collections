@@ -3,6 +3,7 @@ name: distance-matrix-generation-from-indexes
 description: Use when you have pre-computed feature-hashed spectrum vectors and nearest neighbor indexes constructed from those vectors, and you need a pairwise distance matrix as input to density-based clustering (e.g., DBSCAN).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3071
   edam_topics:
   - http://edamontology.org/topic_3520

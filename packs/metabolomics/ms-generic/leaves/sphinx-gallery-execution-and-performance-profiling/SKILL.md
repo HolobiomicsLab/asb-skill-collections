@@ -3,6 +3,7 @@ name: sphinx-gallery-execution-and-performance-profiling
 description: Use when you have a Sphinx-based documentation project with multiple gallery scripts (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_topics: []
   tools:
   - pyOpenMS-viz

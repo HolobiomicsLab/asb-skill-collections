@@ -3,6 +3,7 @@ name: spectral-library-metadata-reorganization
 description: Use when when ingesting mass spectral libraries (EI or MS2) where SMILES information is embedded in the Comment field rather than in a dedicated SMILES metadata field—particularly common in MoNA GC-MS and LC-MS/MS exports.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0091

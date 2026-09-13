@@ -3,6 +3,7 @@ name: variance-estimation-within-and-between-groups
 description: Use when you have a QC-annotated LC-MS feature intensity table (CSV or data frame) with replicate QC samples and biological samples from multiple batches or run orders, and you need to assess which features maintain consistent signal intensity across technical replicates (within-group) relative to.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3173

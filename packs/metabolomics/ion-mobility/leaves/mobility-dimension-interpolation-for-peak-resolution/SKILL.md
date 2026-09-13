@@ -3,6 +3,7 @@ name: mobility-dimension-interpolation-for-peak-resolution
 description: Use when working with raw multiplexed IM-MS data (UIMF or Agilent MassHunter .
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -51,6 +52,7 @@ attribution:
 
 # mobility-dimension-interpolation-for-peak-resolution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpolate arrival time values across the ion mobility dimension in IM-MS data to improve peak deconvolution resolution before applying demultiplexing algorithms. This preprocessing step enhances the ability to resolve overlapping ions in multiplexed acquisitions by increasing effective mobility resolution.

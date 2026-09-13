@@ -3,6 +3,7 @@ name: metabolite-annotation-result-export
 description: Use when after running the annotateRC function on LC-MS All-ion fragmentation (AIF) features and obtaining a populated annotations object with ranked candidate matches, use this skill when you need to persist results to disk for archival, sharing, or downstream interpretation (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3172

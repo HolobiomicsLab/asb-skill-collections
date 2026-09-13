@@ -3,6 +3,7 @@ name: confidence-score-thresholding-in-proteomics
 description: Use when when loading search results from Data-Independent Acquisition (DIA) mass spectrometry workflows (e.g., output from OpenSwath or similar feature detection tools) and you need to restrict the analyte pool to those meeting a strict false-discovery rate (FDR) threshold.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

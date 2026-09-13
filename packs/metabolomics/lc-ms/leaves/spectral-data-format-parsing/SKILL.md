@@ -3,6 +3,7 @@ name: spectral-data-format-parsing
 description: Use when when you have raw LC-MS/MS data files in mzML, mzXML, or vendor-specific formats and need to load them into a Java-based mass spectrometry analysis framework for downstream spectral analysis, fragmentation tree computation, or metabolite identification.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3520

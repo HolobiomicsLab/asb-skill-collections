@@ -3,6 +3,7 @@ name: nmr-spectral-processing
 description: Use when you have raw NMR/IR/MS spectral data in vendor-specific (RAW), open (jcamp), or mass spectrometry (mzML) formats and need to parse, validate, and convert them to a standardized internal representation with extracted metadata and peak tables for visualization or further analysis in.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0593

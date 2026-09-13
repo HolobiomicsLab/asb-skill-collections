@@ -3,6 +3,7 @@ name: sparse-vs-dense-vector-format-selection
 description: Use when when converting high-resolution tandem mass spectra to vectors for clustering or similarity searching, you must decide whether to output sparse or dense vectors. Use this decision point after binning spectra into mass bins but before constructing nearest-neighbor indexes.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: internal-standard-ion-selection-and-application
 description: Use when after isotope correction has been applied to MSI ion images, when you have sprayed or identified a reference lipid standard of known amount (pmol/mm²) and need to normalize target lipid intensities against this standard to remove matrix effects and enable cross-pixel and cross-sample.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0769
@@ -42,6 +43,7 @@ attribution:
 
 # internal-standard-ion-selection-and-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Select and apply user-defined internal standard lipid ions to normalize isotope-corrected ion-image intensities, enabling conversion of raw mass spectrometry imaging signals to quantified values. This skill is essential for converting relative ion intensities into absolute or semi-quantitative lipid abundance estimates across tissue or sample regions.

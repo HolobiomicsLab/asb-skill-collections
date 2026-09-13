@@ -3,6 +3,7 @@ name: formula-transformer-architecture-application
 description: Use when you have tandem mass spectra (MS/MS) with unknown precursor formulas and need to rank chemical formula candidates conditioned on observed fragment m/z values and precursor mass. Use this skill when fragmentation tree computation (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0593

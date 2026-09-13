@@ -3,6 +3,7 @@ name: mass-spectrometry-data-column-mapping
 description: Use when you have generated a peak table or feature list from MZmine, XCMS, MS-DIAL, or Compound Discoverer in its native export format and need to ingest it into LipidMatch for lipid identification.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0121

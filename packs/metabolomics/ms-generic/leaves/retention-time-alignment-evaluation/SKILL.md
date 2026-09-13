@@ -3,6 +3,7 @@ name: retention-time-alignment-evaluation
 description: Use when you have run an NPP tool (XCMS, MZmine 2, etc.) on mzML files and need to assess whether the alignment stage preserved peak detection fidelity and isotopologue abundance ratios.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

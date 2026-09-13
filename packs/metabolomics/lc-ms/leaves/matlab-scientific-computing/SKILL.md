@@ -3,6 +3,7 @@ name: matlab-scientific-computing
 description: Use when you have mass spectrometry data in mzXML or mzML format and need to systematically extract regions of interest (ROIs) from multi-dimensional m/z-intensity-time arrays, normalize feature values, and augment datasets for untargeted metabolomics workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3370

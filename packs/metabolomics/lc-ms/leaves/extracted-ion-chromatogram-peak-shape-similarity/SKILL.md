@@ -3,6 +3,7 @@ name: extracted-ion-chromatogram-peak-shape-similarity
 description: Use when after features have been grouped by retention time similarity and abundance correlation across samples, but before downstream annotation or compound identification.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3370

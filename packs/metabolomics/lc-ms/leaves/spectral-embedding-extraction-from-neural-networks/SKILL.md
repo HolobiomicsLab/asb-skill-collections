@@ -3,6 +3,7 @@ name: spectral-embedding-extraction-from-neural-networks
 description: Use when you have a set of preprocessed MS/MS spectra (binned to 10,000 m/z bins with intensities square-root transformed) and a trained MS2DeepScore Siamese neural network model, and you need to compute 200-dimensional spectral embeddings for dimensionality reduction, clustering, or chemical space.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0091

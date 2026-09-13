@@ -3,6 +3,7 @@ name: polarity-filtering-in-targeted-metabolomics
 description: Use when when working with targeted LC–MS metabolomics or lipidomics data where compound targets span both positive and negative ionization modes, or when your raw .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

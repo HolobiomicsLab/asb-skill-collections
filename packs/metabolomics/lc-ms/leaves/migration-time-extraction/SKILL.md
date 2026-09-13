@@ -3,6 +3,7 @@ name: migration-time-extraction
 description: Use when you have OnDiskMSnExp CE-MS objects with known marker compounds (e.g., Paracetamol EOF marker) and need to extract their migration time positions to establish a calibration reference.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

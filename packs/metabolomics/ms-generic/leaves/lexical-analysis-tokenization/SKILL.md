@@ -3,6 +3,7 @@ name: lexical-analysis-tokenization
 description: Use when you have a mass-spectrometry query string written in MassQL (or similar domain-specific SQL-inspired syntax) that must be converted into structured form for execution. The input is raw, unparsed text containing SQL keywords, MS-specific operators (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_3520

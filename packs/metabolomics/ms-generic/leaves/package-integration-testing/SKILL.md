@@ -3,6 +3,7 @@ name: package-integration-testing
 description: Use when you need to verify that a Python package (or similar installable software) passes its declared integration test suite as a prerequisite to trusting its reliability in production or downstream analysis. Specifically, apply it when you observe a periodic testing CI workflow badge (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3960
   edam_topics:
   - http://edamontology.org/topic_0091

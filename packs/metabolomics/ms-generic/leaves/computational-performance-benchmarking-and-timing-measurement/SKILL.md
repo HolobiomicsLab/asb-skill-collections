@@ -3,6 +3,7 @@ name: computational-performance-benchmarking-and-timing-measurement
 description: Use when when you need to validate that a newly published bioinformatics pipeline meets stated performance claims, or when you must characterize how execution time scales with dataset size (sample count, peak count, or formula complexity) and optional analysis features (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_3520

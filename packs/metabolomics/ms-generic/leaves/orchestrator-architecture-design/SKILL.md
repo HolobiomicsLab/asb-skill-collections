@@ -3,6 +3,7 @@ name: orchestrator-architecture-design
 description: Use when when building a multi-backend visualization library where users specify both a plot type (spectrum, chromatogram, peakmap) and a backend (matplotlib for static output, Bokeh or Plotly for interactive), and you need to avoid code duplication across backends while keeping the user-facing API.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0121

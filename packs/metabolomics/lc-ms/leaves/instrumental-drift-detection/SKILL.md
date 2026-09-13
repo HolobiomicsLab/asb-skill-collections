@@ -3,6 +3,7 @@ name: instrumental-drift-detection
 description: Use when you have a time-series of repeated QCpool (pooled quality control) injections measured at regular intervals during one or more LC-MS/MS sequences, exported from Sciex Multiquant software (v3.0.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3172

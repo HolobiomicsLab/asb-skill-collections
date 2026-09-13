@@ -3,6 +3,7 @@ name: metabolite-annotation-confidence-assignment
 description: Use when you have a feature intensity table with feature metadata (m/z, retention time) extracted from XCMS or MS-Dial, and you want to cross-reference each feature against a known-compound database to assign standardized confidence levels.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3520

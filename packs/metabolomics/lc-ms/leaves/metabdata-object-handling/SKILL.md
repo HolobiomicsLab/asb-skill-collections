@@ -3,6 +3,7 @@ name: metabdata-object-handling
 description: Use when you have a raw peak-picked untargeted LC-MS dataframe with columns containing mass-to-charge (m/z), retention time (rt), feature identifiers, adduct annotations, and sample measurements in non-standard column names or mixed column sets.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3370

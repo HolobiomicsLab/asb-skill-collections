@@ -3,6 +3,7 @@ name: spectral-file-format-conversion
 description: Use when when you have a GNPS molecular networking job archive (downloaded as a .zip or compressed archive) and need to prepare metabolomics spectra and molecular family data for NPLinker integration.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3172

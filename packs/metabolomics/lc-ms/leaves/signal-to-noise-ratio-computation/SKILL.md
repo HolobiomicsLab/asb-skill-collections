@@ -3,6 +3,7 @@ name: signal-to-noise-ratio-computation
 description: Use when after peak detection in nontargeted LC-MS workflows when you have a feature table with detected peaks and need to assign quality scores or filter low-confidence features.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -43,6 +44,7 @@ attribution:
 
 # signal-to-noise-ratio-computation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Compute signal-to-noise ratio (SNR) as a per-feature quality metric in LC-MS data processing. SNR is a key component of MassCube's comprehensive feature quality evaluation module, used to assess the reliability of detected peaks by quantifying peak intensity relative to baseline noise.

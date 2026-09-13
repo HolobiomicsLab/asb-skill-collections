@@ -3,6 +3,7 @@ name: metabolite-filter-status-extraction
 description: Use when after chaining one or more mpactr filter operations (mispicked, group, cv, insource) on an imported peak table and before generating quality-control reports or interactive visualizations.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

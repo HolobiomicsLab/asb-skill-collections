@@ -3,6 +3,7 @@ name: lipid-structure-specification
 description: Use when you have identified lipid species unique to your sample type (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3766
   edam_topics:
   - http://edamontology.org/topic_0153

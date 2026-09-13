@@ -3,6 +3,7 @@ name: batch-effect-correction-and-adjustment
 description: Use when your m/z peak data spans multiple batches (recorded in metadata as a batch ID column) or samples have varying concentrations that are documented in metadata.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

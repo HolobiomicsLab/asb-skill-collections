@@ -3,6 +3,7 @@ name: fold-change-calculation-across-groups
 description: Use when when you have a quantified peak table (LC-MS feature intensities) with sample metadata assigning samples to discrete groups (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

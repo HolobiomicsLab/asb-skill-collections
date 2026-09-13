@@ -3,6 +3,7 @@ name: multi-hypothesis-scoring-and-enumeration
 description: Use when when you have an unknown tandem mass spectrum (MS/MS peaks with m/z and intensity) and need to assign both the precursor chemical formula and its ionization adduct type (e.g., [M+H]+, [M+Na]+, [M+K]+, [M+NH4]+).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_0602

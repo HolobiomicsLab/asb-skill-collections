@@ -3,6 +3,7 @@ name: spectral-annotation-and-overlay-visualization
 description: Use when after correlation testing has validated putative parent–adduct ion pairs (e.g., via corrPairsMSI() on a massdiff object annotated with adductMatch results), use this skill to annotate and visualize the mass spectrum plot to confirm that identified pairs exhibit expected overlap—e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520

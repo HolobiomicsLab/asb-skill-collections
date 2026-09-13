@@ -3,6 +3,7 @@ name: peak-list-parsing-and-validation
 description: Use when when importing raw mass spectrometry data from vendor or open formats (mzML, mzXML, msp, MGF, JSON, metabolomics-USI) and you need to extract peak m/z and intensity pairs into a standardized representation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

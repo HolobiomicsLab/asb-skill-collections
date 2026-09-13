@@ -3,6 +3,7 @@ name: theoretical-mz-grid-generation
 description: Use when you have a feature table from untargeted LC-MS (m/z, retention time, intensity) and need to annotate which observed m/z values correspond to isotopologues and adducts of the same neutral compound.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -44,6 +45,7 @@ attribution:
 
 # theoretical-mz-grid-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a reference m/z grid spanning isotopologues (M0 through M+n 13C) and adduct types to establish theoretical mass offsets for pattern matching and neutral mass inference in LC-MS metabolomics. This grid serves as the foundation for matching observed feature pairs to ion relationships and extracting neutral compound mass via linear regression.

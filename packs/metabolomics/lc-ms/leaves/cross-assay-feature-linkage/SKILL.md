@@ -3,6 +3,7 @@ name: cross-assay-feature-linkage
 description: Use when when you have structural clusters from multiple LC-MS assays (e.g., positive and negative ion modes, or reversed-phase and HILIC methods) and need to identify which features across assays represent the same underlying metabolite.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

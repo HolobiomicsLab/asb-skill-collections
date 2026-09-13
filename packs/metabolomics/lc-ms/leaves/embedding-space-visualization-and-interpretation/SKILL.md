@@ -3,6 +3,7 @@ name: embedding-space-visualization-and-interpretation
 description: Use when after training or loading a pre-trained deep learning model that produces high-dimensional embeddings (e.g., 200-dimensional vectors from MS2DeepScore). Use this skill when you have a set of spectra with known chemical class annotations (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3935
   edam_topics:
   - http://edamontology.org/topic_0091

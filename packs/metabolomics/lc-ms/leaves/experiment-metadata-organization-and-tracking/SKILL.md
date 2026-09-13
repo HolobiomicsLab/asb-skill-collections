@@ -3,6 +3,7 @@ name: experiment-metadata-organization-and-tracking
 description: Use when before initiating raw file conversion or feature extraction, when you have a heterogeneous collection of raw LC-MS files (.raw or .mzML) and sample information scattered across instrument logs, sequence files, or spreadsheets.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

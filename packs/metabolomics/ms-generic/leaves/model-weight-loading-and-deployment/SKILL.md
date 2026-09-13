@@ -3,6 +3,7 @@ name: model-weight-loading-and-deployment
 description: Use when you have a pre-trained MSGO model checkpoint (PFAS or lipid variant) and need to evaluate it against a real mass spectrometry dataset (300+ real spectra, LC–QTOF, or custom CSV) to generate predicted molecular structures and compare against ground truth or baseline results.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3520

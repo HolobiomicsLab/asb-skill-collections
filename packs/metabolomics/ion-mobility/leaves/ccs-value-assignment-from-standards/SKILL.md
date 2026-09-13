@@ -3,6 +3,7 @@ name: ccs-value-assignment-from-standards
 description: Use when you have TWIM-MS experimental data with arrival/drift times and m/z values, and you possess calibrant reference standards with known CCS values.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0121

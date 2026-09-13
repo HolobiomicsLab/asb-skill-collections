@@ -3,6 +3,7 @@ name: precursor-product-mass-pairing
 description: Use when you have centroided MS2 spectra from data-dependent acquisition (ddMS2) in mzML format and seek to prioritize potential PFAS features by detecting diagnostic fragment masses.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3520

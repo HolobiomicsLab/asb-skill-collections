@@ -3,6 +3,7 @@ name: derivatizing-matrix-configuration
 description: Use when you have a derivatizing matrix (e.g., TAHS or other publicly documented reagent) with known composition and ionization behavior that you want to use in Met-ID for metabolite annotation, and the matrix is not yet configured in your Met-ID installation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0769

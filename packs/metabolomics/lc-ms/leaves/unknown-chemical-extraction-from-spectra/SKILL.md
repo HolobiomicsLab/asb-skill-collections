@@ -3,6 +3,7 @@ name: unknown-chemical-extraction-from-spectra
 description: Use when when you have an existing real mzML file from a metabolomics LC-MS/MS acquisition (e.g., beer or urine samples) and need to populate a virtual mass spectrometer with the actual chemicals that were measured, so that you can replay the acquisition with alternative fragmentation strategies (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121

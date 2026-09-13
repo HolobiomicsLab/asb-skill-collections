@@ -3,6 +3,7 @@ name: simulation-evaluation-data-capture
 description: Use when when you have simulated DDA (data-dependent acquisition) scans from a ViMMS Environment and need to (1) quantify how well the simulated acquisition matched real or reference data (via evaluation metrics), and (2) export the results as standards-compliant mzML files for comparison with.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_3520

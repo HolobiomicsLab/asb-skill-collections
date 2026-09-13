@@ -3,6 +3,7 @@ name: unit-test-design-for-scoring-metrics
 description: Use when when implementing new scoring components (inchikey score, neighbourhood score, or similar structural/spectral similarity metrics) that are integrated into an MS/MS candidate re-ranking pipeline.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

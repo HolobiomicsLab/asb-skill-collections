@@ -3,6 +3,7 @@ name: isotopic-pattern-detection-and-merging
 description: Use when your peak table contains features suspected of being artifacts of incorrect isotopic pattern splitting during preprocessing—particularly when you observe multiple ions with very similar mass-to-charge ratios and retention times, or when visual inspection of m/z vs. retention time plots.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: entrypoint-verification
 description: Use when when you have obtained a Python package from a repository (e.g., via git clone) and need to confirm that the documented Python version constraint and pinned dependency versions are sufficient to execute the package's main entry point (typically main.py or a console script).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_0091

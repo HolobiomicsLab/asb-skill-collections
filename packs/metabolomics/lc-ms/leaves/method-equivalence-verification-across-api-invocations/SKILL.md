@@ -3,6 +3,7 @@ name: method-equivalence-verification-across-api-invocations
 description: Use when when a tool like TARDIS extends its API to accept multiple input types (e.g., both file paths and MsExperiment objects), and you need to confirm that screening-mode diagnostic outputs (e.g., EIC plots, peak detection metrics) are identical regardless of which invocation pattern is used.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3172

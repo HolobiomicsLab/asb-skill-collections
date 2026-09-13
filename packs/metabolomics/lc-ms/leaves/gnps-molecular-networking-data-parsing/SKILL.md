@@ -3,6 +3,7 @@ name: gnps-molecular-networking-data-parsing
 description: Use when you have downloaded a GNPS archive from either GNPS1 (https://gnps.ucsd.edu) or GNPS2 (https://gnps2.org) and need to programmatically load and validate its contents (spectra.mgf, molecular_families.tsv, annotations.tsv, file_mappings.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_0091

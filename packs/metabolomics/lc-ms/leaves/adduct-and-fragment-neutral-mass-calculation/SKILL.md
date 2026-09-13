@@ -3,6 +3,7 @@ name: adduct-and-fragment-neutral-mass-calculation
 description: Use when you have an LC-MS peak-intensity matrix with observed m/z values (from negative or positive mode ionization) and need to map each peak to candidate neutral masses in KEGG. Use this skill when you have a curated Cpd.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: knn-nearest-neighbor-matching-for-spot-correspondence
 description: Use when when integrating two spatial omics modalities (ST and SM) measured on the same tissue sample but at different spatial resolutions or spot coordinates.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3674

@@ -3,6 +3,7 @@ name: arrow-table-serialization
 description: Use when you have loaded mzPeak spectrum or chromatogram metadata and signal data into PyArrow Table structures (via the Python mzPeak reader or equivalent) and need to persist them to disk in Parquet format for downstream analysis, interoperability with other languages (R, .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_1812
   edam_topics:
   - http://edamontology.org/topic_3520

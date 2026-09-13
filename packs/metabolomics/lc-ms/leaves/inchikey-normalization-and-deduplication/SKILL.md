@@ -3,6 +3,7 @@ name: inchikey-normalization-and-deduplication
 description: Use when you have an annotated MS/MS spectral dataset with structure metadata (InChI or SMILES records) linked to InChIKey identifiers, and you observe that some InChIKeys are associated with multiple or variant InChI strings due to curation inconsistencies, stereoisomerism notation differences, or.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0154

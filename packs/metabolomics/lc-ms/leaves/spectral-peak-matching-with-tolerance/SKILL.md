@@ -3,6 +3,7 @@ name: spectral-peak-matching-with-tolerance
 description: Use when when comparing a query MS/MS spectrum (e.g., from an unknown metabolite) against a library spectrum to establish correspondence between peaks. Use this skill before calculating similarity scores (cosine, entropy, Bhattacharyya) or when applying penalty factors to unmatched peaks.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

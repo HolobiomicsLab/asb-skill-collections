@@ -3,6 +3,7 @@ name: mrm-transition-extraction
 description: Use when you have raw LC-MS/MS data in MRM acquisition mode and need to systematically identify and catalog all precursor m/z and corresponding product m/z values for each transition monitored during data collection.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3637
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -41,6 +42,7 @@ attribution:
 
 # mrm-transition-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract precursor and product m/z value pairs from raw MRM (Multiple Reaction Monitoring) LC-MS/MS sample files using the get_PrecMZ_ProdMZ utility. This skill is essential for downstream MRM quantification workflows that require cataloging all monitored transitions with their exact mass-to-charge ratios.

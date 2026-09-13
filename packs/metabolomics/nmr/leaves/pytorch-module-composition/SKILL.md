@@ -3,6 +3,7 @@ name: pytorch-module-composition
 description: Use when when you need to extract both local spatial patterns and global long-range dependencies from sequential or spectral data (e.g., 1H NMR spectra), and neither CNNs nor Transformers alone are sufficient.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -44,6 +45,7 @@ attribution:
 
 # PyTorch Module Composition
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Combine independent PyTorch neural network modules (e.g., CNN feature extractors, Transformer encoders) into a unified architecture with explicit feature fusion points. This skill enables hybrid architectures that merge complementary processing paradigms to handle complex scientific data.

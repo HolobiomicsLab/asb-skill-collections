@@ -3,6 +3,7 @@ name: systematic-mass-calibration-and-drift-correction
 description: Use when when processing multiple LC-MS samples in a cohort study and MassGrid construction reveals that anchor mass tracks (13C/12C isotope or Na/H adduct pairs) in non-reference samples deviate systematically from the reference sample's m/z values by >1 ppm.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -47,6 +48,7 @@ attribution:
 
 # Systematic Mass Calibration and Drift Correction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and correct systematic m/z drift across multiple LC-MS samples by comparing anchor mass tracks (isotopes and adducts) between a reference sample and other samples, recalibrating all m/z values when drift exceeds 1 ppm. This ensures reproducible mass track alignment and prevents false feature misalignment in cross-sample metabolomics studies.

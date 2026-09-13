@@ -3,6 +3,7 @@ name: gnps-molecular-network-integration
 description: Use when you have computed frequent fragmentation patterns from a collection of MS/MS spectra using mineMS2, and you want to focus pattern interpretation on subsets of spectra that form meaningful network components (connected groups, cliques, or high-similarity pairs) in a GNPS molecular network.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -45,6 +46,7 @@ attribution:
 
 # gnps-molecular-network-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate fragmentation pattern mining results with GNPS MS/MS molecular networks to identify patterns that optimally explain connected components, cliques, and high-similarity spectrum pairs. This coupling enables discovery of chemical similarities independent of network cosine-score thresholds and facilitates targeted annotation of network neighborhoods.

@@ -3,6 +3,7 @@ name: configuration-file-modification
 description: Use when when you need to expand or contract a mass spectrometry dataset by adding or removing allowed instrument types (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

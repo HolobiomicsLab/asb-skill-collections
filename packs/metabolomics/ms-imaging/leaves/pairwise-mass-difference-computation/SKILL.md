@@ -3,6 +3,7 @@ name: pairwise-mass-difference-computation
 description: Use when after loading preprocessed MSI intensity data (via msimat from CSV export) or a simple numeric vector of mass peak values, when you need to discover which masses in your dataset co-vary as parent–adduct pairs.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

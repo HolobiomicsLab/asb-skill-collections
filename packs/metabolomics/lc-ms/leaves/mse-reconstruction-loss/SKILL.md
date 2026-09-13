@@ -3,6 +3,7 @@ name: mse-reconstruction-loss
 description: Use when training embeddings from multi-modal spectral data (peak information + metadata) where you need to ensure both contrastive discriminability AND reconstruction fidelity. Specifically use it in transformer-based architectures that produce embeddings from heterogeneous inputs (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -41,6 +42,7 @@ attribution:
 
 # MSE Reconstruction Loss for Embedding Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 MSE reconstruction loss measures the fidelity of embeddings by computing mean squared error between original and reconstructed representations. In CLERMS, it is combined with InfoNCE contrastive loss to jointly optimize embedding quality from MS/MS spectra peak information and metadata.

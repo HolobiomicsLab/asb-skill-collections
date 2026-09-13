@@ -3,6 +3,7 @@ name: custom-database-searching
 description: Use when when you have LC-MS/MS data in Mascot Generic Format (mgf) files and need to identify compounds against a curated custom database (e.g., prepared using CFM-id for a specific metabolite class or organism) rather than relying on in-built commercial spectral libraries alone.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3646
   edam_topics:
   - http://edamontology.org/topic_3172

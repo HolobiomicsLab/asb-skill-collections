@@ -3,6 +3,7 @@ name: iokr-kernel-regression-scoring
 description: Use when when you have paired genomics (antiSMASH-detected BGCs with MIBiG homology assignments) and metabolomics data (MS2 spectra from GNPS), and you need to score BGC-spectrum links using molecular structure similarity rather than strain co-occurrence patterns.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3172

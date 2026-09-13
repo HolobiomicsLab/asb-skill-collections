@@ -3,6 +3,7 @@ name: numerical-equivalence-testing
 description: Use when you need to confirm that omitting an optional input parameter (such as secondaryAssay in buildExperiment) produces the expected mathematical result—specifically, when a default value should neutralize a transformation (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

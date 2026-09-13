@@ -3,6 +3,7 @@ name: two-dimensional-tic-folding
 description: Use when immediately after acquiring raw GCxGC-MS data in NetCDF format (.cdf files) and before any signal enhancement (smoothing, baseline correction) or alignment steps.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: molecular-weight-prediction-with-modifications
 description: Use when when you have metabolite structures (as SMILES strings) and need to predict their observable m/z ions under non-standard ionization conditions imposed by a derivatizing matrix reagent (such as FMP-10).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_3172

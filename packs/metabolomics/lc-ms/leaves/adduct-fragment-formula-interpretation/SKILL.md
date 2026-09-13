@@ -3,6 +3,7 @@ name: adduct-fragment-formula-interpretation
 description: Use when after temporal correlation has identified candidate feature pairs with matching intensity profiles across time-resolved DBDI-MS experiments.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0121

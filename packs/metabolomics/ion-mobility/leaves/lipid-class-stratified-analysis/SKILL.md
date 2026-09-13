@@ -3,6 +3,7 @@ name: lipid-class-stratified-analysis
 description: Use when you have IM-MS lipidomics data with measured CCS values, samples spiked with U13C-labeled lipid internal standards (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3678
@@ -43,6 +44,7 @@ attribution:
 
 # lipid-class-stratified-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Stratify ion mobility-mass spectrometry (IM-MS) lipidomics data by lipid class and adduct type to assess and correct collision cross section (CCS) bias using internal U13C-labeled lipid standards. This skill enables class-level bias quantification and correction function generation without requiring external calibration beyond vendor specifications.

@@ -3,6 +3,7 @@ name: lipid-category-classification
 description: Use when a spatial metabolomics dataset contains semicolon-delimited isomer name annotations (e.g., 'all_IsomerNames' column in SpaMTP Seurat objects) and you need to collapse multiple lipid nomenclature variants into their parent lipid categories and classes.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3762
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -53,6 +54,7 @@ attribution:
 
 # Lipid Category Classification
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Simplifies complex lipid nomenclature annotations into standardized Lipid Maps categories and classes using the RefineLipids function. This skill reduces annotation redundancy in spatial metabolomics datasets, enabling clearer biological interpretation when multiple isomers or nomenclature variants map to the same lipid category.

@@ -3,6 +3,7 @@ name: pareto-scaling-normalization
 description: Use when you have peak intensity vectors from LC/GC-MS experiments with corresponding QC (quality control) sample measurements, and you need to correct for batch effects—especially when QC samples show systematic shifts in peak heights across analytical batches.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

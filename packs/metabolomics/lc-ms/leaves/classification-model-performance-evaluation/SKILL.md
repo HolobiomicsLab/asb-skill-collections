@@ -3,6 +3,7 @@ name: classification-model-performance-evaluation
 description: Use when after fitting and optimizing a MB-PLS model on training data, apply this skill to the held-out test set (typically 10% of the original sample) to obtain unbiased performance estimates.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3391

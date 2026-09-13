@@ -3,6 +3,7 @@ name: arrival-time-based-class-assignment
 description: Use when you have raw or processed TWIM-MS data with arrival time and m/z dimensions, and you need to label each experimental feature by biomolecular class before feature identification or peak detection steps are complete.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121

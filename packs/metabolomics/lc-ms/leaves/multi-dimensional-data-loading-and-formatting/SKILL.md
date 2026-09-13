@@ -3,6 +3,7 @@ name: multi-dimensional-data-loading-and-formatting
 description: Use when you have raw or processed mass spectrometry data in HDF5 (.h5) or mzML format and need to ingest it into DEIMoS for multi-dimensional analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3520

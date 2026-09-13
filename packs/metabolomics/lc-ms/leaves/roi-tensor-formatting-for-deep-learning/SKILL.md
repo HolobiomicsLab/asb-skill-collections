@@ -3,6 +3,7 @@ name: roi-tensor-formatting-for-deep-learning
 description: Use when after segmenting raw profile LC-MS data into candidate ROIs containing potential peaks, and before feeding ROI data to a CNN-Transformer peak detection network.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520

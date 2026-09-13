@@ -3,6 +3,7 @@ name: m-z-array-processing
 description: Use when when you have imported MSI data (imzML or vendor format) loaded into the napari plugin environment and need to organize raw spectral m/z and intensity arrays prior to mean intensity calculation, ROI analysis, or database annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3444
   edam_topics:
   - http://edamontology.org/topic_0121

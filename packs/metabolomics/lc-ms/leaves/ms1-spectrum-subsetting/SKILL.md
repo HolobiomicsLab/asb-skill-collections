@@ -3,6 +3,7 @@ name: ms1-spectrum-subsetting
 description: Use when after generating a scan index from a Thermo Fisher Orbitrap raw file using readIndex(), apply this skill when your analysis goal requires working exclusively with MS1 (precursor) scans rather than tandem MS (MS2/MS3) spectra.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

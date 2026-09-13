@@ -3,6 +3,7 @@ name: function-wrapping-and-binding-mechanisms
 description: Use when when you have Spectra objects in R and need to apply Python MS library functionality (spectral similarity scoring, filtering, normalization) without leaving the R environment, or when you want to create custom hybrid workflows that leverage both R and Python MS packages within a single.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_0121

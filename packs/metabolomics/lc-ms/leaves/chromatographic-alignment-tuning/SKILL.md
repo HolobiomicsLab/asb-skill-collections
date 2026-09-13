@@ -3,6 +3,7 @@ name: chromatographic-alignment-tuning
 description: Use when when processing a cohort of centroided mzML LC-MS files with high sample-to-sample retention time and m/z drift, and you need reproducible alignment of detected peaks across all samples before gap-filling and feature consolidation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3370

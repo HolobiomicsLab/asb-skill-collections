@@ -3,6 +3,7 @@ name: image-visualization-formatting
 description: Use when you have loaded a normalized or raw pixel array (NumPy format) with associated metadata from MSI line-scan data, and need to generate publication-quality ion images with controlled intensity scaling, smoothing, and optional ratio or fractional abundance comparisons across multiple m/z.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520

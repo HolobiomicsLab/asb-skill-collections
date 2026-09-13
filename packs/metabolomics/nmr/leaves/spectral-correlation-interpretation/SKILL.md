@@ -3,6 +3,7 @@ name: spectral-correlation-interpretation
 description: Use when you have preprocessed 1H NMR spectral data (e.g., from plasma or biological samples acquired on a 600 MHz instrument) and need to identify the chemical composition of a prominent but structurally ambiguous peak.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -46,6 +47,7 @@ attribution:
 
 # spectral-correlation-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use STOCSY (Statistical Total Correlation Spectroscopy) to assign chemical identity to unknown NMR spectral features by analyzing their covariance and correlation patterns with a chosen driver signal. This skill enables metabolite identification when peak assignments are ambiguous by leveraging the inherent correlation structure in high-resolution NMR data.

@@ -3,6 +3,7 @@ name: metabolomic-feature-table-assembly
 description: Use when when you have LC-MS data (mzML or netCDF format) and a pre-defined list of target metabolites (m/z, retention time, and identifiers) that you wish to extract and quantify across multiple samples, rather than performing untargeted feature discovery.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3637
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: molecular-structure-prediction-evaluation
 description: Use when you have trained a multitask NMR-to-structure model and need to quantify its predictive accuracy on held-out test molecules.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3172

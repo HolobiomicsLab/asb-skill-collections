@@ -3,6 +3,7 @@ name: gcxgc-chromatogram-object-manipulation
 description: Use when you have raw GCxGC-MS data in NetCDF format that contains instrumental and chemical noise (baseline drift, high-frequency signal artifacts) and you need to prepare multiple preprocessed chromatogram objects for downstream multiway PCA or biomarker discovery.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0091

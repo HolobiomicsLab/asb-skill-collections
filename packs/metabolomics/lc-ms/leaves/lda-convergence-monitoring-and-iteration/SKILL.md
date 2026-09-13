@@ -3,6 +3,7 @@ name: lda-convergence-monitoring-and-iteration
 description: Use when after configuring LDA hyperparameters (alpha, beta, number of topics, iteration budget) and loading a preprocessed bag-of-fragments corpus with neutral losses extracted and noise filtered, initiate LDA training and apply convergence monitoring to determine when topic-fragment probability.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_0121

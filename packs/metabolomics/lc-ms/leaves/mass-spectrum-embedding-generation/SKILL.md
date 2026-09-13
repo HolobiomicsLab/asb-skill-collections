@@ -3,6 +3,7 @@ name: mass-spectrum-embedding-generation
 description: Use when you have cleaned MS/MS spectra (in formats like .mgf, .msp, .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3520

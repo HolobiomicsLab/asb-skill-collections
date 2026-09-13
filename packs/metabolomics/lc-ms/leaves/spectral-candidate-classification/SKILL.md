@@ -3,6 +3,7 @@ name: spectral-candidate-classification
 description: Use when after performing spectral library matching of mass spectrometry peaks against a fragmentation library (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

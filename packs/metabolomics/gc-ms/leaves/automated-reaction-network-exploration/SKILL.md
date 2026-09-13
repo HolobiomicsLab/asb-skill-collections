@@ -3,6 +3,7 @@ name: automated-reaction-network-exploration
 description: Use when when you have a molecular geometry (XYZ format) and need to predict electron ionization (EI) mass spectrum fragmentation patterns by exhaustively sampling conformational space and reaction intermediates.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2426
   edam_topics:
   - http://edamontology.org/topic_3314

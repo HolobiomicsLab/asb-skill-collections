@@ -3,6 +3,7 @@ name: mass-spectrometry-feature-annotation
 description: Use when when you have peak-detected LC-MS/MS data (MGF files with MS1 and MS2 spectra, plus a feature abundance table from MZmine2) and need to assign chemical structures and molecular properties to individual MS1 features rather than relying on mass-to-charge alone.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: knime-workflow-orchestration
 description: Use when you have raw LC-MS data (mzML, NetCDF) from multiple runs that require sequential feature detection, alignment, quantification, and optional filtering (e.g., blank exclusion, QC reproducibility, retention-time outlier removal) before spatial mapping or annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0091

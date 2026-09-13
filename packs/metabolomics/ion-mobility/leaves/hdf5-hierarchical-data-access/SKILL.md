@@ -3,6 +3,7 @@ name: hdf5-hierarchical-data-access
 description: Use when you have multidimensional MS data converted to MZA HDF5 format (from Agilent .d, Bruker .d with ion mobility, Thermo .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0121

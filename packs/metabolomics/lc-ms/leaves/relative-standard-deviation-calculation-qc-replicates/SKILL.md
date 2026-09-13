@@ -3,6 +3,7 @@ name: relative-standard-deviation-calculation-qc-replicates
 description: Use when you have a peak table from XCMS preprocessing with intensity measurements for the same set of metabolites across multiple QC replicate injections (samples marked SampleType='LQC'), and you need to filter out EICs with poor reproducibility before evaluating peak quality or training a.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -48,6 +49,7 @@ attribution:
 
 # relative-standard-deviation-calculation-qc-replicates
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate relative standard deviation (RSD) of peak intensities across quality control (QC) replicates to assess reproducibility of extracted ion chromatograms in untargeted LC-MS metabolomics. RSD is used as a filtering criterion to exclude low-reproducibility EICs prior to peak quality metric calculation and machine learning classifier training.

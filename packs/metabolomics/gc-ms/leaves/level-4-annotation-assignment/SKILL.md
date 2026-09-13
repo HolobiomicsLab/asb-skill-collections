@@ -3,6 +3,7 @@ name: level-4-annotation-assignment
 description: Use when after khipu has grouped LC-MS features into empirical compounds with inferred molecular formulas and adduct assignments.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3931
   edam_topics:
   - http://edamontology.org/topic_3172

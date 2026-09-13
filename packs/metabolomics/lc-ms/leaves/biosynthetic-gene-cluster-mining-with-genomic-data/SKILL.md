@@ -3,6 +3,7 @@ name: biosynthetic-gene-cluster-mining-with-genomic-data
 description: Use when you have LC-MS/MS spectra (MGF, mzXML, mzML, or mzData format) from a bacterial or fungal strain and corresponding genomic sequence data (FASTA, antiSMASH .final.gbk, or BOA .annotated.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3454
   edam_topics:
   - http://edamontology.org/topic_0160

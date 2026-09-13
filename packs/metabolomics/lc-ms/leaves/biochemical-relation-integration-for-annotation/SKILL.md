@@ -3,6 +3,7 @@ name: biochemical-relation-integration-for-annotation
 description: Use when when you have LC/MS feature data (m/z, retention time, intensity) that must be annotated against a metabolic database and you have access to (or can construct) knowledge about biochemical reaction networks, expected isotope patterns, and instrument-specific adduct formation rules.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_0749

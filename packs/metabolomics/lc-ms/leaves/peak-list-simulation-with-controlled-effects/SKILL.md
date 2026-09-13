@@ -3,6 +3,7 @@ name: peak-list-simulation-with-controlled-effects
 description: Use when you need to validate batch correction or normalization algorithms, require ground-truth condition/batch effect annotations for method benchmarking, or want to systematically evaluate how different batch types (linear, random) and condition allocations affect feature recovery in metabolomic.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

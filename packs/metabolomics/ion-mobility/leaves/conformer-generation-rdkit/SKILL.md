@@ -3,6 +3,7 @@ name: conformer-generation-rdkit
 description: Use when when you have ionized adduct structures (SMILES or MOL format) from an ionization-state determination step and need to create an ensemble of relaxed 3D geometries for each molecule prior to expensive conformation filtering (e.g., ASE-ANI or quantum methods).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0482
   edam_topics:
   - http://edamontology.org/topic_3314
@@ -45,6 +46,7 @@ attribution:
 
 # conformer-generation-rdkit
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate and minimize 3D conformer ensembles from ionized molecular structures using RDKit's distance-geometry algorithm and force-field optimization. This skill produces multiple low-energy 3D geometries per molecule that serve as input for downstream high-level quantum or machine-learning filtering in CCS prediction workflows.

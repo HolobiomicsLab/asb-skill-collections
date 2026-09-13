@@ -3,6 +3,7 @@ name: api-endpoint-communication
 description: Use when you have fingerprint or spectrum data that requires compound-class annotation but prefer not to run SIRIUS locally, or need to integrate predictions into an automated analysis pipeline.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0218

@@ -3,6 +3,7 @@ name: file-format-conversion-troubleshooting
 description: Use when when integrating MSConvert into an automated LC-MS QC workflow and you need to confirm that vendor acquisition files are properly converted to mzML format with intact spectral metadata. Apply this skill after each MSConvert invocation or when QC results appear incomplete or anomalous (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

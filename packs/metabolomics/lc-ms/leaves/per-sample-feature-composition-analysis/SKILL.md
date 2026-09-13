@@ -3,6 +3,7 @@ name: per-sample-feature-composition-analysis
 description: Use when when you have aligned and quantified mass spectrometry features from multiple natural extracts (via MZmine2/3), paired with in silico annotation results (ISDB or SIRIUS), and you need to prioritize samples for chemical discovery based on the proportion of unannotated, extract-specific.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

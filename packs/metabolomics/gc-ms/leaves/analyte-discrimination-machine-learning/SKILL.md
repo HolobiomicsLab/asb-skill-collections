@@ -3,6 +3,7 @@ name: analyte-discrimination-machine-learning
 description: Use when you have raw chromatography–mass spectrometry data (GC-MS or LC-MS) in 2D m/z–retention time format and need to identify and discriminate multiple analytes while avoiding false peak detections inherent in conventional peak picking.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -48,6 +49,7 @@ attribution:
 
 # analyte-discrimination-machine-learning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use machine learning classifiers to discriminate individual analytes in a two-dimensional MS map (m/z vs retention time) based on their spatial signatures, enabling automated marker feature identification without conventional peak picking. This skill is applied within the NPFimg pipeline to replace error-prone peak detection with multivariate chemo-/biomarker feature discovery.

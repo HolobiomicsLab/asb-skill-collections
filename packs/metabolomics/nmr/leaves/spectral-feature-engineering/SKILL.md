@@ -3,6 +3,7 @@ name: spectral-feature-engineering
 description: Use when you have molecular structures (SMILES or graph representations) and need to predict or analyze infrared spectral properties using message passing neural networks.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_topics: []
   tools:
   - chemprop

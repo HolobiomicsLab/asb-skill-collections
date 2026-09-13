@@ -3,6 +3,7 @@ name: multi-backend-visualization-abstraction
 description: Use when when building a mass spectrometry visualization library that must support multiple plotting backends (matplotlib for static output, bokeh and plotly for interactive exploration) with a uniform DataFrame-based API, and where different plot kinds (spectrum, chromatogram, mobilogram, peakmap).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520

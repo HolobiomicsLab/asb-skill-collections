@@ -3,6 +3,7 @@ name: pseudo-ms-ms-spectra-ranking-and-curation
 description: Use when after executing annotateRC to match six or more lipidomics/metabolomics features against ion fragment databases (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

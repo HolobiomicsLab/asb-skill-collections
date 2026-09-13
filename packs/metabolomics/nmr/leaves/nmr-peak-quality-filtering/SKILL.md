@@ -3,6 +3,7 @@ name: nmr-peak-quality-filtering
 description: Use when you have a CSV or table-formatted input spectral peak list (chemical shifts, intensities, metadata) destined for NMRformer metabolite identification, and you observe or suspect that the list contains noisy peaks or peaks with chemical shifts that do not match known reference standards.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

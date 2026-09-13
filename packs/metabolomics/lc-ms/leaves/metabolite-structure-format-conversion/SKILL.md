@@ -3,6 +3,7 @@ name: metabolite-structure-format-conversion
 description: Use when when importing candidate metabolite structures from public chemical databases (PubChem, ChEBI, etc.) for use in MAGMa-based annotation workflows, or when integrating external structure datasets that may use divergent molecular representation formats or contain non-standard chemical.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0154

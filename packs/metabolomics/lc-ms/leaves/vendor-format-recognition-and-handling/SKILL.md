@@ -3,6 +3,7 @@ name: vendor-format-recognition-and-handling
 description: 'Use when when Rapid QC-MS receives vendor-format LC-MS acquisition files from instrument data folders and must prepare them for automated QC checks and MS-DIAL processing. Specifically: input files are in proprietary vendor formats (Thermo .raw, Bruker .d, Sciex .'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3370

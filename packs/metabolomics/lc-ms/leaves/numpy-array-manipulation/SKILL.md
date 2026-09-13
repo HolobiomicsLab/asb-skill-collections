@@ -3,6 +3,7 @@ name: numpy-array-manipulation
 description: Use when when you have raw MS/MS peak lists that need to be loaded, analyzed for intensity frequency patterns, or filtered based on noise characteristics.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

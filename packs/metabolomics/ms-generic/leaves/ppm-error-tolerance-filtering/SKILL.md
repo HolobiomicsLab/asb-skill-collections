@@ -3,6 +3,7 @@ name: ppm-error-tolerance-filtering
 description: Use when after molecular formula assignment has been performed on FT-ICR MS peaks and you need to remove assignments with unacceptable mass error before proceeding to chemodiversity analysis, transformation network generation, or multivariate statistics.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

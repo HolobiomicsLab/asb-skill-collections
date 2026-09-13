@@ -3,6 +3,7 @@ name: precursor-list-formatting-for-dda
 description: Use when you have generated a lipid spectral library (lipid identities, adducts, m/z values, fragmentation patterns) and your downstream analysis requires DDA acquisition on an Orbitrap instrument using Excalibur software.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3750
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -40,6 +41,7 @@ attribution:
 
 # precursor-list-formatting-for-dda
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert a generated lipid spectral library into an Excalibur-compatible precursor list CSV format suitable for data-dependent acquisition (DDA) analysis on an Orbitrap mass spectrometer. This skill conditionally serializes precursor m/z, charge state, and retention time metadata into the column structure and row format required by Excalibur.

@@ -3,6 +3,7 @@ name: mass-spectrometry-imaging-data-import
 description: Use when you have raw MS imaging data in imzML (continuous or processed) or Analyze 7.5 format and need to load it into R for spectral processing, normalization, peak-picking, or statistical analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: hierarchical-clustering-parameter-optimization
 description: Use when after peak detection in GC-IMS preprocessing, when you need to group peaks across multiple samples and must decide whether euclidean distance is appropriate for your drift time and retention time coordinate space, and when you need to validate that your chosen dt_cluster_spread_ms and.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

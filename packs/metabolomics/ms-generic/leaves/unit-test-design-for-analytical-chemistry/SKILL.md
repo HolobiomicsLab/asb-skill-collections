@@ -3,6 +3,7 @@ name: unit-test-design-for-analytical-chemistry
 description: Use when when implementing or modifying metabolomics feature detection pipelines (e.g., adduct detection, m/z matching, feature labeling) where correctness directly impacts downstream analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3647
   edam_topics:
   - http://edamontology.org/topic_3172

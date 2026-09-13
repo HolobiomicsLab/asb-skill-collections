@@ -3,6 +3,7 @@ name: chromatogram-extraction-and-visualization
 description: Use when you have sqMass files containing pre-extracted transition group chromatograms from DIA-MS experiments and need to interactively visualize individual peptide precursor chromatograms, inspect peak quality via Q-values (typically 1% FDR cutoff), and overlay peak boundaries or apply on-the-fly.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0121

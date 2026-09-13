@@ -3,6 +3,7 @@ name: spectral-token-design
 description: Use when when you need to prepare mass spectra and molecular structures for joint modeling in a BART or transformer-based sequence model, and you lack a unified representation scheme that allows both modalities to be encoded and decoded without collision or information loss.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -41,6 +42,7 @@ attribution:
 
 # spectral-token-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and validate a unified token vocabulary that encodes both mass spectral features (m/z values, intensities) and molecular structures (SMILES or graph tokens) into a single discrete token set for end-to-end pretraining in a language model. This skill ensures bidirectional mapping and complete coverage of the chemical data domain.

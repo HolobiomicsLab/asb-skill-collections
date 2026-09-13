@@ -3,6 +3,7 @@ name: clustering-metrics-computation
 description: Use when when you have executed multiple clustering tools on the same tandem-MS dataset and need to quantitatively compare their performance using normalized, comparable metrics rather than raw cluster assignments alone.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0091

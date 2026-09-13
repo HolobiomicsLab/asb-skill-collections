@@ -3,6 +3,7 @@ name: standardized-region-export-for-deep-learning
 description: Use when you have LC-HRMS profile-mode data with detected local maxima (from gradient-descent peak finding) and need to prepare them as input for a convolutional neural network trained to classify peaks vs. background signal or to estimate peak boundaries and centers.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -43,6 +44,7 @@ attribution:
 
 # standardized-region-export-for-deep-learning
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Export detected local maxima from LC-HRMS profile-mode data as standardized two-dimensional (rt × mz) regions suitable for CNN model ingestion. This skill transforms raw chromatographic peaks into uniform feature matrices that enable consistent deep-learning-based peak classification.

@@ -3,6 +3,7 @@ name: penalty-factor-application-in-spectral-search
 description: Use when when performing reverse spectral search on MS/MS data suspected to contain chimeric spectra (multiple co-isolated precursors), and you need to increase the number of reliable spectral matches while filtering out false positives.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3520

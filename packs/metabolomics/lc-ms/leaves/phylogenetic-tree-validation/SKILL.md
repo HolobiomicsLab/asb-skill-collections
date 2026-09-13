@@ -3,6 +3,7 @@ name: phylogenetic-tree-validation
 description: Use when after generating a Chemical Feature Tree from q2-qemistree (or any tree artifact) and before using it for alpha-diversity or beta-diversity phylogenetic analyses.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2423
   edam_topics:
   - http://edamontology.org/topic_0092

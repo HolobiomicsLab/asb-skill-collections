@@ -3,6 +3,7 @@ name: ms2-spectra-parsing-and-loading
 description: Use when when beginning a MEMO analysis workflow with raw or unaligned MS2 spectra files and needing to extract fragmentation data and precursor information before counting MS2 peaks and neutral losses to generate sample fingerprints.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

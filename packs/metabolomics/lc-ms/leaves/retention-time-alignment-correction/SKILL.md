@@ -3,6 +3,7 @@ name: retention-time-alignment-correction
 description: Use when when processing a batch of centroided mzML or mzXML LC-MS raw data files where chromatographic retention times drift between sample acquisitions (common in large-scale metabolomics studies).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091

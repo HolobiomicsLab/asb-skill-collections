@@ -3,6 +3,7 @@ name: missing-value-imputation-for-pca
 description: Use when your metabolomic dataset contains missing values (common in untargeted or targeted mass spectrometry data) and you need to perform PCA for outlier detection at multiple standard deviation thresholds (e.g., 3 SD, 4 SD, 5 SD) on principal component scores.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

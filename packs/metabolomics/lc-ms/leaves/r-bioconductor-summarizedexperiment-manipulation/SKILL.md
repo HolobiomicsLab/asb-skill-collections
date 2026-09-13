@@ -3,6 +3,7 @@ name: r-bioconductor-summarizedexperiment-manipulation
 description: Use when when converting raw metabolomics data (tab-delimited text files, Sciex OS exports) into a structured object for batch processing, or when you need to organize compound-level measurements (assays), sample metadata (colData), and feature annotations (rowData) in a single container that.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3172

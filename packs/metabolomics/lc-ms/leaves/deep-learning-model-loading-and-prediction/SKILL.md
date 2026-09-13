@@ -3,6 +3,7 @@ name: deep-learning-model-loading-and-prediction
 description: Use when when you have preprocessed MS/MS spectral data (normalized peak intensities and m/z values) and need to convert each spectrum into a learned molecular embedding vector for downstream matching against a reference database.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0091

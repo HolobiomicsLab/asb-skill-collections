@@ -3,6 +3,7 @@ name: tool-initialization-verification
 description: Use when after completing Docker installation and container build steps for CloMet, before attempting substantive data analysis or pipeline execution.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_topics:
   - http://edamontology.org/topic_3172
   tools:

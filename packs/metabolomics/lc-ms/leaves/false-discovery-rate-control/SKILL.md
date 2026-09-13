@@ -3,6 +3,7 @@ name: false-discovery-rate-control
 description: Use when you have generated candidate peptide-spectrum matches from a spectral library search (especially open modification searches using cascade strategies) and need to assign statistical confidence to those matches. Use it whenever the scoring metric (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: chromatographic-misalignment-detection
 description: Use when after running XCMS-based alignment on LC-MS datasets with hundreds of samples or data acquisition periods longer than a week, when the assumption that all m/z bins in the same sample share a single warping function is likely to fail.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3173

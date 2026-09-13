@@ -3,6 +3,7 @@ name: threshold-based-library-validation
 description: Use when you have downloaded or cloned a fragmentation library repository (such as LipidMatch) and need to verify that it contains the expected breadth of coverage across both molecular diversity (distinct species count) and chemical classification (lipid-type category count).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

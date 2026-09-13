@@ -3,6 +3,7 @@ name: mzpeak-format-file-parsing
 description: Use when you have an mzPeak file (uncompressed ZIP archive containing Parquet files) and need to extract and work with spectrum metadata (scan descriptions, precursors, selected ions), spectrum signal data (profile or centroid m/z and intensity arrays), or chromatogram data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0121

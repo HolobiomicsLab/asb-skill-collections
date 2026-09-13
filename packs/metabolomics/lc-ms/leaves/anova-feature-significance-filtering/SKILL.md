@@ -3,6 +3,7 @@ name: anova-feature-significance-filtering
 description: Use when you have a normalized LC-MS/MS metabolite abundance matrix (e.g., from MS-DIAL preprocessing) with multiple samples across experimental groups (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091

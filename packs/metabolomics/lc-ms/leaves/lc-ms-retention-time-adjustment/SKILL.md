@@ -3,6 +3,7 @@ name: lc-ms-retention-time-adjustment
 description: Use when you have centroided .mzML LC–MS data with multiple sample runs and a preliminary compound target table with theoretical or measured retention times, but you suspect the expected RT values may not align with actual retention windows in your dataset.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3370

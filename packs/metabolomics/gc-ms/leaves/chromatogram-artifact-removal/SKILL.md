@@ -3,6 +3,7 @@ name: chromatogram-artifact-removal
 description: Use when raw NetCDF-format GCxGC-MS chromatograms exhibit steady or increasing baseline intensity caused by instrumental contamination, column bleeding, or thermal drift;
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0091

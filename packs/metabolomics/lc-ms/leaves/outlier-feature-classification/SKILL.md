@@ -3,6 +3,7 @@ name: outlier-feature-classification
 description: Use when after peak picking by MS-DIAL and import into R, when the feature table contains m/z values with decimal components that fall within the [4, 8] interval (indicating instrumental artifacts or calibration errors).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

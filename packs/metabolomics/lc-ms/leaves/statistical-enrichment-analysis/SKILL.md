@@ -3,6 +3,7 @@ name: statistical-enrichment-analysis
 description: Use when you have ranked GCF-MF (Gene Cluster Family–Molecular Family) links using two or more independent scoring functions and a set of experimentally validated links.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3473

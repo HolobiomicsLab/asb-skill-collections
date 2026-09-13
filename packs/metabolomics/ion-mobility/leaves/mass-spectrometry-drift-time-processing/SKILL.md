@@ -3,6 +3,7 @@ name: mass-spectrometry-drift-time-processing
 description: Use when when you have raw ion mobility-mass spectrometry data (drift times, m/z values, and frame metadata) from DTIMS-MS, TWIMS-MS, or SLIM-based instruments and need to compute CCS values for structural characterization or database matching.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

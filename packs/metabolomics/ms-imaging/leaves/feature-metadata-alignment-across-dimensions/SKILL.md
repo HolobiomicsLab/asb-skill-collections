@@ -3,6 +3,7 @@ name: feature-metadata-alignment-across-dimensions
 description: Use when you have loaded a feature-by-pixel intensity matrix from an MSI HDF5 container and need to perform dimension-preserving corrections (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -42,6 +43,7 @@ attribution:
 
 # feature-metadata-alignment-across-dimensions
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align and preserve feature metadata (lipid identifiers, adduct forms, isotope relationships) across the feature and pixel dimensions of a mass spectrometry imaging intensity matrix during correction and transformation workflows. This skill ensures that derived datasets (isotope-corrected, quantified) maintain consistent feature-to-metadata mappings and dimensional scale metadata required by downstream visualization and export steps.

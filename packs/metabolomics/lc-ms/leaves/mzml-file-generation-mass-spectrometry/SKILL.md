@@ -3,6 +3,7 @@ name: mzml-file-generation-mass-spectrometry
 description: Use when after frequency-based denoising and sample-level aggregation of replicate MS/MS spectra, when you need to export denoised spectra to a standardized, vendor-independent format compatible with spectral matching pipelines.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3650
   edam_topics:
   - http://edamontology.org/topic_0121

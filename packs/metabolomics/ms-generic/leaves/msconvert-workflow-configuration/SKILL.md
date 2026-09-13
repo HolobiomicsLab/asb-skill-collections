@@ -3,6 +3,7 @@ name: msconvert-workflow-configuration
 description: Use when when you need to convert vendor-specific raw mass spectrometry files (.raw) to the open mzML format using imzML Writer, and msconvert is not yet installed or its location is not recognized by the system.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3520

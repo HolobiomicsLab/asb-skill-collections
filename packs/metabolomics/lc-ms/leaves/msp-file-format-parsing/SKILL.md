@@ -3,6 +3,7 @@ name: msp-file-format-parsing
 description: Use when you have acquired EI or MS2 library files in MSP format (e.g., from NIST via Lib2NIST export, RIKEN, MoNA, SWGDRUG, or GNPS) and need to read them into R to assign SMILES, retention indices, or combine multiple libraries into a single consolidated MSP file for MS-DIAL.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3071

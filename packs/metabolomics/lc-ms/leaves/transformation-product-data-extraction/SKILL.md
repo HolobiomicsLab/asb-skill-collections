@@ -3,6 +3,7 @@ name: transformation-product-data-extraction
 description: Use when after generating or obtaining a TP object (via generateTPs with library, in-silico, or BioTransformer algorithms) that contains SMILES, InChIKey, or formula information for transformation products, and you need to screen those TPs in LC-HRMS data or annotate them using MetFrag.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_0091

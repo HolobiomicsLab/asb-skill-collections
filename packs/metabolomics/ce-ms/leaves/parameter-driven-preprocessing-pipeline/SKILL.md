@@ -3,6 +3,7 @@ name: parameter-driven-preprocessing-pipeline
 description: Use when you have converted mass spectrometry data in mzXML or mzML format and need to extract metabolic features via region-of-interest (ROI) search followed by preprocessing and augmentation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3520

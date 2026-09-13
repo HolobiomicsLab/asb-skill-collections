@@ -3,6 +3,7 @@ name: missing-value-replacement-by-feature-minimum
 description: Use when after loading a feature table into memory when the table contains zero or missing values that represent true signal loss (not genuine absence), and you need to impute them before normalization, batch correction, or statistical analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

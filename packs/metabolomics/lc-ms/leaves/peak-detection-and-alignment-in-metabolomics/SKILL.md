@@ -3,6 +3,7 @@ name: peak-detection-and-alignment-in-metabolomics
 description: Use when after generating simulated mzML output from ViMMS and you need to compare it against real acquisition data. Specifically, use it when you have paired real and simulated mzML files from the same sample (e.g., Beer1pos) and must evaluate whether a fragmentation strategy (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3932
   edam_topics:
   - http://edamontology.org/topic_3520

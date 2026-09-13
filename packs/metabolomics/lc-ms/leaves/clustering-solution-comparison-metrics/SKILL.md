@@ -3,6 +3,7 @@ name: clustering-solution-comparison-metrics
 description: Use when you have applied two different clustering or dendrogram-flattening methods (e.g., constant-threshold vs. silhouette-score optimization) to the same feature set and need to assess whether the two solutions assign features to clusters consistently.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3375

@@ -3,6 +3,7 @@ name: s4-class-method-inspection
 description: Use when you need to verify that an S4 replacement method (e.g., `mz<-`) in a bioinformatics backend class correctly validates input data using vectorized operations on NumericList or similar container objects, rather than inefficient loops or apply functions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_3520

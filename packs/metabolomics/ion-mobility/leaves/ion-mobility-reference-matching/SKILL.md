@@ -3,6 +3,7 @@ name: ion-mobility-reference-matching
 description: Use when you have raw arrival-time data from TWIM-MS and need to convert it to collision cross section (CCS) values for multi-omic analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

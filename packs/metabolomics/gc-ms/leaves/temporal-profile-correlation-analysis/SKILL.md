@@ -3,6 +3,7 @@ name: temporal-profile-correlation-analysis
 description: Use when you have time-resolved direct injection mass spectrometry data (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0121

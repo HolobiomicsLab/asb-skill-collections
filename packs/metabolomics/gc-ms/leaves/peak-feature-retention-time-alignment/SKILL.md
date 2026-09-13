@@ -3,6 +3,7 @@ name: peak-feature-retention-time-alignment
 description: Use when you have preprocessed (smoothed and baseline-corrected) 2D-GCxGC-MS chromatograms from multiple samples and need to align their peak positions to a common reference chromatogram before multivariate analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0091

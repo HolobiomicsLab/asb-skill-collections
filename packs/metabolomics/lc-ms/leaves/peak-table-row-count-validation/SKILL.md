@@ -3,6 +3,7 @@ name: peak-table-row-count-validation
 description: Use when when using mpactr filter functions (e.g., filter_mispicked_ions, filter_group, filter_cv) with R6 reference semantics and uncertain whether the copy_object parameter controls deep copying or in-place modification.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

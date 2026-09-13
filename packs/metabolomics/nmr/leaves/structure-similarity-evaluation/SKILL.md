@@ -3,6 +3,7 @@ name: structure-similarity-evaluation
 description: Use when after an NMR-based structure prediction model has generated predicted molecular structures (formula and connectivity) for a test set of molecules with up to 19 heavy atoms.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0292
   edam_topics:
   - http://edamontology.org/topic_3047

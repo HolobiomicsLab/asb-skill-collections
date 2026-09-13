@@ -3,6 +3,7 @@ name: peak-detection-threshold-application
 description: Use when converting raw MS/MS spectra from library files (e.g., .msp format) into structured library entries, or when annotating experimental LC–MS features against fragment databases.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3370

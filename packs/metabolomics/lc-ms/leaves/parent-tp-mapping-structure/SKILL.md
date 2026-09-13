@@ -3,6 +3,7 @@ name: parent-tp-mapping-structure
 description: Use when you have generated a TP object (from generateTPs) with structural information (SMILES) for predicted or library-derived transformation products, and you need to either (1) construct a MetFrag-compatible database that preserves parent compound records alongside TPs, or (2) componentize.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_0091

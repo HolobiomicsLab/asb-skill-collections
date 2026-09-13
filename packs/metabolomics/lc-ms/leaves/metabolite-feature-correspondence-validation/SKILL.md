@@ -3,6 +3,7 @@ name: metabolite-feature-correspondence-validation
 description: Use when after m/z grouping and pairwise alignment detection when you have a metabCombiner object containing candidate feature pair alignments and need to select a subset of mutually abundant, high-confidence anchors to anchor a nonlinear retention time mapping spline.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0091

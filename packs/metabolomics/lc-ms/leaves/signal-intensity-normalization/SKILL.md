@@ -3,6 +3,7 @@ name: signal-intensity-normalization
 description: Use when after loading raw LC-MS data from multiple disease groups when you need to compute correlations between metabolite signals and disease classes, or before training a deep learning model on metabolomics profiles.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091

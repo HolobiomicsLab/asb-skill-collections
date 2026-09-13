@@ -3,6 +3,7 @@ name: batch-timing-analysis
 description: Use when when evaluating whether a new or candidate mass spectrometry processing library (e.g., spectrum_utils) offers faster spectrum processing throughput than established alternatives (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

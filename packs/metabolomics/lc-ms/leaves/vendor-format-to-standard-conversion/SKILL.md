@@ -3,6 +3,7 @@ name: vendor-format-to-standard-conversion
 description: Use when when ingesting raw LC-MS/MS output from a mass spectrometry instrument and you need to prepare it for metabolite identification, fragmentation tree computation, or molecular formula annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

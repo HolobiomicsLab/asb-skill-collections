@@ -3,6 +3,7 @@ name: nearest-neighbor-candidate-retrieval
 description: Use when when you have a large spectral library (thousands to millions of spectra represented as high-dimensional vectors) and need to search unknown query spectra against it, particularly under open modification search scenarios where all possible mass shifts must be considered.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3945
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: msi-data-import-csv
 description: Use when you have MSI intensity data exported from MSiReader or SCiLS software as a plain-text CSV file (with peaks as columns and pixels/spots as rows), and you need to import it into R to perform pairwise mass difference calculations and adduct identification.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

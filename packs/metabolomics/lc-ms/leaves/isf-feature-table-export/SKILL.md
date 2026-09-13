@@ -3,6 +3,7 @@ name: isf-feature-table-export
 description: Use when after completing Part 4 (Identification of ISF Features) in the ISFrag workflow, when you have an ISFrag analysis results object containing identified ISF features and need to save them as a portable, tabular file for external analysis, reporting, or integration with other metabolomics.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3751
   edam_topics:
   - http://edamontology.org/topic_3172

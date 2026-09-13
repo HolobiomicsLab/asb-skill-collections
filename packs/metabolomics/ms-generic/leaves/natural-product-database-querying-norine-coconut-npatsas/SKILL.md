@@ -3,6 +3,7 @@ name: natural-product-database-querying-norine-coconut-npatsas
 description: Use when you have a chemical structure (as SMILES string or identifier) and need to discover matching records across specialized natural product databases.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_0154

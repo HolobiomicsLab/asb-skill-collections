@@ -3,6 +3,7 @@ name: ce-ms-migration-time-to-mobility-transformation
 description: Use when your CE-MS dataset exhibits migration time drift between runs due to electroosmotic flow (EOF) variation, and you have identified two internal mobility markers (e.g., Paracetamol and Procaine) with known charges whose migration times can be measured in the raw data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

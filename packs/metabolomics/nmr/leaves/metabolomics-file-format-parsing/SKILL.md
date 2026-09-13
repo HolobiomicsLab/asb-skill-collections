@@ -3,6 +3,7 @@ name: metabolomics-file-format-parsing
 description: Use when you have mwTab-formatted files from the Metabolomics Workbench containing MS or NMR experimental metadata and tabular data sections (e.g., METABOLITES, DATA blocks), and need to load them into memory for downstream conversion, validation, or analysis rather than manual text parsing.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3172

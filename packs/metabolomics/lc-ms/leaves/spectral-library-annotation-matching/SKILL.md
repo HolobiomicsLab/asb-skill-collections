@@ -3,6 +3,7 @@ name: spectral-library-annotation-matching
 description: Use when when you have downloaded a GNPS archive (GNPS1 or GNPS2 workflows) and need to map experimental spectra to known library compounds for annotation enrichment. Apply this skill after spectral data (spectra.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3762
   edam_topics:
   - http://edamontology.org/topic_0599

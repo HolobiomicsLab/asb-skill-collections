@@ -3,6 +3,7 @@ name: modulation-parameter-configuration
 description: Use when you have a raw GCxGC-MS chromatogram in NetCDF format (.cdf file) and need to import it into R as a 2D-TIC object for preprocessing (smoothing, baseline correction, peak alignment) or multivariate analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0091

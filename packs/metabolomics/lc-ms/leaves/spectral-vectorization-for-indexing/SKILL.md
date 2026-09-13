@@ -3,6 +3,7 @@ name: spectral-vectorization-for-indexing
 description: Use when when you have a collection of MS/MS reference spectra and unknown query spectra that must be rapidly matched against a large spectral library, and you need to enable approximate nearest neighbor indexing to reduce computational cost from exhaustive pairwise comparison to K-nearest neighbor.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3646
   edam_topics:
   - http://edamontology.org/topic_0121

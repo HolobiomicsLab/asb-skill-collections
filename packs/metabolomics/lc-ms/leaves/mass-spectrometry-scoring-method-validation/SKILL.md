@@ -3,6 +3,7 @@ name: mass-spectrometry-scoring-method-validation
 description: Use when you have high-resolution LC-MS data processed through both XCMS feature detection and RAMClustR clustering, and you need to verify the reliability of molecular weight assignments before downstream annotation or statistical analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121

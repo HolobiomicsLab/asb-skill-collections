@@ -3,6 +3,7 @@ name: multi-omic-data-integration
 description: Use when you have raw or processed TWIM-MS data with arrival time and m/z dimensions, and you need to assign biomolecular class labels and compute class-specific CCS values across multiple compound classes simultaneously, particularly when you lack pre-identified feature peaks or want to bypass.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_0121

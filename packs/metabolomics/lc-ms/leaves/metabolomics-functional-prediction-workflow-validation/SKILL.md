@@ -3,6 +3,7 @@ name: metabolomics-functional-prediction-workflow-validation
 description: Use when a Python-based metabolomics analysis package has been relocated to a new GitHub organization (e.g., metabolomics-cloud) and you need to confirm that the migration preserved package integrity, installation, and runtime correctness.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3501
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -42,6 +43,7 @@ attribution:
 
 # metabolomics-functional-prediction-workflow-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Verify that a metabolomics functional prediction package (specifically Mummichog 3) has been successfully migrated to a new GitHub organization, conforms to organizational standards, and executes core workflows correctly on representative metabolomics datasets. This skill ensures relocated bioinformatics packages remain installable, maintainable, and functionally correct after migration.

@@ -3,6 +3,7 @@ name: structural-annotation-integration
 description: Use when you have structural candidates from in silico tools (SIRIUS/CANOPUS) and library spectral matches from GNPS, but need to resolve conflicting or incomplete chemical classifications into a unified consensus.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0154

@@ -3,6 +3,7 @@ name: visual-studio-project-management
 description: Use when when you have cloned a multi-framework .NET project (e.g., MsdialWorkbench using .NET Framework 4.7.2, .NET Core 3.1, and .NET 6) and need to set up the build environment in Visual Studio, restore dependencies, select a specific build configuration (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3552
   edam_topics:
   - http://edamontology.org/topic_0091

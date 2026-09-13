@@ -3,6 +3,7 @@ name: dataframe-lazy-loading-comparison
 description: Use when when designing or optimizing an MsBackend implementation (or similar columnar data structure) you must decide whether to pre-allocate all known columns in the backing DataFrame at initialization or defer column creation until first access.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0337
   edam_topics:
   - http://edamontology.org/topic_3520

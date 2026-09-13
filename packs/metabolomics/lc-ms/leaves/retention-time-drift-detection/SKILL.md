@@ -3,6 +3,7 @@ name: retention-time-drift-detection
 description: Use when you have LC-MS data processed through XCMS grouping that shows signs of RT drift (e.g., data acquired over extended periods or across many samples) and you suspect misalignment of feature groups.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: spectral-peak-embedding-encoding
 description: Use when when you have variable-length MS/MS peak lists (m/z and intensity arrays) that must be fed into a transformer-based model for spectra analysis, and you need deterministic, normalized embeddings that preserve peak frequency information across multiple scales.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -40,6 +41,7 @@ attribution:
 
 # spectral-peak-embedding-encoding
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encodes MS/MS peak m/z and intensity information into fixed-length tensor representations using sinusoidal basis functions for transformer input. This skill transforms raw peak metadata into learnable embeddings compatible with contrastive learning architectures for spectra representation.

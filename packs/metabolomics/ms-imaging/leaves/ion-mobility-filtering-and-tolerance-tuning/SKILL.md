@@ -3,6 +3,7 @@ name: ion-mobility-filtering-and-tolerance-tuning
 description: Use when your raw MSI dataset is acquired on an ion-mobility-enabled instrument (e.g., Bruker .baf, .tsf, or .tdf formats) and your analyte of interest has a known or experimentally determined ion mobility value (1/K0 or drift time μs).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

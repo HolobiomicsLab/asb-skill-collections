@@ -3,6 +3,7 @@ name: quantitative-mode-metabolomics-configuration
 description: Use when when you have metabolomics results from multiple studies reporting compound identifiers, p-values, fold-changes, and study sizes (N), and you need to prepare them for quantitative meta-analysis using weighted Fisher's method and logarithmic fold-change combination.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0625

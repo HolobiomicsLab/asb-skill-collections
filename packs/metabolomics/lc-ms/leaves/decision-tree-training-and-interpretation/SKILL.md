@@ -3,6 +3,7 @@ name: decision-tree-training-and-interpretation
 description: Use when you have tandem mass spectra data and need to predict a discrete molecular property (e.g., presence/absence of a sulfo group) while maintaining full interpretability of the decision logic.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_1812
   edam_topics:
   - http://edamontology.org/topic_0089
@@ -47,6 +48,7 @@ attribution:
 
 # decision-tree-training-and-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train shallow decision trees on sparse, high-dimensional ChemEcho feature vectors derived from tandem mass spectra, then extract and validate individual tree paths as interpretable fragmentation-based prediction rules. This skill enables conversion of learned decision boundaries directly into executable MassQL queries for transparent, deployable molecular characterization.

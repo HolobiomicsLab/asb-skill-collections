@@ -3,6 +3,7 @@ name: software-plugin-development
 description: Use when when you have a scientific software tool (e.g., Met-ID) that is architected to support plugins or configuration-driven modules, and you need to register and apply a novel reagent, derivatizing matrix, or analytical method (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3172

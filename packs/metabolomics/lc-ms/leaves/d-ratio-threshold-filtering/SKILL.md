@@ -3,6 +3,7 @@ name: d-ratio-threshold-filtering
 description: Use when after signal drift correction (step 4) has computed per-feature D-Ratio values, and before normalization (step 7).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

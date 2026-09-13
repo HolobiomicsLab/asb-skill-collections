@@ -3,6 +3,7 @@ name: mzml-metabolomics-data-import
 description: 'Use when you have raw LC-HRMS metabolomics data in mzML or ABF format that needs to be processed through a reproducible pipeline. Use this skill when: (1) you have public or proprietary .mzML LC-MS datasets (e.g. from MetaboLights, MassIVE, or PRIDE);'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3172

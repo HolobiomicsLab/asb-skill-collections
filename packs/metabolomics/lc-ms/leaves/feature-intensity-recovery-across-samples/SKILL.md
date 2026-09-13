@@ -3,6 +3,7 @@ name: feature-intensity-recovery-across-samples
 description: Use when after sample alignment in untargeted LC-MS workflows, when the aligned feature table contains missing (NA or zero) intensity entries for features that are detected in some samples but fall below the instrument detection limit or are absent in others.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3557
   edam_topics:
   - http://edamontology.org/topic_3370

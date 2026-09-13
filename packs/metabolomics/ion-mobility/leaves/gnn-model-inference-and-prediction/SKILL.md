@@ -3,6 +3,7 @@ name: gnn-model-inference-and-prediction
 description: Use when you have a pre-trained GNN model checkpoint, a test dataset with molecular representations (SMILES, 3D coordinates, adducts) and ground-truth labels, and need to quantify how well the model generalizes to held-out data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3659
   edam_topics:
   - http://edamontology.org/topic_3407

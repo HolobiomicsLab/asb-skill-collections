@@ -3,6 +3,7 @@ name: quality-assurance-contamination-removal
 description: Use when you have a feature quantification table exported from MZmine3 processing of non-targeted LC-MS/MS data that includes both biological samples and blank/control samples, and you need to identify and exclude features whose intensity is driven by contamination in blanks rather than true.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

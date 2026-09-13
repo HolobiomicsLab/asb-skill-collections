@@ -3,6 +3,7 @@ name: conformer-ensemble-processing
 description: Use when you have a set of conformers that have already been filtered by ASE-ANI neural network potentials and need to extract quantum-mechanical electronic properties (polarizability tensor, dipole moment) required for collision cross section calculation.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_2476
   edam_topics:
   - http://edamontology.org/topic_3372
@@ -43,6 +44,7 @@ attribution:
 
 # conformer-ensemble-processing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load pre-filtered conformers (in xyz or molden format) from ASE-ANI filtering, prepare quantum calculation inputs for each conformer, and submit them in parallel to QUICK for quantum calculations. This skill bridges molecular geometry optimization and electronic property extraction in the CCS prediction workflow.

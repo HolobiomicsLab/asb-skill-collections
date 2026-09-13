@@ -3,6 +3,7 @@ name: order-agnostic-dispatch-routing
 description: Use when when your untargeted LC-MS pipeline must support multiple peak-picking backends and you need to let users specify which algorithm to use (via configuration file or parameter) without hard-coding algorithm dependencies.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_3370

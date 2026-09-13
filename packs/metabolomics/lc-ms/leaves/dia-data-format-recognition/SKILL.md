@@ -3,6 +3,7 @@ name: dia-data-format-recognition
 description: Use when you have raw mass spectrometry data from a DIA acquisition method and need to determine whether it is MS^E, All-Ion Fragmentation (AIF), or SWATH-MS before loading into IDSL.CSA for fragmentation spectra deconvolution.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

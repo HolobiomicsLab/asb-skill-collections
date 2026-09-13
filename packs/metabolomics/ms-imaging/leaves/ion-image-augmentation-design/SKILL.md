@@ -3,6 +3,7 @@ name: ion-image-augmentation-design
 description: Use when when preparing ion image data from mass spectrometry imaging for contrastive self-supervised representation learning, and you need to generate augmented image pairs that reflect either co-localization relationships between different molecular ions (COL mode) or isotopic relationships.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -48,6 +49,7 @@ attribution:
 
 # ion-image-augmentation-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and apply mode-specific data augmentation pipelines (COL and ISO) to ion images for mass spectrometry imaging to generate contrastive pairs while preserving domain-relevant physical properties. The choice of augmentation mode and composition depends on the ion relationship type (co-localized vs. isotopic) and is critical for learning meaningful low-dimensional representations.

@@ -3,6 +3,7 @@ name: spectrum-annotation-augmentation
 description: Use when you have a TCN-predicted training set of MS/MS spectra with formula annotations and need to prepare it for Siamese rescore model training.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

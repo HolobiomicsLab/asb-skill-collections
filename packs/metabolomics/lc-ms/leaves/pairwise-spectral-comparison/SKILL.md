@@ -3,6 +3,7 @@ name: pairwise-spectral-comparison
 description: Use when you have a collection of preprocessed mass spectra (in mzML, mzXML, msp, MGF, or JSON format) and need to quantify similarity relationships across all pairs—for instance, to identify redundant spectra in a library, cluster related compounds, or perform spectral library searches.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

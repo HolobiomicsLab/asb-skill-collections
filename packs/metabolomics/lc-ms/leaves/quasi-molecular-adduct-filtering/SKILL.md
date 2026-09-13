@@ -3,6 +3,7 @@ name: quasi-molecular-adduct-filtering
 description: Use when after feature clustering has been applied to co-eluting LC-MS features and mass-to-charge ratio matching to KEGG has produced an annotated table with adduct assignments.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3370

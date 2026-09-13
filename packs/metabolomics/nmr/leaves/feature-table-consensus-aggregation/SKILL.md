@@ -3,6 +3,7 @@ name: feature-table-consensus-aggregation
 description: Use when you have detected feature tables from multiple LC-IMS-MS/MS samples and need to establish a unified feature catalog in which each row represents a distinct molecular entity observed across one or more samples, with harmonized m/z, drift time, and retention time coordinates.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

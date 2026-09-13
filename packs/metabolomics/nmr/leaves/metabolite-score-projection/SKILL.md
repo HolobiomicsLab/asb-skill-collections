@@ -3,6 +3,7 @@ name: metabolite-score-projection
 description: Use when you have Nightingale Health 1H-NMR metabolomics assay output (metabolite concentrations in a samples × features matrix) and you want to compute a published metabolic risk score or surrogate biomarker (mortality risk, metabolic age, cardiovascular event risk, type-2 diabetes risk, COVID-19.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3172

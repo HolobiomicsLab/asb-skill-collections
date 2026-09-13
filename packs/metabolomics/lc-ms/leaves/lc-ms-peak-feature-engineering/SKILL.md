@@ -3,6 +3,7 @@ name: lc-ms-peak-feature-engineering
 description: Use when you have LC-MS feature tables with m/z and retention time coordinates paired with raw .mzXML or .mzML data files, and you need to systematically assess which features correspond to genuine chromatographic peaks versus noise or artifacts.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3172

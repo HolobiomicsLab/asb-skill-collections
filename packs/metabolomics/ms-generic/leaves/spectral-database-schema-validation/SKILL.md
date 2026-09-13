@@ -3,6 +3,7 @@ name: spectral-database-schema-validation
 description: Use when when you have compiled raw mass spectrometry transition data (precursor m/z, product m/z, intensity, retention time, compound IDs) from experiments or external sources, and need to prepare it for ingestion into the EISA-EXPOSOME R Shiny platform for suspect screening.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

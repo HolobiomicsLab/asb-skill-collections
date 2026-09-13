@@ -3,6 +3,7 @@ name: module-refactoring-and-legacy-code-removal
 description: Use when when a major version release (e.g., v1.x → v2.0.0) deprecates a core neural module class, and new equivalent modules must be designed and integrated without breaking downstream prediction pipelines. Triggered by breaking changes in CHANGELOG or deprecation warnings in model initialization.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3364
   edam_topics:
   - http://edamontology.org/topic_3520

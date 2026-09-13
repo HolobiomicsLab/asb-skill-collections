@@ -3,6 +3,7 @@ name: word-embedding-aggregation-for-spectral-data
 description: Use when when you have pre-processed MS/MS spectra and a pre-trained Word2Vec model, and need to compute fast, scalable similarity scores for library matching or molecular networking that correlate better with structural similarity than cosine-based methods.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3172

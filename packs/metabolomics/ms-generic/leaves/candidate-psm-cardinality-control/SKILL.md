@@ -3,6 +3,7 @@ name: candidate-psm-cardinality-control
 description: Use when when rescoring PSMs from a search engine with MS²Rescore and you need to (1) constrain computational cost by reducing the number of candidates fed to feature generators and rescoring engines, (2) control false discovery rate correctly by removing lower-ranking PSMs before final statistical.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

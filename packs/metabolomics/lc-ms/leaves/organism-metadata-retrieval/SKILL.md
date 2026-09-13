@@ -3,6 +3,7 @@ name: organism-metadata-retrieval
 description: Use when when a project JSON document contains genome identifiers but lacks corresponding organism name annotations, and you need to link MS/MS mass spectra with genomic context for downstream biosynthetic gene cluster or chemical ecology analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_0625

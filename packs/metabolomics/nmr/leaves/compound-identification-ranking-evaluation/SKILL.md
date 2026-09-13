@@ -3,6 +3,7 @@ name: compound-identification-ranking-evaluation
 description: Use when after training a FlavorFormer model end-to-end with weighted loss on 1H NMR spectra and compound labels, apply this skill to a held-out test set to measure compound identification accuracy and ranking quality.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3382
@@ -45,6 +46,7 @@ attribution:
 
 # Compound Identification Ranking Evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate the performance of a hybrid deep learning model (FlavorFormer) on compound identification tasks by computing accuracy metrics and ranking-based performance indicators on held-out NMR spectral data. This skill assesses whether the bi-encoder/cross-encoder architecture correctly ranks and identifies compounds in flavor mixtures.

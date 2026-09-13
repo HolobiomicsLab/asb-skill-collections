@@ -3,6 +3,7 @@ name: formula-network-extraction-from-mz
 description: Use when you have an observed m/z value from spatially-resolved mass spectrometry imaging and need to assign one or more plausible molecular formulae with confidence metrics.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -40,6 +41,7 @@ attribution:
 
 # formula-network-extraction-from-mz
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract candidate molecular formulae and their interconnection networks for a given mass-to-charge (m/z) value by querying a precomputed database of 2.8 million formulae linked via chemical and biological edges, then rank them using a multiple linear regression model trained on mass accuracy, database connectivity, and biochemical relationship strength.

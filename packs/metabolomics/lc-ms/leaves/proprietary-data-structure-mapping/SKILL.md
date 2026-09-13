@@ -3,6 +3,7 @@ name: proprietary-data-structure-mapping
 description: Use when you have received raw mass spectrometry data in one of four proprietary vendor formats (Agilent '.d', Bruker ion mobility 'd', Thermo '.raw', or mzML) and need to convert it to a cross-platform, cross-language accessible format.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0121

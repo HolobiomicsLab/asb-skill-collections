@@ -3,6 +3,7 @@ name: retention-time-mass-alignment
 description: Use when you have two independent LC-MS untargeted metabolomic feature datasets (each with retention time and m/z values) and need to identify which features in one dataset correspond to features in the other.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0121

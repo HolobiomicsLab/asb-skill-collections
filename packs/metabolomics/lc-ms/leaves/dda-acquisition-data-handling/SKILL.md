@@ -3,6 +3,7 @@ name: dda-acquisition-data-handling
 description: Use when you have raw or processed LC-MS/MS data from DDA mode acquisitions and need to extract, annotate, and structure MS/MS spectra with purity labels (or quality indicators) to serve as input to the DNMS2Purifier customized model training workflow, or to prepare data for purification of.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -42,6 +43,7 @@ attribution:
 
 # dda-acquisition-data-handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare and format LC-MS/MS data acquired in Data-Dependent Acquisition (DDA) mode for chimeric MS/MS spectrum purification. This skill encompasses loading annotated MS/MS spectra and purity labels from DDA acquisitions into a structured training or analysis dataset suitable for model training or purification workflows.

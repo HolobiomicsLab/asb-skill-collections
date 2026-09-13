@@ -3,6 +3,7 @@ name: mass-spectrometry-peak-pair-analysis
 description: Use when you have preprocessed MSI data (as a CSV intensity matrix or Cardinal MSProcessedImagingExperiment object) and suspect that observed peaks include both parent ions and their adducts formed with matrix or salt species.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121

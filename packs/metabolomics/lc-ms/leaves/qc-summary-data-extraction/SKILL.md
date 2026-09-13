@@ -3,6 +3,7 @@ name: qc-summary-data-extraction
 description: Use when after applying one or more mpactr filters (filter_mispicked_ions, filter_group, filter_cv, filter_insource_ions) to a feature table, use qc_summary() to extract the pass/fail status of each ion across all applied filters.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3370

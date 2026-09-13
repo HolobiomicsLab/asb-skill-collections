@@ -3,6 +3,7 @@ name: mass-spectrometry-file-format-handling
 description: Use when when you have Thermo Fisher Scientific Orbitrap .raw files (e.g., from Q Exactive HF instruments) and need to extract spectral, chromatographic, or metadata directly into R for downstream statistical analysis, benchmarking, or integration with Bioconductor workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0121

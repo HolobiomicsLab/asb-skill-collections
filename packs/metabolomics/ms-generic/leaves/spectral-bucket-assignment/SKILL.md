@@ -3,6 +3,7 @@ name: spectral-bucket-assignment
 description: Use when you have a collection of mass spectrometry spectral data (m/z and intensity pairs) that must be indexed for fast neighbor retrieval or similarity search, and you need to trade some precision in similarity matching for substantial gains in query speed and memory efficiency across large.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

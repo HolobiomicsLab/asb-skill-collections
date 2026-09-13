@@ -3,6 +3,7 @@ name: statistical-hypothesis-testing-mean-comparison
 description: Use when you have computed raw or standardised correlation scores (or other link-ranking metrics) for all possible GCF-MF pairs in a dataset and want to verify that validated links (those with known strain co-occurrence or experimental confirmation) are significantly enriched at higher score values.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3697

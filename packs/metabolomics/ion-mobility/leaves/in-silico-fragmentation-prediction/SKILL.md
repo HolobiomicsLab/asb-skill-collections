@@ -3,6 +3,7 @@ name: in-silico-fragmentation-prediction
 description: Use when you have candidate metabolite structures (from database lookup or enumeration) and experimental MS/MS spectra (mzML, mzXML format), and need to rank candidates by how well their predicted fragments match observed peaks.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0602

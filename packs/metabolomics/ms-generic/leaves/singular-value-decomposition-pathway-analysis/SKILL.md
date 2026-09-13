@@ -3,6 +3,7 @@ name: singular-value-decomposition-pathway-analysis
 description: Use when when you have a peak intensity matrix (rows = metabolite features, columns = samples) with corresponding compound annotations (peak ID → KEGG/ChEBI ID mapping), and you need to rank pathways or metabolite set groupings (KEGG pathways, Reactome pathways, GNPS Molecular Families, MS2LDA.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3768
   edam_topics:
   - http://edamontology.org/topic_0121

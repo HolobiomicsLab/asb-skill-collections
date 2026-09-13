@@ -3,6 +3,7 @@ name: lcms-retention-time-alignment
 description: Use when when XCMS-aligned LC-MS data shows coefficient of variation (CV) above expected thresholds for known features, or when analyzing long-duration experiments (>1 week) or large cohorts (>100 samples) where global warping functions are known to fail due to compound-specific RT drift structures.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3520

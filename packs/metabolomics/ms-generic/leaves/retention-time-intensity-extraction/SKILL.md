@@ -3,6 +3,7 @@ name: retention-time-intensity-extraction
 description: Use when when you have imported mass spectrometry data in .raw, .d, or mzXML format and need to generate a TIC plot to visualize overall sample ionization intensity as a function of retention time.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3520

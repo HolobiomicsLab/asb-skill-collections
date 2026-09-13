@@ -3,6 +3,7 @@ name: library-analogue-search-branching
 description: Use when when you need to reconstruct or validate the control-flow architecture of a spectral search system that must handle both exact-match library lookups and analogue discovery in a single pass, particularly when the system uses pre-computed embeddings for efficiency and machine learning for.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3646
   edam_topics:
   - http://edamontology.org/topic_3520

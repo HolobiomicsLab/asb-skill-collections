@@ -3,6 +3,7 @@ name: r-package-api-usage
 description: Use when when you have metabolomics data (tab-delimited text or SummarizedExperiment object) and need to apply batch correction, outlier detection, internal standard recommendation, and quality filtering at scale or in non-interactive workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

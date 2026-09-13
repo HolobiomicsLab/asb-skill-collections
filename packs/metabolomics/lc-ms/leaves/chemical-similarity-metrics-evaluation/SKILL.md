@@ -3,6 +3,7 @@ name: chemical-similarity-metrics-evaluation
 description: Use when after training a sequence-to-sequence decoder that reconstructs SMILES strings from fixed-size embeddings (e.g., from MS/MS spectra), use this skill to measure reconstruction fidelity on held-out test embeddings.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3365
   edam_topics:
   - http://edamontology.org/topic_3373

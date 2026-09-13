@@ -3,6 +3,7 @@ name: compound-clustering-from-inadequate-spectra
 description: Use when after peak picking has identified individual signals in an INADEQUATE NMR spectrum, apply this skill when you need to collapse thousands of individual peaks into fewer, more interpretable compound-level peak networks.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0625

@@ -3,6 +3,7 @@ name: feature-missingness-threshold-filtering
 description: Use when after loading and formatting raw peak-picked LC-MS metabolomics data frames (via metabData constructor) when you need to eliminate features with poor sample coverage before feature alignment.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

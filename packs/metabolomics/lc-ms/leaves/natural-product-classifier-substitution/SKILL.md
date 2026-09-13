@@ -3,6 +3,7 @@ name: natural-product-classifier-substitution
 description: Use when gNPS has ceased supplying ClassyFire ontology information for spectral library matches, causing downstream ConCISE consensus classification to fail or produce incomplete ontology fields.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3674
   edam_topics:
   - http://edamontology.org/topic_0154

@@ -3,6 +3,7 @@ name: deep-learning-model-implementation-in-pytorch-or-tensorflow
 description: Use when when you need to construct a dual-branch neural network encoder that processes two augmented versions of the same input (e.g., ion images in COL or ISO mode) and must enforce weight sharing between branches to reduce parameters while maintaining separate output representations.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3474
@@ -43,6 +44,7 @@ attribution:
 
 # deep-learning-model-implementation-in-pytorch-or-tensorflow
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a ResNet18-based shared-weight encoder architecture in PyTorch to process pairs of augmented ion images and produce fixed-dimensional representation vectors suitable for contrastive learning. This skill is essential when building deep learning pipelines for mass spectrometry imaging that require parameter sharing across multiple input branches and consistent output dimensionality.

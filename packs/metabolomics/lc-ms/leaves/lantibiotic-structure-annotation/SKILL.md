@@ -3,6 +3,7 @@ name: lantibiotic-structure-annotation
 description: Use when you have (1) genomic data from a Streptomyces or other RiPP-producing organism in raw FASTA format or annotated GenBank format, (2) high-resolution LC-MS/MS spectra in centroided MGF, mzML, mzXML, or mzData format, and (3) a known or predicted lantibiotic core peptide sequence you wish to.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3646
   edam_topics:
   - http://edamontology.org/topic_0121

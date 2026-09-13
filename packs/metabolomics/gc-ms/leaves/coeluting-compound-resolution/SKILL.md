@@ -3,6 +3,7 @@ name: coeluting-compound-resolution
 description: Use when analyzing complex GC-MS mixtures where two or more chemical compounds elute at similar or identical retention times, producing overlapping or merged peaks in the raw chromatogram.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

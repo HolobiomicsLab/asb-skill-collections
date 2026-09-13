@@ -3,6 +3,7 @@ name: cross-workflow-format-translation
 description: Use when you have downloaded a GNPS archive from either GNPS1 (https://gnps.ucsd.edu) or GNPS2 (https://gnps2.org) and need to parse spectra (spectra.mgf), molecular family networks (molecular_families.tsv), spectral library annotations (annotations.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0091

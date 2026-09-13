@@ -3,6 +3,7 @@ name: cross-database-entity-reconciliation
 description: Use when you have chemical entity records scattered across two or more public repositories (e.g., HMDB, ChEMBL, PubChem, KEGG) and need a single authoritative, deduplicated knowledge base indexed by a queryable identifier (e.g., m/z value or chemical formula).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -40,6 +41,7 @@ attribution:
 
 # cross-database-entity-reconciliation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate and deduplicate chemical entities (formulae, structures) sourced from multiple independent repositories (HMDB, ChEMBL, PubChem) by resolving cross-references and assigning unique identifiers, then enrich the unified entity set with biological relationship edges (BioEdges) from KEGG metabolic reaction pairs. This skill enables construction of a comprehensive, interconnected reference database suitable for high-precision mass spectrometry annotation.

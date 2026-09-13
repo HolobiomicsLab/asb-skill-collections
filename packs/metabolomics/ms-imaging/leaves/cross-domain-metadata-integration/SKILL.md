@@ -3,6 +3,7 @@ name: cross-domain-metadata-integration
 description: Use when when you have conducted batch MS/MS searches across one or more domain-specific MASST tools and need to combine their hit scores, metadata annotations, and taxonomic lineages into a single coherent result set for comparative analysis or publication.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3172

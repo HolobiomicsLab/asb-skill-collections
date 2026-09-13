@@ -3,6 +3,7 @@ name: metabolomics-workflow-step-enumeration
 description: Use when when initializing a SmartPeak session and you have a workflow.csv file co-located with sequence.csv in the session directory, and you need to determine the precise order and validity of peak detection, calibration, and QC operations before execution.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_0629

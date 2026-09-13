@@ -3,6 +3,7 @@ name: msms-spectrum-data-structure-manipulation
 description: Use when you have raw or downloaded MSMS spectra (from online resources via Universal Spectrum Identifier, or from local mzML/mzXML files) that require standardization, cleaning, and fragment assignment before visualization, statistical comparison, or machine-learning feature extraction.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: dotnet-assembly-path-verification
 description: Use when when you have just loaded the rawrr R package and need to confirm that the bundled .NET 8.0 assembly (rawrr.exe) is present and functional before performing any mass spectrometry data extraction operations.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_topics: []
   tools:
   - RawFileReader

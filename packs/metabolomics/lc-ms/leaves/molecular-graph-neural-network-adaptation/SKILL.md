@@ -3,6 +3,7 @@ name: molecular-graph-neural-network-adaptation
 description: Use when you have an in-house collection of liquid chromatography spectra and retention time measurements for small molecules, and you want to improve structural identification accuracy by predicting retention times.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3407

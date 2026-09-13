@@ -3,6 +3,7 @@ name: mass-to-charge-matching-tolerance-tuning
 description: Use when you are preparing to align two or more nontargeted LCMS datasets from the same analytical method using Eclipse and need to determine the m/z tolerance window.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3172

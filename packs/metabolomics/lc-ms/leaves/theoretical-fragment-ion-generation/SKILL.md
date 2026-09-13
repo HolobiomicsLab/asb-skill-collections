@@ -3,6 +3,7 @@ name: theoretical-fragment-ion-generation
 description: Use when when you have a peptide sequence and need to predict its fragment ion spectrum for stable isotope labeling validation, particularly when comparing against observed mass spectrometry data with natural or enriched isotopic abundance (e.g., 1% or 50% 13C incorporation).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3520

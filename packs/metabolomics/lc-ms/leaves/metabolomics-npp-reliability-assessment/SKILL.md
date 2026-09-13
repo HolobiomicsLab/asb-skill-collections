@@ -3,6 +3,7 @@ name: metabolomics-npp-reliability-assessment
 description: Use when you have completed NPP runs from one or more metabolomics tools on a set of LC-HRMS mzML files AND you have reference information (target molecule list with molecular formula, main adduct, and RT boundaries) available for a subset of expected compounds in those files.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_0091

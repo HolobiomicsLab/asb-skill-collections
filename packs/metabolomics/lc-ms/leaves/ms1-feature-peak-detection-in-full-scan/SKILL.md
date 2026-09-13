@@ -3,6 +3,7 @@ name: ms1-feature-peak-detection-in-full-scan
 description: Use when you have merged MS1 spectra (output from spectral binning/merging steps) from a full-scan FIA-MS or LC-MS acquisition and need to identify distinct molecular features before accurate mass annotation or background filtering.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3291
   edam_topics:
   - http://edamontology.org/topic_3520

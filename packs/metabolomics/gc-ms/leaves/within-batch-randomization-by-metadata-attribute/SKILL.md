@@ -3,6 +3,7 @@ name: within-batch-randomization-by-metadata-attribute
 description: Use when you have already assigned samples to batches (inter-batch balance is fixed) and need to shuffle injection order within each batch to decorrelate sample properties from time-dependent instrumental effects. Use it when your metadata table includes a randomization dimension (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -39,6 +40,7 @@ attribution:
 
 # within-batch-randomization-by-metadata-attribute
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Randomize sample injection order within each batch according to a user-specified metadata dimension (e.g., replicate ID, technical variable) to reduce systematic bias while preserving batch-level balance. This skill is critical for LC/GC-MS multi-omics experiments where injection sequence can introduce instrumental drift or carryover artifacts.

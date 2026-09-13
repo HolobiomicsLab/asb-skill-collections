@@ -3,6 +3,7 @@ name: contrastive-pair-generation
 description: Use when you have raw ion images from MSI data and need to train a contrastive encoder to learn stable, mode-specific representations.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -42,6 +43,7 @@ attribution:
 
 # contrastive-pair-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate paired augmented images from a single ion image in mass spectrometry imaging (MSI) to enable contrastive learning. This skill is essential for training representation models that learn meaningful low-dimensional embeddings of ion spatial distributions while avoiding collapsed solutions.

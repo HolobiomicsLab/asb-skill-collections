@@ -3,6 +3,7 @@ name: chemical-structure-similarity-matching
 description: Use when you have a set of query chemical compounds (as SMILES, names, or ChemMine objects) and a reference library organized into type groups (e.g., Type A–E chemical sets), and you need to assign each query compound to its -matching type based on structural similarity.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0154

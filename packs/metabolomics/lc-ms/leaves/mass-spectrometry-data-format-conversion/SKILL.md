@@ -3,6 +3,7 @@ name: mass-spectrometry-data-format-conversion
 description: Use when you have mass spectral libraries from multiple sources (e.g., NIST EI, RIKEN MS2, MoNA GC-MS or LC-MS/MS, GNPS mgf) that need to be consolidated for use in MS-DIAL, or you have a single library with incomplete or malformed metadata (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -66,6 +67,7 @@ attribution:
 
 # mass-spectrometry-data-format-conversion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert and harmonize mass spectral libraries from heterogeneous sources (NIST, MoNA, GNPS, RIKEN) into unified, polarity-separated msp files suitable for MS-DIAL analysis. This skill handles structural annotation, metadata reorganization, and format standardization across EI and tandem MS/MS libraries.

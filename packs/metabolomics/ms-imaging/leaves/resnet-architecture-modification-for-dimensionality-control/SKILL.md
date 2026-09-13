@@ -3,6 +3,7 @@ name: resnet-architecture-modification-for-dimensionality-control
 description: Use when your task requires a pretrained convolutional encoder (ResNet18) to produce fixed-size representation vectors of a specific dimensionality (e.g., 512 dimensions) rather than the default output size.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3474
@@ -42,6 +43,7 @@ attribution:
 
 # ResNet Architecture Modification for Dimensionality Control
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Modify a ResNet18 base architecture to output fixed-dimensional representation vectors by replacing or reconfiguring the final fully connected layer. This skill is essential for constraining encoder output to match downstream pipeline requirements (e.g., 512-dimensional vectors for contrastive learning in mass spectrometry imaging).

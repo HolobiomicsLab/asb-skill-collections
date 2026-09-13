@@ -3,6 +3,7 @@ name: chemical-class-assignment-classyfire
 description: Use when you have computed low-dimensional embeddings (e.g., t-SNE coordinates) or clusterings of mass spectra and need to validate that the learned representation space organizes molecules by chemical taxonomy.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3375

@@ -3,6 +3,7 @@ name: ppm-tolerance-window-adjustment
 description: Use when a mass spectrum calibration procedure initialized with a narrow ppm window (e.g., ±1.0 or ±5.0 ppm) finds fewer than 5 reference m/z matches.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

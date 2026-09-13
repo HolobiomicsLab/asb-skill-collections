@@ -3,6 +3,7 @@ name: embedding-space-dimensionality-reduction
 description: Use when when you have a collection of MS/MS spectra (in mzML or MGF format) and need to group or retrieve spectra from the same peptide, or when you need to perform large-scale similarity comparisons across millions of spectra without working directly in the original high-dimensional peak space.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3935
   edam_topics:
   - http://edamontology.org/topic_0121

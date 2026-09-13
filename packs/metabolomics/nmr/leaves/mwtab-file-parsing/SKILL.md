@@ -3,6 +3,7 @@ name: mwtab-file-parsing
 description: Use when you have mwTab format files (Mass Spectrometry or Nuclear Magnetic Resonance experimental data from Metabolomics Workbench) that need to be loaded into Python for downstream analysis, validation, conversion to JSON, or programmatic manipulation of metadata and data sections.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3172

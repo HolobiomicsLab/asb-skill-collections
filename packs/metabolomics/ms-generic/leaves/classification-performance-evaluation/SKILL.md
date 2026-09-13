@@ -3,6 +3,7 @@ name: classification-performance-evaluation
 description: Use when after running inference on test mass spectrometry spectra with a trained deep learning model (e.g., PS2MS) to verify that class label predictions and confidence scores match expected reference outputs.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -43,6 +44,7 @@ attribution:
 
 # classification-performance-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantitatively assess the predictive accuracy of a classification model by computing standard metrics (accuracy, precision, recall, F1-score) on held-out test data and comparing predictions against reference outputs. This skill validates that a trained classifier generalizes correctly to unseen examples.

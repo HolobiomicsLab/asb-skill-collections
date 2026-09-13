@@ -3,6 +3,7 @@ name: wpf-gui-compilation
 description: Use when when you have cloned the MsdialWorkbench repository and need to produce an executable WPF GUI application (MsdialGuiApp) for Windows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0091

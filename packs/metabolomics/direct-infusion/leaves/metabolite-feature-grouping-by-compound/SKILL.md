@@ -3,6 +3,7 @@ name: metabolite-feature-grouping-by-compound
 description: Use when after XCMS feature detection and retention time correction, when you have a feature table (CSV or XCMS object) with m/z and retention time values aligned across samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0091

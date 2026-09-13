@@ -3,6 +3,7 @@ name: metabolite-phenotype-association-partial-correlation
 description: Use when you have a SummarizedExperiment object containing NMR or MS metabolomic data with aligned phenotype information (BMI, disease status, age, gender), and you need to identify metabolites associated with a continuous or categorical outcome while controlling for known confounders that might.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3676
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -44,6 +45,7 @@ attribution:
 
 # metabolite-phenotype-association-partial-correlation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute partial Spearman correlations between metabolic features and a phenotype of interest while simultaneously adjusting for epidemiological confounders (age, gender, disease status). This generates metabolome-wide association estimates, raw p-values, and multiple-testing corrected p-values suitable for hypothesis testing in metabolomic cohorts.

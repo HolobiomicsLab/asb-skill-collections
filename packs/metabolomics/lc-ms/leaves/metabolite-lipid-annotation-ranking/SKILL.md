@@ -3,6 +3,7 @@ name: metabolite-lipid-annotation-ranking
 description: Use when you have LC–MS All-ion fragmentation chromatograms processed through xcms and RamClustR, a feature table with unknown identities, and you want to recover lipid annotations by matching observed spectra against lipid fragment libraries (e.g., LipidPos).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3762
   edam_topics:
   - http://edamontology.org/topic_0091

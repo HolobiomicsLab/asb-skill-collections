@@ -3,6 +3,7 @@ name: conditional-routing-logic
 description: Use when you have received a USI string (formatted as mzspec:<namespace>:<resource>:<identifier_type>:<identifier>) and need to retrieve the corresponding mass spectrum data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: mass-spectrometry-feature-clustering
 description: Use when after XCMS feature detection and alignment when you have a CSV-formatted feature table with m/z and retention time annotations and want to deduplicate isotopic peaks, adducts, and in-source fragments into compound-level clusters before molecular weight inference or spectral matching.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: mass-spectrometry-polarity-filtering
 description: Use when when processing centroided .mzML LC–MS runs with a multi-polarity target list (i.e., some targets ionize in positive mode, others in negative mode, or both) and you need to detect peaks and extract ion chromatograms without manually subsetting the raw data by polarity beforehand.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

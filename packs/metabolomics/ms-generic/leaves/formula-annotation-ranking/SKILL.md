@@ -3,6 +3,7 @@ name: formula-annotation-ranking
 description: Use when after generating candidate formula/adduct pairs from m/z database matching but before final metabolite annotation. Use it when you have observed isotopic patterns from feature detection (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172

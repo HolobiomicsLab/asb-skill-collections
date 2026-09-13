@@ -3,6 +3,7 @@ name: feature-table-blank-intensity-detection
 description: Use when after loading an MZmine3-exported feature quantification table from non-targeted LC-MS/MS data when your experiment includes blank (negative control) samples and you need to remove features attributable to contamination or instrument background before downstream statistical analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: mass-spectrometry-annotation-engine-customization
 description: Use when when you have baseline MS/MS peak annotations from a known compound but need to refine them using newly available structural information (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -50,6 +51,7 @@ attribution:
 
 # mass-spectrometry-annotation-engine-customization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Customize and refine MS/MS peak annotations by swapping or chaining annotation engines (e.g., CosineAlignmentEngine, MAGMaAnnotationEngine) and propagating structural constraints through peak-to-fragment mappings to improve modification site localization confidence. This skill is essential when baseline annotations are insufficient or when oracle (known structure) information becomes available mid-workflow.

@@ -3,6 +3,7 @@ name: mass-spectrometry-reference-standard-mapping
 description: Use when you have acquired tunemix data (positive or negative ion mode, in .h5 format) with known CCS reference values and need to construct a calibration function that will later predict CCS values for unknown analytes.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

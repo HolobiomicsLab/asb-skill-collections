@@ -3,6 +3,7 @@ name: reaction-filtering-by-substrate-completeness
 description: Use when you have loaded intracellular metabolomics data (LC-MS normalized abundances) and a stoichiometric metabolic model with multiple reactions, and you plan to compute reaction propensity scores or other flux-related metrics that depend on substrate concentrations.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0602

@@ -3,6 +3,7 @@ name: rescore-training-data-augmentation
 description: Use when when you have TCN-predicted candidate formulas with ranked scores and need to train a Siamese rescore model to re-rank those candidates.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3936
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: singly-charged-ion-mass-calculation
 description: Use when you have detected monoisotopic features (m/z, drift_time, retention_time, intensity) from LC-IMS-MS/MS data and need to identify and cluster their C13 isotopologues for charge state z=+1.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

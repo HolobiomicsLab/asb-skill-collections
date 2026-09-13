@@ -3,6 +3,7 @@ name: extracted-ion-chromatogram-inspection
 description: Use when after running tardisPeaks() in screening mode or peak detection mode, when you need to visually confirm that target compounds are visible in the expected m/z and retention time windows, verify that peak integration boundaries are correct, diagnose whether sawtooth artefacts are present.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3172

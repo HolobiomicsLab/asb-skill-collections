@@ -3,6 +3,7 @@ name: spectral-library-matching-ripp
 description: Use when you have tandem mass spectrometry data (LC-MS/MS in MGF, mzXML, mzML, or mzData format) and genomic data from a target organism, and you want to identify RiPPs by matching experimental spectra against a database of predicted post-translationally modified RiPP structures derived from.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0121

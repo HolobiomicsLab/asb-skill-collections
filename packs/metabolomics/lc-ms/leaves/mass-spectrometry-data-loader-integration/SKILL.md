@@ -3,6 +3,7 @@ name: mass-spectrometry-data-loader-integration
 description: Use when you have mass spectrometry data available in multiple identifier formats (GNPS Task ID, Universal Spectrum Identifier, or Feature-Based Molecular Networking task reference) and need to route each format to its specific loader without manual preprocessing.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -43,6 +44,7 @@ attribution:
 
 # Mass Spectrometry Data Loader Integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill routes mass spectrometry data inputs from heterogeneous identifier formats (Task ID, USI, or FBMN) to their respective data loaders, enabling standardized ingestion and deserialization of spectral datasets. It is essential for web-based platforms that must accept multiple input pathways while maintaining a unified downstream analysis interface.

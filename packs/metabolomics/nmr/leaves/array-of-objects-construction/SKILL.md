@@ -3,6 +3,7 @@ name: array-of-objects-construction
 description: Use when you have tabular experimental data (e.g., sample metadata, mass spectrometry parameters, NMR acquisition details) in JSON table format and need to produce a list of structured objects for submission to a data repository (e.g., Metabolomics Workbench) or downstream format conversion.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0091

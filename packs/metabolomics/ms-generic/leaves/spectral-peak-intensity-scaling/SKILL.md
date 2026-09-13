@@ -3,6 +3,7 @@ name: spectral-peak-intensity-scaling
 description: Use when after filtering and noise removal when you have a cleaned spectrum with m/z and intensity pairs and need to normalize the intensity distribution prior to peptide fragment annotation, spectral library matching, or machine learning-based spectrum analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3630
   edam_topics:
   - http://edamontology.org/topic_0121

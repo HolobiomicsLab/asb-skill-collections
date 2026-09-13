@@ -3,6 +3,7 @@ name: msimagingarray-object-manipulation
 description: Use when when you have loaded mass spectrometry imaging data into a MSImagingArrays object in Cardinal 3.6 and need to explore the effects of multiple preprocessing steps (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0121

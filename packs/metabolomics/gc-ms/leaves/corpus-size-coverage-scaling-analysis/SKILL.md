@@ -3,6 +3,7 @@ name: corpus-size-coverage-scaling-analysis
 description: Use when when deploying a Word2Vec-based spectral similarity model (such as Spec2Vec) on a new mass spectrometry dataset and needing to assess whether the pre-trained model's learned peak embeddings sufficiently represent the peaks in your query spectra.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0121

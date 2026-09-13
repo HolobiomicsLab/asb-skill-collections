@@ -3,6 +3,7 @@ name: annotation-confidence-assessment
 description: Use when after MS-FINDER in silico annotation has been executed on exported LC-MS features and multiple database matches (with HRR scores) have been returned.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_3172

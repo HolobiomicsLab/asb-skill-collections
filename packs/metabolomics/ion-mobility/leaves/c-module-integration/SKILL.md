@@ -3,6 +3,7 @@ name: c-module-integration
 description: Use when you have raw mass spectrometry data in mzML or mzXML format and need to compress it using a format-agnostic compressor that expects a standardized spectral data contract.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

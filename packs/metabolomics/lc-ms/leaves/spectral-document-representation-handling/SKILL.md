@@ -3,6 +3,7 @@ name: spectral-document-representation-handling
 description: Use when you have per-sample MS2 spectra (in matchms-compatible formats like mzML, mzXML, MGF, or msp) and need to compare metabolomic samples across different LC methods, mass spectrometers, or retention-time regimes—especially when samples are chemodiverse with poor feature overlap or strong RT.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3172

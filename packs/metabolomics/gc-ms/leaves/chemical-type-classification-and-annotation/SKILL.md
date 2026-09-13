@@ -3,6 +3,7 @@ name: chemical-type-classification-and-annotation
 description: Use when after identifying query chemicals from GC-MS data (via Match.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_3172

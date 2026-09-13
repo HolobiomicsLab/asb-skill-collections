@@ -3,6 +3,7 @@ name: compound-structural-similarity-retrieval
 description: Use when you have a collection of preprocessed MS/MS spectra with structural annotations (InChIKey, SMILES, or InChI) and need to identify pairs of compounds that are structurally related above a specified similarity threshold.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_0154

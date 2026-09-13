@@ -3,6 +3,7 @@ name: topic-modeling-hyperparameter-optimization
 description: Use when when preparing to apply LDA to a new MS/MS spectral dataset in bag-of-fragments format, before running the full modeling pipeline.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

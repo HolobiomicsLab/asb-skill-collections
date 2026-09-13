@@ -3,6 +3,7 @@ name: missing-fraction-quality-filtering-for-embeddings
 description: Use when after converting MS/MS spectra to fixed-length vector representations using a pre-trained Word2Vec model (as in Spec2Vec), filter spectra before computing similarity scores to flag those where a large fraction of the observed intensity comes from peaks or neutral losses not present in the.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0153

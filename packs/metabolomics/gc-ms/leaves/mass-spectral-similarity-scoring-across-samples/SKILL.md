@@ -3,6 +3,7 @@ name: mass-spectral-similarity-scoring-across-samples
 description: Use when after XCMS feature detection, grouping, and retention time correction when you have aligned features with consistent retention times and intensity patterns across samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3520

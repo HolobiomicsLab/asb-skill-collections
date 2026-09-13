@@ -3,6 +3,7 @@ name: enrichment-statistical-thresholding
 description: Use when after running Enrichment() on a configured EnrichParam object (via KEGG_Enrich_PlotPanel or similar), when you have a full enrichment result table and need to reduce it to pathway hits meeting a specific significance threshold before visualization or export.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0602

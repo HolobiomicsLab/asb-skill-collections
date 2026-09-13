@@ -3,6 +3,7 @@ name: consensus-spectrum-assembly-from-fragmentation-spectra
 description: Use when you have detected a single chromatographic peak in DDA LC-MS/MS data that generated multiple MS2 fragmentation spectra (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

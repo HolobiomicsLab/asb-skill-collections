@@ -3,6 +3,7 @@ name: constraint-based-flux-sampling-and-analysis
 description: Use when when you have constraint-based metabolic models for multiple samples or cell lines, and you want to determine whether integrating multiple omics constraint types (nutrient availability, extracellular metabolite ratios, gene expression) produces distinct and biologically meaningful.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_0602

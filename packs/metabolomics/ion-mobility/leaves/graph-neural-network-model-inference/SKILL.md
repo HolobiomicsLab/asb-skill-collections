@@ -3,6 +3,7 @@ name: graph-neural-network-model-inference
 description: Use when you have a trained GNN model (stored as .h5 weights) and molecular graph representations (SMILES strings and/or 3D coordinates), and you need to compute predicted CCS values or perform feature importance analysis via ablation or gradient-based saliency mapping.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3925
   edam_topics:
   - http://edamontology.org/topic_3314

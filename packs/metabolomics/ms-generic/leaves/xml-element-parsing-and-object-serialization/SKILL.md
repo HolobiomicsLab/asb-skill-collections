@@ -3,6 +3,7 @@ name: xml-element-parsing-and-object-serialization
 description: Use when you have spectrum or chromatogram data stored as XML strings (e.g., in a SQLite database indexed by spectrum ID) and need to access individual spectra by ID or iterate through them sequentially while working with a library like pymzML that expects Spectrum or Chromatogram objects.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

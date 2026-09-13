@@ -3,6 +3,7 @@ name: network-diffusion-prioritization
 description: Use when after clustering and filtering KEGG candidates for LC-MS features, when you have a ranked set of candidate metabolites per feature and access to a metabolite interaction network (e.g., from FELLA).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3172

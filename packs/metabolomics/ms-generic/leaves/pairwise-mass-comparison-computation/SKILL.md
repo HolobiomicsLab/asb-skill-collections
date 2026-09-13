@@ -3,6 +3,7 @@ name: pairwise-mass-comparison-computation
 description: Use when after peak m/z values and molecular formulas have been extracted and pre-processed from FT-ICR MS data, and you need to reconstruct biochemical transformation networks ab initio.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

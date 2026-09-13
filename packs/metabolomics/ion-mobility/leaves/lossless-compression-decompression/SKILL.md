@@ -3,6 +3,7 @@ name: lossless-compression-decompression
 description: Use when when you have raw mzML or mzXML mass spectrometry files with uncompressed numeric arrays (not pre-compressed with zlib or msnumpress) and need to reduce file size for archival or transfer while guaranteeing that decompressed data is byte-identical to the original.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0121

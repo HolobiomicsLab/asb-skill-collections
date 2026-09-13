@@ -3,6 +3,7 @@ name: mass-track-consensus-computation
 description: Use when after mass tracks have been aligned across all samples (either via pairwise alignment for ≤10 samples or nearest-neighbor clustering for larger cohorts), and you need to generate a single representative m/z per aligned bin for downstream feature extraction and annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -46,6 +47,7 @@ attribution:
 
 # mass-track-consensus-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute consensus m/z values for aligned mass tracks across LC-MS samples by combining median and intensity-weighted estimates. This step finalizes MassGrid construction after pairwise or nearest-neighbor alignment, ensuring reproducible mass calibration across study cohorts.

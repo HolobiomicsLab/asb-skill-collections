@@ -3,6 +3,7 @@ name: chemical-similarity-clustering
 description: Use when you have untargeted LC-MS/MS metabolomic data (MS1 features with MS2 fragmentation spectra) preprocessed by MZmine2 into a feature table (BIOM format) and MGF file, and you want to construct a chemically-informed hierarchy of features for alpha/beta-diversity analysis or to group features.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3172

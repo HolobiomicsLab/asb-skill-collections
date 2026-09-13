@@ -3,6 +3,7 @@ name: custom-data-schema-mapping
 description: Use when a practitioner has pre-computed features from an external feature-finding procedure (e.g., vendor software, alternative open-source tools) and wishes to incorporate them into PFΔScreen's PFAS prioritization pipeline without re-detecting features from raw mzML data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

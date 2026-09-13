@@ -3,6 +3,7 @@ name: abstract-syntax-tree-design
 description: Use when when you have a domain-specific query language (such as MassQL for mass spectrometry) and need to convert query strings into structured representations that preserve domain constraints (e.g., mass tolerance, scan type, intensity thresholds).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3437
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: retention-time-window-tolerance-checking
 description: 'Use when you have acquired LC-MS data and need to verify run quality before proceeding to metabolite identification or quantification. Retention time checking is essential when: (1) you have established expected retention time ranges for known internal standards or reference compounds;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3674
   edam_topics:
   - http://edamontology.org/topic_3172

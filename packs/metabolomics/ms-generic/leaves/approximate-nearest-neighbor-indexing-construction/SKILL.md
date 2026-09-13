@@ -3,6 +3,7 @@ name: approximate-nearest-neighbor-indexing-construction
 description: Use when when you have a large spectral library (hundreds of thousands to millions of spectra) and need to perform open modification searching on query spectra where exhaustive comparison against all library entries is computationally prohibitive.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3945
   edam_topics:
   - http://edamontology.org/topic_0121

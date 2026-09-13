@@ -3,6 +3,7 @@ name: unit-test-validation-for-preprocessing
 description: Use when after implementing or modifying basic peak filtering operations (e.g., low-intensity peak removal, intensity normalization) on mass spectrometry spectral data in supported formats (mzML, mzXML, msp, MGF, JSON).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

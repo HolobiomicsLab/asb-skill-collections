@@ -3,6 +3,7 @@ name: marker-feature-identification-chromatography-ms
 description: Use when when processing raw chromatography–mass spectrometry data (GC–MS or LC–MS) as a 2D m/z vs retention time map and you need to identify and visualize marker features for analyte discrimination without relying on conventional peak picking.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -48,6 +49,7 @@ attribution:
 
 # marker-feature-identification-chromatography-ms
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automatically identify multivariate chemo-/biomarker features in chromatography–mass spectrometry data by combining image processing and machine learning on 2D MS maps (m/z vs retention time), bypassing conventional peak picking to reduce false detections. Designed for GC–MS and LC–MS workflows at ppb-level sensitivity.

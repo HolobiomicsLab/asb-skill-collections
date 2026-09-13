@@ -3,6 +3,7 @@ name: mass-spectrometry-feature-mapping
 description: Use when you have (1) aligned LC-MS/MS feature quantification matrix (features × fractions with m/z and RT for each feature), (2) bioassay activity measurements across the same fractions, and (3) need to assign bioactivity values to individual molecular network nodes to identify bioactive compounds.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3520

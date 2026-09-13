@@ -3,6 +3,7 @@ name: gnps-mgf-format-handling
 description: Use when you have mass spectrometry MS/MS spectral data in GNPS-style MGF format and need to feed it into the Mass2SMILES deep learning model for structure and functional group prediction.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -42,6 +43,7 @@ attribution:
 
 # GNPS-style MGF format handling for mass spectrometry spectral input
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Accept and prepare GNPS-style MGF (mascot generic format) spectral files as standardized input for deep learning–based MS/MS structure prediction workflows. This skill bridges public spectral repositories (GNPS) and containerized inference pipelines by ensuring spectral data is in the correct format and accessible to the processing container.

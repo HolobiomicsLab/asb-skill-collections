@@ -3,6 +3,7 @@ name: root-mean-squared-error-computation-by-bin
 description: Use when when evaluating a regression or similarity prediction model and you need to understand whether prediction error is uniform across the outcome space or concentrated in particular ranges (e.g., low structural similarity vs. high similarity scores).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0154

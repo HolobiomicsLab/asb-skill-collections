@@ -3,6 +3,7 @@ name: quality-control-threshold-validation
 description: Use when after executing Formation formatting on processed feature tables (output from Blueshift or Gravity modules).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0121

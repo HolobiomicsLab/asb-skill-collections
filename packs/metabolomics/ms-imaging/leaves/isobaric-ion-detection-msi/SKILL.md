@@ -3,6 +3,7 @@ name: isobaric-ion-detection-msi
 description: Use when you have loaded MSI data with an extracted peak list and need to annotate matrix-related signals, particularly when the dataset may contain isobaric ions or peaks with overlapping spatial distributions that could be misclassified during downstream annotation filtering.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

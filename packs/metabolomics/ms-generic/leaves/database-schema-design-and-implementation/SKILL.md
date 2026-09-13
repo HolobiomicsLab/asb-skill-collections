@@ -3,6 +3,7 @@ name: database-schema-design-and-implementation
 description: Use when when you have an mzML file that you want to store persistently in a queryable format for repeated access, or when memory constraints prevent loading entire mzML files into memory;
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

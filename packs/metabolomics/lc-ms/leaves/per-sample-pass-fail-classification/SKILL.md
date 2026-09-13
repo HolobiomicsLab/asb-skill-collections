@@ -3,6 +3,7 @@ name: per-sample-pass-fail-classification
 description: Use when after LC-MS data acquisition is complete (or during real-time monitoring) and you have loaded processed LC-MS data in mzML or vendor format and defined QC criteria (retention time windows, m/z tolerances, intensity thresholds) for your internal standards and target analytes.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121

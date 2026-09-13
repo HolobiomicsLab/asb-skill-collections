@@ -3,6 +3,7 @@ name: chemical-transformation-annotation
 description: Use when after computing all pairwise mass differences from MS imaging peaks and binning them into a histogram, use this skill when you need to prioritize which mass differences are most likely to represent real chemical adducts (rather than noise or measurement artifacts) by ranking them by.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_0121

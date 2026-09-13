@@ -3,6 +3,7 @@ name: marker-feature-visualization-retention-time-mz
 description: Use when after NPFimg's automated detection algorithm has identified marker features from a two-dimensional MS map (m/z vs retention time), especially when you need to validate feature positions, inspect co-localization patterns, or communicate results to stakeholders.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -47,6 +48,7 @@ attribution:
 
 # marker-feature-visualization-retention-time-mz
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Visualize identified chemo-/biomarker features on a two-dimensional chromatography–mass spectrometry map (m/z vs retention time) to enable spatial interpretation and validation of discriminative analytes. This skill is essential for confirming marker detection results and communicating feature localization in untargeted metabolomics workflows.

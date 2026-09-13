@@ -3,6 +3,7 @@ name: mass-spectrometry-feature-extraction-from-cardinal-objects
 description: Use when you have a Cardinal MSImagingExperiment object (e.g., from imzML or Analyze 7.5 files) and need to retrieve the complete set of m/z values and their intensities for annotation against metabolite databases (HMDB, Lipidmaps) or for statistical analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3173
@@ -47,6 +48,7 @@ attribution:
 
 # mass-spectrometry-feature-extraction-from-cardinal-objects
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Extract all m/z features and their metadata from a Cardinal MSImagingExperiment object to produce a feature table suitable for downstream annotation and analysis. This skill converts raw imaging MS data into a standardized feature matrix compatible with metabolite database matching.

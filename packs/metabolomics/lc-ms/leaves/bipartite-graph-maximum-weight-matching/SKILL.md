@@ -3,6 +3,7 @@ name: bipartite-graph-maximum-weight-matching
 description: 'Use when you have two MS/MS fragmentation spectra with fragment ion lists and computed pairwise mass differences (m/z deltas) between them, and you need to find the alignment of ion pairs that: (1) does not reuse any ion from either spectrum, (2) maximizes total matching quality (e.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3520

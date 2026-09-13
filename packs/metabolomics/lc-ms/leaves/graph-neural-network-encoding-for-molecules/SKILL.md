@@ -3,6 +3,7 @@ name: graph-neural-network-encoding-for-molecules
 description: Use when you have molecular structures (SMILES or SDF format) that need to be matched against MS/MS spectra, or you need to compute similarity between query spectra and a reference library of compounds.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0362
   edam_topics:
   - http://edamontology.org/topic_3372
@@ -50,6 +51,7 @@ attribution:
 
 # graph-neural-network-encoding-for-molecules
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encodes molecular structures as learnable vector embeddings using graph neural networks, enabling cross-modal comparison with spectral data for compound identification. This skill transforms SMILES strings or molecular graphs into a unified embedding space where structural similarity is preserved.

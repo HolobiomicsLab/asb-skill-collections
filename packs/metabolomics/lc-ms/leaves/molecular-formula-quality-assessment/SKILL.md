@@ -3,6 +3,7 @@ name: molecular-formula-quality-assessment
 description: Use when immediately after formula assignment from raw FT-ICR MS peak detection, when you have a peak intensity matrix with assigned molecular formulas and need to remove spurious or low-confidence assignments before calculating thermodynamic indices, determining compound classes, or performing.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

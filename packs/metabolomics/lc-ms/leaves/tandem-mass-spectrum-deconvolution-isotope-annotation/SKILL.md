@@ -3,6 +3,7 @@ name: tandem-mass-spectrum-deconvolution-isotope-annotation
 description: 'Use when you have aligned features characterized across multiple dimensions (m/z, drift time, retention time) and need to: (1) resolve MS/MS spectra that may contain fragments from multiple co-eluting or co-mobilizing precursors; (2) identify and validate isotopic signatures (e.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3172

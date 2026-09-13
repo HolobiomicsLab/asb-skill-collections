@@ -3,6 +3,7 @@ name: multidimensional-feature-extraction-from-spectra
 description: Use when you have preprocessed MS/MS spectral data (normalized peak intensities and m/z values) and need to transform spectra into fixed-dimensional molecular embeddings for candidate matching against a reference database, especially when direct spectral comparison or classical fingerprinting.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0091

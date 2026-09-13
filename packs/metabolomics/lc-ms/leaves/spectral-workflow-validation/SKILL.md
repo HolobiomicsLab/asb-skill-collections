@@ -3,6 +3,7 @@ name: spectral-workflow-validation
 description: Use when after implementing or modifying a cross-language integration layer that wraps Python mass spectrometry functions (e.g., spectral matching, peak detection, normalization from matchms or spectrum_utils) as R-callable functions within Spectra workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121

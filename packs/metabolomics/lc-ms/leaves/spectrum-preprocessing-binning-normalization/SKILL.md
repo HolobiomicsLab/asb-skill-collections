@@ -3,6 +3,7 @@ name: spectrum-preprocessing-binning-normalization
 description: Use when when preparing raw MS/MS spectra for input to a Siamese neural network trained to predict structural similarity scores (Tanimoto).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0121

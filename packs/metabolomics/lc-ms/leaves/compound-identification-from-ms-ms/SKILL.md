@@ -3,6 +3,7 @@ name: compound-identification-from-ms-ms
 description: Use when you have LC-MS/MS data in mgf format and a custom spectral database prepared with CFM-id (or an in-built database), and you need to identify unknown compounds by comparing their experimental fragmentation patterns against predicted or reference spectra with quantified match scores.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0154

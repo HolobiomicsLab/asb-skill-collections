@@ -3,6 +3,7 @@ name: peak-quality-label-stratification
 description: Use when when you have manually labeled LC-MS peaks as 'High quality' or 'Low quality' using NeatMS's annotation tool and need to create training/validation/test batches.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_3520

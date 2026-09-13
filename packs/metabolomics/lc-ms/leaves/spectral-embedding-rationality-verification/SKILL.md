@@ -3,6 +3,7 @@ name: spectral-embedding-rationality-verification
 description: Use when after training a transformer-encoder-based mass spectrometry embedding model (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0121

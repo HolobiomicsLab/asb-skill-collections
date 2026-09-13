@@ -3,6 +3,7 @@ name: metabolomics-data-integration-with-xcms
 description: Use when you have untargeted LC-MS metabolomics data preprocessed with XCMS and need to filter out low-quality peak integrations that could introduce false positives or noise into metabolite quantification.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -52,6 +53,7 @@ attribution:
 
 # metabolomics-data-integration-with-xcms
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate peak-quality assessment into untargeted LC-MS metabolomics preprocessing pipelines by coupling XCMS chromatographic peak detection with MetaClean's machine learning classifier for flagging low-quality peaks. This skill enables quality control of extracted ion chromatograms (EICs) and peaks before downstream analysis.

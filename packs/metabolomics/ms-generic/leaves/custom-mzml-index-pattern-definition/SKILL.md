@@ -3,6 +3,7 @@ name: custom-mzml-index-pattern-definition
 description: Use when your mzML file contains custom or non-standard spectrum index identifiers that do not follow the default mzML indexing convention, and you need random-access retrieval of spectra by these identifiers.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

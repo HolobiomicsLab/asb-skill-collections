@@ -3,6 +3,7 @@ name: spectral-file-format-parsing
 description: Use when you receive raw spectral data files (jcamp, RAW, or mzML) from NMR, IR, or MS instruments and need to extract peak tables, metadata, and spectral parameters before generating visualizations, performing peak annotation, or converting to standardized output formats.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0593

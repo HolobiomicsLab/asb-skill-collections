@@ -3,6 +3,7 @@ name: isotopologue-signature-detection
 description: Use when you have preprocessed, statistically significant LC-MS features (from multiple assays or a single assay) and need to group features that represent the same metabolite in different isotopic labeling states.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

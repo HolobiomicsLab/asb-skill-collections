@@ -3,6 +3,7 @@ name: mass-track-clustering
 description: Use when after constructing initial data bins from mzTree (indexed by int(mz × 1000)), determine whether a single bin contains one or multiple mass tracks. Apply clustering when the m/z range of points in a bin exceeds 2 × ppm tolerance (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -45,6 +46,7 @@ attribution:
 
 # mass-track-clustering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Partition m/z data points within a mass bin into distinct mass tracks using nearest-neighbor clustering when high mass resolution cannot resolve all peaks within the bin's m/z range. This skill determines how many independent ion species coexist in the same chromatographic bin and assigns each a consensus m/z and intensity vector.

@@ -3,6 +3,7 @@ name: msi-metadata-harmonization-across-image-stacks
 description: Use when you have processed and quantified MSI data from one or more imzML files in LipidQMap and need to export them as a unified, standards-compliant HDF5 container that preserves feature-by-pixel intensity matrices, per-feature lipid annotations (m/z, lipid class, adduct, neutral ID), per-pixel.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -42,6 +43,7 @@ attribution:
 
 # MSI Metadata Harmonization Across Image Stacks
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reconstruct and validate HDF5 export containers for mass spectrometry imaging (MSI) data collections following the Cardinal::HDF5 convention, ensuring standardized storage and interchange of quantified ion images with consistent metadata alignment across multiple imzML sources. This skill is essential when exporting multiple MSI samples or experimental replicates to enable downstream analysis in Cardinal or other HDF5-aware imaging platforms.

@@ -3,6 +3,7 @@ name: derivatization-chemistry-enumeration
 description: Use when when performing metabolite identification in mass spectrometry imaging and the metabolites have been chemically derivatized with a known derivatizing matrix (such as FMP-10) that produces ions other than the standard [M+H]+ in positive mode or [M-H]− in negative mode.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: input-output-kernel-regression-for-metabolite-matching
 description: Use when apply IOKR when you have BGCs with structural predictions based on MIBiG homology (cumulative BLAST score ≥10,000) and you wish to rank hypothetical BGC–spectrum links using metabolite structure information rather than genomic or strain-based features alone.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3658
   edam_topics:
   - http://edamontology.org/topic_0091

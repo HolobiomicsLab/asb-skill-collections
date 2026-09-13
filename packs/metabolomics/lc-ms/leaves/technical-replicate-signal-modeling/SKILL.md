@@ -3,6 +3,7 @@ name: technical-replicate-signal-modeling
 description: Use when your LCMS metabolomics dataset exhibits run-order-dependent intensity drift (signal decay or gain over the course of a sample batch), you have pooled technical replicates (identical biospecimen injected multiple times across the run sequence) and/or known internal standard compounds, and.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3628
   edam_topics:
   - http://edamontology.org/topic_3172

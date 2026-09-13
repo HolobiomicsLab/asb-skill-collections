@@ -3,6 +3,7 @@ name: mass-spectrometry-data-loading
 description: Use when you have raw MS data files from supported instruments (Agilent, Thermo, Bruker, or mzML format) and need to ingest them into IonToolPack for visualization, quality control, targeted extraction, or spectral library matching.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3520

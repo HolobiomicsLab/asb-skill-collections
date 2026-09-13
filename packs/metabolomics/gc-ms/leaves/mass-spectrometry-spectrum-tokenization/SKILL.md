@@ -3,6 +3,7 @@ name: mass-spectrometry-spectrum-tokenization
 description: Use when you have pre-processed MS/MS spectra and need to prepare them for word-embedding-based similarity methods (e.g., Spec2Vec).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0226
   edam_topics:
   - http://edamontology.org/topic_3520

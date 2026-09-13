@@ -3,6 +3,7 @@ name: modular-fragmentor-interface-configuration
 description: Use when you need to simulate LC-MS/MS spectra for a specific biomolecule type (peptides, modified nucleosides, or other metabolites) and must choose which fragmentation model governs how parent ions break into fragment ions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

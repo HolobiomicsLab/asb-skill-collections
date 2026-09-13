@@ -3,6 +3,7 @@ name: chromatographic-alignment-parameter-selection
 description: Use when after chromatographic peak detection (e.g. centWave) has been performed on LC-MS data and you need to group features that likely originate from the same compound.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: graph-based-metabolite-similarity-assessment
 description: Use when you have a collection of MS/MS spectra (stored as Spectrum2 objects in an ms2Lib class) and need to identify which spectra share identical fragmentation patterns—particularly when coupled to a GNPS molecular network to focus on explaining network components (connected components, cliques.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3647
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -46,6 +47,7 @@ attribution:
 
 # graph-based-metabolite-similarity-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and compare fragmentation patterns represented as m/z-difference graphs across MS/MS spectra to identify metabolite similarities independent of external databases or molecular formulas. This skill enables discovery of common structural features shared by subsets of spectra, facilitating untargeted metabolite annotation and network component interpretation.

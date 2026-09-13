@@ -3,6 +3,7 @@ name: outlier-detection-qc-sample-ratio-analysis
 description: Use when after building a SummarizedExperiment object from metabolomics LC-MS data with QC and Study Sample types defined, when you need to identify QC samples with aberrant Compound/Internal Standard ratios (indicating instrument drift, matrix effects, or sample degradation) and Study Samples with.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3375

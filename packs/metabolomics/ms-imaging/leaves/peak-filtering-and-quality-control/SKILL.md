@@ -3,6 +3,7 @@ name: peak-filtering-and-quality-control
 description: Use when after peak picking and alignment have been performed on MSImagingArrays data (via peakPick() and peakProcess()), apply this skill when you need to remove noise-driven or low-frequency peaks before summarizing reference peaks across the full imaging dataset.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

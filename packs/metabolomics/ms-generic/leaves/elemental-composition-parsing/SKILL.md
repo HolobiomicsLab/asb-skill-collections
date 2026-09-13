@@ -3,6 +3,7 @@ name: elemental-composition-parsing
 description: Use when when you have FT-ICR MS peak data with assigned molecular formulas (e.g., from CoreMS, Formularity, or similar formula assignment tools) and need to compute thermodynamic indices (DBE, GFE, AImod, NOSC) or classify peaks by elemental composition.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3737
   edam_topics:
   - http://edamontology.org/topic_3172

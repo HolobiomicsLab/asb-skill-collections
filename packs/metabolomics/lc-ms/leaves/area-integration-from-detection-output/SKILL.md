@@ -3,6 +3,7 @@ name: area-integration-from-detection-output
 description: Use when you have region-of-interest (ROI) LC-MS data and a pre-trained object detection model has already predicted peak locations and confidence scores.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_3520

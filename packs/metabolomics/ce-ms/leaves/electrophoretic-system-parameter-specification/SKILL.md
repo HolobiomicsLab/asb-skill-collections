@@ -3,6 +3,7 @@ name: electrophoretic-system-parameter-specification
 description: Use when you are preparing to perform effective mobility transformation of CE-MS data and must establish the electrophoretic system's calibration context.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0625

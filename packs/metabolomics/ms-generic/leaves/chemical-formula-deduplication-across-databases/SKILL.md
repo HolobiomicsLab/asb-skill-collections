@@ -3,6 +3,7 @@ name: chemical-formula-deduplication-across-databases
 description: Use when you have retrieved chemical formulae and metadata from two or more of HMDB, ChEMBL, or PubChem and need to merge them into a single searchable database without formula duplication.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -40,6 +41,7 @@ attribution:
 
 # chemical-formula-deduplication-across-databases
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Deduplicate and resolve cross-references among chemical formulae retrieved from multiple heterogeneous repositories (HMDB, ChEMBL, PubChem) to construct a unified, non-redundant formulae knowledge base. This skill is essential for building comprehensive metabolomic reference databases where the same molecular structure may be catalogued under different identifiers or metadata across sources.

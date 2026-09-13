@@ -3,6 +3,7 @@ name: noise-smoothing-chromatographic-signals
 description: Use when when you have raw LC-HRMS profile-mode data (rt × mz intensity matrices) and need to detect chromatographic peaks using gradient-descent or local-maxima algorithms.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -41,6 +42,7 @@ attribution:
 
 # noise-smoothing-chromatographic-signals
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Apply smoothing filters to LC-HRMS chromatographic signals (retention time × m/z matrices) to reduce noise prior to peak detection. This preprocessing step is essential for accurate gradient-descent peak localization and feature extraction in untargeted metabolomics workflows.

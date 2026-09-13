@@ -3,6 +3,7 @@ name: mass-spectrometry-data-format-parsing
 description: Use when you have raw MS/MS spectra in one of the supported exchange formats (.mgf, .mzML, or .msp) and need to ingest them into an MS2LDA pipeline for unsupervised motif discovery. This skill is required before any preprocessing, filtering, or ionization-mode-specific handling can occur.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

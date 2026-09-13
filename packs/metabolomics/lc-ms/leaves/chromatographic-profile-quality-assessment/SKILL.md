@@ -3,6 +3,7 @@ name: chromatographic-profile-quality-assessment
 description: Use when running targeted peak detection on LC-MS data acquired with multiple overlapping m/z scan windows and observing distorted or periodically discontinuous peak profiles in EIC plots.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: excel-file-parsing-for-metabolomics
 description: 'Use when you have a preprocessed LC-MS peak table exported from peak-picking software (e.g., MS-DIAL) in Excel format with three logical compartments: sample annotation (rows), feature annotation (columns), and abundance matrix (numeric values).'
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -49,6 +50,7 @@ attribution:
 
 # excel-file-parsing-for-metabolomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse LC-MS peak tables from Excel spreadsheets (e.g., MS-DIAL output) into R and construct MetaboSet objects with properly annotated Feature_ID identifiers, sample metadata, and feature annotations. This is the foundational step in the notame workflow that converts raw peak-picking output into a structured, queryable data object for downstream preprocessing and analysis.

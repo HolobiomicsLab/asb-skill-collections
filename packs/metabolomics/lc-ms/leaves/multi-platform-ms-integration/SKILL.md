@@ -3,6 +3,7 @@ name: multi-platform-ms-integration
 description: Use when you have untargeted metabolomics data from multiple MS instruments (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_0769
@@ -54,6 +55,7 @@ attribution:
 
 # multi-platform-ms-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Unified preprocessing and feature extraction across heterogeneous mass spectrometry platforms (CE-MS and LC-MS) by converting vendor formats to standardized mzXML/mzML, then applying parameter-driven ROI detection, normalization, and augmentation. Enables cross-platform metabolomics studies without platform-specific reimplementation.

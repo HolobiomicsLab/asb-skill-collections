@@ -3,6 +3,7 @@ name: metabolite-feature-m-z-matching
 description: Use when you have (1) a benchmark dataset of known molecules with accurate m/z values, retention time boundaries, and isotopologue identifiers for all enviPat-predicted adducts;
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0625

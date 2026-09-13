@@ -3,6 +3,7 @@ name: spectral-output-formatting
 description: Use when after generating tandem mass spectrum predictions from a neural model (ICEBERG, SCARF, or baseline), and before attempting retrieval ranking, metric computation, or validation against experimental spectra.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3932
   edam_topics:
   - http://edamontology.org/topic_0121

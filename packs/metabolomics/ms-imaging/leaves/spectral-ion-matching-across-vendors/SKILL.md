@@ -3,6 +3,7 @@ name: spectral-ion-matching-across-vendors
 description: Use when you have raw line-scan MSI data from any supported vendor (Agilent .d, Bruker .tsf/.baf/.tdf, Thermo .raw, or .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3755
   edam_topics:
   - http://edamontology.org/topic_0121

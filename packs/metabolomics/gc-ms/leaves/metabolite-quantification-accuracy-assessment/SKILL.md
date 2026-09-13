@@ -3,6 +3,7 @@ name: metabolite-quantification-accuracy-assessment
 description: Use when you have executed mzExacto() on a preprocessed GC-MS dataset and need to verify that the returned dataframe correctly matches query chemicals to their m/z peaks, retention times, and quantitative measurements (area values).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: usi-spectrum-identifier-parsing
 description: Use when when you have a USI string (e.g., mzspec:MTBLS1124:QC07.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -41,6 +42,7 @@ attribution:
 
 # USI Spectrum Identifier Parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse Universal Spectrum Identifiers (USIs) to extract repository accession codes and file identifiers, enabling programmatic resolution and retrieval of mass spectrometry data from public repositories like GNPS, MassIVE, and MetaboLights. This skill is essential for automating data discovery and visualization workflows across heterogeneous mass spectrometry data sources.

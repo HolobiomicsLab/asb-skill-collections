@@ -3,6 +3,7 @@ name: evaluation-data-object-handling
 description: Use when after completing an Environment simulation run with save_eval flag enabled, when you need to preserve the EvaluationData object containing scan provenance, chemical source definitions, and fragmentation events for later inspection, validation, or reanalysis without re-running the full.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3370

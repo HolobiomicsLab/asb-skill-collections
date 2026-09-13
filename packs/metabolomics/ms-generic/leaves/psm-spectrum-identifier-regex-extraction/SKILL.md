@@ -3,6 +3,7 @@ name: psm-spectrum-identifier-regex-extraction
 description: Use when when you have PSM identifications from a search engine (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0121

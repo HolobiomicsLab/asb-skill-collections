@@ -3,6 +3,7 @@ name: confidence-score-interpretation
 description: Use when after executing forward inference on preprocessed mass spectrometry spectra with a deep learning model (e.g., PS²MS), when you have per-spectrum predictions with associated confidence scores or per-class probabilities.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -42,6 +43,7 @@ attribution:
 
 # confidence-score-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret and apply confidence thresholds to deep learning model predictions for NPS classification from mass spectrometry data. This skill filters predictions by model confidence to assign reliable NPS class labels and exclude low-confidence matches.

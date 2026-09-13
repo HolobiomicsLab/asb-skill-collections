@@ -3,6 +3,7 @@ name: instrumental-parameter-validation-mass-spectrometry
 description: Use when when you have obtained a raw Orbitrap mass spectrometry file and need to verify that the instrument was configured as claimed in the methods section or dataset documentation—especially before investing in peptide fragmentation analysis, spectrum library matching, or quantitative proteomics.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

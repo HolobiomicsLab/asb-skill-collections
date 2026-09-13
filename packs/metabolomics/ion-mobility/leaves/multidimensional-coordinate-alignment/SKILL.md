@@ -3,6 +3,7 @@ name: multidimensional-coordinate-alignment
 description: Use when you have detected feature tables from two or more LC-IMS-MS/MS samples (each containing m/z, drift_time, retention_time, and intensity measurements) and need to identify which features correspond to the same chemical compound across samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

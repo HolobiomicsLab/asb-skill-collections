@@ -3,6 +3,7 @@ name: msi-data-visualization-and-spatial-analysis
 description: Use when when you have imzML-format MSI data and need to identify biochemical species in specific tissue regions or anatomical structures.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3520

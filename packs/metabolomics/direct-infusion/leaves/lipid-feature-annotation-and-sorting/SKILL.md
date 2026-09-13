@@ -3,6 +3,7 @@ name: lipid-feature-annotation-and-sorting
 description: Use when after quantifying ion images in LipidQMap and before exporting to HDF5 format, when you need to organize per-feature metadata (lipid ID, class, adduct, m/z, internal standard flag) into aligned datasets that can be linked to intensity data via dimension scales and sorted for reproducible.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -42,6 +43,7 @@ attribution:
 
 # lipid-feature-annotation-and-sorting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate quantified lipid features with chemical identity metadata (lipid class, adduct form, neutral mass, m/z) and sort them by m/z for HDF5 export, ensuring machine-readable and standardized feature organization in MSI data containers.

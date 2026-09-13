@@ -3,6 +3,7 @@ name: chromatographic-method-transfer-learning
 description: 'Use when you have experimental RT measurements from a source chromatographic method and need to predict RTs for the same molecules on a target chromatographic method, but lack a large calibration dataset (typical scenario: 10–100 molecules with ground truth RTs on both methods).'
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -41,6 +42,7 @@ attribution:
 
 # chromatographic-method-transfer-learning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply Bayesian meta-learning to project retention times (RTs) across chromatographic methods using a minimal calibration set (≥10 molecules), enabling rapid method transfer without full retraining. This skill bridges different LC-MS platforms by learning a probabilistic RT projection mapping from a small set of known compounds.

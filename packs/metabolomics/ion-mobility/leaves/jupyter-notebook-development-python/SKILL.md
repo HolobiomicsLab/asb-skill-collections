@@ -3,6 +3,7 @@ name: jupyter-notebook-development-python
 description: Use when when building reproducible Python-based computational workflows that must serve both beginner and expert users; when the analysis requires interactive parameter tuning, file upload capability, or real-time result visualization;
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -49,6 +50,7 @@ attribution:
 
 # Jupyter Notebook Development in Python
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Develop and deploy Python-based Jupyter notebooks as interactive computational tools for scientific analysis, packaged in multiple execution environments (cloud-hosted and local) to accommodate different user expertise levels and data scales. This skill encompasses notebook architecture, dependency management, graphical interface integration, and deployment across Google Colaboratory and Jupyter Lab platforms.

@@ -3,6 +3,7 @@ name: interference-profile-identification
 description: Use when after running saturation repair or multidimensional smoothing on IM-MS data when you need to validate whether corrected peaks are reliable or whether overlapping coeluting/comobiling ions may have caused incorrect signal reconstruction.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -48,6 +49,7 @@ attribution:
 
 # interference-profile-identification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and diagnose highly convoluted elution and ion mobility profiles caused by spectral interferences in IM-MS data, which may compromise the accuracy of downstream signal reconstruction algorithms like saturation repair. This skill is essential for quality control of preprocessed IM-MS data to flag problematic ion signals before accepting computational corrections.

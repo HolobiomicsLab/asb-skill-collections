@@ -3,6 +3,7 @@ name: ionization-polarity-selection-and-filtering
 description: Use when loading raw mass spectrometry data (MGF, mzML, or msp format) into MS2LDA and you need to isolate spectra from a single ionization polarity.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

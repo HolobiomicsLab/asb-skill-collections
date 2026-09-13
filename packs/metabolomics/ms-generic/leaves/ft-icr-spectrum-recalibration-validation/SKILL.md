@@ -3,6 +3,7 @@ name: ft-icr-spectrum-recalibration-validation
 description: 'Use when after applying mass calibration functions (LedFord, linear, or quadratic equations) to an FT-ICR transient or magnitude-mode dataset, before running SearchMolecularFormulas. Specifically, validate recalibration when: (1) comparing recalibrated spectra against reference calibration files (e.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

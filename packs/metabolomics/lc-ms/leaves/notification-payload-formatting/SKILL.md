@@ -3,6 +3,7 @@ name: notification-payload-formatting
 description: Use when when a QC check fails during an LC-MS instrument run and you need to alert users in real time.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0091

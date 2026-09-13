@@ -3,6 +3,7 @@ name: unmatched-peak-detection-and-penalization
 description: Use when when annotating MS/MS spectra against spectral libraries and chimeric spectra (spectra containing fragments from multiple precursor ions) are suspected or known to be present in your dataset.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0121

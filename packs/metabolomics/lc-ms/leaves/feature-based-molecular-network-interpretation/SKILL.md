@@ -3,6 +3,7 @@ name: feature-based-molecular-network-interpretation
 description: Use when you have a feature-based molecular network generated from non-targeted LC-MS/MS metabolomics data (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2238
   edam_topics:
   - http://edamontology.org/topic_3172

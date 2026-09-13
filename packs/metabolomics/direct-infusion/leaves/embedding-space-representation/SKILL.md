@@ -3,6 +3,7 @@ name: embedding-space-representation
 description: Use when you have pairs or triplets of MS/MS spectra with associated metadata (compound structural information, Tanimoto similarity scores) and want to learn embeddings that simultaneously preserve spectral similarity relationships and reconstruct peak intensities.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -41,6 +42,7 @@ attribution:
 
 # embedding-space-representation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct composite loss functions combining contrastive (InfoNCE) and reconstruction (MSE) terms to learn dense embeddings from MS/MS spectra peak information and metadata. This skill applies contrastive learning principles to mass spectrometry data where both pairwise similarity and peak-intensity reconstruction are training signals.

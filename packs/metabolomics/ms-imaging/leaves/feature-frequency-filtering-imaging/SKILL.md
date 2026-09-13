@@ -3,6 +3,7 @@ name: feature-frequency-filtering-imaging
 description: Use when after peak alignment across all spectra in an imaging dataset, use this skill when you have detected many peaks but need to reduce false positives and sparse features.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

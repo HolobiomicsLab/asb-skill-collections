@@ -3,6 +3,7 @@ name: file-path-normalization-and-validation
 description: Use when when preparing to read Thermo Fisher Scientific .raw files using rawrr functions (readFileHeader, readSpectrum, readChromatogram, readIndex), or when retrieving cached assembly paths for the wrapped RawFileReader dependency.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: gnps-repository-querying
 description: Use when when you have a USI string (e.g., mzspec:GNPS:TASK-d93bdbb5cdda40e48975e6e18a45c3ce-...
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3200
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -41,6 +42,7 @@ attribution:
 
 # GNPS Repository Querying
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Resolve Universal Spectrum Identifiers (USI) to retrieve mass spectrometry data from GNPS analysis tasks, MassIVE datasets, MetaboLights, and other public repositories via the GNPS LCMS Visualization Dashboard. This skill enables programmatic and interactive access to spectrum peak lists and metadata across multiple mass spectrometry data sources.

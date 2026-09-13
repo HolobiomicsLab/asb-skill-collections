@@ -3,6 +3,7 @@ name: feature-table-export-and-validation
 description: Use when after executing an MZmine batch processing workflow on raw metabolomics data (mzML/mzXML format), when you need to convert the in-memory feature detection and alignment results into a shareable, schema-compliant tabular format suitable for downstream statistical analysis, figure.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -38,6 +39,7 @@ attribution:
 
 # feature-table-export-and-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Export processed metabolomics feature tables from MZmine in standardized formats (CSV, mzTab) and validate output dimensions and content against repository documentation or expected schema. This skill ensures that feature detection, alignment, and normalization workflows produce compliant, reproducible tabular outputs.

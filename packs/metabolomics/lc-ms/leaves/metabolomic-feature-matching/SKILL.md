@@ -3,6 +3,7 @@ name: metabolomic-feature-matching
 description: Use when you have two LC-MS feature tables (each with m/z, retention time, and intensity columns) from separate metabolomic experiments or replicates, and you need to establish which features in dataset A correspond to which features in dataset B to enable comparative or longitudinal analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0091

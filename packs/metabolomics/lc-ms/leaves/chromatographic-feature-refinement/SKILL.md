@@ -3,6 +3,7 @@ name: chromatographic-feature-refinement
 description: Use when after performing retention-time-based grouping on LC-MS data (e.g., with a 10–20 second window) and observing that many feature groups contain features with similar retention times but dissimilar abundance patterns across samples or different extracted ion chromatogram peak shapes.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3520

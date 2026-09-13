@@ -3,6 +3,7 @@ name: molecular-dataset-partitioning-and-preprocessing
 description: Use when you have raw molecular datasets (e.g., METLIN-CCS, CCSBase) with SMILES strings, 3D coordinates, adduct information, and ground-truth collision cross section labels, and you need to format them for GNN training and held-out test evaluation with consistent standardization.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0154

@@ -3,6 +3,7 @@ name: spectroscopic-data-preprocessing
 description: Use when when you have raw spectroscopic measurements in heterogeneous formats (IR, Raman, UV-Vis, mass spectra, or NMR) and need to feed them into a spectrum-conditioned diffusion model for de novo molecular structure elucidation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3565
   edam_topics:
   - http://edamontology.org/topic_0593

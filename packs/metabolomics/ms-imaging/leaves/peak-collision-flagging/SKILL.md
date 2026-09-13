@@ -3,6 +3,7 @@ name: peak-collision-flagging
 description: Use when you have extracted a peak list from MSI data and need to annotate matrix-related signals, but overlapping peaks or isobaric ions (ions with identical or near-identical m/z values) risk being misclassified.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_0659

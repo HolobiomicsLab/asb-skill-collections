@@ -3,6 +3,7 @@ name: signal-acquisition-error-quantification
 description: Use when you have processed the same GC–MS dataset (m/z vs retention time) through two independent signal acquisition pipelines and need to compute and compare their detection accuracy. Use this skill when one method (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -47,6 +48,7 @@ attribution:
 
 # signal-acquisition-error-quantification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify and compare error rates of signal acquisition and marker identification between two chromatography–mass spectrometry processing methods (e.g., NPFimg vs. XCMS) on the same GC–MS dataset to validate algorithmic reliability. This skill surfaces when conventional peak picking is suspected of introducing false positives or false negatives, and a reference method is available for comparison.

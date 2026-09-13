@@ -3,6 +3,7 @@ name: baseline-comparison-performance-benchmarking
 description: 'Use when when you have implemented a novel annotation algorithm or network and must verify it outperforms a simpler reference approach on held-out or independent spectral data. Specifically: (1) you have ground-truth annotations for a common test set;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3370

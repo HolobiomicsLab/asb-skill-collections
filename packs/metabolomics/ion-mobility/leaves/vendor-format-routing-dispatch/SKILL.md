@@ -3,6 +3,7 @@ name: vendor-format-routing-dispatch
 description: Use when you have a collection of raw mass spectrometry data files from multiple instrument vendors (Agilent, Bruker, Thermo) and/or mzML exports that need to be converted to a standardized, cross-platform format for downstream software development, AI research, or multi-vendor meta-analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: bgc-spectrum-ranking-by-kernel-similarity
 description: 'Use when you have: (1) a trained IOKR model mapping from spectrum kernels to molecular fingerprints, (2) MS2 spectra from your sample, (3) a set of candidate BGCs with known or predicted structures (e.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3634
   edam_topics:
   - http://edamontology.org/topic_0121

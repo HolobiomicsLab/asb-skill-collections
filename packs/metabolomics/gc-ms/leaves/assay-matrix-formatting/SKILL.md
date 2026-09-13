@@ -3,6 +3,7 @@ name: assay-matrix-formatting
 description: Use when after generating a feature table via mzrtsim() containing simulated peak abundances across samples with condition and batch effects, and you need to expose the abundance data through Bioconductor's SummarizedExperiment interface for use with standard accessor functions (assay(), colData()).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0091

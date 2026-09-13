@@ -3,6 +3,7 @@ name: distribution-channel-validation
 description: 'Use when when preparing a software release, testing contribution workflows, or auditing package availability: verify that matchms can be installed and imported successfully from all advertised distribution channels (PyPI and Bioconda) to confirm the package metadata, dependencies, and entry points.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3501
   edam_topics:
   - http://edamontology.org/topic_0091

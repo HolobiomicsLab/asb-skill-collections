@@ -3,6 +3,7 @@ name: isotope-labeling-data-interpretation
 description: Use when you have LC-MS FAM measurements from an isotope-labeling experiment and need to correct them to obtain true MDV values.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: mobility-scale-transformation
 description: Use when analyzing CE-MS(/MS) data where electroosmotic flow fluctuations cause variable migration times for the same compounds across runs.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: ms-dial-output-parsing
 description: Use when you have completed peak picking in MS-DIAL (generating files like Urine_RP_NEG_norm.txt or Urine_RP_POS_norm.txt) and need to load the resulting feature table into R for quality control, feature filtering, normalization, or metabolite annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3172

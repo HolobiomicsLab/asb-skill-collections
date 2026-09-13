@@ -3,6 +3,7 @@ name: type-safety-and-length-matching-validation
 description: Use when implementing data replacement methods (such as `[<-`, `$<-`, `mz<-`, `intensity<-`, `peaksData<-`) in a writable MsBackend subclass.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3375

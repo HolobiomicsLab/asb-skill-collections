@@ -3,6 +3,7 @@ name: interactive-plot-customization-bokeh
 description: Use when when you have loaded extracted ion chromatogram traces (via SqMassLoader from sqMass files) and need to render them as interactive web-based visualizations where users can pan, zoom, hover for metadata, mute individual traces, and optionally visualize peak boundaries from OpenSwath results.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0571
   edam_topics:
   - http://edamontology.org/topic_3520

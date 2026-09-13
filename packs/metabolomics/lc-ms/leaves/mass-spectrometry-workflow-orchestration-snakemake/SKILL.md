@@ -3,6 +3,7 @@ name: mass-spectrometry-workflow-orchestration-snakemake
 description: Use when when you have a collection of mzML.gz files from a multidimensional MS instrument (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3637
   edam_topics:
   - http://edamontology.org/topic_3520

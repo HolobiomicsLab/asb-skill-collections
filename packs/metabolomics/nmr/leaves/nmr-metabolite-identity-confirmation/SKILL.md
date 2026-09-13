@@ -3,6 +3,7 @@ name: nmr-metabolite-identity-confirmation
 description: Use when you have preprocessed 1H NMR spectral data with an unknown or ambiguous peak (e.g., at a specific chemical shift δ), and you need to determine its chemical identity.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -44,6 +45,7 @@ attribution:
 
 # nmr-metabolite-identity-confirmation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use Statistical Total Correlation Spectroscopy (STOCSY) to confirm the chemical identity of unknown NMR signals by analyzing their covariance and correlation patterns with a known driver signal. This skill resolves ambiguous metabolic features to specific metabolites through spectral correlation analysis.

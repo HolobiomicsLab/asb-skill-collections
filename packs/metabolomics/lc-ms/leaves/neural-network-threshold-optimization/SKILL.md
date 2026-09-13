@@ -3,6 +3,7 @@ name: neural-network-threshold-optimization
 description: Use when after training a NeatMS neural network model on labelled peak data (High_quality, Low_quality, Noise) and you need to determine the optimal probability threshold for classifying peaks in your untargeted LCMS dataset.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

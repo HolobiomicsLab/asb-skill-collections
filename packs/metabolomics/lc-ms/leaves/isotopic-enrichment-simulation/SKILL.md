@@ -3,6 +3,7 @@ name: isotopic-enrichment-simulation
 description: Use when you have a peptide sequence and need to predict its theoretical m/z values under partial or complete isotopic enrichment (e.g., 1% natural 13C abundance, 50% 13C labeling, or other SIP conditions).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

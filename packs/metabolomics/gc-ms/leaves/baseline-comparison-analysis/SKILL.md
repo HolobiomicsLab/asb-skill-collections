@@ -3,6 +3,7 @@ name: baseline-comparison-analysis
 description: Use when when you have trained a candidate model (e.g., an ensemble, a new architecture) and need to demonstrate its advantage over published or reference implementations on the same test data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3809
   edam_topics:
   - http://edamontology.org/topic_3520

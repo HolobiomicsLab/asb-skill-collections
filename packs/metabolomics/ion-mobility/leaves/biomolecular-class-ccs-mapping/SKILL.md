@@ -3,6 +3,7 @@ name: biomolecular-class-ccs-mapping
 description: Use when after biomolecular class labels have been assigned to features in a TWIM-MS dataset and you have raw ion mobility arrival time measurements. Use it when you need to convert arrival times to standardized CCS values where calibration accuracy depends critically on the biomolecular class (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_0121

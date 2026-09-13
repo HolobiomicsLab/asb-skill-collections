@@ -3,6 +3,7 @@ name: bgc-spectrum-iokr-score-computation
 description: Use when when you have a collection of microbial genomes with predicted BGCs (via antiSMASH), a set of MS/MS spectra (e.g. from GNPS), and you want to score potential BGC-spectrum associations based on the presence of conserved molecular substructures inferred from the BGC's closest MIBiG homolog.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0362
   edam_topics:
   - http://edamontology.org/topic_0602

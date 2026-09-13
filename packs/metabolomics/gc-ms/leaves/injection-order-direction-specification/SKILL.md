@@ -3,6 +3,7 @@ name: injection-order-direction-specification
 description: Use when when configuring a multi-well plate design (96-well, 384-well, or other format) in InjectionDesign for LC/GC-MS analysis and you need to specify whether analytical samples and QC controls should be injected row-by-row or column-by-column.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -39,6 +40,7 @@ attribution:
 
 # Injection-Order Direction Specification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Define the layout direction (row-wise or column-wise) for LC/GC-MS sample injection sequences across multi-well plates to control the physical order in which samples are analyzed. This parameter directly influences batch structure, randomization outcomes, and inter-batch balancing in high-throughput omics experiments.

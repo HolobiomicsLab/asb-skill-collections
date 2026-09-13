@@ -3,6 +3,7 @@ name: statistical-significance-testing-p-value-calculation
 description: Use when after standardizing link scores (strain correlation and IOKR) across all potential GCF-MF pairs in a metabologenomics dataset, perform significance testing to determine whether validated links show statistically distinguishable score distributions from the background.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3325

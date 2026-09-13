@@ -3,6 +3,7 @@ name: calibration-quality-assessment
 description: Use when after applying polynomial m/z domain recalibration using a reference peak list (e.g., SRFA.ref) to a Bruker FT-ICR dataset. Use this skill to verify that calibration has converged and that mass error statistics support reliable downstream annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

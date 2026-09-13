@@ -3,6 +3,7 @@ name: sparse-distance-matrix-interpretation
 description: Use when you have computed a sparse pairwise distance matrix from nearest neighbor indexes (containing only cosine distances between neighboring spectra, not exhaustive pairwise comparisons) and need to partition spectra into groups of similar ions or peptides.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: reaction-pathway-assignment-and-propagation
 description: Use when you have detected and clustered unknown MS features from untargeted xenobiotic metabolomics data, computed fragmentation pattern similarity scores between features and reference spectra, and now need to systematically assign individual features to specific biotransformation reactions (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0718
@@ -56,6 +57,7 @@ attribution:
 
 # reaction-pathway-assignment-and-propagation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A cluster-based annotation propagation strategy that assigns xenobiotic metabolites to known biotransformation reaction pathways by matching aligned MS features to reaction databases, then propagates those assignments across co-clustered unknown features. This skill enables high-throughput, automated linking of detected metabolites to their parent compound and reaction chemistry without individual spectral matching.

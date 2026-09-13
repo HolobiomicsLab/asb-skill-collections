@@ -3,6 +3,7 @@ name: mass-spectrometry-matrix-background-simulation
 description: Use when when you need to create negative control or background-only reference datasets for LC/GC-MS analysis pipelines—specifically to validate peak-picking algorithms, assess false-positive rates, or simulate instrument background and matrix effects (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3172

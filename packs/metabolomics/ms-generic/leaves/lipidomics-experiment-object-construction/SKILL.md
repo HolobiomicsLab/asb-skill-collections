@@ -3,6 +3,7 @@ name: lipidomics-experiment-object-construction
 description: Use when when you have lipidomics quantitation data (lipid abundances across samples) that you need to load into a unified, annotated R object for analysis—either from public Metabolomics Workbench studies via API, Skyline mass spectrometry software exports, or a custom numerical matrix with.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3407

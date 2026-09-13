@@ -3,6 +3,7 @@ name: spectral-peak-smoothing-artifact-removal
 description: Use when raw Agilent MassHunter (.d) or UIMF mass spectrometry files exhibit jagged or noisy peaks, particularly for low-abundance ions where signal-to-noise ratio is poor.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -49,6 +50,7 @@ attribution:
 
 # spectral-peak-smoothing-artifact-removal
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Multidimensional smoothing reduces noise and artifacts in TOF-MS and IM-MS data by attenuating jagged peaks common in low-abundance ions while preserving real signals. This preprocessing step enhances signal quality across elution time, m/z, and ion mobility dimensions before downstream analysis.

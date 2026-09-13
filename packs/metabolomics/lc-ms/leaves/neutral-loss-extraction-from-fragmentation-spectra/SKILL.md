@@ -3,6 +3,7 @@ name: neutral-loss-extraction-from-fragmentation-spectra
 description: Use when preparing MS/MS spectra for bag-of-fragments conversion and LDA-based motif discovery. You have raw spectra in supported formats (.mgf, .mzML, or .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3520

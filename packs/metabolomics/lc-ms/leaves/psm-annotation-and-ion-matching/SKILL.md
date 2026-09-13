@@ -3,6 +3,7 @@ name: psm-annotation-and-ion-matching
 description: Use when when you have an MS2 scan with observed peak data (m/z, intensity, charge state), a known peptide sequence, and need to determine which observed ions correspond to B and Y fragment ions. Apply this skill particularly when working with natural abundance (1.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0121

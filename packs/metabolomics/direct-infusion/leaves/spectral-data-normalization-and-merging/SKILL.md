@@ -3,6 +3,7 @@ name: spectral-data-normalization-and-merging
 description: Use when you have acquired multiple MS1 spectra over a defined acquisition time range (e.g., 0–30 s in FIA-MS) and need to combine them into a unified spectrum before feature detection.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

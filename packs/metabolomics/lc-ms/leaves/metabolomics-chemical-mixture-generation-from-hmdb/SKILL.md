@@ -3,6 +3,7 @@ name: metabolomics-chemical-mixture-generation-from-hmdb
 description: Use when you need to create realistic, diverse chemical populations for simulating LC-MS/MS acquisition strategies in a virtual environment. It is essential when you lack real metabolomics data but want to prototype and compare fragmentation strategies (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3172

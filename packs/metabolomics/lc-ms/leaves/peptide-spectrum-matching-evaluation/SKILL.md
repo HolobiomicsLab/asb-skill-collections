@@ -3,6 +3,7 @@ name: peptide-spectrum-matching-evaluation
 description: 'Use when when you have a tandem mass spectrum (MSMS) with known peptide sequence and wish to assess whether enabling neutral loss annotation (e.g., NH3: −17.026549, H2O: −18.010565) increases the proportion of observed m/z peaks that can be matched to predicted fragment ions.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0121

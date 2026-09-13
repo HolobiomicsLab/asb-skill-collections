@@ -3,6 +3,7 @@ name: mass-fragment-neutral-loss-representation
 description: Use when when you have raw or minimally processed MS/MS spectra (in positive or negative ion mode) and aim to infer recurring fragmentation patterns (Mass2Motifs) using topic modeling.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0769

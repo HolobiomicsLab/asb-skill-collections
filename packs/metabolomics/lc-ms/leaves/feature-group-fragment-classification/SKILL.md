@@ -3,6 +3,7 @@ name: feature-group-fragment-classification
 description: Use when you have a detected LC-MS feature table (with m/z, retention time, and intensity columns) and need to identify which features are derivatives of the same parent molecule rather than distinct metabolites.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3647
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -42,6 +43,7 @@ attribution:
 
 # feature-group-fragment-classification
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Annotate and group LC-MS features as isotopes, adducts, or in-source fragments by applying mass-shift detection logic and neutral-loss pattern matching. This skill produces a labeled feature table that disambiguates related peaks, enabling more accurate downstream metabolite identification and reduces false positives in nontargeted metabolomics.

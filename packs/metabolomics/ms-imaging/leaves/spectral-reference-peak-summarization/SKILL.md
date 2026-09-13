@@ -3,6 +3,7 @@ name: spectral-reference-peak-summarization
 description: Use when after peak picking and alignment have been performed on preprocessed spectra (normalized, smoothed, and baseline-reduced), and you need to create a unified peak reference table that can be applied consistently across all spectra in an imaging dataset.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

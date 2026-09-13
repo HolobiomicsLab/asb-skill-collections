@@ -3,6 +3,7 @@ name: ms-data-preprocessing
 description: Use when you have received raw CE-MS or LC-MS output files in vendor-specific formats from a mass spectrometry instrument and need to process them through an untargeted metabolomics workflow (e.g., AriumMS) that requires standardized, interoperable file formats.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3650
   edam_topics:
   - http://edamontology.org/topic_0121

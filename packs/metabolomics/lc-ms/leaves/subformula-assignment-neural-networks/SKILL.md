@@ -3,6 +3,7 @@ name: subformula-assignment-neural-networks
 description: Use when when you have MS/MS spectra with assigned precursor formulas and need to annotate fragment peaks with their chemical subformulas, but want to avoid the computational overhead of generating full SIRIUS fragmentation trees or do not have access to spectrum databases.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

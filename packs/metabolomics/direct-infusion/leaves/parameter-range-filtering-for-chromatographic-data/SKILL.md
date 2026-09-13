@@ -3,6 +3,7 @@ name: parameter-range-filtering-for-chromatographic-data
 description: Use when you have raw MS data in instrument-native or mzML format (Agilent .d, Thermo .raw, Bruker .d) and need to isolate specific analyte regions defined by precise m/z windows, RT windows (in seconds or minutes), and/or ion mobility arrival-time windows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

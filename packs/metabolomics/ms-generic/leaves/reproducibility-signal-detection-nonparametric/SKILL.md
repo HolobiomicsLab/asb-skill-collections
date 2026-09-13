@@ -3,6 +3,7 @@ name: reproducibility-signal-detection-nonparametric
 description: Use when when you have high-dimensional replicate experimental data (e.g., metabolomics, proteomics, genomics assays) where technical or biological variability threatens reproducibility, and you need to distinguish genuine reproducible signals from noise without assuming normality.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -50,6 +51,7 @@ attribution:
 
 # reproducibility-signal-detection-nonparametric
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assess reproducibility of high-dimensional biological signals across replicate experiments using rank-based nonparametric methods, identifying reproducible features and sample pairs without distributional assumptions. This skill detects which metabolites, genes, or other features show consistent ranking patterns across biological or technical replicates, and which sample pairs exhibit reproducible signals across the feature space.

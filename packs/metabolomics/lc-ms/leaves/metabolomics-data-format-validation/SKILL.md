@@ -3,6 +3,7 @@ name: metabolomics-data-format-validation
 description: Use when you have a tab-delimited metabolomics data file (raw measurement output from xcms, Sciex OS, or similar acquisition pipelines) and need to load it into mzQuality before building a SummarizedExperiment.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: spectral-data-export-and-format-conversion
 description: Use when after running RAMClustR clustering on XCMS-processed metabolomics data, export spectral data when you need to share clustered spectra with external annotation software (MSFinder, Sirius), perform spectrum matching against reference databases, or prepare results for collaborative analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3790
   edam_topics:
   - http://edamontology.org/topic_3172

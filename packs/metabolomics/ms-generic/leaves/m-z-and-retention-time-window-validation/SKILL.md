@@ -3,6 +3,7 @@ name: m-z-and-retention-time-window-validation
 description: Use when before committing to full-scale targeted peak integration across all LC–MS runs in a metabolomics or lipidomics study. Apply this skill when you have a curated list of 5–50+ target compounds with theoretical m/z values and expected retention times, centroided .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0091

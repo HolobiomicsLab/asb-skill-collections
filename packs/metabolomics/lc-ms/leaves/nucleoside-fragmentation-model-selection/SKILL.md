@@ -3,6 +3,7 @@ name: nucleoside-fragmentation-model-selection
 description: Use when when your input biomolecule is a nucleoside or modified nucleoside (not a peptide) and you are building a synthetic LC-MS/MS run with SMITER.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

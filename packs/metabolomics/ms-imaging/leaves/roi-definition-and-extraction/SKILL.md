@@ -3,6 +3,7 @@ name: roi-definition-and-extraction
 description: Use when when you have loaded imzML MSI data into napari and need to focus analysis on a specific anatomical or morphological region rather than the entire image.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3520

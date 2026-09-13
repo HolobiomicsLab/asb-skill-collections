@@ -3,6 +3,7 @@ name: search-results-filtering-and-parsing
 description: Use when you have loaded DIA mass spectrometry search results containing feature identification data with associated Q-value scores, and you need to restrict the analytes available in selection drop-downs to those meeting a quality cutoff (typically 1% FDR equivalent) before visualization or manual.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

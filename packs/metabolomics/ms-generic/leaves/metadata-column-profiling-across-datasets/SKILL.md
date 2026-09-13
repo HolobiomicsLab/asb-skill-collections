@@ -3,6 +3,7 @@ name: metadata-column-profiling-across-datasets
 description: Use when you are curating metabolomics datasets with variable column naming conventions and need to detect, normalize, and populate standardized database-ID columns (HMDB_ID, PubChem_ID, KEGG_ID, etc.) across many mwTab files before deposition.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3172

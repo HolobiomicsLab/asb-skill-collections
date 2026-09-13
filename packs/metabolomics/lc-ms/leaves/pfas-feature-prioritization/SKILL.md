@@ -3,6 +3,7 @@ name: pfas-feature-prioritization
 description: Use when you have detected features in LC- or GC-HRMS data (via pyOpenMS or custom feature tables) and need to systematically rank them for likelihood of being PFAS compounds.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0121

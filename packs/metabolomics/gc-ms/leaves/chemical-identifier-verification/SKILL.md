@@ -3,6 +3,7 @@ name: chemical-identifier-verification
 description: Use when when you have a list of chemically known compounds and need to validate that an MS processing pipeline (e.g., mzExacto) correctly retrieves their characteristic m/z, retention time, match factor, and area values from GC-MS data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0769

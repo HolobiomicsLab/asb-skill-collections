@@ -3,6 +3,7 @@ name: spectral-library-compilation-and-merging
 description: Use when you have multiple mass spectral library files in different formats (MSP, MGF, MOL folders) from sources like NIST, MoNA, RIKEN, or GNPS, and need to produce a single consolidated MSP file with complete SMILES, InChIKey, and experimental retention index (RI) annotations for metabolomics or.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3520

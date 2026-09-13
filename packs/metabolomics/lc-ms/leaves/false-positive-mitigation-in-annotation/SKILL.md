@@ -3,6 +3,7 @@ name: false-positive-mitigation-in-annotation
 description: Use when you have implemented an automated feature annotation or adduct detection module and need to verify that assigned labels (e.g., [M+NH4]+, [M+K]+, [M+H2O+H]+, [M-H2O+H]+) are accurate and do not produce erroneous assignments on a reference feature set.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3172

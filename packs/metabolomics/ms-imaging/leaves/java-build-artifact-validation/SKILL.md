@@ -3,6 +3,7 @@ name: java-build-artifact-validation
 description: Use when when you need to verify that a Java project's automated build pipeline (GitHub Actions workflow) executes without errors and generates distributable artifacts (e.g., .deb installers, portable binaries, or .jar files).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3552
   edam_topics:
   - http://edamontology.org/topic_0091

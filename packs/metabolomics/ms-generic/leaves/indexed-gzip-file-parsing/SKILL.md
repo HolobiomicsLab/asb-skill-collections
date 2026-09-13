@@ -3,6 +3,7 @@ name: indexed-gzip-file-parsing
 description: Use when you have compressed mzML.gz files and need to retrieve specific spectra by numeric identifier without decompressing the entire file.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

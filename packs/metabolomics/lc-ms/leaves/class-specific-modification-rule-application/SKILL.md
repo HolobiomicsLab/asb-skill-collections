@@ -3,6 +3,7 @@ name: class-specific-modification-rule-application
 description: Use when after identifying putative BGC-encoded precursor peptides from a genome assembly via MetaMiner's BGC identifier, when preparing a RiPP structure database for downstream spectral matching via Dereplicator.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0121

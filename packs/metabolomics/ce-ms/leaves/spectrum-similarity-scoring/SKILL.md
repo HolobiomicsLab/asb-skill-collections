@@ -3,6 +3,7 @@ name: spectrum-similarity-scoring
 description: 'Use when you have an unknown MS/MS spectrum (query spectrum with m/z and intensity pairs) and a reference spectral library (local or public: GNPS, MASSBANK, DrugBANK), and you need to identify the -matching compounds by ranking library entries by spectral similarity.'
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -44,6 +45,7 @@ attribution:
 
 # spectrum-similarity-scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute similarity scores between an experimental MS/MS spectrum and library reference spectra using algorithms such as cosine similarity or spectral dot-product to rank and identify best-matching compounds. This is the core computational step that enables automated spectral library search and compound annotation.

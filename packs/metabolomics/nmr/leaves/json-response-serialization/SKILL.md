@@ -3,6 +3,7 @@ name: json-response-serialization
 description: Use when when a backend service receives structured prediction results from an external API (e.g., nmrshiftdb peak predictions) and must return them to a client application via HTTP POST response.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3172

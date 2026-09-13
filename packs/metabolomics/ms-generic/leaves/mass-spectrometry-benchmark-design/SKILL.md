@@ -3,6 +3,7 @@ name: mass-spectrometry-benchmark-design
 description: Use when when claiming that one mass spectrometry processing library achieves higher throughput than competitors, or when evaluating whether a new or optimized implementation delivers the expected computational efficiency gains.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_0121

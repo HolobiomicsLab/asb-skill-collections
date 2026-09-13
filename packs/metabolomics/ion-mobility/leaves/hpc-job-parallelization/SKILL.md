@@ -3,6 +3,7 @@ name: hpc-job-parallelization
 description: Use when you have a filtered set of conformers (100s–1000s) from ASE-ANI that each require independent quantum calculations via QUICK, and you have access to HPC resources with multiple cores or nodes. Parallelization is necessary when serial execution would exceed practical time budgets (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3372
@@ -43,6 +44,7 @@ attribution:
 
 # HPC Job Parallelization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Distribute independent conformer quantum calculations across HPC cores using a workflow manager to execute multiple QUICK jobs in parallel, reducing wall-clock time for large-scale CCS prediction pipelines. This skill coordinates job submission, resource allocation, and result aggregation on distributed compute infrastructure.

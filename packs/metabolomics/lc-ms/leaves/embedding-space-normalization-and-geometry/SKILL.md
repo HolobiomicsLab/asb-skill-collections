@@ -3,6 +3,7 @@ name: embedding-space-normalization-and-geometry
 description: Use when when designing a Siamese or multi-branch neural architecture where two or more embedding streams (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3520

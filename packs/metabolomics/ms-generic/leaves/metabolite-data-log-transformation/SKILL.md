@@ -3,6 +3,7 @@ name: metabolite-data-log-transformation
 description: Use when you have raw or baseline-corrected metabolite abundance measurements from mass spectrometry and need to prepare them for batch effect correction (e.g., CordBat) or multivariate analysis (e.g., PCA).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

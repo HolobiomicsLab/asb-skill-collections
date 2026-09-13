@@ -3,6 +3,7 @@ name: fragment-ion-peak-detection-and-normalization
 description: Use when immediately after loading raw MS/MS spectra from .mgf, .msp, or .mzML files, before generating the bag-of-fragments corpus or extracting neutral losses.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: molecular-structure-transformation
 description: Use when when you have native metabolite structures (SMILES or mol format) and need to predict adduct ions for a mass spectrometry imaging experiment that uses a derivatizing matrix known to produce ions other than common [M+H]+ (positive mode) or [M-H]- (negative mode).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_0154

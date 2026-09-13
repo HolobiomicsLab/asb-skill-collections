@@ -3,6 +3,7 @@ name: spectral-feature-annotation-and-labeling
 description: Use when you have a detected feature table (m/z, drift_time, retention_time, intensity) and need to identify and label C13 isotopic clusters for singly-charged features (z=+1).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

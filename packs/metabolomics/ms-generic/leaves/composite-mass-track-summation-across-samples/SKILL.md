@@ -3,6 +3,7 @@ name: composite-mass-track-summation-across-samples
 description: Use when after mass tracks have been aligned across samples into a MassGrid structure (m/z-aligned, same mass-to-charge ratio) and retention time calibration dictionaries have been computed for each sample.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3674
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -44,6 +45,7 @@ attribution:
 
 # Reconstruct the composite map by summing aligned mass track intensities
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aggregate intensity vectors from retention-time-aligned mass tracks across all samples into a composite map by element-wise summation at each scan position. This unified composite representation replaces independent peak detection on each sample, enabling statistics-guided peak detection on aggregated signal.

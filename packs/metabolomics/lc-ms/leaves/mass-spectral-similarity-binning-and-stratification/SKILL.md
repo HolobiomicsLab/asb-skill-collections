@@ -3,6 +3,7 @@ name: mass-spectral-similarity-binning-and-stratification
 description: Use when you have predicted structural similarity scores (e.g., Tanimoto or Dice scores) for a large set of spectrum pairs and need to assess prediction accuracy across the full range of possible similarities. Critical when evaluating whether uncertainty filtering (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0081

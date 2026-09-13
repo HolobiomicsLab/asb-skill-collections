@@ -3,6 +3,7 @@ name: virtual-environment-configuration
 description: Use when you have a Python application (e.g., ROIAL-NMR) with documented dependencies and version constraints, and you need to install it on a fresh machine or verify that the environment can be reconstructed without import or runtime errors.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_topics: []
   tools:
   - XlsxWriter

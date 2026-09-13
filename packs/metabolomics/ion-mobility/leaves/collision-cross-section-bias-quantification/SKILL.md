@@ -3,6 +3,7 @@ name: collision-cross-section-bias-quantification
 description: Use when you have ion mobility-mass spectrometry lipidomics data from samples spiked with U¹³C-labeled lipid internal standards (fully labeled yeast extract) and want to assess whether measured CCS values systematically deviate from a validated DT CCS N₂ reference library, indicating bias that may.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -41,6 +42,7 @@ attribution:
 
 # collision-cross-section-bias-quantification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify systematic bias in measured collision cross section (CCS) values relative to a reference library by comparing ion mobility-mass spectrometry measurements of U¹³C-labeled internal standard lipids against their known theoretical CCS values. This enables detection of instrument drift or calibration error before applying correction.

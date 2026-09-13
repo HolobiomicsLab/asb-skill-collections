@@ -3,6 +3,7 @@ name: smoothing-spline-basis-selection
 description: Use when you have a set of anchor feature pairs (m/z and retention time values) from two disparately-acquired LC-MS datasets and need to fit a smooth, nonlinear RT correction spline.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

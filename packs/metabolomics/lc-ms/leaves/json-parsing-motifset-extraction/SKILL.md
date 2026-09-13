@@ -3,6 +3,7 @@ name: json-parsing-motifset-extraction
 description: Use when you have completed the MS2LDA LDA modeling phase and possess motifset.json or motifset_optimized.json files containing inferred Mass2Motifs.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

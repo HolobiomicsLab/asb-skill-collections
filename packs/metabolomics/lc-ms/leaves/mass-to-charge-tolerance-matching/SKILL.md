@@ -3,6 +3,7 @@ name: mass-to-charge-tolerance-matching
 description: Use when you have statistically significant LC-MS features and need to group them into structural clusters. Specifically, use it after selecting features by p-value threshold (e.g., p < 0.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -60,6 +61,7 @@ attribution:
 
 # mass-to-charge-tolerance-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Matches mass-to-charge (m/z) values of LC-MS features within a specified parts-per-million (ppm) tolerance to link features with identical or related neutral masses across ionization adducts or retention time windows. This is a core operation in LC-MS feature clustering that groups features likely to originate from the same metabolite.

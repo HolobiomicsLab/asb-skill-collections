@@ -3,6 +3,7 @@ name: ms2-spectral-interpretation
 description: Use when you have extracted an MS1 feature table (from XCMS or custom CSV with m/z, retention time, and intensity columns) and one or more DDA mzXML files from the same or related LC-MS runs, and you need to annotate features with MS2 spectral data and match them against a standard spectral library.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: ms2-spectral-deconvolution-and-annotation
 description: Use when you have acquired LC-IMS-MS/MS data (or equivalent multidimensional MS/MS acquisition) in mzML or mzML.gz format and need to disambiguate overlapping fragmentation spectra arising from co-eluting or co-drifting precursor ions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: metabolite-annotation-integration-across-databases
 description: Use when you have MZmine-aligned features with m/z and retention time, and you have generated spectral annotations from two or more database sources (e.g., GNPS/ISDB spectral matching and SIRIUS in silico structure elucidation).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_0154

@@ -3,6 +3,7 @@ name: metabolic-model-constraint-specification
 description: Use when you have a generic constraint-based metabolic model (SBML format) and cross-sectional omics data (RNA-seq, intracellular metabolomics, YSI or bioanalyzer extracellular flux measurements) for multiple biological samples and need to create sample-specific models that discriminate whether.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0602

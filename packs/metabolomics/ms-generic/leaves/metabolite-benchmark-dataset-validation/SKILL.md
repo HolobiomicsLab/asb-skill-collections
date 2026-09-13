@@ -3,6 +3,7 @@ name: metabolite-benchmark-dataset-validation
 description: Use when after mzRAPP has exported a benchmark CSV file from processing a batch of centroided mzML files (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_3172

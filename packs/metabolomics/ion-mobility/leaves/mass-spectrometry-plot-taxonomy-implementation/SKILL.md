@@ -3,6 +3,7 @@ name: mass-spectrometry-plot-taxonomy-implementation
 description: Use when you are building a visualization library that must support multiple plot kinds (chromatogram, spectrum, mobilogram, peakmap) across multiple rendering backends (matplotlib, bokeh, plotly) and want to avoid code duplication.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520

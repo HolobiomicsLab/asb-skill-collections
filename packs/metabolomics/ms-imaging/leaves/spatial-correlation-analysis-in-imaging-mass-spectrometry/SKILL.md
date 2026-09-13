@@ -3,6 +3,7 @@ name: spatial-correlation-analysis-in-imaging-mass-spectrometry
 description: Use when after annotating ion pairs with known adducts (using adductMatch or diffGetPeaks), use this skill to filter suspected adduct pairs by testing if their pixel-level intensity profiles are significantly correlated.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3674
   edam_topics:
   - http://edamontology.org/topic_0769

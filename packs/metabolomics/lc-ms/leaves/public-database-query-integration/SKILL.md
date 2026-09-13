@@ -3,6 +3,7 @@ name: public-database-query-integration
 description: Use when you have an experimental MS/MS spectrum (m/z and intensity pairs with known precursor m/z) and need to identify the compound by searching against public repositories or a local reference library.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -46,6 +47,7 @@ attribution:
 
 # public-database-query-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Query and annotate unknown MS/MS spectra against public spectral libraries (GNPS, MASSBANK, DrugBANK) or local databases using spectral similarity algorithms. This skill enables rapid compound identification by matching experimental fragmentation patterns to curated reference spectra with associated metadata.

@@ -3,6 +3,7 @@ name: multi-modal-spectroscopic-data-integration
 description: Use when you have acquired complementary spectroscopic measurements (NMR, HSQC, COSY, IR) for the same molecular sample and need to combine them for structure elucidation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_0154

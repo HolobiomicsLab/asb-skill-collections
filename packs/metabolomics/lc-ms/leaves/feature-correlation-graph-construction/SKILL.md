@@ -3,6 +3,7 @@ name: feature-correlation-graph-construction
 description: Use when after imputing missing values and before assigning Cluster_IDs in the notame preprocessing pipeline.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -47,6 +48,7 @@ attribution:
 
 # Reconstruct the feature clustering algorithm producing Cluster_ID assignments
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build a graph of correlated LC-MS metabolic features by identifying feature pairs with high correlation and similar retention times, then decompose the graph into connected components to group related features for subsequent cluster assignment. This is a prerequisite step for feature clustering and metabolite identification in non-targeted metabolomics workflows.

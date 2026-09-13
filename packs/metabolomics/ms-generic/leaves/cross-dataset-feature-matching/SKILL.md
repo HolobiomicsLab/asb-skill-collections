@@ -3,6 +3,7 @@ name: cross-dataset-feature-matching
 description: Use when you have two or more feature tables in HDF5 format with detected features characterized by m/z, drift time, retention time, and intensity, and you need to match corresponding features across samples to account for systematic shifts caused by instrument variation or tuning differences.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

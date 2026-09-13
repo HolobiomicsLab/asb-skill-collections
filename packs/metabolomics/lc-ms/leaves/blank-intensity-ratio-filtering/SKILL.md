@@ -3,6 +3,7 @@ name: blank-intensity-ratio-filtering
 description: Use when apply this filter after feature detection and before downstream statistical analysis when your experimental design includes blank samples (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091

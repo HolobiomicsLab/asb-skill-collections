@@ -3,6 +3,7 @@ name: retention-time-feature-clustering
 description: Use when after chromatographic peak detection (findChromPeaks) when you have a processed XcmsExperiment object with detected peaks and need to perform initial feature grouping. Use it when features of the same compound are expected to co-elute within a narrow retention-time window (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0630

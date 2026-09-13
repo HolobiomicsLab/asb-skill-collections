@@ -3,6 +3,7 @@ name: chemical-class-node-mapping
 description: Use when you have a GNPS mass spectral molecular network (in graphml or cytoscape format) and want to enrich its nodes with chemical class information derived from GNPS public library spectral matches.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3359
   edam_topics:
   - http://edamontology.org/topic_0091

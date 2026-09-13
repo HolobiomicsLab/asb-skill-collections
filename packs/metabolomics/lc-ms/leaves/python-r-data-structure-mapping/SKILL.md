@@ -3,6 +3,7 @@ name: python-r-data-structure-mapping
 description: Use when when you have mass spectrometry data in R's Spectra format but need to leverage Python libraries (matchms, spectrum_utils) for specialized operations like spectral similarity scoring, filtering, or normalization that lack native R implementations or perform better in Python.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3356
   edam_topics:
   - http://edamontology.org/topic_3370

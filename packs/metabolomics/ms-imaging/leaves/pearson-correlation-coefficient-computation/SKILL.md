@@ -3,6 +3,7 @@ name: pearson-correlation-coefficient-computation
 description: Use when after annotating mass-difference pairs with candidate adduct identities, compute correlations to test whether putative parent and adduct ion intensities co-vary across the imaging pixel grid. High positive correlation (with Bonferroni-corrected p-value < 0.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3520

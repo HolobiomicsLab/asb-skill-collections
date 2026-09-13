@@ -3,6 +3,7 @@ name: spectral-image-filtering
 description: Use when when generating augmented variants of single-channel or multi-channel ion images for contrastive learning in mass spectrometry imaging analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3564
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -41,6 +42,7 @@ attribution:
 
 # spectral-image-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply spatial filtering to ion images in mass spectrometry imaging (MSI) to smooth local intensity variations while preserving spatial structure for contrastive representation learning. This is a component of the T_COL data augmentation pipeline in DeepION for generating augmented ion image pairs.

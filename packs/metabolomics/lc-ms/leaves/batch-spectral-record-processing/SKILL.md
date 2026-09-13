@@ -3,6 +3,7 @@ name: batch-spectral-record-processing
 description: Use when you have acquired MS/MS spectra in .msp format (e.g., from MassBank or experimental acquisition) and need to transform them into a structured library format compatible with automated annotation tools.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

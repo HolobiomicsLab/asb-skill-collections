@@ -3,6 +3,7 @@ name: feature-table-quality-control
 description: Use when when you have a feature intensity matrix (samples × compounds) from untargeted LC–MS/MS or GC–MS analysis and accompanying sample-type metadata (blank, curve, QC, unknown classifications), and you need to remove features with high measurement variability, low QC detection rates, high blank.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091

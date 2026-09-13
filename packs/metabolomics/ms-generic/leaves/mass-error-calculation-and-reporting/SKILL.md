@@ -3,6 +3,7 @@ name: mass-error-calculation-and-reporting
 description: Use when after molecular formula assignment has been performed on calibrated m/z values. Apply this skill when you need to quantify the accuracy of formula-to-peak matching, validate mass calibration performance against reference standards (e.g., SRFA.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3520

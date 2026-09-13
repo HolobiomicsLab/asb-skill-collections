@@ -3,6 +3,7 @@ name: query-latency-throughput-measurement
 description: Use when when you have implemented or obtained a spectral library search algorithm (such as Flash Entropy Search) and need to empirically verify its performance against reported benchmark metrics, or when comparing query performance across different library sizes, mass spectral file formats (.mgf, .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

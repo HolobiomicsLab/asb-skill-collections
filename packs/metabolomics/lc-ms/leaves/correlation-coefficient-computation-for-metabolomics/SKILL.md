@@ -3,6 +3,7 @@ name: correlation-coefficient-computation-for-metabolomics
 description: Use when you have an aligned LCMS feature table (output from Eclipse or equivalent alignment tool) and need to identify candidate redundant features for clustering. It is most useful when features are suspected to originate from the same metabolite (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3463
   edam_topics:
   - http://edamontology.org/topic_3172

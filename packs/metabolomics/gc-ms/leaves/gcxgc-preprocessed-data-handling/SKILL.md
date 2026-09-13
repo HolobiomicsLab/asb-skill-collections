@@ -3,6 +3,7 @@ name: gcxgc-preprocessed-data-handling
 description: Use when you have preprocessed individual GCxGC-MS chromatograms (each smoothed with Whittaker smoother, baseline-corrected with asymmetric least squares, and aligned against a reference using 2D correlation optimized warping) and need to consolidate them into a single analytical object for.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0769

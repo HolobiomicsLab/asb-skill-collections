@@ -3,6 +3,7 @@ name: retention-time-feature-distribution-analysis
 description: Use when you have extracted retention times from top MS1 features in an LC-MS/MS experiment and need to assess whether the gradient configuration (start and end time in minutes) achieves adequate compound separation across the full chemical space.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -47,6 +48,7 @@ attribution:
 
 # retention-time-feature-distribution-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify LC-MS chromatographic gradient performance by encoding the spatial distribution of detected compound retention times into a normalized separation-efficiency metric (0–1). This skill bridges raw retention-time sequences to omics-scale gradient evaluation by computing how effectively a gradient spreads compounds across the usable chromatographic window.

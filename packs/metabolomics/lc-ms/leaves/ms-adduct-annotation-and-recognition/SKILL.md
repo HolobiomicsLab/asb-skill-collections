@@ -3,6 +3,7 @@ name: ms-adduct-annotation-and-recognition
 description: Use when when processing LC-MS peak tables from isotope tracing experiments where multiple ionization adducts ([M+H]+, [M+Na]+, [M+NH4]+, etc.) and in-source fragments have generated redundant features at different m/z values that represent the same underlying metabolite.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -53,6 +54,7 @@ attribution:
 
 # ms-adduct-annotation-and-recognition
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated recognition and annotation of MS adducts, neutral losses, and in-source fragments to merge redundant LC-MS features into canonical peak identities. This skill enables deduplication of isotope-labeled and unlabeled peak tables before pairing intermediates in stable isotope tracing metabolomics.

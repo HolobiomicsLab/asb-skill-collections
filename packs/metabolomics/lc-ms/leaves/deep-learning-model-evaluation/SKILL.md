@@ -3,6 +3,7 @@ name: deep-learning-model-evaluation
 description: Use when after training a Siamese neural network on MS/MS spectrum pairs, use this skill to quantify prediction performance on a disjoint test set (e.g., 3600+ spectra from 500 unseen compounds).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_0091

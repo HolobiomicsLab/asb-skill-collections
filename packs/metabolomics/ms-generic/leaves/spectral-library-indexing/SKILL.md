@@ -3,6 +3,7 @@ name: spectral-library-indexing
 description: Use when you have large spectral libraries (thousands to millions of spectra) and need to search query spectra against them for peptide identification with tolerance for post-translational modifications.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_0121

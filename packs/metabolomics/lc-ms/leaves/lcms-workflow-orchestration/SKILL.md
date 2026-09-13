@@ -3,6 +3,7 @@ name: lcms-workflow-orchestration
 description: Use when starting from raw LC-MS spectral files (mzML or mzXML format) in a global metabolomics study and you need to produce a complete, validated feature table with m/z, retention time, and intensity values across all samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3628
   edam_topics:
   - http://edamontology.org/topic_3172

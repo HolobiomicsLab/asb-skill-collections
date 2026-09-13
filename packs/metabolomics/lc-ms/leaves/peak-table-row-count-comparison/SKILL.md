@@ -3,6 +3,7 @@ name: peak-table-row-count-comparison
 description: Use when you need to validate the reference-semantics behavior of mpactr filter functions, particularly when using copy_object=FALSE. Use it to confirm that a filtering operation (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_3520

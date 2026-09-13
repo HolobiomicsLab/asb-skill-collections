@@ -3,6 +3,7 @@ name: spectral-library-match-assignment
 description: Use when you have a set of candidate molecular structures from in silico fragmentation (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0091

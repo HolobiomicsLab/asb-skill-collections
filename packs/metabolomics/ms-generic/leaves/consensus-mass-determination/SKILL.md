@@ -3,6 +3,7 @@ name: consensus-mass-determination
 description: Use when after constructing individual mass tracks from mzTree data bins and before alignment across samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -44,6 +45,7 @@ attribution:
 
 # consensus-mass-determination
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Determines a representative m/z value for each mass track by combining the median m/z across the track with the m/z at maximum intensity, weighted by the peak's signal characteristics. This step ensures robust mass assignment that resists outliers while preserving the mass shift information from the most intense part of the elution profile.

@@ -3,6 +3,7 @@ name: spectral-feature-clustering-by-intensity-correlation
 description: Use when you have an annotated LC-MS feature table with KEGG candidate matches and adduct assignments (output from the matching stage), and you need to disambiguate which features co-elute and correlate in intensity, signaling a common metabolite origin before applying adduct-based filtering.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0091

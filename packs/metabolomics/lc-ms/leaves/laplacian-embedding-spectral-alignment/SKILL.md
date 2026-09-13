@@ -3,6 +3,7 @@ name: laplacian-embedding-spectral-alignment
 description: Use when you have two or more MS/MS fragmentation spectra (with precursor m/z, fragment m/z values, and intensities) and need to identify which fragment ions match across spectra while quantifying the statistical confidence of those matches.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: corpus-bag-of-words-representation
 description: Use when when you have raw LC-MS/MS data in MGF format and need to prepare it for unsupervised topic modeling of metabolomics fragmentation patterns.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

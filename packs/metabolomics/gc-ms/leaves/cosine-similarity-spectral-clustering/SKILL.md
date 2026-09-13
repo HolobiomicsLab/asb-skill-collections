@@ -3,6 +3,7 @@ name: cosine-similarity-spectral-clustering
 description: Use when you have a collection of deconvolved mass spectra (in MGF or mzTab format) from GC-MS analysis and need to group them into a molecular network to identify structural relationships and enable compound annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3932
   edam_topics:
   - http://edamontology.org/topic_3520

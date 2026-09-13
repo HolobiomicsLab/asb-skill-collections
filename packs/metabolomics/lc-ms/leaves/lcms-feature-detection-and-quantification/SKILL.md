@@ -3,6 +3,7 @@ name: lcms-feature-detection-and-quantification
 description: Use when you have raw LC-MS data (mzML or equivalent format) from a metabolomics experiment and need to extract a reproducible, quantified feature table with intensity measurements before conducting metabolite identification or statistical analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3630
   edam_topics:
   - http://edamontology.org/topic_0091

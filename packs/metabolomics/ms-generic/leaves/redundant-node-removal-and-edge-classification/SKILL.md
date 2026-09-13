@@ -3,6 +3,7 @@ name: redundant-node-removal-and-edge-classification
 description: Use when after network partitioning, when you have identified connected subnetworks of features matched by isotope or adduct patterns and need to sanitize and categorize the relationships before tree construction. Use it when redundant features (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -46,6 +47,7 @@ attribution:
 
 # Redundant Node Removal and Edge Classification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 After partitioning a feature network into connected subnetworks, inspect each subnetwork to remove redundant (duplicate or erroneous) nodes and classify edges as either isotope or adduct type. This prepares the subnetwork for conversion into an optimal tree structure (khipu instance) suitable for neutral mass inference and ion annotation.

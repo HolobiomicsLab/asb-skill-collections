@@ -3,6 +3,7 @@ name: command-line-interface-configuration-and-automation
 description: Use when you have a batch of raw LC-IMS-MS/MS data in mzML or mzML.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0121

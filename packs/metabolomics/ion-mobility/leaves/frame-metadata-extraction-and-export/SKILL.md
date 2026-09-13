@@ -3,6 +3,7 @@ name: frame-metadata-extraction-and-export
 description: Use when after completing multidimensional smoothing and saturation repair on Agilent MassHunter (.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -46,6 +47,7 @@ attribution:
 
 # frame-metadata-extraction-and-export
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and export ion mobility frame metadata (field strength, pressure, temperature, MS actuals) from preprocessed IM-MS data files to structured text records for downstream analysis and instrumental parameter documentation.

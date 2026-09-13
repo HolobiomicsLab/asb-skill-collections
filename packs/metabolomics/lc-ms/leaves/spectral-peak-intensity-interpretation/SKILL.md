@@ -3,6 +3,7 @@ name: spectral-peak-intensity-interpretation
 description: Use when you have a molecular structure (SMILES, InChI, or chemical formula) and need to predict which fragments will appear with high intensity in a tandem MS spectrum, or when you are performing structural elucidation by ranking candidate molecules against experimental spectra and need.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3680
   edam_topics:
   - http://edamontology.org/topic_0121

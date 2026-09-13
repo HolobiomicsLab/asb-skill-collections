@@ -3,6 +3,7 @@ name: sample-batch-metadata-organization
 description: Use when you have tab-delimited metabolomics data with columns for aliquot identifiers, compound names, peak areas (primary and internal standard), sample type (QC, study sample, calibration), batch labels, and injection times, and need to construct a single unified object for batch correction.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_3172

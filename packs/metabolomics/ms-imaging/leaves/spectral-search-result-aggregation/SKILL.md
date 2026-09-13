@@ -3,6 +3,7 @@ name: spectral-search-result-aggregation
 description: Use when when you have executed batch searches of MS/MS spectra against multiple domain-specific MASST indices and need to consolidate results across domains (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_3520

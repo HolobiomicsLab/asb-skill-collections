@@ -3,6 +3,7 @@ name: md-defect-ratio-calculation
 description: Use when you have a feature table from LC- or GC-HRMS data (either detected via pyOpenMS or imported as a custom feature list) containing m/z, retention time, and intensity values, and you want to rapidly filter to candidate PFAS features that exhibit the elevated mass defects typical of.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3674
   edam_topics:
   - http://edamontology.org/topic_3172

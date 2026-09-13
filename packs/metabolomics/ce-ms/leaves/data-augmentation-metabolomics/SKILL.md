@@ -3,6 +3,7 @@ name: data-augmentation-metabolomics
 description: Use when you have preprocessed and normalized ROI feature data extracted from mzXML or mzML mass spectrometry files and seek to increase feature representation and robustness before statistical modeling or machine learning.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: mzml-file-parsing
 description: Use when you have raw LC- or GC-HRMS data from vendor instruments (ESI or APCI ionization) that needs to be converted to a vendor-neutral format for non-target screening, or you already have mzML files that require loading into a Python environment for downstream feature detection and MS2 spectral.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

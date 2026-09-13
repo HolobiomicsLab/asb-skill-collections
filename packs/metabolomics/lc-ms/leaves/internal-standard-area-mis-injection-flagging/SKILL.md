@@ -3,6 +3,7 @@ name: internal-standard-area-mis-injection-flagging
 description: Use when after building a SummarizedExperiment object containing LC-MS peak areas and internal standard assignments, when you need to identify study samples with anomalous Internal Standard signal (indicating syringe failure, capillary clogging, or injection system malfunction) before applying.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0091

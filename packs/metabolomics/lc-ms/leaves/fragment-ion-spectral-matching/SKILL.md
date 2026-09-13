@@ -3,6 +3,7 @@ name: fragment-ion-spectral-matching
 description: Use when after pointwise correlation analysis and exact mass difference refinement have identified candidate ion-species pairs that may share a common analyte origin.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

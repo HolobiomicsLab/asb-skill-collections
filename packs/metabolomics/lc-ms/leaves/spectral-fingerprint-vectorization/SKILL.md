@@ -3,6 +3,7 @@ name: spectral-fingerprint-vectorization
 description: Use when you have MS2 fragmentation spectra from multiple metabolomics samples and need to compare them in a retention time-agnostic manner, especially when samples are chemically diverse, acquired with different LC methods or mass spectrometer technologies (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

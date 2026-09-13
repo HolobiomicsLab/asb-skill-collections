@@ -3,6 +3,7 @@ name: fragmentation-pattern-query-validation
 description: Use when after converting a decision tree path into a MassQL query string, before deployment to production mass spectrometry workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -43,6 +44,7 @@ attribution:
 
 # fragmentation-pattern-query-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate that a decision tree path trained on ChemEcho mass spectrometry features has been correctly translated into a MassQL domain-specific language query by checking syntactic correctness and comparing predictions against a reference dataset. This ensures interpretable fragmentation patterns are accurately represented and deployable.

@@ -3,6 +3,7 @@ name: pairwise-spectrum-comparison
 description: Use when you have a collection of cleaned mass spectrometry spectra (in mzML, mzXML, msp, MGF, or JSON format) and need to identify spectral similarities, find related compounds, or generate a comprehensive similarity matrix for downstream analysis such as spectral library matching or clustering.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3625
   edam_topics:
   - http://edamontology.org/topic_0121

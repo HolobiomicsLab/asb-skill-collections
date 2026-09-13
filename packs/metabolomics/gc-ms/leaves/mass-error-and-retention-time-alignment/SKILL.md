@@ -3,6 +3,7 @@ name: mass-error-and-retention-time-alignment
 description: Use when when processing low- or high-resolution mass spectrometry data (mzML profile or centroided format) for isotopologue quantification and you need to match detected peaks to a targeted formulaTable of compounds.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3520

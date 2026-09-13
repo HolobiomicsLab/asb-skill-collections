@@ -3,6 +3,7 @@ name: graph-neural-network-model-loading
 description: Use when when you need to evaluate GNN performance on collision cross section prediction using the enveda/ccs-prediction repository, either by loading an existing pre-trained model checkpoint or by retraining from scratch using deposited datasets and published hyperparameters.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0154

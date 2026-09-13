@@ -3,6 +3,7 @@ name: mass-spectrometry-wrapper-function-design
 description: Use when when you have a Spectra-based MS analysis workflow in R but need access to specialized spectral similarity, filtering, or normalization algorithms available only in Python libraries.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

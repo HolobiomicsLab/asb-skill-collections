@@ -3,6 +3,7 @@ name: r-object-size-measurement-and-benchmarking
 description: Use when evaluating alternative implementations of data storage or retrieval strategies in R objects—specifically when deciding whether to eagerly populate all columns in a data frame slot (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_3520

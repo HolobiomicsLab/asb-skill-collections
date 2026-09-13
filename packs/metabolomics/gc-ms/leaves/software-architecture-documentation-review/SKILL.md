@@ -3,6 +3,7 @@ name: software-architecture-documentation-review
 description: Use when you need to verify the scope and completeness of a software platform's analytical capabilities—particularly when the project claims to support multiple input modalities (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

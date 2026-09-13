@@ -3,6 +3,7 @@ name: memory-profiling-and-benchmarking
 description: Use when when designing or optimizing backends that handle large MS datasets (mzML, mzXML, CDF files via MsBackendMzR), to verify that claimed memory advantages of on-disk or chunked approaches actually materialize in practice.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3520

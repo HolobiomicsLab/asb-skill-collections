@@ -3,6 +3,7 @@ name: multivariate-lipid-metabolite-analysis
 description: Use when you have integrated, normalized lipidomic and metabolomic feature tables from the Multi-ABLE method or similar concurrent multiomics workflows, with matched sample phenotypes (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3935
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -47,6 +48,7 @@ attribution:
 
 # Multivariate Analysis of Lipids and Metabolites
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply multivariate statistical methods to identify differential lipids and metabolites associated with biological phenotypes (e.g., atherosclerosis) from integrated lipidomic and metabolomic datasets. This skill enables detection of molecular signatures across multiple lipid and metabolite features simultaneously, rather than univariate feature-by-feature testing.

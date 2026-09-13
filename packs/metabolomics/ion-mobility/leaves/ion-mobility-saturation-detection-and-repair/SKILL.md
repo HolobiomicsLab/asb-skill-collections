@@ -3,6 +3,7 @@ name: ion-mobility-saturation-detection-and-repair
 description: Use when preprocessing raw Agilent MassHunter (.d) or UIMF IM-MS data files that exhibit signal saturation—ion intensity clipping caused by detector or amplifier limits—which distorts peak shape and abundance estimates across the m/z and drift-time axes.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3635
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -49,6 +50,7 @@ attribution:
 
 # ion-mobility-saturation-detection-and-repair
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detects and reconstructs saturated ion signals in IM-MS data using multidimensional smoothing across m/z, mobility, and retention time dimensions, then exports frame-level metadata (field strength, pressure, temperature, MS actuals) to enable validation and downstream analysis.

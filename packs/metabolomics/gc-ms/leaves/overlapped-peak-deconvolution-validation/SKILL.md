@@ -3,6 +3,7 @@ name: overlapped-peak-deconvolution-validation
 description: Use when after solving for the concentration distribution matrix C using least squares optimization (minimize ||overlapped_peaks - S·C||²), validate that the solution is physically meaningful and numerically accurate by checking whether S·C faithfully reconstructs the input overlapped peak.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172

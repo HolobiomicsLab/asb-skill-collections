@@ -3,6 +3,7 @@ name: storage-origin-metadata-assignment
 description: Use when when implementing or initializing an MsBackend subclass to handle mass spectrometry data, you must assign dataStorage and dataOrigin variables after loading m/z and intensity values.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

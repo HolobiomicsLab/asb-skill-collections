@@ -3,6 +3,7 @@ name: distance-matrix-clustering
 description: Use when you have a sparse pairwise distance matrix derived from nearest neighbor indexing of MS/MS spectra (or similar high-dimensional objects) and need to partition spectra into groups based on local density and neighborhood connectivity.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520

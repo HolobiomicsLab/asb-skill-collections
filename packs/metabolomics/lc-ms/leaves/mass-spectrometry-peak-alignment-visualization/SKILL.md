@@ -3,6 +3,7 @@ name: mass-spectrometry-peak-alignment-visualization
 description: Use when when you have aligned peak data from molecular networking (with m/z, intensity, retention time, and alignment quality metrics across multiple spectra) and need to interactively explore peak alignments under multiple filtering criteria (intensity thresholds, alignment score cutoffs, peak.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3630
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -45,6 +46,7 @@ attribution:
 
 # mass-spectrometry-peak-alignment-visualization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill enables interactive web-based visualization and real-time filtering of aligned peaks across multiple mass spectrometry spectra, supporting molecular networking analysis. It combines structured peak-alignment data (m/z, intensity, retention time, alignment quality) with dynamic filter controls to render multi-spectrum overlays or heatmaps and validate peak presence under user-defined constraints.

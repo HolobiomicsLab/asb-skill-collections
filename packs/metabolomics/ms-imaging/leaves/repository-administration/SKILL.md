@@ -3,6 +3,7 @@ name: repository-administration
 description: Use when you need to validate that a scientific software project's continuous integration pipeline is functional and producing reproducible builds—particularly before releasing new versions, after merging changes to release branches, or when troubleshooting build failures that block distribution of.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3501
   edam_topics:
   - http://edamontology.org/topic_0091

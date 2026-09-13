@@ -3,6 +3,7 @@ name: mass-spectrometry-prediction-modeling
 description: Use when when you have a collection of compound structures in SDF format (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0599
@@ -41,6 +42,7 @@ attribution:
 
 # mass-spectrometry-prediction-modeling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use computational tools to predict fragment mass spectra from chemical compound structures, enabling in-silico annotation and reference library construction for untargeted metabolomics and adductomics. This skill bridges structural chemistry with experimental MS data without requiring physical sample analysis.

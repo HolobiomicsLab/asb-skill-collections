@@ -3,6 +3,7 @@ name: precursor-ion-isolation-windowing
 description: Use when processing SWATH-MS (Sequential Windowed Acquisition of all Theoretical Mass-spectra) raw data files (mzML or vendor format) for untargeted metabolomics, specifically before attempting to deconvolute overlapping MS/MS spectra.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0121

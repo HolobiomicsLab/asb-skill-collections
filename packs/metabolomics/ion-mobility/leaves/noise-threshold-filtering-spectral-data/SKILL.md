@@ -3,6 +3,7 @@ name: noise-threshold-filtering-spectral-data
 description: Use when working with raw IM-MS data (Agilent MassHunter .d or UIMF format) that contains low-abundance background noise, isolated high-intensity artifacts, or jagged peaks characteristic of low-abundance ions.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -48,6 +49,7 @@ attribution:
 
 # noise-threshold-filtering-spectral-data
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove low-intensity noise and spike artifacts from ion mobility–mass spectrometry (IM-MS) data by applying intensity thresholds and spike detection algorithms. This preprocessing step enhances signal quality and reduces false positives before downstream analysis.

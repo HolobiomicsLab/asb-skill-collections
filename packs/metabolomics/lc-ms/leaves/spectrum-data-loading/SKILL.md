@@ -3,6 +3,7 @@ name: spectrum-data-loading
 description: Use when when you have a USI (e.g., mzspec:MTBLS1124:QC07.mzML) pointing to a public mzML or related spectrum file in MetaboLights, MassIVE, or GNPS repositories, and need to load the spectrum data for interactive visualization, quality control assessment, or downstream analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -41,6 +42,7 @@ attribution:
 
 # spectrum-data-loading
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load mass spectrometry spectrum data from public repositories (MetaboLights, MassIVE, GNPS) into memory via Universal Spectrum Identifier (USI) resolution, validation, and parsing into spectrum container objects. This skill enables downstream LC-MS visualization, feature extraction, and spectral comparison workflows.

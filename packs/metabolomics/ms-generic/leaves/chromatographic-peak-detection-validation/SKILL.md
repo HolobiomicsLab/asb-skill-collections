@@ -3,6 +3,7 @@ name: chromatographic-peak-detection-validation
 description: Use when you have centroided mzML data and a curated set of target molecules with known retention time (RT) boundaries, and you need to establish ground-truth peak detection performance metrics (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121

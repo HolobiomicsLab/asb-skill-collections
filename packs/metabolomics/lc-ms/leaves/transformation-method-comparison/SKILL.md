@@ -3,6 +3,7 @@ name: transformation-method-comparison
 description: Use when when you have paired microbiome (16S rRNA or functional) and metabolome (LC-MS/MS or similar) data and must decide between compositional transformations (CLR, RA, or others) before training a predictive model.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3174

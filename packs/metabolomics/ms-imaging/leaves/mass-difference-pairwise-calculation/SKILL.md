@@ -3,6 +3,7 @@ name: mass-difference-pairwise-calculation
 description: Use when after importing MSI data as an msimat object and having a list of detected peak masses, but before annotating which mass differences correspond to biologically plausible adducts.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

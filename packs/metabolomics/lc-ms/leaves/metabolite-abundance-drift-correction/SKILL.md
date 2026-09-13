@@ -3,6 +3,7 @@ name: metabolite-abundance-drift-correction
 description: Use when you have a raw LCMS nontargeted metabolomics abundance table spanning multiple injections with embedded pooled technical replicate (PREF) or internal standard injections distributed across the run sequence.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3172

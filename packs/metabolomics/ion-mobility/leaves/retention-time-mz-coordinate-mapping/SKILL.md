@@ -3,6 +3,7 @@ name: retention-time-mz-coordinate-mapping
 description: Use when when you have mass-spectrometry data in tabular form (Pandas DataFrame) with columns for m/z, retention time or ion mobility, and intensity, and you need to visualize the 2D distribution of peaks to assess peak separation, detect co-elution, or examine chromatographic and mass resolution.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3628
   edam_topics:
   - http://edamontology.org/topic_3520

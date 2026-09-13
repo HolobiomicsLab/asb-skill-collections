@@ -3,6 +3,7 @@ name: chromatographic-peak-isolation-and-refinement
 description: Use when after sliding-window analysis has identified candidate TIC peaks but before extracting chromatographic parameters (retention time, peak width, intensity) from extracted ion chromatograms.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: lipid-concentration-normalization
 description: Use when your lipidomics experiment includes spiked internal lipid standards with known absolute concentrations, and you have a data matrix of signal intensities (samples × lipids) from LipidSearch or LIQUID output.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3564
   edam_topics:
   - http://edamontology.org/topic_3375

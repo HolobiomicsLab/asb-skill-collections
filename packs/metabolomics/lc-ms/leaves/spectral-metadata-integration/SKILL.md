@@ -3,6 +3,7 @@ name: spectral-metadata-integration
 description: Use when after isotopologue and adduct grouping has been completed and you need to associate MS2 spectra with consolidated feature groups in DDA LC-MS experiments.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0121

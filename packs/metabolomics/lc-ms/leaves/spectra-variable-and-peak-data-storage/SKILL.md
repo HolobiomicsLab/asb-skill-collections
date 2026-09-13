@@ -3,6 +3,7 @@ name: spectra-variable-and-peak-data-storage
 description: Use when when building a new mass spectrometry data backend for the Spectra package that must store and serve multiple spectra with their associated m/z and intensity peaks. Use this when you need a backend that combines efficient metadata lookup (via data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520

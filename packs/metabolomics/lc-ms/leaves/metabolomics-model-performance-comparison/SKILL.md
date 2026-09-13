@@ -3,6 +3,7 @@ name: metabolomics-model-performance-comparison
 description: Use when you have trained multiple machine learning classifiers (e.g., AdaBoost, SVM, Random Forest) on the same metabolomics peak-quality training set using k-fold cross-validation with repeated runs (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -49,6 +50,7 @@ attribution:
 
 # metabolomics-model-performance-comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compare machine learning classifier performance across multiple algorithms and metric sets to identify the best-performing model for detecting low-quality peaks in untargeted LC-MS metabolomics data. This skill synthesizes evaluation measures (e.g., sensitivity, specificity, accuracy, balanced accuracy) computed via k-fold cross-validation to guide model selection before final training.

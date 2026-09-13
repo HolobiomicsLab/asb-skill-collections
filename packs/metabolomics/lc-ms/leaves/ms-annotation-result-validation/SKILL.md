@@ -3,6 +3,7 @@ name: ms-annotation-result-validation
 description: Use when after running annotateRC on LC–MS AIF features with fragment libraries (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0121

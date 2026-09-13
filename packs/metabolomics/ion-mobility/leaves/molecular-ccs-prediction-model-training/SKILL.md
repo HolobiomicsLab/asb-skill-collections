@@ -3,6 +3,7 @@ name: molecular-ccs-prediction-model-training
 description: Use when you have a curated dataset of small molecules with SMILES, optional 3D coordinates, adduct information, and experimentally measured CCS values (in Ångströms or similar units), and you want to train a GNN model to predict CCS on held-out test molecules.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3372

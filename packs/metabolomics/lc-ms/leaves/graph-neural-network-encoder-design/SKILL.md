@@ -3,6 +3,7 @@ name: graph-neural-network-encoder-design
 description: Use when when you need to compare spectrum prediction models fairly across different encoder architectures (GNN vs. FFN vs. Transformer), and you require equivalent settings (same covariates, identical hyperparameter sweeps) to isolate the effect of the encoder design.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: spectrum-metadata-title-parsing
 description: Use when when you have PSM files from a search engine (e.g., MaxQuant, MSGFPlus, Mascot) and corresponding spectrum files in mzML or MGF format, and the spectrum identifiers in both files use different naming conventions or formats.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

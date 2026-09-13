@@ -3,6 +3,7 @@ name: spectral-peak-word-embedding-representation
 description: Use when when you have MS/MS spectra (LC-MS or equivalent positive ionization mode data) that you intend to embed using Word2Vec or similar distributional semantic models, or when you need to prepare spectral data for training similarity models that learn peak co-occurrence patterns rather than.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

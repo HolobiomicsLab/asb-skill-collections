@@ -3,6 +3,7 @@ name: inchikey-identifier-normalization
 description: Use when gNPS has stopped supplying ClassyFire ontology information for spectral library matches (as of the ConCISE documentation snapshot) and you need to manually retrieve chemical classifications.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_0154

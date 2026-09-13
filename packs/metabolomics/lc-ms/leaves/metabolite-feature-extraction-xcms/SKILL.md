@@ -3,6 +3,7 @@ name: metabolite-feature-extraction-xcms
 description: Use when you have one or multiple raw mzXML/mzML files from DDA, DIA, or full-scan LCMS analyses and need to detect, align, and quantify metabolite features across samples to create a unified feature matrix before MS2 annotation or in-source fragment analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3557
   edam_topics:
   - http://edamontology.org/topic_3172

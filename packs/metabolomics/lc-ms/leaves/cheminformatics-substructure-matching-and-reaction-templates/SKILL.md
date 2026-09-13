@@ -3,6 +3,7 @@ name: cheminformatics-substructure-matching-and-reaction-templates
 description: 'Use when you have a chemical substrate and need to predict its biotransformation products using rule-based metabolism prediction. This applies when: (1) you possess a library of biotransformation rules extracted from a curated database (e.'
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_0250
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -39,6 +40,7 @@ attribution:
 
 # cheminformatics-substructure-matching-and-reaction-templates
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Apply SMARTS-based substructure matching and biotransformation reaction templates to predict small molecule metabolites in environmental, mammalian, and microbial systems. This skill enables systematic enumeration of possible metabolic products by matching input substrates against curated biotransformation rules and expanding matched substructures into product templates.

@@ -3,6 +3,7 @@ name: feature-table-annotation-with-sample-metadata
 description: Use when your input is a feature intensity table (CSV or R data frame) with features as columns and samples as rows, and you have accompanying sample metadata (batch identifiers, QC/study sample labels, run order, sample phenotypes, collection dates).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3336
   edam_topics:
   - http://edamontology.org/topic_3172

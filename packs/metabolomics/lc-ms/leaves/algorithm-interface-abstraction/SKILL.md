@@ -3,6 +3,7 @@ name: algorithm-interface-abstraction
 description: Use when you have multiple independent peak-picking algorithms available and need to allow end-users to select among them for the same analytical task (peak detection in untargeted LC-MS data) without coupling the rest of your pipeline to each algorithm's API.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3172

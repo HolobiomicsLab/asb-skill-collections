@@ -3,6 +3,7 @@ name: usi-string-parsing
 description: Use when when you have a USI string (e.g., mzspec:GNPS:TASK-d93bdbb5cdda40e48975e6e18a45c3ce-f.mwang87/data/Yao_Streptomyces/roseosporus/0518_s_BuOH.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3281
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -38,6 +39,7 @@ attribution:
 
 # usi-string-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse Unified Spectrum Identifier (USI) strings to extract repository identifiers, file paths, and scan numbers, enabling programmatic retrieval of mass spectrometry data from distributed repositories (GNPS, MassIVE, MetaboLights). This skill bridges human-readable spectrum citations with machine-actionable data access.

@@ -3,6 +3,7 @@ name: qiime2-artifact-inspection
 description: Use when you need to verify that a QIIME 2 artifact (e.g., a Chemical Feature Tree from q2-qemistree, a FeatureTable[Frequency], or a Phylogeny[Rooted] object) has been correctly produced, before using it as input to downstream analyses.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3489

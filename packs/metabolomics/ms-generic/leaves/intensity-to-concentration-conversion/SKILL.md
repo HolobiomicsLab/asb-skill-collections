@@ -3,6 +3,7 @@ name: intensity-to-concentration-conversion
 description: Use when you have raw mass spectrometry intensity measurements from sample analyses and need absolute quantitative concentrations.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0153

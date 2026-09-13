@@ -3,6 +3,7 @@ name: python-filter-class-inheritance
 description: Use when you need to filter compounds during Pickaxe network expansion based on domain-specific criteria (e.g., mass matching, similarity thresholds, retention time windows) that are not covered by built-in filters.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0602

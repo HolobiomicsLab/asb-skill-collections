@@ -3,6 +3,7 @@ name: peak-network-clustering-inadequate
 description: Use when you have picked peaks (coordinates and intensities) from INADEQUATE spectra and need to distinguish which peaks likely originate from the same metabolite before matching to a reference database.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3172

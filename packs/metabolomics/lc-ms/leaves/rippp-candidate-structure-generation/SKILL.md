@@ -3,6 +3,7 @@ name: rippp-candidate-structure-generation
 description: Use when after identifying precursor peptides from genome assemblies via BGC mining, when you need to enumerate the chemical space of PTM variants (lantibiotic, lassopeptide, cyanobactin, or other RiPP classes) before matching tandem mass spectra against a constructed database using Dereplicator or.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_0121

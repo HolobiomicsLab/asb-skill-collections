@@ -3,6 +3,7 @@ name: nonparametric-reproducibility-ranking
 description: Use when you have high-dimensional replicate experiment data (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -49,6 +50,7 @@ attribution:
 
 # Nonparametric Reproducibility Ranking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply the Maximum Rank Reproducibility (marr) method to quantify reproducibility of features (metabolites/genes) across replicate biological or technical samples, and of sample pairs across features. This nonparametric approach produces ranked reproducibility metrics and binary classifications (reproducible/non-reproducible) based on user-defined thresholds, without assuming a distributional form.

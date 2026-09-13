@@ -3,6 +3,7 @@ name: chromatographic-modality-classification
 description: Use when when ingesting raw or vendor-format mass spectrometry data files of unknown or mixed acquisition modality, and you need to automatically determine whether the input originated from liquid chromatography (LC), gas chromatography (GC), ion mobility spectrometry (IMS), or MS imaging (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

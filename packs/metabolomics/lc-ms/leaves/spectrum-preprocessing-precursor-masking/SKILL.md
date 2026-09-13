@@ -3,6 +3,7 @@ name: spectrum-preprocessing-precursor-masking
 description: Use when when training a formula-prediction model with a frozen pretrained TCN spectrum encoder and unfrozen FormulaEncoder and RescoreHead components, or when you suspect the model may use precursor intensity as a spurious feature rather than fragment-pattern information for molecular formula.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

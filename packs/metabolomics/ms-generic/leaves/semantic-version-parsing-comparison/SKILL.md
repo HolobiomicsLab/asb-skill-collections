@@ -3,6 +3,7 @@ name: semantic-version-parsing-comparison
 description: Use when before executing a bioinformatics pipeline that depends on multiple R packages with strict version constraints (e.g., DaDIA, which requires R ≥4.0, XCMS ≥3.11.4, and metaMS =1.25.1).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -43,6 +44,7 @@ attribution:
 
 # semantic-version-parsing-comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and compare software package version strings against minimum semantic versioning requirements to validate pipeline dependencies before execution. This skill ensures that all critical packages meet or exceed specified thresholds, preventing downstream failures caused by incompatible or outdated libraries.

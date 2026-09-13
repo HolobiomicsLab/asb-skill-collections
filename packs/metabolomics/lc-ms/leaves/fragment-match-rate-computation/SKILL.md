@@ -3,6 +3,7 @@ name: fragment-match-rate-computation
 description: Use when after denoising MS/MS spectra at multiple frequency thresholds and matching each thresholded spectrum against a -matching reference spectrum.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

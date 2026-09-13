@@ -3,6 +3,7 @@ name: spectral-library-matching-and-ranking
 description: Use when when you have discovered Mass2Motifs from MS2LDA topic modeling and need to automatically annotate them by finding the most structurally similar known spectra in a reference library.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3520

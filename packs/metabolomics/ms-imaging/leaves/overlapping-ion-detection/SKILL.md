@@ -3,6 +3,7 @@ name: overlapping-ion-detection
 description: Use when when annotating matrix-related ions in MSI datasets where two or more ions share identical or near-identical m/z values (isobaric ions) or exhibit overlapping spatial distributions across imaging pixels.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

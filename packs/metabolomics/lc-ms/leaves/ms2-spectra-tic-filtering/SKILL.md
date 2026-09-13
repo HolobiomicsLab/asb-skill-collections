@@ -3,6 +3,7 @@ name: ms2-spectra-tic-filtering
 description: Use when after concatenating replicate MS/MS spectra for each precursor feature (m/z and retention time), use this skill when you have multiple replicate scans per feature and need to reduce spectral count while preserving the highest-intensity, most-reliable spectra.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

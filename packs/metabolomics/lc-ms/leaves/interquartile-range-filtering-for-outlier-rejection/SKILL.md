@@ -3,6 +3,7 @@ name: interquartile-range-filtering-for-outlier-rejection
 description: Use when when you have ensemble predictions (e.g., from Monte-Carlo Dropout inference with N ≥ 10 forward passes per input) and need to distinguish high-confidence from uncertain predictions before downstream analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091

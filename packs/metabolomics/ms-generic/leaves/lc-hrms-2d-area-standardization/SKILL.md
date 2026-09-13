@@ -3,6 +3,7 @@ name: lc-hrms-2d-area-standardization
 description: Use when after detecting local-maxima in LC-HRMS profile mode datasets and before training or inference with a CNN model for peak classification.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -42,6 +43,7 @@ attribution:
 
 # lc-hrms-2d-area-standardization
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Standardize local-maxima detected in LC-HRMS profile mode data into uniform two-dimensional areas (retention time × m/z) for input to machine-learning models. This preprocessing step ensures consistent representation of potential chromatographic peaks across diverse samples and instrument configurations.

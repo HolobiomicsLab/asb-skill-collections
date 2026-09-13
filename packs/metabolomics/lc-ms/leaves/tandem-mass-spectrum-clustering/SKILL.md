@@ -3,6 +3,7 @@ name: tandem-mass-spectrum-clustering
 description: Use when you have a large collection of tandem mass spectra (mzML, mzXML, or MGF format) and want to group similar spectra into clusters to identify redundancy, discover novel peptides or metabolites, or prepare data for downstream annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

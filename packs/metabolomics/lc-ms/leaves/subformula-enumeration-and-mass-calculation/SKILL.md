@@ -3,6 +3,7 @@ name: subformula-enumeration-and-mass-calculation
 description: 'Use when when performing chemical denoising of MS/MS spectra: after modifying a master formula based on SMILES and adduct information, enumerate all possible subformulas to establish the set of chemically valid neutral losses.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3172

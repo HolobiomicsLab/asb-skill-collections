@@ -3,6 +3,7 @@ name: uhplc-hrms-ms-data-matching
 description: Use when you have peak-picked UHPLC-HRMS/MS data (from Q-Exactive orbitrap, Agilent, Bruker, or SCIEX Q-TOF instruments) with both MS1 and MS/MS fragment spectra, and you need to assign lipid identities to detected features using in-silico fragmentation patterns.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3172

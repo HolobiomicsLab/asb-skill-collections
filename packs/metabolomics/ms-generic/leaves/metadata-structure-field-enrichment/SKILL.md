@@ -3,6 +3,7 @@ name: metadata-structure-field-enrichment
 description: Use when a metadata table contains compound names and identifiers but lacks structural data (SMILES, InChI, or molecular formula). The compounds are publicly available in PubChem and can be reliably identified by their chemical names. Use this skill before performing structure-dependent analyses (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_0154

@@ -3,6 +3,7 @@ name: chromatogram-netcdf-file-import
 description: Use when you have raw GCxGC-MS chromatogram data in NetCDF (CDF) format from an instrument and need to load it into R for preprocessing (smoothing, baseline correction, peak alignment) and multivariate analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091

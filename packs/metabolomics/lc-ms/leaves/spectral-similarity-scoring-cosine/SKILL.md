@@ -3,6 +3,7 @@ name: spectral-similarity-scoring-cosine
 description: Use when you have a collection of preprocessed and cleaned mass spectrometry spectra (in mzML, mzXML, msp, MGF, or JSON format) and need to compute all-pairs or targeted spectral similarity scores to identify related spectra, perform spectral library searches, or build a similarity network.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0491
   edam_topics:
   - http://edamontology.org/topic_3520

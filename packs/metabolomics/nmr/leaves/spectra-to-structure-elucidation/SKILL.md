@@ -3,6 +3,7 @@ name: spectra-to-structure-elucidation
 description: Use when you have one or more spectroscopic datasets (IR, Raman, UV-Vis, mass spectra, NMR) from an unknown compound and need to generate candidate molecular structures ranked by likelihood. Use this when retrieval-based approaches are infeasible (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: mass-spectrometry-peak-enumeration
 description: Use when you have preprocessed MSI data (peaks already binned and normalized) and need to detect adduct formation patterns across the dataset.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

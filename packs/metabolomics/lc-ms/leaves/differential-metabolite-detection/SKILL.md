@@ -3,6 +3,7 @@ name: differential-metabolite-detection
 description: Use when you have normalized and aligned lipidomic and metabolomic spectral features from the Multi-ABLE method across multiple biological samples grouped by phenotype (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -47,6 +48,7 @@ attribution:
 
 # Differential Metabolite Detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies lipids and metabolites that are significantly associated with a disease phenotype (e.g., atherosclerosis) using multivariate analysis of normalized lipidomic and metabolomic spectral data. This skill detects which molecular features differ between sample groups after preprocessing and alignment.
