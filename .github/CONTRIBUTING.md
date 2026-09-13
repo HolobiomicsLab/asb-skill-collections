@@ -121,9 +121,15 @@ from a short **skeleton** by the ASB factory, not hand-written.
    the preferred leaf skill slugs from `skills_index.json`).
 2. A curator runs the checklist (every leaf slug resolves; stages form a valid
    DAG; no leaf in two stages; scientific ordering sound; not a duplicate).
-3. On go-ahead, the skeleton lands at `skeletons/<collection>/<slug>.yaml`; a
-   maintainer generates the workflow with `compose_workflows.py` and it must pass
-   `validate_workflows.py` before promotion into the collection's `workflows/`.
+3. On go-ahead, the skeleton lands in the **framework** repo
+   (`HolobiomicsLab/AgenticScienceBuilder`) at
+   `scripts/skeletons/<collection>/<slug>.yaml`. A maintainer generates the workflow
+   there with `scripts/compose_workflows.py` — maintainer-only, because the semantic
+   binding needs an `OPENAI_API_KEY` and the prebuilt embedding cache — and it must
+   pass `validate_workflows.py` in *this* repo before promotion into the collection's
+   `workflows/`. The 21 workflows in `collections/metabolomics/v2/workflows/` were
+   produced this way; their skeletons are the 21 files under
+   `scripts/skeletons/metabolomics/`.
 
 ## Tier progression
 

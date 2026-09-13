@@ -6,14 +6,15 @@ import re
 from typing import Any
 
 # --------------------------------------------------------------------------- #
-# Versioned PII / dual-use config (mirrors                                     #
-# src/agentic_science_builder/release/pii_patterns.json — CONTENT_POLICY.md    #
-# §6.2).  Bump ``version`` whenever a pattern/keyword/allowlist changes; the   #
-# gate report records the version used per CONTENT_POLICY.md §6.2.             #
+# Versioned PII / dual-use config — this module IS the library that           #
+# CONTENT_POLICY.md §6.2 names.  No ``pii_patterns.json`` exists, here or in  #
+# the framework; §6.2's pointer to one was corrected 2026-09-13.  Bump        #
+# ``version`` whenever a pattern/keyword/allowlist changes: the gate report   #
+# records the version used and folds this dict into ``receipt_sha256``.       #
 # --------------------------------------------------------------------------- #
 PII_CONFIG: dict[str, Any] = {
     "version": "2026-07-10.2",
-    "source": "scripts/pii_config.py::PII_CONFIG (mirror of pii_patterns.json)",
+    "source": "scripts/pii_config.py::PII_CONFIG",
     # Tier 1 — HARD FAIL when found inside a verbatim quote span.
     "hard_fail_patterns": {
         # Clinical / personal identifiers.

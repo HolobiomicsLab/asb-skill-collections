@@ -212,7 +212,15 @@ The release gate is the checkpoint between private Tier 2 and public Tier 3. Eve
 **Exit:** `gate_report.json` (PASS|WARN|FAIL) + artifacts for promotion to `staged-collections/`
 **Enforcement:** Advisory on PRs to `staged-collections/`; **hard-blocking** on promotion to `collections/` and on the release tag
 
-### Gate Checklist (14 gates; v0 activates gates 1,2,5,6,8,9,10,12,15; gates 3,4,7,11-14 documented but non-blocking)
+### Gate Checklist (15 gates)
+
+At v0, `release_gate.py` hard-blocks on gates **2, 5, 6, 8, 10, 15** — the
+`hard_gate_ids` field of every gate report, and the authority when this table and the
+code disagree. Gates **1, 3, 4, 7, 9, 11** are warn-only. Gates **13** and **14** are
+formally waived for v0 (§9). Gate **12** is declared hard-blocking in the row below but
+has **no implementation**: no contamination check exists, and no collection file
+declares `benchmark_tier` or `openness`. Activating it or waiving it like 13/14 is an
+open decision; until it is taken, the row describes an intention, not a check.
 
 | # | Gate | Owner | Criterion | Trigger | v0 Enforcement |
 |---|---|---|---|---|---|
@@ -309,7 +317,7 @@ derived_from:
 4. **Confirmed dual-use content** — synthesis instructions, weaponization methods, organism-enhancement protocols flagged by human review as belonging to DURC categories per NIH/NSF DURC definitions
 
 **Detection method:**
-- Regex scan of verbatim quote spans against a versioned PII pattern library (config: `src/agentic_science_builder/release/pii_patterns.json`)
+- Regex scan of verbatim quote spans against a versioned PII pattern library (config: `scripts/pii_config.py`, the `PII_CONFIG` dict — see §6.2)
 - LLM-judge secondary pass for context (e.g., "is this a real patient name or a placeholder?")
 - Keyword screen for dual-use red-flag terms (pathogen enhancement, gain-of-function, weaponizable, etc.; curated list in same config)
 
@@ -347,7 +355,18 @@ derived_from:
 
 ### 6.2 Pattern Library Versioning
 
-PII patterns, dual-use keywords, and author allowlist are versioned in a committed config file: `src/agentic_science_builder/release/pii_patterns.json`. Every release documents which version was used.
+PII patterns, dual-use keywords and author allowlist are versioned in a committed
+config file: `scripts/pii_config.py` (the `PII_CONFIG` dict, currently
+`version: 2026-07-10.2`, 14 hard-fail/advisory patterns). It is mirrored byte-for-byte
+into the released collection at `collections/<slug>/v<N>/scripts/pii_config.py`, and
+`tests/test_pack_closure.py` fails if the two copies drift.
+
+Every release records which version ran, and the record is tamper-evident:
+`release_gate.py` writes `policy.pii.version` into `gate_report.json` and folds the
+whole config into `receipt_sha256`. A reviewer asking *which patterns gated this
+release* reads `policy.pii` in the report and re-checks it with
+`release_gate.py <collection> --verify`; the pattern set cannot be swapped after the
+fact without breaking the receipt.
 
 ---
 
@@ -383,7 +402,7 @@ PII patterns, dual-use keywords, and author allowlist are versioned in a committ
 **Trigger:** A maintainer creates a release tag `<slug>-v<N>` and pushes it.
 
 **Workflow:** `.github/workflows/release.yml` runs:
-- Full `release_gate.py` (all 15 gates, hard-block on gates 1,2,5,6,8,10,12,15)
+- Full `release_gate.py --strict` (hard-block on gates 2,5,6,8,10,15 — see the §5 checklist)
 - Zenodo deposition + DOI mint
 - HF mirror trigger (`mirror-to-hf.yml`)
 - Catalogue regeneration + w3id IRI assertion

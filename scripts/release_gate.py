@@ -28,8 +28,8 @@ Checks implemented (mapped to the §5 checklist + §6 safety gates):
                                 verbatim quote spans; WARN + route-to-human for
                                 ambiguous matches.  Author / affiliation emails are
                                 allowlisted.  Regex + keyword lists live in a
-                                versioned config dict (mirrors
-                                ``pii_patterns.json``).
+                                versioned config dict, ``scripts/pii_config.py``
+                                (CONTENT_POLICY.md §6.2).
   4. PROVENANCE              — gate 8.  Every skill carries a source DOI + a
                                 license tag.
   5. LAYOUT / PACKAGING      — gate 10.  Every promoted skill directory holds

@@ -44,7 +44,10 @@ For open-access papers (CC-BY, CC0, etc.), the license permits broader inclusion
 ### Open-access (`type: open-access`)
 
 - **License declaration required** — SPDX identifier (CC-BY-4.0, CC-BY-NC-4.0, CC0-1.0, Apache-2.0, MIT, etc.)
-- **Verification** — `verified_via: unpaywall` + `verified_at: <ISO date>` populated automatically by `verify-paper.yml` CI
+- **Verification** — `verified_via: unpaywall` + `verified_on: <ISO date>`. The corpus
+  field is `verified_on`; `verified_at` appears nowhere in it. Both are entered by the
+  proposer: `verify-paper.yml` checks the declared tier but makes no network call and
+  writes nothing back (see the proposal workflow below).
 - **Permitted inclusion** — full evidence spans, figure references, all structured extractions
 - **Redistribution** — under the source paper's license; consumers of ASB-Skill collections inherit those terms
 
@@ -53,19 +56,27 @@ For open-access papers (CC-BY, CC0, etc.), the license permits broader inclusion
 The paper is published in a venue that retains traditional copyright but allows derivative scholarly use via fair-use / quotation rights.
 
 - **License declaration** — `license: copyrighted` (publisher-held); no SPDX
-- **Verification** — `verified_via: unpaywall` confirms paywalled access; `verified_at` populated
+- **Verification** — `verified_via: unpaywall` confirms paywalled access; `verified_on` recorded — by hand, as above
 - **Permitted inclusion**:
   - Bibliographic metadata (always allowed)
   - Structured extractions (facts, uncopyrightable)
   - Verbatim quotes ≤300 chars per `evidence_span`, attributed via `source: <DOI>`
 - **Per-quote attribution required** — every `evidence_span` includes the source DOI so users can trace back
 - **Cumulative cap** — across all evidence_spans from a single paper, ≤2% of paper word count or ≤1500 chars total (whichever is smaller). This margin keeps quotation within fair-use bounds under all major jurisdictions.
-- **Enforcement** — `asb collection promote` runs `_sanitize_quotations_for_release()` after all artifacts are emitted. For any paper with `access.type` ∈ {hybrid, closed, unknown}:
+- **Enforcement** — `asb collection promote` runs `_sanitize_quotations_for_release()` (framework repo, `src/agentic_science_builder/release/promote.py`) after all artifacts are emitted. For any paper with `access.type` ∈ {hybrid, closed, unknown}:
   - SKILL.md `## Evidence` lines are stripped of the trailing `: "verbatim quote"` portion (paraphrase prefix retained — it's independently authored and discriminative).
   - `benchmark/claims/per_paper/*/ground_truth.jsonl` rows where `source_excerpt == text` have the redundant `source_excerpt` field dropped; otherwise truncated to ≤150 chars.
   - A per-DOI accounting written to `quotation_audit.json` for transparent verification.
   - Tool YAMLs are NOT stripped (per-tool excerpts are ≤300 chars and serve attribution purpose; they fall under fair use as critical commentary).
 - The sanitizer is **idempotent** — running twice produces no further changes. Running on a pure-OA collection is a no-op.
+- This repository enforces the same ceilings independently, at release time rather than
+  at promote time: `release_gate.py` imports `_PER_SPAN_CAP`, `_CUMULATIVE_CAP`,
+  `_TEXT_FIELD_CAP` and the OA / non-OA tier sets from that module (with a vendored
+  fallback when the framework is not installed) and applies them as hard gates 5 and 6.
+  A collection therefore cannot be promoted here over the cap even if it never went
+  through `promote`.
+- On the released metabolomics collection the sanitizer is a no-op by construction: no
+  paper in `corpus.yaml` declares `hybrid`, `closed` or `unknown`.
 
 ### Closed (no abstract, `type: closed`)
 
@@ -147,7 +158,14 @@ users the upstream tool's terms.
 
 ## Retraction handling
 
-We monitor Crossref's retraction watch monthly (CI workflow `corpus-freshness.yml`, planned v1.1).
+We monitor Crossref's retraction watch monthly: `corpus-freshness.yml` runs a scheduled
+sweep that re-queries Crossref for `update-to` relations and opens a labelled issue per
+affected collection. That half ships today.
+
+**Propagation does not.** No script consumes `status: retracted`, `release_gate.py`
+contains no retraction check, and the `[RETRACTED SOURCE]` notice in step 2 below is
+applied by hand. The steps that follow describe the curator's procedure, not an
+automated one.
 
 **On detecting a retraction:**
 
@@ -165,12 +183,20 @@ To add a paper to a collection's corpus:
 
 1. **Open an issue** using the `Propose paper` template at <`https://github.com/HolobiomicsLab/asb-skill-collections/issues/new?template=propose-paper.md`>. Include: DOI, title, intended collection, rationale (why this paper).
 2. **Discussion** happens on the issue. Anyone may comment with reasoning for or against inclusion.
-3. **PR adds the paper** to `corpus.yaml` with `status: proposed`. `verify-paper.yml` CI:
-   - Resolves the DOI via Crossref
-   - Queries Unpaywall to determine access tier
-   - Populates `access.{type, license, verified_via, verified_at}`
-   - Flags duplicates (paper already in corpus)
-   - Checks for retraction status
+3. **PR adds the paper** to `corpus.yaml` with `status: proposed`. `verify-paper.yml`
+   CI validates what the PR *declares*: it normalises `access.type` against the OA and
+   non-OA tier sets and fails the PR on a non-OA, `unknown` or `preprint` tier. It
+   installs only `pyyaml`, makes no network call and writes nothing back, so the
+   following are **intended, not implemented** — the proposer fills these fields in by
+   hand, and whether to build the write-back is an open decision:
+   - Resolve the DOI via Crossref
+   - Query Unpaywall to determine the access tier
+   - Populate `access.{type, license, verified_via, verified_on}`
+   - Flag duplicates (paper already in corpus). Scope it to the target corpus: every
+     corpus file is internally duplicate-free today, but **91 DOIs are shared between
+     `metabolomics/v1` and `metabolomics/v2`** — deliberate carry-overs, not errors, so
+     a cross-collection check would fire 91 times on day one.
+   - Check retraction status
 4. **Lead Curator review** — confirms thematic fit, rationale quality, access-tier handling. Merging the PR transitions the paper to `status: accepted`.
 5. **Next ASB processing run** picks up accepted papers; promoted output transitions them to `status: included` (auto, by `asb collection promote`).
 

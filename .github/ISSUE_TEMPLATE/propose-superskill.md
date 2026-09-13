@@ -68,6 +68,6 @@ enables, and how it differs from existing super-skills in the collection.
 - [ ] No leaf appears in two stages (de-collision)
 - [ ] Scientific ordering is sound (a domain reviewer signed off)
 - [ ] Not a duplicate of an existing super-skill
-- [ ] Skeleton authored under `skeletons/<collection>/<slug>.yaml`
-- [ ] Generated with `compose_workflows.py`; passes `validate_workflows.py`
+- [ ] Skeleton authored in the framework repo under `scripts/skeletons/<collection>/<slug>.yaml`
+- [ ] Generated there with `scripts/compose_workflows.py` (maintainer-only: needs `OPENAI_API_KEY`); passes `validate_workflows.py` here
 - [ ] Decision: accept / reject / defer-pending-info
