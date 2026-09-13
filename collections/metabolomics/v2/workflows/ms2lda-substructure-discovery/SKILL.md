@@ -91,11 +91,11 @@ Use when you want to discover shared substructures (Mass2Motifs) across a corpus
 
 ### Stage 1 — preprocess
 
-**Goal:** raw MS2 spectra (mgf/mzML/msp) -> cleaned, intensity-normalized bag-of-fragments corpus
+**Goal:** raw MS2 spectra (mgf/mzML/msp) -> cleaned, intensity-normalized bag-of-fragments corpus + the MS2 export (GNPS-FBMN mgf) the network stage consumes
 
 **EDAM operation:** operation_3632
 
-**Inputs:** mgf, mzML · **Outputs:** corpus-json
+**Inputs:** mgf, mzML · **Outputs:** corpus-json, mgf/gnps-fbmn
 
 **Candidate leaf skills:** `mass-spectrometry-file-format-parsing` (primary), `fragment-ion-peak-detection-and-normalization`, `mass-spectrometry-peak-filtering-and-noise-reduction`, `spectral-noise-filtering-and-artifact-removal`, `spectral-noise-filtering-and-quality-control`
 

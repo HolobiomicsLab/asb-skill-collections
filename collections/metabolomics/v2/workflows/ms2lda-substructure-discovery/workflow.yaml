@@ -6,7 +6,7 @@ techniques:
 steps:
 - id: preprocess
   goal: raw MS2 spectra (mgf/mzML/msp) -> cleaned, intensity-normalized bag-of-fragments
-    corpus
+    corpus + the MS2 export (GNPS-FBMN mgf) the network stage consumes
   edam_operation: operation_3632
   skills:
   - mass-spectrometry-file-format-parsing
@@ -27,6 +27,8 @@ steps:
   - type: mzML
   outputs:
   - type: corpus-json
+  - type: mgf
+    flavour: gnps-fbmn
   grounding:
     kb_slugs:
     - asb-paper-10-1021-acs-jproteome-9b00640
@@ -143,7 +145,7 @@ steps:
     motif_annotation:
     - annotated-motifset-json
     preprocess:
-    - mgf
+    - mgf:gnps-fbmn
 - id: report
   goal: consolidate motifs + annotations + motif-enriched network into a substructure
     discovery report
