@@ -47,7 +47,7 @@ in order of precision:
    `ion-mobility-MS`, `NMR`. Filter `techniques` first.
 2. **Goal phrasing** — match the user's intent against each row's `description`.
 
-Available workflows (this staged set):
+Available workflows (published as outlines):
 
 | workflow | technique | what it does |
 |---|---|---|
