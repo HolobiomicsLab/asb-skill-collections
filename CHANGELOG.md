@@ -12,6 +12,18 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
 - the **skill collections** (e.g. metabolomics) — tagged `<slug>-v<N>`, deposited
   to Zenodo / HuggingFace.
 
+## [Unreleased]
+
+### Fixed
+- Remove twelve stale rows from four technique packs' skill indexes and KB
+  bundles, using their declared v2 parent index; correct the pack table and
+  router count metadata without changing leaves.
+
+### Added
+- Shared index-closure and helper-containment checks for shipped units, with
+  an offline CLI and release-gate integration. The check exposes the existing
+  feedback-helper dependency gap pending a standalone vendored helper.
+
 ## [0.2.0] — 2026-06-29
 
 First release of the installable tooling and of composite workflow super-skills.
