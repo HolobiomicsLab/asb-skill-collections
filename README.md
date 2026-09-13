@@ -347,6 +347,13 @@ contributions earn a place on the contributor leaderboard and can become
 co-authorship on the next release DOI — the full flywheel is documented in
 [CONTRIBUTION_LOOP.md](governance/CONTRIBUTION_LOOP.md).
 
+Before packaging, run `python -m scripts.unit_closure` from the repository root
+to compare each shipped unit's indexes with its leaves and check declared
+`metadata.helper` files. `--prune` removes stale pack rows only when they are
+absent from the pack's declared collection/version parent; it preserves JSON
+formatting and never changes leaves. `metadata.issue_templates` contains
+repository pointers read on GitHub and does not require local copies.
+
 ## Other collections
 
 `collections/` also contains `epigenomics/v1`, `transcriptomics/v1`, and the

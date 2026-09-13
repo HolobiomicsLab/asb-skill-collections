@@ -4,12 +4,12 @@ Lighter per-technique installs of the ASB metabolomics collection.
 
 | Plugin | Skills |
 |---|---|
-| `metabolomics-lc-ms` | 2621 |
+| `metabolomics-lc-ms` | 2616 |
 | `metabolomics-gc-ms` | 367 |
-| `metabolomics-ce-ms` | 114 |
+| `metabolomics-ce-ms` | 113 |
 | `metabolomics-direct-infusion` | 97 |
-| `metabolomics-ms-imaging` | 292 |
-| `metabolomics-ion-mobility` | 390 |
+| `metabolomics-ms-imaging` | 291 |
+| `metabolomics-ion-mobility` | 385 |
 | `metabolomics-nmr` | 276 |
 | `metabolomics-ms-generic` | 804 |
 

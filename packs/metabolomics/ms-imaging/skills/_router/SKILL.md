@@ -3,7 +3,7 @@ name: metabolomics-ms-imaging-router
 description: Use when a task needs a skill from ASB Metabolomics — MS-imaging — search this unit's 292 evidence-grounded skills, then apply and optionally ground the one that fits.
 license: CC-BY-4.0
 metadata:
-  skills_count: 292
+  skills_count: 291
   leaf_dir: leaves
   retrieval: bin/search_skills.py
   indexes:

@@ -81,6 +81,7 @@ if __package__ in (None, ""):
     _sys.path.insert(0, _p.dirname(_p.dirname(_p.abspath(__file__))))
 
 from asb_skill_collections import layout
+from scripts import unit_closure
 
 try:
     import yaml
@@ -986,33 +987,6 @@ _KB_SIDECAR_MAX_BYTES = 64 * 1024
 _COLLECTION_KB_MAX_BYTES = 64 * 1024 * 1024
 
 
-def _index_slugs(index_path: Path) -> tuple[set[str], str | None]:
-    """Slugs declared by ``skills_index.json``, or an error string.
-
-    Tolerates the two shapes the index has worn — a bare list of entries, and
-    an object wrapping one under ``skills`` — and accepts plain strings as
-    slugs.  An entry that declares no slug is drift, not a shape this reads
-    around, so it is reported rather than skipped.
-    """
-    try:
-        data = json.loads(index_path.read_text(encoding="utf-8"))
-    except (OSError, ValueError) as exc:
-        return set(), f"unreadable ({exc})"
-    if isinstance(data, dict):
-        data = data.get("skills", [])
-    if not isinstance(data, list):
-        return set(), "not a list of entries"
-    slugs: set[str] = set()
-    for i, entry in enumerate(data):
-        if isinstance(entry, str):
-            slugs.add(entry)
-        elif isinstance(entry, dict) and isinstance(entry.get("slug"), str):
-            slugs.add(entry["slug"])
-        else:
-            return slugs, f"entry {i} declares no slug"
-    return slugs, None
-
-
 def check_layout(
     collection_dir: Path,
     per_skill_max_bytes: int = _KB_SIDECAR_MAX_BYTES,
@@ -1089,40 +1063,24 @@ def check_layout(
             budget=collection_max_bytes,
         )
 
-    index_path = Path(collection_dir) / "skills_index.json"
-    if index_path.is_file():
-        indexed, error = _index_slugs(index_path)
-        if error:
-            res.add(FAIL, f"skills_index.json: {error}.", file="skills_index.json")
-        leaves = layout.leaf_dir(collection_dir)
-        on_disk = {
-            d.name
-            for d in (sorted(leaves.iterdir()) if leaves.is_dir() else [])
-            if d.is_dir() and not d.name.startswith("_") and (d / "SKILL.md").is_file()
-        }
-        for slug in sorted(indexed - on_disk):
-            res.add(
-                FAIL,
-                f"skills_index.json names {slug!r}, which has no SKILL.md under "
-                f"{leaves.name}/.",
-                file="skills_index.json",
-                slug=slug,
-            )
-        for slug in sorted(on_disk - indexed):
-            res.add(
-                FAIL,
-                f"{leaves.name}/{slug} is not named in skills_index.json — it cannot "
-                "be reached through the router.",
-                file="skills_index.json",
-                slug=slug,
-            )
-        res.summary = f"{res.summary}  ({len(indexed)} indexed, {len(on_disk)} on disk)"
-    else:
-        res.add(PASS, "No skills_index.json — index consistency is not applicable.")
+    unit_closure.record_index_closure(res, collection_dir)
 
     res.summary = f"{res.summary}  ({n_skills} skills checked)"
     if n_skills == 0:
         res.add(WARN, "No SKILL.md files found in collection.")
+    return res
+
+
+def check_unit_closure(collection_dir: Path) -> CheckResult:
+    """Check pack index closure and helpers in the collection and its packs."""
+    res = CheckResult(
+        name="unit_closure",
+        gates=[10],
+        hard_gate=True,
+        summary="Pack indexes match their leaves; declared helpers stay inside each unit.",
+    )
+    for finding in unit_closure.gate_findings(collection_dir):
+        res.add(FAIL, **{**vars(finding), "unit": str(finding.unit)})
     return res
 
 
@@ -1166,6 +1124,7 @@ def run_gate(
         check_provenance(collection_dir),
         check_workflows(collection_dir),
         check_layout(collection_dir),
+        check_unit_closure(collection_dir),
     ]
 
     counts = {PASS: 0, WARN: 0, FAIL: 0}

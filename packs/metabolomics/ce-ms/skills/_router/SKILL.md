@@ -3,7 +3,7 @@ name: metabolomics-ce-ms-router
 description: Use when a task needs a skill from ASB Metabolomics — CE-MS — search this unit's 114 evidence-grounded skills, then apply and optionally ground the one that fits.
 license: CC-BY-4.0
 metadata:
-  skills_count: 114
+  skills_count: 113
   leaf_dir: leaves
   retrieval: bin/search_skills.py
   indexes:

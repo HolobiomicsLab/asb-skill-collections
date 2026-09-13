@@ -3,7 +3,7 @@ name: metabolomics-ion-mobility-router
 description: Use when a task needs a skill from ASB Metabolomics — ion-mobility-MS — search this unit's 390 evidence-grounded skills, then apply and optionally ground the one that fits.
 license: CC-BY-4.0
 metadata:
-  skills_count: 390
+  skills_count: 385
   leaf_dir: leaves
   retrieval: bin/search_skills.py
   indexes:
