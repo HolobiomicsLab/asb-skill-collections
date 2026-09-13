@@ -1,8 +1,12 @@
-# gnn-spectral-property-prediction-workflow — STAGING
+# gnn-spectral-property-prediction-workflow
 
-**Status:** STAGING ONLY — promote via `release_gate.py` after human review.
+**Status:** published as an **outline** — the structure is validated, the execution is not.
 **Kind:** composite-workflow (P1 canonical set).
 **Bound by:** perspicacite-semantic (text-embedding-3-large retrieval + EDAM-aware primary selection).
+
+> Automatic grading of `workflow.yaml` (`asb solve-workflow`, checkpoint mode) is **not part of
+> this release**: no released ASB version loads these files. Follow the stages yourself. The stage
+> structure is validated by `validate_workflows.py` through `release_gate.py`.
 
 ## Stages
 
@@ -12,4 +16,5 @@
 4. **predict** — trained GNN + candidate structures -> predicted property values  →  `gnn-model-inference-and-prediction`, `graph-neural-network-model-inference`, `neural-network-inference-execution`, `molecular-property-prediction-feature-construction`
 5. **rescore** — predicted property + experimental evidence -> re-ranked / filtered annotation candidates  →  `metabolite-annotation-by-chromatographic-behavior`, `candidate-ranking-by-score`, `metabolite-candidate-ranking`, `candidate-structure-ranking`, `ranked-annotation-prioritization`, `metabolite-annotation-ensemble-ranking`
 
-`derived_from_workflows` in the frontmatter is the eval-ablation set (SPEC §8).
+`derived_from_workflows` in the frontmatter is a provenance record — the ASB per-paper workflows
+whose structure corroborated this pipeline. No ablation experiment consuming it is released.

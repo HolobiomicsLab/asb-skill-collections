@@ -21,7 +21,7 @@ attribution:
 This is the **goal-level** entry point for the ASB Metabolomics collection. Where the
 leaf router (`metabolomics-collection-router`) finds ONE atomic skill, this router selects
 an **end-to-end composite workflow super-skill** — an ordered pipeline of stages, each
-delegating to vetted leaf skills, with grounding and a gradable `workflow.yaml`.
+delegating to vetted leaf skills, with grounding and a declarative `workflow.yaml`.
 
 Use it in three steps: **select → run → ground**.
 
