@@ -1,8 +1,12 @@
-# suspect-screening-exposomics-workflow — STAGING
+# suspect-screening-exposomics-workflow
 
-**Status:** STAGING ONLY — promote via `release_gate.py` after human review.
+**Status:** published as an **outline** — the structure is validated, the execution is not.
 **Kind:** composite-workflow (P1 canonical set).
 **Bound by:** perspicacite-semantic (text-embedding-3-large retrieval + EDAM-aware primary selection).
+
+> Automatic grading of `workflow.yaml` (`asb solve-workflow`, checkpoint mode) is **not part of
+> this release**: no released ASB version loads these files. Follow the stages yourself. The stage
+> structure is validated by `validate_workflows.py` through `release_gate.py`.
 
 ## Stages
 
@@ -12,4 +16,5 @@
 4. **confidence** — assign identification confidence levels (Schymanski 1-5) to hits  →  `compound-annotation-confidence-assessment`, `metabolite-annotation-confidence-assignment`, `annotation-confidence-assessment`, `annotation-scoring-and-ranking`, `bayesian-annotation-probability-inference`
 5. **report** — consolidate suspect hits + structures + confidence into an annotated table  →  `feature-metadata-annotation`, `chemical-structure-validation`, `reference-compound-verification`
 
-`derived_from_workflows` in the frontmatter is the eval-ablation set (SPEC §8).
+`derived_from_workflows` in the frontmatter is a provenance record — the ASB per-paper workflows
+whose structure corroborated this pipeline. No ablation experiment consuming it is released.
