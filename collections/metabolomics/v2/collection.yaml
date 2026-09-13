@@ -2721,6 +2721,7 @@ skills:
 - massql-query-generation
 - massql-query-language-syntax
 - masst-output-visualization
+- masster
 - match-factor-threshold-filtering
 - matlab-data-structure-design
 - matlab-package-execution

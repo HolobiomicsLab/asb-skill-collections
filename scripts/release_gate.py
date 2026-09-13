@@ -36,9 +36,9 @@ Checks implemented (mapped to the §5 checklist + §6 safety gates):
                                 ``skill_kb.json``; the sidecar stays inside a
                                 per-skill and a collection-level byte budget
                                 (both FAIL loudly, neither truncates); and
-                                ``skills_index.json``, when the collection ships
-                                one, reconciles with the leaf directories on
-                                disk.
+                                every ``collection.yaml`` reconciles its counts
+                                and advertised members with the leaf/tool files
+                                and any indexes the collection ships.
 
 Enforcement modes (CONTENT_POLICY.md §7):
   * default (advisory, staged-collections PRs): WARNs and FAILs are reported but
@@ -59,6 +59,7 @@ Usage:
     python scripts/release_gate.py collections/metabolomics/v1 \
         [--corpus collections/metabolomics/v1/corpus.yaml] \
         [--strict] [--report gate_report.json]
+    python scripts/release_gate.py collections --catalogue-membership
 """
 
 from __future__ import annotations
@@ -72,6 +73,7 @@ from datetime import datetime, timezone
 from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any, Iterable
+
 # Invoked by path (`python scripts/x.py`), only `scripts/` lands on sys.path, so
 # the repo root has to be added before the sibling package can be imported.
 if __package__ in (None, ""):
@@ -157,9 +159,7 @@ PII_CONFIG: dict[str, Any] = {
         # even though the gate compiles every pattern with IGNORECASE — otherwise
         # IGNORECASE makes [A-Z] match lowercase and this fires on ordinary clinical
         # prose ("patient cohort showed", "patient samples were"). See test_pii_crossdomain.
-        "named_patient_dx": (
-            r"\bpatient\s+(?-i:[A-Z][a-z]+\s+[A-Z][a-z]+)\b"
-        ),
+        "named_patient_dx": (r"\bpatient\s+(?-i:[A-Z][a-z]+\s+[A-Z][a-z]+)\b"),
         "subject_id_phenotype": (
             r"\bsubject\s+(?:id\s+)?\d{3,}\s+(?:showed|presented|exhibited|had)\b"
         ),
@@ -179,8 +179,21 @@ PII_CONFIG: dict[str, Any] = {
     # can mask a real personal/author email, whose local-part is a name and whose
     # domain resolves to a real TLD.
     "email_notation_localparts": [
-        "peak", "loss", "frag", "fragment", "ion", "precursor", "product",
-        "mz", "mass", "neutral", "adduct", "bin", "feature", "token", "word",
+        "peak",
+        "loss",
+        "frag",
+        "fragment",
+        "ion",
+        "precursor",
+        "product",
+        "mz",
+        "mass",
+        "neutral",
+        "adduct",
+        "bin",
+        "feature",
+        "token",
+        "word",
     ],
     "email_placeholder_domain_regex": r"^[xX]+(?:\.[xX]+)*$",
     # Author / corresponding-author / institutional-role emails are allowlisted
@@ -359,7 +372,11 @@ def _read_frontmatter(text: str) -> tuple[dict[str, Any], str]:
 
 def _ngram_set(text: str, n: int = 3) -> set[tuple[str, ...]]:
     tokens = re.findall(r"\w+", text.lower())
-    return {tuple(tokens[i : i + n]) for i in range(len(tokens) - n + 1)} if len(tokens) >= n else set()
+    return (
+        {tuple(tokens[i : i + n]) for i in range(len(tokens) - n + 1)}
+        if len(tokens) >= n
+        else set()
+    )
 
 
 def _jaccard(a: set, b: set) -> float:
@@ -411,7 +428,11 @@ def _collect_evidence_spans(fm: dict[str, Any], body: str) -> list[dict[str, Any
     for key in ("evidence_spans", "evidence"):
         for sp in fm.get(key) or []:
             if isinstance(sp, dict):
-                _push(sp.get("text") or sp.get("quote") or "", sp.get("doi"), sp.get("section"))
+                _push(
+                    sp.get("text") or sp.get("quote") or "",
+                    sp.get("doi"),
+                    sp.get("section"),
+                )
             elif isinstance(sp, str):
                 _push(sp, None, None)
 
@@ -491,7 +512,9 @@ def _is_notation_not_email(em: str) -> bool:
     return False
 
 
-def _build_email_allowlist(collection_meta: dict[str, Any]) -> tuple[set[str], re.Pattern]:
+def _build_email_allowlist(
+    collection_meta: dict[str, Any],
+) -> tuple[set[str], re.Pattern]:
     """Author/affiliation email allowlist (exact set + institutional-role regex)."""
     exact = {e.lower() for e in PII_CONFIG["email_allowlist_exact"]}
     email_re = re.compile(PII_CONFIG["email_regex"])
@@ -510,7 +533,13 @@ def _build_email_allowlist(collection_meta: dict[str, Any]) -> tuple[set[str], r
                 _harvest(v)
 
     # Author / corresponding-author / curator / contact emails are allowlisted.
-    for key in ("corresponding_author", "authors", "curators", "contact", "maintainers"):
+    for key in (
+        "corresponding_author",
+        "authors",
+        "curators",
+        "contact",
+        "maintainers",
+    ):
         _harvest(collection_meta.get(key))
     role_re = re.compile(PII_CONFIG["email_allowlist_role_regex"], re.IGNORECASE)
     return exact, role_re
@@ -530,7 +559,9 @@ def _access_tier_from_corpus(corpus: dict[str, Any]) -> dict[str, str]:
 # --------------------------------------------------------------------------- #
 # Check 1 — ACCESS-TIER (OA).  Gates 2 / 15 (hard).                            #
 # --------------------------------------------------------------------------- #
-def check_access_tier(corpus: dict[str, Any], require_open_access: bool = True) -> CheckResult:
+def check_access_tier(
+    corpus: dict[str, Any], require_open_access: bool = True
+) -> CheckResult:
     res = CheckResult(
         name="access_tier_oa",
         gates=[2, 15],
@@ -709,7 +740,10 @@ def check_strip_verbatim(
                 window = body
                 ratio = _similarity_ratio(span_text, window) if window else 0.0
                 jac = _jaccard(_ngram_set(span_text), _ngram_set(window))
-                if jac > _NGRAM_JACCARD_THRESHOLD and ratio >= _SIMILARITY_RATIO_THRESHOLD:
+                if (
+                    jac > _NGRAM_JACCARD_THRESHOLD
+                    and ratio >= _SIMILARITY_RATIO_THRESHOLD
+                ):
                     res.add(
                         FAIL,
                         f"{rel}: span is near-verbatim (jaccard={jac:.2f}, ratio={ratio:.2f}) — "
@@ -719,7 +753,10 @@ def check_strip_verbatim(
                         jaccard=round(jac, 3),
                         ratio=round(ratio, 3),
                     )
-                elif jac > _NGRAM_JACCARD_THRESHOLD or ratio >= _SIMILARITY_RATIO_THRESHOLD:
+                elif (
+                    jac > _NGRAM_JACCARD_THRESHOLD
+                    or ratio >= _SIMILARITY_RATIO_THRESHOLD
+                ):
                     res.add(
                         WARN,
                         f"{rel}: span similarity above one §5.3 threshold "
@@ -742,7 +779,9 @@ def check_pii_dual_use(
 ) -> CheckResult:
     res = CheckResult(
         name="pii_dual_use",
-        gates=[6],  # §6 content-safety gate (no numeric §5 row; tracked as gate 6 content-safety)
+        gates=[
+            6
+        ],  # §6 content-safety gate (no numeric §5 row; tracked as gate 6 content-safety)
         hard_gate=True,
         summary=(
             "Two-tier PII / dual-use scan of verbatim quote spans "
@@ -750,8 +789,13 @@ def check_pii_dual_use(
         ),
     )
 
-    hard_patterns = {k: re.compile(v, re.IGNORECASE) for k, v in PII_CONFIG["hard_fail_patterns"].items()}
-    warn_patterns = {k: re.compile(v, re.IGNORECASE) for k, v in PII_CONFIG["warn_patterns"].items()}
+    hard_patterns = {
+        k: re.compile(v, re.IGNORECASE)
+        for k, v in PII_CONFIG["hard_fail_patterns"].items()
+    }
+    warn_patterns = {
+        k: re.compile(v, re.IGNORECASE) for k, v in PII_CONFIG["warn_patterns"].items()
+    }
     email_re = re.compile(PII_CONFIG["email_regex"])
     instruction_re = re.compile(PII_CONFIG["dual_use_instruction_regex"], re.IGNORECASE)
     allow_exact, allow_role_re = _build_email_allowlist(collection_meta)
@@ -818,7 +862,8 @@ def check_pii_dual_use(
                 for kw in PII_CONFIG["dual_use_keywords"]:
                     if kw in low:
                         defensive = any(
-                            ctx in low for ctx in PII_CONFIG["dual_use_defensive_context"]
+                            ctx in low
+                            for ctx in PII_CONFIG["dual_use_defensive_context"]
                         )
                         res.add(
                             WARN,
@@ -875,7 +920,11 @@ def check_provenance(collection_dir: Path) -> CheckResult:
             )
         lic = _skill_license(fm)
         if not lic:
-            res.add(FAIL, f"{rel}: no license tag (license / license_spdx / metadata.license).", file=rel)
+            res.add(
+                FAIL,
+                f"{rel}: no license tag (license / license_spdx / metadata.license).",
+                file=rel,
+            )
     res.summary = f"{res.summary}  ({n_skills} skills checked)"
     if n_skills == 0:
         res.add(WARN, "No SKILL.md files found in collection.")
@@ -913,8 +962,11 @@ def check_workflows(collection_dir: Path) -> CheckResult:
             res.add(FAIL, f"cannot parse skills_index.json: {exc}")
             return res
     else:
-        res.add(WARN, "no skills_index.json in this subtree — leaf-slug resolution deferred "
-                      "to validate_workflows.py --collection <released>; structural checks only.")
+        res.add(
+            WARN,
+            "no skills_index.json in this subtree — leaf-slug resolution deferred "
+            "to validate_workflows.py --collection <released>; structural checks only.",
+        )
     n = 0
     for d in sorted(wf_root.iterdir()):
         if not d.is_dir() or d.name.startswith("_") or d.name == "bin":
@@ -936,22 +988,26 @@ def check_workflows(collection_dir: Path) -> CheckResult:
             res.add(FAIL, f"{name}: metadata.kind != composite-workflow", file=name)
         ids: set = set()
         seen: dict = {}
-        for st in (wf.get("steps") or []):
+        for st in wf.get("steps") or []:
             sid = st.get("id")
-            for s in (st.get("skills") or []):
+            for s in st.get("skills") or []:
                 if idx is not None and s not in idx:
                     res.add(FAIL, f"{name}/{sid}: unresolved skill {s}", file=name)
                 if s in seen and seen[s] != sid:
-                    res.add(FAIL, f"{name}: collision {s} ({seen[s]} & {sid})", file=name)
+                    res.add(
+                        FAIL, f"{name}: collision {s} ({seen[s]} & {sid})", file=name
+                    )
                 seen[s] = sid
-            for a in (st.get("after") or []):
+            for a in st.get("after") or []:
                 if a not in ids:
                     res.add(FAIL, f"{name}/{sid}: dangling after -> {a}", file=name)
-            for k in (st.get("inputs_from") or {}):
+            for k in st.get("inputs_from") or {}:
                 if k not in ids:
-                    res.add(FAIL, f"{name}/{sid}: dangling inputs_from -> {k}", file=name)
+                    res.add(
+                        FAIL, f"{name}/{sid}: dangling inputs_from -> {k}", file=name
+                    )
             ids.add(sid)
-        for t in (meta.get("member_tools") or []):
+        for t in meta.get("member_tools") or []:
             if str(t).endswith(".py"):
                 res.add(WARN, f"{name}: script-filename as tool: {t}", file=name)
     res.summary = f"{res.summary}  ({n} workflows checked)"
@@ -986,8 +1042,10 @@ _KB_SIDECAR_MAX_BYTES = 64 * 1024
 _COLLECTION_KB_MAX_BYTES = 64 * 1024 * 1024
 
 
-def _index_slugs(index_path: Path) -> tuple[set[str], str | None]:
-    """Slugs declared by ``skills_index.json``, or an error string.
+def _index_slugs(
+    index_path: Path, member_key: str = "skills"
+) -> tuple[set[str], str | None]:
+    """Slugs declared by an index, or an error string.
 
     Tolerates the two shapes the index has worn — a bare list of entries, and
     an object wrapping one under ``skills`` — and accepts plain strings as
@@ -999,7 +1057,7 @@ def _index_slugs(index_path: Path) -> tuple[set[str], str | None]:
     except (OSError, ValueError) as exc:
         return set(), f"unreadable ({exc})"
     if isinstance(data, dict):
-        data = data.get("skills", [])
+        data = data.get(member_key, [])
     if not isinstance(data, list):
         return set(), "not a list of entries"
     slugs: set[str] = set()
@@ -1011,6 +1069,155 @@ def _index_slugs(index_path: Path) -> tuple[set[str], str | None]:
         else:
             return slugs, f"entry {i} declares no slug"
     return slugs, None
+
+
+def _catalogue_member_set(
+    metadata: dict[str, Any], member_key: str, label: str, res: CheckResult
+) -> set[str] | None:
+    """Return one advertised member set, reporting malformed lists loudly."""
+    members = metadata.get(member_key)
+    if not isinstance(members, list) or not all(
+        isinstance(item, str) for item in members
+    ):
+        res.add(FAIL, f"{label}: collection.yaml {member_key} is not a list of slugs.")
+        return None
+    if len(set(members)) != len(members):
+        res.add(
+            FAIL, f"{label}: collection.yaml {member_key} contains duplicate members."
+        )
+    return set(members)
+
+
+def _disk_member_set(collection_dir: Path, member_key: str) -> tuple[set[str], str]:
+    """Return the skill directories or tool YAMLs shipped by one collection."""
+    if member_key == "skills":
+        leaf_dir = layout.leaf_dir(collection_dir)
+        members = set()
+        if leaf_dir.is_dir():
+            members = {
+                path.name
+                for path in leaf_dir.iterdir()
+                if path.is_dir()
+                and not path.name.startswith("_")
+                and (path / "SKILL.md").is_file()
+            }
+        return members, f"{leaf_dir.name}/"
+    tools_dir = collection_dir / "tools"
+    members = (
+        {path.stem for path in tools_dir.glob("*.yaml")}
+        if tools_dir.is_dir()
+        else set()
+    )
+    return members, "tools/"
+
+
+def _report_member_difference(
+    res: CheckResult,
+    label: str,
+    left: set[str],
+    right: set[str],
+    left_name: str,
+    right_name: str,
+) -> None:
+    """Report both directions of one set comparison."""
+    for missing_from_right in sorted(left - right):
+        res.add(
+            FAIL,
+            f"{label}: {left_name} missing from {right_name}: {missing_from_right!r}.",
+            slug=missing_from_right,
+        )
+    for missing_from_left in sorted(right - left):
+        res.add(
+            FAIL,
+            f"{label}: {right_name} missing from {left_name}: {missing_from_left!r}.",
+            slug=missing_from_left,
+        )
+
+
+def _check_advertised_count(
+    metadata: dict[str, Any], member_key: str, label: str, res: CheckResult
+) -> None:
+    """Require the advertised count to equal its own member-list length."""
+    count_key = f"{member_key}_count"
+    if metadata.get(count_key) != len(metadata[member_key]):
+        res.add(
+            FAIL,
+            f"{label}: {count_key} is {metadata.get(count_key)!r} but {member_key} "
+            f"has {len(metadata[member_key])} members.",
+        )
+
+
+def _check_optional_index(
+    collection_dir: Path,
+    member_key: str,
+    advertised: set[str],
+    label: str,
+    res: CheckResult,
+) -> None:
+    """Compare advertised members with an index when the collection ships one."""
+    index_name = f"{member_key}_index.json"
+    index_path = collection_dir / index_name
+    if not index_path.is_file():
+        return
+    indexed, error = _index_slugs(index_path, member_key)
+    if error:
+        res.add(FAIL, f"{label}: {index_name}: {error}.", file=index_name)
+        return
+    _report_member_difference(
+        res, label, advertised, indexed, f"collection.yaml {member_key}", index_name
+    )
+
+
+def _check_catalogue_members(
+    collection_dir: Path,
+    metadata: dict[str, Any],
+    member_key: str,
+    label: str,
+    res: CheckResult,
+) -> None:
+    """Check count, disk members, and optional index for one member class."""
+    advertised = _catalogue_member_set(metadata, member_key, label, res)
+    if advertised is None:
+        return
+    _check_advertised_count(metadata, member_key, label, res)
+    on_disk, disk_name = _disk_member_set(collection_dir, member_key)
+    _report_member_difference(
+        res, label, advertised, on_disk, f"collection.yaml {member_key}", disk_name
+    )
+    _check_optional_index(collection_dir, member_key, advertised, label, res)
+
+
+def _check_collection_catalogue(
+    collection_yaml: Path, root: Path, res: CheckResult
+) -> None:
+    """Check both advertised member classes in one collection manifest."""
+    try:
+        label = collection_yaml.relative_to(root).as_posix()
+    except ValueError:
+        label = collection_yaml.as_posix()
+    metadata = _load_yaml(collection_yaml)
+    _check_catalogue_members(collection_yaml.parent, metadata, "skills", label, res)
+    _check_catalogue_members(collection_yaml.parent, metadata, "tools", label, res)
+
+
+def check_catalogue_membership(collections_root: Path) -> CheckResult:
+    """Reconcile every collection manifest found below ``collections_root``."""
+    res = CheckResult(
+        name="catalogue_membership",
+        gates=[10],
+        hard_gate=True,
+        summary="Collection counts and advertised members match disk and published indexes.",
+    )
+    collection_yamls = sorted(Path(collections_root).rglob("collection.yaml"))
+    if not collection_yamls:
+        res.add(FAIL, f"No collection.yaml found under {collections_root}.")
+        return res
+    for collection_yaml in collection_yamls:
+        _check_collection_catalogue(collection_yaml, Path(collections_root), res)
+    if res.status == PASS:
+        res.add(PASS, f"All {len(collection_yamls)} collection catalogues agree.")
+    res.summary = f"{res.summary}  ({len(collection_yamls)} catalogues checked)"
+    return res
 
 
 def check_layout(
@@ -1137,7 +1344,9 @@ def _load_yaml(path: Path) -> dict[str, Any]:
         return {}
 
 
-def _resolve_corpus(collection_dir: Path, explicit: Path | None) -> tuple[dict[str, Any], Path | None]:
+def _resolve_corpus(
+    collection_dir: Path, explicit: Path | None
+) -> tuple[dict[str, Any], Path | None]:
     if explicit:
         return _load_yaml(explicit), explicit
     for cand in (collection_dir / "corpus.yaml", collection_dir.parent / "corpus.yaml"):
@@ -1167,6 +1376,8 @@ def run_gate(
         check_workflows(collection_dir),
         check_layout(collection_dir),
     ]
+    if (collection_dir / "collection.yaml").is_file():
+        checks.append(check_catalogue_membership(collection_dir))
 
     counts = {PASS: 0, WARN: 0, FAIL: 0}
     for c in checks:
@@ -1219,14 +1430,27 @@ def _print_human_summary(report: dict[str, Any]) -> None:
     print("  checks:")
     for c in report["checks"]:
         hard = " [hard-gate]" if c["hard_gate"] else ""
-        print(f"    {icon[c['status']]:>4}  {c['name']} (gates {c['gates']}){hard} — {c['n_findings']} finding(s)")
+        print(
+            f"    {icon[c['status']]:>4}  {c['name']} (gates {c['gates']}){hard} — {c['n_findings']} finding(s)"
+        )
         for d in c["details"]:
             print(f"            · [{icon[d['status']]}] {d['message']}")
-    print(f"  overall    : {icon[report['overall_status']]}  (exit {report['exit_code']})")
+    print(
+        f"  overall    : {icon[report['overall_status']]}  (exit {report['exit_code']})"
+    )
     if report["blocking"]:
-        print("  RESULT     : BLOCKED — strict mode + at least one FAIL on a hard gate.")
+        print(
+            "  RESULT     : BLOCKED — strict mode + at least one FAIL on a hard gate."
+        )
     elif report["overall_status"] == FAIL:
         print("  RESULT     : advisory — FAIL(s) reported, exit 0 (curator review).")
+
+
+def _print_check_summary(result: CheckResult) -> None:
+    """Print one repository-wide check with the release gate vocabulary."""
+    print(f"{result.status.upper()}: {result.name} — {result.summary}")
+    for detail in result.details:
+        print(f"  [{detail['status'].upper()}] {detail['message']}")
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -1240,7 +1464,12 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "collection_dir",
         type=Path,
-        help="Collection directory, e.g. collections/metabolomics/v1",
+        help="Collection directory, or a tree root with --catalogue-membership.",
+    )
+    parser.add_argument(
+        "--catalogue-membership",
+        action="store_true",
+        help="Walk every collection.yaml below collection_dir and check advertised members.",
     )
     parser.add_argument(
         "--corpus",
@@ -1277,12 +1506,19 @@ def main(argv: list[str] | None = None) -> int:
         sys.stderr.write(f"error: collection_dir not found: {collection_dir}\n")
         return 2
 
+    if args.catalogue_membership:
+        result = check_catalogue_membership(collection_dir)
+        _print_check_summary(result)
+        return 1 if result.status == FAIL else 0
+
     strict = bool(args.strict)  # --advisory and default both → strict=False
     report = run_gate(collection_dir, args.corpus, strict)
 
     report_path = args.report or (collection_dir / "gate_report.json")
     try:
-        report_path.write_text(json.dumps(report, indent=2, sort_keys=False) + "\n", encoding="utf-8")
+        report_path.write_text(
+            json.dumps(report, indent=2, sort_keys=False) + "\n", encoding="utf-8"
+        )
     except OSError as exc:
         sys.stderr.write(f"error: could not write report to {report_path}: {exc}\n")
         return 2
