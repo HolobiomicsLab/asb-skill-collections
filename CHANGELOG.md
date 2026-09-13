@@ -15,6 +15,13 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
 ## [Unreleased]
 
 ### Fixed
+- An installed unit that is moved on disk stays usable and stays removable. Every
+  bound entry now names its asset root relative to its own directory alongside the
+  absolute path, and its documented first step resolves from the entry rather than
+  from a path fixed at install time. `uninstall --dest` and `install --dest`
+  naming the new location recognise the moved unit as the same unit instead of
+  refusing it, so removal no longer requires aiming an uninstall at a directory
+  that no longer exists — which emptied the manifest and orphaned the copy.
 - Remove twelve stale rows from four technique packs' skill indexes and KB
   bundles, using their declared v2 parent index; correct the pack table and
   router count metadata without changing leaves.

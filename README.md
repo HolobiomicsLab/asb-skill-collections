@@ -151,7 +151,10 @@ python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --dest ~/so
 Every install copies the pack's shipped files into a managed snapshot under
 `<destination>/.asbb-units/`, including its leaves, indexes, helpers and workflows.
 Local caches, virtual environments and Git metadata are excluded. The advertised
-entries identify this installed root for relative paths and commands. Skill-native
+entries identify this installed root for relative paths and commands, naming it
+both absolutely and relative to the entry's own directory, so an installation
+that is later moved on disk stays usable — and `uninstall`/`install` accept a
+`--dest` naming where it was moved to. Skill-native
 entries **symlink** to adapters in the snapshot by default; `--copy` (also used by
 `--dest`) creates real adapter directories. Rules targets receive rendered files
 with the same root instructions. All modes retain their shipped assets after the

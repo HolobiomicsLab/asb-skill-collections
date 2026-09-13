@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
+import re
 import shutil
 from pathlib import Path
 
@@ -12,6 +14,13 @@ from .paths import resolve_within
 UNITS_DIR = ".asbb-units"
 ENTRIES_DIR = ".asbb-entries"
 RECEIPT_FILE = ".asbb-unit.json"
+
+#: The installed asset root, written into every bound entry. The absolute form
+#: is what readers have always looked for; the relative form is the same
+#: directory seen from the entry's own directory, and is the only one of the two
+#: that survives the installation being moved on disk.
+ABSOLUTE_MARKER = re.compile(r"<!-- asbb-unit: (.+?) -->")
+RELATIVE_MARKER = re.compile(r"<!-- asbb-unit-relative: (.+?) -->")
 LOCAL_STATE = frozenset(
     {".git", ".cache", "__pycache__", ".pytest_cache", ".ruff_cache", ".venv"}
 )
@@ -88,18 +97,100 @@ def copy_assets(assets, destination):
             shutil.copy2(source, final)
 
 
-def bind_body(body: str, unit: Path, source_entry: str) -> str:
-    """Prefix instructions with the installed working directory and original entry."""
+def entry_relative_unit(unit: Path, entry_dir: Path) -> str:
+    """Return the unit as seen from the directory holding one bound entry.
+
+    Skill-native entries are directories beside ``.asbb-units``, so the unit is
+    one hop up; rules entries are files in the destination itself, so it is not.
+    The depth is derived, never assumed: a fixed ``../`` would miss one of the
+    two by exactly one directory, and miss it silently.
+    """
+    return Path(os.path.relpath(Path(unit), Path(entry_dir))).as_posix()
+
+
+def bind_body(body: str, unit: Path, source_entry: str, entry_file: Path) -> str:
+    """Prefix instructions with the installed working directory and original entry.
+
+    Two markers are written, not one. The absolute path is what every reader has
+    always looked for and it is exact while nothing has moved — but it is also
+    the single fact that stops being true the moment the installation is moved on
+    disk, and a moved install used to leave its own documented first step naming
+    a directory that no longer exists. The relative marker is the same unit seen
+    from this entry's own directory, so it survives any move of the install root.
+    Readers resolve the relative marker against the directory they read the entry
+    from and fall back to the absolute one; see :func:`unit_from_entry`.
+    """
     import shlex
 
+    relative = entry_relative_unit(unit, Path(entry_file).parent)
     return (
         f"<!-- asbb-unit: {json.dumps(str(unit))} -->\n"
+        f"<!-- asbb-unit-relative: {json.dumps(relative)} -->\n"
         "## Installed pack location\n\n"
-        f"This pack's asset root is `{unit}`. Resolve pack-relative paths here, "
-        "including indexes, leaves and helper scripts. Before running the commands "
-        "below, change the working directory in the same shell:\n\n"
-        f"```sh\ncd -- {shlex.quote(str(unit))}\n```\n\n"
-        f"The original entry is `{unit / source_entry}`; resolve entry-local "
-        "supporting files beside that file.\n\n"
+        f"This pack's asset root is `{relative}`, resolved against the directory "
+        "holding this file. That is the form to prefer: it stays correct if this "
+        f"installation is moved. While it has not moved it is `{unit}`. Resolve "
+        "pack-relative paths there, including indexes, leaves and helper scripts. "
+        "Before running the commands below, change the working directory in the "
+        "same shell — set `ENTRY` to the path you read this file from, which is "
+        "the line below unless the installation has moved:\n\n"
+        f"```sh\nENTRY={shlex.quote(str(entry_file))}\n"
+        f'cd -- "$(dirname -- "$ENTRY")/{relative}"\n```\n\n'
+        f"The original entry is `{source_entry}` beneath that root; resolve "
+        "entry-local supporting files beside that file.\n\n"
         f"{body}"
     )
+
+
+def _marker(text: str, pattern) -> str | None:
+    """Return one marker's decoded path, or None when it is absent or unreadable."""
+    found = pattern.search(text)
+    if not found:
+        return None
+    try:
+        value = json.loads(found[1])
+    except (json.JSONDecodeError, TypeError):
+        return None
+    return value if isinstance(value, str) and value else None
+
+
+def _unit_candidates(entry: Path, text: str):
+    relative = _marker(text, RELATIVE_MARKER)
+    if relative:
+        # The lexical parent, normalised without touching the filesystem. Under
+        # the default symlink mode the host entry is a link into the unit, so
+        # resolving it first would walk *inside* the unit and lose the
+        # `.asbb-units` sibling that the relative path names.
+        yield Path(os.path.normpath(Path(entry.parent) / relative))
+    absolute = _marker(text, ABSOLUTE_MARKER)
+    if absolute:
+        yield Path(absolute)
+    # Last resort, for a reader that resolved the entry's symlink before reading
+    # it: that reader is standing inside the unit already, where neither marker
+    # points back at it. The unit is then the nearest ancestor carrying a receipt.
+    try:
+        physical = entry.resolve(strict=True)
+    except (OSError, RuntimeError):
+        return
+    yield from physical.parents
+
+
+def unit_from_entry(entry: Path) -> Path | None:
+    """Locate an installed entry's asset root from the entry's own markers.
+
+    Candidates are tried in order and the first one that is actually an
+    installed unit — proved by its receipt, not by existing — wins. Returns None
+    when the entry carries no marker, or when every path it names is gone.
+    """
+    entry = Path(entry)
+    try:
+        text = entry.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return None
+    for candidate in _unit_candidates(entry, text):
+        try:
+            if (candidate / RECEIPT_FILE).is_file():
+                return candidate
+        except OSError:
+            continue
+    return None

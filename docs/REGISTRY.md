@@ -424,6 +424,16 @@ directory, is refused before anything is written; links inside the pack are
 materialised as files. The installer does not establish grounding quality and
 does not copy external dependencies.
 
+Each advertised entry records the unit twice: an absolute path, and the same
+directory relative to the entry's own directory (`../.asbb-units/<content-id>`
+for skill entries, `.asbb-units/<content-id>` for rules entries, which sit in the
+destination itself). Readers resolve the relative form against the directory they
+read the entry from and fall back to the absolute one, so a destination that is
+moved wholesale keeps working. Management follows: `uninstall --dest` and
+`install --dest` naming the new location recognise the moved unit as the same
+unit, proved by the receipt it carried with it and by the recorded root no longer
+holding it — a *copy*, whose original is still in place, is never claimed.
+
 The destination and the source pack may not contain each other, in either
 direction, and two advertised entries may not resolve to the same destination
 path or to one inside another; both are refused while the plan is being built.
