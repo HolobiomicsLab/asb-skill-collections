@@ -511,23 +511,34 @@ separate top-level command, still present, and still a stub.
 > `registry` out of the CLI is a separate owner decision; see
 > `governance/CONTENT_POLICY.md` §7.1.
 
-### 4.2 asbb verify-collection
+### 4.2 asbb verify-collection (never existed)
 
-The content gate (`python scripts/release_gate.py <collection> --strict`) produces `gate_report.json`, or the `--report` destination, with scoped item counts, separate file coverage, payload/manifest digests, input closure, recomputed inventory and policy/configuration version. Only the selected receipt and `MANIFEST.gen.json` are excluded from the payload digest. Recheck a saved strict receipt with `--verify` and the same `--report` override; ASB cut manifests require source directories via `--inputs`. Strict gating and re-verification use exits 0 verified, 1 failed/uncheckable, 2 usage error. Advisory mode retains 0 for nonempty diagnostics and explicitly states “diagnostic run, not a release verification”; empty required measurements exit 1 in either mode. Optional absent workflows are `not_applicable`. A `collection.yaml` declaration of `unit_type: data-only` or `unit_type: empty` identifies a nonskill unit but cannot obtain skill validation or a passing release receipt from zero skill checks. Additional registry validation is documented below:
+**There is no `asbb verify-collection`.** Unlike `asbb registry`, which was
+advertised and then removed, this name has never been a subcommand at all: the
+top-level parser takes `search / get / verify / doctor / install / uninstall`, so
+the invocation this section used to print is an argparse `invalid choice` that
+exits 2, and none of its three flags exists on any command in this repository.
+The paragraph below is accurate and names the real route.
 
-```bash
-asbb verify-collection collections/metabolomics/v1 \
-  --require-open-access \
-  --check-dois \
-  --validate-ro-crate
-```
+The content gate (`python scripts/release_gate.py <collection> --strict`) produces `gate_report.json`, or the `--report` destination, with scoped item counts, separate file coverage, payload/manifest digests, input closure, recomputed inventory and policy/configuration version. Only the selected receipt and `MANIFEST.gen.json` are excluded from the payload digest. Recheck a saved strict receipt with `--verify` and the same `--report` override; ASB cut manifests require source directories via `--inputs`. Strict gating and re-verification use exits 0 verified, 1 failed/uncheckable, 2 usage error. Advisory mode retains 0 for nonempty diagnostics and explicitly states “diagnostic run, not a release verification”; empty required measurements exit 1 in either mode. Optional absent workflows are `not_applicable`. A `collection.yaml` declaration of `unit_type: data-only` or `unit_type: empty` identifies a nonskill unit but cannot obtain skill validation or a passing release receipt from zero skill checks.
 
-Checks:
-- collection.yaml schema compliance
-- All derived_from DOIs resolve
-- RO-Crate metadata validity
-- SKILL.md frontmatter discipline (description length, no marketing terms)
-- Open-access source tags (if `--require-open-access`)
+What the removed invocation's *Checks* list advertised maps onto that route as
+follows.
+
+| Advertised check | What actually runs it |
+| --- | --- |
+| `collection.yaml` schema compliance | Nothing. `layout_packaging` checks the on-disk layout and `unit_closure` that every declared member resolves, and `--catalogue-membership` checks that the catalogue's advertised members exist — none of them validates `collection.yaml` against a schema. |
+| All `derived_from` DOIs resolve | `provenance_doi_license` checks that each leaf carries a source DOI **or** a repository URL, plus a licence tag. Nothing in this repository resolves a DOI over the network. |
+| RO-Crate metadata validity | No replacement. The gate contains no RO-Crate check. |
+| SKILL.md frontmatter discipline (description length, no marketing terms) | `python scripts/lint_skill_descriptions.py` — a separate script, not part of the gate. |
+| Open-access source tags (if `--require-open-access`) | `access_tier_oa`, which runs unconditionally; `release_gate.py` has no `--require-open-access` flag. |
+
+A strict receipt records thirteen checks: the eight content checks
+`access_tier_oa`, `catalogue_membership`, `composite_workflows`,
+`layout_packaging`, `pii_dual_use`, `provenance_doi_license`,
+`strip_verbatim_similarity` and `unit_closure`, and the five that bind the
+receipt to what it measured — `collection_inventory`, `cut_manifest`,
+`gate_input_files`, `target_binding` and `target_stability`.
 
 ### 4.3 asbb export-sssom
 
