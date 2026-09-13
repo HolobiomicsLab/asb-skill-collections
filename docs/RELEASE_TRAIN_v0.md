@@ -164,14 +164,19 @@ ELSE (token is set):
 
 **Zenodo topology (v0, LOCKED):**
 - **Exactly ONE concept-DOI per collection-release** (versioned deposition, all versions linked under one concept).
-- **The KB snapshot, the indicium schema version, and the asb: ontology Turtle ride as FILES inside that single deposition — they do NOT get separate DOIs.**
-- **indicium has its OWN concept-DOI** (minted by the indicium repo's own Zenodo releases). The collection deposition only pins/attaches the indicium version as a file; it does not re-mint a DOI for indicium.
-- **Attached files inside the versioned deposition:**
-  - `<slug>-v<N>.zip` (the collection directory)
-  - the **KB snapshot** for this collection (grounding KB archive)
-  - `indicium_version.txt` (the indicium release version pinned by this release; indicium itself is DOI'd separately — see "Indicium co-release" below)
-  - `asb_ontology.ttl` (the asb: ontology Turtle snapshot at this release; see SPEC.md §5.1)
-  - `CITATION.cff` (for reproducibility)
+- **The KB binder rides as a FILE inside that single deposition — it does NOT get a separate DOI.**
+- **indicium has its OWN concept-DOI** (minted by the indicium repo's own Zenodo releases).
+- **Attached files inside the versioned deposition, as `release.yml` actually uploads them:**
+  - `<slug>-v<N>.zip` — the collection directory, plus `scripts/perspicacite_kb_bind.py`,
+    `scripts/requirements.txt` and `AGENTS.md` so the archive is self-contained
+  - `<slug>-v<N>-leafemb.npz` — the prebuilt leaf embedding cache, **only when a maintainer has
+    placed it** (fail-soft; absent by default, and semantic retrieval re-embeds on first use)
+  - `kb_bundle.json` and `CITATION.cff` ride **inside** the zip, not as separate uploads
+
+  ~~`indicium_version.txt`~~ and ~~`asb_ontology.ttl`~~ are **struck (2026-09-13)** — see
+  `governance/CONTENT_POLICY.md` §7.4. Neither ever existed, `release.yml` has no stage that would
+  attach them, and a v0 collection contains no JSON-LD, no claim records and no `asb:`-typed
+  artefact for that ontology to describe.
 
 **DOI output:** Minted DOI is passed to the next step via GitHub output `steps.zenodo.outputs.doi`.
 
@@ -301,17 +306,23 @@ ELSE:
 
 **What this means for the release train:**
 
-1. **Before tagging a collection**, check the indicium version pinned in the release/profile.
-   - Lookup: `agenticsciencebuilder_dev/docs/asbb/RELEASE.yaml` (not yet finalized; assume it exists and carries `indicium_version: <tag>`)
-   - Or, look at the pinned version in the AgenticScienceBuilder codebase (e.g., `setup.py` or `pyproject.toml`).
+**Not applicable to a v0 collection release (2026-09-13).** This repository has no indicium
+dependency — `indicium-adapters` is `pip install ... || echo WARNING` in two workflows and is not on
+PyPI — and a shipped collection contains no claim records for the indicium schema to govern. There is
+therefore nothing for a collection tag to pin. The steps below are kept for **v1**, when claim records
+ship, and one of them has to change first:
 
-2. **At Zenodo deposit time**, attach the indicium version as a metadata file:
-   - Create `indicium_version.txt` containing the tag (e.g., `v1.11.0`) or full version identifier
-   - Include it in the zipped collection
-   - This makes the pin publicly discoverable
+1. **Before tagging**, check the indicium version pinned in the release/profile.
+   - Lookup: `agenticsciencebuilder_dev/docs/asbb/RELEASE.yaml` — **this file does not exist**; treat
+     the lookup as unavailable rather than assuming it carries `indicium_version`.
+   - Or read the pinned version in the AgenticScienceBuilder codebase.
 
-3. **If indicium is released AFTER the collection tag**, update the collection CITATION.cff manually and push a patch commit (e.g., `git commit -m "chore: pin indicium to <tag>"`) before the Zenodo step runs.
-   - v0 guidance: keep releases close together; synchronize tags within 24 hours.
+2. **Pin a commit SHA, not a tag.** `~/git/indicium` has **zero tags**, and its two version strings
+   disagree — `pyproject.toml` says `2.0.0`, the installed distribution reports `1.12.0`. "The tag
+   (e.g. `v1.11.0`)" is unproducible; a SHA identifies the schema exactly and is available today.
+
+3. **If indicium is released AFTER the collection tag**, update `CITATION.cff` and push a patch commit
+   before the Zenodo step runs. v0 guidance: keep releases close together; synchronize within 24 hours.
 
 4. **Breaking change policy:** If a new major version of indicium ships before your release:
    - Rebase collection against the new indicium
@@ -527,7 +538,8 @@ pytest tests/ -v
 - [ ] Confirm collection in `collections/<slug>/v<N>/` is complete
 - [ ] Run local pytest: `pytest tests/ -v` (passes)
 - [ ] Review `CITATION.cff` (authors, DOIs, license)
-- [ ] Check that `indicium_version` is pinned (in release manifest, if it exists)
+- [ ] ~~Check that `indicium_version` is pinned~~ — **not applicable at v0** (no indicium dependency, no claim records, no release manifest; see "Indicium co-release")
+- [ ] Confirm the w3id redirect for `w3id.org/holobiomicslab/asb-skill/` — **it 404s today**, so every `@id` in the deposited collection is a dead link until the redirect config is submitted
 
 ### Release (tag push)
 

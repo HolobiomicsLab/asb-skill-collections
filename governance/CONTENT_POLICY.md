@@ -217,16 +217,16 @@ The release gate is the checkpoint between private Tier 2 and public Tier 3. Eve
 At v0, `release_gate.py` hard-blocks on gates **2, 5, 6, 8, 10, 15** — the
 `hard_gate_ids` field of every gate report, and the authority when this table and the
 code disagree. Gates **1, 3, 4, 7, 9, 11** are warn-only. Gates **13** and **14** are
-formally waived for v0 (§9). Gate **12** is declared hard-blocking in the row below but
-has **no implementation**: no contamination check exists, and no collection file
-declares `benchmark_tier` or `openness`. Activating it or waiving it like 13/14 is an
-open decision; until it is taken, the row describes an intention, not a check.
+formally waived for v0 (§9), and so, as of 2026-09-13, is gate **12** — it is declared
+hard-blocking in the row below but has **no implementation**: no contamination check
+exists, and no collection file declares `benchmark_tier` or `openness`. The row states a
+v1 intention, not a v0 check (§9).
 
 | # | Gate | Owner | Criterion | Trigger | v0 Enforcement |
 |---|---|---|---|---|---|
 | **1** | **asb-schema published** | A+H | LinkML `asb-schema` repo public + registered | gate check: lookup on GitHub | warn-only (schema not published yet) |
 | **2** | **Paper access tier resolved** | A | Every `status:included` paper has `access.type` in the OA set `{open-access, open_access, oa, gold-oa, gold_oa, green-oa, green, diamond}` (post-normalization) | CI verify-paper.yml | hard-block non-OA / unknown |
-| **3** | **Indicium schema version pinned** | A | Collection YAML lists `schema_versions.indicium: <real-tag>` from indicium repo | gate check: git tag exists | warn-only (gate 3 not activated v0) |
+| **3** | **Indicium schema version pinned** | A | Collection YAML lists `schema_versions.indicium: <real-tag>` from indicium repo | gate check: git tag exists | warn-only (gate 3 not activated v0). **Unachievable as written:** the indicium repository has zero tags and no collection declares `schema_versions`. At v1 the pin is a commit SHA — §7.4 |
 | **4** | **Profile reproducibility** | A | Generation manifest includes `profile_hash`, `llm`, `seed` enabling exact rebuild | manifest validation | warn-only (gate 4 not activated v0) |
 | **5** | **Verbatim quotation caps** | A | Sum of `evidence_span` lengths across all skills/claims ≤ corpus-size-dependent cap (§5.3) | gate check: char count | hard-block (fail if exceeded) |
 | **6** | **Similarity check (verbatim vs original)** | A | N-gram overlap + embedding cosine for each `evidence_span` vs Tier-1 source ≤ threshold (§5.4) | gate check: automated similarity scan | hard-block (flag/block spans for rewrite) |
@@ -235,7 +235,7 @@ open decision; until it is taken, the row describes an intention, not a check.
 | **9** | **Indicium adapters published** | A | All four indicium adapters (sepio, sssom, prov, claims) are publicly available + versioned | gate check: lookup on PyPI/GitHub | warn-only (adapters not published yet) |
 | **10** | **Registry consistency** | A | `marketplace.json` ↔ `catalogue.jsonld` ↔ filesystem reconciliation passes; no duplicates, IRI conflicts, or missing files | CI validate.yml → asbb registry verify | hard-block (fail if drift) |
 | **11** | **Leaderboard schema valid** | A | `benchmark/leaderboard.jsonld` validates against JSONLD context; CiTO link types recognized | gate check: JSONLD parser + CiTO vocab | warn-only (gate 11 not activated v0) |
-| **12** | **Contamination / held-out audit** | A | For open-tier releases: no held-out test splits mixed into public outputs; for closed-tier: held-out marker present (v1+ only; v0 open-only) | gate check: output file audit | hard-block (fail if contamination detected) |
+| **12** | **Contamination / held-out audit** | A | For open-tier releases: no held-out test splits mixed into public outputs; for closed-tier: held-out marker present (v1+ only; v0 open-only) | (v1) gate check: output file audit | **FORMALLY WAIVED for v0** — no contamination check is implemented and no held-out split is declared; v0 is open-tier only, so the criterion's closed-tier half does not apply (waiver logged in §9 + release notes) |
 | **13** | **Independent co-reviewer (gate §9 waiver)** | A+H | (v1) If `is_coauthor: true` on any collection attestation, a second verified reviewer (non-coauthor, ≥Reviewer tier) has signed off | CR-P0-02 attestation review | **FORMALLY WAIVED for v0** — self-merge permitted; no second reviewer required pre-tag (waiver logged in §9 + release notes) |
 | **14** | **≥20 external reviews (gate §9 waiver)** | A+H | (v1 TARGET) Lead Curator's external-review count (papers with `is_coauthor:false`) ≥ 20 | tier-update.yml CI + manual audit | **FORMALLY WAIVED for v0** — ≥20 external reviews is the v1 target, NOT enforced at v0 (waiver logged in §9 + release notes) |
 | **15** | **v0 OA-only access tier** | A | All included papers `access.type` in the OA set `{open-access, open_access, oa, gold-oa, gold_oa, green-oa, green, diamond}` (post-normalization); no closed/hybrid/unknown mixed in. Gate 15 asserts ONLY the paper-access (`require_open_access`) axis; it does NOT assert workflow openness (`benchmark_tier.openness`) | verify-paper.yml CI | hard-block v0 (non-OA auto-fail) |
@@ -415,11 +415,40 @@ fact without breaking the receipt.
 
 The following ride as **FILES inside that single deposition** — they do NOT receive separate DOIs:
 
-- the **KB snapshot** (the pinned grounding knowledge base for the collection),
-- the **indicium schema version** (recorded as `indicium_version.txt` / pin file), and
-- the **asb: ontology Turtle** snapshot (`asb_ontology.ttl`) at this release.
+- the **KB snapshot** (the pinned grounding knowledge base for the collection) — this ships as
+  `kb_bundle.json` inside the collection directory, and therefore inside the zip. It is a DOI-list
+  binder manifest rather than an archive of the grounding KB itself; it pins *which* KB, not its
+  contents.
 
-**indicium has its own, separate concept-DOI** (minted from the indicium repository's own releases). The collection deposition only *pins/attaches the indicium schema version as a file*; it does not re-mint a DOI for indicium. Do not create per-file or per-export DOIs (no DOI matrix explosion).
+**indicium has its own, separate concept-DOI** (minted from the indicium repository's own releases). Do not create per-file or per-export DOIs (no DOI matrix explosion).
+
+**Struck 2026-09-13: the `indicium_version.txt` pin file and the `asb_ontology.ttl` snapshot.**
+Both were listed here from the start, neither ever existed, and `release.yml`'s Zenodo step has no
+stage that would attach them. They are struck rather than built, because **the deposition contains
+nothing that conforms to that ontology.** A v0 collection is 5,917 Markdown files, 934 YAML, 8 JSON
+and a `CITATION.cff`: **zero JSON-LD documents, zero claim records, zero indicium exports.** The
+`asb:` term base that `asb_spine.ttl` declares (`https://w3id.org/asb#`) appears nowhere in a shipped
+collection. Depositing an ontology beside artefacts that do not use it would assert a conformance
+that does not exist — the same failure this policy's other corrected claims produced, in the one
+place where a reader is most entitled to trust the record.
+
+**What the deposition actually needs pinned, and already has.** The IRI space a v0 collection uses is
+`https://w3id.org/holobiomicslab/asb-skill/`, bound as the `asb:` prefix at `collection.yaml:3` and
+stamped into the `@id` of every skill — 5,884 occurrences in `metabolomics/v2` alone. Its JSON-LD
+context is the repository's `catalogue.jsonld`, which pins `schema.org` as `@vocab` plus the EDAM and
+XSD prefixes. Both ship. No third file is required.
+
+> **Open, and it is a registration, not a decision.** Neither `https://w3id.org/holobiomicslab/asb-skill/`
+> nor `https://w3id.org/asb` resolves — both return 404 (checked 2026-09-13). A w3id IRI is designed to
+> be minted before it redirects, so this does not block a tag and the identifiers stay stable, but every
+> `@id` in the deposited collection is a dead link until the redirect config is submitted to the w3id.org
+> repository. Tracked as the `w3id-registration` register item; the PR text is already drafted.
+
+**If v1 ships claim records**, the ontology pin becomes real and belongs here — at that point snapshot the
+generated Turtle from the framework (`docs/ontology/asb_spine.ttl`), not a hand-copy in this repo. The
+indicium pin should then be a **commit SHA, not a tag**: the indicium repository has zero tags, and its
+two version strings disagree (`pyproject.toml` says 2.0.0, the installed distribution reports 1.12.0), so
+"the tag" as `RELEASE_TRAIN_v0.md:309` asks for is unproducible today.
 
 ### 7.5 Install Surface vs. asbb CLI (Phase 1.7)
 
@@ -506,18 +535,21 @@ If a hard-gate violation is discovered **after release** (e.g., a non-OA paper s
 
 ---
 
-## 9. Governance: Review Gates 13 & 14 (v0 Waiver)
+## 9. Governance: Gates 12, 13 & 14 (v0 Waiver)
 
-The full spec (§9 Community/Public Expert Review, SPEC.md §9.7.6) defines gates 13 and 14:
+The full spec (§9 Community/Public Expert Review, SPEC.md §9.7.6) defines gates 13 and 14;
+gate 12 is defined in §5's checklist:
 
+- **Gate 12:** Contamination / held-out audit (no held-out split mixed into public outputs)
 - **Gate 13:** Independent co-reviewer present when `is_coauthor: true` on any attestation
 - **Gate 14:** ≥20 external reviews (Lead-Curator non-self minimum)
 
-### v0 Waiver Justification (LOCKED 2026-06-14)
+### Gates 13 & 14 — v0 Waiver Justification (LOCKED 2026-06-14)
 
 **Context:** ASB v0 is a single-maintainer, single-lead-curator release. Gates 13 & 14 are designed for a mature multi-curator governance model with multiple independent reviewers. Enforcing them at launch would be a structural impossibility.
 
-**v0 Exception (BOTH gates FORMALLY WAIVED):**
+**v0 Exception (BOTH gates FORMALLY WAIVED):**  
+*(Gate 12 is waived separately, under its own justification below, LOCKED 2026-09-13.)*
 
 1. **Gate 13 (independent co-reviewer) — FORMALLY WAIVED for v0**
    - v0 permits self-review of papers where the reviewer is a co-author (with full disclosure in attestation)
@@ -530,7 +562,29 @@ The full spec (§9 Community/Public Expert Review, SPEC.md §9.7.6) defines gate
    - v0 sets no minimum external-review count; the gate is waived rather than lowered
    - v0 releases are labeled "pre-peer-review" / "community-review-eligible" in release notes
 
-**Waiver logging:** This waiver is logged here (§9 + §13 waiver summary) and MUST also be recorded in the release notes / CHANGELOG of each v0 collection release.
+### Gate 12 Waiver Justification (LOCKED 2026-09-13)
+
+**Context:** gate 12 asks whether a held-out evaluation split leaked into public output. That
+question is not answerable for v0, because **no split was ever declared**: `benchmark_tier` and
+`openness` occur zero times in any collection file, there is no `benchmark/` directory, and no
+contamination logic exists in `scripts/` or in the package. The gate's own criterion scopes its
+closed-tier half to "v1+ only; v0 open-only", and v0 is open-tier throughout. Building the check
+is not the work — declaring the split it would audit is, and that belongs with the benchmark, not
+with this release.
+
+**Gate 12 (contamination / held-out audit) — FORMALLY WAIVED for v0**
+
+   - v0 ships open-tier only; there is no closed-tier release for the held-out marker to protect
+   - No held-out split is declared in any v0 collection, so there is nothing a contamination audit
+     could compare against
+   - `release_gate.py`'s `hard_gate_ids` is `(2, 5, 6, 8, 10, 15)` and does **not** include 12;
+     this waiver makes the document agree with the code rather than the reverse
+   - **Do not wire this gate to `--exclude-doi`.**
+     `collect_metabolomics_collection.py:715-746` contains the phrase "held out of release"; that is
+     a **licence** exclusion, it leaves no marker in the shipped artefact, and it is not an
+     evaluation split
+
+**Waiver logging:** All three waivers are logged here (§9 + §13 waiver summary) and MUST also be recorded in the release notes / CHANGELOG of each v0 collection release.
 
 ### v0 Release Label
 
@@ -551,6 +605,9 @@ multi-curator consensus) are enabled for v1.
 
 Starting with v1 (scheduled ~Q4 2026):
 
+- Gate 12 becomes enforceable **only once a held-out split exists to audit**: the prerequisite is a
+  declared benchmark split plus `benchmark_tier.openness` in the collection schema, populated. The
+  audit itself is the small part
 - Gate 13 becomes a hard requirement (independent co-reviewer if `is_coauthor:true`); self-merge is disallowed once v1 governance is in force
 - Gate 14 becomes a hard requirement (≥20 external reviews, verified in `tier-update.yml`)
 - Single-maintainer exception is removed; minimum two curators per release
@@ -563,7 +620,7 @@ Starting with v1 (scheduled ~Q4 2026):
 
 1. **Curator credit** — a human submits an attestation (`collections/<slug>/v<N>/reviews/<doi>.yaml`)
 2. **Reviewer credit** — a GitHub-verified human posts an approval comment on the attestation PR
-3. **External-review credit** — an ASB `--peer-review` run flags a claim + evidence pair; imported via `import_external_reviews.py`
+3. **External-review credit** — an ASB `--peer-review` run flags a claim + evidence pair. **(v1; see the gate 14 waiver in §9.)** The producing half ships — `peer_review.py` writes `peer_reviews.json` with `"source": "peer_review"`, and `claim_ledger.py` declares `peer_review` a valid `EvaluationSource` — but **no importer exists**: `import_external_reviews.py` is named here and nowhere else, in any repository. Nothing is blocked by its absence at v0, because its only consumer is gate 14, which is formally waived, and `contributors.jsonld` holds zero records, so there is no one to credit
 4. **Tier advancement** — curators with N qualifying reviews + M external-review + 0 COI conflicts advance to Reviewer/Lead-Curator tier (per `COI_POLICY.md`)
 
 ### Public Credit Surface
@@ -646,6 +703,7 @@ These items are required for v0 release:
 
 | Gate | Status | Justification | Expires |
 |---|---|---|---|
+| 12 (contamination / held-out audit) | **FORMALLY WAIVED** | No held-out split is declared anywhere in v0 and no contamination logic exists; v0 is open-tier only, so the criterion's closed-tier half does not apply. Waived 2026-09-13 | v1, and only once a split exists to audit |
 | 13 (independent co-reviewer) | **FORMALLY WAIVED** | Single-maintainer v0; self-merge permitted, no second reviewer required pre-tag | v1 (Q4 2026) |
 | 14 (≥20 external reviews) | **FORMALLY WAIVED** | ≥20 external reviews is the v1 target, not enforced at v0; releases labeled "pre-peer-review" | v1 (Q4 2026) |
 

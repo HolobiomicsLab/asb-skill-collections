@@ -183,20 +183,26 @@ To add a paper to a collection's corpus:
 
 1. **Open an issue** using the `Propose paper` template at <`https://github.com/HolobiomicsLab/asb-skill-collections/issues/new?template=propose-paper.md`>. Include: DOI, title, intended collection, rationale (why this paper).
 2. **Discussion** happens on the issue. Anyone may comment with reasoning for or against inclusion.
-3. **PR adds the paper** to `corpus.yaml` with `status: proposed`. `verify-paper.yml`
-   CI validates what the PR *declares*: it normalises `access.type` against the OA and
-   non-OA tier sets and fails the PR on a non-OA, `unknown` or `preprint` tier. It
-   installs only `pyyaml`, makes no network call and writes nothing back, so the
-   following are **intended, not implemented** — the proposer fills these fields in by
-   hand, and whether to build the write-back is an open decision:
-   - Resolve the DOI via Crossref
-   - Query Unpaywall to determine the access tier
-   - Populate `access.{type, license, verified_via, verified_on}`
-   - Flag duplicates (paper already in corpus). Scope it to the target corpus: every
-     corpus file is internally duplicate-free today, but **91 DOIs are shared between
-     `metabolomics/v1` and `metabolomics/v2`** — deliberate carry-overs, not errors, so
-     a cross-collection check would fire 91 times on day one.
-   - Check retraction status
+3. **PR adds the paper** to `corpus.yaml` with `status: proposed`, **with the access fields
+   filled in by the proposer**. `verify-paper.yml` CI then validates what the PR *declares*:
+   it normalises `access.type` against the OA and non-OA tier sets and fails the PR on a
+   non-OA, `unknown` or `preprint` tier. It installs only `pyyaml`, makes no network call and
+   writes nothing back — **the access tier is attested by the proposer and checked for
+   consistency, not resolved by CI.** State the source you used in the PR description.
+
+   *Automatic resolution is a v1 item, deliberately not built for v0 (decided 2026-09-13).*
+   Resolving the DOI via Crossref, querying Unpaywall, populating
+   `access.{type, license, verified_via, verified_on}` and checking retraction status from
+   inside the PR gate are all reachable — the clients exist and are reusable, and a PR touches
+   1–5 DOIs, so it would be 1–5 calls — but the read-only tier check stands on its own, and the
+   corpus-wide equivalent already runs monthly in `corpus-freshness.yml`, which is where a sweep
+   belongs. **The gap this leaves is freshness, not correctness:** `verified_on` is populated on
+   685 of 685 rows and the dates are ~3 months old.
+
+   **If it is built, scope the duplicate check to the target corpus.** Every corpus file is
+   internally duplicate-free today, but **91 DOIs are shared between `metabolomics/v1` and
+   `metabolomics/v2`** — deliberate carry-overs, not errors, so a cross-collection check would
+   fire 91 times on day one.
 4. **Lead Curator review** — confirms thematic fit, rationale quality, access-tier handling. Merging the PR transitions the paper to `status: accepted`.
 5. **Next ASB processing run** picks up accepted papers; promoted output transitions them to `status: included` (auto, by `asb collection promote`).
 
