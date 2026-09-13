@@ -233,7 +233,7 @@ v1 intention, not a v0 check (§9).
 | **7** | **Claim fidelity (indicium round-trip)** | A | Every skill claim resolves in `benchmark/claims/` ground truth; `trace_status: exact_match` | gate check: indicium `verify-claims` | warn-only (gate 7 not activated v0) |
 | **8** | **DOI & license resolution** | A | Every artifact lists source DOI(s) + license SPDX tag; Zenodo lookup succeeds or entry is public preprint | gate check: CrossRef/Zenodo API | hard-block (fail if DOI invalid) |
 | **9** | **Indicium adapters published** | A | All four indicium adapters (sepio, sssom, prov, claims) are publicly available + versioned | gate check: lookup on PyPI/GitHub | warn-only (adapters not published yet) |
-| **10** | **Registry consistency** | A | `marketplace.json` ↔ `catalogue.jsonld` ↔ filesystem reconciliation passes; no duplicates, IRI conflicts, or missing files | release_gate.py `check_catalogue_membership` + `check_layout` + `check_unit_closure` (**not** `asbb registry verify`, which is not a command — §7.1) | hard-block (fail if drift) |
+| **10** | **Registry consistency** | A | `marketplace.json` ↔ `catalogue.jsonld` ↔ filesystem reconciliation passes; no duplicates, IRI conflicts, or missing files | release_gate.py `check_catalogue_membership` + `check_layout` + `check_unit_closure` (**not** `asbb registry verify`: that verb never existed, and `asbb registry` itself was removed on 2026-09-14 — §7.1 and `docs/REGISTRY.md` §4.1) | hard-block (fail if drift) |
 | **11** | **Leaderboard schema valid** | A | `benchmark/leaderboard.jsonld` validates against JSONLD context; CiTO link types recognized | gate check: JSONLD parser + CiTO vocab | warn-only (gate 11 not activated v0) |
 | **12** | **Contamination / held-out audit** | A | For open-tier releases: no held-out test splits mixed into public outputs; for closed-tier: held-out marker present (v1+ only; v0 open-only) | (v1) gate check: output file audit | **FORMALLY WAIVED for v0** — no contamination check is implemented and no held-out split is declared; v0 is open-tier only, so the criterion's closed-tier half does not apply (waiver logged in §9 + release notes) |
 | **13** | **Independent co-reviewer (gate §9 waiver)** | A+H | (v1) If `is_coauthor: true` on any collection attestation, a second verified reviewer (non-coauthor, ≥Reviewer tier) has signed off | CR-P0-02 attestation review | **FORMALLY WAIVED for v0** — self-merge permitted; no second reviewer required pre-tag (waiver logged in §9 + release notes) |
@@ -493,11 +493,16 @@ license-tier, provenance-tier and tool-catalogue gates over
 
 Three separate errors are corrected here.
 
-1. **`asbb registry verify` is not a command.** `asbb registry` accepts only `list`
-   and `validate` (`verify` is an `invalid choice`), and both are Phase-1.7 stubs
-   that print a placeholder and — since 2026-09-13 — exit 1 rather than 0, so that a
-   caller cannot read "consistent" out of a command that looked at nothing. Fixing the
-   verb would not have enforced anything either.
+1. **`asbb registry verify` is not a command — and since 2026-09-14 neither is
+   `asbb registry`.** Until then `asbb registry` accepted only `list` and `validate`
+   (`verify` was an `invalid choice`), and both were Phase-1.7 stubs that printed a
+   placeholder and — since 2026-09-13 — exited 1 rather than 0, so that a caller could
+   not read "consistent" out of a command that looked at nothing. Fixing the verb
+   would not have enforced anything either. On 2026-09-14 the owner removed the
+   advertised surface rather than leave a documented command that answers nothing:
+   `asbb registry <anything>` is now an argparse `invalid choice` on the top-level
+   parser and exits 2. `docs/REGISTRY.md` §4.1 records what the two subcommands
+   claimed and which script does each job.
 2. **`release_gate.py` is not wired into this workflow at all** — in advisory mode or
    any other. The gate runs at promotion (§7.2) and at release, never on a
    `staged-collections/` PR.
@@ -614,7 +619,9 @@ The **install surface** is the Claude Code plugin marketplace, NOT the `asbb` CL
 /plugin install <slug>-v<N>@HolobiomicsLab/asb-skill-collections
 ```
 
-resolved via `.claude-plugin/marketplace.json` (note: the manifest lives at `.claude-plugin/marketplace.json`, not at the repo root). The `asbb` CLI is **to-build (Phase 1.7)** and covers **registry / verify / doctor ONLY** — it is NOT the install path.
+resolved via `.claude-plugin/marketplace.json` (note: the manifest lives at `.claude-plugin/marketplace.json`, not at the repo root). The `asbb` CLI is **to-build (Phase 1.7)** and covers **verify / doctor ONLY** — it is NOT the install path.
+
+> **Corrected 2026-09-14.** This paragraph used to read "**registry / verify / doctor ONLY**". `registry` was the third Phase-1.7 stub: advertised in `asbb --help` and documented with two subcommands, doing neither. It was removed on 2026-09-14 — see `docs/REGISTRY.md` §4.1, which names the script that performs each job it claimed. (The "NOT the install path" half of the sentence is separately superseded by the shipped, tested `asbb install` / `asbb uninstall` for non-Claude runtimes; that correction is held in `docs/REGISTRY.md` §4 pending the owner's restatement of the locked caveat, and is not touched here.)
 
 ### 7.6 Two Independent Axes: OA-access vs. Workflow-openness
 
@@ -845,7 +852,7 @@ These items are required for v0 release:
 - [ ] TODO: `release_gate.py` wired with gates 1,2,5,6,8,10,12,15 hard-blocking (gate test coverage + PR comments)
 - [ ] TODO: `.github/workflows/promote-collection.yml` deployed (staged→collections gating)
 - [ ] TODO: `.github/workflows/verify-paper.yml` deployed (gate 15, access-tier enforcement)
-- [ ] TODO: `asb` CLI integration (`asbb doctor`, `asbb registry verify`) tested end-to-end
+- [ ] TODO: `asb` CLI integration (`asbb doctor`, `asbb verify`) tested end-to-end. ~~`asbb registry verify`~~ — that verb never existed and `asbb registry` was removed on 2026-09-14 (`docs/REGISTRY.md` §4.1); registry consistency is gate 10 above, carried by `release_gate.py`, not by the CLI
 - [ ] TODO: First collection (metabolomics) promoted to `collections/` and passes full CI
 - [ ] TODO: `CHANGELOG.md` / release notes updated with this policy
 - [ ] TODO: Contributor allowlist (author/affiliation emails) seeded in PII config

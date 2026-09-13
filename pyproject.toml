@@ -29,7 +29,7 @@ Pipeline = "https://github.com/HolobiomicsLab/AgenticScienceBuilder"
 
 [project.scripts]
 # Thin programmatic surface: `asbb search/get` (offline retrieval over a checkout)
-# + registry/verify/doctor + install for non-Claude runtimes. For Claude Code the
+# + verify/doctor + install for non-Claude runtimes. For Claude Code the
 # canonical collection install is `/plugin install`.
 asbb = "asb_skill_collections.asbb_cli:main"
 # MCP skill-server (needs the [mcp] extra). Any MCP agent can search/fetch skills.

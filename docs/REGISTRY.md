@@ -371,18 +371,24 @@ require Perspicacité, and `local` retrieves source material over the network.
 
 > **Caveat (locked):** The `asbb` CLI is **to-build (Phase 1.7)** and is scoped to **`registry` / `verify` / `doctor` ONLY**. It is a **registry utility, NOT the install surface**. The install surface is the Claude Code plugin marketplace (`/plugin install <slug>-v<N>@HolobiomicsLab/asb-skill-collections`, resolved via `.claude-plugin/marketplace.json`). Commands beyond `registry`/`verify`/`doctor` shown elsewhere in this doc (e.g. `export-sssom`) are aspirational/post-Phase-1.7 and are not part of the v0 surface.
 
-> **Superseded in fact, not yet in governance (2026-09-13).** The shipped CLI is
-> `search / get / registry / verify / doctor / install / uninstall`. `install`
-> and `uninstall` materialise packs into non-Claude runtimes (Codex, Gemini,
-> Copilot, Cursor, Cline, VS Code Copilot, or any directory via `--dest`) and are
-> covered by tests; `registry` and `doctor` are the commands that remain Phase-1.7
-> stubs. So the locked sentences above are false about the release candidate in
-> two ways: the CLI is not scoped to three commands, and it *is* an install
-> surface — for every runtime other than Claude Code, where the plugin
+> **Superseded in fact, not yet in governance (2026-09-13, revised 2026-09-14).**
+> The shipped CLI is `search / get / verify / doctor / install / uninstall`.
+> `install` and `uninstall` materialise packs into non-Claude runtimes (Codex,
+> Gemini, Copilot, Cursor, Cline, VS Code Copilot, or any directory via `--dest`)
+> and are covered by tests; `verify` and `doctor` are the commands that remain
+> Phase-1.7 stubs. So the locked sentences above are false about the release
+> candidate in two ways: the CLI is not scoped to three commands, and it *is* an
+> install surface — for every runtime other than Claude Code, where the plugin
 > marketplace stays the recommended path. The lock itself is a governance
 > decision and is left for the owner to retire or restate; this note exists so the
 > document does not contradict `asbb --help` unremarked. See
 > [offline selection](selection.md) and the install section of the root README.
+>
+> **`asbb registry` was removed on 2026-09-14** (owner decision). It was the
+> third stub, and unlike `verify` and `doctor` it was also documented here with a
+> two-subcommand surface and a sample transcript, so a reader could plan a
+> release step around it and only discover at the point of use that it answered
+> nothing. §4.1 records what it claimed and what does the work instead.
 
 
 The `asbb` command-line tool provides operations that do not go through Claude Code's `/plugin install`:
@@ -396,10 +402,15 @@ The `asbb` command-line tool provides operations that do not go through Claude C
 asbb install metabolomics-lc-ms --runtime agents   # codex | copilot | gemini | claude
 asbb install metabolomics-lc-ms --dest ~/some/skills/dir
 
-# Registry operations (asbb CLI — Phase 1.7, registry/verify/doctor only):
-asbb registry ...   # registry subcommands (list / validate published collections)
+# Registry operations (asbb CLI — Phase 1.7 stubs: they print a placeholder and exit 1):
 asbb verify ...     # validate a collection / catalogue / marketplace before release
 asbb doctor         # health check: DOI resolution, KB reachability, manifest availability
+
+# Registry reconciliation (shipped, not a stub). `asbb registry` was removed
+# 2026-09-14; these are what actually do the job — see §4.1:
+python scripts/release_gate.py <collection> --strict   # catalogue membership, layout, unit closure
+python scripts/regen_catalogue.py                      # rebuild catalogue.jsonld from collections/
+python scripts/check_advertised_counts.py              # advertised counts vs the units on disk
 ```
 
 `install` resolves the marketplace name and a source contained in that checkout;
@@ -456,51 +467,49 @@ original destination, project cwd and Claude `--user` setting when uninstalling.
 A moved installation still works; managing it again requires the recorded root.
 
 The local adapter and filesystem contract is tested with synthetic units. It is
-not a claim of a version-pinned native host smoke test. The following registry,
+not a claim of a version-pinned native host smoke test. The following
 verification and export subsections describe historical planned behavior, not
-implemented commands beyond the current stubs.
+implemented commands beyond the current stubs; §4.1 records a command that has
+since been removed outright.
 
-### 4.1 asbb registry commands
+### 4.1 asbb registry commands (removed 2026-09-14)
 
-**`asbb registry list`**
-Lists all published collections from the catalogue.
+**`asbb registry` is no longer a command.** `asbb registry list`, like any other
+argument after it, is an argparse `invalid choice` on the top-level parser and
+exits 2. It is not deprecated or hidden: it is gone.
 
-```
-Metabolomics Skills Collection (metabolomics-v1)
-  Skills: 42  Tools: 8  DOI: 10.5281/zenodo.PLACEHOLDER
-  Released: 2026-06-30  Lead: Curator Name (ORCID)
-  Openness: open
-  Install: /plugin install metabolomics@asb-skill-collections
-```
+**Why.** From Phase 1.7 until 2026-09-14 the subcommand was advertised in
+`asbb --help`, documented in this section with two subcommands (`list` and
+`validate`) and a sample transcript, and did neither: both printed
+`(Phase 1.7 stub — not yet implemented)` on stderr and exited 1. That is worse
+than an absent command. A reader consults `--help` or this section, plans a
+release step around `asbb registry validate`, and only discovers the gap at the
+point of use. The owner's decision was to remove the advertised surface rather
+than leave a promise the code does not keep. Nothing was lost with it, because
+nothing was implemented; no CI job, script or test invoked it.
 
-**`asbb registry validate [--remote]`**
-Validates local catalogue.jsonld + marketplace.json against schemas.
-- `--remote`: also checks Zenodo DOI resolution + w3id.org IRI reachability
+**Where the work went.** The registry is reconciled by scripts that exist:
+
+| The removed command claimed | What does the job |
+|---|---|
+| `asbb registry list` — list every published collection from the catalogue, with skill/tool counts, DOI, release date, lead curator, openness and install line | `catalogue.jsonld` is that list; rebuild it deterministically with `python scripts/regen_catalogue.py`. For what a checkout ships rather than what is published, `asbb search --list-collections` |
+| `asbb registry validate [--remote]` — validate `catalogue.jsonld` + `marketplace.json` against their schemas, and (with `--remote`) Zenodo DOI and w3id.org IRI reachability | `python scripts/release_gate.py <collection> --strict` — `check_catalogue_membership` (each `collection.yaml`'s advertised members against `catalogue.jsonld` and the files on disk), `check_layout` and `check_unit_closure`. The `--remote` half has no direct replacement: `validate.yml` samples `derived_from` DOI resolution (its own gate 2) and checks EDAM IRIs (its gate 6), which is neither Zenodo concept-DOI nor w3id.org reachability — and those are `validate.yml`'s gate numbers, not this document's (`governance/CONTENT_POLICY.md` §7.1) |
+| (the counts a `list` output would have quoted) | `python scripts/check_advertised_counts.py` — advertised totals against the units on disk |
 
 ~~**`asbb registry doctor`** — Health check: Perspicacité KB endpoint reachability,
 marketplace.json HTTP availability, Zenodo API status.~~
-**This subcommand has never existed.** `asbb registry` accepts only `list` and
-`validate`; anything else is an argparse `invalid choice` and exits 2. (Struck
-2026-09-13. `asbb doctor` is a separate top-level command, and it too is a stub.)
+**This subcommand never existed** even while `asbb registry` did; it was struck
+2026-09-13, one day before the parent command was removed. `asbb doctor` is a
+separate top-level command, still present, and still a stub.
 
-> **Status of the two commands above, checked 2026-09-13.** Neither produces the
-> output shown. Both `asbb registry list` and `asbb registry validate` print
-> `(Phase 1.7 stub — not yet implemented)`; the sample output in this section is a
-> specification, not a transcript. `asbb verify` and `asbb doctor` are the same stub.
->
-> **Corrected the same day:** all four used to print on stdout and **exit 0**. A
+> **`asbb verify` and `asbb doctor` are unchanged and remain Phase-1.7 stubs.**
+> They print `(Phase 1.7 stub — not yet implemented)` on stderr and exit 1 — since
+> 2026-09-13, when all of the stubs stopped printing on stdout and exiting 0. A
 > command that answers *is this consistent?* — and a health check most of all — must
 > not report success having looked at nothing, because no caller can tell that from a
-> healthy answer. They now print on **stderr** and **exit 1**, and name the command
-> that does the work (`python scripts/release_gate.py <collection> --strict`). Nothing
-> in CI or any script invoked them and no test pinned their output, so the change
-> breaks nothing. Neither command's `--help` says it is a stub.
->
-> Nothing in CI depends on them, and no test pins their output, so correcting them
-> breaks nothing. What actually reconciles the registry today is
-> `scripts/release_gate.py` — `check_catalogue_membership`, `check_layout` and
-> `check_unit_closure` — together with `scripts/regen_catalogue.py` and
-> `scripts/check_advertised_counts.py`. See `governance/CONTENT_POLICY.md` §7.1.
+> healthy answer. Neither command's `--help` says it is a stub. Whether they follow
+> `registry` out of the CLI is a separate owner decision; see
+> `governance/CONTENT_POLICY.md` §7.1.
 
 ### 4.2 asbb verify-collection
 
@@ -676,7 +685,7 @@ The promotion step is manual (move the directory), not automated. This allows:
 | **Gate report schema** | agent | Formal schema for `gate_report.json` | Phase 0.3 |
 | **MANIFEST.gen.json schema** | agent | Manifest format (corpus SHA, ASB ver, KB profile, LLM, seed) | Phase 0.4 |
 | **Zenodo PLACEHOLDER DOI** | human | Replace `10.5281/zenodo.PLACEHOLDER*` with real concept DOIs | Phase 1.9 |
-| **asbb CLI bootstrap** | agent | Skeleton `asbb` CLI with `registry list` + `verify-collection` | Phase 1.7 |
+| **asbb CLI bootstrap** | agent | ~~Skeleton `asbb` CLI with `registry list` + `verify-collection`~~ **Withdrawn 2026-09-14**: `asbb registry` was removed rather than implemented; the reconciliation it would have wrapped lives in `scripts/release_gate.py` (§4.1) | Phase 1.7 |
 
 ### 7.3 Known issues
 
@@ -694,7 +703,7 @@ The promotion step is manual (move the directory), not automated. This allows:
 | **Machine registry** | `catalogue.jsonld` | JSON-LD (w3id IRIs) | Bots, linked-data clients, citation systems | Auto (regen_catalogue.py on tag) | Deterministic algorithm |
 | **Collection metadata** | `collections/<slug>/v<N>/collection.yaml` | YAML (LinkML schema) | Release gate, regen_catalogue.py | Manual (collection author) | LinkML validation (gate 1) |
 | **KB grounding** | `collections/<slug>/v<N>/kb.yaml` | YAML | Install script, skill runtime | Manual (collection author) | Optional (fail-soft if absent) |
-| **Registry helper** | `asbb` CLI | shell commands | Maintainers, CI/CD, power users | Manual command invocation | No auto trigger |
+| **Registry reconciliation** | `scripts/release_gate.py`, `regen_catalogue.py`, `check_advertised_counts.py` | shell commands | Maintainers, CI/CD, power users | Manual command invocation (gate also runs at promotion and release) | Release gate. (`asbb registry`, listed here until 2026-09-14, was a stub and was removed — §4.1) |
 
 ---
 
