@@ -45,85 +45,163 @@ jq '.[] | select(.slug=="<slug>") | .tools' skills_index.json
 
 ---
 
-## 1. Install
+## 1. Install one domain collection
 
-### Claude Code (recommended)
+The release perimeter verified here is deliberately narrow: a managed local
+installation, Claude Code's local-checkout marketplace route and the checkout
+CLI. Other adapters are listed under pending verification rather than presented
+as working instructions.
+
+The complete managed snapshot behaviour below was exercised on
+`int/collections-release-2026-09-13` at `777671bc3`. Source revision
+`600f4a5dc` predates the installer fixes and creates incomplete source symlinks;
+do not use that pre-fix behaviour as the release experience.
+
+### Managed, source-independent installation
+
+Start from an existing checkout with Python 3.12 or later and PyYAML available.
+From the repository root, install the full metabolomics domain into the shared
+skill-native location:
 
 ```bash
-/plugin marketplace add HolobiomicsLab/asb-skill-collections
-/plugin install metabolomics@asb-skill-collections          # full (5,859 skills)
-# or a lighter per-technique pack (load only what you need):
-/plugin install metabolomics-lc-ms@asb-skill-collections    # lc-ms · gc-ms · nmr · ms-imaging ·
-                                                            # ion-mobility · ce-ms ·
-                                                            # direct-infusion · ms-generic
+python3 -m asb_skill_collections.asbb_cli install metabolomics --runtime agents
 ```
 
-Installing costs almost nothing in context. A plugin host advertises every
-skill under `skills/`, so the corpus instead ships in **`leaves/<slug>/SKILL.md`**
-and only `skills/_router/SKILL.md` is advertised — roughly 150 tokens rather than
-the ~450,000 the full corpus would cost. The router searches the corpus on demand
-and reads the one skill it needs.
+The clean temporary-HOME rehearsal returned:
 
-Packs **overlap** (a multi-technique skill is in several). They are now cheap
-enough to combine, but installing the full plugin plus a pack still gives you two
-routers over overlapping corpora — prefer one full plugin *or* a few packs.
+```text
+installed 3 skill(s) from metabolomics -> /private/tmp/asbcoll-release-docs-20260913/leaf-install/home/.agents/skills
+```
 
-### Any other agent / IDE (IDE-agnostic)
+The installation contains:
 
-Every skill is a plain `SKILL.md` (YAML frontmatter + markdown body) and every
-tool is a `tools/<slug>.yaml`. Point your agent at this directory, or consume
-the machine indexes directly:
+- three host-visible adapters under `$HOME/.agents/skills`: `_router`,
+  `asb-metabolomics` and `asb-contribute`;
+- a content-addressed snapshot under
+  `$HOME/.agents/skills/.asbb-units/<content-id>`; and
+- an ownership receipt at `$HOME/.asbb/installed.json`.
 
-| File | What it is |
-|---|---|
-| `skills_index.json` | one row/skill: `slug, name, description, edam_operation, edam_topics, tools, dois` |
-| `tools_index.json` | one row/tool: `slug, name, edam_topics, dois, license_tier, license_subject, repo_url, source_paper_repos` |
-| `kb_bundle.json` | skill → source DOIs + tools + `asb-paper-<doi>` KB slugs (grounding map) |
-| `collection.yaml` | the SkillCollection record (counts, curators, license) |
-| `corpus.yaml` | per-paper access basis (`repo-oa`) |
+The snapshot census was 5,859 leaf `SKILL.md` files, 21 composite workflow
+skills plus the workflow router, 909 tool records and 6,867 files in total
+(70 MB on the rehearsal filesystem). It also contained the indexes, search and
+grounding helpers, and no internal symlinks.
 
-### Chat assistants via the web UI (Claude · ChatGPT · Mistral)
+To test the installed copy itself, change to the installed router and run its
+packaged search helper:
 
-No CLI needed — you attach the skills as **uploaded knowledge** and add a short
-routing instruction. Because these UIs cap how many files you can upload, **do
-not upload all 5,859 skills**. Upload instead:
+```bash
+cd "$HOME/.agents/skills/_router"
+python3 ../../bin/search_skills.py --collection ../.. --query "untargeted LC-MS/MS annotation" --target workflows --json -k 1
+```
 
-1. `skills_index.json` + `tools_index.json` (the searchable catalogue), and
-2. only the handful of `leaves/<slug>/SKILL.md` files relevant to your work
-   (find them first with the search in §2, then download those files).
+In the rehearsal the temporary source path was moved away first. The command
+still exited 0 without `PYTHONPATH` or `ASB_COLLECTIONS_ROOT`; its first result
+contained these fields:
 
-Then paste this **routing instruction** into the assistant's
-instructions/system prompt:
+```text
+qualified_slug: metabolomics/v2/workflows/untargeted-lcmsms-annotation
+score: 12.0
+selector: asb-keyword / 1.0.0 / package
+```
 
-> You have an ASB metabolomics skill catalogue. To answer a metabolomics task:
-> (1) search `skills_index.json` by EDAM topic, tool name, or keyword to pick
-> the best `slug`; (2) open that skill's `SKILL.md` and follow its procedure;
-> (3) cite the skill's `original_doi`. If a needed `SKILL.md` wasn't uploaded,
-> say which `slug` to add.
+There is no separate `asbb update` command. After updating the checkout through
+your normal source-control process, rerun the same `install` command to refresh
+the managed snapshot. A same-revision refresh was exercised and returned the
+same successful install line.
 
-Per-platform UI steps (menu names drift; the flow is what matters):
+Uninstall from the checkout that supplies the CLI:
 
-- **Claude (claude.ai):** *Projects → Create project → add files to **Project
-  knowledge*** (drop the two index files + your chosen `SKILL.md`s), then put
-  the routing instruction in *Project instructions*. If your workspace has the
-  **Skills/Capabilities** panel, you can instead add a skill there. (Claude
-  Desktop/Code users: prefer the native plugin in §1.)
-- **ChatGPT (chatgpt.com):** *Explore GPTs → Create → Configure → **Knowledge***
-  → upload the index files + your `SKILL.md`s (file-count limited, ~20), paste
-  the routing instruction into *Instructions*. *Projects* with attached files
-  work the same way.
-- **Mistral (Le Chat):** *Agents → build an agent* (or a **Library**) → upload
-  the index files + your `SKILL.md`s as the agent's documents, and paste the
-  routing instruction as the agent's system prompt.
+```bash
+python3 -m asb_skill_collections.asbb_cli uninstall metabolomics --runtime agents
+```
 
-> Grounding (§4) via Perspicacité is CLI-only; the web-UI path gives you the
-> distilled skills + citations, not the live KB query.
+The rehearsal returned `removed 3 entry(ies) for metabolomics`. It removed all
+three adapters and the managed snapshot. It deliberately left the empty
+`$HOME/.agents/skills` directory and `$HOME/.asbb/installed.json` containing
+`{}`.
+
+### Claude Code: verified local marketplace route
+
+Claude Code 2.1.241 was exercised with both `HOME` and `CLAUDE_CONFIG_DIR`
+redirected to temporary directories. From the checkout root:
+
+```bash
+claude --version
+claude plugin marketplace add "$PWD"
+claude plugin install metabolomics@asb-skill-collections
+claude plugin list
+claude plugin details metabolomics@asb-skill-collections
+```
+
+The host reported version `2.1.241`, added marketplace
+`asb-skill-collections`, installed `metabolomics` at user scope, and listed
+version 0.1.0 as enabled. Its component inventory reported `_router`,
+`asb-contribute`, `asb-metabolomics` and the `ground` command as four skills,
+with an estimated 244-token always-on cost. The cached plugin independently
+returned the same workflow hit as the managed installation, with 5,859 leaves
+and 909 tools.
+
+The host's lifecycle commands were also exercised:
+
+```bash
+claude plugin update metabolomics@asb-skill-collections
+claude plugin uninstall metabolomics@asb-skill-collections
+```
+
+Update reported that 0.1.0 was current. Uninstall removed the host registration,
+but Claude retained the 70 MB plugin cache with an `.orphaned_at` marker and
+retained its local marketplace registration. Those files are host-managed cache,
+not an active plugin.
+
+### Checkout CLI: verified programmatic route
+
+This route needs Python, PyYAML and the checkout; it intentionally does not
+survive removal of that checkout. From the repository root:
+
+```bash
+python3 -m asb_skill_collections.asbb_cli search "untargeted LC-MS/MS annotation" --collection metabolomics --target workflows --k 1
+python3 -m asb_skill_collections.asbb_cli get untargeted-lcmsms-annotation --collection metabolomics/v2 --target workflows | sed -n '1,24p'
+python3 -m asb_skill_collections.asbb_cli search --list-collections
+```
+
+All three commands exited 0. Search returned
+`metabolomics/v2/workflows/untargeted-lcmsms-annotation` with score 12 and
+selector `asb-keyword/1.0.0/package`; `get` opened that workflow; and the host
+visibility check printed:
+
+```text
+metabolomics/v2    5859 skills    +workflows
+```
+
+### Pending verification
+
+- The public GitHub transport for Claude Code was not exercised: the verified
+  route added the same marketplace from a local checkout, while this environment
+  had no usable DNS. It is therefore pending rather than inferred from the local
+  result.
+- The MCP server was successfully exercised by the pinned release audit, but a
+  fresh rehearsal here could not install the optional `mcp` dependency because
+  PyPI name resolution failed. Invoking the server without that dependency
+  exited 1 with its installation guidance. No current stdio handshake or host
+  integration is claimed.
+- The `agents` adapter materialisation was verified, but Codex, Copilot CLI and
+  Gemini CLI were not launched against it. Their host integrations are
+  **experimental, not verified end to end**.
+- Cursor, Cline, VS Code/Copilot instructions, arbitrary-destination adapters
+  and web-UI uploads were not exercised. They are **experimental, not verified
+  end to end** for this release perimeter.
 
 ---
 
 ## 2. Search — find the right skill
 
-Match the user's task against the indexes, most precise first:
+For the selector actually shared by the router, checkout CLI and MCP surface,
+including score explanations, tie handling, measured limits and executed
+examples, see [How offline skill selection works](../../../docs/selection.md).
+
+The shared selector is the normal route. If you inspect the JSON indexes
+manually, the following is a useful narrowing order; it is not the selector's
+scoring order:
 
 1. **Technique** (`skills_index.json` → `techniques`) — analytical platform tags.
 2. **EDAM operation/topic IRI** (`edam_operation` / `edam_topics`).

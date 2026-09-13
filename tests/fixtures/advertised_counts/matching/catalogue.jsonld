@@ -1,0 +1,12 @@
+{
+  "collections": [
+    {
+      "slug": "astronomy",
+      "version": 1,
+      "skills_count": 2,
+      "tools_count": 1,
+      "workflows_count": 1,
+      "papers_count": 2
+    }
+  ]
+}
