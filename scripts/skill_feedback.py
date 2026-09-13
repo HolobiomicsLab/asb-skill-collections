@@ -54,8 +54,15 @@ KINDS: dict[str, str] = {
 OUTBOUND_PATTERNS: dict[str, str] = {
     "url_userinfo": r"\b[a-z][a-z0-9+.\-]*://[^/\s:@]+:[^/\s@]+@",
     "authorization_header": (
-        r"(?<![A-Za-z0-9])(?:authorization|api[_-]?key|access[_-]?key|secret[_-]?key|"
-        r"token|secret|password|passwd|pwd|key)\s*[:=]\s*\S+"
+        # An HTTP auth header is two tokens: the scheme and the credential. A
+        # single \S+ consumes only the scheme, so "Authorization: Bearer <tok>"
+        # used to publish <tok> under a "redacted" label. Consume the scheme and
+        # the credential that follows it, and keep the one-token form for the
+        # assignment-shaped keys where a second token is ordinary prose.
+        r"(?<![A-Za-z0-9])(?:authorization\s*[:=]\s*"
+        r"(?:(?:bearer|basic|digest|token|apikey|api-key)\s+)?\S+"
+        r"|(?:api[_-]?key|access[_-]?key|secret[_-]?key|"
+        r"token|secret|password|passwd|pwd|key)\s*[:=]\s*\S+)"
     ),
     "credential": (
         r"\b(?:(?:sk|pk)-[A-Za-z0-9_\-]{10,}|"
