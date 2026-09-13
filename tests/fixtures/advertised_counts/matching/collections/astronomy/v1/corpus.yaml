@@ -1,0 +1,9 @@
+summary:
+  total: 2
+  included: 1
+  hold: 1
+papers:
+  - doi: 10.0000/one
+    status: included
+  - doi: 10.0000/two
+    status: hold

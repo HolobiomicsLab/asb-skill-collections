@@ -365,12 +365,30 @@ fallback: "warn"  # warn | skip_grounding | fail
 
 > **Caveat (locked):** The `asbb` CLI is **to-build (Phase 1.7)** and is scoped to **`registry` / `verify` / `doctor` ONLY**. It is a **registry utility, NOT the install surface**. The install surface is the Claude Code plugin marketplace (`/plugin install <slug>-v<N>@HolobiomicsLab/asb-skill-collections`, resolved via `.claude-plugin/marketplace.json`). Commands beyond `registry`/`verify`/`doctor` shown elsewhere in this doc (e.g. `export-sssom`) are aspirational/post-Phase-1.7 and are not part of the v0 surface.
 
+> **Superseded in fact, not yet in governance (2026-09-13).** The shipped CLI is
+> `search / get / registry / verify / doctor / install / uninstall`. `install`
+> and `uninstall` materialise packs into non-Claude runtimes (Codex, Gemini,
+> Copilot, Cursor, Cline, VS Code Copilot, or any directory via `--dest`) and are
+> covered by tests; `registry` and `doctor` are the commands that remain Phase-1.7
+> stubs. So the locked sentences above are false about the release candidate in
+> two ways: the CLI is not scoped to three commands, and it *is* an install
+> surface — for every runtime other than Claude Code, where the plugin
+> marketplace stays the recommended path. The lock itself is a governance
+> decision and is left for the owner to retire or restate; this note exists so the
+> document does not contradict `asbb --help` unremarked. See
+> [offline selection](selection.md) and the install section of the root README.
+
+
 The `asbb` command-line tool provides operations that do not go through Claude Code's `/plugin install`:
 
 ```bash
-# Install path (Claude Code native — the ONLY install surface):
+# Install path, Claude Code (recommended there):
 /plugin install metabolomics-v1@HolobiomicsLab/asb-skill-collections
 #   resolved via .claude-plugin/marketplace.json
+
+# Install path, every other runtime (shipped, not a stub):
+asbb install metabolomics-lc-ms --runtime agents   # codex | copilot | gemini | claude
+asbb install metabolomics-lc-ms --dest ~/some/skills/dir
 
 # Registry operations (asbb CLI — Phase 1.7, registry/verify/doctor only):
 asbb registry ...   # registry subcommands (list / validate published collections)

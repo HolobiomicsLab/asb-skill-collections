@@ -1,0 +1,14 @@
+{
+  "plugins": [
+    {
+      "name": "astronomy",
+      "source": "./collections/astronomy/v1",
+      "description": "ASB Astronomy: 2 evidence-grounded skills over 1 tool, distilled from 2 papers. Includes 1 composite workflow. Two skills are advertised."
+    },
+    {
+      "name": "astronomy-radio",
+      "source": "./packs/astronomy/radio",
+      "description": "ASB Astronomy radio subset: 2 evidence-grounded skills."
+    }
+  ]
+}

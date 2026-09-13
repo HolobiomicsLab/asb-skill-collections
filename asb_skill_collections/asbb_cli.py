@@ -36,9 +36,12 @@ def _cmd_registry(args: argparse.Namespace) -> int:
     """`asbb registry` — inspect the published collection registry."""
     action = getattr(args, "registry_action", None) or "list"
     print(f"asbb registry {action}: {_TO_BUILD}")
+    # This line used to say installing was "NOT this CLI", which the same
+    # binary contradicts: `asbb install` is the route for non-Claude runtimes.
     print(
-        "Install collections via the plugin marketplace, NOT this CLI:\n"
-        "  /plugin install <slug>-v<N>@HolobiomicsLab/asb-skill-collections"
+        "To install a pack:\n"
+        "  Claude Code   /plugin install <slug>@HolobiomicsLab/asb-skill-collections\n"
+        "  other runtimes  asbb install <slug> --runtime <id>  (see `asbb install --help`)"
     )
     return 0
 

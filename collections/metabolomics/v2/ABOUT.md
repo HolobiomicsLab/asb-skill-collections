@@ -40,17 +40,17 @@ IRIs for retrieval. The most frequent **topics** across the collection:
 
 | EDAM topic | Skills |
 |---|---|
-| Metabolomics | 1,838 |
-| Proteomics experiment* | 2,583 |
-| Proteomics* | 1,783 |
-| Bioinformatics | 1,771 |
-| Small molecules | 423 |
-| Analytical chemistry | 347 |
-| Endocrinology and metabolism | 308 |
-| Molecular interactions, pathways and networks | 304 |
-| Drug metabolism | 226 |
-| Lipids | 120 |
-| NMR | 97 |
+| Metabolomics (`topic_3172`) | 1,838 |
+| Proteomics experiment* (`topic_3520`) | 2,583 |
+| Proteomics* (`topic_0121`) | 1,783 |
+| Bioinformatics (`topic_0091`) | 1,771 |
+| Small molecules (`topic_0154`) | 423 |
+| Analytical chemistry (`topic_3370`) | 347 |
+| Endocrinology and metabolism (`topic_3407`) | 308 |
+| Molecular interactions, pathways and networks (`topic_0602`) | 304 |
+| Drug metabolism (`topic_3375`) | 226 |
+| Lipids (`topic_0153`) | 120 |
+| NMR (`topic_0593`) | 97 |
 
 \* EDAM's "Proteomics experiment"/"Proteomics" topics are commonly applied to
 mass-spectrometry methodology in general; their high count reflects shared
