@@ -40,6 +40,25 @@ def _report_skip(path, reason):
     print(f"asbb: skipped {path}: {reason}", file=sys.stderr)
 
 
+def _absent(final) -> bool:
+    """Report whether nothing at all occupies an entry's destination path.
+
+    An entry that is already gone is already cleaned: there is nothing to
+    validate ownership of and nothing to remove. Validating first was the old
+    behaviour and it failed twice over, because :func:`_owned_entry` reads the
+    unit receipt that a deleted destination took with it. Every entry then
+    raised ``FileNotFoundError`` and was reported as a skip — and since a
+    skipped entry stays in ``entries``, the snapshot was retained forever, so
+    *every later install of that pack* reprinted the same errors naming a
+    directory the user no longer has.
+
+    A broken symlink is not absent. It occupies the name, it is ours to remove
+    if we own it, and reading it through ``exists()`` alone would silently
+    abandon a dangling link the installer placed.
+    """
+    return not final.exists() and not final.is_symlink()
+
+
 def _unit_identity(rec, slug, runtime):
     return {
         **{key: rec[key] for key in ("dest_root", "unit", "version", "source_digest")},
@@ -222,10 +241,12 @@ def _clean_entries(rec, slug, runtime, entries, home):
     removed = []
     for rel in entries:
         try:
-            final = _owned_entry(rec, slug, runtime, rel)
-            if _other_claims(home, slug, runtime, recorded_root(rec["dest_root"]), rel):
-                raise ValueError("another installed pack claims this entry")
-            _remove_existing(final)
+            root = recorded_root(rec["dest_root"])
+            if not _absent(_resolve(root, rel)):
+                final = _owned_entry(rec, slug, runtime, rel)
+                if _other_claims(home, slug, runtime, root, rel):
+                    raise ValueError("another installed pack claims this entry")
+                _remove_existing(final)
             removed.append(rel)
         except (KeyError, ValueError, OSError, RuntimeError) as exc:
             _report_skip(rel, str(exc))
