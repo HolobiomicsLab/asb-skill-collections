@@ -1,5 +1,6 @@
-"""CI gate: every corpus + skills_index entry carries a valid license_tier, and
-each SKILL.md tool_license block is internally consistent. Exit 1 on violations.
+"""CI gate: every corpus + skills_index entry carries a valid license_tier, every
+SKILL.md whose tier demands an acknowledgment carries a tool_license block, and
+each such block is internally consistent. Exit 1 on violations.
 """
 from __future__ import annotations
 
@@ -61,6 +62,16 @@ def check_collection(collection_dir) -> list[str]:
 
         tl = (fm.get("metadata") or {}).get("tool_license")
         if not tl:
+            # An absent block is not a neutral absence. `asb-metabolomics` reads
+            # this block to decide whether to raise the blocking use
+            # acknowledgment, so a leaf whose tier demands one but carries no
+            # block is applied with no acknowledgment at all -- while its
+            # frontmatter still reads `license_tier: noncommercial`. Skipping it
+            # here is what let 37 such leaves ship. Tiers that raise no ack are
+            # exempt by the same rule: their block gates nothing, and the soft
+            # note they do owe the user is carried by the body banner.
+            if ack_required((fm.get("metadata") or {}).get("license_tier")):
+                violations.append(f"{md}: tool_license block missing, required by tier")
             continue
         if tl.get("tier") not in _VALID:
             violations.append(f"{md}: tool_license.tier invalid")

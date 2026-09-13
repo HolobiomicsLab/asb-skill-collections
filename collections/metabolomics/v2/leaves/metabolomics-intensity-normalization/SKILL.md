@@ -15,6 +15,11 @@ metadata:
   techniques:
   - LC-MS
   license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ''
   provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.09.30.679445v1

@@ -21,6 +21,11 @@ metadata:
   techniques:
   - MS-imaging
   license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ''
   provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
