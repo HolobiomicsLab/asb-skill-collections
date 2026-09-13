@@ -7,9 +7,9 @@ tools at run time — without installing the whole collection. It composes with 
 Perspicacité MCP (evidence grounding): one server for skill retrieval, one for
 grounding.
 
-It reuses `asb_skill_index` (the same keyword retrieval as `asbb search` and each
-collection's `bin/semantic_search.py` offline mode), so behaviour is identical
-across the CLI, the docs-site, and MCP. Pure-offline, no API key required.
+It reuses `asb_skill_index`, also used by `asbb search` and embedded in the
+packaged router and semantic script's keyword mode. These surfaces return the
+same ranked candidates and typed explanations. Pure-offline, no API key required.
 
 Run:
     ASB_COLLECTIONS_ROOT=/path/to/checkout asb-mcp        # after `pip install .[mcp]`
@@ -151,25 +151,36 @@ def list_collections() -> list[dict]:
 
 @mcp.tool()
 def search_skills(query: str, collection: str | None = None,
-                  technique: str | None = None, k: int = 10) -> list[dict]:
-    """Search atomic skills by meaning/keywords. `collection` is 'slug' (latest)
+                  technique: str | None = None, k: int = 10,
+                  selector: str | None = None, tool: str | None = None,
+                  edam: str | None = None, max_tools: int | None = None) -> list[dict]:
+    """Search atomic skills by keywords. `collection` is 'slug' (latest)
     or 'slug/vN', or omit to search every collection. `technique` filters by tag
-    (e.g. 'LC-MS'). Returns ranked {slug, name, score, description, techniques,
-    tools, collection}."""
-    return idx.search(collection, "skills", query, technique=technique, k=k)
+    (e.g. 'LC-MS'). Every result includes a versioned selector, qualified slug,
+    matched fields, score, applied filters and fallback path. `selector='router'`
+    keeps the deprecated router rule available for one release."""
+    return idx.search(collection, "skills", query, technique=technique, k=k,
+                      selector=selector, tool=tool, edam=edam, max_tools=max_tools)
 
 
 @mcp.tool()
-def search_workflows(query: str, collection: str | None = None, k: int = 5) -> list[dict]:
+def search_workflows(query: str, collection: str | None = None, k: int = 5,
+                     technique: str | None = None, selector: str | None = None,
+                     tool: str | None = None, edam: str | None = None) -> list[dict]:
     """Search composite workflow super-skills (end-to-end pipelines). Use for a
-    whole-pipeline goal rather than a single step."""
-    return idx.search(collection, "workflows", query, k=k)
+    whole-pipeline goal. The selector, filters and explanation match skill search;
+    member_tools are searchable and curated composites have no tool-count guard."""
+    return idx.search(collection, "workflows", query, technique=technique, k=k,
+                      selector=selector, tool=tool, edam=edam)
 
 
 @mcp.tool()
-def search_tools(query: str, collection: str | None = None, k: int = 10) -> list[dict]:
-    """Search software-tool records (XCMS, SIRIUS, GNPS, …) across a collection."""
-    return idx.search(collection, "tools", query, k=k)
+def search_tools(query: str, collection: str | None = None, k: int = 10,
+                 technique: str | None = None, selector: str | None = None,
+                 edam: str | None = None) -> list[dict]:
+    """Search tool records with the shared selector and qualified explanations."""
+    return idx.search(collection, "tools", query, technique=technique, k=k,
+                      selector=selector, edam=edam)
 
 
 @mcp.tool()
