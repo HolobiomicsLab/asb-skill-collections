@@ -7,8 +7,8 @@ source: asb-corpus-metabolomics expansion buildlist (repo-grounded, computationa
 policy: OPEN_ACCESS_POLICY.md (repo-grounded; access.type=repo-oa, public git repo
   cloned at build)
 summary:
-  total: 568
-  included: 568
+  total: 566
+  included: 566
   hold: 0
 papers:
 - name: 10.1002/9780470508183

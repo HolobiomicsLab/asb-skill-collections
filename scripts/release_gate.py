@@ -1072,6 +1072,48 @@ def _check_catalogue_members(
     _check_optional_index(collection_dir, member_key, advertised, label, res)
 
 
+def _check_corpus_summary(collection_dir: Path, label: str, res: CheckResult) -> None:
+    """Reconcile ``corpus.yaml``'s summary block with its own papers array.
+
+    The member classes above are advertised in ``collection.yaml``; the source
+    corpus advertises its own totals separately, and nothing compared them. A
+    commit that drops papers without touching ``summary`` therefore left the
+    manifest overstating the corpus while every other check stayed green.
+    Checked only where the version directory ships its own corpus.
+    """
+    corpus_path = collection_dir / "corpus.yaml"
+    if not corpus_path.is_file():
+        return
+    corpus = _load_yaml(corpus_path)
+    summary = corpus.get("summary")
+    papers = corpus.get("papers")
+    if not isinstance(summary, dict) or not isinstance(papers, list):
+        return
+    rel = corpus_path.name
+    if isinstance(summary.get("total"), int) and summary["total"] != len(papers):
+        res.add(
+            FAIL,
+            f"{label}: corpus.yaml summary.total is {summary['total']} but the "
+            f"papers array has {len(papers)} entries.",
+            file=rel,
+        )
+    by_status: dict[str, int] = {}
+    for paper in papers:
+        if isinstance(paper, dict):
+            by_status[str(paper.get("status") or "included")] = (
+                by_status.get(str(paper.get("status") or "included"), 0) + 1
+            )
+    for key in ("included", "hold"):
+        declared = summary.get(key)
+        if isinstance(declared, int) and declared != by_status.get(key, 0):
+            res.add(
+                FAIL,
+                f"{label}: corpus.yaml summary.{key} is {declared} but "
+                f"{by_status.get(key, 0)} papers carry status={key!r}.",
+                file=rel,
+            )
+
+
 def _check_collection_catalogue(
     collection_yaml: Path, root: Path, res: CheckResult
 ) -> None:
@@ -1083,6 +1125,7 @@ def _check_collection_catalogue(
     metadata = _load_yaml(collection_yaml)
     _check_catalogue_members(collection_yaml.parent, metadata, "skills", label, res)
     _check_catalogue_members(collection_yaml.parent, metadata, "tools", label, res)
+    _check_corpus_summary(collection_yaml.parent, label, res)
 
 
 def check_catalogue_membership(collections_root: Path) -> CheckResult:
