@@ -52,6 +52,7 @@ jobs:
         run: |
           set -euo pipefail
           fail=0
+          python scripts/release_gate.py collections --catalogue-membership || fail=1
           shopt -s globstar nullglob
           dirs=(collections/*/v*)
           if [ ${#dirs[@]} -eq 0 ]; then
