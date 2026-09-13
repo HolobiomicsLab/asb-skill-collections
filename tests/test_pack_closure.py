@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import json
 import pathlib
+import shutil
+import subprocess
 import sys
 
 import pytest
@@ -477,8 +479,66 @@ def test_real_unit_matrix_covers_collections_and_packs():
     assert "packs" in relatives
 
 
-def test_collection_feedback_helper_is_byte_identical_to_root():
-    root_helper = REPO_ROOT / "scripts/skill_feedback.py"
-    shipped_helper = REPO_ROOT / "collections/metabolomics/v2/scripts/skill_feedback.py"
+@pytest.mark.parametrize("filename", ("skill_feedback.py", "pii_config.py"))
+def test_collection_feedback_helpers_are_byte_identical_to_root(filename):
+    root_helper = REPO_ROOT / "scripts" / filename
+    shipped_helper = REPO_ROOT / "collections/metabolomics/v2/scripts" / filename
 
     assert shipped_helper.read_bytes() == root_helper.read_bytes()
+
+
+def _copy_feedback_unit(tmp_path: pathlib.Path) -> pathlib.Path:
+    source = REPO_ROOT / "collections/metabolomics/v2"
+    unit = tmp_path / "installed-unit"
+    shutil.copytree(source / "skills/asb-contribute", unit / "skills/asb-contribute")
+    shutil.copytree(source / "scripts", unit / "scripts")
+    return unit
+
+
+def _run_isolated_feedback(unit: pathlib.Path, *args: str) -> subprocess.CompletedProcess:
+    return subprocess.run(
+        [sys.executable, "-I", "-S", str(unit / "scripts/skill_feedback.py"), *args],
+        cwd="/",
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+
+
+ISOLATED_DRY_RUN_ARGS = (
+    "--dry-run",
+    "--kind",
+    "defect",
+    "--target",
+    "/Users/example/collections/metabolomics/v2/leaves/example-skill",
+    "--symptom",
+    "failed at /Users/example/private/run.raw for reporter@example.org",
+    "--collection",
+    "/Users/example/collections/metabolomics/v2",
+)
+
+
+def test_feedback_helper_runs_from_an_isolated_unit(tmp_path):
+    unit = _copy_feedback_unit(tmp_path)
+
+    help_result = _run_isolated_feedback(unit, "--help")
+    dry_run = _run_isolated_feedback(unit, *ISOLATED_DRY_RUN_ARGS)
+
+    assert help_result.returncode == 0, help_result.stderr
+    assert dry_run.returncode == 0, dry_run.stderr
+    output = help_result.stdout + help_result.stderr + dry_run.stdout + dry_run.stderr
+    assert "Traceback" not in output
+    assert "/Users/example" not in dry_run.stdout
+    assert "reporter@example.org" not in dry_run.stdout
+    assert "<redacted:" in dry_run.stdout
+
+
+def test_isolated_feedback_helper_requires_its_vendored_pii_module(tmp_path):
+    unit = _copy_feedback_unit(tmp_path)
+    (unit / "scripts/pii_config.py").unlink()
+
+    result = _run_isolated_feedback(unit, *ISOLATED_DRY_RUN_ARGS)
+
+    assert result.returncode != 0
+    assert "ModuleNotFoundError" in result.stderr
+    assert "scripts.pii_config" in result.stderr

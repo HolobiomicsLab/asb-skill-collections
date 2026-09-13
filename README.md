@@ -353,6 +353,7 @@ to compare each shipped unit's indexes with its leaves and check declared
 absent from the pack's declared collection/version parent; it preserves JSON
 formatting and never changes leaves. `metadata.issue_templates` contains
 repository pointers read on GitHub and does not require local copies.
+The metabolomics v2 unit vendors its feedback helper and shared PII configuration under `scripts/`, so the helper remains runnable after installation.
 
 ## Other collections
 

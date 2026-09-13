@@ -18,11 +18,11 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
 - Remove twelve stale rows from four technique packs' skill indexes and KB
   bundles, using their declared v2 parent index; correct the pack table and
   router count metadata without changing leaves.
+- Vendor the `asb-contribute` feedback helper with its standalone shared PII configuration so installed units can run it without repository gate dependencies.
 
 ### Added
 - Shared index-closure and helper-containment checks for shipped units, with
-  an offline CLI and release-gate integration. The check exposes the existing
-  feedback-helper dependency gap pending a standalone vendored helper.
+  an offline CLI and release-gate integration across every declared helper.
 
 ## [0.2.0] — 2026-06-29
 
