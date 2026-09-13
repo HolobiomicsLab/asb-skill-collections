@@ -98,8 +98,18 @@ def test_generator_refreshes_scripts_without_changing_unit_assets(tmp_path):
 def test_measured_default_retains_documented_workflow_choices(label):
     source = label["source"]
     lines = (ROOT / source["path"]).read_text().splitlines()
-    for offset, excerpt in enumerate(source["excerpt"].splitlines()):
-        assert lines[source["line"] - 1 + offset].startswith(excerpt)
+    excerpt_lines = source["excerpt"].splitlines()
+    # The recorded line is a hint: documentation above the excerpt may grow or
+    # shrink on other branches, so the excerpt is located by content and the
+    # label is only tied to the text it quotes.
+    starts = [
+        number for number, line in enumerate(lines, start=1)
+        if line.startswith(excerpt_lines[0])
+    ]
+    assert starts, f"{source['path']} no longer contains: {excerpt_lines[0]!r}"
+    start = source["line"] if source["line"] in starts else starts[0]
+    for offset, excerpt in enumerate(excerpt_lines):
+        assert lines[start - 1 + offset].startswith(excerpt)
     hits = idx.search(
         label["collection"], label["target"], label["query"],
         technique=label["technique"], k=3, root=ROOT,
