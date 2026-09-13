@@ -270,6 +270,19 @@ ordering's relevance; “still tied” is the fraction of queries whose rank-1 b
 survives the rule's own tie-break; lower and upper bound Hit@1 over the best and
 worst possible resolution of that residue.
 
+**The two corpora.** *Canonical, 5,859 rows* is the whole of
+`collections/metabolomics/v2/skills_index.json` — what the `metabolomics`
+plugin installs, and what the eight technique packs are drawn from. *Installed
+unit, 1,478 rows* is that index restricted to the slugs
+`collections/metabolomics/v1` also ships: the 1,485 skills of the public
+`metabolomics-v0.1.0` pre-release, less the 7 that v2 no longer carries. It is
+reported because it is the corpus a reader who installed that release is
+actually searching, and because a ranking rule's lead can be an artefact of how
+many candidates it is asked to separate. The same 326 labels are usable against
+both — every card with a gold skill in v2 has one in the intersection too — so
+the two rows of a table are the same queries against different candidate sets,
+and the smaller set's higher Hit@1 is the easier problem, not a better ranker.
+
 Full query title:
 
 | Corpus | Order | Hit@1 shipped | Hit@1 random | lower | upper | still tied |

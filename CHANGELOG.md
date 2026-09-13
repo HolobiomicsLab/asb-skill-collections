@@ -38,11 +38,47 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
 - Remove twelve stale rows from four technique packs' skill indexes and KB
   bundles, using their declared v2 parent index; correct the pack table and
   router count metadata without changing leaves.
+- Re-derive the eight technique packs from `collections/metabolomics/v2` instead
+  of carrying the hand-made 2026-06-22 split forward. The packs were internally
+  consistent with their own indexes and had drifted from the collection: the
+  `masster` leaf added the next day never reached `lc-ms` (2,616 of 2,617 LC-MS
+  skills, and six sites advertising the lower number while the collection
+  advertised the higher one for the same technique); `provenance_tier`,
+  `tool_license` and `grounding_tier` were absent from all 4,949 copied leaves,
+  and `provenance_tier`, `grounding_tier` and `tools_used` from every row of
+  both pack indexes; and the packaged grounding map still pointed at
+  repositories belonging to other papers (issue #42), fixed in the unit builder
+  and never re-run over the packs. Pack leaves are now byte copies of the
+  collection leaf of the same slug and both indexes are the collection's own
+  rows filtered to the pack's members.
+- Aim the licence and provenance tier gates at the packs as well as the
+  collection. `check_license_tiers` read `corpus.yaml` unconditionally and so
+  raised `FileNotFoundError` on every pack, which is why the tiers a consumer
+  installs were never checked; a pack ships no corpus of its own, and its pass
+  line now says so rather than reporting a half-run gate as OK.
 - Vendor the `asb-contribute` feedback helper with its standalone shared PII configuration so installed units can run it without repository gate dependencies.
 
 ### Added
 - Shared index-closure and helper-containment checks for shipped units, with
   an offline CLI and release-gate integration across every declared helper.
+- `packs/<domain>/packs.yaml` (schema `asb-pack-map/1.0`) declares pack
+  membership as data: one technique tag per pack, selecting
+  `tag in skills_index[slug].techniques`. Nothing recorded this before.
+- `scripts/build_packs.py` re-derives every declared pack from that map, with
+  `--check` (report drift, write nothing) and `--dry-run`. `build(build(t))`
+  equals `build(t)`; `bin/`, `commands/`, `skills/`, `.claude-plugin/` and
+  `GROUNDING.md` are not touched.
+- A pack-to-collection check in `scripts/unit_closure.py`, reading the
+  generator's own rule and comparison so the gate cannot pass a tree the
+  generator would change. It reports a selected leaf the pack does not ship, a
+  shipped leaf the rule does not select, and a copy whose bytes are not its
+  original's, naming the front-matter key when one was lost. Index closure alone
+  stays green on a pack that lost a leaf and pruned its own rows. Wired into the
+  release gate and into CI.
+- CI now runs the existing advertised-count guard over the repository. It would
+  not have caught the stale LC-MS count — the pack really did hold 2,616 leaves
+  — but it is what keeps the six corrected sites honest now that the derivation
+  gate makes the two numbers one number.
 
 ## [0.2.0] — 2026-06-29
 
