@@ -3,6 +3,7 @@ name: chemical-identifier-unification
 description: 'Use when when you have raw GC-MS output (CSV with columns: Component.RT, Base.Peak.MZ, Component.Area, Compound.Name, Match.Factor, File.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_0625

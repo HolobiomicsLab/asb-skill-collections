@@ -3,6 +3,7 @@ name: target-list-matching-and-alignment
 description: Use when you have LC-MS data (mzML or netCDF format) and a predefined list of target metabolites with known m/z values and retention time windows that you wish to extract and quantify.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0091

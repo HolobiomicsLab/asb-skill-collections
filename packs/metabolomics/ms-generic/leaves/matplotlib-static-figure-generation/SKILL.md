@@ -3,6 +3,7 @@ name: matplotlib-static-figure-generation
 description: Use when you have mass spectrometry data in a pandas DataFrame with retention time (rt) and intensity columns, and need to produce a static figure for publication, presentation, or archival.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0121

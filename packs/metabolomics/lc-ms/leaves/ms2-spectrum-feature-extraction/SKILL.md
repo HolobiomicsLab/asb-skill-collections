@@ -3,6 +3,7 @@ name: ms2-spectrum-feature-extraction
 description: Use when you have DDA (data-dependent acquisition) LC-MS/MS data with MS2 spectra and want to discover metabolic features that may be missed by MS1-only peak picking, or when you need an alternative feature extraction workflow that leverages fragmentation patterns to identify true metabolite.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3370

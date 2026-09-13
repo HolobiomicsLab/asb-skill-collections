@@ -3,6 +3,7 @@ name: spectral-feature-consolidation
 description: Use when when you have generated separate MemoMatrix objects from independent sample sets (e.g., sample set A and sample set B) and need to align and combine their MS2 fingerprint data into a single matrix for comparative analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3520

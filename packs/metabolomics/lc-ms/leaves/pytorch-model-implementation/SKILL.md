@@ -3,6 +3,7 @@ name: pytorch-model-implementation
 description: Use when you have preprocessed MS/MS spectral data (m/z and intensity arrays) and need to map it to a fixed-size latent vector for use in an encoder–decoder architecture. Specifically applicable when the downstream task requires a molecular structure reconstruction (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

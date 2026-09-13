@@ -3,6 +3,7 @@ name: comparative-machine-learning-benchmarking
 description: Use when you have developed a new machine learning model for predicting metabolomic profiles from microbiome data and need to quantify its performance improvement over existing methods.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3659
   edam_topics:
   - http://edamontology.org/topic_3174

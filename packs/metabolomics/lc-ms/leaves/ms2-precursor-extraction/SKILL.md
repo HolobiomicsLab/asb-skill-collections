@@ -3,6 +3,7 @@ name: ms2-precursor-extraction
 description: Use when when you have a resolved spectrum file in mzML or mzXML format and need to identify where MS2 (tandem mass spectrometry) scans occur within an LC-MS run, particularly to annotate XIC displays with MS2 precursor positions or validate that MS2 events align with expected chromatographic.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -38,6 +39,7 @@ attribution:
 
 # MS2 Precursor Extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and locate MS2 precursor scan positions from resolved spectrum files (mzML, mzXML) to enable overlay of tandem mass spectrometry data points on extracted ion chromatograms (XICs). This skill reconstructs the mapping between MS2 events and their retention times or scan identifiers for visualization and annotation.

@@ -3,6 +3,7 @@ name: spectral-embedding-generation
 description: Use when you have a collection of pre-processed MS/MS spectra (binned, intensity-normalized) and a trained MS2DeepScore base network, and you need to compute structural similarity scores between spectrum pairs or visualize spectra in chemical space via dimensionality reduction (e.g., UMAP).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -73,6 +74,7 @@ attribution:
 
 # spectral-embedding-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate low-dimensional vector embeddings (200-dimensional spectral embeddings) from pairs of binned MS/MS spectra using a trained Siamese neural network base, enabling downstream similarity prediction and spectral clustering without explicit molecular fingerprint computation.

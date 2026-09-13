@@ -3,6 +3,7 @@ name: feature-alignment-error-identification
 description: Use when you have completed peak detection and feature alignment in metabolomic LC-MS processing and suspect systematic errors in peak integration or feature misalignment across your sample cohort.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0121

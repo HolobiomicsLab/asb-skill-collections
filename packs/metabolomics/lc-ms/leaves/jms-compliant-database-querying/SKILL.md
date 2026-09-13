@@ -3,6 +3,7 @@ name: jms-compliant-database-querying
 description: Use when you have grouped LC-MS features into empirical compounds with inferred molecular formulas and adduct assignments (via khipu), and you need to assign candidate metabolite identities at Level 4 annotation depth by matching against curated reference libraries.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_3172

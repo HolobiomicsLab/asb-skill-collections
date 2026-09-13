@@ -3,6 +3,7 @@ name: neural-network-inference-and-embedding-extraction
 description: Use when when you have paired or unpaired MS/MS spectra and need to compute structural similarity scores without explicit molecular fingerprint computation, or when you want to generate low-dimensional embeddings for spectral visualization, clustering, or retrieval tasks.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0362
   edam_topics:
   - http://edamontology.org/topic_0121

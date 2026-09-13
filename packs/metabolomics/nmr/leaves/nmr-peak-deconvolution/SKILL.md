@@ -3,6 +3,7 @@ name: nmr-peak-deconvolution
 description: Use when when you have raw or processed 1D NMR spectra (FID or frequency-domain format) and need to extract individual peak identities and quantitative parameters in tabular form.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3172

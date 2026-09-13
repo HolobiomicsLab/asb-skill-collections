@@ -3,6 +3,7 @@ name: metadata-harmonization-standardization
 description: Use when when you have preprocessed MS/MS spectra from multiple source repositories or instruments with inconsistent metadata field naming, formats, or values (e.g., mixed adduct notations like '[M+H]+' vs '[M+H]⁺', variable instrument type strings, or non-standard collision energy units).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

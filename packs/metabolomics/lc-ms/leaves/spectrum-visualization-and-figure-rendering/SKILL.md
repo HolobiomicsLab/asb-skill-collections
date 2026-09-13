@@ -3,6 +3,7 @@ name: spectrum-visualization-and-figure-rendering
 description: Use when when you have a processed or annotated MsmsSpectrum object (from USI loading or direct instantiation) and need to generate a figure showing observed peaks, their intensities, and assigned fragment ions (e.g., b/y ions) for publication or presentation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: metabolite-spectral-data-merging
 description: Use when you have two or more mass spectral libraries in different formats (NIST binary exports converted to MSP, MoNA downloads, RIKEN public databases, GNPS MGF, or batches of in-house standards in separate MSP files) and need to combine them with consistent metadata (SMILES, InChIKey, molecular.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_0630

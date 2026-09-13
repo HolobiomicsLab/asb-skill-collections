@@ -3,6 +3,7 @@ name: plot-customization-and-styling
 description: Use when after generating a numerical visualization (e.g., confusion matrix, heatmap, or similarity array) using matplotlib, when you need to add axis labels, class names, colormaps, normalization annotations, colorbars, titles, and export the figure in a publication-ready format (PNG or PDF).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520

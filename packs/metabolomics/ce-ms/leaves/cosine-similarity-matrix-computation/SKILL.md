@@ -3,6 +3,7 @@ name: cosine-similarity-matrix-computation
 description: Use when after generating normalized dense embeddings for both query and reference MS/MS spectra using a pre-trained model like SpecEmbedding.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3791
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -49,6 +50,7 @@ attribution:
 
 # cosine-similarity-matrix-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute pairwise cosine similarity scores between query and reference MS/MS spectral embeddings to rank candidate compounds by retrieval relevance. This skill is essential for spectral library search workflows where dense embeddings from deep learning models must be converted into similarity-ranked retrieval results.

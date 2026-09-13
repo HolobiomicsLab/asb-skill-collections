@@ -3,6 +3,7 @@ name: code-repository-analysis
 description: Use when you have a published research article describing a new FT-ICR MS analysis tool and need to verify which analytical and visualization features are actually implemented (not just claimed).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3925
   edam_topics:
   - http://edamontology.org/topic_3520

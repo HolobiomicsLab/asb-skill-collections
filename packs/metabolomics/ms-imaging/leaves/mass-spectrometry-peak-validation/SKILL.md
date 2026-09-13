@@ -3,6 +3,7 @@ name: mass-spectrometry-peak-validation
 description: Use when after peak alignment across all spectra in an MSImagingExperiment using peakAlign(), when you need to reduce the feature set to high-confidence peaks by removing spurious or low-frequency detections.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

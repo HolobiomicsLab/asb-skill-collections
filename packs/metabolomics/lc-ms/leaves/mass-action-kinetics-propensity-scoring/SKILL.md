@@ -3,6 +3,7 @@ name: mass-action-kinetics-propensity-scoring
 description: Use when you have intracellular metabolomics measurements (absolute metabolite abundances) for multiple biological samples and want to identify which metabolic reactions are controlled by substrate availability rather than gene expression.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0602

@@ -3,6 +3,7 @@ name: corrected-intensity-table-validation
 description: Use when after applying one or more intensity drift correction strategies (Internal Standard correction, statistical drift correction, custom or weighted bracketing) within QuantyFey and before exporting the corrected intensity table for final quantification.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

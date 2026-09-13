@@ -3,6 +3,7 @@ name: metabolite-database-embedding-lookup
 description: Use when when you have paired tandem MS spectra and known molecular structures (SMILES or fingerprints) and want to annotate novel spectra by retrieving similar structures from a reference database without relying on spectral database matching.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_0121

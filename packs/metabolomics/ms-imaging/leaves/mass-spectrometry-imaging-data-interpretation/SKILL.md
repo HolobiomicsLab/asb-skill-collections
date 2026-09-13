@@ -3,6 +3,7 @@ name: mass-spectrometry-imaging-data-interpretation
 description: Use when when you have preprocessed MALDI-MSI data (in msimat format) and want to determine whether abundant peaks are actually molecular adducts of simpler parent ions rather than distinct metabolites.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3370

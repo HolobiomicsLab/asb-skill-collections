@@ -3,6 +3,7 @@ name: molecular-network-attribute-enrichment
 description: Use when you have a GNPS mass spectral molecular network (in .graphml or Cytoscape format) and wish to annotate its nodes and edges with chemical class assignments from the GNPS library and/or MS2LDA motif probabilities from an independent LDA experiment.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3925
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: msimagingexperiment-subset-operations
 description: Use when after peak alignment with peakAlign(), when you have an MSImagingExperiment with many detected peaks but want to retain only those present in a sufficient fraction of pixels.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

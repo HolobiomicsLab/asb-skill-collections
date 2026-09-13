@@ -3,6 +3,7 @@ name: pubchem-structure-retrieval
 description: Use when you have an experimental tandem mass spectrum and chemical formula for an unknown compound, and need to identify the true structure among all PubChem entries with that formula.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3431
   edam_topics:
   - http://edamontology.org/topic_0154

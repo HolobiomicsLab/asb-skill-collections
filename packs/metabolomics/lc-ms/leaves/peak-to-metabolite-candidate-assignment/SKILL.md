@@ -3,6 +3,7 @@ name: peak-to-metabolite-candidate-assignment
 description: Use when you have a raw peak-intensity matrix from untargeted LC-MS data (organized as rows=peaks, columns=samples) and need to generate initial candidate metabolite assignments.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_3172

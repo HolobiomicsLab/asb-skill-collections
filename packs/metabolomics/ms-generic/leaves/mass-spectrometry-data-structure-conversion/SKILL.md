@@ -3,6 +3,7 @@ name: mass-spectrometry-data-structure-conversion
 description: Use when when you have received metabolomics mass-spectrometry data in vendor-native or open formats (.raw, .d, mzXML) and need to ingest it into SMART for preprocessing, peak detection, or statistical analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3932
   edam_topics:
   - http://edamontology.org/topic_3520

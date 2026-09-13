@@ -3,6 +3,7 @@ name: pareto-front-multi-objective-optimization
 description: Use when you have evaluated a parametric denoising strategy (e.g., frequency-based filtering) at multiple threshold values and computed two or more competing metrics (e.g., signal loss and noise reduction) for each threshold.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_3520

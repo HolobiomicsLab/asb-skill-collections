@@ -3,6 +3,7 @@ name: batch-record-processing
 description: Use when when you have a repository containing hundreds or thousands of structured records (e.g., MassBank records in standardized format) that must be validated for correctness before release or merge.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -40,6 +41,7 @@ attribution:
 
 # batch-record-processing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated validation of large collections of structured scientific records (e.g., mass spectrometry metadata) using continuous integration workflows and specialized validators. This skill ensures data consistency and compliance across thousands of records without manual inspection of each entry.

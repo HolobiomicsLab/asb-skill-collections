@@ -3,6 +3,7 @@ name: multi-criterion-scoring-integration
 description: Use when you have an LC-HRMS feature table (m/z, retention time, isotope ratios, fragmentation patterns) and a suspect compound database with reference properties (m/z, expected RT windows, theoretical isotope ratios, characteristic neutral losses), and you need to rank which features most likely.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3172

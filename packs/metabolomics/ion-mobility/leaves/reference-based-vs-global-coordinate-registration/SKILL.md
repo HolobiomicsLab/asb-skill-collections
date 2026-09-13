@@ -3,6 +3,7 @@ name: reference-based-vs-global-coordinate-registration
 description: Use when you have detected feature tables from multiple LC-IMS-MS/MS samples (each with mz, drift_time, retention_time, and intensity columns) and need to match corresponding features across datasets to enable cross-sample quantitation or cohort analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

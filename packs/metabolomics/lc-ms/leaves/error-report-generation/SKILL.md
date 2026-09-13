@@ -3,6 +3,7 @@ name: error-report-generation
 description: Use when when a user uploads a JSON project document to the Pairing Omics Data Platform and you need to determine whether it satisfies the platform's data structure requirements, including all mandatory fields, proper data types, and constraint satisfaction for paired omics metadata (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3437
   edam_topics:
   - http://edamontology.org/topic_0091

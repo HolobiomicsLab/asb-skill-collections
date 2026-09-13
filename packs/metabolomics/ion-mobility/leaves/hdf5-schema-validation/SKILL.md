@@ -3,6 +3,7 @@ name: hdf5-schema-validation
 description: Use when after converting proprietary vendor mass spectrometry files (Thermo .raw, Agilent .d, Bruker .d, or mzML) to MZA HDF5 format using the MZA executable.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0121

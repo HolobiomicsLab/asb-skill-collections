@@ -3,6 +3,7 @@ name: pubchem-structure-lookup-by-name
 description: Use when your metadata table contains compound names but lacks structure information (SMILES, InChI, molecular formula, or PubChem CID).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_0154

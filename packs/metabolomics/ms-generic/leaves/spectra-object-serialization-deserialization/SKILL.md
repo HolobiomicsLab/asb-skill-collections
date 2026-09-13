@@ -3,6 +3,7 @@ name: spectra-object-serialization-deserialization
 description: Use when you have Spectra objects in an R environment and need to apply Python MS algorithms (e.g., matchms similarity scoring, spectrum normalization, or filtering) that operate on Python spectral objects, then return results back to R for further analysis or visualization.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3370

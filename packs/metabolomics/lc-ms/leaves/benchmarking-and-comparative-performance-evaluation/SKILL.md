@@ -3,6 +3,7 @@ name: benchmarking-and-comparative-performance-evaluation
 description: Use when you have trained a new machine learning model for chemical formula or adduct assignment from MS/MS spectra and need to assess whether it offers genuine performance gains over established baselines. Use it specifically when you have access to ground-truth annotations (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3372

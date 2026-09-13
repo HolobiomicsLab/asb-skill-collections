@@ -3,6 +3,7 @@ name: mass-spectrometry-data-normalization
 description: Use when when raw MS/MS spectra from GNPS or similar databases contain variable-scale peak intensities, missing metadata, or inconsistent m/z calibration, and you intend to feed peak information into a transformer-based spectral embedding model that expects normalized, fixed-length tensor inputs.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -41,6 +42,7 @@ attribution:
 
 # mass-spectrometry-data-normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalization of MS/MS peak intensity and m/z information to prepare raw spectra for transformer-based embedding and contrastive learning. This step removes inaccurate or incomplete records and scales peak data into a fixed numerical range suitable for sinusoidal encoding and downstream model input.

@@ -3,6 +3,7 @@ name: eic-file-format-generation
 description: Use when after completing MS2 annotation in the JPA metabolomics workflow, when you have aligned feature data (feature matrix with m/z, retention time, intensity, and sample assignments) and need to extract and export EIC traces for individual features or feature subsets for external validation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_0769

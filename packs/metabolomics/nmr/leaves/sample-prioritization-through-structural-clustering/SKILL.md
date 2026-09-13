@@ -3,6 +3,7 @@ name: sample-prioritization-through-structural-clustering
 description: Use when you have 2D NMR spectral data (HSQC, HMBC, COSY) from multiple samples in a natural products screening campaign and need to rank samples by structural novelty or identify which samples share common molecular scaffolds.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0593

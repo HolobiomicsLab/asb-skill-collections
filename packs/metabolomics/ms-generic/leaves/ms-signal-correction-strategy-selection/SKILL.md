@@ -3,6 +3,7 @@ name: ms-signal-correction-strategy-selection
 description: Use when you have loaded raw MS intensity tables into QuantyFey and observe or suspect intensity drift artifacts across your measurement sequence. Drift is especially likely in long-running targeted MS experiments where calibration curves or internal standards show systematic variation over time.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121

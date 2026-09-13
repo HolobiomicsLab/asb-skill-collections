@@ -3,6 +3,7 @@ name: statistical-significance-estimation-mass-spectrometry
 description: Use when after aligning fragment ions between two tandem mass spectra (query and reference) using maximum weight matching and you need to assign confidence scores to the matched ion pairs.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

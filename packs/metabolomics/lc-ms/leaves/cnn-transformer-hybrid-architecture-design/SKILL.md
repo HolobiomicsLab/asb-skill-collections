@@ -3,6 +3,7 @@ name: cnn-transformer-hybrid-architecture-design
 description: Use when when you need to detect and classify peaks in LC-MS regions of interest (ROIs) and simultaneously localize their boundaries for area integration.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3520

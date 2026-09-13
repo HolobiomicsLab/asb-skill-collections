@@ -3,6 +3,7 @@ name: molecular-formula-calculation
 description: Use when you have user-specified lipid class constraints (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -40,6 +41,7 @@ attribution:
 
 # molecular-formula-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate and output molecular formulas for enumerated lipid species by combining lipid class identifiers with fatty acid chain descriptors (carbon count, degree of unsaturation). This skill enables systematic generation of lipid molecular identities for spectral library construction and mass spectrometry-based identification workflows.

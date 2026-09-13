@@ -3,6 +3,7 @@ name: generalized-additive-model-hyperparameter-optimization
 description: Use when when fitting a nonlinear retention time (RT) mapping spline to anchor feature pairs (m/z and RT values) from two LC-MS datasets acquired under different conditions, you need to determine both the optimal B-spline basis dimension and identify which anchor points are outliers.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

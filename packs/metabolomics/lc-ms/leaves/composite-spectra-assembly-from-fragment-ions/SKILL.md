@@ -3,6 +3,7 @@ name: composite-spectra-assembly-from-fragment-ions
 description: Use when you have DDA raw mass spectrometry data (mzML, mzXML, or netCDF format) and need to reconstruct composite fragmentation spectra by associating fragment ions with their parent precursor ions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

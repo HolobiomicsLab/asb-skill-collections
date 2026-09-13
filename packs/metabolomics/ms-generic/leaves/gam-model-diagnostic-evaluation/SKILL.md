@@ -3,6 +3,7 @@ name: gam-model-diagnostic-evaluation
 description: Use when after fitting candidate GAM splines with B-spline basis functions across a range of basis dimensions (k values 12–20) to anchor feature pairs (m/z and retention time coordinates).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0337
   edam_topics:
   - http://edamontology.org/topic_3172

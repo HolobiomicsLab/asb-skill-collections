@@ -3,6 +3,7 @@ name: lipid-fragmentation-pattern-recognition
 description: Use when you have experimental tandem MS (MS/MS) spectra from lipid samples (in mzML format) and need to assign molecular identities and lipid classes.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: msflo-metabolite-annotation
 description: Use when after MS-DIAL has completed feature detection and peak alignment on .mzML LC-HRMS data, producing an aligned feature table. Use MSFLO when you need to assign metabolite identities to detected features and filter results by significance criteria before downstream interpretation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3803
   edam_topics:
   - http://edamontology.org/topic_3172

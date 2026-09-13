@@ -3,6 +3,7 @@ name: ion-mobility-arrival-time-conversion
 description: Use when you have a feature table containing raw ion mobility arrival time measurements paired with experimentally assigned biomolecular class labels (e.g., lipid, protein, carbohydrate), and you need to compute CCS values for downstream structural or comparative analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121

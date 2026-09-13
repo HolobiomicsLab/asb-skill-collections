@@ -3,6 +3,7 @@ name: adduct-type-assignment-positive-mode
 description: Use when you have an unknown MS/MS spectrum with a measured precursor m/z and want to determine which positive-mode adduct type ([M+H]+, [M+Na]+, [M+K]+, etc.) is most likely responsible for ionization.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

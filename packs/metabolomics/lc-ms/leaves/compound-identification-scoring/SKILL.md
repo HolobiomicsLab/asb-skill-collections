@@ -3,6 +3,7 @@ name: compound-identification-scoring
 description: Use when you have preprocessed MS/MS spectra (noise-filtered, normalized) and need to compute pairwise similarity or distance scores for compound library matching, when your goal is to rank candidate compounds by spectral match quality and maximize correct identification rate above dot-product.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2929
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: error-handling-confirmation
 description: Use when when implementing or auditing a data replacement method (e.g., `mz<-`, `intensity<-`) in an MsBackend subclass that must enforce ordering or format constraints on peak data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

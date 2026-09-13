@@ -3,6 +3,7 @@ name: ion-mobility-feature-engineering
 description: Use when you have a set of metabolite structures (or their molecular descriptors) and need to construct training or target feature matrices for CCS prediction. Specifically, use it when you are preparing data to fit or apply a machine learning model (e.g., Sklearn v1.0.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -45,6 +46,7 @@ attribution:
 
 # ion-mobility-feature-engineering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Feature engineering for ion-mobility mass spectrometry involves selecting and configuring molecular descriptor sets to train collision cross section (CCS) prediction models. This skill bridges raw metabolomics data and machine learning by curating input feature sets that encode molecular structure in a format compatible with Sklearn regressors.

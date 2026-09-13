@@ -3,6 +3,7 @@ name: transition-group-peak-picking
 description: Use when you have loaded extracted ion chromatogram (XIC) data from DIA mass spectrometry and need to identify peak boundaries for peptide precursor transitions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

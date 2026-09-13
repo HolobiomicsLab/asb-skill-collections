@@ -3,6 +3,7 @@ name: quality-control-threshold-optimization
 description: Use when when you have extracted a peak feature table (CSV or tabular format) with mass-to-charge ratios, retention times, and intensity values across multiple samples, and you need to distinguish genuine differential metabolic signals from instrumental noise or low-abundance background before.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

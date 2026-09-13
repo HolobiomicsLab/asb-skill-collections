@@ -3,6 +3,7 @@ name: execution-time-metric-analysis
 description: Use when you have computation-time metrics from a gallery or benchmark suite comparing multiple plotting backends on the same data types (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0092

@@ -3,6 +3,7 @@ name: precursor-mass-tolerance-filtering
 description: Use when after cosine similarity or dot-product scoring of experimental MS/MS spectra against a reference library, when you need to eliminate matches whose precursor m/z values deviate too far from the experimental precursor m/z, thereby improving specificity of library matching before final.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_0121

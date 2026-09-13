@@ -3,6 +3,7 @@ name: de-novo-mass-spectrum-interpretation
 description: Use when you have MS/MS spectra (centroided m/z and intensity pairs) and corresponding MS1 precursor masses but lack reference spectra or a priori formula information.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0153

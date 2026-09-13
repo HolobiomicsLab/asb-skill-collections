@@ -3,6 +3,7 @@ name: metabolomics-feature-selection-significance-filtering
 description: Use when you have fitted an MB-PLS model on multi-assay LC-MS intensity data (e.g., HPOS, LPOS, LNEG), computed MB-VIP scores for all features, and need to identify which features are statistically significant for your phenotypic outcome.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0091

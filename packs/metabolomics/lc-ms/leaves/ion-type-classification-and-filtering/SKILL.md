@@ -3,6 +3,7 @@ name: ion-type-classification-and-filtering
 description: Use when you have an MS/MS spectrum and a ProForma 2.0 peptidoform specification, and you need to identify which observed peaks correspond to specific fragment ion types (e.g., only b and y ions for backbone fragmentation, or immonium ions for amino acid identification).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121

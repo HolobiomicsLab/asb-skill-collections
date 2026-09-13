@@ -3,6 +3,7 @@ name: image-processing-for-metabolomics
 description: Use when you have GC–MS or LC–MS data represented as a two-dimensional map (m/z vs retention time) and need to identify analyte signals and marker features while minimizing false peak detections.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0769
@@ -46,6 +47,7 @@ attribution:
 
 # image-processing-for-metabolomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply image processing and machine learning to two-dimensional chromatography–mass spectrometry maps (m/z vs retention time) to automatically identify multivariate chemo-/biomarker features without conventional peak picking. This skill reduces false positive and false negative detection rates compared to traditional peak detection methods like XCMS.

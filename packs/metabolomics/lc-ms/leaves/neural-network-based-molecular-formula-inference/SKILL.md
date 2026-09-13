@@ -3,6 +3,7 @@ name: neural-network-based-molecular-formula-inference
 description: Use when you have MS/MS spectra with unknown precursor m/z values and need to assign the most likely chemical formula and adduct type (e.g., [M+H]+, [M+Na]+, [M+K]+) in a de novo setting where spectrum database matching is unavailable or undesirable.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3520

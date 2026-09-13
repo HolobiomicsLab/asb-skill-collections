@@ -3,6 +3,7 @@ name: mass-spectrometry-data-file-parsing
 description: Use when you receive raw MS data files from LC-MS, LC-IMS-MS, direct infusion, or DDA/DIA experiments and need to extract ion chromatograms, mobility heatmaps, quality metrics, or perform spectral matching.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0121

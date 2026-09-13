@@ -3,6 +3,7 @@ name: m-z-based-feature-grouping
 description: Use when after retention-time clustering has grouped features from multiple LC-MS samples, when you need to refine feature assignments by enforcing m/z consistency and eliminate duplicate or near-duplicate features with the same mass but potentially misaligned retention times.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: graph-clustering-community-detection
 description: Use when after constructing a spectral similarity network from pairwise cosine similarity scores between deconvolved GC-MS spectra.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3439
   edam_topics:
   - http://edamontology.org/topic_0080

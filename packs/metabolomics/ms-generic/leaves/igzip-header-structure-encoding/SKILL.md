@@ -3,6 +3,7 @@ name: igzip-header-structure-encoding
 description: Use when when implementing an igzip parser, decoder, or validator that must interpret the custom header format; when debugging igzip file corruption or encoding errors; or when extending pymzML's igzip support to handle new index schemes.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_topics: []
   tools:
   - pymzML

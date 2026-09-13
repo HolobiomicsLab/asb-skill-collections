@@ -3,6 +3,7 @@ name: data-dependent-acquisition-controller-implementation
 description: Use when you have a conceptual MS/MS fragmentation strategy (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: chemical-structure-annotation-preparation
 description: Use when you have acquired composite fragmentation spectra from DIA experiments (MS^E, AIF, or SWATH-MS) that have been deconvoluted by IDSL.CSA, and you need to export the resolved spectra in a format suitable for chemical structure identification against reference libraries or spectral databases.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0091

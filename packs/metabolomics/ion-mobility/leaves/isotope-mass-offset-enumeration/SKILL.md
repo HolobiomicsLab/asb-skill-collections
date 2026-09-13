@@ -3,6 +3,7 @@ name: isotope-mass-offset-enumeration
 description: Use when you have a detected feature table (m/z, drift_time, retention_time, intensity) from LC-IMS-MS or similar multidimensional MS data and want to identify and annotate isotopic families (e.g., singly-charged C13 patterns).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

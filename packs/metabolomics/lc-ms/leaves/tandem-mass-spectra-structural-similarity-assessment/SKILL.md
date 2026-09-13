@@ -3,6 +3,7 @@ name: tandem-mass-spectra-structural-similarity-assessment
 description: Use when you have pairs of cleaned tandem mass spectra with known chemical structure annotations (InChIKey, SMILES, or InChI), and you need to predict Tanimoto structural similarity scores directly from spectral data without pre-computing molecular fingerprints.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0625

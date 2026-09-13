@@ -3,6 +3,7 @@ name: mass-binning-and-tokenization-for-topic-modeling
 description: Use when you have extracted and intensity-normalized fragment ion masses and neutral loss values from MS/MS spectra and need to prepare them for unsupervised topic modeling to discover recurring fragmentation motifs.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

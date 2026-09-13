@@ -3,6 +3,7 @@ name: mass-spectrometry-data-visualization
 description: Use when after applying retention time, abundance correlation, or EIC similarity-based feature grouping (e.g., via SimilarRtimeParam, AbundanceSimilarityParam, or EicSimilarityParam). Use when you need to visually confirm that grouped features belong to the same compound—i.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0564
   edam_topics:
   - http://edamontology.org/topic_3370

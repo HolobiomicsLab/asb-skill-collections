@@ -3,6 +3,7 @@ name: adduct-signature-identification-mass-spectrometry
 description: Use when you have statistically significant LC-MS features (e.g., filtered by p-value < 0.01) from multi-assay metabolomics datasets and need to group features that represent the same metabolite ionized under different ESI conditions (e.g., [M+H]+, [M+Na]+, [M+NH4]+).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121

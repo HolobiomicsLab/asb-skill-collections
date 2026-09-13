@@ -3,6 +3,7 @@ name: file-format-robustness-testing
 description: Use when when processing MS spectral data from multiple open mass spectra libraries (OMSLs) in mixed formats (MSP, MGF, JSON, CSV), especially when source data exhibits missing fields, malformed entries, inconsistent adduct representations, or non-standard format variants that may cause silent.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -44,6 +45,7 @@ attribution:
 
 # file-format-robustness-testing
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Validate and standardize mass spectrometry data across heterogeneous file formats (MSP, MGF, JSON, CSV) by implementing format-specific parsers with comprehensive edge-case handling, metadata validation, and structural integrity checks to ensure consistent spectrum parsing without data loss.

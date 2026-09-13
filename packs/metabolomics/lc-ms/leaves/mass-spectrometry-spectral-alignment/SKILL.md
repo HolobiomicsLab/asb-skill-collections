@@ -3,6 +3,7 @@ name: mass-spectrometry-spectral-alignment
 description: Use when you have a pair of MS/MS spectra—one from a known compound and one from a structurally modified variant of that compound—and you need to identify which atoms in the structure likely bear the modification.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3650
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -48,6 +49,7 @@ attribution:
 
 # mass-spectrometry-spectral-alignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align tandem mass spectra from known and structurally modified compound pairs using cosine similarity and fragmentation annotation to localize per-atom modification sites. This skill enables direct comparison of MS/MS peaks and fragments to generate modification site probability scores.

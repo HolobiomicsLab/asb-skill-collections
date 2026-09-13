@@ -3,6 +3,7 @@ name: peak-detection-and-boundary-identification
 description: Use when when you have CE-MS raw data (mzML or netCDF format) with extracted ion traces for target compounds and need to identify peak boundaries and extract quantitative peak properties (retention time on µeff scale, peak intensity, peak area) within a specified mobility window.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3370

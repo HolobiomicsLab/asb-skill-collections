@@ -3,6 +3,7 @@ name: aif-spectrum-fragment-database-matching
 description: Use when you have a feature table from untargeted LC–MS all-ion fragmentation (AIF) chromatograms processed by xcms and RamClustR, and you want to assign metabolite annotations to individual features by comparing their experimental MS/MS spectra against curated fragment libraries (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0153

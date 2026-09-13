@@ -3,6 +3,7 @@ name: percentile-threshold-filtering
 description: Use when you have computed multiple independent scoring functions (e.g., standardised strain correlation and IOKR) for a large set of potential genomic–metabolomic links and wish to identify subsets enriched for validated links.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0202

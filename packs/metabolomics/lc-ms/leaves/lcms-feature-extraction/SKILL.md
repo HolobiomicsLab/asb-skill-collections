@@ -3,6 +3,7 @@ name: lcms-feature-extraction
 description: Use when when you have raw LC-MS chromatographic data (mzML or vendor format) and need to identify and characterize all detectable peaks across the full retention time range for untargeted metabolomics or discovery workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -42,6 +43,7 @@ attribution:
 
 # lcms-feature-extraction
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Nontargeted peak detection and segmentation of raw LC-MS data (mzML or vendor formats) to extract chromatographic features with precise m/z, retention time, intensity, and peak width metadata. This skill produces a feature table suitable for downstream metabolomics analysis.

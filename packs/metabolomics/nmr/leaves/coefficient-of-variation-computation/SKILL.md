@@ -3,6 +3,7 @@ name: coefficient-of-variation-computation
 description: Use when you have loaded raw NMR or MS metabolomic abundance data into a SummarizedExperiment object and need to assess feature reproducibility before downstream association modeling.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -55,6 +56,7 @@ attribution:
 
 # coefficient-of-variation-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute coefficient of variation (CV) for each metabolic feature across samples in a metabolomic SummarizedExperiment object to quantify reproducibility and identify low-variance, high-quality features. This step is foundational for quality control filtering in metabolome-wide association studies.

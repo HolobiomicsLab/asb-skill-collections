@@ -3,6 +3,7 @@ name: feature-table-parsing-and-loading
 description: Use when you have extracted volatile organic compound (VOC) features from individual breath samples (mzML or mzXML files) and wish to consolidate multiple per-sample feature tables into a single aligned feature table, or you need to programmatically access feature metadata (m/z, intensity, scan.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3762
   edam_topics:
   - http://edamontology.org/topic_3520

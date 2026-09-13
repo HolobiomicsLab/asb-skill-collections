@@ -3,6 +3,7 @@ name: cross-database-structural-homology-matching
 description: Use when when you have antiSMASH-predicted BGCs and wish to link them to metabolomic data via structure prediction, but only BGCs with sufficient structural homology to characterized reference clusters will yield reliable predictions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0346
   edam_topics:
   - http://edamontology.org/topic_0621

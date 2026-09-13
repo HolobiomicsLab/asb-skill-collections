@@ -3,6 +3,7 @@ name: peak-picking-parameter-configuration
 description: Use when when reconstructing a metabolite fragment library entry from raw MS/MS spectral data (e.g., from MassBank or local acquisition), you need to define peak-picking thresholds to separate true fragment ions from baseline noise and assign occurrence scores.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: retention-time-and-mz-based-alignment
 description: Use when after peak detection has been completed on individual LC-MS samples and you have a collection of detected peaks with m/z, retention time, and intensity values from each sample.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3172

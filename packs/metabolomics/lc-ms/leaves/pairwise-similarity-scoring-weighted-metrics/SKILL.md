@@ -3,6 +3,7 @@ name: pairwise-similarity-scoring-weighted-metrics
 description: Use when after anchor selection and RT mapping spline fitting, when you have a fitted metabCombiner object with pre-aligned feature pair candidates and need to determine which parameter weights (A for RT, B for m/z, C for similarity score) discriminate true metabolite matches from false positives.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: cross-instrument-data-harmonization
 description: Use when you have mass spectrometry spectral data from multiple instrument types (e.g., direct infusion MS, ambient ionization MS, laser desorption/ionization MS) and need to perform unified species discrimination or database scoring across all samples regardless of their source instrument.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -43,6 +44,7 @@ attribution:
 
 # cross-instrument-data-harmonization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enable unified analysis of mass spectrometry data across heterogeneous instrument platforms (DI-MS, ASAP-MS, LDI-MS, AI-MS) by standardizing file parsing, pre-processing, and peak detection workflows. This skill bridges instrumental differences to allow consistent species authentication and database searching without instrument-specific recalibration.

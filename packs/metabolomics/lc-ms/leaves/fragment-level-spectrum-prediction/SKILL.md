@@ -3,6 +3,7 @@ name: fragment-level-spectrum-prediction
 description: Use when when you have a molecular structure (SMILES, InChI, or chemical formula) and need to predict its tandem mass spectrum for structural elucidation or mass spectrometry validation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0593

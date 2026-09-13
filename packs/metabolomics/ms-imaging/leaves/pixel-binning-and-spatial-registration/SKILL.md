@@ -3,6 +3,7 @@ name: pixel-binning-and-spatial-registration
 description: Use when you have raw line-scan mass spectrometry imaging data from nano-DESI or other line-scan acquisition modes and need to produce a georeferenced 3D pixel array.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0121

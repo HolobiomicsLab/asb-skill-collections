@@ -3,6 +3,7 @@ name: bayesian-optimization-acquisition-function-selection
 description: Use when after fitting a Gaussian Process regression model to prior LC-MS gradient evaluations (where gradients are encoded as input and separation efficiency is output), use this skill to decide which candidate gradient to test next.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -51,6 +52,7 @@ attribution:
 
 # bayesian-optimization-acquisition-function-selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Select and apply an acquisition function to a fitted Gaussian Process model to propose the next LC gradient point for evaluation in a Bayesian optimization loop. This skill determines whether to favor exploration, exploitation, or a balanced trade-off when navigating the gradient parameter space.

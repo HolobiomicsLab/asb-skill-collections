@@ -3,6 +3,7 @@ name: molecular-fingerprint-parsing
 description: Use when you have received a JSON response from the CSI:FingerID web service endpoint after submitting a fragmentation tree or tandem mass spectrum query, and you need to extract the predicted molecular fingerprint representation and associated scoring metrics for compound identification or CANOPUS.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3806
   edam_topics:
   - http://edamontology.org/topic_0625

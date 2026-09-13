@@ -3,6 +3,7 @@ name: metabolite-similarity-scoring
 description: Use when you have an unknown compound's mass spectrum (m/z peaks and intensities) in .
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3628
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -39,6 +40,7 @@ attribution:
 
 # metabolite-similarity-scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Score and rank candidate metabolites by computing semantic similarity between an unknown compound's mass spectrum and a reference database of known metabolite spectra using deep-learned mass spectral language encodings. This enables prediction of structurally related metabolites and assists in ranking molecular structure database candidates.

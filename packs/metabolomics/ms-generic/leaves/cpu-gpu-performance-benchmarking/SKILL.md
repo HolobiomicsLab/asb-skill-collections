@@ -3,6 +3,7 @@ name: cpu-gpu-performance-benchmarking
 description: Use when you have implemented both CPU and GPU versions of a spectral search algorithm (e.g., approximate nearest neighbor indexing with cascade filtering) and need to validate whether GPU acceleration is justified.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121

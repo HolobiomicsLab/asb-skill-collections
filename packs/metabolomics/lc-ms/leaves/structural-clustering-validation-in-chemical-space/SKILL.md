@@ -3,6 +3,7 @@ name: structural-clustering-validation-in-chemical-space
 description: Use when you have trained or loaded a deep learning model that produces high-dimensional spectral embeddings (e.g., 200-dimensional vectors from MS2DeepScore base network) and need to validate that these embeddings capture chemical structure information rather than learning spurious patterns.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3745
   edam_topics:
   - http://edamontology.org/topic_3172

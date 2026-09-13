@@ -3,6 +3,7 @@ name: metadata-extraction-and-population
 description: Use when when importing raw mass spectrometry data from files in supported formats (mzML, mzXML, msp, MGF, JSON, metabolomics-USI) and you need to extract and standardize metadata fields so that spectra are ready for metadata cleaning, validation, and comparative analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121

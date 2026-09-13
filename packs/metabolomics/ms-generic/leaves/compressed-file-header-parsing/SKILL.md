@@ -3,6 +3,7 @@ name: compressed-file-header-parsing
 description: Use when you have a large indexed gzip file (igz format) with metadata encoded in the gzip header comment field, and you need to retrieve specific blocks or spectra by integer index without decompressing the entire file.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3546
   edam_topics:
   - http://edamontology.org/topic_3520

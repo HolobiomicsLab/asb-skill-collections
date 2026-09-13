@@ -3,6 +3,7 @@ name: domain-specific-masst-api-integration
 description: Use when your research involves searching MS/MS spectra against multiple curated taxonomic or domain-specific databases (microbial, plant, tissue, microbiome, or food origin) and you need to aggregate, compare, and visualize matching results across all domains in a single interface.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -49,6 +50,7 @@ attribution:
 
 # domain-specific-masst-api-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrating API endpoints from domain-specific MASST tools (microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST) into a unified aggregation layer to route heterogeneous MS/MS search results into metadataMASST for combined visualization and analysis. This skill enables batch processing of multiple spectra against all domain-specific MASSTs simultaneously rather than searching one spectrum at a time.

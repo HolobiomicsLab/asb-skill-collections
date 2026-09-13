@@ -3,6 +3,7 @@ name: skyline-import-format-specification
 description: Use when you have computationally generated precursor m/z values, fragment m/z values, collision energies, and retention time predictions for a set of lipid targets (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3375

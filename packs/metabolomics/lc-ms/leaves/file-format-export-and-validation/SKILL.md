@@ -3,6 +3,7 @@ name: file-format-export-and-validation
 description: Use when after executing MassQL queries on mass spectrometry data that produce tabulated results (e.g., MS1 or MS2 scan metadata, peak intensities, retention times), and you need to persist those results for archival, sharing, or downstream statistical analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3750
   edam_topics:
   - http://edamontology.org/topic_3520

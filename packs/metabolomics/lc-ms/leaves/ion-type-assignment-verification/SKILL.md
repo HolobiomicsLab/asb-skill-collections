@@ -3,6 +3,7 @@ name: ion-type-assignment-verification
 description: Use when after calling MsmsSpectrum.annotate_proforma() to assign fragment ions to a mass spectrum, verify that each annotated peak has the correct ion_type ('b' or 'y'), charge state, and m/z deviation from the theoretical mass computed for that peptidoform.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: non-targeted-preprocessing-tool-comparison
 description: Use when you have LC-HRMS mzML data processed by at least one non-targeted pre-processing tool (XCMS, MZmine 2, MZmine 3, MS-DIAL, OpenMS, El-MAVEN, or similar), you have access to curated retention time boundaries and molecular formulas for a set of known target compounds (ideally 30+ molecules.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3635
   edam_topics:
   - http://edamontology.org/topic_3172

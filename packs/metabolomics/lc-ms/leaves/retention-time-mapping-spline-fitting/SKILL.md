@@ -3,6 +3,7 @@ name: retention-time-mapping-spline-fitting
 description: Use when after anchor feature pairs (m/z and retention time values) have been selected from two disparately-acquired LC-MS datasets, and you need to correct for systematic retention time differences between the datasets.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3172

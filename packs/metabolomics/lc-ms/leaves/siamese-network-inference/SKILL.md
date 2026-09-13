@@ -3,6 +3,7 @@ name: siamese-network-inference
 description: Use when you have a collection of cleaned MS/MS spectra (in formats like mzML, mgf, msp, mzxml, or json) and need to predict molecular structural similarities between spectrum pairs without pre-computing RDKit fingerprints.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3680
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -64,6 +65,7 @@ attribution:
 
 # siamese-network-inference
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load a pre-trained Siamese neural network and use it to generate spectral embeddings and predict structural similarity scores (Tanimoto or Dice) from pairs of MS/MS spectra without requiring molecular fingerprint computation. This skill enables rapid, scalable chemical similarity assessment directly from mass spectrometry data.

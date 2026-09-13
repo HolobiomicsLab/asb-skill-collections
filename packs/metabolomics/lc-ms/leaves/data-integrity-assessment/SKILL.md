@@ -3,6 +3,7 @@ name: data-integrity-assessment
 description: Use when immediately after importing raw mass spectrometry data from supported formats (mzML, mzXML, msp, metabolomics-USI, MGF, JSON) and before performing spectral similarity comparisons or statistical analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

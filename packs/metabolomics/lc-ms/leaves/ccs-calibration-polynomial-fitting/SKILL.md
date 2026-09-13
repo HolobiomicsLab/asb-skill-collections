@@ -3,6 +3,7 @@ name: ccs-calibration-polynomial-fitting
 description: Use when you have acquired tunemix or reference standard data in ion mobility spectrometry with known m/z, drift time, and CCS values, and you need to establish a drift-time-to-CCS mapping for a specific instrument, ionization mode (positive or negative), and buffer gas.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

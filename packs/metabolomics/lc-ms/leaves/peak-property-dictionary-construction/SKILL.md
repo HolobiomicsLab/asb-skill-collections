@@ -3,6 +3,7 @@ name: peak-property-dictionary-construction
 description: Use when when you have identified the set of analytes (peptides, nucleosides, or other biomolecules) you wish to simulate in silico, and you need to prepare their chemical properties (m/z, intensity, retention time) in a machine-readable format before applying fragmentation and noise injection.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

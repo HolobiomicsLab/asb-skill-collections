@@ -3,6 +3,7 @@ name: peak-annotation-refinement-structure-driven
 description: Use when you have two related compounds (a known reference and its structural analog with unknown modification site), baseline peak annotations from cosine alignment, and newly available structural information (SMILES or molecular structure) for the modified compound.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -50,6 +51,7 @@ attribution:
 
 # peak-annotation-refinement-structure-driven
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Refine MS/MS peak annotations by propagating structural constraints from a known compound through a ModiFinder network to improve fragment-to-modification mappings. This skill uses oracle-mode annotation when a modified compound's structure becomes available, enabling more confident localization of modification sites via re-annotation and probability score regeneration.

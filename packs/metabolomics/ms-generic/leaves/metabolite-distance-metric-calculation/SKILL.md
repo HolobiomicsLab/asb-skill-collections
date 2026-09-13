@@ -3,6 +3,7 @@ name: metabolite-distance-metric-calculation
 description: Use when you have normalized peak intensity tables from FT-ICR MS data (or MetaboDirect pre-processed .csv output) with samples grouped by experimental treatments (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3960
   edam_topics:
   - http://edamontology.org/topic_0091

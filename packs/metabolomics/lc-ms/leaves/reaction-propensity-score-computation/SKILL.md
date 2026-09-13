@@ -3,6 +3,7 @@ name: reaction-propensity-score-computation
 description: Use when you have measured intracellular metabolite abundances (LC-MS or similar) across multiple cell lines or conditions and a stoichiometric metabolic model (with reaction-metabolite associations) to estimate how differences in substrate availability—independent of gene expression—translate into.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0602

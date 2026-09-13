@@ -3,6 +3,7 @@ name: ion-mobility-spectrometry-peak-extraction
 description: Use when after peaks have been detected in aligned GCIMS samples using findPeaks with CWT parameters and peaks have been clustered across samples, and you need to integrate peak signals into a matrix format where each entry represents the intensity of a peak cluster in a specific sample for.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3197
   edam_topics:
   - http://edamontology.org/topic_0091

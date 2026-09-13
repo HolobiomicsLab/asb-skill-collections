@@ -3,6 +3,7 @@ name: nested-data-structure-construction-for-chemical-metadata
 description: Use when you have loaded raw Agilent Unknowns Analysis CSV output with required columns (Component.RT, Base.Peak.MZ, Component.Area, Compound.Name, Match.Factor, File.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_0582

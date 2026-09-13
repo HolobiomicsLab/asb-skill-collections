@@ -3,6 +3,7 @@ name: fragmentation-spectrum-extraction
 description: Use when you have raw or peak-detected mass spectrometry data (mzXML, mzML, or netCDF format) from untargeted metabolomics or exposomics studies and need to separate composite fragmentation spectra into individual constituent spectra for annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3370

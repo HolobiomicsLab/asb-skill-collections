@@ -3,6 +3,7 @@ name: metabolite-cluster-export-formatting
 description: Use when after running do.findmain on a RAMClustR-clustered object to infer molecular weights and assign features to compound clusters, when you need to conduct structural elucidation in MSFinder or Sirius and require spectra in their native import formats rather than the intermediate MSP or.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_0091

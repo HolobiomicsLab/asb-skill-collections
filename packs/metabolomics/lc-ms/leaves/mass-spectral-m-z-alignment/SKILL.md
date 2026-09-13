@@ -3,6 +3,7 @@ name: mass-spectral-m-z-alignment
 description: Use when after you have (1) identified putative labelled features with intensity and m/z measurements from LC/MS data (e.g., via basepeak_finder output in geoRge), (2) defined a list of expected ionization adducts (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_0769

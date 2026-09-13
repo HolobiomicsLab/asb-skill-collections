@@ -3,6 +3,7 @@ name: spectral-peak-detection-local-maxima
 description: Use when you have a 1D intensity array (e.g., a single MS1 or MS2 spectrum extracted from an MZA HDF5 file) and need to identify prominent peaks with their m/z indices and heights.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_0121

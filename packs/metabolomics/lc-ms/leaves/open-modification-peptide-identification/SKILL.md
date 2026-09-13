@@ -3,6 +3,7 @@ name: open-modification-peptide-identification
 description: Use when when you have high-resolution tandem mass spectra (query spectra) and need to identify peptides with unanticipated or open modifications (any mass shift on any amino acid position).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0121

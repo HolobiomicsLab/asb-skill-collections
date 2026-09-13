@@ -3,6 +3,7 @@ name: feature-pair-scoring-in-metabolomics
 description: Use when use this skill after XCMS feature detection and alignment on non-targeted LC-MS or GC-MS metabolomics data, when you have aligned features with quantitative profiles across samples and need to group features that co-originate from the same compound (accounting for isotopic peaks, adducts.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3172

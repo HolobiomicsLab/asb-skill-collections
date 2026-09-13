@@ -3,6 +3,7 @@ name: arrow-columnar-data-decoding
 description: Use when when reading mzPeak files or other Parquet-backed mass spectrometry archives where spectral m/z and intensity arrays are stored in columnar layouts (point or chunked format) and you need to reconstruct them into Python NumPy arrays, pandas DataFrames, or equivalent in-memory structures for.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: metabolomics-imputation-method-application
 description: Use when your metabolomics dataset (LC/MS or GC/MS) contains missing values encoded as NA or zero that represent compounds below the instrument's limit of detection (LOD) or limit of quantification (LOQ), rather than values missing completely at random.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -45,6 +46,7 @@ attribution:
 
 # metabolomics-imputation-method-application
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Apply Gibbs sampler-based or alternative imputation methods to recover left-censored missing values in metabolomics data matrices, where missingness is caused by detection limits below which metabolite concentrations cannot be quantified. This skill encompasses method selection, preprocessing, parameter tuning, and convergence assessment to produce complete imputed datasets suitable for downstream statistical analysis.

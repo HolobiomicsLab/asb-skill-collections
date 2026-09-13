@@ -3,6 +3,7 @@ name: isotopic-pattern-matching
 description: Use when after feature detection has produced candidate formula–adduct pairs and their corresponding m/z values, but before final compound identification.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0593

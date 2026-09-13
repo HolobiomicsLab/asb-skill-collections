@@ -3,6 +3,7 @@ name: spectral-metadata-extraction
 description: Use when after loading an MSP spectral library file into memory using mssearchr's MSP parser, when you need to verify that each spectrum record contains complete and valid metadata (precursor m/z values, peak lists, header annotations) before writing the parsed spectra to a new MSP file or.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3237
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: metabolomics-feature-matrix-filtering
 description: Use when you have an aligned MemoMatrix (sample-by-feature occurrence matrix where features are MS2 peaks and neutral losses) and need to remove background noise before applying visualization or clustering techniques (MDS/PCoA, TMAP, Heatmap).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

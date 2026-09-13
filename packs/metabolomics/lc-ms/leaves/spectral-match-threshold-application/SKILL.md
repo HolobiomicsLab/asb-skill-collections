@@ -3,6 +3,7 @@ name: spectral-match-threshold-application
 description: Use when after running spectral matching (e.g., GNPS library search, SIRIUS in silico annotation) and obtaining an annotation table with confidence scores, apply threshold filtering to remove low-confidence or spurious matches before downstream analysis (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

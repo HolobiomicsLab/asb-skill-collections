@@ -3,6 +3,7 @@ name: recursive-algorithm-implementation
 description: Use when after peak detection on LC/HRMS data (mzXML, mzML, netCDF formats) when m/z values require refinement for improved mass accuracy in untargeted metabolomics workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -43,6 +44,7 @@ attribution:
 
 # Reconstruct the recursive mass correction stage
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a recursive mass correction algorithm to refine m/z accuracy of LC/HRMS peaks after initial detection, using internal reference standards or lock masses to recalibrate mass coordinates across population-scale untargeted datasets.

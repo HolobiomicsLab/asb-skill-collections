@@ -3,6 +3,7 @@ name: ms2-fragment-m-z-grouping-and-aggregation
 description: Use when you have extracted MS/MS spectra for a given metabolomic feature across multiple replicates (e.g., after top-TIC filtering) and need to identify which fragments are reproducible across replicates.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

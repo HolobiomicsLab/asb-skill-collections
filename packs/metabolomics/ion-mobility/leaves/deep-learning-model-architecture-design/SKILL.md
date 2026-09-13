@@ -3,6 +3,7 @@ name: deep-learning-model-architecture-design
 description: Use when you have extracted molecular features (voxel projected areas, molecular graphs, m/z values, adduct encodings) and need to build a predictive model to map these features to a continuous molecular property (CCS).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0006
   edam_topics:
   - http://edamontology.org/topic_3474

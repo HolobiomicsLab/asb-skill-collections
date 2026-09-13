@@ -3,6 +3,7 @@ name: comparative-performance-profiling
 description: 'Use when when you have implemented a new or optimized mass spectrometry data processing library and need to demonstrate its computational advantage over established alternatives (e.g., pymzML, pyOpenMS) on real proteomics data. Trigger on availability of: (1) a common input dataset (e.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0121

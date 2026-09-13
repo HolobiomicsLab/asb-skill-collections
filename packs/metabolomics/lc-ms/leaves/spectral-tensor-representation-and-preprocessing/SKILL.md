@@ -3,6 +3,7 @@ name: spectral-tensor-representation-and-preprocessing
 description: 'Use when when preparing MS/MS spectra from .msp files for transformer-based deep learning models in IDSL_MINT. Specifically: you have raw spectral data with variable peak counts and need fixed-size tensor inputs;'
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -44,6 +45,7 @@ attribution:
 
 # spectral-tensor-representation-and-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert mass spectrometry MS/MS spectral peak data into fixed-dimension tensor representations suitable for transformer model input, with positional encoding of spectrum features. This preprocessing step bridges raw .msp spectral records into PyTorch-compatible numerical formats that preserve peak intensity and m/z relationships.

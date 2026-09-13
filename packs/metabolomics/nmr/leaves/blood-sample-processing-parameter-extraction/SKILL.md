@@ -3,6 +3,7 @@ name: blood-sample-processing-parameter-extraction
 description: Use when when you have peripheral blood sample cohorts (plasma/serum) with multiple timestamps (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -40,6 +41,7 @@ attribution:
 
 # blood-sample-processing-parameter-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract pre- and post-centrifugation processing delay times from date+time stamp differences in peripheral blood sample metadata to enable stratified analysis of processing effects on NMR metabolomic measurements. This skill is essential for quantifying and annotating the pre-analytical variables that drive metabolite stability variation.

@@ -3,6 +3,7 @@ name: conditional-dispatch-routing
 description: Use when you have received a peak/feature table from an unknown or variable upstream peak-picking tool and need to ingest it into LipidMatch or a similar unified workflow. The input file format, column naming, or metadata structure is tool-specific (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3370

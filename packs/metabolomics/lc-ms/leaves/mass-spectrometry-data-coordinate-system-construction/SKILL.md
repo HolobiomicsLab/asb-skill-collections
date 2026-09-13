@@ -3,6 +3,7 @@ name: mass-spectrometry-data-coordinate-system-construction
 description: Use when when you have processed LC-MS/MS spectral data in .mgf format with precomputed ms2deepscore similarity matrices and need a 2-D overview representation that preserves local spectral relationships for interactive exploration and visualization.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3935
   edam_topics:
   - http://edamontology.org/topic_0121

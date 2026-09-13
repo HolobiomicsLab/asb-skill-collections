@@ -3,6 +3,7 @@ name: constraint-based-flux-balance-analysis
 description: Use when you have a generic genome-scale metabolic model (SBML format) and cross-sectional omics data (RNA-seq, intracellular metabolomics, extracellular flux measurements from bioanalyzer or similar) from multiple biological samples (cell lines, conditions).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3660
   edam_topics:
   - http://edamontology.org/topic_0602

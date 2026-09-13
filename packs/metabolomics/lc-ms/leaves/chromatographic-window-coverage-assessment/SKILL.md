@@ -3,6 +3,7 @@ name: chromatographic-window-coverage-assessment
 description: Use when after extracting retention times from top MS1 features detected in an LC-MS run, and when you need to evaluate whether a given gradient time range (e.g., 0–30 minutes) is being used efficiently to separate compounds. Apply this skill as the objective function in gradient optimization (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -47,6 +48,7 @@ attribution:
 
 # chromatographic-window-coverage-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantifies how effectively a liquid chromatography gradient distributes compounds across the usable retention-time window by converting a series of MS1 retention times into a normalized separation-efficiency score (0–1). This metric encodes omics-scale compound-separation performance for gradient optimization workflows.

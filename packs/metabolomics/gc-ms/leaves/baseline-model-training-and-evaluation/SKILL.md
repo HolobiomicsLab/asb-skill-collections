@@ -3,6 +3,7 @@ name: baseline-model-training-and-evaluation
 description: 'Use when when you need to establish comparable performance baselines for a novel spectrum prediction model and require fair comparison across multiple baseline architectures. Trigger this skill when: (1) you have a new spectrum prediction approach (e.g., ICEBERG, SCARF) to benchmark;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091

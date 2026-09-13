@@ -3,6 +3,7 @@ name: atom-feature-extraction-chemistry
 description: Use when you have canonicalized SMILES strings from a chemical database (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0209

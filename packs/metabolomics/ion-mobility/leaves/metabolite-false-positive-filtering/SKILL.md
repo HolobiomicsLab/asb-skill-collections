@@ -3,6 +3,7 @@ name: metabolite-false-positive-filtering
 description: Use when you have ion-mobility mass spectrometry metabolomics data with putative metabolite identifications (e.g., from database matching) and want to reduce false positives by cross-validating compound identities against machine-learned CCS predictions.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3960
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -46,6 +47,7 @@ attribution:
 
 # metabolite-false-positive-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use machine-learning-predicted collision cross section (CCS) values to filter false positive metabolite identifications in ion-mobility mass spectrometry datasets. This skill applies a trained CCS prediction model to experimentally detected compounds and compares predicted vs. observed CCS to remove low-confidence annotations.

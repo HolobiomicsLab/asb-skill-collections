@@ -3,6 +3,7 @@ name: lipid-adduct-pairing-by-neutral-mass
 description: Use when when processing mass spectrometry imaging data with multiple adduct forms of the same lipid species, and you need to correct one adduct form (e.g. [M+H]+) for isotopic interference from a co-occurring adduct (e.g. [M+Na]+).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -41,6 +42,7 @@ attribution:
 
 # Lipid Adduct Pairing by Neutral Mass
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and match paired adduct ions (e.g. [M+H]+ and [M+Na]+) from the same neutral lipid species by comparing neutral lipid identifiers and m/z differences. This pairing is essential for applying Type II isotopic correction to remove adduct-specific overlap in mass spectrometry imaging quantitation.

@@ -3,6 +3,7 @@ name: mass-spectrum-peak-manipulation-merging
 description: Use when after generating electronic noise (uniformly sampled m/z with Poisson-distributed intensities) and chemical noise (formula database-sampled m/z with Poisson intensities) and you need to combine both noise types with a clean baseline spectrum into a single unified peak array.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3714
   edam_topics:
   - http://edamontology.org/topic_3520

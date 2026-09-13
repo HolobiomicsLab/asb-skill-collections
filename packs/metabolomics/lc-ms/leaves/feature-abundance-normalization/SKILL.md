@@ -3,6 +3,7 @@ name: feature-abundance-normalization
 description: Use when after peak picking (e.g., via MS-DIAL) and quality control filtering, when you have a raw feature abundance matrix with intensity values across multiple samples and need to make intensities comparable before statistical testing or multivariate analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

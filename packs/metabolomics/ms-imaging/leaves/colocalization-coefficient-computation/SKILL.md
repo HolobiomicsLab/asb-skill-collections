@@ -3,6 +3,7 @@ name: colocalization-coefficient-computation
 description: Use when you have two co-registered LA-ICP-MS element channel images and need to quantify whether their spatial distributions are statistically correlated or independent. Use it specifically when investigating whether two elements co-occur spatially (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3500
@@ -48,6 +49,7 @@ attribution:
 
 # colocalization-coefficient-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantifies spatial relationships between two co-registered element channels in LA-ICP-MS images by computing Pearson R, Li ICQ, and Manders coefficients (via Costes thresholding). This skill enables detection and measurement of elemental colocalization patterns critical for understanding spatial distribution relationships in imaging mass spectrometry data.

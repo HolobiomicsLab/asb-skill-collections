@@ -3,6 +3,7 @@ name: adduct-form-prediction-and-mass-calculation
 description: Use when you have a characterized lipid species (with defined class and fatty acid composition) and need to predict which adduct forms will ionize under your experimental ionization mode (positive or negative ESI), and you require accurate precursor m/z values for DDA method configuration or.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -40,6 +41,7 @@ attribution:
 
 # adduct-form-prediction-and-mass-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enumerate all ionization adduct forms (e.g., [M+H]+, [M+Na]+, [M−H]−) for a given lipid species and compute their precursor m/z values to support targeted mass spectrometry experiments. This skill is essential for generating comprehensive precursor lists and spectral libraries for data-dependent acquisition (DDA) on Orbitrap instruments.

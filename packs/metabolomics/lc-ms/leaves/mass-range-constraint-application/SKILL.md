@@ -3,6 +3,7 @@ name: mass-range-constraint-application
 description: Use when when generating a virtual chemical mixture for LC-MS/MS simulation, or when sampling molecular formulas from a metabolite database (such as HMDB), you need to restrict the sample to a specific m/z window that matches your instrument's acquisition range or your analytical focus.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3370

@@ -3,6 +3,7 @@ name: background-ion-drift-detection-and-removal
 description: Use when processing MS-DIAL peak lists from untargeted LC-MS/MS experiments (DDA or DIA mode) where you suspect instrumental background contamination or ion source carry-over is generating false positive features.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3172

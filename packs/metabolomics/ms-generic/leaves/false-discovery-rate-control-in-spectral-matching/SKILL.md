@@ -3,6 +3,7 @@ name: false-discovery-rate-control-in-spectral-matching
 description: Use when after performing spectral library matching (whether unmodified or open modification search) and ranking candidate matches by similarity score, apply FDR control when you need to report a curated set of identifications with quantified confidence.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

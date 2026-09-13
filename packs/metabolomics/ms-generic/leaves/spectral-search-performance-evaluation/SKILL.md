@@ -3,6 +3,7 @@ name: spectral-search-performance-evaluation
 description: Use when when you have implemented or obtained a spectral library search tool (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0362
   edam_topics:
   - http://edamontology.org/topic_3520

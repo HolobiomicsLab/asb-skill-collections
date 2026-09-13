@@ -3,6 +3,7 @@ name: schema-compliance-testing
 description: Use when when uploading or ingesting a new paired omics project JSON document into the Pairing Omics Data Platform, or when programmatically submitting projects via the OpenAPI interface. Apply this skill before persisting the document to disk or indexing it for search.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3697

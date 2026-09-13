@@ -3,6 +3,7 @@ name: feature-detection-rate-filtering
 description: Use when after constructing a MetaboSet object with LC-MS peak abundances, sample metadata (pData with QC labels), and feature metadata (fData), and after marking missing values as NA.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -49,6 +50,7 @@ attribution:
 
 # feature-detection-rate-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies and flags LC-MS metabolomic features that fail to meet a minimum detection-rate threshold (e.g., 70% of QC samples) to exclude low-quality or sporadic features from downstream multivariate analysis. This filtering step operates on a MetaboSet object after data import and missing-value markup, removing features with insufficient QC reproducibility before imputation and statistical modeling.

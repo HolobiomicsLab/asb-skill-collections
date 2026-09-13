@@ -3,6 +3,7 @@ name: rendering-speed-profiling
 description: Use when when you have implemented the same visualization (e.g., chromatogram, spectrum, peakmap, mobilogram) across multiple plotting backends in pyOpenMS-viz and need to determine which backend minimizes rendering latency.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3520

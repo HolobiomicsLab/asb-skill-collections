@@ -3,6 +3,7 @@ name: seurat-assay-metadata-extraction
 description: Use when you have a SpaMTP Seurat object with a 'Spatial' assay containing metabolomics features (m/z values) and their associated metadata columns (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -53,6 +54,7 @@ attribution:
 
 # Seurat Assay Metadata Extraction
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Extract feature-level metadata (m/z values, annotation columns, and derived attributes) from a Seurat object's assay slot to enable downstream filtering, refinement, and statistical analysis of spatial metabolomics data. This skill bridges the gap between Cardinal MSI objects and Seurat-based annotation workflows by preserving and accessing feature-level metadata that would otherwise be inaccessible through standard Seurat accessors.

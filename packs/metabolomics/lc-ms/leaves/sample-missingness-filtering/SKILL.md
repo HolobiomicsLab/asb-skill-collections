@@ -3,6 +3,7 @@ name: sample-missingness-filtering
 description: Use when when you have loaded (un)targeted metabolite data into a Metaboprep object and need to exclude samples with excessive missing values before quality control or statistical analysis. This is typically applied early in the QC pipeline when sample-level data completeness is a concern (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

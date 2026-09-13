@@ -3,6 +3,7 @@ name: metabolomics-data-preprocessing
 description: Use when you have raw LC/HRMS data files in mzXML, mzML, or netCDF format and need to identify individual and aggregated aligned peaks with their retention time and m/z values before applying spectral deconvolution or chemical annotation. This is the obligatory first step when using IDSL.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0121

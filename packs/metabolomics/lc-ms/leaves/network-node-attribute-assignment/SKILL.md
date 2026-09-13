@@ -3,6 +3,7 @@ name: network-node-attribute-assignment
 description: Use when you have constructed a NetworkX graph with LC-MS features as nodes and need to annotate each node with metadata derived from the MamsiStructSearch output (assay source, isotopologue group, adduct group, structural cluster ID, correlation cluster ID, and optional compound annotation).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3359
   edam_topics:
   - http://edamontology.org/topic_3520

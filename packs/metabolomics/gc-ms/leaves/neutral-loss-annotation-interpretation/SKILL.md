@@ -3,6 +3,7 @@ name: neutral-loss-annotation-interpretation
 description: Use when when building Word2Vec or embedding-based spectral similarity models where you need to capture fragmentation patterns beyond individual peak positions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121

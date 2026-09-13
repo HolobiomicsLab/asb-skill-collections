@@ -3,6 +3,7 @@ name: mass2motif-annotation-guidance-via-spectral-embeddings
 description: Use when after discovering Mass2Motifs through LDA topic modeling of MS/MS fragmentation data, when you need to assign chemical meaning (substructure classes, candidate annotations) to motifs by leveraging pre-trained spectral embeddings and a reference motif database.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121

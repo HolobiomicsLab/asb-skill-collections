@@ -3,6 +3,7 @@ name: mz-binning-and-indexing
 description: Use when immediately after parsing mzML files into (m/z, scan_number, intensity) tuples when you need to build mass tracks from raw MS1 spectra. Use it when working with high-resolution instruments (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -44,6 +45,7 @@ attribution:
 
 # mz-binning-and-indexing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Organize high-resolution MS1 spectra into m/z-indexed data structures and merge adjacent bins to enable efficient mass track construction and alignment. This skill leverages integer-keyed indexing and proximity-based merging to separate and align masses prior to feature detection.

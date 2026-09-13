@@ -3,6 +3,7 @@ name: kegg-pathway-prediction-from-spectra
 description: Use when you have untargeted MS2 spectral data (in MS2MP-compatible format) and need to assign KEGG pathway annotations to unknown metabolites.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -39,6 +40,7 @@ attribution:
 
 # kegg-pathway-prediction-from-spectra
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use MS2MP, a deep learning framework, to predict KEGG metabolic pathways directly from untargeted tandem mass spectrometry (MS2) spectra. This skill enables high-throughput functional annotation of unknown metabolites without requiring extensive spectral libraries or manual curation.

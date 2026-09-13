@@ -3,6 +3,7 @@ name: in-silico-compound-annotation
 description: Use when after feature filtering and clustering have been completed in MS-CleanR and you have a cleaned feature set with m/z, retention time, and MS/MS spectra data ready for structural assignment. Use it when you need to identify unknown compounds by querying multiple chemical databases (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3172

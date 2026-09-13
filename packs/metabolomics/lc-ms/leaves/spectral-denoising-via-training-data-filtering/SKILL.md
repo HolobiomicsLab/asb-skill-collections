@@ -3,6 +3,7 @@ name: spectral-denoising-via-training-data-filtering
 description: Use when you have untargeted MS2 spectra from environmental or clinical samples that will be used for natural product identification (e.g., linking to BGCs via IOKR or other kernel-based methods), and you have access to a high-quality training library of annotated spectra with known structures.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0593

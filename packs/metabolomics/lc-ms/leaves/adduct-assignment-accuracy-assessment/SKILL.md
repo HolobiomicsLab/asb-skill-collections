@@ -3,6 +3,7 @@ name: adduct-assignment-accuracy-assessment
 description: Use when you have a trained formula ranking model (such as MIST-CF) and want to measure the specific performance gain from incorporating multiple positive-mode adduct types (e.g., [M+H]+, [M+Na]+, [M+K]+, [M+NH4]+) instead of restricting predictions to [M+H]+ only.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3520

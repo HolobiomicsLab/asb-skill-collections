@@ -3,6 +3,7 @@ name: molecular-formula-parsing-and-validation
 description: Use when you have received a formula-assigned FT-ICR MS dataset (CSV or tab-delimited table containing molecular formulas and mass values) and need to convert those formula strings into quantified elemental compositions before computing molecular descriptors, diversity indices, or transformation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3727
   edam_topics:
   - http://edamontology.org/topic_3172

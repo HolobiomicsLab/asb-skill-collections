@@ -3,6 +3,7 @@ name: blockwise-data-parsing-and-indexing
 description: Use when when you need random access into a large text or XML file that you want to keep compressed, where the file has natural logical divisions (chapters, spectra, records) that can be written independently.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3520

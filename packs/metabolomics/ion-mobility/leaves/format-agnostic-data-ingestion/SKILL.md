@@ -3,6 +3,7 @@ name: format-agnostic-data-ingestion
 description: Use when when you have mass spectrometry data in multiple formats (mzML, mzXML) that must be fed into a compression, analysis, or transformation pipeline that operates on a single canonical spectral data model.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0121

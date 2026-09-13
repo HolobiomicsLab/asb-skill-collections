@@ -3,6 +3,7 @@ name: parameter-sharing-in-siamese-networks
 description: Use when when processing paired augmented versions of the same input (e.g., two augmented ion images in COL or ISO mode) and you need to learn meaningful low-dimensional representations via contrastive loss.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3500
@@ -42,6 +43,7 @@ attribution:
 
 # parameter-sharing-in-siamese-networks
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a Siamese encoder architecture where two parallel branches share identical weights to process paired augmented inputs and generate matched-dimensional representation vectors. This approach enforces consistent feature extraction across both branches, enabling contrastive learning on augmented ion images in mass spectrometry imaging.

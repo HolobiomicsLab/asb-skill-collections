@@ -3,6 +3,7 @@ name: exact-mass-lookup-and-aggregation-from-chemical-databases
 description: Use when after loading raw Agilent Unknowns Analysis CSV output and when you need to convert tentative compound identifications (matched only by GC-MS library cosine similarity or Match.Factor score) into searchable, curated chemical records with exact masses and multi-source confirmation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

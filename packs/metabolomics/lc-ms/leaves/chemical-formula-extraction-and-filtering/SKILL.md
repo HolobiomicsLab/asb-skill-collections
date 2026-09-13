@@ -3,6 +3,7 @@ name: chemical-formula-extraction-and-filtering
 description: Use when when you have a loaded metabolite database (e.g., hmdb_compounds.p pickle file) and need to constrain the chemical space to a specific instrumental m/z range (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0154

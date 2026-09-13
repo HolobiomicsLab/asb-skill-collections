@@ -3,6 +3,7 @@ name: reaction-flux-concordance-analysis
 description: Use when you have computed RAS (Reaction Activity Scores) from transcriptomics and GPR rules, RPS (Reaction Propensity Scores) from intracellular metabolomics via mass-action kinetics, and flux distribution differences (FFD) from constraint-based sampling across multiple biological samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0602

@@ -3,6 +3,7 @@ name: peak-recovery-from-filtered-candidates
 description: Use when after applying cluster-based filtering with quasi-molecular adducts and frequency thresholds on candidate metabolites from KEGG matching.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3938
   edam_topics:
   - http://edamontology.org/topic_3172

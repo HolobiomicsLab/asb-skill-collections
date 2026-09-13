@@ -3,6 +3,7 @@ name: mass-spectral-data-augmentation
 description: Use when when you have limited real GC-MS overlapped peak data but need thousands of labeled examples to train a deep learning model for mass spectral deconvolution.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

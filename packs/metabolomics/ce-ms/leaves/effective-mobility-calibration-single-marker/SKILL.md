@@ -3,6 +3,7 @@ name: effective-mobility-calibration-single-marker
 description: Use when when you have CE-MS data with migration times that vary between runs due to electroosmotic flow drift, but you possess a reliable internal standard with a known effective mobility value.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0121

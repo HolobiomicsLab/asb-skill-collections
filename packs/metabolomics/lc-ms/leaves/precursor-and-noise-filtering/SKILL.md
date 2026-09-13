@@ -3,6 +3,7 @@ name: precursor-and-noise-filtering
 description: Use when you have loaded raw tandem MS spectra (in MGF, mzML, or similar format) and need to prepare them for peptide identification, spectral library matching, or intensity-based analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121

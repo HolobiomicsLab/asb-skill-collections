@@ -3,6 +3,7 @@ name: mass-range-filtering-for-metabolomics
 description: Use when when preparing a chemical database for virtual or real MS/MS acquisition, and you need to focus on a specific m/z window (e.g., 100–1000) that matches your instrument's scan range or your metabolomics study's analytical scope.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

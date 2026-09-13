@@ -3,6 +3,7 @@ name: data-quality-assessment-from-molecular-descriptors
 description: Use when processing spectral datasets from open mass spectra libraries (OMSLs) where structural identifiers and ionization metadata are incomplete or inconsistent.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -44,6 +45,7 @@ attribution:
 
 # data-quality-assessment-from-molecular-descriptors
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Assess and filter mass spectrometry spectral data based on completeness and consistency of molecular structural identifiers (SMILES, InChI, InChIKey) and associated metadata (precursor m/z, adduct information). This skill identifies spectra lacking critical structural or ionization descriptors and removes them to ensure dataset quality and analytical reliability.

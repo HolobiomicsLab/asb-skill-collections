@@ -3,6 +3,7 @@ name: qm-output-parsing-and-aggregation
 description: Use when you have completed parallel QUICK quantum calculations on multiple conformers filtered by ASE-ANI and need to extract electronic properties from the output logs and consolidate them into a single structured table for use in CCS calculations or metabolite annotation workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -43,6 +44,7 @@ attribution:
 
 # QM Output Parsing and Aggregation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse quantum mechanical (QM) output logs from QUICK to extract electronic properties (polarizability tensor components, dipole moment) and aggregate results into a structured table mapping conformer IDs to computed properties. This skill bridges the gap between raw QM calculations and downstream CCS prediction by collecting and organizing molecular descriptors needed for collision cross-section modeling.

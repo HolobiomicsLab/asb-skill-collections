@@ -3,6 +3,7 @@ name: spectrum-metadata-normalization-across-formats
 description: Use when you have mass-spectrometry data files in mixed formats (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

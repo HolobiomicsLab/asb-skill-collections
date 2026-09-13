@@ -3,6 +3,7 @@ name: ms-vendor-documentation-extraction
 description: Use when you need to determine the complete set of validated instrument/vendor and acquisition mode combinations for a mass spectrometry analysis tool, when assessing whether your specific instrument platform (vendor, model, acquisition method) is supported before committing to a workflow, or when.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: spectral-library-matching-gnps
 description: Use when you have MS2 product-ion spectra in open formats (.mzML or .mzXML) from public mass spectrometry datasets (e.g., from MassIVE with a valid accession) and need to identify chemical compounds by comparing fragmentation patterns against the GNPS reference spectral library.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -49,6 +50,7 @@ attribution:
 
 # spectral-library-matching-gnps
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Spectral library matching in GNPS compares MS2 product-ion spectra against a public reference fragmentation library to generate chemical annotations with cosine similarity scores. This skill is essential for converting raw tandem mass spectrometry data into a binary detection matrix (files × chemicals) suitable for downstream ecological or chemical discovery analysis.

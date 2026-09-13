@@ -3,6 +3,7 @@ name: ranked-candidate-prioritization
 description: Use when you have a feature quantification table (m/z, retention time, peak areas) and candidate metabolite annotations (chemical identifiers, MS/MS spectra matches, or SIRIUS/GNPS predictions) linked to a sample organism or taxon, and you need to prioritize which candidates are most biochemically.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3437
   edam_topics:
   - http://edamontology.org/topic_0625

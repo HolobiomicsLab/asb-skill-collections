@@ -3,6 +3,7 @@ name: contrastive-learning-encoder-design
 description: Use when when you have mass spectrometry ion image data and need to learn meaningful low-dimensional representations through self-supervised contrastive learning.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3674
@@ -43,6 +44,7 @@ attribution:
 
 # contrastive-learning-encoder-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a paired ResNet18-based encoder architecture with shared parameters that processes augmented ion images to produce 512-dimensional representation vectors optimized for contrastive learning. This skill is essential when building low-dimensional representations of mass spectrometry imaging (MSI) data where meaningful spatial and spectral patterns must be preserved while avoiding representation collapse.

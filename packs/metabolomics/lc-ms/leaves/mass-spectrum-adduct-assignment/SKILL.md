@@ -3,6 +3,7 @@ name: mass-spectrum-adduct-assignment
 description: Use when when analyzing tandem mass spectra with unknown precursor adduct identity, especially for positive-mode data containing non-protonated adducts ([M+Na]+, [M+K]+, [M+NH4]+).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121

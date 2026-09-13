@@ -3,6 +3,7 @@ name: table-join-alignment-on-identifiers
 description: Use when you have a feature quantification table output from MZmine3 feature detection (rows = features, columns = sample abundance values) and a separate sample metadata file (rows = samples, columns = sample attributes) that need to be unified before downstream statistical analysis, data cleanup.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3283
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: metabolomic-feature-table-interpretation
 description: Use when after quality control, filtering, and normalization of an MS-DIAL-derived feature abundance matrix (e.g., Urine_RP_NEG_norm.txt or Urine_RP_POS_norm.txt), when you have samples assigned to discrete experimental classes (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3676
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: mass-spectrometry-peak-detection-and-extraction
 description: Use when you have raw high-resolution mass-spectrometry data in mzML or mzXML format from breath analysis and need to identify individual volatile organic compounds before sample-to-sample alignment or comparative analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0769

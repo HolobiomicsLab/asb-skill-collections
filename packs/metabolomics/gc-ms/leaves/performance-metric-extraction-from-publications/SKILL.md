@@ -3,6 +3,7 @@ name: performance-metric-extraction-from-publications
 description: Use when you have identified a claim that one tool outperforms another (e.g., 'IDSL.IPA outperforms MZmine 2 and xcms') in a research article's abstract or introduction, but the specific metrics and results table are not included in the introductory text.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -47,6 +48,7 @@ attribution:
 
 # performance-metric-extraction-from-publications
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract quantitative performance metrics (sensitivity, specificity, precision, recall, runtime, accuracy) from published research comparing bioinformatics tools on a common benchmark dataset. This skill enables reproducible validation of tool claims by locating, tabulating, and source-documenting comparative results.

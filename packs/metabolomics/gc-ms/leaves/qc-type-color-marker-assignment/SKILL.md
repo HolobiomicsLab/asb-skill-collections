@@ -3,6 +3,7 @@ name: qc-type-color-marker-assignment
 description: Use when configuring a new injection-plate design template in InjectionDesign if you have multiple QC types to position on a plate and need to visually distinguish them in the final worksheet.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -39,6 +40,7 @@ attribution:
 
 # QC-type color-marker assignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign distinct color markers to each of five predefined quality-control (QC) types in LC/GC-MS injection-plate design to enable visual discrimination during sample layout configuration. This skill ensures QC sample roles (Blank, Solvent, Pooled, Long-Term Reference, and custom) are unambiguous in plate visualization and experimental documentation.

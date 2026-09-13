@@ -3,6 +3,7 @@ name: neural-network-model-inference-deployment
 description: Use when you have a pre-trained neural network model (e.g., MSBERT weights in .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3520

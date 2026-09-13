@@ -3,6 +3,7 @@ name: deletion-reason-logging-and-traceability
 description: Use when when processing OMSLs (Open Mass Spectra Libraries) with heterogeneous data quality, inconsistent annotations, or mixed ionmode/chromatographic modes (LC/GC), and you need to track which spectra were discarded, why, and potentially recover or reprocess them in future iterations.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -42,6 +43,7 @@ attribution:
 
 # deletion-reason-logging-and-traceability
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 A data quality and provenance practice that systematically logs detailed reasons for every spectrum deletion during mass spectrometry data standardization, enabling traceability and audit trails for downstream validation and reprocessing decisions.

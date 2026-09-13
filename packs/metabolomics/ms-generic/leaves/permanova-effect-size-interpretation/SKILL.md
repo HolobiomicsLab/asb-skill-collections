@@ -3,6 +3,7 @@ name: permanova-effect-size-interpretation
 description: Use when after running PERMANOVA on distance matrices derived from FT-ICR MS metabolite peak intensities or other high-dimensional compositional data, when p-values indicate statistical significance but ordination plots (NMDS, PCA) fail to discriminate among treatment groups.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2426
   edam_topics:
   - http://edamontology.org/topic_0091

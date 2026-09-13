@@ -3,6 +3,7 @@ name: spectral-noise-classification
 description: Use when you have MS/MS spectra contaminated with noise ions and need to improve compound identification accuracy.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

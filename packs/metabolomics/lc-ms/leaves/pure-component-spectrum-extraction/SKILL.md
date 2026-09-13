@@ -3,6 +3,7 @@ name: pure-component-spectrum-extraction
 description: Use when analyzing GC-MS data containing overlapped peaks where two or more components co-elute within the same retention time window, making direct spectral assignment impossible.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0769

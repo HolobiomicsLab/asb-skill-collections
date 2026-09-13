@@ -3,6 +3,7 @@ name: metabolomics-data-input-validation
 description: Use when when importing a tab-delimited or Sciex OS text export metabolomics dataset into mzQuality, before building the SummarizedExperiment object.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3172

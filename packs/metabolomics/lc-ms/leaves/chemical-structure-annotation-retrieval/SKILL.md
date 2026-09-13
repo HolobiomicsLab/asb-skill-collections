@@ -3,6 +3,7 @@ name: chemical-structure-annotation-retrieval
 description: Use when you have MS/MS spectra from public repositories (e.g., GNPS) that lack chemical structure annotations (InChI/SMILES), or have incomplete/inconsistent annotations.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_0602

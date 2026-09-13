@@ -3,6 +3,7 @@ name: ppm-mass-accuracy-filtering
 description: Use when when processing imzML/ibd Imaging Mass Spectrometry datasets and you need to extract ion density maps for specific analytes or isotopes. Apply this skill after importing the .imzML metadata and .
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3630
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -47,6 +48,7 @@ attribution:
 
 # ppm-mass-accuracy-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract ion images from Imaging Mass Spectrometry data by selecting specific m/z values within a user-defined parts-per-million (ppm) mass window tolerance. This skill filters the binary intensity data to isolate signals at target masses, enabling multi-channel image construction for spatial metabolite or element mapping.

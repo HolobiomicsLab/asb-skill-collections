@@ -3,6 +3,7 @@ name: mass-spectral-feature-annotation
 description: Use when you have m/z values from spatially-resolved mass spectrometry imaging (e.g., MALDI-MSI, DESI-MSI) and need to assign molecular formulae to thousands of features with higher precision than traditional LC-MS approaches.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -40,6 +41,7 @@ attribution:
 
 # mass-spectral-feature-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign molecular formulae to mass-to-charge (m/z) features in spatially-resolved mass spectrometry imaging using a machine-learning-guided database search. This skill bridges a critical gap in MSI annotation precision by leveraging a 2.8-million-formula knowledge base interconnected by biochemical evidence to rank formula candidates.

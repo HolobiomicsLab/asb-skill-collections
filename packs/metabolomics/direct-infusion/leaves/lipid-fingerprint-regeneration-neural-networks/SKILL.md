@@ -3,6 +3,7 @@ name: lipid-fingerprint-regeneration-neural-networks
 description: Use when you have MS/MS spectra with initial lipid annotations from spectral library matching (e.g., from XCMS + CAMERA or LipidIN's Expeditious Querying module) and seek to improve recall, precision, and annotation coverage.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3172

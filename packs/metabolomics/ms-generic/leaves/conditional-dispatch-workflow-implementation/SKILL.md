@@ -3,6 +3,7 @@ name: conditional-dispatch-workflow-implementation
 description: Use when when you have loaded a raw mass spectrum (e.g., ESI_NEG_SRFA.d in Bruker or .raw format) and need to apply one of several noise-threshold strategies based on user preference or spectrum metadata.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121

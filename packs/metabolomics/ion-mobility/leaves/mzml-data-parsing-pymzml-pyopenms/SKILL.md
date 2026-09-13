@@ -3,6 +3,7 @@ name: mzml-data-parsing-pymzml-pyopenms
 description: Use when you have mzML-format mass spectrometry data files and need to load them into memory as structured data (pandas DataFrame) to prepare for visualization with pyOpenMS-Viz or other analysis pipelines.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

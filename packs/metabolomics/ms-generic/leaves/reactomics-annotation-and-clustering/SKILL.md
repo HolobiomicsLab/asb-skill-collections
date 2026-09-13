@@ -3,6 +3,7 @@ name: reactomics-annotation-and-clustering
 description: Use when you have a formula-assigned dataset from FT-ICR MS or other mass spectrometry with molecular formulas assigned to each mass feature, and you want to identify and quantify the molecular transformations (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_0121

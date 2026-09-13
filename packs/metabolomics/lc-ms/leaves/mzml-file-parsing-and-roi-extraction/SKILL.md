@@ -3,6 +3,7 @@ name: mzml-file-parsing-and-roi-extraction
 description: Use when when you have a real mzML file from an untargeted metabolomics LC-MS/MS experiment and need to extract the chemical features it contains—either to simulate a data-dependent acquisition (DDA) strategy on those same compounds, to benchmark different fragmentation controllers, or to reproduce.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0091

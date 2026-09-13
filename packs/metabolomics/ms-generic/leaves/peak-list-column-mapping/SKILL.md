@@ -3,6 +3,7 @@ name: peak-list-column-mapping
 description: Use when when uploading a new peak list or complex sample data file with delimiter-separated columns to Punc'data, especially when column headers are ambiguous or use non-standard naming conventions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

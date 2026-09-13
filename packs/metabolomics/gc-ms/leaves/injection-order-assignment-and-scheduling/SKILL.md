@@ -3,6 +3,7 @@ name: injection-order-assignment-and-scheduling
 description: Use when designing multi-batch LC/GC-MS experiments where you need to control for batch effects (e.g., instrument drift, reagent lot variation) and have identified both a balance dimension (e.g., sample group, treatment condition) and a randomization dimension (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -39,6 +40,7 @@ attribution:
 
 # injection-order-assignment-and-scheduling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assigns sample injection order across LC/GC-MS plates while maintaining inter-batch balance along one dimension and intra-batch randomization along another, ensuring robust experimental design for multi-omics studies. This skill prevents systematic bias across batches and instrument drift effects within batches.

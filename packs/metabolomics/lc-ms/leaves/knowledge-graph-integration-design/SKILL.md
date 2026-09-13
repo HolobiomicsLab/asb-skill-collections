@@ -3,6 +3,7 @@ name: knowledge-graph-integration-design
 description: Use when designing a metabolite annotation workflow that must simultaneously leverage established biochemical knowledge (pathway databases, reaction networks) and experimental evidence (mass spectrometry feature similarity, co-occurrence patterns).
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -41,6 +42,7 @@ attribution:
 
 # knowledge-graph-integration-design
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a two-layer interactive networking topology that bridges knowledge-driven (biochemical pathways, metabolic reaction networks) and data-driven (experimental MS2 similarity networks) graph structures to enable recursive annotation propagation across metabolite networks. This skill is essential when building comprehensive metabolite annotation systems that require both static ontological reasoning and dynamic empirical evidence.

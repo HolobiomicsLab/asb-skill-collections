@@ -3,6 +3,7 @@ name: precursor-mass-filtering
 description: Use when after retrieving top-scoring library candidates from a full MS2Deepscore comparison, but before or during final re-ranking.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

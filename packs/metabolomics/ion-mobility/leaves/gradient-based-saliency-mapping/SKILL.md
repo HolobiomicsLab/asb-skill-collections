@@ -3,6 +3,7 @@ name: gradient-based-saliency-mapping
 description: Use when you have a trained graph neural network model for CCS prediction and need to identify which molecular structural features drive individual predictions or systematic biases.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0602

@@ -3,6 +3,7 @@ name: pfas-characteristic-mass-difference-detection
 description: Use when you have centroided MS2 spectra (ddMS2 data in mzML format) from HRMS analysis and need to identify potential PFAS compounds among thousands of features.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0625

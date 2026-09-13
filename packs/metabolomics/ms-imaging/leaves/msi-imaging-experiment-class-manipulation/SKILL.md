@@ -3,6 +3,7 @@ name: msi-imaging-experiment-class-manipulation
 description: Use when when loading mass spectrometry imaging data from imzML or Analyze 7.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

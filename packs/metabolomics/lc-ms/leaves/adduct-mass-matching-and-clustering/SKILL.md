@@ -3,6 +3,7 @@ name: adduct-mass-matching-and-clustering
 description: Use when after identifying statistically significant LC-MS features (e.g. via MB-VIP permutation testing) when you need to consolidate redundant measurements of the same metabolite arising from different ionisation adducts (e.g. [M+H]+, [M+Na]+, [M−H]−).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0602

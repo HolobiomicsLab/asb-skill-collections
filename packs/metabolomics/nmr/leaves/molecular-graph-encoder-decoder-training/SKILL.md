@@ -3,6 +3,7 @@ name: molecular-graph-encoder-decoder-training
 description: Use when when you have a training dataset of NMR spectra-derived molecular fragments encoded as token sequences, and you need to predict both the molecular formula and complete bond connectivity of unknown molecules.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

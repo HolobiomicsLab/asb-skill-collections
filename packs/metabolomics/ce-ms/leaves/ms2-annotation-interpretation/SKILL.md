@@ -3,6 +3,7 @@ name: ms2-annotation-interpretation
 description: Use when after GNPS spectral library search has returned matched chemical annotations (with m/z values and cosine similarity scores) for MS/MS spectra.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -48,6 +49,7 @@ attribution:
 
 # MS2 Annotation Interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret and contextualize chemical annotations derived from tandem MS (MS/MS) spectral library matching, understanding their confidence level, potential multiplicity, and implications for metabolite identification in high-throughput datasets. This skill bridges raw spectral matches to scientifically valid chemical identities by applying metabolomics confidence standards.

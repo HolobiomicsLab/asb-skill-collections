@@ -3,6 +3,7 @@ name: ms-spectral-library-matching
 description: 'Use when when you have a GC-MS dataset (CSV with columns: Component.RT, Component.Area, Base.Peak.MZ, File.Name, Compound.Name, Match.Factor) and a known set of target chemicals you wish to locate and extract with their spectral match quality and quantitation.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172

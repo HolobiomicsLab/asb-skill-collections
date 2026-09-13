@@ -3,6 +3,7 @@ name: metabolite-reference-library-filtering
 description: Use when you have defined one or more proton NMR spectral regions-of-interest (ROIs) with lower and upper chemical-shift bounds (in ppm) from an experimental NMR spectrum of a biological sample, and you need to identify which metabolites in a reference database (HMDB) have published 1H NMR shifts.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0592

@@ -3,6 +3,7 @@ name: rippp-structure-database-matching
 description: 'Use when you have: (1) tandem MS/MS spectra in MGF, mzXML, mzML, or mzData format from LC-MS/MS analysis; (2) a set of predicted RiPP precursor peptides derived from genomic biosynthetic gene cluster mining (via antiSMASH, BOA, or raw FASTA);'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3646
   edam_topics:
   - http://edamontology.org/topic_0121

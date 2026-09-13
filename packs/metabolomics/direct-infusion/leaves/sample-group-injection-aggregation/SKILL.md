@@ -3,6 +3,7 @@ name: sample-group-injection-aggregation
 description: Use when when you have picked and annotated MS1 features from replicate injections of the same sample and need to produce a unified feature matrix indexed by sample (not injection).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3674
   edam_topics:
   - http://edamontology.org/topic_0091

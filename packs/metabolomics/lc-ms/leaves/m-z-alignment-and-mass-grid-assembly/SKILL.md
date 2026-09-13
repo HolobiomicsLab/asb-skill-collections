@@ -3,6 +3,7 @@ name: m-z-alignment-and-mass-grid-assembly
 description: Use when when processing multiple centroided mzML LC-MS files from the same study and you need to identify which mass tracks represent the same metabolite across samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3557
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -50,6 +51,7 @@ attribution:
 
 # m/z-alignment-and-mass-grid-assembly
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aligns mass tracks (extracted ion chromatograms) across multiple LC-MS samples using high-mass-resolution m/z separation and hierarchical clustering to build a unified MassGrid that serves as the foundation for composite peak detection and feature extraction. This skill prioritizes mass resolution over retention time to handle co-eluting isomers and complex mixtures.

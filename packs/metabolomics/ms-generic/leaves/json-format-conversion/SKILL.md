@@ -3,6 +3,7 @@ name: json-format-conversion
 description: Use when when you have extracted file metadata or scan summaries as R list objects from .raw files using readFileHeader(), readIndex(), or readSpectrum(), and need to persist them to disk, share them across systems, or feed them into downstream tools that consume JSON (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0121

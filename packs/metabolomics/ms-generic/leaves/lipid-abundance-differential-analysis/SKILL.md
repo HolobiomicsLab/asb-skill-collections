@@ -3,6 +3,7 @@ name: lipid-abundance-differential-analysis
 description: Use when you have a preprocessed and normalized lipid abundance matrix with batch identifiers and experimental group assignments, and you need to compare lipid levels across treatment conditions (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0153

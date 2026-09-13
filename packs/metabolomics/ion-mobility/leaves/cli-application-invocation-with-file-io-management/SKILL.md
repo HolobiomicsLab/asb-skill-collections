@@ -3,6 +3,7 @@ name: cli-application-invocation-with-file-io-management
 description: Use when when you have vendor mass spectrometry raw files (e.g., .raw format) that must be converted to an open format (Aird) using a Windows .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3650
   edam_topics:
   - http://edamontology.org/topic_3520

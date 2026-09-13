@@ -3,6 +3,7 @@ name: probabilistic-topic-modeling-mass-spectrometry
 description: Use when you have preprocessed tandem mass spectrometry spectra converted into a bag-of-fragments representation (with fragments and neutral losses extracted and noise filtered) and your goal is to discover recurring fragmentation patterns or substructures across a large spectral dataset without.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3520

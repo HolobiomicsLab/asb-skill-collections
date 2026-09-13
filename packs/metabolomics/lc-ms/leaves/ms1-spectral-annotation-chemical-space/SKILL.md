@@ -3,6 +3,7 @@ name: ms1-spectral-annotation-chemical-space
 description: Use when you have (1) a peaklist from untargeted LC/HRMS analysis with m/z and intensity values (typically output from IDSL.IPA or similar peak-picking tools), (2) a need to assign molecular formulas to detected peaks, and (3) only MS1 spectral data available (MS/MS is not required).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

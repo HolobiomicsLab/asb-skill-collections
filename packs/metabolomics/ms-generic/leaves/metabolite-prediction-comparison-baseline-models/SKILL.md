@@ -3,6 +3,7 @@ name: metabolite-prediction-comparison-baseline-models
 description: Use when you have paired microbiome (genus-level 16S or functional profiles) and metabolome datasets (e.g., mass spectrometry or metabolomics panels) with 100+ samples, and you want to demonstrate that a new prediction method outperforms prior work.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_3407

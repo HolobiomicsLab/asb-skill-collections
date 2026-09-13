@@ -3,6 +3,7 @@ name: mb-vip-feature-importance-ranking
 description: Use when after fitting a Multi-Block PLS (MB-PLS) discriminant or regression model on multi-assay LC-MS intensity data (e.g., HPOS, LPOS, LNEG blocks), and you need to identify which features drive model performance and warrant further statistical validation or biological interpretation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3945
   edam_topics:
   - http://edamontology.org/topic_0091

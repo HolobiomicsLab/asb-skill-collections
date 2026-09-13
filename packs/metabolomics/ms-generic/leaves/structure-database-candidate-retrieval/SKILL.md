@@ -3,6 +3,7 @@ name: structure-database-candidate-retrieval
 description: Use when you have a mass spectrum of an unknown metabolite with a known or inferred precursor m/z, you have run a deep-learning semantic similarity model (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3559
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -40,6 +41,7 @@ attribution:
 
 # structure-database-candidate-retrieval
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve and rank candidate structures from molecular databases (PubChem, HMDB) for an unknown compound by leveraging deep-learning predictions of structurally related metabolites and computing chemical-space similarity metrics. This skill improves annotation accuracy by reordering database candidates based on their proximity to predicted structural neighbors in chemical space.

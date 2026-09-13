@@ -3,6 +3,7 @@ name: classification-algorithm-tuning-validation
 description: Use when you have labeled training data (e.g., pqm_development with 500 peaks and 89 samples) and need to select which of multiple classification algorithms (e.g., AdaBoost, Random Forest, SVM) and their hyperparameters (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -49,6 +50,7 @@ attribution:
 
 # classification-algorithm-tuning-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically tune and validate machine learning classifiers using k-fold cross-validation with repeated runs to identify optimal hyperparameter configurations and select the best-performing algorithm for peak-quality classification in LC-MS metabolomics data. This skill ensures reproducible model selection by comparing multiple algorithms and evaluation metrics across held-out folds.

@@ -3,6 +3,7 @@ name: ionization-mode-specific-preprocessing-handling
 description: Use when you have raw MS/MS spectra in supported formats (.mgf, .mzML, or .msp) from mixed ionization modes and need to prepare them for downstream topic modeling (LDA) or motif discovery.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

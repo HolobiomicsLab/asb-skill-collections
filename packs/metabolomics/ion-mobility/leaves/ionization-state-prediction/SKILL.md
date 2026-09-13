@@ -3,6 +3,7 @@ name: ionization-state-prediction
 description: Use when when you have SMILES strings representing neutral organic molecules and need to enumerate the likely protonated (e.g., [M+H]+) and deprotonated (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -46,6 +47,7 @@ attribution:
 
 # ionization-state-prediction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Predict protonated and deprotonated adduct forms of organic molecules from SMILES strings using machine learning-based ionization state determination. This skill is essential as a first step in computational workflows that require multiple ionization states (e.g., for CCS prediction in metabolomics), since most mass spectrometry experiments detect molecules in specific ionization forms.

@@ -3,6 +3,7 @@ name: axis-label-format-customization
 description: Use when when designing injection plate layouts in InjectionDesign and needing to display sample positions with clear, domain-appropriate labels on the y-axis (e.g., row identifiers, well coordinates, or sample indices).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_topics: []
   tools:
   - InjectionDesign
@@ -36,6 +37,7 @@ attribution:
 
 # axis-label-format-customization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Configure the y-axis label format for plate visualization in LC/GC-MS injection design workflows to enhance readability and communicate sample organization across plate layouts. This customization is applied during QC predefinition to ensure that injection sequences are clearly labeled according to experimental requirements.

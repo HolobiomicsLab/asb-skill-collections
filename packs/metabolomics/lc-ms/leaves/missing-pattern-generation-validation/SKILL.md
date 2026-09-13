@@ -3,6 +3,7 @@ name: missing-pattern-generation-validation
 description: Use when you have a complete metabolomics data matrix (simulated or real abundance table) and need to create reproducible, controlled MNAR scenarios for evaluating imputation algorithm performance.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -43,6 +44,7 @@ attribution:
 
 # missing-pattern-generation-validation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Generate synthetic missing-not-at-random (MNAR) patterns in metabolomics abundance matrices by applying left-censoring thresholds and feature-dependent missingness mechanisms, then validate the resulting data against expected missingness distributions and coverage statistics. This skill enables benchmarking of imputation methods on realistic missing-data scenarios.

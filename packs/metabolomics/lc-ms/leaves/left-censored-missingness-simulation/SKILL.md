@@ -3,6 +3,7 @@ name: left-censored-missingness-simulation
 description: Use when when you have a complete metabolomics abundance table (e.g., targeted LC/MS or untargeted GC/MS counts) and need to generate synthetic left-censored missingness for evaluating imputation algorithm performance.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -44,6 +45,7 @@ attribution:
 
 # left-censored-missingness-simulation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Simulate missing-not-at-random (MNAR) left-censored data in metabolomics matrices by applying detection limits and feature-dependent missing mechanisms, enabling benchmarking of imputation methods against realistic instrument censoring patterns.

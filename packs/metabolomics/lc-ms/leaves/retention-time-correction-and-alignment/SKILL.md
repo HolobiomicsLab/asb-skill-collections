@@ -3,6 +3,7 @@ name: retention-time-correction-and-alignment
 description: Use when you have multiple LC-MS runs with the same set of targets (compounds) and observe or expect retention time drift or jitter between runs.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3370

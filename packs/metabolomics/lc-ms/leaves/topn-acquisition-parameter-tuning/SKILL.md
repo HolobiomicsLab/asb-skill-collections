@@ -3,6 +3,7 @@ name: topn-acquisition-parameter-tuning
 description: Use when when you have real LC-MS/MS data (mzML format) from an untargeted metabolomics experiment and want to test how variations in TopN DDA parameters affect which precursor ions are selected and fragmented, before deploying the optimized strategy on physical instruments.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_0121

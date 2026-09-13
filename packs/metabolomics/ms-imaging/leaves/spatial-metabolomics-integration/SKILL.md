@@ -3,6 +3,7 @@ name: spatial-metabolomics-integration
 description: Use when when you have paired spatial metabolomics and spatial transcriptomics measurements from the same tissue samples and need to identify how metabolite distributions relate to gene expression patterns at aligned spatial coordinates.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3391

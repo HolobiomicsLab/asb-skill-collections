@@ -3,6 +3,7 @@ name: distance-matrix-computation-for-samples
 description: Use when after batch effect removal and data integration, when you have a feature-by-sample matrix (finalData) and wish to separate and visualize sample groups by their metabolomic profiles using clustering methods such as hierarchical clustering analysis (HCA).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0091

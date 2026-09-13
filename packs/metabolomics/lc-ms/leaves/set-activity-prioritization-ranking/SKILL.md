@@ -3,6 +3,7 @@ name: set-activity-prioritization-ranking
 description: Use when after computing activity scores for a collection of metabolite sets (pathways, GNPS Molecular Families, or MS2LDA Mass2Motifs) from intensity and annotation data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3172

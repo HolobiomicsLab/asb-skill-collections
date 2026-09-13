@@ -3,6 +3,7 @@ name: feature-detection-in-chromatographic-ms-data
 description: Use when you have vendor-independent centroided DDA mzML files from LC- or GC-HRMS and need to delineate chromatographic peaks across the mass-to-charge and retention-time dimensions before applying mass defect analysis, diagnostic fragment matching, or other prioritization rules.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: lipid-coverage-assessment
 description: Use when after hierarchical fragmentation library matching has produced candidate lipid annotations for a multi-species LC-MS/MS dataset, and you have applied retention time–based filtering rules (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

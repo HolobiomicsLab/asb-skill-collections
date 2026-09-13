@@ -3,6 +3,7 @@ name: mass-spectrometry-data-quality-assessment
 description: Use when when raw mass spectrometry spectral data has been imported into matchms from common file formats (mzML, mzXML, msp, MGF, JSON) and you need to assess whether metadata fields are correctly normalized, validated against schema requirements, and peaks are appropriately filtered before.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

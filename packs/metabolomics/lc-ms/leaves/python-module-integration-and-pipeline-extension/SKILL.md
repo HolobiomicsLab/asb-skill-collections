@@ -3,6 +3,7 @@ name: python-module-integration-and-pipeline-extension
 description: Use when you have developed new scoring logic (e.g., average inchikey score, neighbourhood score) for an MS/MS spectral analogue search tool and need to embed these components into an existing production pipeline that uses a random forest to combine multiple features for candidate re-ranking.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: saturated-peak-reconstruction
 description: Use when processing IM-MS data files (Agilent .d or UIMF format) that contain high-abundance ions suspected of signal saturation, particularly in untargeted or discovery proteomics/metabolomics workflows where dynamic range compression would obscure quantitative relationships.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -48,6 +49,7 @@ attribution:
 
 # saturated-peak-reconstruction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detect and computationally reconstruct ion signals that have exceeded the dynamic range of the mass spectrometry detector in ion mobility–mass spectrometry (IM-MS) data. This skill applies multidimensional smoothing algorithms across m/z, mobility, and retention time dimensions to restore intensity information and enable accurate quantification of high-abundance ions.

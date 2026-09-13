@@ -3,6 +3,7 @@ name: cosine-similarity-ranking-metrics
 description: Use when when you have pre-computed spectral embeddings (vectors) for both query spectra and a reference library, and you need to measure retrieval performance by ranking reference compounds by similarity to each query.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -50,6 +51,7 @@ attribution:
 
 # cosine-similarity-ranking-metrics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute pairwise cosine similarity between query and reference MS/MS spectral embeddings, then retrieve top-k candidate indices and calculate hit@k retrieval metrics to evaluate compound identification performance. This skill quantifies how often the correct match appears within the top k retrieved candidates across random query/reference splits.

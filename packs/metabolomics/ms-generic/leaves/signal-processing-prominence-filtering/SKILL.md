@@ -3,6 +3,7 @@ name: signal-processing-prominence-filtering
 description: Use when when you have a 1D intensity array from a mass spectrum (m/z or retention time dimension) and need to identify and rank local maxima that are biochemically meaningful rather than noise-driven.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0121

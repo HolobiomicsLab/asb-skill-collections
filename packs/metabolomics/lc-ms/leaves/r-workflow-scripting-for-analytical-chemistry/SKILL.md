@@ -3,6 +3,7 @@ name: r-workflow-scripting-for-analytical-chemistry
 description: Use when you have raw CE-MS or LC-MS instrument files (stored as OnDiskMSnExp objects or similar Bioconductor containers) and need to extract quantitative features (migration times, m/z values, peak intensities) by orchestrating multiple R packages in a controlled, documented sequence.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3370

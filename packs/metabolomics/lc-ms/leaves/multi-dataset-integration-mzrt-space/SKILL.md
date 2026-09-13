@@ -3,6 +3,7 @@ name: multi-dataset-integration-mzrt-space
 description: Use when you have multiple CSV feature tables from independent metabolomic experiments, each with RT and m/z annotations, and you need to produce a single consolidated feature matrix for comparative analysis across all samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3258
   edam_topics:
   - http://edamontology.org/topic_0121

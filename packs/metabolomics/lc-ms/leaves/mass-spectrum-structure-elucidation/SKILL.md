@@ -3,6 +3,7 @@ name: mass-spectrum-structure-elucidation
 description: Use when you have an experimental tandem mass spectrum (collision-induced dissociation, CID) and a known chemical formula (or narrow set of candidate formulas), and you need to identify the most likely structure(s) by ranking against a large candidate library such as PubChem.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0153

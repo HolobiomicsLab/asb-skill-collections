@@ -3,6 +3,7 @@ name: ppm-tolerance-scoring-and-ranking
 description: Use when you have extracted a list of candidate molecular formulae for a given m/z value and need to rank them by plausibility.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -41,6 +42,7 @@ attribution:
 
 # ppm-tolerance-scoring-and-ranking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Score and rank candidate molecular formulae for mass spectrometry peaks by computing mass accuracy (parts per million error) against a reference database, then filtering and sorting by PPM threshold to identify the most likely formula assignments. This skill is essential in spatially-resolved metabolomics where formula annotation precision directly impacts downstream biological interpretation.

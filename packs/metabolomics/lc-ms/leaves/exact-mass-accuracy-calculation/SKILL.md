@@ -3,6 +3,7 @@ name: exact-mass-accuracy-calculation
 description: Use when you have feature pairs identified by temporal correlation in direct-injection MS data and need to confirm their relationship is consistent with known adduct/fragment mass shifts.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

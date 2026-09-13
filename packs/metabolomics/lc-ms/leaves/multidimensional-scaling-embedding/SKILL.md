@@ -3,6 +3,7 @@ name: multidimensional-scaling-embedding
 description: Use when after computing a pairwise sample distance matrix from aligned MS2 fingerprint vectors and you need to visualize sample relationships, clustering, or separation by group identity in 2D space.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3727
   edam_topics:
   - http://edamontology.org/topic_3520

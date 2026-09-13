@@ -3,6 +3,7 @@ name: mzml-mzxml-file-format-processing
 description: Use when your raw LC-MS data are in vendor-specific binary formats (e.g., .raw, .d, .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

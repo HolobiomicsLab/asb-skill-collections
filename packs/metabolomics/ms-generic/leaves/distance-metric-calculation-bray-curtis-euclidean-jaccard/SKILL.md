@@ -3,6 +3,7 @@ name: distance-metric-calculation-bray-curtis-euclidean-jaccard
 description: Use when you have normalized peak intensity data (or absence/presence matrices) from metabolomics experiments with multiple samples and need to quantify compositional differences between them prior to multivariate analysis. This step is essential when testing whether categorical factors (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3172

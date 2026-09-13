@@ -3,6 +3,7 @@ name: mass-spectrometry-chromatogram-generation
 description: Use when after MS2 annotation and sample alignment have been completed in JPA, when you need to visualize ion chromatograms for quality control, validate feature identities, or export chromatographic evidence for specific metabolic features across multiple samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

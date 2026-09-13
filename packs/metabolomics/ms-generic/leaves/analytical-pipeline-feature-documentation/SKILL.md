@@ -3,6 +3,7 @@ name: analytical-pipeline-feature-documentation
 description: Use when you are evaluating a new or existing data analysis pipeline (e.g., MetaboDirect) and need to produce a transparent, evidence-based feature matrix showing which analyses it supports—particularly when the pipeline is positioned as an alternative to or improvement over established tools.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

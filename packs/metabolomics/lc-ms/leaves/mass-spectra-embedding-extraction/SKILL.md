@@ -3,6 +3,7 @@ name: mass-spectra-embedding-extraction
 description: Use when you have tandem mass spectra (MS/MS) in .msp format and need dense, chemically meaningful vector representations for library matching, similarity computation, or structural clustering. Apply this when comparing spectra across large reference databases (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3520

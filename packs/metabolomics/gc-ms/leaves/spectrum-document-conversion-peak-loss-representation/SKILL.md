@@ -3,6 +3,7 @@ name: spectrum-document-conversion-peak-loss-representation
 description: Use when when preparing MS/MS spectral data for training word-embedding models (Word2Vec, Skip-gram, CBOW) that will learn relationships between fragment ions and neutral losses.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

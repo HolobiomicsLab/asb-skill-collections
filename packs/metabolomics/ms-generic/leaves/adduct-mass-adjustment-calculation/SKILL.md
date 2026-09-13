@@ -3,6 +3,7 @@ name: adduct-mass-adjustment-calculation
 description: Use when you have a set of in silico-predicted compounds (with SMILES structures) and an experimental metabolomics peak list (m/z values), and you need to filter predictions to only those that could plausibly be detected.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_0602

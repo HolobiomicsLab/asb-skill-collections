@@ -3,6 +3,7 @@ name: generic-hdf5-library-api-usage
 description: Use when when you have converted multidimensional MS data to MZA HDF5 format and need to programmatically read spectra, metadata, and ion mobility or mass-to-charge arrays in Python or R without vendor-specific dependencies.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3520

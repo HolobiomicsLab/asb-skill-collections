@@ -3,6 +3,7 @@ name: retention-index-calibration-and-alignment
 description: Use when processing raw GC-MS data in NetCDF format where peaks have been detected but lack standardized retention indices.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3628
   edam_topics:
   - http://edamontology.org/topic_0769

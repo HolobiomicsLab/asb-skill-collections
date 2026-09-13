@@ -3,6 +3,7 @@ name: spectral-library-annotation-interpretation
 description: Use when you have received chemical annotations from GNPS spectral library matching and need to (1) assess annotation confidence and validity for downstream analysis, (2) understand why the same chemical may appear under multiple GNPS annotation IDs, or (3) decide whether to collapse or deduplicate.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -48,6 +49,7 @@ attribution:
 
 # spectral-library-annotation-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpret and contextualizechemical annotations derived from tandem MS spectral library matching, accounting for annotation confidence levels and spectral variation artifacts that produce multiple annotations for the same compound. This skill is essential when working with GNPS spectral library identifications to understand their limitations and ensure valid downstream statistical or visualization comparisons.

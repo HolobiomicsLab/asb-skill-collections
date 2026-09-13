@@ -3,6 +3,7 @@ name: two-layer-architecture-dispatch-testing
 description: Use when when you need to verify that a wrapper package (e.g., rawrr) correctly bridges R and a managed .NET assembly (such as RawFileReader), specifically to confirm that internal dispatch functions can retrieve assembly location and version string before attempting actual spectral data extraction.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0361
   edam_topics:
   - http://edamontology.org/topic_3520

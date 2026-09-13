@@ -3,6 +3,7 @@ name: multi-format-data-ingestion
 description: Use when you have raw metabolomics data files in one or more of the supported formats (.raw from Thermo instruments, .d directories from Agilent, or mzXML open-format exports) and need to ingest them into SMART for preprocessing, visualization, or statistical analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: ms2-spectrum-peak-filtering-by-training-set-membership
 description: Use when when you have raw MS2 spectra (m/z and intensity pairs) and need to compute a Probability Product Kernel score or other fragmentation-based similarity metric against a training dataset of known spectra (e.g., GNPS library spectra with structural annotations).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

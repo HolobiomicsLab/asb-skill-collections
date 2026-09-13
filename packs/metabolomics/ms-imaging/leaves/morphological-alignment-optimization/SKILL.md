@@ -3,6 +3,7 @@ name: morphological-alignment-optimization
 description: Use when you have two or more spatial omics datasets (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3170
@@ -40,6 +41,7 @@ attribution:
 
 # morphological-alignment-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A spatial registration technique that aligns spot coordinates between spatial transcriptome and metabolome datasets using modified morphological operators to achieve accurate spot-to-spot integration. This skill ensures high-resolution multimodal spatial data fusion by registering coordinate systems before feature integration.

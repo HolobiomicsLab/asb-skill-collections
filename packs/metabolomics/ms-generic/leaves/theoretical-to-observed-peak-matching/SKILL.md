@@ -3,6 +3,7 @@ name: theoretical-to-observed-peak-matching
 description: Use when you have a mass spectrum scan containing observed precursor ions (m/z, intensity pairs) in a narrow isolation window, a known peptide sequence with specified charge state and stable isotope labeling parameters (atom type, incorporation probability), and you need to determine which observed.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

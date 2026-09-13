@@ -3,6 +3,7 @@ name: linear-regression-fitting-for-chromatography
 description: Use when you have extracted retention times at peak maxima (rtFittedAPEX) from extracted-ion chromatograms (XICs) of known internal RT calibrants (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121

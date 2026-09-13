@@ -3,6 +3,7 @@ name: conditional-dispatch-logic-implementation
 description: Use when when accepting a file path as input in an MSI data processing pipeline and you need to determine which data reader module to instantiate before calling get_image_data() or load_pixels(). This arises when building a multi-vendor instrument workflow (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121

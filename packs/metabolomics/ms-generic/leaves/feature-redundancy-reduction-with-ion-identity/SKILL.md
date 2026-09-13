@@ -3,6 +3,7 @@ name: feature-redundancy-reduction-with-ion-identity
 description: Use when when processing MZmine2/MZmine3 peak tables from LC–MS metabolomics data where you observe inflated feature counts due to multiple ionization states, isotopic satellites, and neutral losses of the same parent compound, particularly before computing extract-level metrics (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_3172

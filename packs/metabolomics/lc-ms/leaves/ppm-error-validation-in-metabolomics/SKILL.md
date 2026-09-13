@@ -3,6 +3,7 @@ name: ppm-error-validation-in-metabolomics
 description: Use when when annotating m/z features from Cardinal MSImagingExperiment objects or LC-MS datasets against metabolite databases (HMDB, Lipidmaps) and you need to exclude matches where the mass difference exceeds your instrumental accuracy or analysis tolerance.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -46,6 +47,7 @@ attribution:
 
 # ppm-error-validation-in-metabolomics
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Validation of mass spectral annotations by constraining matches to observed m/z values within a specified parts-per-million (ppm) error tolerance relative to theoretical database values. This skill filters false-positive or implausible metabolite matches when annotating high-resolution MS features against reference metabolite databases.

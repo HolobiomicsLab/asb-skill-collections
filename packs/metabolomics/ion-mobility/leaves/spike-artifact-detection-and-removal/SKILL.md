@@ -3,6 +3,7 @@ name: spike-artifact-detection-and-removal
 description: Use when processing raw IM-MS data (Agilent MassHunter .d or UIMF format) that exhibits isolated high-intensity noise artifacts or instrumental artifacts that appear as discrete, non-continuous signals in the retention time, ion mobility, or m/z dimensions.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -46,6 +47,7 @@ attribution:
 
 # spike-artifact-detection-and-removal
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Detects and eliminates isolated high-intensity noise artifacts (spikes) that do not represent true ion signals in IM-MS data, improving signal quality without removing low-abundance genuine peaks. This is a critical preprocessing step applied after low-intensity threshold filtering to refine multidimensional ion mobility–mass spectrometry datasets.

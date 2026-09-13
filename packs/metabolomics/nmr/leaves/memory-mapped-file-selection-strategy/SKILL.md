@@ -3,6 +3,7 @@ name: memory-mapped-file-selection-strategy
 description: Use when initializing a Dataset object in NMRFx and must decide which storage backend to use for in-memory or memory-mapped file access.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_topics: []
   tools:
   - NMRFx
@@ -37,6 +38,7 @@ attribution:
 
 # memory-mapped-file-selection-strategy
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A decision-tree method for selecting the optimal storage backend implementation (SubMatrixFile, BigMappedMatrixFile, MappedSubMatrixFile, or MappedMatrixFile) for Dataset.createDataFile() based on cache flags, dataset size, and block layout. This skill optimizes memory efficiency and access patterns for large NMR datasets in NMRFx.

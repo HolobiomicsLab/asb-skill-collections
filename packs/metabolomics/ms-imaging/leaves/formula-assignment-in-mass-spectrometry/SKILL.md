@@ -3,6 +3,7 @@ name: formula-assignment-in-mass-spectrometry
 description: Use when you have m/z values from mass spectrometry imaging (or similar MSI experiments) and need to assign molecular formulae to them. This is especially valuable when working with spatially-resolved metabolomics data where annotation precision lags behind traditional LC-MS approaches.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_0769
@@ -40,6 +41,7 @@ attribution:
 
 # formula-assignment-in-mass-spectrometry
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign molecular formulae to mass-to-charge (m/z) values in spatially-resolved mass spectrometry imaging using a regression-based network approach. This skill leverages a curated knowledge base of 2.8 million formulae and their biochemical relationships to predict candidate formulae with high precision on reference benchmarks.

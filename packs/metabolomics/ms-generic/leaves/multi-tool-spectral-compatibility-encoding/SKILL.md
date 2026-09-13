@@ -3,6 +3,7 @@ name: multi-tool-spectral-compatibility-encoding
 description: Use when after RAMClustR clustering and do.findmain molecular weight inference are complete, when you need to submit the same inferred spectra to multiple third-party annotation tools (MSFinder and Sirius) that each require distinct file formats and cannot share a common intermediate representation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0091

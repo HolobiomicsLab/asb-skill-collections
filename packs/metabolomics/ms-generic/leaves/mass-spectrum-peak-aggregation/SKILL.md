@@ -3,6 +3,7 @@ name: mass-spectrum-peak-aggregation
 description: Use when you have a processed mass spectrum object with assigned molecular formulas for individual peaks and need to summarize peaks by their heteroatom composition—e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121

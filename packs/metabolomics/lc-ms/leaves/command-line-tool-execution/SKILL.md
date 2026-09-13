@@ -3,6 +3,7 @@ name: command-line-tool-execution
 description: Use when you have tandem MS/MS spectrum data in standard peak file formats (mzML, mzXML, or MGF) and need to cluster spectra based on precursor mass and fragment ion similarity.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3520

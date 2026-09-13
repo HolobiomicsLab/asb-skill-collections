@@ -3,6 +3,7 @@ name: word-embedding-based-spectrum-representation
 description: Use when when comparing large numbers of MS/MS spectra against spectral libraries or in molecular networking, particularly when molecules differ by multiple structural modifications and cosine-based scores produce excessive false positives.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3520

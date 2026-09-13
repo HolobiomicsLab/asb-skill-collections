@@ -3,6 +3,7 @@ name: nmr-spectral-preprocessing-and-phasing
 description: Use when when working with raw 1H NMR FID data acquired on instruments like Bruker Avance spectrometers that require baseline correction, phase adjustment, and signal alignment before metabolite identification or statistical association testing can proceed reliably.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0593
@@ -46,6 +47,7 @@ attribution:
 
 # nmr-spectral-preprocessing-and-phasing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preprocessing and phasing of raw 1H NMR spectra to remove instrumental artifacts and align signals for downstream metabolomic analysis. This foundational step prepares FID data for quantitative metabolite assignment and association modeling.

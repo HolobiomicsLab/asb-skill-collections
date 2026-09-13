@@ -3,6 +3,7 @@ name: theoretical-spectrum-generation
 description: Use when you have a defined set of lipid species (identified by class and fatty acid composition) and need to create a high-throughput spectral library for mass spectrometry-based lipid identification.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_0675
@@ -42,6 +43,7 @@ attribution:
 
 # theoretical-spectrum-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate theoretical mass spectra for enumerated lipid species by applying peer-reviewed, adduct-specific fragmentation patterns. This skill produces precursor m/z, fragment m/z values, and relative intensities that can be exported as spectral libraries (MSP format) or instrument-compatible precursor lists (CSV for Orbitrap DDA or Skyline).

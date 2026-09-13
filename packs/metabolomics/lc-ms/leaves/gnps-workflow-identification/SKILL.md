@@ -3,6 +3,7 @@ name: gnps-workflow-identification
 description: Use when you have downloaded a GNPS molecular networking job archive and need to extract its contents (spectra.mgf, molecular_families.tsv, annotations.tsv, file_mappings) but do not know which GNPS workflow version produced it, preventing correct file naming and downstream computational analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3172

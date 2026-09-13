@@ -3,6 +3,7 @@ name: metabolite-kegg-pathway-enrichment
 description: Use when you have an annotated list of metabolite compounds (with associated m/z features or compound IDs) and want to determine which KEGG metabolic pathways are significantly enriched or depleted in your experimental samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3501
   edam_topics:
   - http://edamontology.org/topic_0121

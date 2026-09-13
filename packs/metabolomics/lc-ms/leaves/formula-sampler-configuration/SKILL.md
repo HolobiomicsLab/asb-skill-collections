@@ -3,6 +3,7 @@ name: formula-sampler-configuration
 description: Use when you need to generate a set of candidate chemical formulas for LC-MS/MS simulation—specifically when you want to populate a virtual mass spectrometer with realistic chemical structures drawn from a reference database (HMDB) or a uniform m/z distribution, and you need to apply m/z filtering.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3674
   edam_topics:
   - http://edamontology.org/topic_0121

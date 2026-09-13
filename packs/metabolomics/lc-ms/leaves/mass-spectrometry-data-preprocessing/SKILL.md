@@ -3,6 +3,7 @@ name: mass-spectrometry-data-preprocessing
 description: Use when you have raw LCMS data in mzML or mzXML format from DDA, DIA, or fullscan analyses and need to extract metabolite features with unified m/z, retention time, and intensity values across multiple samples before performing MS2 annotation or in-source fragment analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -98,6 +99,7 @@ attribution:
 
 # mass-spectrometry-data-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preprocessing of raw LCMS data through centroiding, noise filtering, peak detection, and alignment to produce a feature table compatible with downstream metabolite annotation and in-source fragment identification. This is Part 2 of the ISFrag workflow and serves as the foundation for MS2 annotation and ISF analysis.

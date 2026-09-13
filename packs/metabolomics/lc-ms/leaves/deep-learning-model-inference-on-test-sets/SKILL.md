@@ -3,6 +3,7 @@ name: deep-learning-model-inference-on-test-sets
 description: 'Use when you have a pretrained deep learning model, a reserved test set with ground-truth annotations, and need to evaluate prediction quality or generate embeddings for downstream analysis. Typical triggers: benchmarking a new model against classical baselines (e.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3703
   edam_topics:
   - http://edamontology.org/topic_0091

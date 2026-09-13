@@ -3,6 +3,7 @@ name: pixel-intensity-scaling-and-thresholding
 description: Use when after normalizing an MSI pixel array to TIC or an internal standard, when the raw pixel intensity distribution spans multiple orders of magnitude and produces images with poor contrast or where extreme outlier intensities would wash out spatial detail.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: feature-intensity-thresholding
 description: Use when after feature extraction from mzML/mzXML files when you have identified candidate peaks in breath spectrometry data but need to separate true VOC signals from instrument noise.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

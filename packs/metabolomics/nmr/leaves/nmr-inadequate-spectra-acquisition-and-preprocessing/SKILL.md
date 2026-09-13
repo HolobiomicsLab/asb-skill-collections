@@ -3,6 +3,7 @@ name: nmr-inadequate-spectra-acquisition-and-preprocessing
 description: Use when when you have raw INADEQUATE NMR spectral data (e.g., from a query sample or library) and need to extract peak coordinates and intensities as a first step toward identifying metabolite peak networks or comparing against a metabolite database.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3370

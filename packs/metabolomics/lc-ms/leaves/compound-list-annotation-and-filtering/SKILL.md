@@ -3,6 +3,7 @@ name: compound-list-annotation-and-filtering
 description: Use when after marker identification or feature selection has produced a list of discriminatory m/z features, and before pathway enrichment analysis (e.g., KEGG).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_0091

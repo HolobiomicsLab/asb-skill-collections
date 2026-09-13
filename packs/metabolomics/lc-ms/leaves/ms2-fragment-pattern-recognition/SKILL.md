@@ -3,6 +3,7 @@ name: ms2-fragment-pattern-recognition
 description: Use when you have data-dependent acquisition (DDA) MS2 spectra from HRMS measurements (ESI or APCI ionization) and need to prioritize potential PFAS features from a large pool of detected ions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3860
   edam_topics:
   - http://edamontology.org/topic_0121

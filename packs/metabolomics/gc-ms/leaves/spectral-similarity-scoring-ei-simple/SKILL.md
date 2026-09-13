@@ -3,6 +3,7 @@ name: spectral-similarity-scoring-ei-simple
 description: Use when you have a query electron ionization (EI) mass spectrum and need to search it against a library of known EI mass spectra to identify unknown compounds. Use it when exact identity matching (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

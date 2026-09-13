@@ -3,6 +3,7 @@ name: model-comparison-evaluation
 description: Use when when you have multiple candidate spectrum prediction models (e.g., FFN vs. GNN encoders, NEIMS vs. MassFormer vs. ICEBERG) and need to determine which performs better on a shared task like tandem mass spectrum prediction.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -54,6 +55,7 @@ attribution:
 
 # model-comparison-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A systematic approach to comparing spectrum prediction models by implementing baseline and alternative architectures using equivalent settings (same covariates, hyperparameter sweeps, training/test splits, random seeds) to enable fair performance attribution. This skill ensures that observed performance differences reflect true model capability rather than experimental confounds.

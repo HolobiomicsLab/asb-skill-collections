@@ -3,6 +3,7 @@ name: adduct-based-feature-consolidation
 description: Use when after accurate mass searching has assigned multiple detected m/z features to the same metabolite via positive and negative adduct libraries, and before sample-level feature merging.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: sample-metadata-integration-for-qc
 description: Use when when you have an aligned MemoMatrix (sample-by-feature occurrence matrix where features are MS2 peaks and neutral losses) and corresponding sample annotations (especially blank/control sample labels), and you need to exclude background-derived peaks and losses before applying visualization.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

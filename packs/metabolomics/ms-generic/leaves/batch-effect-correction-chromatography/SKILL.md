@@ -3,6 +3,7 @@ name: batch-effect-correction-chromatography
 description: Use when when analyzing untargeted LC/HRMS data from population-scale projects (n > 500) spanning multiple sample batches or instrument runs, peaks with identical or near-identical m/z values appear at systematically shifted retention times across batches due to instrument drift, column aging, or.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -44,6 +45,7 @@ attribution:
 
 # batch-effect-correction-chromatography
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retention time correction across multiple LC/HRMS batches aligns peaks with similar m/z and RT profiles, harmonizing retention times to enable reliable downstream peak annotation and quantification in population-scale untargeted studies. This corrects instrumental drift and batch-to-batch chromatographic variation that would otherwise confound peak identity across samples.

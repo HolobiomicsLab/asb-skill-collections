@@ -3,6 +3,7 @@ name: json-document-enrichment
 description: Use when when your project JSON document contains public identifiers (genome IDs, biosample accessions, etc.) that lack human-readable or linked metadata, and you need to populate those fields programmatically before storage or publication to enable full-text search, validation, or cross-linking.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3283
   edam_topics:
   - http://edamontology.org/topic_3673

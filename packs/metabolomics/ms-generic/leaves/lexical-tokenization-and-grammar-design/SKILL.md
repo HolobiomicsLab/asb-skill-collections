@@ -3,6 +3,7 @@ name: lexical-tokenization-and-grammar-design
 description: Use when you need to enable users to express complex domain-specific queries in a natural, succinct syntax—particularly when SQL patterns are familiar but must be augmented with domain assumptions (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_0121

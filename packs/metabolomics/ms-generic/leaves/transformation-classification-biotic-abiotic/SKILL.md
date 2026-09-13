@@ -3,6 +3,7 @@ name: transformation-classification-biotic-abiotic
 description: Use when after mass-difference network generation has matched pairwise peak mass differences to a reference biochemical transformation key with mass error ≤1 ppm, and you need to distinguish metabolic transformations driven by microbial activity from those arising from non-biological chemical.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3766
   edam_topics:
   - http://edamontology.org/topic_3172

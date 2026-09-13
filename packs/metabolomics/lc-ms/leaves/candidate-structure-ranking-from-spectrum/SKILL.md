@@ -3,6 +3,7 @@ name: candidate-structure-ranking-from-spectrum
 description: Use when you have an experimental tandem mass spectrum (m/z and intensity pairs) and a known or suspected chemical formula, and you need to narrow down the identity of an unknown compound from a large candidate pool (e.g., all PubChem entries matching that formula).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_0593

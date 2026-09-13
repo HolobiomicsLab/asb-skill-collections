@@ -3,6 +3,7 @@ name: mass-accuracy-tolerance-application
 description: Use when when you have generated in silico annotations (from GNPS ISDB, SIRIUS, or timaR) and need to distinguish true matches from false positives by enforcing a mass accuracy constraint. Apply this skill before computing novelty metrics (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -62,6 +63,7 @@ attribution:
 
 # mass-accuracy-tolerance-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Application of mass accuracy (ppm error) thresholds to filter and validate in silico annotations from spectral databases and structure prediction tools in metabolomics workflows. This skill is essential for ensuring that only high-confidence feature–compound matches are retained during annotation refinement.

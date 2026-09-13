@@ -3,6 +3,7 @@ name: cheminformatics-database-querying
 description: Use when you have a list of identified or suspected chemical compound names (e.g., from GC-MS Match.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_0154

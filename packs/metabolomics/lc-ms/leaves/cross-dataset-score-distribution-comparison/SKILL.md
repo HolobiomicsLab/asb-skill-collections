@@ -3,6 +3,7 @@ name: cross-dataset-score-distribution-comparison
 description: 'Use when when you have applied multiple scoring functions (e.g., strain correlation and IOKR) to rank genomic-metabolomic (GCF-MF or BGC-spectrum) links and need to verify that: (1) standardisation produces zero mean and unit variance across all links;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_0203

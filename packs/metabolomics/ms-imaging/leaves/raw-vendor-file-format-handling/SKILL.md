@@ -3,6 +3,7 @@ name: raw-vendor-file-format-handling
 description: Use when you have collected imaging mass spectrometry data in vendor-specific raw format (.raw files from Bruker, Waters, Thermo, or other instrument manufacturers) and need to convert it to the open, vendor-agnostic mzML XML format before downstream imzML construction and spatial alignment.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3649
   edam_topics:
   - http://edamontology.org/topic_0121

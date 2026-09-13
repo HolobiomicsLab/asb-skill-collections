@@ -3,6 +3,7 @@ name: batch-effect-visualization-pca
 description: Use when after applying CordBat batch correction to a log2-transformed metabolite matrix from multi-batch metabolomics data, you want to quantitatively and visually assess whether the correction successfully reduced batch effects.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3935
   edam_topics:
   - http://edamontology.org/topic_3172

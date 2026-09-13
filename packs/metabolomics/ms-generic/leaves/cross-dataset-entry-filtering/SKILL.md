@@ -3,6 +3,7 @@ name: cross-dataset-entry-filtering
 description: Use when you have received MSBERT-preprocessed spectral data from GNPS, MoNA, or MTBLS1572 and need to ensure data integrity before training a spectral embedding model.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -44,6 +45,7 @@ attribution:
 
 # cross-dataset-entry-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove entries with malformed or invalid SMILES strings from MSBERT-preprocessed spectral datasets (GNPS, MoNA, MTBLS1572) to improve data quality before model training. This filtering step ensures that only chemically valid and syntactically correct molecular identifiers are retained in the training corpus.

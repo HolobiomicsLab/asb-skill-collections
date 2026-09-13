@@ -3,6 +3,7 @@ name: retention-time-peak-flagging
 description: Use when after applying peak detection algorithms to identify local maxima in feature signals across retention time or m/z dimensions, but before exporting or filtering the peak list for further analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0769

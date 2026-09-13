@@ -3,6 +3,7 @@ name: retention-time-range-filtering
 description: Use when you have raw IM-MS data (Agilent MassHunter .d or UIMF format) and need to exclude early or late chromatographic regions—e.g., to skip dead volume, exclude blank runs, focus on a known analyte window, or reduce file size for faster processing.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -49,6 +50,7 @@ attribution:
 
 # retention-time-range-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Selectively isolate IM-MS data within a user-defined retention time window to focus downstream preprocessing on the relevant chromatographic region. This reduces computational overhead and concentrates analysis on regions of interest before compression, interpolation, and demultiplexing.

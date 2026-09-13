@@ -3,6 +3,7 @@ name: mass-spectrum-plot-rendering
 description: Use when after importing and preprocessing mass spectrometry data (in .raw, .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0091

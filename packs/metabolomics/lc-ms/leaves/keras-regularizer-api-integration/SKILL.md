@@ -3,6 +3,7 @@ name: keras-regularizer-api-integration
 description: Use when when extending an existing neural network class (e.g., SiameseModel) that lacks user-configurable regularization, and you need to prevent overfitting on moderate-sized training datasets (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_0091

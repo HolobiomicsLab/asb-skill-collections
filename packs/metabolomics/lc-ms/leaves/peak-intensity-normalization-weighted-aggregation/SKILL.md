@@ -3,6 +3,7 @@ name: peak-intensity-normalization-weighted-aggregation
 description: Use when when training Word2Vec embeddings on mass spectra represented as peak-word documents, and you need to preserve the quantitative intensity relationships between fragments without allowing a single dominant peak to overwhelm the learned word associations.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

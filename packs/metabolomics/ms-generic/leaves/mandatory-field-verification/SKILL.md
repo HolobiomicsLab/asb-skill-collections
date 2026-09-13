@@ -3,6 +3,7 @@ name: mandatory-field-verification
 description: Use when after generating mzPeak files from prototype implementations (Rust, Python, R, or .NET) or after format conversion, and before integrating files into a mass spectrometry data repository or sharing them with collaborators. Use it when specification compliance is a hard requirement (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3961
   edam_topics:
   - http://edamontology.org/topic_0121

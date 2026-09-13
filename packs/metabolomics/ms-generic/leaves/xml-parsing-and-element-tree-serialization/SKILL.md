@@ -3,6 +3,7 @@ name: xml-parsing-and-element-tree-serialization
 description: Use when when spectrum or chromatogram data is stored as serialized XML strings in a database or file system and must be converted into pymzML Spectrum or Chromatogram objects for programmatic access.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0943

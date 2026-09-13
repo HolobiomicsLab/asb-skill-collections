@@ -3,6 +3,7 @@ name: mass-spectrometry-data-serialization
 description: Use when after RAMClustR clustering and molecular weight inference via do.findmain, when you need to export deconvoluted cluster spectra for import into external annotation tools (MSFinder or Sirius).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0091

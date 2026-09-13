@@ -3,6 +3,7 @@ name: peak-filtering-noise-removal
 description: Use when you have raw MS/MS spectra (in formats like mzML, json, mgf, msp, mzxml) that contain background noise or numerous low-intensity peaks before running MS2Query library matching.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3216
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: metabolomics-feature-quality-assessment
 description: Use when after drift correction and before missing value imputation when your LC-MS peak table contains features with variable detection rates across samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -51,6 +52,7 @@ attribution:
 
 # metabolomics-feature-quality-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and flag low-quality molecular features in LC-MS metabolomics data using detection rates and quality metrics to ensure downstream statistical and multivariate analyses are performed on reliable features. This skill applies quality thresholds defined in the notame workflow to systematically exclude features with extensive missing values or poor reproducibility before imputation and batch correction.

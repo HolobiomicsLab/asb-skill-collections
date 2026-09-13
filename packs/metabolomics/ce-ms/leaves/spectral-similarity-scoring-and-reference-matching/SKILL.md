@@ -3,6 +3,7 @@ name: spectral-similarity-scoring-and-reference-matching
 description: Use when when you have extracted MS2 spectra from DDA chromatographic peaks and need to identify the originating compound by comparing against reference MS2 spectra (e.g., from Metlin or GNPS).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3172

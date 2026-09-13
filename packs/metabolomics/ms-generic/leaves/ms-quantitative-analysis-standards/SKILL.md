@@ -3,6 +3,7 @@ name: ms-quantitative-analysis-standards
 description: Use when you have raw MS intensity data paired with known-concentration calibration standard measurements, and you need to convert intensities to absolute or relative concentrations.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: spectral-data-loading-from-repository
 description: Use when when you need to retrieve a specific MS/MS spectrum from a public proteomics repository (PRIDE, MassIVE, PeptideAtlas) by its USI string for annotation, visualization, or comparative analysis, rather than working with locally stored mzML/mzXML files or already-loaded spectrum objects.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121

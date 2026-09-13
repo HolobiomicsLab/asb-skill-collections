@@ -3,6 +3,7 @@ name: chromatographic-data-visualization
 description: Use when after peak detection has been completed and a feature table has been generated in MetCohort.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0218

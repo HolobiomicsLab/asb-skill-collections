@@ -3,6 +3,7 @@ name: in-source-fragment-identification
 description: Use when you have an LCMS feature table (from XCMS, MS-DIAL, MZmine2, or other feature extraction software) with m/z, retention time, and intensity columns, plus MS2 spectral annotations from DDA data, and you need to identify which features are in-source fragments rather than distinct metabolites.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

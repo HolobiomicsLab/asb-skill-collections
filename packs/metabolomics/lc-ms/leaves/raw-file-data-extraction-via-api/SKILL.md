@@ -3,6 +3,7 @@ name: raw-file-data-extraction-via-api
 description: Use when you have a Thermo Fisher Scientific .raw file (e.g., Q Exactive HF, Orbitrap) and need to extract specific spectral scans, chromatographic traces, scan-level metadata, or file-level headers programmatically—e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0121

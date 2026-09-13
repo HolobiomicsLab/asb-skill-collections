@@ -3,6 +3,7 @@ name: instrument-metadata-classification
 description: Use when when preprocessing a heterogeneous spectral library (e.g., GNPS public library) that contains spectra from multiple instrument types, and you need to partition data by a single instrument class to train or evaluate a formula-prediction model.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

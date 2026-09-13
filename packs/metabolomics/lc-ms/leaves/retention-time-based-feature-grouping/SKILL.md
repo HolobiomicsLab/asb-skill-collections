@@ -3,6 +3,7 @@ name: retention-time-based-feature-grouping
 description: Use when after chromatographic peak detection on preprocessed LC-MS data when you have an xcms result object (XcmsExperiment or xcmsSet) with detected peaks and need to collapse redundant m/z signals into feature groups.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3370

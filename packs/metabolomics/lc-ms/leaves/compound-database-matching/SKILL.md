@@ -3,6 +3,7 @@ name: compound-database-matching
 description: Use when you have MS2 .mzML spectral data from untargeted metabolomics and need to assign chemical identities to detected precursor ions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3860
   edam_topics:
   - http://edamontology.org/topic_3172

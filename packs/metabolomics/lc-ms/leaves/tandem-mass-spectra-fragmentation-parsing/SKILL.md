@@ -3,6 +3,7 @@ name: tandem-mass-spectra-fragmentation-parsing
 description: Use when when you have raw tandem mass spectra in mz/intensity format with precursor m/z values, and need to extract all fragmentation features (observed peaks and neutral losses) as a foundation for building interpretable machine learning models.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -43,6 +44,7 @@ attribution:
 
 # Tandem Mass Spectra Fragmentation Parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse tandem mass spectra (mz/intensity pairs and precursor m/z) to identify all observed peaks and compute neutral losses, establishing the feature vocabulary for sparse chemical feature vector construction. This parsing step is essential for converting raw fragmentation data into interpretable, directly-chemical feature representations.

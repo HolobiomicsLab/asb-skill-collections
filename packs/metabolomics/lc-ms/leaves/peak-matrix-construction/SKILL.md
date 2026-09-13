@@ -3,6 +3,7 @@ name: peak-matrix-construction
 description: Use when when you have raw mzML files and a corresponding feature table (CSV format, e.g., from mzmine) and need to generate peak matrices with fixed dimensions (e.g., 2 × 120) that encode margin vs. peak signal regions for training a neural network classifier to filter false positive LCMS peaks.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_0625

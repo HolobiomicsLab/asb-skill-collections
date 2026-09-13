@@ -3,6 +3,7 @@ name: chunk-wise-data-processing-optimization
 description: Use when you have a large mass spectrometry dataset stored across multiple mzML, mzXML, or CDF files and need to perform operations (e.g., normalization, filtering, feature extraction) on the full dataset but memory constraints prevent loading all peak data simultaneously.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3520

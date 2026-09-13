@@ -3,6 +3,7 @@ name: pathway-activity-decomposition-via-plage
 description: Use when you have a log2-transformed, standardized peak intensity matrix (rows = metabolite features, columns = samples) with compound annotations mapped to curated pathway databases (KEGG, Reactome, or custom metabolite sets), and you need to rank pathways by their activity level while tolerating.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3501
   edam_topics:
   - http://edamontology.org/topic_0621
@@ -50,6 +51,7 @@ attribution:
 
 # pathway-activity-decomposition-via-plage
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 PLAGE (Pathway Level Analysis using Gene Expression) decomposes peak intensity or gene expression matrices into pathway activity scores by applying singular value decomposition to metabolite or gene groups within curated pathways. This rank-based approach is more robust to noise and missing peaks than alternatives like ORA and GSEA, making it well-suited for metabolomics datasets with incomplete or noisy peak detection.

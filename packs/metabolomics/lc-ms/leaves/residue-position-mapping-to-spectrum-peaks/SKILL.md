@@ -3,6 +3,7 @@ name: residue-position-mapping-to-spectrum-peaks
 description: Use when when you have an MS2 spectrum (FT2 scan or mzML) with observed peak data (m/z, intensity, charge states), a peptide sequence, and need to annotate which amino acid residues generated each matched fragment ion—particularly in stable isotope labeling experiments where isotopic mass shifts.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0121

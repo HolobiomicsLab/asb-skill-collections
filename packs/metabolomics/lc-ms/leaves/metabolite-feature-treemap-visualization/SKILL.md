@@ -3,6 +3,7 @@ name: metabolite-feature-treemap-visualization
 description: Use when after applying mpactr's filter suite (filter_mispicked_ions, filter_group, filter_cv, filter_insource_ions) to a peak table, use this skill when you need to summarize the overall filtering outcome across all ion categories and present a compact, area-proportional view of which ions passed.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0571
   edam_topics:
   - http://edamontology.org/topic_3172

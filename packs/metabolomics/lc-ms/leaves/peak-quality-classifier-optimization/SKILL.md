@@ -3,6 +3,7 @@ name: peak-quality-classifier-optimization
 description: Use when after calculating 12 peak-quality metrics on a development set of extracted ion chromatograms (EICs) and labeled peaks, when you need to select both the classification algorithm and its optimal hyperparameters before training a final model on held-out test data.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -49,6 +50,7 @@ attribution:
 
 # Peak-Quality Classifier Optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize machine learning classifier hyperparameters for detecting low-quality chromatographic peaks in LC-MS metabolomics data using k-fold cross-validation and comparative evaluation metrics. This skill identifies the best-performing algorithm configuration (e.g., AdaBoost with nIter=150, method='Adaboost.M1') by training multiple classifiers on development data and ranking them by performance across diverse quality metrics.

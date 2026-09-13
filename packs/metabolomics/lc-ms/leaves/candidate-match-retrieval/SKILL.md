@@ -3,6 +3,7 @@ name: candidate-match-retrieval
 description: Use when when you have a query MS/MS spectrum (m/z and intensity pairs) and need to find potential structural analogues or exact matches in a large spectral library. Apply this skill after preprocessing your spectra (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0091

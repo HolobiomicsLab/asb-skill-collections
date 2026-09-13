@@ -3,6 +3,7 @@ name: search-result-visualization-across-domains
 description: Use when you have executed batch searches of MS/MS spectra against multiple domain-specific MASST indices and need to synthesize results across domains (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0224
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -48,6 +49,7 @@ attribution:
 
 # search-result-visualization-across-domains
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aggregate and visualize mass spectrometry search results from multiple domain-specific MASST tools into unified, interactive outputs. This skill enables cross-domain metabolomics discovery by combining heterogeneous search outputs (from microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST) through normalized data structures and interactive visualizations.

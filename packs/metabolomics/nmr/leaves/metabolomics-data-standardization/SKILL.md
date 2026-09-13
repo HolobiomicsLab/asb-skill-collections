@@ -3,6 +3,7 @@ name: metabolomics-data-standardization
 description: Use when you have raw 1D NMR spectral data (urine, worm, or other biological samples) that needs to be converted into peak tables for metabolite identification and quantification.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0091

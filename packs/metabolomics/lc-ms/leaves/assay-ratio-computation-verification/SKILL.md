@@ -3,6 +3,7 @@ name: assay-ratio-computation-verification
 description: Use when after calling buildExperiment on metabolomics data to construct a SummarizedExperiment object, before performing batch correction, outlier detection, or other QC calculations that depend on ratio assay values.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

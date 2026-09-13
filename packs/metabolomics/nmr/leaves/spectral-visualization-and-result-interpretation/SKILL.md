@@ -3,6 +3,7 @@ name: spectral-visualization-and-result-interpretation
 description: Use when after peak clustering, network filtering, and database matching have identified candidate metabolites and their associated peak networks.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3370

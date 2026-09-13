@@ -3,6 +3,7 @@ name: spectral-library-similarity-matching
 description: Use when you have an unknown experimental mass spectrum (e.g., from liquid chromatography–mass spectrometry) and need to retrieve the most structurally similar candidate molecules from a database of millions of predicted or experimental spectra.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0593

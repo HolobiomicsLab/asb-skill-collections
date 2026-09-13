@@ -3,6 +3,7 @@ name: mass-spectrometry-feature-grouping
 description: Use when after raw data processing and feature extraction (e.g., via XCMS, OpenMS, or enviPick) when you have detected features across multiple LC-MS or GC-MS analyses and need to identify which features represent the same chemical across samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3557
   edam_topics:
   - http://edamontology.org/topic_0121

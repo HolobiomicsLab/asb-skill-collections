@@ -3,6 +3,7 @@ name: multi-species-lipid-prediction
 description: Use when you have candidate lipid annotations from high-throughput spectral matching (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0091

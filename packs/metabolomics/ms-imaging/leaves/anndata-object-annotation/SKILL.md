@@ -3,6 +3,7 @@ name: anndata-object-annotation
 description: Use when after loading or merging spatial metabolomics data into an AnnData object (via read_sm_csv_as_anndata, read_sm_imzml_as_anndata, or merge_sm_pos_neg), and before filtering or normalization steps.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121

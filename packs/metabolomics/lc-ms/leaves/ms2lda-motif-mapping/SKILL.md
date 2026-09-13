@@ -3,6 +3,7 @@ name: ms2lda-motif-mapping
 description: Use when you have a GNPS-generated molecular network (either classical or feature-based) and corresponding MS2LDA experiment output containing Mass2Motif-to-spectrum assignments, and you want to visualize which substructural motifs are shared across clusters or features and how they distribute.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0121

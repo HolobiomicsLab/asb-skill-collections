@@ -3,6 +3,7 @@ name: r-package-function-execution
 description: Use when you have raw Bruker NMR spectral data files (1D 1H format) stored in a directory structure and need to prepare them for automated metabolite identification and quantification in ASICS.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0593
@@ -44,6 +45,7 @@ attribution:
 
 # r-package-function-execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute R package functions in sequence to transform raw Bruker NMR spectral files into a Spectra object suitable for metabolite quantification. This skill chains importSpectraBruker() and createSpectra() as a required preprocessing pipeline before downstream ASICS quantification.

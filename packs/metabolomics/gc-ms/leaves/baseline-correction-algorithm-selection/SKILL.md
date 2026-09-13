@@ -3,6 +3,7 @@ name: baseline-correction-algorithm-selection
 description: Use when when you have imported a raw GCxGC-MS chromatogram as a 2D-TIC (2D Total Intensity Chromatogram) object from a NetCDF file and observe steady or increasing baseline intensity caused by instrumental contamination, column bleeding, or thermal drift.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3172

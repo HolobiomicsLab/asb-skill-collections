@@ -3,6 +3,7 @@ name: json-serialization-and-deserialization
 description: Use when after extracting header metadata from a Thermo Fisher Scientific .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

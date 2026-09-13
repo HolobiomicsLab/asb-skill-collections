@@ -3,6 +3,7 @@ name: msi-data-format-interoperability
 description: Use when your MSI data is stored in a Cardinal imaging experiment object (version 2.2+) that has already been peak-binned with peakBin(), and you want to run mass2adduct's massdiff() and adductMatch() pipeline without manually exporting to CSV;
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: mass-spectrometry-preprocessing-quality-control
 description: Use when immediately after importing raw peak tables and metadata from MS preprocessing software (e.g., Progenesis, MS-DIAL, Bruker Metaboscape).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3370

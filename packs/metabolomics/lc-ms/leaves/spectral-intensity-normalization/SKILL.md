@@ -3,6 +3,7 @@ name: spectral-intensity-normalization
 description: Use when after removing precursor and noise peaks from an MsmsSpectrum object when the spectrum contains peaks with highly variable intensities (e.g., one or two dominant peaks with many weaker fragments).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

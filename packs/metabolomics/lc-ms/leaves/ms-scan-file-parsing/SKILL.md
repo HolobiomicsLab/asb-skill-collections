@@ -3,6 +3,7 @@ name: ms-scan-file-parsing
 description: Use when you have acquired a Thermo mass spectrometry RAW file (or other proprietary instrument format) and need to extract MS1 and/or MS2 scans in an open, interoperable format (mzML, MGF, or Raxport-processed FT1/FT2 files) for TIC visualization, PSM scoring, or stable isotope labeling analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0121

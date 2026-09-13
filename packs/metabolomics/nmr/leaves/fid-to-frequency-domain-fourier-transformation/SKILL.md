@@ -3,6 +3,7 @@ name: fid-to-frequency-domain-fourier-transformation
 description: Use when after simulating and convolving individual metabolite multiplets with realistic lineshapes (Lorentzian or Gaussian) and combining them into a single time-domain FID array.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -38,6 +39,7 @@ attribution:
 
 # fid-to-frequency-domain-fourier-transformation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transform time-domain free-induction decay (FID) data into frequency-domain 1H NMR spectra by applying Fourier transformation. This is a standard signal processing step in NMR spectral simulation that converts combined metabolite FID arrays into interpretable chemical-shift-resolved spectra.

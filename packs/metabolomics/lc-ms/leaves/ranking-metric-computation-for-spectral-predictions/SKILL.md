@@ -3,6 +3,7 @@ name: ranking-metric-computation-for-spectral-predictions
 description: Use when after generating ranked predictions of chemical formulas or subformulas for MS/MS spectra (from a neural network model like MIST-CF's formula transformer), compare predicted assignments against ground-truth reference labels to measure ranking quality.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3520

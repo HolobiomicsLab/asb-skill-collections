@@ -3,6 +3,7 @@ name: molecular-structure-ground-truth-matching-and-accuracy-evaluation
 description: Use when after an end-to-end neural model (CNN + transformer) has generated predicted molecular structures (formula and connectivity) from 1D NMR spectra.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0154

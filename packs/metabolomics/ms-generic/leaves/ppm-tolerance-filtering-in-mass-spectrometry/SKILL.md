@@ -3,6 +3,7 @@ name: ppm-tolerance-filtering-in-mass-spectrometry
 description: Use when when you have assigned molecular formulas to m/z peaks or computed mass differences between peaks in FT-ICR MS data, and you need to distinguish true chemical matches from noise or random coincidences.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: lipid-species-identification
 description: Use when you have centroid-mode LC–MS AIF chromatograms processed by xcms and RamClustR (or equivalent), a feature table with m/z and retention time coordinates, and you need to resolve individual lipid species identities with confidence scores and fragmentation evidence.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: chromatographic-peak-processing
 description: Use when after peak detection when you have a table of detected peaks with m/z values and retention times from LC/HRMS data, and you observe systematic m/z drift across a batch or population-scale study (n > 500 samples).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -42,6 +43,7 @@ attribution:
 
 # Reconstruct the recursive mass correction stage
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Recursive mass correction refines m/z accuracy of detected LC/HRMS peaks by recalibrating against internal reference standards or lock masses. This is a critical post-detection stage in untargeted metabolomics workflows that improves downstream peak alignment and annotation reliability.

@@ -3,6 +3,7 @@ name: biotransformation-rule-application-to-metabolites
 description: Use when you have untargeted metabolomics data with unknown or ambiguous molecular identities, anchor metabolites (known structures in SMILES or MOL format), and a curated database of biotransformation rules (e.g., from KEGG, RetroRules, or domain-specific repositories).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3658
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -43,6 +44,7 @@ attribution:
 
 # biotransformation-rule-application-to-metabolites
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply biotransformation rules (encoded as SMARTS reactant/product patterns) to seed metabolite structures to generate candidate transformation products with parent–product traceability. This skill enables annotation of unknown metabolites in untargeted metabolomics by systematically exploring chemically plausible transformations from known metabolite seeds.

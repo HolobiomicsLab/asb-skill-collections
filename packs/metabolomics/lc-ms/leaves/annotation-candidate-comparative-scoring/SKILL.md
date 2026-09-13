@@ -3,6 +3,7 @@ name: annotation-candidate-comparative-scoring
 description: Use when you have pseudo-MS/MS spectra from LC-MS all-ion fragmentation (AIF) data that have been matched against one or more ion fragment databases (e.g., LipidPos, MassBank), generating multiple candidate annotations per feature.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3370

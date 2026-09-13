@@ -3,6 +3,7 @@ name: spectral-feature-vector-generation
 description: Use when you have a collection of MS/MS spectra in standard formats (mzML, MGF) and need to perform rapid similarity search, clustering, or joint analysis across millions of spectra without repeated peptide database searches.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3520

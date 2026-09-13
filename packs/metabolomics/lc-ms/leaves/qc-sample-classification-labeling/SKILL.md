@@ -3,6 +3,7 @@ name: qc-sample-classification-labeling
 description: Use when when loading multiple LC-MS runs (mzML files) into an MsExperiment object and the injection sequence contains an interleaved or documented pattern of QC and sample runs (e.g., two QC, four sample, two QC, four sample, two QC).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

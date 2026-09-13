@@ -3,6 +3,7 @@ name: spectral-clustering-density-based
 description: Use when you have computed a sparse pairwise distance matrix from MS/MS spectra (via nearest neighbor indexing) and need to partition spectra into homogeneous clusters—typically when clustering bottom-up proteomics data with the goal of grouping spectra from the same peptide sequence or when you.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520

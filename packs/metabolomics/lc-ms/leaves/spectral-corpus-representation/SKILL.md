@@ -3,6 +3,7 @@ name: spectral-corpus-representation
 description: Use when you have a collection of tandem mass spectrometry spectra in mzML or similar format and need to prepare them for LDA-based motif discovery.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3860
   edam_topics:
   - http://edamontology.org/topic_3520

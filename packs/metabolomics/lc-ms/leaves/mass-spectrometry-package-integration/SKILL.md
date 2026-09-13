@@ -3,6 +3,7 @@ name: mass-spectrometry-package-integration
 description: Use when you have R Spectra objects and need to apply Python-only MS algorithms (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3370

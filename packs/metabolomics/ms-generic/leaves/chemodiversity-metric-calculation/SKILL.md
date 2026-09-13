@@ -3,6 +3,7 @@ name: chemodiversity-metric-calculation
 description: Use when when you have sum-normalized peak-abundance matrices from FT-ICR MS data with assigned molecular formulas and need to compare metabolite diversity between treatment groups (e.g., inoculated vs. control samples).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

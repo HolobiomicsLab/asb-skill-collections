@@ -3,6 +3,7 @@ name: threshold-based-filtering
 description: Use when after computing pairwise similarity scores between query molecular embeddings and a reference database, apply this skill when you need to distinguish high-confidence candidate matches from spurious matches.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

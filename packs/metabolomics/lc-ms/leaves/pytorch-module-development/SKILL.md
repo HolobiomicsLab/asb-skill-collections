@@ -3,6 +3,7 @@ name: pytorch-module-development
 description: Use when when constructing a composite loss function for contrastive learning on structured data (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -39,6 +40,7 @@ attribution:
 
 # PyTorch Module Development
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encapsulate composite loss functions (e.g., combining InfoNCE contrastive and MSE reconstruction terms) as reusable PyTorch modules with configurable hyperparameters, enabling gradient-based training of embedding models. This skill is essential when building trainable neural architectures that require custom loss logic with weighted multi-objective optimization.

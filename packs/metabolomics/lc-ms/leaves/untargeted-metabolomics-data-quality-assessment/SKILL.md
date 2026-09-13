@@ -3,6 +3,7 @@ name: untargeted-metabolomics-data-quality-assessment
 description: Use when after imputation and signal drift correction (OUKS steps 3–4), when you have a QC-annotated feature intensity table with replicated QC samples and need to assess which features have stable, reproducible signals before filtering and statistical testing.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_0091

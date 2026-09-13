@@ -3,6 +3,7 @@ name: wasserstein-distance-computation
 description: Use when when you have both an observed NMR mixture spectrum and a candidate reconstructed spectrum (each represented as intensity distributions across chemical shift bins), and you need a scalar similarity metric to evaluate how closely the reconstruction matches the observed data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: metadata-normalization-and-reconciliation
 description: Use when you have multiple CSV feature lists from different acquisition methods (e.g., LC-MS vs LC-IMS-MS) or processing software, each using different naming conventions, retention time scales, or m/z precision;
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3281
   edam_topics:
   - http://edamontology.org/topic_3520

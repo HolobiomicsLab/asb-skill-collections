@@ -3,6 +3,7 @@ name: fragment-ion-theoretical-mass-calculation
 description: Use when when building a comprehensive lipid fragment ion library covering all chain composition and positional isomer variants (e.g., 168.6 million entries).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0153

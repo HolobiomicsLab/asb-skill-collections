@@ -3,6 +3,7 @@ name: spectral-intensity-normalisation
 description: Use when processing raw MS/MS spectra (in MGF, mzML, mzXML, JSON, or MSP format) prior to MS2Query library matching or MS2Deepscore embedding calculation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

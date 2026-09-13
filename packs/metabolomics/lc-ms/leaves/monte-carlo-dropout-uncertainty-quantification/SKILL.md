@@ -3,6 +3,7 @@ name: monte-carlo-dropout-uncertainty-quantification
 description: Use when when a trained Siamese neural network model makes predictions on new spectrum pairs and you need to identify and exclude high-uncertainty predictions to improve RMSE.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_0154

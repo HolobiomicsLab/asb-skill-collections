@@ -3,6 +3,7 @@ name: spectrum-pair-prediction
 description: Use when you have pairs of MS/MS spectra and need to estimate their structural similarity (Tanimoto score based on molecular fingerprints) as a proxy for compound relatedness.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0593

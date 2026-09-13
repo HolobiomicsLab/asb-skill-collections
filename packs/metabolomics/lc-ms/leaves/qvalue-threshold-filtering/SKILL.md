@@ -3,6 +3,7 @@ name: qvalue-threshold-filtering
 description: Use when after loading search result files (e.g., from DIA-NN or OpenSwath) containing feature identification results with associated Q-value scores, apply this filter when you need to select a subset of high-confidence identifications before generating comparison plots or summary statistics across.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

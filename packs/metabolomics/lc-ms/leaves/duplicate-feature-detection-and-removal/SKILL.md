@@ -3,6 +3,7 @@ name: duplicate-feature-detection-and-removal
 description: Use when you have peak-picked LC-MS data with multiple features that may represent the same metabolite detected at slightly different m/z or retention time values due to instrument precision limits, isotope variants, or adduct forms.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

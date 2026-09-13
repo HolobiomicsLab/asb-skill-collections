@@ -3,6 +3,7 @@ name: peak-preservation-vs-noise-reduction-tradeoff
 description: Use when you have raw or baseline-corrected mass spectra from MSImagingArrays or MSImagingExperiment objects and need to decide between smoothing methods before peak picking or statistical analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3520

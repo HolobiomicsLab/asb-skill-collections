@@ -3,6 +3,7 @@ name: mass-spec-tolerance-parameter-application
 description: Use when when you have a feature table from Orbitrap LC-MS containing m/z, retention time, and intensity columns, and you need to group individual mass features into putative metabolites that represent the same chemical entity across different ionization states and isotopic compositions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3172

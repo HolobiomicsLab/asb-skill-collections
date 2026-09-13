@@ -3,6 +3,7 @@ name: mass-spectrometry-quantification
 description: Use when you have measured MS intensity data from unknown samples and known-concentration standard compounds, and you need to convert sample intensities into predicted concentrations. Specifically applicable when intensity drift is observed across the measurement sequence (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

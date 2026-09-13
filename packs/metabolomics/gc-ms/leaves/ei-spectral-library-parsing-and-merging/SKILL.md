@@ -3,6 +3,7 @@ name: ei-spectral-library-parsing-and-merging
 description: Use when you need to build a comprehensive EI spectral reference library for GC-MS compound identification in MS-DIAL, starting from raw downloads of NIST, RIKEN, MoNA, or SWGDRUG libraries that have inconsistent metadata organization (SMILES in different fields or absent, RI values missing or.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_0153

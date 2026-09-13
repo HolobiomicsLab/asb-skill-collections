@@ -3,6 +3,7 @@ name: networkx-object-generation-and-export
 description: Use when after identifying statistically significant features and assigning them to structural clusters (isotopologue groups, adduct groups, cross-assay links) and correlation clusters via MamsiStructSearch.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3359
   edam_topics:
   - http://edamontology.org/topic_3172

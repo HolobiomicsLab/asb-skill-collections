@@ -3,6 +3,7 @@ name: hmdb-formula-sampling
 description: Use when when you need to create in silico LC-MS/MS experiments with diverse chemical backgrounds for testing fragmentation strategies or acquisition controllers, and you want the chemical diversity to reflect real metabolomic samples. Use this when you have a target m/z range (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2238
   edam_topics:
   - http://edamontology.org/topic_3520

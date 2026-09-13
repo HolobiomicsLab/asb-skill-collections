@@ -3,6 +3,7 @@ name: spectral-peak-alignment-with-mass-offset
 description: Use when when comparing two MS/MS spectra where the precursor m/z values differ (indicating potential mass modifications, adducts, or related compounds), and you want to detect structurally conserved fragmentation patterns that would be missed by direct m/z matching.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3646
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -42,6 +43,7 @@ attribution:
 
 # Spectral Peak Alignment with Mass Offset
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align peaks between two MS/MS spectra by accounting for their precursor mass difference, enabling detection of structurally related molecules that may have undergone mass shifts or modifications. This is the core computational step in modified cosine similarity scoring.

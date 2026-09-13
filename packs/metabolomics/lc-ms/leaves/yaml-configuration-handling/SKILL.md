@@ -3,6 +3,7 @@ name: yaml-configuration-handling
 description: Use when when initializing a MolNotator project with user-defined parameters for ionization modes, adduct tables, database selections, output directories, and tool-specific thresholds.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

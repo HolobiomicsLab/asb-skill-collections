@@ -3,6 +3,7 @@ name: feature-annotation-via-isotope-adduct-grouping
 description: Use when after peak detection and feature extraction have produced a composite feature table with m/z, retention time, and intensity values for individual samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -50,6 +51,7 @@ attribution:
 
 # feature-annotation-via-isotope-adduct-grouping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Group detected LC-MS peaks into empirical compounds by identifying isotopologue (13C/12C) and adduct (Na/H) relationships, then search the resulting neutral masses against metabolite databases to assign chemical identities. This skill bridges raw peak detection and metabolite annotation by collapsing degenerate ion signals into biological entities.

@@ -3,6 +3,7 @@ name: peptide-sequence-composition-parsing
 description: Use when you have peptide or protein sequences (as FASTA strings or text identifiers) and need to compute their mass, isotopic envelope, charge state, isoelectric point, or chromatographic retention time for MS matching, peak annotation, or property prediction.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0399
   edam_topics:
   - http://edamontology.org/topic_0121

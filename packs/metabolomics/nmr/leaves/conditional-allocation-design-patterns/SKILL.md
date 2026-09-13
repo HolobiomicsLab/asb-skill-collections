@@ -3,6 +3,7 @@ name: conditional-allocation-design-patterns
 description: 'Use when when designing a dataset storage layer that must handle variable dataset sizes, block layouts, and platform-specific constraints (e.g., Windows vs. non-Windows). Specifically: (1) you have parsed dataset metadata including cache-file flags, total point counts, and block configuration;'
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_topics: []
   tools:
   - NMRFx
@@ -37,6 +38,7 @@ attribution:
 
 # conditional-allocation-design-patterns
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A design pattern for selecting among multiple storage-backend implementations (e.g., SubMatrixFile, BigMappedMatrixFile, MappedSubMatrixFile, MappedMatrixFile) based on dataset metadata and memory constraints. This skill applies conditional logic to choose the optimal file-storage strategy for NMR spectroscopic datasets, balancing memory efficiency, access patterns, and I/O performance.

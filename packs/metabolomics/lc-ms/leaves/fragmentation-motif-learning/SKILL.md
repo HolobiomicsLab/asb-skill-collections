@@ -3,6 +3,7 @@ name: fragmentation-motif-learning
 description: Use when you have preprocessed mass spectrometry fragmentation data (neutral losses and fragment masses extracted and noise-filtered) and want to discover hidden structural motifs across a spectral dataset in an unsupervised manner.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3520

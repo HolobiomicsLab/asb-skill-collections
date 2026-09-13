@@ -3,6 +3,7 @@ name: spectral-quality-assurance-proteomics
 description: Use when when you have extracted a raw Orbitrap scan from a .raw file and need to verify that the instrument operated within expected parameters and that observed peptide fragment ions rise substantially above noise—i.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

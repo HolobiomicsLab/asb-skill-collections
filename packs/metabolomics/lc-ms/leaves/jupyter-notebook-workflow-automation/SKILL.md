@@ -3,6 +3,7 @@ name: jupyter-notebook-workflow-automation
 description: Use when when you have raw LC-MS/MS spectral data in .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: metabolomics-peak-table-loading
 description: Use when you have raw peak tables exported from a tandem mass spectrometry preprocessing tool (e.g. Progenesis, MS-DIAL, or Bruker Metaboscape) and need to integrate them with sample metadata for reproducibility filtering, mispicked-ion removal, or group-based feature exclusion.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3172

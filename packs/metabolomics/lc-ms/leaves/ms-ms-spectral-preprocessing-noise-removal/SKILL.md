@@ -3,6 +3,7 @@ name: ms-ms-spectral-preprocessing-noise-removal
 description: Use when when you have raw MS/MS spectra (from NIST, MassBank, or local acquisition) and plan to compute spectral similarity for compound identification.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

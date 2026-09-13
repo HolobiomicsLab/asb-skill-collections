@@ -3,6 +3,7 @@ name: metabolomics-group-comparison-statistics
 description: Use when you have a metabolomics matrix with metabolites as rows and samples as columns, each sample labeled with one of two experimental group identifiers (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3172

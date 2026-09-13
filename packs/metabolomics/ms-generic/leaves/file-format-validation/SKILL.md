@@ -3,6 +3,7 @@ name: file-format-validation
 description: Use when after writing parsed spectra to a new MSP file using mssearchr's MSP writer, or when integrating MSP files from external sources into an R analysis pipeline.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

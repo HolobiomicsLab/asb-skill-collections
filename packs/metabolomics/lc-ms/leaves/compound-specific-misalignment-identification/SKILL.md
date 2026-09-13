@@ -3,6 +3,7 @@ name: compound-specific-misalignment-identification
 description: Use when you have completed XCMS grouping on LC-MS data and suspect misaligned features due to long acquisition periods (>1 week) or large sample cohorts (hundreds of samples).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

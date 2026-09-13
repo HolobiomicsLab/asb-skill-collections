@@ -3,6 +3,7 @@ name: spectral-quality-control-assessment
 description: Use when after MS1 extraction (coarse/fine error correction, EIC window extraction) and retention time windowing on a set of mzML files tagged with ionization mode and compound adducts.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

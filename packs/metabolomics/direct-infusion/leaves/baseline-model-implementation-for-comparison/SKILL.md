@@ -3,6 +3,7 @@ name: baseline-model-implementation-for-comparison
 description: Use when you are introducing a novel spectrum prediction model and need to demonstrate that performance improvements come from architectural innovation rather than experimental advantage.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3439
   edam_topics:
   - http://edamontology.org/topic_3172

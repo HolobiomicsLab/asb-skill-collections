@@ -3,6 +3,7 @@ name: formula-annotation-capping-by-frequency
 description: Use when when preparing multi-formula MS/MS training data for a rescore model, if the raw positive examples show extreme imbalance (some formulas represented by hundreds of spectra while others have only a few).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0097

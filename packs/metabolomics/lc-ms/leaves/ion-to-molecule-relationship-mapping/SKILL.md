@@ -3,6 +3,7 @@ name: ion-to-molecule-relationship-mapping
 description: Use when after dereplication and cosine similarity clustering have been completed and you have merged molecular predictions with ion metadata (m/z, adduct type, intensity).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3762
   edam_topics:
   - http://edamontology.org/topic_0121

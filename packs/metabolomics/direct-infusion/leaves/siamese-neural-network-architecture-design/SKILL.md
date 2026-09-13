@@ -3,6 +3,7 @@ name: siamese-neural-network-architecture-design
 description: Use when when you have pairs of mass spectrometry spectra and need to predict their molecular structural similarity as a scalar Tanimoto score in the range [0, 1].
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

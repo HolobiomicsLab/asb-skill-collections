@@ -3,6 +3,7 @@ name: adduct-ion-parent-ion-pairing-analysis
 description: Use when when you have binned mass spectrometry imaging peaks and want to understand which detected mass-to-charge ratios represent the same metabolite in different ionization states (parent vs. adduct form).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: mass-spectrometry-dataset-post-processing
 description: Use when you have a formula-assigned FT-ICR MS dataset (CSV or tab-delimited table with molecular formulas and mass values) and need to quantify molecular chemodiversity, characterize elemental stoichiometry patterns, or explore transformation pathways across samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121

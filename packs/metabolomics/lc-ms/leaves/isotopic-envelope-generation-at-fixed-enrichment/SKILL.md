@@ -3,6 +3,7 @@ name: isotopic-envelope-generation-at-fixed-enrichment
 description: Use when when you have a peptide sequence, MS2 fragment charge states, and a known isotope enrichment fraction (e.g., 1.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

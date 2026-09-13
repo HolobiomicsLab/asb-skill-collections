@@ -3,6 +3,7 @@ name: ion-mobility-demultiplexing-algorithm
 description: Use when you have raw IM-MS data in UIMF or Agilent MassHunter .d format acquired using multiplexed (compressed) ion mobility pulse sequences, and you need to recover conventional (non-multiplexed) IM-MS spectra with resolved mobility and mass dimensions.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -53,6 +54,7 @@ attribution:
 
 # ion-mobility-demultiplexing-algorithm
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill applies the PNNL demultiplexing and artifact removal algorithm to recover conventional IM-MS spectra from multiplexed ion mobility–mass spectrometry acquisitions. It is essential when raw data contains overlapping ion mobility frames that must be separated to recover individual mobility-resolved mass spectra.

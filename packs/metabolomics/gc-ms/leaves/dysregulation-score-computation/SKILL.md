@@ -3,6 +3,7 @@ name: dysregulation-score-computation
 description: Use when you have per-sample metabolite abundance data (e.g., from LC-MS or GC-MS) and a metabolite-to-pathway assignment table, and need to generate a sample-by-pathway dysregulation matrix for downstream classification, prognosis prediction, or pathway-level phenotype association.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

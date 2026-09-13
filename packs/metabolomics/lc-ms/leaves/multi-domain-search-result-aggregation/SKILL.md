@@ -3,6 +3,7 @@ name: multi-domain-search-result-aggregation
 description: Use when you have executed batch searches of MS/MS spectra against multiple domain-specific MASST tools and need to synthesize results across domains (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -48,6 +49,7 @@ attribution:
 
 # multi-domain-search-result-aggregation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Combine and normalize heterogeneous mass spectrometry search outputs from multiple domain-specific MASST tools (microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST) into a unified data structure, then visualize the aggregated results interactively using metadataMASST. This skill enables cross-domain metabolite discovery by merging spectrum matches across taxonomic, plant, tissue, microbiome, and food sample repositories.

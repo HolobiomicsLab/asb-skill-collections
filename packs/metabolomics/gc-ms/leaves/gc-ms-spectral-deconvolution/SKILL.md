@@ -3,6 +3,7 @@ name: gc-ms-spectral-deconvolution
 description: Use when you have raw GC-MS data (in netCDF or vendor format) containing overlapping chromatographic peaks from complex mixtures where individual compound spectra cannot be resolved by simple peak picking.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0091

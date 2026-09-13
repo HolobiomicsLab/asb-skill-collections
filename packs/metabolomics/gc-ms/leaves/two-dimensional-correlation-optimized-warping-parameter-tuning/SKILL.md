@@ -3,6 +3,7 @@ name: two-dimensional-correlation-optimized-warping-parameter-tuning
 description: Use when when you have a preprocessed sample chromatogram (smoothed and baseline-corrected) and a preprocessed reference chromatogram, and need to align them using 2D COW.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: lcms-raw-data-import
 description: Use when you have raw LC/MS data in mzML or mzXML format and need to initiate untargeted metabolomics analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3370

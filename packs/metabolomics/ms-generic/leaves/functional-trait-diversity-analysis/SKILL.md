@@ -3,6 +3,7 @@ name: functional-trait-diversity-analysis
 description: Use when when you have abundance-normalized FT-ICR MS peak data with assigned molecular formulas and need to distinguish between richness (total number of distinct metabolites) and functional diversity (diversity in metabolic potential).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

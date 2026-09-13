@@ -3,6 +3,7 @@ name: instrument-type-filtering-gnps
 description: Use when you have a large, mixed-instrument GNPS spectral dataset and need to create an instrument-specific training set for FIDDLE or similar deep learning models. Use this skill when your configuration file specifies an instrument allowlist (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

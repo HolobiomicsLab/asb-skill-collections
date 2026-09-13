@@ -3,6 +3,7 @@ name: retention-time-prediction-optimization
 description: Use when when you have a retention-time dataset (e.g., SMRT or Eawag_XBridgeC18_364) in .xlsx format and need to train or adapt a graph neural network model to predict chromatographic retention times for new compounds.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -57,6 +58,7 @@ attribution:
 
 # retention-time-prediction-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train and optimize graph neural network models to predict liquid chromatography retention times for small molecules using the ABCoRT framework. This skill enables fine-tuning of pre-trained models on domain-specific retention-time datasets via transfer learning, improving prediction accuracy for chemical compound characterization.

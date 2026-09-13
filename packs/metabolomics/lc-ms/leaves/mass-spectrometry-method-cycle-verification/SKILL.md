@@ -3,6 +3,7 @@ name: mass-spectrometry-method-cycle-verification
 description: Use when when you have a Thermo Fisher Scientific Orbitrap .raw file and need to confirm that a targeted acquisition method (e.g., PRM targeting a specific precursor m/z) is achieving uniform cycle timing.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0121

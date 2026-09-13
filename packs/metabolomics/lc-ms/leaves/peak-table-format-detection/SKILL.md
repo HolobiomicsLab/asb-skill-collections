@@ -3,6 +3,7 @@ name: peak-table-format-detection
 description: Use when when receiving a peak or feature table output from an unknown or variable upstream peak-picking tool, and you need to route it to the correct ingestion adapter (e.g., in LipidMatch) to normalize and validate it before lipid identification.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

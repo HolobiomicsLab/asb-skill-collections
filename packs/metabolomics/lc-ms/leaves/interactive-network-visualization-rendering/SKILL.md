@@ -3,6 +3,7 @@ name: interactive-network-visualization-rendering
 description: Use when after structural clustering (isotopologue grouping, adduct detection, cross-assay linking) and correlation clustering of LC-MS features, when you need to inspect and communicate the topology of structural relationships—particularly when the number of features or link types is too dense for.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3083
   edam_topics:
   - http://edamontology.org/topic_3172

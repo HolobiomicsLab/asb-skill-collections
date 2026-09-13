@@ -3,6 +3,7 @@ name: ms2lda-substructure-assignment
 description: Use when you have a GNPS molecular network (in GML or GraphML format) and a completed MS2LDA experiment on ms2lda.org, and you want to annotate network nodes with detected substructural motifs to identify shared fragmentation patterns and structural classes across molecular families.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3520

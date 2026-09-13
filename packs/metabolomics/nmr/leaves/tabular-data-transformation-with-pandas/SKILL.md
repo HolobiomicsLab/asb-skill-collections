@@ -3,6 +3,7 @@ name: tabular-data-transformation-with-pandas
 description: Use when when converting mwTab-formatted metabolomics files (containing MS/NMR tabular data blocks) to JSON, or when you need to extract, manipulate, and re-serialize tabular sections from mwTab files while maintaining column structure and type information.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

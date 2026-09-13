@@ -3,6 +3,7 @@ name: online-proteomics-resource-integration
 description: Use when your analysis requires MS/MS spectra from public proteomics datasets but you want to avoid manual download and format conversion.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3634
   edam_topics:
   - http://edamontology.org/topic_0121

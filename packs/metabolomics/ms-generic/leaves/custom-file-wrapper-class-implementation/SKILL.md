@@ -3,6 +3,7 @@ name: custom-file-wrapper-class-implementation
 description: Use when when you have mass spectrometry data stored in a database or non-mzML file format and need to integrate it into the pymzML pipeline without converting to mzML. Use this skill when FileInterface does not natively recognize your file extension and you want to avoid data conversion overhead.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

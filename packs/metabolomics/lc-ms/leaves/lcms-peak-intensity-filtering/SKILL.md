@@ -3,6 +3,7 @@ name: lcms-peak-intensity-filtering
 description: Use when after XCMS peak picking, alignment, and grouping when you have identified putative incorporations (via PuInc_seeker) or base-peak isotopologue candidates and need to exclude low-intensity peaks that are likely noise or instrument artifacts.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3375

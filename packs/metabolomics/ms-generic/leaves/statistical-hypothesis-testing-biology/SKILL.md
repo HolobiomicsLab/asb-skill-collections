@@ -3,6 +3,7 @@ name: statistical-hypothesis-testing-biology
 description: Use when you have a metabolite abundance table (rows=metabolites, columns=samples) from Metabolomics Workbench format and need to test whether specific metabolites or metabolite classes are significantly enriched in particular biological pathways or conditions, beyond what would be expected by.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0625

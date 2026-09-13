@@ -3,6 +3,7 @@ name: minimum-cost-flow-formulation
 description: Use when you have an NMR mixture spectrum and a library of single-compound reference spectra, and you need to identify which compounds are present and their relative abundances.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0593

@@ -3,6 +3,7 @@ name: machine-learning-model-evaluation
 description: Use when you have a trained NeatMS neural network model and a labelled validation dataset of MS1 peaks (annotated as 'High_quality' or 'Low_quality'), and you need to identify the scalar probability threshold that separates true positive from false positive peak classifications in your specific.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091

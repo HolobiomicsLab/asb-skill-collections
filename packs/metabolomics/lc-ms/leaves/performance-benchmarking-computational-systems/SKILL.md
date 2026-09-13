@@ -3,6 +3,7 @@ name: performance-benchmarking-computational-systems
 description: Use when you have implemented or reconstructed a performance-critical computational module (e.g., an expeditious querying engine, a database lookup accelerator, or a real-time matching algorithm) and need to validate that it achieves claimed throughput targets.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

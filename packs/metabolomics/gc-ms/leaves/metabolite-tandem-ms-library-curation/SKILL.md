@@ -3,6 +3,7 @@ name: metabolite-tandem-ms-library-curation
 description: Use when you have multiple tandem MS/MS libraries in different formats (msp, mgf) from different providers (NIST, RIKEN, MoNA, GNPS) with incomplete or inconsistent structural annotations (missing SMILES or molecular formula fields) and need to combine them into unified, polarity-specific msp files.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_3172

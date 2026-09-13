@@ -3,6 +3,7 @@ name: model-hyperparameter-transfer-and-tuning
 description: Use when you have a trained baseline GNN model with established hyperparameters (dropout rate, learning rate, epochs, optimizer settings) and want to evaluate whether alternative message-passing GNN architectures (Graph Attention Networks, Message-Passing Neural Networks) achieve comparable or.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_0091

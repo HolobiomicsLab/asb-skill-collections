@@ -3,6 +3,7 @@ name: openms-api-surface-exposure
 description: Use when when you need to make OpenMS C++ classes, functions, or data structures callable from Python code, or when verifying that a newly bound C++ component can be imported and instantiated without errors in a Python environment.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0339
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -40,6 +41,7 @@ attribution:
 
 # openms-api-surface-exposure
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Expose and verify OpenMS C++ API surface through nanobind-based Python bindings, enabling downstream Python code to access mass spectrometry data structures and algorithms. This skill bridges compiled C++ library functionality into importable Python modules for rapid prototyping and algorithm development.

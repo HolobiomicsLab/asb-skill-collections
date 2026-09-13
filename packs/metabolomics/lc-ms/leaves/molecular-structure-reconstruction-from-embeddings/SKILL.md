@@ -3,6 +3,7 @@ name: molecular-structure-reconstruction-from-embeddings
 description: Use when you have a pretrained encoder that produces fixed-size embeddings from MS/MS spectra (or other molecular data modalities) and you need to recover the corresponding molecular structure as a SMILES string.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3791
   edam_topics:
   - http://edamontology.org/topic_0154

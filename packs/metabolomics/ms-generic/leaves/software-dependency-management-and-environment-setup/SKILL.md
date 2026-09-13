@@ -3,6 +3,7 @@ name: software-dependency-management-and-environment-setup
 description: Use when you are preparing to run the MetaboDirect pipeline for the first time on a new machine, or you need to reproduce a published benchmark or analysis on a different OS (Windows, Linux, MacOS) and want to guarantee that all six pipeline steps (data pre-processing, diagnostics, exploration.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0227
   edam_topics:
   - http://edamontology.org/topic_0092

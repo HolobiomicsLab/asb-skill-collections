@@ -3,6 +3,7 @@ name: collision-cross-section-computation
 description: Use when you have a set of molecular structures in SMILES format that require CCS prediction for metabolite annotation in untargeted mass spectrometry workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0570
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -49,6 +50,7 @@ attribution:
 
 # collision-cross-section-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 End-to-end computational workflow for predicting collisional cross section (CCS) values from SMILES molecular structures via automated ionization state determination, conformer generation, energy-based filtering, and quantum mechanical calculations. CCS values aid in metabolite annotation by providing a third orthogonal dimension (mobility) for mass spectrometry-based compound identification.

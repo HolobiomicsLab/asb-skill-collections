@@ -3,6 +3,7 @@ name: quality-control-metric-distribution-analysis
 description: Use when after composite-map peak detection has produced an unfiltered peak list with SNR, peakshape (goodness_fitting), peak_height, and prominence values.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -48,6 +49,7 @@ attribution:
 
 # quality-control-metric-distribution-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Analyze the distribution and selectivity of peak quality metrics (SNR, peak shape goodness-of-fit, peak height, prominence) across detected features to assess filtering efficacy and inform threshold tuning in LC-MS metabolomics workflows. This skill validates that peak filtering reduces false positives while retaining signal-rich features.

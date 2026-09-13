@@ -3,6 +3,7 @@ name: mass-tolerance-window-filtering
 description: Use when after calculating neutral mass from observed m/z and adduct type, and before ranking candidates by chemical plausibility. Use it whenever querying a formula database (KEGG, PubChem, or custom) to retrieve all molecular formulae within a specified mass tolerance window of each neutral mass.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3664
   edam_topics:
   - http://edamontology.org/topic_0602

@@ -3,6 +3,7 @@ name: drug-database-record-extraction
 description: Use when when you have obtained a DrugBank release file (requiring access credentials) and need to integrate drug chemical structure, name, and identifier information into a metadata cleanup or chemical enrichment pipeline.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3762
   edam_topics:
   - http://edamontology.org/topic_0154

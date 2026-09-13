@@ -3,6 +3,7 @@ name: lcms-feature-classification
 description: Use when you have an LCMS feature table annotated with MS2 spectral data and need to distinguish in-source fragments (mass loss patterns, same retention time, MS2 spectral relationships) from true metabolite features.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_0121

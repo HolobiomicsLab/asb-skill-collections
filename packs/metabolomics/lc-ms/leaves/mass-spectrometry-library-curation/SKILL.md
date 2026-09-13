@@ -3,6 +3,7 @@ name: mass-spectrometry-library-curation
 description: Use when when preprocessing a public MS/MS spectral library (e.g., GNPS) for machine learning and you discover discrepancies between expected and observed compound counts after filtering by instrument type, or when a known instrument metadata issue (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

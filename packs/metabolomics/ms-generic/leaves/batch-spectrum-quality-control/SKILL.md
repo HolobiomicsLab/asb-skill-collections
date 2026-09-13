@@ -3,6 +3,7 @@ name: batch-spectrum-quality-control
 description: Use when when ingesting spectra from multiple open mass spectrometry libraries (OMSLs) in .mgf, .msp, .json, or .csv format and you observe mixed experimental protocols, inconsistent adduct annotations, or partial metadata.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -42,6 +43,7 @@ attribution:
 
 # Batch Spectrum Quality Control
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Remove mass spectra that violate ionmode–adduct polarity consistency, lack chemical identifiers, or fail quality thresholds during bulk standardization of open mass spectrometry libraries. This skill detects and logs mismatched adducts, missing annotations, and low-entropy spectra to ensure only high-quality, annotated spectra are retained.

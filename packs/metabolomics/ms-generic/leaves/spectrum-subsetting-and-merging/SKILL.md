@@ -3,6 +3,7 @@ name: spectrum-subsetting-and-merging
 description: Use when when you have a large MsBackend object and need to (1) select a contiguous or non-contiguous range of spectra for focused analysis, or (2) combine spectra from multiple independently-loaded backends (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

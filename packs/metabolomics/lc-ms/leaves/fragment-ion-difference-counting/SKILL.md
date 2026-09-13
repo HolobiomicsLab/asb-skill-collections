@@ -3,6 +3,7 @@ name: fragment-ion-difference-counting
 description: Use when when preparing tandem MS/MS data for spectral alignment and similarity comparison, particularly when you have loaded raw fragmentation spectra and need to extract and quantify mass difference patterns that capture the fragmentation process.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

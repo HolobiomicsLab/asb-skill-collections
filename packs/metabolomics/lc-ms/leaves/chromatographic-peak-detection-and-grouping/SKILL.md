@@ -3,6 +3,7 @@ name: chromatographic-peak-detection-and-grouping
 description: Use when when you have processed LC-MS data through XCMS alignment but suspect misaligned features due to retention-time drift over long acquisition periods (>1 week) or large sample batches (hundreds of samples), or when peak-filling produces unexpectedly high coefficient-of-variation (CV > 0.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0121

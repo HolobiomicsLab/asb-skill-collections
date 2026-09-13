@@ -3,6 +3,7 @@ name: comparative-omics-report-generation
 description: Use when when you have feature lists (in CSV format) from two or more different MS acquisition methods (e.g., LC-MS vs. LC-IMS-MS), different processing software (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3375

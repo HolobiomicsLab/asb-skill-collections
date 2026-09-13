@@ -3,6 +3,7 @@ name: top-k-retrieval-ranking-evaluation
 description: Use when when you have deployed a trained embedding or similarity model on a test set of tandem mass spectra and need to measure its ability to rank correct library compounds near the top of retrieved candidates.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

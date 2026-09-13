@@ -3,6 +3,7 @@ name: model-metadata-extraction
 description: Use when when you need to programmatically interface with a TensorFlow Serving model instance and must discover or validate the expected input names (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_topics: []
   tools:
   - tensorflow serving

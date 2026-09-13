@@ -3,6 +3,7 @@ name: motif-database-lookup-and-retrieval
 description: Use when after completing the MS2LDA LDA modeling step when you have a JSON-serialized inferred motifset (Mass2Motifs with fragment and neutral-loss patterns) and need to annotate those motifs by comparing them against a curated MotifDB reference database to identify known structural subpatterns.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_3520

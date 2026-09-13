@@ -3,6 +3,7 @@ name: spectral-data-normalization-tic
 description: Use when apply TIC normalization when you have raw, unprocessed mass spectrometry data (Cardinal objects or imaging matrices with 10,000+ m/z features and 1,000+ spectra) where signal intensity varies across spatial locations or samples due to instrumental drift, uneven sample preparation, or.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -49,6 +50,7 @@ attribution:
 
 # Spectral Data Normalization (TIC)
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Total Ion Current (TIC) normalization corrects for systematic variations in ion signal intensity across mass spectrometry imaging or LC-MS samples by dividing each spectrum's m/z intensities by the sum of all intensities in that spectrum. This preprocessing step is essential before peak detection or quantitative comparison, especially when acquisition conditions or sample loading vary.

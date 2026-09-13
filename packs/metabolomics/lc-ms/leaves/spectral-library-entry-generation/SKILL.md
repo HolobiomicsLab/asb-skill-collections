@@ -3,6 +3,7 @@ name: spectral-library-entry-generation
 description: Use when you have an experimental or public MS/MS spectrum (e.g., from MassBank in msp format, or a raw centroid-mode chromatogram) and need to create a reusable library entry for a known metabolite.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3636
   edam_topics:
   - http://edamontology.org/topic_0091

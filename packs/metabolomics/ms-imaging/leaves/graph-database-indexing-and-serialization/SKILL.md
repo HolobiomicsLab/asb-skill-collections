@@ -3,6 +3,7 @@ name: graph-database-indexing-and-serialization
 description: Use when you have retrieved and deduplicated chemical formulae and metadata from multiple heterogeneous sources (HMDB, ChEMBL, PubChem) and extracted both structural relationships (DBEdges) and biological reactant pairs (BioEdges from KEGG), and now need to merge them into a single queryable.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -39,6 +40,7 @@ attribution:
 
 # graph-database-indexing-and-serialization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and index a unified graph database of chemical formulae and their interconnections (DBEdges and BioEdges) for efficient mass-to-charge (m/z) based lookup and export as a serialized database file. This skill bridges multiple chemical repositories and biological reaction networks into a queryable knowledge structure.

@@ -3,6 +3,7 @@ name: memo-ms-api-usage-and-parameter-configuration
 description: Use when you have aligned feature tables (CSV format) with corresponding MS2 spectra data (MGF or mzML files), and need to construct a sample-level vectorization matrix where each row represents a sample and columns encode the occurrence counts of MS2 peaks and neutral losses observed in that.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3630
   edam_topics:
   - http://edamontology.org/topic_3520

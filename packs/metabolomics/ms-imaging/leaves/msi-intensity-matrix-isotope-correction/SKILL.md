@@ -3,6 +3,7 @@ name: msi-intensity-matrix-isotope-correction
 description: Use when you have loaded a feature-by-pixel intensity matrix (HDF5 format following Cardinal::HDF5 layout) from imzML MSI data in positive ion mode and you have identified paired [M+H]+ and [M+Na]+ features for the same neutral lipid species (differing by ~22 Da in m/z).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -41,6 +42,7 @@ attribution:
 
 # msi-intensity-matrix-isotope-correction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Type II isotopic correction removes [M+Na]+ adduct overlap from [M+H]+ ion images in mass spectrometry imaging (MSI) data by subtracting scaled sodium adduct intensities from protonated adduct intensities across all pixels in a feature-by-pixel intensity matrix. This correction is essential for accurate lipid quantitation in imzML-formatted MSI experiments where multiple adduct forms of the same neutral lipid species co-ionize.

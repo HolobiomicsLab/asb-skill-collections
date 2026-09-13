@@ -3,6 +3,7 @@ name: linear-score-calculation-from-coefficients
 description: Use when when you have 1H-NMR metabolite measurements from Nightingale Health assayed on a new cohort and wish to compute risk scores (e.g., all-cause mortality, cardiovascular event, type 2 diabetes) using published metabolic biomarker weights from a reference study.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0769

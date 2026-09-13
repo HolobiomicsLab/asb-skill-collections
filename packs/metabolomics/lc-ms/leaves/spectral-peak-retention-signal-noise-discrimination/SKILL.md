@@ -3,6 +3,7 @@ name: spectral-peak-retention-signal-noise-discrimination
 description: Use when when you have replicate MS/MS spectra for the same feature (precursor m/z and retention time) and need to distinguish genuine fragment ions from noise.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

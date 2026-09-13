@@ -3,6 +3,7 @@ name: regression-metric-computation-rmse-mae-r2
 description: 'Use when you have model predictions and ground-truth labels for a test set and need to assess how well the trained model generalizes to unseen data. Typical triggers: after executing inference on a held-out test partition, after cross-dataset evaluation (e.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3659
   edam_topics:
   - http://edamontology.org/topic_0091

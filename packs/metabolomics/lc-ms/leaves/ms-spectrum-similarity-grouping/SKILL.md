@@ -3,6 +3,7 @@ name: ms-spectrum-similarity-grouping
 description: Use when after computing a sparse pairwise distance matrix from nearest neighbor indexes of MS/MS spectra (in mzML, mzXML, or MGF format), and you need to assign each spectrum to a cluster group for downstream analysis such as peptide identification or spectral library construction.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

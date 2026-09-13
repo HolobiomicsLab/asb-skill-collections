@@ -3,6 +3,7 @@ name: dashboard-session-initialization-verification
 description: Use when after loading a specXplore session data object (saved .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3925
   edam_topics:
   - http://edamontology.org/topic_3520

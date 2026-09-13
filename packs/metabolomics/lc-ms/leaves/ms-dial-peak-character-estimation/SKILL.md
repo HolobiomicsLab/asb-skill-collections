@@ -3,6 +3,7 @@ name: ms-dial-peak-character-estimation
 description: Use when you have a filtered MS-DIAL peak list (post-generic filtering, containing m/z, retention time, and peak intensity metrics for each feature) and need to group features into clusters that represent true metabolite signals rather than instrumental or chemical artifacts.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3172

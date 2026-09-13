@@ -3,6 +3,7 @@ name: mzmine-quantitative-table-parsing
 description: Use when you have LC–MS/MS data processed through MZmine2 or MZmine3 and need to construct a feature quantification table for natural product discovery pipelines (e.g., INVENTA prioritization, GNPS networking, or metabolite annotation).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0091

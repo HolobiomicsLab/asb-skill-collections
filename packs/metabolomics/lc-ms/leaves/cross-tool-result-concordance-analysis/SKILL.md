@@ -3,6 +3,7 @@ name: cross-tool-result-concordance-analysis
 description: Use when you have executed multiple NPDtools database search pipelines (Dereplicator, VarQuest, Dereplicator+, or MetaMiner in different modes) on identical test spectra or RiPP sequence inputs and need to understand their relative sensitivity, specificity, and complementarity.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3375

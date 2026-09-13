@@ -3,6 +3,7 @@ name: relative-abundance-preprocessing
 description: Use when when you have raw count tables from 16S rRNA sequencing (microbiome) or LC-MS/MS metabolomics (metabolome) and need to train neural network or regression models for microbe-metabolite relationship prediction.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3174

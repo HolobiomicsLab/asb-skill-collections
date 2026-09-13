@@ -3,6 +3,7 @@ name: fragment-ion-matching
 description: Use when you have two tandem mass spectra (query and reference) with precursor m/z and fragment ion peaks, and you need to identify which fragment ions correspond between them to assess spectral similarity, detect structural variants, or validate compound identifications.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: mirror-plot-visualization-for-spectrum-comparison
 description: Use when after computing compareSpectra similarity scores between an experimental consensus MS2 spectrum and candidate reference spectra (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3520

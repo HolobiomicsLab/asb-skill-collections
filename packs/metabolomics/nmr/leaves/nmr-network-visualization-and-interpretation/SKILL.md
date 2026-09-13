@@ -3,6 +3,7 @@ name: nmr-network-visualization-and-interpretation
 description: 'Use when you have 2D NMR spectra (heteronuclear: HSQC, HMBC;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3172

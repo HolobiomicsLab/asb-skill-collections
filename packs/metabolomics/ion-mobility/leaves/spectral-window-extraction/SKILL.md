@@ -3,6 +3,7 @@ name: spectral-window-extraction
 description: Use when you have loaded multidimensional MS data (from MZA HDF5 files or other formats) and need to examine a specific m/z region—for example, to visualize a known lipid or metabolite mass range, perform peak detection within a narrow window, or reduce computational overhead by working on a subset.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

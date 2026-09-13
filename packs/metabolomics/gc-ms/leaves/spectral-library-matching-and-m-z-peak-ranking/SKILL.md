@@ -3,6 +3,7 @@ name: spectral-library-matching-and-m-z-peak-ranking
 description: Use when you have raw GC-MS output in CSV format (with Component.RT, Base.Peak.MZ, Component.Area, Compound.Name, Match.Factor, and File.Name columns) and need to systematically rank putative identifications by match quality and exact mass agreement.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: false-discovery-rate-interpretation
 description: Use when when you have executed database search pipelines (Dereplicator, VarQuest, or Dereplicator+) on centroided LC-MS/MS spectra in MGF format and obtained match results with associated p-values and false discovery rates.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3375

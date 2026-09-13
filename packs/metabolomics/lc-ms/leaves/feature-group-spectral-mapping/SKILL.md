@@ -3,6 +3,7 @@ name: feature-group-spectral-mapping
 description: Use when after sample alignment and isotopologue/adduct grouping are complete, when you need to associate MS2 spectral data (DDA-acquired) with the consolidated feature groups to enable MS/MS-based compound annotation or to bundle MS1 quantification with MS2 evidence.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3172

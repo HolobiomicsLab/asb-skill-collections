@@ -3,6 +3,7 @@ name: pathway-ranking-and-prioritization
 description: 'Use when after peak annotation when you have: (1) a peak intensity matrix (rows=peaks with KEGG/ChEBI/UniProt IDs, columns=samples) with group labels; (2) a pathway database (KEGG, Reactome, or user-defined metabolite sets); (3) a comparative experimental design (case vs. control groups).'
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_1812
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -51,6 +52,7 @@ attribution:
 
 # pathway-ranking-and-prioritization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank and prioritize metabolic or molecular pathways by computing activity level scores from intensity data and pathway definitions, then sorting by statistical significance. This skill enables hypothesis generation by identifying which pathways are most perturbed in a dataset, particularly robust to noise and missing peaks in metabolomics.

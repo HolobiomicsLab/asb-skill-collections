@@ -3,6 +3,7 @@ name: data-format-compliance-checking
 description: Use when mSMetaEnhancer fetches metadata from external services (CIR, CTS, PubChem, IDSM, BridgeDb) and must write enriched annotations (SMILES, InChI, CAS numbers, formulas, inchikeys, IUPAC names) into .msp files.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3172

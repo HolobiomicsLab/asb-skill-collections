@@ -3,6 +3,7 @@ name: spectrum-plot-generation-mz-intensity
 description: Use when you have mass spectrometry spectral data loaded into a Pandas DataFrame with columns representing m/z (mass-to-charge ratio) and intensity values, and you need to visualize the spectrum to inspect peak patterns, identify high-abundance ions, or compare spectral profiles across samples or.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0121

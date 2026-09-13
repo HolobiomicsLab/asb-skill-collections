@@ -3,6 +3,7 @@ name: mass-accuracy-ppm-filtering
 description: Use when when you have a set of candidate molecular formulae for a measured m/z value and need to rank them by how closely their theoretical m/z matches the observed value.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3674
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -40,6 +41,7 @@ attribution:
 
 # mass-accuracy-ppm-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter and rank candidate molecular formulae by mass accuracy using parts-per-million (PPM) error thresholds, a key criterion in the SMART multiple linear regression scoring pipeline for m/z-based formula assignment in mass spectrometry imaging.

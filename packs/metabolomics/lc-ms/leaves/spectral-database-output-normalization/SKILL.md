@@ -3,6 +3,7 @@ name: spectral-database-output-normalization
 description: Use when you have executed batch spectral searches against two or more domain-specific MASST tools and received heterogeneous output formats (domain-specific HTML trees, JSON objects, TSV match tables) that need to be reconciled into a single normalized schema for downstream aggregation.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -49,6 +50,7 @@ attribution:
 
 # spectral-database-output-normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize and aggregate heterogeneous mass spectrometry search outputs from multiple domain-specific spectral databases (microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST) into a unified data structure for cross-domain comparison and visualization. This skill is essential when combining search results across independent MASST tools to enable metaanalysis of spectral matches across biological domains.

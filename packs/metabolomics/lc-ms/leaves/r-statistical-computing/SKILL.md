@@ -3,6 +3,7 @@ name: r-statistical-computing
 description: Use when you have a merged and batch-corrected non-targeted LC-MS/MS feature table with sample metadata and need to perform statistical testing to identify significant features, compare groups (e.g., disease vs. control), or explore multivariate patterns.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0625

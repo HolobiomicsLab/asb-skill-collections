@@ -3,6 +3,7 @@ name: dense-neural-network-layer-construction
 description: Use when when you have a binned MS/MS spectrum vector (e.g., 9948-dimensional input from 10,000 equally-spaced m/z bins in the 10–1000 Da range) and need to compress it into a learned latent representation (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121

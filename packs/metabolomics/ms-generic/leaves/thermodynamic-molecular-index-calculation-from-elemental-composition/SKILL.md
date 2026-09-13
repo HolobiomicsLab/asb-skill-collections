@@ -3,6 +3,7 @@ name: thermodynamic-molecular-index-calculation-from-elemental-composition
 description: 'Use when when you have peak-abundance .csv files with assigned molecular formulas (elemental composition: C, H, O, N, P, S) from FT-ICR MS or high-resolution MS and need to characterize the redox and structural properties of the molecular pool—e.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0091

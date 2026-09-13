@@ -3,6 +3,7 @@ name: compound-structure-representation
 description: Use when when you have experimental MS/MS data (peak lists, precursor m/z, charge state, adduct type) paired with a chemical structure (SMILES or structural identifier), and need to create a unified Compound object for spectral alignment, modification-site prediction, or comparative fragmentation.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3762
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -48,6 +49,7 @@ attribution:
 
 # compound-structure-representation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encode chemical structures as SMILES strings and spectroscopic metadata (precursor m/z, charge, adduct) into Compound objects for downstream mass spectrometry analysis. This skill is essential for initializing structured chemical representations that link molecular topology to experimental ionization and fragmentation data.

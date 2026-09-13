@@ -3,6 +3,7 @@ name: ms2-peak-detection-and-counting
 description: Use when you have raw MS2 spectral data (MGF, mzML, or msp format) and need to generate a sample-level fingerprint for comparison across metabolomics samples, especially when samples were acquired using different LC methods, mass spectrometer technologies, or exhibit poor feature overlap or large.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

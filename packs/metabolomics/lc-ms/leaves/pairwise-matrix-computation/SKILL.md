@@ -3,6 +3,7 @@ name: pairwise-matrix-computation
 description: Use when when you have a cleaned MS/MS dataset with chemical structure annotations (SMILES, InChI, or InChIKey) and need to generate ground-truth structural similarity labels for training a deep learning model.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_1812
   edam_topics:
   - http://edamontology.org/topic_0154

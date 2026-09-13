@@ -3,6 +3,7 @@ name: graphical-time-warping-parameter-tuning
 description: Use when your XCMS-processed LC-MS dataset exhibits retention-time drift or misalignment artifacts—particularly when analyzing hundreds of samples, data acquisition spans longer than one week, or you observe feature groups with inconsistent m/z or RT that XCMS grouped under a single global warping.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0218

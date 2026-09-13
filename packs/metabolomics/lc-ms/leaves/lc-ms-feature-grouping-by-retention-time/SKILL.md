@@ -3,6 +3,7 @@ name: lc-ms-feature-grouping-by-retention-time
 description: Use when immediately after chromatographic peak detection (findChromPeaks) when you have detected peaks across multiple samples and need to identify which peaks represent the same feature across the sample cohort.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

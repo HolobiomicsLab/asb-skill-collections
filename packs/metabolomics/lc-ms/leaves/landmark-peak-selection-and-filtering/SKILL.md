@@ -3,6 +3,7 @@ name: landmark-peak-selection-and-filtering
 description: Use when when preparing mass tracks for retention-time (RT) alignment across multiple LC-MS samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -46,6 +47,7 @@ attribution:
 
 # landmark-peak-selection-and-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Selection and filtering of high-selectivity landmark peaks from reference and sample mass tracks to enable robust retention-time alignment via LOWESS regression. Landmark peaks serve as anchoring points for calibrating RT relationships between LC-MS samples.

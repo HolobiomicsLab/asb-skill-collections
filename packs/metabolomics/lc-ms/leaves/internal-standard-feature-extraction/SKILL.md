@@ -3,6 +3,7 @@ name: internal-standard-feature-extraction
 description: Use when you have processed LC-MS run data (feature table or peak detection output) containing internal standard identifications and need to monitor internal standard retention time, m/z, and intensity variation across samples as part of automated or user-defined QC checks during instrument runs.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3370

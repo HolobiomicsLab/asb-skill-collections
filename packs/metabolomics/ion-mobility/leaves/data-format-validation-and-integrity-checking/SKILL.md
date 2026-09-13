@@ -3,6 +3,7 @@ name: data-format-validation-and-integrity-checking
 description: Use when after converting raw Bruker .d/.baf or other proprietary mass spectrometry imaging formats using pyBaf2Sql or ProteoWizard MSConvert, or after running MSIGen's get_image_data() function.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_1812
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: targeted-metabolomics-feature-elaboration
 description: Use when you have targeted metabolomics data with peak area intensities organized in rows (samples) × columns (compounds), accompanying sample metadata indicating which samples are blanks, calibration curve points, or QC samples with known concentration values, and a compound legend assigning.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3663
   edam_topics:
   - http://edamontology.org/topic_3172

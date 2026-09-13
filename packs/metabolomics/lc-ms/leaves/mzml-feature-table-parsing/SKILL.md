@@ -3,6 +3,7 @@ name: mzml-feature-table-parsing
 description: Use when you have raw LCMS data in mzML format and a feature table (CSV) from a peak detection pipeline (e.g., MZmine) and need to prepare these inputs for NeatMS preprocessing, batch creation, or peak classification. This skill is the mandatory entry point for any NeatMS workflow.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

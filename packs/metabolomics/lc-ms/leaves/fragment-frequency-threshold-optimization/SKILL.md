@@ -3,6 +3,7 @@ name: fragment-frequency-threshold-optimization
 description: Use when you have replicate MS/MS spectra with labeled fragment recurrence frequencies and need to select an optimal frequency threshold (beyond the default 0.1) that maximizes spectral quality metrics while minimizing false positive noise.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3945
   edam_topics:
   - http://edamontology.org/topic_3520

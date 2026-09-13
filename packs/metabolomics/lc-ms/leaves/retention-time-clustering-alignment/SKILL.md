@@ -3,6 +3,7 @@ name: retention-time-clustering-alignment
 description: Use when you have extracted feature tables (via MS1 peak picking, MS2 recognition, or targeted list extraction) from two or more individual LC-MS samples and need to identify which features represent the same metabolite across samples before generating a unified, sample-aligned feature table for.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3370

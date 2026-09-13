@@ -3,6 +3,7 @@ name: mass2motif-parameter-optimization
 description: Use when when you have a preprocessed bag-of-fragments corpus from tandem mass spectrometry spectra and need to train an MS2LDA model to discover Mass2Motifs.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

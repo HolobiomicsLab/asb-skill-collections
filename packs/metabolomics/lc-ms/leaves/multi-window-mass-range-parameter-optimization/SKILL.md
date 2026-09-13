@@ -3,6 +3,7 @@ name: multi-window-mass-range-parameter-optimization
 description: Use when you observe sawtooth or discontinuous peak profiles in EICs after running tardisPeaks() on LC-MS data acquired with multiple overlapping or sequential m/z scan windows (e.g., positive and negative polarity scans, or data-independent acquisition with staggered windows).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3636
   edam_topics:
   - http://edamontology.org/topic_3520

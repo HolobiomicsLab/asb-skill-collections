@@ -3,6 +3,7 @@ name: spectral-peak-shape-modeling
 description: Use when when generating synthetic LC/GC-MS .mzML files from MoNA or HMDB spectral records where you need to compute absolute ground-truth maximum intensity (sim_ins) for each peak while accounting for chromatographic band broadening, peak tailing, and retention-time dispersion.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

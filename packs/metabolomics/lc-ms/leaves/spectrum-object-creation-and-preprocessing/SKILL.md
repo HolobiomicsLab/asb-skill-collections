@@ -3,6 +3,7 @@ name: spectrum-object-creation-and-preprocessing
 description: Use when when you have raw tandem mass spectrometry peak data (m/z and intensity pairs), precursor m/z, charge state, and adduct annotation for one or more compounds, and need to construct normalized spectrum objects suitable for downstream spectral alignment, modification site prediction, or.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -47,6 +48,7 @@ attribution:
 
 # spectrum-object-creation-and-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Create and preprocess mass spectrometry spectrum objects from raw peak data and metadata, applying standardized normalization and filtering to prepare inputs for comparative structural analysis. This skill is essential for building reproducible, comparable spectra objects required by alignment and annotation engines like ModiFinder.

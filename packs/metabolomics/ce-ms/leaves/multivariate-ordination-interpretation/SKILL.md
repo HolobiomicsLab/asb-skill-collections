@@ -3,6 +3,7 @@ name: multivariate-ordination-interpretation
 description: Use when you have a collection of tandem MS/MS samples (stored in MassIVE) with GNPS spectral library annotations (m/z, retention time, compound identity), and you want to explore whether samples cluster by shared chemical features without predefined class labels.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -49,6 +50,7 @@ attribution:
 
 # multivariate-ordination-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute unsupervised principal components analysis (PCA) on chemical annotation matrices derived from mass spectrometry data, then render and interactively explore the resulting ordination plots to identify sample relationships and chemical annotation patterns across a cohort.

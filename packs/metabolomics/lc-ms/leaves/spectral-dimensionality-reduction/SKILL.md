@@ -3,6 +3,7 @@ name: spectral-dimensionality-reduction
 description: Use when you have high-resolution tandem MS spectra (in mzML, mzXML, or MGF format) that need to be clustered or searched at scale (millions of spectra).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3520

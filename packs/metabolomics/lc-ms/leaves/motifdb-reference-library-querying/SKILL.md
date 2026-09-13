@@ -3,6 +3,7 @@ name: motifdb-reference-library-querying
 description: Use when after Mass2Motifs have been inferred from tandem MS/MS spectra via LDA topic modeling and you need to assign putative substructure annotations to those motifs.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3258
   edam_topics:
   - http://edamontology.org/topic_0091

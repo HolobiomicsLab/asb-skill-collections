@@ -3,6 +3,7 @@ name: cross-language-interface-implementation
 description: Use when you have a mature R analysis pipeline (e.g., using Spectra objects for MS data) but need access to specialized algorithms or calculations available only in Python libraries (e.g., CosineGreedy similarity from matchms).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

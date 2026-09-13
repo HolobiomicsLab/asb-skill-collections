@@ -3,6 +3,7 @@ name: metabologenomic-database-construction
 description: Use when you have genome FASTA or annotated genome files (antiSMASH .gbk, BOA .annotated.txt) and wish to discover ribosomally synthesized and post-translationally modified peptides (RiPPs) by integrating genomic and mass spectrometry data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3349
   edam_topics:
   - http://edamontology.org/topic_0621

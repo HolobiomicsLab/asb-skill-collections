@@ -3,6 +3,7 @@ name: metabolite-target-list-formatting
 description: Use when you have a raw LC–MS compound metadata file (xlsx or csv) with heterogeneous column names and column order, and you need to prepare it for targeted peak detection in TARDIS.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3172

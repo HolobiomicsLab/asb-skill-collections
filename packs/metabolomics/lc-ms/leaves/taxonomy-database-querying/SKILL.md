@@ -3,6 +3,7 @@ name: taxonomy-database-querying
 description: Use when a paired omics project record contains a genome identifier (e.g., from GenBank or NCBI) but lacks the corresponding organism scientific name.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3095
   edam_topics:
   - http://edamontology.org/topic_0637

@@ -3,6 +3,7 @@ name: irt-peptide-calibration-and-scoring
 description: Use when when you need to assess whether retention times measured on a given LC-MS run follow the expected linear relationship defined by iRT peptide standards (e.g., Pierce or Biognosys iRT peptides).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121

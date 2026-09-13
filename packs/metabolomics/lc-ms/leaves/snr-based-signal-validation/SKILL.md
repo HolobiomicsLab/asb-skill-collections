@@ -3,6 +3,7 @@ name: snr-based-signal-validation
 description: Use when after composite map peak detection has generated a full unfiltered peak list with SNR values computed for each candidate peak.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -45,6 +46,7 @@ attribution:
 
 # SNR-based signal validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filters detected LC-MS peaks by applying a signal-to-noise ratio (SNR > 2) threshold to retain only peaks with sufficient signal separation from background noise. This is a foundational selectivity step in the asari peak quality pipeline that reduces false positive features before downstream filtering on peak shape and height.

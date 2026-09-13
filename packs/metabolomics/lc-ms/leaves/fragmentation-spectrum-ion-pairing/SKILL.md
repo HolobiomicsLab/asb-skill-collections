@@ -3,6 +3,7 @@ name: fragmentation-spectrum-ion-pairing
 description: 'Use when you have two MS/MS spectra (precursor m/z and fragment ion lists) and need to identify the non-overlapping set of fragment ion alignments. Use this skill when: (1) you want to move beyond monotonic alignment to capture complex ion relationships;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3520

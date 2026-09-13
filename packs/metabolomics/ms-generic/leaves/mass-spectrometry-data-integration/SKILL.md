@@ -3,6 +3,7 @@ name: mass-spectrometry-data-integration
 description: Use when you have multiple mzML or HDF5 feature tables from the same study acquired on the same or similar instruments and need to align feature coordinates across samples to correct for systematic shifts in mass-to-charge, drift time, or retention time caused by instrumental drift, column aging.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

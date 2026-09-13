@@ -3,6 +3,7 @@ name: metabolite-set-annotation-mapping
 description: Use when you have a metabolomics peak intensity matrix with feature IDs (m/z, retention time, or arbitrary peak identifiers) and need to assign these peaks to standardized metabolite databases or spectral groupings (KEGG compounds, ChEBI IDs, GNPS Molecular Families, or MS2LDA Mass2Motifs) before.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_0769

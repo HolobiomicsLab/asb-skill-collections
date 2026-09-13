@@ -3,6 +3,7 @@ name: peak-detection-accuracy-assessment
 description: Use when after running a non-targeted preprocessing (NPP) pipeline (e.g., XCMS, MZmine 2, OpenMS) on the same set of centroided mzML files that were used to generate a validated benchmark dataset.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3172

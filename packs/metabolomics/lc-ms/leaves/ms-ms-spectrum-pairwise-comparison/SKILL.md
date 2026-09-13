@@ -3,6 +3,7 @@ name: ms-ms-spectrum-pairwise-comparison
 description: Use when you have millions of MS/MS spectra in mzML, mzXML, or MGF format that have been converted to low-dimensional vectors via feature hashing, and you need to identify which spectra are similar enough to cluster together.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0121

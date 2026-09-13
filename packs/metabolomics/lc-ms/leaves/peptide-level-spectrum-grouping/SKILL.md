@@ -3,6 +3,7 @@ name: peptide-level-spectrum-grouping
 description: Use when after embedding MS/MS spectra into a 32-dimensional vector space using GLEAMS, when you need to identify and group all spectra originating from the same peptide sequence.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

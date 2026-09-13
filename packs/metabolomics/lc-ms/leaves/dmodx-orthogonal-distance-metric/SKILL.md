@@ -3,6 +3,7 @@ name: dmodx-orthogonal-distance-metric
 description: Use when apply DModX when you have a normalized LC-MS feature matrix (post-normalization, Step 7 in OUKS) and need to identify samples whose metabolomic profiles are systematically displaced from the learned PCA subspace—indicating potential technical artifacts, extreme biological phenotypes, or.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

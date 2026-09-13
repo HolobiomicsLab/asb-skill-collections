@@ -3,6 +3,7 @@ name: metabolite-ms-ms-annotation
 description: Use when when you have SWATH-MS raw data (mzML or vendor format) containing multiplexed MS/MS spectra from multiple co-eluting precursor ions and need to separate these spectra into individual, annotatable component spectra for metabolite identification.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

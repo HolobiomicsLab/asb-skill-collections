@@ -3,6 +3,7 @@ name: mass-difference-pattern-matching
 description: Use when after peak picking and sample alignment when you have an aligned feature table containing m/z and retention time coordinates. Use it when your untargeted LC-MS workflow needs to reduce feature redundancy caused by naturally occurring stable isotope patterns and common adduct formation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3557
   edam_topics:
   - http://edamontology.org/topic_3370

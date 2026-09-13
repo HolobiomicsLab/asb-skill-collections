@@ -3,6 +3,7 @@ name: vendor-proprietary-format-interoperability
 description: Use when you have mass spectrometry raw data in a proprietary vendor format (Thermo .raw, Agilent .d with or without ion mobility, Bruker ion mobility .d, or mzML) and need to enable reproducible, language-agnostic access to multidimensional spectra (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

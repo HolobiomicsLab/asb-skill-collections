@@ -3,6 +3,7 @@ name: gc-ci-ms-data-processing
 description: Use when you have vendor-format GC-CI-MS raw data from a stable isotope labeling experiment, a list of targeted compounds with known monoisotopic m/z, retention time, and molecular formula, and you need to extract per-isotopologue area and intensity values across multiple samples with consistent.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0769

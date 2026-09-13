@@ -3,6 +3,7 @@ name: molecular-formula-assignment
 description: 'Use when you have acquired MS/MS spectra (in MGF format with required fields: TITLE, PRECURSOR_MZ, PRECURSOR_TYPE, COLLISION_ENERGY) from known or unknown compounds and need to predict their molecular formulas with ranked candidates and confidence scores.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0718

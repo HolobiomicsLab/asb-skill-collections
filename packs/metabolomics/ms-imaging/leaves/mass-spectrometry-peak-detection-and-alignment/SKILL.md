@@ -3,6 +3,7 @@ name: mass-spectrometry-peak-detection-and-alignment
 description: Use when after normalization, smoothing, and baseline reduction have been performed on raw MSImagingArrays data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0769

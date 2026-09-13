@@ -3,6 +3,7 @@ name: mass-spectrometry-peak-filtering-and-noise-reduction
 description: Use when you have raw MS/MS spectra in MGF, mzML, or msp format and need to prepare them for mass2motif discovery or topic modeling.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

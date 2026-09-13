@@ -3,6 +3,7 @@ name: m-z-tolerance-window-matching
 description: Use when when you have detected features with m/z, drift time, and retention time dimensions and need to associate peaks into isotopic groups (e.g., monoisotopes with C13 substitutions) or align features across multiple LC-IMS-MS/MS samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

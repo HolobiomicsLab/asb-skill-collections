@@ -3,6 +3,7 @@ name: score-standardisation-z-score-normalization
 description: Use when when comparing raw link scores (strain correlation or IOKR) across different GCF-MF or BGC-spectrum pairs and you need to distinguish true positive links from background noise. Raw scores depend on overlap size and are incomparable across links with different cluster sizes;
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3301

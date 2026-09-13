@@ -3,6 +3,7 @@ name: constraint-based-model-sampling-and-flux-prediction
 description: Use when you have constraint-based metabolic models with integrated multi-omics constraints (transcriptomics via Reaction Activity Scores, extracellular flux ratios via YSI bioanalyzer or LC-MS, nutrient availability bounds), and you need to determine whether differential enzyme expression.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0602

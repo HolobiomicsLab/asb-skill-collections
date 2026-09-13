@@ -3,6 +3,7 @@ name: rapid-spectrum-retrieval-optimization
 description: Use when you have a large collection of mass spectrometry spectra (m/z and intensity pairs) and need to rapidly retrieve similar or candidate spectra from the archive in response to queries.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3945
   edam_topics:
   - http://edamontology.org/topic_0121

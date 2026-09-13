@@ -3,6 +3,7 @@ name: configuration-driven-batch-processing
 description: Use when when processing multiple PSM files from search engines (e.g., MaxQuant, MSGFPlus, Mascot) that omit fixed modifications from their output, or when PSM and spectrum files use inconsistent ID schemes, decoy naming conventions, or modification notations.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: vendor-instrument-data-handling
 description: Use when you have acquired raw mass spectrometry data in vendor-proprietary formats (ThermoFisher, Agilent, or equivalent) and need to analyze it using MSThunder for unknown organic pollutant identification.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -43,6 +44,7 @@ attribution:
 
 # vendor-instrument-data-handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert raw mass spectrometry data from multiple vendor formats (ThermoFisher .raw, Agilent .d, etc.) into a standardized, analysis-ready format via MSConvert on a Linux system, enabling downstream deep learning-based nontargeted pollutant identification in MSThunder. This skill bridges proprietary instrument output to open analytical frameworks.

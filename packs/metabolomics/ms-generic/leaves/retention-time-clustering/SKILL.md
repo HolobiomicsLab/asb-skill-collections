@@ -3,6 +3,7 @@ name: retention-time-clustering
 description: Use when you have an XCMS CentWave feature extraction output table containing multiple features with near-identical m/z values and retention times (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3172

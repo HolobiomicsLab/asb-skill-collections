@@ -3,6 +3,7 @@ name: candidate-ranking-by-score
 description: 'Use when you have a query mass spectrum and a set of candidate molecular structures, and you need to prioritize candidates by their likelihood of matching the query. Typical triggers include: (1) you have computed or extracted spectral features (e.'
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -45,6 +46,7 @@ attribution:
 
 # candidate-ranking-by-score
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank a set of molecular candidates against a query mass spectrum by computing cross-view similarity scores using MultiView Projection (MVP), then sorting candidates by aggregated scores to identify the most likely molecular matches. This skill is essential for MS/MS annotation workflows where multiple candidate structures must be prioritized for a given experimental spectrum.

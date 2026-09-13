@@ -3,6 +3,7 @@ name: feature-metadata-parsing-and-integration
 description: Use when after completing sample alignment in JPA (Part 5) or when ingesting a peaklist or aligned feature matrix from prior peak-picking runs, parse feature metadata to enable EIC export or multi-sample feature annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3172

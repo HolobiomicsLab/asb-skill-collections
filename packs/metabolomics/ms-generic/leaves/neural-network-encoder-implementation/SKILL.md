@@ -3,6 +3,7 @@ name: neural-network-encoder-implementation
 description: Use when when you need to benchmark multiple encoder types (e.g., FFN vs. GNN) on the same predictive task and require evidence that performance differences reflect genuine architectural trade-offs rather than suboptimal tuning.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -44,6 +45,7 @@ attribution:
 
 # neural-network-encoder-implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement equivalent FFN and GNN encoder architectures with matched hyperparameters, covariates, and random seeds to enable fair empirical comparison of neural network variants for spectrum prediction. This skill ensures that architectural differences—not hyperparameter choices or training variations—drive observed performance divergence.

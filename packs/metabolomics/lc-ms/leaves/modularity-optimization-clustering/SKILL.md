@@ -3,6 +3,7 @@ name: modularity-optimization-clustering
 description: Use when after MS-DIAL peak character estimation has grouped LC-MS features into preliminary clusters based on peak shape and chromatographic similarity, and you need to select a single representative parental feature from each cluster to reduce redundancy before MS-FINDER annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

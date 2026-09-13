@@ -3,6 +3,7 @@ name: compound-identifier-lookup
 description: Use when you have an experimental MS/MS spectrum (m/z and intensity pairs in mzML/mzXML format from DDA or targeted acquisition on Thermo, Waters, or Bruker instruments) and need to identify the unknown compound by comparing it against a reference database.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3860
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -46,6 +47,7 @@ attribution:
 
 # Reconstruct library search annotation of an unknown spectrum against a local or public database
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Search and annotate an unknown MS/MS spectrum by matching its fragmentation pattern and precursor m/z against a spectral library (local or public) using cosine similarity or spectral dot-product algorithms. This skill enables confident compound identification without sharing proprietary data to public repositories.

@@ -3,6 +3,7 @@ name: peak-validation-synthetic-data
 description: Use when after running a 1D peak detection function (e.g., mzapy.peaks.find_peaks_1d_localmax or mzapy.peaks.find_peaks_1d_gauss) on synthetic mass spectra with known peak locations and heights.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

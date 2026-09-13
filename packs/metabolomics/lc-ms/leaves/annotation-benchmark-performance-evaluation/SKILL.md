@@ -3,6 +3,7 @@ name: annotation-benchmark-performance-evaluation
 description: Use when after running an end-to-end annotation workflow (matching, clustering, filtering, and prioritization) on untargeted LC-MS peak tables, when you have access to a curated reference dataset (df.Ref) containing validated peak assignments for the same biological sample.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: chimeric-spectra-classification-model-training
 description: Use when when your DDA-mode LC-MS/MS data exhibits chimeric spectra patterns that differ systematically from the reference training set used in DNMS2Purifier, or when you wish to optimize purification sensitivity/specificity for your particular instrument, ionization method, or sample matrix.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -42,6 +43,7 @@ attribution:
 
 # chimeric-spectra-classification-model-training
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train a customized machine-learning model to classify and purify chimeric MS/MS spectra in untargeted metabolomics workflows. This skill enables adaptation of the DNMS2Purifier purification engine to user-specific LC-MS/MS acquisition protocols by retraining on annotated spectra with known purity labels.

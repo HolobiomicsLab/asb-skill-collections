@@ -3,6 +3,7 @@ name: multi-dimensional-data-encoding
 description: Use when you have loaded LC-MS feature tables or peak detection output containing internal standard identifications with retention times, m/z values, and intensity measurements across multiple samples, and you need to detect anomalies such as retention time drift, m/z shifts, or intensity loss that.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0091

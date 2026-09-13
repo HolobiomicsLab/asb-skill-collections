@@ -3,6 +3,7 @@ name: mean-intensity-aggregation
 description: Use when after importing imzML or vendor-specific MSI data into napari and visualizing the raw spectral dataset.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

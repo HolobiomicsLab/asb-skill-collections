@@ -3,6 +3,7 @@ name: feature-node-identifier-matching
 description: Use when you have created a feature-based GNPS molecular network and a corresponding MS2LDA experiment, and you need to propagate substructural motif annotations from the MS2LDA output back to the network nodes by matching feature IDs.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: xcms-grouping-result-interpretation
 description: Use when xCMS grouping has been performed on LC-MS data from studies with hundreds of samples or data acquisition periods longer than a week, where retention time drift structures are complex and the single-warping-function assumption is likely violated.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

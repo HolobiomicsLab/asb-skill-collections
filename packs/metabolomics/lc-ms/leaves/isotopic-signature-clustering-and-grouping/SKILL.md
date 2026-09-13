@@ -3,6 +3,7 @@ name: isotopic-signature-clustering-and-grouping
 description: Use when you have a feature table (m/z, drift_time, retention_time, intensity) from LC-IMS-MS or similar multi-dimensional MS acquisition and need to (1) link isotopic variants to their monoisotopic parent features, (2) disambiguate true chemical features from noise or instrumental artifacts, or.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3520

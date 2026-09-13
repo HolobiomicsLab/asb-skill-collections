@@ -3,6 +3,7 @@ name: python-sqlite-migration-and-etl
 description: Use when you have MS/MS spectral library data currently stored in multiple file formats (JSON, CSV, or binary) and need to enable fast, filtered queries by metadata (e.g., precursor m/z, retention time, molecular class) without loading entire libraries into memory.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0091

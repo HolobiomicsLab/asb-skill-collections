@@ -3,6 +3,7 @@ name: formula-database-chemical-noise-sampling
 description: Use when when you need to generate synthetic MS/MS spectra with chemical noise for validating denoising performance, benchmarking library matching algorithms, or testing edge cases where clean reference spectra exist but must be augmented with realistic contaminants.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

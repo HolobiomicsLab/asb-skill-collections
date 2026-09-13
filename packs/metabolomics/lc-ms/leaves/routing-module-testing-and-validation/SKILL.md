@@ -3,6 +3,7 @@ name: routing-module-testing-and-validation
 description: Use when when you have implemented conditional routing logic in the GNPS_MASST codebase and need to verify that spectrum submissions with explicit domain-context selections (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

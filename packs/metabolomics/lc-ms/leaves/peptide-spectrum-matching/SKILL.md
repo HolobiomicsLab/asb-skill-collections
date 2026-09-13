@@ -3,6 +3,7 @@ name: peptide-spectrum-matching
 description: Use when when you have high-resolution tandem mass spectrometry data (in mzML or mzXML format) and a spectral library, and need to identify peptides including those with post-translational modifications.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0121

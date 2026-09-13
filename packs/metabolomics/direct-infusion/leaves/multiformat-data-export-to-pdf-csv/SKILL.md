@@ -3,6 +3,7 @@ name: multiformat-data-export-to-pdf-csv
 description: Use when you have raw MS data in vendor formats (Agilent .d, Thermo .raw, Bruker .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3957
   edam_topics:
   - http://edamontology.org/topic_3520

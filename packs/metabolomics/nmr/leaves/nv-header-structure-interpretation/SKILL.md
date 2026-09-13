@@ -3,6 +3,7 @@ name: nv-header-structure-interpretation
 description: Use when you have a raw NV file from NMRViewJ or compatible NMR acquisition software and need to extract header metadata before processing spectroscopic data.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0593
@@ -39,6 +40,7 @@ attribution:
 
 # nv-header-structure-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and validate the binary header structure of NV (NMRViewJ) format files, extracting magic number, version, dimensionality, and per-dimension metadata (size, blockSize, frequency, phase, labels). This skill is essential for correctly reading NMR spectroscopy data files and detecting endianness mismatches early in the pipeline.

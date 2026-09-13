@@ -3,6 +3,7 @@ name: basepeak-intensity-identification
 description: Use when when you have Thermo Fisher Scientific .raw files from an Orbitrap instrument and need to identify the m/z value and corresponding intensity of the most abundant ion in each MS1 scan for quality control, method optimization, or feature extraction in a modular R-based proteomics pipeline.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0121

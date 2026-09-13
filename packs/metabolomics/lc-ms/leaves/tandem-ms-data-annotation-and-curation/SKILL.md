@@ -3,6 +3,7 @@ name: tandem-ms-data-annotation-and-curation
 description: Use when you have an unknown tandem MS/MS spectrum (precursor m/z and fragment peaks) and need to infer the molecular formula and ionization mode (e.g., [M+H]+, [M+Na]+, [M+K]+, [M+NH4]+) in a de novo setting without access to spectral libraries.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

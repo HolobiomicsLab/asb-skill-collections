@@ -3,6 +3,7 @@ name: reference-semantics-verification
 description: Use when when applying sequential filters to a large metabolomics peak table (e.g., mispicked ions, group, CV, or in-source filters) and you need to confirm that setting copy_object=FALSE actually modifies the input object in-place rather than creating a hidden copy.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: integration-test-development
 description: Use when when you have implemented or modified a data ingestion module (e.g., mzML parser) and need to verify that file deserialization produces correct internal representations.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

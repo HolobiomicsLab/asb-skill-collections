@@ -3,6 +3,7 @@ name: iterative-fitting-convergence
 description: Use when you have 1D mass spectrometry signal data (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_3520

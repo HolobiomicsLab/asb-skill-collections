@@ -3,6 +3,7 @@ name: permutation-test-p-value-estimation
 description: Use when after computing Multi-Block Variable Importance in Projection (MB-VIP) scores on a fitted MB-PLS discriminant model, when you need to distinguish signal features from noise by establishing empirical significance thresholds rather than relying on parametric assumptions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3659
   edam_topics:
   - http://edamontology.org/topic_0091

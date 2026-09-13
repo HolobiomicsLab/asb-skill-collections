@@ -3,6 +3,7 @@ name: replicate-consistency-assessment
 description: Use when after NMR or MS data acquisition and preprocessing (phasing, baseline correction) when you have a SummarizedExperiment object containing assay intensity matrix with QC sample columns designated.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -44,6 +45,7 @@ attribution:
 
 # replicate-consistency-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute coefficient of variation (CV) across quality control (QC) replicates to quantify the reproducibility of individual metabolic features in high-throughput NMR or MS assays. This metric identifies which features have stable, reliable signal intensity across technical replicates, informing downstream filtering and association analysis.

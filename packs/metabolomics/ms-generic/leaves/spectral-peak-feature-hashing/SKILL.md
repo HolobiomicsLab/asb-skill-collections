@@ -3,6 +3,7 @@ name: spectral-peak-feature-hashing
 description: Use when when you have a large collection of query high-resolution mass spectra that must be rapidly matched against a spectral library containing modified and unmodified peptides, and you need to reduce computational overhead before approximate nearest neighbor indexing or GPU-accelerated.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121

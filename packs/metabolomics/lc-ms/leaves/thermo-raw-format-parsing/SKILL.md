@@ -3,6 +3,7 @@ name: thermo-raw-format-parsing
 description: Use when when you have LC-MS data in Thermo .raw format (a proprietary binary output from Thermo mass spectrometers) and need to load it into a 3D LC-MS viewer or extract structured spectral metadata (retention time, m/z values, intensities, scan number, MS level) for visualization or quantitative.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

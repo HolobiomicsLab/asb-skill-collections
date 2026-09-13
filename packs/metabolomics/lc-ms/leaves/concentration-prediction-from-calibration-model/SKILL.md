@@ -3,6 +3,7 @@ name: concentration-prediction-from-calibration-model
 description: Use when you have (1) a set of calibration samples with known spiked concentrations of target compounds, (2) measured compound/internal-standard ratios for both calibration and study samples, and (3) need to convert ratios to absolute concentrations for reporting.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3172

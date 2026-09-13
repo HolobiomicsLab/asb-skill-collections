@@ -3,6 +3,7 @@ name: peak-intensity-vector-transformation
 description: Use when you have a peak intensity matrix from LC/GC-MS analysis with known QC sample indices and suspect batch-related systematic variation in feature intensities. Use it as a preprocessing step before downstream analysis (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3370

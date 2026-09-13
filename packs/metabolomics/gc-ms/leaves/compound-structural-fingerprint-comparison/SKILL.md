@@ -3,6 +3,7 @@ name: compound-structural-fingerprint-comparison
 description: Use when you have a set of query chemicals and a reference library (organized by type or group), and you need to determine which reference compounds most closely resemble each query chemical based on structural features.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_2258

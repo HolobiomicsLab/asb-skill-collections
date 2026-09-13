@@ -3,6 +3,7 @@ name: fragmentation-pattern-classification
 description: Use when you have tandem mass spectra for compounds with known binary or categorical molecular properties (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3502
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -44,6 +45,7 @@ attribution:
 
 # fragmentation-pattern-classification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train interpretable decision trees on ChemEcho sparse feature vectors derived from tandem mass spectra to classify molecular properties (e.g., sulfo group presence). The learned tree paths can be converted directly to MassQL queries for deployment and transparent evaluation of fragmentation-based prediction criteria.

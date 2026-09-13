@@ -3,6 +3,7 @@ name: peak-table-extraction
 description: Use when you have raw or converted spectral data (jcamp, RAW, or mzML format) from NMR, IR, or MS instruments and need to identify individual peaks, extract their properties (chemical shift, m/z, intensity, width), and generate a structured peak table for annotation, comparison, or publication.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3172

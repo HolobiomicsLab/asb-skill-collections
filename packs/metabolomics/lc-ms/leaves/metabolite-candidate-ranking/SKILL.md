@@ -3,6 +3,7 @@ name: metabolite-candidate-ranking
 description: Use when you have an untargeted mass spectrometry spectrum (MS/MS data) and a set of candidate molecules from PubChem or similar databases, and you need to rank candidates by likelihood of being the true molecular annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3258
   edam_topics:
   - http://edamontology.org/topic_0091

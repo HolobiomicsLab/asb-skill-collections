@@ -3,6 +3,7 @@ name: roi-detection-mass-spectrometry
 description: Use when you have raw or converted mass spectrometry data (CE-MS or LC-MS in mzXML or mzML format) and need to identify candidate metabolite regions before feature extraction.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3172

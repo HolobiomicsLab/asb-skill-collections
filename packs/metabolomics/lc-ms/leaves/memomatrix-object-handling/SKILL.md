@@ -3,6 +3,7 @@ name: memomatrix-object-handling
 description: Use when you have generated one or more MemoMatrix objects (MS2 fingerprint matrices from separate sample sets) and need to combine them for cross-cohort alignment, validate structural consistency after merging, or prepare merged matrices for downstream filtering and visualization.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3033
   edam_topics:
   - http://edamontology.org/topic_3375

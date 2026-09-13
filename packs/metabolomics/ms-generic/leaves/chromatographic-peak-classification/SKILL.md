@@ -3,6 +3,7 @@ name: chromatographic-peak-classification
 description: Use when you have (1) a benchmark dataset of reference peaks with validated m/z, retention time boundaries, and isotopologue assignments, and (2) NPP output feature tables (unaligned and aligned) from tools like XCMS, MZmine 2, or MS-DIAL that you wish to evaluate.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

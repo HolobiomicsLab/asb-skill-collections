@@ -3,6 +3,7 @@ name: genome-identifier-organism-mapping
 description: Use when a paired omics project record contains a genome identifier field (e.g., from GenBank) but lacks the corresponding organism name, or when you need to validate that genome identifiers in bulk project records can be resolved to authoritative taxonomy.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0623

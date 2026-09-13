@@ -3,6 +3,7 @@ name: mass-spectrometry-fragmentation-pattern-modeling
 description: Use when when building a re-usable spectral reference library for lipidomics workflows where you need to match experimental MS/MS spectra against a comprehensive theoretical fragmentation model.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0121

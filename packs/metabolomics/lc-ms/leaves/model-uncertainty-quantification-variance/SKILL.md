@@ -3,6 +3,7 @@ name: model-uncertainty-quantification-variance
 description: Use when when you have predictions from multiple independently trained models (e.g., ROASMI_1–ROASMI_5) for the same set of compounds in a reversed-phase liquid chromatography system at eluent pH ~2.7, and you need to estimate prediction reliability without ground-truth labels.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3931
   edam_topics:
   - http://edamontology.org/topic_3957

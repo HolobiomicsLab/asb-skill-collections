@@ -3,6 +3,7 @@ name: thermo-raw-binary-data-extraction
 description: Use when you have acquired .raw files from a Thermo mass spectrometer (e.g., Q Exactive, Orbitrap) and need to expose their contents—scan numbers, retention times, m/z values, intensities, and precursor information—for downstream nontargeted LCMS feature detection and alignment.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: metabolomics-lcms-data-preprocessing
 description: Use when when you have raw LC-MS metabolomics data from multiple disease groups (e.g., .mzML or .npy format files) that must be converted into a uniform, normalized feature representation before training a deep learning classifier to distinguish disease states.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091

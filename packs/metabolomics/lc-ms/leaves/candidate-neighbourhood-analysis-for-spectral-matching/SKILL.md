@@ -3,6 +3,7 @@ name: candidate-neighbourhood-analysis-for-spectral-matching
 description: Use when you have a query MS/MS spectrum matched against a library and need to re-rank the top 2000 candidate spectra by combining spectral similarity (MS2Deepscore) with structural neighbourhood information.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0769

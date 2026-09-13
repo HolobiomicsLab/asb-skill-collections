@@ -3,6 +3,7 @@ name: spectra-object-manipulation-r
 description: Use when when you have extracted and concatenated MS/MS spectra from multiple replicates for a set of metabolomic features (stored in a preprocessed list), and need to apply intensity-based filtering (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3520

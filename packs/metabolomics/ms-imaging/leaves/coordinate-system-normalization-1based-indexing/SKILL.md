@@ -3,6 +3,7 @@ name: coordinate-system-normalization-1based-indexing
 description: Use when when exporting quantified ion images and pixel metadata from LipidQMap to HDF5 format for use in downstream Cardinal or other MSI analysis workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -41,6 +42,7 @@ attribution:
 
 # Coordinate-system normalization to 1-based indexing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert spatial coordinates and pixel indices from 0-based to 1-based indexing when exporting MSI data to HDF5 containers that follow the Cardinal::HDF5 convention. This ensures standardized interchange and correct spatial interpretation across MSI analysis platforms.

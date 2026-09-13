@@ -3,6 +3,7 @@ name: extraction-parameter-optimization-ppm-retention-time-ion-mobility
 description: Use when you are reconstructing targeted ion chromatograms (XIC) and ion mobilograms (IM) from raw diaPASEF data and need to balance sensitivity (wide extraction windows) against specificity (narrow windows that reject interference).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

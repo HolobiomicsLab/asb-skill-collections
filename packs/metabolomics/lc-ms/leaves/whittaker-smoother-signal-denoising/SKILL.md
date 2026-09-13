@@ -3,6 +3,7 @@ name: whittaker-smoother-signal-denoising
 description: Use when after baseline correction (e.g., via asymmetric least squares) when raw GCxGC-MS chromatograms still contain high-frequency noise that obscures true signal structure. Use it when you need to reduce noise before peak alignment or multivariate analysis (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3563
   edam_topics:
   - http://edamontology.org/topic_0091

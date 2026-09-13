@@ -3,6 +3,7 @@ name: total-ion-current-calculation
 description: Use when after loading all MS1 scans from a raw or intermediate mass spectrum file (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: chemical-metadata-retrieval-and-aggregation
 description: Use when after raw GC-MS CSV input has been parsed into separate matrices (Component.RT, Base.Peak.MZ, Compound.Name, Match.Factor, Component.Area) and you need to enrich sample-level identifications with authoritative chemical properties.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3431
   edam_topics:
   - http://edamontology.org/topic_0091

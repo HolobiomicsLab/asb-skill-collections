@@ -3,6 +3,7 @@ name: computational-throughput-measurement
 description: Use when when you need to compare the computational efficiency of different mass spectrometry libraries on identical data and processing pipelines, or when you want to establish baseline throughput for a library version and validate claims of performance improvement.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_3520

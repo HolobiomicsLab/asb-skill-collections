@@ -3,6 +3,7 @@ name: domain-specific-language-grammar-design
 description: Use when when you need to enable non-programmers or domain experts to formulate complex, unambiguous queries over specialized data (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_0091

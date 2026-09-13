@@ -3,6 +3,7 @@ name: interactive-workflow-validation
 description: 'Use when after automated peak detection has identified candidate peaks from LC-MS mzML files, but before exporting the final metabolite library. Use this skill when you need to: (1) optimize noise and peak-detection parameters by visualizing their effect on a representative subset of peaks;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3370

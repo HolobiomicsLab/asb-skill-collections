@@ -3,6 +3,7 @@ name: mass-spectrometry-data-parsing
 description: Use when you have received raw or vendor-converted centroid mzML files from LC-MS, GC-MS, or DI-MS platforms and need to extract MS1 spectra before building mass tracks, performing peak detection, or constructing composite feature maps.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3931
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -90,6 +91,7 @@ attribution:
 
 # mass-spectrometry-data-parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse centroid mzML files from LC-MS instruments to extract MS1 spectra as (m/z, scan_number, intensity) tuples, indexing them for efficient retrieval and downstream mass track construction. This is the foundational step that converts vendor instrument data into a structured, queryable representation suitable for high-resolution metabolomics feature extraction.

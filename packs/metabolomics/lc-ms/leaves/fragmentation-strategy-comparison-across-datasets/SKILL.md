@@ -3,6 +3,7 @@ name: fragmentation-strategy-comparison-across-datasets
 description: Use when you have extracted a chemical mixture from a real mzML acquisition (e.g., Beer1pos), simulated the same chemicals through ViMMS using a chosen controller (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3370

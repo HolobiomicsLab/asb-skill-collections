@@ -3,6 +3,7 @@ name: in-silico-spectrum-generation-cfmid
 description: Use when when you have a list of SMILES strings representing chemical structures and need to create paired SMILES-spectrum training data for a generative model (like MSGO) without requiring experimental mass spectra.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0593

@@ -3,6 +3,7 @@ name: proforma-notation-parsing
 description: Use when when peptide identifications from a search engine (MaxQuant, MSGFPlus, Sage, etc.) contain custom or engine-specific modification notation that must be converted to a standardized format before rescoring, or when different search engines use incompatible modification label schemes that.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

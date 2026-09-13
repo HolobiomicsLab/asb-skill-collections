@@ -3,6 +3,7 @@ name: annotation-quality-filtering-by-cosine-similarity
 description: Use when you have in silico annotations (e.g. from GNPS, timaR, or SIRIUS) paired with experimental MS/MS spectra and need to select only the highest-confidence structural matches.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

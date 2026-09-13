@@ -3,6 +3,7 @@ name: ion-mobility-class-stratification
 description: Use when you have TWIM-MS experimental data with assigned biomolecular class labels (e.g., peptides, lipids, carbohydrates) and arrival time measurements, and you need to compute CCS values conditioned on class membership.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: peak-evaluation-metrics-cselectivity-snr-gaussian-fit
 description: Use when after scipy.signal.find_peaks has identified candidate peaks on a composite mass track segment, evaluate each peak to decide whether to retain it in the final feature table.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -45,6 +46,7 @@ attribution:
 
 # peak-evaluation-metrics-cSelectivity-SNR-gaussian-fit
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate detected peaks against three orthogonal quality criteria—chromatographic selectivity (cSelectivity), signal-to-noise ratio (SNR > 2), and gaussian fit quality—to retain only peaks meeting shape and signal thresholds. This multi-metric filtering ensures peaks are reproducible, well-resolved from background, and conform to expected peak shape.

@@ -3,6 +3,7 @@ name: msi-peak-annotation
 description: Use when you have processed MSI data (peak matrix and spatial coordinates) from matrix-assisted laser desorption/ionization (MALDI) or silver-assisted laser desorption/ionization (AgLDI) experiments, and you need to computationally distinguish matrix ions from analyte ions before downstream feature.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520

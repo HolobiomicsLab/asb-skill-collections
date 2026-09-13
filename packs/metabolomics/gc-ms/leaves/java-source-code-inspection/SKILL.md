@@ -3,6 +3,7 @@ name: java-source-code-inspection
 description: Use when when you need to understand how a Java application routes input data to processing modules based on declared data types, conditionally branches on instrument or format types (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

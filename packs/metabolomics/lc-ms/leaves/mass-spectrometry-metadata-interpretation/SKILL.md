@@ -3,6 +3,7 @@ name: mass-spectrometry-metadata-interpretation
 description: Use when when integrating LC-MS/MS data from diverse sources (e.g., public repositories like MSV000080102, instrument outputs, or precomputed workflows) into NPDtools pipelines.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121

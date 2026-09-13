@@ -3,6 +3,7 @@ name: isotopologue-adduct-link-identification
 description: Use when you have selected statistically significant features from multi-assay untargeted LC-MS metabolomics data and need to group them by structural relationships defined by their mass-to-charge ratios (m/z) and retention times (RT).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_3370

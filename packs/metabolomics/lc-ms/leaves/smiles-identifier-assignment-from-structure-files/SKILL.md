@@ -3,6 +3,7 @@ name: smiles-identifier-assignment-from-structure-files
 description: Use when when you have a mass spectral library (MSP format) that lacks SMILES annotations but is paired with a folder of MOL structure files (from Lib2NIST export or similar source).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_0154

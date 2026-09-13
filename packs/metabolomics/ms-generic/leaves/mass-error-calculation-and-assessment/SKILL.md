@@ -3,6 +3,7 @@ name: mass-error-calculation-and-assessment
 description: Use when after peak picking and before or after molecular formula assignment on FT-ICR data, especially when calibrating on a specific field strength (e.g., 12 T or 15 T).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0769

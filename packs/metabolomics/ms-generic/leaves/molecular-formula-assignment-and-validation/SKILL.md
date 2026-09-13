@@ -3,6 +3,7 @@ name: molecular-formula-assignment-and-validation
 description: Use when you have a calibrated FT-ICR transient (ESI_NEG or similar ionization mode) and need to annotate each detected m/z peak with its most likely elemental composition.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

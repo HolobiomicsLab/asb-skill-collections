@@ -3,6 +3,7 @@ name: inter-scan-interval-validation
 description: Use when after acquiring a PRM experiment on a Thermo Fisher Orbitrap instrument when you need to verify that the mass spectrometer's data acquisition controller executed the scheduled method with correct temporal spacing.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

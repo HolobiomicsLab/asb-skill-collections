@@ -3,6 +3,7 @@ name: acquisition-method-overlap-analysis
 description: Use when you have acquired the same sample(s) using multiple LC-MS, LC-IMS-MS, or direct infusion methods (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3520

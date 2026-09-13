@@ -3,6 +3,7 @@ name: convolutional-neural-network-layer-design
 description: Use when you have 1H NMR spectral tensors as input and need to extract local features (e.g., peak patterns, signal neighborhoods) before applying attention-based or sequence-level processing.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3465
   edam_topics:
   - http://edamontology.org/topic_0593
@@ -44,6 +45,7 @@ attribution:
 
 # convolutional-neural-network-layer-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and integrate convolutional layers into a hybrid deep learning architecture to capture local spectral patterns in 1H NMR data, serving as the feature extraction foundation before global dependency modeling. This skill is essential when raw spectral tensors must be transformed into learned local feature representations suitable for downstream sequence-level processing.

@@ -3,6 +3,7 @@ name: clustering-tool-orchestration
 description: Use when you have raw tandem MS metabolomics data (in mzML or MGF format) and wish to compare the clustering performance of two or more MS clustering tools on the same dataset.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: network-graph-re-annotation-propagation
 description: Use when when you have completed an initial ModiFinder analysis on a compound pair (known compound + modified analog with unknown structure), and you subsequently acquire or determine the structure of the modified compound.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3803
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -50,6 +51,7 @@ attribution:
 
 # Network Graph Re-annotation Propagation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Propagate structural constraints through a peak-to-fragment mapping network to refine MS/MS annotations when a previously unknown compound's structure becomes known. This technique leverages graph-based inference to improve modification site localization confidence by redistributing annotation probabilities across aligned fragments.

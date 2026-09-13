@@ -3,6 +3,7 @@ name: precursor-mass-neutral-loss-calculation
 description: Use when when analyzing tandem mass spectra (MS/MS data) and you want to incorporate neutral loss patterns—characteristic mass losses from molecular precursors—into your spectral similarity or feature representation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

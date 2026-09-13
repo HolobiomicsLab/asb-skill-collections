@@ -3,6 +3,7 @@ name: metabolite-prediction-pathway-selection
 description: Use when when you have a small-molecule structure (SMILES, MOL, or SDF format) and need to predict its metabolic fate across one or more biological systems.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3938
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -41,6 +42,7 @@ attribution:
 
 # metabolite-prediction-pathway-selection
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Use BioTransformer 3.0.0 to predict small-molecule metabolism by selecting the appropriate biological system module (mammalian, gut microbiota, or soil/aquatic microbiota) and executing prediction workflows on prepared molecular structures. This skill enables systematic exploration of how a compound is metabolized across different biological contexts.

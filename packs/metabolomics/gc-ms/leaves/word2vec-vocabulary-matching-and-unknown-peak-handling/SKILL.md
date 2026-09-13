@@ -3,6 +3,7 @@ name: word2vec-vocabulary-matching-and-unknown-peak-handling
 description: Use when converting MS/MS spectra into Spec2Vec embeddings using a pre-trained Word2Vec model that was trained on reference data (e.g., a subset of GNPS or MassBank).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3628
   edam_topics:
   - http://edamontology.org/topic_3172

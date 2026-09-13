@@ -3,6 +3,7 @@ name: quality-control-sample-designation
 description: Use when when importing a new batch of centroided mzML or mzXML LC-MS files into MetCohort, before any data alignment or feature detection is performed. At least one file must be designated as QC to enable ROA detection and alignment;
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0091

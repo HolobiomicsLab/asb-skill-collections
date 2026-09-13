@@ -3,6 +3,7 @@ name: per-sample-spectral-aggregation
 description: Use when you have raw MS2 spectra from a sample and need to collapse them into a single sample-level representation for comparison across multiple samples, particularly when samples have poor feature overlap, strong retention time shifts between LC methods, or were acquired on different mass.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3375

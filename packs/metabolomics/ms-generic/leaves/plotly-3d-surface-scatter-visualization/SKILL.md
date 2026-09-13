@@ -3,6 +3,7 @@ name: plotly-3d-surface-scatter-visualization
 description: Use when you have mass spectrometry data (m/z, retention time, intensity) loaded into a Pandas DataFrame and need to explore the full 3D structure of a peak map interactively, particularly when static 2D heatmaps obscure important intensity relationships or when stakeholders require browser-based.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3945
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: training-dataset-assembly
 description: Use when when you have a large list of SMILES strings but lack corresponding experimental mass spectra, and you need to generate 30,000+ training pairs to train a deep learning model for molecular structure prediction.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0602

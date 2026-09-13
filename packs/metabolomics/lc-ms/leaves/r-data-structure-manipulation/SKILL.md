@@ -3,6 +3,7 @@ name: r-data-structure-manipulation
 description: Use when when xcms has produced misaligned feature groups and you need to extract raw LC-MS profiles from source files into a structured format acceptable by ncGTW's realignment functions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3925
   edam_topics:
   - http://edamontology.org/topic_3520

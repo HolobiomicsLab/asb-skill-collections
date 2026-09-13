@@ -3,6 +3,7 @@ name: molecular-graph-construction-from-smiles
 description: Use when you have raw SMILES strings from a chemical database (e.g., CCSBase, METLIN, or custom sources) and need to feed them into a graph neural network model.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0292
   edam_topics:
   - http://edamontology.org/topic_0154

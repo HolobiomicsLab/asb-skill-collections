@@ -3,6 +3,7 @@ name: ms1-feature-ranking-and-extraction
 description: Use when when you have raw LC-MS data files and need to identify which compounds were actually detected at high abundance during a gradient run, prior to evaluating whether the gradient provided good separation across the chemical space.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -50,6 +51,7 @@ attribution:
 
 # MS1 Feature Ranking and Extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies and ranks the most abundant MS1 features from raw LC-MS data, extracting their retention times for downstream separation efficiency evaluation. This skill bridges raw instrument data to omics-scale compound separation metrics used in gradient optimization.

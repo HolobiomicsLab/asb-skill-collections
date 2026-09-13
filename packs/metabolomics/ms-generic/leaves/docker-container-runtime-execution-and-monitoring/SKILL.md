@@ -3,6 +3,7 @@ name: docker-container-runtime-execution-and-monitoring
 description: Use when you have a vendor mass spectrometry raw file (e.g., .raw format) that requires conversion to Aird format using AirdPro CLI, and you are running on macOS or Linux.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3650
   edam_topics:
   - http://edamontology.org/topic_3520

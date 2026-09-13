@@ -3,6 +3,7 @@ name: reference-compound-verification
 description: Use when after formatting raw mass spectrometry transition data into the EISA-EXPOSOME schema (NAME, PrecursorMZ, ProductMZ, Intensity, RT, ID columns), and before exporting the final database file.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

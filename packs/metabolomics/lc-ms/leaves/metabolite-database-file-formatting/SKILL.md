@@ -3,6 +3,7 @@ name: metabolite-database-file-formatting
 description: Use when after generating or filtering transformation products using generateTPs() or filter(), when you need to annotate MS/MS spectra using MetFrag and require a database of candidate structures (parent compounds and/or their TPs) in a format MetFrag can read.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0154

@@ -3,6 +3,7 @@ name: cascade-search-strategy-fdr-control
 description: Use when when searching high-resolution mass spectra against spectral libraries and you need to identify both unmodified and post-translationally modified peptides while maintaining strict control over false positive identifications.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: rawrr-spectral-data-retrieval
 description: Use when you have Thermo Orbitrap .raw files and need to access raw spectral data (individual MS1 or MS2 scans, base-peak values, chromatogram traces, retention times, or scan-level metadata) for custom analysis, visualization, or integration into an R-based pipeline.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0121

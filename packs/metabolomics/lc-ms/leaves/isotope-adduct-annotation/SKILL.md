@@ -3,6 +3,7 @@ name: isotope-adduct-annotation
 description: Use when after completing peak picking, sample alignment, and before final MS2 spectrum extraction, when you have identified individual ion peaks across samples and need to link isotopic variants (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3637
   edam_topics:
   - http://edamontology.org/topic_3520

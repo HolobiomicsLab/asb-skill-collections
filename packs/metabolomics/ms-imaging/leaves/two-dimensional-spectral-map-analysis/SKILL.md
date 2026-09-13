@@ -3,6 +3,7 @@ name: two-dimensional-spectral-map-analysis
 description: Use when you have GC–MS or LC–MS data represented as a two-dimensional map with m/z values on one axis and retention time on the other, and you need to identify analyte signals and chemo-/biomarker features while minimizing false positive and false negative peak detections.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -49,6 +50,7 @@ attribution:
 
 # two-dimensional-spectral-map-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Analyze two-dimensional chromatography–mass spectrometry maps (m/z vs retention time) using image processing and machine learning to discriminate analytes and identify marker features without conventional peak picking. This approach reduces false peak detections and achieves lower error rates than traditional methods like XCMS.

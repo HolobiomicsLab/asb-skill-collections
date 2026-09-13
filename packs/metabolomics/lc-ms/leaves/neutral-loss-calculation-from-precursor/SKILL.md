@@ -3,6 +3,7 @@ name: neutral-loss-calculation-from-precursor
 description: Use when when converting MS/MS spectra into spectral documents for Spec2Vec embedding, and you want to capture chemical relationships implicit in the fragmentation pattern (e.g., loss of water, ammonia, or CO2) that may correlate with structural similarity. Use this when the neutral loss range (5.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_3520

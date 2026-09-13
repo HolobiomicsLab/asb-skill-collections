@@ -3,6 +3,7 @@ name: chemical-valence-constraint-validation
 description: Use when when you have enumerated a large pool of candidate chemical subformulae for observed fragment peaks (m/z values) within a mass tolerance window and need to eliminate chemically invalid candidates before ranking.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172

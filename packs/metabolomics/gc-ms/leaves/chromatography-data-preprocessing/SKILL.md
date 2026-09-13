@@ -3,6 +3,7 @@ name: chromatography-data-preprocessing
 description: Use when you have raw spectra files from a liquid chromatography experiment (in-house or external database) and need to adapt a pretrained GNN-RT model to predict retention times for your molecules. Preprocessing is the mandatory first step before any model training or transfer learning can proceed.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3429
   edam_topics:
   - http://edamontology.org/topic_0625

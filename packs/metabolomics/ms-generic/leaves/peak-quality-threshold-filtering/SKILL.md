@@ -3,6 +3,7 @@ name: peak-quality-threshold-filtering
 description: Use when after composite-map peak detection (scipy.signal.find_peaks) has identified candidate peaks on aligned mass tracks, but before compiling the final feature table.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -46,6 +47,7 @@ attribution:
 
 # peak-quality-threshold-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A post-detection filtering step that applies quantitative thresholds on signal-to-noise ratio (SNR), peak shape goodness-of-fit, peak height, and prominence to remove low-quality peaks from composite-map peak detection output before constructing the final feature table. This reduces false positives while retaining reproducible, well-shaped features for downstream analysis.

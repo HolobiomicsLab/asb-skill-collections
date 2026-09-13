@@ -3,6 +3,7 @@ name: train-test-split-verification
 description: Use when after applying a configuration fix (e.g., adding an instrument type to an allowlist, updating filtering thresholds) to a dataset preprocessing pipeline, you need to confirm that the change produces the documented training/test split counts.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3375

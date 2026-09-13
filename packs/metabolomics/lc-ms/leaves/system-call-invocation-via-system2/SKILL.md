@@ -3,6 +3,7 @@ name: system-call-invocation-via-system2
 description: Use when you need to query or extract data from Thermo Fisher Scientific .raw files or other proprietary binary formats accessible only through a compiled external executable (e.g., RawFileReader .NET assembly). The executable returns text or structured output (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_3520

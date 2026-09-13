@@ -3,6 +3,7 @@ name: lipid-fragmentation-pattern-application
 description: Use when you have an enumerated list of lipid species (identified by class, fatty acid composition, and chain length) and need to generate theoretical precursor m/z values, fragment ion masses, and relative intensities for targeted or untargeted lipidomics experiments.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -41,6 +42,7 @@ attribution:
 
 # lipid-fragmentation-pattern-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill applies peer-reviewed lipid class- and adduct-specific fragmentation patterns to generate theoretical mass spectra for enumerated lipid species. It is used to create in silico spectral libraries for lipid identification via data-dependent acquisition (DDA) on high-resolution instruments.

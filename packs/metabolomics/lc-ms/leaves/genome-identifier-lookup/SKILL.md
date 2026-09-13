@@ -3,6 +3,7 @@ name: genome-identifier-lookup
 description: Use when a paired omics project JSON document contains genome identifiers (e.g. IMG IDs, NCBI accessions) but lacks corresponding organism names.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3672
   edam_topics:
   - http://edamontology.org/topic_0621

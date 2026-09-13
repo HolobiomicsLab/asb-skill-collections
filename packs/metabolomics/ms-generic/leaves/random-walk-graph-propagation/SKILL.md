@@ -3,6 +3,7 @@ name: random-walk-graph-propagation
 description: 'Use when you have: (1) a set of spectral library matches (seed identities) mapped to molecular structures, (2) a candidate structure graph derived from in silico fragmentation (e.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0593

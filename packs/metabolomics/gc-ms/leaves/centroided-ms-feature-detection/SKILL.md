@@ -3,6 +3,7 @@ name: centroided-ms-feature-detection
 description: Use when you have vendor-independent centroided mzML files from data-dependent acquisition (ddMS2) HRMS experiments and need to extract a reproducible feature list with mass, chromatographic, and intensity dimensions as input to PFAS prioritization, suspect screening, or other MS-based analyses.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0121

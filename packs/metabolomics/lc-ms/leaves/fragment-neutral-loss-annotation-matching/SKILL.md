@@ -3,6 +3,7 @@ name: fragment-neutral-loss-annotation-matching
 description: Use when after generateComponents with algorithm='tp' has tentatively paired parent features with TP candidates based on retention time and spectrum similarity, and when formula annotations are available for both parents and candidates.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0218

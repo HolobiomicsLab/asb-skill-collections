@@ -3,6 +3,7 @@ name: spectral-network-propagation-analysis
 description: Use when after running MetaMiner's Dereplicator stage to identify some RiPPs via direct database matching against a constructed structure database, apply this skill to enlarge the set of identifications by propagating those matches through spectral clusters and visualizing the connected components.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3938
   edam_topics:
   - http://edamontology.org/topic_0121

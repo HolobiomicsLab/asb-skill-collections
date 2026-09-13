@@ -3,6 +3,7 @@ name: spectrum-chromatogram-mobilogram-rendering
 description: Use when you have mass spectrometry data in a Pandas DataFrame with columns for m/z and intensity (spectrum), retention time and intensity (chromatogram), or drift time and intensity (mobilogram), and need to render 1D traces as static or interactive plots for exploratory analysis, quality control.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520

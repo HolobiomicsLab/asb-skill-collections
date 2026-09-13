@@ -3,6 +3,7 @@ name: baseline-and-noise-level-estimation-from-quartile-statistics
 description: Use when before peak detection on a composite or individual mass track when you need to filter out low-intensity noise and baseline drift without removing true signal.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -45,6 +46,7 @@ attribution:
 
 # baseline-and-noise-level-estimation-from-quartile-statistics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Estimate chromatographic baseline and noise level from the bottom intensity quartiles of a mass track to enable robust peak detection in LC-MS metabolomics. This approach isolates baseline drift and electronic noise without assuming specific distributions, making it applicable to diverse sample compositions and instrument configurations.

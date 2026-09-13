@@ -3,6 +3,7 @@ name: chromatographic-peak-labeling
 description: Use when you have a user-defined reference list of isolated, high-confidence chromatographic peaks (ground-truth) matched across multiple LC-HRMS samples, and you need to produce a labelled training dataset large enough to train a CNN model that discriminates true peaks from background noise and.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -43,6 +44,7 @@ attribution:
 
 # chromatographic-peak-labeling
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Generate large-scale labelled training datasets for CNN peak detection by iteratively combining matched reference features from LC-HRMS chromatograms. This skill augments ground-truth peak properties (borders, centers, isomeric variants) with synthetic distraction peaks and background variations to train robust peak-type classifiers.

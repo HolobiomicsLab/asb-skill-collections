@@ -3,6 +3,7 @@ name: one-hot-encoding-categorical-chromatography-features
 description: Use when you have raw HPLC column metadata containing categorical fields (e.g., column manufacturer 'Waters', USP type 'L1', solvent identities 'H2O'/'MeOH'/'ACN') that must be converted into numerical representations before featurization for a machine learning pipeline.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3553
   edam_topics:
   - http://edamontology.org/topic_3407
@@ -42,6 +43,7 @@ attribution:
 
 # one-hot-encoding-categorical-chromatography-features
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Converts categorical HPLC column metadata (company, USP designation, solvent identities) into binary feature vectors suitable for machine learning. This preprocessing step is essential for method-independent retention time prediction, enabling graph transformer models to ingest heterogeneous categorical and continuous column parameters as a unified feature array.

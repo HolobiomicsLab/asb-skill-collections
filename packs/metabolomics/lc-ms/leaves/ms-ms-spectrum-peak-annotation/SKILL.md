@@ -3,6 +3,7 @@ name: ms-ms-spectrum-peak-annotation
 description: Use when you have an experimental MS/MS spectrum (e.g., from MassBank or local data) and need to identify significant fragment ions above noise, assign occurrence scores to peaks, and generate a CSV-formatted library entry for use in metabolite feature annotation pipelines.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

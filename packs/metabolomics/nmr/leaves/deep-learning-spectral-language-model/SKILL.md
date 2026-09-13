@@ -3,6 +3,7 @@ name: deep-learning-spectral-language-model
 description: Use when when you have an unknown compound's mass spectrum (m/z peaks and intensities in .mgf or equivalent format with mandatory PRECURSOR_MZ and IONMODE tags) and need to identify structurally related metabolites from a reference database.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -40,6 +41,7 @@ attribution:
 
 # deep-learning-spectral-language-model
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encode mass spectra into semantic vector representations using a deep-learning model trained on mass spectral language, then compute cosine similarity scores against reference metabolite databases to rank and predict structurally related metabolites for unknown compounds. This approach leverages chemical space to improve candidate ranking and annotation confidence.

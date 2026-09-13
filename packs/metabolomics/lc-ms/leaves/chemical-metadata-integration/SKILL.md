@@ -3,6 +3,7 @@ name: chemical-metadata-integration
 description: Use when when you have a GNPS molecular network (graphml or cytoscape format) and wish to annotate it with chemical class labels or MS2LDA-derived mass2motifs to highlight shared structural features or chemical families across spectral clusters.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0091

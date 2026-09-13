@@ -3,6 +3,7 @@ name: cloud-compatible-file-output
 description: Use when after feature clustering and drift correction (Gravity and Blueshift outputs) are complete and you need to produce a final, validated feature table ready for storage, archival, or downstream analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091

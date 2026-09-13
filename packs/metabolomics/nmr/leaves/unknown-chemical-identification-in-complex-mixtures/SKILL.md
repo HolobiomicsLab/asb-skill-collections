@@ -3,6 +3,7 @@ name: unknown-chemical-identification-in-complex-mixtures
 description: Use when you have experimental LC–QTOF mass spectra from complex environmental samples (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3803
   edam_topics:
   - http://edamontology.org/topic_0602

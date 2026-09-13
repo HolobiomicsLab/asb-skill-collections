@@ -3,6 +3,7 @@ name: compound-ground-truth-matching
 description: Use when when you have pre-computed embeddings for query and reference MS/MS spectra, computed their cosine similarity matrix, and need to measure retrieval success by verifying whether the correct compound (identified by SMILES string) appears in the top-1, top-5, or top-10 ranked candidates from.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -48,6 +49,7 @@ attribution:
 
 # compound-ground-truth-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate MS/MS spectral retrieval by checking whether the true compound (ground-truth SMILES) appears in the top-k retrieved reference spectra. This metric quantifies hit@k performance across 10-fold cross-validation splits to measure compound identification accuracy.

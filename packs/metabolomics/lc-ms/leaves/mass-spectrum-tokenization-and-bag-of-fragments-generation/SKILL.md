@@ -3,6 +3,7 @@ name: mass-spectrum-tokenization-and-bag-of-fragments-generation
 description: Use when after filtering and cleaning MS/MS spectra (positive/negative ion mode) but before applying Latent Dirichlet Allocation for Mass2Motif discovery.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: in-source-fragment-adduct-candidate-flagging
 description: Use when you have aligned, imputed time-resolved mass spectrometric data from direct-injection plasma ionization (e.g., DBDI, DESI) without chromatographic separation, and you suspect multiple m/z features belong to the same neutral analyte as in-source fragments or oxygen-bound adducts.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3680
   edam_topics:
   - http://edamontology.org/topic_0121

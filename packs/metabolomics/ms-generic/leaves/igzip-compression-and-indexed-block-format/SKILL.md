@@ -3,6 +3,7 @@ name: igzip-compression-and-indexed-block-format
 description: Use when you have mzML mass spectrometry files that need both compression and rapid random access by spectrum ID (e.g., direct retrieval of spectrum 2540 without sequential scanning).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

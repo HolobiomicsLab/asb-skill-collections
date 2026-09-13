@@ -3,6 +3,7 @@ name: r-bioconductor-workflow-orchestration
 description: Use when you have untargeted LC/MS metabolomics data from stable isotope labeling experiments (e.g., 13C-glucose vs. 12C-glucose) already converted to mzXML format, and you need to systematically identify putatively incorporated metabolic features by comparing unlabeled and labeled sample groups.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: isobaric-ion-misclassification-documentation
 description: Use when after matrix annotation has been performed on mass spectrometry imaging (MSI) data when you need to identify and document ions whose m/z values overlap with or are isobaric to other peaks, creating risk of false positive or false negative matrix assignments.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3520

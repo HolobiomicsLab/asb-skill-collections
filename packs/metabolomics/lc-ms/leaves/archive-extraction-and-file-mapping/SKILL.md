@@ -3,6 +3,7 @@ name: archive-extraction-and-file-mapping
 description: 'Use when when you have downloaded a GNPS molecular networking job archive (from GNPS1 or GNPS2 workflows: METABOLOMICS-SNETS, METABOLOMICS-SNETS-V2, FEATURE-BASED-MOLECULAR-NETWORKING, classical_networking_workflow, or feature_based_molecular_networking_workflow) and need to extract and standardize.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3172

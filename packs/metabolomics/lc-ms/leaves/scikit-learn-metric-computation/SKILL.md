@@ -3,6 +3,7 @@ name: scikit-learn-metric-computation
 description: Use when you have prediction arrays (model outputs) and ground-truth label arrays from a classification task and need to compute confusion matrices, accuracy scores, or other performance metrics for visualization or quantitative evaluation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3439
   edam_topics:
   - http://edamontology.org/topic_0091

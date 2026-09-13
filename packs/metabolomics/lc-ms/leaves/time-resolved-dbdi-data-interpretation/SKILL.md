@@ -3,6 +3,7 @@ name: time-resolved-dbdi-data-interpretation
 description: Use when you have time-resolved DBDI-MS data (intensity matrix with m/z features as rows and scan timepoints as columns) from direct injection analysis where chromatographic separation is unavailable and you need to identify which features represent fragments or adducts of the same parent compound.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: cross-reference-publication-linking
 description: Use when when cataloging a suite of related bioinformatics tools or web applications (particularly in domains like metabolomics, microbiology, or systems biology) and you need to establish the authoritative peer-reviewed or preprint publication for each tool, verify publication URLs are live, and.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0089
@@ -49,6 +50,7 @@ attribution:
 
 # cross-reference-publication-linking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and validate peer-reviewed or preprint publications associated with domain-specific bioinformatics tools from repository documentation, then verify accessibility and linkage integrity. This skill ensures that scientific tools are properly attributed to their originating research and that publication metadata is current and retrievable.

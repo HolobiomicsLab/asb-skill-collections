@@ -3,6 +3,7 @@ name: metabolic-pathway-database-querying
 description: Use when you have a ranked list of metabolite identifiers (PubChemCIDs, KEGG IDs, or chemical names) from differential abundance or ANOVA testing and need to determine which metabolic pathways are overrepresented or enriched among the most significant features.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_0188

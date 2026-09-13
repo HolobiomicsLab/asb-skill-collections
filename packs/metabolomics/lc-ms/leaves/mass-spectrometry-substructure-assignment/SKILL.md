@@ -3,6 +3,7 @@ name: mass-spectrometry-substructure-assignment
 description: Use when after Mass2Motif discovery via LDA on preprocessed MS/MS spectra, when you have a set of inferred motifs (fragments and neutral losses with LDA probabilities) and need to assign putative substructure identities rather than retain anonymous motif labels.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0224
   edam_topics:
   - http://edamontology.org/topic_0121

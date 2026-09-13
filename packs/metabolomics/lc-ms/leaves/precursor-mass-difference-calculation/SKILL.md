@@ -3,6 +3,7 @@ name: precursor-mass-difference-calculation
 description: Use when when comparing two MS/MS spectra using modified cosine similarity and the precursor m/z values differ, indicating potential neutral losses, adduct variations, or analogs with different substituents.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -42,6 +43,7 @@ attribution:
 
 # precursor-mass-difference-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calculate the mass offset between precursor ions of two MS/MS spectra to enable alignment of peaks under the modified cosine similarity measure. This step is essential for detecting structurally related molecules that differ in mass.

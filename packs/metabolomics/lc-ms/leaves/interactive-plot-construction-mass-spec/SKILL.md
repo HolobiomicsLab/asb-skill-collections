@@ -3,6 +3,7 @@ name: interactive-plot-construction-mass-spec
 description: Use when after LC-MS data has been converted to mzML format and processed through peak detection (e.g., MS-DIAL output) to yield a feature table with internal standard identifications, retention times, m/z values, and intensity measurements across multiple samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0570
   edam_topics:
   - http://edamontology.org/topic_0599

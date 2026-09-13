@@ -3,6 +3,7 @@ name: feature-flagging-threshold-calibration
 description: Use when after drift correction in non-targeted LC-MS metabolomics workflows, when you need to decide which molecular features are sufficiently reproducible (low instrument/QC variance) and biologically informative (high QC-versus-biological signal ratio) to retain for downstream statistical.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -47,6 +48,7 @@ attribution:
 
 # feature-flagging-threshold-calibration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically apply quality-metric thresholds to identify and mark low-quality metabolic features in LC-MS data using relative standard deviation (RSD), robust RSD variants, and detection ratios. This skill bridges preprocessing and statistical analysis by deciding which features to retain, flag, or exclude based on reproducibility and biological signal strength.

@@ -3,6 +3,7 @@ name: hmdb-compound-database-manipulation
 description: Use when when you need to establish a reproducible inventory of compounds for LC-MS/MS simulation studies, particularly to determine how many unique molecular formulas fall within a target m/z window (e.g., 100–1000 Da) and MS1 detection level.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

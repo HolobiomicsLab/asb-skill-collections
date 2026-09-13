@@ -3,6 +3,7 @@ name: workflow-routing-configuration
 description: Use when when you have raw mass spectrometry data files from multiple acquisition modalities (LC-MS, GC-MS, ion mobility, or imaging) and need to automatically route each to the correct downstream analysis module without manual intervention.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: lipid-class-coverage-assessment
 description: Use when when you have acquired a CCS reference library (such as DTCCSN2 for U13C labeled lipids) and need to verify that it contains the expected lipid classes, CCS values are physically plausible for ion mobility data, and coverage matches the library's advertised documentation before using it.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -41,6 +42,7 @@ attribution:
 
 # lipid-class-coverage-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates the structural completeness and CCS value distribution of a collision cross section (CCS) reference library for ion mobility-mass spectrometry lipidomics by verifying lipid class presence, extracting metadata, and confirming numeric ranges against documented specifications.

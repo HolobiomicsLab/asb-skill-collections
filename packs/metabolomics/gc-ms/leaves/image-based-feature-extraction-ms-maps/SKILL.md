@@ -3,6 +3,7 @@ name: image-based-feature-extraction-ms-maps
 description: Use when you have a two-dimensional MS map (m/z vs retention time) from GC–MS or LC–MS data and need to discriminate analytes and identify marker features without false positives from peak picking; particularly useful for untargeted metabolomics at ppb sensitivity (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -48,6 +49,7 @@ attribution:
 
 # image-based-feature-extraction-ms-maps
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automatically identify multivariate chemo-/biomarker features in chromatography–mass spectrometry data by treating the m/z vs retention time plane as a two-dimensional image and applying image processing combined with machine learning, avoiding conventional peak picking errors.

@@ -3,6 +3,7 @@ name: unified-mobility-scale-construction-across-polarities
 description: Use when you have CE-MS raw data in OnDiskMSnExp format with both positive and negative polarity acquisitions, migration times that vary due to electroosmotic flow drift, and access to two well-characterized mobility markers (e.g., Paracetamol and Procaine with known charges and migration times).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3370

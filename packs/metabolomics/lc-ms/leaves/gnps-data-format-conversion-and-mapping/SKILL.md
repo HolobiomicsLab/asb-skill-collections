@@ -3,6 +3,7 @@ name: gnps-data-format-conversion-and-mapping
 description: Use when you have GNPS molecular networking output (from GNPS1 at https://gnps.ucsd.edu or GNPS2 at https://gnps2.org) that must be integrated with antiSMASH BGC data and MIBiG metadata for natural product mining.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0091

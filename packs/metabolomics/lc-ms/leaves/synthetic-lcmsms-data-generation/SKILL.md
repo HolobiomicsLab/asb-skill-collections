@@ -3,6 +3,7 @@ name: synthetic-lcmsms-data-generation
 description: Use when you need to create defined LC-MS/MS datasets with known molecular composition and fragmentation patterns for algorithm validation, method development, or evaluation of analytical challenges (e.g., co-elution prediction).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

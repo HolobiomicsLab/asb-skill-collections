@@ -3,6 +3,7 @@ name: msp-to-csv-parsing
 description: Use when you have a .msp format MS/MS spectrum library (e.g., from MassBank or similar public databases) and need to convert it into individual CSV entries indexed by positive or negative ionisation mode for use as a custom fragment library in MetaboAnnotatoR annotation pipelines.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0091

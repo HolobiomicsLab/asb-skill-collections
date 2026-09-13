@@ -3,6 +3,7 @@ name: orbitrap-spectrum-extraction-from-raw-files
 description: Use when you have a Thermo Fisher Orbitrap .raw file and need to retrieve a specific scan's spectral data (m/z and intensity arrays), validate instrument parameters (resolving power, AGC injection time), or assess signal-to-noise characteristics of fragment ions for a known precursor peptide (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

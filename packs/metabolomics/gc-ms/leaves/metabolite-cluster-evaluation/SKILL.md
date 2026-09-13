@@ -3,6 +3,7 @@ name: metabolite-cluster-evaluation
 description: Use when after running RAMClustR clustering on XCMS-detected LC-MS features in positive ionization mode, when you need to assign molecular weights to compound clusters and want to cross-validate the two available scoring methods (findMain and RAMClustR internal scoring) to identify cases where they.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0599

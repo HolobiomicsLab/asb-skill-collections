@@ -3,6 +3,7 @@ name: metabolic-network-graph-construction
 description: Use when when you have an untargeted metabolomics feature table (m/z values, retention times, intensities) and aim to predict functional pathway activity without explicit metabolite identification.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3439
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -41,6 +42,7 @@ attribution:
 
 # metabolic-network-graph-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct or load a metabolic network representation that captures biochemical pathway organization and metabolite connectivity, enabling graph-based propagation of activity signals through network nodes. This is a foundational step in network-based functional prediction from untargeted metabolomics feature tables.

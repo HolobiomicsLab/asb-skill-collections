@@ -3,6 +3,7 @@ name: open-modification-search
 description: Use when your query spectra contain peptides with unknown modifications (e.g., oxidation, phosphorylation, acetylation, or non-enzymatic modifications not specified in the search parameters), and you have a reference spectral library in mzML or mzXML format.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3646
   edam_topics:
   - http://edamontology.org/topic_0121

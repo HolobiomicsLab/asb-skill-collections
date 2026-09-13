@@ -3,6 +3,7 @@ name: duplicate-spectrum-detection-splash
 description: Use when when processing large collections of mass spectra from multiple Open Mass Spectra Libraries (OMSLs) or databases that may contain redundant spectral records with identical m/z–intensity peak patterns but potentially different metadata annotations.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -41,6 +42,7 @@ attribution:
 
 # duplicate-spectrum-detection-splash
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Detect and remove duplicate mass spectra by computing SPLASH (SPectraL hASH) keys and grouping spectra with identical hash values. This enables systematic deduplication of spectral datasets while preserving a single representative entry per group.

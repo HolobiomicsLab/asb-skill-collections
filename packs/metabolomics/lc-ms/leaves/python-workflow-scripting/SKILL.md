@@ -3,6 +3,7 @@ name: python-workflow-scripting
 description: Use when you have raw mass spectrometry spectral data in common formats (MGF, MSP, mzML, mzXML, JSON) that requires standardized metadata cleaning, validation, and peak filtering before comparative analysis. Use this skill when you need to encode data quality constraints (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

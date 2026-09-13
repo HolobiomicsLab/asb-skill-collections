@@ -3,6 +3,7 @@ name: usi-namespace-parsing
 description: Use when when you need to retrieve mass spectrometry spectrum data from a metabolomics repository but only have a USI string (e.g., 'mzspec:GNPS:TASK-c95481f0c53d42e78a61bf899e9f9adb-spectra/specs_ms.mgf:scan:1943' or 'mzspec:MASSBANK::accession:SM858102').
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

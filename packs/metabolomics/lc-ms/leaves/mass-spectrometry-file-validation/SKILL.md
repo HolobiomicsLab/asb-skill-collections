@@ -3,6 +3,7 @@ name: mass-spectrometry-file-validation
 description: Use when after MSConvert has converted vendor-specific raw mass spectrometry data (ThermoFisher, Agilent, or equivalent formats) on a Linux system and before initiating analysis in MSThunder.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -43,6 +44,7 @@ attribution:
 
 # mass-spectrometry-file-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate the integrity and format compliance of mass spectrometry data files after conversion from vendor-specific raw formats (ThermoFisher .raw, Agilent .d) to MSThunder-compatible formats via MSConvert. This skill ensures that converted files are suitable for downstream deep learning-based nontargeted analysis of organic pollutants.

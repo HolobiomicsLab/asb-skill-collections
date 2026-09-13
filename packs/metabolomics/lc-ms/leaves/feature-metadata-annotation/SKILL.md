@@ -3,6 +3,7 @@ name: feature-metadata-annotation
 description: Use when you have processed mass spectrometry data consisting of three separate tables (quantification features, sample metadata, and spectral annotations) and need to combine them into a single, queryable artifact that preserves relationships between features, samples, and their chemical.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3520

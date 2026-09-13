@@ -3,6 +3,7 @@ name: tool-xml-wrapper-integration
 description: Use when you have standalone metabolomics analysis tools (Python scripts, R packages, MATLAB compiled applications) that you want to expose through Galaxy's UI and make composable into reproducible workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3172

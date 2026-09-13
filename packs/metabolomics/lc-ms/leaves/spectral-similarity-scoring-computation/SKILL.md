@@ -3,6 +3,7 @@ name: spectral-similarity-scoring-computation
 description: Use when you have a query spectrum (or set of query spectra) and need to rank candidate library spectra by their likelihood of sharing the same chemical structure.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

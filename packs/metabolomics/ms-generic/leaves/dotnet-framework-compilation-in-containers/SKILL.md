@@ -3,6 +3,7 @@ name: dotnet-framework-compilation-in-containers
 description: Use when you have a C# GUI application targeting .NET Framework 4.8 (Windows-only) and need to execute it on macOS or Linux hosts without modifying the source code. The application requires compilation from source and GUI display support via X11 forwarding or headless CLI execution.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3431
   edam_topics:
   - http://edamontology.org/topic_0091

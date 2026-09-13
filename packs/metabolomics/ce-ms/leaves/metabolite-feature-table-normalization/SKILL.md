@@ -3,6 +3,7 @@ name: metabolite-feature-table-normalization
 description: Use when you have selected a subset of ReDU public tandem MS files with GNPS chemical annotations (level 2 or 3 spectral library matches) and wish to explore sample relationships via principal component analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -49,6 +50,7 @@ attribution:
 
 # metabolite-feature-table-normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and normalize a feature-by-sample matrix from mass spectrometry chemical annotations (m/z, retention time, GNPS spectral library matches) to enable unsupervised dimensionality reduction and cross-sample comparison. This skill transforms sparse, multi-annotated MS/MS identifications into a dense analytical table suitable for PCA and interactive visualization.

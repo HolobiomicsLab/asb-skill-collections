@@ -3,6 +3,7 @@ name: mass-offset-scanning-for-modification-detection
 description: Use when you have a query mass spectrum of unknown modification status and need to search a spectral library to identify the peptide and its post-translational modifications.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121

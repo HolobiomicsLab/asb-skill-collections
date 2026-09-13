@@ -3,6 +3,7 @@ name: ms1-composite-spectra-deconvolution
 description: Use when you have high-resolution MS1 data (mzXML, mzML, or netCDF format) from LC/HRMS analysis and need to deconvolve composite spectra into individual fragmentation patterns without DDA or DIA acquisition.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3370

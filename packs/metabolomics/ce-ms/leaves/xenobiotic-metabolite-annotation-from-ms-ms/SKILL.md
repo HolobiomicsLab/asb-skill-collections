@@ -3,6 +3,7 @@ name: xenobiotic-metabolite-annotation-from-ms-ms
 description: Use when you have aligned MS/MS feature tables (e.g., from MSDial ver. 4.80) representing unknown metabolites suspected to be Phase I/II transformation products of xenobiotics, and you need to assign both chemical identity and biotransformation pathway context to each feature.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -55,6 +56,7 @@ attribution:
 
 # xenobiotic-metabolite-annotation-from-ms-ms
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A top-down untargeted metabolomics workflow that automates high-throughput annotation of reaction-derived xenobiotic metabolites by matching MS/MS fragmentation patterns and spectral entropy signatures against reference databases. This skill bridges raw MS data to curated metabolite identity assignments via clustering, similarity scoring, and reaction pathway propagation.

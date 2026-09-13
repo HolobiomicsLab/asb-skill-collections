@@ -3,6 +3,7 @@ name: vectorized-operation-verification
 description: Use when when implementing or auditing S4 replacement methods (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_3520

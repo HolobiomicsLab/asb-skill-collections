@@ -3,6 +3,7 @@ name: hit-score-consolidation-across-domains
 description: Use when you have executed batch spectral searches against two or more domain-specific MASSTs (via the Fast Search API or individual MASST tools) and need to combine the resulting hit lists, match scores, and taxonomic/metadata annotations into a single ranked table for downstream analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_3520

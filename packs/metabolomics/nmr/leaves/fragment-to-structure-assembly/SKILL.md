@@ -3,6 +3,7 @@ name: fragment-to-structure-assembly
 description: Use when when you have spectroscopic measurements (1D ¹H or ¹³C NMR) that have been decomposed into predicted substructures or fragments, and you need to reconstruct the full molecular formula and connectivity graph.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0154

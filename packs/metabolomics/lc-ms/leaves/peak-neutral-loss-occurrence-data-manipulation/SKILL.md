@@ -3,6 +3,7 @@ name: peak-neutral-loss-occurrence-data-manipulation
 description: Use when you have aligned MS2 spectra from multiple samples and need to create a matrix representation where rows are samples and columns are MS2 peaks or neutral losses (mass differences to the precursor), with counts of occurrences.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3563
   edam_topics:
   - http://edamontology.org/topic_3520

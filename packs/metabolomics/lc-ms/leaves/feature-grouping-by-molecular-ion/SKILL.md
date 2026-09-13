@@ -3,6 +3,7 @@ name: feature-grouping-by-molecular-ion
 description: Use when after peak picking and sample alignment have produced an aligned feature table with m/z and retention time coordinates.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0121

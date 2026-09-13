@@ -3,6 +3,7 @@ name: graph-neural-network-architecture-assembly
 description: 'Use when when you have: (1) a collection of molecules represented as molecular graphs (nodes=atoms, edges=bonds with chirality/order attributes); (2) structured metadata describing experimental conditions (e.'
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0337
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -44,6 +45,7 @@ attribution:
 
 # graph-neural-network-architecture-assembly
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assembly and instantiation of a Graph Transformer backbone for molecular property prediction, where heterogeneous molecular graphs (nodes, edges, atom/bond attributes) and structured metadata (column parameters, gradient slopes) are combined into a unified forward pass that outputs continuous predictions. This skill bridges graph encoding, feature featurization, and transformer inference.

@@ -3,6 +3,7 @@ name: chemical-class-novelty-detection
 description: Use when when you have CANOPUS chemical class predictions for your samples and need to identify which extracts contain chemical classes absent from the literature for their species or genus.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3961
   edam_topics:
   - http://edamontology.org/topic_3407

@@ -3,6 +3,7 @@ name: ftms-mass-spectrum-peak-detection
 description: Use when you have loaded an FT-ICR raw spectrum (e.g., ESI_NEG_SRFA.d in Bruker or ThermoFisher .raw format) and need to identify the m/z positions and intensities of individual mass spectral peaks.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

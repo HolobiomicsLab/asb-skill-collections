@@ -3,6 +3,7 @@ name: metabolite-compound-list-mapping-with-adduct-assignment
 description: Use when when you have mzML files from targeted or untargeted metabolomics experiments run in multiple ionization modes (e.g., KO_NEG, KO_POS, STD_NEG, STD_POS, WT_NEG, WT_POS) and a CSV list of reference compounds (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_0121

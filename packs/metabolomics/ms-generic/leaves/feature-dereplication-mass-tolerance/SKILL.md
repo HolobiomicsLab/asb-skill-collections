@@ -3,6 +3,7 @@ name: feature-dereplication-mass-tolerance
 description: Use when you have a raw XCMS CentWave feature extraction table with m/z values, retention times, and intensities, and you observe that multiple features cluster around the same nominal mass and retention window.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_0121

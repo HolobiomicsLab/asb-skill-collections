@@ -3,6 +3,7 @@ name: tanimoto-similarity-computation
 description: Use when you have a trained MS2DeepScore neural network and a set of MS/MS spectra (52 binned peaks per spectrum after preprocessing) for which you need to compute pairwise structural similarity predictions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0154

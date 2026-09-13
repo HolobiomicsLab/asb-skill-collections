@@ -3,6 +3,7 @@ name: ms2-spectrum-extraction-and-consensus-building
 description: Use when when you have DDA LC-MS/MS data (mzML format) with identified chromatographic peaks at a specific m/z (e.g., 304.1131) and multiple MS2 spectra fragmented from that precursor, and you need to produce a single high-confidence MS2 spectrum for comparison against reference databases (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3803
   edam_topics:
   - http://edamontology.org/topic_3520

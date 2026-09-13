@@ -3,6 +3,7 @@ name: ion-mobility-heatmap-visualization
 description: Use when you have raw LC-IMS-MS data (Agilent, Thermo, Bruker, or mzML format) and need to visualize and export the spatial distribution of a specific ion species (or ion family) across both ion mobility and retention time dimensions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3520

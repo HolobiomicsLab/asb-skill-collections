@@ -3,6 +3,7 @@ name: data-handoff-pipeline-orchestration
 description: 'Use when you have raw MS files (with associated metadata: filename, upload path, file format) staged in an uploader repository and need to route them to a proteomics processor for analysis while preserving audit trails and ensuring format compatibility before processing begins.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: spectral-peak-filtering-and-normalization
 description: Use when working with raw or minimally processed MS/MS spectra from repositories like GNPS that contain variable peak intensities, noise, and formatting inconsistencies that would interfere with downstream deep learning models trained on normalized spectral representations.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

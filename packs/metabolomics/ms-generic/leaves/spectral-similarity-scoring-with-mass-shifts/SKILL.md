@@ -3,6 +3,7 @@ name: spectral-similarity-scoring-with-mass-shifts
 description: Use when you have an unknown query spectrum suspected to carry a post-translational modification and need to match it against a library of unmodified reference spectra.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0121

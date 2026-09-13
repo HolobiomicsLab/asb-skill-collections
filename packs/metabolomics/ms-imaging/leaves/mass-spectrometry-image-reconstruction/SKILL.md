@@ -3,6 +3,7 @@ name: mass-spectrometry-image-reconstruction
 description: Use when you have paired .imzML (XML metadata) and .
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -45,6 +46,7 @@ attribution:
 
 # mass-spectrometry-image-reconstruction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Reconstruct spatially resolved mass spectrometry images from imzML/ibd file pairs by parsing XML metadata, extracting mass-specific intensity slices from binary data, and assembling multi-channel image objects with isotope annotations and coordinate metadata. This skill enables pixel-level spectral exploration and targeted m/z image generation for imaging mass spectrometry workflows.

@@ -3,6 +3,7 @@ name: r-data-frame-aggregation
 description: Use when when you have extracted multiple spectral attributes (e.g., base-peak m/z, intensity, retention time, scan index) from individual MS scans via accessor functions and need to organize them into a single rectangular data frame for batch analysis, filtering, or export to external tools.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_0121

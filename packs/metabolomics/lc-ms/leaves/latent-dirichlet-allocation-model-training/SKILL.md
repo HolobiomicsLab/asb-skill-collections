@@ -3,6 +3,7 @@ name: latent-dirichlet-allocation-model-training
 description: Use when when you have preprocessed MS/MS spectral data (filtered, noise-reduced, with neutral losses extracted) and need to discover recurring fragmentation patterns across a spectral dataset.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: mass-spectrometry-transition-data-formatting
 description: Use when when you have raw mass spectrometry transition data from a triple-quadrupole or other tandem MS instrument and need to prepare it for suspect chemical screening using EISA-EXPOSOME, or when merging custom compound libraries into the T3DB format.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: spectral-database-integration-and-sampling
 description: Use when you need to generate synthetic LC/GC-MS feature tables or raw mzML files with realistic peak complexity, ion multiplicities, and natural spectral variation—not just theoretical m/z values.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3812
   edam_topics:
   - http://edamontology.org/topic_0091

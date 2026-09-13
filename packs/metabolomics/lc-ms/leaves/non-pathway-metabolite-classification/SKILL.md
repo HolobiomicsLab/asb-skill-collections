@@ -3,6 +3,7 @@ name: non-pathway-metabolite-classification
 description: Use when you have metabolomics intensity data with peak annotations, and you want to rank and prioritize metabolite groupings (Molecular Families, Mass2Motifs, or other non-pathway metabolite sets) by their activity levels across experimental contrasts.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3680
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -49,6 +50,7 @@ attribution:
 
 # Non-pathway metabolite classification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply the PLAGE decomposition method to metabolite groupings beyond canonical pathways—such as Molecular Families from GNPS or Mass2Motifs from MS2LDA—to compute activity scores and rank metabolite sets by differential abundance across experimental conditions. This generalizes pathway-level scoring to any coherent metabolite classification scheme.

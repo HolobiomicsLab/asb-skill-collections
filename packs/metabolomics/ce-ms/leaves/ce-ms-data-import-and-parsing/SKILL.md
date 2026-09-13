@@ -3,6 +3,7 @@ name: ce-ms-data-import-and-parsing
 description: Use when you have raw CE-MS instrument output in mzML or netCDF format and need to extract specific ion traces (by m/z value), filter by effective mobility windows, or apply transformations to migration time data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

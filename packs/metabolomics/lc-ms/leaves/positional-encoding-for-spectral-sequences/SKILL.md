@@ -3,6 +3,7 @@ name: positional-encoding-for-spectral-sequences
 description: Use when preparing mass spectrum input tensors for transformer encoder layers in IDSL_MINT.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0226
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -42,6 +43,7 @@ attribution:
 
 # positional-encoding-for-spectral-sequences
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Positional encoding embeds ordinal and sequential information into mass spectrum m/z-intensity pairs so that transformer self-attention layers can distinguish their position in the spectrum. This is essential for transformer-based MS/MS interpretation, where attention mechanisms otherwise treat all spectrum peaks as an unordered set.

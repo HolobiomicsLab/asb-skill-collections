@@ -3,6 +3,7 @@ name: gaussian-process-uncertainty-quantification
 description: Use when after collecting observed separation efficiency scores at sampled gradient conditions and you need to propose the next gradient to evaluate.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -49,6 +50,7 @@ attribution:
 
 # gaussian-process-uncertainty-quantification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Fit a Gaussian Process regression model to observed LC-MS gradient performance data and generate mean and variance predictions across a continuous search space to quantify prediction uncertainty. This uncertainty estimate directly enables acquisition function selection and drives the efficiency of Bayesian optimization for gradient discovery.

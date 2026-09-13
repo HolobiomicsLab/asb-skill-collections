@@ -3,6 +3,7 @@ name: targeted-peak-detection-and-integration
 description: Use when you have centroided LC–MS data in .mzML format, a validated table of target compounds with adjusted expected retention times (RT in minutes), and you need to extract peak areas and quality metrics across all sample runs.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0091

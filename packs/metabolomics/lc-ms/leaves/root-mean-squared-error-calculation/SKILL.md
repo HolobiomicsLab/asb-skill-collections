@@ -3,6 +3,7 @@ name: root-mean-squared-error-calculation
 description: Use when when you have paired predictions and ground-truth structural similarity labels (e.g., predicted Tanimoto scores from a neural network and reference Tanimoto scores from RDKit Daylight fingerprints) and need to report a single scalar metric of model prediction error across all pairs.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3172

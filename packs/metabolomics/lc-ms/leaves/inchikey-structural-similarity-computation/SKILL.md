@@ -3,6 +3,7 @@ name: inchikey-structural-similarity-computation
 description: Use when you have a ranked list of library candidates (top 2000 by MS2Deepscore) from MS/MS spectral matching and need to re-rank them using structural metadata to distinguish true analogues and exact matches from false positives.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0292
   edam_topics:
   - http://edamontology.org/topic_0121

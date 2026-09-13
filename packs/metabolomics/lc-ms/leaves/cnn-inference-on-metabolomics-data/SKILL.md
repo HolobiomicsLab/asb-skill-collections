@@ -3,6 +3,7 @@ name: cnn-inference-on-metabolomics-data
 description: Use when you have LC-MS feature tables (with m/z and retention time columns) paired with raw .mzXML or .mzML files, and you need to automatically validate which detected features correspond to genuine chromatographic peaks versus false positives or noise.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3439
   edam_topics:
   - http://edamontology.org/topic_0091

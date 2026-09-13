@@ -3,6 +3,7 @@ name: microbiome-metabolome-abundance-normalization
 description: Use when when you have raw count matrices from paired microbiome (16S rRNA or metagenomic) and metabolomic (LC-MS/MS) profiling data that will be used to train or apply a predictive model (e.g., MiMeNet, MelonnPan, Random Forest) to predict metabolite abundances from microbial composition.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3174

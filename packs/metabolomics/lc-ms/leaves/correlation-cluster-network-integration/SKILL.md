@@ -3,6 +3,7 @@ name: correlation-cluster-network-integration
 description: Use when after identifying structural clusters (isotopologue groups, adduct groups, and cross-assay links) and assigning features to correlation clusters via hierarchical clustering.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3083
   edam_topics:
   - http://edamontology.org/topic_3520

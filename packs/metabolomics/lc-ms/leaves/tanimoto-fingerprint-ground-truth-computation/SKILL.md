@@ -3,6 +3,7 @@ name: tanimoto-fingerprint-ground-truth-computation
 description: Use when when preparing paired MS/MS spectra for training or validation of a siamese neural network model, and you have chemical structure annotations (InChI, SMILES, or InChIKey) for each spectrum but lack pre-computed structural similarity labels.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0564
   edam_topics:
   - http://edamontology.org/topic_0154

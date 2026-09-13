@@ -3,6 +3,7 @@ name: parent-ion-fragment-hierarchy-organization
 description: Use when after ISF features have been identified and annotated in Part 4 of the ISFrag workflow, and you need to represent the structural relationships among ISF features and their parent ions hierarchically.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0121

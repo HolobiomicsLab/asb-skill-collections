@@ -3,6 +3,7 @@ name: mass-spectrometry-imaging-data-representation
 description: Use when you have raw mass spectrometry imaging data (2D or 3D spatial coordinates with full mass-to-charge spectra) and want to train a probabilistic deep learning classifier for tumor delineation or tissue classification.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -45,6 +46,7 @@ attribution:
 
 # mass-spectrometry-imaging-data-representation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Represent raw mass spectrometry imaging (MSI) data as dense tensors suitable for direct input to deep learning classifiers without prior peak picking or feature extraction. This skill enables end-to-end learning on spatially resolved mass spectrometry data by preserving the full spectral and spatial dimensionality.

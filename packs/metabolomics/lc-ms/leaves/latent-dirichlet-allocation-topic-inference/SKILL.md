@@ -3,6 +3,7 @@ name: latent-dirichlet-allocation-topic-inference
 description: Use when you have a preprocessed corpus of mass spectrometry spectra converted to bag-of-fragments format (with neutral losses extracted and noise filtered), and you seek to discover recurring fragmentation patterns or substructures that characterize multiple spectra without prior knowledge of the.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2238
   edam_topics:
   - http://edamontology.org/topic_0081

@@ -3,6 +3,7 @@ name: ionisation-method-hardware-correspondence
 description: Use when when evaluating whether a mass spectrometry analysis platform (such as mzmine) has comprehensive module support across multiple ionisation and separation techniques (LC, GC, IMS, MALDI MS imaging), or when planning a multi-technique MS study and needing to confirm that all intended.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3520

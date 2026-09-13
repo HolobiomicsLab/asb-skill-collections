@@ -3,6 +3,7 @@ name: metabolomics-feature-table-filtering
 description: Use when when you have a raw LC-MS peak table imported from vendor software (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

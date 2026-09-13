@@ -3,6 +3,7 @@ name: retention-time-window-extraction
 description: Use when you have loaded sqMass files containing pre-extracted transition group chromatograms and need to isolate chromatographic traces within a specific retention time interval—either defined by OpenSwath feature metadata (apex retention time ± margin) or by manual user selection.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0121

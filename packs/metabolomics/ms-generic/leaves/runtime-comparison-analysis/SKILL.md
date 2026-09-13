@@ -3,6 +3,7 @@ name: runtime-comparison-analysis
 description: Use when when a new version or variant of a tool claims performance improvements over a prior version (e.g., MASST+ vs. MASST), and you need empirical evidence that the claimed speedup (e.g., ~100-fold reduction in search time) is real, reproducible, and quantifiable.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -43,6 +44,7 @@ attribution:
 
 # runtime-comparison-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A benchmarking skill that compares wall-clock execution times of two or more implementations (baseline vs. optimized) on identical query workloads to quantify speedup ratios and verify claimed performance improvements. This skill is essential for validating algorithmic or system-level optimizations in mass spectrometry search tools and other compute-intensive workflows.

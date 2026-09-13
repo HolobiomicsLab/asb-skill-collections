@@ -3,6 +3,7 @@ name: signal-preprocessing-chain-normalization-smoothing-baseline
 description: Use when apply this preprocessing chain when you have loaded raw or continuous imzML mass spectra into a Cardinal MSImagingArrays object and need to prepare them for peak picking, statistical analysis, or imaging.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0121

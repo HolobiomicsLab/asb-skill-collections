@@ -3,6 +3,7 @@ name: spectral-data-import-validation
 description: Use when when you have raw mass spectrometry data in one or more of the six supported file formats (mzML, mzXML, msp, metabolomics-USI, MGF, JSON) and need to transform it into matchms spectrum objects for processing, cleaning, or similarity comparisons.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0121

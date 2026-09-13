@@ -3,6 +3,7 @@ name: mass-spectrometry-base-peak-identification
 description: Use when after PuInc_seeker has identified putative incorporations in XCMS-processed LC/MS data, when you have paired unlabeled and labeled sample groups (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

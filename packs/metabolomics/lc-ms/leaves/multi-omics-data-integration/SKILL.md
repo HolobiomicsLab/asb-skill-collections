@@ -3,6 +3,7 @@ name: multi-omics-data-integration
 description: Use when when you have matched transcriptomics (RNA-seq read counts), intracellular metabolomics (LC-MS abundance data), and extracellular flux measurements (YSI bioanalyzer or similar) from multiple biological samples or cell lines, and you need to determine whether differences in metabolic enzyme.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3660
   edam_topics:
   - http://edamontology.org/topic_0602

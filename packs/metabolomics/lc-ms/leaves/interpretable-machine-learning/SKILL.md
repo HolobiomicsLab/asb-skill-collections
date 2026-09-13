@@ -3,6 +3,7 @@ name: interpretable-machine-learning
 description: Use when when you have tandem mass spectra data and need to predict a binary molecular property (e.g., presence of a functional group like a sulfo group) while maintaining full interpretability of the model's decision logic.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_1812
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -46,6 +47,7 @@ attribution:
 
 # interpretable-machine-learning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train shallow decision trees on sparse, high-dimensional ChemEcho feature vectors derived from tandem mass spectra fragmentation patterns to produce human-readable models whose decision paths can be directly converted to MassQL queries for transparent deployment and validation of fragmentation-based prediction criteria.

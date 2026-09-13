@@ -3,6 +3,7 @@ name: unique-compound-enumeration
 description: Use when you have a GC-MS results table with a Match.Factor column (representing identification confidence) and you need to understand how many distinct compounds survive at different quality cutoffs (e.g., ≥65, ≥80, ≥90).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

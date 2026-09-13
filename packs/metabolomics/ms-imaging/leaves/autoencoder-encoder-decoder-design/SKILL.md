@@ -3,6 +3,7 @@ name: autoencoder-encoder-decoder-design
 description: Use when when working with imaging mass spectrometry (IMS) datasets where you need to extract latent low-dimensional peak features from high-dimensional peak intensity data while preserving spatial adjacency information.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -46,6 +47,7 @@ attribution:
 
 # autoencoder-encoder-decoder-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a graph-attention autoencoder architecture that maps imaging mass spectrometry peak intensities into low-dimensional latent representations and reconstructs them. This skill enables automatic feature extraction from spatial metabolomics data for downstream peak picking and marker ion identification.

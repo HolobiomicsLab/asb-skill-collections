@@ -3,6 +3,7 @@ name: tabular-results-aggregation-and-comparison
 description: Use when when you have chemical annotations (GNPS matches) distributed across multiple sample groups (e.g., by sample type, extraction method, ionization source) with unequal numbers of files per group, and you need to compare enrichment fairly without group-size bias.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -47,6 +48,7 @@ attribution:
 
 # tabular-results-aggregation-and-comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize chemical annotation counts across sample groups of unequal size by computing enrichment percentages, enabling fair cross-group comparison in metabolomics and mass spectrometry data. This skill transforms raw frequency counts into percentage-normalized tables suitable for visualization and statistical comparison.

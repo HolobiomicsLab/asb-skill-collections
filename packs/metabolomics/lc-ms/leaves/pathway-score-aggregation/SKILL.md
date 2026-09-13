@@ -3,6 +3,7 @@ name: pathway-score-aggregation
 description: Use when you have a metabolite intensity matrix (samples × metabolites) or gene expression matrix (samples × genes) with corresponding pathway definitions (pathway IDs mapped to feature sets), and you need to rank pathways by activity level to identify which biological processes are most affected.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3762
   edam_topics:
   - http://edamontology.org/topic_0602

@@ -3,6 +3,7 @@ name: collision-cross-section-model-validation
 description: Use when after applying deimos.calibration.tunemix() to positive-mode or negative-mode tune mix data with known CCS reference compounds (m/z range typically 118–1522), verify that the resulting calibration model achieves the expected r-squared coefficient.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121

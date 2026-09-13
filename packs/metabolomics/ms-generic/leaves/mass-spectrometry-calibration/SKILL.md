@@ -3,6 +3,7 @@ name: mass-spectrometry-calibration
 description: Use when after peak detection when you have a detected peaks table with m/z values and need to correct systematic mass drift or inaccuracy before peak alignment across multiple batches.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -41,6 +42,7 @@ attribution:
 
 # mass-spectrometry-calibration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Recursive mass correction refines m/z accuracy of detected peaks in untargeted LC/HRMS data by recalibrating mass coordinates using internal reference standards or lock masses. This skill is essential for multi-batch population-scale studies where consistent mass accuracy across samples directly impacts peak alignment, annotation reliability, and downstream compound identification.

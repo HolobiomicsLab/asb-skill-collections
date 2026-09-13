@@ -3,6 +3,7 @@ name: feature-quality-assessment-via-qvalue
 description: Use when you have loaded search results from an upstream proteomics database search (e.g., OpenSwath, DIA-NN) containing feature identification data with Q-value scores, and you need to populate analyte dropdown menus or restrict downstream analysis to only statistically confident identifications.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: cascade-search-strategy-for-peptide-identification
 description: Use when use this strategy when analyzing tandem mass spectrometry data where you expect both unmodified and modified peptide identifications and require high confidence assignments with controlled false discovery rates.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121

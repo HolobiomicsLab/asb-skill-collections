@@ -3,6 +3,7 @@ name: xcms-object-handling-and-preprocessing
 description: Use when you have raw gas or liquid chromatography–mass spectrometry data (in NetCDF or mzML format) and need to detect features, align them across samples by retention time and mass-to-charge ratio, correct for retention time drift, and fill missing values before downstream metabolite clustering.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0091

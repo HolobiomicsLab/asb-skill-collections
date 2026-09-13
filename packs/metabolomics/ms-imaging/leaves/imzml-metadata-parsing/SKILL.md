@@ -3,6 +3,7 @@ name: imzml-metadata-parsing
 description: Use when you have received paired .imzML (XML metadata) and .ibd (binary data) files from an Imaging Mass Spectrometry instrument and need to discover the imaging geometry, m/z calibration, and scan coordinate system before extracting mass images or computing total ion chromatograms (TIC).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -46,6 +47,7 @@ attribution:
 
 # imzML Metadata Parsing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract imaging parameters, coordinate systems, and m/z reference lists from imzML XML metadata files to enable structured access to Imaging Mass Spectrometry dataset configuration. This skill bridges raw imzML/ibd file pairs and downstream mass-image extraction by validating file integrity and populating the coordinate and spectral metadata needed for pixel-level data access.

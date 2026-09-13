@@ -3,6 +3,7 @@ name: spectral-batch-submission-to-networking-server
 description: Use when you have deconvolved GC-MS spectra in GNPS_GC input-compatible format and want to construct a molecular network to identify relationships between unknown compounds and perform structured chemical similarity analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0091

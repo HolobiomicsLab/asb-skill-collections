@@ -3,6 +3,7 @@ name: spectral-similarity-scoring-and-ranking
 description: Use when after discovering Mass2Motifs via LDA topic modeling on MS/MS data, when you need to assign putative structural annotations to those motifs by comparing their fragmentation signatures (weighted fragment and neutral loss distributions) to a curated reference database of known motifs and.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3372

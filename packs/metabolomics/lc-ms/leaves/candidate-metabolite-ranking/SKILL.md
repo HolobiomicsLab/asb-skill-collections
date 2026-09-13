@@ -3,6 +3,7 @@ name: candidate-metabolite-ranking
 description: Use when when you have generated a set of predicted metabolite structures from BioTransformer's metabolism prediction engine and need to assign identity to observed compounds from LC-MS/MS, spectral, or chromatographic experiments.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -39,6 +40,7 @@ attribution:
 
 # candidate-metabolite-ranking
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Rank predicted metabolite structures by probability or likelihood score to prioritize candidate identities for matching against observed experimental data. This skill transforms raw BioTransformer metabolism predictions into a prioritized list suitable for structural similarity matching and mass-to-charge alignment.

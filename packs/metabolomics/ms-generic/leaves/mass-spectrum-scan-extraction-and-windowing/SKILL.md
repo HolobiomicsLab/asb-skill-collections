@@ -3,6 +3,7 @@ name: mass-spectrum-scan-extraction-and-windowing
 description: Use when when you have a full mass spectrum scan (e.g., FT1 or FT2 scan from an Orbitrap or IonTrap instrument) and need to isolate a narrow m/z window containing a known or predicted precursor ion before matching it to theoretical isotopic envelopes.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0121

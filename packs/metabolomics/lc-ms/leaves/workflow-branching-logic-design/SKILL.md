@@ -3,6 +3,7 @@ name: workflow-branching-logic-design
 description: Use when when a spectral matching tool produces mixed output containing both exact library matches and analog search results, and your analysis or publication requires separate handling, interpretation, or reporting of these two match classes.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_0121

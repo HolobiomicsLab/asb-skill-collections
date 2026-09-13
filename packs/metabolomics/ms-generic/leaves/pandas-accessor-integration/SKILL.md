@@ -3,6 +3,7 @@ name: pandas-accessor-integration
 description: Use when you have mass-spectrometry data in a Pandas DataFrame and need to expose plot kinds (spectrum, chromatogram, mobilogram, peakmap) as a `.plot(kind='...
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0121

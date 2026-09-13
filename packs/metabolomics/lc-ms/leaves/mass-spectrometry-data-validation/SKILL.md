@@ -3,6 +3,7 @@ name: mass-spectrometry-data-validation
 description: Use when when reproducing or validating a tandem mass spectrometry denoising pipeline on mzML files with known feature precursor m/z and RT coordinates, compare pre- and post-filter counts of spectra and fragments at each major step (TIC cutoff, intra-spectrum grouping, frequency-based labeling).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

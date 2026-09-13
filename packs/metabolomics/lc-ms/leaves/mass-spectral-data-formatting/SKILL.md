@@ -3,6 +3,7 @@ name: mass-spectral-data-formatting
 description: Use when when you have raw mass spectral data in .mgf, .msp, .mzML, or .lbm2 file formats and need to search against a spectral library using entropy similarity or Flash Entropy Search. Also apply this skill before building spectral library indices or computing entropy-based compound identification.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

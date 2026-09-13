@@ -3,6 +3,7 @@ name: eic-data-extraction-from-xcms
 description: Use when after running XCMS getEIC() to generate xcmsEIC objects and fillPeaks() to produce a filled xcmsSet object, before computing the 12 peak-quality metrics (Apex Max-Boundary Ratio, Elution Shift, FWHM2Base, Jaggedness, Modality, Symmetry, Sharpness, Gaussian Similarity, Retention-Time.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3185
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -49,6 +50,7 @@ attribution:
 
 # EIC Data Extraction from XCMS
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract retention time, intensity, and peak characteristic data from XCMS-derived EIC and filled peak objects into a structured evalObj for downstream peak-quality metric computation. This skill bridges XCMS preprocessing output and quality assessment in untargeted LC-MS metabolomics workflows.

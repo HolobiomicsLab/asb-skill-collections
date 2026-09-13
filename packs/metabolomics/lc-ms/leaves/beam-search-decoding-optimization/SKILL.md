@@ -3,6 +3,7 @@ name: beam-search-decoding-optimization
 description: Use when using Casanovo for de novo peptide sequencing on high-stakes datasets (immunopeptidomics, paleoproteomics, or monoclonal antibody discovery) where missing the correct sequence in the top-1 prediction is costly.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_0121

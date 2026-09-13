@@ -3,6 +3,7 @@ name: metabolite-mass-lookup-preparation
 description: Use when when beginning an untargeted LC-MS annotation workflow, before attempting to match experimental m/z peaks to metabolite identities.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0625

@@ -3,6 +3,7 @@ name: substrate-concentration-normalization
 description: Use when you have LC-MS normalized intracellular metabolite abundance data from multiple cell lines (or samples) and need to compute reaction-level propensity scores that account for substrate availability as a predictor of metabolic flux.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3172

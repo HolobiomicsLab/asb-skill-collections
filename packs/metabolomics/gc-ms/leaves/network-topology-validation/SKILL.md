@@ -3,6 +3,7 @@ name: network-topology-validation
 description: Use when after retrieving a molecular network file (GraphML or JSON format) from GNPS_GC following submission of deconvolved GC-MS spectra. Use this skill to confirm the network structure is sound before performing chemical similarity searches, community detection, or annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_0091

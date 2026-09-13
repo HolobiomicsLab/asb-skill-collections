@@ -3,6 +3,7 @@ name: cosine-similarity-computation
 description: Use when when comparing two MS/MS spectra (query and reference) to quantify their spectral resemblance for compound identification or molecular networking, particularly when you need a simple, symmetric measure that is insensitive to precursor mass differences and does not require peak alignment.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -45,6 +46,7 @@ attribution:
 
 # cosine-similarity-computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute cosine similarity between two MS/MS spectra by normalizing their fragment peak intensity vectors and calculating their dot product. This foundational similarity measure is used to discover structurally related molecules in mass spectral library searching.

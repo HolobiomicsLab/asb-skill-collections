@@ -3,6 +3,7 @@ name: qc-failure-event-detection
 description: Use when rapid QC-MS is actively monitoring LC-MS data acquisition and a QC check result (e.g., internal standard retention time drift, m/z deviation, or intensity threshold breach) returns a fail status.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091

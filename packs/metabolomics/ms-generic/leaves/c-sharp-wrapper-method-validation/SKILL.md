@@ -3,6 +3,7 @@ name: c-sharp-wrapper-method-validation
 description: Use when when integrating an R package that wraps a compiled .NET assembly (such as rawrr), you need to verify that the internal dispatch mechanism between the R layer and the C# layer is operational before attempting to read actual raw data files.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_0121

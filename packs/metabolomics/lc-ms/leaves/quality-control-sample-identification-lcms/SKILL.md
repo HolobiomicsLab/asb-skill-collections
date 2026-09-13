@@ -3,6 +3,7 @@ name: quality-control-sample-identification-lcms
 description: Use when when you have XCMS-preprocessed LC-MS metabolomics data with a peak table and an accompanying covariate/metadata file that contains a 'SampleType' column, and you plan to apply QC-based quality filters (such as RSD filtering) or train classifiers for peak quality assessment.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -47,6 +48,7 @@ attribution:
 
 # quality-control-sample-identification-lcms
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identify and extract quality control (QC) sample column names from a metabolomics covariate file to enable downstream QC-based filtering and peak quality metric calculation in LC-MS workflows. This is a prerequisite step for optional RSD-based filtering and classifier training in MetaClean.

@@ -3,6 +3,7 @@ name: mass-spectrum-noise-threshold-parameter-selection
 description: Use when when processing raw or centroid mass spectra (e.g., ESI-MS or FT-ICR data from Bruker .d or Thermo .raw formats) and you need to remove instrument noise and low-abundance peaks before peak picking or molecular formula assignment.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0121

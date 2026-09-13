@@ -3,6 +3,7 @@ name: marker-ion-ranking-and-filtering
 description: Use when you have extracted latent low-dimensional peak features from imaging mass spectrometry (IMS) data using a graph-attention autoencoder and need to identify a ranked subset of marker ions that represent spatial metabolomic patterns.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -44,6 +45,7 @@ attribution:
 
 # marker-ion-ranking-and-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Iteratively rank and select marker ions from imaging mass spectrometry data using latent low-dimensional peak features learned by a graph-attention autoencoder, stopping when a target number of markers is reached or diminishing returns are observed. This skill transforms learned feature representations into an ordered list of biologically or chemically significant m/z peaks for downstream analysis.

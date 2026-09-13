@@ -3,6 +3,7 @@ name: test-driven-database-development
 description: Use when when you have an existing tool or library with file-based storage (JSON, CSV, binary formats) that needs to support efficient querying across large datasets, and you want to migrate to a relational database without breaking existing functionality or performance expectations.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3050

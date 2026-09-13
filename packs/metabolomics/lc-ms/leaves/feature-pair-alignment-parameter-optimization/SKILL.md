@@ -3,6 +3,7 @@ name: feature-pair-alignment-parameter-optimization
 description: Use when after anchor selection and retention-time spline mapping have produced a candidate list of feature pair alignments, but before final scoring and reduction of the combined table.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

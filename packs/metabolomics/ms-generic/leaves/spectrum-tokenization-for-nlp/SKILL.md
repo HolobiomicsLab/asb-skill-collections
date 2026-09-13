@@ -3,6 +3,7 @@ name: spectrum-tokenization-for-nlp
 description: Use when when you have raw mass spectra from experimental libraries (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_3520

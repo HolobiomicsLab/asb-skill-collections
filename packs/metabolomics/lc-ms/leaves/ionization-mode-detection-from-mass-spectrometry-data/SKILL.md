@@ -3,6 +3,7 @@ name: ionization-mode-detection-from-mass-spectrometry-data
 description: Use when when you have raw LC-MS data in mzML format (converted from .raw or acquired directly in that format) and need to invoke Asari for feature extraction, but the ionization mode is not explicitly specified in your experimental metadata or pipeline configuration.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3630
   edam_topics:
   - http://edamontology.org/topic_0121

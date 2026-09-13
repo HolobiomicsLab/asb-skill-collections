@@ -3,6 +3,7 @@ name: xcms-output-replacement-workflow
 description: Use when xCMS has produced aligned LC-MS features but alignment quality is suspected to be poor—especially when analyzing hundreds of samples, data acquired over extended periods (>1 week), or when individual m/z bins show inconsistent RT shifts.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3520

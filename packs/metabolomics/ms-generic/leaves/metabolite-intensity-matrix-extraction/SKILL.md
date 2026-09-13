@@ -3,6 +3,7 @@ name: metabolite-intensity-matrix-extraction
 description: Use when when you have raw mass spectrometry peak intensity data (rows = peaks with IDs, columns = individual samples) and you need to align it with metabolite annotations (peak ID → KEGG or ChEBI compound ID mappings) before performing pathway-level analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0625

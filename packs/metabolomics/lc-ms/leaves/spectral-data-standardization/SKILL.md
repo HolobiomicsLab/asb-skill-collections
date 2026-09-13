@@ -3,6 +3,7 @@ name: spectral-data-standardization
 description: Use when you have completed a GNPS1 (METABOLOMICS-SNETS, METABOLOMICS-SNETS-V2, FEATURE-BASED-MOLECULAR-NETWORKING) or GNPS2 (classical_networking_workflow, feature_based_molecular_networking_workflow) molecular networking job and need to access its output files in a standardized format for.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0121

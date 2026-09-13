@@ -3,6 +3,7 @@ name: feature-fidelity-prediction
 description: Use when you have a feature table (CSV with m/z and retention time columns) and corresponding .mzXML or .mzML mass spectrometry files from an LC-MS metabolomics experiment, and you need to filter out false or low-quality chromatographic peaks before downstream analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

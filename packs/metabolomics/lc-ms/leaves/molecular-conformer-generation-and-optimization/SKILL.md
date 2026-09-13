@@ -3,6 +3,7 @@ name: molecular-conformer-generation-and-optimization
 description: Use when you have SMILES strings or 2D molecular structures of N-Me derived unsaturated sterol lipids (or other C=C-containing molecules) and need to generate 3D conformational and electronic structure data as input to a machine-learning CCS prediction model.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0321
   edam_topics:
   - http://edamontology.org/topic_3314
@@ -46,6 +47,7 @@ attribution:
 
 # molecular-conformer-generation-and-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate 3D conformational ensembles and optimize electronic structures for organic molecules using quantum chemistry calculations, producing conformer geometries and electronic features for downstream machine-learning CCS prediction. This skill bridges chemical structure input (SMILES or molecular geometry files) to quantum-derived features required for collision cross section estimation in ion mobility spectrometry workflows.

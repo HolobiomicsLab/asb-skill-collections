@@ -3,6 +3,7 @@ name: receiver-operating-characteristic-curve-interpretation
 description: Use when you have a trained NeatMS neural network model and labelled peak validation data, and need to select an operational classification threshold or understand how TPR and FPR vary across probability thresholds (e.g., 0.00–0.99).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

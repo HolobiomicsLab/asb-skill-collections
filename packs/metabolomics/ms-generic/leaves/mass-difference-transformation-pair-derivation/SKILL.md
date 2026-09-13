@@ -3,6 +3,7 @@ name: mass-difference-transformation-pair-derivation
 description: Use when you have a formula-assigned DOM dataset from FT-ICR MS (or other mass spectrometry with compound annotations) and need to characterize how molecular transformations occur across the sample—e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0769

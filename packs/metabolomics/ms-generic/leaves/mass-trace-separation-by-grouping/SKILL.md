@@ -3,6 +3,7 @@ name: mass-trace-separation-by-grouping
 description: Use when your pandas DataFrame contains mass spectrometry data with retention time (rt) and intensity columns AND a column representing different mass-to-charge (m/z) values or ion identifiers. This is particularly relevant when generating chromatogram plots from data with multiple mass traces (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: mass-spectrometry-spectral-preprocessing
 description: Use when you have raw mass spectrometry spectra from an unknown analyte or a synthetic compound library and need to feed them into PS2MS or similar deep learning classifiers for NPS detection.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -41,6 +42,7 @@ attribution:
 
 # mass-spectrometry-spectral-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare raw mass spectrometry spectral data into the normalized format required by deep learning models for chemical classification and identity matching. This preprocessing step ensures spectral inputs conform to model expectations before inference or similarity scoring.

@@ -3,6 +3,7 @@ name: file-system-audit-and-validation
 description: Use when after invoking the saveAnnotations function on a MetaboAnnotatoR annotations object to confirm that all four expected output file types (global results file, ranked results file, per-feature ranked spectra PDFs, and pseudo-MS/MS MGF file) have been written to the output directory without.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3172

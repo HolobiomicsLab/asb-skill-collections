@@ -3,6 +3,7 @@ name: metadata-batch-assignment-verification
 description: Use when after data merging and before applying batch correction algorithms (ComBat, SVA, or normalization techniques) to a merged feature table from non-targeted LC-MS/MS metabolomics data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3520

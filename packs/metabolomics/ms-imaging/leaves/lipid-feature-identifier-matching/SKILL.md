@@ -3,6 +3,7 @@ name: lipid-feature-identifier-matching
 description: Use when you have an isotope-corrected or raw MSI dataset stored in HDF5 format following Cardinal::HDF5 conventions, a user-provided internal standard definition (sample identifier and/or feature name), and need to locate and extract the intensity row for that lipid before performing ratio-based.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_2421
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -42,6 +43,7 @@ attribution:
 
 # lipid-feature-identifier-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match user-specified lipid identifiers (internal standards or target species) to their corresponding feature rows in mass spectrometry imaging HDF5 data structures by querying featureData metadata. This skill enables precise extraction of intensity vectors for downstream quantitation or comparison operations.

@@ -3,6 +3,7 @@ name: document-structure-verification
 description: Use when when uploading or ingesting paired omics project documents into the Pairing Omics Data Platform, or when you need to verify that a JSON project file conforms to the expected schema structure before processing MS/MS mass spectra linkages, genome associations, or submission to external.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0091

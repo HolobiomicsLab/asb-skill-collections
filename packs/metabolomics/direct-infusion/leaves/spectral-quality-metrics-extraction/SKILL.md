@@ -3,6 +3,7 @@ name: spectral-quality-metrics-extraction
 description: Use when you have multi-sample MS1 data (from Agilent, Thermo, Bruker, or mzML formats) and need to quantify ion-level quality attributes—such as signal consistency, noise characteristics, or chromatographic stability—to either flag outlier samples or validate data fitness for downstream.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3664
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: feature-identifier-assignment
 description: Use when after constructing MetaboSet objects from Excel-formatted LC-MS peak tables and before drift correction or quality flagging.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -49,6 +50,7 @@ attribution:
 
 # Feature-identifier assignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct and assign unique Feature_ID identifiers to LC-MS metabolomic features by combining Split mode, mass, and retention time values into row names of the expression matrix. This ensures consistent feature tracking and traceability across the MetaboSet object structure.

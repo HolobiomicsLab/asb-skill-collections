@@ -3,6 +3,7 @@ name: chemical-database-querying-and-retrieval
 description: Use when you have BioTransformer-predicted metabolite structures (in SMILES or InChI format) and need to identify which known compounds in public databases match those structures.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -43,6 +44,7 @@ attribution:
 
 # chemical-database-querying-and-retrieval
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Query chemical structure databases (PubChem, ChEMBL, HMDB) with predicted metabolite structures to retrieve known compound identities and retrieve matching candidates ranked by structural similarity and biological plausibility. This skill transforms predicted SMILES or InChI structures into validated chemical identifiers and metadata for metabolite annotation.

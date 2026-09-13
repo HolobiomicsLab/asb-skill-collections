@@ -3,6 +3,7 @@ name: spectral-scan-generation-and-export
 description: Use when you have real LC-MS/MS data (mzML) from a complex sample (e.g., beer, metabolomics extract) and need to prototype or validate a new data-dependent acquisition (DDA) strategy—such as Top-N fragmentation—before deploying it on physical instrumentation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

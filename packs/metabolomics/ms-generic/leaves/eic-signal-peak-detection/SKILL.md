@@ -3,6 +3,7 @@ name: eic-signal-peak-detection
 description: Use when after EIC candidate generation from LC/HRMS data (mzXML, mzML, or netCDF formats), when you need to localize discrete peaks within chromatographic profiles and assign retention time boundaries, apex intensities, and quality scores prior to peak annotation or cross-sample alignment.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -44,6 +45,7 @@ attribution:
 
 # EIC Signal Peak Detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Identifies and delineates individual peaks within extracted ion chromatograms (EICs) from LC/HRMS data by analyzing signal continuity, intensity transitions, and morphological properties. This is a critical intermediate step between EIC candidate generation and peak property quantification in untargeted metabolomics workflows.

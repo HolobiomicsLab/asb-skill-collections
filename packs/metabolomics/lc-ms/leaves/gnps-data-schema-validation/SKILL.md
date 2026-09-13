@@ -3,6 +3,7 @@ name: gnps-data-schema-validation
 description: Use when after extracting a GNPS molecular networking job archive using GNPSExtractor, before calling npl.load_data().
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3172

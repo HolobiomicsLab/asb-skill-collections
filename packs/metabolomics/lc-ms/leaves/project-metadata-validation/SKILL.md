@@ -3,6 +3,7 @@ name: project-metadata-validation
 description: Use when when a user uploads a JSON project document to the Pairing Omics Data Platform, before accepting it into the repository or indexing it for search. Use this skill to catch missing required fields, incorrect field types, and constraint violations early in the submission workflow.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3364
   edam_topics:
   - http://edamontology.org/topic_3377

@@ -3,6 +3,7 @@ name: ion-mobility-peak-picking
 description: Use when when you have extracted ion mobilograms from DIA-MS experiments and need to automatically identify peak boundaries and apex positions in the ion mobility dimension.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0121

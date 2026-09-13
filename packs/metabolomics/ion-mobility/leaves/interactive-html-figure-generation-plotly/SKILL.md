@@ -3,6 +3,7 @@ name: interactive-html-figure-generation-plotly
 description: Use when your mass spectrometry DataFrame contains m/z, retention time (or mobility), and intensity columns, and you need to generate an interactive HTML figure for exploration, web-based presentation, or interactive supplementary material.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0570
   edam_topics:
   - http://edamontology.org/topic_0121

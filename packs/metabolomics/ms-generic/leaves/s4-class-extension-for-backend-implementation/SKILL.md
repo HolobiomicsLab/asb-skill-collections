@@ -3,6 +3,7 @@ name: s4-class-extension-for-backend-implementation
 description: Use when you are building a new data representation or storage strategy for MS spectra (e.g., on-disk HDF5, SQL database, remote file access) and need to integrate it seamlessly into workflows that use the Spectra package.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: nearest-neighbor-index-querying
 description: Use when you have millions of MS/MS spectra to cluster and have already constructed nearest neighbor indexes (partitioned Voronoi diagrams of spectrum vectors bucketed by precursor m/z).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3696
   edam_topics:
   - http://edamontology.org/topic_3520

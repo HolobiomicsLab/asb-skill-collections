@@ -3,6 +3,7 @@ name: bgc-identification-from-genomic-sequence
 description: Use when you have assembled genome sequences (contigs or scaffolds in FASTA format) and want to identify putative BGCs and their precursor peptides before constructing a RiPP structure database for spectral matching.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0436
   edam_topics:
   - http://edamontology.org/topic_0621

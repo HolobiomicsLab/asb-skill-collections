@@ -3,6 +3,7 @@ name: retention-time-extraction-from-raw-spectra
 description: Use when when you have Thermo Orbitrap .raw files containing known reference peptides (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

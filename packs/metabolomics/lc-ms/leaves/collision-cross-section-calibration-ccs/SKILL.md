@@ -3,6 +3,7 @@ name: collision-cross-section-calibration-ccs
 description: Use when when you have acquired ion mobility–mass spectrometry data (drift time and m/z dimensions) and need to convert observed drift times into calibrated CCS values.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: metabolite-candidate-ranking-interpretation
 description: Use when after running annotateRC() on LC-MS AIF features, when you need to validate whether a feature's rank-1 annotation is reliable or when you suspect that structurally similar metabolites (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3172

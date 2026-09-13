@@ -3,6 +3,7 @@ name: building-block-annotation-export
 description: Use when you have retrieved a user database entry (sequence or building-block structure record) from the MassSpecBlocks backend and need to generate a file in CycloBranch format for mass spectra analysis, interpretation, or sharing with collaborators using the CycloBranch software.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0081

@@ -3,6 +3,7 @@ name: two-dimensional-ms-image-processing
 description: Use when you have raw GC–MS or LC–MS data represented as a two-dimensional map (m/z axis vs. retention time axis) and need to identify chemo-/biomarker features across multiple analytes simultaneously, especially when conventional peak picking produces high false-positive or false-negative rates.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -45,6 +46,7 @@ attribution:
 
 # two-dimensional-ms-image-processing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply image processing and machine learning to two-dimensional chromatography–mass spectrometry maps (m/z vs. retention time) to automatically discriminate analytes and identify multivariate marker features without conventional peak picking. This skill avoids false peak detections inherent in traditional workflows and is demonstrable at parts per billion sensitivity levels.

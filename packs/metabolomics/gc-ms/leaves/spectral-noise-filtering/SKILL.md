@@ -3,6 +3,7 @@ name: spectral-noise-filtering
 description: Use when immediately after extracting ion chromatograms (EICs) by binning mass spectral data across the full m/z range from raw LC/HRMS files (mzML, mzXML, or netCDF format).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -44,6 +45,7 @@ attribution:
 
 # spectral-noise-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter mass spectral noise from extracted ion chromatogram (EIC) candidates during the initial stage of untargeted LC/HRMS data processing. This skill removes low-intensity background signals and non-significant peaks to retain only genuine chemical signals for downstream peak detection.

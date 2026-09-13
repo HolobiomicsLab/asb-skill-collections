@@ -3,6 +3,7 @@ name: spectral-peak-detection-and-deconvolution
 description: Use when you have raw LC-MS data in mzML or mzXML format and need to extract reproducible, high-quality metabolite features (m/z, retention time, intensity) for global metabolomics.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3172

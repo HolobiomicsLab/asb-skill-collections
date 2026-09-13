@@ -3,6 +3,7 @@ name: automated-feature-extraction-from-spectra
 description: Use when when you have raw or processed direct-infusion MS (DI-MS) or ASAP-MS spectra as mz/intensity pairs and need to rapidly identify salient peaks for species authentication, sample scoring, or comparative profiling without manual inspection.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -44,6 +45,7 @@ attribution:
 
 # automated-feature-extraction-from-spectra
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automatic identification and annotation of peaks of interest from raw or processed mass spectrometry spectra using algorithmic detection. This skill extracts m/z and intensity features with confidence scoring, enabling downstream species discrimination and sample characterization without manual peak curation.

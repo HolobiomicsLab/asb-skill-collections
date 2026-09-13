@@ -3,6 +3,7 @@ name: metabolite-feature-annotation
 description: 'Use when after MS1 feature extraction from mzXML files when you have: (1) a feature table with m/z, retention time, and intensity values; (2) DDA (Data-Dependent Acquisition) mzXML files containing MS2 fragmentation spectra; and (3) a reference spectral library in MSP format.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0153

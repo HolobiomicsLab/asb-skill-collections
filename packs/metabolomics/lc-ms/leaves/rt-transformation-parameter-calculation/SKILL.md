@@ -3,6 +3,7 @@ name: rt-transformation-parameter-calculation
 description: Use when you have centroided mzML or mzXML LC-MS files from a single batch run that exhibit systematic retention-time drift between samples, one or more designated QC reference file(s), and you need to harmonize RT coordinates across all samples before feature detection to reduce false positive and.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

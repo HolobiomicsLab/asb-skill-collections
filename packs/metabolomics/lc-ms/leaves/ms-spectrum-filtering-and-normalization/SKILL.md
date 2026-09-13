@@ -3,6 +3,7 @@ name: ms-spectrum-filtering-and-normalization
 description: Use when you have raw or parsed tandem MS spectra (MGF, mzML, or in-memory Spectrum objects) and need to remove artifacts and normalize intensities prior to spectral matching, library searching, or downstream analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

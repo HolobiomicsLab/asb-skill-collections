@@ -3,6 +3,7 @@ name: msi-intensity-matrix-normalization
 description: Use when after isotope correction when you have extracted intensity matrices from imzML or HDF5 MSI data and need to convert raw or isotope-corrected ion-image intensities into quantified values using a known internal standard lipid species.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -42,6 +43,7 @@ attribution:
 
 # msi-intensity-matrix-normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize Mass Spectrometry Imaging (MSI) ion-image intensity matrices by dividing target lipid intensities element-wise by user-defined internal standard intensities, converting raw or isotope-corrected values into quantified measurements. This skill enables accurate lipid quantitation by correcting for instrument response variation and sample preparation differences across pixels.

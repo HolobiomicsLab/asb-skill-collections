@@ -3,6 +3,7 @@ name: conda-environment-setup-and-activation
 description: Use when preparing a fresh system or user account to run MSIGen for mass spectrometry imaging data processing, or when you need to isolate MSIGen installation from other Python projects to avoid dependency conflicts.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_topics: []
   tools:
   - pyBaf2Sql

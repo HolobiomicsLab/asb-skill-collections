@@ -3,6 +3,7 @@ name: source-code-analysis-for-algorithm-extraction
 description: Use when when you need to reverse-engineer or formally document the computational steps within a closed or under-documented scientific software module—particularly when the software performs in silico generation, enumeration, or filtering of candidate molecular structures and the published paper or.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: mass-spectrometry-imaging-data-processing
 description: Use when you have raw or processed MSI data (in imzML or rMSIproc formats) and need to identify and annotate matrix-related peaks before statistical analysis or metabolite identification. Use it specifically when your MSI experiment employed a chemical matrix (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3929
   edam_topics:
   - http://edamontology.org/topic_3520

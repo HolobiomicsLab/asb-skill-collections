@@ -3,6 +3,7 @@ name: untargeted-lcms-peak-annotation
 description: Use when you have a peak-intensity matrix from untargeted LC-MS analysis (raw detected peaks with m/z and intensity values) and need to assign putative metabolite identities.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

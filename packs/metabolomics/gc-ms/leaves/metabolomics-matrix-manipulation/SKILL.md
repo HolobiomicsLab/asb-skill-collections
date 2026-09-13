@@ -3,6 +3,7 @@ name: metabolomics-matrix-manipulation
 description: Use when you have a raw metabolomics abundance table (e.g., LC/MS or GC/MS peak intensities or concentrations) with non-normal distributions and missing values, and you need to prepare it for Gibbs sampler or other model-based imputation.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -44,6 +45,7 @@ attribution:
 
 # metabolomics-matrix-manipulation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Transform and standardize metabolomics abundance matrices through log-transformation, scaling, centralization, and recovery operations to prepare data for imputation and downstream analysis. This skill chains pre- and post-processing steps that preserve data integrity and enable missing-value algorithms to work on normalized scales.

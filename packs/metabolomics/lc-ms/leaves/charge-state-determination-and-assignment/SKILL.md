@@ -3,6 +3,7 @@ name: charge-state-determination-and-assignment
 description: Use when when analyzing high-resolution mass spectrometry data from natural-abundance or labeled peptides where multiple charge states (+2, +3, +4, etc.) may be present within the same m/z isolation window (e.g., 880–890 m/z).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: fragmentation-pattern-similarity-scoring
 description: Use when after feature detection and alignment have produced a feature table with MS/MS spectra, and you have access to a reference spectral database (e.g., xenobiotic reaction libraries or public databases).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -56,6 +57,7 @@ attribution:
 
 # fragmentation-pattern-similarity-scoring
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute similarity scores between fragmentation patterns of unknown MS features and reference spectra to rank candidate metabolite annotations in untargeted metabolomics. This step bridges feature detection and confident metabolite identity assignment by quantifying spectral match quality.

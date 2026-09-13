@@ -3,6 +3,7 @@ name: mass-tolerance-matching-and-validation
 description: Use when you have an MS/MS spectrum with observed peaks and a peptidoform specification (e.g., ProForma 2.0 notation such as 'EM[Oxidation]EVEES[Phospho]PEK'), and you need to annotate which observed peaks correspond to known fragment ions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

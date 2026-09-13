@@ -3,6 +3,7 @@ name: poisson-noise-generation
 description: Use when when preparing augmented variants of ion images (single-channel 2D arrays or multi-channel spectral images) for contrastive learning in mass spectrometry imaging tasks.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -42,6 +43,7 @@ attribution:
 
 # poisson-noise-generation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate synthetic Poisson noise matched to ion image intensity to simulate the shot-noise characteristics of mass spectrometry imaging detectors. This augmentation step is applied during contrastive learning to improve model robustness to realistic detector noise.

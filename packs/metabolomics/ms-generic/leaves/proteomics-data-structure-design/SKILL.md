@@ -3,6 +3,7 @@ name: proteomics-data-structure-design
 description: Use when when building a mass-spectrometry analysis pipeline that must support multiple vendor and open formats (mzML, mzXML, Thermo, Agilent, Bruker, etc.) and you need to shield downstream tools from format-specific parsing logic.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

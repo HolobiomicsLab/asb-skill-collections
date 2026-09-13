@@ -3,6 +3,7 @@ name: mzml-spectrum-chromatogram-object-construction
 description: Use when you have an indexed gzip–compressed mzML file (mzML.gz with internal index structure) and need to retrieve and work with individual spectra or chromatograms by integer index without decompressing the entire file.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

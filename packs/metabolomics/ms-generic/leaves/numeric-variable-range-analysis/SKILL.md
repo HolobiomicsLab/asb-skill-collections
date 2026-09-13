@@ -3,6 +3,7 @@ name: numeric-variable-range-analysis
 description: Use when you have loaded a numeric column (e.g., H/C ratio, O/C ratio, m/z value, or intensity) from a CSV file into Punc'data and need to render a histogram with appropriate bar spacing. The skill is triggered when the range of the column is small enough that default bin widths (1.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091

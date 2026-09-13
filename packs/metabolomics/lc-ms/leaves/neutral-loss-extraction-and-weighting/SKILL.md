@@ -3,6 +3,7 @@ name: neutral-loss-extraction-and-weighting
 description: Use when you have a collection of annotated MS/MS spectra with precursor m/z values and fragment peak lists, and you aim to train or apply a spectral similarity model (such as Spec2Vec Word2Vec) that exploits fragmentation chemistry.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

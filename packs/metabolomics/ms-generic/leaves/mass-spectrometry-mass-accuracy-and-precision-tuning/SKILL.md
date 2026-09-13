@@ -3,6 +3,7 @@ name: mass-spectrometry-mass-accuracy-and-precision-tuning
 description: Use when when extracting and validating chromatographic peaks for target molecules from centroided mzML files, particularly when working with multiple isotopologues and adducts where mass tolerance directly affects whether predicted isotopologues are correctly grouped and detected as part of the.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

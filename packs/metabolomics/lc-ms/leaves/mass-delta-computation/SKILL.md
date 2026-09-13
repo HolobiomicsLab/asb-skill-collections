@@ -3,6 +3,7 @@ name: mass-delta-computation
 description: Use when when you have parsed two or more MS/MS spectra (precursor m/z and fragment ion lists) and need to quantify all pairwise mass differences between fragment ions before alignment or similarity scoring.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

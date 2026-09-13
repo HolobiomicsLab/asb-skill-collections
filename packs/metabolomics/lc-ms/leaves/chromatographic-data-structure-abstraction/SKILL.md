@@ -3,6 +3,7 @@ name: chromatographic-data-structure-abstraction
 description: Use when when ingesting raw mass spectrometry data from multiple instrument vendors or file formats into a metabolomics processing pipeline, and you need to expose spectral and chromatographic metadata through a single, consistent interface regardless of the source format's internal structure.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

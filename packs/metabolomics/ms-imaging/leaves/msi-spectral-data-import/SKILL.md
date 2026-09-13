@@ -3,6 +3,7 @@ name: msi-spectral-data-import
 description: Use when use this skill at the start of any MSI analysis workflow when you have raw imzML files or vendor-specific MSI data that need to be loaded into napari-MSI-Explorer for visualization, mean intensity calculation, ROI analysis, or annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3209
   edam_topics:
   - http://edamontology.org/topic_3520

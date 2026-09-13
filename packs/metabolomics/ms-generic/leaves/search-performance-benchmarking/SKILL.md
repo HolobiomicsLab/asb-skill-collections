@@ -3,6 +3,7 @@ name: search-performance-benchmarking
 description: Use when when you have two or more implementations of a spectral search tool (e.g., MASST vs. MASST+) and need to quantify whether claimed performance improvements (e.g., '100-fold speedup') are reproducible.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3945
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -44,6 +45,7 @@ attribution:
 
 # search-performance-benchmarking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Benchmark and compare the search performance of spectral library query tools by executing identical query sets on baseline and improved systems, measuring wall-clock time, resource consumption, and speedup ratios. This skill validates whether algorithmic or infrastructure improvements achieve claimed performance gains at scale.

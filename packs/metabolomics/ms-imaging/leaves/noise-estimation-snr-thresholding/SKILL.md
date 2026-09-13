@@ -3,6 +3,7 @@ name: noise-estimation-snr-thresholding
 description: Use when after normalizing, smoothing, and baseline-reducing mass spectra via normalize(), smooth(), and reduceBaseline(), when you need to distinguish true peaks from noise-induced artifacts.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0943

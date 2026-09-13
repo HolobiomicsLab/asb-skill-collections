@@ -3,6 +3,7 @@ name: pls-pls-da-classification-modeling
 description: Use when you have a preprocessed peak table (feature matrix with samples × peaks), known sample class labels or group membership, and a goal to classify or discriminate between two or more sample groups.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

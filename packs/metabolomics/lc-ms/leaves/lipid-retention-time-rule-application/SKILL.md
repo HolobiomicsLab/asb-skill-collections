@@ -3,6 +3,7 @@ name: lipid-retention-time-rule-application
 description: Use when you have candidate lipid annotations from spectral library matching (e.g., XCMS + CAMERA output) with MS/MS scores, and you need to reduce false positives and predict previously unannotated lipids.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0091

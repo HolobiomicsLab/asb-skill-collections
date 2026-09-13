@@ -3,6 +3,7 @@ name: batch-script-execution-and-automation
 description: Use when you have generated a peak table or feature list output file from an external peak-picking tool (MZmine, XCMS, MS-DIAL, or Compound Discoverer) in its native export format and need to ingest it into LipidMatch for lipid identification without manual column remapping or format conversion.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3762
   edam_topics:
   - http://edamontology.org/topic_3172

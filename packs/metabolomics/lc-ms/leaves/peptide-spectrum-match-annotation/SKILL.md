@@ -3,6 +3,7 @@ name: peptide-spectrum-match-annotation
 description: Use when when you have a peptide sequence, observed MS2 spectrum peaks (m/z, intensity, charge state), and need to determine which theoretical fragment ions (B and Y ions) match the observed data—particularly in stable isotope probing (SIP) experiments where peptides carry heavy isotope labels (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3648
   edam_topics:
   - http://edamontology.org/topic_0121

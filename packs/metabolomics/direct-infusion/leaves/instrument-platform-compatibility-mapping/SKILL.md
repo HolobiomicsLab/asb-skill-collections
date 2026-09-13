@@ -3,6 +3,7 @@ name: instrument-platform-compatibility-mapping
 description: Use when when adopting a mass spectrometry data processing tool (e.g., LipidMatch) and needing to verify whether your specific instrument platform (vendor + model) and acquisition mode combination (targeted, ddMS2-topN, AIF, direct infusion, imaging) have been formally validated.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520

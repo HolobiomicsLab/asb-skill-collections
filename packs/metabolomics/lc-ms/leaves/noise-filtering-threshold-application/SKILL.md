@@ -3,6 +3,7 @@ name: noise-filtering-threshold-application
 description: Use when when you have raw or centroid-mode LC-MS All-ion fragmentation (AIF) spectra and need to generate or match against ion fragment databases.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0625

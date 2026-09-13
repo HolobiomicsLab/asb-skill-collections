@@ -3,6 +3,7 @@ name: chemical-formula-annotation-mapping
 description: 'Use when you have processed MSI peak data (in rMSIproc format) and need to distinguish matrix-related ions from analyte signals. Specifically: (1) you have a peak matrix with m/z values and spatial intensity maps; (2) you have a reference matrix identity (e.g., ''Ag1'' for silver);'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_3520

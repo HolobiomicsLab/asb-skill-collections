@@ -3,6 +3,7 @@ name: spectral-peak-frequency-threshold-optimization
 description: 'Use when you have MS/MS spectra with fragment frequency annotations (from consensus spectrum generation) and need to decide which fragments to retain versus remove. Trigger conditions: (1) you have replicate MS/MS spectra for the same feature with per-fragment recurrence frequencies calculated;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3520

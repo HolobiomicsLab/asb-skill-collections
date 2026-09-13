@@ -3,6 +3,7 @@ name: ms-ms-spectrum-preprocessing
 description: Use when you have raw or semi-processed MS/MS spectral data from bottom-up tandem mass spectrometry experiments (data-dependent acquisition) that you intend to input to de novo peptide sequencing tools like Casanovo.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -73,6 +74,7 @@ attribution:
 
 # MS/MS Spectrum Preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare raw tandem mass spectrometry (MS/MS) spectra for de novo peptide sequencing by converting, validating, and standardizing spectral data into formats suitable for neural network-based peptide prediction. This skill ensures data quality and consistency across diverse mass spectrometry instruments and acquisition protocols.

@@ -3,6 +3,7 @@ name: feature-occurrence-counting-across-spectra
 description: Use when when you have parsed MS2 spectra from a single metabolomics sample (via matchms or similar) and need to generate a sample-level feature vector that represents the chemical composition independently of chromatographic alignment.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

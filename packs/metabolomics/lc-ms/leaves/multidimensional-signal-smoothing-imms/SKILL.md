@@ -3,6 +3,7 @@ name: multidimensional-signal-smoothing-imms
 description: Use when processing raw IM-MS data (Agilent MassHunter .d or UIMF format) that contains jagged, low-abundance ion peaks or when saturation repair has been applied and the resulting reconstructed signals need artifact removal and enhancement.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3563
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -51,6 +52,7 @@ attribution:
 
 # multidimensional-signal-smoothing-imms
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Multidimensional smoothing reduces noise and reconstructs low-abundance ion signals in IM-MS data by applying smoothing algorithms across m/z, drift time (or arrival time), and retention time dimensions. This skill is essential for improving signal-to-noise ratio and enabling reliable detection of weak analytes in ion mobility–mass spectrometry workflows.

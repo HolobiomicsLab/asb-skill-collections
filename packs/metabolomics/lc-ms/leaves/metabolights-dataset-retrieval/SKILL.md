@@ -3,6 +3,7 @@ name: metabolights-dataset-retrieval
 description: Use when you have a MetaboLights dataset identifier (e.g., MTBLS1124) and need to download a specific mzML file (e.g., QC07.mzML) from the public repository for visualization, quality control assessment, or integration into a metabolomics workflow. The USI format mzspec:MTBLS1124:QC07.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3925
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -40,6 +41,7 @@ attribution:
 
 # metabolights-dataset-retrieval
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Retrieve and validate mzML mass spectrometry files from the MetaboLights public repository using Uniform Spectrum Identifiers (USI) and the GNPS LCMS Visualization Dashboard. This skill enables programmatic access to deposited metabolomics datasets for downstream spectrum visualization and analysis.

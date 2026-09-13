@@ -3,6 +3,7 @@ name: mass-spectrometry-spectral-embedding-learning
 description: Use when when you have preprocessed MS/MS spectral pairs (peak intensities and m/z values) and need to predict molecular structural similarity scores, or when you want to project spectra into a learned chemical embedding space for visualization (e.g., via UMAP) or downstream similarity searches.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0391
   edam_topics:
   - http://edamontology.org/topic_0121

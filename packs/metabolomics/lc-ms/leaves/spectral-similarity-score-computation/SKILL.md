@@ -3,6 +3,7 @@ name: spectral-similarity-score-computation
 description: Use when when you have pairs of MS/MS spectra (in mgf, msp, mzml, mzxml, json, or usi format) and need to retrieve structurally related compounds or rank spectral similarity on a continuous scale (Tanimoto prediction).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: mzml-file-import-xcms
 description: Use when you have raw mzML files from a mass spectrometry instrument and need to begin a preprocessing workflow in xcms. This is the essential first step before any peak detection (centWave, MSWParam) or feature grouping can occur.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3520

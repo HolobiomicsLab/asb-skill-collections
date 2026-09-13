@@ -3,6 +3,7 @@ name: two-layer-topology-traversal
 description: Use when you have an untargeted metabolomics dataset with partial metabolite annotations (from database matching or prior curation) and need to extend annotation coverage to unannotated metabolites.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -39,6 +40,7 @@ attribution:
 
 # two-layer-topology-traversal
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Reconstruct and traverse a two-layer interactive network topology (knowledge-driven biochemical pathways + data-driven MS2 similarity networks) to propagate metabolite annotations recursively across both layers. This skill enables accurate annotation coverage in untargeted metabolomics by leveraging both prior biological knowledge and experimental spectral similarity evidence.

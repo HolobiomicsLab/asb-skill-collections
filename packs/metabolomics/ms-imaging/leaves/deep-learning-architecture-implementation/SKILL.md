@@ -3,6 +3,7 @@ name: deep-learning-architecture-implementation
 description: Use when you have two augmented versions of the same ion image (from mass spectrometry imaging data) and need to extract learnable 512-dimensional feature representations using a shared-weight encoder for contrastive loss optimization.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -41,6 +42,7 @@ attribution:
 
 # deep-learning-architecture-implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a ResNet18-based encoder module with shared parameters that processes pairs of augmented ion images and outputs 512-dimensional representation vectors for contrastive learning in mass spectrometry imaging. This skill is essential for building the feature extraction backbone of self-supervised representation learning models designed to discover co-localized or isotope ions.

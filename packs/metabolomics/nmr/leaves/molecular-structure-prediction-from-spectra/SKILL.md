@@ -3,6 +3,7 @@ name: molecular-structure-prediction-from-spectra
 description: Use when you have preprocessed 1D ¹H and/or ¹³C NMR spectra (as numerical arrays or feature tensors) from an unknown organic compound with ≤19 heavy atoms, and you need to predict both the molecular formula and the connectivity graph of the compound without prior structural hypotheses or reference.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

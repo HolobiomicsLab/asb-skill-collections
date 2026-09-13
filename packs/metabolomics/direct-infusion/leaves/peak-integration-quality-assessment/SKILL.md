@@ -3,6 +3,7 @@ name: peak-integration-quality-assessment
 description: Use when you have a metabolomic feature table (rows=features, columns=samples) with peak height and peak area measurements from chromatographic processing, and you suspect data quality issues such as misaligned features or erratic peak integration across your sample cohort.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

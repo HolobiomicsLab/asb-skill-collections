@@ -3,6 +3,7 @@ name: molecular-fingerprint-extraction-and-vectorization
 description: Use when you have annotated metabolite structures (with SMILES strings) from a reference library (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0292
   edam_topics:
   - http://edamontology.org/topic_0154

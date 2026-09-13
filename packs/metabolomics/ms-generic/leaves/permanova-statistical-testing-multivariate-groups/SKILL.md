@@ -3,6 +3,7 @@ name: permanova-statistical-testing-multivariate-groups
 description: Use when you have normalized peak intensities or abundance matrices from mass spectrometry (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: metabolite-ranking-by-annotation-score
 description: Use when when you have generated a set of candidate metabolites for a given experimental MS/MS spectrum and need to determine which candidate is most likely to be the true metabolite.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: hrms-feature-annotation-integration
 description: Use when you have LC- or GC-HRMS data in mzML format and a feature list (CSV/TSL/Excel) from external feature detection software (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_3172

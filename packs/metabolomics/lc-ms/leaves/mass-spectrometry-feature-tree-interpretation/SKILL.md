@@ -3,6 +3,7 @@ name: mass-spectrometry-feature-tree-interpretation
 description: Use when after running qiime qemistree make-hierarchy and obtaining a tree artifact (qemistree.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0566
   edam_topics:
   - http://edamontology.org/topic_3520

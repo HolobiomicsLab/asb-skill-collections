@@ -3,6 +3,7 @@ name: molecular-transformation-frequency-filtering
 description: Use when after clustering pairwise mass differences into transformation groups from FT-ICR MS formula-assigned datasets, apply this skill when you have a catalog of transformation pairs (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091

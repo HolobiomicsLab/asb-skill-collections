@@ -3,6 +3,7 @@ name: entropy-based-spectral-distance-computation
 description: Use when when comparing two preprocessed MS/MS spectra for compound identification and you need higher accuracy than dot product similarity provides.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_1812
   edam_topics:
   - http://edamontology.org/topic_3520

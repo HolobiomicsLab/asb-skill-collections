@@ -3,6 +3,7 @@ name: organism-specific-metabolism-pathway-assignment
 description: Use when you have observed metabolites (from LC-MS/MS, chromatography, or spectroscopy) whose identities are unknown, and you wish to constrain the candidate pool by leveraging organism-specific metabolism predictions.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3656
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -41,6 +42,7 @@ attribution:
 
 # organism-specific-metabolism-pathway-assignment
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 This skill uses BioTransformer to predict small molecule metabolism pathways in a specified biological context (mammals, gut microbiota, or soil/aquatic microbiota) and assign candidate metabolite structures to experimentally observed compounds by matching predicted structures against observed spectral or mass features.

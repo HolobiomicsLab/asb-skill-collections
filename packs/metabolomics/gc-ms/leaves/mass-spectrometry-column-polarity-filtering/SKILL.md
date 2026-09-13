@@ -3,6 +3,7 @@ name: mass-spectrometry-column-polarity-filtering
 description: Use when you have a combined EI library (from multiple sources such as NIST, RIKEN, MoNA) and access to NIST RI database files (ri.dat and USER.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0625

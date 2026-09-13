@@ -3,6 +3,7 @@ name: metabolite-abundance-normalization-across-conditions
 description: Use when you have intracellular metabolomics abundance data (measured metabolite concentrations) from multiple biological replicates collected from two or more cell lines or conditions, and you need to create a normalized, cell-line-level metabolite dataset before computing Reaction Propensity.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0769

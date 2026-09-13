@@ -3,6 +3,7 @@ name: redundant-feature-identification-lcms
 description: Use when after alignment of two or more same-method nontargeted LCMS datasets (e.g., via Eclipse) when you have a feature table containing retention times and feature intensities across samples. Use it when redundancy is expected—e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0091

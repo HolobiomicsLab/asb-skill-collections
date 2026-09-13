@@ -3,6 +3,7 @@ name: msi-metadata-curation-and-storage
 description: Use when after generating a 3D pixel array (shape n+1, y, x) from raw line-scan MSI data via MSIGen's get_image_data() call, curate and validate the accompanying JSON metadata file before visualization or downstream analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520

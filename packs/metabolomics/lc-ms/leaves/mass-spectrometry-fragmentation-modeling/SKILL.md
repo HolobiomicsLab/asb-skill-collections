@@ -3,6 +3,7 @@ name: mass-spectrometry-fragmentation-modeling
 description: Use when you are generating synthetic LC-MS/MS data for method validation, algorithm benchmarking, or co-fragmentation analysis, and need to model how specific biomolecules (peptides, nucleosides, or other chemical formulas) fragment under collision-induced dissociation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0121

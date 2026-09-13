@@ -3,6 +3,7 @@ name: chromatographic-retention-time-matching
 description: Use when you have GC-MS data with multiple replicate injections or samples, need to identify a predefined set of query chemicals by name, and want to consolidate all instances of those chemicals (which may appear with varying match factors or peak areas across different samples or injection.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_0628

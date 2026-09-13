@@ -3,6 +3,7 @@ name: abstract-base-class-implementation
 description: Use when when building a visualization library that must support multiple plotting backends (e.g., matplotlib, bokeh, plotly) and multiple data types (e.g., chromatograms, spectra, peak maps) without duplicating core logic or configuration handling across backend–plot-type combinations.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520

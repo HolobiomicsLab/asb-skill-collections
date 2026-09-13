@@ -3,6 +3,7 @@ name: throughput-optimization-ms-querying
 description: Use when you have experimental MS/MS spectra that must be matched against a large hierarchical fragmentation library (e.g., 168.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0121

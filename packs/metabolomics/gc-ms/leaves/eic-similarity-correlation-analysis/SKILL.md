@@ -3,6 +3,7 @@ name: eic-similarity-correlation-analysis
 description: Use when after abundance-correlation-based feature group refinement when you observe that larger feature groups (particularly those with 3+ features in the same m/z–retention-time window) may contain features with different peak shapes or retention-time shifts in their EICs, or when abundance.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: metabolite-annotation-network-architecture
 description: Use when when annotating large-scale untargeted metabolomics datasets where reference library coverage is incomplete and you need to infer metabolite identities for unannotated compounds by propagating annotations from seed metabolites (database matches or prior curation) across both.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -42,6 +43,7 @@ attribution:
 
 # metabolite-annotation-network-architecture
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Design and implement a fixed two-layer interactive networking topology that bridges knowledge-driven (biochemical ontologies, metabolic reaction networks) and data-driven (MS2 spectral similarity, co-occurrence patterns) layers to enable recursive annotation propagation across metabolite networks. This architecture supports accurate large-scale metabolite annotation in untargeted metabolomics by leveraging both curated biochemical relationships and experimental mass spectrometry evidence simultaneously.

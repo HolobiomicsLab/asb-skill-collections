@@ -3,6 +3,7 @@ name: activity-score-robustness-assessment
 description: Use when after computing PLAGE-derived activity scores for pathways or metabolite sets (Molecular Families, Mass2Motifs) from log2-standardized metabolomics intensity data.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -50,6 +51,7 @@ attribution:
 
 # activity-score-robustness-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate the robustness of pathway or metabolite-set activity scores computed via PLAGE decomposition against noise and missing peaks in metabolomics intensity data. This skill assesses whether activity scores remain stable and interpretable across perturbations of the input peak intensity matrix, a critical validation step for metabolomics pathway analysis where noise and missing data are prevalent.

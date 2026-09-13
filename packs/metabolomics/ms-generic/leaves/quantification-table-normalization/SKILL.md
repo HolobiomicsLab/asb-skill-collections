@@ -3,6 +3,7 @@ name: quantification-table-normalization
 description: Use when you have raw quantification data (abundance or intensity values across samples and features) from mass spectrometry or similar high-dimensional assays and need to prepare it for msFeaST's feature selection workflow, which requires standardized internal data structures compatible with.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3375

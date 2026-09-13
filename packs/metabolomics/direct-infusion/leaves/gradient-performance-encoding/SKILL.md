@@ -3,6 +3,7 @@ name: gradient-performance-encoding
 description: Use when when you have extracted retention times from the top detected MS1 features in a LC-MS run and need to evaluate whether the gradient spreads those compounds efficiently across the available chromatographic time window—particularly during iterative gradient optimization where you need a.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -49,6 +50,7 @@ attribution:
 
 # gradient-performance-encoding
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encodes LC gradient separation performance as a single normalized metric (0–1) by computing the distribution and spacing of MS1 feature retention times across the chromatographic window. This omics-scale quantification enables rapid evaluation of gradient quality without full compound identification.

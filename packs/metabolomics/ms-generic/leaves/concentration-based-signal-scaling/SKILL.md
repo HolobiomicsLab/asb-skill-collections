@@ -3,6 +3,7 @@ name: concentration-based-signal-scaling
 description: Use when you have loaded m/z peak data with metadata that includes a concentration column representing sample loading mass or volume, and systematic intensity variation across samples is suspected to reflect preparation differences rather than true biological variation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: feature-matrix-preparation-for-supervised-learning
 description: Use when you have preprocessed metabolomics feature abundance data and want to train multiple classifiers (traditional ML or deep learning) to predict sample phenotype or disease status.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0092

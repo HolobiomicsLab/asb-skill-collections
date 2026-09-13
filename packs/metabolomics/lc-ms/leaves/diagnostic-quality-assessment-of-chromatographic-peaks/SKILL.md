@@ -3,6 +3,7 @@ name: diagnostic-quality-assessment-of-chromatographic-peaks
 description: Use when after running targeted peak detection in TARDIS (screening_mode = FALSE) on centroided .mzML LC–MS files, apply this skill to verify that integrated peaks for your target compounds exhibit acceptable quality.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0091

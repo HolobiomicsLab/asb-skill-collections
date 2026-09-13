@@ -3,6 +3,7 @@ name: proforma-2-0-peptidoform-parsing
 description: Use when you have a ProForma 2.0 peptidoform string (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: gibbs-sampler-implementation-and-convergence
 description: Use when your metabolomics dataset contains missing values below a known detection limit (left-censored MNAR data), and you need to recover these values while respecting the truncation constraint.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -46,6 +47,7 @@ attribution:
 
 # Gibbs sampler implementation and convergence
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Implement a Gibbs sampling algorithm to iteratively impute left-censored missing values in metabolomics datasets by alternating between sampling missing values from truncated normal distributions and updating posterior parameter estimates. Convergence is assessed via chain stabilization or maximum iteration count to ensure reliable imputation.

@@ -3,6 +3,7 @@ name: spectral-json-parsing
 description: Use when after submitting an LC-MS/MS fragmentation spectrum to the MSNovelist web service and receiving a JSON response containing ranked de-novo structure candidates.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0091

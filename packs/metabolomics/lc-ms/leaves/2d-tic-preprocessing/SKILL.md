@@ -3,6 +3,7 @@ name: 2d-tic-preprocessing
 description: Use when when you have raw GCxGC-MS data imported from NetCDF into a 2D-TIC chromatogram object and need to remove chemical and instrumental noise (column bleeding, baseline drift, detector contamination) to reveal metabolite differences between sample groups for downstream multiway PCA or.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0091

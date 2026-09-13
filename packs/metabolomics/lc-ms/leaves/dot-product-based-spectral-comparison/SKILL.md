@@ -3,6 +3,7 @@ name: dot-product-based-spectral-comparison
 description: Use when when searching an unknown MS/MS spectrum against a spectral library and you need to rapidly identify the most relevant candidate library spectra before applying cascade scoring with false discovery rate control.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121

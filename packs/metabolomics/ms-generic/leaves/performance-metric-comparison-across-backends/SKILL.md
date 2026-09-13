@@ -3,6 +3,7 @@ name: performance-metric-comparison-across-backends
 description: Use when when you have access to a set of gallery or benchmark scripts executed across multiple plotting backends and need to quantify which backend delivers the fastest median execution time for specific mass spectrometry plot types (chromatogram, mobilogram, peakmap, peakmap-marginals, spectrum.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3520

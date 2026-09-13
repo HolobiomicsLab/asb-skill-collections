@@ -3,6 +3,7 @@ name: singularity-container-deployment
 description: Use when you have a Nextflow workflow (e.g., Nextflow4MS-DIAL) that currently runs under Docker or bare metal, and you need to execute it on an HPC cluster that lacks Docker support or enforces Singularity as the container runtime.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3172

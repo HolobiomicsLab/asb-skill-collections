@@ -3,6 +3,7 @@ name: spectral-data-quality-assessment
 description: Use when importing raw or public mass spectrometry spectral data in formats such as MGF, MSP, or mzML that may contain incomplete metadata (e.g., missing instrument type, precursor m/z, retention time), low-intensity noise peaks, or spectra with invalid or inconsistent metadata fields.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -57,6 +58,7 @@ attribution:
 
 # spectral-data-quality-assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assessment and remediation of mass spectrometry spectral data quality through metadata cleaning, validation, and peak filtering to ensure data accuracy and integrity before downstream analysis or comparison. This skill applies matchms' array of cleaning and filtering tools to standardize spectral datasets and remove spectra or peaks that fail critical quality thresholds.

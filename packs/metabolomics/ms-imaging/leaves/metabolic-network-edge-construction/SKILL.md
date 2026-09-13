@@ -3,6 +3,7 @@ name: metabolic-network-edge-construction
 description: Use when when building a comprehensive chemical knowledge base for mass spectrometry formula assignment, particularly when you need to link chemical formulae across heterogeneous repositories (HMDB, ChEMBL, PubChem) and connect them through known metabolic transformations to improve annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3439
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -40,6 +41,7 @@ attribution:
 
 # metabolic-network-edge-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construction of interconnected chemical formula networks by integrating structural relationships (DBEdges) from multi-source chemical repositories and biological reaction pairs (BioEdges) from KEGG, enabling m/z-based lookups for spatially-resolved metabolomics annotation.

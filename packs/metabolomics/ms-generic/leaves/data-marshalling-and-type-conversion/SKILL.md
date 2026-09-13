@@ -3,6 +3,7 @@ name: data-marshalling-and-type-conversion
 description: Use when you have Spectra::Spectra objects in R and need to apply Python MS algorithms from matchms or spectrum_utils (e.g., CosineGreedy similarity scoring, normalization, or filtering), or conversely need to convert Python spectral objects back to R for downstream Spectra workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3211
   edam_topics:
   - http://edamontology.org/topic_0121

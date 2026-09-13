@@ -3,6 +3,7 @@ name: spectrum-pair-retrieval-and-ranking
 description: Use when you have a test set of annotated MS/MS spectra with known structural similarity (via molecular fingerprints or InChIKey), and you want to assess how well a spectral similarity measure (learned or classical) retrieves structurally related compound pairs across a full range of thresholds.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0091

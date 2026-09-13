@@ -3,6 +3,7 @@ name: blank-sample-background-interference-estimation
 description: Use when after MS1 feature detection and accurate mass annotation, when you have identified a set of blank injections (negative controls) run in the same analytical sequence segment as your biological or study samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0091

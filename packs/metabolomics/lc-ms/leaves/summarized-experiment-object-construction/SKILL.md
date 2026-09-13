@@ -3,6 +3,7 @@ name: summarized-experiment-object-construction
 description: Use when when you have imported a tab-delimited metabolomics file (via readData or similar) containing columns for compound identifiers, sample/aliquot names, peak areas (primary assay), internal standard areas (secondary assay), and sample type classifications, and you need to organize these into.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3172

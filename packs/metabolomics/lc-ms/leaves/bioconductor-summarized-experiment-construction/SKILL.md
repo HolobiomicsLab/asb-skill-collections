@@ -3,6 +3,7 @@ name: bioconductor-summarized-experiment-construction
 description: 'Use when after successfully reading and validating a tab-delimited metabolomics file (containing mandatory columns: aliquot, compound, area, type, injection_time, batch) using readData, and before applying batch correction, outlier detection, or other QC filters.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3791
   edam_topics:
   - http://edamontology.org/topic_3172

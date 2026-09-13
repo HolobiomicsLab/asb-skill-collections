@@ -3,6 +3,7 @@ name: peak-selectivity-metric-evaluation
 description: Use when when identifying landmark peaks for retention time alignment in multi-sample LC-MS metabolomics workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -46,6 +47,7 @@ attribution:
 
 # peak-selectivity-metric-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate and filter LC-MS peaks based on selectivity metrics to identify high-confidence landmark peaks suitable for retention time (RT) alignment and mass calibration. Peak selectivity (threshold m/z selectivity > 0.99) prioritizes peaks with minimal mass overlap across samples, enabling robust alignment functions.

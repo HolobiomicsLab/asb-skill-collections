@@ -3,6 +3,7 @@ name: chromatogram-and-ionization-intensity-modeling
 description: 'Use when when you need to simulate LC-MS/MS data for fragmentation strategy development and do not have (or wish to augment) real experimental chromatograms. Specifically: (1) you have a list of known or sampled chemical compounds with molecular formulae;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0821

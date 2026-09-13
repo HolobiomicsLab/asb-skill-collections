@@ -3,6 +3,7 @@ name: mass-spectrometry-cluster-detection
 description: Use when you have 32-dimensional GLEAMS embeddings (output from the `gleams embed` step) and need to group spectra by their underlying peptide identity.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

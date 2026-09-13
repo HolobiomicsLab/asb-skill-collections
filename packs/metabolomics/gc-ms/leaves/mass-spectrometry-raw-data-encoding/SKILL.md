@@ -3,6 +3,7 @@ name: mass-spectrometry-raw-data-encoding
 description: Use when you have generated or obtained a two-dimensional mass-spectrometry intensity matrix (m/z × retention time scan points) with simulated or experimental peak shapes, noise, and background, and need to encode it as a binary .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

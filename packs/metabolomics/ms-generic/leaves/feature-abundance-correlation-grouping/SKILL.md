@@ -3,6 +3,7 @@ name: feature-abundance-correlation-grouping
 description: Use when after performing retention-time-based feature grouping (e.g., 10–20 second windows), when you observe large feature groups that may conflate multiple independent compounds with coincidentally similar retention times.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3520

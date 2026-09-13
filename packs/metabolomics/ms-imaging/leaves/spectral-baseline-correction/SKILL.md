@@ -3,6 +3,7 @@ name: spectral-baseline-correction
 description: Use when you have loaded raw MSI spectral data (imzML format) in profile or centroid mode and need to remove background noise and baseline artifacts before intensity normalization or ROI analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0091

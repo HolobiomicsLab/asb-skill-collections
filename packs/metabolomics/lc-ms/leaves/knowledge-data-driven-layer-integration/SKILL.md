@@ -3,6 +3,7 @@ name: knowledge-data-driven-layer-integration
 description: Use when you have untargeted metabolomics data (MS/MS spectra) and need to annotate metabolites at scale.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -39,6 +40,7 @@ attribution:
 
 # knowledge-data-driven-layer-integration
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Integrate knowledge-driven (biochemical pathways, metabolic reaction networks) and data-driven (experimental MS2 similarity networks) layers into a unified two-layer network topology to enable recursive annotation propagation for comprehensive metabolite annotation in untargeted metabolomics. This skill underpins accurate, high-coverage metabolite identification in large-scale studies.

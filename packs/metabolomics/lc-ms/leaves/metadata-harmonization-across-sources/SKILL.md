@@ -3,6 +3,7 @@ name: metadata-harmonization-across-sources
 description: Use when you have completed independent batch searches across one or more domain-specific MASST tools (microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST) and received multiple separate output files (_microbe.html, _plant.json, _matches.tsv, _library.tsv, _datasets.tsv, _count_domain.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_3520

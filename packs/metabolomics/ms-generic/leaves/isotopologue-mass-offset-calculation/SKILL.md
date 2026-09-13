@@ -3,6 +3,7 @@ name: isotopologue-mass-offset-calculation
 description: Use when you have a peak-picked feature table (HDF5 format with m/z, drift_time, retention_time, intensity columns) and need to identify and label isotopic signatures within singly charged species.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

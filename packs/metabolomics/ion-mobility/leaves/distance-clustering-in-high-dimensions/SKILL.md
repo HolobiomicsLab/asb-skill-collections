@@ -3,6 +3,7 @@ name: distance-clustering-in-high-dimensions
 description: Use when when you have detected feature tables from two or more LC-IMS-MS/MS samples and need to establish correspondence between features across samples (i.e., which features in sample A match which features in sample B).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520

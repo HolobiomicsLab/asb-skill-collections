@@ -3,6 +3,7 @@ name: notification-configuration-management
 description: Use when setting up a Rapid QC-MS monitoring job and you need to define WHERE and HOW QC-fail alerts should be sent.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: bioinformatic-object-conversion
 description: Use when when you have processed Cardinal MSI data (normalized peak intensities, optional SSC segmentation results) and need to transition to Seurat-based workflows for differential expression, pathway analysis, or integration with spatial transcriptomics data.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -48,6 +49,7 @@ attribution:
 
 # bioinformatic-object-conversion
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Conversion of mass spectrometry imaging data from one standardized bioinformatic object format to another—specifically, transforming Cardinal MSImagingExperiment objects into Seurat-compatible SpaMTP objects while preserving spectral intensities, spatial coordinates, feature metadata (m/z values), and any derived annotations (e.g., spatial shrunken centroids clustering). This skill enables seamless integration of MSI data into the Seurat ecosystem for downstream spatial-omics analysis.

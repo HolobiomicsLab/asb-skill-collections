@@ -3,6 +3,7 @@ name: mass-spectrometry-imaging-data-loading
 description: Use when you have raw or preprocessed MS imaging data archived as an RDS file or from a Zenodo deposit that includes the full m/z feature set (e.g., 10,200 m/z values spanning 150–1000 m/z range) and spectrum count (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -53,6 +54,7 @@ attribution:
 
 # Mass Spectrometry Imaging Data Loading
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Load and initialize unprocessed MS imaging data (e.g., from Zenodo) into a Cardinal object, establishing the raw feature matrix, m/z axis, and spatial coordinates for downstream processing. This is the foundational step that materializes the high-dimensional m/z × spectrum matrix before normalization or peak refinement.

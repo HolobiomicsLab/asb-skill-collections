@@ -3,6 +3,7 @@ name: spectral-data-format-validation
 description: Use when after converting existing mass spectrometry formats (mzML, vendor formats) into mzPeak using command-line tools or when receiving mzPeak files from external sources.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: lipid-species-annotation-assessment
 description: Use when after running MetaboAnnotatoR's annotateRC function when you need to (1) verify that the top-ranked annotation for a feature is correct, (2) understand what alternative lipid structures (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: molecular-formula-search-assignment
 description: Use when you have a recalibrated FT-ICR mass spectrum (Bruker .d format or equivalent) with detected, noise-thresholded peaks and need to assign chemical formulas to each peak. This is particularly relevant when analyzing samples with unknown composition (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: hdf5-output-validation-verification
 description: Use when after invoking the DEIMoS CLI with a configuration file and allowing the Snakemake workflow to execute, use this skill to confirm successful completion of all workflow rules.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121

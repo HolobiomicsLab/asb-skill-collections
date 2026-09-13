@@ -3,6 +3,7 @@ name: model-ablation-study-design
 description: Use when you need to measure how much a specific model capability or architectural feature contributes to prediction performance, especially when that capability is non-obvious or orthogonal to baseline methods.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_0091

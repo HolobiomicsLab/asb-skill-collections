@@ -3,6 +3,7 @@ name: molecular-descriptor-graph-representation
 description: Use when when you need to train or evaluate a graph neural network for molecular property prediction (collision cross section, ion mobility, or related descriptors) and have access to SMILES strings and/or 3D conformer coordinates.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0337
   edam_topics:
   - http://edamontology.org/topic_3373

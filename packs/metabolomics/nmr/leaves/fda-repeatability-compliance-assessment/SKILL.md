@@ -3,6 +3,7 @@ name: fda-repeatability-compliance-assessment
 description: Use when you have completed NMR data quality control analysis and possess per-feature CV values, and you need to formally assess whether the metabolomic dataset meets FDA regulatory standards for downstream biomarker discovery or quantitative assays.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3928
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -42,6 +43,7 @@ attribution:
 
 # FDA repeatability compliance assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantifies the proportion of NMR metabolic features meeting FDA coefficient of variation (CV) thresholds for biomarker discovery (CV < 0.30) and quantification (CV < 0.15), establishing whether a metabolomic dataset exhibits acceptable reproducibility. This skill validates dataset quality against regulatory benchmarks.

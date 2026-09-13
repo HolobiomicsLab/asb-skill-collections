@@ -3,6 +3,7 @@ name: biomolecular-class-annotation
 description: Use when you have raw or processed TWIM-MS data with arrival time and m/z dimensions, and you need to label experimental features by biomolecular class before performing CCS calibration or validation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0121

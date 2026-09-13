@@ -3,6 +3,7 @@ name: mass-spectrometry-data-visualization-pandas
 description: Use when when you have mass spectrometry data (mzML, Bruker .d, or CSV) loaded into a Pandas DataFrame with columns for m/z, retention time, ion mobility, or intensity values, and you need to render spectrum plots, chromatograms, mobilograms, or 2D peak maps.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520

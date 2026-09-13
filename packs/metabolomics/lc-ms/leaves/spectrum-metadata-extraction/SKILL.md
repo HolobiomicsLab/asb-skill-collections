@@ -3,6 +3,7 @@ name: spectrum-metadata-extraction
 description: Use when when you have raw mass spectrometry data from diverse instrument vendors (Thermo, Sciex, etc.) and need to harmonize and standardize spectrum-level metadata—including scan information, precursor m/z and charge, and ion selection parameters—into a queryable, vendor-agnostic tabular schema.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

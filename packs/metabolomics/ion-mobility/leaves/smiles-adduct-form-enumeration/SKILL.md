@@ -3,6 +3,7 @@ name: smiles-adduct-form-enumeration
 description: Use when when you have SMILES structures of small organic molecules and need to predict CCS values for metabolite annotation in untargeted mass spectrometry workflows. Specifically, apply this skill when the same chemical entity may appear in multiple ionization states (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -40,6 +41,7 @@ attribution:
 
 # SMILES Adduct Form Enumeration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enumerate protonated and deprotonated adduct forms of organic molecules from SMILES strings using Dimorphite-DL to predict ionization states. This is essential for downstream collision cross section (CCS) prediction when multiple ion forms may be observed in mass spectrometry.

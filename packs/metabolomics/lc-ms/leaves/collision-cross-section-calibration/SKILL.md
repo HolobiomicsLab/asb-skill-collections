@@ -3,6 +3,7 @@ name: collision-cross-section-calibration
 description: Use when you have LC-IMS-MS/MS data with drift_time measurements and need to convert raw drift times into calibrated CCS values for structural annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: bipartite-network-node-edge-assembly
 description: Use when after completing dereplication and cosine similarity clustering in the MolNotator workflow, when you have merged, dereplicated molecular and ion data (output from mode_merger and dereplicator steps) and need to assemble the final molecular network representation connecting predicted.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0365
   edam_topics:
   - http://edamontology.org/topic_3370

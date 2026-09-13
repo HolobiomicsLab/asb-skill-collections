@@ -3,6 +3,7 @@ name: accurate-mass-metabolite-search-against-hmdb
 description: Use when after MS1 feature detection and spectra merging in an untargeted or semi-targeted metabolomics workflow, when you have a list of observed accurate m/z values from high-resolution mass spectrometry (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_0121

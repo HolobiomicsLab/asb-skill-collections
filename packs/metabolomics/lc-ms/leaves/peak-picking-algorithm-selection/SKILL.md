@@ -3,6 +3,7 @@ name: peak-picking-algorithm-selection
 description: 'Use when at the entry point of SLAW processing when you have centroided mzML or netCDF LC-MS files and need to decide which peak-picking algorithm to use. Trigger this skill when: (1) raw LC-MS data must be converted into a feature matrix;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3634
   edam_topics:
   - http://edamontology.org/topic_3370

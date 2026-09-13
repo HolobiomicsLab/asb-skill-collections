@@ -3,6 +3,7 @@ name: functional-module-inference-from-networks
 description: Use when you have an untargeted metabolomics feature table (m/z and retention time columns) and a statistical test result (p-value) per feature, but lack confident metabolite identifications.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3762
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -41,6 +42,7 @@ attribution:
 
 # functional-module-inference-from-networks
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Infer metabolic functional activity and pathway membership directly from untargeted metabolomics feature tables by mapping m/z values onto a metabolic network graph and propagating signals through connected nodes, without requiring explicit metabolite identification. This approach predicts which metabolic modules and pathways are active in a sample based on the spatial organization of detected features within the network.

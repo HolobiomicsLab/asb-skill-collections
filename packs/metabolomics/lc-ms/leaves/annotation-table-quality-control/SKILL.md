@@ -3,6 +3,7 @@ name: annotation-table-quality-control
 description: Use when after obtaining in silico annotations from SIRIUS (Zodiac/Cosmic scores) or ISDB (cosine/shared peaks metrics), before using the annotation table for Feature Component calculation, chemical class assignment, or metabolite discovery prioritization.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

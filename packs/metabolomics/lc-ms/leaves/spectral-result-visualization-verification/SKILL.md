@@ -3,6 +3,7 @@ name: spectral-result-visualization-verification
 description: Use when after running annotateRC to generate ranked candidate annotations for LC-MS AIF features, when you need to confirm that (1) the top-ranked candidate match is chemically plausible given the observed fragment ions, (2) alternative candidate annotations exist and are correctly ranked, and (3).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_0091

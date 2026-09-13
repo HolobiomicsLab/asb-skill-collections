@@ -3,6 +3,7 @@ name: candidate-formula-ranking
 description: Use when you have an observed m/z value from mass spectrometry imaging and need to assign a chemical formula with high confidence.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -41,6 +42,7 @@ attribution:
 
 # Candidate-formula ranking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Rank molecular formula candidates for a given m/z value using a multiple linear regression model that scores formulae based on network connectivity, chemical edge evidence, and mass accuracy. This skill is essential when assigning chemical identities to thousands of m/z features in spatially-resolved metabolomics, where accurate annotation lags behind LC-MS approaches.

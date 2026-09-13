@@ -3,6 +3,7 @@ name: drop-down-interface-population-from-filtered-data
 description: Use when you have search results from DIA mass spectrometry data containing feature Q-value scores and need to restrict the analyte choices available to users in a GUI to only those meeting a 1% feature Q-value threshold.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

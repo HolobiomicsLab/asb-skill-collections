@@ -3,6 +3,7 @@ name: upset-plot-generation
 description: Use when after loading and filtering search results from two or more DIA-MS analysis tools at a specified Q-value cutoff, when you need to summarize which analytes are identified by all tools, by specific subsets, or uniquely by individual tools.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3945
   edam_topics:
   - http://edamontology.org/topic_0121

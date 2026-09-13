@@ -3,6 +3,7 @@ name: bruker-solarix-format-parsing
 description: Use when you have acquired Bruker Solarix FT-ICR-MS raw data (e.g., ESI_NEG_SRFA.d) and need to programmatically access the transient time-domain signal and metadata for zero-filling, apodization windowing (e.g., Hanning), or mass calibration.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: chromatographic-peak-quality-metric-evaluation
 description: Use when when processing untargeted LC-MS metabolomics data with XCMS and need to identify low-quality peak integrations that may introduce noise or bias into subsequent compound identification and quantification.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -53,6 +54,7 @@ attribution:
 
 # chromatographic-peak-quality-metric-evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematic evaluation of extracted ion chromatogram (EIC) and peak quality in LC-MS metabolomics data using 12 standardized peak-quality metrics and machine learning classification to detect and flag low-quality peaks before downstream analysis.

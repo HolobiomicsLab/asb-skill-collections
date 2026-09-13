@@ -3,6 +3,7 @@ name: chromatogram-retention-time-visualization
 description: Use when you have mass spectrometry data loaded as a pandas DataFrame with at minimum two numeric columns representing retention time and intensity values, and you need to generate a chromatogram visualization for exploratory analysis, quality control, or publication.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520

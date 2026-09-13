@@ -3,6 +3,7 @@ name: chemical-name-normalization-and-publish-database-integration
 description: Use when after spreadOut() has converted raw CSV peak data into a structured list, when you have one or more Compound.Name entries from GC-MS that may be ambiguous, non-canonical, or missing standardized properties (exact mass, published retention times, reactive groups, database presence).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_0218

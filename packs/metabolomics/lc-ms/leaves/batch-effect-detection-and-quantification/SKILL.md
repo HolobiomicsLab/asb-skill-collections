@@ -3,6 +3,7 @@ name: batch-effect-detection-and-quantification
 description: Use when after merging feature tables from multiple LC-MS/MS analytical runs or sample cohorts processed in separate batches, and before applying batch correction.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

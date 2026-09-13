@@ -3,6 +3,7 @@ name: heavy-isotope-labeling-interpretation
 description: Use when your peptide sample has been enriched with stable isotope labels (13C, 15N, etc.) at a known incorporation probability (e.g., 52% 13C).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_0121

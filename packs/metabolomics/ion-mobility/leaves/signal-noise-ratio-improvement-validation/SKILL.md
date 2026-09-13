@@ -3,6 +3,7 @@ name: signal-noise-ratio-improvement-validation
 description: Use when after executing multidimensional smoothing, spike removal, or saturation repair on raw TOF-MS or IM-MS data (.d format from Agilent MassHunter) to confirm that signal quality has improved.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3674
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -47,6 +48,7 @@ attribution:
 
 # signal-noise-ratio-improvement-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates that multidimensional smoothing and noise-filtering preprocessing steps enhance signal quality in ion mobility–mass spectrometry data by removing artifacts from low-abundance ions while preserving real signal peaks. This skill assesses whether preprocessing has successfully reduced background noise and jagged peak artifacts without introducing distortion.

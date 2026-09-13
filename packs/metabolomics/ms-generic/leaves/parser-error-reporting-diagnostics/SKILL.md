@@ -3,6 +3,7 @@ name: parser-error-reporting-diagnostics
 description: Use when when implementing or extending a DSL parser (lexer + recursive descent or LALR parser) that accepts user-authored query strings.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: docker-environment-configuration
 description: Use when you need to deploy CloMet for the first time on a new system, or when you want to ensure reproducible execution of metabolomics data harmonization tasks without manual dependency management.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: raw-data-throughput-benchmarking
 description: Use when when you have a raw mass spectrometry file (e.g., Thermo Orbitrap .raw) and need to establish the measured throughput of a spectral reading function (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121

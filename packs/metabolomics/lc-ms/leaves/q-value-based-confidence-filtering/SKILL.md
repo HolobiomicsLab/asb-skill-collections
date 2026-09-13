@@ -3,6 +3,7 @@ name: q-value-based-confidence-filtering
 description: Use when after loading feature identification results (e.g., from OpenSwath or other DIA search engines) when you need to display only confident peptide precursors and their chromatograms.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

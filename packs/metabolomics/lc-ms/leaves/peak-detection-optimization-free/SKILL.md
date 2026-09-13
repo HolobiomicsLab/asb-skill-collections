@@ -3,6 +3,7 @@ name: peak-detection-optimization-free
 description: Use when when processing raw untargeted LC/MS data in mzML or mzXML format and you need to detect peaks across mass-to-charge (m/z) and retention time (rt) dimensions without prior knowledge of optimal signal detection parameters, QC samples, or domain expertise in LC/MS preprocessing.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: chemical-similarity-metric-aggregation
 description: Use when when you have an unknown metabolite compound with mass spectral data, have retrieved candidate structures from a molecular structure database (PubChem, HMDB), and have obtained predictions of structurally related metabolites from a deep-learning semantic similarity model (e.g., DeepMASS2).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0360
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -39,6 +40,7 @@ attribution:
 
 # chemical-similarity-metric-aggregation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Aggregate chemical-space similarity scores between database candidate structures and deep-learning predicted structurally related metabolites to rerank molecular structure database hits. This skill leverages molecular fingerprints and similarity metrics to identify chemical-space proximity and relocate unknown metabolites within the structural candidate space.

@@ -3,6 +3,7 @@ name: rank-performance-metric-computation
 description: Use when when you have predictions from one or more metabolite annotation models (MLP baseline, GNN, or ESP ensemble) and need to quantify ranking performance on ESI/LC-MS test spectra.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0625

@@ -3,6 +3,7 @@ name: spectrum-filtering-and-normalization
 description: Use when you have raw or minimally processed tandem MS spectra (in mzML, mgf, or other standard formats) and need to prepare them for spectral matching, library searching, or quantitative analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: c-python-interface-wrapping
 description: Use when you have a mature C++ library (like OpenMS) with stable APIs that you want to make accessible from Python environments, and you need to preserve performance-critical C++ execution while supporting rapid prototyping or integration into Python-based data pipelines (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -40,6 +41,7 @@ attribution:
 
 # C++-Python-Interface-Wrapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert a compiled C++ library into importable Python modules using binding generators (e.g. nanobind, SWIG) so that Python code can call C++ functions and classes directly. This skill is essential when you need to expose computationally intensive or legacy C++ code to Python workflows without rewriting the core logic.

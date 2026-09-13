@@ -3,6 +3,7 @@ name: mass-spectrometry-compound-extraction
 description: Use when you have a preprocessed GC-MS dataset (from spreadOut) with standardized column names (Compound.Name, Component.RT, Base.Peak.MZ, Component.Area, Match.Factor) and a specific list of chemical compounds you want to extract and aggregate across multiple sample runs.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3172

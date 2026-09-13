@@ -3,6 +3,7 @@ name: benchmark-harness-execution
 description: Use when you have post-processed clustering results from multiple tools (msCluster, Falcon, MaRaCluster) on the same tandem MS dataset and need to generate a comparative performance report with quality metrics and runtime statistics to determine which tool suits your metabolomics workflow.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

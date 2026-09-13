@@ -3,6 +3,7 @@ name: image-intensity-jittering
 description: Use when when preparing ion images (single-channel 2D arrays or multi-channel spectral images) from mass spectrometry imaging for contrastive learning in DeepION's COL or ISO modes.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -41,6 +42,7 @@ attribution:
 
 # image-intensity-jittering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply color jitter augmentation to ion images in mass spectrometry imaging to modulate pixel intensity values, generating varied augmented versions for contrastive learning. This technique helps prevent representation collapse and improves the robustness of learned embeddings.

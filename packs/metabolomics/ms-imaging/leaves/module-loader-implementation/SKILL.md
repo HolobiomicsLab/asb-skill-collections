@@ -3,6 +3,7 @@ name: module-loader-implementation
 description: Use when you have mass spectrometry imaging data in multiple vendor or open-source formats and need to programmatically route each file to its correct processing handler based on file extension, avoiding hardcoded conditional chains and enabling extensible format support.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0121

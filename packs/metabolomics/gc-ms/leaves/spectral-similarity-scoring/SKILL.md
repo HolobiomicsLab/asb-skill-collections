@@ -3,6 +3,7 @@ name: spectral-similarity-scoring
 description: Use when when you have extracted low-resolution mass spectra from individual chromatographic peaks in GC-MS data and need to match them against a spectral library (e.g., PNNLMetV20191015.MSL) to identify the unknown compound.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -97,6 +98,7 @@ attribution:
 
 # spectral-similarity-scoring
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Quantify the similarity between an experimental mass spectrum and library reference spectra using cosine similarity and retention-index proximity metrics. This skill is essential for automated compound identification in GC-MS workflows where multiple spectral candidates must be ranked and selected.

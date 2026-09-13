@@ -3,6 +3,7 @@ name: extracted-ion-chromatogram-eic-visualization
 description: Use when after running MS1 extraction and prescreening on mzML files with assigned adducts and tags, when you need to inspect detected compounds visually to verify peak shape, confirm retention time consistency across samples (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3520

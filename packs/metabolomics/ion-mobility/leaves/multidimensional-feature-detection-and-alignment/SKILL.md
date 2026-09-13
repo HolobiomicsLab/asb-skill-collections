@@ -3,6 +3,7 @@ name: multidimensional-feature-detection-and-alignment
 description: Use when when you have acquired LC-IMS-MS/MS data (mzML or mzML.gz format) from multiple samples and need to detect features that exploit simultaneous separation in m/z, drift time, and retention time to improve detection sensitivity and reduce false positives.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

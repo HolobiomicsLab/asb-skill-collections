@@ -3,6 +3,7 @@ name: high-quality-spectral-library-benchmarking
 description: Use when you have a pre-trained MS/MS spectral embedding model and need to validate that it achieves strong and consistent retrieval performance on curated spectral libraries that represent real-world data quality standards.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -48,6 +49,7 @@ attribution:
 
 # high-quality-spectral-library-benchmarking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Evaluate MS/MS spectral embedding model performance on curated, high-quality spectral libraries (MassBank and MassSpecGym) using hit@k retrieval metrics computed across multiple random query/reference splits. This skill assesses model robustness and generalization on spectral data with minimal quality artifacts.

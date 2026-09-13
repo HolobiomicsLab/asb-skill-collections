@@ -3,6 +3,7 @@ name: spectral-data-alignment
 description: Use when you have quantification tables (with feature IDs and abundance values), metadata tables (with sample annotations), and separate spectral data files (e.g., MS/MS spectra or fragmentation patterns), and you need to integrate them into a unified input for msFeaST.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3762
   edam_topics:
   - http://edamontology.org/topic_3520

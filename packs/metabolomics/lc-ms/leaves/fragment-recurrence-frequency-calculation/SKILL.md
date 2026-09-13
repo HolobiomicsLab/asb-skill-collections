@@ -3,6 +3,7 @@ name: fragment-recurrence-frequency-calculation
 description: Use when after extracting and grouping fragments from top x% TIC-filtered replicate spectra for a given feature, to quantify which fragments consistently appear across replicates. Use this when you have multiple MS/MS spectra for the same precursor (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

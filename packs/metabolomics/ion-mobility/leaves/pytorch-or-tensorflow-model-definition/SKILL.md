@@ -3,6 +3,7 @@ name: pytorch-or-tensorflow-model-definition
 description: Use when when you have molecular structure inputs (SMILES strings, molecular graphs, or feature vectors) and need to predict a continuous molecular property (e.g., CCS values, retention time, ionization efficiency).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3363
   edam_topics:
   - http://edamontology.org/topic_3298

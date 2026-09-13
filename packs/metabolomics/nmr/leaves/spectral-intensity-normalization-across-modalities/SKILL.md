@@ -3,6 +3,7 @@ name: spectral-intensity-normalization-across-modalities
 description: Use when you have raw spectral data from multiple complementary spectroscopic techniques (NMR, HSQC, COSY, IR) that must be combined into joint training records for a multimodal deep learning model, and the raw intensity values or chemical shift ranges differ significantly between modalities due to.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

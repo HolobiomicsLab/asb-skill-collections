@@ -3,6 +3,7 @@ name: ranking-performance-evaluation
 description: Use when after running retention-order prediction experiments on a test or held-out evaluation dataset.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: spatial-spectral-array-processing
 description: Use when you have preprocessed MSImagingArrays data (after normalization, smoothing, and baseline reduction) and need to detect peaks consistently across all spectra in an imaging experiment, create reference peak positions from a representative subset, and filter by signal-to-noise ratio and.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520

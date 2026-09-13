@@ -3,6 +3,7 @@ name: unsaturation-degree-quantification
 description: Use when you have FT-ICR MS peak data with assigned molecular formulas (C, H, O, N, S, P elemental counts) and want to characterize the structural saturation and aromaticity of metabolites to assess their biochemical degradation potential, compare chemodiversity across samples, or stratify.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121

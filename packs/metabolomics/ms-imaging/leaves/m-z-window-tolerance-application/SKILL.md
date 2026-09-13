@@ -3,6 +3,7 @@ name: m-z-window-tolerance-application
 description: Use when after parsing an imzML XML metadata file and loading the corresponding .ibd binary intensity data, when you need to isolate and visualize the spatial distribution of specific isotopes, chemical species, or mass fragments.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -45,6 +46,7 @@ attribution:
 
 # m/z-window-tolerance-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract image slices from Imaging Mass Spectrometry binary data (.ibd files) by specifying target m/z values and a mass tolerance window in parts-per-million (ppm). This skill maps mass-to-charge ratios to their corresponding intensity distributions across spatial coordinates, enabling multi-channel image reconstruction.

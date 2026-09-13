@@ -3,6 +3,7 @@ name: spectral-library-matching-with-cosine-similarity
 description: Use when you have a query spectrum and a reduced candidate set of library spectra (via approximate nearest neighbor indexing), and need to search for exact unmodified peptide matches with high confidence before proceeding to variable-mass-shift modification searches.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3647
   edam_topics:
   - http://edamontology.org/topic_0121

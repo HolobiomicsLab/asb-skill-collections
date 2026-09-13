@@ -3,6 +3,7 @@ name: feature-annotation-filtering
 description: Use when you have a feature list with assigned molecular formulas and m/z values from non-target HRMS analysis, and you need to identify and rank potential PFAS compounds among thousands of detected features.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

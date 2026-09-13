@@ -3,6 +3,7 @@ name: chromatographic-peak-detection-wavelet
 description: Use when you have loaded raw LC-MS or direct-injection FTICR-MS data (in mzML or netCDF format) into an XCMSnExp object and need to identify individual chromatographic peaks before feature grouping.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: mass-spectrum-peak-normalization
 description: Use when when comparing two or more MSMS spectra using intensity-weighted similarity measures (cosine similarity, modified cosine, or neutral loss similarity), and the spectra have been acquired under different instrumental conditions, ionization efficiencies, or detector gains that produce.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -42,6 +43,7 @@ attribution:
 
 # mass-spectrum-peak-normalization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Normalize fragment peak intensities in tandem mass spectra to a common scale (typically 0–1 or unit norm) to enable fair intensity-weighted similarity comparisons across spectra with different dynamic ranges or absolute intensity values. This is a prerequisite step for cosine-based and neutral loss similarity scoring.

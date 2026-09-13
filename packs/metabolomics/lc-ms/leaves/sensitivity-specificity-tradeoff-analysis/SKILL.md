@@ -3,6 +3,7 @@ name: sensitivity-specificity-tradeoff-analysis
 description: Use when you have a trained neural network model and a labelled validation dataset (with high-quality and low-quality peak annotations), and you need to determine the optimal probability threshold that maximizes the difference between true positive rate and false positive rate for classifying MS1.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: sample-metadata-annotation-for-lcms
 description: Use when when you have loaded centroided .mzML files into a Spectra object and plan to use TARDIS (tardisPeaks) with an MsExperiment object rather than file paths, and you need TARDIS to distinguish QC runs from sample runs for separate quality metric calculation, polarity filtering, and.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

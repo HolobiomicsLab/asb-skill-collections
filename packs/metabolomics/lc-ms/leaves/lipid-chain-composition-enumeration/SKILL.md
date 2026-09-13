@@ -3,6 +3,7 @@ name: lipid-chain-composition-enumeration
 description: Use when constructing a de novo or expanded lipid spectral library that must cover all theoretically possible chain compositions and double-bond positional isomers for one or more lipid classes.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_0153

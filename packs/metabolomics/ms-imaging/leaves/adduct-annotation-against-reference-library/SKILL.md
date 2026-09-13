@@ -3,6 +3,7 @@ name: adduct-annotation-against-reference-library
 description: Use when after computing a histogram of all pairwise mass differences from an MSI dataset, use this skill when you have observed mass difference peaks that may correspond to known adducts (e.g., [M+H]+, [M+Na]+, [M−H2O]+).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

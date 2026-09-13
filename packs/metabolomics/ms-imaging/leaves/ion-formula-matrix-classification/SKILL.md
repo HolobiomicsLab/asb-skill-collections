@@ -3,6 +3,7 @@ name: ion-formula-matrix-classification
 description: Use when you have peak data from MSI experiments (stored as .zip peak matrix files) where matrix ions (e.g., silver adducts in AgLDI-MSI) dominate the spectrum and obscure analyte signals.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3520

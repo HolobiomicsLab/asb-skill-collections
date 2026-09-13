@@ -3,6 +3,7 @@ name: spectral-vector-normalization-by-intensity
 description: Use when when converting pre-processed MS/MS spectra into fixed-length vector representations using Word2Vec embeddings for Spec2Vec similarity scoring. Specifically, apply this skill after you have represented individual peaks and neutral losses as words ('[redacted-email]', 'loss@xxx.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

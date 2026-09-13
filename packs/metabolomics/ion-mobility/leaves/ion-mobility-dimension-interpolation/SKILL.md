@@ -3,6 +3,7 @@ name: ion-mobility-dimension-interpolation
 description: Use when when processing raw IM-MS data (Agilent MassHunter .
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3195
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -47,6 +48,7 @@ attribution:
 
 # ion-mobility-dimension-interpolation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Interpolation of the ion mobility dimension in IM-MS data to smooth and regularize mobility profiles, improving downstream demultiplexing and peak deconvolution in drift-tube or SLIM instruments. Applied after data compression to enhance resolution of overlapping or low-abundance ion signals.

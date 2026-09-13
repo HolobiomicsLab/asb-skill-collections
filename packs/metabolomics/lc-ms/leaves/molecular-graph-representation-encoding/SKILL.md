@@ -3,6 +3,7 @@ name: molecular-graph-representation-encoding
 description: Use when when you have a collection of molecular structures (as InChI strings, SMILES, or RDKit Mol objects) and need to feed them into a pretrained or transfer-learning neural network that expects both molecular graph topology and structural fingerprints as inputs.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3364
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -61,6 +62,7 @@ attribution:
 
 # molecular-graph-representation-encoding
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encodes molecular structures as graph representations and fingerprints for input to neural network models predicting molecular properties (e.g., retention time). This skill transforms unstructured chemical data (InChI, SMILES, or molecular objects) into tensor-compatible graph and fingerprint features suitable for graph convolution and transformer architectures.

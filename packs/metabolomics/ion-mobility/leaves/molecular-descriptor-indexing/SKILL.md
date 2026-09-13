@@ -3,6 +3,7 @@ name: molecular-descriptor-indexing
 description: Use when when you have a collection of molecular structures (SMILES or SDF format) and need to generate a queryable database of collision cross section values for high-throughput mass spectrometry workflows, or when you want to organize pre-computed CCS predictions with conformer metadata into a.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_0154

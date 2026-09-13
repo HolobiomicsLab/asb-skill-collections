@@ -3,6 +3,7 @@ name: ccs-calibration-tunemix-execution
 description: Use when you have positive-mode tune mix reference data (e.g., example_tune_pos.h5) with known CCS values spanning a wide m/z range (e.g., 118.086–1522 m/z) and need to establish a CCS calibration model to convert experimental drift times or collision cross sections for downstream analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_3375

@@ -3,6 +3,7 @@ name: spectrum-processing-throughput-benchmarking
 description: Use when when selecting a spectrum processing library for high-throughput proteomics or metabolomics workflows, or when optimizing an existing pipeline for computational efficiency. Apply this skill when you have access to representative raw MS data (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3520

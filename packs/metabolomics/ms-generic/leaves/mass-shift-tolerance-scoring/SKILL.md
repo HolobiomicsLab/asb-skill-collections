@@ -3,6 +3,7 @@ name: mass-shift-tolerance-scoring
 description: Use when when searching for peptide spectra with unknown or open modifications (i.e., any mass shift within a broad tolerance range rather than a fixed set of known modifications).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121

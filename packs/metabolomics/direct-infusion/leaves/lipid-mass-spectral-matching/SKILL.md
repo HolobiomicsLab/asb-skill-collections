@@ -3,6 +3,7 @@ name: lipid-mass-spectral-matching
 description: Use when you have peak-picked LC-HRMS/MS or direct infusion MS/MS data (m/z, retention time, intensity) from Q-Exactive, Agilent, Bruker, or SCIEX instruments and need to annotate experimental fragment patterns to known lipid structures.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

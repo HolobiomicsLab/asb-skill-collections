@@ -3,6 +3,7 @@ name: statistical-result-interpretation-and-plotting
 description: Use when after statistical analysis has produced a results table with lipid identities, quantitative expression values, p-values, fold-changes, and experimental condition labels.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0571
   edam_topics:
   - http://edamontology.org/topic_0092

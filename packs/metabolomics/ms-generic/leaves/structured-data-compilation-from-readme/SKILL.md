@@ -3,6 +3,7 @@ name: structured-data-compilation-from-readme
 description: Use when when a scientific software repository documents multiple standalone tools, web applications, or resources with associated metadata (URLs, publications, taxonomic coverage) in its README, and you need to create a machine-readable inventory for downstream indexing, validation, or reuse.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0219

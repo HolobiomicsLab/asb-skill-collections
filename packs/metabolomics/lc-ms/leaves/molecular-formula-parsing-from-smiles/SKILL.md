@@ -3,6 +3,7 @@ name: molecular-formula-parsing-from-smiles
 description: Use when you have a query MS/MS spectrum with a SMILES string and adduct type (e.g., '[M+H]+', '[M+Na]+'), and you need to validate fragment ions against chemically plausible losses from the parent compound.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3762
   edam_topics:
   - http://edamontology.org/topic_0154

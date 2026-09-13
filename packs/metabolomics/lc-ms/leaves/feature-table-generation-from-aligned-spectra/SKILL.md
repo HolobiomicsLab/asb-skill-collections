@@ -3,6 +3,7 @@ name: feature-table-generation-from-aligned-spectra
 description: Use when after retention-time and m/z-based peak alignment has been completed across a cohort of LC-MS samples, and you need to create a unified quantitative matrix for statistical testing, multivariate analysis, or annotation workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3375

@@ -3,6 +3,7 @@ name: adduct-ionmode-consistency-checking
 description: Use when parsing, standardizing, or filtering MS spectra from mixed or heterogeneous databases where adduct assignment may be manually entered, auto-inferred, or missing.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -42,6 +43,7 @@ attribution:
 
 # adduct-ionmode-consistency-checking
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Validates that adduct polarity matches ionization mode in mass spectra, removing spectra with contradictory adduct–ionmode pairs (e.g., negative adducts in positive ionmode or positive adducts in negative ionmode). This ensures chemical plausibility and data integrity in standardized spectral libraries.

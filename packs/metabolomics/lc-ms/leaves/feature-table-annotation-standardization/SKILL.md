@@ -3,6 +3,7 @@ name: feature-table-annotation-standardization
 description: Use when after Blueshift or Gravity processing has produced a feature abundance table with annotations, but before final reporting or integration with sample/injection metadata.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3172

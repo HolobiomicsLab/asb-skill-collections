@@ -3,6 +3,7 @@ name: rdkit-molecular-property-extraction
 description: Use when when you have a set of compounds represented as SMILES strings and need to compute their molecular properties (neutral mass, adduct-adjusted masses, mordred descriptors) for comparison against experimental peaks, retention time predictions, or similarity-based filtering thresholds during.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0337
   edam_topics:
   - http://edamontology.org/topic_0154

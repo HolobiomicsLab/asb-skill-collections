@@ -3,6 +3,7 @@ name: apache-arrow-columnar-format-parsing
 description: Use when you have mzPeak files stored as Parquet tables within a ZIP archive and need to load spectrum metadata, chromatogram metadata, signal data (profile or centroid), or peaks into memory for analysis in R, Python, or another Arrow-supported language.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

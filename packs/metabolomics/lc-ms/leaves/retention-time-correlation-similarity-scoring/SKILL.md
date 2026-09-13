@@ -3,6 +3,7 @@ name: retention-time-correlation-similarity-scoring
 description: Use when when you have detected multiple features from non-targeted mass spectrometry and need to group them by putative compound origin.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_0769

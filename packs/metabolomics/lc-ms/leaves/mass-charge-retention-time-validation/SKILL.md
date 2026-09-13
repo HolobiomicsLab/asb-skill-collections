@@ -3,6 +3,7 @@ name: mass-charge-retention-time-validation
 description: Use when after loading centroided .mzML LC-MS data and creating a target list with compound ID, name, theoretical or measured m/z, expected RT (in minutes), and polarity designation, perform this validation step to confirm target visibility and refine m/z and RT window parameters before running.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0625

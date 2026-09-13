@@ -3,6 +3,7 @@ name: spectral-peak-data-validation-and-parsing
 description: Use when when you have received POST requests containing peaks data as form parameters (chemical shift, multiplicity, integration values) and need to accept, validate, and normalize those values before formatting them into a query compatible with an external NMR prediction service such as.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

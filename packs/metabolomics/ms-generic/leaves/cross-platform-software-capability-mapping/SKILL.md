@@ -3,6 +3,7 @@ name: cross-platform-software-capability-mapping
 description: Use when you are designing a new tool for FT-ICR MS analysis (or similar high-resolution mass spectrometry domain) and need to understand which analytical and visualization features are already implemented in competing or complementary tools (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3520

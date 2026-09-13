@@ -3,6 +3,7 @@ name: peak-deconvolution-preprocessing
 description: Use when you have raw IM-MS data in Agilent MassHunter (.d) or UIMF format from drift tube (DT) or SLIM instruments, and you intend to perform HRdm demultiplexing or peak deconvolution to resolve co-eluting or structurally similar ions.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -49,6 +50,7 @@ attribution:
 
 # peak-deconvolution-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare ion mobility-mass spectrometry (IM-MS) data for high-resolution demultiplexing and peak deconvolution by applying data compression, interpolation, smoothing, and noise filtering. This preprocessing step enhances the quality of downstream peak deconvolution and structural isomer resolution in complex omics samples.

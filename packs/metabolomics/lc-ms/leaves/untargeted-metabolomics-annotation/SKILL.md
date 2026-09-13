@@ -3,6 +3,7 @@ name: untargeted-metabolomics-annotation
 description: Use when you have authentic metabolite standards analyzed by LC-MS in both positive and negative ESI modes (converted to .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172

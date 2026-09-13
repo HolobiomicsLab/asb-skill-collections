@@ -3,6 +3,7 @@ name: in-silico-spectrum-metadata-curation
 description: Use when when processing collections of in-silico mass spectra from OMSLs (Open Mass Spectra Libraries) where the adduct field is absent, null, or not explicitly specified in the source file;
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -41,6 +42,7 @@ attribution:
 
 # in-silico-spectrum-metadata-curation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Automatic assignment and validation of ionization adducts ([M+H]+ or [M-H]-) to in-silico mass spectra when adduct metadata is missing or inconsistent. This skill ensures that in-silico spectra conform to chemical ionization polarity conventions before standardization and downstream analysis.

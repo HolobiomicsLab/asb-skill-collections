@@ -3,6 +3,7 @@ name: thermo-raw-file-format-parsing
 description: Use when you have acquired multidimensional mass spectrometry data (MS1, MS/MS, or data-independent acquisition) from a Thermo instrument saved in the proprietary '.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: batch-preparation-class-imbalance-handling
 description: Use when when you have raw mzML files and a feature table (CSV from mzMine or XCMS) with labeled peaks of unequal class sizes (e.g., fewer false positives than true positives) and plan to train a CNN classifier on the LCMS data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0625

@@ -3,6 +3,7 @@ name: raw-ms-data-format-conversion
 description: Use when you have raw UPLC-HRMS data from ThermoFisher or Agilent instruments and need to feed it into MSThunder for nontargeted pollutant identification. Your input is a vendor binary format (.raw or .d) that MSThunder cannot directly ingest. Environment constraints (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -43,6 +44,7 @@ attribution:
 
 # raw-ms-data-format-conversion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert vendor-specific raw mass spectrometry data (ThermoFisher .raw, Agilent .d) to MSThunder-compatible formats using MSConvert on a Linux system. This skill bridges incompatible instrument formats and downstream deep-learning analysis pipelines for unknown pollutant identification.

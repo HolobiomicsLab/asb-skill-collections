@@ -3,6 +3,7 @@ name: metabolite-peak-annotation
 description: Use when after peak detection has identified significant m/z and retention time features in untargeted or targeted mass spectrometry data (as a .raw, .d, or mzXML file).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_0121

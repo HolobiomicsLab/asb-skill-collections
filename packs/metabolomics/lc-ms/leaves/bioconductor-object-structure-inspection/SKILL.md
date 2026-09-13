@@ -3,6 +3,7 @@ name: bioconductor-object-structure-inspection
 description: Use when after constructing a SummarizedExperiment object from raw metabolomics data via buildExperiment, or after batch correction and ratio computation steps, inspect rowData, colData, and assays slots to verify that compound identities, sample annotations, and computed assay values (primary.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_3375

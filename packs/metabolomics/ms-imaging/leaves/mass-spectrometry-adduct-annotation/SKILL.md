@@ -3,6 +3,7 @@ name: mass-spectrometry-adduct-annotation
 description: Use when you have tabulated pairwise mass differences from a MALDI-MS imaging dataset (via massdiff()) and need to identify which observed mass differences correspond to known chemical adducts (e.g., [M+H]+, [M+Na]+, [M-H2O]+).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3520

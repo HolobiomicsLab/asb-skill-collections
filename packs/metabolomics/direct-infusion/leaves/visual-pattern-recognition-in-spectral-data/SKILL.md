@@ -3,6 +3,7 @@ name: visual-pattern-recognition-in-spectral-data
 description: Use when after database search algorithms have scored unknown MS samples against reference species, and you need to visually inspect and confirm species assignments or identify ambiguous classifications.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3552
   edam_topics:
   - http://edamontology.org/topic_0081
@@ -43,6 +44,7 @@ attribution:
 
 # Visual pattern recognition in spectral data
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use RapidMass's visual interface to recognize and interpret mass spectrometry patterns for species discrimination through intuitive graphical outputs (heatmaps, classification plots) rather than numerical tables alone. This skill bridges computational database scoring with human pattern cognition to validate and interpret unknown sample classifications.

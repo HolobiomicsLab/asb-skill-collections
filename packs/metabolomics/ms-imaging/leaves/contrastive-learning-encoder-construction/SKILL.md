@@ -3,6 +3,7 @@ name: contrastive-learning-encoder-construction
 description: Use when you have mass spectrometry imaging (MSI) data with ion images that need low-dimensional representation learning for downstream tasks like co-localized ion searching or isotope discovery.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3928
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -42,6 +43,7 @@ attribution:
 
 # contrastive-learning-encoder-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Build a shared-weight ResNet18 encoder module that processes pairs of augmented ion images to produce 512-dimensional representation vectors for contrastive learning in mass spectrometry imaging. This skill applies contrastive loss to maximize similarity between augmentations of the same image while avoiding representation collapse.

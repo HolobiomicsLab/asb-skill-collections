@@ -3,6 +3,7 @@ name: nontargeted-analysis-workflow-execution
 description: Use when you have UPLC-HRMS data from ThermoFisher, Agilent, or other vendor instruments (converted via MSConvert if needed), organized as batch-processed files ready for MSThunder input, and you need to identify unknown organic pollutants with deep learning-assisted structure prediction and.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -47,6 +48,7 @@ attribution:
 
 # nontargeted-analysis-workflow-execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute a deep learning-based nontargeted analytical workflow in MSThunder to identify unknown organic pollutants in UPLC-HRMS data by matching precursor ions, retention times, and MS2 spectra against learned candidate structures and spectral libraries. Use this skill when you have batch-processed mass spectrometry data and need to rapidly assign compound identities with confidence scores to unknowns in water or similar matrices.

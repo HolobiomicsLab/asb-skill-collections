@@ -3,6 +3,7 @@ name: mass-fragment-pattern-querying
 description: Use when after LDA modeling has produced an inferred motifset (JSON format) containing Mass2Motifs with fragment and neutral-loss patterns.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3088
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: kegg-identifier-to-mass-mapping
 description: Use when you have raw LC-MS peak intensity data with mass-to-charge ratios and need to match them to known metabolites. This skill must be applied before the matching stage if you are working with a KEGG database (KeggDB or sample.keggDB) and require a precomputed adduct/fragment lookup table.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: metabolite-chemodiversity-index-calculation-and-interpretation
 description: Use when you have peak-abundance data (after molecular formula assignment, peak filtering by m/z, isotope, ppm error, and sample presence thresholds) and you need to quantify and compare the molecular composition diversity across samples or conditions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

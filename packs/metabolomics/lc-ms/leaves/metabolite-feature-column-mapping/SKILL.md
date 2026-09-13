@@ -3,6 +3,7 @@ name: metabolite-feature-column-mapping
 description: Use when you have peak-picked LC-MS metabolomics data in a tabular format (R data frame) with columns for mass-to-charge ratio, retention time, feature identifiers, adduct annotations, and sample measurements, but the column names do not follow a standard naming convention.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: peak-shape-correlation-analysis
 description: Use when when extracting benchmark peaks from mzML files for multiple isotopologues of target molecules, after initial m/z and retention-time matching, to validate that detected isotopologue peaks exhibit consistent peak shape and expected abundance ratios before including them in a reliability.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520

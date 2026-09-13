@@ -3,6 +3,7 @@ name: tandem-ms-spectral-data-interpretation
 description: Use when you have untargeted MS2 spectral data in MS2MP-compatible format and need to assign KEGG pathway annotations to spectra without spectral library matching or manual compound identification.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -39,6 +40,7 @@ attribution:
 
 # tandem-ms-spectral-data-interpretation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply deep learning-based MS2MP framework to predict KEGG metabolic pathways directly from untargeted tandem mass spectrometry (MS2) spectra without requiring prior compound identification. This skill bridges the gap between raw spectral data and functional pathway annotation by leveraging pre-trained neural networks.

@@ -3,6 +3,7 @@ name: retrieval-metric-hit-k-calculation
 description: Use when when you have generated embeddings for query and reference MS/MS spectra, computed a cosine similarity matrix between them, and need to evaluate how often the correct compound appears in the top-1, top-5, or top-10 retrieved candidates.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3814
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -48,6 +49,7 @@ attribution:
 
 # retrieval-metric-hit-k-calculation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute hit@k retrieval performance metrics by checking whether the ground-truth compound (identified by SMILES) appears in the top-k most similar reference spectra for each query, then aggregate across multiple evaluation splits to report mean and standard deviation. This skill quantifies compound identification accuracy in MS/MS spectral retrieval workflows.

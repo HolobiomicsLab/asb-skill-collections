@@ -3,6 +3,7 @@ name: consensus-taxonomy-generation
 description: Use when when you have structural annotations from multiple sources (in silico predictions via SIRIUS/CANOPUS and GNPS spectral library matches) for the same molecular features and need a single authoritative taxonomy assignment.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0199

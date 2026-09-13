@@ -3,6 +3,7 @@ name: model-checkpoint-persistence
 description: Use when training a Transformer or neural network model on a large dataset (e.g., 80,000+ training samples) where validation performance is monitored to prevent overfitting, and you need to halt training early or recover the -performing model checkpoint without re-executing the entire training loop.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_0091

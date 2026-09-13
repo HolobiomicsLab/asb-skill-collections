@@ -3,6 +3,7 @@ name: mzml-xml-deserialization
 description: Use when your input is an mzML file (XML-based mass spectrometry data format) and you need to expose spectral metadata, scan information, and ion data in a structured, programmatic form for alignment, clustering, drift correction, or quantification within the BMXP pipeline.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

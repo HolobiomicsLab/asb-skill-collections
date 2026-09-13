@@ -3,6 +3,7 @@ name: gcf-spectra-association-ranking
 description: Use when when you have integrated genomic data (GCFs from AntiSMASH via BigScape clustering) and metabolomic data (spectra and molecular families from GNPS molecular networking) and need to identify and rank which secondary metabolites detected in spectra are likely produced by which biosynthetic.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0621

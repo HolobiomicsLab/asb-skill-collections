@@ -3,6 +3,7 @@ name: spectral-peak-filtering-by-mass-accuracy
 description: Use when after molecular formula assignment has been performed on FT-ICR MS peaks (e.g., by Formularity or CoreMS), and before calculating thermodynamic indices, compound class assignments, or statistical analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

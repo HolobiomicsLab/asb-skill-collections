@@ -3,6 +3,7 @@ name: feature-table-format-conversion
 description: Use when you have raw feature tables exported from NPP tools (XCMS, MZmine 2, MS-DIAL, OpenMS, etc.) in their native formats and need to compare their peak detection and alignment performance against a mzRAPP benchmark dataset.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3172

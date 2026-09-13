@@ -3,6 +3,7 @@ name: untargeted-lc-ms-data-preprocessing
 description: Use when when you have raw untargeted LC-MS metabolomics data and need to detect low-quality or mis-integrated peaks in an XCMS-processed xcmsSet object before performing metabolite annotation, statistical analysis, or biomarker discovery.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -48,6 +49,7 @@ attribution:
 
 # untargeted-lc-ms-data-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preprocessing of untargeted LC-MS metabolomics data using XCMS to extract ion chromatograms (EICs) and fill missing peaks, followed by computation of 12 peak-quality metrics via MetaClean to detect and flag low-quality peaks for downstream quality assessment and machine learning classification.

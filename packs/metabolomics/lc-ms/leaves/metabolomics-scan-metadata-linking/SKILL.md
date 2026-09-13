@@ -3,6 +3,7 @@ name: metabolomics-scan-metadata-linking
 description: Use when after running a ViMMS Environment simulation with save_eval flag enabled, when you need to preserve the link between each simulated MS/MS scan in the output mzML file and its source chemical definition, fragmentation parameters, and evaluation metrics for later analysis, comparison, or.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3429
   edam_topics:
   - http://edamontology.org/topic_0121

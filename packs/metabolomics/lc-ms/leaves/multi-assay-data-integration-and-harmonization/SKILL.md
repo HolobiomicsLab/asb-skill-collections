@@ -3,6 +3,7 @@ name: multi-assay-data-integration-and-harmonization
 description: Use when you have independent LC-MS assays (e.g., positive and negative ionization modes, different lipid profiling assays, or different chromatographic methods) analyzed on the same sample cohort and want to integrate them into a single discriminant or regression model without losing assay-level.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3673

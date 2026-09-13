@@ -3,6 +3,7 @@ name: random-access-and-sequential-iteration-pattern-implementation
 description: Use when when you need to support fast, non-sequential lookups (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3945
   edam_topics:
   - http://edamontology.org/topic_0121

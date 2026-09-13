@@ -3,6 +3,7 @@ name: isotope-pattern-detection
 description: Use when you have MS1-format mass spectrometry files and need to determine the isotope count for peptide features without manual inspection or expert parameter tuning.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

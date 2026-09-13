@@ -3,6 +3,7 @@ name: convolutional-neural-network-encoding
 description: Use when you have pairs of augmented ion images from mass spectrometry imaging data and need to generate low-dimensional representation vectors that maximize similarity between augmentations of the same image while avoiding representation collapse.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -41,6 +42,7 @@ attribution:
 
 # convolutional-neural-network-encoding
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use a shared-weight ResNet18 encoder to transform pairs of augmented ion images into fixed 512-dimensional representation vectors for contrastive learning. This skill is essential when building self-supervised embeddings of mass spectrometry imaging (MSI) data that preserve spatial and intensity relationships across augmented views.

@@ -3,6 +3,7 @@ name: nmr-peak-table-generation
 description: Use when you have raw 1D NMR spectra (in NMRPipe or similar format) from biological samples (urine, worm, or other metabolomics experiments) and need to extract a structured peak table with chemical shifts and intensities for downstream metabolite identification or quantification.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3172

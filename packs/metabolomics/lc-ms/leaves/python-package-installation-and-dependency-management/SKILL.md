@@ -3,6 +3,7 @@ name: python-package-installation-and-dependency-management
 description: Use when when setting up a new computational environment for tandem MS/MS spectrum clustering or other proteomics analysis, and you need to install a tool (like falcon) that depends on specific versions of auxiliary packages (like spectrum-utils==0.3.5).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0227
   edam_topics:
   - http://edamontology.org/topic_0121

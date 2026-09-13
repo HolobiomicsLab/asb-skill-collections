@@ -3,6 +3,7 @@ name: technical-variation-removal-in-lcms-data
 description: Use when after merging feature tables from non-targeted LC-MS/MS data and before statistical analysis, when samples were acquired across multiple instrument runs, different days, or instrumental calibration cycles.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0121

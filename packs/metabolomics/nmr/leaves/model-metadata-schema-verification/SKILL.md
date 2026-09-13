@@ -3,6 +3,7 @@ name: model-metadata-schema-verification
 description: Use when before submitting peak data or other inputs to a machine learning classification API for the first time, after a model update, or if you encounter unexpected prediction errors. It is essential when the underlying model's input names or structure may change and require code updates.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_topics: []
   tools:
   - tensorflow serving

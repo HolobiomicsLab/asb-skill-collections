@@ -3,6 +3,7 @@ name: u13c-labeled-standard-reference-matching
 description: Use when you have IM-MS measurements of samples spiked with U13C-labeled internal standards (e.g., fully labeled yeast extract) and need to assess whether measured CCS values systematically deviate from their true reference values.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -42,6 +43,7 @@ attribution:
 
 # u13c-labeled-standard-reference-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Match measured collision cross section (CCS) values from isotope-labeled lipid internal standards to a reference DTCCS_N2 library to quantify per-lipid-class bias, enabling systematic CCS correction in IM-MS lipidomics without external calibration.

@@ -3,6 +3,7 @@ name: mass-grid-construction-and-mapping
 description: 'Use when after mass track extraction from individual LC-MS samples, when you need to align mass tracks across a cohort to produce a unified feature matrix. Specifically: when study size is ≤10 samples, use pairwise anchor-prioritized alignment;'
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -48,6 +49,7 @@ attribution:
 
 # mass-grid-construction-and-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a unified mass-to-sample alignment map (MassGrid) by conditionally selecting between pairwise or clustering-based alignment strategies based on study size, establishing consensus m/z values across samples while tracking sample membership and mass track identifiers.

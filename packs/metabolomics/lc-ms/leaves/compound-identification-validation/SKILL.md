@@ -3,6 +3,7 @@ name: compound-identification-validation
 description: Use when when you have an unknown MS/MS spectrum (in .
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -50,6 +51,7 @@ attribution:
 
 # compound-identification-validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validate compound identifications by cross-modal retrieval of MS/MS spectra against a molecular structure library using contrastive spectral-structural embeddings. This skill enables ranking and confidence scoring of candidate structures matched to an unknown mass spectrum.

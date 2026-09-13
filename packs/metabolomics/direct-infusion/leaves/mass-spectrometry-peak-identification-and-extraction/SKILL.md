@@ -3,6 +3,7 @@ name: mass-spectrometry-peak-identification-and-extraction
 description: Use when when you have raw mass spectrometry data from direct-infusion (DI-MS) or ambient surface analysis probe (ASAP-MS) instruments and need to identify which m/z peaks are biologically or chemically informative for sample classification, rather than processing the entire spectrum including.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -43,6 +44,7 @@ attribution:
 
 # mass-spectrometry-peak-identification-and-extraction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated identification and extraction of relevant mass-to-charge peaks from high-throughput mass spectrometry data (DI-MS, ASAP-MS) to reduce dimensionality and prepare data for species classification. This step filters raw MS spectra to feature sets suitable for downstream database searching and sample discrimination.

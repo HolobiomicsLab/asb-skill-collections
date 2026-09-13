@@ -3,6 +3,7 @@ name: molecular-fragment-prediction-interpretation
 description: Use when you have an experimental tandem mass spectrum (collision energy annotated) and a known molecular formula or candidate structure list, and you need to rank or discriminate between isomeric or isobaric candidates by comparing predicted fragment-level spectral patterns.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_0153

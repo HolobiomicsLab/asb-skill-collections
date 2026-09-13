@@ -3,6 +3,7 @@ name: mass-spectrometry-feature-extraction-ms1-ms2
 description: Use when when you have raw mzML files from LC-MS/MS metabolomics experiments and need to convert them into a structured feature table with accurate mass, retention time, and MS2 spectral data linked to a reference compound list.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3637
   edam_topics:
   - http://edamontology.org/topic_3172

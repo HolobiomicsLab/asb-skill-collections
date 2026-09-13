@@ -3,6 +3,7 @@ name: sample-to-reference-retention-time-remapping
 description: Use when after mass tracks have been aligned across samples into a MassGrid structure and retention time calibration dictionaries (rt_cal_dict) have been computed for each sample during prior alignment steps.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -43,6 +44,7 @@ attribution:
 
 # sample-to-reference-retention-time-remapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply sample-specific retention time calibration dictionaries to remap scan indices from individual samples into a unified reference sample retention time space, enabling intensity vectors of different lengths to be aggregated into a composite map for peak detection. This is a prerequisite for cross-sample composite intensity summation in high-resolution LC-MS metabolomics.

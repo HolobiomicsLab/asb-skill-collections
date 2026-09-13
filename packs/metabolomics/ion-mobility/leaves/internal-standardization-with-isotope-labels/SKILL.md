@@ -3,6 +3,7 @@ name: internal-standardization-with-isotope-labels
 description: Use when your IM-MS lipidomics samples have been spiked with fully labeled isotopic internal standards (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -41,6 +42,7 @@ attribution:
 
 # internal-standardization-with-isotope-labels
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Use fully labeled isotopic standards (e.g., U13C-labeled lipids) spiked into samples to calculate and correct systematic bias in ion mobility-derived collisional cross section (CCS) measurements without requiring additional external calibration. This approach enables accurate quality control of IM-MS lipidomics data by leveraging a reference library of isotope CCS values.

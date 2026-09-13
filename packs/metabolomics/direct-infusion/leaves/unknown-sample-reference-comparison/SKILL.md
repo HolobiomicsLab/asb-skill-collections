@@ -3,6 +3,7 @@ name: unknown-sample-reference-comparison
 description: Use when you have a preprocessed unknown sample spectrum (m/z peaks and intensities) from high-throughput mass spectrometry (DI-MS, ASAP-MS, or ambient ionization methods) and need to identify the species or authenticate a sample against a curated reference database of known spectra.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3502
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -40,6 +41,7 @@ attribution:
 
 # unknown-sample-reference-comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assign candidate species scores to unknown mass spectrometry samples by computing similarity metrics between preprocessed unknown spectra and a reference database of known species spectra. This skill enables automated species authentication through ranked candidate lists with match scores.

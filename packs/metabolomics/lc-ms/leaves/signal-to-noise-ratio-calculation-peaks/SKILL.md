@@ -3,6 +3,7 @@ name: signal-to-noise-ratio-calculation-peaks
 description: Use when after elution peaks have been detected on composite mass tracks using local maxima and prominence detection, before reporting features in the final feature table.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -46,6 +47,7 @@ attribution:
 
 # Signal-to-Noise-Ratio Calculation for Peaks
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantifies the quality of detected chromatographic peaks by computing the ratio of peak intensity to local noise, enabling filtering of low-confidence features in LC-MS metabolomics. This metric is used to retain only peaks with SNR above a defined threshold (default SNR >2) during feature extraction from composite mass tracks.

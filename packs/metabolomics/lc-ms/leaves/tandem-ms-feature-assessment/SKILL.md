@@ -3,6 +3,7 @@ name: tandem-ms-feature-assessment
 description: Use when after importing raw peak tables from tandem MS/MS preprocessing software (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0769

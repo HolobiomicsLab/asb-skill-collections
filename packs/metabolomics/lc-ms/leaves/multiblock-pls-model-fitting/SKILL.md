@@ -3,6 +3,7 @@ name: multiblock-pls-model-fitting
 description: Use when you have split multi-assay LC-MS intensity data into training (90%) and test (10%) subsets with assay-specific column prefixes, and you need to fit a discriminant or regression model that respects the block structure (separate assays) while jointly predicting a phenotypic outcome (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3929
   edam_topics:
   - http://edamontology.org/topic_3172

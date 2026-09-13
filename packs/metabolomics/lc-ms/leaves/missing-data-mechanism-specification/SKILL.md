@@ -3,6 +3,7 @@ name: missing-data-mechanism-specification
 description: Use when when you have a metabolomics abundance table with missing values and need to decide which imputation method to apply, or when designing a simulation to evaluate imputation performance.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -46,6 +47,7 @@ attribution:
 
 # Missing-Data Mechanism Specification
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Specify the missing-data mechanism (MCAR, MAR, or MNAR) and censoring parameters for metabolomics datasets to enable appropriate selection and benchmarking of imputation methods. This skill determines whether missingness is random, dependent on observed covariates, or dependent on unobserved (left-censored) values, which constrains which imputation strategies are valid.

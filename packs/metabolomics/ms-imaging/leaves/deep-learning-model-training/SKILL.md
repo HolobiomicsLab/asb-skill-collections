@@ -3,6 +3,7 @@ name: deep-learning-model-training
 description: Use when you have raw or preprocessed mass spectrometry feature matrices (e.g., from low mass resolution or sparse acquisition) and want to enhance signal quality and spatial resolution across tissue or single-cell samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_3520

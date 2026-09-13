@@ -3,6 +3,7 @@ name: circular-dependency-avoidance-in-method-design
 description: Use when you are implementing multiple accessor methods on a backend class that logically depend on each other (e.g., one returns full data and another returns column metadata), and both methods are required by downstream code.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

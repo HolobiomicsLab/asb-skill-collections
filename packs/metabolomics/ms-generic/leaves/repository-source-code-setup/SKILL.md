@@ -3,6 +3,7 @@ name: repository-source-code-setup
 description: Use when you need to validate that a published software tool (e.g., MassQL) executes correctly in your environment, reproduce published results, or contribute to development.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_0091

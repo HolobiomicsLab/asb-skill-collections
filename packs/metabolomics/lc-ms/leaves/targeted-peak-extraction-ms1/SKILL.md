@@ -3,6 +3,7 @@ name: targeted-peak-extraction-ms1
 description: Use when you have raw MS data in a supported instrument format (Agilent .d, Thermo .raw, Bruker .d, mzML) and a predefined list of molecular targets (CSV with m/z and/or retention time) that you need to quantify.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3637
   edam_topics:
   - http://edamontology.org/topic_3520

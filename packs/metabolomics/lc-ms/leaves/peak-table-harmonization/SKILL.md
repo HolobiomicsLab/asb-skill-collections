@@ -3,6 +3,7 @@ name: peak-table-harmonization
 description: Use when when you have extracted peak tables from multiple independent LC/HRMS analysis batches (each with retention time and m/z values) and need to align peaks across batches to create a unified feature matrix for downstream statistical analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -43,6 +44,7 @@ attribution:
 
 # peak-table-harmonization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align and harmonize peak tables across multiple LC/HRMS batches by applying retention time correction to resolve batch-induced shifts in chromatographic retention times while preserving peak identity across samples. This skill ensures that chemically identical compounds with the same m/z and elution profile are assigned consistent retention times across all batches in large-scale population studies.

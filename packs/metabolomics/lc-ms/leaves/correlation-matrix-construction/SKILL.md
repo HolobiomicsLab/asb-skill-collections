@@ -3,6 +3,7 @@ name: correlation-matrix-construction
 description: Use when after obtaining per-sample model predictions and metabolite signal intensities from a trained deep learning model (e.g., DeepMSProfiler) on LC-MS data from multiple disease groups, and you need to identify and visualize metabolite–disease associations as correlation strengths.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091

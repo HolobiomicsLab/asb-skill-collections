@@ -3,6 +3,7 @@ name: similarity-scoring-for-spectra
 description: Use when you have LC-MS/MS query spectra in mgf format that you need to match against a custom database (e.g., prepared with CFM-id) to identify compounds. Apply this skill when you want to rank candidate compounds by spectral similarity and return scored match results for downstream interpretation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

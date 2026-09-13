@@ -3,6 +3,7 @@ name: mass-spectrometry-file-conversion
 description: Use when you have vendor raw mass spectrometry data files (.raw) from a commercial instrument and need to convert them to open formats (mzML for spectral data, imzML for imaging mass spectrometry) for compatibility with third-party analysis software or to meet open-data standards.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

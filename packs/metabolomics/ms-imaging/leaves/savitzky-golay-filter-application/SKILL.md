@@ -3,6 +3,7 @@ name: savitzky-golay-filter-application
 description: Use when apply Savitzky-Golay smoothing when your mass spectra contain significant noise but you need to preserve sharp peaks and spectral fine structure (e.g., isotope patterns, peak asymmetry).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_3520

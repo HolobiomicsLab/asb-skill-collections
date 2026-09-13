@@ -3,6 +3,7 @@ name: sinusoidal-embedding-implementation
 description: Use when building a transformer-based neural network for chemical formula ranking or classification from mass spectrometry spectra, and you need to encode categorical chemical formulas (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3365
   edam_topics:
   - http://edamontology.org/topic_0218

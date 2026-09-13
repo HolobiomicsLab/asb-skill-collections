@@ -3,6 +3,7 @@ name: cross-dataset-feature-correspondence-mapping
 description: Use when you have two or more nontargeted LCMS feature tables from the same analytical method (same column, ionization mode, and acquisition parameters) and need to identify which features in one dataset correspond to features in another.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3172

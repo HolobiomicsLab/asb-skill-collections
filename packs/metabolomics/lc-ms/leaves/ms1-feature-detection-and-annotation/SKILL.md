@@ -3,6 +3,7 @@ name: ms1-feature-detection-and-annotation
 description: Use when you have FIA-MS, LC-MS, or GC-MS full-scan data in mzML format and need to identify unknown molecular features by accurate mass.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3637
   edam_topics:
   - http://edamontology.org/topic_0121

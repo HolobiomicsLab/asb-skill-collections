@@ -3,6 +3,7 @@ name: pytorch-inference-execution
 description: Use when you have a pretrained PyTorch model with released weights (e.g., JESTR on NPLIB1), a prepared dataset with input features (spectra m/z–intensity arrays, molecular graphs), a GPU environment with CUDA 11.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3520

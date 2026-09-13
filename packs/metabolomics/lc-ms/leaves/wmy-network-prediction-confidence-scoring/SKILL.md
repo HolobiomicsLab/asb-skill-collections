@@ -3,6 +3,7 @@ name: wmy-network-prediction-confidence-scoring
 description: Use when after initial lipid candidate annotation via spectral library matching (e.g., from XCMS/CAMERA peak alignment and LipidIN EQ module querying), when you need to improve coverage and annotation confidence on unannotated or low-confidence lipid signals.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3803
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: ms2-spectrum-format-preparation
 description: Use when you have raw or unstructured MS2 spectral data (from untargeted tandem mass spectrometry experiments) and plan to run MS2MP inference for KEGG pathway prediction.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -39,6 +40,7 @@ attribution:
 
 # ms2-spectrum-format-preparation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare untargeted tandem mass spectrometry (MS2) spectral data into the file structure and format required by the MS2MP deep learning framework for downstream KEGG pathway prediction. This skill ensures data integrity and compatibility before inference.

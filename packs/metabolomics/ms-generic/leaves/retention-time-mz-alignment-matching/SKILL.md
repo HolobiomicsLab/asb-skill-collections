@@ -3,6 +3,7 @@ name: retention-time-mz-alignment-matching
 description: Use when you have extracted feature tables (m/z, intensity, retention time) from multiple breath samples (mzML or mzXML files) via feature extraction, and need to identify which features represent the same volatile organic compound (VOC) across samples to enable cross-sample intensity comparisons.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

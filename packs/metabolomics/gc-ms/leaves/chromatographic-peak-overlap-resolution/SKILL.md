@@ -3,6 +3,7 @@ name: chromatographic-peak-overlap-resolution
 description: Use when analyzing GC-MS data containing overlapping chromatographic peaks—a common scenario in untargeted metabolomics and environmental screening where sample complexity or chromatographic resolution limitations cause co-elution of structurally similar or temporally proximate compounds.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0091

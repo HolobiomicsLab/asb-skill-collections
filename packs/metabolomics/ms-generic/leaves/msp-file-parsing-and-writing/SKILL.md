@@ -3,6 +3,7 @@ name: msp-file-parsing-and-writing
 description: Use when you have one or more .msp spectral library files (NIST format) that need to be ingested for metadata curation, enrichment via web services, or export after transformation. Use this skill as the entry and exit point for any .msp-based annotation or analysis pipeline.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0091

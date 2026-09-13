@@ -3,6 +3,7 @@ name: signal-noise-trade-off-evaluation
 description: 'Use when after generating consensus spectra with fragment recurrence frequencies, when you have replicate MS/MS spectra for features and need to choose a single frequency cutoff for denoising. Triggers include: (1) uncertainty about which frequency threshold to apply across all features;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0943

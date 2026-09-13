@@ -3,6 +3,7 @@ name: two-dimensional-chromatography-data-handling
 description: Use when you have raw GCxGC-MS chromatogram data in NetCDF format from multiple samples (e.g., case and control groups) and need to prepare them for multivariate analysis such as multiway principal component analysis (MPCA).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0091

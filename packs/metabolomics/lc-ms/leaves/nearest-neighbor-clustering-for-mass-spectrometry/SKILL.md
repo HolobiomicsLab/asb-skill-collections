@@ -3,6 +3,7 @@ name: nearest-neighbor-clustering-for-mass-spectrometry
 description: Use when you have extracted mass tracks (EICs) from individual samples at 0.001 amu m/z resolution and need to align them into a composite mass grid for feature detection.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -48,6 +49,7 @@ attribution:
 
 # nearest-neighbor-clustering-for-mass-spectrometry
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Cluster and bin m/z values from mass tracks across multiple LC-MS samples using nearest-neighbor methods to resolve overlapping chromatograms and construct a unified mass grid. This skill leverages high mass resolution to group chemically equivalent ions and align them reproducibly across the cohort.

@@ -3,6 +3,7 @@ name: metabolite-identification-from-transformation-rules
 description: Use when when you have a small-molecule structure (SMILES, MOL, or SDF format) and need to identify probable metabolites or degradation products in a specific biological compartment (e.g., soil/aquatic microbiota, mammalian liver, or gut microbiota).
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3803
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -40,6 +41,7 @@ attribution:
 
 # metabolite-identification-from-transformation-rules
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Predict the chemical structures of small-molecule metabolites by applying biotransformation rules from curated metabolic databases to an input compound structure. This skill enables identification of likely degradation products and metabolic intermediates in specific biological contexts (mammalian, gut microbial, or environmental).

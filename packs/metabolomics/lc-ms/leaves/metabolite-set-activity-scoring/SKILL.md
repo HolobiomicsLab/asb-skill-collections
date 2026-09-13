@@ -3,6 +3,7 @@ name: metabolite-set-activity-scoring
 description: Use when when you have log2-normalized, standardized peak intensity data (rows=peaks, columns=samples) with compound annotations (peak-to-metabolite mappings via KEGG/ChEBI IDs) and need to collapse individual peak signals into pathway-level summary scores for statistical comparison across.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_0121

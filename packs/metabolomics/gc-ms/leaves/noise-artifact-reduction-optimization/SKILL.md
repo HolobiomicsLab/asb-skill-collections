@@ -3,6 +3,7 @@ name: noise-artifact-reduction-optimization
 description: Use when you have imported a raw GCxGC-MS chromatogram (NetCDF format folded into 2D-TIC) that exhibits chemical noise, instrumental artifacts, or baseline drift—conditions that obscure true metabolite signals and impede between-group differentiation in downstream multivariate analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0091

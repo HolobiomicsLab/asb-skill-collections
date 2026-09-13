@@ -3,6 +3,7 @@ name: mzml-data-access-abstraction
 description: Use when when building or extending a mass spectrometry data parser that must support multiple mzML storage formats (plain .mzML, indexed .mzML.gz, standard-compressed .mzML.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

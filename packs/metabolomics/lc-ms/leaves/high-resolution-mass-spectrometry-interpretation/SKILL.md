@@ -3,6 +3,7 @@ name: high-resolution-mass-spectrometry-interpretation
 description: Use when you have centroided LC- or GC-HRMS data (in mzML format, ideally from data-dependent acquisition) and need to identify potential PFAS candidates from a large feature list.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_0121

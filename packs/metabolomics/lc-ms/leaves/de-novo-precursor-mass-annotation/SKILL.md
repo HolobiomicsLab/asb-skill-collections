@@ -3,6 +3,7 @@ name: de-novo-precursor-mass-annotation
 description: Use when when you have unknown MS/MS spectra with observed precursor m/z values and want to infer the molecular formula and adduct type (e.g., [M+H]+, [M+Na]+, [M+K]+) in a de novo setting without access to spectral libraries.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3680
   edam_topics:
   - http://edamontology.org/topic_3172

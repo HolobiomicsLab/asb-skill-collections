@@ -3,6 +3,7 @@ name: spectral-feature-standardization
 description: Use when after peak-picking stage completes on centroided mzML or netCDF raw LC-MS data via any of the three wrapped algorithms (Centwave, FeatureFinderMetabo, ADAP), when you need to pass the detected features to downstream SLAW stages (alignment, isotope/adduct grouping, gap-filling, MS2.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3520

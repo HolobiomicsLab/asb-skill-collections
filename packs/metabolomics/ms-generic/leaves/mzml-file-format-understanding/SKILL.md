@@ -3,6 +3,7 @@ name: mzml-file-format-understanding
 description: Use when you have mass spectrometry raw data in mzML format (including compressed variants like mzML.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

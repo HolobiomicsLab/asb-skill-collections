@@ -3,6 +3,7 @@ name: ms-ms-spectrum-statistical-significance-testing
 description: Use when you have aligned fragment ion pairs from two MS/MS spectra (via maximum weight matching or other methods) and need to assign p-values or Z-scores to each matched pair to distinguish true biological/chemical relationships from random noise.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0121

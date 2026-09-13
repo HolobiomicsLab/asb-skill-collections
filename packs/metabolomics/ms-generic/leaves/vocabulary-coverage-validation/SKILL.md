@@ -3,6 +3,7 @@ name: vocabulary-coverage-validation
 description: Use when after merging separate vocabularies for distinct data modalities (e.g., spectral tokens for m/z values and intensities, structural tokens for SMILES or graphs) and before deploying the unified vocabulary in a language model.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -41,6 +42,7 @@ attribution:
 
 # Vocabulary Coverage Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates that a unified token vocabulary correctly encodes representative samples from heterogeneous data domains (e.g., mass spectra and molecular structures) with complete coverage, no collisions, and correct bidirectional mapping. This skill ensures the vocabulary is ready for downstream pretraining and fine-tuning in multimodal sequence models.

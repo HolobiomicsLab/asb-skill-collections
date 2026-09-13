@@ -3,6 +3,7 @@ name: bgc-mf-link-scoring
 description: Use when you have preprocessed GCF-MF link pairs from paired genomics–metabolomics datasets (antiSMASH-detected BGCs clustered into GCFs, and GNPS spectra grouped into MFs) and need to rank them by likelihood of representing true natural product–biosynthetic gene associations.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3172

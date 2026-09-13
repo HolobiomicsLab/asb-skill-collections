@@ -3,6 +3,7 @@ name: spectral-graph-construction-from-fragments
 description: Use when after you have aligned fragment ion pairs between two MS/MS spectra using maximum weight matching and need to compute statistical significance scores for the matched pairs.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520

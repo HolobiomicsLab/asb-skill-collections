@@ -3,6 +3,7 @@ name: batch-effect-matrix-construction
 description: 'Use when when you need to generate synthetic metabolomics feature tables with quantified batch effects for validating batch-correction methods. Use this skill when: (1) you want reproducible, ground-truth batch effects overlaid on condition-only variation;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3172

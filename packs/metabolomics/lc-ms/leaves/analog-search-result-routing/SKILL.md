@@ -3,6 +3,7 @@ name: analog-search-result-routing
 description: Use when after MS2Query has ranked and scored library matches against query spectra, when you need to apply different confidence thresholds, interpretation strategies, or downstream workflows depending on whether the result is an exact match (precursor m/z difference ≈ 0) or a chemical analog.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0153

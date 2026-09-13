@@ -3,6 +3,7 @@ name: bag-of-fragments-representation-construction
 description: Use when after noise filtering and polarity selection of MS/MS spectra (from .mgf, .mzML, or .msp files), when you need to prepare spectra for unsupervised discovery of recurring fragmentation patterns without prior compound identification.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

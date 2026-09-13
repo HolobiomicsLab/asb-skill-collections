@@ -3,6 +3,7 @@ name: spectral-similarity-matching-and-comparison
 description: Use when after extracting and optionally combining MS2 spectra from a chromatographic peak (e.g., at a known m/z value like 304.1131), you need to determine which compound(s) in a reference library match the experimental spectrum.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3520

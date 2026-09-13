@@ -3,6 +3,7 @@ name: molecular-geometry-file-parsing
 description: Use when when you have a molecular structure in XYZ or similar coordinate format and need to initialize QCxMS2 or related workflows for EI mass spectrum calculation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2427
   edam_topics:
   - http://edamontology.org/topic_0176

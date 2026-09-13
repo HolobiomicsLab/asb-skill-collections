@@ -3,6 +3,7 @@ name: json-record-enrichment
 description: Use when when a project JSON record contains a resolvable public identifier (genome accession, biosynthetic gene cluster ID, etc.) but lacks the corresponding human-readable or standardized metadata field (organism name, cluster description).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3283
   edam_topics:
   - http://edamontology.org/topic_0622

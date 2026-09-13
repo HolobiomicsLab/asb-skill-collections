@@ -3,6 +3,7 @@ name: metabolomics-experiment-object-handling
 description: Use when when converting raw metabolomics data from external formats (tab-delimited text, Sciex OS exports) into a unified R analysis environment, or when you have an existing SummarizedExperiment from another pipeline (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0625

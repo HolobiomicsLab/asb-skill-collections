@@ -3,6 +3,7 @@ name: mass-track-extraction-and-binning
 description: 'Use when when you have centroid mzML files from LC-MS metabolomics acquisition and need to construct sample-level mass tracks before cross-sample alignment. Specifically: you are starting fresh with vendor-converted or pre-processed mzML input;'
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -49,6 +50,7 @@ attribution:
 
 # mass-track-extraction-and-binning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Extract and bin mass tracks (extracted ion chromatograms, EICs) from individual LC-MS samples by parsing mzML files, binning m/z values at high resolution (0.001 amu), and clustering overlapping m/z traces using nearest-neighbor methods. This foundational step produces raw mass tracks that serve as input to cross-sample alignment.

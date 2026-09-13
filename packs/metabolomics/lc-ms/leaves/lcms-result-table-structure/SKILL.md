@@ -3,6 +3,7 @@ name: lcms-result-table-structure
 description: Use when after completing Part 4 (Identification of ISF Features) in the ISFrag workflow, when you have an analysis results object containing identified ISF features and need to generate a shareable, tabular export that documents feature annotations, hierarchical parent–fragment relationships, and.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3172

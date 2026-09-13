@@ -3,6 +3,7 @@ name: metabolomics-intensity-normalization
 description: Use when your input is a raw metabolomics intensity matrix (compounds × samples) with known batch assignment and QC sample labels, and you observe signal drift across the analytical sequence or batch-to-batch variation.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -44,6 +45,7 @@ attribution:
 
 # metabolomics-intensity-normalization
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Apply robust normalization methods (tGAM, rGAM, rLOESS, QC-RLSC, QC-RSC) to correct for signal drift and batch effects in untargeted metabolomics intensity matrices. This skill removes systematic variation across analytical runs while preserving biological signal, essential for cross-batch and multi-scale metabolomics studies.

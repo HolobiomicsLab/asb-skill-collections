@@ -3,6 +3,7 @@ name: proforma-peptidoform-parsing
 description: Use when when you have a ProForma 2.0–formatted peptide string with PSI-MOD or UniMod modification labels and need to extract the underlying amino acid sequence and modification positions before performing theoretical fragment ion calculation or spectrum peak matching.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: scalable-network-inference-high-dimensional
 description: Use when when working with feature abundance tables (rows=features, columns=samples) where the feature count exceeds 10,000 and you need to infer a network of correlations between features.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0092

@@ -3,6 +3,7 @@ name: simulation-output-serialization
 description: Use when after a ViMMS Environment.run() simulation completes with save_eval flag enabled, you have collected EvaluationData containing chemical compounds, their generated scans, and fragmentation events in memory.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3949
   edam_topics:
   - http://edamontology.org/topic_3173

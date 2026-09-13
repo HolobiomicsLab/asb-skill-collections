@@ -3,6 +3,7 @@ name: transformation-network-topology-analysis
 description: Use when when you have pre-processed FT-ICR MS peak lists with assigned molecular formulas and wish to move beyond univariate chemical composition analysis to understand metabolic transformation pathways and hub metabolites.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3172

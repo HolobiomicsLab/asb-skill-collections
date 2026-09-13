@@ -3,6 +3,7 @@ name: bioconductor-data-import-and-handling
 description: Use when you have CE-MS test files archived in the msdata Bioconductor package and need to load them into an in-memory or on-disk R representation to extract ion electropherograms, pick peaks, or compute effective mobility transformations.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3520

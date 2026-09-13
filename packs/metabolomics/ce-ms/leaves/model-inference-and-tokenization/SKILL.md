@@ -3,6 +3,7 @@ name: model-inference-and-tokenization
 description: Use when you have MS/MS spectra in .msp format and need to retrieve similar compounds or compute spectral similarities for compound identification. The input spectra should already be cleaned (malformed or invalid SMILES removed), and you have access to a pre-trained SpecEmbedding model checkpoint.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -50,6 +51,7 @@ attribution:
 
 # model-inference-and-tokenization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Generate vector embeddings for MS/MS spectra by tokenizing m/z intensity pairs with a learned vocabulary, then passing them through a pre-trained deep learning model to produce fixed-dimensional representations. This skill enables efficient similarity-based compound retrieval and structural matching across spectral databases.

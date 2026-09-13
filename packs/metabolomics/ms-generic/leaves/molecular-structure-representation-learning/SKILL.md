@@ -3,6 +3,7 @@ name: molecular-structure-representation-learning
 description: Use when when you have paired mass spectra and molecular structure data and need to train a model that can bidirectionally map between experimental spectra and chemical structures.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3372
@@ -42,6 +43,7 @@ attribution:
 
 # molecular-structure-representation-learning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Learning joint representations of mass spectra and molecular structures through unified tokenization and multi-stage pretraining, fine-tuning, and alignment. This skill enables end-to-end modeling where spectra and molecules share a common vocabulary and latent space, enabling structure elucidation from experimental mass spectra.

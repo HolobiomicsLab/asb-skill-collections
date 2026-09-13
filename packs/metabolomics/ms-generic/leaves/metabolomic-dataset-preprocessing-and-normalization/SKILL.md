@@ -3,6 +3,7 @@ name: metabolomic-dataset-preprocessing-and-normalization
 description: Use when you have raw or minimally processed FT-ICR MS peak tables in Formularity .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091

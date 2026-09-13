@@ -3,6 +3,7 @@ name: reactant-ion-peak-exclusion
 description: Use when when performing peak detection on Gas Chromatography–Ion Mobility Spectrometry samples where the Reactant Ion Peak (a high-intensity background signal from the ion source) would otherwise be misidentified as an analyte peak, causing false positives in the peak list.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0121

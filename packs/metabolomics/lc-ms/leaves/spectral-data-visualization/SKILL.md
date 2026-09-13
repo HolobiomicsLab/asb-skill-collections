@@ -3,6 +3,7 @@ name: spectral-data-visualization
 description: Use when you have executed MassQL queries on mzML mass spectrometry data and need to communicate query results visually—particularly when comparing peak shapes across multiple files, assessing retention time distributions, or validating precursor/product ion matches.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0121

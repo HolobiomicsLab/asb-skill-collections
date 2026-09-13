@@ -3,6 +3,7 @@ name: lipid-identification-scoring
 description: Use when after peak picking (MZmine, XCMS, MS-DIAL, or Compound Discoverer output) and candidate retrieval, when you have experimental fragment m/z values and multiple candidate lipid species from the in-silico library.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3762
   edam_topics:
   - http://edamontology.org/topic_0153

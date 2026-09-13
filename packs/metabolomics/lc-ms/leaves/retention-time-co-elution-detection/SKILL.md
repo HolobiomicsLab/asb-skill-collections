@@ -3,6 +3,7 @@ name: retention-time-co-elution-detection
 description: Use when after matching mass-to-charge ratios to a compound database (e.g., KEGG) and assigning adduct/fragment types, when you have an annotated feature table with retention times, m/z values, and intensity profiles across samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

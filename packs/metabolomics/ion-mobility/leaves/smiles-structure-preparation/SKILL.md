@@ -3,6 +3,7 @@ name: smiles-structure-preparation
 description: Use when you have a SMILES input file of small organic molecules and need to predict their collision cross sections or other molecular properties via quantum mechanics.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0361
   edam_topics:
   - http://edamontology.org/topic_3314
@@ -47,6 +48,7 @@ attribution:
 
 # SMILES Structure Preparation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Prepare and standardize molecular structures from SMILES notation by determining ionization states and generating conformations for subsequent computational chemistry workflows. This skill is essential when beginning an in silico collision cross section (CCS) prediction pipeline where molecular input must be chemically contextualized before quantum mechanical calculations.

@@ -3,6 +3,7 @@ name: nmr-chemical-shift-interval-matching
 description: Use when you have isolated one or more regions-of-interest (ROIs) from a proton NMR spectrum (defined as lower and upper chemical-shift bounds in ppm) and need to systematically generate a list of plausible metabolite assignments from a reference database.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3172

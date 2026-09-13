@@ -3,6 +3,7 @@ name: retention-time-mass-proximity-matching
 description: Use when after sample alignment and grouping of isotopologues and adducts have been completed, when the aligned feature table contains NA or zero entries (missing intensities) for features that are detected in some samples but fall below the detection threshold in others.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3370

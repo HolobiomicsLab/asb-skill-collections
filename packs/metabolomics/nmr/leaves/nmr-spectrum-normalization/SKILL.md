@@ -3,6 +3,7 @@ name: nmr-spectrum-normalization
 description: Use when when preparing library compound spectra and observed mixture spectra for mcfNMR analysis, normalize both spectra to cumulative distribution functions (CDFs) scaled by total intensity.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3370

@@ -3,6 +3,7 @@ name: fdr-aware-psm-retention-strategy
 description: 'Use when rescoring PSMs with machine learning or statistical models where: (1) you want to consider multiple candidate PSMs per spectrum (e.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

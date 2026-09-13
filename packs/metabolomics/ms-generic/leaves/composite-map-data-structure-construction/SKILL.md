@@ -3,6 +3,7 @@ name: composite-map-data-structure-construction
 description: Use when after mass track extraction and alignment across samples, when you have a MassGrid structure (m/z-aligned mass tracks) and corresponding retention time calibration dictionaries for each sample, and need to prepare input for composite peak detection rather than per-sample peak detection.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -43,6 +44,7 @@ attribution:
 
 # composite-map-data-structure-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Constructs a CompositeMap data structure by aligning mass tracks across samples into a unified MassGrid, applying retention time calibration, and summing intensity vectors element-wise to create consensus m/z-indexed composite mass tracks for unified peak detection. This enables peak detection on aggregated signal rather than repeated independently on each sample.

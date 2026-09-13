@@ -3,6 +3,7 @@ name: peak-property-preparation-from-csv
 description: Use when you have a CSV file containing nucleoside or peptide molecular data (formulas, identifiers, retention times, intensities) that you want to simulate as LC-MS/MS runs. Use this skill as the mandatory first step before selecting a fragmentation model and noise injector in SMITER.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

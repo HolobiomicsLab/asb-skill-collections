@@ -3,6 +3,7 @@ name: multi-task-learning-feature-fusion
 description: Use when when you have multi-branch deep learning architecture predicting related but distinct peptide properties (charge state, isotope count, retention time) from raw mass spectrum, and you want to leverage auxiliary task gradients to improve primary task learning.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0121

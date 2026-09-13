@@ -3,6 +3,7 @@ name: survival-data-preparation
 description: Use when when you have clinical survival outcomes (event status and follow-up time) and high-dimensional metabolomic or expression data, and you need to feed them into Cox-PH or Cox-nnet prognosis models.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3673

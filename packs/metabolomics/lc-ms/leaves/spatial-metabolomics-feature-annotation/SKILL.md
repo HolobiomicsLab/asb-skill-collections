@@ -3,6 +3,7 @@ name: spatial-metabolomics-feature-annotation
 description: Use when your spatial metabolomics dataset contains raw m/z features (e.g., from MALDI-MS imaging or LC-MS/MS) without metabolite annotations, and you have selected a reference database and adduct type appropriate for your ionization mode and biological sample.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3755
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -49,6 +50,7 @@ attribution:
 
 # Spatial Metabolomics Feature Annotation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Assign metabolite identities to mass-to-charge (m/z) features in spatial metabolomics datasets by matching observed m/z values against a reference database (e.g., LipidMaps, HMDB) within a specified mass error tolerance and adduct assumption. This skill enables interpretation of spatial MS imaging data by linking ion signals to known chemical structures.

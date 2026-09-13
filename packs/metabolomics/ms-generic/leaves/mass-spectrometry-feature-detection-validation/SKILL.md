@@ -3,6 +3,7 @@ name: mass-spectrometry-feature-detection-validation
 description: Use when when you have processed LC-HRMS mzML files through a non-targeted preprocessing tool (e.g., XCMS, MZmine 2, MS-DIAL) and need to assess whether peak detection rates, isotopologue ratio fidelity, and alignment accuracy meet acceptable thresholds before downstream analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3370

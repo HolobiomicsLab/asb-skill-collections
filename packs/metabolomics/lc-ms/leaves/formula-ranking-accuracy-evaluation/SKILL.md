@@ -3,6 +3,7 @@ name: formula-ranking-accuracy-evaluation
 description: Use when use this skill after training or fine-tuning a chemical formula transformer model on annotated tandem MS/MS spectra, when you need to measure whether the model's ranked formula candidates match ground truth.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: compound-library-construction-and-curation
 description: Use when when you have a set of query chemicals (e.g., ethyl hexanoate, methyl salicylate, octanal, undecane) and need to evaluate them against reference compound categories, or when you want to restrict structural matching to specific compound type sets (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_0154

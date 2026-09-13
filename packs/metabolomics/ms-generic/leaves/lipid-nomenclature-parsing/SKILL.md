@@ -3,6 +3,7 @@ name: lipid-nomenclature-parsing
 description: Use when you have received raw lipid identification output from LipidSearch or LIQUID in CSV or TSV format containing lipid species names or identifiers, and you need to extract their structural components and map them to standardized LIPID MAPS categories before building a quantitative data matrix.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_0153

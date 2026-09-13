@@ -3,6 +3,7 @@ name: data-serialization-format-interoperability
 description: Use when you have a new or draft file format specification (e.g., mzPeak) with multiple independent language implementations, and you need to verify that all readers agree on the structured data they extract before recommending the format for production use.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

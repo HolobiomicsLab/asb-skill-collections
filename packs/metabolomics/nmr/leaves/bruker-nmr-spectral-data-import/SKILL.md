@@ -3,6 +3,7 @@ name: bruker-nmr-spectral-data-import
 description: Use when you have raw Bruker NMR spectral files (from a Bruker instrument) in a directory and need to prepare them for automated metabolite identification and quantification using ASICS.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -44,6 +45,7 @@ attribution:
 
 # bruker-nmr-spectral-data-import
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Import Bruker NMR spectral data files into an R data frame, then convert to a Spectra object for downstream metabolite identification and quantification. This is a required preprocessing step in the ASICS pipeline for 1H NMR metabolomics analysis.

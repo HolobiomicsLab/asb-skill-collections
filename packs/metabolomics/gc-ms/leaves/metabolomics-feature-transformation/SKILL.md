@@ -3,6 +3,7 @@ name: metabolomics-feature-transformation
 description: Use when when you have a feature intensity table (samples × compounds) from targeted or non-targeted metabolomics and need to prepare it for statistical modeling or multivariate analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0625

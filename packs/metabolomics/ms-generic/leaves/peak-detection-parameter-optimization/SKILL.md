@@ -3,6 +3,7 @@ name: peak-detection-parameter-optimization
 description: Use when when loading and processing raw or recalibrated FT-ICR mass spectrum data (Bruker .d format) on a defined field-strength instrument (e.g., 12 T or 15 T), before executing molecular formula search.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3520

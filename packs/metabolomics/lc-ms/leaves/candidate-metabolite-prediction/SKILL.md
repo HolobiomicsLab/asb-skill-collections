@@ -3,6 +3,7 @@ name: candidate-metabolite-prediction
 description: Use when you have an unknown compound's mass spectrum (m/z peaks and intensities) in positive or negative ion mode and need to identify candidate metabolites from a structure database.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -39,6 +40,7 @@ attribution:
 
 # candidate-metabolite-prediction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Predict structurally related metabolites for unknown compounds by encoding mass spectra into semantic representations and ranking candidates from a reference database using deep-learning-based similarity scoring. This enables prioritization of molecular structure database candidates by considering chemical space context.

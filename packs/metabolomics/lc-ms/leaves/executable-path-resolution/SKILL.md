@@ -3,6 +3,7 @@ name: executable-path-resolution
 description: Use when when preparing to run QCxMS2 or similar multi-tool orchestration software that depends on five or more external programs with strict version floors.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3071

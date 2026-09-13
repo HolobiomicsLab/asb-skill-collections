@@ -3,6 +3,7 @@ name: metabolic-reaction-classification-by-regulatory-layer
 description: Use when you have integrated transcriptomics, intracellular metabolomics, and extracellular flux ratio data from multiple cell lines or conditions, and need to determine whether observed differences in metabolic fluxes originate from gene expression changes, substrate availability changes, or both.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_2259

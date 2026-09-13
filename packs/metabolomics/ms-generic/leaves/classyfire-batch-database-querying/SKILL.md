@@ -3,6 +3,7 @@ name: classyfire-batch-database-querying
 description: Use when you have a GNPS DBResult file with InChIKey identifiers but lack corresponding ClassyFire superclass, class, and subclass taxonomy annotations—particularly when GNPS spectral library matches no longer include this ontology information by default.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_0602

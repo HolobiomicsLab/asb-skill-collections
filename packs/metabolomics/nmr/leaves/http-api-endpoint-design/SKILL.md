@@ -3,6 +3,7 @@ name: http-api-endpoint-design
 description: Use when when you need to expose a multi-step spectral processing workflow (parse → extract → render → annotate → compress) as a web service endpoint that accepts jcamp/RAW/mzML spectral files and must return coordinated output artifacts (modified JCAMP files, peak tables, and PNG images) in a.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3761
   edam_topics:
   - http://edamontology.org/topic_0081

@@ -3,6 +3,7 @@ name: r-list-object-manipulation
 description: Use when you have extracted metadata or spectral information from a Thermo Fisher Scientific .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121

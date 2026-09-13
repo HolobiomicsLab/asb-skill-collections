@@ -3,6 +3,7 @@ name: feature-grouping-by-similarity-metrics
 description: Use when after LCMS feature alignment (e.g., Eclipse output) when you have a feature table with retention times and intensity profiles across multiple injections, and you need to collapse redundant features (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3172

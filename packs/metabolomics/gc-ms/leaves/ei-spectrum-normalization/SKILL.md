@@ -3,6 +3,7 @@ name: ei-spectrum-normalization
 description: Use when you have raw electron ionization mass spectra (m/z and intensity pairs) that you intend to match against a library using the Identity (EI Normal) or Similarity (EI Simple) algorithms. Different ionization runs and instrument conditions produce spectra with varying absolute intensities;
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

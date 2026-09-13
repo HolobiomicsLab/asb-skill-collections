@@ -3,6 +3,7 @@ name: isotope-labelling-feature-interpretation
 description: Use when after basepeak_finder has identified base peaks from isotope-labelled feature clusters with fold-change and intensity thresholds met.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3860
   edam_topics:
   - http://edamontology.org/topic_3172

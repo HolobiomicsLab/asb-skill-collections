@@ -3,6 +3,7 @@ name: mass-spectrometry-preprocessing
 description: Use when when you have raw mass-spectrometry data (precursor m/z, ionization mode, and fragment m/z–intensity pairs) that must be fed into a CNN model for metabolite annotation via compound fingerprint prediction.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -43,6 +44,7 @@ attribution:
 
 # mass-spectrometry-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Preparation and normalization of mass-spectrometry spectral data (m/z and intensity arrays) into a format compatible with machine learning input layers, specifically for CNN-based compound fingerprint prediction. This skill ensures spectral matrices are properly structured, intensity-normalized, and aligned for downstream model ingestion.

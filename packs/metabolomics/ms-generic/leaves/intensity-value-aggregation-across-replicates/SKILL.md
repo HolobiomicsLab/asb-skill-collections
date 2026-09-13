@@ -3,6 +3,7 @@ name: intensity-value-aggregation-across-replicates
 description: Use when after peak recognition has identified features (m/z and retention time pairs) across one or more MS replicates, and you need to collapse multiple intensity measurements per feature into a single representative value per sample.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

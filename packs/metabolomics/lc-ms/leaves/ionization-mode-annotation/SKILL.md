@@ -3,6 +3,7 @@ name: ionization-mode-annotation
 description: Use when when converting MS/MS spectra from .msp format library files (e.g., MassBank) into a custom fragment library for metabolite annotation, and the source spectra are tagged with ionization mode information (positive or negative).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3762
   edam_topics:
   - http://edamontology.org/topic_0121

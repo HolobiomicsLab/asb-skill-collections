@@ -3,6 +3,7 @@ name: reference-peak-matching-and-alignment
 description: Use when when you have a processed mass spectrum object (e.g., from Bruker FT-ICR acquisition) and a reference peak list (e.g., SRFA.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

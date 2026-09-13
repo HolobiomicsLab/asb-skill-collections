@@ -3,6 +3,7 @@ name: msconvert-integration-and-invocation
 description: Use when when you have vendor-format LC-MS acquisition files (Thermo .raw, Bruker .d, Sciex .ms, Agilent, Waters formats) that need to be ingested into a quality control or data processing pipeline that requires open, standardized spectral formats.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

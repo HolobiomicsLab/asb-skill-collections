@@ -3,6 +3,7 @@ name: microbiome-metabolome-prediction-modeling
 description: Use when you have paired microbiome (16S rRNA, metagenomic) and metabolomic (LC-MS, GC-MS) abundance tables from the same biosamples, and you want to predict which metabolites are recoverable from microbial composition alone and identify groups of microbes and metabolites with correlated.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3174

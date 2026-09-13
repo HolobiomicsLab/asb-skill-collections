@@ -3,6 +3,7 @@ name: bag-of-words-document-representation-generation
 description: Use when you have raw MS/MS spectral data in standard mass spectrometry formats and need to prepare it for unsupervised substructure discovery via topic modeling.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

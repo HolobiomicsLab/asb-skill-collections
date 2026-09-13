@@ -3,6 +3,7 @@ name: siamese-network-embedding-generation
 description: Use when you have preprocessed MS/MS spectra binned into 10,000 equally-sized m/z bins (10–1000 m/z range) with square-root-transformed intensities, and you need to generate 200-dimensional spectral embeddings for structural similarity prediction, visualization via dimensionality reduction (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: lipid-maps-database-lookup
 description: Use when when you have a parsed lipid species table (output from LipidSearch or LIQUID) containing lipid names or identifiers, and you need to annotate each entry with its standardized LIPID MAPS category (e.g., Glycerophospholipids, Sphingolipids) and subcategory (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_0153

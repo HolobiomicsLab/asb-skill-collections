@@ -3,6 +3,7 @@ name: hash-based-deduplication-workflow
 description: Use when when processing open mass spectrometry library (OMSL) data that may contain duplicate spectral records (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -43,6 +44,7 @@ attribution:
 
 # hash-based-deduplication-workflow
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 A data quality workflow that identifies and removes duplicate mass spectra by computing spectral hash identifiers (SPLASH keys) and grouping spectra by identical hash values. This ensures a deduplicated spectral dataset while preserving the first occurrence of each unique spectrum.

@@ -3,6 +3,7 @@ name: high-dimensional-similarity-search-optimization
 description: Use when when you have a large spectral library (thousands to millions of spectra) represented as high-dimensional vectors and need to match unknown query spectra against it, but exhaustive pairwise comparison is computationally prohibitive.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3945
   edam_topics:
   - http://edamontology.org/topic_3520

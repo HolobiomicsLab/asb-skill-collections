@@ -3,6 +3,7 @@ name: theoretical-isotope-envelope-calculation
 description: Use when when processing mass spectrometry data from stable isotope probing (SIP) experiments where peptides contain known levels of heavy isotope incorporation (13C, 15N, 2H, 18O), and you need to annotate observed MS2 peaks by matching them to theoretical B and Y ion fragments.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121

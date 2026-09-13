@@ -3,6 +3,7 @@ name: overfitting-detection-and-prevention
 description: Use when when training a fresh CNN model from scratch on labeled LCMS data (e.g., MS1 peak classification in NeatMS), particularly when aiming for a specific performance target (e.g., AUC ROC > 0.9) and you need to avoid wasting compute time on redundant epochs or degrading validation performance.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

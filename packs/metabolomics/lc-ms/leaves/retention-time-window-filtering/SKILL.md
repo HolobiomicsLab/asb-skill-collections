@@ -3,6 +3,7 @@ name: retention-time-window-filtering
 description: Use when you have mzML/mzXML chromatogram files from Thermo, Waters, or Bruker instruments and need to extract MS1 and MS2 scans matching both a target m/z value AND a known or suspected retention time range.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -42,6 +43,7 @@ attribution:
 
 # retention-time-window-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter MS1 and MS2 scans from raw chromatogram files by applying user-specified retention time (RT) bounds in addition to m/z targets, enabling targeted extraction of precursor and fragment ions within defined chromatographic windows. This skill is essential when building local spectral libraries from high-volume LC-MS/MS data while maintaining specificity to the intended analyte elution profile.

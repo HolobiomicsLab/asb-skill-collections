@@ -3,6 +3,7 @@ name: y-ion-signal-detection-and-noise-assessment
 description: Use when you have extracted a centroided MS/MS spectrum from a Thermo Orbitrap raw file (via rawrr::readSpectrum or equivalent) and need to verify that the observed y-ion fragments for a known peptide precursor exhibit signal-to-noise ratios consistent with high-quality fragmentation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3636
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: retention-time-windowing
 description: Use when you have a complete TIC (total ion current) table indexed by retention time and need to visualize or analyze only a specific time interval—for example, when isolating a chromatographic peak region (9–10 min) before plotting or when a mass spectrometry run spans a time range wider than the.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

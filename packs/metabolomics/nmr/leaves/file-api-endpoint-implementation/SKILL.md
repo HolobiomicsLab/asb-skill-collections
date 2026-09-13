@@ -3,6 +3,7 @@ name: file-api-endpoint-implementation
 description: Use when when you need to construct a POST endpoint that ingests raw spectral data files from multiple vendor formats (jcamp, RAW, mzML) and must standardize them for downstream processing.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0593

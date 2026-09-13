@@ -3,6 +3,7 @@ name: saturation-threshold-configuration
 description: Use when when executing peak integration on preprocessed GC-IMS data (after alignment and baseline correction) and you need to decide whether to include or exclude peaks that exhibit saturation artifacts from the RIP signal. Set a threshold (e.g., 0.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3520

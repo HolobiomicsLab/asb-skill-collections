@@ -3,6 +3,7 @@ name: rc-object-construction-and-validation
 description: Use when after feature detection and alignment (XCMS or equivalent), when you have a CSV feature table with m/z and retention time columns and need to group features derived from the same compound.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3172

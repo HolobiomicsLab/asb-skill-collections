@@ -3,6 +3,7 @@ name: publication-image-asset-preparation
 description: Use when you have resolved a USI string pointing to a spectrum in a supported repository (GNPS, MassBank, MassIVE, MetaboLights, Metabolomics Workbench, ProteoXchange, or MS2LDA) and need to embed a publication-ready visualization or machine-readable reference that preserves the spectrum's.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3172

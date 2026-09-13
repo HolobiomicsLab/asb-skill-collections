@@ -3,6 +3,7 @@ name: mass-to-charge-filtering
 description: Use when after generating theoretical B/Y ion spectra or after importing experimental MS/MS scans when your analysis goal requires restricting the ion population to a specific m/z window (e.g., m/z < 2000).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: metabolite-candidate-matching
 description: 'Use when you have: (1) a set of predicted candidate metabolites with known mass-to-charge ratios and chemical properties derived from a parent drug formula; (2) raw mass spectrometry data in mzML format from a sample suspected to contain those metabolites;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3172

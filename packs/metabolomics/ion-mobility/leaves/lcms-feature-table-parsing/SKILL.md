@@ -3,6 +3,7 @@ name: lcms-feature-table-parsing
 description: Use when you have raw nontargeted LCMS feature tables from one or more analytical methods in tabular format (with m/z, RT, and intensity columns) that need to be aligned or clustered, or when integrating multiple feature tables into a shared BMXP processing pipeline that requires standardized.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3172

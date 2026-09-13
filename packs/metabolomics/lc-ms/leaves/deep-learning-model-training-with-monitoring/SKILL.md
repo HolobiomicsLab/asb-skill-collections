@@ -3,6 +3,7 @@ name: deep-learning-model-training-with-monitoring
 description: Use when you have a pre-trained deep learning encoder (e.g., TCN spectrum encoder trained on a large corpus) and want to adapt it to a new task (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3474

@@ -3,6 +3,7 @@ name: metadata-coldata-integration
 description: Use when when you have generated a feature abundance matrix from mzrtsim() peak list simulation with known sample-level attributes (condition assignments, batch labels, sample identifiers) and need to package this into a SummarizedExperiment object for Bioconductor-compatible analysis pipelines.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: cross-software-feature-matching
 description: Use when you have collected feature lists in CSV format from two or more MS acquisition methods (e.g., LC-MS vs. LC-IMS-MS), processing software packages (e.g., vendor-specific vs. open-source), or instrument platforms (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3258
   edam_topics:
   - http://edamontology.org/topic_0121

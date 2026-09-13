@@ -3,6 +3,7 @@ name: ftms-raw-data-loading-and-parsing
 description: Use when you have received raw FT-ICR transient data from Bruker Solarix or ThermoFisher instruments and need to perform signal processing, apodization, calibration, or molecular formula assignment in CoreMS. The data must be in native vendor format (.d directory with ser/fid files, or .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

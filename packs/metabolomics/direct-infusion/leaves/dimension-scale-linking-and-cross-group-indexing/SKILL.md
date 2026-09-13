@@ -3,6 +3,7 @@ name: dimension-scale-linking-and-cross-group-indexing
 description: Use when when exporting quantified MSI data as HDF5 containers following the Cardinal::HDF5 layout convention, and you need to establish bidirectional indexing between intensity data (feature-by-pixel matrix) and metadata groups (featureData, pixelData).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -43,6 +44,7 @@ attribution:
 
 # dimension-scale-linking-and-cross-group-indexing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Link HDF5 dataset dimensions to shared index scales across groups to enable standardized cross-group coordinate reference and axis semantics in Cardinal::HDF5 containers. This ensures that feature and pixel axes in intensity matrices are properly annotated and traversable via dimension scales.

@@ -3,6 +3,7 @@ name: binary-data-base64-encoding
 description: Use when when converting simulated or real LC/GC-MS spectral data (m/z–retention-time intensity matrices) into mzML format for archival, sharing, or downstream processing.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_3520

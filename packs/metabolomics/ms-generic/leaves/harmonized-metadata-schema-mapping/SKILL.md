@@ -3,6 +3,7 @@ name: harmonized-metadata-schema-mapping
 description: Use when you have imported mass spectrometry spectra from multiple file formats (mzML, mzXML, msp, metabolomics-USI, MGF, JSON) and need to standardize their metadata fields before performing spectral comparisons, similarity scoring, or library construction.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

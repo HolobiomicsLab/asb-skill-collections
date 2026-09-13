@@ -3,6 +3,7 @@ name: ion-image-embedding-optimization
 description: Use when you have 512-dimensional representation vectors output from ResNet18 encoders processing paired augmented ion images, and you need to prevent trivial solutions (representation collapse) during contrastive learning—specifically when optimizing for maximized similarity between augmentations.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -41,6 +42,7 @@ attribution:
 
 # ion-image-embedding-optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill optimizes 512-dimensional ion image representations using contrastive learning with Projection and Prediction modules to prevent representation collapse and learn meaningful embeddings for mass spectrometry imaging. It is applied when training encoder outputs to maximize similarity between augmentations of the same ion image while minimizing cross-image similarity.

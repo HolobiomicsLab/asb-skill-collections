@@ -3,6 +3,7 @@ name: ms-data-format-parsing-and-conversion
 description: Use when you have raw breath HRMS data in mzML or mzXML format and need to extract volatile organic compound (VOC) features as a standardized CSV table indexed by m/z value, with columns for scan time or sample identifiers and corresponding intensity measurements.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3370

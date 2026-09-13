@@ -3,6 +3,7 @@ name: comparative-performance-evaluation-across-methods
 description: 'Use when when you have developed a new spectral similarity scoring method and need to quantify its retrieval performance relative to established methods (e.g., modified cosine, Spec2Vec). Use this skill if you have: (1) a test set of spectra with ground-truth structural similarity labels (e.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3375

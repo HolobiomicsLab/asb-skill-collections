@@ -3,6 +3,7 @@ name: precursor-ion-chromatogram-extraction
 description: Use when you have raw DIA mass spectrometry data files (.raw, .d, or .wiff formats) from timsTOF, TripleTOF, or Orbitrap instruments and need to extract precursor ion chromatograms for quality assessment or downstream analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3650
   edam_topics:
   - http://edamontology.org/topic_0121

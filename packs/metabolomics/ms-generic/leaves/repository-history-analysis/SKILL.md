@@ -3,6 +3,7 @@ name: repository-history-analysis
 description: Use when when you need to understand how a complex feature or architectural pattern was implemented in a codebase, particularly when the current README or documentation does not fully explain the control flow, decision criteria, or parameter passing between subsystems.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0091

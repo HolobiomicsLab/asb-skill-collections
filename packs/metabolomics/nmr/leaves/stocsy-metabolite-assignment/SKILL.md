@@ -3,6 +3,7 @@ name: stocsy-metabolite-assignment
 description: Use when use STOCSY when you have preprocessed 1H NMR spectral data with an unidentified peak of interest (driver signal at a specific δ ppm value) and need to determine its metabolite identity by finding correlated signals across the spectrum.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -47,6 +48,7 @@ attribution:
 
 # stocsy-metabolite-assignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 STOCSY (Statistical Total Correlation Spectroscopy) is a multivariate NMR analysis technique that identifies the chemical identity of unknown metabolic features by correlating their spectral patterns with a driver signal across all chemical shifts. It enables rapid metabolite assignment without prior structural knowledge by detecting covariance signatures characteristic of specific compounds.

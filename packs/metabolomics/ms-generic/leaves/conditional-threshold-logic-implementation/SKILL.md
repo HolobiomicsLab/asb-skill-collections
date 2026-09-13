@@ -3,6 +3,7 @@ name: conditional-threshold-logic-implementation
 description: 'Use when when visualizing numeric columns with unknown or highly variable ranges, and the visualization quality depends on parameter selection tied to data statistics. Specifically: after loading a numeric column (e.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3520

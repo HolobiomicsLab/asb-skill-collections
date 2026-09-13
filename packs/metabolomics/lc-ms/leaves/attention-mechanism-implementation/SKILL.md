@@ -3,6 +3,7 @@ name: attention-mechanism-implementation
 description: Use when you have imaging mass spectrometry (IMS) datasets with peak intensity features organized as spatial graphs (nodes = pixels/voxels, edges = spatial adjacency), and you need to discover latent peak patterns for automatic peak picking or marker ion identification without manual feature.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0092
@@ -48,6 +49,7 @@ attribution:
 
 # attention-mechanism-implementation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Implement a graph-attention autoencoder architecture to embed imaging mass spectrometry peak intensities into low-dimensional latent representations. This enables unsupervised learning of peak features that support automatic marker ion discovery in spatial metabolomics.

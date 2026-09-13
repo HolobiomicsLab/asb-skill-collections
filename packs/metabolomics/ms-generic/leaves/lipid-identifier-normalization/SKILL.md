@@ -3,6 +3,7 @@ name: lipid-identifier-normalization
 description: Use when when you have a list of lipids identified by different database identifiers (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_3407

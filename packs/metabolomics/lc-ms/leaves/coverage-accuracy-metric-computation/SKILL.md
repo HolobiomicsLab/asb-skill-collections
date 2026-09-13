@@ -3,6 +3,7 @@ name: coverage-accuracy-metric-computation
 description: Use when you have two sets of lipid annotations—one from baseline spectral library matching and one from an enhanced method (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0188

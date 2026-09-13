@@ -3,6 +3,7 @@ name: python-class-interface-design-for-ml-libraries
 description: 'Use when when building a machine learning library for scientific workflows where users need to: (1) prepare domain-specific data (e.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3520

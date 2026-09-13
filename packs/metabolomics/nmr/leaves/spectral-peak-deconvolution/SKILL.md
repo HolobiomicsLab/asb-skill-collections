@@ -3,6 +3,7 @@ name: spectral-peak-deconvolution
 description: Use when you have a raw 1D NMR spectrum (FID or processed format) from urine, worm, or other biological samples and need to extract peak positions, intensities, and linewidths as a tabular peak list.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3370

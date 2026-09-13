@@ -3,6 +3,7 @@ name: neural-network-regularization-configuration
 description: Use when implementing or modifying a Siamese model (such as SiameseModel in ms2deepscore) if you need to make regularization hyperparameters user-configurable rather than hard-coded, or when training on spectral datasets where overfitting risk is high due to limited training examples or high model.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091

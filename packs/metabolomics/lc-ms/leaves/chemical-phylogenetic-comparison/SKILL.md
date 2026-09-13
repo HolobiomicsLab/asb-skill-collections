@@ -3,6 +3,7 @@ name: chemical-phylogenetic-comparison
 description: Use when you have LC-MS/MS data preprocessed with MZmine2 into an MGF file (containing MS1 and MS2 spectra) and a feature table (peak areas per sample), and you want to relate MS1 features to each other based on predicted molecular substructures and chemical properties rather than arbitrary.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3324
   edam_topics:
   - http://edamontology.org/topic_0091

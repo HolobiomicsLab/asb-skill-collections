@@ -3,6 +3,7 @@ name: compound-count-verification
 description: Use when after modifying a FIDDLE configuration file to add or remove instrument types from the allowlist (e.g., adding 'ftms' to gnps_orbitrap), run the full preprocessing pipeline and validate that the resulting training and test set sizes match documented targets.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: ms2-fingerprint-blank-contamination-removal
 description: Use when after aligning MS2 fingerprints across samples (generating a sample-by-feature occurrence matrix) and before applying visualization techniques (MDS/PCoA, TMAP, Heatmap) or statistical comparisons.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

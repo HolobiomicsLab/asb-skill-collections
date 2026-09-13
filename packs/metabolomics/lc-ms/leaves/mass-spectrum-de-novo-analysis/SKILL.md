@@ -3,6 +3,7 @@ name: mass-spectrum-de-novo-analysis
 description: Use when you have an unknown MS/MS spectrum (m/z and intensity pairs) from positive-mode ionization and need to identify the most likely molecular formula and adduct type (e.g., [M+H]+, [M+Na]+) when no reference library match is available or desirable.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

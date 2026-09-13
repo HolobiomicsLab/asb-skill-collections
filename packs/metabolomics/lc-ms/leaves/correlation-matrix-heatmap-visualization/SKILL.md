@@ -3,6 +3,7 @@ name: correlation-matrix-heatmap-visualization
 description: Use when after computing a correlation matrix (e.g., Pearson correlation across samples) on statistically significant LC-MS features, particularly when you need to inspect hierarchical dendrogram structure, validate cluster assignments from different flattening methods (constant-threshold vs..
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3520

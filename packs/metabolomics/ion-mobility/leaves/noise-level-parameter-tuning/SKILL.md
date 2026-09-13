@@ -3,6 +3,7 @@ name: noise-level-parameter-tuning
 description: Use when when you have an aligned GCIMS dataset and need to configure the findPeaks function with CWT algorithm to detect peaks across retention time and drift time dimensions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_3520

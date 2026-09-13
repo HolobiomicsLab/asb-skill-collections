@@ -3,6 +3,7 @@ name: imzml-file-loading-and-import
 description: Use when when you have one or more imzML files containing mass spectrometry imaging data and need to import them into LipidQMap for ion image extraction, isotopic correction, and quantitative analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -41,6 +42,7 @@ attribution:
 
 # imzml-file-loading-and-import
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load and import imzML mass spectrometry imaging files into LipidQMap, configuring ion extraction parameters, isotope correction, and calibration settings prior to ion image display and quantitation. This skill is essential for preparing raw MSI data for downstream lipid quantitation and visualization workflows.

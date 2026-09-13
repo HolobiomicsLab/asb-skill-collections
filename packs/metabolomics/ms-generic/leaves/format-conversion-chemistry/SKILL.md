@@ -3,6 +3,7 @@ name: format-conversion-chemistry
 description: Use when when you have retrieved a user database entry (sequence or structure data) from the MassSpecBlocks backend and need to enable mass spectra analysis in the open-source CycloBranch program, or when you need to export NRP sequences and building-block annotations for consumption by external.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0625

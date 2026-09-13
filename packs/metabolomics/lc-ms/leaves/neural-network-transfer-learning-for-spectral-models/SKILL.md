@@ -3,6 +3,7 @@ name: neural-network-transfer-learning-for-spectral-models
 description: Use when your input is a corpus of MS/MS spectra with annotated molecular formulas and adduct types that represent a new ionisation mode, instrument type, or adduct chemistry not well-represented in the pre-trained model's training data. You have access to a trained formula transformer (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3520

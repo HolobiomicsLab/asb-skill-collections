@@ -3,6 +3,7 @@ name: signal-quality-enhancement-low-abundance-ions
 description: Use when you observe jagged or noisy peak profiles in low-abundance ions after loading raw IM-MS data (Agilent MassHunter .
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3564
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -46,6 +47,7 @@ attribution:
 
 # signal-quality-enhancement-low-abundance-ions
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Enhance signal quality and recover true ion signals from low-abundance peaks in IM-MS data by applying multidimensional smoothing to remove jagged artifacts while preserving real signal intensity. This skill is essential for improving detection and quantification fidelity when analyzing complex proteomics or metabolomics samples where low-abundance ions are susceptible to noise corruption.

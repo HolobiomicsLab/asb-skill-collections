@@ -3,6 +3,7 @@ name: chemical-formula-representation
 description: Use when you need to feed chemical formulas into a neural network-based formula scorer (such as MIST-CF) that must learn data-dependent representations of formula structure and composition.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0218

@@ -3,6 +3,7 @@ name: ion-image-augmentation-contrastive-learning
 description: Use when when you have preprocessed mass spectrometry ion images (single-channel 2D arrays or multi-channel spectral images) and need to train a self-supervised encoder to learn low-dimensional representations for downstream tasks such as co-localized ion discovery (COL mode) or isotope ion.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3562
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -42,6 +43,7 @@ attribution:
 
 # ion-image-augmentation-contrastive-learning
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply stochastic augmentation transformations to single ion images to generate paired augmented variants for contrastive representation learning in mass spectrometry imaging. This skill ensures that the encoder learns invariant ion image representations robust to instrumental and detection variability.

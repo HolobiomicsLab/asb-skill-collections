@@ -3,6 +3,7 @@ name: lipidomics-data-mining
 description: Use when when you have quantitative lipidomics data (either from Skyline CSV export or numerical matrix format) with sample annotations and a biological grouping variable (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3656
   edam_topics:
   - http://edamontology.org/topic_0153

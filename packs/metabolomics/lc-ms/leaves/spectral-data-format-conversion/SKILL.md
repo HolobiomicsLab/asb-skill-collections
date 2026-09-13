@@ -3,6 +3,7 @@ name: spectral-data-format-conversion
 description: Use when you have raw tandem mass spectrometry data in one or more of the vendor formats (MGF, mzML, or msp) and need to apply unsupervised topic modeling (LDA-based motif discovery) or comparative fragmentation analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

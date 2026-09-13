@@ -3,6 +3,7 @@ name: fragment-peak-chemical-annotation
 description: Use when you have MS/MS spectra with assigned precursor formulas and need to annotate the chemical composition of individual fragment peaks for metabolite structure elucidation or fragmentation pathway analysis. Apply this skill when you want to avoid external fragmentation tree computation (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_0591

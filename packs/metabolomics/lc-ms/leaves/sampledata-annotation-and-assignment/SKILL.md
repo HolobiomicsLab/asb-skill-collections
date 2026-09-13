@@ -3,6 +3,7 @@ name: sampledata-annotation-and-assignment
 description: Use when after loading multiple LC-MS .mzML files into an MsExperiment object using MsBackendMzR backend, when you have a documented injection sequence (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: mass-spectrometry-match-factor-filtering
 description: Use when you have a GC-MS dataset with a Match.Factor column (output from Agilent Unknowns Analysis or equivalent) and need to retain only high-confidence compound identifications.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0599

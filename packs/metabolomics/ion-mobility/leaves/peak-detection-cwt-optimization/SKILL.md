@@ -3,6 +3,7 @@ name: peak-detection-cwt-optimization
 description: Use when when you have a pre-aligned GCIMSDataset and need to systematically identify and annotate chromatographic peaks across multiple samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3630
   edam_topics:
   - http://edamontology.org/topic_0625

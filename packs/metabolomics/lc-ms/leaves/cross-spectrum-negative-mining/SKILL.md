@@ -3,6 +3,7 @@ name: cross-spectrum-negative-mining
 description: Use when when training a Siamese architecture rescore model for MS/MS-based molecular formula prediction and you have an imbalanced training set with far fewer negative than positive spectrum pairs.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0091

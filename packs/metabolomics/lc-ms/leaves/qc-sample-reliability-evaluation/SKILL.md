@@ -3,6 +3,7 @@ name: qc-sample-reliability-evaluation
 description: Use when after drift correction has been applied to your LC-MS peak table and you need to identify low-quality metabolic features that exhibit high internal spread (RSD, RSD*) or excessive QC-versus-biological variation (D-ratio) before imputation and batch correction.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -48,6 +49,7 @@ attribution:
 
 # QC Sample Reliability Evaluation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assess the reliability and quality of quality control (QC) samples in LC-MS metabolomics data by applying conservative thresholds to relative standard deviation (RSD), robust RSD*, and D-ratio metrics, then flag features that fail to meet reproducibility standards before downstream analysis.

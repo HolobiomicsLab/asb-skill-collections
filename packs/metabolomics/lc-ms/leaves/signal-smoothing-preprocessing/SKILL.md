@@ -3,6 +3,7 @@ name: signal-smoothing-preprocessing
 description: Use when when working with raw LC-HRMS profile-mode data containing noisy chromatographic signals, apply this skill before peak detection. Smoothing is particularly needed when the signal-to-noise ratio is low or when gradient-based peak detection would be compromised by high-frequency noise.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -40,6 +41,7 @@ attribution:
 
 # signal-smoothing-preprocessing
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Apply smoothing to LC-HRMS profile-mode chromatographic signals to reduce noise and enable robust local-maxima detection. This preprocessing step is essential before gradient-descent peak-picking to ensure reliable identification of chromatographic peaks versus background artifacts.

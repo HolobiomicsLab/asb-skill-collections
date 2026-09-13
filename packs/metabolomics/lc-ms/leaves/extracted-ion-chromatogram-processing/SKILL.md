@@ -3,6 +3,7 @@ name: extracted-ion-chromatogram-processing
 description: Use when you have Thermo Fisher Orbitrap .raw files and need to locate and quantify specific peptide precursor ions (e.g., iRT calibrants, synthetic standards, or putative identifications).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121

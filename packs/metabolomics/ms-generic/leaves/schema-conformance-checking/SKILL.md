@@ -3,6 +3,7 @@ name: schema-conformance-checking
 description: Use when you have a collection of records in a standardized format (e.g., MassBank plain-text or structured records) that must be validated before commit or publication.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3437
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -39,6 +40,7 @@ attribution:
 
 # schema-conformance-checking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated validation of structured scientific records (e.g., mass spectrometry data) against a formal schema to detect field presence, data type, value range, and format violations. This skill ensures that records conform to defined standards before integration into a shared repository.

@@ -3,6 +3,7 @@ name: scalability-extrapolation-and-throughput-estimation
 description: Use when you have a new or modified LC-MS data processing tool and need to determine whether it can handle production-scale sample cohorts (50–100+ samples) on modest hardware (single-core CPU, ≤16 GB RAM).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -47,6 +48,7 @@ attribution:
 
 # scalability-extrapolation-and-throughput-estimation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify how a metabolomics data processing pipeline (asari) scales with increasing sample cohort sizes by measuring wall-clock runtime and peak memory usage across 10–100+ LC-MS mzML files, then plot and extrapolate performance metrics to estimate laptop-class hardware requirements and throughput bounds.

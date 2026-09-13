@@ -3,6 +3,7 @@ name: machine-learning-model-training-sklearn
 description: Use when your metabolomics analysis pipeline requires CCS value prediction for ion-mobility mass spectrometry data, you have access to a curated training set of known metabolites with experimentally validated CCS values, and you plan to predict CCS values on target datasets containing 10,000+.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3501
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -46,6 +47,7 @@ attribution:
 
 # machine-learning-model-training-sklearn
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Train a Scikit-learn collision cross section (CCS) prediction model on user-curated ion-mobility metabolomics training sets to enable accurate CCS value prediction and filtering of false positive identifications. This skill targets practitioners working with large-scale metabolomics datasets who need to integrate machine learning into ion-mobility workflows.

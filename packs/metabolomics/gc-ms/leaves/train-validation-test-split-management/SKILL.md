@@ -3,6 +3,7 @@ name: train-validation-test-split-management
 description: Use when when you have a complete dataset of labeled examples (e.g., 100,000 augmented spectra, chromatograms, or synthetic samples) and need to train a supervised model (such as a Transformer) while preserving a held-out test set to measure generalization performance without bias.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3437
   edam_topics:
   - http://edamontology.org/topic_3373

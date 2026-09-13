@@ -3,6 +3,7 @@ name: mass-spectrometry-metric-engineering
 description: Use when you have raw DIA mass spectrometry files (.raw, .d, .wiff formats) from timsTOF, TripleTOF, or Orbitrap instruments and need to quantify file quality for automated quality control, longitudinal instrument monitoring, or training a quality prediction classifier.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

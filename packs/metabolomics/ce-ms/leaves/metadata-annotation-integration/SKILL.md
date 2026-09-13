@@ -3,6 +3,7 @@ name: metadata-annotation-integration
 description: Use when you have chemical annotations (GNPS spectral library matches) assigned to MS/MS samples and a validated ReDU sample-information template (TSV) with categorical metadata (e.g., sample type, extraction method, ionization source).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -48,6 +49,7 @@ attribution:
 
 # metadata-annotation-integration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Integrate sample metadata with tandem MS chemical annotations to enable stratified comparison of chemical enrichment across sample groups. This skill normalizes chemical occurrence counts to percentages within each metadata-defined group, accommodating imbalanced group sizes.

@@ -3,6 +3,7 @@ name: similarity-matrix-generation
 description: Use when you have a collection of cleaned spectra in supported formats (mzML, mzXML, msp, MGF, JSON) and need to compute all pairwise similarity scores to identify related or duplicate spectra, support spectral library searching, or enable network-based analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

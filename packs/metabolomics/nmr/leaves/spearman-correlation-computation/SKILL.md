@@ -3,6 +3,7 @@ name: spearman-correlation-computation
 description: 'Use when : (1) you have metabolomic data (NMR or MS-derived) and a continuous phenotype variable; (2) you need to quantify associations while controlling for known confounders (age, gender, disease status);'
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3768
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -44,6 +45,7 @@ attribution:
 
 # Spearman Correlation Computation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Compute partial Spearman rank correlations between metabolites and a continuous phenotype (e.g., BMI) while adjusting for epidemiological confounders, producing correlation coefficients, raw p-values, and multiple-testing corrected p-values. This skill is essential for metabolome-wide association studies (MWAS) where linear assumptions may be violated or robustness to outliers is required.

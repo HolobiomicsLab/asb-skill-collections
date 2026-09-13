@@ -3,6 +3,7 @@ name: metabolomics-feature-extraction-and-export
 description: 'Use when you have raw LC-MS data (mzXML format or pre-computed feature tables from external software) and need to: (1) detect both Gaussian and non-Gaussian shaped metabolic features across multiple samples, (2) align these features across samples, and (3) export EIC chromatograms with m/z.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3637
   edam_topics:
   - http://edamontology.org/topic_3172

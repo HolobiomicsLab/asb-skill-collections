@@ -3,6 +3,7 @@ name: fragment-mass-tolerance-calibration
 description: 'Use when when implementing fragment ion annotation in proteomics workflows and needing to determine whether neutral loss annotation (e.g., H2O: -18.010565, NH3: -17.026549) should be enabled to maximize peak interpretation.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

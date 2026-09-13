@@ -3,6 +3,7 @@ name: batch-wise-normalization-application
 description: Use when when processing a SummarizedExperiment containing metabolomics peak areas or intensities organized by batch (e.g., LC-MS/MS runs on different days or instruments), and you have pooled quality control samples injected repeatedly within or across batches to serve as batch anchors.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: genome-cluster-family-scoring-computation
 description: Use when you have pre-processed AntiSMASH BGC annotations (optionally clustered via BigScape into GCFs), GNPS molecular networking spectra and molecular families, and you seek to computationally link biosynthetic gene clusters to observed metabolites without manual curation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3680
   edam_topics:
   - http://edamontology.org/topic_0203

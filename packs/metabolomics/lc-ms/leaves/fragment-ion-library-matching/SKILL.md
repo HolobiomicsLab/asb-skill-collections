@@ -3,6 +3,7 @@ name: fragment-ion-library-matching
 description: Use when you have peak-picked experimental MS/MS data (m/z, retention time, intensity) from UHPLC-HRMS/MS instruments (Orbitrap or Q-TOF from Agilent, Bruker, SCIEX, or similar vendors) and need to annotate detected features with specific lipid identifications using in-silico fragmentation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3172

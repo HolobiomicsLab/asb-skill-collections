@@ -3,6 +3,7 @@ name: training-validation-test-set-allocation
 description: Use when after labeling a representative subset of peaks (typically 10–20 pooled samples with corresponding feature tables) and before neural network training, when you need to split labeled data into independent subsets for model training, hyperparameter tuning, and unbiased performance evaluation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

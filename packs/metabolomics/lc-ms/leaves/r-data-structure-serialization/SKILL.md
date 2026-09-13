@@ -3,6 +3,7 @@ name: r-data-structure-serialization
 description: Use when after completing Part 4 (Identification of ISF Features) in the ISFrag workflow, when you have a feature table with identified ISF features and their hierarchical fragmentation relationships, and you need to export this relationship structure for interpretation, integration with external.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

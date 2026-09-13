@@ -3,6 +3,7 @@ name: de-novo-structure-candidate-ranking
 description: Use when when you have high-resolution LC-MS/MS data for an unknown metabolite or small molecule, have computed or measured the molecular ion mass and fragmentation spectrum, and require de-novo structure generation because the compound is absent from spectral libraries or structure databases.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0592

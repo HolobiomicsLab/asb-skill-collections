@@ -3,6 +3,7 @@ name: transition-group-feature-extraction
 description: Use when when you have loaded a TransitionGroup (extracted ion chromatogram or mobilogram from DIA mass spectrometry data) and need to identify precise peak boundaries, apex retention/drift time, and intensity values for quantitative feature detection.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0121

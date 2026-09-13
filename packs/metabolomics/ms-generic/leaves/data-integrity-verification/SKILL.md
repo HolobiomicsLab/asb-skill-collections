@@ -3,6 +3,7 @@ name: data-integrity-verification
 description: Use when after applying matchms metadata cleaning tools to normalize field values and standardize naming conventions on imported spectra (mzML, mzXML, msp, MGF, or JSON formats).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_3520

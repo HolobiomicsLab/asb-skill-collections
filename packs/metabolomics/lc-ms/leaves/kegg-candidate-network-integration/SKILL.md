@@ -3,6 +3,7 @@ name: kegg-candidate-network-integration
 description: Use when after cluster-based filtering has produced a set of candidate KEGG compounds for each feature cluster in untargeted LC-MS data, and you need to rank these candidates by their metabolic plausibility using network context rather than mass accuracy alone.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

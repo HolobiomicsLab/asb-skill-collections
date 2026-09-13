@@ -3,6 +3,7 @@ name: object-oriented-class-hierarchy-design
 description: Use when when you need to create a plotting or visualization framework that must support multiple plot kinds (spectrum, chromatogram, mobilogram, peakmap) each backed by multiple rendering engines (matplotlib, bokeh, plotly), and you want to avoid combinatorial explosion of concrete classes while.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0570
   edam_topics:
   - http://edamontology.org/topic_3520

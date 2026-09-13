@@ -3,6 +3,7 @@ name: multiway-principal-component-analysis-score-extraction
 description: Use when after preprocessing and aligning 2D chromatogram data (baseline correction, smoothing, peak alignment) and after running m_prcomp multiway PCA on the joined chromatogram matrix.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: intensity-distribution-simulation
 description: Use when when you need to create synthetic noisy MS/MS spectra from clean baseline spectra to validate denoising algorithms, compare denoising performance across noise levels, or generate ground-truth test datasets where the true signal and noise composition are known and controllable.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: s4-class-extension-development
 description: Use when you need to create a new backend for the Spectra package that provides MS data from a new source (file format, database, or computational resource) not covered by existing backends (MsBackendMzR, MsBackendMemory, MsBackendSql, etc.).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3375

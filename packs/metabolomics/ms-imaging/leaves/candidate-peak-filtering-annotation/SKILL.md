@@ -3,6 +3,7 @@ name: candidate-peak-filtering-annotation
 description: Use when you have a peak list extracted from MSI data that includes candidate peaks with potential m/z overlap or spatial co-localization patterns across tissue images.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

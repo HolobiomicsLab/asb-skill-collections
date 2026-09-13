@@ -3,6 +3,7 @@ name: isotopic-peak-removal
 description: Use when after loading raw FT-ICR MS peak lists with assigned molecular formulas when you have detected peaks across multiple m/z values that correspond to isotopic variants of the same parent compound.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

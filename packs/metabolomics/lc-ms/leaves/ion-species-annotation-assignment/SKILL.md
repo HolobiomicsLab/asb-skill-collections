@@ -3,6 +3,7 @@ name: ion-species-annotation-assignment
 description: Use when after temporal correlation has identified feature pairs with matching intensity profiles across time-resolved MS scans, but before final candidate validation. Apply this skill when you need to distinguish between competing ion-species hypotheses (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

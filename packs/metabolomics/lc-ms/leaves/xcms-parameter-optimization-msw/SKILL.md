@@ -3,6 +3,7 @@ name: xcms-parameter-optimization-msw
 description: Use when when you have direct-injection or low-complexity mass spectrometry data (mzML files) and need to detect chromatographic peaks using wavelet-based methods instead of centWave, especially when standard retention-time-dependent peak detection is not suitable or when you need to tune.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

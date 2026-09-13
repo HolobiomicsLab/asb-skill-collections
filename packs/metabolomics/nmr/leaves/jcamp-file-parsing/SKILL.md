@@ -3,6 +3,7 @@ name: jcamp-file-parsing
 description: Use when you receive uploaded spectral data in JCAMP format (jcamp) as input to the /api/v1/chemspectra/file/convert endpoint, or when you need to extract and validate metadata and peak information from an existing JCAMP file before converting to another format or performing spectral analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_0593

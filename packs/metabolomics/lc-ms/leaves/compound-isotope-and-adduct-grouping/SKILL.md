@@ -3,6 +3,7 @@ name: compound-isotope-and-adduct-grouping
 description: Use when after XCMS feature detection, retention time correction, regrouping, and missing value imputation have produced an aligned feature table with multiple signals per compound. Use it when your data contains isotopic peaks (e.g., ¹³C variants) and multiple ionization products (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: chemical-metadata-harmonization
 description: Use when when aggregating MS/MS spectra from multiple public repositories (GNPS, MassBank, Mona) or in-house sources with inconsistent metadata naming conventions, missing or malformed adduct annotations, or incomplete chemical structure annotations (SMILES/InChI/InChIKey).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0602

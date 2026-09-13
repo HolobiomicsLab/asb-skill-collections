@@ -3,6 +3,7 @@ name: sample-study-size-stratified-algorithm-selection
 description: Use when when beginning mass alignment in a multi-sample LC-MS metabolomics study, before constructing the MassGrid.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -44,6 +45,7 @@ attribution:
 
 # sample-study-size-stratified-algorithm-selection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A performance-conscious strategy for selecting between pairwise and nearest-neighbor mass alignment algorithms based on study sample count. This skill enables asari to scale across small (≤10 samples) and large studies by choosing algorithmically matched approaches that balance CPU and memory use.

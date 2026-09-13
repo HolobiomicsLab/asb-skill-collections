@@ -3,6 +3,7 @@ name: usi-spectrum-identifier-encoding
 description: Use when you have a Universal Spectrum Identifier (USI) string referencing a spectrum in a supported metabolomics repository (GNPS, MassBank, MetaboLights, Metabolomics Workbench, MassIVE, or MS2LDA) and need to create an embeddable, scannable reference for publication or data integration that.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3359
   edam_topics:
   - http://edamontology.org/topic_3520

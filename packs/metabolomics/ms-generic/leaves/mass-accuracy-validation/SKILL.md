@@ -3,6 +3,7 @@ name: mass-accuracy-validation
 description: Use when after implementing or modifying an mzML parser module that converts mzML files into MS-DIAL's internal data model, and before integrating the parser into the production analysis pipeline.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -67,6 +68,7 @@ attribution:
 
 # mass-accuracy-validation
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Verification that parsed mass spectrometry spectral data (m/z values and intensity arrays) extracted from mzML-format raw data files maintain expected mass accuracy when mapped to MS-DIAL's internal data structures. This skill ensures that deserialization and format conversion workflows preserve measurement fidelity prior to downstream metabolomics or lipidomics analysis.

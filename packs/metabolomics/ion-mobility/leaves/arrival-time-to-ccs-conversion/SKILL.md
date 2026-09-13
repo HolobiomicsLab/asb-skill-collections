@@ -3,6 +3,7 @@ name: arrival-time-to-ccs-conversion
 description: Use when when you have raw TWIM-MS arrival-time data and need to transform it into absolute CCS values for downstream biomolecular class assignment or comparative analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: multi-component-weighted-ranking-aggregation
 description: Use when you have completed LC–MS/MS feature detection and annotation (via MZmine2/3 and GNPS/SIRIUS/CANOPUS), have compiled a taxonomically annotated metadata table, and need to rank extracts by their likelihood of containing novel chemistry.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: retention-time-alignment-clustering
 description: Use when you have two or more nontargeted LCMS feature tables from the same analytical method and need to establish matched feature correspondences across datasets, then consolidate redundant features.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3520

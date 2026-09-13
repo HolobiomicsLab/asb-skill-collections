@@ -3,6 +3,7 @@ name: correlation-coefficient-computation-across-samples
 description: Use when after XCMS feature detection and retention time correction, when you need to group features derived from the same compound. Features from the same compound show correlated quantitative trends across samples;
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3463
   edam_topics:
   - http://edamontology.org/topic_0769

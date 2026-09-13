@@ -3,6 +3,7 @@ name: mass-spectrometry-metadata-parsing
 description: Use when you have a Thermo Fisher Orbitrap .raw file and need to programmatically inspect or validate its acquisition parameters (instrument type, total scan count, acquisition duration, file name) before extracting spectral data, or when you need to serialize metadata to JSON for data provenance.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: ms1-scan-extraction-and-filtering
 description: Use when you have a Thermo Fisher Scientific .raw file from an Orbitrap instrument and need to programmatically retrieve MS1 spectral attributes (base-peak m/z, intensity, retention time) for downstream statistical analysis or quality control in R, rather than relying on external preprocessing.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

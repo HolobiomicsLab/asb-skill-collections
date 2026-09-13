@@ -3,6 +3,7 @@ name: transformer-encoder-decoder-inference
 description: Use when when you have preprocessed MS/MS spectra (normalized intensities, filtered for quality, with top peaks retained) that have been encoded using a spectral representation method (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3092
   edam_topics:
   - http://edamontology.org/topic_0121

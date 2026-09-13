@@ -3,6 +3,7 @@ name: spec2vec-similarity-scoring
 description: Use when after discovering Mass2Motifs via LDA on preprocessed MS/MS spectra, use this skill to assign putative substructure annotations by matching each motif's fragmentation pattern against a pre-indexed spectral library using learned spectral embeddings.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121

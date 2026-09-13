@@ -3,6 +3,7 @@ name: tic-peak-isolation-validation
 description: Use when you have raw mass spectrometry data (mzML, mzXML, or CDF format) from at least 3 samples and need to automatically identify candidate peak regions in the TIC chromatogram before extracting ion-level parameters for XCMS or MZmine2 processing.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121

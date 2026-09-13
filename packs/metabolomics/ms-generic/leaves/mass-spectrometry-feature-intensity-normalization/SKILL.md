@@ -3,6 +3,7 @@ name: mass-spectrometry-feature-intensity-normalization
 description: Use when after aligning raw mass spectra into a 2D feature intensity matrix (features × time points) but before computing pointwise correlation to identify feature pairs with matching temporal profiles.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: python-library-integration
 description: Use when when you have Thermo Fisher RAW mass spectrometry files and need to extract mass-to-charge ratios, intensities, scan metadata, and peak lists within a Python script or notebook for downstream computational analysis, and you require programmatic control over extraction parameters rather.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0121

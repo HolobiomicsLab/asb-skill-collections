@@ -3,6 +3,7 @@ name: bioactivity-score-aggregation
 description: Use when when you have both (1) a molecular network graph from GNPS with aligned MS/MS features (nodes and edges) and (2) a bioassay-guided fractionation activity matrix (fractions × bioactivity measurements), and you need to determine which molecular features are responsible for observed.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: feature-specificity-calculation
 description: Use when when you have a quantitative feature table from MZmine2/MZmine3 with peak area and m/z data aligned across multiple extract samples, and you need to identify which features are characteristic of individual samples (high specificity) versus ubiquitous across the extract set.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

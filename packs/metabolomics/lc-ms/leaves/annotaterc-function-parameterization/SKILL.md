@@ -3,6 +3,7 @@ name: annotaterc-function-parameterization
 description: Use when you have LC–MS all-ion fragmentation chromatograms already processed by xcms and clustered by RamClustR, a feature table (targetTable.csv format) listing features to annotate, and you need rank-1 metabolite or lipid identifications with confidence metrics.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_0153

@@ -3,6 +3,7 @@ name: mrm-data-format-ingestion
 description: Use when you have raw MRM lipidomics export files in vendor-specific formats (e.g., TSV or CSV from a mass spectrometry instrument) and need to convert them into a standardized tabular format before performing lipid identification, statistical analysis, or visualization.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0091

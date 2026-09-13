@@ -3,6 +3,7 @@ name: match-factor-threshold-filtering
 description: Use when you have a GC-MS dataset with Match.Factor scores for each detected compound (output from Agilent Unknowns Analysis or equivalent), and you want to reduce the number of query chemicals passed to computationally intensive cheminformatics functions (categorate, mzExacto, or exactoThese).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0625

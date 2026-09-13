@@ -3,6 +3,7 @@ name: lipid-library-format-schema
 description: Use when you have identified lipid species unique to your experimental system (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3375

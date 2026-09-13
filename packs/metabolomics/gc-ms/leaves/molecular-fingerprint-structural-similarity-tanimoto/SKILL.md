@@ -3,6 +3,7 @@ name: molecular-fingerprint-structural-similarity-tanimoto
 description: Use when when evaluating how well mass spectral similarity scores correlate with actual chemical structure for annotated spectral pairs (e.g., spectra with InChIKey metadata).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0593

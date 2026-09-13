@@ -3,6 +3,7 @@ name: gnps-workflow-identifier-retrieval
 description: Use when when you have a GNPS molecular networking task ID and need to fetch the job archive, decompose it into standard metabolomics file formats (spectra.mgf, molecular_families.tsv, annotations.tsv, file_mappings), and prepare them for integration with genomics data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3791
   edam_topics:
   - http://edamontology.org/topic_0625

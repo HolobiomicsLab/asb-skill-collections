@@ -3,6 +3,7 @@ name: peakmap-visualization-generation
 description: Use when you have mass spectrometry data loaded into a Pandas DataFrame with columns for m/z, retention time (or ion mobility), and intensity, and you need to visualize the complete 2D peak map landscape to identify co-eluting features, assess data quality, or explore retention time and.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0121

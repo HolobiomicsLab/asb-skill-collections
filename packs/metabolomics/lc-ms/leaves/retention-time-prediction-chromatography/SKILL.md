@@ -3,6 +3,7 @@ name: retention-time-prediction-chromatography
 description: Use when you have a new chromatographic dataset with molecular structures (as InChI or SMILES) and experimentally measured retention times, and you want to predict retention times for unannotated metabolites or validate predictions on a held-out test set without retraining from scratch.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -59,6 +60,7 @@ attribution:
 
 # retention-time-prediction-chromatography
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Transfer a pretrained RT-Transformer model from the SMRT dataset to predict liquid chromatography retention times on new chromatographic methods represented in datasets like PredRet. This skill enables scalable retention time prediction across different chromatographic conditions to assist metabolite identification in non-targeted metabolomics.

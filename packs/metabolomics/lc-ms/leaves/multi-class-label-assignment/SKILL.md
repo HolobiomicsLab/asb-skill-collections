@@ -3,6 +3,7 @@ name: multi-class-label-assignment
 description: Use when you have raw LC-MS metabolomics data from multiple disease groups and need to classify new or existing samples into discrete disease categories.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3766
   edam_topics:
   - http://edamontology.org/topic_3172

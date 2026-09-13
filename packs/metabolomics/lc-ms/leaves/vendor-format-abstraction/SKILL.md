@@ -3,6 +3,7 @@ name: vendor-format-abstraction
 description: Use when you have mass-spectrometry raw data files from multiple vendors (e.g., Thermo, Waters, Bruker, Sciex) and/or mixed standard formats (mzML, mzXML) that must be processed by a single analysis pipeline.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3630
   edam_topics:
   - http://edamontology.org/topic_0121

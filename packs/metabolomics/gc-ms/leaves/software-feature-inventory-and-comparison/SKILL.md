@@ -3,6 +3,7 @@ name: software-feature-inventory-and-comparison
 description: Use when you need to assess whether a newly developed FT-ICR MS pipeline (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0362
   edam_topics:
   - http://edamontology.org/topic_3172

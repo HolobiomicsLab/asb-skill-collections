@@ -3,6 +3,7 @@ name: machine-learning-model-inference
 description: Use when you have molecular descriptors or fingerprints for a set of compounds (e.g., from LC-MS metabolomics) and need to predict a continuous property—such as HPLC retention time—to support compound identification or filter out false positive annotations.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3837
   edam_topics:
   - http://edamontology.org/topic_3172

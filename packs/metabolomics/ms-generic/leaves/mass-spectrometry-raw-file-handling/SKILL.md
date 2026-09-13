@@ -3,6 +3,7 @@ name: mass-spectrometry-raw-file-handling
 description: Use when you have raw MS data files from Thermo Orbitrap or other vendor instruments that must be uploaded into a centralized platform for automated processing. Use it at the start of a multi-stage omics workflow where data collection, management, processing, and visualization are integrated;
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0121

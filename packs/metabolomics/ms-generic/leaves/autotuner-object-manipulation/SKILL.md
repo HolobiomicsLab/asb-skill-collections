@@ -3,6 +3,7 @@ name: autotuner-object-manipulation
 description: Use when after AutoTuner has completed EICparams extraction and parameter estimation on raw untargeted metabolomics data (mzML, mzXML, or CDF format), and you need to pass those estimates into XCMS or MZmine2 for full dataset processing.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3370

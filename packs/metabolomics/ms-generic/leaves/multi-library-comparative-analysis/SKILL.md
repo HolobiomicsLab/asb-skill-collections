@@ -3,6 +3,7 @@ name: multi-library-comparative-analysis
 description: Use when you need to evaluate whether a newly released or candidate library (e.g., spectrum_utils v0.4.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520

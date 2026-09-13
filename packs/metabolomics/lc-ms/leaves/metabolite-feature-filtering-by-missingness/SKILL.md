@@ -3,6 +3,7 @@ name: metabolite-feature-filtering-by-missingness
 description: Use when you have a raw metabolite abundance matrix (e.g., from MSPrep or another LC-MS/MS pipeline) with many features and samples, and you observe that a substantial fraction of metabolites are missing (NA or zero-valued) across replicates.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -48,6 +49,7 @@ attribution:
 
 # metabolite-feature-filtering-by-missingness
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Remove metabolite features from a high-dimensional abundance matrix that exceed a missingness threshold (typically 80%), reducing noise and improving feature quality for downstream reproducibility and statistical analysis. This filtering step is a standard preprocessing gate in mass spectrometry–based metabolomics workflows.

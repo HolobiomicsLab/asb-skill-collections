@@ -3,6 +3,7 @@ name: interactive-data-exploration-design
 description: Use when you have NMR metabolomics measurements paired with pre-analytical metadata (processing delay times, centrifugation timing, sample type such as plasma vs. serum, cohort identifiers) and need to interactively explore how variation in processing conditions drives changes in metabolic.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -40,6 +41,7 @@ attribution:
 
 # interactive-data-exploration-design
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Design and implement an interactive data exploration interface that enables cohort-level investigation of how pre-analytical variables (processing delays, sample type) affect quantitative metabolic parameters in NMR metabolomics. This skill combines dynamic filtering, multi-dimensional visualization, and tabular performance reporting to support hypothesis generation around sample stability and pre-analytical quality.

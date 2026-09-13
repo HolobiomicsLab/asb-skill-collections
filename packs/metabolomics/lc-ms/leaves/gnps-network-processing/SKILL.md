@@ -3,6 +3,7 @@ name: gnps-network-processing
 description: Use when you have generated a GNPS mass spectral molecular network (in classical or feature-based mode) and want to annotate network nodes with substructural motifs from MS2LDA or chemical class information.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_0154

@@ -3,6 +3,7 @@ name: targeted-metabolite-screening-mode-configuration
 description: Use when beginning a targeted LC–MS metabolomics or lipidomics study with a predefined list of compounds (e.g., 10+ targets) and you have centroided .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3630
   edam_topics:
   - http://edamontology.org/topic_0091

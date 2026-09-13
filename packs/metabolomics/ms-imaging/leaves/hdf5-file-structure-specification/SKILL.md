@@ -3,6 +3,7 @@ name: hdf5-file-structure-specification
 description: Use when when exporting quantified MSI data (feature-by-pixel intensity matrices with associated ion m/z, lipid annotations, and pixel spatial coordinates) from LipidQMap and you need to produce a standards-compliant HDF5 container that can be read by Cardinal and other MSI analysis tools.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3439
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -42,6 +43,7 @@ attribution:
 
 # HDF5 File Structure Specification
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Specification and validation of HDF5 container structure for Mass Spectrometry Imaging (MSI) data exports following the Cardinal::HDF5 layout convention. This skill ensures quantified ion images are serialized with standardized group hierarchies, dimension scales, metadata attributes, and indexing schemes for interchange and downstream analysis.

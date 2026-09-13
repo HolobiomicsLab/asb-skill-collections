@@ -3,6 +3,7 @@ name: nmr-spectral-comparative-analysis
 description: Use when you have 2D NMR spectral data (heteronuclear and/or homonuclear experiments) from multiple samples in a natural products library or mixture, and you need to identify common structural scaffolds, correlate features across samples, or prioritize samples for further structural annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0593

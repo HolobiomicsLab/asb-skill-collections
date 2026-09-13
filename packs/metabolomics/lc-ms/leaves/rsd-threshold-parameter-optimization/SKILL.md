@@ -3,6 +3,7 @@ name: rsd-threshold-parameter-optimization
 description: Use when when preparing XCMS peak tables for quality classification and you observe that the default RSD threshold (0.3 or 30%) is either too permissive (retaining noisy EICs) or too stringent (discarding valid signals).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -49,6 +50,7 @@ attribution:
 
 # RSD Threshold Parameter Optimization
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Optimize the relative standard deviation (RSD) percentage threshold used by MetaClean's rsdFilter() function to selectively remove low-quality extracted ion chromatograms (EICs) prior to peak quality metric calculation and classifier training. This parameter controls the stringency of quality control sample variability filtering in untargeted LC-MS metabolomics pipelines.

@@ -3,6 +3,7 @@ name: chromatography-mass-spectrometry-data-processing
 description: Use when when you have raw GC–MS or LC–MS data (m/z vs retention time chromatography-mass spectrometry maps) and need to identify analyte signals and marker features without conventional peak picking;
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -46,6 +47,7 @@ attribution:
 
 # chromatography-mass-spectrometry-data-processing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated identification of multivariate chemo-/biomarker features in GC–MS and LC–MS data by combining image processing and machine learning on two-dimensional m/z–retention time maps, bypassing conventional peak picking to reduce false positives and false negatives.

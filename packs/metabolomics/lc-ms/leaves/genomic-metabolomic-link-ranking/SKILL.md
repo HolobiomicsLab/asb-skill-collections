@@ -3,6 +3,7 @@ name: genomic-metabolomic-link-ranking
 description: Use when you have paired genomic (BGCs clustered into GCFs via BiG-SCAPE) and metabolomic data (MS2 spectra grouped into MFs), with strain/sample co-occurrence patterns and predicted BGC–spectrum IOKR scores, and you need to prioritise which GCF–MF pairs are most likely to represent true natural.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

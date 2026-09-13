@@ -3,6 +3,7 @@ name: browser-security-policy-configuration
 description: Use when you need to run a web application locally (by opening index.html directly in the browser) and the application uses WebWorker or WebAssembly modules that fail to load with cross-origin policy or file-access errors.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_topics: []
   tools:
   - Google Chrome

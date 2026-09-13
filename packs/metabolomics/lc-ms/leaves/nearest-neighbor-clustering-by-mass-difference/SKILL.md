@@ -3,6 +3,7 @@ name: nearest-neighbor-clustering-by-mass-difference
 description: Use when processing LC-MS metabolomics studies with >10 samples where sample count and memory constraints make pairwise mass alignment infeasible.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3198
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -45,6 +46,7 @@ attribution:
 
 # nearest-neighbor-clustering-by-mass-difference
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Groups mass tracks across LC-MS samples by clustering m/z values using nearest-neighbor methods seeded by histogram-based m/z detection, enabling scalable mass alignment for large studies (>10 samples) without pairwise computation. This approach trades exhaustive pairwise alignment for memory- and CPU-efficient binning that preserves high-resolution mass separation.

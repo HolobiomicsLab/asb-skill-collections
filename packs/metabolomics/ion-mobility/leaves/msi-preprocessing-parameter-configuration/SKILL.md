@@ -3,6 +3,7 @@ name: msi-preprocessing-parameter-configuration
 description: Use when you have raw line-scan MSI data (from Bruker .d/.baf, converted to .mzML, or other supported formats) and need to configure MSIGen before calling msigen() to generate image arrays.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121

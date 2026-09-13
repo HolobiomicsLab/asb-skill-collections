@@ -3,6 +3,7 @@ name: m-z-alignment-across-samples
 description: Use when you have extracted mass tracks (EICs) from multiple LC-MS samples at 0.001 amu resolution and need to construct a sample-agnostic m/z reference frame.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -52,6 +53,7 @@ attribution:
 
 # m-z-alignment-across-samples
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Align mass tracks (EICs) detected in individual LC-MS samples into a unified MassGrid structure by leveraging high mass resolution to detect and resolve m/z differences corresponding to isotopes and adducts, then bin and centroid m/z values across the cohort. This enables reproducible tracking between detected features and their underlying chromatographic traces.

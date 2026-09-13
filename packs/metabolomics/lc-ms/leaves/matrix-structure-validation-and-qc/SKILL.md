@@ -3,6 +3,7 @@ name: matrix-structure-validation-and-qc
 description: Use when after executing memo_from_unaligned or memo_from_aligned functions to generate a MemoMatrix object from MS2 spectra or aligned feature tables.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

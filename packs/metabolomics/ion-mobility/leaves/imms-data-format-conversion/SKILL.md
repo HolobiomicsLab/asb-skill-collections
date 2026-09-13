@@ -3,6 +3,7 @@ name: imms-data-format-conversion
 description: Use when when you have raw Agilent MassHunter (.d) or UIMF IM-MS data files from drift tube (DT) or structure for lossless ion manipulations (SLIM) instruments and need to ingest them into a preprocessing pipeline that requires standardized in-memory or intermediate representations for.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -47,6 +48,7 @@ attribution:
 
 # IM-MS Data Format Conversion
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert ion mobility–mass spectrometry (IM-MS) raw data files between vendor-specific formats (Agilent MassHunter .d, UIMF) and standardized or proprietary interchange formats to enable downstream processing, demultiplexing, and metadata extraction in unified pipelines.

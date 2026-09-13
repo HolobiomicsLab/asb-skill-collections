@@ -3,6 +3,7 @@ name: high-dimensional-data-indexing
 description: Use when when you have millions of high-dimensional objects (e.g., MS/MS spectra converted to feature-hashed vectors) and need to compute pairwise similarities or retrieve nearest neighbors efficiently.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520

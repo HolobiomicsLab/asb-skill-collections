@@ -3,6 +3,7 @@ name: taxonomic-classification-merging
 description: Use when you have a GNPS DBResult file with spectral library matches that lack ClassyFire superclass, class, and subclass annotations, and you need to augment those matches with standardized chemical taxonomy for consensus classification or downstream analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_0089

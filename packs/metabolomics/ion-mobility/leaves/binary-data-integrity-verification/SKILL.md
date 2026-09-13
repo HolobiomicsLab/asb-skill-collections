@@ -3,6 +3,7 @@ name: binary-data-integrity-verification
 description: Use when after implementing a lossless compression–decompression cycle on mzML or mzXML mass spectrometry files, or when validating that a lossy compression pipeline meets acceptable error thresholds.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_3520

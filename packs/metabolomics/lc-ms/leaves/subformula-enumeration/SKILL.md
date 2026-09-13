@@ -3,6 +3,7 @@ name: subformula-enumeration
 description: Use when when performing chemical noise removal on MS/MS spectra and you need to validate whether each fragment ion m/z is consistent with loss of a subformula from the precursor ion.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121

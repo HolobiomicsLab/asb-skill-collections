@@ -3,6 +3,7 @@ name: distribution-shape-adaptation-in-normalization
 description: Use when after imputation and correction, when metabolomic feature intensities exhibit heteroscedastic variance or non-normal distributions across samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

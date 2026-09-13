@@ -3,6 +3,7 @@ name: web-service-api-integration
 description: Use when when you have a parsed mass spectrum (precursor m/z, ionization mode, collision energy, and fragment peak list as m/z–intensity pairs) and need to obtain molecular fingerprint predictions, de-novo candidate structures, or chemical class annotations without maintaining local neural network.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3634
   edam_topics:
   - http://edamontology.org/topic_3520

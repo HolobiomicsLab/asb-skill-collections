@@ -3,6 +3,7 @@ name: drift-time-to-ccs-correlation-modeling
 description: Use when you have tunemix or other reference standards with known m/z, drift-time, charge state, and CCS values, and you need to establish a predictive calibration model for your ion-mobility mass spectrometry instrument.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520

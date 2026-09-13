@@ -3,6 +3,7 @@ name: molecular-formula-prediction
 description: Use when you have 1D ¹H or ¹³C NMR spectra from an unknown organic compound and need to predict its molecular formula (e.g., C₆H₁₂O₂). The compound must contain ≤19 heavy (non-hydrogen) atoms. Use this as the first stage of a structure elucidation pipeline before predicting molecular connectivity.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0154

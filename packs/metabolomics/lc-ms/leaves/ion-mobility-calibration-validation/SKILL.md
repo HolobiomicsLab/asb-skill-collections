@@ -3,6 +3,7 @@ name: ion-mobility-calibration-validation
 description: Use when when you have positive- or negative-mode ion mobility spectrometry data with tunemix reference standards (known m/z, drift times, and CCS values) and need to verify that the calibration model accurately captures the relationship between drift time, reference m/z, and collision cross.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121

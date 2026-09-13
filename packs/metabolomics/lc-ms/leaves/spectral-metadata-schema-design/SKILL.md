@@ -3,6 +3,7 @@ name: spectral-metadata-schema-design
 description: Use when you are implementing a file parser or data ingestion module that must read .raw (Thermo) and .mzml files from heterogeneous LC-MS instruments and pass structured data to downstream tools (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

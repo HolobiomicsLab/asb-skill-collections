@@ -3,6 +3,7 @@ name: untargeted-metabolomics-data-processing
 description: Use when you have untargeted MS2 spectral data (from LC-MS/MS or similar instruments) and need to assign metabolic pathway context to detected compounds when standard spectral library matching is unavailable or insufficient.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3501
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -42,6 +43,7 @@ attribution:
 
 # untargeted-metabolomics-data-processing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Process untargeted tandem mass spectrometry (MS2) spectra through a deep learning framework to predict KEGG metabolic pathways directly from spectral data. This skill enables functional annotation of unknown metabolites by leveraging pre-trained models that map MS2 fragmentation patterns to known biochemical pathways.

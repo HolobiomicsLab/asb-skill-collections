@@ -3,6 +3,7 @@ name: gcf-mf-hierarchical-aggregation
 description: Use when when you have predicted BGC-spectrum IOKR scores or other pairwise linking scores, and need to rank genomic clusters (GCFs from BiG-SCAPE) against metabolomic clusters (MFs from MS/MS spectra grouping), particularly in NPLinker workflows where one GCF may contain multiple BGCs and one MF.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

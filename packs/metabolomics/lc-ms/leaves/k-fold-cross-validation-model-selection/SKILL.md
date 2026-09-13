@@ -3,6 +3,7 @@ name: k-fold-cross-validation-model-selection
 description: Use when when fitting a multi-block PLS discriminant model on multi-assay LC-MS metabolomics data and you need to determine the number of latent variables to retain without overfitting.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3765
   edam_topics:
   - http://edamontology.org/topic_3172

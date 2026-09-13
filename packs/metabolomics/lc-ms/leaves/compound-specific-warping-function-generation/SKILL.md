@@ -3,6 +3,7 @@ name: compound-specific-warping-function-generation
 description: Use when xCMS alignment produces suspected misaligned feature groups across hundreds of samples or long acquisition runs (>1 week), particularly when global XCMS warping functions fail to account for compound-specific or sample-neighborhood retention-time drift structures.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3365

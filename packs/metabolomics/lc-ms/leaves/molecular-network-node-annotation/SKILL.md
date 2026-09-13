@@ -3,6 +3,7 @@ name: molecular-network-node-annotation
 description: Use when you have a GNPS-generated molecular network (classical or feature-based workflow) and corresponding MS2LDA LDA experiment results (Mass2Motif assignments and/or chemical class predictions), and you need to propagate those annotations to individual network nodes to support visual and.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_0602

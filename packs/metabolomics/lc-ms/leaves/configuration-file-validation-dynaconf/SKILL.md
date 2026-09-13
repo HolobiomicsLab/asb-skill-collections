@@ -3,6 +3,7 @@ name: configuration-file-validation-dynaconf
 description: Use when when setting up NPLinker for natural products data mining and you have a TOML configuration file (nplinker.toml) that specifies root_dir, mode (local or podp), and paths to GNPS, AntiSMASH, and MIBiG directories.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0102

@@ -3,6 +3,7 @@ name: isotopic-enrichment-quantification
 description: Use when you have MS2 spectra from peptides with known stable isotope enrichment (e.g., 52% ¹³C incorporation), a target peptide sequence, and you need to determine which B and Y ion fragments carry how many isotope labels at each position.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121

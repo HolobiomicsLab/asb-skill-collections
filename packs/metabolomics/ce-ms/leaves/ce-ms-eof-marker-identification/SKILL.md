@@ -3,6 +3,7 @@ name: ce-ms-eof-marker-identification
 description: Use when when processing CE-MS test files and you need to identify and extract the migration time of the EOF marker (e.g., Paracetamol) to normalize compound migration times across runs.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: spectral-scoring-and-significance-assessment
 description: 'Use when you have executed multiple database search pipelines (Dereplicator, VarQuest, and/or Dereplicator+) on centroided LC-MS/MS spectra (in MGF, mzXML, mzML, or mzData format) against a chemical structure database of known natural products, and you need to: (1) identify which pipeline(s).'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

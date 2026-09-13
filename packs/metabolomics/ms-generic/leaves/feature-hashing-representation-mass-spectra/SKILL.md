@@ -3,6 +3,7 @@ name: feature-hashing-representation-mass-spectra
 description: Use when when you have high-resolution mass spectra that must be rapidly searched against large spectral libraries with open modifications, and you need to reduce the dimensionality of spectral data without losing the ability to retrieve spectrally similar peptides.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3765
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: approximate-nearest-neighbor-indexing-for-spectra
 description: Use when when you have a large spectral library (hundreds of thousands or millions of spectra) and need to search unknown query spectra against it for both unmodified and post-translationally modified peptides.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3646
   edam_topics:
   - http://edamontology.org/topic_0121

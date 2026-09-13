@@ -3,6 +3,7 @@ name: metabolomic-feature-table-processing
 description: Use when you have a metabolomics feature table (rows=features, columns=samples) generated from LC-MS or GC-MS preprocessing and need to identify which features contain systematic errors from peak integration or alignment.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: strain-spectrum-mapping-linkage
 description: Use when when you have downloaded and extracted a GNPS archive (from GNPS1 or GNPS2 workflows) and need to establish which spectral records (from spectra.mgf) were generated from which bacterial strains or samples. The file_mappings.tsv or file_mappings.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0091

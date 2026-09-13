@@ -3,6 +3,7 @@ name: intensity-dependent-missing-value-simulation
 description: Use when augmenting mass spectrometry ion images in ISO mode (isotope ions from the same molecule) and you need to simulate intensity-dependent data loss that reflects real detector behavior where lower-intensity pixels are more likely to be missed or undetected.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -45,6 +46,7 @@ attribution:
 
 # intensity-dependent-missing-value-simulation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A data augmentation technique that selectively removes pixels from ion images based on their intensity levels, applied exclusively in ISO mode of the DeepION pipeline to simulate realistic photon-counting and detector artifacts in mass spectrometry imaging. This augmentation preserves the relationship between pixel intensity and missingness, which is critical for learning robust representations of isotope ions.

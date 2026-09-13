@@ -3,6 +3,7 @@ name: mass-spectral-library-benchmark-execution
 description: Use when you have access to the Flash Entropy Search implementation and want to validate that real-time spectral library querying achieves the reported timing and throughput metrics under the same library sizes, query parameters, and measurement methodology documented in the paper.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

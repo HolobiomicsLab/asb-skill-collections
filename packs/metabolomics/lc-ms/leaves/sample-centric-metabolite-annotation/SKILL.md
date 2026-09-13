@@ -3,6 +3,7 @@ name: sample-centric-metabolite-annotation
 description: Use when after MZmine feature detection and molecular networking on a single LC-MS/MS DDA sample, when you have a feature table (with retention time, m/z, fragmentation spectra) and sample-level taxonomical metadata, and you want to assign both spectral identity and predicted chemical structure to.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0121

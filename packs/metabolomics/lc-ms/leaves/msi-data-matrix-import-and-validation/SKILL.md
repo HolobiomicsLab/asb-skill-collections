@@ -3,6 +3,7 @@ name: msi-data-matrix-import-and-validation
 description: Use when you have MSI intensity data exported from MSiReader, SCiLS, or Cardinal as plain-text CSV files or as Cardinal MSProcessedImagingExperiment/MSContinuousImagingExperiment objects, and need to load it into R as a validated msimat object for mass difference and adduct analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520

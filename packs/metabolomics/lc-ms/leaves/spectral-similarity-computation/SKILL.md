@@ -3,6 +3,7 @@ name: spectral-similarity-computation
 description: Use when after inferring Mass2Motif definitions from LDA modeling when you need to build a network representation of motif relationships.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

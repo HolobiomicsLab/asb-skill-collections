@@ -3,6 +3,7 @@ name: mass-spectrometry-data-statistical-testing
 description: Use when you have a normalized abundance matrix from LC-MS/MS profiling with sample class assignments (e.g., phenotypic groups, disease states, treatment conditions) and need to filter metabolic features for downstream pathway analysis or biological validation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0625

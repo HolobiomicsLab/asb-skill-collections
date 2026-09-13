@@ -3,6 +3,7 @@ name: tanimoto-score-threshold-optimization
 description: Use when when you have a set of MS/MS spectra with ground-truth structural similarity labels (Tanimoto scores computed from molecular fingerprints) and need to choose a decision threshold for classifying spectrum pairs as 'chemically related' or 'unrelated'.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0602

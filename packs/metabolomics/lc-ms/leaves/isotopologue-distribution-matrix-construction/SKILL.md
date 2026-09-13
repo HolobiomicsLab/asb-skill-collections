@@ -3,6 +3,7 @@ name: isotopologue-distribution-matrix-construction
 description: Use when when you have measured fractional abundances of isotopologues (FAM) from LC-MS in an isotope labeling experiment and need to correct them to obtain true mass distribution vectors (MDV) that reflect only the labeling contribution, accounting for background from naturally occurring isotopes.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_0769

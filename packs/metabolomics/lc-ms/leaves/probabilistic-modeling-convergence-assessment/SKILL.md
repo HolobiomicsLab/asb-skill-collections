@@ -3,6 +3,7 @@ name: probabilistic-modeling-convergence-assessment
 description: Use when during the LDA training phase when you need to decide whether the model has learned a stable representation of Mass2Motifs.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3520

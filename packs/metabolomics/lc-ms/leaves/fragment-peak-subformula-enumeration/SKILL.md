@@ -3,6 +3,7 @@ name: fragment-peak-subformula-enumeration
 description: Use when you have a list of fragment peak m/z values and intensities from tandem MS/MS data and need to assign chemical subformulae to each peak for downstream formula ranking or structure inference.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0091

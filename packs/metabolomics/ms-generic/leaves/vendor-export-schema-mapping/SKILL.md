@@ -3,6 +3,7 @@ name: vendor-export-schema-mapping
 description: Use when raw MRM lipidomics data arrives in vendor-specific export formats (e.g., Sciex, Waters, Thermo TSV/CSV) with inconsistent or proprietary column naming, numeric encoding, and lipid nomenclature.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3370

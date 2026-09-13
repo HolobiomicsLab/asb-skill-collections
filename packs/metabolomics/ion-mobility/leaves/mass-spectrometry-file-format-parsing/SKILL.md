@@ -3,6 +3,7 @@ name: mass-spectrometry-file-format-parsing
 description: Use when you have raw MS/MS spectral data in one or more standard mass spectrometry file formats (.mgf, .msp, or .mzML) and need to convert them into a standardized bag-of-fragments representation for unsupervised topic modeling or substructure discovery workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

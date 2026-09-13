@@ -3,6 +3,7 @@ name: global-similarity-aggregation
 description: Use when after computing pairwise cosine similarities between all spectra across two LC-MS/MS datasets when you need a single scalar summary of dataset-level resemblance rather than individual spectrum matches.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: gpu-accelerated-nearest-neighbor-indexing
 description: Use when when searching unknown mass spectra against large high-resolution spectral libraries for open modification identification and you need to reduce search latency from seconds to milliseconds while maintaining sensitivity and specificity.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_3520

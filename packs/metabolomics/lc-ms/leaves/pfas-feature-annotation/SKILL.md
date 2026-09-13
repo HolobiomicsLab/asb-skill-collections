@@ -3,6 +3,7 @@ name: pfas-feature-annotation
 description: Use when when you have a feature list (m/z, retention time, intensity) from LC- or GC-HRMS non-target screening and need to identify PFAS-like homologous series characterized by CF₂ (14 Da) repeating units.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0625

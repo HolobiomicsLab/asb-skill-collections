@@ -3,6 +3,7 @@ name: interactive-plot-rendering-bokeh
 description: Use when when you have mass spectrometry data in a Pandas DataFrame with columns for m/z, retention time (or ion mobility), and intensity, and you want to generate interactive (rather than static) visualizations for exploratory analysis, interactive drill-down, or deployment in web applications or.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520

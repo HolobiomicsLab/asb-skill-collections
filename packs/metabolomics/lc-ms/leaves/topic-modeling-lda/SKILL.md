@@ -3,6 +3,7 @@ name: topic-modeling-lda
 description: Use when after generating a corpus/features JSON file from raw MS2 fragmentation spectra or similar document-term data, when the goal is unsupervised discovery of latent topics (e.g., metabolite families or spectral motifs) without ground-truth labels.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2995
   edam_topics:
   - http://edamontology.org/topic_3520

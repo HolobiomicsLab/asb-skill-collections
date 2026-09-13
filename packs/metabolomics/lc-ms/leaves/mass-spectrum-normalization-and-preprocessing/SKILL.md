@@ -3,6 +3,7 @@ name: mass-spectrum-normalization-and-preprocessing
 description: Use when you have raw tandem mass spectra data (mz/intensity pairs and precursor m/z values) and need to train interpretable machine learning models (regression or tree-based) where feature interpretability and direct chemical meaning are required.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -43,6 +44,7 @@ attribution:
 
 # mass-spectrum-normalization-and-preprocessing
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert raw tandem mass spectra (mz/intensity pairs with precursor m/z) into normalized, interpretable sparse feature vectors by parsing fragmentation patterns, computing neutral losses, and enumerating unique peak and loss formulas. This preprocessing step is essential for training interpretable machine learning models on mass spectrometry data.

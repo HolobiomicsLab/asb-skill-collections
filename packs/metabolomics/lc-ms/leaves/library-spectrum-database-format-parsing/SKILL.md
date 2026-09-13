@@ -3,6 +3,7 @@ name: library-spectrum-database-format-parsing
 description: Use when you have experimental MS/MS spectra (from mzML, mzXML, or raw instrument formats) and wish to match them against a reference spectral library provided in MSP or CSV format. The skill is required as the first step before similarity scoring and candidate ranking.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121

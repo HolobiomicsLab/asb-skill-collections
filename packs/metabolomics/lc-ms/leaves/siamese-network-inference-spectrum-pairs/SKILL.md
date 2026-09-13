@@ -3,6 +3,7 @@ name: siamese-network-inference-spectrum-pairs
 description: Use when you have a collection of preprocessed tandem mass spectra (binned into 10,000 equally-sized m/z bins, intensities square-root transformed, top 1,000 peaks retained), a trained MS2DeepScore Siamese model, and you need to predict structural similarity scores (Tanimoto or Dice) for all or a.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: benchmark-dataset-generation-from-reference-metabolites
 description: Use when you have a set of centroided mzML files from LC-HRMS analysis, a list of target metabolites with known molecular formula and retention time windows, and you need to create a reference dataset to benchmark the reliability of NPP tools (XCMS, MZmine, MS-DIAL, etc.) on the same files.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0091

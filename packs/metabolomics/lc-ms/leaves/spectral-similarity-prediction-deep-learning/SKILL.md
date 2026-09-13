@@ -3,6 +3,7 @@ name: spectral-similarity-prediction-deep-learning
 description: Use when when you have paired MS/MS spectra (unknown and known metabolites) with annotated structural similarity labels, and you need to rank candidate structures for metabolite identification.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: blind-search-mode-parameter-optimization
 description: Use when when you have tandem mass spectra from ribosomally synthesized peptides (RiPPs) and suspect the presence of unknown or non-standard post-translational modifications that would be missed by standard database search modes constrained to known modification classes.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0121

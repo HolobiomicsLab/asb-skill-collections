@@ -3,6 +3,7 @@ name: hyperparameter-tuning-learning-rate-optimizer-selection
 description: Use when when training a fresh NeatMS CNN model from scratch on LCMS peak classification and you need to determine which optimizer (Adam vs. SGD) and learning rate will produce an AUC ROC > 0.9 without overfitting.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

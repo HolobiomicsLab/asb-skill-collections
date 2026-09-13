@@ -3,6 +3,7 @@ name: retention-index-calibration-application
 description: Use when when processing GC-MS data where retention time alone is insufficient for compound identification due to instrument drift or method variation, and you need to match detected peaks against a spectral library (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_0769

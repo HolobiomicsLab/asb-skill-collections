@@ -3,6 +3,7 @@ name: installation-troubleshooting
 description: Use when when setting up matchms for the first time in a new environment, after upgrading Python or conda, when switching between package managers (pip vs conda), or when distributing matchms to end users to confirm functionality across supported installation channels.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0227
   edam_topics:
   - http://edamontology.org/topic_3047

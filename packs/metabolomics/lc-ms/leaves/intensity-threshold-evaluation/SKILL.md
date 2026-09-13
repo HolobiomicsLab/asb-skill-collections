@@ -3,6 +3,7 @@ name: intensity-threshold-evaluation
 description: Use when you have processed LC-MS data (mzML or vendor format) and need to validate that internal standards and target analytes produce peak intensities within expected operational ranges.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_0121

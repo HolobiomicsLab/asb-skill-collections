@@ -3,6 +3,7 @@ name: peak-picking-algorithm-comparison
 description: Use when you have claims in a paper or tool documentation that one peak picking method outperforms others (e.g., 'IDSL.IPA outperforms MZmine 2 and xcms'), but the specific comparison metrics, numerical results, and source tables are not provided in the abstract or introduction.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -48,6 +49,7 @@ attribution:
 
 # peak-picking-algorithm-comparison
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically benchmark and compare peak picking algorithms (e.g., IDSL.IPA, MZmine 2, xcms, MS-DIAL) on LC/HRMS data using quantitative performance metrics such as sensitivity, specificity, precision, recall, runtime, and accuracy to validate superiority claims and inform tool selection for untargeted metabolomics studies.

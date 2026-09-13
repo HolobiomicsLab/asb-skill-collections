@@ -3,6 +3,7 @@ name: molecular-formula-inference-from-adducts
 description: Use when when you have grouped features consolidated into empirical compounds (EmpCpds) with inferred adduct assignments from khipu, and need to perform MS1-level annotation by matching neutral formulas against JMS-compliant reference libraries (HMDB, LMSD).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172

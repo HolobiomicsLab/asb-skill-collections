@@ -3,6 +3,7 @@ name: multi-group-comparison-interpretation
 description: Use when after performing an ANOVA-style multi-group de_design() analysis on a LipidomicsExperiment object, when you need to determine whether a categorical sample variable (e.g., Cancer Stage, SampleType, Race) significantly associates with the lipid molecular profile.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: feature-list-format-validation
 description: Use when a user supplies a custom feature list from external feature-finding software (vendor tools, alternative open-source pipelines) instead of using pyOpenMS automatic detection, or wishes to augment/replace pyOpenMS results with pre-processed features.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

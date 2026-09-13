@@ -3,6 +3,7 @@ name: metabolomics-data-formatting
 description: Use when after running feature clustering (Gravity) or drift correction (Blueshift) on LCMS data, when you have a processed feature table and need to standardize its structure, validate metadata completeness, enforce missing-value thresholds, and generate a QC report documenting pass/fail status.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

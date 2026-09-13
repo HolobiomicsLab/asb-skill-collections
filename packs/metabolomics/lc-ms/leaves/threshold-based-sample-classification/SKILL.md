@@ -3,6 +3,7 @@ name: threshold-based-sample-classification
 description: Use when after normalization (step 7) in untargeted metabolomic profiling pipelines, when you have a preprocessed feature matrix and need to identify samples with anomalous metabolic profiles that violate multivariate assumptions or represent technical failures.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091

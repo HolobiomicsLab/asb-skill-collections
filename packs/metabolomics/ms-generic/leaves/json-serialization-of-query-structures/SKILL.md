@@ -3,6 +3,7 @@ name: json-serialization-of-query-structures
 description: Use when you have parsed a MassQL query string into an AST representation and need to store, validate, transmit, or integrate the query structure with other tools or systems.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

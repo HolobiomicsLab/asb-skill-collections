@@ -3,6 +3,7 @@ name: training-data-inventory-construction-from-spectral-libraries
 description: Use when you are preparing to apply Probability Product Kernel–based scoring to MS2 spectra for genomic–metabolomic linking, and you need to establish a reference set of ion peaks that represent robust spectral diversity without overfitting to any single study.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3520

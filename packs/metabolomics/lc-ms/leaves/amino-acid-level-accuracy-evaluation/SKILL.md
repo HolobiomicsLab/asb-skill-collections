@@ -3,6 +3,7 @@ name: amino-acid-level-accuracy-evaluation
 description: Use when you have predicted peptide sequences from a de novo sequencing tool (e.g., Casanovo) and want to understand the fine-grained accuracy of the predictions beyond exact-match peptide-level scoring.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0121

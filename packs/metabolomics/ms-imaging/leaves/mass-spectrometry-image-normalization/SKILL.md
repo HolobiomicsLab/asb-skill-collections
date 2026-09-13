@@ -3,6 +3,7 @@ name: mass-spectrometry-image-normalization
 description: Use when after loading a pixel array (NumPy format) and its associated metadata JSON file from MSIGen, when you need to account for pixel-to-pixel variations in total ion signal or when comparing relative abundances of multiple ions within or across samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

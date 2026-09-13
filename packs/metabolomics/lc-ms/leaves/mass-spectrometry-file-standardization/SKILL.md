@@ -3,6 +3,7 @@ name: mass-spectrometry-file-standardization
 description: Use when you have raw or semi-processed mass-spectrometry peak data from XCMS, MSnbase, or other peak-picking tools in non-standard formats (MetaboAnalyst-like, Metabolights, vendor-specific), and you need to load them into MetaboShiny for compound identification, normalization, and statistical.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: chromatographic-peak-extraction-and-retention-time-filtering
 description: Use when when you have LC-MS/MS raw data (mzML or netCDF format) and need to isolate a specific compound's signal based on its known or suspected m/z value and retention time range.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: mass-tolerance-window-calibration
 description: Use when when implementing adduct detection in LC-MS metabolomics workflows, after defining theoretical adduct mass offsets (e.g., [M+NH4]+ at +17.0266 Da, [M+K]+ at +38.9815 Da), and before assigning adduct labels to a feature table.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_3172

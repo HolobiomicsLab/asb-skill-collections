@@ -3,6 +3,7 @@ name: mass-spectrum-histogram-interpretation
 description: Use when after computing all pairwise mass differences from a mass spectrometry imaging dataset, when you need to identify which mass differences correspond to real molecular adducts (e.g., metabolite–matrix or metabolite–salt ions) rather than noise.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

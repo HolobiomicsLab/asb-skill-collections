@@ -3,6 +3,7 @@ name: imaging-parameter-metadata-annotation
 description: Use when after mzML-to-imzML conversion has produced barebones imzML files with pixel alignment but no experimental metadata.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: metabolomics-peak-data-normalization-and-handling
 description: Use when when you have raw peak intensity matrices from metabolomics LC-MS/MS experiments with zero values (missing peaks or undetected compounds) and need to prepare data for pathway-level analysis using PLAGE, ORA, or GSEA.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0091

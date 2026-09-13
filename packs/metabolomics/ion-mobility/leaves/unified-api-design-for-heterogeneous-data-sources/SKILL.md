@@ -3,6 +3,7 @@ name: unified-api-design-for-heterogeneous-data-sources
 description: Use when your analysis pipeline must ingest mass-spectrometry data from mixed vendor sources (e.g., Thermo RAW, Agilent .d, Waters .raw, and open mzML) without writing separate parser logic for each format.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: r-internal-function-invocation
 description: Use when when you need to verify or retrieve package-internal metadata about compiled .NET assembly location and version before processing raw mass spectrometry files, or when testing the R↔C# dispatch mechanism in isolation without loading actual Orbitrap .raw data files.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

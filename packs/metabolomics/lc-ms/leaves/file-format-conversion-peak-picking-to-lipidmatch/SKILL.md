@@ -3,6 +3,7 @@ name: file-format-conversion-peak-picking-to-lipidmatch
 description: Use when you have generated a peak table or feature list from MZmine, XCMS, MS-DIAL, or Compound Discoverer and need to ingest it into LipidMatch for lipid identification.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

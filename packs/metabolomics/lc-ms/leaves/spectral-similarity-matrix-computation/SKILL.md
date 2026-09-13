@@ -3,6 +3,7 @@ name: spectral-similarity-matrix-computation
 description: Use when after preprocessing and filtering mass spectra (peak filtering, metadata cleaning) when you need to compare all spectrum pairs within a dataset or between a query set and a reference library to identify similar or related spectra.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3945
   edam_topics:
   - http://edamontology.org/topic_3520

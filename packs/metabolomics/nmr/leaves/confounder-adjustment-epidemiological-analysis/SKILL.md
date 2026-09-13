@@ -3,6 +3,7 @@ name: confounder-adjustment-epidemiological-analysis
 description: Use when when testing associations between metabolic features (from NMR or MS) and a phenotype of interest (e.g., BMI, disease status) in a cohort where age, gender, or clinical confounders are known to correlate with both the metabolite and phenotype.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -44,6 +45,7 @@ attribution:
 
 # confounder-adjustment-epidemiological-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Adjust metabolite–phenotype associations for epidemiological confounders (age, gender, disease status) using partial correlations or generalized linear models to isolate true disease signals and prevent confounding bias. This is essential in metabolome-wide association studies (MWAS) where multivariate models alone fail to properly account for cofounding factors that distort observed associations.

@@ -3,6 +3,7 @@ name: mass-spectrometry-reference-standard-alignment
 description: Use when you have positive- or negative-mode tunemix reference data (with known CCS values, m/z, and measured drift times) and need to establish a calibration model for converting observed drift times into CCS values for downstream feature annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0121

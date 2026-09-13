@@ -3,6 +3,7 @@ name: hierarchical-database-indexing
 description: Use when when you have a large combinatorial chemical space (e.g., all regioisomeric positions of lipid double bonds across carbon counts and saturation levels) and need to query it repeatedly against experimental mass spectrometry spectra.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0226
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: raw-spectral-data-reading
 description: Use when you have Thermo Orbitrap .raw files and need to extract specific spectral features (base-peak m/z, intensity values, chromatographic traces, scan-level metadata) for downstream statistical analysis or visualization in R. Use this skill when you want to avoid lossy format conversion (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3945
   edam_topics:
   - http://edamontology.org/topic_0121

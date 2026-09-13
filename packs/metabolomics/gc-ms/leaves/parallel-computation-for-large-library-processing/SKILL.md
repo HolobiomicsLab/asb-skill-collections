@@ -3,6 +3,7 @@ name: parallel-computation-for-large-library-processing
 description: Use when your input consists of multiple large MSP files (hundreds of megabytes) with associated structure folders containing hundreds of thousands of MOL or SDF files that require sequential processing steps (structure extraction, SMILES matching, RI assignment).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0154

@@ -3,6 +3,7 @@ name: mass-error-distribution-analysis
 description: Use when after applying polynomial m/z recalibration using a reference peak list (e.g., SRFA.ref) to an FT-ICR mass spectrum.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520

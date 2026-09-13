@@ -3,6 +3,7 @@ name: summarized-experiment-object-handling
 description: Use when you have cross-validated, filtered metabolomic NMR or MS data in a SummarizedExperiment container and need to prepare it for metabolome-wide association studies (MWAS) with epidemiological confounders.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -44,6 +45,7 @@ attribution:
 
 # summarized-experiment-object-handling
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Load, validate, and prepare SummarizedExperiment objects containing metabolomic data with integrated phenotype information for downstream association analysis. This skill ensures that metabolite abundance matrices and clinical metadata are properly aligned and accessible for confounder-adjusted statistical modeling.

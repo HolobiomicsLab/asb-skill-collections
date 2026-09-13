@@ -3,6 +3,7 @@ name: form-encoded-request-handling
 description: Use when when a web service must accept spectroscopic measurements (NMR peaks, IR/MS metadata) submitted as form-encoded POST parameters from a client, and those parameters need to be validated, reformatted into an external API query format, or passed to a downstream predictor service.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_0593

@@ -3,6 +3,7 @@ name: csv-xlsx-file-conversion-and-export
 description: Use when when you have validated mass spectrometry transition data (precursor m/z, product m/z, intensity, retention time, and compound identifiers) formatted in one tabular format (CSV or XLSX) and need to convert it to the other format for ingestion into EISA-EXPOSOME or long-term archival.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

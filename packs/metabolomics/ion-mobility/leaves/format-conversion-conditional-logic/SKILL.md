@@ -3,6 +3,7 @@ name: format-conversion-conditional-logic
 description: Use when you have generated a lipid spectral library (with lipid identities, adducts, m/z values, and fragmentation patterns) and need to export it for downstream mass spectrometry analysis on either an Orbitrap (via Excalibur DDA) or via Skyline's transition-based workflow.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3750
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -42,6 +43,7 @@ attribution:
 
 # Conditional Format Conversion for Mass Spectrometry Data
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 This skill conditionally serializes spectral library data from an in-memory representation into one of two distinct CSV schemas—Excalibur precursor lists for DDA on orbitrap or Skyline transition lists—based on user-selected format. It bridges the gap between a unified spectral library generation pipeline and instrument-specific data requirements.

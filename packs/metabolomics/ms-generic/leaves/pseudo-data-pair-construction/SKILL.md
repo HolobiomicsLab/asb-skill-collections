@@ -3,6 +3,7 @@ name: pseudo-data-pair-construction
 description: Use when when you have a raw list of SMILES strings but lack sufficient real mass spectrometry reference data (typically <300 spectra) to train a generative model for unknown chemical identification.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0361
   edam_topics:
   - http://edamontology.org/topic_0154

@@ -3,6 +3,7 @@ name: precursor-m-z-based-filtering
 description: 'Use when you have an unknown MS/MS query spectrum with a known or measured precursor m/z value and need to search a spectral library (local or public: GNPS, MASSBANK, DrugBANK) to annotate the compound.'
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -44,6 +45,7 @@ attribution:
 
 # precursor-m-z-based-filtering
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter and match MS/MS spectra by precursor mass-to-charge ratio (m/z) to reduce the search space during spectral library lookup and improve annotation specificity. This skill is essential when matching unknown query spectra against large spectral libraries or databases where exact precursor m/z alignment is a prerequisite for confident compound identification.

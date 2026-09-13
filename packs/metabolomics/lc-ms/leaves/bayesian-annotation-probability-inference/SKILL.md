@@ -3,6 +3,7 @@ name: bayesian-annotation-probability-inference
 description: Use when you have LC/MS feature data (m/z, retention time, intensity) and need to assign metabolite annotations with confidence scores rather than binary peak-to-compound matches.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3860
   edam_topics:
   - http://edamontology.org/topic_0091

@@ -3,6 +3,7 @@ name: relative-mass-defect-window-filtering
 description: Use when apply this filter when working with MS-DIAL peak lists (feature tables with m/z, retention time, and intensity) that contain features with anomalous mass defects—particularly when you have prior knowledge of the expected RMD range for your sample type or analytical method, or when you want.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: metabolite-abundance-threshold-filtering
 description: Use when you have intracellular metabolomics data paired with constraint-based metabolic model predictions and need to identify metabolically controlled reactions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0176

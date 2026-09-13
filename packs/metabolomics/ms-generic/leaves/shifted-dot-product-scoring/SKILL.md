@@ -3,6 +3,7 @@ name: shifted-dot-product-scoring
 description: Use when matching query mass spectra to a spectral library in the presence of unknown post-translational modifications (PTMs) or non-enzymatic modifications.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121

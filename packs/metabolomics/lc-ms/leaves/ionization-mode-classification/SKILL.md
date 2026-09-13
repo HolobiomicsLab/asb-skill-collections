@@ -3,6 +3,7 @@ name: ionization-mode-classification
 description: Use when when converting raw MS/MS spectral records (e.g. from .msp format) into metabolite fragment database entries for MetaboAnnotatoR, and the output filenames or library index must distinguish between positive and negative ionization modes to ensure correct library selection during annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_0599

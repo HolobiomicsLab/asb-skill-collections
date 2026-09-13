@@ -3,6 +3,7 @@ name: spatial-spot-coordinate-registration
 description: Use when when you have paired spatial transcriptome and metabolome datasets with spot-based coordinates that need to be aligned for multi-modal integration.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3674
@@ -40,6 +41,7 @@ attribution:
 
 # spatial-spot-coordinate-registration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Register and align spot coordinates between spatial transcriptome and metabolome datasets using modified spatial morphological alignment to enable spot-to-spot data integration. This skill achieves high-resolution correspondence between two modalities' spatial coordinate systems for joint analysis.

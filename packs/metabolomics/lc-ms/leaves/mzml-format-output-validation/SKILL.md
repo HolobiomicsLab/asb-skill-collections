@@ -3,6 +3,7 @@ name: mzml-format-output-validation
 description: Use when after executing smiter.synthetic_mzml.write_mzml to generate synthetic LC-MS/MS runs from nucleoside or peptide fragmentation models.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

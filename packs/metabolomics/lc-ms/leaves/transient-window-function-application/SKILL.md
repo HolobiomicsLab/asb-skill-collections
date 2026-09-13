@@ -3,6 +3,7 @@ name: transient-window-function-application
 description: Use when when processing raw FT-ICR transient files (Bruker Solarix .d format or equivalent) intended for high-resolution mass spectral analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3557
   edam_topics:
   - http://edamontology.org/topic_0121

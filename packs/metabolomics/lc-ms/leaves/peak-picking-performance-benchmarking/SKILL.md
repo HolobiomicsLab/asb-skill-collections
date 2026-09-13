@@ -3,6 +3,7 @@ name: peak-picking-performance-benchmarking
 description: Use when when you have completed non-targeted peak picking and alignment with tools such as MZmine 2, XCMS, or MS-DIAL on LC-HRMS mzML data and need to quantify performance metrics (found peaks %, degenerated isotopologue ratio, alignment errors) by comparing against a curated benchmark of known.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520

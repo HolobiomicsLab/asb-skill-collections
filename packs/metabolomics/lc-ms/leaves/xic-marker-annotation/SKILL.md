@@ -3,6 +3,7 @@ name: xic-marker-annotation
 description: Use when when you have a resolved spectrum file (mzML, mzXML) and need to visualize where MS2 precursor scans occur on an XIC display.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3694
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -39,6 +40,7 @@ attribution:
 
 # xic-marker-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Overlay MS2 precursor scan positions as markers on extracted ion chromatograms (XICs) by parsing MS/MS metadata and annotating retention times or scan identifiers. This skill enables visual inspection of tandem mass spectrometry fragmentation events at their chromatographic positions.

@@ -3,6 +3,7 @@ name: probability-threshold-calibration
 description: Use when after training or loading a NeatMS neural network model, apply this skill when you have a labelled validation dataset and need to determine the optimal probability threshold that maximizes classification performance (true positives minus false positives).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: nmr-spectra-preprocessing
 description: Use when when you have raw 1D NMR spectroscopic data (urine, worm, or other biological samples) in a format supported by NMRBox/NMRPipe and need to generate peak tables with automatic phasing, baseline correction, and spectral deconvolution without manual intervention.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0593

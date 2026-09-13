@@ -3,6 +3,7 @@ name: neural-network-encoder-freezing
 description: Use when when you have a pre-trained encoder (e.g., TCN spectrum encoder in FIDDLE) that has learned useful representations on a source task (e.g., MS/MS spectrum encoding), and you want to train lightweight task-specific modules (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

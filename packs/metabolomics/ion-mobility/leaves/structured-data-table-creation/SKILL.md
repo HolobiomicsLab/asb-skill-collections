@@ -3,6 +3,7 @@ name: structured-data-table-creation
 description: Use when you have obtained a raw reference library file (such as the DTCCS_N2 library for U13C labeled lipids) and need to validate its structure, verify that all expected lipid entries are present, and ensure CCS values fall within physically plausible ranges (typically 50–300 Ų for small lipids).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -41,6 +42,7 @@ attribution:
 
 # structured-data-table-creation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Parse and validate a reference library file (CSV/TSV) into a structured table with standardized columns (lipid class, species identifier, CCS value) and numeric range checks. This skill ensures that curated lipidomics reference data conforms to schema expectations before downstream bias calculation and correction workflows.

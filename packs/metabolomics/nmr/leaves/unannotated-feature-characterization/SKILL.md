@@ -3,6 +3,7 @@ name: unannotated-feature-characterization
 description: Use when you have aligned feature tables from LC–MS/MS, corresponding in silico annotations (from GNPS/ISDB or SIRIUS), and metadata describing sample origin. Use it to rank extracts by the proportion of sample-specific, unannotated features—a proxy for structural novelty.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3520

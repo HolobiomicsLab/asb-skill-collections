@@ -3,6 +3,7 @@ name: twim-ms-data-preprocessing
 description: Use when you have raw or processed TWIM-MS experimental data (arrival times, m/z, ion mobility parameters) and need to compute class-conditioned CCS values or assign biomolecular class labels directly from high-dimensional ion mobility measurements.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

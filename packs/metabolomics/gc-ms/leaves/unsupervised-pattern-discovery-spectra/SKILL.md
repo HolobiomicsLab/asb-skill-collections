@@ -3,6 +3,7 @@ name: unsupervised-pattern-discovery-spectra
 description: Use when when you have preprocessed mass spectral data (normalized peak intensities or binned m/z representations) and need to discover latent spectral patterns to enhance neural network predictors without labeled spectral classes.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2945
   edam_topics:
   - http://edamontology.org/topic_3520

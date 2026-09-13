@@ -3,6 +3,7 @@ name: spectra-object-instantiation-and-manipulation
 description: Use when you have mass spectrometry spectral data (m/z and intensity pairs, precursor m/z, MS level, and metadata) in R memory or in a file format (mzML, mzXML, CDF, MGF, MSP), and you need to organize it into a queryable, processable object before performing spectral similarity calculations.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3218
   edam_topics:
   - http://edamontology.org/topic_3520

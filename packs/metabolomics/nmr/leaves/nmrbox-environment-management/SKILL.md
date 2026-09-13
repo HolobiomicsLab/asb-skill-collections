@@ -3,6 +3,7 @@ name: nmrbox-environment-management
 description: Use when when you need to deploy SAND for 1D NMR spectrum deconvolution on a new machine or cluster, or when testing code changes before merging into production.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_topics: []
   tools:
   - NMRBox

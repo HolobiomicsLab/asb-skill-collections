@@ -3,6 +3,7 @@ name: peak-list-formatting
 description: Use when after successfully resolving a USI string to a specific mass spectrum scan, and before performing spectral matching, library search, or comparative analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -39,6 +40,7 @@ attribution:
 
 # peak-list-formatting
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert resolved mass spectrometry scan data into structured peak lists (m/z and intensity pairs) for downstream analysis, export, or integration with other tools. This skill bridges raw spectrum retrieval and machine-readable output formats suitable for annotation, quantification, or comparison workflows.

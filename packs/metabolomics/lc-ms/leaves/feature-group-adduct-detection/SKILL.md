@@ -3,6 +3,7 @@ name: feature-group-adduct-detection
 description: Use when you have a feature table from LC-MS analysis (containing m/z, retention time, and intensity values) and need to identify which detected features represent the same molecular species ionized under different adduction states.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -42,6 +43,7 @@ attribution:
 
 # feature-group-adduct-detection
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Automated detection and grouping of LC-MS features related by common adduct mass shifts (e.g., +H, +Na, +NH4, +K, –H) to consolidate redundant ion species into coherent feature groups. This skill is essential in nontargeted metabolomics to reduce false feature inflation and improve annotation confidence.

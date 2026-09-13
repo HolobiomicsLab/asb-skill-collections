@@ -3,6 +3,7 @@ name: container-image-selection-and-mounting
 description: Use when when deploying a Nextflow workflow across multiple execution environments (local machines, HPC clusters) where tool versions, dependencies, or OS configurations may differ. Choose this skill specifically when you need to process LC-HRMS .mzML or .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3233
   edam_topics:
   - http://edamontology.org/topic_3172

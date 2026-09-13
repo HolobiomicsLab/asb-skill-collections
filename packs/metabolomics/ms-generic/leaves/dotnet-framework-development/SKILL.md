@@ -3,6 +3,7 @@ name: dotnet-framework-development
 description: Use when you need to compile and test a .NET-based metabolomics or bioinformatics desktop application (e.g., MS-DIAL version 5 series) from source code, or you are implementing new parsing or data-processing modules that must integrate with WPF UI frameworks and ReactiveExtensions patterns.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_3172

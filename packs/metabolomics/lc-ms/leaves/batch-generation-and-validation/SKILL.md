@@ -3,6 +3,7 @@ name: batch-generation-and-validation
 description: Use when you have raw mzML files and a feature table (CSV) from LCMS data processed by tools like mzMine, and you need to create train/test/validation batches with specific matrix dimensions (120 × 2) and verified margin/peak signal separation before training or evaluating a neural network.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3172

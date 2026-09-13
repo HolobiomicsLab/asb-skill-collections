@@ -3,6 +3,7 @@ name: compound-structure-comparison-metrics
 description: Use when you have two MS/MS spectra from related compounds (e.g., a reference compound and a suspected modified version) and need to quantify where and how their structures differ.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0593
@@ -48,6 +49,7 @@ attribution:
 
 # compound-structure-comparison-metrics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantitatively compare two related chemical structures (a known compound and a modified analog) by aligning their tandem MS/MS spectra and computing difference metrics to localize structural modification sites. This skill enables systematic evaluation of how spectral fragmentation patterns diverge between compounds, grounding modification hypotheses in observed mass shifts and peak intensity changes.

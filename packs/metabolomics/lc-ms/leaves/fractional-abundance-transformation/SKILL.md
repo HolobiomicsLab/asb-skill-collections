@@ -3,6 +3,7 @@ name: fractional-abundance-transformation
 description: Use when you have raw LC-MS fractional abundances of isotopologues (FAM) from a stable isotope labeling experiment (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3172

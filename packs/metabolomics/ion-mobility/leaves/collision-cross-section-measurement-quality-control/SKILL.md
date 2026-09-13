@@ -3,6 +3,7 @@ name: collision-cross-section-measurement-quality-control
 description: Use when you have IM-MS lipidomics data from samples spiked with U13C-labeled internal standards (fully labeled yeast extract) and you need to quantify whether measured CCS values deviate systematically from theoretical values, or when you want to correct CCS measurements before downstream lipid.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -43,6 +44,7 @@ attribution:
 
 # collision-cross-section-measurement-quality-control
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assess and correct collision cross section (CCS) bias in ion mobility-mass spectrometry lipidomics data using internal standardization with U13C-labeled lipids and a reference DT CCS N2 library. This skill detects systematic CCS deviation patterns and applies class-specific linear correction functions to improve measurement accuracy.

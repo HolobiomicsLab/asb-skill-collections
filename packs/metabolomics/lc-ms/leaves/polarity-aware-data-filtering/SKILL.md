@@ -3,6 +3,7 @@ name: polarity-aware-data-filtering
 description: Use when when performing targeted peak detection on LC-MS data where compounds have been assigned expected ionization polarities (positive or negative mode) in the target list, and you want to prevent false peak assignments from the opposite polarity and avoid manual pre-filtering of raw data by.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0593

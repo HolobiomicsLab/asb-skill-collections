@@ -3,6 +3,7 @@ name: mass-spectrometry-screening-workflows
 description: Use when when you have high-resolution LC-MS or GC-MS data from environmental samples and need to simultaneously screen for both known suspect chemicals and their transformation products, rather than targeting single compounds.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0593

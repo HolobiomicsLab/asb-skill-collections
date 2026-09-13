@@ -3,6 +3,7 @@ name: vendor-file-format-specification-handling
 description: Use when you have a raw MSI data file from an unknown or mixed set of vendors and need to apply format-specific data extraction, spectral parsing, or image reconstruction. The file extension alone must determine which parsing module (MSIGen.raw, MSIGen.D, MSIGen.baf, MSIGen.tdf, MSIGen.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

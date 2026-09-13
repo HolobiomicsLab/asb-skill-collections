@@ -3,6 +3,7 @@ name: annotation-object-manipulation
 description: Use when after completing metabolite annotation of LC-MS AIF features using the annotateRC function, when you need to persist ranked candidate matches, inspect multiple candidate annotations per feature, visualize matched ions in ranked spectra, or export pseudo-MS/MS spectra for external analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3860
   edam_topics:
   - http://edamontology.org/topic_0121

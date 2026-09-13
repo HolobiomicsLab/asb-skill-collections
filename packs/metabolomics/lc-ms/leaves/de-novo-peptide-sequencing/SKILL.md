@@ -3,6 +3,7 @@ name: de-novo-peptide-sequencing
 description: Use when you have annotated MS/MS spectra in MGF format and need to identify peptide sequences that may not exist in reference protein databases—such as in immunopeptidomics, metaproteomics, paleoproteomics, venomics, or monoclonal antibody assembly workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3646
   edam_topics:
   - http://edamontology.org/topic_0121

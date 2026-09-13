@@ -3,6 +3,7 @@ name: qc-sample-quality-assessment
 description: Use when after drift correction and before imputation when you have LC-MS data with designated QC samples and you need to remove features with poor reproducibility across QC replicates.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -49,6 +50,7 @@ attribution:
 
 # QC Sample Quality Assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Flag and filter molecular features in LC-MS metabolomics data based on their detection rate across Quality Control (QC) samples to remove low-quality features before multivariate analysis. This is a critical quality-control step in the notame preprocessing workflow that identifies features failing to meet minimum reproducibility thresholds.

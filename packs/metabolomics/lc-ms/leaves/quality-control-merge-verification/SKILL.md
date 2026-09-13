@@ -3,6 +3,7 @@ name: quality-control-merge-verification
 description: Use when after performing an inner or left join operation to combine a feature quantification table (from MZmine3) with sample metadata, and before proceeding to data cleanup, blank removal, batch correction, or statistical analyses.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

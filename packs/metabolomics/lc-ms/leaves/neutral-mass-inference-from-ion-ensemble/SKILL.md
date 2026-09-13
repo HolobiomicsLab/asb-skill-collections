@@ -3,6 +3,7 @@ name: neutral-mass-inference-from-ion-ensemble
 description: Use when you have a connected subnetwork of feature ions that have been validated as belonging to the same empirical compound (khipu instance), with isotope and adduct edges assigned, and you need to estimate the true neutral mass M0 rather than relying on any single observed m/z.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -46,6 +47,7 @@ attribution:
 
 # neutral-mass-inference-from-ion-ensemble
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Infer the neutral mass of a compound from an ensemble of observed ions (adducts and isotopologues) by fitting their measured m/z values against a theoretical khipu grid using linear regression. This skill recovers the ground-truth neutral mass from degenerate ion populations in untargeted LC-MS data.

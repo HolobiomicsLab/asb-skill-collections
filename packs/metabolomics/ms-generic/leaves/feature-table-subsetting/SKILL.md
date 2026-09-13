@@ -3,6 +3,7 @@ name: feature-table-subsetting
 description: 'Use when after loading an MS-DIAL feature table when you need to separate features into two disjoint groups: one meeting a quantitative threshold (e.g., m/z decimal values outside [4, 8], coefficient of variation below a cutoff, or mass defects within acceptable bounds) and one not meeting it.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

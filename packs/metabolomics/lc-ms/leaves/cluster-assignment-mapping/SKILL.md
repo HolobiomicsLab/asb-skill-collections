@@ -3,6 +3,7 @@ name: cluster-assignment-mapping
 description: Use when after density-based clustering (e.g., DBSCAN) has been performed on a sparse pairwise distance matrix derived from MS/MS spectra nearest neighbor indexes.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: multiclass-metabolite-comparison
 description: Use when when you have a normalized metabolite abundance matrix with sample metadata assigning each sample to one of three or more distinct biological classes (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0625

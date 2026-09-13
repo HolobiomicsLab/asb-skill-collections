@@ -3,6 +3,7 @@ name: lcms-peak-detection-and-alignment
 description: Use when you have one or more raw mzXML or mzML LCMS data files (from DDA, DIA, or fullscan acquisition) and need to extract quantitative metabolite features for multi-sample comparative analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

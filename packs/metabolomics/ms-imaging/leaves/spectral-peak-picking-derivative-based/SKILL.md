@@ -3,6 +3,7 @@ name: spectral-peak-picking-derivative-based
 description: Use when you have preprocessed MSImagingArrays objects (normalized via normalize(), smoothed via smooth(), and baseline-reduced via reduceBaseline()) and need to identify discrete peaks across all spectra in a mass spectrometry imaging dataset.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3520

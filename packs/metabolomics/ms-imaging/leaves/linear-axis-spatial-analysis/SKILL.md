@@ -3,6 +3,7 @@ name: linear-axis-spatial-analysis
 description: Use when you have deposited mass spectrometry imaging datasets in NetCDF (CDF) format with accompanying MATLAB workspace files (.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -40,6 +41,7 @@ attribution:
 
 # linear-axis-spatial-analysis
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 A workflow for analyzing mass spectrometry imaging (MSI) data along a defined linear axis through the DIMPLE computational pipeline, extracting spatial intensity profiles, feature distributions, and quantitative metrics that vary with position along the root developmental gradient.

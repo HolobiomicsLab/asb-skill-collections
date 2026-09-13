@@ -3,6 +3,7 @@ name: protonation-state-assignment
 description: Use when you have SMILES-encoded molecular structures and need to model their behavior under electrospray ionization (ESI) or other ionization methods in mass spectrometry.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0417
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -41,6 +42,7 @@ attribution:
 
 # Protonation-State Assignment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Automated determination of ionization states (protonation and deprotonation forms) for small molecules from SMILES strings using machine-learning-guided rule sets. This skill is essential for predicting collision cross section (CCS) values of metabolites in their native ionization states during mass spectrometry analysis.

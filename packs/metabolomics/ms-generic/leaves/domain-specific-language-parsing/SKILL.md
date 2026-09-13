@@ -3,6 +3,7 @@ name: domain-specific-language-parsing
 description: 'Use when when you have SQL-inspired query strings that encode domain-specific assumptions and need to validate, transform, or execute them against data repositories. Specifically: input is human-readable DSL text containing mass spectrometry-specific clauses (e.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_3520

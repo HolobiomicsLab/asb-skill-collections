@@ -3,6 +3,7 @@ name: mass-spectrometry-spectrum-quality-filtering
 description: Use when compiling or harmonizing MS/MS spectral libraries from multiple source repositories and you need to identify and remove spectra that fail quality thresholds (low resolution, precursor-fragment mass inconsistency, duplicate fragment patterns, noise-dominated, or missing critical metadata.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

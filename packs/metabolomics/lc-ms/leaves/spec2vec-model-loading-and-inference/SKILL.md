@@ -3,6 +3,7 @@ name: spec2vec-model-loading-and-inference
 description: Use when you have discovered Mass2Motifs or other fragmentation pattern representations via LDA and need to generate vector embeddings to query a reference motif database (MotifDB) for structural annotation candidates.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_2939
   edam_topics:
   - http://edamontology.org/topic_0943

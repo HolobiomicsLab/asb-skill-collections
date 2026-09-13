@@ -3,6 +3,7 @@ name: intensity-color-representation
 description: Use when when visualizing 2D peak maps (x=m/z, y=retention time or ion mobility, z=intensity) using pyOpenMS-viz with any plotting backend (matplotlib, bokeh, plotly).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520

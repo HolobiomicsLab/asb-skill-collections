@@ -3,6 +3,7 @@ name: mpactr-data-object-lifecycle-tracking
 description: Use when when chaining multiple mpactr filters on a peak table and you need to decide whether to preserve intermediate filtered objects or accept in-place mutation for memory efficiency.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

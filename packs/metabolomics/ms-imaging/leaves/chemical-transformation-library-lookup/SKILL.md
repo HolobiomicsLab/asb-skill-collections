@@ -3,6 +3,7 @@ name: chemical-transformation-library-lookup
 description: Use when you have a histogram of mass differences (from pairwise comparisons of detected m/z values in MALDI-MS or MSI data) and need to annotate which differences correspond to known molecular adducts—particularly when investigating unexpected or ambiguous peaks in the mass spectrum, or when.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3431
   edam_topics:
   - http://edamontology.org/topic_3520

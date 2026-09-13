@@ -3,6 +3,7 @@ name: unified-vocabulary-construction
 description: Use when when you have parallel mass spectra and molecular structure data (e.g., CANOPUS or MassSpecGym datasets) and aim to train a single encoder-decoder model (e.g., BART) that must handle both modalities as input and output tokens.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -40,6 +41,7 @@ attribution:
 
 # unified-vocabulary-construction
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a unified token vocabulary that merges mass spectral features (m/z values, intensities) and molecular structure tokens (SMILES or graph representations) into a single coherent set for end-to-end sequence modeling. This enables a single language model to process both spectral and structural data with consistent tokenization.

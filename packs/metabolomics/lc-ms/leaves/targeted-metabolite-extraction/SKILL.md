@@ -3,6 +3,7 @@ name: targeted-metabolite-extraction
 description: Use when you have centroided LC-MS data (.mzML format) and a curated list of targeted metabolites or lipids (with m/z, retention time, and polarity) that you want to quantify and quality-assess across multiple analytical runs, and you need both per-run AUC values and averaged QC metrics for each.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3704
   edam_topics:
   - http://edamontology.org/topic_0625

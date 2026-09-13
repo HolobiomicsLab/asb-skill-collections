@@ -3,6 +3,7 @@ name: pandas-dataframe-column-specification
 description: Use when when you have mass spectrometry data in a Pandas DataFrame with column names that do not match pyOpenMS-viz's default expectations (e.g., 'm/z' vs 'mz' or 'retention_time' vs 'rt'), or when your data uses domain-specific column labels (e.g., 'mass_to_charge', 'scan_time', 'peak_intensity').
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3500
   edam_topics:
   - http://edamontology.org/topic_3520

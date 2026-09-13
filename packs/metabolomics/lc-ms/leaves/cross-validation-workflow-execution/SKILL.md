@@ -3,6 +3,7 @@ name: cross-validation-workflow-execution
 description: Use when you have paired microbiome (16S rRNA/metagenomic) and metabolome (LC-MS/MS or similar) count data and need to evaluate how well a predictive model (e.g., neural network, Elastic Net) generalizes across samples.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3697

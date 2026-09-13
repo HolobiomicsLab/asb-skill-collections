@@ -3,6 +3,7 @@ name: peak-classification-validation
 description: Use when after training or loading a NeatMS neural network model, before applying it to filter false positive MS1 peaks in a new dataset.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3659
   edam_topics:
   - http://edamontology.org/topic_3520

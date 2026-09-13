@@ -3,6 +3,7 @@ name: cross-language-data-format-interoperability
 description: Use when you have mass spectrometry data (LC–MS/MS, ion mobility, DIA) converted to MZA format and need to read or analyze it in multiple programming languages (Python and R), or share datasets with collaborators using different environments without requiring proprietary vendor libraries or format.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3957
   edam_topics:
   - http://edamontology.org/topic_0121

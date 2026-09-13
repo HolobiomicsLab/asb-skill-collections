@@ -3,6 +3,7 @@ name: spectrum-binning-and-normalization
 description: Use when you have raw, high-resolution MS/MS spectra in mzML, mzXML, or MGF format that need to be prepared for fast similarity searching or clustering.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0121

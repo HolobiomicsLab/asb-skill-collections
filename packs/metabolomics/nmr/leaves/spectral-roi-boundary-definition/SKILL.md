@@ -3,6 +3,7 @@ name: spectral-roi-boundary-definition
 description: Use when when you have identified a spectral window of interest in a 1H NMR spectrum from a complex biological sample (serum, urine, CSF, tissue, saliva, or sweat) and need to systematically retrieve all metabolites from HMDB whose reference proton NMR chemical shifts fall within that window.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3680
   edam_topics:
   - http://edamontology.org/topic_3172

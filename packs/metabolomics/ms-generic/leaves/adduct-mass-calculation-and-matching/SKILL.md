@@ -3,6 +3,7 @@ name: adduct-mass-calculation-and-matching
 description: Use when when you have a list of target molecules with known molecular formulas and need to extract and validate their peaks from centroided mzML files, or when assessing whether detected peaks in a mass spectrometry run correspond to expected adducts of known metabolites.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3370

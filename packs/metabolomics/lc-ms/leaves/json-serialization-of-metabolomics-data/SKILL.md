@@ -3,6 +3,7 @@ name: json-serialization-of-metabolomics-data
 description: Use when after pre-annotation grouping (e.g., via khipu) has assigned features to empirical compounds, or when exporting feature tables and metadata from asari for downstream analysis in MetaboAnalyst or custom R/Python workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3172

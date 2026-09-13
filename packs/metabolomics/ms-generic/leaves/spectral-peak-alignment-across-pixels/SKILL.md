@@ -3,6 +3,7 @@ name: spectral-peak-alignment-across-pixels
 description: Use when after peak picking across individual spectra in an MSImagingExperiment, when you need to harmonize peak m/z positions across pixels to account for small shifts in peak location due to instrumental drift, calibration differences, or natural variation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: centered-log-ratio-normalization
 description: Use when apply CLR normalization when you have count-based microbiome or metabolome compositional data (e.g., 16S rRNA gene abundances, LC-MS/MS metabolite abundances) that will be used as input to multivariate predictive models (neural networks, regression, correlation analysis).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3697

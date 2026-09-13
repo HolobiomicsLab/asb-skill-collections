@@ -3,6 +3,7 @@ name: peak-table-schema-validation
 description: Use when after converting peak-picker output (from MZmine, XCMS, MS-DIAL, or Compound Discoverer) into LipidMatch-compatible format. Use this skill when you need to verify that the converted file will be successfully read by LipidMatch before proceeding to lipid identification;
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3197
   edam_topics:
   - http://edamontology.org/topic_3520

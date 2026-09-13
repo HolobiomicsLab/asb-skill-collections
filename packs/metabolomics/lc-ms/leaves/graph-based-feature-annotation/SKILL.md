@@ -3,6 +3,7 @@ name: graph-based-feature-annotation
 description: Use when you have a GNPS molecular network (in GML or GraphML format) and corresponding MS2LDA substructural feature assignments or chemical class predictions, and you want to systematically propagate these annotations to individual network nodes to enable feature-aware visualization and.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_0091

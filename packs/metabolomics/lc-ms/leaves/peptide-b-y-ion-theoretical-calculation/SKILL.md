@@ -3,6 +3,7 @@ name: peptide-b-y-ion-theoretical-calculation
 description: Use when when you have a peptide sequence and need to predict which fragment ions (B and Y series) should appear in an MS2 spectrum at a known isotopic abundance (e.g., natural 13C at 1.07%, or stable isotope labeling at 50% enrichment).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

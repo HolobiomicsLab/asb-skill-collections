@@ -3,6 +3,7 @@ name: adduct-mass-offset-parameterization
 description: Use when when processing LC-MS metabolomics feature tables where adduct annotation is absent or incomplete, and you need to identify which ionization adducts are present in your mass spectrometry data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

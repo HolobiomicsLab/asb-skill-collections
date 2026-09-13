@@ -3,6 +3,7 @@ name: composite-mass-track-assembly-and-peak-detection
 description: Use when after mass tracks have been aligned across all samples into a MassGrid (via sample-wise or centroid-based alignment), you have a unified set of m/z features tracked across the entire study.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -54,6 +55,7 @@ attribution:
 
 # composite-mass-track-assembly-and-peak-detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Assemble aligned mass tracks from multiple LC-MS samples into a composite mass track, then detect elution peaks on this composite map using statistics-guided local maxima detection. This approach prioritizes mass resolution and selectivity, avoiding repeated peak detection on individual samples and improving reproducibility across the cohort.

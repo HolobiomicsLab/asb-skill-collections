@@ -3,6 +3,7 @@ name: mass-to-charge-ratio-matching-against-kegg
 description: Use when you have an LC-MS peak-intensity matrix (rows = peaks with m/z and intensity; columns = samples) and need to assign KEGG compound identifiers to observed peaks.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3755
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: structured-data-element-checking
 description: Use when you have generated or received a mass spectrometry data file in a structured format (e.g., mzPeak, Parquet-based archive) and need to verify it conforms to the published specification before use in analysis pipelines, sharing with collaborators, or publishing.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: spectral-metadata-standardization
 description: Use when you have mass spectrometry spectra stored across multiple, disparate metabolomics repositories (GNPS, MassBank, MetaboLights, Metabolomics Workbench, ProteoXchange, MS2LDA) and need to retrieve them using a single identifier scheme, or you are publishing spectrum figures and need.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

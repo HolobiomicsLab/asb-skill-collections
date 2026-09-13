@@ -3,6 +3,7 @@ name: computational-resource-profiling-and-benchmarking
 description: Use when when evaluating a new or updated version of a data processing tool (especially asari or similar LC-MS workflows) before production deployment, or when verifying claims about scalability, memory efficiency, or throughput on specific hardware classes (e.g., ≤16 GB RAM single-core systems).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -45,6 +46,7 @@ attribution:
 
 # computational-resource-profiling-and-benchmarking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically measure and characterize wall-clock runtime and peak memory consumption of a metabolomics processing tool across increasing sample cohort sizes to verify scalability claims and establish throughput benchmarks on target hardware. This skill validates whether software meets claimed performance targets for laptop-class and cloud deployments.

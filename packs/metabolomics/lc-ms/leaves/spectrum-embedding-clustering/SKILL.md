@@ -3,6 +3,7 @@ name: spectrum-embedding-clustering
 description: Use when after embedding MS/MS spectra into 32-dimensional GLEAMS vectors, when you need to group spectra by the same peptide origin.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

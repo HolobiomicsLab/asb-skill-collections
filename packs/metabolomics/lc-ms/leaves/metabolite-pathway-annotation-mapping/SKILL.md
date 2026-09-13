@@ -3,6 +3,7 @@ name: metabolite-pathway-annotation-mapping
 description: Use when after peak detection and statistical association or classification analysis has identified a set of significant peaks, use this skill when you need to move from individual feature-level results (peak intensities, p-values, importance scores) to functional biological interpretation via.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3501
   edam_topics:
   - http://edamontology.org/topic_0602

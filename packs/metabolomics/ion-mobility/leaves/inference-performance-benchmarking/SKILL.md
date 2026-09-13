@@ -3,6 +3,7 @@ name: inference-performance-benchmarking
 description: Use when you have trained two or more graph neural network models on the same CCS dataset split (using identical hyperparameters, loss functions, and optimization settings) and need to rigorously compare their held-out test performance to determine which architecture balances prediction accuracy.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_3372

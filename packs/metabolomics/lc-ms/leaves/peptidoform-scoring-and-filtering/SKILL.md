@@ -3,6 +3,7 @@ name: peptidoform-scoring-and-filtering
 description: Use when after a transformer-based de novo sequencing model (such as Casanovo) generates candidate peptide sequences from MS/MS spectra, before exporting results or using them in database matching or visualization workflows.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121

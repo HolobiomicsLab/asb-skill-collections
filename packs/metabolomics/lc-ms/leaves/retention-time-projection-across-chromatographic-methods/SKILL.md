@@ -3,6 +3,7 @@ name: retention-time-projection-across-chromatographic-methods
 description: Use when when you have retention times measured on one chromatographic method and need to predict or map them to another method with minimal or no overlap in measured molecules.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -41,6 +42,7 @@ attribution:
 
 # retention-time-projection-across-chromatographic-methods
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Project retention times between different chromatographic methods using a Bayesian meta-learning approach that learns a mapping from minimal calibration data (as few as 10 molecules) to a pre-trained DNN's latent feature space. This enables metabolite annotation and cross-method RT prediction with competitive accuracy relative to larger calibration sets.

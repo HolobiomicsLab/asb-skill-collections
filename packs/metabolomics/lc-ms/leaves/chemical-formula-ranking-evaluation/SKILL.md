@@ -3,6 +3,7 @@ name: chemical-formula-ranking-evaluation
 description: Use when after running formula inference on a benchmark dataset with known formula and adduct ground truth (e.g., NPLIB1, NIST20, or CASMI 2022). Apply this skill when you need to quantify ranking performance, isolate the contribution of specific model features (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0121

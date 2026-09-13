@@ -3,6 +3,7 @@ name: module-import-testing
 description: Use when releasing a new version of a Python package, validating packaging infrastructure changes, or confirming that distribution channels (PyPI, Bioconda) remain functional after upstream updates. Use it as a gate before finalizing a release to catch installation or import breakage early.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_0091

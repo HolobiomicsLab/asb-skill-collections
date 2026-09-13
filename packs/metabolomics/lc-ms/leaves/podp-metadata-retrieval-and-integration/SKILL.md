@@ -3,6 +3,7 @@ name: podp-metadata-retrieval-and-integration
 description: Use when when running NPLinker in PODP mode (as opposed to local mode), you need to fetch and validate project metadata from PODP, orchestrate downloads of GNPS molecular networking data, AntiSMASH BGC predictions, BigScape clustering results, and MIBiG reference metadata, then organize them into.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

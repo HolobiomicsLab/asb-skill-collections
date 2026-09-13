@@ -3,6 +3,7 @@ name: peptide-spectrum-representation-learning
 description: Use when you have a collection of MS/MS spectra (in mzML or MGF format) and need to group or compare spectra from the same peptide without prior sequence annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: modification-notation-interpretation
 description: Use when you have a ProForma 2.0 peptidoform string (e.g., DLTDYLM[Oxidation]K) and need to extract the underlying peptide sequence and map modification positions to enable fragment ion annotation, mass calculation, or spectral matching.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_0121

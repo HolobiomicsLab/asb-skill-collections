@@ -3,6 +3,7 @@ name: receiver-operator-characteristic-curve-generation
 description: Use when when you have computed similarity scores (cosine, modified cosine, Spec2Vec, or other metrics) between a set of query spectra and a reference library with known structural annotations (InChIKey), and you need to evaluate how well each scoring method distinguishes true structural matches.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0091

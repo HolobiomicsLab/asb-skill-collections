@@ -3,6 +3,7 @@ name: msi-peak-intensity-extraction
 description: Use when you have MSI intensity data exported from commercial software (MSiReader, SCiLS) or Cardinal processing pipelines as plain-text CSV files or Cardinal MSProcessedImagingExperiment/MSContinuousImagingExperiment objects, and you need to prepare it for mass-difference tabulation and adduct.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3439
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: spectral-cluster-connectivity-assessment
 description: Use when after running spectral networking on tandem MS data and obtaining a network graph, when you need to assess which spectra cluster together, determine cluster representatives, and propagate RiPP identifications across clusters at distance 1 or 2 to enlarge the set of identified RiPPs beyond.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0226
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: categorical-numerical-feature-concatenation-for-graphs
 description: 'Use when when preparing heterogeneous column-metadata inputs for a graph transformer model that operates on molecular graphs. Specifically: (1) you have both categorical metadata (e.'
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3407
@@ -45,6 +46,7 @@ attribution:
 
 # categorical-numerical-feature-concatenation-for-graphs
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Encode mixed categorical and numerical HPLC column parameters into a unified feature vector for input to graph transformer models by one-hot encoding categorical attributes (company, USP, solvents, HPLC type) and normalizing numerical features (length, temperature, pH, particle size, dead time, physicochemical parameters) before concatenation. This skill bridges domain-specific chromatographic metadata and graph neural network architectures for retention-time prediction.

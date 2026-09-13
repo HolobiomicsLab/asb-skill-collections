@@ -3,6 +3,7 @@ name: ms-ms-spectral-library-matching
 description: Use when you have experimental MS/MS spectra from nontargeted metabolomics data and need to assign molecular identities or identify structurally related analogs.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -53,6 +54,7 @@ attribution:
 
 # ms-ms-spectral-library-matching
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Annotate experimental MS/MS spectra by matching them against a reference spectral library using both identity search (exact or high-confidence matches) and fuzzy/analog search (similarity-based matching for structurally related compounds). This skill disambiguates unknown metabolites by leveraging known fragmentation patterns.

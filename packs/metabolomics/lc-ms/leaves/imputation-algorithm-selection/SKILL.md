@@ -3,6 +3,7 @@ name: imputation-algorithm-selection
 description: Use when you have a metabolomics dataset with left-censored missing values (e.g., below limit of quantification in LC/MS or GC/MS) and need to evaluate multiple imputation approaches.
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -45,6 +46,7 @@ attribution:
 
 # imputation-algorithm-selection
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Select and dispatch missing-value matrices to appropriate MNAR imputation methods (GSimp, QRILC, kNN-TN) based on data characteristics and missingness mechanism. This skill routes preprocessed metabolomics data through method-specific wrapper functions to produce algorithm-specific imputed matrices for downstream comparison and evaluation.

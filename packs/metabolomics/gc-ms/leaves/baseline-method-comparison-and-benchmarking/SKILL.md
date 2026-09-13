@@ -3,6 +3,7 @@ name: baseline-method-comparison-and-benchmarking
 description: Use when you have developed or adapted an analytical method (e.g., NPFimg for GC–MS marker identification) and need to demonstrate its reliability or improved performance over a widely-used reference method (e.g., XCMS). Apply this skill when you have access to both the same raw input data (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -47,6 +48,7 @@ attribution:
 
 # baseline-method-comparison-and-benchmarking
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantitatively compare a novel analytical method against an established baseline tool by computing error metrics on the same input dataset, enabling objective evaluation of performance improvements in signal detection and feature identification. This skill is essential for validating whether new approaches reduce false positives, false negatives, or other systematic errors relative to conventional pipelines.

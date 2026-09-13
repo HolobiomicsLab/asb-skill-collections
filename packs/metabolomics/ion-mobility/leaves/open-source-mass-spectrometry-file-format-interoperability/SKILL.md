@@ -3,6 +3,7 @@ name: open-source-mass-spectrometry-file-format-interoperability
 description: Use when when working with Bruker .d/.baf mass spectrometry imaging data and needing to feed it into MSIGen or other open-source MSI processing pipelines.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520

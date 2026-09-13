@@ -3,6 +3,7 @@ name: separation-efficiency-calculation-from-retention-times
 description: Use when you have extracted retention times from MS1 spectra for top signals in a single LC-MS/MS run and need to evaluate whether that gradient's separation performance is sufficient, or when you are building the objective function for an iterative gradient optimization loop where each candidate.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -51,6 +52,7 @@ attribution:
 
 # separation-efficiency-calculation-from-retention-times
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Computes a scalar metric of LC gradient performance by quantifying compound separation efficiency across retention times detected in MS1 data. This metric serves as the objective function in Bayesian optimization to iteratively identify optimal LC gradients for untargeted MS analysis.

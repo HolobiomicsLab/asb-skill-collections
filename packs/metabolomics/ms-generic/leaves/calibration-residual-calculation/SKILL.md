@@ -3,6 +3,7 @@ name: calibration-residual-calculation
 description: Use when after a mass spectrum has been matched against a reference m/z file (e.g., SRFA.ref) and a sufficient number of calibration points (≥5) have been identified within a given PPM tolerance window.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121

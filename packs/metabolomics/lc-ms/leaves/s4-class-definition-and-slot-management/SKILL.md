@@ -3,6 +3,7 @@ name: s4-class-definition-and-slot-management
 description: 'Use when you are extending the MsBackend virtual class to create a new backend for storing MS spectra data and need to define the internal data structure. Specifically: when you have multiple types of spectra variables (e.'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3088
   edam_topics:
   - http://edamontology.org/topic_3520

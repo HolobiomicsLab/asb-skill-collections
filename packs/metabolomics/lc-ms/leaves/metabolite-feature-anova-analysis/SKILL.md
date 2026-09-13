@@ -3,6 +3,7 @@ name: metabolite-feature-anova-analysis
 description: Use when you have normalized abundance data from LC-MS/MS for multiple samples classified into three or more discrete groups (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3172

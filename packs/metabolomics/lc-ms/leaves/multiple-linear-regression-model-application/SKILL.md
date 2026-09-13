@@ -3,6 +3,7 @@ name: multiple-linear-regression-model-application
 description: Use when when you have an observed m/z value from mass spectrometry imaging and need to annotate it with a ranked list of candidate chemical formulae. Apply this skill when the KnownSet database (2.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3860
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -41,6 +42,7 @@ attribution:
 
 # multiple-linear-regression-model-application
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply a multiple linear regression model to extract formula networks from a KnownSet database for a given m/z value and score candidate formulae by combining evidence from linked formulae, DBEdges/BioEdges connectivity, and mass accuracy (PPM). This skill is used in spatially-resolved metabolomics to assign chemical formulae to observed mass-to-charge ratios with quantified confidence.

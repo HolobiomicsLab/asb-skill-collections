@@ -3,6 +3,7 @@ name: cross-domain-token-mapping
 description: Use when when building a unified sequence model (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_0599
@@ -39,6 +40,7 @@ attribution:
 
 # cross-domain-token-mapping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Construct a unified token vocabulary that bridges mass spectra and molecular structures, enabling a single language model to jointly encode and decode both spectral peak data (m/z values, intensities) and chemical structures (SMILES or graph tokens). This skill is essential for end-to-end pretraining and fine-tuning in multimodal chemistry models.

@@ -3,6 +3,7 @@ name: peak-table-filtering-metabolomics
 description: Use when after generating a peak table from XCMS peakTable() output in an untargeted LC-MS metabolomics workflow, if your experimental design includes quality control (QC) samples (SampleType='LQC') and you want to exclude noisy or unstable EICs before building a peak quality classifier.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -47,6 +48,7 @@ attribution:
 
 # peak-table-filtering-metabolomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Filter extracted ion chromatograms (EICs) from XCMS peak tables by relative standard deviation (RSD) in quality control samples prior to peak quality metric calculation and machine learning classifier training. This optional preprocessing step removes EICs with excessive variability in replicate QC injections, improving downstream peak quality assessment.

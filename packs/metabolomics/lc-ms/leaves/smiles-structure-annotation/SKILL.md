@@ -3,6 +3,7 @@ name: smiles-structure-annotation
 description: Use when you have LC–QTOF mass spectra from real environmental or biological samples (e.g., wastewater, complex mixtures) and need to assign molecular structures to spectra where traditional library matching fails or reference compounds are unavailable.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0199

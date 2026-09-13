@@ -3,6 +3,7 @@ name: chemical-coverage-optimization
 description: Use when your LC-MS feature table is incomplete or has low chemical coverage because traditional peak extraction algorithms (e.g., standard XCMS workflows) systematically miss features at m/z and retention time positions corresponding to known suspect compounds in your database.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_0091

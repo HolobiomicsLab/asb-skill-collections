@@ -3,6 +3,7 @@ name: ionization-mode-and-column-mode-separation
 description: Use when your LC-MS peak table from MS-DIAL or similar software contains data from multiple ionization modes (positive and/or negative) and/or multiple chromatographic columns (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -51,6 +52,7 @@ attribution:
 
 # Ionization Mode and Column Mode Separation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Separates LC-MS peak table data by chromatographic column and ionization mode (e.g., positive/negative ESI) to create mode-specific MetaboSet objects, enabling independent preprocessing and later integration of multimodal data. This is a prerequisite step in the notame workflow to preserve mode-specific feature identities and quality metrics.

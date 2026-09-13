@@ -3,6 +3,7 @@ name: ei-mass-spectrum-simulation
 description: Use when when you have a molecular structure (XYZ or equivalent format) and need to predict its EI mass spectrum including major fragment ions and their relative intensities, particularly for validation against experimental data or when experimental spectra are unavailable;
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3860
   edam_topics:
   - http://edamontology.org/topic_0154

@@ -3,6 +3,7 @@ name: scan-window-routing-mass-spectrometry
 description: Use when when processing LC-MS data with multiple overlapping m/z scan windows and observing sawtooth-pattern distortions in EICs during tardisPeaks() execution.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0121

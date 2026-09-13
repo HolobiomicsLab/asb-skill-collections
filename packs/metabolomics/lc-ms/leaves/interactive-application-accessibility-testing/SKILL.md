@@ -3,6 +3,7 @@ name: interactive-application-accessibility-testing
 description: Use when after instantiating a specXplore dashboard session layer with a loaded session data object from disk, before conducting visual exploration of LC-MS/MS spectral data.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: fragmentation-pattern-annotation
 description: Use when when you have an experimental MS/MS spectrum (query spectrum as m/z–intensity pairs) and need to identify the compound by comparing its fragmentation pattern to a spectral library.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3860
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -47,6 +48,7 @@ attribution:
 
 # fragmentation-pattern-annotation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Annotate unknown MS/MS spectra by matching their fragmentation patterns (m/z and intensity pairs) against spectral libraries using similarity scoring algorithms. This enables compound identification in metabolomics and pharmaceutical screening when spectra are matched to reference libraries with known metadata.

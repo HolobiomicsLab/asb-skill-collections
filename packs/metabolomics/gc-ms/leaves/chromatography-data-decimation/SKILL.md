@@ -3,6 +3,7 @@ name: chromatography-data-decimation
 description: Use when working with large GCIMS matrices where computational speed or memory constraints are a concern, after filtering retention time (e.g., 0–1100 s) and drift time (e.g., 5–16 ms) ranges and applying Savitzky-Golay smoothing. Use it as a preprocessing step before alignment operations.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3565
   edam_topics:
   - http://edamontology.org/topic_3520

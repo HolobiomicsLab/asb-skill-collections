@@ -3,6 +3,7 @@ name: entropy-search-algorithm-implementation
 description: Use when you need to search one or more query MS/MS spectra against large spectral libraries (hundreds of thousands to millions of spectra) and require real-time or near-real-time compound identification.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

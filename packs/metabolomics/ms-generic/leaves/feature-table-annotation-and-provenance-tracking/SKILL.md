@@ -3,6 +3,7 @@ name: feature-table-annotation-and-provenance-tracking
 description: Use when after generating a filtered feature table from raw mass spectrometry data in openNAU.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

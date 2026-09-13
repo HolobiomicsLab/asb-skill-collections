@@ -3,6 +3,7 @@ name: retention-time-alignment-scoring
 description: Use when after feature m/z grouping and pairwise alignment detection have identified candidate feature pairs, and anchor points have been selected to establish retention time correspondence.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0121

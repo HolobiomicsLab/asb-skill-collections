@@ -3,6 +3,7 @@ name: formula-deduplication-and-counting
 description: Use when when you have loaded a chemical database (e.g., HMDB pickle file) and need to understand how many distinct molecular formulas remain after filtering for a specific m/z range (e.g., 100–1000) and MS acquisition level (typically MS level 1).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3439
   edam_topics:
   - http://edamontology.org/topic_3172

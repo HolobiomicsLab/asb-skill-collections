@@ -3,6 +3,7 @@ name: msbackend-api-implementation
 description: Use when you need to create a new backend to integrate MS data from a novel file format, database, or in-memory storage system into the Spectra ecosystem. Use this skill when existing backends (MsBackendMemory, MsBackendMzR, MsBackendSql, etc.) do not support your data source or storage paradigm.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520

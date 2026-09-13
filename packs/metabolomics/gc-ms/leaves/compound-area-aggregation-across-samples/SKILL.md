@@ -3,6 +3,7 @@ name: compound-area-aggregation-across-samples
 description: Use when you have a GC-MS dataset with multiple sample files (e.g., Std_soln_00, Std_soln_07, Std_soln_00a) where the same chemical is detected in different runs with varying Match.Factor scores, and you need to consolidate area values by compound identity rather than by individual peak detection.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_0091

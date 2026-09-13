@@ -3,6 +3,7 @@ name: xcms-data-import-preprocessing
 description: Use when you have raw LC-MS or GC-MS data files from a mass spectrometer (in mzML, NetCDF, or mzXML format) and need to detect chromatographic peaks, correct m/z bias via mass calibration (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0121

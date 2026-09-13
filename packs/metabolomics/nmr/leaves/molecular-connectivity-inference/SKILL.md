@@ -3,6 +3,7 @@ name: molecular-connectivity-inference
 description: Use when you have 1D ¹H and/or ¹³C NMR spectra (as preprocessed numerical arrays or peak lists) from an unknown organic molecule with ≤19 heavy atoms, and you need to recover its molecular formula and connectivity graph.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0154

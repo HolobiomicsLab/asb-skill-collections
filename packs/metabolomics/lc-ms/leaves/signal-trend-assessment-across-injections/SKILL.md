@@ -3,6 +3,7 @@ name: signal-trend-assessment-across-injections
 description: Use when you have QCpool (pooled quality control) samples measured at regular intervals across one or more LC-MS/MS sequences and need to detect whether instrument performance degrades, drifts, or destabilizes during the analytical run.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0091

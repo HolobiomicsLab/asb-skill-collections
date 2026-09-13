@@ -3,6 +3,7 @@ name: cross-language-function-invocation-and-validation
 description: Use when your R-based Spectra analysis workflow requires a specific mass spectrometry algorithm (e.g., CosineGreedy similarity scoring, spectral normalization, or advanced filtering) that is available only in a Python MS package (matchms, spectrum_utils) and not yet in native R.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0121

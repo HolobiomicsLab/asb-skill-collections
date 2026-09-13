@@ -3,6 +3,7 @@ name: mass-spectrometry-data-processing
 description: Use when you have raw mass spectrometry data in vendor-specific formats (Thermo RAW, Waters RAW, or open formats like mzML/jcamp) that need to be ingested, validated, and converted to a standardized representation for downstream peak detection, quantification, or integration with other NMR/IR/MS.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121

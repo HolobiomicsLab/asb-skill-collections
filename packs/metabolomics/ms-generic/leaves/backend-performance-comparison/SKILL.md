@@ -3,6 +3,7 @@ name: backend-performance-comparison
 description: Use when you have execution-time metrics (from a benchmark table or profiling logs) across multiple visualization backends for the same set of plots (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_0121

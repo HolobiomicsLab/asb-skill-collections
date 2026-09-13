@@ -3,6 +3,7 @@ name: publication-figure-preparation
 description: Use when you have a mass spectrometry spectrum from a supported repository (GNPS, MassBank, MetaboLights, Metabolomics Workbench, ProteoXchange, MS2LDA, or MassIVE) and need to include it in a publication or supplementary material.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3172

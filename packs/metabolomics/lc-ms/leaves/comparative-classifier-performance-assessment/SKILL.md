@@ -3,6 +3,7 @@ name: comparative-classifier-performance-assessment
 description: Use when you have a labeled peak quality dataset (development set with ground-truth pass/fail labels), a defined set of peak-quality metrics (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3502
   edam_topics:
   - http://edamontology.org/topic_3394
@@ -51,6 +52,7 @@ attribution:
 
 # Comparative Classifier Performance Assessment
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Systematically train and rank multiple machine learning algorithms on the same peak-quality assessment task using k-fold cross-validation with statistical ranking plots to identify the best-performing classifier. This skill applies when selecting among competing algorithms for peak quality classification in LC-MS metabolomics data.

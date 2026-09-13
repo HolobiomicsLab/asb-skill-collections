@@ -3,6 +3,7 @@ name: dda-spectrum-association-to-features
 description: Use when you have centroided DDA mzML data and have already detected MS1 features (either via pyOpenMS or external feature finding), and need to extract MS2 fragment m/z values and diagnostic patterns (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0153

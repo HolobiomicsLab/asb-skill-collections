@@ -3,6 +3,7 @@ name: column-header-keyword-matching
 description: Use when importing a new delimited data file (CSV, semicolon-separated, or other formats) into Punc'data that contains high-resolution mass spectrometry results.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520

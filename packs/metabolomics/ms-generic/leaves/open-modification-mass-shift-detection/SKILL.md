@@ -3,6 +3,7 @@ name: open-modification-mass-shift-detection
 description: Use when query mass spectra do not confidently match unmodified peptides in the spectral library, or when you suspect the sample contains unknown or unexpected post-translational modifications.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121

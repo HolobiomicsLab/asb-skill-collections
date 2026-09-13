@@ -3,6 +3,7 @@ name: mass-spectral-feature-grouping
 description: Use when you have untargeted metabolomics MS/MS spectra from multiple features and need to identify which features belong to the same molecular family or are related by biotransformation.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -41,6 +42,7 @@ attribution:
 
 # mass-spectral-feature-grouping
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Group MS features into molecular families by constructing a similarity network from MS/MS spectral data, filtering edges by similarity threshold, and applying graph-based clustering to identify connected components. This groups features that likely derive from related molecular structures or biotransformation products.

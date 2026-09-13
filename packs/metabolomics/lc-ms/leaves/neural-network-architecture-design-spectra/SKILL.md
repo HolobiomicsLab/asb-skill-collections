@@ -3,6 +3,7 @@ name: neural-network-architecture-design-spectra
 description: Use when you have preprocessed MS/MS spectra pairs (unknown and known metabolites) with annotated structural similarity labels, and you need to learn a generalizable model that can rank candidate structures for novel unknowns by predicting their similarity to reference compounds in a database.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3520

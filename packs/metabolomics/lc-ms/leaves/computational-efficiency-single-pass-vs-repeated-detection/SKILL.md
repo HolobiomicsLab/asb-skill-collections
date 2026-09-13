@@ -3,6 +3,7 @@ name: computational-efficiency-single-pass-vs-repeated-detection
 description: 'Use when when processing aligned LC-MS data across multiple samples where the computational bottleneck is repeated peak-detection algorithm calls (one per sample per m/z value). Typical scenario: >10 samples with >1000 m/z values each, where N individual find_peaks invocations dominate runtime.'
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -48,6 +49,7 @@ attribution:
 
 # computational-efficiency-single-pass-vs-repeated-detection
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Replace per-sample peak detection with single-pass detection on a composite mass track (summed intensities across all samples) to reduce scipy.signal.find_peaks invocations from N to 1, dramatically improving computational scalability in untargeted LC-MS metabolomics without sacrificing peak quality metrics.

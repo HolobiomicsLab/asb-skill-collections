@@ -3,6 +3,7 @@ name: mass-tolerance-filtering
 description: Use when when you have observed fragment peak m/z values from tandem mass spectra and need to assign chemical subformulae to them.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3520

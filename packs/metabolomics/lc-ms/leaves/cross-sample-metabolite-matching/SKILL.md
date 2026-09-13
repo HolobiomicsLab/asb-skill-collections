@@ -3,6 +3,7 @@ name: cross-sample-metabolite-matching
 description: Use when after feature extraction (MS1 peak picking, MS2 recognition, or targeted list extraction) from multiple individual samples and before annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_0121

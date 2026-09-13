@@ -3,6 +3,7 @@ name: isotopic-envelope-calculation
 description: Use when when you have one or more peptide sequences (as strings) and need to predict their theoretical isotopic distribution for comparison against experimental MS peaks, validation of mass calibration, or simulation of expected peptide signals in a mass spectrometry assay.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

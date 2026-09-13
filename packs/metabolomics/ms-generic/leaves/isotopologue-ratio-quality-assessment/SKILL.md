@@ -3,6 +3,7 @@ name: isotopologue-ratio-quality-assessment
 description: Use when evaluating the reliability of non-targeted data pre-processing (NPP) tools (XCMS, MZmine 2, MS-DIAL, etc.) on known metabolite peaks.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

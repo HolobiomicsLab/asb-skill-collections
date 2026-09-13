@@ -3,6 +3,7 @@ name: filter-output-interpretation
 description: Use when after applying a filter function (filter_mispicked_ions(), filter_group(), filter_cv(), filter_insource_ions()) to an mpactr object, use this skill to inspect and document which features were retained versus removed.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

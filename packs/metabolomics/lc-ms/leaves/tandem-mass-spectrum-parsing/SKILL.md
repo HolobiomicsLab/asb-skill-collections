@@ -3,6 +3,7 @@ name: tandem-mass-spectrum-parsing
 description: Use when when you have raw or instrument-native tandem mass spectrometry data (MS/MS) in formats such as mzML, mzXML, or proprietary binary formats, and you need to align, match, or compare spectra using methods like SIMILE that require structured access to precursor m/z, fragment m/z values, and.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0121

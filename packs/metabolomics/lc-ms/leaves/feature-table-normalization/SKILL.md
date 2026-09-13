@@ -3,6 +3,7 @@ name: feature-table-normalization
 description: Use when you have peak/feature tables from one or more peak picking tools (MZmine, XCMS, MS-DIAL, Compound Discoverer) and need to ingest them into LipidMatch or combine results from multiple tools in a single lipidomics workflow.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

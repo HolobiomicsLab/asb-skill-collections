@@ -3,6 +3,7 @@ name: resolver-url-construction
 description: Use when when you have a USI string (comprising dataset identifier, spectrum index, and optional library reference) and need to generate a stable, machine-readable link that resolves to interactive spectrum visualization or programmatic access.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0337
   edam_topics:
   - http://edamontology.org/topic_3520

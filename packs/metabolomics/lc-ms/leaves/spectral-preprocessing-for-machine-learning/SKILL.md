@@ -3,6 +3,7 @@ name: spectral-preprocessing-for-machine-learning
 description: Use when when preparing raw MS2 spectra (m/z and intensity pairs) for kernel-based scoring methods such as IOKR, especially when the training dataset is large and represents diverse ion types.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

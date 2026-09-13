@@ -3,6 +3,7 @@ name: detection-network-output-parsing
 description: Use when you have raw LC-MS data in mzML format with regions of interest (ROI) already identified, and a trained detection model (e.g., checkpoint0029.pth) has produced bounding box predictions with confidence scores.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: high-resolution-mass-spectrometry-data-processing
 description: Use when you have uploaded a delimited data file (CSV, TSV, or semicolon-separated) containing at least m/z values and intensity columns from HRMS analysis of a complex sample, and you need to (1) verify that column keywords are correctly recognized, (2) compute derived metrics such as Normalized.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3520

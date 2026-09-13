@@ -3,6 +3,7 @@ name: top-k-accuracy-ranking-and-evaluation
 description: Use when a machine learning model produces multiple ranked predictions (each with an associated confidence score) for a single input, and you need to quantify how often the correct answer appears in the top-k predictions.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0154

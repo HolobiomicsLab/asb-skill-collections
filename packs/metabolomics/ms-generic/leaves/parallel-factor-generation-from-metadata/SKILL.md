@@ -3,6 +3,7 @@ name: parallel-factor-generation-from-metadata
 description: Use when when you have a Spectra object backed by an on-disk MS data source (e.g., MsBackendMzR reading mzML, mzXML, or CDF files) and need to process large numbers of spectra in parallel or serial chunks.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_3520

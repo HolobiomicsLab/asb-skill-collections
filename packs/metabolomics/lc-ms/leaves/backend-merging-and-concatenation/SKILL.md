@@ -3,6 +3,7 @@ name: backend-merging-and-concatenation
 description: Use when when you have two or more MsBackend objects (e.g., multiple MsBackendMemory, MsBackendDataFrame, or MsBackendMzR instances) containing distinct sets of MS spectra and you need to consolidate them into a single backend for downstream analysis, parallel processing, or export.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3364
   edam_topics:
   - http://edamontology.org/topic_3520

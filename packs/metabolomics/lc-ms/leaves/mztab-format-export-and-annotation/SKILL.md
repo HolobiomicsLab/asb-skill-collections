@@ -3,6 +3,7 @@ name: mztab-format-export-and-annotation
 description: Use when after Casanovo has generated ranked peptide sequence predictions from MS/MS spectra and you need to persist, share, or integrate the results into a proteomics data management or visualization pipeline.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3765
   edam_topics:
   - http://edamontology.org/topic_0121

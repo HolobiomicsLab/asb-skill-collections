@@ -3,6 +3,7 @@ name: mass-spectrometry-imaging-vendor-format-support
 description: Use when your input mass spectrometry imaging data is in a proprietary vendor format (Bruker .d/.baf, or other binary formats not natively supported by MSIGen) and you need to convert it to an open, readable format (mzML or processed binary) compatible with MSIGen's msigen() function.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: feedforward-neural-network-architecture-design
 description: Use when you have preprocessed molecular structures as fixed-length feature vectors and need to establish a fair-comparison baseline model for tandem mass spectrum prediction.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3656
   edam_topics:
   - http://edamontology.org/topic_0592

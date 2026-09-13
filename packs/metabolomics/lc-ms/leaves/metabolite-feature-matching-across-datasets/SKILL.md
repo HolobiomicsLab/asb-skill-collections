@@ -3,6 +3,7 @@ name: metabolite-feature-matching-across-datasets
 description: Use when you have two independent LC-MS untargeted metabolomic feature tables (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_0121

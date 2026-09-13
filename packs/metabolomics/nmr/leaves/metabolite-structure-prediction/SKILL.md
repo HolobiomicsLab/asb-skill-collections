@@ -3,6 +3,7 @@ name: metabolite-structure-prediction
 description: Use when you have a parent compound (or set of compounds) in SMILES, MOL, or SDF format and need to predict plausible metabolite structures and pathways in a specific biological context (mammalian Phase I/II metabolism, human gut microbiota, or soil/aquatic microbial degradation).
 license: CC-BY-4.0
 metadata:
+  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3803
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -42,6 +43,7 @@ attribution:
 
 # metabolite-structure-prediction
 
+> **License: noncommercial** — confirm your use is a permitted (noncommercial) purpose before applying; commercial use requires a separate license (see `metadata.tool_license`). <!-- asb-license-banner -->
 ## Summary
 
 Predict small molecule metabolite structures across mammalian, gut microbial, and environmental microbial systems using BioTransformer's biotransformation rules and reaction templates. This skill enables scientists to generate candidate metabolite identities and metabolic pathways from parent compounds, supporting both exploratory metabolism studies and targeted metabolite identification workflows.

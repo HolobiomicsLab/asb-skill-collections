@@ -3,6 +3,7 @@ name: spectral-noise-filtering-and-artifact-removal
 description: Use when you have raw MS/MS spectra in supported formats (.mgf, .mzML, or .msp) containing both chemical signal and experimental noise, prior to structural motif discovery via topic modeling.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3520

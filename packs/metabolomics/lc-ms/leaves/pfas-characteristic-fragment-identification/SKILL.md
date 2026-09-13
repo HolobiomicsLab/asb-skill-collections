@@ -3,6 +3,7 @@ name: pfas-characteristic-fragment-identification
 description: Use when you have centroided data-dependent acquisition (ddMS2) mzML spectra from LC- or GC-HRMS and need to prioritize putative PFAS features.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3647
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: spectra-data-representation-backends
 description: Use when you are creating a new backend to expose MS data (m/z, intensity, retention time, and other spectral properties) from a specific storage format or data source (e.g., mzML files, SQL databases, in-memory matrices, or spectral libraries) to Spectra objects.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3945
   edam_topics:
   - http://edamontology.org/topic_3520

@@ -3,6 +3,7 @@ name: conformer-ensemble-generation-via-crest
 description: Use when you have a molecular geometry (XYZ format) and need to explore its conformational space prior to quantum mechanical property calculation or when QCxMS2 workflow requires an ensemble of low-energy structures to enable systematic fragmentation pathways for EI mass spectrum simulation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0360
   edam_topics:
   - http://edamontology.org/topic_3314

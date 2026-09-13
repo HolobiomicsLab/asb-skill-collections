@@ -3,6 +3,7 @@ name: mass2motif-network-construction
 description: Use when after MS2LDA has inferred a motifset and you need to visualize and export the relationships between discovered Mass2Motifs for post-processing exploration, comparative annotation, or integration with external tools. Use this skill when you have motifset.json or motifset_optimized.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3083
   edam_topics:
   - http://edamontology.org/topic_0593

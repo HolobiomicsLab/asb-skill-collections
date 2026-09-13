@@ -3,6 +3,7 @@ name: isf-relationship-tree-construction
 description: Use when after completing ISFrag Part 4 (Identification of ISF Features) when you have a validated feature table with identified ISF features and need to visualize or export the hierarchical fragmentation structure linking parent ions to their in-source fragments.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_3520

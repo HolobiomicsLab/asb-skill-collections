@@ -3,6 +3,7 @@ name: spectral-noise-filtering-and-quality-control
 description: Use when you have raw MS/MS spectra in multiple formats (.mgf, .msp, .mzML) that contain background noise, instrument artifacts, or low-abundance fragments that would degrade downstream LDA motif discovery.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121

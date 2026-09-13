@@ -3,6 +3,7 @@ name: gcf-mf-link-scoring
 description: Use when after BGC detection and clustering (producing GCFs) and metabolomics profiling (producing MFs with MS/MS spectra), when you have paired genomic and metabolomic data from the same microbial strains and need to rank which GCF–MF pairs are likely to represent true biosynthetic relationships.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3697

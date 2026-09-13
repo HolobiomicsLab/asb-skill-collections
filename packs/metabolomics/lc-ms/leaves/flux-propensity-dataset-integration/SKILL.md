@@ -3,6 +3,7 @@ name: flux-propensity-dataset-integration
 description: Use when when you have (1) LC-MS normalized intracellular metabolite abundance data across multiple cell lines or samples, (2) a constraint-based metabolic model with stoichiometric coefficients, and (3) a need to quantify metabolic control through substrate availability independently of enzymatic.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0602

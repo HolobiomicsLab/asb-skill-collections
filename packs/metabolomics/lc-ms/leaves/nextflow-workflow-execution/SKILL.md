@@ -3,6 +3,7 @@ name: nextflow-workflow-execution
 description: Use when you have .mzML or .abf LC-HRMS metabolomics raw data files and need to perform peak detection, feature identification, and chromatogram alignment reproducibly across different compute environments (local workstations, HPC clusters).
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -57,6 +58,7 @@ attribution:
 
 # nextflow-workflow-execution
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Execute a containerized Nextflow workflow for LC-HRMS metabolomics data processing using Docker or Singularity backends. This skill orchestrates sequential MS-DIAL and MSFLO processing of .mzML input files within a reproducible, version-controlled pipeline environment.

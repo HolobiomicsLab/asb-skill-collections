@@ -3,6 +3,7 @@ name: aromaticity-index-computation
 description: Use when after molecular formula assignment from FT-ICR MS peaks and elemental composition tabulation (C, H, O, N, S, P counts), when you need to quantify the degree of aromaticity and carbon-skeleton unsaturation for each detected compound to support Van Krevelen classification, chemodiversity.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172

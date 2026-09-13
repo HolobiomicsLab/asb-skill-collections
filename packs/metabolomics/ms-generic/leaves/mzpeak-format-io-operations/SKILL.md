@@ -3,6 +3,7 @@ name: mzpeak-format-io-operations
 description: Use when you have mass spectrometry run data (spectra, chromatograms, instrument metadata) that must be stored in or recovered from the mzPeak format, or when you need to validate that a mzPeak implementation correctly supports both read and write paths for round-trip fidelity.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_0121

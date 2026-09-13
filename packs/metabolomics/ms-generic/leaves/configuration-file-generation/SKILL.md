@@ -3,6 +3,7 @@ name: configuration-file-generation
 description: Use when you need to set up a LipoCLEAN analysis for MS-DIAL lipid identifications and do not yet have a configuration file, or you are switching between MS-DIAL versions 4 and 5 and need version-specific parameter defaults (e.g., column names and scaling factors that differ between versions).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0121

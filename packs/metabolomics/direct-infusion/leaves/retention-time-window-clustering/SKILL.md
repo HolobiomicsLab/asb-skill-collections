@@ -3,6 +3,7 @@ name: retention-time-window-clustering
 description: Use when after filtering LC-MS features by statistical significance (e.g., p-value < 0.01) and you need to link individual m/z features into structural clusters representing the same metabolite in different ionization states or isotopic forms.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121

@@ -3,6 +3,7 @@ name: chemical-classification-scheme-validation
 description: Use when you have structural annotations from in silico tools (SIRIUS, CANOPUS) and spectral library matches from GNPS, but need to (1) reconcile conflicting or incomplete ClassyFire ontology assignments, or (2) substitute NPClassifier taxonomy when ClassyFire ontology data is unavailable from GNPS.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_0154

@@ -3,6 +3,7 @@ name: metabolite-annotation-validation
 description: Use when after running in silico annotation tools (SIRIUS, ISDB) or spectral library matching on your feature table, when you need to retain only annotations meeting a minimum confidence threshold.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

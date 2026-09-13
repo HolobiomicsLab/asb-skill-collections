@@ -3,6 +3,7 @@ name: cytoscape-edge-node-file-formatting
 description: Use when after computing pairwise mass-difference transformations between FT-ICR MS peaks and matching them to a reference biochemical transformation key, you have putative edge data (source peak, target peak, transformation type, mass error) and node data (peaks with m/z, molecular formula.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0602

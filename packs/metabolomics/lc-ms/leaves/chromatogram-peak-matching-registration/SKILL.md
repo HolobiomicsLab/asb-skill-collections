@@ -3,6 +3,7 @@ name: chromatogram-peak-matching-registration
 description: Use when you have multiple LC-MS samples in mzML or mzXML format with variable retention times, at least one designated as a quality control (QC) reference file, and you need to correct for RT drift before peak/feature detection.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172

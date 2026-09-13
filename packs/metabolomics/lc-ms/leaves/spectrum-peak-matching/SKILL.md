@@ -3,6 +3,7 @@ name: spectrum-peak-matching
 description: Use when you have an experimental tandem mass spectrum (peaks with m/z values and intensities), a chemical formula, and a set of candidate molecular structures retrieved from a database like PubChem.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0153

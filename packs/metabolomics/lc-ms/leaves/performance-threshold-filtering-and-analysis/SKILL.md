@@ -3,6 +3,7 @@ name: performance-threshold-filtering-and-analysis
 description: Use when when a trained model produces probabilistic or ensemble predictions and you need to achieve a specific target accuracy metric (e.g., RMSE ≤ 0.1) or minimize error on a test set, but the unfiltered model does not meet that target.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3372

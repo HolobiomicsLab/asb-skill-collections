@@ -3,6 +3,7 @@ name: small-molecule-chromatography-modeling
 description: Use when when you have a set of small molecule structures (as SMILES or molecular graphs) and need to predict their elution order in RPLC systems with eluent pH around 2.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3172

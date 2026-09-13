@@ -3,6 +3,7 @@ name: ion-mode-specific-ccs-model-generation
 description: Use when you have tunemix reference data acquired in both positive and negative ion modes and need to establish independent CCS calibration curves for each mode. The skill is required when downstream CCS assignments must achieve R² ≥ 0.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

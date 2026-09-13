@@ -3,6 +3,7 @@ name: mass-tolerance-optimization-hrms
 description: Use when you have experimental peak lists (m/z, retention time, intensity) from peak-picking software (MZmine, XCMS, MS-DIAL, or Compound Discoverer) and need to match them against a simulated lipid fragment library (500,000+ lipid species).
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0769

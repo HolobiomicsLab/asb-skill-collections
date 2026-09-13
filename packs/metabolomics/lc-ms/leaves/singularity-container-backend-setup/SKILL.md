@@ -3,6 +3,7 @@ name: singularity-container-backend-setup
 description: Use when your LC-HRMS metabolomics analysis must run on a high-performance computing cluster (e.g., HiPerGator, SLURM-managed systems) that lacks Docker support or prefers Singularity for security and portability. You have .mzML or .
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0121

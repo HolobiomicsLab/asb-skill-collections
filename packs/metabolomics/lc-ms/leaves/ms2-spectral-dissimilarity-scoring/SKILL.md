@@ -3,6 +3,7 @@ name: ms2-spectral-dissimilarity-scoring
 description: Use when you have MS2 fragmentation spectra from multiple metabolomics samples and need to identify samples with unusual spectral profiles that may indicate novel chemistry, independent of feature abundance or annotation status.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0091

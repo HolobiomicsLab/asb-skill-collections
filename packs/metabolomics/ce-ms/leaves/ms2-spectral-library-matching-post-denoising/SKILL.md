@@ -3,6 +3,7 @@ name: ms2-spectral-library-matching-post-denoising
 description: 'Use when after frequency-based denoising of MS/MS spectra, when you need to validate that denoising improves metabolite identifications and quantify the trade-off between signal retention and annotation confidence. Specifically: (1) you have denoised MS/MS spectra from replicate measurements;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172

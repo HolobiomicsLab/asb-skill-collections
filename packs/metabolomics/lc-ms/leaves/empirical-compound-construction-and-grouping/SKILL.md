@@ -3,6 +3,7 @@ name: empirical-compound-construction-and-grouping
 description: Use when after generating a feature table from mzML data (via Asari) and before performing MS1 or MS2 annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121

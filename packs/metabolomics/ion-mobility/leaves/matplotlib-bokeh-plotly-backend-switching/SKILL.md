@@ -3,6 +3,7 @@ name: matplotlib-bokeh-plotly-backend-switching
 description: Use when when you have mass spectrometry data (chromatograms, spectra, mobilograms, or peak maps) in a Pandas DataFrame and need to generate the same visualization in multiple formats—e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520

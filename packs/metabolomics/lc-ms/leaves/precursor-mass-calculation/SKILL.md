@@ -3,6 +3,7 @@ name: precursor-mass-calculation
 description: Use when when you have a compound's SMILES string or molecular formula and need to determine the expected precursor ion m/z for comparison against observed spectra, particularly before applying formula-based denoising, entropy similarity scoring, or denoising search against reference libraries.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0080

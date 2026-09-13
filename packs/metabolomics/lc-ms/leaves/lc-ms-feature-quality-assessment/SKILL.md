@@ -3,6 +3,7 @@ name: lc-ms-feature-quality-assessment
 description: Use when you have generated feature tables from LC-MS data using different parameter combinations (e.g., varying Centwave, FeatureFinderMetabo, or ADAP peak picking settings) and need to objectively compare their outputs to select the -performing configuration for your dataset.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0091

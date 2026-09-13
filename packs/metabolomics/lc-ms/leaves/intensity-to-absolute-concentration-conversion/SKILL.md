@@ -3,6 +3,7 @@ name: intensity-to-absolute-concentration-conversion
 description: Use when your lipidomics experiment includes spiked internal lipid standards of known concentration, and you have raw signal intensity matrices from LipidSearch or LIQUID output.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172

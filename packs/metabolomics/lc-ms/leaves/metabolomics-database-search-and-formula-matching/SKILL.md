@@ -3,6 +3,7 @@ name: metabolomics-database-search-and-formula-matching
 description: Use when after you have detected LC-MS features, grouped them into empirical compounds via isotope and adduct clustering (using khipu), and have accurate m/z and retention time values.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -50,6 +51,7 @@ attribution:
 
 # metabolomics-database-search-and-formula-matching
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Search empirical compounds (grouped isotopes and adducts) against a reference metabolite database (HMDB 4) using mass-based queries to retrieve matched molecular formulas, isomers, and chemical annotations. This skill bridges untargeted feature detection to compound identification by leveraging high-resolution m/z values and pre-annotation groupings.

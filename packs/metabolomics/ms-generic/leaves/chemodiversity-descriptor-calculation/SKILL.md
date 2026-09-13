@@ -3,6 +3,7 @@ name: chemodiversity-descriptor-calculation
 description: Use when you have a formula-assigned FT-ICR MS dataset (CSV or tab-delimited table with molecular formulas and mass values) and need to quantify the molecular chemodiversity, elemental composition diversity, or complexity of environmental organic samples for cross-sample comparison or.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0625

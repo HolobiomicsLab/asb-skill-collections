@@ -3,6 +3,7 @@ name: spectral-feature-chemical-assignment
 description: Use when you have spectral feature data annotated by both in silico structural tools (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172

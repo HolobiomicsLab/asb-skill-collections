@@ -3,6 +3,7 @@ name: multimodal-spectral-alignment-by-molecular-identifier
 description: Use when you have parsed spectral data from four distinct modalities (NMR, HSQC, COSY, IR) stored as separate numpy arrays or DataFrames with normalized chemical shifts and intensity ranges, and you need to create paired multimodal training records where each molecule's spectra across all.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_0593

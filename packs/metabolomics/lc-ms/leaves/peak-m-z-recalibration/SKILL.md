@@ -3,6 +3,7 @@ name: peak-m-z-recalibration
 description: Use when after peak detection when you have a table of detected peaks with m/z values and need to improve mass accuracy for downstream annotation.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -41,6 +42,7 @@ attribution:
 
 # peak-m/z-recalibration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Recursive mass correction refines m/z accuracy of detected LC/HRMS peaks by recalibrating their mass-to-charge coordinates using internal reference standards or lock masses. This step is applied post-detection to improve mass accuracy metrics across large untargeted metabolomics datasets.

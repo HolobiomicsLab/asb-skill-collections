@@ -3,6 +3,7 @@ name: retention-time-mass-tolerance-calibration
 description: Use when you have multiple feature tables (CSV files) from different LC-MS analytical experiments, each containing mass, retention time, intensity, isotope, and adduct annotations, and you need to merge them into a single aligned feature matrix.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -54,6 +55,7 @@ attribution:
 
 # retention-time-mass-tolerance-calibration
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Calibrate and apply retention time (RT) and mass-to-charge ratio (m/z) tolerance parameters to align features across multiple metabolomic datasets from different analytical experiments into a unified feature matrix. This skill is essential for integrating heterogeneous LC-MS/MS datasets while preserving feature identity and minimizing false alignments.

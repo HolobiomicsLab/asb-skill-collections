@@ -3,6 +3,7 @@ name: kovats-retention-index-extraction-and-assignment
 description: Use when you have compiled a multi-source EI library (NIST, RIKEN, MoNA, SWGDRUG) into a single msp object and want to enrich it with experimental retention index metadata. Apply this skill when you have access to NIST library installation files (ri.dat and USER.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0153

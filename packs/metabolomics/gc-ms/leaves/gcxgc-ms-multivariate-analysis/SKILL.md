@@ -3,6 +3,7 @@ name: gcxgc-ms-multivariate-analysis
 description: Use when after preprocessing a set of aligned 2D-TIC (two-dimensional Total Intensity Chromatogram) matrices from GCxGC-MS experiments—when you have multiple samples across distinct biological groups (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3172

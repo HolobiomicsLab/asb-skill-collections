@@ -3,6 +3,7 @@ name: smiles-structure-annotation-from-molfiles
 description: Use when you have a mass spectral library in MSP format (e.g., from NIST, SWGDRUG, or other sources) exported alongside a folder of MOL files, and you need to populate the SMILES field in each library record to enable structure-based filtering, annotation, or downstream MS-DIAL analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0362
   edam_topics:
   - http://edamontology.org/topic_0154

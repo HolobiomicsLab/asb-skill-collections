@@ -3,6 +3,7 @@ name: isotope-corrected-image-quantitation
 description: Use when after isotopic correction has been performed on MSI ion images and you need to convert normalized intensities into absolute quantitative values.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0769
@@ -42,6 +43,7 @@ attribution:
 
 # isotope-corrected-image-quantitation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Convert isotope-corrected mass spectrometry ion-image intensities into quantified lipid abundance values by normalizing against user-defined internal standards. This skill enables absolute quantitation of spatial lipid distributions in MSI data by dividing target lipid intensity matrices by internal standard intensity, handling division-by-zero artifacts.

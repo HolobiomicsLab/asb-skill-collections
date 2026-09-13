@@ -3,6 +3,7 @@ name: log-transformation-application
 description: Use when apply log-transformation immediately after loading a raw metabolomics featuredata matrix (metabolite peak intensities as rows=samples, columns=metabolites) and before normalization.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3172

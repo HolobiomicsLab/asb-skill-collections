@@ -3,6 +3,7 @@ name: mass-spectrometry-library-matching
 description: Use when when you have an unknown MS/MS spectrum (with ≥10 peaks, precursor m/z, and at least 5 fragment ions) and need to identify it by comparing against a curated spectral library with annotated InChIKeys or chemical structures.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3647
   edam_topics:
   - http://edamontology.org/topic_0153

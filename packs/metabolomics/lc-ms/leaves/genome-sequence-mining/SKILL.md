@@ -3,6 +3,7 @@ name: genome-sequence-mining
 description: Use when you have assembled genomic DNA sequences (contigs in FASTA format, not antiSMASH or BOA output) and corresponding LC-MS/MS data (in MGF, mzXML, mzML, or mzData format) from the same organism, and you want to identify novel RiPPs by linking gene cluster predictions to observed mass spectra.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3460
   edam_topics:
   - http://edamontology.org/topic_0621

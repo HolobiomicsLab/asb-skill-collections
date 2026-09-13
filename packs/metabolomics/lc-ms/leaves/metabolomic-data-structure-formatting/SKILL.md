@@ -3,6 +3,7 @@ name: metabolomic-data-structure-formatting
 description: Use when after peak detection in MZmine2 has produced an MGF file (containing MS1 and MS2 spectra) and a feature abundance table (CSV or BIOM), but before running q2-qemistree tree construction or any QIIME 2-based metabolomic analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0637

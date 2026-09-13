@@ -3,6 +3,7 @@ name: feature-extraction-untargeted
 description: Use when when you have raw untargeted LC/MS data in mzML or mzXML format and need to detect and quantify metabolite signals across mass-to-charge and retention time dimensions without prior knowledge of instrument parameters, batch effects, or optimal detection thresholds.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0091

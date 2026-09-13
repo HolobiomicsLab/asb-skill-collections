@@ -3,6 +3,7 @@ name: lcms-feature-table-construction
 description: Use when you have centroided, single-polarity mzML files from DDA LC-MS experiments and need to generate a quantitative feature table with aligned m/z and retention time coordinates, isotopic annotations, and MS2 spectra for downstream statistical or annotation analysis.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3634
   edam_topics:
   - http://edamontology.org/topic_0091

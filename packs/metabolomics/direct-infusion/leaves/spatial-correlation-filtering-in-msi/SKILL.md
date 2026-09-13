@@ -3,6 +3,7 @@ name: spatial-correlation-filtering-in-msi
 description: Use when after identifying candidate parent–adduct mass-difference pairs (via massdiff, histogram binning, and adductMatch), apply this skill to discriminate true molecular adducts from coincidental mass matches.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520

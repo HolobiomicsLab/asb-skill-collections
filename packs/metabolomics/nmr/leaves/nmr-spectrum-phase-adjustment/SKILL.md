@@ -3,6 +3,7 @@ name: nmr-spectrum-phase-adjustment
 description: Use when you have acquired raw 1D NMR spectra (FID or processed spectra in NMRPipe format) that exhibit phase distortion—where peaks are not in pure absorption mode—and you need to prepare the spectrum for automatic deconvolution into peak tables.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520

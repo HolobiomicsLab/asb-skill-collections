@@ -3,6 +3,7 @@ name: molecular-fingerprint-generation-and-encoding
 description: Use when when you have paired tandem MS spectra and corresponding molecular structures (as SMILES strings or InChI keys) and need to train a model that jointly embeds spectra and structures for structure annotation by database lookup.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_0310
   edam_topics:
   - http://edamontology.org/topic_3172

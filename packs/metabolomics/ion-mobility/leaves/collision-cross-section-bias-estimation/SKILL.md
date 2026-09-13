@@ -3,6 +3,7 @@ name: collision-cross-section-bias-estimation
 description: Use when when you have IM-MS lipidomics data spiked with U13C labeled lipid internal standards (e.g., fully labeled yeast extract) and want to assess whether measured CCS values deviate systematically from expected values in the DTCCS_N2 reference library.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -44,6 +45,7 @@ attribution:
 
 # collision-cross-section-bias-estimation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Quantify systematic bias in measured collision cross section (CCS) values from ion mobility-mass spectrometry by comparing them against a reference DTCCS_N2 library for U13C labeled lipid standards, stratified by lipid class and adduct type. This enables detection and correction of instrument-specific CCS measurement drift without requiring external calibrants beyond vendor specifications.

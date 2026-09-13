@@ -3,6 +3,7 @@ name: peptide-sequence-prediction-comparison
 description: Use when when you have a pre-trained Casanovo model, annotated MS/MS spectra in MGF format, and want to benchmark whether beam search decoding improves peptide prediction quality over the default greedy decoding strategy.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3646
   edam_topics:
   - http://edamontology.org/topic_0121

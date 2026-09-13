@@ -3,6 +3,7 @@ name: multiple-testing-correction-metabolomics
 description: Use when you have computed raw p-values from partial Spearman correlations (or other univariate tests) between each metabolite in a SummarizedExperiment object and a phenotype of interest, adjusted for epidemiological confounders (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0218
@@ -43,6 +44,7 @@ attribution:
 
 # multiple-testing-correction-metabolomics
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Apply multiple-testing correction (Benjamini-Hochberg) to raw p-values from metabolome-wide association studies to control false discovery rate across thousands of metabolic features. This is essential when conducting univariate hypothesis testing on NMR or MS metabolomic data to distinguish true metabolite-phenotype associations from spurious correlations.

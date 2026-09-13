@@ -3,6 +3,7 @@ name: spectral-annotation-recall-precision-quantification
 description: Use when you have run two or more annotation pipelines on the same MS/MS spectral dataset (e.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0153

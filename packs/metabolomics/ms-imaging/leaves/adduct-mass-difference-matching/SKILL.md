@@ -3,6 +3,7 @@ name: adduct-mass-difference-matching
 description: Use when you have computed a histogram of pairwise mass differences from MS imaging data and need to (1) identify which observed mass differences correspond to biologically relevant or chemically known adducts, or (2) rank the most frequently observed mass differences to discover dominant adduct.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0769

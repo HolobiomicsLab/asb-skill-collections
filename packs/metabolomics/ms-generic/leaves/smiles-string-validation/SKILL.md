@@ -3,6 +3,7 @@ name: smiles-string-validation
 description: Use when you have MSBERT-preprocessed spectral datasets (GNPS, MoNA, or MTBLS1572 format) with SMILES annotations before training a spectral embedding or compound identification model.
 license: CC-BY-4.0
 metadata:
+  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0593
@@ -45,6 +46,7 @@ attribution:
 
 # SMILES String Validation
 
+> **License: restricted** — no clear open-source license detected for the underlying tool; verify licensing before commercial use or redistribution. <!-- asb-license-banner -->
 ## Summary
 
 Validates and removes spectral entries with malformed or syntactically invalid SMILES strings from mass spectrometry datasets (GNPS, MoNA, MTBLS1572) preprocessed by MSBERT. This data-cleaning step improves input quality for downstream spectral embedding model training by ensuring structural and syntactic correctness of chemical notation.

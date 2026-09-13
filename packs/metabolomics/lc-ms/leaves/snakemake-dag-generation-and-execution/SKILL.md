@@ -3,6 +3,7 @@ name: snakemake-dag-generation-and-execution
 description: Use when you have multiple mzML or mzML.gz files from LC-IMS-MS/MS instruments and need to apply DEIMoS feature detection, alignment, and calibration operations in a reproducible, traceable manner.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_0121

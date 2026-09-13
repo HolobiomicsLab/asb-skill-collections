@@ -3,6 +3,7 @@ name: metabolite-feature-clustering-by-retention-time
 description: Use when after XCMS feature detection, grouping, retention time correction, regrouping, and missing value filling on LC-MS or GC-MS data, when you have an aligned feature table with retention times and intensity profiles across multiple samples and need to collapse redundant features into.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3172

@@ -3,6 +3,7 @@ name: gpu-accelerated-similarity-search
 description: Use when you have a large spectral library and many query spectra to search against it, and you need to identify both unmodified and open-modification peptides with strict false discovery rate control.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0121

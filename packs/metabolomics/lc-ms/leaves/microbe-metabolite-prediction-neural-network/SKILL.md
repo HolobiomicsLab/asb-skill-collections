@@ -3,6 +3,7 @@ name: microbe-metabolite-prediction-neural-network
 description: 'Use when you have paired microbiome (16S or metagenomic taxonomy/functions at genus or finer level) and metabolome (LC-MS or similar profiled metabolites) data from the same samples and want to: (1) predict unobserved metabolite abundances from microbiome composition;'
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3174

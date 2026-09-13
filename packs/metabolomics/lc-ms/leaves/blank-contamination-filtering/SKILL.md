@@ -3,6 +3,7 @@ name: blank-contamination-filtering
 description: Use when your peak table includes features flagged in blank control samples (e.g., solvent blanks, media blanks) at relative abundance above a project-specific threshold.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172

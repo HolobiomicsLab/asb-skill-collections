@@ -3,6 +3,7 @@ name: hierarchical-library-data-structure-design
 description: Use when when building a reference library for high-throughput spectral matching against experimental MS/MS data, and you need to support millions to billions of queries per second on a standardized dataset.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172

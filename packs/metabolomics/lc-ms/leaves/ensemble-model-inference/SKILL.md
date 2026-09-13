@@ -3,6 +3,7 @@ name: ensemble-model-inference
 description: Use when you have a set of compounds (as SMILES strings or molecular structures) that need retention order predictions in a reversed-phase liquid chromatography (RPLC) system at eluent pH ~2.7, and you want to quantify prediction uncertainty rather than relying on a single model's output.
 license: CC-BY-4.0
 metadata:
+  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3407
