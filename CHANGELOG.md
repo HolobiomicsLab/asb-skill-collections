@@ -14,6 +14,19 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
 
 ## [Unreleased]
 
+### Changed
+- Make `router` the default offline selector rule and give it a relevance-bearing
+  tie-break inside an equal-score block: candidates are ordered by how many query
+  terms reached their `name`, then by how much of the `name` those terms are,
+  with slug then collection as the deterministic fallback. On 326 benchmark-card
+  labels `router` leads the previous `package` default by +0.126 Hit@1 on the
+  5,859-row corpus under a relevance-neutral tie policy (95% CI
+  [+0.070, +0.182]), and the title tie-break adds a further +0.019 there and
+  +0.041 on the 1,478-row installed unit while cutting the rank-1 tie rate from
+  51.2% to 12.6% and from 47.2% to 7.7% respectively. `package` stays available
+  for one release via `--selector package` / `ASB_SELECTOR_RULE=package` and
+  keeps its historical score/slug order unchanged. See `docs/selection.md`.
+
 ### Fixed
 - Remove twelve stale rows from four technique packs' skill indexes and KB
   bundles, using their declared v2 parent index; correct the pack table and

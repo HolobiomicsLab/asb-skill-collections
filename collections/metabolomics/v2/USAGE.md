@@ -112,6 +112,13 @@ score: 12.0
 selector: asb-keyword / 1.0.0 / package
 ```
 
+That block is the rehearsal's own output and predates the change of default. The
+same command run today returns the same `qualified_slug` with `score: 4.0` and
+`selector: asb-keyword / 1.0.0 / router`: the router rule counts each distinct
+matched term once instead of every occurrence, so its scores are smaller and are
+comparable only within one request. The install behaviour the rehearsal was
+checking is unchanged.
+
 There is no separate `asbb update` command. After updating the checkout through
 your normal source-control process, rerun the same `install` command to refresh
 the managed snapshot. A same-revision refresh was exercised and returned the
@@ -174,8 +181,10 @@ python3 -m asb_skill_collections.asbb_cli search --list-collections
 
 All three commands exited 0. Search returned
 `metabolomics/v2/workflows/untargeted-lcmsms-annotation` with score 12 and
-selector `asb-keyword/1.0.0/package`; `get` opened that workflow; and the host
-visibility check printed:
+selector `asb-keyword/1.0.0/package` — recorded before the default changed; the
+same command returns the same workflow today with score 4 and selector
+`asb-keyword/1.0.0/router`. `get` opened that workflow, and the host visibility
+check printed:
 
 ```text
 metabolomics/v2    5859 skills    +workflows
@@ -254,9 +263,9 @@ For offline retrieval, the collection-level `bin/search_skills.py`,
 selector. Add `--json` to the router command for the same result dictionaries,
 including matched fields, filters and qualified collection/target/slug. See
 [the selector contract and measured comparison](../../../docs/selection.md).
-The package rule is the measured default; the previous router rule remains
-available through `--selector router` (or `ASB_SELECTOR_RULE=router` for `asbb`)
-for one release and is deprecated.
+The router rule is the measured default; the previous package rule remains
+available through `--selector package` (or `ASB_SELECTOR_RULE=package` for
+`asbb`) for one release and is deprecated.
 
 `bin/semantic_search.py` ranks by **meaning** (`text-embedding-3-large`, the model
 Perspicacité uses) when an embedding cache is present, and falls back to a keyword

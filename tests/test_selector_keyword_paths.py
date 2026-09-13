@@ -115,7 +115,7 @@ def test_measured_default_retains_documented_workflow_choices(label):
         technique=label["technique"], k=3, root=ROOT,
     )
     assert hits[0]["slug"] in label["expected_slugs"]
-    assert hits[0]["selector"]["rule"] == "package"
+    assert hits[0]["selector"]["rule"] == "router"
 
 
 def test_collection_qualification_is_stable_for_colliding_slugs(tmp_path):

@@ -192,7 +192,7 @@ clone.
 Each keyword hit explains its score, matched fields and filters, and carries a
 qualified collection/version/target/slug. The router's `--json` output uses the
 same dictionaries. See [offline selection](docs/selection.md) for the measured
-comparison, workflow paths and the temporary `ASB_SELECTOR_RULE=router` option.
+comparison, workflow paths and the temporary `ASB_SELECTOR_RULE=package` option.
 
 > **Not on PyPI in v0.** `asb-skill-collections` is unpublished by
 > [design decision 5](https://github.com/HolobiomicsLab/AgenticScienceBuilder) —

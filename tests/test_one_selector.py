@@ -268,10 +268,19 @@ def test_cli_mcp_and_packaged_router_have_one_result_contract(
     assert bool(package_results) is case["expect_match"]
 
     for hit in package_results:
-        _assert_hit_shape(hit, case, "package")
+        _assert_hit_shape(hit, case, "router")
     for hit in router_payload["results"]:
-        _assert_hit_shape(hit, case, "package")
-    order = [(-hit["score"], hit["slug"]) for hit in package_results]
+        _assert_hit_shape(hit, case, "router")
+    # The documented order, restated here rather than imported from
+    # result_order: descending score, then the default rule's title tie-break
+    # inside an equal-score block (how many query terms reached the name, then
+    # how much of the name they are), then the slug as the deterministic
+    # fallback.
+    order = []
+    for hit in package_results:
+        named = len(hit["matched_fields"].get("name", ()))
+        terms = max(1, len(idx.tokenize(hit["name"], "router")))
+        order.append((-hit["score"], -named, -named / terms, hit["slug"]))
     assert order == sorted(order)
 
 
@@ -533,4 +542,4 @@ def test_vendored_router_runs_with_only_the_standard_library(tmp_path):
     payload = json.loads(completed.stdout)
     assert payload["mode"] == "keyword"
     assert payload["results"]
-    assert all(hit["selector"]["rule"] == "package" for hit in payload["results"])
+    assert all(hit["selector"]["rule"] == "router" for hit in payload["results"])

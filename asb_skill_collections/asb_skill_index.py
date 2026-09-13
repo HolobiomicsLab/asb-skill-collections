@@ -6,8 +6,9 @@ standard library; the package's separate source-file layout helper is loaded
 lazily by ``item_source_path`` and is not needed to search an installed unit.
 
 The two historical scoring rules share resolution, fields, filters, result
-explanations and score/slug ordering. The measured default and the temporary
-compatibility option are documented in ``docs/selection.md``.
+explanations and score ordering; each owns the tie-break applied inside an
+equal-score block, and slug then collection end both. The measured default and
+the temporary compatibility option are documented in ``docs/selection.md``.
 """
 from __future__ import annotations
 
@@ -28,7 +29,7 @@ ROUTER_STOP = frozenset(
 )
 SELECTOR_NAME = "asb-keyword"
 SELECTOR_VERSION = "1.0.0"
-DEFAULT_SELECTOR = "package"
+DEFAULT_SELECTOR = "router"
 SELECTOR_ENV = "ASB_SELECTOR_RULE"
 SELECTORS = ("package", "router")
 TARGETS = {
@@ -297,9 +298,29 @@ def _hit(row: dict, score: float, matched: dict, context: dict) -> SearchHit:
     }
 
 
+def name_tiebreak(hit: dict) -> tuple[int, float]:
+    """Title evidence inside an equal-score block, negated for descending.
+
+    Only ``router`` uses it. Its score counts each distinct matched term once,
+    so about half of all queries tie at rank 1 and slug spelling would otherwise
+    decide them. A query term reaching a candidate's ``name`` is stronger
+    evidence that the candidate is *about* that term than the same term reaching
+    its body, so a tied block is ranked by how many terms reached the name and
+    then by how much of the name those terms are. The first count is read
+    straight out of the explanation the hit already carries. ``package`` weights
+    ``name`` inside its score and keeps its historical score/slug order, so an
+    older result reproduces with it exactly.
+    """
+    if hit.get("selector", {}).get("rule") != "router":
+        return 0, 0.0
+    matched = len(hit["matched_fields"].get("name", ()))
+    return -matched, -matched / max(1, len(tokenize(hit["name"], "router")))
+
+
 def result_order(hit: dict) -> tuple:
-    """Order by descending score, then slug, then collection for duplicate slugs."""
-    return -hit["score"], hit["slug"], hit["collection"]
+    """Order by descending score, the rule's title tie-break, then slug, then
+    collection for duplicate slugs. Slug remains the deterministic fallback."""
+    return -hit["score"], *name_tiebreak(hit), hit["slug"], hit["collection"]
 
 
 def keyword_search(rows, query, technique=None, k=10, max_tools=None, *,
