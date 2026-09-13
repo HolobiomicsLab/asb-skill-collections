@@ -135,10 +135,22 @@ python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --runtime v
 python3 -m asb_skill_collections.asbb_cli install metabolomics-lc-ms --dest ~/some/skills/dir
 ```
 
-Skill-native installs **symlink** by default (a `git pull` in the clone updates
-them); add `--copy` for a self-contained copy. `--dry-run` previews, `--force`
-overwrites unmanaged files, and `asbb uninstall <pack> --runtime <id>` cleanly
-removes exactly what was installed (tracked in `~/.asbb/installed.json`).
+Every install copies the pack's shipped files into a managed snapshot under
+`<destination>/.asbb-units/`, including its leaves, indexes, helpers and workflows.
+Local caches, virtual environments and Git metadata are excluded. The advertised
+entries identify this installed root for relative paths and commands. Skill-native
+entries **symlink** to adapters in the snapshot by default; `--copy` (also used by
+`--dest`) creates real adapter directories. Rules targets receive rendered files
+with the same root instructions. All modes retain their shipped assets after the
+checkout is moved or removed; rerun `install` to refresh the snapshot.
+
+`--dry-run` previews without writing. A conflicting entry requires `--force`,
+which records its transfer to the new pack. `asbb uninstall <pack> --runtime <id>`
+(or `--dest DIR`) removes only unchanged entries still owned by that pack and its
+unchanged managed snapshot. Replaced entries and unsafe paths are preserved and
+reported. Versions, content identities and ownership are tracked in
+`~/.asbb/installed.json`. Skipped entries retain their assets and receipts for
+later cleanup; legacy receipts without ownership evidence require manual review.
 
 > For **Claude Code**, the plugin marketplace above remains the recommended path.
 
