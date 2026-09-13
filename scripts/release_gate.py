@@ -90,6 +90,8 @@ except ImportError:  # pragma: no cover - guidance for CI
     )
     raise
 
+from scripts.validate_workflows import validate_port_types
+
 # --------------------------------------------------------------------------- #
 # Reuse the real promote.py logic.  We import the canonical constants /        #
 # helpers from the AgenticScienceBuilder package when it is importable, and    #
@@ -886,17 +888,40 @@ def check_workflows(collection_dir: Path) -> CheckResult:
     """Validate the composite workflow super-skill subtree (`workflows/<slug>/`).
 
     Each workflow's leaves must resolve in skills_index.json, the workflow.yaml DAG
-    (after / inputs_from) must reference only earlier steps, no leaf may appear in two
-    stages, and tools must not leak script filenames. Non-hard (advisory) — the leaf
-    collection is the hard-gated artifact; workflows are an additive layer.
+    (after / inputs_from) must reference only earlier steps, every transferred port type
+    must be declared by the producer's outputs and consumer's inputs, no leaf may appear
+    in two stages, and tools must not leak script filenames. Declared workflow counts are
+    compared with the on-disk layout. ``verification.final_outputs[].type`` is not
+    compared with step outputs because those values are file kinds in a different
+    vocabulary. Non-hard (advisory) — the leaf collection is the hard-gated artifact;
+    workflows are an additive layer.
     """
     res = CheckResult(
         name="composite_workflows",
         gates=[],
         hard_gate=False,
-        summary="Composite workflow super-skills resolve to real leaves with a valid DAG.",
+        summary=(
+            "Composite workflow super-skills resolve to real leaves with a valid typed DAG "
+            "and matching layout count."
+        ),
     )
     wf_root = collection_dir / "workflows"
+    collection_meta = _load_yaml(collection_dir / "collection.yaml")
+    has_declared_count = "workflows_count" in collection_meta
+    workflow_dirs = [
+        path
+        for path in (sorted(wf_root.iterdir()) if wf_root.is_dir() else [])
+        if path.is_dir() and not path.name.startswith("_") and path.name != "bin"
+    ]
+    n_workflows = len(workflow_dirs)
+    if has_declared_count and collection_meta["workflows_count"] != n_workflows:
+        res.add(
+            WARN,
+            "collection.yaml workflows_count mismatch: "
+            f"declared {collection_meta['workflows_count']}, "
+            f"on-disk workflow directories {n_workflows}",
+            file="collection.yaml",
+        )
     if not wf_root.is_dir():
         res.add(PASS, "No workflows/ subtree (n/a).")
         return res
@@ -911,15 +936,10 @@ def check_workflows(collection_dir: Path) -> CheckResult:
             idx = {r["slug"] for r in json.loads(idx_path.read_text(encoding="utf-8"))}
         except ValueError as exc:
             res.add(FAIL, f"cannot parse skills_index.json: {exc}")
-            return res
     else:
         res.add(WARN, "no skills_index.json in this subtree — leaf-slug resolution deferred "
                       "to validate_workflows.py --collection <released>; structural checks only.")
-    n = 0
-    for d in sorted(wf_root.iterdir()):
-        if not d.is_dir() or d.name.startswith("_") or d.name == "bin":
-            continue
-        n += 1
+    for d in workflow_dirs:
         name = d.name
         sk_md, wf_y = d / "SKILL.md", d / "workflow.yaml"
         if not (sk_md.is_file() and wf_y.is_file()):
@@ -934,9 +954,12 @@ def check_workflows(collection_dir: Path) -> CheckResult:
         meta = fm.get("metadata", {}) or {}
         if meta.get("kind") != "composite-workflow":
             res.add(FAIL, f"{name}: metadata.kind != composite-workflow", file=name)
+        steps = wf.get("steps") or []
+        for message in validate_port_types(name, steps):
+            res.add(FAIL, message, file=name)
         ids: set = set()
         seen: dict = {}
-        for st in (wf.get("steps") or []):
+        for st in steps:
             sid = st.get("id")
             for s in (st.get("skills") or []):
                 if idx is not None and s not in idx:
@@ -954,8 +977,8 @@ def check_workflows(collection_dir: Path) -> CheckResult:
         for t in (meta.get("member_tools") or []):
             if str(t).endswith(".py"):
                 res.add(WARN, f"{name}: script-filename as tool: {t}", file=name)
-    res.summary = f"{res.summary}  ({n} workflows checked)"
-    if n == 0:
+    res.summary = f"{res.summary}  ({n_workflows} workflows checked)"
+    if n_workflows == 0:
         res.add(PASS, "workflows/ present but empty.")
     return res
 
