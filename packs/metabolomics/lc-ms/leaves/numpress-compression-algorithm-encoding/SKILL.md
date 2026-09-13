@@ -1,9 +1,10 @@
 ---
 name: numpress-compression-algorithm-encoding
-description: Use when you have raw floating-point m/z and intensity arrays extracted from mass-spectrometry experiments (e.g., from mzML or mzXML files) and need to compress them for storage or transmission.
+description: Use when you have raw floating-point m/z and intensity arrays extracted
+  from mass-spectrometry experiments (e.g., from mzML or mzXML files) and need to
+  compress them for storage or transmission.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +15,8 @@ metadata:
   - pyOpenMS
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS

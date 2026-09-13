@@ -1,9 +1,10 @@
 ---
 name: compound-identification-ranking-evaluation
-description: Use when after training a FlavorFormer model end-to-end with weighted loss on 1H NMR spectra and compound labels, apply this skill to a held-out test set to measure compound identification accuracy and ranking quality.
+description: Use when after training a FlavorFormer model end-to-end with weighted
+  loss on 1H NMR spectra and compound labels, apply this skill to a held-out test
+  set to measure compound identification accuracy and ranking quality.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3382
@@ -17,6 +18,8 @@ metadata:
   techniques:
   - GC-MS
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.microc.2025.115372
   title: FlavorFormer

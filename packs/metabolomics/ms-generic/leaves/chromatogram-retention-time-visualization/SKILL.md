@@ -1,9 +1,11 @@
 ---
 name: chromatogram-retention-time-visualization
-description: Use when you have mass spectrometry data loaded as a pandas DataFrame with at minimum two numeric columns representing retention time and intensity values, and you need to generate a chromatogram visualization for exploratory analysis, quality control, or publication.
+description: Use when you have mass spectrometry data loaded as a pandas DataFrame
+  with at minimum two numeric columns representing retention time and intensity values,
+  and you need to generate a chromatogram visualization for exploratory analysis,
+  quality control, or publication.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,12 +18,15 @@ metadata:
   - plotly
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
 evidence_spans:
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

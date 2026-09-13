@@ -1,9 +1,10 @@
 ---
 name: memory-efficient-pairwise-statistics
-description: Use when you have an MSI intensity matrix (msimat object) and an annotated mass-difference table (massdiff object with known or hypothesized parent–adduct ion pairs) where the number of peak pairs exceeds available RAM.
+description: Use when you have an MSI intensity matrix (msimat object) and an annotated
+  mass-difference table (massdiff object with known or hypothesized parent–adduct
+  ion pairs) where the number of peak pairs exceeds available RAM.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3463
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,13 +15,17 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - We can match massdiffs to specific adduct types using the same function `adductMatch`
-- If the data matrix is very large, it may need to be reformatted to be loaded into memory during an R session.
+- If the data matrix is very large, it may need to be reformatted to be loaded into
+  memory during an R session.
 - corrPairsMSI(d,d.diff.annot)
 claims: []
 provenance:

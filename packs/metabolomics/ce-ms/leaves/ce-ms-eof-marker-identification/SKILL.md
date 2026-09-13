@@ -1,9 +1,10 @@
 ---
 name: ce-ms-eof-marker-identification
-description: Use when when processing CE-MS test files and you need to identify and extract the migration time of the EOF marker (e.g., Paracetamol) to normalize compound migration times across runs.
+description: Use when when processing CE-MS test files and you need to identify and
+  extract the migration time of the EOF marker (e.g., Paracetamol) to normalize compound
+  migration times across runs.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -18,11 +19,14 @@ metadata:
   - Spectra
   techniques:
   - CE-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
 evidence_spans:
-- there is no implementation in R that performs effective mobility transformation of CE-MS(/MS) data
+- there is no implementation in R that performs effective mobility transformation
+  of CE-MS(/MS) data
 - Description and usage of MobilityTransformR
 - compute Procaine's effective mobility using mobilityTransform
 - The CE-MS test data are from the `r BiocStyle::Biocpkg("msdata")` package

@@ -1,9 +1,11 @@
 ---
 name: metabolite-feature-quality-control
-description: Use when you have a metabolomic SummarizedExperiment object with replicate QC (quality control) samples and need to remove non-reproducible metabolic features before phenotype association modeling. Use it specifically when your workflow requires FDA-compliant reproducibility thresholds (CV < 0.
+description: Use when you have a metabolomic SummarizedExperiment object with replicate
+  QC (quality control) samples and need to remove non-reproducible metabolic features
+  before phenotype association modeling. Use it specifically when your workflow requires
+  FDA-compliant reproducibility thresholds (CV < 0.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,13 +17,16 @@ metadata:
   - Bioconductor
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btx477
   title: MWASTools
 evidence_spans:
 - Assuming that R (>=3.3) and Bioconductor have been correctly installed
 - Here, we present a package to perform MWAS using univariate hypothesis testing
-- '"MWASTools" is an R package designed to provide an integrated and user-friendly pipeline'
+- '"MWASTools" is an R package designed to provide an integrated and user-friendly
+  pipeline'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

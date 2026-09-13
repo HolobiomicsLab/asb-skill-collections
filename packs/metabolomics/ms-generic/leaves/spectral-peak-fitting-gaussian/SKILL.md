@@ -1,9 +1,10 @@
 ---
 name: spectral-peak-fitting-gaussian
-description: Use when you have 1D MS signal data (extracted ion chromatograms, arrival time distributions, or intensity profiles) and need to resolve overlapping or closely-spaced peaks with accurate position, height, and width estimates.
+description: Use when you have 1D MS signal data (extracted ion chromatograms, arrival
+  time distributions, or intensity profiles) and need to resolve overlapping or closely-spaced
+  peaks with accurate position, height, and width estimates.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,6 +18,8 @@ metadata:
   - mzapy.peaks.calc_peak_area
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c01653
   title: mzapy

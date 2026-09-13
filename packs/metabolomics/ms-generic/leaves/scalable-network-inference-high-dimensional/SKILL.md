@@ -1,9 +1,10 @@
 ---
 name: scalable-network-inference-high-dimensional
-description: Use when when working with feature abundance tables (rows=features, columns=samples) where the feature count exceeds 10,000 and you need to infer a network of correlations between features.
+description: Use when when working with feature abundance tables (rows=features, columns=samples)
+  where the feature count exceeds 10,000 and you need to infer a network of correlations
+  between features.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0092
@@ -16,12 +17,16 @@ metadata:
   - pcutils
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.06.26.661636v1
   title: MetaNet
 evidence_spans:
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers.
-- MetaNet, a high-performance R package that unifies network construction, visualization, and analysis across diverse omics layers
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers.
+- MetaNet, a high-performance R package that unifies network construction, visualization,
+  and analysis across diverse omics layers
 - MetaNet, a high-performance R package
 claims: []
 provenance:

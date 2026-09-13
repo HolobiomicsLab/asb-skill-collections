@@ -1,9 +1,11 @@
 ---
 name: unknown-sample-reference-comparison
-description: Use when you have a preprocessed unknown sample spectrum (m/z peaks and intensities) from high-throughput mass spectrometry (DI-MS, ASAP-MS, or ambient ionization methods) and need to identify the species or authenticate a sample against a curated reference database of known spectra.
+description: Use when you have a preprocessed unknown sample spectrum (m/z peaks and
+  intensities) from high-throughput mass spectrometry (DI-MS, ASAP-MS, or ambient
+  ionization methods) and need to identify the species or authenticate a sample against
+  a curated reference database of known spectra.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3502
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -12,6 +14,8 @@ metadata:
   - RapidMass
   techniques:
   - direct-infusion-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass

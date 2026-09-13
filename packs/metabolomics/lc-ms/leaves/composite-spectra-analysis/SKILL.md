@@ -1,9 +1,11 @@
 ---
 name: composite-spectra-analysis
-description: Use when your untargeted LC/HRMS dataset contains Data-Independent Acquisition data (MS^E, AIF, or SWATH-MS) or MS1-only composite spectra where multiple precursor ions fragment simultaneously, and you need to deconvolve overlapping fragmentation spectra to enable accurate chemical structure.
+description: Use when your untargeted LC/HRMS dataset contains Data-Independent Acquisition
+  data (MS^E, AIF, or SWATH-MS) or MS1-only composite spectra where multiple precursor
+  ions fragment simultaneously, and you need to deconvolve overlapping fragmentation
+  spectra to enable accurate chemical structure.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,11 +18,14 @@ metadata:
   - IDSL.FSA
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c00376
   title: IDSL.CSA
 evidence_spans:
-- The **Composite Spectra Analysis (IDSL.CSA)** R package for the analysis of mass spectrometry data
+- The **Composite Spectra Analysis (IDSL.CSA)** R package for the analysis of mass
+  spectrometry data
 - The **Composite Spectra Analysis (IDSL.CSA)** R package
 claims: []
 provenance:

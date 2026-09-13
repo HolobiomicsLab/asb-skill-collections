@@ -1,9 +1,11 @@
 ---
 name: reaction-pathway-assignment-and-propagation
-description: Use when you have detected and clustered unknown MS features from untargeted xenobiotic metabolomics data, computed fragmentation pattern similarity scores between features and reference spectra, and now need to systematically assign individual features to specific biotransformation reactions (e.
+description: Use when you have detected and clustered unknown MS features from untargeted
+  xenobiotic metabolomics data, computed fragmentation pattern similarity scores between
+  features and reference spectra, and now need to systematically assign individual
+  features to specific biotransformation reactions (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0718
@@ -24,6 +26,8 @@ metadata:
   - tidyverse, reshape2
   techniques:
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.est.5c08558
   title: CMDN

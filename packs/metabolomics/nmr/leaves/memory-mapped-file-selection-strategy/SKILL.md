@@ -1,14 +1,16 @@
 ---
 name: memory-mapped-file-selection-strategy
-description: Use when initializing a Dataset object in NMRFx and must decide which storage backend to use for in-memory or memory-mapped file access.
+description: Use when initializing a Dataset object in NMRFx and must decide which
+  storage backend to use for in-memory or memory-mapped file access.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_topics: []
   tools:
   - NMRFx
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx

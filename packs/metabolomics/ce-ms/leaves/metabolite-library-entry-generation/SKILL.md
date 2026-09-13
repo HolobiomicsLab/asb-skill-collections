@@ -1,9 +1,10 @@
 ---
 name: metabolite-library-entry-generation
-description: Use when you have an experimental MS/MS spectrum (from MassBank or your own acquisition) and need to create a standardized library entry with ranked fragment ions for use in MetaboAnnotatoR or other fragment-based annotation pipelines.
+description: Use when you have an experimental MS/MS spectrum (from MassBank or your
+  own acquisition) and need to create a standardized library entry with ranked fragment
+  ions for use in MetaboAnnotatoR or other fragment-based annotation pipelines.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,11 +17,14 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - start R (version "4.5.0" or higher)
 claims: []
 provenance:

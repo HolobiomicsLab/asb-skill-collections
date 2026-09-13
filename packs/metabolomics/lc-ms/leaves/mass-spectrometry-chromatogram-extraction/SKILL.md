@@ -1,9 +1,10 @@
 ---
 name: mass-spectrometry-chromatogram-extraction
-description: Use when you have raw profile LC-MS data in .mzML format and need to prepare candidate peak regions for classification by a neural network detector (e.g., QuanFormer).
+description: Use when you have raw profile LC-MS data in .mzML format and need to
+  prepare candidate peak regions for classification by a neural network detector (e.g.,
+  QuanFormer).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +16,8 @@ metadata:
   - xcms (centWave algorithm)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c04531
   title: QuanFormer

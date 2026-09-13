@@ -1,9 +1,11 @@
 ---
 name: compound-retrieval-hit-at-k-evaluation
-description: Use when when you have generated spectral embeddings for a query set and a reference spectral library, computed pairwise cosine similarity scores between them, and need to quantify retrieval performance across ranked candidates (top-1, top-5, top-10).
+description: Use when when you have generated spectral embeddings for a query set
+  and a reference spectral library, computed pairwise cosine similarity scores between
+  them, and need to quantify retrieval performance across ranked candidates (top-1,
+  top-5, top-10).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -18,6 +20,8 @@ metadata:
   - ModelTester
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding

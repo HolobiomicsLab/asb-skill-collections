@@ -1,9 +1,11 @@
 ---
 name: vendor-proprietary-format-interoperability
-description: Use when you have mass spectrometry raw data in a proprietary vendor format (Thermo .raw, Agilent .d with or without ion mobility, Bruker ion mobility .d, or mzML) and need to enable reproducible, language-agnostic access to multidimensional spectra (e.
+description: Use when you have mass spectrometry raw data in a proprietary vendor
+  format (Thermo .raw, Agilent .d with or without ion mobility, Bruker ion mobility
+  .d, or mzML) and need to enable reproducible, language-agnostic access to multidimensional
+  spectra (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,11 +19,14 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00313
   title: MZA
 evidence_spans:
-- MZA is a stand-alone and self-contained command-line executable which converts multidimensional mass spectrometry (MS) data
+- MZA is a stand-alone and self-contained command-line executable which converts multidimensional
+  mass spectrometry (MS) data
 - using generic HDF5 libraries available (e.g., h5py and rhdf5)
 claims: []
 provenance:

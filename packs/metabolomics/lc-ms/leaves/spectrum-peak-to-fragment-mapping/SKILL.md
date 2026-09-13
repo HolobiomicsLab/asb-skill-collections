@@ -1,9 +1,11 @@
 ---
 name: spectrum-peak-to-fragment-mapping
-description: Use when when you have a tandem mass spectrum (MS/MS) and a ProForma 2.0 peptidoform string (e.g., DLTDYLM[Oxidation]K) and need to identify which observed spectrum peaks correspond to expected b-ion and y-ion fragments, in order to validate peptide identification or annotate spectrum quality.
+description: Use when when you have a tandem mass spectrum (MS/MS) and a ProForma
+  2.0 peptidoform string (e.g., DLTDYLM[Oxidation]K) and need to identify which observed
+  spectrum peaks correspond to expected b-ion and y-ion fragments, in order to validate
+  peptide identification or annotate spectrum quality.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,12 +18,16 @@ metadata:
   - PSI-MOD
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma) specification
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma)
+  specification
 - spectrum_utils is a Python package
 - spectrum = sus.MsmsSpectrum.from_usi(usi)
 - 'Specify modifications by their name: `EM[Oxidation]EVEES[Phospho]PEK`'

@@ -1,9 +1,11 @@
 ---
 name: feature-table-export-and-validation
-description: Use when after executing an MZmine batch processing workflow on raw metabolomics data (mzML/mzXML format), when you need to convert the in-memory feature detection and alignment results into a shareable, schema-compliant tabular format suitable for downstream statistical analysis, figure.
+description: Use when after executing an MZmine batch processing workflow on raw metabolomics
+  data (mzML/mzXML format), when you need to convert the in-memory feature detection
+  and alignment results into a shareable, schema-compliant tabular format suitable
+  for downstream statistical analysis, figure.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -12,6 +14,8 @@ metadata:
   - MZmine
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.05.13.593988v1
   title: plantMASST

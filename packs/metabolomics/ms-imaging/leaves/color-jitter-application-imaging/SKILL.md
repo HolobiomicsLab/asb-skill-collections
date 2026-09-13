@@ -1,9 +1,10 @@
 ---
 name: color-jitter-application-imaging
-description: Use when preparing ion image data for representation learning in mass spectrometry imaging, specifically when you need to augment raw ion images to generate pairs of diverse views for contrastive loss training.
+description: Use when preparing ion image data for representation learning in mass
+  spectrometry imaging, specifically when you need to augment raw ion images to generate
+  pairs of diverse views for contrastive loss training.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3564
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,12 +15,15 @@ metadata:
   - PyTorch
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
 evidence_spans:
 - Two augmented images are propagated through a pair of ResNet18-based encoders
-- Two augmented images are propagated through a pair of ResNet18-based encoders that shared parameters
+- Two augmented images are propagated through a pair of ResNet18-based encoders that
+  shared parameters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

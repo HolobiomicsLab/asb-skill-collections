@@ -1,9 +1,10 @@
 ---
 name: qc-summary-data-extraction
-description: Use when after applying one or more mpactr filters (filter_mispicked_ions, filter_group, filter_cv, filter_insource_ions) to a feature table, use qc_summary() to extract the pass/fail status of each ion across all applied filters.
+description: Use when after applying one or more mpactr filters (filter_mispicked_ions,
+  filter_group, filter_cv, filter_insource_ions) to a feature table, use qc_summary()
+  to extract the pass/fail status of each ion across all applied filters.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -16,13 +17,16 @@ metadata:
   - ggplot2
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04632
   title: MPACT
 evidence_spans:
 - To import these data into R, use the mpactr function
 - We will be using multiple libraries for data analysis and visualization
-- creating an interactive plot of input features and the filters they failed, if any, using `ggplot` and `plotly`
+- creating an interactive plot of input features and the filters they failed, if any,
+  using `ggplot` and `plotly`
 - library(data.table)
 claims: []
 provenance:

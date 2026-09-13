@@ -1,9 +1,10 @@
 ---
 name: m-z-array-processing
-description: Use when when you have imported MSI data (imzML or vendor format) loaded into the napari plugin environment and need to organize raw spectral m/z and intensity arrays prior to mean intensity calculation, ROI analysis, or database annotation.
+description: Use when when you have imported MSI data (imzML or vendor format) loaded
+  into the napari plugin environment and need to organize raw spectral m/z and intensity
+  arrays prior to mean intensity calculation, ROI analysis, or database annotation.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3444
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,11 +15,14 @@ metadata:
   - MSI-Explorer
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01513
   title: MSI-Explorer
 evidence_spans:
-- The MSI-Explorer napari plugin is a powerful tool designed for targeted biochemical annotations in MSI data.
+- The MSI-Explorer napari plugin is a powerful tool designed for targeted biochemical
+  annotations in MSI data.
 - '[![Python Version](https://img.shields.io/pypi/pyversions/MSI-Explorer.svg?color=green)](https://python.org)'
 claims: []
 provenance:

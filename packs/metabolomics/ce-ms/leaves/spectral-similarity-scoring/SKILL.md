@@ -1,9 +1,10 @@
 ---
 name: spectral-similarity-scoring
-description: Use when when you have extracted low-resolution mass spectra from individual chromatographic peaks in GC-MS data and need to match them against a spectral library (e.g., PNNLMetV20191015.MSL) to identify the unknown compound.
+description: Use when when you have extracted low-resolution mass spectra from individual
+  chromatographic peaks in GC-MS data and need to match them against a spectral library
+  (e.g., PNNLMetV20191015.MSL) to identify the unknown compound.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -32,6 +33,13 @@ metadata:
   techniques:
   - GC-MS
   - CE-MS
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: huaxuyu/masscube
+  provenance_tier: literature
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
@@ -47,7 +55,8 @@ derived_from:
   title: ''
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np

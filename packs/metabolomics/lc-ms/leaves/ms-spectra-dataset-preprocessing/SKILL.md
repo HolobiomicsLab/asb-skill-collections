@@ -1,9 +1,10 @@
 ---
 name: ms-spectra-dataset-preprocessing
-description: Use when when you have a raw or partially processed MS/MS spectra collection (e.g., GNPS-sourced Orbitrap or Q-TOF spectra in MGF format) and need to (1) restrict to a specific instrument type (e.
+description: Use when when you have a raw or partially processed MS/MS spectra collection
+  (e.g., GNPS-sourced Orbitrap or Q-TOF spectra in MGF format) and need to (1) restrict
+  to a specific instrument type (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,6 +14,8 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

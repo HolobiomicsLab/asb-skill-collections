@@ -1,9 +1,11 @@
 ---
 name: feature-annotation-augmentation
-description: Use when when a traditional peak extraction pipeline (e.g., XCMS) has generated a feature table from LC-MS data but fails to detect known or suspected compounds present in your sample. Specifically, when you have a suspect database (e.
+description: Use when when a traditional peak extraction pipeline (e.g., XCMS) has
+  generated a feature table from LC-MS data but fails to detect known or suspected
+  compounds present in your sample. Specifically, when you have a suspect database
+  (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3634
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -15,12 +17,15 @@ metadata:
   - T3DB
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c02697
   title: EISA-EXPOSOME
 evidence_spans:
 - We provide a Rshiny program for EISA-EXPOSOME
-- We provide a Rshiny program for EISA-EXPOSOME, which runs with the interface shown below
+- We provide a Rshiny program for EISA-EXPOSOME, which runs with the interface shown
+  below
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

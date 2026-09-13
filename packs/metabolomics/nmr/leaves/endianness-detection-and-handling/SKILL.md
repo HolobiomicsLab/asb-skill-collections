@@ -1,9 +1,10 @@
 ---
 name: endianness-detection-and-handling
-description: Use when when reading a binary file format with a magic integer or fixed checksum field at a known offset, and endianness is not explicitly declared in file metadata or header comments.
+description: Use when when reading a binary file format with a magic integer or fixed
+  checksum field at a known offset, and endianness is not explicitly declared in file
+  metadata or header comments.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3307
@@ -12,6 +13,8 @@ metadata:
   - NMRFx
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx

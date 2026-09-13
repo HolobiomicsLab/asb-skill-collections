@@ -1,9 +1,9 @@
 ---
 name: consensus-mass-determination
-description: Use when after constructing individual mass tracks from mzTree data bins and before alignment across samples.
+description: Use when after constructing individual mass tracks from mzTree data bins
+  and before alignment across samples.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -15,12 +15,15 @@ metadata:
   - scipy.signal.find_peaks
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
 - The default method uses `pymzml` to parse mzML files.
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:

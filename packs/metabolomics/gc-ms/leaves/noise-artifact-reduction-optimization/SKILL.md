@@ -1,9 +1,11 @@
 ---
 name: noise-artifact-reduction-optimization
-description: Use when you have imported a raw GCxGC-MS chromatogram (NetCDF format folded into 2D-TIC) that exhibits chemical noise, instrumental artifacts, or baseline drift—conditions that obscure true metabolite signals and impede between-group differentiation in downstream multivariate analysis.
+description: Use when you have imported a raw GCxGC-MS chromatogram (NetCDF format
+  folded into 2D-TIC) that exhibits chemical noise, instrumental artifacts, or baseline
+  drift—conditions that obscure true metabolite signals and impede between-group differentiation
+  in downstream multivariate analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,13 +18,16 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
 - doi: 10.1371/journal.pntd.0006215
   title: ''
 evidence_spans:
-- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional gas chromatography data.
+- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional
+  gas chromatography data.
 - This is the vignette to explain the implementation of RGCxGC package.
 claims: []
 provenance:

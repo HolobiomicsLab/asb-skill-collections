@@ -1,9 +1,11 @@
 ---
 name: mass-spectrometry-ion-formula-assignment
-description: Use when when you have a metabolite structure (SMILES or molecular graph) and need to predict its ionization behavior in a mass spectrometry experiment using a specific derivatizing matrix or ionization mode. Use this skill when the expected ions are non-standard (i.
+description: Use when when you have a metabolite structure (SMILES or molecular graph)
+  and need to predict its ionization behavior in a mass spectrometry experiment using
+  a specific derivatizing matrix or ionization mode. Use this skill when the expected
+  ions are non-standard (i.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +16,8 @@ metadata:
   - Met-ID
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid

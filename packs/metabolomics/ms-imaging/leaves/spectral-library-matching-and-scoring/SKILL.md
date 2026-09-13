@@ -1,9 +1,11 @@
 ---
 name: spectral-library-matching-and-scoring
-description: Use when when you have extracted a mean or ROI spectrum from MSI data (via centroid or profile mode conversion) and need to identify the biochemical composition by comparing against curated reference libraries such as LIPID MAPS, HMDB, or a custom metabolite database.
+description: Use when when you have extracted a mean or ROI spectrum from MSI data
+  (via centroid or profile mode conversion) and need to identify the biochemical composition
+  by comparing against curated reference libraries such as LIPID MAPS, HMDB, or a
+  custom metabolite database.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -23,6 +25,8 @@ metadata:
   - tima R package
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01513
   title: MSI-Explorer
@@ -31,7 +35,8 @@ derived_from:
 - doi: 10.5281/zenodo.3378723
   title: ''
 evidence_spans:
-- The MSI-Explorer napari plugin is a powerful tool designed for targeted biochemical annotations in MSI data.
+- The MSI-Explorer napari plugin is a powerful tool designed for targeted biochemical
+  annotations in MSI data.
 - '[![Python Version](https://img.shields.io/pypi/pyversions/MSI-Explorer.svg?color=green)](https://python.org)'
 - The initial work is available at <https://doi.org/10.3389/fpls.2019.01329>
 claims: []

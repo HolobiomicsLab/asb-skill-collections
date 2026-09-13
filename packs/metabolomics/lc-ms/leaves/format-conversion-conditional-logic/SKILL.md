@@ -1,9 +1,11 @@
 ---
 name: format-conversion-conditional-logic
-description: Use when you have generated a lipid spectral library (with lipid identities, adducts, m/z values, and fragmentation patterns) and need to export it for downstream mass spectrometry analysis on either an Orbitrap (via Excalibur DDA) or via Skyline's transition-based workflow.
+description: Use when you have generated a lipid spectral library (with lipid identities,
+  adducts, m/z values, and fragmentation patterns) and need to export it for downstream
+  mass spectrometry analysis on either an Orbitrap (via Excalibur DDA) or via Skyline's
+  transition-based workflow.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3750
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +17,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04518
   title: Lipid Spectrum Generator

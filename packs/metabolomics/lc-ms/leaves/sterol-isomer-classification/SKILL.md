@@ -1,9 +1,10 @@
 ---
 name: sterol-isomer-classification
-description: Use when you have LC-IM-MS/MS raw data from sterol-containing tissue samples and need to assign detected peaks to specific structural isomers (e.g., distinct double bond positions or saturation patterns in C27–C29 sterols).
+description: Use when you have LC-IM-MS/MS raw data from sterol-containing tissue
+  samples and need to assign detected peaks to specific structural isomers (e.g.,
+  distinct double bond positions or saturation patterns in C27–C29 sterols).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -19,6 +20,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA

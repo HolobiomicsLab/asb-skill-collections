@@ -1,9 +1,10 @@
 ---
 name: graph-neural-network-encoding-for-molecules
-description: Use when you have molecular structures (SMILES or SDF format) that need to be matched against MS/MS spectra, or you need to compute similarity between query spectra and a reference library of compounds.
+description: Use when you have molecular structures (SMILES or SDF format) that need
+  to be matched against MS/MS spectra, or you need to compute similarity between query
+  spectra and a reference library of compounds.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0362
   edam_topics:
   - http://edamontology.org/topic_3372
@@ -18,6 +19,8 @@ metadata:
   - pip
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01594
   title: CSU-MS2

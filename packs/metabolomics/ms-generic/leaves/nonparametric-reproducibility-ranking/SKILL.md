@@ -3,7 +3,6 @@ name: nonparametric-reproducibility-ranking
 description: Use when you have high-dimensional replicate experiment data (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -17,6 +16,8 @@ metadata:
   - SummarizedExperiment
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s12859-021-04336-9
   title: marr

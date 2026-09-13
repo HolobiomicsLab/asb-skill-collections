@@ -1,9 +1,10 @@
 ---
 name: ms-backend-api-implementation
-description: Use when you have MS data in a new format or storage system (e.g., a custom database, HDF5 file, or proprietary raw file) and need to make it accessible to Spectra-based analysis workflows without forking the Spectra package itself.
+description: Use when you have MS data in a new format or storage system (e.g., a
+  custom database, HDF5 file, or proprietary raw file) and need to make it accessible
+  to Spectra-based analysis workflows without forking the Spectra package itself.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,11 +18,14 @@ metadata:
   - MsBackendSql
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 - library(Spectra) library(IRanges)
 - library(Spectra)
 claims: []

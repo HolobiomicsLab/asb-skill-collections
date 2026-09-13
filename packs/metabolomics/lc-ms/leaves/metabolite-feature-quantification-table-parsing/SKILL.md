@@ -1,9 +1,11 @@
 ---
 name: metabolite-feature-quantification-table-parsing
-description: Use when when you have completed feature detection in MZmine3 or similar tools and produced a feature quantification table (rows = features, columns = samples with intensity values), and you possess a separate sample metadata file (sample identifiers, treatment groups, batch information).
+description: Use when when you have completed feature detection in MZmine3 or similar
+  tools and produced a feature quantification table (rows = features, columns = samples
+  with intensity values), and you possess a separate sample metadata file (sample
+  identifiers, treatment groups, batch information).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3283
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,6 +16,8 @@ metadata:
   - MZmine3
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41596-024-01046-3
   title: FBMN-STATS

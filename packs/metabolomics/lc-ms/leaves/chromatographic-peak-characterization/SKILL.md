@@ -1,9 +1,11 @@
 ---
 name: chromatographic-peak-characterization
-description: Use when after screening-mode validation of your m/z and retention time (RT) windows has confirmed that targets are visible in your data. Use it when you have centroided .mzML files, a validated target compound table with adjusted expected RT values (e.
+description: Use when after screening-mode validation of your m/z and retention time
+  (RT) windows has confirmed that targets are visible in your data. Use it when you
+  have centroided .mzML files, a validated target compound table with adjusted expected
+  RT values (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0769
@@ -16,6 +18,8 @@ metadata:
   - MSConvert (ProteoWizard)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis

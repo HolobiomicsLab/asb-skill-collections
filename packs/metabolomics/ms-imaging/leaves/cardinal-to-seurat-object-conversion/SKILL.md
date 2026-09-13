@@ -1,9 +1,11 @@
 ---
 name: cardinal-to-seurat-object-conversion
-description: Use when after completing Cardinal-based preprocessing (feature summarization, TIC normalization, peak processing, spatial segmentation, and SSC annotation), use this conversion when you need to leverage Seurat's downstream statistical methods—such as differential metabolite expression testing.
+description: Use when after completing Cardinal-based preprocessing (feature summarization,
+  TIC normalization, peak processing, spatial segmentation, and SSC annotation), use
+  this conversion when you need to leverage Seurat's downstream statistical methods—such
+  as differential metabolite expression testing.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,6 +19,13 @@ metadata:
   - R
   techniques:
   - MS-imaging
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ''
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP

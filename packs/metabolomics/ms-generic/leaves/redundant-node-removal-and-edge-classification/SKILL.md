@@ -1,9 +1,11 @@
 ---
 name: redundant-node-removal-and-edge-classification
-description: Use when after network partitioning, when you have identified connected subnetworks of features matched by isotope or adduct patterns and need to sanitize and categorize the relationships before tree construction. Use it when redundant features (e.
+description: Use when after network partitioning, when you have identified connected
+  subnetworks of features matched by isotope or adduct patterns and need to sanitize
+  and categorize the relationships before tree construction. Use it when redundant
+  features (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +18,8 @@ metadata:
   - khipu
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu

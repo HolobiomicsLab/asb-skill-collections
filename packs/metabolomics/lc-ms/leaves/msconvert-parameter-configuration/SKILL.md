@@ -1,9 +1,10 @@
 ---
 name: msconvert-parameter-configuration
-description: Use when you have acquired raw mass spectrometry data from ThermoFisher, Agilent, or compatible vendors in their native formats (.raw, .d, or equivalent) and need to prepare it for nontargeted analysis using MSThunder on a Linux system.
+description: Use when you have acquired raw mass spectrometry data from ThermoFisher,
+  Agilent, or compatible vendors in their native formats (.raw, .d, or equivalent)
+  and need to prepare it for nontargeted analysis using MSThunder on a Linux system.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,13 +16,17 @@ metadata:
   - Ubuntu 20.04
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.enceco.2025.07.022
   title: MSThunder
 evidence_spans:
-- MSThunder provide a deep learning-based nontargeted analytical framework for the accurate and rapid identification of unknown organic pollutants in water
+- MSThunder provide a deep learning-based nontargeted analytical framework for the
+  accurate and rapid identification of unknown organic pollutants in water
 - other vendors whose raw data can be converted via MSConvert
-- The current version is compatible with ThermoFisher, Agilent, and other vendors whose raw data can be converted via MSConvert.
+- The current version is compatible with ThermoFisher, Agilent, and other vendors
+  whose raw data can be converted via MSConvert.
 - available through our experiments conducted on an Ubuntu 20.04 environment
 claims: []
 provenance:

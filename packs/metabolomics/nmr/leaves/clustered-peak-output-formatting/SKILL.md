@@ -3,7 +3,6 @@ name: clustered-peak-output-formatting
 description: Use when after peak clustering has been completed in pyINETA (i.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3961
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,6 +12,8 @@ metadata:
   - Python
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c03966
   title: PyINETA

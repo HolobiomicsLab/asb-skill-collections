@@ -1,9 +1,10 @@
 ---
 name: contrastive-learning-for-cross-modal-retrieval
-description: Use when you have paired MS/MS spectra and molecular structures (SMILES or SDF format) and need to perform compound identification by retrieving the correct structure for an unknown spectrum.
+description: Use when you have paired MS/MS spectra and molecular structures (SMILES
+  or SDF format) and need to perform compound identification by retrieving the correct
+  structure for an unknown spectrum.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -19,6 +20,8 @@ metadata:
   - Distributed Data Parallel (DDP)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01594
   title: CSU-MS2

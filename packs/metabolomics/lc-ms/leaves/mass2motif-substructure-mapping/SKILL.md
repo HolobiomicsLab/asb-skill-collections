@@ -1,9 +1,11 @@
 ---
 name: mass2motif-substructure-mapping
-description: Use when you have created a GNPS molecular network (classical or feature-based workflow) and run an MS2LDA experiment on the corresponding MGF spectra, and you want to annotate network nodes with shared Mass2Motifs and chemical class information to interpret the structural basis of network.
+description: Use when you have created a GNPS molecular network (classical or feature-based
+  workflow) and run an MS2LDA experiment on the corresponding MGF spectra, and you
+  want to annotate network nodes with shared Mass2Motifs and chemical class information
+  to interpret the structural basis of network.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,11 +19,14 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo9070144
   title: molnetenhancer
 evidence_spans:
-- pyMolNetEnhancer is a python module integrating chemical class and substructure information
+- pyMolNetEnhancer is a python module integrating chemical class and substructure
+  information
 - pyMolNetEnhancer is a python module
 claims: []
 provenance:

@@ -1,9 +1,10 @@
 ---
 name: graph-based-molecular-representation
-description: Use when when you have 1D NMR spectra (¹H and/or ¹³C) as input and need to predict complete molecular structure (both molecular formula and bond connectivity) for molecules with up to 19 heavy atoms.
+description: Use when when you have 1D NMR spectra (¹H and/or ¹³C) as input and need
+  to predict complete molecular structure (both molecular formula and bond connectivity)
+  for molecules with up to 19 heavy atoms.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0337
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -14,6 +15,8 @@ metadata:
   - Transformer (architecture)
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct

@@ -1,9 +1,9 @@
 ---
 name: peak-integration-parameter-optimization
-description: Use when after peak detection and clustering have been completed on aligned and baseline-corrected GC-IMS data, and before imputation or statistical analysis.
+description: Use when after peak detection and clustering have been completed on aligned
+  and baseline-corrected GC-IMS data, and before imputation or statistical analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -14,6 +14,8 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS

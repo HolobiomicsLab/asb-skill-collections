@@ -1,9 +1,10 @@
 ---
 name: peak-evaluation-metrics-cselectivity-snr-gaussian-fit
-description: Use when after scipy.signal.find_peaks has identified candidate peaks on a composite mass track segment, evaluate each peak to decide whether to retain it in the final feature table.
+description: Use when after scipy.signal.find_peaks has identified candidate peaks
+  on a composite mass track segment, evaluate each peak to decide whether to retain
+  it in the final feature table.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,11 +18,14 @@ metadata:
   - peaks.audit_mass_track
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:

@@ -1,9 +1,10 @@
 ---
 name: molecular-candidate-ranking
-description: Use when after a trained CNN model has generated molecular embeddings for query spectra, and you need to retrieve the most likely candidate molecules from a reference database.
+description: Use when after a trained CNN model has generated molecular embeddings
+  for query spectra, and you need to retrieve the most likely candidate molecules
+  from a reference database.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -13,6 +14,8 @@ metadata:
   - ChemEmbed
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.02.07.637102v1
   title: ChemEmbed

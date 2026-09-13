@@ -1,9 +1,11 @@
 ---
 name: runtime-performance-benchmarking
-description: Use when when you have implemented or adopted a new clustering or analysis tool and need to validate that it meets stated runtime claims on a representative production-scale dataset. Particularly important when the tool uses hardware acceleration (GPU) and the claimed speedup is a core contribution;
+description: Use when when you have implemented or adopted a new clustering or analysis
+  tool and need to validate that it meets stated runtime claims on a representative
+  production-scale dataset. Particularly important when the tool uses hardware acceleration
+  (GPU) and the claimed speedup is a core contribution;
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +16,8 @@ metadata:
   - CUDA
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00612
   title: HyperSpec

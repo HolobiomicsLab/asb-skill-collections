@@ -1,9 +1,10 @@
 ---
 name: computational-environment-configuration
-description: Use when at the start of any DaDIA pipeline execution, or whenever you are preparing to run a complex multi-package R workflow on a new system or after updating package managers.
+description: Use when at the start of any DaDIA pipeline execution, or whenever you
+  are preparing to run a complex multi-package R workflow on a new system or after
+  updating package managers.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_topics: []
   tools:
   - R
@@ -12,6 +13,8 @@ metadata:
   - DaDIA
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c05022
   title: DaDIA

@@ -1,9 +1,11 @@
 ---
 name: mass-to-charge-retention-time-feature-mapping
-description: Use when you have centroided data-dependent acquisition (DDA) mzML files from LC- or GC-HRMS measurements and need to convert continuous raw mass spectrometric signals into discrete, quantifiable chromatographic features (m/z, RT, intensity, charge, isotope) before PFAS-specific prioritization or.
+description: Use when you have centroided data-dependent acquisition (DDA) mzML files
+  from LC- or GC-HRMS measurements and need to convert continuous raw mass spectrometric
+  signals into discrete, quantifiable chromatographic features (m/z, RT, intensity,
+  charge, isotope) before PFAS-specific prioritization or.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,13 +18,17 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 - pyOpenMS (Python interface to the C++ OpenMS library)
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data.
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data.
 - PFΔScreen is an open-source Python based non-target screening software tool
 claims: []
 provenance:

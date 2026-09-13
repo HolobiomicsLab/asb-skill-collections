@@ -1,9 +1,10 @@
 ---
 name: chemical-structure-format-verification
-description: Use when working with mass spectrometry spectral libraries (GNPS, MoNA, MTBLS1572, MassBank) that have been preprocessed by prior teams but may contain formatting errors or entries with missing/null SMILES fields.
+description: Use when working with mass spectrometry spectral libraries (GNPS, MoNA,
+  MTBLS1572, MassBank) that have been preprocessed by prior teams but may contain
+  formatting errors or entries with missing/null SMILES fields.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -17,6 +18,8 @@ metadata:
   - Python 3.12
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding

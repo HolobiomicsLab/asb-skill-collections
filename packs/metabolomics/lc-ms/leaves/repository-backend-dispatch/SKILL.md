@@ -1,9 +1,10 @@
 ---
 name: repository-backend-dispatch
-description: Use when when you have a USI string (e.g., 'mzspec:GNPS:TASK-abc123:scan:1943') and need to retrieve the underlying spectrum data from its native repository without knowing a priori which backend stores it.
+description: Use when when you have a USI string (e.g., 'mzspec:GNPS:TASK-abc123:scan:1943')
+  and need to retrieve the underlying spectrum data from its native repository without
+  knowing a priori which backend stores it.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -20,6 +21,8 @@ metadata:
   - MetabolomicsSpectrumResolver
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.05.09.086066
   title: Metabolomics Spectrum Resolver

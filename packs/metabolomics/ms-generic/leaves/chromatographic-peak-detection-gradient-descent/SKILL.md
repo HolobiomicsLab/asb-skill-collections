@@ -1,9 +1,11 @@
 ---
 name: chromatographic-peak-detection-gradient-descent
-description: Use when you have LC-HRMS profile-mode data (retention time × m/z matrix format) and need to automatically identify chromatographic peak locations and boundaries prior to feature extraction, reference matching, or training a peak-classification CNN model.
+description: Use when you have LC-HRMS profile-mode data (retention time × m/z matrix
+  format) and need to automatically identify chromatographic peak locations and boundaries
+  prior to feature extraction, reference matching, or training a peak-classification
+  CNN model.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +17,13 @@ metadata:
   - OpenMS/TOPPView
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: christophuv/PeakBot
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot

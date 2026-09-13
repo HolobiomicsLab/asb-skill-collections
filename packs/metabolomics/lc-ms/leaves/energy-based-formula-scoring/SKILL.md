@@ -1,9 +1,11 @@
 ---
 name: energy-based-formula-scoring
-description: Use when you have an unknown MS/MS spectrum (precursor m/z and fragment peak list) and a set of candidate molecular formulae, and you need to rank them by likelihood without access to a spectrum database or precomputed fragmentation trees.
+description: Use when you have an unknown MS/MS spectrum (precursor m/z and fragment
+  peak list) and a set of candidate molecular formulae, and you need to rank them
+  by likelihood without access to a spectrum database or precomputed fragmentation
+  trees.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,11 +15,14 @@ metadata:
   - MIST-CF
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
-- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS fragmentation trees)
+- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS
+  fragmentation trees)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

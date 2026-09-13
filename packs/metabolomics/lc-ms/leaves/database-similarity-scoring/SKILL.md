@@ -1,9 +1,11 @@
 ---
 name: database-similarity-scoring
-description: Use when you have one or more MS/MS spectra (query spectra in mzML, mzXML, or MGF format) and need to identify unknown compounds by comparing them against curated spectral databases organized by biological domain (microbe, plant, tissue, microbiome, food).
+description: Use when you have one or more MS/MS spectra (query spectra in mzML, mzXML,
+  or MGF format) and need to identify unknown compounds by comparing them against
+  curated spectral databases organized by biological domain (microbe, plant, tissue,
+  microbiome, food).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -20,6 +22,8 @@ metadata:
   - metadataMASST
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst

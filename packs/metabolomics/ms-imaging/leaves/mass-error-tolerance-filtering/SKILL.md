@@ -1,9 +1,11 @@
 ---
 name: mass-error-tolerance-filtering
-description: 'Use when when annotating full-scan MS or MS imaging data against a metabolite database (e.g., LipidMaps, HMDB) and you need to control the stringency of m/z matching. Use this filter to balance annotation sensitivity against specificity: tighter ppm tolerances (e.'
+description: 'Use when when annotating full-scan MS or MS imaging data against a metabolite
+  database (e.g., LipidMaps, HMDB) and you need to control the stringency of m/z matching.
+  Use this filter to balance annotation sensitivity against specificity: tighter ppm
+  tolerances (e.'
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -15,6 +17,13 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ''
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP

@@ -1,9 +1,11 @@
 ---
 name: third-party-processor-integration
-description: Use when when you have raw MS files (e.g., .raw, vendor-specific formats) stored in a centralized repository and need to invoke a third-party proteomics analysis tool—such as a mass spectrometry feature detector or quantification engine—without manually managing file transfers or output.
+description: Use when when you have raw MS files (e.g., .raw, vendor-specific formats)
+  stored in a centralized repository and need to invoke a third-party proteomics analysis
+  tool—such as a mass spectrometry feature detector or quantification engine—without
+  manually managing file transfers or output.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,6 +19,8 @@ metadata:
   - Django REST framework
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00854
   title: MSConnect

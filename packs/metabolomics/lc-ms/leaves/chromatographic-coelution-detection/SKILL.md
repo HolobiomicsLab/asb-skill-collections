@@ -1,9 +1,11 @@
 ---
 name: chromatographic-coelution-detection
-description: Use when after feature detection when you have a feature table with m/z, retention time, and intensity columns, and you need to group features into empirical compounds (putative metabolites) that account for isotopologue patterns and multiple adduct forms arising from a single underlying analyte.
+description: Use when after feature detection when you have a feature table with m/z,
+  retention time, and intensity columns, and you need to group features into empirical
+  compounds (putative metabolites) that account for isotopologue patterns and multiple
+  adduct forms arising from a single underlying analyte.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -19,6 +21,8 @@ metadata:
   - mass2chem
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

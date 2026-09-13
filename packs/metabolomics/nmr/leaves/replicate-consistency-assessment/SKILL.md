@@ -1,9 +1,10 @@
 ---
 name: replicate-consistency-assessment
-description: Use when after NMR or MS data acquisition and preprocessing (phasing, baseline correction) when you have a SummarizedExperiment object containing assay intensity matrix with QC sample columns designated.
+description: Use when after NMR or MS data acquisition and preprocessing (phasing,
+  baseline correction) when you have a SummarizedExperiment object containing assay
+  intensity matrix with QC sample columns designated.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,13 +16,16 @@ metadata:
   - R / Bioconductor
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btx477
   title: MWASTools
 evidence_spans:
 - Assuming that R (>=3.3) and Bioconductor have been correctly installed
 - Here, we present a package to perform MWAS using univariate hypothesis testing
-- '"MWASTools" is an R package designed to provide an integrated and user-friendly pipeline'
+- '"MWASTools" is an R package designed to provide an integrated and user-friendly
+  pipeline'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

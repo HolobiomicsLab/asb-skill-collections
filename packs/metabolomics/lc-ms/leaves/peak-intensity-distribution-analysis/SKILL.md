@@ -1,9 +1,10 @@
 ---
 name: peak-intensity-distribution-analysis
-description: Use when after executing feature detection and quantification on raw LC-MS data (mzML or NetCDF format) using an automated pipeline such as MetaboAnalystR 4.0, and before proceeding to downstream normalization, scaling, or functional analysis.
+description: Use when after executing feature detection and quantification on raw
+  LC-MS data (mzML or NetCDF format) using an automated pipeline such as MetaboAnalystR
+  4.0, and before proceeding to downstream normalization, scaling, or functional analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -13,6 +14,8 @@ metadata:
   - MetaboAnalystR 4.0
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-024-48009-6
   title: metaboanalystr

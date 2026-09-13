@@ -1,9 +1,9 @@
 ---
 name: mass-spectrometry-preprocessing-quality-control
-description: Use when immediately after importing raw peak tables and metadata from MS preprocessing software (e.g., Progenesis, MS-DIAL, Bruker Metaboscape).
+description: Use when immediately after importing raw peak tables and metadata from
+  MS preprocessing software (e.g., Progenesis, MS-DIAL, Bruker Metaboscape).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -16,6 +16,8 @@ metadata:
   - ggplot2 and plotly
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04632
   title: MPACT

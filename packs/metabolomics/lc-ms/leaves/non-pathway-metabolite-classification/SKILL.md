@@ -1,9 +1,11 @@
 ---
 name: non-pathway-metabolite-classification
-description: Use when you have metabolomics intensity data with peak annotations, and you want to rank and prioritize metabolite groupings (Molecular Families, Mass2Motifs, or other non-pathway metabolite sets) by their activity levels across experimental contrasts.
+description: Use when you have metabolomics intensity data with peak annotations,
+  and you want to rank and prioritize metabolite groupings (Molecular Families, Mass2Motifs,
+  or other non-pathway metabolite sets) by their activity levels across experimental
+  contrasts.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3680
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -16,14 +18,18 @@ metadata:
   - GNPS (Global Natural Products Social Molecular Networking)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
 - doi: 10.1186/1471-2105-6-225
   title: ''
 evidence_spans:
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways, decomposes activity levels in pathways
-- we introduce PALS (Pathway Activity Level Scoring), a complete tool that performs database queries of pathways, decomposes activity levels in pathways
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways, decomposes activity levels in pathways
+- we introduce PALS (Pathway Activity Level Scoring), a complete tool that performs
+  database queries of pathways, decomposes activity levels in pathways
 - Molecular Families from GNPS
 - Mass2Motifs from MS2LDA
 claims: []

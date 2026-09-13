@@ -1,9 +1,11 @@
 ---
 name: gcxgc-chromatogram-object-manipulation
-description: Use when you have raw GCxGC-MS data in NetCDF format that contains instrumental and chemical noise (baseline drift, high-frequency signal artifacts) and you need to prepare multiple preprocessed chromatogram objects for downstream multiway PCA or biomarker discovery.
+description: Use when you have raw GCxGC-MS data in NetCDF format that contains instrumental
+  and chemical noise (baseline drift, high-frequency signal artifacts) and you need
+  to prepare multiple preprocessed chromatogram objects for downstream multiway PCA
+  or biomarker discovery.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,13 +18,16 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.microc.2020.104830
   title: RGCxGC
 - doi: 10.1371/journal.pntd.0006215
   title: ''
 evidence_spans:
-- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional gas chromatography data.
+- The goal of RGCxGC is to provide an easy-to-use platform to analyze two-dimensional
+  gas chromatography data.
 - This is the vignette to explain the implementation of RGCxGC package.
 claims: []
 provenance:

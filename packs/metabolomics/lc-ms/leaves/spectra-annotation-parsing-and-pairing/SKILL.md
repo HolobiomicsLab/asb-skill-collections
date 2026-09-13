@@ -1,9 +1,10 @@
 ---
 name: spectra-annotation-parsing-and-pairing
-description: Use when when loading MS/MS spectra from MGF files for FIDDLE model training or evaluation, or when preparing spectrum–annotation pairs for rescore model data augmentation (TCN train/test sets).
+description: Use when when loading MS/MS spectra from MGF files for FIDDLE model training
+  or evaluation, or when preparing spectrum–annotation pairs for rescore model data
+  augmentation (TCN train/test sets).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -13,6 +14,8 @@ metadata:
   - FIDDLE (research codebase)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

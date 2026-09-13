@@ -1,9 +1,9 @@
 ---
 name: python-class-interface-design-for-ml-libraries
-description: 'Use when when building a machine learning library for scientific workflows where users need to: (1) prepare domain-specific data (e.'
+description: 'Use when when building a machine learning library for scientific workflows
+  where users need to: (1) prepare domain-specific data (e.'
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,11 +16,14 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.03.25.586580v5
   title: MS2DeepScore 2.0
 evidence_spans:
-- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular structural similarities'
+- '`ms2deepscore` provides a Siamese neural network that is trained to predict molecular
+  structural similarities'
 - make sure the existing tests still work by running ``python setup.py test``
 claims: []
 provenance:

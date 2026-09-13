@@ -1,9 +1,11 @@
 ---
 name: peak-property-validation
-description: Use when after converting a CSV file of molecule definitions into a peak properties dictionary using csv_to_peak_properties, or after loading a serialized peak properties dictionary from pickle/JSON storage, before passing it to SMITER simulation functions (e.g., smiter.synthetic_mzml.write_mzml).
+description: Use when after converting a CSV file of molecule definitions into a peak
+  properties dictionary using csv_to_peak_properties, or after loading a serialized
+  peak properties dictionary from pickle/JSON storage, before passing it to SMITER
+  simulation functions (e.g., smiter.synthetic_mzml.write_mzml).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,11 +15,14 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/genes12030396
   title: SMITER
 evidence_spans:
-- SMITER (Synthetic mzML writer) is a python-based command-line tool designed to simulate LC-MS/MS runs.
+- SMITER (Synthetic mzML writer) is a python-based command-line tool designed to simulate
+  LC-MS/MS runs.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

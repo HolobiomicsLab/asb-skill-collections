@@ -1,9 +1,11 @@
 ---
 name: deep-learning-model-inference
-description: Use when you have preprocessed mass spectrometry spectra (tokenized m/z and intensity pairs or feature matrices) and a trained deep learning model checkpoint, and you need to classify unknown compounds or generate prediction confidence scores for structural novelty analysis.
+description: Use when you have preprocessed mass spectrometry spectra (tokenized m/z
+  and intensity pairs or feature matrices) and a trained deep learning model checkpoint,
+  and you need to classify unknown compounds or generate prediction confidence scores
+  for structural novelty analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -20,6 +22,8 @@ metadata:
   - PyTorch or TensorFlow
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05019
   title: ps2ms

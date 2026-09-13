@@ -1,9 +1,10 @@
 ---
 name: batch-effect-detection-and-quantification
-description: Use when after merging feature tables from multiple LC-MS/MS analytical runs or sample cohorts processed in separate batches, and before applying batch correction.
+description: Use when after merging feature tables from multiple LC-MS/MS analytical
+  runs or sample cohorts processed in separate batches, and before applying batch
+  correction.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +17,8 @@ metadata:
   - SMART
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41596-024-01046-3
   title: FBMN-STATS

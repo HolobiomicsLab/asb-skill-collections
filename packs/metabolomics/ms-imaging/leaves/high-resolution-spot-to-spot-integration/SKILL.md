@@ -1,9 +1,11 @@
 ---
 name: high-resolution-spot-to-spot-integration
-description: 'Use when you have two spatial omics datasets (e.g., spatial transcriptome and metabolome spot matrices) collected from the same or adjacent tissue sections, with both feature matrices (X: np.ndarray) and spatial coordinates (D: np.ndarray containing location information in .'
+description: 'Use when you have two spatial omics datasets (e.g., spatial transcriptome
+  and metabolome spot matrices) collected from the same or adjacent tissue sections,
+  with both feature matrices (X: np.ndarray) and spatial coordinates (D: np.ndarray
+  containing location information in .'
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3198
   edam_topics:
   - http://edamontology.org/topic_3673
@@ -14,11 +16,14 @@ metadata:
   - hacca Python package
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.08.20.608773v2
   title: haCCA
 evidence_spans:
-- haCCA, a workflow utilizing high Correlated feature pairs combined with a modified spatial morphological alignment
+- haCCA, a workflow utilizing high Correlated feature pairs combined with a modified
+  spatial morphological alignment
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

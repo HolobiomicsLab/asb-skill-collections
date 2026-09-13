@@ -1,9 +1,11 @@
 ---
 name: structured-data-table-creation
-description: Use when you have obtained a raw reference library file (such as the DTCCS_N2 library for U13C labeled lipids) and need to validate its structure, verify that all expected lipid entries are present, and ensure CCS values fall within physically plausible ranges (typically 50–300 Ų for small lipids).
+description: Use when you have obtained a raw reference library file (such as the
+  DTCCS_N2 library for U13C labeled lipids) and need to validate its structure, verify
+  that all expected lipid entries are present, and ensure CCS values fall within physically
+  plausible ranges (typically 50–300 Ų for small lipids).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -13,12 +15,16 @@ metadata:
   - MobiLipid
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c01253
   title: mobilipid
 evidence_spans:
-- Our tool enhances CCS quality control by providing a R Markdown that integrates into IM-MS lipidomics workflows
-- MobiLipid aims to streamline lipidomics workflows by offering a fully automated solution for assessing and correcting collision cross section (CCS) bias
+- Our tool enhances CCS quality control by providing a R Markdown that integrates
+  into IM-MS lipidomics workflows
+- MobiLipid aims to streamline lipidomics workflows by offering a fully automated
+  solution for assessing and correcting collision cross section (CCS) bias
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

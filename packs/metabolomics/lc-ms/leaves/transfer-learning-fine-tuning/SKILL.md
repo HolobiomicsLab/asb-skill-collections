@@ -1,9 +1,10 @@
 ---
 name: transfer-learning-fine-tuning
-description: Use when you have collected liquid chromatography (LC) spectra and retention time labels for your in-house molecular database, and you want to leverage a pretrained GNN-RT model rather than train from scratch.
+description: Use when you have collected liquid chromatography (LC) spectra and retention
+  time labels for your in-house molecular database, and you want to leverage a pretrained
+  GNN-RT model rather than train from scratch.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_3474
@@ -18,6 +19,8 @@ metadata:
   - RDKit
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c04071
   title: GNN-RT

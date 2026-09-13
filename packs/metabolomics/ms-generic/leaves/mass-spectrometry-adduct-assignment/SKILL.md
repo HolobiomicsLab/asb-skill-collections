@@ -1,9 +1,10 @@
 ---
 name: mass-spectrometry-adduct-assignment
-description: Use when when processing in-silico or experimental MS spectra records from databases with incomplete metadata, specifically when the adduct field is null or absent but the ionmode field (positive/negative polarity) is present.
+description: Use when when processing in-silico or experimental MS spectra records
+  from databases with incomplete metadata, specifically when the adduct field is null
+  or absent but the ionmode field (positive/negative polarity) is present.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +16,13 @@ metadata:
   - RDkit
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub

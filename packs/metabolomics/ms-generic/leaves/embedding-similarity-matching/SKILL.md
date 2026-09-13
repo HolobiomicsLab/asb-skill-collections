@@ -1,9 +1,10 @@
 ---
 name: embedding-similarity-matching
-description: Use when after a CNN model has generated predicted molecular embeddings from mass spectrometry data, and you need to identify the most likely candidate molecules from a reference database.
+description: Use when after a CNN model has generated predicted molecular embeddings
+  from mass spectrometry data, and you need to identify the most likely candidate
+  molecules from a reference database.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3765
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,6 +14,8 @@ metadata:
   - ChemEmbed
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.02.07.637102v1
   title: ChemEmbed

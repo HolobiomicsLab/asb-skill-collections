@@ -1,9 +1,10 @@
 ---
 name: input-type-classification
-description: Use when a web application receives mass spectrometry data through heterogeneous identifier formats and must automatically determine which loader (Task ID, USI, or FBMN) should process the input.
+description: Use when a web application receives mass spectrometry data through heterogeneous
+  identifier formats and must automatically determine which loader (Task ID, USI,
+  or FBMN) should process the input.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +15,8 @@ metadata:
   - usi.py
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00237
   title: MMSA

@@ -1,9 +1,11 @@
 ---
 name: mass-spectrum-extraction-and-formatting
-description: Use when you have raw GC-MS data in netCDF or vendor-specific binary format and need to separate co-eluting compounds and extract clean mass spectra for each individual chemical component prior to molecular networking, spectral matching, or metabolite identification workflows.
+description: Use when you have raw GC-MS data in netCDF or vendor-specific binary
+  format and need to separate co-eluting compounds and extract clean mass spectra
+  for each individual chemical component prior to molecular networking, spectral matching,
+  or metabolite identification workflows.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,12 +15,15 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41587-020-0700-3
   title: mshub
 evidence_spans:
 - MSHub auto-deconvolution
-- Auto-deconvolution and molecular networking of gas chromatography–mass spectrometry data
+- Auto-deconvolution and molecular networking of gas chromatography–mass spectrometry
+  data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

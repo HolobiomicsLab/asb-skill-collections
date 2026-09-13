@@ -1,9 +1,11 @@
 ---
 name: mass-spectrometry-data-visualization
-description: Use when after applying retention time, abundance correlation, or EIC similarity-based feature grouping (e.g., via SimilarRtimeParam, AbundanceSimilarityParam, or EicSimilarityParam). Use when you need to visually confirm that grouped features belong to the same compound—i.
+description: Use when after applying retention time, abundance correlation, or EIC
+  similarity-based feature grouping (e.g., via SimilarRtimeParam, AbundanceSimilarityParam,
+  or EicSimilarityParam). Use when you need to visually confirm that grouped features
+  belong to the same compound—i.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0564
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -18,11 +20,14 @@ metadata:
   - pheatmap
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package
 - library(Spectra)
 - library(MsBackendMgf)
 - '%\VignetteDepends{xcms,MsDataHub,BiocStyle,pander,Spectra,MsBackendMgf,MetaboCoreUtils}'

@@ -1,9 +1,9 @@
 ---
 name: empirical-compound-construction-from-feature-clustering
-description: Use when after feature detection and quality control have produced a feature table in TSV format from Asari or equivalent preprocessing.
+description: Use when after feature detection and quality control have produced a
+  feature table in TSV format from Asari or equivalent preprocessing.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,6 +15,8 @@ metadata:
   - Asari
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

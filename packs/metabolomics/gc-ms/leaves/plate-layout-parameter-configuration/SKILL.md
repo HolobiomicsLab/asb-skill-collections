@@ -1,9 +1,9 @@
 ---
 name: plate-layout-parameter-configuration
-description: Use when after uploading a sample list to InjectionDesign and before performing inter-batch balancing and intra-batch randomization.
+description: Use when after uploading a sample list to InjectionDesign and before
+  performing inter-batch balancing and intra-batch randomization.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -12,6 +12,8 @@ metadata:
   - InjectionDesign
   techniques:
   - GC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.02.26.530140v1.article-info
   title: InjectionDesign

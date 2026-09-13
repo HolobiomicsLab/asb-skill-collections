@@ -1,9 +1,11 @@
 ---
 name: retention-time-feature-distribution-analysis
-description: Use when you have extracted retention times from top MS1 features in an LC-MS/MS experiment and need to assess whether the gradient configuration (start and end time in minutes) achieves adequate compound separation across the full chemical space.
+description: Use when you have extracted retention times from top MS1 features in
+  an LC-MS/MS experiment and need to assess whether the gradient configuration (start
+  and end time in minutes) achieves adequate compound separation across the full chemical
+  space.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +17,8 @@ metadata:
   - pyopenms
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.09.08.556930
   title: BAGO

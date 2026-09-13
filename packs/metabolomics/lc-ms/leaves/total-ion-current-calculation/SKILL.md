@@ -1,9 +1,9 @@
 ---
 name: total-ion-current-calculation
-description: Use when after loading all MS1 scans from a raw or intermediate mass spectrum file (e.
+description: Use when after loading all MS1 scans from a raw or intermediate mass
+  spectrum file (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,12 +16,16 @@ metadata:
   - ThermoRawFileParser
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c03207
   title: Aerith
 evidence_spans:
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans, calculate the theoretical isotopic peak envelope
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans, calculate the theoretical isotopic peak envelope
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans
 - Aerith is an R package
 claims: []
 provenance:

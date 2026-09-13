@@ -1,9 +1,11 @@
 ---
 name: cardinal-object-structure-understanding
-description: Use when when you have loaded a raw or processed Cardinal MSImagingExperiment object from MS imaging data and need to (1) extract spectral intensities and m/z feature information for conversion to other formats (e.g., Seurat), (2) verify that normalization or spatial segmentation (e.
+description: Use when when you have loaded a raw or processed Cardinal MSImagingExperiment
+  object from MS imaging data and need to (1) extract spectral intensities and m/z
+  feature information for conversion to other formats (e.g., Seurat), (2) verify that
+  normalization or spatial segmentation (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +17,13 @@ metadata:
   - Seurat
   techniques:
   - MS-imaging
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ''
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP

@@ -1,9 +1,10 @@
 ---
 name: r-parallel-backend-configuration
-description: Use when you have multiple MSP (mass spectrum) library files to read and merge in R, and your computational task is time-consuming (e.g., structure extraction, SMILES assignment, or RI assignment) and you have a multi-core system available.
+description: Use when you have multiple MSP (mass spectrum) library files to read
+  and merge in R, and your computational task is time-consuming (e.g., structure extraction,
+  SMILES assignment, or RI assignment) and you have a multi-core system available.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,6 +17,8 @@ metadata:
   - parallel
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler

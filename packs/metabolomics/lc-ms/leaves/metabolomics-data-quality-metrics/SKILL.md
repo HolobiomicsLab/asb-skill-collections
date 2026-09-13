@@ -1,9 +1,11 @@
 ---
 name: metabolomics-data-quality-metrics
-description: Use when you have a Sciex Multiquant (≥v3.0.3) txt export containing QCpool sample measurements at multiple timepoints within a sequence, and you need to flag compounds with high technical variability or signal degradation before proceeding to statistical analysis or interpretation of.
+description: Use when you have a Sciex Multiquant (≥v3.0.3) txt export containing
+  QCpool sample measurements at multiple timepoints within a sequence, and you need
+  to flag compounds with high technical variability or signal degradation before proceeding
+  to statistical analysis or interpretation of.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -13,11 +15,14 @@ metadata:
   - Sciex Multiquant
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c03660
   title: QComics
 evidence_spans:
-- The goal of the `QComics` package is to have a quick overview of the quality of a metabolomics or lipidomics study
+- The goal of the `QComics` package is to have a quick overview of the quality of
+  a metabolomics or lipidomics study
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

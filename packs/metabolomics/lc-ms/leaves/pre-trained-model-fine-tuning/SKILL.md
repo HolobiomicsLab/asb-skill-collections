@@ -1,9 +1,10 @@
 ---
 name: pre-trained-model-fine-tuning
-description: Use when you have a small training dataset for molecular property prediction (e.g., <500 samples from PredRet or MoNA databases) and a pre-trained GNN model is available that was trained on a related, larger molecular corpus.
+description: Use when you have a small training dataset for molecular property prediction
+  (e.g., <500 samples from PredRet or MoNA databases) and a pre-trained GNN model
+  is available that was trained on a related, larger molecular corpus.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3659
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -15,6 +16,8 @@ metadata:
   - retention_time_gnn
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c03177
   title: retention_time_gnn

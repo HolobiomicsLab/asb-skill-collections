@@ -1,9 +1,10 @@
 ---
 name: vendor-instrument-data-handling
-description: Use when you have acquired raw mass spectrometry data in vendor-proprietary formats (ThermoFisher, Agilent, or equivalent) and need to analyze it using MSThunder for unknown organic pollutant identification.
+description: Use when you have acquired raw mass spectrometry data in vendor-proprietary
+  formats (ThermoFisher, Agilent, or equivalent) and need to analyze it using MSThunder
+  for unknown organic pollutant identification.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -15,11 +16,14 @@ metadata:
   - Ubuntu 20.04
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.enceco.2025.07.022
   title: MSThunder
 evidence_spans:
-- MSThunder provide a deep learning-based nontargeted analytical framework for the accurate and rapid identification of unknown organic pollutants in water
+- MSThunder provide a deep learning-based nontargeted analytical framework for the
+  accurate and rapid identification of unknown organic pollutants in water
 - available through our experiments conducted on an Ubuntu 20.04 environment
 claims: []
 provenance:

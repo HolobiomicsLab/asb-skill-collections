@@ -1,9 +1,11 @@
 ---
 name: nontargeted-analysis-workflow-execution
-description: Use when you have UPLC-HRMS data from ThermoFisher, Agilent, or other vendor instruments (converted via MSConvert if needed), organized as batch-processed files ready for MSThunder input, and you need to identify unknown organic pollutants with deep learning-assisted structure prediction and.
+description: Use when you have UPLC-HRMS data from ThermoFisher, Agilent, or other
+  vendor instruments (converted via MSConvert if needed), organized as batch-processed
+  files ready for MSThunder input, and you need to identify unknown organic pollutants
+  with deep learning-assisted structure prediction and.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -16,13 +18,16 @@ metadata:
   - Ubuntu 20.04 (Linux environment)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.enceco.2025.07.022
   title: MSThunder
 - doi: 10.5281/zenodo.12602805
   title: ''
 evidence_spans:
-- MSThunder provide a deep learning-based nontargeted analytical framework for the accurate and rapid identification of unknown organic pollutants in water
+- MSThunder provide a deep learning-based nontargeted analytical framework for the
+  accurate and rapid identification of unknown organic pollutants in water
 - A case file named “Pesticides” can be run in the Windows environment
 claims: []
 provenance:

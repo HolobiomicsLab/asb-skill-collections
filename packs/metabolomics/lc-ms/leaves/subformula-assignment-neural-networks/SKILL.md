@@ -1,9 +1,11 @@
 ---
 name: subformula-assignment-neural-networks
-description: Use when when you have MS/MS spectra with assigned precursor formulas and need to annotate fragment peaks with their chemical subformulas, but want to avoid the computational overhead of generating full SIRIUS fragmentation trees or do not have access to spectrum databases.
+description: Use when when you have MS/MS spectra with assigned precursor formulas
+  and need to annotate fragment peaks with their chemical subformulas, but want to
+  avoid the computational overhead of generating full SIRIUS fragmentation trees or
+  do not have access to spectrum databases.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,12 +18,15 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data
-- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum
+  using an end-to-end energy based modeling approach
 - Utilizing sinusoidal formula embeddings as developed in our previous work SCARF
 claims: []
 provenance:

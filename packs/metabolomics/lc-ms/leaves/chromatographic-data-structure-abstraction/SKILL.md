@@ -1,9 +1,11 @@
 ---
 name: chromatographic-data-structure-abstraction
-description: Use when when ingesting raw mass spectrometry data from multiple instrument vendors or file formats into a metabolomics processing pipeline, and you need to expose spectral and chromatographic metadata through a single, consistent interface regardless of the source format's internal structure.
+description: Use when when ingesting raw mass spectrometry data from multiple instrument
+  vendors or file formats into a metabolomics processing pipeline, and you need to
+  expose spectral and chromatographic metadata through a single, consistent interface
+  regardless of the source format's internal structure.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,8 +16,10 @@ metadata:
   - bmxp (Chroma module)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
-- doi: 10.1093/bioinformatics/btaf290/8128335
+- doi: 10.1093/bioinformatics/btaf290
   title: Eclipse
 evidence_spans:
 - They are written in Python and C
@@ -26,15 +30,15 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_eclipse_cq
-    doi: 10.1093/bioinformatics/btaf290/8128335
+    doi: 10.1093/bioinformatics/btaf290
     title: Eclipse
   dedup_kept_from: coll_eclipse_cq
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bioinformatics/btaf290/8128335
+  original_doi: 10.1093/bioinformatics/btaf290
   all_source_dois:
-  - 10.1093/bioinformatics/btaf290/8128335
+  - 10.1093/bioinformatics/btaf290
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias

@@ -1,9 +1,11 @@
 ---
 name: metabolights-dataset-retrieval
-description: Use when you have a MetaboLights dataset identifier (e.g., MTBLS1124) and need to download a specific mzML file (e.g., QC07.mzML) from the public repository for visualization, quality control assessment, or integration into a metabolomics workflow. The USI format mzspec:MTBLS1124:QC07.
+description: Use when you have a MetaboLights dataset identifier (e.g., MTBLS1124)
+  and need to download a specific mzML file (e.g., QC07.mzML) from the public repository
+  for visualization, quality control assessment, or integration into a metabolomics
+  workflow. The USI format mzspec:MTBLS1124:QC07.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3925
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,6 +16,8 @@ metadata:
   - pymzML
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-021-01339-5
   title: GNPS Dashboard

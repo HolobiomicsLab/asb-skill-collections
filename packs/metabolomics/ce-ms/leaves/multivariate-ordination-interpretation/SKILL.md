@@ -1,9 +1,11 @@
 ---
 name: multivariate-ordination-interpretation
-description: Use when you have a collection of tandem MS/MS samples (stored in MassIVE) with GNPS spectral library annotations (m/z, retention time, compound identity), and you want to explore whether samples cluster by shared chemical features without predefined class labels.
+description: Use when you have a collection of tandem MS/MS samples (stored in MassIVE)
+  with GNPS spectral library annotations (m/z, retention time, compound identity),
+  and you want to explore whether samples cluster by shared chemical features without
+  predefined class labels.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -17,6 +19,8 @@ metadata:
   - scikit-learn
   techniques:
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU

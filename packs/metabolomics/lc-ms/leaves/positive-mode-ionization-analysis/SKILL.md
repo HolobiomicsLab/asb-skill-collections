@@ -1,9 +1,9 @@
 ---
 name: positive-mode-ionization-analysis
-description: Use when you have LC-MS metabolomics data in positive ionization mode and have already performed XCMS feature detection and RAMClustR clustering.
+description: Use when you have LC-MS metabolomics data in positive ionization mode
+  and have already performed XCMS feature detection and RAMClustR clustering.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,6 +15,8 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust

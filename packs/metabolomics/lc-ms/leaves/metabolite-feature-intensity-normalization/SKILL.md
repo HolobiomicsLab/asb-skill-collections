@@ -1,9 +1,10 @@
 ---
 name: metabolite-feature-intensity-normalization
-description: Use when after imputation and batch-effect correction (OUKS steps 3–4) have been completed on your LC-MS feature-intensity table, and before statistical hypothesis testing.
+description: Use when after imputation and batch-effect correction (OUKS steps 3–4)
+  have been completed on your LC-MS feature-intensity table, and before statistical
+  hypothesis testing.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +17,8 @@ metadata:
   - MetCorR
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.1c00392
   title: Omics Untargeted Key Script

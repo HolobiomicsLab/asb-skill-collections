@@ -1,9 +1,10 @@
 ---
 name: marker-ion-ranking-and-filtering
-description: Use when you have extracted latent low-dimensional peak features from imaging mass spectrometry (IMS) data using a graph-attention autoencoder and need to identify a ranked subset of marker ions that represent spatial metabolomic patterns.
+description: Use when you have extracted latent low-dimensional peak features from
+  imaging mass spectrometry (IMS) data using a graph-attention autoencoder and need
+  to identify a ranked subset of marker ions that represent spatial metabolomic patterns.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +17,8 @@ metadata:
   techniques:
   - MS-imaging
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART

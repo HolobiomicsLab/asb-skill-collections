@@ -1,9 +1,11 @@
 ---
 name: chromatogram-and-ionization-intensity-modeling
-description: 'Use when when you need to simulate LC-MS/MS data for fragmentation strategy development and do not have (or wish to augment) real experimental chromatograms. Specifically: (1) you have a list of known or sampled chemical compounds with molecular formulae;'
+description: 'Use when when you need to simulate LC-MS/MS data for fragmentation strategy
+  development and do not have (or wish to augment) real experimental chromatograms.
+  Specifically: (1) you have a list of known or sampled chemical compounds with molecular
+  formulae;'
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0821
@@ -16,6 +18,8 @@ metadata:
   - HMDB
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -24,7 +28,8 @@ derived_from:
 evidence_spans:
 - ViMMS is compatible with Python 3+
 - ViMMS dependencies are managed with [Poetry](https://python-poetry.org/)
-- Processes mzML output from a simulation (or real acquisition) to compute fragmentation coverage using OpenMS
+- Processes mzML output from a simulation (or real acquisition) to compute fragmentation
+  coverage using OpenMS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

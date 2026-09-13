@@ -1,9 +1,9 @@
 ---
 name: sample-information-metadata-parsing
-description: Use when when you have a validated ReDU sample-information metadata file (gnps_metadata.
+description: Use when when you have a validated ReDU sample-information metadata file
+  (gnps_metadata.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +14,8 @@ metadata:
   - GNPS
   techniques:
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU

@@ -1,9 +1,10 @@
 ---
 name: nmr-spectral-data-format-serialization
-description: Use when you have generated 1D FID time-domain data and Fourier-transformed frequency-domain 1H NMR spectra, or computed 2D COSY/HSQC correlation matrices, and need to write them to disk in a format that standard NMR software (e.
+description: Use when you have generated 1D FID time-domain data and Fourier-transformed
+  frequency-domain 1H NMR spectra, or computed 2D COSY/HSQC correlation matrices,
+  and need to write them to disk in a format that standard NMR software (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_1812
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,6 +15,8 @@ metadata:
   - scipy.io.netcdf / netCDF4-python
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btaf045
   title: MetAssimulo 2.0

@@ -1,9 +1,10 @@
 ---
 name: empirical-compound-pre-annotation
-description: Use when after feature detection from mzML files (e.g., via Asari) when you have a feature table with m/z, retention time, and intensity columns, and before MS1 or MS2 annotation.
+description: Use when after feature detection from mzML files (e.g., via Asari) when
+  you have a feature table with m/z, retention time, and intensity columns, and before
+  MS1 or MS2 annotation.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,6 +18,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

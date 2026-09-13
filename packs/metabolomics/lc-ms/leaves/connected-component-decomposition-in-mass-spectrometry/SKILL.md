@@ -1,9 +1,11 @@
 ---
 name: connected-component-decomposition-in-mass-spectrometry
-description: Use when you have a feature list from LC-MS preprocessing (e.g., asari output) and have already identified all pairwise feature matches to isotope and adduct patterns. Apply this skill when you need to separate feature matches into disjoint empirical compounds—i.
+description: Use when you have a feature list from LC-MS preprocessing (e.g., asari
+  output) and have already identified all pairwise feature matches to isotope and
+  adduct patterns. Apply this skill when you need to separate feature matches into
+  disjoint empirical compounds—i.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,6 +19,8 @@ metadata:
   - metDataModel
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu

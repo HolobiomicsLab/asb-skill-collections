@@ -1,9 +1,10 @@
 ---
 name: mass-spectrometry-fragmentation-pattern-modeling
-description: Use when when building a re-usable spectral reference library for lipidomics workflows where you need to match experimental MS/MS spectra against a comprehensive theoretical fragmentation model.
+description: Use when when building a re-usable spectral reference library for lipidomics
+  workflows where you need to match experimental MS/MS spectra against a comprehensive
+  theoretical fragmentation model.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,12 +17,16 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-59683-5
   title: LipidIN
 evidence_spans:
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification'
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification.'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification.'
 - 'CAMERA: an'
 claims: []
 provenance:

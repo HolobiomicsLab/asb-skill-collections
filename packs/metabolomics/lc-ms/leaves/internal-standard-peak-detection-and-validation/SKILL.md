@@ -1,9 +1,11 @@
 ---
 name: internal-standard-peak-detection-and-validation
-description: Use when you have loaded processed LC-MS data (mzML or vendor format) and need to establish baseline instrument performance before evaluating sample analytes. Use it at the start of each LC-MS batch or run to ensure that internal standard detection passes predefined thresholds;
+description: Use when you have loaded processed LC-MS data (mzML or vendor format)
+  and need to establish baseline instrument performance before evaluating sample analytes.
+  Use it at the start of each LC-MS batch or run to ensure that internal standard
+  detection passes predefined thresholds;
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +16,8 @@ metadata:
   - Rapid QC-MS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c00786
   title: Rapid QC-MS

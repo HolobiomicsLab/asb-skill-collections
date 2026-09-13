@@ -1,9 +1,11 @@
 ---
 name: lc-ms-scan-acquisition-orchestration
-description: Use when when you have a curated list of chemical compounds (real or virtual), a defined fragmentation strategy (e.g., Top-N, exclusion lists), and need to simulate how that strategy will acquire MS1 and MS2 scans over a defined retention-time window.
+description: Use when when you have a curated list of chemical compounds (real or
+  virtual), a defined fragmentation strategy (e.g., Top-N, exclusion lists), and need
+  to simulate how that strategy will acquire MS1 and MS2 scans over a defined retention-time
+  window.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3173
@@ -19,6 +21,8 @@ metadata:
   - OpenMS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms

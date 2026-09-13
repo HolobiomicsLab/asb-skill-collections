@@ -1,9 +1,11 @@
 ---
 name: feature-intensity-quantification
-description: Use when after features have been identified in LC-MS data via peak picking, MS2 recognition, or targeted-list matching, and you need to measure their signal magnitude (peak height or area) across samples for quantitative comparison, normalization, or statistical testing in metabolomics studies.
+description: Use when after features have been identified in LC-MS data via peak picking,
+  MS2 recognition, or targeted-list matching, and you need to measure their signal
+  magnitude (peak height or area) across samples for quantitative comparison, normalization,
+  or statistical testing in metabolomics studies.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,6 +16,8 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12030212
   title: JPA

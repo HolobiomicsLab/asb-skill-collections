@@ -5,6 +5,16 @@ exactly its indexable leaves in both indexes. ``--prune`` removes stale pack
 rows only when their declared collection/version parent also excludes them;
 it never copies, removes or invents a leaf.
 
+Index closure is *internal*: it asks whether a unit's indexes match the leaves
+that unit ships, which a pack can satisfy while shipping a leaf set the
+collection no longer has. That is how ``lc-ms`` stayed one leaf short of its
+own collection for months with every gate green. So a pack declared in a
+``packs/<domain>/packs.yaml`` map is additionally checked *against its parent
+collection* -- membership by the declared rule, and each copied leaf against
+the original it was copied from. The rule and the comparison live in
+:mod:`scripts.build_packs`, so the gate cannot pass a tree the generator would
+change.
+
 ``metadata.helper`` paths are unit-relative executable assets, including on
 advertised, infrastructure and workflow skills. ``metadata.issue_templates``
 contains repository pointers read on GitHub, not executed local assets, and is
@@ -24,7 +34,7 @@ if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from asb_skill_collections import layout
-from scripts import skill_index
+from scripts import build_packs, skill_index
 from scripts.propagate_license_tiers import detect_indent
 
 
@@ -216,8 +226,47 @@ def check_helpers(unit: Path) -> list[Violation]:
 
 
 def check_unit(unit: Path) -> list[Violation]:
-    """Return index closure and helper violations for one shipped unit."""
+    """Return index closure and helper violations for one shipped unit.
+
+    Deliberately *internal* to the unit: it needs no repository around it, and
+    a pack passes it while diverging from its collection. Derivation is checked
+    by :func:`derivation_findings`, which needs the root to find the parent.
+    """
     return inspect_indexes(unit).violations + check_helpers(unit)
+
+
+def derivation_findings(root: Path, collection_dir: Path | None = None) -> list[Violation]:
+    """Check every declared pack against the collection it is derived from.
+
+    Restricted to one parent when ``collection_dir`` is given, so a release gate
+    run for one collection reports only its own packs. A pack tree that declares
+    no map yields nothing: the declaration is what makes the relationship
+    checkable at all, which is why one is now shipped beside the packs.
+    """
+    root = Path(root).resolve()
+    parent = Path(collection_dir).resolve() if collection_dir is not None else None
+    findings: list[Violation] = []
+    for pack_map in build_packs.discover_maps(root):
+        if parent is not None and pack_map.collection_dir != parent:
+            continue
+        index = build_packs.read_index(
+            pack_map.collection_dir / build_packs.INDEX_FILENAME
+        )
+        source = pack_map.collection_dir.relative_to(root)
+        for spec in pack_map.packs:
+            findings.extend(
+                Violation(
+                    spec.directory,
+                    divergence.where,
+                    divergence.slug,
+                    "pack-to-collection",
+                    f"{divergence.reason} (source: {source.as_posix()}).",
+                )
+                for divergence in build_packs.pack_divergences(
+                    spec, pack_map.collection_dir, index
+                )
+            )
+    return findings
 
 
 def gate_findings(collection_dir: Path) -> list[Violation]:
@@ -231,7 +280,7 @@ def gate_findings(collection_dir: Path) -> list[Violation]:
     for unit in discover_units(root):
         if unit != collection_dir and unit.parent.parent == root / "packs":
             findings.extend(check_unit(unit))
-    return findings
+    return findings + derivation_findings(root, collection_dir)
 
 
 def _declared_parent(root: Path, bundle: dict) -> set[str]:
@@ -317,13 +366,21 @@ def prune_pack(pack: Path, root: Path) -> dict[str, list[str]]:
     return removed
 
 
+# Directions whose message is a template over (unit, slug, direction) alone, so
+# printing it again would only repeat the grouping key. Every other direction
+# carries a reason the reader cannot reconstruct -- which helper, which parse
+# error, which field the copy lost -- so its message is part of the key and is
+# printed.
+_MESSAGE_IMPLIED_BY_DIRECTION = ("index-to-disk", "disk-to-index")
+
+
 def _report(findings: list[Violation], root: Path, units: int) -> int:
     grouped: dict[tuple, list[Violation]] = {}
     for finding in findings:
         detail = (
-            finding.message
-            if finding.direction in ("helper-to-unit", "invalid-index")
-            else ""
+            ""
+            if finding.direction in _MESSAGE_IMPLIED_BY_DIRECTION
+            else finding.message
         )
         key = (finding.unit, finding.slug or "", finding.direction, detail)
         grouped.setdefault(key, []).append(finding)
@@ -370,7 +427,10 @@ def main(argv: list[str] | None = None) -> int:
             print(f"FAIL: prune stopped: {exc}")
             return 1
     return _report(
-        [finding for unit in units for finding in check_unit(unit)], root, len(units)
+        [finding for unit in units for finding in check_unit(unit)]
+        + derivation_findings(root),
+        root,
+        len(units),
     )
 
 

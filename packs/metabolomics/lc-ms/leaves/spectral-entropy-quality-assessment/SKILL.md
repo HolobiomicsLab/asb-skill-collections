@@ -1,9 +1,11 @@
 ---
 name: spectral-entropy-quality-assessment
-description: Use when after feature detection and alignment in untargeted MS data processing, when you need to filter or rank candidate metabolite annotations by spectral quality before committing to xenobiotic metabolite assignments. Use when combining fragmentation similarity scores (e.
+description: Use when after feature detection and alignment in untargeted MS data
+  processing, when you need to filter or rank candidate metabolite annotations by
+  spectral quality before committing to xenobiotic metabolite assignments. Use when
+  combining fragmentation similarity scores (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -22,6 +24,8 @@ metadata:
   - readxl
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.est.5c08558
   title: CMDN

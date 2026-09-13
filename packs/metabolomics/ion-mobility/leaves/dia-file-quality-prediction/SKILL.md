@@ -1,9 +1,10 @@
 ---
 name: dia-file-quality-prediction
-description: Use when you have a batch of DIA mass spectrometry raw files (.raw, .d, or .wiff formats) from known instrument types (timsTOF, TripleTOF, or Orbitrap) and need to classify each file as pass/fail or assign a quality label.
+description: Use when you have a batch of DIA mass spectrometry raw files (.raw, .d,
+  or .wiff formats) from known instrument types (timsTOF, TripleTOF, or Orbitrap)
+  and need to classify each file as pass/fail or assign a quality label.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,6 +17,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-024-54871-1
   title: iDIA-QC

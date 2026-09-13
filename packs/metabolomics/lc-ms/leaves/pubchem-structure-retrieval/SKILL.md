@@ -1,9 +1,10 @@
 ---
 name: pubchem-structure-retrieval
-description: Use when you have an experimental tandem mass spectrum and chemical formula for an unknown compound, and need to identify the true structure among all PubChem entries with that formula.
+description: Use when you have an experimental tandem mass spectrum and chemical formula
+  for an unknown compound, and need to identify the true structure among all PubChem
+  entries with that formula.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3431
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -15,6 +16,8 @@ metadata:
   - MAGMa
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04654
   title: ICEBERG / fragmentation graph generation

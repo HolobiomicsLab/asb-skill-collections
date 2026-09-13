@@ -1,9 +1,10 @@
 ---
 name: signal-to-noise-filtering-for-peak-candidates
-description: Use when immediately after peak detection in the IDSL.IPA workflow, when you have a list of candidate peaks extracted from EIC data and need to remove noise-dominated signals before downstream peak property evaluation and annotation.
+description: Use when immediately after peak detection in the IDSL.IPA workflow, when
+  you have a list of candidate peaks extracted from EIC data and need to remove noise-dominated
+  signals before downstream peak property evaluation and annotation.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,11 +16,15 @@ metadata:
   - MZmine 2
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA
 evidence_spans:
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
+  R package'
 - light-weight R package
 claims: []
 provenance:

@@ -1,9 +1,11 @@
 ---
 name: spectral-data-quality-assessment
-description: Use when importing raw or public mass spectrometry spectral data in formats such as MGF, MSP, or mzML that may contain incomplete metadata (e.g., missing instrument type, precursor m/z, retention time), low-intensity noise peaks, or spectra with invalid or inconsistent metadata fields.
+description: Use when importing raw or public mass spectrometry spectral data in formats
+  such as MGF, MSP, or mzML that may contain incomplete metadata (e.g., missing instrument
+  type, precursor m/z, retention time), low-intensity noise peaks, or spectra with
+  invalid or inconsistent metadata fields.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -20,6 +22,8 @@ metadata:
   - RDKit (inferred)
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
@@ -27,7 +31,8 @@ derived_from:
   title: ''
 evidence_spans:
 - Matchms offers an array of tools for metadata cleaning and validation
-- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+- Matchms is a versatile open-source Python package developed for importing, processing,
+  cleaning, and comparing mass spectrometry data
 - make sure the existing tests still work by running ``pytest``
 - Python：3.12
 - PyTorch：2.6.0 + CUDA 12.4

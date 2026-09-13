@@ -1,9 +1,10 @@
 ---
 name: molecular-structure-graph-representation
-description: Use when when you have a set of chemical structures (SMILES strings or SDF files) that need to be processed for training a graph neural network model on molecular property prediction tasks, specifically when the target property (e.
+description: Use when when you have a set of chemical structures (SMILES strings or
+  SDF files) that need to be processed for training a graph neural network model on
+  molecular property prediction tasks, specifically when the target property (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_2275
@@ -24,6 +25,8 @@ metadata:
   - torch-scatter, torch-sparse, torch-cluster
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jcim.4c02179
   title: ABCoRT

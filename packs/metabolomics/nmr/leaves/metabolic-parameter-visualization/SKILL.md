@@ -1,9 +1,11 @@
 ---
 name: metabolic-parameter-visualization
-description: Use when when you have paired NMR metabolite measurements and corresponding processing metadata (pre-centrifugation delay, post-centrifugation delay, sample type, cohort) for a blood sample cohort and need to determine which metabolites remain stable across the expected or observed delay range, or.
+description: Use when when you have paired NMR metabolite measurements and corresponding
+  processing metadata (pre-centrifugation delay, post-centrifugation delay, sample
+  type, cohort) for a blood sample cohort and need to determine which metabolites
+  remain stable across the expected or observed delay range, or.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0337
   edam_topics:
   - http://edamontology.org/topic_0769
@@ -14,6 +16,8 @@ metadata:
   - QC-Tool
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c04938
   title: PRIMA-Panel

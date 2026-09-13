@@ -1,9 +1,10 @@
 ---
 name: missing-pattern-generation-validation
-description: Use when you have a complete metabolomics data matrix (simulated or real abundance table) and need to create reproducible, controlled MNAR scenarios for evaluating imputation algorithm performance.
+description: Use when you have a complete metabolomics data matrix (simulated or real
+  abundance table) and need to create reproducible, controlled MNAR scenarios for
+  evaluating imputation algorithm performance.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,6 +16,13 @@ metadata:
   - R package imputeLCMD
   techniques:
   - LC-MS
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-SA-4.0
+    url: WandeRum/GSimp
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp

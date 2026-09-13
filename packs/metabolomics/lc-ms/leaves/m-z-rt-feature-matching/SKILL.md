@@ -1,9 +1,10 @@
 ---
 name: m-z-rt-feature-matching
-description: Use when you have extracted peaks from multiple LC/HRMS batches (n > 1) with their m/z and RT values, and you need to identify and align peaks representing the same compound across batches to build a consensus feature matrix.
+description: Use when you have extracted peaks from multiple LC/HRMS batches (n >
+  1) with their m/z and RT values, and you need to identify and align peaks representing
+  the same compound across batches to build a consensus feature matrix.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,11 +16,15 @@ metadata:
   - xcms
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA
 evidence_spans:
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
+  R package'
 - light-weight R package
 claims: []
 provenance:

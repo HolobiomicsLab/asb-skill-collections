@@ -1,9 +1,9 @@
 ---
 name: least-squares-optimization-spectral-deconvolution
-description: Use when after GCMSFormer has predicted the pure mass spectral matrix S from overlapped GC-MS peaks.
+description: Use when after GCMSFormer has predicted the pure mass spectral matrix
+  S from overlapped GC-MS peaks.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +15,8 @@ metadata:
   - GCMSFormer
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05772
   title: GCMSFormer

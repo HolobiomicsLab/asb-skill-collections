@@ -1,9 +1,10 @@
 ---
 name: parameter-conditional-execution
-description: Use when when a post-processing step (such as dereplication) risks removing true positive signals due to overly strict thresholds, and you need the option to retain raw or unfiltered output without code branching.
+description: Use when when a post-processing step (such as dereplication) risks removing
+  true positive signals due to overly strict thresholds, and you need the option to
+  retain raw or unfiltered output without code branching.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -13,6 +14,8 @@ metadata:
   - Paramounter
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c04758
   title: Paramounter

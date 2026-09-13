@@ -1,9 +1,9 @@
 ---
 name: cosine-similarity-matrix-computation
-description: Use when after generating normalized dense embeddings for both query and reference MS/MS spectra using a pre-trained model like SpecEmbedding.
+description: Use when after generating normalized dense embeddings for both query
+  and reference MS/MS spectra using a pre-trained model like SpecEmbedding.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3791
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -20,6 +20,8 @@ metadata:
   - CUDA 12.4
   techniques:
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding

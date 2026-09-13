@@ -1,9 +1,9 @@
 ---
 name: peak-prominence-calculation-local-maxima
-description: Use when when processing LC-MS mass tracks (EICs) and you need to identify genuine chromatographic peaks rather than noise artifacts.
+description: Use when when processing LC-MS mass tracks (EICs) and you need to identify
+  genuine chromatographic peaks rather than noise artifacts.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,11 +16,14 @@ metadata:
   - asari (peaks.evaluate_gaussian_peak_on_intensity_list)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:

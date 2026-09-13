@@ -1,9 +1,11 @@
 ---
 name: attention-mechanism-implementation
-description: Use when you have imaging mass spectrometry (IMS) datasets with peak intensity features organized as spatial graphs (nodes = pixels/voxels, edges = spatial adjacency), and you need to discover latent peak patterns for automatic peak picking or marker ion identification without manual feature.
+description: Use when you have imaging mass spectrometry (IMS) datasets with peak
+  intensity features organized as spatial graphs (nodes = pixels/voxels, edges = spatial
+  adjacency), and you need to discover latent peak patterns for automatic peak picking
+  or marker ion identification without manual feature.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0092
@@ -18,6 +20,8 @@ metadata:
   - LC-MS
   - MS-imaging
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART

@@ -1,9 +1,10 @@
 ---
 name: spectral-library-database-querying
-description: Use when you have one or more MS/MS query spectra (in mzML, mgf, msp, mzxml, json, or pickled matchms format) and a pre-built spectral library stored in SQLite with precomputed MS2Deepscore embeddings.
+description: Use when you have one or more MS/MS query spectra (in mzML, mgf, msp,
+  mzxml, json, or pickled matchms format) and a pre-built spectral library stored
+  in SQLite with precomputed MS2Deepscore embeddings.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +17,8 @@ metadata:
   - MZMine
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query

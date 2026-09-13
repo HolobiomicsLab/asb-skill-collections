@@ -1,9 +1,11 @@
 ---
 name: isotopic-impurity-accounting
-description: Use when when analyzing LC-MS data from stable isotope labeling experiments where measured isotopologue abundances are contaminated by naturally occurring isotopes and tracer isotopic impurity, and you have access to unlabeled sample reference measurements to empirically model these confounding.
+description: Use when when analyzing LC-MS data from stable isotope labeling experiments
+  where measured isotopologue abundances are contaminated by naturally occurring isotopes
+  and tracer isotopic impurity, and you have access to unlabeled sample reference
+  measurements to empirically model these confounding.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,6 +15,8 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s12859-019-2669-9
   title: ElemCor

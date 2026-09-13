@@ -1,9 +1,11 @@
 ---
 name: ppm-error-validation-in-metabolomics
-description: Use when when annotating m/z features from Cardinal MSImagingExperiment objects or LC-MS datasets against metabolite databases (HMDB, Lipidmaps) and you need to exclude matches where the mass difference exceeds your instrumental accuracy or analysis tolerance.
+description: Use when when annotating m/z features from Cardinal MSImagingExperiment
+  objects or LC-MS datasets against metabolite databases (HMDB, Lipidmaps) and you
+  need to exclude matches where the mass difference exceeds your instrumental accuracy
+  or analysis tolerance.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,6 +16,13 @@ metadata:
   - Cardinal
   techniques:
   - LC-MS
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ''
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP

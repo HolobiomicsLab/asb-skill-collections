@@ -1,9 +1,9 @@
 ---
 name: hrms-feature-annotation-integration
-description: Use when you have LC- or GC-HRMS data in mzML format and a feature list (CSV/TSL/Excel) from external feature detection software (e.
+description: Use when you have LC- or GC-HRMS data in mzML format and a feature list
+  (CSV/TSL/Excel) from external feature detection software (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,12 +16,15 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
 - PFΔScreen is an open-source Python based non-target screening software tool
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

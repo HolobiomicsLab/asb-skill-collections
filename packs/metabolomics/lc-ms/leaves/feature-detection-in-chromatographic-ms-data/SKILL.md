@@ -1,9 +1,11 @@
 ---
 name: feature-detection-in-chromatographic-ms-data
-description: Use when you have vendor-independent centroided DDA mzML files from LC- or GC-HRMS and need to delineate chromatographic peaks across the mass-to-charge and retention-time dimensions before applying mass defect analysis, diagnostic fragment matching, or other prioritization rules.
+description: Use when you have vendor-independent centroided DDA mzML files from LC-
+  or GC-HRMS and need to delineate chromatographic peaks across the mass-to-charge
+  and retention-time dimensions before applying mass defect analysis, diagnostic fragment
+  matching, or other prioritization rules.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,13 +18,17 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 - pyOpenMS (Python interface to the C++ OpenMS library)
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data.
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data.
 - PFΔScreen is an open-source Python based non-target screening software tool
 claims: []
 provenance:

@@ -1,9 +1,11 @@
 ---
 name: cross-instrument-data-harmonization
-description: Use when you have mass spectrometry spectral data from multiple instrument types (e.g., direct infusion MS, ambient ionization MS, laser desorption/ionization MS) and need to perform unified species discrimination or database scoring across all samples regardless of their source instrument.
+description: Use when you have mass spectrometry spectral data from multiple instrument
+  types (e.g., direct infusion MS, ambient ionization MS, laser desorption/ionization
+  MS) and need to perform unified species discrimination or database scoring across
+  all samples regardless of their source instrument.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +17,8 @@ metadata:
   - LDI-MS
   techniques:
   - direct-infusion-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass

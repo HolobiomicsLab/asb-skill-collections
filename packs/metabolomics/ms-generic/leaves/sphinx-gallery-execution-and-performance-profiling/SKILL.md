@@ -1,9 +1,9 @@
 ---
 name: sphinx-gallery-execution-and-performance-profiling
-description: Use when you have a Sphinx-based documentation project with multiple gallery scripts (e.
+description: Use when you have a Sphinx-based documentation project with multiple
+  gallery scripts (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_topics: []
   tools:
   - pyOpenMS-viz
@@ -15,12 +15,15 @@ metadata:
   - pandas
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
 evidence_spans:
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 - Multiple backends supported including matplotlib, bokeh, and plotly
 - Rendering is typically slower than the BOKEH backend
 - Build docs with sphinx-build

@@ -1,9 +1,11 @@
 ---
 name: cohort-stratified-metabolic-performance-analysis
-description: Use when when you have uploaded a pre-analytical data table containing sample metadata, processing delay annotations (pre- and post-centrifugation times), and paired NMR metabolomic measurements for a plasma or serum cohort, and you need to determine how processing delays impact metabolite.
+description: Use when when you have uploaded a pre-analytical data table containing
+  sample metadata, processing delay annotations (pre- and post-centrifugation times),
+  and paired NMR metabolomic measurements for a plasma or serum cohort, and you need
+  to determine how processing delays impact metabolite.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3745
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +18,8 @@ metadata:
   - LC-MS
   - GC-MS
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c04938
   title: PRIMA-Panel

@@ -1,9 +1,10 @@
 ---
 name: molecular-networking-parameter-configuration
-description: Use when after preparing a feature table and MS/MS spectral data (mzML or MGF format with precursor m/z, retention time, and MS/MS spectra) and before submitting to GNPS for molecular network generation.
+description: Use when after preparing a feature table and MS/MS spectral data (mzML
+  or MGF format with precursor m/z, retention time, and MS/MS spectra) and before
+  submitting to GNPS for molecular network generation.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -15,6 +16,8 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jnatprod.7b00737
   title: Bioactivity-Based Molecular Networking

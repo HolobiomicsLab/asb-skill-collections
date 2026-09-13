@@ -1,9 +1,10 @@
 ---
 name: spectral-connectivity-filtering
-description: Use when you have picked peaks (coordinates and intensities) from an INADEQUATE NMR spectrum and need to cluster them into networks representing individual compounds.
+description: Use when you have picked peaks (coordinates and intensities) from an
+  INADEQUATE NMR spectrum and need to cluster them into networks representing individual
+  compounds.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,6 +14,8 @@ metadata:
   - PyINETA
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c03966
   title: PyINETA

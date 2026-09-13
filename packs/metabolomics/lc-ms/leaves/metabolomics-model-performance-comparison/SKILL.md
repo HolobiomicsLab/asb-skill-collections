@@ -1,9 +1,10 @@
 ---
 name: metabolomics-model-performance-comparison
-description: Use when you have trained multiple machine learning classifiers (e.g., AdaBoost, SVM, Random Forest) on the same metabolomics peak-quality training set using k-fold cross-validation with repeated runs (e.
+description: Use when you have trained multiple machine learning classifiers (e.g.,
+  AdaBoost, SVM, Random Forest) on the same metabolomics peak-quality training set
+  using k-fold cross-validation with repeated runs (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,15 +16,20 @@ metadata:
   - caret
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s11306-020-01738-3
   title: MetaClean
 - doi: 10.1186/1471-2105-15-s11-s5
   title: ''
 evidence_spans:
-- MetaClean is a package for building classifiers to identify low quality integrations in untargeted metabolomics data.
-- '`MetaClean` provides 8 classification algorithms (implemented with the R package `caret`) for building a predictive model.'
-- getEvalObj is called to extract the relevant data from the three objects provided by ther user and store them in an object of class evalObj
+- MetaClean is a package for building classifiers to identify low quality integrations
+  in untargeted metabolomics data.
+- '`MetaClean` provides 8 classification algorithms (implemented with the R package
+  `caret`) for building a predictive model.'
+- getEvalObj is called to extract the relevant data from the three objects provided
+  by ther user and store them in an object of class evalObj
 - It is an R package and can be easily incorporated
 - MetaClean provides 8 classification algorithms (implemented with the R package caret)
 claims: []

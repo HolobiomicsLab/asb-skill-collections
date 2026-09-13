@@ -1,9 +1,11 @@
 ---
 name: spectral-alignment-scoring
-description: Use when you have paired MS/MS spectra (known compound and its structural analog) with assigned precursor m/z, charge, and SMILES; you want to quantify which parts of the molecular structure could have undergone modification by scoring peak alignment quality.
+description: Use when you have paired MS/MS spectra (known compound and its structural
+  analog) with assigned precursor m/z, charge, and SMILES; you want to quantify which
+  parts of the molecular structure could have undergone modification by scoring peak
+  alignment quality.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -19,6 +21,8 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00061
   title: ModiFinder

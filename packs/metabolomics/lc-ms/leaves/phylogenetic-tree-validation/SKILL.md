@@ -1,9 +1,10 @@
 ---
 name: phylogenetic-tree-validation
-description: Use when after generating a Chemical Feature Tree from q2-qemistree (or any tree artifact) and before using it for alpha-diversity or beta-diversity phylogenetic analyses.
+description: Use when after generating a Chemical Feature Tree from q2-qemistree (or
+  any tree artifact) and before using it for alpha-diversity or beta-diversity phylogenetic
+  analyses.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_2423
   edam_topics:
   - http://edamontology.org/topic_0092
@@ -15,11 +16,14 @@ metadata:
   - SIRIUS / CSI:FingerID
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
 evidence_spans:
-- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed comparison of untargeted metabolomic profiles.
+- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed
+  comparison of untargeted metabolomic profiles.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

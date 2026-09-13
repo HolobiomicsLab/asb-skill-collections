@@ -1,9 +1,10 @@
 ---
 name: computational-reproducibility-verification
-description: Use when you have access to both raw data (deposited in a repository like Zenodo) and analysis scripts (in a GitHub repository), and you need to confirm that the published figures, tables, or quantitative findings are reproducible.
+description: Use when you have access to both raw data (deposited in a repository
+  like Zenodo) and analysis scripts (in a GitHub repository), and you need to confirm
+  that the published figures, tables, or quantitative findings are reproducible.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +16,8 @@ metadata:
   - Zenodo deposit
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-43917-5
   title: scSpaMet

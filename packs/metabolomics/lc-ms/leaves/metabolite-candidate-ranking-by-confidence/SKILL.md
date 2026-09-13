@@ -1,9 +1,11 @@
 ---
 name: metabolite-candidate-ranking-by-confidence
-description: Use when you have a set of candidate metabolites for an unknown compound detected in a liquid chromatography–mass spectrometry (LC-MS) experiment, predicted RTs from a trained DNN model, and access to calibration molecules (minimum 10) that connect your observed chromatographic method to a source.
+description: Use when you have a set of candidate metabolites for an unknown compound
+  detected in a liquid chromatography–mass spectrometry (LC-MS) experiment, predicted
+  RTs from a trained DNN model, and access to calibration molecules (minimum 10) that
+  connect your observed chromatographic method to a source.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3680
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,11 +15,14 @@ metadata:
   - cmmrt
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

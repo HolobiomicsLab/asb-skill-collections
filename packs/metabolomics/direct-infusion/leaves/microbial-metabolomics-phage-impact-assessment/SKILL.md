@@ -1,9 +1,11 @@
 ---
 name: microbial-metabolomics-phage-impact-assessment
-description: 'Use when you have normalized peak intensities (with assigned molecular formulas) from FT-ICR MS analysis of treated and control bacterial samples (or environmental microbial communities), grouped by two or more treatment factors (e.g., phage type: HP1, HS2, control;'
+description: 'Use when you have normalized peak intensities (with assigned molecular
+  formulas) from FT-ICR MS analysis of treated and control bacterial samples (or environmental
+  microbial communities), grouped by two or more treatment factors (e.g., phage type:
+  HP1, HS2, control;'
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -17,13 +19,17 @@ metadata:
   - FT-ICR MS
   techniques:
   - direct-infusion-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
-- calculate diversity metrics using functions from the R packages vegan [63] and SYNCSA [64]
+- calculate diversity metrics using functions from the R packages vegan [63] and SYNCSA
+  [64]
 - using functions from the R packages vegan [63]
-- Molecular transformation networks for each sample (mass difference network-based approach) are generated in this step
+- Molecular transformation networks for each sample (mass difference network-based
+  approach) are generated in this step
 - The MetaboDirect pipeline consists of 6 major steps/categories (Fig. 1)
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
 claims: []

@@ -1,9 +1,10 @@
 ---
 name: imzml-file-format-parsing
-description: Use when you have acquired imaging mass spectrometry (IMS) data stored in imzML format (accompanied by an .ibd ion binary data file) and need to load it into a Python-based spatial metabolomics workflow.
+description: Use when you have acquired imaging mass spectrometry (IMS) data stored
+  in imzML format (accompanied by an .ibd ion binary data file) and need to load it
+  into a Python-based spatial metabolomics workflow.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +15,8 @@ metadata:
   - LC-MS
   - MS-imaging
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-63915-z
   title: SpatialMETA

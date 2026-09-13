@@ -1,15 +1,18 @@
 ---
 name: gradient-flow-verification
-description: Use when after implementing a composite loss function that combines multiple loss terms (e.g., InfoNCE contrastive loss and MSE reconstruction loss) in a PyTorch module, and before running full-scale training on MS/MS spectra data.
+description: Use when after implementing a composite loss function that combines multiple
+  loss terms (e.g., InfoNCE contrastive loss and MSE reconstruction loss) in a PyTorch
+  module, and before running full-scale training on MS/MS spectra data.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_topics: []
   tools:
   - PyTorch
   - Transformer
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c00260
   title: CLERMS

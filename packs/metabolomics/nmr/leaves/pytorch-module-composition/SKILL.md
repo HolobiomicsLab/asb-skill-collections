@@ -1,9 +1,10 @@
 ---
 name: pytorch-module-composition
-description: Use when when you need to extract both local spatial patterns and global long-range dependencies from sequential or spectral data (e.g., 1H NMR spectra), and neither CNNs nor Transformers alone are sufficient.
+description: Use when when you need to extract both local spatial patterns and global
+  long-range dependencies from sequential or spectral data (e.g., 1H NMR spectra),
+  and neither CNNs nor Transformers alone are sufficient.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +17,8 @@ metadata:
   - FlavorFormer
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.microc.2025.115372
   title: FlavorFormer

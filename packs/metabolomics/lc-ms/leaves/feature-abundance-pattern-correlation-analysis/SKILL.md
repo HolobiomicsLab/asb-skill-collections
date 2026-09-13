@@ -1,9 +1,9 @@
 ---
 name: feature-abundance-pattern-correlation-analysis
-description: Use when after initial retention-time-based feature grouping has been performed on LC-MS data but before final EIC similarity refinement.
+description: Use when after initial retention-time-based feature grouping has been
+  performed on LC-MS data but before final EIC similarity refinement.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,11 +14,14 @@ metadata:
   - BiocParallel
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package with additional functionality being implemented
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package with additional functionality being implemented
 - VignetteDepends{xcms,BiocStyle,faahKO,pheatmap,MsFeatures}
 claims: []
 provenance:

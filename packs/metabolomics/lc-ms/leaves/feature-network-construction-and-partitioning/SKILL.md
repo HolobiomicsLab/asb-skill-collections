@@ -1,9 +1,10 @@
 ---
 name: feature-network-construction-and-partitioning
-description: Use when you have a preprocessed LC-MS feature table (m/z, retention time, intensity columns) and need to identify which features belong together as isotopes or adducts of the same neutral compound.
+description: Use when you have a preprocessed LC-MS feature table (m/z, retention
+  time, intensity columns) and need to identify which features belong together as
+  isotopes or adducts of the same neutral compound.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +17,8 @@ metadata:
   - metDataModel
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu

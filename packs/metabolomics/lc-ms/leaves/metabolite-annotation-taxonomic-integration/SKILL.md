@@ -1,9 +1,11 @@
 ---
 name: metabolite-annotation-taxonomic-integration
-description: Use when you have paired metabolomics data (MS/MS spectra and feature quantification) linked to organismal or tissue taxonomy, and you want to reduce false positive annotations and improve annotation rank by filtering candidate metabolites to those chemically plausible within the given taxon.
+description: Use when you have paired metabolomics data (MS/MS spectra and feature
+  quantification) linked to organismal or tissue taxonomy, and you want to reduce
+  false positive annotations and improve annotation rank by filtering candidate metabolites
+  to those chemically plausible within the given taxon.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3860
   edam_topics:
   - http://edamontology.org/topic_0639
@@ -18,6 +20,8 @@ metadata:
   - Spectra (R package)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3389/fpls.2019.01329
   title: tima

@@ -1,9 +1,11 @@
 ---
 name: visual-studio-project-management
-description: Use when when you have cloned a multi-framework .NET project (e.g., MsdialWorkbench using .NET Framework 4.7.2, .NET Core 3.1, and .NET 6) and need to set up the build environment in Visual Studio, restore dependencies, select a specific build configuration (e.
+description: Use when when you have cloned a multi-framework .NET project (e.g., MsdialWorkbench
+  using .NET Framework 4.7.2, .NET Core 3.1, and .NET 6) and need to set up the build
+  environment in Visual Studio, restore dependencies, select a specific build configuration
+  (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3552
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -19,14 +21,18 @@ metadata:
   - MsdialWorkbench
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
 evidence_spans:
-- If you intend to contribute to the GUI part of the code and would like to have access to a preview, we recommend using Visual Studio
+- If you intend to contribute to the GUI part of the code and would like to have access
+  to a preview, we recommend using Visual Studio
 - we recommend using Visual Studio
 - utilizing packages such as ReactiveExtensions and ReactiveProperty
-- The .NET class libraries adhere at least to the specifications of .NET Standard 2.0
+- The .NET class libraries adhere at least to the specifications of .NET Standard
+  2.0
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

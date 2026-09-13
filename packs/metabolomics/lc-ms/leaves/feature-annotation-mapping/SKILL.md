@@ -1,9 +1,10 @@
 ---
 name: feature-annotation-mapping
-description: Use when you have a trained decision tree model on ChemEcho sparse feature vectors and need to convert a specific decision path (root to leaf) into a deployable query.
+description: Use when you have a trained decision tree model on ChemEcho sparse feature
+  vectors and need to convert a specific decision path (root to leaf) into a deployable
+  query.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -14,6 +15,8 @@ metadata:
   - LIME
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c02591
   title: ChemEcho

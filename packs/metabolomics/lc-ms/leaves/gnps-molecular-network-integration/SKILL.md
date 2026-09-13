@@ -1,9 +1,11 @@
 ---
 name: gnps-molecular-network-integration
-description: Use when you have computed frequent fragmentation patterns from a collection of MS/MS spectra using mineMS2, and you want to focus pattern interpretation on subsets of spectra that form meaningful network components (connected groups, cliques, or high-similarity pairs) in a GNPS molecular network.
+description: Use when you have computed frequent fragmentation patterns from a collection
+  of MS/MS spectra using mineMS2, and you want to focus pattern interpretation on
+  subsets of spectra that form meaningful network components (connected groups, cliques,
+  or high-similarity pairs) in a GNPS molecular network.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +18,8 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-025-01051-y
   title: minems2

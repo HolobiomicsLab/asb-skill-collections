@@ -1,9 +1,10 @@
 ---
 name: ms2-dereplication
-description: Use when you have MS2 tandem mass spectrometry data in .mzML format and need to match unknown spectra against a reference library (GNPS, HMDB, MassBank) to identify which known compounds are present in your sample.
+description: Use when you have MS2 tandem mass spectrometry data in .mzML format and
+  need to match unknown spectra against a reference library (GNPS, HMDB, MassBank)
+  to identify which known compounds are present in your sample.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -18,6 +19,8 @@ metadata:
   - MassBank
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-023-00695-y
   title: MAW

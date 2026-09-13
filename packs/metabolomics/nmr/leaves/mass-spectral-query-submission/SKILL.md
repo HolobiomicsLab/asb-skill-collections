@@ -1,9 +1,10 @@
 ---
 name: mass-spectral-query-submission
-description: Use when you have one or more individual MS/MS spectra (in mzML, mzXML, or JSON format) and need to identify the compound(s) and their biological source by searching against a domain-specific spectral library.
+description: Use when you have one or more individual MS/MS spectra (in mzML, mzXML,
+  or JSON format) and need to identify the compound(s) and their biological source
+  by searching against a domain-specific spectral library.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -20,6 +21,8 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst

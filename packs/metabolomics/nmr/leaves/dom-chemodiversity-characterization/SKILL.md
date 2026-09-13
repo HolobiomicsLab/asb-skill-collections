@@ -1,9 +1,10 @@
 ---
 name: dom-chemodiversity-characterization
-description: Use when you have a formula-assigned FT-ICR MS dataset (molecular formulas already assigned to individual mass features) and seek to understand the chemodiversity landscape and transformation relationships within DOM.
+description: Use when you have a formula-assigned FT-ICR MS dataset (molecular formulas
+  already assigned to individual mass features) and seek to understand the chemodiversity
+  landscape and transformation relationships within DOM.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -12,11 +13,14 @@ metadata:
   - MoleTrans
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.estlett.5c00284
   title: MoleTrans
 evidence_spans:
-- MoleTrans is a webtool for post analysis and data mining on the formula assigned datasets from FT-ICR MS
+- MoleTrans is a webtool for post analysis and data mining on the formula assigned
+  datasets from FT-ICR MS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

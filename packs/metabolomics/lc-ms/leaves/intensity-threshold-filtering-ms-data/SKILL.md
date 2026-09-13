@@ -1,9 +1,11 @@
 ---
 name: intensity-threshold-filtering-ms-data
-description: Use when when you have loaded aligned peak data (from a preceding molecular networking alignment task) as a structured table with peak intensity, m/z, retention time, and alignment quality metrics, and you need to reduce false positives, remove noise, or focus analysis on peaks above a.
+description: Use when when you have loaded aligned peak data (from a preceding molecular
+  networking alignment task) as a structured table with peak intensity, m/z, retention
+  time, and alignment quality metrics, and you need to reduce false positives, remove
+  noise, or focus analysis on peaks above a.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +17,8 @@ metadata:
   - Dash
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00237
   title: MMSA

@@ -1,9 +1,11 @@
 ---
 name: ms-spectral-library-matching
-description: 'Use when when you have a GC-MS dataset (CSV with columns: Component.RT, Component.Area, Base.Peak.MZ, File.Name, Compound.Name, Match.Factor) and a known set of target chemicals you wish to locate and extract with their spectral match quality and quantitation.'
+description: 'Use when when you have a GC-MS dataset (CSV with columns: Component.RT,
+  Component.Area, Base.Peak.MZ, File.Name, Compound.Name, Match.Factor) and a known
+  set of target chemicals you wish to locate and extract with their spectral match
+  quality and quantitation.'
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -17,14 +19,19 @@ metadata:
   - Agilent Unknowns Analysis
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
 - Modern programming languages allow even complex workflows to be automated
 - Modern programming languages allow even complex workflows to be automated.
-- The first step in the process is to convert the raw input to a format that downstream functions can work with. `spreadOut()` prepares the read in .CSV for intelligent ***sorting*** (using retention
-- '`mzExacto()` collects the same information for a set of query chemicals and uses it to precisely search the advanced dictionary for samples that have those chemicals.'
+- The first step in the process is to convert the raw input to a format that downstream
+  functions can work with. `spreadOut()` prepares the read in .CSV for intelligent
+  ***sorting*** (using retention
+- '`mzExacto()` collects the same information for a set of query chemicals and uses
+  it to precisely search the advanced dictionary for samples that have those chemicals.'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

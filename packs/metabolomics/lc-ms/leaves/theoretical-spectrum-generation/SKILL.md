@@ -1,9 +1,10 @@
 ---
 name: theoretical-spectrum-generation
-description: Use when you have a defined set of lipid species (identified by class and fatty acid composition) and need to create a high-throughput spectral library for mass spectrometry-based lipid identification.
+description: Use when you have a defined set of lipid species (identified by class
+  and fatty acid composition) and need to create a high-throughput spectral library
+  for mass spectrometry-based lipid identification.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_0675
@@ -14,6 +15,8 @@ metadata:
   - Skyline
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04518
   title: Lipid Spectrum Generator

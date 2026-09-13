@@ -1,9 +1,10 @@
 ---
 name: retention-time-prediction-optimization
-description: Use when when you have a retention-time dataset (e.g., SMRT or Eawag_XBridgeC18_364) in .xlsx format and need to train or adapt a graph neural network model to predict chromatographic retention times for new compounds.
+description: Use when when you have a retention-time dataset (e.g., SMRT or Eawag_XBridgeC18_364)
+  in .xlsx format and need to train or adapt a graph neural network model to predict
+  chromatographic retention times for new compounds.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -25,6 +26,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jcim.4c02179
   title: ABCoRT

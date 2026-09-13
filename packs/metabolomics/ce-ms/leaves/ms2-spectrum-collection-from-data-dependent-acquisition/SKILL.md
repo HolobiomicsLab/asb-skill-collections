@@ -1,9 +1,11 @@
 ---
 name: ms2-spectrum-collection-from-data-dependent-acquisition
-description: Use when you have DDA LC-MS/MS raw data (mzML format) with detected chromatographic peaks at a target m/z value and retention time window, and you need to build a high-confidence MS2 consensus spectrum for that peak to match against reference spectra (e.g., Metlin, GNPS).
+description: Use when you have DDA LC-MS/MS raw data (mzML format) with detected chromatographic
+  peaks at a target m/z value and retention time window, and you need to build a high-confidence
+  MS2 consensus spectrum for that peak to match against reference spectra (e.g., Metlin,
+  GNPS).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,12 +18,15 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
 - library(MsBackendMgf)
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package with additional functionality being implemented
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package with additional functionality being implemented
 - VignetteDepends{xcms,BiocStyle,faahKO,pheatmap,MsFeatures}
 claims: []
 provenance:

@@ -1,9 +1,10 @@
 ---
 name: repository-cloning-and-setup
-description: Use when when you need to deploy a containerized scientific tool (e.g., CloMet) for the first time on a local machine or CI/CD environment, and the project provides a Dockerfile and GitHub repository.
+description: Use when when you need to deploy a containerized scientific tool (e.g.,
+  CloMet) for the first time on a local machine or CI/CD environment, and the project
+  provides a Dockerfile and GitHub repository.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_3407
@@ -13,6 +14,8 @@ metadata:
   - CloMet
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00602
   title: CloMet

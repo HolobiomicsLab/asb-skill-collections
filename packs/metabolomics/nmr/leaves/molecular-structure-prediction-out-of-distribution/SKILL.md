@@ -1,9 +1,10 @@
 ---
 name: molecular-structure-prediction-out-of-distribution
-description: Use when your goal is to assess whether a pretrained NMR2Struct model trained on molecules ≤19 heavy atoms can generalize to larger, more complex molecules, or whether accuracy degrades significantly.
+description: Use when your goal is to assess whether a pretrained NMR2Struct model
+  trained on molecules ≤19 heavy atoms can generalize to larger, more complex molecules,
+  or whether accuracy degrades significantly.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -14,6 +15,8 @@ metadata:
   - PubChem or equivalent molecular database
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct

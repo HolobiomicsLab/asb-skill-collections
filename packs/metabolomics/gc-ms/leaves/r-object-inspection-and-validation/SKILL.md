@@ -1,9 +1,9 @@
 ---
 name: r-object-inspection-and-validation
-description: Use when after performing assignment operations (assign_ri, assign_smiles) or combining multiple library objects (e.
+description: Use when after performing assignment operations (assign_ri, assign_smiles)
+  or combining multiple library objects (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +14,8 @@ metadata:
   - MS-DIAL
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler

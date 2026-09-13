@@ -1,9 +1,11 @@
 ---
 name: dda-fragmentation-strategy-parameterization
-description: Use when you have a virtual chemical mixture (MS1 peaks) and need to prototype a new DDA acquisition strategy before testing on real instrumentation. Use this skill when you want to compare how different parameter combinations (e.g., TopN=3 vs TopN=5, isolation_width=0.5 Da vs 1.
+description: Use when you have a virtual chemical mixture (MS1 peaks) and need to
+  prototype a new DDA acquisition strategy before testing on real instrumentation.
+  Use this skill when you want to compare how different parameter combinations (e.g.,
+  TopN=3 vs TopN=5, isolation_width=0.5 Da vs 1.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -15,6 +17,8 @@ metadata:
   - IAPI (Thermo Fisher Tribrid/Exactive)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms

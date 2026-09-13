@@ -1,9 +1,11 @@
 ---
 name: large-scale-data-retrieval
-description: Use when you have a query mass spectrum (or a metabolite reference spectrum from public data) and need to search it against a large-scale spectral repository (≥billions of spectra, e.g., GNPS library) where execution time and resource efficiency are critical.
+description: Use when you have a query mass spectrum (or a metabolite reference spectrum
+  from public data) and need to search it against a large-scale spectral repository
+  (≥billions of spectra, e.g., GNPS library) where execution time and resource efficiency
+  are critical.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +16,8 @@ metadata:
   - Spectrum USI (Spectrum Unique Spectrum Identifier)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41587-023-01985-4
   title: MASST

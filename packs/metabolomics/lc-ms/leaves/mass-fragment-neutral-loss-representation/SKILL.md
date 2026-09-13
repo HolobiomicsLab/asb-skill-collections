@@ -1,9 +1,10 @@
 ---
 name: mass-fragment-neutral-loss-representation
-description: Use when when you have raw or minimally processed MS/MS spectra (in positive or negative ion mode) and aim to infer recurring fragmentation patterns (Mass2Motifs) using topic modeling.
+description: Use when when you have raw or minimally processed MS/MS spectra (in positive
+  or negative ion mode) and aim to infer recurring fragmentation patterns (Mass2Motifs)
+  using topic modeling.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0769
@@ -14,11 +15,14 @@ metadata:
   - Latent Dirichlet Allocation (LDA)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
-- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
+- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural
+  language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
 - Invoke the main script `ms2lda_runfull.py` with your arguments
 - configure the Python environment (set `PYTHONPATH`, activate conda, etc.)
 - Configure the Python environment (set `PYTHONPATH`, activate conda, etc.)

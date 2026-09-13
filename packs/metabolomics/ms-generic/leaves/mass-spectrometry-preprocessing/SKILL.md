@@ -1,9 +1,10 @@
 ---
 name: mass-spectrometry-preprocessing
-description: Use when when you have raw mass-spectrometry data (precursor m/z, ionization mode, and fragment m/z–intensity pairs) that must be fed into a CNN model for metabolite annotation via compound fingerprint prediction.
+description: Use when when you have raw mass-spectrometry data (precursor m/z, ionization
+  mode, and fragment m/z–intensity pairs) that must be fed into a CNN model for metabolite
+  annotation via compound fingerprint prediction.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +17,8 @@ metadata:
   - PyFingerprint
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s11306-020-01726-7
   title: MetFID

@@ -1,9 +1,11 @@
 ---
 name: hierarchical-spectrum-object-construction
-description: Use when immediately after parsing and validating raw LC-MS/MS data files (mzML, mzXML, or vendor formats) when you need to prepare spectral data for fragmentation tree computation, isotope pattern analysis, or molecular formula ranking within the SIRIUS framework.
+description: Use when immediately after parsing and validating raw LC-MS/MS data files
+  (mzML, mzXML, or vendor formats) when you need to prepare spectral data for fragmentation
+  tree computation, isotope pattern analysis, or molecular formula ranking within
+  the SIRIUS framework.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -12,6 +14,8 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41587-021-01045-9
   title: cosmic

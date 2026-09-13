@@ -1,9 +1,10 @@
 ---
 name: metabolite-mass-database-matching
-description: Use when after features have been grouped into empirical compounds (empCpds) with inferred molecular formulas and adduct assignments by khipu, and you need to assign putative metabolite identities at the formula level.
+description: Use when after features have been grouped into empirical compounds (empCpds)
+  with inferred molecular formulas and adduct assignments by khipu, and you need to
+  assign putative metabolite identities at the formula level.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -17,12 +18,16 @@ metadata:
   - pcpfm
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm
 evidence_spans:
-- we recommend that you download the JMS-compliant versions of the HMDB and LMSD using the `download extras` command
-- perform MS1 annotation using an authentic compound library, a public database (e.g. HMDB, LIPID MAP), or custom database
+- we recommend that you download the JMS-compliant versions of the HMDB and LMSD using
+  the `download extras` command
+- perform MS1 annotation using an authentic compound library, a public database (e.g.
+  HMDB, LIPID MAP), or custom database
 - pre-annotation to group featues to empirical compounds (khipu)
 - Python-Centric Pipeline for Metabolomics
 claims: []

@@ -1,9 +1,10 @@
 ---
 name: sample-partitioning-by-metadata
-description: Use when you have a merged MGF file (e.g., from MZmine output) containing MS/MS spectra from multiple biological or environmental samples, and you need to process each sample independently through annotation pipelines (e.
+description: Use when you have a merged MGF file (e.g., from MZmine output) containing
+  MS/MS spectra from multiple biological or environmental samples, and you need to
+  process each sample independently through annotation pipelines (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +15,8 @@ metadata:
   - MZmine
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2021.12.21.473622v1
   title: MolNotator

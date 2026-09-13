@@ -1,9 +1,11 @@
 ---
 name: bayesian-model-update-with-experimental-data
-description: Use when you have completed one or more LC-MS gradient runs, extracted separation efficiency metrics from the resulting MS1 and MS2 spectra, and need to incorporate those real experimental observations into your Gaussian process model to improve the next gradient proposal.
+description: Use when you have completed one or more LC-MS gradient runs, extracted
+  separation efficiency metrics from the resulting MS1 and MS2 spectra, and need to
+  incorporate those real experimental observations into your Gaussian process model
+  to improve the next gradient proposal.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -17,13 +19,16 @@ metadata:
   - bago
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.09.08.556930
   title: BAGO
 - doi: 10.1002/9780470508183
   title: ''
 evidence_spans:
-- BAGO is a Bayesian optimization strategy for LC gradient optimization for MS-based small molecule analysis
+- BAGO is a Bayesian optimization strategy for LC gradient optimization for MS-based
+  small molecule analysis
 - A :class:`ms1Spectrum` object (supported by :mod:`bago`)
 - A :class:`MSExperiment` object (supported by :mod:`pyopenms`)
 - a :class:`sklearn.preprocessing.StandardScaler` object used to scale the data

@@ -1,27 +1,32 @@
 ---
 name: sample-study-size-stratified-algorithm-selection
-description: Use when when beginning mass alignment in a multi-sample LC-MS metabolomics study, before constructing the MassGrid.
+description: Use when when beginning mass alignment in a multi-sample LC-MS metabolomics
+  study, before constructing the MassGrid.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
   - http://edamontology.org/topic_0769
   tools:
   - Python
-  - asari MassGrid class (build_grid_sample_wise, add_sample, build_grid_by_centroiding, bin_track_mzs)
+  - asari MassGrid class (build_grid_sample_wise, add_sample, build_grid_by_centroiding,
+    bin_track_mzs)
   - asari mass_functions module (nn_cluster_by_mz_seeds)
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
-- See [MassGrid.build_grid_sample_wise](MassGrid.build_grid_sample_wise), [MassGrid.add_sample](MassGrid.add_sample). See [MassGrid.build_grid_by_centroiding](MassGrid.build_grid_by_centroiding),
+- See [MassGrid.build_grid_sample_wise](MassGrid.build_grid_sample_wise), [MassGrid.add_sample](MassGrid.add_sample).
+  See [MassGrid.build_grid_by_centroiding](MassGrid.build_grid_by_centroiding),
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

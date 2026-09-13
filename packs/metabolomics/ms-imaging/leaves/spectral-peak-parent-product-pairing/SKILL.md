@@ -1,9 +1,11 @@
 ---
 name: spectral-peak-parent-product-pairing
-description: Use when you have mass spectrometry imaging data with a histogram of pairwise mass differences that have already been matched to known adducts (via adductMatch), and you need to retrieve the actual mass peak pairs corresponding to a specific adduct of interest—particularly when you want to test.
+description: Use when you have mass spectrometry imaging data with a histogram of
+  pairwise mass differences that have already been matched to known adducts (via adductMatch),
+  and you need to retrieve the actual mass peak pairs corresponding to a specific
+  adduct of interest—particularly when you want to test.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,13 +16,17 @@ metadata:
   - corrPairsMSI
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - We can match massdiffs to specific adduct types using the same function `adductMatch`
-- If the data matrix is very large, it may need to be reformatted to be loaded into memory during an R session.
+- If the data matrix is very large, it may need to be reformatted to be loaded into
+  memory during an R session.
 - corrPairsMSI(d,d.diff.annot)
 claims: []
 provenance:

@@ -1,9 +1,9 @@
 ---
 name: calibration-curve-fitting-ms-data
-description: Use when you have raw mass spectrometry intensity data from targeted analytes and a set of calibration standard measurements with known concentrations.
+description: Use when you have raw mass spectrometry intensity data from targeted
+  analytes and a set of calibration standard measurements with known concentrations.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -12,6 +12,8 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey

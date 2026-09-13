@@ -1,9 +1,11 @@
 ---
 name: lc-ms-adduct-pattern-detection
-description: Use when when you have statistically significant features from multi-assay LC-MS metabolomics data (with m/z and retention time annotations) and need to group features that may represent the same compound ionized as different adducts (e.g., [M+H]⁺ vs. [M+Na]⁺).
+description: Use when when you have statistically significant features from multi-assay
+  LC-MS metabolomics data (with m/z and retention time annotations) and need to group
+  features that may represent the same compound ionized as different adducts (e.g.,
+  [M+H]⁺ vs. [M+Na]⁺).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -17,6 +19,8 @@ metadata:
   - peakPantheR
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi

@@ -1,9 +1,10 @@
 ---
 name: installation-requirement-validation
-description: Use when before attempting to run QCxMS2 for the first time, after updating any external dependencies (xtb, CREST, molbar, orca, geodesic_interpolate), or when troubleshooting unexplained calculation failures.
+description: Use when before attempting to run QCxMS2 for the first time, after updating
+  any external dependencies (xtb, CREST, molbar, orca, geodesic_interpolate), or when
+  troubleshooting unexplained calculation failures.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_0003
@@ -16,11 +17,14 @@ metadata:
   - orca
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00234
   title: QCxMS2
 evidence_spans:
-- Program package for the quantum mechanical calculation of EI mass spectra using automated reaction network exploration
+- Program package for the quantum mechanical calculation of EI mass spectra using
+  automated reaction network exploration
 - '**xtb** (version > 6.7.1 - bleeding edge version)'
 - '**molbar** (version >= 1.1.3)'
 - '**geodesic_interpolate** (version'

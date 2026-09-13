@@ -1,9 +1,10 @@
 ---
 name: percentile-feature-filtering-for-normalization
-description: Use when you have a raw or pre-processed LC-MS feature table with multiple samples and need to normalize for inter-sample intensity biases before downstream statistical analysis.
+description: Use when you have a raw or pre-processed LC-MS feature table with multiple
+  samples and need to normalize for inter-sample intensity biases before downstream
+  statistical analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +17,8 @@ metadata:
   - pycombat
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

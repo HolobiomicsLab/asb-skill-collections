@@ -1,9 +1,11 @@
 ---
 name: chemical-noise-tagging-and-filtering
-description: Use when you have MS/MS spectra contaminated with chemical noise (spurious fragment ions that do not correspond to real chemical bonds or rearrangements), a known or predicted molecular formula or SMILES structure for the precursor, the adduct type (e.
+description: Use when you have MS/MS spectra contaminated with chemical noise (spurious
+  fragment ions that do not correspond to real chemical bonds or rearrangements),
+  a known or predicted molecular formula or SMILES structure for the precursor, the
+  adduct type (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -19,6 +21,8 @@ metadata:
   - spectral-denoising (Python package)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-025-02646-x
   title: Spectral Denoising

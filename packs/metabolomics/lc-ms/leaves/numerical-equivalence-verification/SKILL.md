@@ -1,9 +1,10 @@
 ---
 name: numerical-equivalence-verification
-description: Use when when you have reimplemented an algorithm in a new package or optimized an existing algorithm and need to verify that the new version produces the same numerical results as the original or reference implementation.
+description: Use when when you have reimplemented an algorithm in a new package or
+  optimized an existing algorithm and need to verify that the new version produces
+  the same numerical results as the original or reference implementation.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +15,8 @@ metadata:
   - ms_distance
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-021-01331-z
   title: Spectral entropy

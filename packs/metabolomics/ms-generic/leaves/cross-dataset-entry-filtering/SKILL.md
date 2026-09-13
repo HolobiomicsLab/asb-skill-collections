@@ -1,9 +1,10 @@
 ---
 name: cross-dataset-entry-filtering
-description: Use when you have received MSBERT-preprocessed spectral data from GNPS, MoNA, or MTBLS1572 and need to ensure data integrity before training a spectral embedding model.
+description: Use when you have received MSBERT-preprocessed spectral data from GNPS,
+  MoNA, or MTBLS1572 and need to ensure data integrity before training a spectral
+  embedding model.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -16,6 +17,8 @@ metadata:
   - PyTorch 2.6.0
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding

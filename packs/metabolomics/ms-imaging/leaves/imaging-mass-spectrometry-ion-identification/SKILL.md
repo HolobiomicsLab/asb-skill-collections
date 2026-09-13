@@ -1,9 +1,11 @@
 ---
 name: imaging-mass-spectrometry-ion-identification
-description: Use when you have imaging mass spectrometry data from spatial metabolomics experiments and need to reduce the high-dimensional peak space to a ranked set of marker ions for downstream spatial analysis (e.g., tissue region annotation or biomarker discovery).
+description: Use when you have imaging mass spectrometry data from spatial metabolomics
+  experiments and need to reduce the high-dimensional peak space to a ranked set of
+  marker ions for downstream spatial analysis (e.g., tissue region annotation or biomarker
+  discovery).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +18,8 @@ metadata:
   techniques:
   - MS-imaging
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART

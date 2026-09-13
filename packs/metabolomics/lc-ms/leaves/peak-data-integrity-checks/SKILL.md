@@ -1,9 +1,10 @@
 ---
 name: peak-data-integrity-checks
-description: Use when implementing or modifying a writable MsBackend subclass (e.g., MsBackendMemory, MsBackendDataFrame) and need to replace peak data (m/z values, intensity values, or peaksData).
+description: Use when implementing or modifying a writable MsBackend subclass (e.g.,
+  MsBackendMemory, MsBackendDataFrame) and need to replace peak data (m/z values,
+  intensity values, or peaksData).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +15,8 @@ metadata:
   - Spectra
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra

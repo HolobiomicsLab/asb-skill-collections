@@ -1,9 +1,11 @@
 ---
 name: mass-trace-separation-by-grouping
-description: Use when your pandas DataFrame contains mass spectrometry data with retention time (rt) and intensity columns AND a column representing different mass-to-charge (m/z) values or ion identifiers. This is particularly relevant when generating chromatogram plots from data with multiple mass traces (e.
+description: Use when your pandas DataFrame contains mass spectrometry data with retention
+  time (rt) and intensity columns AND a column representing different mass-to-charge
+  (m/z) values or ion identifiers. This is particularly relevant when generating chromatogram
+  plots from data with multiple mass traces (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,12 +16,15 @@ metadata:
   - matplotlib
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
 evidence_spans:
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

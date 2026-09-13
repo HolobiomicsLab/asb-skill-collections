@@ -1,9 +1,10 @@
 ---
 name: singular-value-decomposition-metabolomics
-description: Use when when you have a log2-normalized, zero-mean, unit-variance intensity matrix (rows=metabolites, columns=samples) and a curated metabolite set database (e.
+description: Use when when you have a log2-normalized, zero-mean, unit-variance intensity
+  matrix (rows=metabolites, columns=samples) and a curated metabolite set database
+  (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3935
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -18,6 +19,8 @@ metadata:
   - MS2LDA
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals

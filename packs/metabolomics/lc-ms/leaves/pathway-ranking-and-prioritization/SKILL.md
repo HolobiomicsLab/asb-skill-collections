@@ -1,9 +1,11 @@
 ---
 name: pathway-ranking-and-prioritization
-description: 'Use when after peak annotation when you have: (1) a peak intensity matrix (rows=peaks with KEGG/ChEBI/UniProt IDs, columns=samples) with group labels; (2) a pathway database (KEGG, Reactome, or user-defined metabolite sets); (3) a comparative experimental design (case vs. control groups).'
+description: 'Use when after peak annotation when you have: (1) a peak intensity matrix
+  (rows=peaks with KEGG/ChEBI/UniProt IDs, columns=samples) with group labels; (2)
+  a pathway database (KEGG, Reactome, or user-defined metabolite sets); (3) a comparative
+  experimental design (case vs. control groups).'
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_1812
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -20,14 +22,18 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
 - doi: 10.1186/1471-2105-6-225
   title: ''
 evidence_spans:
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways, decomposes activity levels in pathways
-- we introduce PALS (Pathway Activity Level Scoring), a complete tool that performs database queries of pathways, decomposes activity levels in pathways
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways, decomposes activity levels in pathways
+- we introduce PALS (Pathway Activity Level Scoring), a complete tool that performs
+  database queries of pathways, decomposes activity levels in pathways
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

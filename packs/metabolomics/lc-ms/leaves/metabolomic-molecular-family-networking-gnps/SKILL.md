@@ -1,9 +1,11 @@
 ---
 name: metabolomic-molecular-family-networking-gnps
-description: Use when when you have untargeted LC-MS/MS spectral data from microbial or environmental samples and aim to group related metabolites into molecular families for natural product discovery, especially when integrating with genomic biosynthetic gene cluster (BGC) annotations to link chemistry to.
+description: Use when when you have untargeted LC-MS/MS spectral data from microbial
+  or environmental samples and aim to group related metabolites into molecular families
+  for natural product discovery, especially when integrating with genomic biosynthetic
+  gene cluster (BGC) annotations to link chemistry to.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -19,16 +21,20 @@ metadata:
   - AntiSMASH
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s40168-022-01444-3
   title: NPClassScore
 evidence_spans:
-- It provides the tools [`GNPSDownloader`][nplinker.metabolomics.gnps.GNPSDownloader] and [`GNPSExtractor`][nplinker.metabolomics.gnps.GNPSExtractor]
+- It provides the tools [`GNPSDownloader`][nplinker.metabolomics.gnps.GNPSDownloader]
+  and [`GNPSExtractor`][nplinker.metabolomics.gnps.GNPSExtractor]
 - '[![github repo badge](https://img.shields.io/badge/github-nplinker-000.svg?color=blue)](https://github.com/NPLinker/nplinker)'
 - Python version ≥3.11
 - conda create -n npl-3.11 python=3.11
 - pip install nplinker
-- NPLinker requires GNPS molecular networking data as input. It currently accepts data from both GNPS1 (https://gnps.ucsd.edu) and GNPS2 (https://gnps2.org) workflows.
+- NPLinker requires GNPS molecular networking data as input. It currently accepts
+  data from both GNPS1 (https://gnps.ucsd.edu) and GNPS2 (https://gnps2.org) workflows.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

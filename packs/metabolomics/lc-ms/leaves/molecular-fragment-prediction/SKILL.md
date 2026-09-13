@@ -1,9 +1,10 @@
 ---
 name: molecular-fragment-prediction
-description: Use when when you have an experimental tandem mass spectrum (m/z peaks and intensities) and a chemical formula, and need to identify the true molecular structure from a candidate library (e.g., PubChem).
+description: Use when when you have an experimental tandem mass spectrum (m/z peaks
+  and intensities) and a chemical formula, and need to identify the true molecular
+  structure from a candidate library (e.g., PubChem).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0593
@@ -15,6 +16,8 @@ metadata:
   - MAGMa
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04654
   title: ICEBERG / fragmentation graph generation

@@ -1,9 +1,11 @@
 ---
 name: mse-reconstruction-loss
-description: Use when training embeddings from multi-modal spectral data (peak information + metadata) where you need to ensure both contrastive discriminability AND reconstruction fidelity. Specifically use it in transformer-based architectures that produce embeddings from heterogeneous inputs (e.
+description: Use when training embeddings from multi-modal spectral data (peak information
+  + metadata) where you need to ensure both contrastive discriminability AND reconstruction
+  fidelity. Specifically use it in transformer-based architectures that produce embeddings
+  from heterogeneous inputs (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +17,8 @@ metadata:
   - Sinusoidal embedder
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c00260
   title: CLERMS

@@ -1,9 +1,10 @@
 ---
 name: ppm-mass-accuracy-filtering
-description: Use when when processing imzML/ibd Imaging Mass Spectrometry datasets and you need to extract ion density maps for specific analytes or isotopes. Apply this skill after importing the .imzML metadata and .
+description: Use when when processing imzML/ibd Imaging Mass Spectrometry datasets
+  and you need to extract ion density maps for specific analytes or isotopes. Apply
+  this skill after importing the .imzML metadata and .
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3630
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,13 +16,16 @@ metadata:
   techniques:
   - MS-imaging
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c02138
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
 evidence_spans:
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally defined threshold
+- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
+  defined threshold
 - '|pewpew| is an open-source LA-ICP-MS data import and processing application'
 - based on the python library pewlib_
 claims: []

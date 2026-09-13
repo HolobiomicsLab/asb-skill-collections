@@ -1,9 +1,10 @@
 ---
 name: spectrum-feature-vectorization
-description: Use when you have raw mass spectrometry spectra (peak lists or intensity arrays) that must be fed into a pre-trained deep learning model for substance classification (e.g., PS²MS for NPS detection).
+description: Use when you have raw mass spectrometry spectra (peak lists or intensity
+  arrays) that must be fed into a pre-trained deep learning model for substance classification
+  (e.g., PS²MS for NPS detection).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0621
@@ -15,6 +16,8 @@ metadata:
   - DeepEI
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05019
   title: ps2ms

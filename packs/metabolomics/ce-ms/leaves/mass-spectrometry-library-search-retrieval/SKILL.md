@@ -1,9 +1,9 @@
 ---
 name: mass-spectrometry-library-search-retrieval
-description: Use when when you have an unknown MSMS spectrum (precursor m/z and fragment ions) and need to discover structurally related compounds from a spectral library.
+description: Use when when you have an unknown MSMS spectrum (precursor m/z and fragment
+  ions) and need to discover structurally related compounds from a spectral library.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3945
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -13,6 +13,8 @@ metadata:
   - spectrum_utils
   techniques:
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.2c00153
   title: Neutral-loss similarity

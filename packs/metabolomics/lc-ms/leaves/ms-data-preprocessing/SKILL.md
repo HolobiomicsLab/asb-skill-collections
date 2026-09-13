@@ -1,9 +1,11 @@
 ---
 name: ms-data-preprocessing
-description: Use when you have received raw CE-MS or LC-MS output files in vendor-specific formats from a mass spectrometry instrument and need to process them through an untargeted metabolomics workflow (e.g., AriumMS) that requires standardized, interoperable file formats.
+description: Use when you have received raw CE-MS or LC-MS output files in vendor-specific
+  formats from a mass spectrometry instrument and need to process them through an
+  untargeted metabolomics workflow (e.g., AriumMS) that requires standardized, interoperable
+  file formats.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3650
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,11 +17,14 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-04715-6
   title: AriumMS
 evidence_spans:
-- For MS Data conversion to .mzXML or .mzML file format use msconvert, distributed with the ProteoWizard Project
+- For MS Data conversion to .mzXML or .mzML file format use msconvert, distributed
+  with the ProteoWizard Project
 - msconvert, distributed with the ProteoWizard Project
 - msconvert, distributed with the ProteoWizard Project http://proteowizard.sourceforge.net/download.html
 claims: []

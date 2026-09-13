@@ -1,9 +1,10 @@
 ---
 name: spectral-neutral-loss-transformation
-description: Use when when comparing two or more MSMS spectra and you need to emphasize structural relationships revealed by neutral losses (mass differences between precursor and fragment ions) rather than absolute m/z values.
+description: Use when when comparing two or more MSMS spectra and you need to emphasize
+  structural relationships revealed by neutral losses (mass differences between precursor
+  and fragment ions) rather than absolute m/z values.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +15,8 @@ metadata:
   - cosine_neutral_loss
   techniques:
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.2c00153
   title: Neutral-loss similarity

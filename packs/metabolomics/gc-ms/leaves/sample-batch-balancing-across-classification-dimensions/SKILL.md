@@ -1,9 +1,10 @@
 ---
 name: sample-batch-balancing-across-classification-dimensions
-description: Use when designing multi-batch LC/GC-MS experiments where samples belong to multiple groups or conditions and you need to ensure that each injection plate receives a balanced representation of all groups.
+description: Use when designing multi-batch LC/GC-MS experiments where samples belong
+  to multiple groups or conditions and you need to ensure that each injection plate
+  receives a balanced representation of all groups.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -12,6 +13,8 @@ metadata:
   - InjectionDesign
   techniques:
   - GC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.02.26.530140v1.article-info
   title: InjectionDesign

@@ -1,9 +1,10 @@
 ---
 name: qc-type-color-marker-assignment
-description: Use when configuring a new injection-plate design template in InjectionDesign if you have multiple QC types to position on a plate and need to visually distinguish them in the final worksheet.
+description: Use when configuring a new injection-plate design template in InjectionDesign
+  if you have multiple QC types to position on a plate and need to visually distinguish
+  them in the final worksheet.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -12,6 +13,8 @@ metadata:
   - InjectionDesign
   techniques:
   - GC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.02.26.530140v1.article-info
   title: InjectionDesign

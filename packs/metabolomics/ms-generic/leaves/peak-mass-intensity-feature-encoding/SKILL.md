@@ -1,9 +1,11 @@
 ---
 name: peak-mass-intensity-feature-encoding
-description: Use when you have raw mass spectra (e.g., from NIST 2017 or MassBank) and need to prepare them for Word2vec embedding or other token-based neural models. Use it as a preprocessing step before training spectral embedding models, especially when scale and accuracy of spectrum matching are priorities.
+description: Use when you have raw mass spectra (e.g., from NIST 2017 or MassBank)
+  and need to prepare them for Word2vec embedding or other token-based neural models.
+  Use it as a preprocessing step before training spectral embedding models, especially
+  when scale and accuracy of spectrum matching are priorities.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +16,8 @@ metadata:
   - Python 3.7
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39279-7
   title: FastEI

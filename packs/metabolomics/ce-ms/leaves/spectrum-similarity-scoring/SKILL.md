@@ -1,9 +1,11 @@
 ---
 name: spectrum-similarity-scoring
-description: 'Use when you have an unknown MS/MS spectrum (query spectrum with m/z and intensity pairs) and a reference spectral library (local or public: GNPS, MASSBANK, DrugBANK), and you need to identify the -matching compounds by ranking library entries by spectral similarity.'
+description: 'Use when you have an unknown MS/MS spectrum (query spectrum with m/z
+  and intensity pairs) and a reference spectral library (local or public: GNPS, MASSBANK,
+  DrugBANK), and you need to identify the -matching compounds by ranking library entries
+  by spectral similarity.'
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,11 +18,14 @@ metadata:
   - GNPS
   techniques:
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04343
   title: MeRgeION
 evidence_spans:
-- search and annotate an unknown spectrum in their local database or public databases (i.e. drug structures in GNPS, MASSBANK and DrugBANK)
+- search and annotate an unknown spectrum in their local database or public databases
+  (i.e. drug structures in GNPS, MASSBANK and DrugBANK)
 - github.com__daniellyz__meRgeION2
 claims: []
 provenance:

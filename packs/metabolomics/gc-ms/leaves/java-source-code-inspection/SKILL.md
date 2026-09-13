@@ -1,9 +1,10 @@
 ---
 name: java-source-code-inspection
-description: Use when when you need to understand how a Java application routes input data to processing modules based on declared data types, conditionally branches on instrument or format types (e.
+description: Use when when you need to understand how a Java application routes input
+  data to processing modules based on declared data types, conditionally branches
+  on instrument or format types (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +17,8 @@ metadata:
   - LC-MS
   - GC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-021-23953-9
   title: iimn

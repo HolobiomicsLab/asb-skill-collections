@@ -1,9 +1,9 @@
 ---
 name: mass-spectrometry-prediction-modeling
-description: Use when when you have a collection of compound structures in SDF format (e.
+description: Use when when you have a collection of compound structures in SDF format
+  (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0599
@@ -13,12 +13,15 @@ metadata:
   - CFM-ID
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.3389/fchem.2022.908572
   title: DNA adduct database
 evidence_spans:
 - CFM-ID
-- the CFM-ID spectra, the Chemdraw files, the mol files and the SDF files of the DNA adducts
+- the CFM-ID spectra, the Chemdraw files, the mol files and the SDF files of the DNA
+  adducts
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

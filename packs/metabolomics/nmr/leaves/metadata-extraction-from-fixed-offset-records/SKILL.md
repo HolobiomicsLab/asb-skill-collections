@@ -1,9 +1,9 @@
 ---
 name: metadata-extraction-from-fixed-offset-records
-description: Use when you have a binary file (e.g., NV format) with a known fixed-size header block (e.
+description: Use when you have a binary file (e.g., NV format) with a known fixed-size
+  header block (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -11,6 +11,8 @@ metadata:
   - NMRFx
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx

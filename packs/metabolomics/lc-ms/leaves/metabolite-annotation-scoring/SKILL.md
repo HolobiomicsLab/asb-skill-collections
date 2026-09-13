@@ -1,9 +1,11 @@
 ---
 name: metabolite-annotation-scoring
-description: Use when you have a feature table with candidate metabolite annotations (m/z, retention time, chemical identifiers) from MS/MS spectra or external tools (SIRIUS, GNPS), sample metadata linking samples to organisms, and you need to prioritize candidates by both annotation quality AND biological.
+description: Use when you have a feature table with candidate metabolite annotations
+  (m/z, retention time, chemical identifiers) from MS/MS spectra or external tools
+  (SIRIUS, GNPS), sample metadata linking samples to organisms, and you need to prioritize
+  candidates by both annotation quality AND biological.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -18,6 +20,8 @@ metadata:
   - GNPS-FBMN
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.3389/fpls.2019.01329
   title: tima

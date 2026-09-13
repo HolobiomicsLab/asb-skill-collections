@@ -1,9 +1,11 @@
 ---
 name: ms2-spectrum-extraction-and-consensus-building
-description: Use when when you have DDA LC-MS/MS data (mzML format) with identified chromatographic peaks at a specific m/z (e.g., 304.1131) and multiple MS2 spectra fragmented from that precursor, and you need to produce a single high-confidence MS2 spectrum for comparison against reference databases (e.
+description: Use when when you have DDA LC-MS/MS data (mzML format) with identified
+  chromatographic peaks at a specific m/z (e.g., 304.1131) and multiple MS2 spectra
+  fragmented from that precursor, and you need to produce a single high-confidence
+  MS2 spectrum for comparison against reference databases (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3803
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,11 +19,14 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package
 - library(Spectra)
 - library(MsBackendMgf)
 - '%\VignetteDepends{xcms,MsDataHub,BiocStyle,pander,Spectra,MsBackendMgf,MetaboCoreUtils}'

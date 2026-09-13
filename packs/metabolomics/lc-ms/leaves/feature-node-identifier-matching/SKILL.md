@@ -1,9 +1,11 @@
 ---
 name: feature-node-identifier-matching
-description: Use when you have created a feature-based GNPS molecular network and a corresponding MS2LDA experiment, and you need to propagate substructural motif annotations from the MS2LDA output back to the network nodes by matching feature IDs.
+description: Use when you have created a feature-based GNPS molecular network and
+  a corresponding MS2LDA experiment, and you need to propagate substructural motif
+  annotations from the MS2LDA output back to the network nodes by matching feature
+  IDs.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -18,11 +20,14 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo9070144
   title: molnetenhancer
 evidence_spans:
-- pyMolNetEnhancer is a python module integrating chemical class and substructure information
+- pyMolNetEnhancer is a python module integrating chemical class and substructure
+  information
 - pyMolNetEnhancer is a python module
 claims: []
 provenance:

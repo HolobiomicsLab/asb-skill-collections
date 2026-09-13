@@ -1,9 +1,11 @@
 ---
 name: metabolite-dataset-preprocessing
-description: Use when you have raw NMR metabolomics measurements paired with pre-analytical metadata (e.g., processing delay times, sample type designations [plasma vs. serum], cohort identifiers) and need to investigate how delays affect measured metabolic parameters.
+description: Use when you have raw NMR metabolomics measurements paired with pre-analytical
+  metadata (e.g., processing delay times, sample type designations [plasma vs. serum],
+  cohort identifiers) and need to investigate how delays affect measured metabolic
+  parameters.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,6 +15,8 @@ metadata:
   - PRIMA-Panel
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c04938
   title: PRIMA-Panel

@@ -1,9 +1,11 @@
 ---
 name: web-application-documentation-mining
-description: Use when you have access to a project README or repository documentation (Zenodo deposit, GitHub, or local clone) describing multiple domain-specific web applications, and you need to produce a machine-readable inventory of those applications with verified live URLs and associated publications for.
+description: Use when you have access to a project README or repository documentation
+  (Zenodo deposit, GitHub, or local clone) describing multiple domain-specific web
+  applications, and you need to produce a machine-readable inventory of those applications
+  with verified live URLs and associated publications for.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3346
   edam_topics:
   - http://edamontology.org/topic_0218
@@ -22,6 +24,8 @@ metadata:
   - MZmine
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst

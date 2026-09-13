@@ -24,7 +24,16 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "openms",
+   "pyopenms",
+   "smartpeak",
+   "smartpeakcli",
+   "smartpeakgui"
+  ]
  },
  {
   "slug": "accurate-mass-metabolite-search-against-hmdb",
@@ -50,7 +59,16 @@
    "direct-infusion-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "openms",
+   "pyopenms",
+   "smartpeak",
+   "smartpeakcli",
+   "smartpeakgui"
+  ]
  },
  {
   "slug": "acquisition-method-overlap-analysis",
@@ -75,7 +93,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "acquisition-mode-enumeration-and-validation",
@@ -101,7 +129,20 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-q-tof-uhplc-hrms-ms",
+   "bruker-q-tof-uhplc-hrms-ms",
+   "compound-discoverer",
+   "lipidmatch",
+   "ms-dial",
+   "mzmine",
+   "q-exactive-orbitrap",
+   "sciex-q-tof-uhplc-hrms-ms",
+   "xcms"
+  ]
  },
  {
   "slug": "adduct-based-feature-consolidation",
@@ -127,7 +168,16 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "openms",
+   "pyopenms",
+   "smartpeak",
+   "smartpeakcli",
+   "smartpeakgui"
+  ]
  },
  {
   "slug": "aromaticity-index-computation",
@@ -150,7 +200,33 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cytoscape",
+   "dropms",
+   "formularity",
+   "freda",
+   "i-van-krevelen",
+   "keggrest",
+   "matplotlib",
+   "metaboanalyst",
+   "metabodirect",
+   "numpy",
+   "pandas",
+   "pmartr",
+   "py4cytoscape",
+   "python",
+   "python-numpy-pandas",
+   "r-4-0-2",
+   "r-vegan-package",
+   "seaborn",
+   "syncsa",
+   "ultramassexplorer",
+   "vegan",
+   "vegan-r-package"
+  ]
  },
  {
   "slug": "automated-feature-extraction-from-spectra",
@@ -173,7 +249,14 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asap-ms",
+   "di-ms",
+   "rapidmass"
+  ]
  },
  {
   "slug": "baseline-model-implementation-for-comparison",
@@ -195,7 +278,17 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "iceberg-webui",
+   "ms-pred-iceberg",
+   "ms-pred-scarf-model",
+   "pubchem",
+   "pytorch",
+   "tensorflow"
+  ]
  },
  {
   "slug": "biochemical-transformation-matching",
@@ -219,7 +312,33 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cytoscape",
+   "dropms",
+   "formularity",
+   "freda",
+   "i-van-krevelen",
+   "keggrest",
+   "matplotlib",
+   "metaboanalyst",
+   "metabodirect",
+   "numpy",
+   "pandas",
+   "pmartr",
+   "py4cytoscape",
+   "python",
+   "python-numpy-pandas",
+   "r-4-0-2",
+   "r-vegan-package",
+   "seaborn",
+   "syncsa",
+   "ultramassexplorer",
+   "vegan",
+   "vegan-r-package"
+  ]
  },
  {
   "slug": "blank-sample-background-interference-estimation",
@@ -246,7 +365,16 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "openms",
+   "pyopenms",
+   "smartpeak",
+   "smartpeakcli",
+   "smartpeakgui"
+  ]
  },
  {
   "slug": "compound-class-assignment-from-molecular-formula",
@@ -270,7 +398,33 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cytoscape",
+   "dropms",
+   "formularity",
+   "freda",
+   "i-van-krevelen",
+   "keggrest",
+   "matplotlib",
+   "metaboanalyst",
+   "metabodirect",
+   "numpy",
+   "pandas",
+   "pmartr",
+   "py4cytoscape",
+   "python",
+   "python-numpy-pandas",
+   "r-4-0-2",
+   "r-vegan-package",
+   "seaborn",
+   "syncsa",
+   "ultramassexplorer",
+   "vegan",
+   "vegan-r-package"
+  ]
  },
  {
   "slug": "cross-instrument-data-harmonization",
@@ -293,7 +447,14 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asap-ms",
+   "di-ms",
+   "rapidmass"
+  ]
  },
  {
   "slug": "dimension-scale-linking-and-cross-group-indexing",
@@ -316,7 +477,14 @@
    "direct-infusion-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
+   "lipidqmap"
+  ]
  },
  {
   "slug": "diversity-visualization-by-treatment",
@@ -338,7 +506,33 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cytoscape",
+   "dropms",
+   "formularity",
+   "freda",
+   "i-van-krevelen",
+   "keggrest",
+   "matplotlib",
+   "metaboanalyst",
+   "metabodirect",
+   "numpy",
+   "pandas",
+   "pmartr",
+   "py4cytoscape",
+   "python",
+   "python-numpy-pandas",
+   "r-4-0-2",
+   "r-vegan-package",
+   "seaborn",
+   "syncsa",
+   "ultramassexplorer",
+   "vegan",
+   "vegan-r-package"
+  ]
  },
  {
   "slug": "embedding-space-representation",
@@ -361,7 +555,12 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "transformer"
+  ]
  },
  {
   "slug": "environment-dependency-management",
@@ -393,7 +592,15 @@
    "direct-infusion-MS",
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "galaxy",
+   "matlab-compiler-runtime-8-3",
+   "python-2-7",
+   "r-3-0-1"
+  ]
  },
  {
   "slug": "experimental-design-metadata-integration",
@@ -417,7 +624,12 @@
    "direct-infusion-MS",
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "knime"
+  ]
  },
  {
   "slug": "extracted-ion-chromatogram-generation",
@@ -441,7 +653,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "feature-list-harmonization-across-methods",
@@ -466,7 +688,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "feature-quality-assessment-metrics",
@@ -488,7 +720,13 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "masscube",
+   "python"
+  ]
  },
  {
   "slug": "feature-table-export-and-formatting",
@@ -515,7 +753,15 @@
    "direct-infusion-MS",
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "mzmine2",
+   "openms",
+   "optimus"
+  ]
  },
  {
   "slug": "fiams-spectra-window-extraction-and-merging",
@@ -539,7 +785,16 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "openms",
+   "pyopenms",
+   "smartpeak",
+   "smartpeakcli",
+   "smartpeakgui"
+  ]
  },
  {
   "slug": "fragment-ion-peak-annotation",
@@ -562,7 +817,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "gradient-performance-encoding",
@@ -588,7 +853,18 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bago",
+   "ms-dial",
+   "mzmine-3",
+   "pyopenms",
+   "python",
+   "scikit-learn",
+   "xcms"
+  ]
  },
  {
   "slug": "hierarchical-clustering-dendrogram-cutting",
@@ -614,7 +890,17 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "dynamictreecut",
+   "interpretmsspectrum",
+   "msfinder",
+   "ramclustr",
+   "sirius",
+   "xcms"
+  ]
  },
  {
   "slug": "in-silico-fragment-m-z-calculation",
@@ -640,7 +926,20 @@
    "direct-infusion-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-q-tof-uhplc-hrms-ms",
+   "bruker-q-tof-uhplc-hrms-ms",
+   "compound-discoverer",
+   "lipidmatch",
+   "ms-dial",
+   "mzmine",
+   "q-exactive-orbitrap",
+   "sciex-q-tof-uhplc-hrms-ms",
+   "xcms"
+  ]
  },
  {
   "slug": "in-silico-fragmentation-simulation-validation",
@@ -666,7 +965,20 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-q-tof-uhplc-hrms-ms",
+   "bruker-q-tof-uhplc-hrms-ms",
+   "compound-discoverer",
+   "lipidmatch",
+   "ms-dial",
+   "mzmine",
+   "q-exactive-orbitrap",
+   "sciex-q-tof-uhplc-hrms-ms",
+   "xcms"
+  ]
  },
  {
   "slug": "instrument-platform-compatibility-mapping",
@@ -690,7 +1002,20 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-q-tof-uhplc-hrms-ms",
+   "bruker-q-tof-uhplc-hrms-ms",
+   "compound-discoverer",
+   "lipidmatch",
+   "ms-dial",
+   "mzmine",
+   "q-exactive-orbitrap",
+   "sciex-q-tof-uhplc-hrms-ms",
+   "xcms"
+  ]
  },
  {
   "slug": "ion-image-quantification-workflow",
@@ -714,7 +1039,14 @@
    "direct-infusion-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
+   "lipidqmap"
+  ]
  },
  {
   "slug": "knime-workflow-orchestration",
@@ -741,7 +1073,12 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "knime"
+  ]
  },
  {
   "slug": "lc-ms-dataset-acquisition-and-curation",
@@ -766,7 +1103,28 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "asari-mass-functions-module-nn-cluster-by-mz-seeds",
+   "asari-massgrid-class-build-grid-sample-wise-add-sample-build-grid-by-centroiding-bin-track-mzs",
+   "asari-peaks-module",
+   "hmdb-4",
+   "https-github-com-shuzhao-li-asari",
+   "jms",
+   "khipu",
+   "lowess",
+   "mass-functions-nn-cluster-by-mz-seeds",
+   "numpy",
+   "proteowizard",
+   "pymzml",
+   "python",
+   "scipy",
+   "scipy-signal-detrend",
+   "scipy-signal-find-peaks"
+  ]
  },
  {
   "slug": "lipid-candidate-matching",
@@ -790,7 +1148,20 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-q-tof-uhplc-hrms-ms",
+   "bruker-q-tof-uhplc-hrms-ms",
+   "compound-discoverer",
+   "lipidmatch",
+   "ms-dial",
+   "mzmine",
+   "q-exactive-orbitrap",
+   "sciex-q-tof-uhplc-hrms-ms",
+   "xcms"
+  ]
  },
  {
   "slug": "lipid-feature-annotation-and-sorting",
@@ -812,7 +1183,14 @@
    "direct-infusion-MS",
    "MS-imaging"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
+   "lipidqmap"
+  ]
  },
  {
   "slug": "lipid-fingerprint-regeneration-neural-networks",
@@ -837,7 +1215,13 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "camera",
+   "xcms"
+  ]
  },
  {
   "slug": "lipid-mass-spectral-matching",
@@ -862,7 +1246,20 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-q-tof-uhplc-hrms-ms",
+   "bruker-q-tof-uhplc-hrms-ms",
+   "compound-discoverer",
+   "lipidmatch",
+   "ms-dial",
+   "mzmine",
+   "q-exactive-orbitrap",
+   "sciex-q-tof-uhplc-hrms-ms",
+   "xcms"
+  ]
  },
  {
   "slug": "m-z-intensity-calibration",
@@ -884,7 +1281,14 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asap-ms",
+   "di-ms",
+   "rapidmass"
+  ]
  },
  {
   "slug": "marker-feature-identification-and-validation",
@@ -909,7 +1313,13 @@
    "GC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "npfimg",
+   "xcms"
+  ]
  },
  {
   "slug": "mass-difference-network-construction",
@@ -938,7 +1348,33 @@
    "direct-infusion-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cytoscape",
+   "dropms",
+   "formularity",
+   "freda",
+   "i-van-krevelen",
+   "keggrest",
+   "matplotlib",
+   "metaboanalyst",
+   "metabodirect",
+   "numpy",
+   "pandas",
+   "pmartr",
+   "py4cytoscape",
+   "python",
+   "python-numpy-pandas",
+   "r-4-0-2",
+   "r-vegan-package",
+   "seaborn",
+   "syncsa",
+   "ultramassexplorer",
+   "vegan",
+   "vegan-r-package"
+  ]
  },
  {
   "slug": "mass-spectrometry-data-file-parsing",
@@ -964,7 +1400,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "mass-spectrometry-data-loading",
@@ -991,7 +1437,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "mass-spectrometry-data-parsing",
@@ -1037,7 +1493,43 @@
    "GC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "asari-mass-functions-module-nn-cluster-by-mz-seeds",
+   "asari-massgrid-class-build-grid-sample-wise-add-sample-build-grid-by-centroiding-bin-track-mzs",
+   "asari-peaks-module",
+   "gnps-lcms-visualization-dashboard",
+   "hmdb-4",
+   "https-github-com-shuzhao-li-asari",
+   "idsl-ipa",
+   "jms",
+   "khipu",
+   "lowess",
+   "mass-functions-nn-cluster-by-mz-seeds",
+   "matchms",
+   "memo",
+   "memo-ms",
+   "metfrag",
+   "mzmine-2",
+   "numpy",
+   "proteowizard",
+   "pubchem",
+   "pubchempy",
+   "pymzml",
+   "python",
+   "rdkit",
+   "scikit-bio",
+   "scipy",
+   "scipy-signal-detrend",
+   "scipy-signal-find-peaks",
+   "sirius",
+   "spec2vec",
+   "spectra",
+   "xcms"
+  ]
  },
  {
   "slug": "mass-spectrometry-feature-similarity-modeling",
@@ -1057,7 +1549,12 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mrnannoalgo3-metdna3"
+  ]
  },
  {
   "slug": "mass-spectrometry-instrument-format-compatibility",
@@ -1079,7 +1576,14 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asap-ms",
+   "di-ms",
+   "rapidmass"
+  ]
  },
  {
   "slug": "mass-spectrometry-outlier-detection",
@@ -1103,7 +1607,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "mass-spectrometry-peak-identification-and-extraction",
@@ -1125,7 +1639,14 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asap-ms",
+   "di-ms",
+   "rapidmass"
+  ]
  },
  {
   "slug": "mass-spectrometry-peak-intensity-encoding",
@@ -1150,7 +1671,16 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "mass-spectrum-database-matching",
@@ -1182,7 +1712,25 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "antismash",
+   "asap-ms",
+   "dereplicator",
+   "di-ms",
+   "gnps-spectral-networking-molecular-networking",
+   "joblib",
+   "matplotlib",
+   "metaminer",
+   "networkx",
+   "npdtools",
+   "npdtools-2-5-0",
+   "proteowizard",
+   "python",
+   "rapidmass"
+  ]
  },
  {
   "slug": "mass-spectrum-peak-detection",
@@ -1204,7 +1752,14 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asap-ms",
+   "di-ms",
+   "rapidmass"
+  ]
  },
  {
   "slug": "mass-track-construction-from-centroided-spectra",
@@ -1233,7 +1788,28 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "asari-mass-functions-module-nn-cluster-by-mz-seeds",
+   "asari-massgrid-class-build-grid-sample-wise-add-sample-build-grid-by-centroiding-bin-track-mzs",
+   "asari-peaks-module",
+   "hmdb-4",
+   "https-github-com-shuzhao-li-asari",
+   "jms",
+   "khipu",
+   "lowess",
+   "mass-functions-nn-cluster-by-mz-seeds",
+   "numpy",
+   "proteowizard",
+   "pymzml",
+   "python",
+   "scipy",
+   "scipy-signal-detrend",
+   "scipy-signal-find-peaks"
+  ]
  },
  {
   "slug": "mass-track-extraction-and-binning",
@@ -1260,7 +1836,28 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "asari-mass-functions-module-nn-cluster-by-mz-seeds",
+   "asari-massgrid-class-build-grid-sample-wise-add-sample-build-grid-by-centroiding-bin-track-mzs",
+   "asari-peaks-module",
+   "hmdb-4",
+   "https-github-com-shuzhao-li-asari",
+   "jms",
+   "khipu",
+   "lowess",
+   "mass-functions-nn-cluster-by-mz-seeds",
+   "numpy",
+   "proteowizard",
+   "pymzml",
+   "python",
+   "scipy",
+   "scipy-signal-detrend",
+   "scipy-signal-find-peaks"
+  ]
  },
  {
   "slug": "metabolite-feature-clustering-by-retention-time",
@@ -1288,7 +1885,17 @@
    "GC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "dynamictreecut",
+   "interpretmsspectrum",
+   "msfinder",
+   "ramclustr",
+   "sirius",
+   "xcms"
+  ]
  },
  {
   "slug": "metabolite-feature-grouping-by-adduct-isotope",
@@ -1311,7 +1918,20 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "hmdb",
+   "khipu",
+   "lipid-map",
+   "matchms",
+   "metaboanalyst",
+   "pycombat",
+   "python",
+   "thermorawfileparser"
+  ]
  },
  {
   "slug": "metabolite-feature-grouping-by-compound",
@@ -1337,7 +1957,17 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "dynamictreecut",
+   "interpretmsspectrum",
+   "msfinder",
+   "ramclustr",
+   "sirius",
+   "xcms"
+  ]
  },
  {
   "slug": "metabolite-identifier-mapping",
@@ -1360,7 +1990,16 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "openms",
+   "pyopenms",
+   "smartpeak",
+   "smartpeakcli",
+   "smartpeakgui"
+  ]
  },
  {
   "slug": "metabolomics-feature-preprocessing",
@@ -1385,7 +2024,13 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "python",
+   "python-3-8-1"
+  ]
  },
  {
   "slug": "metabolomics-tool-deployment",
@@ -1414,7 +2059,15 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "galaxy",
+   "matlab-compiler-runtime-8-3",
+   "python-2-7",
+   "r-3-0-1"
+  ]
  },
  {
   "slug": "microbial-metabolomics-phage-impact-assessment",
@@ -1439,7 +2092,33 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cytoscape",
+   "dropms",
+   "formularity",
+   "freda",
+   "i-van-krevelen",
+   "keggrest",
+   "matplotlib",
+   "metaboanalyst",
+   "metabodirect",
+   "numpy",
+   "pandas",
+   "pmartr",
+   "py4cytoscape",
+   "python",
+   "python-numpy-pandas",
+   "r-4-0-2",
+   "r-vegan-package",
+   "seaborn",
+   "syncsa",
+   "ultramassexplorer",
+   "vegan",
+   "vegan-r-package"
+  ]
  },
  {
   "slug": "missing-value-imputation-in-quantification-tables",
@@ -1462,7 +2141,15 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "mzmine2",
+   "openms",
+   "optimus"
+  ]
  },
  {
   "slug": "ms-ms-raw-data-loading",
@@ -1487,7 +2174,15 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "mzmine2",
+   "openms",
+   "optimus"
+  ]
  },
  {
   "slug": "ms-vendor-documentation-extraction",
@@ -1512,7 +2207,20 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-q-tof-uhplc-hrms-ms",
+   "bruker-q-tof-uhplc-hrms-ms",
+   "compound-discoverer",
+   "lipidmatch",
+   "ms-dial",
+   "mzmine",
+   "q-exactive-orbitrap",
+   "sciex-q-tof-uhplc-hrms-ms",
+   "xcms"
+  ]
  },
  {
   "slug": "ms1-feature-detection-and-annotation",
@@ -1539,7 +2247,16 @@
    "GC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "openms",
+   "pyopenms",
+   "smartpeak",
+   "smartpeakcli",
+   "smartpeakgui"
+  ]
  },
  {
   "slug": "ms1-feature-peak-detection-in-full-scan",
@@ -1565,7 +2282,16 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "openms",
+   "pyopenms",
+   "smartpeak",
+   "smartpeakcli",
+   "smartpeakgui"
+  ]
  },
  {
   "slug": "multi-sample-cohort-assessment",
@@ -1588,7 +2314,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "multidimensional-feature-detection-and-alignment",
@@ -1614,7 +2350,18 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "multiformat-data-export-to-pdf-csv",
@@ -1637,7 +2384,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "mz-retention-time-tolerance-parameter-configuration",
@@ -1661,7 +2418,20 @@
    "GC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "hmdb",
+   "khipu",
+   "lipid-map",
+   "matchms",
+   "metaboanalyst",
+   "pycombat",
+   "python",
+   "thermorawfileparser"
+  ]
  },
  {
   "slug": "mztab-format-generation",
@@ -1686,7 +2456,16 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "openms",
+   "pyopenms",
+   "smartpeak",
+   "smartpeakcli",
+   "smartpeakgui"
+  ]
  },
  {
   "slug": "nontargeted-metabolomics-data-processing",
@@ -1710,7 +2489,13 @@
    "direct-infusion-MS",
    "MS-imaging"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "masscube",
+   "python"
+  ]
  },
  {
   "slug": "parameter-range-filtering-for-chromatographic-data",
@@ -1734,7 +2519,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "peak-detection-and-mass-alignment",
@@ -1757,7 +2552,15 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "mzmine2",
+   "openms",
+   "optimus"
+  ]
  },
  {
   "slug": "peak-integration-quality-assessment",
@@ -1778,7 +2581,12 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "avir-r"
+  ]
  },
  {
   "slug": "peak-labeling-and-annotation",
@@ -1800,7 +2608,14 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asap-ms",
+   "di-ms",
+   "rapidmass"
+  ]
  },
  {
   "slug": "plant-species-authentication-via-mass-spectrometry",
@@ -1822,7 +2637,14 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asap-ms",
+   "di-ms",
+   "rapidmass"
+  ]
  },
  {
   "slug": "pure-component-spectrum-extraction",
@@ -1848,7 +2670,14 @@
    "GC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "python-3",
+   "pytorch"
+  ]
  },
  {
   "slug": "quality-control-metric-distribution-analysis",
@@ -1875,7 +2704,28 @@
    "GC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "asari-mass-functions-module-nn-cluster-by-mz-seeds",
+   "asari-massgrid-class-build-grid-sample-wise-add-sample-build-grid-by-centroiding-bin-track-mzs",
+   "asari-peaks-module",
+   "hmdb-4",
+   "https-github-com-shuzhao-li-asari",
+   "jms",
+   "khipu",
+   "lowess",
+   "mass-functions-nn-cluster-by-mz-seeds",
+   "numpy",
+   "proteowizard",
+   "pymzml",
+   "python",
+   "scipy",
+   "scipy-signal-detrend",
+   "scipy-signal-find-peaks"
+  ]
  },
  {
   "slug": "retention-time-prediction-modeling",
@@ -1903,7 +2753,12 @@
    "CE-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "retip"
+  ]
  },
  {
   "slug": "retention-time-window-clustering",
@@ -1931,7 +2786,24 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cytoscape",
+   "mamsi-mamsistructsearch",
+   "mamsistructsearch",
+   "matplotlib",
+   "mbpls",
+   "networkx",
+   "numpy",
+   "pandas",
+   "python",
+   "pyvis",
+   "scikit-learn",
+   "scipy",
+   "xcms"
+  ]
  },
  {
   "slug": "sample-group-injection-aggregation",
@@ -1956,7 +2828,16 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "openms",
+   "pyopenms",
+   "smartpeak",
+   "smartpeakcli",
+   "smartpeakgui"
+  ]
  },
  {
   "slug": "siamese-neural-network-architecture-design",
@@ -1979,7 +2860,14 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github",
+   "ms2deepscore",
+   "python"
+  ]
  },
  {
   "slug": "software-support-matrix-construction",
@@ -2004,7 +2892,20 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-q-tof-uhplc-hrms-ms",
+   "bruker-q-tof-uhplc-hrms-ms",
+   "compound-discoverer",
+   "lipidmatch",
+   "ms-dial",
+   "mzmine",
+   "q-exactive-orbitrap",
+   "sciex-q-tof-uhplc-hrms-ms",
+   "xcms"
+  ]
  },
  {
   "slug": "spatial-correlation-filtering-in-msi",
@@ -2028,7 +2929,14 @@
    "direct-infusion-MS",
    "MS-imaging"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cardinal",
+   "github-kbseah-mass2adduct",
+   "mass2adduct"
+  ]
  },
  {
   "slug": "species-authentication-classification-evaluation",
@@ -2051,7 +2959,14 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asap-ms",
+   "di-ms",
+   "rapidmass"
+  ]
  },
  {
   "slug": "species-candidate-ranking-from-spectral-alignment",
@@ -2071,7 +2986,14 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asap-ms",
+   "di-ms",
+   "rapidmass"
+  ]
  },
  {
   "slug": "spectral-data-normalization-and-merging",
@@ -2095,7 +3017,16 @@
    "LC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "openms",
+   "pyopenms",
+   "smartpeak",
+   "smartpeakcli",
+   "smartpeakgui"
+  ]
  },
  {
   "slug": "spectral-data-preprocessing",
@@ -2117,7 +3048,14 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asap-ms",
+   "di-ms",
+   "rapidmass"
+  ]
  },
  {
   "slug": "spectral-database-search-and-scoring",
@@ -2140,7 +3078,14 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asap-ms",
+   "di-ms",
+   "rapidmass"
+  ]
  },
  {
   "slug": "spectral-peak-detection-and-alignment",
@@ -2162,7 +3107,14 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asap-ms",
+   "di-ms",
+   "rapidmass"
+  ]
  },
  {
   "slug": "spectral-quality-metrics-extraction",
@@ -2184,7 +3136,17 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "tandem-mass-spectrometry-mirror-plot-construction",
@@ -2208,7 +3170,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "target-list-coordinate-mapping",
@@ -2232,7 +3204,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "targeted-peak-extraction-ms1",
@@ -2258,7 +3240,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "technical-specification-tabulation",
@@ -2282,7 +3274,20 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-q-tof-uhplc-hrms-ms",
+   "bruker-q-tof-uhplc-hrms-ms",
+   "compound-discoverer",
+   "lipidmatch",
+   "ms-dial",
+   "mzmine",
+   "q-exactive-orbitrap",
+   "sciex-q-tof-uhplc-hrms-ms",
+   "xcms"
+  ]
  },
  {
   "slug": "transformation-network-topology-analysis",
@@ -2308,7 +3313,33 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cytoscape",
+   "dropms",
+   "formularity",
+   "freda",
+   "i-van-krevelen",
+   "keggrest",
+   "matplotlib",
+   "metaboanalyst",
+   "metabodirect",
+   "numpy",
+   "pandas",
+   "pmartr",
+   "py4cytoscape",
+   "python",
+   "python-numpy-pandas",
+   "r-4-0-2",
+   "r-vegan-package",
+   "seaborn",
+   "syncsa",
+   "ultramassexplorer",
+   "vegan",
+   "vegan-r-package"
+  ]
  },
  {
   "slug": "transformer-model-training",
@@ -2334,7 +3365,14 @@
    "GC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "python-3",
+   "pytorch"
+  ]
  },
  {
   "slug": "unknown-sample-reference-comparison",
@@ -2354,7 +3392,14 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asap-ms",
+   "di-ms",
+   "rapidmass"
+  ]
  },
  {
   "slug": "visual-pattern-recognition-in-spectral-data",
@@ -2376,7 +3421,14 @@
   "techniques": [
    "direct-infusion-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asap-ms",
+   "di-ms",
+   "rapidmass"
+  ]
  },
  {
   "slug": "xcms-data-import-preprocessing",
@@ -2402,6 +3454,23 @@
    "GC-MS",
    "direct-infusion-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "github",
+   "gnps",
+   "limma",
+   "massspecwavelet",
+   "metabocoreutils",
+   "msbackendmgf",
+   "msdatahub",
+   "msfeatures",
+   "pheatmap",
+   "spectra",
+   "xcms",
+   "zenodo"
+  ]
  }
 ]

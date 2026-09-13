@@ -1,9 +1,10 @@
 ---
 name: modification-site-localization
-description: Use when you have a pair of MS/MS spectra—one from a known compound and one from a structurally related modified (unknown) compound—and need to identify which atom(s) in the structure carry the modification.
+description: Use when you have a pair of MS/MS spectra—one from a known compound and
+  one from a structurally related modified (unknown) compound—and need to identify
+  which atom(s) in the structure carry the modification.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,6 +18,8 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00061
   title: ModiFinder
@@ -26,7 +29,8 @@ evidence_spans:
 - ModiFinder requires Python 3.9 or above.
 - ModiFinder requires Python 3.9 or above
 - 'rdkit: http://www.rdkit.org/'
-- ModiFinder includes powerful visualization tools built on RDKit and matplotlib for creating publication-quality figures.
+- ModiFinder includes powerful visualization tools built on RDKit and matplotlib for
+  creating publication-quality figures.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

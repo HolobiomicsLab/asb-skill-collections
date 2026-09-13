@@ -1,9 +1,11 @@
 ---
 name: mass-spectrometry-data-preprocessing
-description: Use when you have raw LCMS data in mzML or mzXML format from DDA, DIA, or fullscan analyses and need to extract metabolite features with unified m/z, retention time, and intensity values across multiple samples before performing MS2 annotation or in-source fragment analysis.
+description: Use when you have raw LCMS data in mzML or mzXML format from DDA, DIA,
+  or fullscan analyses and need to extract metabolite features with unified m/z, retention
+  time, and intensity values across multiple samples before performing MS2 annotation
+  or in-source fragment analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -36,6 +38,8 @@ metadata:
   - Spectra
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c01644
   title: ISFrag
@@ -50,8 +54,10 @@ derived_from:
 - doi: 10.1021/ac051437y
   title: ''
 evidence_spans:
-- ISFrag is an R package for identifying and annotating in-source fragments in LCMS metabolite feature table.
-- ISFrag is an R package for identifying and annotating in-source fragments in LCMS metabolite feature table
+- ISFrag is an R package for identifying and annotating in-source fragments in LCMS
+  metabolite feature table.
+- ISFrag is an R package for identifying and annotating in-source fragments in LCMS
+  metabolite feature table
 - To install ISFrag package R version 4.0.0 or above is required
 - github.com/richardxie1119/MEISTER
 - github.com__kevinmildau__msFeaST

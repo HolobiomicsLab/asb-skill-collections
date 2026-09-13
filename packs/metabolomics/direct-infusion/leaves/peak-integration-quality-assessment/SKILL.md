@@ -1,9 +1,11 @@
 ---
 name: peak-integration-quality-assessment
-description: Use when you have a metabolomic feature table (rows=features, columns=samples) with peak height and peak area measurements from chromatographic processing, and you suspect data quality issues such as misaligned features or erratic peak integration across your sample cohort.
+description: Use when you have a metabolomic feature table (rows=features, columns=samples)
+  with peak height and peak area measurements from chromatographic processing, and
+  you suspect data quality issues such as misaligned features or erratic peak integration
+  across your sample cohort.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,11 +15,14 @@ metadata:
   - R
   techniques:
   - direct-infusion-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04046
   title: AVIR
 evidence_spans:
-- AVIR.R is a program developed to recognize computational variation among metabolic features in samples
+- AVIR.R is a program developed to recognize computational variation among metabolic
+  features in samples
 - AVIR.R
 claims: []
 provenance:

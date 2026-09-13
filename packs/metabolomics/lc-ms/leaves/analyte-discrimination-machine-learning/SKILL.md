@@ -1,9 +1,10 @@
 ---
 name: analyte-discrimination-machine-learning
-description: Use when you have raw chromatography–mass spectrometry data (GC-MS or LC-MS) in 2D m/z–retention time format and need to identify and discriminate multiple analytes while avoiding false peak detections inherent in conventional peak picking.
+description: Use when you have raw chromatography–mass spectrometry data (GC-MS or
+  LC-MS) in 2D m/z–retention time format and need to identify and discriminate multiple
+  analytes while avoiding false peak detections inherent in conventional peak picking.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -15,6 +16,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c03163?ref=
   title: NPFimg
@@ -22,9 +25,12 @@ derived_from:
   title: ''
 evidence_spans:
 - Comparison with the widely used XCMS shows the excellent reliability of NPFimg
-- Comparison with the widely used XCMS shows the excellent reliability of NPFimg, in that it has lower error rates of signal acquisition and marker identification.
+- Comparison with the widely used XCMS shows the excellent reliability of NPFimg,
+  in that it has lower error rates of signal acquisition and marker identification.
 - github.com__poomcj__NPFimg
-- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker features of analytes in chromatography–mass spectrometry (MS) data by combining image processing and
+- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker
+  features of analytes in chromatography–mass spectrometry (MS) data by combining
+  image processing and
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

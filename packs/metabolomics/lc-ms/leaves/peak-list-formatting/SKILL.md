@@ -1,9 +1,10 @@
 ---
 name: peak-list-formatting
-description: Use when after successfully resolving a USI string to a specific mass spectrum scan, and before performing spectral matching, library search, or comparative analysis.
+description: Use when after successfully resolving a USI string to a specific mass
+  spectrum scan, and before performing spectral matching, library search, or comparative
+  analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -13,6 +14,8 @@ metadata:
   - GNPS Data Repository API
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-021-01339-5
   title: GNPS Dashboard

@@ -1,9 +1,10 @@
 ---
 name: lipid-retention-time-rule-application
-description: Use when you have candidate lipid annotations from spectral library matching (e.g., XCMS + CAMERA output) with MS/MS scores, and you need to reduce false positives and predict previously unannotated lipids.
+description: Use when you have candidate lipid annotations from spectral library matching
+  (e.g., XCMS + CAMERA output) with MS/MS scores, and you need to reduce false positives
+  and predict previously unannotated lipids.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -15,12 +16,16 @@ metadata:
   - RaMS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-59683-5
   title: LipidIN
 evidence_spans:
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification'
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification.'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification.'
 - 'CAMERA: an'
 claims: []
 provenance:

@@ -1,9 +1,10 @@
 ---
 name: configuration-object-pattern
-description: Use when when designing a library that needs to support multiple plotting backends (e.g., matplotlib, bokeh, plotly) and you want to avoid reimplementing parameter validation, storage, and dispatch logic for each backend.
+description: Use when when designing a library that needs to support multiple plotting
+  backends (e.g., matplotlib, bokeh, plotly) and you want to avoid reimplementing
+  parameter validation, storage, and dispatch logic for each backend.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,6 +17,8 @@ metadata:
   - Plotly
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz

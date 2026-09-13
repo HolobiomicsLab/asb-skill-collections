@@ -1,9 +1,9 @@
 ---
 name: controlled-vocabulary-term-mapping
-description: Use when you have collected or inherited sample-information metadata from multiple sources (e.
+description: Use when you have collected or inherited sample-information metadata
+  from multiple sources (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_3307
@@ -17,6 +17,8 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU

@@ -1,9 +1,10 @@
 ---
 name: mass-spectra-clustering-hyperdimensional-space
-description: Use when you have large-scale MS/MS spectra datasets (hundreds of thousands to millions of spectra) in MGF format that need to be grouped by similarity, and you have access to NVIDIA GPU hardware (GTX 1080Ti or GTX 3090).
+description: Use when you have large-scale MS/MS spectra datasets (hundreds of thousands
+  to millions of spectra) in MGF format that need to be grouped by similarity, and
+  you have access to NVIDIA GPU hardware (GTX 1080Ti or GTX 3090).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +16,8 @@ metadata:
   - DBSCAN / Hierarchical Clustering
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00612
   title: HyperSpec

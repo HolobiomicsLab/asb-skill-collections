@@ -1,9 +1,10 @@
 ---
 name: tandem-mass-spectrometry-data-interpretation
-description: Use when you have high-resolution MS2 data (.ms2 format) from tandem mass spectrometry analysis of lipid A-containing samples and need to perform automated structure annotation and identification at systems scale.
+description: Use when you have high-resolution MS2 data (.ms2 format) from tandem
+  mass spectrometry analysis of lipid A-containing samples and need to perform automated
+  structure annotation and identification at systems scale.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3929
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,6 +15,8 @@ metadata:
   - MSConvert (ProteoWizard)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00520
   title: LipidA-IDER

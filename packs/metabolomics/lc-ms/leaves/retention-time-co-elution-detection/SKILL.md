@@ -1,9 +1,10 @@
 ---
 name: retention-time-co-elution-detection
-description: Use when after matching mass-to-charge ratios to a compound database (e.g., KEGG) and assigning adduct/fragment types, when you have an annotated feature table with retention times, m/z values, and intensity profiles across samples.
+description: Use when after matching mass-to-charge ratios to a compound database
+  (e.g., KEGG) and assigning adduct/fragment types, when you have an annotated feature
+  table with retention times, m/z values, and intensity profiles across samples.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,11 +15,14 @@ metadata:
   - CAMERA
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
 evidence_spans:
-- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides tools for context-based annotation of untargeted LC-MS data.
+- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides
+  tools for context-based annotation of untargeted LC-MS data.
 - mWISE (metabolomics Wise Inference of Speck Entities) is an R package
 claims: []
 provenance:

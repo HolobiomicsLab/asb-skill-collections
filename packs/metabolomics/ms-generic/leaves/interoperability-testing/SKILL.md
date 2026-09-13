@@ -1,9 +1,10 @@
 ---
 name: interoperability-testing
-description: Use when when a new file format specification exists as a living document (e.
+description: Use when when a new file format specification exists as a living document
+  (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -18,6 +19,8 @@ metadata:
   - JavaScript/TypeScript implementation
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak

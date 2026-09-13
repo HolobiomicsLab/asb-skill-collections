@@ -1,9 +1,11 @@
 ---
 name: precursor-mz-window-filtering
-description: Use when when preparing augmented training data for Siamese or contrastive learning architectures in mass spectrometry, specifically when you need to generate hard negative examples that are spectrally distinct but mass-similar to positive examples.
+description: Use when when preparing augmented training data for Siamese or contrastive
+  learning architectures in mass spectrometry, specifically when you need to generate
+  hard negative examples that are spectrally distinct but mass-similar to positive
+  examples.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,6 +15,8 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

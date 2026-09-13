@@ -1,9 +1,12 @@
 ---
 name: spectrum-record-consistency-validation
-description: Use when when you have a mass spectrometry data file (such as mzPeak) that has been read by two or more independent implementations (e.g., Rust, Python/pyarrow, R/arrow) and need to verify that all implementations produce identical spectrum metadata, data types, row counts, and numerical values.
+description: Use when when you have a mass spectrometry data file (such as mzPeak)
+  that has been read by two or more independent implementations (e.g., Rust, Python/pyarrow,
+  R/arrow) and need to verify that all implementations produce identical spectrum
+  metadata, data types, row counts, and numerical values.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -18,6 +21,8 @@ metadata:
   - R arrow
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak

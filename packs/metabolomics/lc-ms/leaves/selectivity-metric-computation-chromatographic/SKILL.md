@@ -1,9 +1,10 @@
 ---
 name: selectivity-metric-computation-chromatographic
-description: Use when after peak detection on composite mass tracks when you need to evaluate whether a detected peak represents a pure, interference-free signal on its m/z channel.
+description: Use when after peak detection on composite mass tracks when you need
+  to evaluate whether a detected peak represents a pure, interference-free signal
+  on its m/z channel.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,11 +16,14 @@ metadata:
   - asari.peaks.evaluate_gaussian_peak_on_intensity_list
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:

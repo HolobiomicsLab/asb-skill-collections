@@ -1,9 +1,10 @@
 ---
 name: expressionset-construction-and-metadata-annotation
-description: Use when after validating a peak table (either standardized format or software tool–generated format) and its corresponding label file, before applying any NOREVA assessment functions (normulticlassqcall, nortimecourseqcall, etc.).
+description: Use when after validating a peak table (either standardized format or
+  software tool–generated format) and its corresponding label file, before applying
+  any NOREVA assessment functions (normulticlassqcall, nortimecourseqcall, etc.).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +17,8 @@ metadata:
   - R base functions
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA

@@ -1,9 +1,11 @@
 ---
 name: baseline-comparison-performance-benchmarking
-description: 'Use when when you have implemented a novel annotation algorithm or network and must verify it outperforms a simpler reference approach on held-out or independent spectral data. Specifically: (1) you have ground-truth annotations for a common test set;'
+description: 'Use when when you have implemented a novel annotation algorithm or network
+  and must verify it outperforms a simpler reference approach on held-out or independent
+  spectral data. Specifically: (1) you have ground-truth annotations for a common
+  test set;'
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -16,12 +18,16 @@ metadata:
   - LipidIN Wide-spectrum Modeling Yield (WMY) network
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-59683-5
   title: LipidIN
 evidence_spans:
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification'
-- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear peak alignment, matching and identification.'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification'
+- 'XCMS: Processing mass spectrometry data for metabolite profiling using nonlinear
+  peak alignment, matching and identification.'
 - 'CAMERA: an'
 claims: []
 provenance:

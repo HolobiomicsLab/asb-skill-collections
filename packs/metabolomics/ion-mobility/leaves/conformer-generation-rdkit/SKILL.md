@@ -1,9 +1,11 @@
 ---
 name: conformer-generation-rdkit
-description: Use when when you have ionized adduct structures (SMILES or MOL format) from an ionization-state determination step and need to create an ensemble of relaxed 3D geometries for each molecule prior to expensive conformation filtering (e.g., ASE-ANI or quantum methods).
+description: Use when when you have ionized adduct structures (SMILES or MOL format)
+  from an ionization-state determination step and need to create an ensemble of relaxed
+  3D geometries for each molecule prior to expensive conformation filtering (e.g.,
+  ASE-ANI or quantum methods).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0482
   edam_topics:
   - http://edamontology.org/topic_3314
@@ -15,12 +17,15 @@ metadata:
   - ASE-ANI
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS
 evidence_spans:
 - Snakemake workflow manager for predicting collisional cross sections
-- This repository contains a Snakemake workflow manager for predicting collisional cross sections (CCS)
+- This repository contains a Snakemake workflow manager for predicting collisional
+  cross sections (CCS)
 - 'RDKit: For conformation generation'
 - 'RDKit: For conformation generation. Available at: https://www.rdkit.org'
 claims: []

@@ -1,9 +1,10 @@
 ---
 name: deep-learning-architecture-implementation
-description: Use when you have two augmented versions of the same ion image (from mass spectrometry imaging data) and need to extract learnable 512-dimensional feature representations using a shared-weight encoder for contrastive loss optimization.
+description: Use when you have two augmented versions of the same ion image (from
+  mass spectrometry imaging data) and need to extract learnable 512-dimensional feature
+  representations using a shared-weight encoder for contrastive loss optimization.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +15,8 @@ metadata:
   - torchvision
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion

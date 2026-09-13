@@ -1,9 +1,10 @@
 ---
 name: quality-control-metric-evaluation
-description: Use when you have measured IM-MS lipidomics data spiked with U13C labeled internal standards and need to assess whether CCS bias remains within acceptable limits for each lipid class-adduct combination.
+description: Use when you have measured IM-MS lipidomics data spiked with U13C labeled
+  internal standards and need to assess whether CCS bias remains within acceptable
+  limits for each lipid class-adduct combination.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3564
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -13,11 +14,14 @@ metadata:
   - MobiLipid
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c01253
   title: mobilipid
 evidence_spans:
-- Our tool enhances CCS quality control by providing a R Markdown that integrates into IM-MS lipidomics workflows
+- Our tool enhances CCS quality control by providing a R Markdown that integrates
+  into IM-MS lipidomics workflows
 - providing a R Markdown that integrates into IM-MS lipidomics workflows
 claims: []
 provenance:

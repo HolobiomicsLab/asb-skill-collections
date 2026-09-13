@@ -1,9 +1,10 @@
 ---
 name: autoencoder-encoder-decoder-design
-description: Use when when working with imaging mass spectrometry (IMS) datasets where you need to extract latent low-dimensional peak features from high-dimensional peak intensity data while preserving spatial adjacency information.
+description: Use when when working with imaging mass spectrometry (IMS) datasets where
+  you need to extract latent low-dimensional peak features from high-dimensional peak
+  intensity data while preserving spatial adjacency information.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,6 +17,8 @@ metadata:
   techniques:
   - MS-imaging
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART

@@ -1,9 +1,11 @@
 ---
 name: ms-finder-format-export
-description: Use when after completing MS-CleanR filtering (blank subtraction, background removal, RSD/RMD thresholding) and feature clustering steps, when you have a consolidated set of representative features and need structural identification via MS/MS spectral matching.
+description: Use when after completing MS-CleanR filtering (blank subtraction, background
+  removal, RSD/RMD thresholding) and feature clustering steps, when you have a consolidated
+  set of representative features and need structural identification via MS/MS spectral
+  matching.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -14,11 +16,14 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
 evidence_spans:
-- all selected features are exported to MS-FINDER program for in silico-based annotation using hydrogen rearrangement rules (HRR) scoring system
+- all selected features are exported to MS-FINDER program for in silico-based annotation
+  using hydrogen rearrangement rules (HRR) scoring system
 - MS-CleanR use as input MS-DIAL peak list processed in data dependent analysis
 claims: []
 provenance:

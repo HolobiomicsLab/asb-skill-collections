@@ -1,9 +1,10 @@
 ---
 name: kendrick-mass-calculation
-description: Use when you have uploaded m/z values from a high-resolution mass spectrometry analysis of a complex sample (e.g., crude oil, natural organic matter) and need to visualize homolog series trends.
+description: Use when you have uploaded m/z values from a high-resolution mass spectrometry
+  analysis of a complex sample (e.g., crude oil, natural organic matter) and need
+  to visualize homolog series trends.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -12,6 +13,8 @@ metadata:
   - Punc'data
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00151
   title: Punc’data

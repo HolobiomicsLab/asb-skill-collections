@@ -1,9 +1,10 @@
 ---
 name: chimeric-spectrum-detection-and-filtering
-description: Use when you have acquired LC-MS/MS data in Data-Dependent Acquisition (DDA) mode for untargeted metabolomics and suspect contamination from chimeric (co-fragmented) MS/MS spectra.
+description: Use when you have acquired LC-MS/MS data in Data-Dependent Acquisition
+  (DDA) mode for untargeted metabolomics and suspect contamination from chimeric (co-fragmented)
+  MS/MS spectra.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +16,8 @@ metadata:
   - R 4.2.1
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c00736
   title: DNMS2Purifier

@@ -1,9 +1,11 @@
 ---
 name: neutral-mass-inference-from-ion-ensemble
-description: Use when you have a connected subnetwork of feature ions that have been validated as belonging to the same empirical compound (khipu instance), with isotope and adduct edges assigned, and you need to estimate the true neutral mass M0 rather than relying on any single observed m/z.
+description: Use when you have a connected subnetwork of feature ions that have been
+  validated as belonging to the same empirical compound (khipu instance), with isotope
+  and adduct edges assigned, and you need to estimate the true neutral mass M0 rather
+  than relying on any single observed m/z.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +18,8 @@ metadata:
   - khipu (Weavor and Khipu classes)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu

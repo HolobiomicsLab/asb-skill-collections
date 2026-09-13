@@ -1,9 +1,11 @@
 ---
 name: queued-spectrum-preview-generation
-description: Use when when you have queued one or more spectral processing operations (e.g., smooth(), normalize(), reduceBaseline()) on an MSImagingArrays object and need to inspect the effect on representative spectra before processing the full dataset.
+description: Use when when you have queued one or more spectral processing operations
+  (e.g., smooth(), normalize(), reduceBaseline()) on an MSImagingArrays object and
+  need to inspect the effect on representative spectra before processing the full
+  dataset.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,12 +18,15 @@ metadata:
   - BiocParallel
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btv146
   title: Cardinal
 evidence_spans:
 - library(Cardinal)
-- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of the new low-level signal processing functions'
+- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of
+  the new low-level signal processing functions'
 - 'Once installed, Cardinal can be loaded with library(): library(Cardinal)'
 - 'We can read an example of a "continuous" imzML file from the `CardinalIO` package:'
 claims: []

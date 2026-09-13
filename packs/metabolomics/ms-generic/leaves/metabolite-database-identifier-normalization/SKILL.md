@@ -1,9 +1,11 @@
 ---
 name: metabolite-database-identifier-normalization
-description: Use when you have metabolomics metadata in mwTab or tabular format with column headers and values that may contain database identifiers (e.g., HMDB IDs, PubChem CIDs, KEGG compound IDs) in heterogeneous or non-canonical formats (mixed case, optional prefixes, variable naming conventions).
+description: Use when you have metabolomics metadata in mwTab or tabular format with
+  column headers and values that may contain database identifiers (e.g., HMDB IDs,
+  PubChem CIDs, KEGG compound IDs) in heterogeneous or non-canonical formats (mixed
+  case, optional prefixes, variable naming conventions).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,6 +17,8 @@ metadata:
   - Python 3.6+
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo11030163
   title: mwtab Python Library for RESTful Access

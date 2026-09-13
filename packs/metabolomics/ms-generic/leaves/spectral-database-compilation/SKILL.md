@@ -1,9 +1,11 @@
 ---
 name: spectral-database-compilation
-description: Use when you have generated predicted fragment spectra for a set of compounds using CFM-ID or similar in-silico prediction tools and need to organize these results into a persistent, queryable database that mirrors the schema of an existing online spectral reference (such as the predicted-fragments.
+description: Use when you have generated predicted fragment spectra for a set of compounds
+  using CFM-ID or similar in-silico prediction tools and need to organize these results
+  into a persistent, queryable database that mirrors the schema of an existing online
+  spectral reference (such as the predicted-fragments.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -12,12 +14,15 @@ metadata:
   - CFM-ID
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.3389/fchem.2022.908572
   title: DNA adduct database
 evidence_spans:
 - CFM-ID
-- the CFM-ID spectra, the Chemdraw files, the mol files and the SDF files of the DNA adducts
+- the CFM-ID spectra, the Chemdraw files, the mol files and the SDF files of the DNA
+  adducts
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

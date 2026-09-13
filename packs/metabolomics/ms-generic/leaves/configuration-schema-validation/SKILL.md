@@ -1,9 +1,11 @@
 ---
 name: configuration-schema-validation
-description: Use when when you have generated or edited a LipoCLEAN `options.txt` file using `--print MSD4` or `--print MSD5` and need to verify it is well-formed before running the analysis. Use this skill as a pre-flight check before invoking `--options options.
+description: Use when when you have generated or edited a LipoCLEAN `options.txt`
+  file using `--print MSD4` or `--print MSD5` and need to verify it is well-formed
+  before running the analysis. Use this skill as a pre-flight check before invoking
+  `--options options.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +16,8 @@ metadata:
   - MS-DIAL 5
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c04040
   title: lipoclean

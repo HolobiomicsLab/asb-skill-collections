@@ -3,7 +3,6 @@ name: spectrum-metadata-normalization-across-formats
 description: Use when you have mass-spectrometry data files in mixed formats (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -13,11 +12,14 @@ metadata:
   - pwiz
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.9b00640
   title: Skyline (small molecules)
 evidence_spans:
-- The ProteoWizard Library and Tools are a set of modular and extensible open-source, cross-platform tools and software libraries
+- The ProteoWizard Library and Tools are a set of modular and extensible open-source,
+  cross-platform tools and software libraries
 - github.com__ProteoWizard__pwiz
 claims: []
 provenance:

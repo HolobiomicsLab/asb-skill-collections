@@ -1,9 +1,11 @@
 ---
 name: spectral-library-compilation-and-merging
-description: Use when you have multiple mass spectral library files in different formats (MSP, MGF, MOL folders) from sources like NIST, MoNA, RIKEN, or GNPS, and need to produce a single consolidated MSP file with complete SMILES, InChIKey, and experimental retention index (RI) annotations for metabolomics or.
+description: Use when you have multiple mass spectral library files in different formats
+  (MSP, MGF, MOL folders) from sources like NIST, MoNA, RIKEN, or GNPS, and need to
+  produce a single consolidated MSP file with complete SMILES, InChIKey, and experimental
+  retention index (RI) annotations for metabolomics or.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -24,6 +26,8 @@ metadata:
   - ChemmineOB
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -33,7 +37,8 @@ evidence_spans:
 - library(future.apply)
 - you can transformed it into a msp file by *Lib2NIST*
 - MS-DIAL friendly msp file
-- both positive and negative modes are in a single file as well. Therefore, we need to separated the polarity
+- both positive and negative modes are in a single file as well. Therefore, we need
+  to separated the polarity
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

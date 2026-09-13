@@ -1,9 +1,12 @@
 ---
 name: mzpeak-file-io-operations
-description: 'Use when you have raw mass spectrometry data (vendor formats, mzML, or existing mzPeak files) and need to: (1) convert to mzPeak format for long-term storage and interoperability across languages and tools; (2) load mzPeak spectrum or chromatogram data into memory as structured tables for analysis;'
+description: 'Use when you have raw mass spectrometry data (vendor formats, mzML,
+  or existing mzPeak files) and need to: (1) convert to mzPeak format for long-term
+  storage and interoperability across languages and tools; (2) load mzPeak spectrum
+  or chromatogram data into memory as structured tables for analysis;'
 license: CC-BY-4.0
 metadata:
-  license_tier: open
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3999
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -19,6 +22,8 @@ metadata:
   - TypeScript/JavaScript implementation
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak

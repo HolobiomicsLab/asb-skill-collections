@@ -1,9 +1,9 @@
 ---
 name: mass-spectrometry-instrument-format-compatibility
-description: Use when you have raw mass spectrometry data from an instrument not yet validated in your pipeline (e.
+description: Use when you have raw mass spectrometry data from an instrument not yet
+  validated in your pipeline (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +14,8 @@ metadata:
   - ASAP-MS
   techniques:
   - direct-infusion-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass

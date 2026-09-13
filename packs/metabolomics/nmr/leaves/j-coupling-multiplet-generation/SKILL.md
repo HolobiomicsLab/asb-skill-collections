@@ -1,9 +1,10 @@
 ---
 name: j-coupling-multiplet-generation
-description: Use when you have parsed metabolite identities with known spin-system coupling constants (J-values) and chemical shifts, and need to generate the theoretical multiplet patterns that will form the basis of a simulated 1D or 2D NMR spectrum.
+description: Use when you have parsed metabolite identities with known spin-system
+  coupling constants (J-values) and chemical shifts, and need to generate the theoretical
+  multiplet patterns that will form the basis of a simulated 1D or 2D NMR spectrum.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -12,6 +13,8 @@ metadata:
   - MetAssimulo 2
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btaf045
   title: MetAssimulo 2.0

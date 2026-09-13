@@ -1,9 +1,11 @@
 ---
 name: pandas-dataframe-plotting-interface
-description: Use when you have mass spectrometry data (retention time, m/z, intensity, or mobility dimensions) already loaded into a Pandas DataFrame and need to produce publication-ready or exploratory visualizations. Use this when you want to leverage Pandas' native .
+description: Use when you have mass spectrometry data (retention time, m/z, intensity,
+  or mobility dimensions) already loaded into a Pandas DataFrame and need to produce
+  publication-ready or exploratory visualizations. Use this when you want to leverage
+  Pandas' native .
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,6 +19,8 @@ metadata:
   - plotly
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -24,7 +28,8 @@ evidence_spans:
 - Plot directly from a pandas dataframe object
 - provides a simple interface for extending the plotting capabilities of Pandas DataFrames
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

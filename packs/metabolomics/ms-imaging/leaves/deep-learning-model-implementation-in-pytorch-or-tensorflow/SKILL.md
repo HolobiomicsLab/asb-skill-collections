@@ -1,9 +1,11 @@
 ---
 name: deep-learning-model-implementation-in-pytorch-or-tensorflow
-description: Use when when you need to construct a dual-branch neural network encoder that processes two augmented versions of the same input (e.g., ion images in COL or ISO mode) and must enforce weight sharing between branches to reduce parameters while maintaining separate output representations.
+description: Use when when you need to construct a dual-branch neural network encoder
+  that processes two augmented versions of the same input (e.g., ion images in COL
+  or ISO mode) and must enforce weight sharing between branches to reduce parameters
+  while maintaining separate output representations.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3474
@@ -15,12 +17,15 @@ metadata:
   - boly_pytorch
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
 evidence_spans:
 - Two augmented images are propagated through a pair of ResNet18-based encoders
-- Two augmented images are propagated through a pair of ResNet18-based encoders that shared parameters
+- Two augmented images are propagated through a pair of ResNet18-based encoders that
+  shared parameters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

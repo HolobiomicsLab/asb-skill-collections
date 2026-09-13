@@ -1,9 +1,10 @@
 ---
 name: taxonomic-weighting-in-annotation
-description: Use when you have a feature table with candidate metabolite annotations (m/z, retention time, chemical identifiers) and MS/MS spectra, and you know the organism or taxon of origin for your samples.
+description: Use when you have a feature table with candidate metabolite annotations
+  (m/z, retention time, chemical identifiers) and MS/MS spectra, and you know the
+  organism or taxon of origin for your samples.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3761
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -18,6 +19,8 @@ metadata:
   - GNPS-FBMN
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3389/fpls.2019.01329
   title: tima

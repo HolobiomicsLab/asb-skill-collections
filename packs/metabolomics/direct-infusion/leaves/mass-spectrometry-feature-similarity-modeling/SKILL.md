@@ -1,9 +1,9 @@
 ---
 name: mass-spectrometry-feature-similarity-modeling
-description: Use when when you have an untargeted metabolomics dataset with MS2 fragmentation spectra and need to annotate metabolites beyond what reference databases alone provide.
+description: Use when when you have an untargeted metabolomics dataset with MS2 fragmentation
+  spectra and need to annotate metabolites beyond what reference databases alone provide.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3346
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -12,11 +12,19 @@ metadata:
   - MrnAnnoAlgo3 (MetDNA3)
   techniques:
   - direct-infusion-MS
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ZhuMetLab/MrnAnnoAlgo3
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-63536-6
   title: MetDNA3
 evidence_spans:
-- '`MrnAnnoAlgo3` is the core algorithm module of **MetDNA3**, designed to annotate metabolites'
+- '`MrnAnnoAlgo3` is the core algorithm module of **MetDNA3**, designed to annotate
+  metabolites'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

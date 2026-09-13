@@ -1,9 +1,11 @@
 ---
 name: model-artifact-persistence
-description: Use when after a deep neural network model has completed training on LC-MS spectral peak classification data and you need to preserve the learned weights and architecture for downstream inference, validation on held-out test sets, or sharing with collaborators.
+description: Use when after a deep neural network model has completed training on
+  LC-MS spectral peak classification data and you need to preserve the learned weights
+  and architecture for downstream inference, validation on held-out test sets, or
+  sharing with collaborators.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -14,6 +16,8 @@ metadata:
   - EDML_deep_learning2.py
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b02983
   title: DNN peak classifier

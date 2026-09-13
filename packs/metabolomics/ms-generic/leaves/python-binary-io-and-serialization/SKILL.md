@@ -1,9 +1,12 @@
 ---
 name: python-binary-io-and-serialization
-description: Use when when you have mzPeak files (Parquet-based archives in uncompressed ZIP containers) or other PyArrow-compatible columnar formats containing mass spectrometry spectra, and you need to extract and decode spectral data arrays (m/z values, intensities) into Python memory for downstream.
+description: Use when when you have mzPeak files (Parquet-based archives in uncompressed
+  ZIP containers) or other PyArrow-compatible columnar formats containing mass spectrometry
+  spectra, and you need to extract and decode spectral data arrays (m/z values, intensities)
+  into Python memory for downstream.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,6 +20,8 @@ metadata:
   - mzPeak Rust implementation
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak

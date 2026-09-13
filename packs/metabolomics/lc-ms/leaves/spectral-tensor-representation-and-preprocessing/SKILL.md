@@ -1,9 +1,10 @@
 ---
 name: spectral-tensor-representation-and-preprocessing
-description: 'Use when when preparing MS/MS spectra from .msp files for transformer-based deep learning models in IDSL_MINT. Specifically: you have raw spectral data with variable peak counts and need fixed-size tensor inputs;'
+description: 'Use when when preparing MS/MS spectra from .msp files for transformer-based
+  deep learning models in IDSL_MINT. Specifically: you have raw spectral data with
+  variable peak counts and need fixed-size tensor inputs;'
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +17,8 @@ metadata:
   - IDSL_MINT
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-024-00804-5
   title: idslmint

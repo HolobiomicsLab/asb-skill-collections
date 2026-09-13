@@ -1,9 +1,11 @@
 ---
 name: interactive-filter-control-design-web
-description: Use when when you have a web-based visualization of aligned mass spectrometry peaks (m/z, intensity, retention time, alignment quality metrics) and need users to interactively explore subsets of those peaks by applying constraints on intensity thresholds, alignment score cutoffs, or peak.
+description: Use when when you have a web-based visualization of aligned mass spectrometry
+  peaks (m/z, intensity, retention time, alignment quality metrics) and need users
+  to interactively explore subsets of those peaks by applying constraints on intensity
+  thresholds, alignment score cutoffs, or peak.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +18,8 @@ metadata:
   - pandas
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00237
   title: MMSA

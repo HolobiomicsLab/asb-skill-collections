@@ -1,9 +1,11 @@
 ---
 name: retention-time-and-mz-weight-tuning
-description: Use when after anchor selection and RT mapping spline construction, when you have a fitted metabCombiner object with pre-aligned feature pair candidates and need to tune the scoring metric that combines retention time, m/z, and cosine similarity components.
+description: Use when after anchor selection and RT mapping spline construction, when
+  you have a fitted metabCombiner object with pre-aligned feature pair candidates
+  and need to tune the scoring metric that combines retention time, m/z, and cosine
+  similarity components.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,12 +16,16 @@ metadata:
   - mgcv
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

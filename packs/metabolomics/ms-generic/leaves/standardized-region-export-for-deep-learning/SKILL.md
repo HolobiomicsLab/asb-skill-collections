@@ -1,9 +1,11 @@
 ---
 name: standardized-region-export-for-deep-learning
-description: Use when you have LC-HRMS profile-mode data with detected local maxima (from gradient-descent peak finding) and need to prepare them as input for a convolutional neural network trained to classify peaks vs. background signal or to estimate peak boundaries and centers.
+description: Use when you have LC-HRMS profile-mode data with detected local maxima
+  (from gradient-descent peak finding) and need to prepare them as input for a convolutional
+  neural network trained to classify peaks vs. background signal or to estimate peak
+  boundaries and centers.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -16,6 +18,13 @@ metadata:
   - OpenMS (TOPPView)
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: christophuv/PeakBot
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot

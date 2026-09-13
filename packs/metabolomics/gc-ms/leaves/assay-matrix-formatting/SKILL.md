@@ -1,9 +1,11 @@
 ---
 name: assay-matrix-formatting
-description: Use when after generating a feature table via mzrtsim() containing simulated peak abundances across samples with condition and batch effects, and you need to expose the abundance data through Bioconductor's SummarizedExperiment interface for use with standard accessor functions (assay(), colData()).
+description: Use when after generating a feature table via mzrtsim() containing simulated
+  peak abundances across samples with condition and batch effects, and you need to
+  expose the abundance data through Bioconductor's SummarizedExperiment interface
+  for use with standard accessor functions (assay(), colData()).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -14,12 +16,16 @@ metadata:
   - mzrtsim
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
-- For seamless integration with Bioconductor workflows, use `mzrtsim_se()` which wraps the simulation in a `SummarizedExperiment`
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
+- For seamless integration with Bioconductor workflows, use `mzrtsim_se()` which wraps
+  the simulation in a `SummarizedExperiment`
 - github.com__yufree__mzrtsim
 claims: []
 provenance:

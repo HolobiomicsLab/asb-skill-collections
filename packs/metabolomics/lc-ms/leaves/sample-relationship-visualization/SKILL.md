@@ -1,9 +1,11 @@
 ---
 name: sample-relationship-visualization
-description: Use when after generating aligned MS2 fingerprints (sample-by-fingerprint matrices) from metabolomics data when you need to visually inspect sample clustering, identify sample similarities, or detect batch effects and RT shifts across different LC methods or mass spectrometer technologies.
+description: Use when after generating aligned MS2 fingerprints (sample-by-fingerprint
+  matrices) from metabolomics data when you need to visually inspect sample clustering,
+  identify sample similarities, or detect batch effects and RT shifts across different
+  LC methods or mass spectrometer technologies.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3727
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,6 +19,8 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo

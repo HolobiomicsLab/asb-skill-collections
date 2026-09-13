@@ -1,9 +1,11 @@
 ---
 name: container-port-mapping-configuration
-description: Use when you need to deploy a containerized web application (such as MetFrag webapp on Tomcat) and make it accessible at a specific HTTP endpoint on the host machine. Use this skill when you have a Docker image with an internal service listening on a known port (e.
+description: Use when you need to deploy a containerized web application (such as
+  MetFrag webapp on Tomcat) and make it accessible at a specific HTTP endpoint on
+  the host machine. Use this skill when you have a Docker image with an internal service
+  listening on a known port (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_topics: []
   tools:
   - MetFrag
@@ -11,11 +13,14 @@ metadata:
   - Tomcat
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
 evidence_spans:
-- This container packages the MetFrag (https://github.com/ipb-halle/MetFragRelaunched) webapp
+- This container packages the MetFrag (https://github.com/ipb-halle/MetFragRelaunched)
+  webapp
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

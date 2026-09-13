@@ -1,9 +1,10 @@
 ---
 name: spectral-motif-inference-and-extraction
-description: Use when you have preprocessed MS/MS spectral data (converted to bag-of-fragments format with neutral losses extracted and noise filtered) and seek to identify recurring fragmentation patterns indicative of molecular substructures across a spectral cohort.
+description: Use when you have preprocessed MS/MS spectral data (converted to bag-of-fragments
+  format with neutral losses extracted and noise filtered) and seek to identify recurring
+  fragmentation patterns indicative of molecular substructures across a spectral cohort.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,11 +18,14 @@ metadata:
   - MotifDB
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
-- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
+- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural
+  language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
 - ms2lda_runfull.py
 - Configure the Python environment (set `PYTHONPATH`, activate conda, etc.)
 - configure the Python environment (set `PYTHONPATH`, activate conda, etc.)

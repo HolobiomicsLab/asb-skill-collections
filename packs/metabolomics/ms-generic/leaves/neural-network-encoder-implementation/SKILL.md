@@ -1,9 +1,10 @@
 ---
 name: neural-network-encoder-implementation
-description: Use when when you need to benchmark multiple encoder types (e.g., FFN vs. GNN) on the same predictive task and require evidence that performance differences reflect genuine architectural trade-offs rather than suboptimal tuning.
+description: Use when when you need to benchmark multiple encoder types (e.g., FFN
+  vs. GNN) on the same predictive task and require evidence that performance differences
+  reflect genuine architectural trade-offs rather than suboptimal tuning.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -15,6 +16,8 @@ metadata:
   - PyTorch or TensorFlow
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04654
   title: ICEBERG / fragmentation graph generation

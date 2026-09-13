@@ -1,9 +1,11 @@
 ---
 name: ms-modification-site-evaluation
-description: Use when after ModiFinder has generated modification site probability scores for an unknown compound by comparing its MS/MS spectrum to a known analog, and you have access to the true structure of the unknown compound (oracle mode) or a reference modification site annotation.
+description: Use when after ModiFinder has generated modification site probability
+  scores for an unknown compound by comparing its MS/MS spectrum to a known analog,
+  and you have access to the true structure of the unknown compound (oracle mode)
+  or a reference modification site annotation.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,6 +19,8 @@ metadata:
   - Pillow
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00061
   title: ModiFinder

@@ -1,9 +1,10 @@
 ---
 name: metabolomics-functional-prediction-workflow-validation
-description: Use when a Python-based metabolomics analysis package has been relocated to a new GitHub organization (e.g., metabolomics-cloud) and you need to confirm that the migration preserved package integrity, installation, and runtime correctness.
+description: Use when a Python-based metabolomics analysis package has been relocated
+  to a new GitHub organization (e.g., metabolomics-cloud) and you need to confirm
+  that the migration preserved package integrity, installation, and runtime correctness.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3501
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +17,8 @@ metadata:
   - pytest / unittest
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: mummichog

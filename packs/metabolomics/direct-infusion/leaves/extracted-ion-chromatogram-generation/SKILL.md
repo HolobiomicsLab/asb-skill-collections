@@ -3,7 +3,6 @@ name: extracted-ion-chromatogram-generation
 description: Use when you have raw MS data (in Agilent .d, Thermo .raw, Bruker .
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3630
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -16,11 +15,14 @@ metadata:
   - LC-MS
   - direct-infusion-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00146
   title: PeakQC
 evidence_spans:
-- 'Mirador: Raw MS data visualization and export (PDF, CSV) including extracted ion chromatograms (XIC), extracted ion mobility (XIM) heatmaps, and MS/MS mirror plots'
+- 'Mirador: Raw MS data visualization and export (PDF, CSV) including extracted ion
+  chromatograms (XIC), extracted ion mobility (XIM) heatmaps, and MS/MS mirror plots'
 - IonToolPack is a software suite housing tools for mass spectrometry data
 - IonToolPack is a software suite housing tools for mass spectrometry data.
 claims: []

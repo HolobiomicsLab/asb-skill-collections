@@ -1,9 +1,10 @@
 ---
 name: structure-similarity-comparison
-description: Use when after executing a molecular structure prediction model on spectroscopic input data and obtaining predicted molecular structures in a standardized format (e.g., SMILES, MOL, SDF).
+description: Use when after executing a molecular structure prediction model on spectroscopic
+  input data and obtaining predicted molecular structures in a standardized format
+  (e.g., SMILES, MOL, SDF).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3439
   edam_topics:
   - http://edamontology.org/topic_2275
@@ -13,6 +14,8 @@ metadata:
   - RDKit
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/ange.202517611
   title: MMST

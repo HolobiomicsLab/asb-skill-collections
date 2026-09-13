@@ -1,9 +1,11 @@
 ---
 name: dataset-size-threshold-enforcement
-description: Use when when you have partitioned public MS/MS files from MassIVE using the ReDU File Selector into one or more filtered groups (G1–G6) and need to verify that each group's file count complies with computational constraints before submitting to GNPS molecular networking (3000 file limit) or.
+description: Use when when you have partitioned public MS/MS files from MassIVE using
+  the ReDU File Selector into one or more filtered groups (G1–G6) and need to verify
+  that each group's file count complies with computational constraints before submitting
+  to GNPS molecular networking (3000 file limit) or.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +17,8 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU

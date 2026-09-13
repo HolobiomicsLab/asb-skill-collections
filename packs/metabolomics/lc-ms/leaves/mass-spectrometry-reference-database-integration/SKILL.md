@@ -1,9 +1,10 @@
 ---
 name: mass-spectrometry-reference-database-integration
-description: Use when you have individual MS/MS spectra or batch .mgf files from untargeted metabolomics experiments and need to search them against domain-specific reference libraries (e.
+description: Use when you have individual MS/MS spectra or batch .mgf files from untargeted
+  metabolomics experiments and need to search them against domain-specific reference
+  libraries (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -21,6 +22,8 @@ metadata:
   - MZmine
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41538-022-00137-3
   title: foodMASST

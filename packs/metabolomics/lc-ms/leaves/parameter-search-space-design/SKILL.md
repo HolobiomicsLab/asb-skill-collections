@@ -1,9 +1,11 @@
 ---
 name: parameter-search-space-design
-description: Use when when beginning an untargeted LC-MS analysis and either (1) the dataset characteristics (sample complexity, instrument platform, or polarity) differ from previously optimized cohorts, (2) multiple peak-picking algorithms (Centwave, FeatureFinderMetabo, ADAP) are available and their relative.
+description: Use when when beginning an untargeted LC-MS analysis and either (1) the
+  dataset characteristics (sample complexity, instrument platform, or polarity) differ
+  from previously optimized cohorts, (2) multiple peak-picking algorithms (Centwave,
+  FeatureFinderMetabo, ADAP) are available and their relative.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -15,11 +17,14 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
 evidence_spans:
-- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo, ADAP'
+- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo,
+  ADAP'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

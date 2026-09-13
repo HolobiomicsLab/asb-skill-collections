@@ -1,9 +1,11 @@
 ---
 name: chromatographic-feature-extraction
-description: Use when you have centroided mzML files from LC- or GC-HRMS instruments (acquired in data-dependent mode with ddMS2) and need to systematically identify chromatographic peaks, measure their mass and retention time coordinates, and quantify their intensities before applying PFAS-specific.
+description: Use when you have centroided mzML files from LC- or GC-HRMS instruments
+  (acquired in data-dependent mode with ddMS2) and need to systematically identify
+  chromatographic peaks, measure their mass and retention time coordinates, and quantify
+  their intensities before applying PFAS-specific.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -16,12 +18,15 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
 - PFΔScreen is an open-source Python based non-target screening software tool
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 - pyOpenMS (Python interface to the C++ OpenMS library)
 claims: []
 provenance:

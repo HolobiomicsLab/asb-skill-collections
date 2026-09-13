@@ -1,9 +1,10 @@
 ---
 name: differential-metabolite-detection
-description: Use when you have normalized and aligned lipidomic and metabolomic spectral features from the Multi-ABLE method across multiple biological samples grouped by phenotype (e.
+description: Use when you have normalized and aligned lipidomic and metabolomic spectral
+  features from the Multi-ABLE method across multiple biological samples grouped by
+  phenotype (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +17,8 @@ metadata:
   - ProteoMM
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.isci.2023.106881
   title: MultiABLER

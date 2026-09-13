@@ -1,9 +1,11 @@
 ---
 name: cross-assay-feature-linkage-analysis
-description: Use when after identifying statistically significant features within individual LC-MS assays (e.g., via MB-VIP and permutation testing), use this skill when you have multiple parallel assays acquired in complementary ionization modes (e.
+description: Use when after identifying statistically significant features within
+  individual LC-MS assays (e.g., via MB-VIP and permutation testing), use this skill
+  when you have multiple parallel assays acquired in complementary ionization modes
+  (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -19,6 +21,8 @@ metadata:
   - LC-MS
   - GC-MS
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi

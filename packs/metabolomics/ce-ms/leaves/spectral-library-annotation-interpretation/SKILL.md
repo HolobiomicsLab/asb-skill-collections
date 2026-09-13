@@ -1,9 +1,11 @@
 ---
 name: spectral-library-annotation-interpretation
-description: Use when you have received chemical annotations from GNPS spectral library matching and need to (1) assess annotation confidence and validity for downstream analysis, (2) understand why the same chemical may appear under multiple GNPS annotation IDs, or (3) decide whether to collapse or deduplicate.
+description: Use when you have received chemical annotations from GNPS spectral library
+  matching and need to (1) assess annotation confidence and validity for downstream
+  analysis, (2) understand why the same chemical may appear under multiple GNPS annotation
+  IDs, or (3) decide whether to collapse or deduplicate.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +18,8 @@ metadata:
   - Emperor
   techniques:
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU

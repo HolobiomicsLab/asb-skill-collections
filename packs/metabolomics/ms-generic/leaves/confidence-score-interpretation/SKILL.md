@@ -1,9 +1,10 @@
 ---
 name: confidence-score-interpretation
-description: Use when after executing forward inference on preprocessed mass spectrometry spectra with a deep learning model (e.g., PS²MS), when you have per-spectrum predictions with associated confidence scores or per-class probabilities.
+description: Use when after executing forward inference on preprocessed mass spectrometry
+  spectra with a deep learning model (e.g., PS²MS), when you have per-spectrum predictions
+  with associated confidence scores or per-class probabilities.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,6 +16,8 @@ metadata:
   - DeepEI
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05019
   title: ps2ms

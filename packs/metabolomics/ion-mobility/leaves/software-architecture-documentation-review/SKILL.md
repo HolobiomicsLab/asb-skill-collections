@@ -1,9 +1,10 @@
 ---
 name: software-architecture-documentation-review
-description: Use when you need to verify the scope and completeness of a software platform's analytical capabilities—particularly when the project claims to support multiple input modalities (e.
+description: Use when you need to verify the scope and completeness of a software
+  platform's analytical capabilities—particularly when the project claims to support
+  multiple input modalities (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +16,8 @@ metadata:
   - LC-MS
   - GC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3

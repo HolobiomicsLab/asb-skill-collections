@@ -1,9 +1,11 @@
 ---
 name: file-format-identification-mass-spectrometry
-description: Use when you have raw MS data files from one or more instrument vendors (Agilent, Bruker, Thermo Fisher, or mzML-formatted) and need to convert them to a vendor-agnostic HDF5-based storage format for downstream software development, machine learning, or cross-platform data access.
+description: Use when you have raw MS data files from one or more instrument vendors
+  (Agilent, Bruker, Thermo Fisher, or mzML-formatted) and need to convert them to
+  a vendor-agnostic HDF5-based storage format for downstream software development,
+  machine learning, or cross-platform data access.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,11 +18,14 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00313
   title: MZA
 evidence_spans:
-- MZA is a stand-alone and self-contained command-line executable which converts multidimensional mass spectrometry (MS) data
+- MZA is a stand-alone and self-contained command-line executable which converts multidimensional
+  mass spectrometry (MS) data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,11 @@
 ---
 name: simulation-control-loop-architecture
-description: Use when you have a set of metabolites or chemical formulas to analyze and want to evaluate how different MS/MS fragmentation strategies (e.g., TopN, exclusion lists, dynamic window selection) would perform without access to real instrument time.
+description: Use when you have a set of metabolites or chemical formulas to analyze
+  and want to evaluate how different MS/MS fragmentation strategies (e.g., TopN, exclusion
+  lists, dynamic window selection) would perform without access to real instrument
+  time.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -19,6 +21,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms

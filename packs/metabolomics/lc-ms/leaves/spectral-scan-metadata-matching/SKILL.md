@@ -1,9 +1,11 @@
 ---
 name: spectral-scan-metadata-matching
-description: Use when you have extracted MS1 and MS2 scans in mzML/mzXML format from raw chromatogram files and a structured metadata file (containing retention time, m/z, compound name, molecular weight, and annotation fields), and you need to pair each scan set with its corresponding chemical record to build.
+description: Use when you have extracted MS1 and MS2 scans in mzML/mzXML format from
+  raw chromatogram files and a structured metadata file (containing retention time,
+  m/z, compound name, molecular weight, and annotation fields), and you need to pair
+  each scan set with its corresponding chemical record to build.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,6 +15,8 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04343
   title: MeRgeION

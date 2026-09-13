@@ -1,9 +1,10 @@
 ---
 name: gam-model-diagnostic-evaluation
-description: Use when after fitting candidate GAM splines with B-spline basis functions across a range of basis dimensions (k values 12–20) to anchor feature pairs (m/z and retention time coordinates).
+description: Use when after fitting candidate GAM splines with B-spline basis functions
+  across a range of basis dimensions (k values 12–20) to anchor feature pairs (m/z
+  and retention time coordinates).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0337
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,13 +15,17 @@ metadata:
   - metabCombiner
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
 - a modified form of the `gam` function implemented in the *mgcv* R package
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,11 @@
 ---
 name: biotransformation-candidate-integration-with-networking
-description: Use when you have output from a biotransformation rules module (candidate transformed structures linked to anchor molecules) and untargeted MS/MS spectral data, and you want to identify molecular families and annotate features with predicted structures by leveraging spectral similarity and network.
+description: Use when you have output from a biotransformation rules module (candidate
+  transformed structures linked to anchor molecules) and untargeted MS/MS spectral
+  data, and you want to identify molecular families and annotate features with predicted
+  structures by leveraging spectral similarity and network.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -14,6 +16,8 @@ metadata:
   - GNN-SOM
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c01565
   title: bam

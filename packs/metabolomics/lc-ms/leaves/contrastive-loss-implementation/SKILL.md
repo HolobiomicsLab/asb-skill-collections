@@ -1,9 +1,11 @@
 ---
 name: contrastive-loss-implementation
-description: 'Use when training embeddings from MS/MS spectra and you need to simultaneously enforce: (1) discrimination between spectra with different structural properties via contrastive learning on peak information and metadata embeddings, and (2) accurate reconstruction of embeddings from peak features via.'
+description: 'Use when training embeddings from MS/MS spectra and you need to simultaneously
+  enforce: (1) discrimination between spectra with different structural properties
+  via contrastive learning on peak information and metadata embeddings, and (2) accurate
+  reconstruction of embeddings from peak features via.'
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +18,8 @@ metadata:
   - CLERMS
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c00260
   title: CLERMS

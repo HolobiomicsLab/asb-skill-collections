@@ -1,9 +1,10 @@
 ---
 name: imputation-algorithm-selection
-description: Use when you have a metabolomics dataset with left-censored missing values (e.g., below limit of quantification in LC/MS or GC/MS) and need to evaluate multiple imputation approaches.
+description: Use when you have a metabolomics dataset with left-censored missing values
+  (e.g., below limit of quantification in LC/MS or GC/MS) and need to evaluate multiple
+  imputation approaches.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -17,6 +18,13 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-SA-4.0
+    url: WandeRum/GSimp
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp

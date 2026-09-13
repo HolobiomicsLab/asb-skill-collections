@@ -1,9 +1,10 @@
 ---
 name: mzmine-batch-processing-configuration
-description: Use when you have raw metabolomics data in mzML or mzXML format and need to extract ion features, align them across samples, and produce a normalized feature table for downstream statistical or chemotaxonomic analysis.
+description: Use when you have raw metabolomics data in mzML or mzXML format and need
+  to extract ion features, align them across samples, and produce a normalized feature
+  table for downstream statistical or chemotaxonomic analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3637
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -12,6 +13,8 @@ metadata:
   - MZmine
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.05.13.593988v1
   title: plantMASST

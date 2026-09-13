@@ -1,9 +1,10 @@
 ---
 name: scan-filter-file-organization
-description: Use when when converting mzML files to imzML format and the source mzML contains multiple scan filters (e.g., different MS/MS isolation windows, ionization modes, or mass ranges acquired in a single imaging experiment).
+description: Use when when converting mzML files to imzML format and the source mzML
+  contains multiple scan filters (e.g., different MS/MS isolation windows, ionization
+  modes, or mass ranges acquired in a single imaging experiment).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3945
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +15,8 @@ metadata:
   - msconvert
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c06520
   title: imzML Writer

@@ -1,9 +1,10 @@
 ---
 name: retention-index-extraction-from-nist-database
-description: Use when you have a compiled EI or MS2 library object (from read_lib or c() combination of multiple sources) and a local NIST library installation with accessible ri.dat and USER.DBU files in the mssearch/nist_ri directory.
+description: Use when you have a compiled EI or MS2 library object (from read_lib
+  or c() combination of multiple sources) and a local NIST library installation with
+  accessible ri.dat and USER.DBU files in the mssearch/nist_ri directory.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -17,6 +18,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler

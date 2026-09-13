@@ -1,9 +1,10 @@
 ---
 name: data-integrity-assessment
-description: Use when immediately after importing raw mass spectrometry data from supported formats (mzML, mzXML, msp, metabolomics-USI, MGF, JSON) and before performing spectral similarity comparisons or statistical analysis.
+description: Use when immediately after importing raw mass spectrometry data from
+  supported formats (mzML, mzXML, msp, metabolomics-USI, MGF, JSON) and before performing
+  spectral similarity comparisons or statistical analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,11 +16,14 @@ metadata:
   - poetry
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
 evidence_spans:
-- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+- Matchms is a versatile open-source Python package developed for importing, processing,
+  cleaning, and comparing mass spectrometry data
 - make sure the existing tests still work by running ``pytest``
 claims: []
 provenance:

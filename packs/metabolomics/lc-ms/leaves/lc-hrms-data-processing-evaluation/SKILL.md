@@ -1,9 +1,10 @@
 ---
 name: lc-hrms-data-processing-evaluation
-description: Use when you have processed the same set of untargeted LC/HRMS files (mzXML, mzML, or netCDF format) with two or more peak-picking tools and need to validate which tool produces higher-quality peaklists for organic small molecules.
+description: Use when you have processed the same set of untargeted LC/HRMS files
+  (mzXML, mzML, or netCDF format) with two or more peak-picking tools and need to
+  validate which tool produces higher-quality peaklists for organic small molecules.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -17,11 +18,15 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA
 evidence_spans:
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
+  R package'
 - IDSL.IPA is able to outperform similar peak picking tools such as MZmine 2
 - IDSL.IPA is able to outperform similar peak picking tools such as MZmine 2, *xcms
 - similar peak picking tools such as MZmine 2, *xcms

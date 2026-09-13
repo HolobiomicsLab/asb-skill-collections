@@ -1,9 +1,10 @@
 ---
 name: directory-structure-schema-enforcement
-description: Use when you have raw or partially organized natural products data from multiple sources (GNPS molecular networking, AntiSMASH BGC predictions, BigScape clustering, MIBiG metadata) and need to prepare them for NPLinker integration.
+description: Use when you have raw or partially organized natural products data from
+  multiple sources (GNPS molecular networking, AntiSMASH BGC predictions, BigScape
+  clustering, MIBiG metadata) and need to prepare them for NPLinker integration.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3960
   edam_topics:
   - http://edamontology.org/topic_3697
@@ -20,6 +21,8 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker

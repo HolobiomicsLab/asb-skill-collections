@@ -1,9 +1,10 @@
 ---
 name: openms-api-surface-exposure
-description: Use when when you need to make OpenMS C++ classes, functions, or data structures callable from Python code, or when verifying that a newly bound C++ component can be imported and instantiated without errors in a Python environment.
+description: Use when when you need to make OpenMS C++ classes, functions, or data
+  structures callable from Python code, or when verifying that a newly bound C++ component
+  can be imported and instantiated without errors in a Python environment.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0339
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +15,8 @@ metadata:
   - OpenMS C++ library
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS

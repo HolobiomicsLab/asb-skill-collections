@@ -1,9 +1,10 @@
 ---
 name: metabolite-feature-table-normalization
-description: Use when you have selected a subset of ReDU public tandem MS files with GNPS chemical annotations (level 2 or 3 spectral library matches) and wish to explore sample relationships via principal component analysis.
+description: Use when you have selected a subset of ReDU public tandem MS files with
+  GNPS chemical annotations (level 2 or 3 spectral library matches) and wish to explore
+  sample relationships via principal component analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -17,6 +18,8 @@ metadata:
   - Emperor
   techniques:
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU

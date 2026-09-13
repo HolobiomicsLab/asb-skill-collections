@@ -1,9 +1,10 @@
 ---
 name: parameter-sharing-in-siamese-networks
-description: Use when when processing paired augmented versions of the same input (e.g., two augmented ion images in COL or ISO mode) and you need to learn meaningful low-dimensional representations via contrastive loss.
+description: Use when when processing paired augmented versions of the same input
+  (e.g., two augmented ion images in COL or ISO mode) and you need to learn meaningful
+  low-dimensional representations via contrastive loss.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3500
@@ -14,12 +15,15 @@ metadata:
   - Contrastive loss function
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
 evidence_spans:
 - Two augmented images are propagated through a pair of ResNet18-based encoders
-- Two augmented images are propagated through a pair of ResNet18-based encoders that shared parameters
+- Two augmented images are propagated through a pair of ResNet18-based encoders that
+  shared parameters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

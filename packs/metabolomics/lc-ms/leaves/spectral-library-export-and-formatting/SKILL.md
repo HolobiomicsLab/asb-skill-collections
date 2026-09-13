@@ -1,9 +1,11 @@
 ---
 name: spectral-library-export-and-formatting
-description: Use when after theoretical spectra have been generated for lipid–adduct combinations with enumerated fragment masses and intensities, and you need to deploy them for downstream MS/MS analysis on Orbitrap (DDA via Excalibur) or SkyLine (targeted/PRM) workflows.
+description: Use when after theoretical spectra have been generated for lipid–adduct
+  combinations with enumerated fragment masses and intensities, and you need to deploy
+  them for downstream MS/MS analysis on Orbitrap (DDA via Excalibur) or SkyLine (targeted/PRM)
+  workflows.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -15,6 +17,8 @@ metadata:
   - Skyline
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04518
   title: Lipid Spectrum Generator

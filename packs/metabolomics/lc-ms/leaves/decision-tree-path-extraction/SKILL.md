@@ -1,9 +1,11 @@
 ---
 name: decision-tree-path-extraction
-description: Use when you have a trained shallow decision tree on ChemEcho feature vectors (sparse, high-dimensional representations of tandem mass spectra peaks and neutral losses) and need to convert it into an interpretable, deployable query for a domain-specific language like MassQL.
+description: Use when you have a trained shallow decision tree on ChemEcho feature
+  vectors (sparse, high-dimensional representations of tandem mass spectra peaks and
+  neutral losses) and need to convert it into an interpretable, deployable query for
+  a domain-specific language like MassQL.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3766
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -13,6 +15,8 @@ metadata:
   - Mass Query Language (MassQL)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c02591
   title: ChemEcho

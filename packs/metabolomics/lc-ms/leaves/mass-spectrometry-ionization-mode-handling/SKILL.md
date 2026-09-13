@@ -1,9 +1,9 @@
 ---
 name: mass-spectrometry-ionization-mode-handling
-description: Use when when you have a feature table from LC-MS preprocessed data (e.g. from asari v1.9.2) and need to annotate ions and infer neutral mass.
+description: Use when when you have a feature table from LC-MS preprocessed data (e.g.
+  from asari v1.9.2) and need to annotate ions and infer neutral mass.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3630
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -17,6 +17,8 @@ metadata:
   - treelib
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu

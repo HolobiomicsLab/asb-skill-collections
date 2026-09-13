@@ -1,9 +1,11 @@
 ---
 name: 2d-nmr-pulse-sequence-implementation
-description: Use when when you need to generate 2D metabolomic NMR spectra (COSY for homonuclear or HSQC/HMQC for heteronuclear correlations) from parsed metabolite concentration and spin-system J-coupling data, and you want to simulate realistic peak patterns including indirect-dimension evolution and phase.
+description: Use when when you need to generate 2D metabolomic NMR spectra (COSY for
+  homonuclear or HSQC/HMQC for heteronuclear correlations) from parsed metabolite
+  concentration and spin-system J-coupling data, and you want to simulate realistic
+  peak patterns including indirect-dimension evolution and phase.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3625
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -12,6 +14,8 @@ metadata:
   - MetAssimulo 2
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btaf045
   title: MetAssimulo 2.0

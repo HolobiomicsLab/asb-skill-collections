@@ -1,14 +1,17 @@
 ---
 name: dataset-storage-interface-architecture
-description: Use when you have NMR dataset metadata (cache-file flag, total point count, block layout configuration) and need to select an appropriate storage backend that balances memory efficiency, access patterns, and platform-specific constraints.
+description: Use when you have NMR dataset metadata (cache-file flag, total point
+  count, block layout configuration) and need to select an appropriate storage backend
+  that balances memory efficiency, access patterns, and platform-specific constraints.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_topics: []
   tools:
   - NMRFx
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx

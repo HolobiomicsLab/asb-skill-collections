@@ -1,9 +1,10 @@
 ---
 name: tandem-mass-spectrometry-fragmentation-simulation
-description: Use when you have a new fragmentation acquisition strategy (e.g., a weighted exclusion variant, alternative TopN ranking, or dynamic isolation window rule) that you wish to evaluate without access to real mass spectrometry hardware.
+description: Use when you have a new fragmentation acquisition strategy (e.g., a weighted
+  exclusion variant, alternative TopN ranking, or dynamic isolation window rule) that
+  you wish to evaluate without access to real mass spectrometry hardware.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +16,8 @@ metadata:
   - OpenMS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms

@@ -1,9 +1,9 @@
 ---
 name: acquisition-method-overlap-analysis
-description: Use when you have acquired the same sample(s) using multiple LC-MS, LC-IMS-MS, or direct infusion methods (e.
+description: Use when you have acquired the same sample(s) using multiple LC-MS, LC-IMS-MS,
+  or direct infusion methods (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,13 +17,16 @@ metadata:
   - LC-MS
   - direct-infusion-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00146
   title: PeakQC
 evidence_spans:
 - IonToolPack is a software suite housing tools for mass spectrometry data
 - IonToolPack is a software suite housing tools for mass spectrometry data.
-- 'Comparador: Tool to compare lists of features (CSV files) from different acquisition methods or processing software'
+- 'Comparador: Tool to compare lists of features (CSV files) from different acquisition
+  methods or processing software'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

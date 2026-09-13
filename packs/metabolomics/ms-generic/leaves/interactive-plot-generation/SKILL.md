@@ -1,9 +1,11 @@
 ---
 name: interactive-plot-generation
-description: Use when you have loaded m/z and intensity arrays from an MZA file (via mzapy) and need to inspect a mass spectrum, extracted ion chromatogram (XIC), or arrival time distribution (ATD) visually, either for QC purposes, method development, or publication-ready output.
+description: Use when you have loaded m/z and intensity arrays from an MZA file (via
+  mzapy) and need to inspect a mass spectrum, extracted ion chromatogram (XIC), or
+  arrival time distribution (ATD) visually, either for QC purposes, method development,
+  or publication-ready output.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +17,8 @@ metadata:
   - h5py
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c01653
   title: mzapy

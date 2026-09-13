@@ -1,9 +1,11 @@
 ---
 name: intensity-vector-manipulation-numpy
-description: Use when you have extracted mass tracks (EICs) from multiple LC-MS samples aligned into a MassGrid structure, and you need to combine their intensity vectors into a single composite intensity vector for peak detection on the aggregate signal rather than per-sample.
+description: Use when you have extracted mass tracks (EICs) from multiple LC-MS samples
+  aligned into a MassGrid structure, and you need to combine their intensity vectors
+  into a single composite intensity vector for peak detection on the aggregate signal
+  rather than per-sample.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -14,11 +16,14 @@ metadata:
   - asari
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - intensity_track is np.array(full RT length).
 claims: []

@@ -1,9 +1,10 @@
 ---
 name: gaussian-peakshape-fitting-evaluation
-description: Use when after peak detection on mass track segments using find_peaks, when you need to distinguish genuine chromatographic peaks from noise-induced false positives or irregular shapes.
+description: Use when after peak detection on mass track segments using find_peaks,
+  when you need to distinguish genuine chromatographic peaks from noise-induced false
+  positives or irregular shapes.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -16,11 +17,14 @@ metadata:
   - Python (numpy, scipy.optimize)
   techniques:
   - GC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:

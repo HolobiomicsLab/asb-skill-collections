@@ -1,9 +1,11 @@
 ---
 name: peak-detection-and-alignment-in-metabolomics
-description: Use when after generating simulated mzML output from ViMMS and you need to compare it against real acquisition data. Specifically, use it when you have paired real and simulated mzML files from the same sample (e.g., Beer1pos) and must evaluate whether a fragmentation strategy (e.
+description: Use when after generating simulated mzML output from ViMMS and you need
+  to compare it against real acquisition data. Specifically, use it when you have
+  paired real and simulated mzML files from the same sample (e.g., Beer1pos) and must
+  evaluate whether a fragmentation strategy (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3932
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +16,8 @@ metadata:
   - VIMMS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
@@ -21,7 +25,8 @@ derived_from:
   title: ''
 evidence_spans:
 - ViMMS is compatible with Python 3+
-- Processes mzML output from a simulation (or real acquisition) to compute fragmentation coverage using OpenMS
+- Processes mzML output from a simulation (or real acquisition) to compute fragmentation
+  coverage using OpenMS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

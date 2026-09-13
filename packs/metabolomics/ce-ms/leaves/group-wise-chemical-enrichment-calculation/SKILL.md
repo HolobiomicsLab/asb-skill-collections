@@ -1,9 +1,11 @@
 ---
 name: group-wise-chemical-enrichment-calculation
-description: Use when when comparing GNPS chemical annotations across two or more groups of samples (defined by ReDU sample-information categories such as sample type, extraction method, or ionization source) where the groups contain different numbers of files.
+description: Use when when comparing GNPS chemical annotations across two or more
+  groups of samples (defined by ReDU sample-information categories such as sample
+  type, extraction method, or ionization source) where the groups contain different
+  numbers of files.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -16,6 +18,8 @@ metadata:
   techniques:
   - CE-MS
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU

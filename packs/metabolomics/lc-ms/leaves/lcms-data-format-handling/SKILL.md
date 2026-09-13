@@ -1,9 +1,11 @@
 ---
 name: lcms-data-format-handling
-description: Use when you have raw LC-MS data from a vendor instrument or in netCDF format and need to ingest it into SLAW or similar untargeted LC-MS workflows. Use this skill when raw data must be converted to mzML, validated for centroiding and polarity uniformity, and prepared for peak-picking dispatch.
+description: Use when you have raw LC-MS data from a vendor instrument or in netCDF
+  format and need to ingest it into SLAW or similar untargeted LC-MS workflows. Use
+  this skill when raw data must be converted to mzML, validated for centroiding and
+  polarity uniformity, and prepared for peak-picking dispatch.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,11 +18,14 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
 evidence_spans:
-- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo, ADAP'
+- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo,
+  ADAP'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

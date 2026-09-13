@@ -1,9 +1,9 @@
 ---
 name: savitzky-golay-smoothing-application
-description: Use when after filtering retention time and drift time ranges on raw GCIMS samples but before decimation and alignment.
+description: Use when after filtering retention time and drift time ranges on raw
+  GCIMS samples but before decimation and alignment.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3562
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,6 +16,8 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS

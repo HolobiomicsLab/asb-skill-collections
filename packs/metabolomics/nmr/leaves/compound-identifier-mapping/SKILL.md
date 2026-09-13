@@ -1,9 +1,10 @@
 ---
 name: compound-identifier-mapping
-description: Use when after filtering a peak table to remove mispicked ions, group contaminants, and low-replicability features, you have a curated feature list with m/z, retention time, and MS/MS spectra ready for annotation.
+description: Use when after filtering a peak table to remove mispicked ions, group
+  contaminants, and low-replicability features, you have a curated feature list with
+  m/z, retention time, and MS/MS spectra ready for annotation.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3762
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -18,6 +19,8 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04632
   title: MPACT

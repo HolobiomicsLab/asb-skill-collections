@@ -1,9 +1,10 @@
 ---
 name: gibbs-sampler-implementation-and-convergence
-description: Use when your metabolomics dataset contains missing values below a known detection limit (left-censored MNAR data), and you need to recover these values while respecting the truncation constraint.
+description: Use when your metabolomics dataset contains missing values below a known
+  detection limit (left-censored MNAR data), and you need to recover these values
+  while respecting the truncation constraint.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -18,6 +19,13 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-SA-4.0
+    url: WandeRum/GSimp
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp

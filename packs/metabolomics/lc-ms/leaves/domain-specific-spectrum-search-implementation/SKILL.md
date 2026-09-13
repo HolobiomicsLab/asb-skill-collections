@@ -1,9 +1,10 @@
 ---
 name: domain-specific-spectrum-search-implementation
-description: Use when you have acquired one or more tandem MS/MS spectra and need to identify metabolites against a reference library filtered by biological domain (e.
+description: Use when you have acquired one or more tandem MS/MS spectra and need
+  to identify metabolites against a reference library filtered by biological domain
+  (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -21,6 +22,8 @@ metadata:
   - MZmine
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41538-022-00137-3
   title: foodMASST

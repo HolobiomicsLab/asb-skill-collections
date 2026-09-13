@@ -1,9 +1,11 @@
 ---
 name: chemical-structure-descriptor-computation
-description: Use when when you have a set of molecular structures (N-Me derived unsaturated sterol lipids or structurally similar organic molecules with C=C bonds) represented as SMILES or molecular geometry files, and you need to train or apply a machine-learning model to predict an instrument-dependent.
+description: Use when when you have a set of molecular structures (N-Me derived unsaturated
+  sterol lipids or structurally similar organic molecules with C=C bonds) represented
+  as SMILES or molecular geometry files, and you need to train or apply a machine-learning
+  model to predict an instrument-dependent.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0337
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -17,6 +19,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA

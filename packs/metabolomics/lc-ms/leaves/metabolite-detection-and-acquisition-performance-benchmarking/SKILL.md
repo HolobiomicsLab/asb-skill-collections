@@ -1,9 +1,9 @@
 ---
 name: metabolite-detection-and-acquisition-performance-benchmarking
-description: Use when you have simulated or experimental mzML data from two or more fragmentation controllers (e.
+description: Use when you have simulated or experimental mzML data from two or more
+  fragmentation controllers (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3699
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,6 +16,8 @@ metadata:
   - OpenMS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms

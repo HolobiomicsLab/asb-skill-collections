@@ -1,9 +1,9 @@
 ---
 name: data-summarization-and-tabulation
-description: Use when after obtaining structural clusters from the MAMSI framework using different parameter configurations (e.
+description: Use when after obtaining structural clusters from the MAMSI framework
+  using different parameter configurations (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0637
@@ -16,6 +16,8 @@ metadata:
   - MAMSI (MamsiStructSearch)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi

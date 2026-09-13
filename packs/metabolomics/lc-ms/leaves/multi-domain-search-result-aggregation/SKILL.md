@@ -1,9 +1,9 @@
 ---
 name: multi-domain-search-result-aggregation
-description: Use when you have executed batch searches of MS/MS spectra against multiple domain-specific MASST tools and need to synthesize results across domains (e.
+description: Use when you have executed batch searches of MS/MS spectra against multiple
+  domain-specific MASST tools and need to synthesize results across domains (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -20,6 +20,8 @@ metadata:
   - jobs.py
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41538-022-00137-3
   title: foodMASST

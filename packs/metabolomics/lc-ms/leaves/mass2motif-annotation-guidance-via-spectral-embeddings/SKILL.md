@@ -1,9 +1,11 @@
 ---
 name: mass2motif-annotation-guidance-via-spectral-embeddings
-description: Use when after discovering Mass2Motifs through LDA topic modeling of MS/MS fragmentation data, when you need to assign chemical meaning (substructure classes, candidate annotations) to motifs by leveraging pre-trained spectral embeddings and a reference motif database.
+description: Use when after discovering Mass2Motifs through LDA topic modeling of
+  MS/MS fragmentation data, when you need to assign chemical meaning (substructure
+  classes, candidate annotations) to motifs by leveraging pre-trained spectral embeddings
+  and a reference motif database.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -18,13 +20,16 @@ metadata:
   - LDA (Latent Dirichlet Allocation)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 - doi: 10.5281/zenodo.15688609
   title: ''
 evidence_spans:
-- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
+- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural
+  language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
 - Invoke the main script `ms2lda_runfull.py` with your arguments
 - Automated annotation of **M2M** using **MAG**
 - configure the Python environment (set `PYTHONPATH`, activate conda, etc.)

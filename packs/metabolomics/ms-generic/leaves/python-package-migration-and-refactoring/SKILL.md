@@ -1,9 +1,9 @@
 ---
 name: python-package-migration-and-refactoring
-description: Use when you have a mature Python package (e.g., Mummichog 2.x) that needs to be relocated to a new GitHub organization (e.
+description: Use when you have a mature Python package (e.g., Mummichog 2.x) that
+  needs to be relocated to a new GitHub organization (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -14,11 +14,14 @@ metadata:
   - pytest or equivalent test framework
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: mummichog
 evidence_spans:
-- Mummichog is a Python program for analyzing data from high throughput, untargeted metabolomics
+- Mummichog is a Python program for analyzing data from high throughput, untargeted
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

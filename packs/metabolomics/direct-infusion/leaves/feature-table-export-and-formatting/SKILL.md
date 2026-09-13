@@ -1,9 +1,11 @@
 ---
 name: feature-table-export-and-formatting
-description: Use when after completing feature detection, alignment, and optional filtering (blank subtraction, QC reproducibility, feature occurrence thresholds) in MZmine2 or Optimus, and you need to prepare the feature table and MS/MS spectra for GNPS-based molecular networking, bioassay integration, or.
+description: Use when after completing feature detection, alignment, and optional
+  filtering (blank subtraction, QC reproducibility, feature occurrence thresholds)
+  in MZmine2 or Optimus, and you need to prepare the feature table and MS/MS spectra
+  for GNPS-based molecular networking, bioassay integration, or.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -19,6 +21,8 @@ metadata:
   - LC-MS
   - direct-infusion-MS
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jnatprod.7b00737
   title: Bioactivity-Based Molecular Networking

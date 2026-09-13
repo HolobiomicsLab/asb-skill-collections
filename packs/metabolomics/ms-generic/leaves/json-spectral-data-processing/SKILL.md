@@ -1,9 +1,11 @@
 ---
 name: json-spectral-data-processing
-description: Use when you have raw or semi-curated mass spectrometry spectral data in JSON, CSV, MSP, or MGF format from multiple open mass spectra libraries (OMSLs) and need to standardize field names, validate chemical identifiers (SMILES, InChI, InChIKey), remove duplicates, filter by quality criteria.
+description: Use when you have raw or semi-curated mass spectrometry spectral data
+  in JSON, CSV, MSP, or MGF format from multiple open mass spectra libraries (OMSLs)
+  and need to standardize field names, validate chemical identifiers (SMILES, InChI,
+  InChIKey), remove duplicates, filter by quality criteria.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -20,6 +22,13 @@ metadata:
   - NPclassifier
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub

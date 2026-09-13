@@ -1,9 +1,10 @@
 ---
 name: msconvert-workflow-configuration
-description: Use when when you need to convert vendor-specific raw mass spectrometry files (.raw) to the open mzML format using imzML Writer, and msconvert is not yet installed or its location is not recognized by the system.
+description: Use when when you need to convert vendor-specific raw mass spectrometry
+  files (.raw) to the open mzML format using imzML Writer, and msconvert is not yet
+  installed or its location is not recognized by the system.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,12 +17,16 @@ metadata:
   - imzML Writer
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c06520
   title: imzML Writer
 evidence_spans:
-- imzML Writer relies on MS convert to convert raw instrument data into the open format mzML, requiring a working install.
-- imzML Writer relies on MS convert to convert raw instrument data into the open format mzML.
+- imzML Writer relies on MS convert to convert raw instrument data into the open format
+  mzML, requiring a working install.
+- imzML Writer relies on MS convert to convert raw instrument data into the open format
+  mzML.
 - On PC, download the latest msconvert release from ProteoWizard
 - 'On PC, this can be installed normally from Proteowizard: https://proteowizard.sourceforge.io/download.html'
 - import os import imzml_writer.utils as iw_utils

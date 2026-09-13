@@ -1,9 +1,11 @@
 ---
 name: mass-spectrometry-peak-intensity-encoding
-description: Use when working with imaging mass spectrometry (IMS) datasets where you need to (1) automatically identify marker ions without manual annotation, (2) reduce peak intensity dimensionality while preserving spatial relationships between measurement points, or (3) apply iterative peak picking.
+description: Use when working with imaging mass spectrometry (IMS) datasets where
+  you need to (1) automatically identify marker ions without manual annotation, (2)
+  reduce peak intensity dimensionality while preserving spatial relationships between
+  measurement points, or (3) apply iterative peak picking.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,6 +19,8 @@ metadata:
   - direct-infusion-MS
   - MS-imaging
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART

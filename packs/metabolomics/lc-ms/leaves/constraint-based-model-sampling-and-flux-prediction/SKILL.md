@@ -1,9 +1,11 @@
 ---
 name: constraint-based-model-sampling-and-flux-prediction
-description: Use when you have constraint-based metabolic models with integrated multi-omics constraints (transcriptomics via Reaction Activity Scores, extracellular flux ratios via YSI bioanalyzer or LC-MS, nutrient availability bounds), and you need to determine whether differential enzyme expression.
+description: Use when you have constraint-based metabolic models with integrated multi-omics
+  constraints (transcriptomics via Reaction Activity Scores, extracellular flux ratios
+  via YSI bioanalyzer or LC-MS, nutrient availability bounds), and you need to determine
+  whether differential enzyme expression.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -17,12 +19,17 @@ metadata:
   - INTEGRATE pipeline (qLSLab/integrate)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- we exploited the implementation of optGpSampler algorithm [71] available in COBRApy [72], and we sampled a million steady state solutions of the ENGRO2 model
-- We performed a Flux Variability Analysis (FVA). FVA [67, 68] is a constraint-based modelling technique aimed at determining the maximal (and minimal) possible flux through any reaction
+- we exploited the implementation of optGpSampler algorithm [71] available in COBRApy
+  [72], and we sampled a million steady state solutions of the ENGRO2 model
+- We performed a Flux Variability Analysis (FVA). FVA [67, 68] is a constraint-based
+  modelling technique aimed at determining the maximal (and minimal) possible flux
+  through any reaction
 - using constraint-based stoichiometric metabolic models as a scaffold
 claims: []
 provenance:

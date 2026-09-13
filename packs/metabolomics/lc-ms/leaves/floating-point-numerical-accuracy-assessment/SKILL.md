@@ -1,9 +1,11 @@
 ---
 name: floating-point-numerical-accuracy-assessment
-description: 'Use when when implementing or validating a lossy numeric codec for mass-spectrometry data (e.g., MSNumpressCoder in OpenMS). Specifically: after implementing both encoder and decoder, before shipping to production, or when comparing alternative compression schemes.'
+description: 'Use when when implementing or validating a lossy numeric codec for mass-spectrometry
+  data (e.g., MSNumpressCoder in OpenMS). Specifically: after implementing both encoder
+  and decoder, before shipping to production, or when comparing alternative compression
+  schemes.'
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3564
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +17,8 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS

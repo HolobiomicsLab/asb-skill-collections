@@ -1,9 +1,10 @@
 ---
 name: tandem-mass-spectra-interpretation
-description: Use when you have an unknown MS/MS spectrum (tandem mass spectrum) with a measured precursor m/z and fragment peaks, and you need to assign the most likely molecular formula and ionization adduct (e.g., [M+H]+, [M+Na]+, [M+K]+).
+description: Use when you have an unknown MS/MS spectrum (tandem mass spectrum) with
+  a measured precursor m/z and fragment peaks, and you need to assign the most likely
+  molecular formula and ionization adduct (e.g., [M+H]+, [M+Na]+, [M+K]+).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,12 +16,15 @@ metadata:
   - SCARF
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data
-- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum
+  using an end-to-end energy based modeling approach
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

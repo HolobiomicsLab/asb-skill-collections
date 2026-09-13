@@ -1,9 +1,11 @@
 ---
 name: spectral-embedding-generation
-description: Use when you have a collection of pre-processed MS/MS spectra (binned, intensity-normalized) and a trained MS2DeepScore base network, and you need to compute structural similarity scores between spectrum pairs or visualize spectra in chemical space via dimensionality reduction (e.g., UMAP).
+description: Use when you have a collection of pre-processed MS/MS spectra (binned,
+  intensity-normalized) and a trained MS2DeepScore base network, and you need to compute
+  structural similarity scores between spectrum pairs or visualize spectra in chemical
+  space via dimensionality reduction (e.g., UMAP).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -29,6 +31,8 @@ metadata:
   - CUDA 12.4
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -39,9 +43,13 @@ derived_from:
 evidence_spans:
 - Our MS2DeepScore Python library offers two types of data generators
 - To estimate the uncertainty of a prediction we used Monte-Carlo Dropout ensembles
-- Our MS2DeepScore Python library offers two types of data generators, one which iterates over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over all spectra and was used for
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities.
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
+- Our MS2DeepScore Python library offers two types of data generators, one which iterates
+  over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over
+  all spectra and was used for
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities.
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities
 - mean squared error (MSE) loss
 claims: []
 provenance:

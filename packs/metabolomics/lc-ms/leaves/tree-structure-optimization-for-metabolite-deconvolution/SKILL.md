@@ -1,9 +1,10 @@
 ---
 name: tree-structure-optimization-for-metabolite-deconvolution
-description: Use when you have a connected subnetwork of LC-MS features that matched isotope or adduct patterns, and you need to establish a canonical tree representation with a single neutral mass assignment.
+description: Use when you have a connected subnetwork of LC-MS features that matched
+  isotope or adduct patterns, and you need to establish a canonical tree representation
+  with a single neutral mass assignment.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -17,6 +18,8 @@ metadata:
   - khipu
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu

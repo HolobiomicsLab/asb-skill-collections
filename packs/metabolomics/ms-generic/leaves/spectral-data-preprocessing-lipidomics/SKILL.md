@@ -1,9 +1,11 @@
 ---
 name: spectral-data-preprocessing-lipidomics
-description: Use when you have raw lipidomic and metabolomic spectral data files from a Multi-ABLE barocycler-based concurrent multiomics experiment and need to normalize ion intensities, align retention times and m/z values across samples, and remove noise or low-signal features before statistical comparison.
+description: Use when you have raw lipidomic and metabolomic spectral data files from
+  a Multi-ABLE barocycler-based concurrent multiomics experiment and need to normalize
+  ion intensities, align retention times and m/z values across samples, and remove
+  noise or low-signal features before statistical comparison.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -17,6 +19,8 @@ metadata:
   - Tidyverse
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.isci.2023.106881
   title: MultiABLER

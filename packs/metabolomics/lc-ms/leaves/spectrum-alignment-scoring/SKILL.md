@@ -1,9 +1,9 @@
 ---
 name: spectrum-alignment-scoring
-description: Use when after generating probability predictions for potential modification sites (via ModiFinder.
+description: Use when after generating probability predictions for potential modification
+  sites (via ModiFinder.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +14,8 @@ metadata:
   - BasicEvaluationEngine
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00061
   title: ModiFinder

@@ -1,9 +1,11 @@
 ---
 name: instrument-agnostic-feature-engineering
-description: Use when you have DIA raw mass spectrometry files from multiple instrument types (timsTOF, TripleTOF, Orbitrap) and need to build a single machine learning model to predict data quality across all platforms, or when you need to compare quality characteristics of files produced by different.
+description: Use when you have DIA raw mass spectrometry files from multiple instrument
+  types (timsTOF, TripleTOF, Orbitrap) and need to build a single machine learning
+  model to predict data quality across all platforms, or when you need to compare
+  quality characteristics of files produced by different.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,6 +18,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-024-54871-1
   title: iDIA-QC

@@ -1,9 +1,10 @@
 ---
 name: smiles-canonicalization-rdkit
-description: Use when when processing raw SMILES strings from external databases or user input that may contain non-canonical tautomeric forms, variable stereochemical notation, or redundant representations of the same chemical structure.
+description: Use when when processing raw SMILES strings from external databases or
+  user input that may contain non-canonical tautomeric forms, variable stereochemical
+  notation, or redundant representations of the same chemical structure.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3929
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -16,6 +17,8 @@ metadata:
   - enveda/ccs-prediction training pipeline
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.7554/eLife.70780
   title: lotus

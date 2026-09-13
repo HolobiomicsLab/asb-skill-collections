@@ -1,15 +1,18 @@
 ---
 name: realtime-alert-dispatch
-description: Use when a QC check fails during an active LC-MS instrument run and you need to immediately notify configured users (via Slack channel or email address) of the failure event, including timestamp, check type, and severity metadata.
+description: Use when a QC check fails during an active LC-MS instrument run and you
+  need to immediately notify configured users (via Slack channel or email address)
+  of the failure event, including timestamp, check type, and severity metadata.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_topics: []
   tools:
   - Slack API
   - Email service
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c00786
   title: Rapid QC-MS

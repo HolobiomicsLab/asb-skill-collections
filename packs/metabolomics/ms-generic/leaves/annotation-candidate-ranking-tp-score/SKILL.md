@@ -1,9 +1,10 @@
 ---
 name: annotation-candidate-ranking-tp-score
-description: Use when after generating TP candidates from annotation algorithms (ann_comp for structure-based, ann_form for formula-based), when you need to filter and rank candidates to focus on the most credible identifications.
+description: Use when after generating TP candidates from annotation algorithms (ann_comp
+  for structure-based, ann_form for formula-based), when you need to filter and rank
+  candidates to focus on the most credible identifications.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -16,6 +17,8 @@ metadata:
   - MetFrag
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-020-00477-w
   title: patRoon

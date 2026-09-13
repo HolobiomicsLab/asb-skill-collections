@@ -1,9 +1,10 @@
 ---
 name: composite-mass-track-summation-across-samples
-description: Use when after mass tracks have been aligned across samples into a MassGrid structure (m/z-aligned, same mass-to-charge ratio) and retention time calibration dictionaries have been computed for each sample.
+description: Use when after mass tracks have been aligned across samples into a MassGrid
+  structure (m/z-aligned, same mass-to-charge ratio) and retention time calibration
+  dictionaries have been computed for each sample.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3674
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,11 +17,14 @@ metadata:
   - asari.peaks.stats_detect_elution_peaks
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:

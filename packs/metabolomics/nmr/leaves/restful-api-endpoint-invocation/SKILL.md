@@ -1,9 +1,10 @@
 ---
 name: restful-api-endpoint-invocation
-description: Use when you have NMR peak data (1H and 13C chemical shift values) and need to obtain SMART 3 classification predictions from the DeepSAT service.
+description: Use when you have NMR peak data (1H and 13C chemical shift values) and
+  need to obtain SMART 3 classification predictions from the DeepSAT service.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,6 +15,8 @@ metadata:
   - DeepSAT
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT

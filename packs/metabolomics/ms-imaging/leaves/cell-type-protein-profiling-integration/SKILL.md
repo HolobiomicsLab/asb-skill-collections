@@ -1,9 +1,11 @@
 ---
 name: cell-type-protein-profiling-integration
-description: Use when you have co-registered IMC (protein imaging mass cytometry) and SIMS (secondary ion mass spectrometry for metabolites) data from the same tissue regions, cell segmentation masks, and need to assign cell types based on protein expression patterns, then overlay those assignments onto.
+description: Use when you have co-registered IMC (protein imaging mass cytometry)
+  and SIMS (secondary ion mass spectrometry for metabolites) data from the same tissue
+  regions, cell segmentation masks, and need to assign cell types based on protein
+  expression patterns, then overlay those assignments onto.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,6 +18,8 @@ metadata:
   - Jupyter notebooks 02–05 (ScSpaMet pipeline)
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-43917-5
   title: scSpaMet

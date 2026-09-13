@@ -1,9 +1,9 @@
 ---
 name: neutral-loss-peak-interpretation
-description: Use when you have a tandem mass spectrum (MSMS) loaded via USI and wish to maximize the interpretability of observed peaks.
+description: Use when you have a tandem mass spectrum (MSMS) loaded via USI and wish
+  to maximize the interpretability of observed peaks.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +14,8 @@ metadata:
   - ProForma 2.0
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils

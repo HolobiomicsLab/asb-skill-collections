@@ -1,9 +1,10 @@
 ---
 name: precursor-list-formatting-for-dda
-description: Use when you have generated a lipid spectral library (lipid identities, adducts, m/z values, fragmentation patterns) and your downstream analysis requires DDA acquisition on an Orbitrap instrument using Excalibur software.
+description: Use when you have generated a lipid spectral library (lipid identities,
+  adducts, m/z values, fragmentation patterns) and your downstream analysis requires
+  DDA acquisition on an Orbitrap instrument using Excalibur software.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3750
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,6 +14,8 @@ metadata:
   - LSG
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04518
   title: Lipid Spectrum Generator

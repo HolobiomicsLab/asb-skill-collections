@@ -1,9 +1,10 @@
 ---
 name: bi-encoder-cross-encoder-architecture-design
-description: Use when you have paired spectrum-compound reference data and need to simultaneously retrieve candidate compounds rapidly (bi-encoder) while also refining relevance scores through joint context modeling (cross-encoder).
+description: Use when you have paired spectrum-compound reference data and need to
+  simultaneously retrieve candidate compounds rapidly (bi-encoder) while also refining
+  relevance scores through joint context modeling (cross-encoder).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -14,6 +15,8 @@ metadata:
   - PyTorch
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.microc.2025.115372
   title: FlavorFormer

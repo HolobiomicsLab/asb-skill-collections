@@ -1,9 +1,11 @@
 ---
 name: msp-file-parsing-and-serialization
-description: Use when you have raw .msp files containing mass spectra records and need to extract spectrum identifiers (compound name, precursor mass, retention time) as structured data for enrichment via external web services, or you have enriched spectrum objects and must write them back to .
+description: Use when you have raw .msp files containing mass spectra records and
+  need to extract spectrum identifiers (compound name, precursor mass, retention time)
+  as structured data for enrichment via external web services, or you have enriched
+  spectrum objects and must write them back to .
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -20,6 +22,8 @@ metadata:
   - pytest
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

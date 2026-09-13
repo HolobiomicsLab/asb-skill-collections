@@ -1,9 +1,11 @@
 ---
 name: molecular-graph-representation-encoding
-description: Use when when you have a collection of molecular structures (as InChI strings, SMILES, or RDKit Mol objects) and need to feed them into a pretrained or transfer-learning neural network that expects both molecular graph topology and structural fingerprints as inputs.
+description: Use when when you have a collection of molecular structures (as InChI
+  strings, SMILES, or RDKit Mol objects) and need to feed them into a pretrained or
+  transfer-learning neural network that expects both molecular graph topology and
+  structural fingerprints as inputs.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3364
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -23,6 +25,8 @@ metadata:
   - pandas
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btae084
   title: RT-Transformer

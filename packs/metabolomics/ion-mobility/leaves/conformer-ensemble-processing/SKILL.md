@@ -1,9 +1,11 @@
 ---
 name: conformer-ensemble-processing
-description: Use when you have a set of conformers that have already been filtered by ASE-ANI neural network potentials and need to extract quantum-mechanical electronic properties (polarizability tensor, dipole moment) required for collision cross section calculation.
+description: Use when you have a set of conformers that have already been filtered
+  by ASE-ANI neural network potentials and need to extract quantum-mechanical electronic
+  properties (polarizability tensor, dipole moment) required for collision cross section
+  calculation.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_2476
   edam_topics:
   - http://edamontology.org/topic_3372
@@ -14,13 +16,16 @@ metadata:
   - ASE-ANI
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS
 evidence_spans:
 - 'QUICK: For quantum calculations'
 - Snakemake workflow manager for predicting collisional cross sections
-- This repository contains a Snakemake workflow manager for predicting collisional cross sections (CCS)
+- This repository contains a Snakemake workflow manager for predicting collisional
+  cross sections (CCS)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

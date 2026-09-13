@@ -1,9 +1,9 @@
 ---
 name: query-result-serialization-to-csv
-description: Use when after executing a MassQL query against mzML mass spectrometry files and obtaining a tabulated result DataFrame in memory.
+description: Use when after executing a MassQL query against mzML mass spectrometry
+  files and obtaining a tabulated result DataFrame in memory.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +14,8 @@ metadata:
   - pandas
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/rcm.10132
   title: MassQLab

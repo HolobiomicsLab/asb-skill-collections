@@ -1,9 +1,9 @@
 ---
 name: mispicked-ion-detection-and-merging
-description: Use when immediately after importing raw LC-MS peak tables (e.g., Progenesis format) and before applying group or replicability filters.
+description: Use when immediately after importing raw LC-MS peak tables (e.g., Progenesis
+  format) and before applying group or replicability filters.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,6 +14,8 @@ metadata:
   - data.table
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr

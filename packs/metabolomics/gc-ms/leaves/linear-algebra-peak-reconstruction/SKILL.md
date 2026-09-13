@@ -1,9 +1,9 @@
 ---
 name: linear-algebra-peak-reconstruction
-description: Use when after a Transformer model (e.g. GCMSFormer) has predicted the pure mass spectral matrix S for all components in overlapped peaks.
+description: Use when after a Transformer model (e.g. GCMSFormer) has predicted the
+  pure mass spectral matrix S for all components in overlapped peaks.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -15,6 +15,8 @@ metadata:
   - GCMSFormer
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05772
   title: GCMSFormer

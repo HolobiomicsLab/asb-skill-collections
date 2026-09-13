@@ -1,9 +1,10 @@
 ---
 name: jupyter-notebook-development-python
-description: Use when when building reproducible Python-based computational workflows that must serve both beginner and expert users; when the analysis requires interactive parameter tuning, file upload capability, or real-time result visualization;
+description: Use when when building reproducible Python-based computational workflows
+  that must serve both beginner and expert users; when the analysis requires interactive
+  parameter tuning, file upload capability, or real-time result visualization;
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -17,6 +18,8 @@ metadata:
   - Anaconda
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c03491
   title: CCS Predictor 2.0

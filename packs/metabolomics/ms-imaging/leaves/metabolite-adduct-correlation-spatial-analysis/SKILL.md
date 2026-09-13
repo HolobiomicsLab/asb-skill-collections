@@ -1,9 +1,10 @@
 ---
 name: metabolite-adduct-correlation-spatial-analysis
-description: Use when you have annotated mass-difference peaks with known adduct identities (via mass-matching to reference adduct tables) and possess MSI intensity matrices where each peak's abundance is measured across multiple tissue pixels or voxels.
+description: Use when you have annotated mass-difference peaks with known adduct identities
+  (via mass-matching to reference adduct tables) and possess MSI intensity matrices
+  where each peak's abundance is measured across multiple tissue pixels or voxels.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -20,13 +21,17 @@ metadata:
   - pointsAdducts
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - We can match massdiffs to specific adduct types using the same function `adductMatch`
-- If the data matrix is very large, it may need to be reformatted to be loaded into memory during an R session.
+- If the data matrix is very large, it may need to be reformatted to be loaded into
+  memory during an R session.
 - corrPairsMSI(d,d.diff.annot)
 claims: []
 provenance:

@@ -1,9 +1,10 @@
 ---
 name: compound-structure-comparison-metrics
-description: Use when you have two MS/MS spectra from related compounds (e.g., a reference compound and a suspected modified version) and need to quantify where and how their structures differ.
+description: Use when you have two MS/MS spectra from related compounds (e.g., a reference
+  compound and a suspected modified version) and need to quantify where and how their
+  structures differ.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0593
@@ -16,6 +17,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00061
   title: ModiFinder

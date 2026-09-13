@@ -1,9 +1,10 @@
 ---
 name: fragmentation-pattern-annotation-magma
-description: Use when you have a tandem MS/MS spectrum of a structurally modified compound and a known reference structure (SMILES), and you need to annotate which fragment ions correspond to specific bonds or atoms in the molecule.
+description: Use when you have a tandem MS/MS spectrum of a structurally modified
+  compound and a known reference structure (SMILES), and you need to annotate which
+  fragment ions correspond to specific bonds or atoms in the molecule.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +16,8 @@ metadata:
   - matplotlib
   techniques:
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00061
   title: ModiFinder
@@ -24,7 +27,8 @@ evidence_spans:
 - ModiFinder requires Python 3.9 or above.
 - ModiFinder requires Python 3.9 or above
 - 'rdkit: http://www.rdkit.org/'
-- ModiFinder includes powerful visualization tools built on RDKit and matplotlib for creating publication-quality figures.
+- ModiFinder includes powerful visualization tools built on RDKit and matplotlib for
+  creating publication-quality figures.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

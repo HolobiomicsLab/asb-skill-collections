@@ -1,9 +1,10 @@
 ---
 name: unit-test-design-for-analytical-chemistry
-description: Use when when implementing or modifying metabolomics feature detection pipelines (e.g., adduct detection, m/z matching, feature labeling) where correctness directly impacts downstream analysis.
+description: Use when when implementing or modifying metabolomics feature detection
+  pipelines (e.g., adduct detection, m/z matching, feature labeling) where correctness
+  directly impacts downstream analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3647
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,6 +14,8 @@ metadata:
   - fermo_core
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-024-50111-8
   title: FERMO

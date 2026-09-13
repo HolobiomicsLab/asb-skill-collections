@@ -1,9 +1,10 @@
 ---
 name: chemical-database-querying-and-retrieval
-description: Use when you have BioTransformer-predicted metabolite structures (in SMILES or InChI format) and need to identify which known compounds in public databases match those structures.
+description: Use when you have BioTransformer-predicted metabolite structures (in
+  SMILES or InChI format) and need to identify which known compounds in public databases
+  match those structures.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,11 +17,20 @@ metadata:
   - HMDB
   techniques:
   - NMR
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: Academic use free; commercial use/redistribution by permission of the authors
+      (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
+    url: https://bitbucket.org/wishartlab/biotransformer3.0jar.git
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/nar/gkac408
   title: BioTransformer 3.0
 evidence_spans:
-- This is version 3.0.0 of BioTransformer. BioTransformer is a software tool that predicts small molecule metabolism
+- This is version 3.0.0 of BioTransformer. BioTransformer is a software tool that
+  predicts small molecule metabolism
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

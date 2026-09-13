@@ -1,9 +1,11 @@
 ---
 name: receiver-operator-characteristic-curve-generation
-description: Use when when you have computed similarity scores (cosine, modified cosine, Spec2Vec, or other metrics) between a set of query spectra and a reference library with known structural annotations (InChIKey), and you need to evaluate how well each scoring method distinguishes true structural matches.
+description: Use when when you have computed similarity scores (cosine, modified cosine,
+  Spec2Vec, or other metrics) between a set of query spectra and a reference library
+  with known structural annotations (InChIKey), and you need to evaluate how well
+  each scoring method distinguishes true structural matches.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -20,16 +22,22 @@ metadata:
   - scikit-learn or scipy.metrics
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1008724
   title: Spec2Vec
 evidence_spans:
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms
-- the implementations for the cosine score and the modified cosine score used can be found in the Python package matchms [31] (https://github.com/matchms/matchms)
-- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim [37]
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms
+- the implementations for the cosine score and the modified cosine score used can
+  be found in the Python package matchms [31] (https://github.com/matchms/matchms)
+- A Word2Vec [22] model is trained on all documents of a chosen dataset using gensim
+  [37]
 - making extensive use of Numpy [24] and Numba [25]
 - by making extensive use of Numpy [24] and Numba [25], the library
-- Spec2Vec was optimised by making extensive use of Numpy [24] and Numba [25], the library matching was implemented using Pandas [40]
+- Spec2Vec was optimised by making extensive use of Numpy [24] and Numba [25], the
+  library matching was implemented using Pandas [40]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

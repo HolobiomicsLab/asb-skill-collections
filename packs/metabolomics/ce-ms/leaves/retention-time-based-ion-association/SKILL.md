@@ -1,9 +1,10 @@
 ---
 name: retention-time-based-ion-association
-description: Use when when processing Data Dependent Acquisition (DDA) raw mass spectrometry data (mzML or mzXML format) and you need to deconvolute fragmentation spectra by matching precursor ions to their corresponding fragment ions.
+description: Use when when processing Data Dependent Acquisition (DDA) raw mass spectrometry
+  data (mzML or mzXML format) and you need to deconvolute fragmentation spectra by
+  matching precursor ions to their corresponding fragment ions.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,11 +15,14 @@ metadata:
   - IDSL.IPA
   techniques:
   - CE-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c00376
   title: IDSL.CSA
 evidence_spans:
-- The **Composite Spectra Analysis (IDSL.CSA)** R package for the analysis of mass spectrometry data
+- The **Composite Spectra Analysis (IDSL.CSA)** R package for the analysis of mass
+  spectrometry data
 - The **Composite Spectra Analysis (IDSL.CSA)** R package
 claims: []
 provenance:

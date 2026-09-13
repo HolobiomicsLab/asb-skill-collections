@@ -1,9 +1,11 @@
 ---
 name: multiplexed-spectrum-decomposition
-description: Use when you have SWATH-MS data (mzML or vendor binary format) where precursor isolation windows intentionally capture multiple co-eluting compounds, resulting in multiplexed MS/MS spectra that contain mixed fragment ion peaks from unknown metabolites.
+description: Use when you have SWATH-MS data (mzML or vendor binary format) where
+  precursor isolation windows intentionally capture multiple co-eluting compounds,
+  resulting in multiplexed MS/MS spectra that contain mixed fragment ion peaks from
+  unknown metabolites.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -12,6 +14,13 @@ metadata:
   - DecoMetDIA
   techniques:
   - LC-MS
+  license_tier: open
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ZhuMSLab/DecoMetDIA
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b02655
   title: DecoMetDIA

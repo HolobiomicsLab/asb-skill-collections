@@ -1,9 +1,11 @@
 ---
 name: deep-learning-metabolite-annotation
-description: Use when you have UPLC-HRMS data (ThermoFisher, Agilent, or MSConvert-compatible format) from a water sample, a precursor m/z and retention time of interest, and want to annotate an unknown compound by predicting its molecular formula, structure, and name using deep learning scoring rather than.
+description: Use when you have UPLC-HRMS data (ThermoFisher, Agilent, or MSConvert-compatible
+  format) from a water sample, a precursor m/z and retention time of interest, and
+  want to annotate an unknown compound by predicting its molecular formula, structure,
+  and name using deep learning scoring rather than.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -16,11 +18,14 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.enceco.2025.07.022
   title: MSThunder
 evidence_spans:
-- MSThunder provide a deep learning-based nontargeted analytical framework for the accurate and rapid identification of unknown organic pollutants in water
+- MSThunder provide a deep learning-based nontargeted analytical framework for the
+  accurate and rapid identification of unknown organic pollutants in water
 - A case file named “Pesticides” can be run in the Windows environment
 claims: []
 provenance:

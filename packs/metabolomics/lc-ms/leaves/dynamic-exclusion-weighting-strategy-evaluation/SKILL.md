@@ -1,9 +1,11 @@
 ---
 name: dynamic-exclusion-weighting-strategy-evaluation
-description: Use when you have prototyped a novel data-dependent acquisition strategy that uses dynamic exclusion with intensity or ROI weighting, and you need to quantitatively compare its MS/MS coverage and intensity performance against a simpler baseline (TopN) before testing on real instrumentation.
+description: Use when you have prototyped a novel data-dependent acquisition strategy
+  that uses dynamic exclusion with intensity or ROI weighting, and you need to quantitatively
+  compare its MS/MS coverage and intensity performance against a simpler baseline
+  (TopN) before testing on real instrumentation.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3699
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +18,8 @@ metadata:
   - OpenMS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms

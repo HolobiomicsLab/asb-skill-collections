@@ -1,9 +1,10 @@
 ---
 name: chemical-formula-deduplication-across-databases
-description: Use when you have retrieved chemical formulae and metadata from two or more of HMDB, ChEMBL, or PubChem and need to merge them into a single searchable database without formula duplication.
+description: Use when you have retrieved chemical formulae and metadata from two or
+  more of HMDB, ChEMBL, or PubChem and need to merge them into a single searchable
+  database without formula duplication.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -13,11 +14,14 @@ metadata:
   - SMART
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART
 evidence_spans:
-- we present SMART, an open-source platform designed for precise formula assignment in mass spectrometry imaging
+- we present SMART, an open-source platform designed for precise formula assignment
+  in mass spectrometry imaging
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

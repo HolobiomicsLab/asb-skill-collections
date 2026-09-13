@@ -1,9 +1,11 @@
 ---
 name: machine-learning-model-evaluation
-description: Use when you have a trained NeatMS neural network model and a labelled validation dataset of MS1 peaks (annotated as 'High_quality' or 'Low_quality'), and you need to identify the scalar probability threshold that separates true positive from false positive peak classifications in your specific.
+description: Use when you have a trained NeatMS neural network model and a labelled
+  validation dataset of MS1 peaks (annotated as 'High_quality' or 'Low_quality'),
+  and you need to identify the scalar probability threshold that separates true positive
+  from false positive peak classifications in your specific.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -18,11 +20,14 @@ metadata:
   - Keras
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
 evidence_spans:
-- NeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object
+- NeatMS provides the necessary functions to do that, all we will have to do is create
+  a `Neural network handler` object
 - Calling the method `get_threshold()` will compute and return the optimal threshold
 - After installation, you should be able to import NeatMS
 - Import the required libraries first

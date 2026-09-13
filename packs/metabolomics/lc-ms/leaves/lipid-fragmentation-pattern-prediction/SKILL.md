@@ -1,9 +1,10 @@
 ---
 name: lipid-fragmentation-pattern-prediction
-description: Use when you have defined lipid species (class, chain composition, and adducts) and need to generate precursor–fragment transition pairs for targeted lipidomics experiments.
+description: Use when you have defined lipid species (class, chain composition, and
+  adducts) and need to generate precursor–fragment transition pairs for targeted lipidomics
+  experiments.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3454
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -14,6 +15,8 @@ metadata:
   - Agilent QTOF
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-020-15960-z
   title: LipidCreator

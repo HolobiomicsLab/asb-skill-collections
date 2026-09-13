@@ -1,9 +1,10 @@
 ---
 name: binary-format-specification-implementation
-description: Use when you have a compressed file format (e.g., igzip) with a custom binary header structure that encodes metadata (index-to-offset mappings) in a fixed layout, and you need to parse or generate compliant files.
+description: Use when you have a compressed file format (e.g., igzip) with a custom
+  binary header structure that encodes metadata (index-to-offset mappings) in a fixed
+  layout, and you need to parse or generate compliant files.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3359
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,6 +14,8 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml

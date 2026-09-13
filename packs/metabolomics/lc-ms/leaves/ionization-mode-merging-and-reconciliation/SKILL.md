@@ -1,9 +1,10 @@
 ---
 name: ionization-mode-merging-and-reconciliation
-description: Use when you have acquired MS-DIAL peak lists in both positive and negative ionization modes on the same sample set and want to consolidate detected features across modes to avoid reporting duplicate annotations for the same molecule.
+description: Use when you have acquired MS-DIAL peak lists in both positive and negative
+  ionization modes on the same sample set and want to consolidate detected features
+  across modes to avoid reporting duplicate annotations for the same molecule.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -14,6 +15,8 @@ metadata:
   - MS-FINDER
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR

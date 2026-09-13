@@ -1,9 +1,10 @@
 ---
 name: unit-test-design-for-scoring-metrics
-description: Use when when implementing new scoring components (inchikey score, neighbourhood score, or similar structural/spectral similarity metrics) that are integrated into an MS/MS candidate re-ranking pipeline.
+description: Use when when implementing new scoring components (inchikey score, neighbourhood
+  score, or similar structural/spectral similarity metrics) that are integrated into
+  an MS/MS candidate re-ranking pipeline.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,13 +15,16 @@ metadata:
   - Python unittest / pytest
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query
 evidence_spans:
 - you want to make some kind of change to the code base
 - MS2Query - Reliable and fast MS/MS spectral-based analogue search
-- fork the repository to your own Github profile and create your own feature branch off of the latest master commit
+- fork the repository to your own Github profile and create your own feature branch
+  off of the latest master commit
 - use the search functionality [here](https://github.com/iomega/ms2query/issues)
 claims: []
 provenance:

@@ -1,9 +1,10 @@
 ---
 name: uncertainty-estimation-across-models
-description: Use when when you have multiple independently trained models (e.g., ROASMI_1 through ROASMI_5) making predictions on the same set of compounds or samples, and you need to assess confidence in individual predictions.
+description: Use when when you have multiple independently trained models (e.g., ROASMI_1
+  through ROASMI_5) making predictions on the same set of compounds or samples, and
+  you need to assess confidence in individual predictions.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -14,6 +15,8 @@ metadata:
   - ROASMI (ensemble models)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-025-00968-8
   title: ROASMI

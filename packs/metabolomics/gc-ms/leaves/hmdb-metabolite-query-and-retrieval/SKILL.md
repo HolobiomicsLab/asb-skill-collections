@@ -1,9 +1,11 @@
 ---
 name: hmdb-metabolite-query-and-retrieval
-description: Use when you have identified one or more proton NMR spectral regions-of-interest (ROIs)—defined by lower and upper chemical-shift bounds in ppm—from complex biological samples (serum, saliva, urine, tissue, CSF) and need to generate a ranked list of plausible metabolite identities.
+description: Use when you have identified one or more proton NMR spectral regions-of-interest
+  (ROIs)—defined by lower and upper chemical-shift bounds in ppm—from complex biological
+  samples (serum, saliva, urine, tissue, CSF) and need to generate a ranked list of
+  plausible metabolite identities.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -18,6 +20,8 @@ metadata:
   - LC-MS
   - GC-MS
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/nbm.70131
   title: ROIAL-NMR

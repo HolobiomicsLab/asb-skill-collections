@@ -1,9 +1,11 @@
 ---
 name: nmr-peak-table-generation
-description: Use when you have raw 1D NMR spectra (in NMRPipe or similar format) from biological samples (urine, worm, or other metabolomics experiments) and need to extract a structured peak table with chemical shifts and intensities for downstream metabolite identification or quantification.
+description: Use when you have raw 1D NMR spectra (in NMRPipe or similar format) from
+  biological samples (urine, worm, or other metabolomics experiments) and need to
+  extract a structured peak table with chemical shifts and intensities for downstream
+  metabolite identification or quantification.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,11 +16,14 @@ metadata:
   - NMRBox
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c03078
   title: SAND
 evidence_spans:
-- Any user is welcome to make new modificaitons on the SAND code, particularly its version for NMRBox
+- Any user is welcome to make new modificaitons on the SAND code, particularly its
+  version for NMRBox
 - interface to NMRPipe (pipe_scripts/)
 claims: []
 provenance:

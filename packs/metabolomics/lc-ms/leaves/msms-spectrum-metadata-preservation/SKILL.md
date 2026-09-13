@@ -1,9 +1,9 @@
 ---
 name: msms-spectrum-metadata-preservation
-description: Use when removing invalid or malformed entries (e.g., SMILES validation, format errors) from large spectral datasets (GNPS, MoNA, MTBLS1572, MassBank).
+description: Use when removing invalid or malformed entries (e.g., SMILES validation,
+  format errors) from large spectral datasets (GNPS, MoNA, MTBLS1572, MassBank).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,6 +17,8 @@ metadata:
   - PyTorch 2.6.0
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding

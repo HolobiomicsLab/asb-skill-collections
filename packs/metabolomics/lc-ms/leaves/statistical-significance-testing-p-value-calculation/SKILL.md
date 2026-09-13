@@ -1,9 +1,11 @@
 ---
 name: statistical-significance-testing-p-value-calculation
-description: Use when after standardizing link scores (strain correlation and IOKR) across all potential GCF-MF pairs in a metabologenomics dataset, perform significance testing to determine whether validated links show statistically distinguishable score distributions from the background.
+description: Use when after standardizing link scores (strain correlation and IOKR)
+  across all potential GCF-MF pairs in a metabologenomics dataset, perform significance
+  testing to determine whether validated links show statistically distinguishable
+  score distributions from the background.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3325
@@ -17,18 +19,24 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- After downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- After downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE clusters the BGCs separately by product type
-- antiSMASH to score the correspondence between the MIBiG entries and the detected BGCs
-- the MIBiG database [32] has emerged as a central repository of characterised microbial BGCs
-- this way, we built a set of known BGC-spectrum pairs. To avoid etabolites based on properties absent from an MS2 spectrum,
+- antiSMASH to score the correspondence between the MIBiG entries and the detected
+  BGCs
+- the MIBiG database [32] has emerged as a central repository of characterised microbial
+  BGCs
+- this way, we built a set of known BGC-spectrum pairs. To avoid etabolites based
+  on properties absent from an MS2 spectrum,
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

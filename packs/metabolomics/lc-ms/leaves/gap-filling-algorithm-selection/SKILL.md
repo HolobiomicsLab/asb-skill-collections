@@ -1,9 +1,11 @@
 ---
 name: gap-filling-algorithm-selection
-description: Use when when processing untargeted LC-MS data with SLAW and observing incomplete feature detection across the sample cohort—i.e., features present in some samples but with missing values (zeros or NAs) in others due to signal dropout, retention time drift, or mass calibration drift.
+description: Use when when processing untargeted LC-MS data with SLAW and observing
+  incomplete feature detection across the sample cohort—i.e., features present in
+  some samples but with missing values (zeros or NAs) in others due to signal dropout,
+  retention time drift, or mass calibration drift.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,11 +18,14 @@ metadata:
   - xcms (XCMS Online)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
 evidence_spans:
-- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo, ADAP'
+- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo,
+  ADAP'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

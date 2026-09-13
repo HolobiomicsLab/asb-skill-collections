@@ -1,9 +1,11 @@
 ---
 name: compound-identifier-lookup
-description: Use when you have an experimental MS/MS spectrum (m/z and intensity pairs in mzML/mzXML format from DDA or targeted acquisition on Thermo, Waters, or Bruker instruments) and need to identify the unknown compound by comparing it against a reference database.
+description: Use when you have an experimental MS/MS spectrum (m/z and intensity pairs
+  in mzML/mzXML format from DDA or targeted acquisition on Thermo, Waters, or Bruker
+  instruments) and need to identify the unknown compound by comparing it against a
+  reference database.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3860
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -18,11 +20,14 @@ metadata:
   - RChemMass
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04343
   title: MeRgeION
 evidence_spans:
-- search and annotate an unknown spectrum in their local database or public databases (i.e. drug structures in GNPS, MASSBANK and DrugBANK)
+- search and annotate an unknown spectrum in their local database or public databases
+  (i.e. drug structures in GNPS, MASSBANK and DrugBANK)
 - github.com__daniellyz__meRgeION2
 claims: []
 provenance:

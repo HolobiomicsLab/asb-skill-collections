@@ -1,9 +1,10 @@
 ---
 name: retention-time-alignment-correction
-description: Use when when processing a batch of centroided mzML or mzXML LC-MS raw data files where chromatographic retention times drift between sample acquisitions (common in large-scale metabolomics studies).
+description: Use when when processing a batch of centroided mzML or mzXML LC-MS raw
+  data files where chromatographic retention times drift between sample acquisitions
+  (common in large-scale metabolomics studies).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -12,12 +13,16 @@ metadata:
   - MetCohort
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c04906
   title: MetCohort
 evidence_spans:
-- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data processing tool for large-scale metabolomics and exposomics
-- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data processing tool
+- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data
+  processing tool for large-scale metabolomics and exposomics
+- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data
+  processing tool
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,10 @@
 ---
 name: msp-file-parsing-edge-case-handling
-description: Use when you are parsing mass spectrometry spectral library files in MSP format and need to guarantee that all spectrum records are either successfully integrated into the final dataset or explicitly logged with a reason for exclusion.
+description: Use when you are parsing mass spectrometry spectral library files in
+  MSP format and need to guarantee that all spectrum records are either successfully
+  integrated into the final dataset or explicitly logged with a reason for exclusion.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,6 +16,13 @@ metadata:
   - FragHub
   techniques:
   - CE-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub

@@ -1,9 +1,11 @@
 ---
 name: spectral-library-parallel-ingestion
-description: Use when you have multiple MSP or spectral library files (e.g., one per batch of analytical standards, or organized in a directory structure) that need to be read and merged into a single library object for downstream enrichment (SMILES assignment, RI annotation, write operations).
+description: Use when you have multiple MSP or spectral library files (e.g., one per
+  batch of analytical standards, or organized in a directory structure) that need
+  to be read and merged into a single library object for downstream enrichment (SMILES
+  assignment, RI annotation, write operations).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -15,6 +17,8 @@ metadata:
   - parallel
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler

@@ -1,9 +1,11 @@
 ---
 name: mass-spectrometry-data-loader-integration
-description: Use when you have mass spectrometry data available in multiple identifier formats (GNPS Task ID, Universal Spectrum Identifier, or Feature-Based Molecular Networking task reference) and need to route each format to its specific loader without manual preprocessing.
+description: Use when you have mass spectrometry data available in multiple identifier
+  formats (GNPS Task ID, Universal Spectrum Identifier, or Feature-Based Molecular
+  Networking task reference) and need to route each format to its specific loader
+  without manual preprocessing.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,6 +19,8 @@ metadata:
   - networkx
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00237
   title: MMSA

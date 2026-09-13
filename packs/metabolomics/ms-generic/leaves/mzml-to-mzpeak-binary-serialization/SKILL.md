@@ -1,9 +1,11 @@
 ---
 name: mzml-to-mzpeak-binary-serialization
-description: Use when you have one or more mzML files (XML-based mass spectrometry data) and need to convert them into mzPeak format for downstream analysis, archival, or integration with tools that consume Parquet-based spectra.
+description: Use when you have one or more mzML files (XML-based mass spectrometry
+  data) and need to convert them into mzPeak format for downstream analysis, archival,
+  or integration with tools that consume Parquet-based spectra.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +17,8 @@ metadata:
   - Apache Arrow (R)
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak

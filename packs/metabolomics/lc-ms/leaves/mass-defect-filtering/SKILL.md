@@ -1,9 +1,10 @@
 ---
 name: mass-defect-filtering
-description: Use when after MS-Dial peak picking and feature table construction, when you observe a high proportion of features with anomalous m/z decimal values that are inconsistent with known metabolite ionization patterns.
+description: Use when after MS-Dial peak picking and feature table construction, when
+  you observe a high proportion of features with anomalous m/z decimal values that
+  are inconsistent with known metabolite ionization patterns.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +16,8 @@ metadata:
   - notame
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
@@ -23,7 +26,9 @@ derived_from:
 evidence_spans:
 - The R package margheRita addresses the complete workflow
 - The R package margheRita
-- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
+  spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
 claims: []
 provenance:

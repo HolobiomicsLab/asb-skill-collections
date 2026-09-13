@@ -1,9 +1,11 @@
 ---
 name: one-hot-encoding-categorical-chromatography-features
-description: Use when you have raw HPLC column metadata containing categorical fields (e.g., column manufacturer 'Waters', USP type 'L1', solvent identities 'H2O'/'MeOH'/'ACN') that must be converted into numerical representations before featurization for a machine learning pipeline.
+description: Use when you have raw HPLC column metadata containing categorical fields
+  (e.g., column manufacturer 'Waters', USP type 'L1', solvent identities 'H2O'/'MeOH'/'ACN')
+  that must be converted into numerical representations before featurization for a
+  machine learning pipeline.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3553
   edam_topics:
   - http://edamontology.org/topic_3407
@@ -14,6 +16,8 @@ metadata:
   - Graphormer-RT
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT

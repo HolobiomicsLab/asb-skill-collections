@@ -1,9 +1,10 @@
 ---
 name: docker-volume-mount-configuration
-description: Use when deploying the ipbhalle/metfragweb container and you need to supply custom MetFrag settings (ChemSpider tokens, proxy servers, local database connections) without modifying the container image.
+description: Use when deploying the ipbhalle/metfragweb container and you need to
+  supply custom MetFrag settings (ChemSpider tokens, proxy servers, local database
+  connections) without modifying the container image.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_topics: []
   tools:
   - Docker
@@ -11,6 +12,8 @@ metadata:
   - MetFrag
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag

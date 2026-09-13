@@ -1,9 +1,10 @@
 ---
 name: command-line-tool-execution
-description: Use when you have tandem MS/MS spectrum data in standard peak file formats (mzML, mzXML, or MGF) and need to cluster spectra based on precursor mass and fragment ion similarity.
+description: Use when you have tandem MS/MS spectrum data in standard peak file formats
+  (mzML, mzXML, or MGF) and need to cluster spectra based on precursor mass and fragment
+  ion similarity.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -26,6 +27,8 @@ metadata:
   - SECIMTools suite
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
@@ -36,7 +39,8 @@ derived_from:
 - doi: 10.1186/s12859-018-2134-1
   title: ''
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 - LipoCLEAN is a command line tool
 - can be run in a standalone mode or via Galaxy Genomics Framework
 claims: []

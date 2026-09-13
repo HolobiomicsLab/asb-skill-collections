@@ -1,9 +1,11 @@
 ---
 name: ccs-bias-quantification
-description: Use when you have IM-MS lipidomics data acquired on samples spiked with fully labeled U13C lipid standards (e.g., U13C yeast extract), and you need to assess whether systematic CCS deviation exists between your instrument's measured values and the DT CCS N2 reference library for U13C labeled lipids.
+description: Use when you have IM-MS lipidomics data acquired on samples spiked with
+  fully labeled U13C lipid standards (e.g., U13C yeast extract), and you need to assess
+  whether systematic CCS deviation exists between your instrument's measured values
+  and the DT CCS N2 reference library for U13C labeled lipids.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -15,11 +17,14 @@ metadata:
   - data.table
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c01253
   title: mobilipid
 evidence_spans:
-- Our tool enhances CCS quality control by providing a R Markdown that integrates into IM-MS lipidomics workflows
+- Our tool enhances CCS quality control by providing a R Markdown that integrates
+  into IM-MS lipidomics workflows
 - providing a R Markdown that integrates into IM-MS lipidomics workflows
 claims: []
 provenance:

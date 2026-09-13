@@ -3,7 +3,6 @@ name: github-actions-workflow-execution
 description: Use when you have a GitHub repository containing scientific records (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -13,6 +12,8 @@ metadata:
   - MassBank-data repository
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/jms.1777
   title: MassBank

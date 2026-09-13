@@ -1,9 +1,11 @@
 ---
 name: chemical-noise-subformula-loss-filtering
-description: Use when you have MS/MS spectra with high chemical noise (spurious ions arising from incomplete ionization, in-source fragmentation, or instrument artifacts) and you possess accurate molecular formula or SMILES structure and adduct information for the precursor.
+description: Use when you have MS/MS spectra with high chemical noise (spurious ions
+  arising from incomplete ionization, in-source fragmentation, or instrument artifacts)
+  and you possess accurate molecular formula or SMILES structure and adduct information
+  for the precursor.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,6 +19,8 @@ metadata:
   - molmass
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-025-02646-x
   title: Spectral Denoising

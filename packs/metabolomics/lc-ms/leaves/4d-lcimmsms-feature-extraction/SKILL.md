@@ -1,9 +1,11 @@
 ---
 name: 4d-lcimmsms-feature-extraction
-description: Use when you have raw LC-IM-MS/MS data files from sterol lipid analysis and need to identify unsaturated sterol isomers by matching experimental collision cross section values against a quantum chemistry calculation-assisted CCS prediction database.
+description: Use when you have raw LC-IM-MS/MS data files from sterol lipid analysis
+  and need to identify unsaturated sterol isomers by matching experimental collision
+  cross section values against a quantum chemistry calculation-assisted CCS prediction
+  database.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -17,6 +19,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA

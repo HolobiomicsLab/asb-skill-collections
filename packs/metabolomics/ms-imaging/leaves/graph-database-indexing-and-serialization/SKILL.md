@@ -1,9 +1,11 @@
 ---
 name: graph-database-indexing-and-serialization
-description: Use when you have retrieved and deduplicated chemical formulae and metadata from multiple heterogeneous sources (HMDB, ChEMBL, PubChem) and extracted both structural relationships (DBEdges) and biological reactant pairs (BioEdges from KEGG), and now need to merge them into a single queryable.
+description: Use when you have retrieved and deduplicated chemical formulae and metadata
+  from multiple heterogeneous sources (HMDB, ChEMBL, PubChem) and extracted both structural
+  relationships (DBEdges) and biological reactant pairs (BioEdges from KEGG), and
+  now need to merge them into a single queryable.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -12,11 +14,14 @@ metadata:
   - SMART
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART
 evidence_spans:
-- we present SMART, an open-source platform designed for precise formula assignment in mass spectrometry imaging
+- we present SMART, an open-source platform designed for precise formula assignment
+  in mass spectrometry imaging
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

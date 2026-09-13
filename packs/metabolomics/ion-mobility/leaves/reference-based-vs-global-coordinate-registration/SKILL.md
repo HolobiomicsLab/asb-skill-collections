@@ -1,9 +1,11 @@
 ---
 name: reference-based-vs-global-coordinate-registration
-description: Use when you have detected feature tables from multiple LC-IMS-MS/MS samples (each with mz, drift_time, retention_time, and intensity columns) and need to match corresponding features across datasets to enable cross-sample quantitation or cohort analysis.
+description: Use when you have detected feature tables from multiple LC-IMS-MS/MS
+  samples (each with mz, drift_time, retention_time, and intensity columns) and need
+  to match corresponding features across datasets to enable cross-sample quantitation
+  or cohort analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,13 +18,16 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
 - DEIMoS is a Python application programming interface
 - DEIMoS is a Python application programming interface and command-line tool
-- Functionality includes feature detection, feature alignment, collision cross section (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
+- Functionality includes feature detection, feature alignment, collision cross section
+  (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
 - import deimos
 - import numpy as np
 claims: []

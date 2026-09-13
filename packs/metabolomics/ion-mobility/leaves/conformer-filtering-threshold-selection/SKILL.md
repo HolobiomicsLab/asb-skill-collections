@@ -1,9 +1,10 @@
 ---
 name: conformer-filtering-threshold-selection
-description: Use when after RDKit has generated a large ensemble of 3D conformers for a molecule (typically hundreds to thousands), you need to reduce computational burden before quantum-chemical single-point energy evaluation.
+description: Use when after RDKit has generated a large ensemble of 3D conformers
+  for a molecule (typically hundreds to thousands), you need to reduce computational
+  burden before quantum-chemical single-point energy evaluation.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3047
@@ -15,6 +16,8 @@ metadata:
   - Snakemake
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS

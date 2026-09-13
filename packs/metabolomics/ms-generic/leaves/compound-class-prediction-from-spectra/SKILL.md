@@ -1,9 +1,10 @@
 ---
 name: compound-class-prediction-from-spectra
-description: Use when you have an unknown mass spectrometry spectrum (acquired experimentally or computationally) and need to assign it to a known drug class or identify candidate structures.
+description: Use when you have an unknown mass spectrometry spectrum (acquired experimentally
+  or computationally) and need to assign it to a known drug class or identify candidate
+  structures.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0657
@@ -14,6 +15,8 @@ metadata:
   - DeepEI
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05019
   title: ps2ms

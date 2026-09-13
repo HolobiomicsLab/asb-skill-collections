@@ -1,9 +1,11 @@
 ---
 name: csv-serialization-for-mass-spectrometry
-description: Use when you have generated or curated a lipid spectral library (with precursor m/z, adduct information, charge states, retention times, and fragmentation patterns) and need to export it for use in either Excalibur-based DDA experiments on an Orbitrap mass spectrometer, or in Skyline for targeted.
+description: Use when you have generated or curated a lipid spectral library (with
+  precursor m/z, adduct information, charge states, retention times, and fragmentation
+  patterns) and need to export it for use in either Excalibur-based DDA experiments
+  on an Orbitrap mass spectrometer, or in Skyline for targeted.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,6 +15,8 @@ metadata:
   - Skyline
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04518
   title: Lipid Spectrum Generator

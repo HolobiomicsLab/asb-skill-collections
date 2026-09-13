@@ -1,9 +1,10 @@
 ---
 name: smiles-parsing-and-validation
-description: Use when you have SMILES strings for candidate novel psychoactive substance structures and need to convert them into a machine-readable molecular representation before computing descriptors, generating mass spectra, or calculating chemical fingerprints.
+description: Use when you have SMILES strings for candidate novel psychoactive substance
+  structures and need to convert them into a machine-readable molecular representation
+  before computing descriptors, generating mass spectra, or calculating chemical fingerprints.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3929
   edam_topics:
   - http://edamontology.org/topic_0176
@@ -12,6 +13,8 @@ metadata:
   - RDKit
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05019
   title: ps2ms

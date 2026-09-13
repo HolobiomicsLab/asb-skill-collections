@@ -1,9 +1,10 @@
 ---
 name: lipid-identification-quality-filtering
-description: Use when you have MS-DIAL lipid identification results (alignment exports in msp/txt format) and need to distinguish correct from incorrect lipid IDs before downstream analysis.
+description: Use when you have MS-DIAL lipid identification results (alignment exports
+  in msp/txt format) and need to distinguish correct from incorrect lipid IDs before
+  downstream analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +15,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c04040
   title: lipoclean

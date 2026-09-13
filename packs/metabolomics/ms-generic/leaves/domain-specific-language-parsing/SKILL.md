@@ -1,9 +1,11 @@
 ---
 name: domain-specific-language-parsing
-description: 'Use when when you have SQL-inspired query strings that encode domain-specific assumptions and need to validate, transform, or execute them against data repositories. Specifically: input is human-readable DSL text containing mass spectrometry-specific clauses (e.'
+description: 'Use when when you have SQL-inspired query strings that encode domain-specific
+  assumptions and need to validate, transform, or execute them against data repositories.
+  Specifically: input is human-readable DSL text containing mass spectrometry-specific
+  clauses (e.'
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +17,8 @@ metadata:
   - ANTLR / PLY parser generators
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-025-02785-1
   title: MassQL

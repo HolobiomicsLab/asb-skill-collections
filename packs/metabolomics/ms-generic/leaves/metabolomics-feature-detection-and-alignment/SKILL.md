@@ -1,9 +1,10 @@
 ---
 name: metabolomics-feature-detection-and-alignment
-description: Use when you have raw metabolomics mass spectrometry data in mzML or mzXML format and need to extract, align, and normalize metabolic features across multiple samples or conditions.
+description: Use when you have raw metabolomics mass spectrometry data in mzML or
+  mzXML format and need to extract, align, and normalize metabolic features across
+  multiple samples or conditions.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -12,6 +13,8 @@ metadata:
   - MZmine
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.05.13.593988v1
   title: plantMASST

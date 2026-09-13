@@ -1,9 +1,10 @@
 ---
 name: mzml-data-parsing-pymzml-pyopenms
-description: Use when you have mzML-format mass spectrometry data files and need to load them into memory as structured data (pandas DataFrame) to prepare for visualization with pyOpenMS-Viz or other analysis pipelines.
+description: Use when you have mzML-format mass spectrometry data files and need to
+  load them into memory as structured data (pandas DataFrame) to prepare for visualization
+  with pyOpenMS-Viz or other analysis pipelines.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,11 +17,14 @@ metadata:
   - pandas
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
 evidence_spans:
-- pyOpenMS-Viz is a Python library that provides a simple interface for extending the plotting capabilities of Pandas DataFrames
+- pyOpenMS-Viz is a Python library that provides a simple interface for extending
+  the plotting capabilities of Pandas DataFrames
 - '.mzML ----- .. toctree:: :maxdepth: 1 pyopenms pymzml'
 - pyopenms ... pymzml ... pyteomics
 - '.d -- .. toctree:: :maxdepth: 1 alphatims'

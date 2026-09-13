@@ -1,9 +1,11 @@
 ---
 name: overfitting-detection-and-prevention
-description: Use when when training a fresh CNN model from scratch on labeled LCMS data (e.g., MS1 peak classification in NeatMS), particularly when aiming for a specific performance target (e.g., AUC ROC > 0.9) and you need to avoid wasting compute time on redundant epochs or degrading validation performance.
+description: Use when when training a fresh CNN model from scratch on labeled LCMS
+  data (e.g., MS1 peak classification in NeatMS), particularly when aiming for a specific
+  performance target (e.g., AUC ROC > 0.9) and you need to avoid wasting compute time
+  on redundant epochs or degrading validation performance.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -19,15 +21,20 @@ metadata:
   - Jupyter Notebook
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
 evidence_spans:
-- NeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object
+- NeatMS provides the necessary functions to do that, all we will have to do is create
+  a `Neural network handler` object
 - Calling the method `get_threshold()` will compute and return the optimal threshold
 - After installation, you should be able to import NeatMS
 - Import the required libraries first
-- calling the training method (1000 by default). NeatMS does not currently provides callback functions to automatically stop the training. Calling the training method will simply resume the training
+- calling the training method (1000 by default). NeatMS does not currently provides
+  callback functions to automatically stop the training. Calling the training method
+  will simply resume the training
 - from keras.optimizers import SGD, Adam
 claims: []
 provenance:

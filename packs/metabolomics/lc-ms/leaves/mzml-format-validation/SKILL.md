@@ -1,9 +1,10 @@
 ---
 name: mzml-format-validation
-description: Use when after downloading an mzML file from a remote repository (e.g., MetaboLights, MassIVE, GNPS) via USI resolution, before attempting to parse it into a spectrum container or visualization dashboard.
+description: Use when after downloading an mzML file from a remote repository (e.g.,
+  MetaboLights, MassIVE, GNPS) via USI resolution, before attempting to parse it into
+  a spectrum container or visualization dashboard.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0336
   edam_topics:
   - http://edamontology.org/topic_0943
@@ -18,6 +19,8 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-021-01339-5
   title: GNPS Dashboard

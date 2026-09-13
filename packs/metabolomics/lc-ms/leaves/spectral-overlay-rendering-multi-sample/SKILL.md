@@ -1,9 +1,11 @@
 ---
 name: spectral-overlay-rendering-multi-sample
-description: Use when when you have aligned peak-alignment data from a preceding molecular networking task (structured as a table with peak intensity, m/z, retention time, and alignment quality metrics) and need to visualize and interactively filter peaks across multiple spectra to support comparative mass.
+description: Use when when you have aligned peak-alignment data from a preceding molecular
+  networking task (structured as a table with peak intensity, m/z, retention time,
+  and alignment quality metrics) and need to visualize and interactively filter peaks
+  across multiple spectra to support comparative mass.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0570
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,6 +18,8 @@ metadata:
   - Flask
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00237
   title: MMSA

@@ -1,9 +1,10 @@
 ---
 name: fragment-ion-mass-calibration
-description: Use when when comparing experimental spectra to reference library spectra and fragment ion m/z values show systematic drift or measurement noise that could distort neutral loss peaks or cosine similarity scores.
+description: Use when when comparing experimental spectra to reference library spectra
+  and fragment ion m/z values show systematic drift or measurement noise that could
+  distort neutral loss peaks or cosine similarity scores.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,6 +14,8 @@ metadata:
   - cosine_neutral_loss repository
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.2c00153
   title: Neutral-loss similarity

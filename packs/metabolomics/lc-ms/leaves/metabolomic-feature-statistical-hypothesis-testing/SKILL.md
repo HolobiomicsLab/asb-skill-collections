@@ -1,9 +1,9 @@
 ---
 name: metabolomic-feature-statistical-hypothesis-testing
-description: Use when when you have a normalized and batch-corrected feature abundance matrix from non-targeted LC-MS/MS metabolomics (e.
+description: Use when when you have a normalized and batch-corrected feature abundance
+  matrix from non-targeted LC-MS/MS metabolomics (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,6 +16,8 @@ metadata:
   - Google Colab
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41596-024-01046-3
   title: FBMN-STATS

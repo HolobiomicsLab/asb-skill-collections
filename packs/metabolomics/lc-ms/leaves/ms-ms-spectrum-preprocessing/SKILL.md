@@ -1,9 +1,10 @@
 ---
 name: ms-ms-spectrum-preprocessing
-description: Use when you have raw or semi-processed MS/MS spectral data from bottom-up tandem mass spectrometry experiments (data-dependent acquisition) that you intend to input to de novo peptide sequencing tools like Casanovo.
+description: Use when you have raw or semi-processed MS/MS spectral data from bottom-up
+  tandem mass spectrometry experiments (data-dependent acquisition) that you intend
+  to input to de novo peptide sequencing tools like Casanovo.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -23,6 +24,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo
@@ -35,12 +38,15 @@ derived_from:
 - doi: 10.1016/1044-0305
   title: ''
 evidence_spans:
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing.
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing.
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing
 - Pytorch is installed automatically when installing Casanovo
 - Upgraded minimum Lightning version to 2.6.
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data
-- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum
+  using an end-to-end energy based modeling approach
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

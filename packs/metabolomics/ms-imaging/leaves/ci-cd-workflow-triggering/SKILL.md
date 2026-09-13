@@ -1,9 +1,10 @@
 ---
 name: ci-cd-workflow-triggering
-description: Use when you need to verify that a GitHub Actions workflow (such as dev_build_release.yml) successfully completes end-to-end, especially after code changes or to confirm that automated build infrastructure is functioning correctly.
+description: Use when you need to verify that a GitHub Actions workflow (such as dev_build_release.yml)
+  successfully completes end-to-end, especially after code changes or to confirm that
+  automated build infrastructure is functioning correctly.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -14,6 +15,8 @@ metadata:
   - GitHub Actions
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-021-23953-9
   title: iimn

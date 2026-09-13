@@ -18,8 +18,8 @@ policy: OPEN_ACCESS_POLICY.md (OA verified per entry; unresolved tiers flagged i
 wave: community-2026-06
 summary:
   total: 6
-  included: 0
-  hold: 6
+  included: 1   # Masster (shipped as a repository-tier skill, not a corpus paper)
+  hold: 5
 
 papers:
 - name: RforMassSpectrometry
@@ -123,7 +123,13 @@ papers:
   year: null
   category: Multifunctional
   repo_url: https://github.com/zamboni-lab/masster-dist
-  status: hold
+  # `included` is the accepted state in this schema (asb-corpus/1.0): corpus.yaml
+  # has no other value, and the README's lifecycle says an accepted entry is
+  # recorded `status: included`. `accept` is the vocabulary of `triage.decision`,
+  # a different field. This entry ships as a repository-tier SKILL.md rather than
+  # a corpus paper -- it has no DOI -- so it is recorded here, not pasted into
+  # corpus.yaml.
+  status: included
   license_tier: noncommercial
   wave: community-2026-06
   resource_type: software-tool
@@ -146,7 +152,10 @@ papers:
       Admissible as a noncommercial-tier skill (license_tier: noncommercial). Ship a
       prose-only SKILL.md with link-only grounding and a runtime use-acknowledgment
       gate; do NOT embed the repo. access.type stays "restricted" (OA axis unchanged) —
-      the license_tier is what makes it includable. Still status: hold pending merge.
+      the license_tier is what makes it includable. Merged: shipped as
+      collections/metabolomics/v2/leaves/masster (provenance_tier: repository,
+      license_tier: noncommercial), on the owner's confirmation with the tool's
+      author that inclusion is approved.
 
 - name: OmniPath Metabo
   # DOI prefix 10.64898 is openRxiv (bioRxiv/medRxiv's registrant since the Cold Spring

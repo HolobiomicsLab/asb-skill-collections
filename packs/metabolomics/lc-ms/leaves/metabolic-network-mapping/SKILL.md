@@ -1,9 +1,11 @@
 ---
 name: metabolic-network-mapping
-description: Use when you have an untargeted metabolomics feature table (with m/z, retention time, and statistical significance values) and want to predict which metabolic pathways and functional modules are active in your sample, but you lack confident metabolite identifications or wish to bypass the.
+description: Use when you have an untargeted metabolomics feature table (with m/z,
+  retention time, and statistical significance values) and want to predict which metabolic
+  pathways and functional modules are active in your sample, but you lack confident
+  metabolite identifications or wish to bypass the.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3501
   edam_topics:
   - http://edamontology.org/topic_0159
@@ -15,6 +17,8 @@ metadata:
   - mass2chem
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: mummichog

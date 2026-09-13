@@ -1,9 +1,11 @@
 ---
 name: structured-molecule-relationship-evaluation
-description: Use when when you have tandem mass spectra (MSMS) from related or candidate molecules and need to determine which similarity metric—cosine, modified cosine, or neutral loss— ranks structurally similar compounds in your dataset. Particularly useful when structural relationships are known a priori (e.
+description: Use when when you have tandem mass spectra (MSMS) from related or candidate
+  molecules and need to determine which similarity metric—cosine, modified cosine,
+  or neutral loss— ranks structurally similar compounds in your dataset. Particularly
+  useful when structural relationships are known a priori (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -13,6 +15,8 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.2c00153
   title: Neutral-loss similarity

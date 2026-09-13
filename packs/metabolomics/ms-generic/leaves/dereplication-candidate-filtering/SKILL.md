@@ -1,9 +1,10 @@
 ---
 name: dereplication-candidate-filtering
-description: Use when after spectral database dereplication (using Spectra) and compound database dereplication (using SIRIUS or MetFrag) have produced candidate annotations in CSV or JSON format.
+description: Use when after spectral database dereplication (using Spectra) and compound
+  database dereplication (using SIRIUS or MetFrag) have produced candidate annotations
+  in CSV or JSON format.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,6 +18,8 @@ metadata:
   - MetFrag
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-023-00695-y
   title: MAW

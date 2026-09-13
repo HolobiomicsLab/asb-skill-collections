@@ -1,9 +1,10 @@
 ---
 name: mass-defect-filtering-for-chemical-validity
-description: Use when after loading an MS-DIAL peak list (feature table with m/z, retention time, intensity, and sample assignments) when you need to remove non-organic or chemically implausible features.
+description: Use when after loading an MS-DIAL peak list (feature table with m/z,
+  retention time, intensity, and sample assignments) when you need to remove non-organic
+  or chemically implausible features.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,6 +14,8 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR

@@ -1,9 +1,11 @@
 ---
 name: normalization-for-unequal-group-sizes
-description: Use when when tabulating chemical annotation enrichment (e.g., GNPS spectral library matches) across sample groups stratified by metadata category (e.g., sample type, extraction method, ionization source), and the groups contain different numbers of files or samples.
+description: Use when when tabulating chemical annotation enrichment (e.g., GNPS spectral
+  library matches) across sample groups stratified by metadata category (e.g., sample
+  type, extraction method, ionization source), and the groups contain different numbers
+  of files or samples.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -15,6 +17,8 @@ metadata:
   - Emperor
   techniques:
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU

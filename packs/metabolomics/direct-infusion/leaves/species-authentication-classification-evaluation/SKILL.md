@@ -1,9 +1,10 @@
 ---
 name: species-authentication-classification-evaluation
-description: Use when when you have high-throughput mass spectrometry data (DI-MS, ASAP-MS, LDI-MS, or other ambient ionization formats) from unknown biological samples and need to determine their species identity against a curated reference database.
+description: Use when when you have high-throughput mass spectrometry data (DI-MS,
+  ASAP-MS, LDI-MS, or other ambient ionization formats) from unknown biological samples
+  and need to determine their species identity against a curated reference database.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -15,6 +16,8 @@ metadata:
   - LDI-MS
   techniques:
   - direct-infusion-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass

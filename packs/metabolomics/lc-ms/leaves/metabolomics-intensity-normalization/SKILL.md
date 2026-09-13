@@ -1,9 +1,10 @@
 ---
 name: metabolomics-intensity-normalization
-description: Use when your input is a raw metabolomics intensity matrix (compounds × samples) with known batch assignment and QC sample labels, and you observe signal drift across the analytical sequence or batch-to-batch variation.
+description: Use when your input is a raw metabolomics intensity matrix (compounds
+  × samples) with known batch assignment and QC sample labels, and you observe signal
+  drift across the analytical sequence or batch-to-batch variation.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,6 +14,13 @@ metadata:
   - Metanorm
   techniques:
   - LC-MS
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ''
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.09.30.679445v1
   title: Metanorm
@@ -20,7 +28,8 @@ derived_from:
   title: ''
 evidence_spans:
 - The R package implements three (new) robust normalization methods
-- Metanorm supports robust metabolomics data normalization across scales and experimental designs
+- Metanorm supports robust metabolomics data normalization across scales and experimental
+  designs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

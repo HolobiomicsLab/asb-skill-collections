@@ -1,9 +1,10 @@
 ---
 name: spectral-metadata-validation
-description: Use when processing heterogeneous mass spectral datasets from multiple open libraries (e.g., MassBank, UNPD, GMD) where structural identifiers, precursor m/z, and adduct information are frequently incomplete or inconsistent across records.
+description: Use when processing heterogeneous mass spectral datasets from multiple
+  open libraries (e.g., MassBank, UNPD, GMD) where structural identifiers, precursor
+  m/z, and adduct information are frequently incomplete or inconsistent across records.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,6 +17,13 @@ metadata:
   - FragHub
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub

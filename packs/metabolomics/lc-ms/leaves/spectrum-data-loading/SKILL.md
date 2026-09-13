@@ -1,9 +1,11 @@
 ---
 name: spectrum-data-loading
-description: Use when when you have a USI (e.g., mzspec:MTBLS1124:QC07.mzML) pointing to a public mzML or related spectrum file in MetaboLights, MassIVE, or GNPS repositories, and need to load the spectrum data for interactive visualization, quality control assessment, or downstream analysis.
+description: Use when when you have a USI (e.g., mzspec:MTBLS1124:QC07.mzML) pointing
+  to a public mzML or related spectrum file in MetaboLights, MassIVE, or GNPS repositories,
+  and need to load the spectrum data for interactive visualization, quality control
+  assessment, or downstream analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +17,8 @@ metadata:
   - MetaboLights REST API
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-021-01339-5
   title: GNPS Dashboard

@@ -1,9 +1,11 @@
 ---
 name: cnn-inference-on-metabolomics-data
-description: Use when you have LC-MS feature tables (with m/z and retention time columns) paired with raw .mzXML or .mzML files, and you need to automatically validate which detected features correspond to genuine chromatographic peaks versus false positives or noise.
+description: Use when you have LC-MS feature tables (with m/z and retention time columns)
+  paired with raw .mzXML or .mzML files, and you need to automatically validate which
+  detected features correspond to genuine chromatographic peaks versus false positives
+  or noise.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3439
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -17,12 +19,16 @@ metadata:
   - Anaconda
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c01309
   title: EVA
 evidence_spans:
-- EVA now has a python version that can be easily installed and used on Mac, PC, and Linux systems. Please check out pyEVA
-- EVA now has a python version that can be easily installed and used on Mac, PC, and Linux systems
+- EVA now has a python version that can be easily installed and used on Mac, PC, and
+  Linux systems. Please check out pyEVA
+- EVA now has a python version that can be easily installed and used on Mac, PC, and
+  Linux systems
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

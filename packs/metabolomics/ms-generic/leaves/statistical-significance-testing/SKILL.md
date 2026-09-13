@@ -1,9 +1,11 @@
 ---
 name: statistical-significance-testing
-description: Use when when you have computed rank-based accuracy metrics (top-1, top-5, top-10 hit rates) for two or more competing methods on the same test dataset (e.g., Orbitrap spectra), and need to determine whether performance differences are genuine rather than noise.
+description: Use when when you have computed rank-based accuracy metrics (top-1, top-5,
+  top-10 hit rates) for two or more competing methods on the same test dataset (e.g.,
+  Orbitrap spectra), and need to determine whether performance differences are genuine
+  rather than noise.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0092
@@ -17,6 +19,8 @@ metadata:
   - Git / GitHub
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c02426
   title: MSBERT

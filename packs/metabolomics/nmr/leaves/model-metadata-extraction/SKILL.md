@@ -1,15 +1,18 @@
 ---
 name: model-metadata-extraction
-description: Use when when you need to programmatically interface with a TensorFlow Serving model instance and must discover or validate the expected input names (e.
+description: Use when when you need to programmatically interface with a TensorFlow
+  Serving model instance and must discover or validate the expected input names (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
+  grounding_tier: link-only
   edam_topics: []
   tools:
   - tensorflow serving
   - TensorFlow Serving
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT

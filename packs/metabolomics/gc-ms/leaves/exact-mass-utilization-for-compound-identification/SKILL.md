@@ -1,9 +1,11 @@
 ---
 name: exact-mass-utilization-for-compound-identification
-description: Use when you have a GC-MS dataset in CSV format with retention times, base peak m/z values, component areas, and compound names, and you need to identify whether specific query chemicals are present in your samples and retrieve their -match factors (scoring the confidence of the spectral match) and.
+description: Use when you have a GC-MS dataset in CSV format with retention times,
+  base peak m/z values, component areas, and compound names, and you need to identify
+  whether specific query chemicals are present in your samples and retrieve their
+  -match factors (scoring the confidence of the spectral match) and.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,14 +18,19 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
 - Modern programming languages allow even complex workflows to be automated
 - Modern programming languages allow even complex workflows to be automated.
-- The first step in the process is to convert the raw input to a format that downstream functions can work with. `spreadOut()` prepares the read in .CSV for intelligent ***sorting*** (using retention
-- '`mzExacto()` collects the same information for a set of query chemicals and uses it to precisely search the advanced dictionary for samples that have those chemicals.'
+- The first step in the process is to convert the raw input to a format that downstream
+  functions can work with. `spreadOut()` prepares the read in .CSV for intelligent
+  ***sorting*** (using retention
+- '`mzExacto()` collects the same information for a set of query chemicals and uses
+  it to precisely search the advanced dictionary for samples that have those chemicals.'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

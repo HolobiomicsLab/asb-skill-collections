@@ -1,9 +1,11 @@
 ---
 name: ci-cd-pipeline-orchestration
-description: Use when you need to automate testing and quality checks on code changes—specifically when pull requests or commits are made to a repository and you want to verify that builds succeed, test suites pass, and code quality metrics meet project standards before merging.
+description: Use when you need to automate testing and quality checks on code changes—specifically
+  when pull requests or commits are made to a repository and you want to verify that
+  builds succeed, test suites pass, and code quality metrics meet project standards
+  before merging.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -15,6 +17,8 @@ metadata:
   - Python setuptools
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query

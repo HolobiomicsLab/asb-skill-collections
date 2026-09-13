@@ -1,9 +1,10 @@
 ---
 name: ms2-spectral-similarity-scoring
-description: Use when after temporal intensity profile correlation and exact mass difference refinement have identified candidate ion-species pairs in direct-injection plasma ionization MS data (e.g., DBDI-MS, DBDI-FT-ICR-MS).
+description: Use when after temporal intensity profile correlation and exact mass
+  difference refinement have identified candidate ion-species pairs in direct-injection
+  plasma ionization MS data (e.g., DBDI-MS, DBDI-FT-ICR-MS).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,11 +15,14 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
-- doi: 10.1093/bioinformatics/btad088/7036334
+- doi: 10.1093/bioinformatics/btad088
   title: DBDIpy
 evidence_spans:
-- DBDIpy is an open-source Python library for the curation and interpretation of dielectric barrier discharge ionisation mass spectrometric datasets
+- DBDIpy is an open-source Python library for the curation and interpretation of dielectric
+  barrier discharge ionisation mass spectrometric datasets
 - DBDIpy is an open-source Python library
 claims: []
 provenance:
@@ -26,15 +30,15 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_dbdipy_cq
-    doi: 10.1093/bioinformatics/btad088/7036334
+    doi: 10.1093/bioinformatics/btad088
     title: DBDIpy
   dedup_kept_from: coll_dbdipy_cq
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bioinformatics/btad088/7036334
+  original_doi: 10.1093/bioinformatics/btad088
   all_source_dois:
-  - 10.1093/bioinformatics/btad088/7036334
+  - 10.1093/bioinformatics/btad088
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias

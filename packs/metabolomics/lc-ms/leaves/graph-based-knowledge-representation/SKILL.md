@@ -1,9 +1,10 @@
 ---
 name: graph-based-knowledge-representation
-description: Use when annotating metabolites in untargeted metabolomics experiments where both established biochemical pathways and experimental MS2 similarity patterns must be simultaneously leveraged.
+description: Use when annotating metabolites in untargeted metabolomics experiments
+  where both established biochemical pathways and experimental MS2 similarity patterns
+  must be simultaneously leveraged.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_0362
   edam_topics:
   - http://edamontology.org/topic_0599
@@ -14,11 +15,19 @@ metadata:
   - MetDNA3 webserver
   techniques:
   - LC-MS
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ZhuMetLab/MrnAnnoAlgo3
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-63536-6
   title: MetDNA3
 evidence_spans:
-- '`MrnAnnoAlgo3` is the core algorithm module of **MetDNA3**, designed to annotate metabolites'
+- '`MrnAnnoAlgo3` is the core algorithm module of **MetDNA3**, designed to annotate
+  metabolites'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

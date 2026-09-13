@@ -1,9 +1,11 @@
 ---
 name: lipid-class-enumeration
-description: Use when you have a lipid identification or library-generation task that requires you to define a target chemical space bounded by lipid classes (e.g., phosphatidylcholine, triglyceride) and fatty acid composition ranges (e.g., C14–C22 with 0–6 degrees of unsaturation).
+description: Use when you have a lipid identification or library-generation task that
+  requires you to define a target chemical space bounded by lipid classes (e.g., phosphatidylcholine,
+  triglyceride) and fatty acid composition ranges (e.g., C14–C22 with 0–6 degrees
+  of unsaturation).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -14,6 +16,8 @@ metadata:
   - Excalibur
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04518
   title: Lipid Spectrum Generator

@@ -1,9 +1,12 @@
 ---
 name: json-payload-construction-for-nmr-spectra
-description: Use when when you have NMR peak assignments (1H and 13C chemical shift values) and need to submit them to the /api/smart3/search endpoint for automated structure classification. Use this skill before making API calls to ensure peak data conforms to the expected JSON schema.
+description: Use when when you have NMR peak assignments (1H and 13C chemical shift
+  values) and need to submit them to the /api/smart3/search endpoint for automated
+  structure classification. Use this skill before making API calls to ensure peak
+  data conforms to the expected JSON schema.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0593
@@ -13,6 +16,8 @@ metadata:
   - DeepSAT
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT

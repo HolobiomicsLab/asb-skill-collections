@@ -1,9 +1,9 @@
 ---
 name: fractional-abundance-transformation
-description: Use when you have raw LC-MS fractional abundances of isotopologues (FAM) from a stable isotope labeling experiment (e.
+description: Use when you have raw LC-MS fractional abundances of isotopologues (FAM)
+  from a stable isotope labeling experiment (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,6 +13,8 @@ metadata:
   - ElemCor
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s12859-019-2669-9
   title: ElemCor

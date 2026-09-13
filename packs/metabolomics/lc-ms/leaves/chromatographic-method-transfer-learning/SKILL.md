@@ -1,9 +1,11 @@
 ---
 name: chromatographic-method-transfer-learning
-description: 'Use when you have experimental RT measurements from a source chromatographic method and need to predict RTs for the same molecules on a target chromatographic method, but lack a large calibration dataset (typical scenario: 10–100 molecules with ground truth RTs on both methods).'
+description: 'Use when you have experimental RT measurements from a source chromatographic
+  method and need to predict RTs for the same molecules on a target chromatographic
+  method, but lack a large calibration dataset (typical scenario: 10–100 molecules
+  with ground truth RTs on both methods).'
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -14,11 +16,14 @@ metadata:
   - cmmrt (CMM-RT)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

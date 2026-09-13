@@ -1,9 +1,10 @@
 ---
 name: peak-apex-identification-from-intensity-profiles
-description: Use when after EIC candidate generation and peak detection have been completed on LC/HRMS data, when you need to extract the retention time and intensity values at peak maxima for each detected peak.
+description: Use when after EIC candidate generation and peak detection have been
+  completed on LC/HRMS data, when you need to extract the retention time and intensity
+  values at peak maxima for each detected peak.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,11 +16,15 @@ metadata:
   - xcms
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA
 evidence_spans:
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
+  R package'
 - light-weight R package
 claims: []
 provenance:

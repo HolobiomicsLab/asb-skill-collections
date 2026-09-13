@@ -1,9 +1,10 @@
 ---
 name: mass-difference-calculation-and-matching
-description: Use when you have centroided data-dependent acquisition (DDA) MS2 spectra from LC- or GC-HRMS and need to annotate detected features with PFAS-specific diagnostic fragments. Use it after feature detection (e.
+description: Use when you have centroided data-dependent acquisition (DDA) MS2 spectra
+  from LC- or GC-HRMS and need to annotate detected features with PFAS-specific diagnostic
+  fragments. Use it after feature detection (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,11 +16,14 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 - PFΔScreen is an open-source Python based non-target screening software tool
 claims: []
 provenance:

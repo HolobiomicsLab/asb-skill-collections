@@ -1,9 +1,10 @@
 ---
 name: lcms-feature-probability-scoring
-description: Use when you have an untargeted LC/MS feature table (m/z, retention time, intensity columns) and need to move beyond single-hit matching to probabilistic annotation.
+description: Use when you have an untargeted LC/MS feature table (m/z, retention time,
+  intensity columns) and need to move beyond single-hit matching to probabilistic
+  annotation.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,6 +14,8 @@ metadata:
   - ipaPy2
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btad455
   title: ipaPy2

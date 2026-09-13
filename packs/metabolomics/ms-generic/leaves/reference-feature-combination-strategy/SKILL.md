@@ -1,9 +1,11 @@
 ---
 name: reference-feature-combination-strategy
-description: Use when when you have isolated, high-confidence reference chromatographic peaks (ground-truth) from reference LC-HRMS chromatograms that have been matched across multiple samples, and you need to train a CNN model to detect peaks in new chromatograms but lack sufficient labelled instances.
+description: Use when when you have isolated, high-confidence reference chromatographic
+  peaks (ground-truth) from reference LC-HRMS chromatograms that have been matched
+  across multiple samples, and you need to train a CNN model to detect peaks in new
+  chromatograms but lack sufficient labelled instances.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +18,13 @@ metadata:
   - OpenMS
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: christophuv/PeakBot
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot

@@ -1,9 +1,11 @@
 ---
 name: collision-cross-section-bias-quantification
-description: Use when you have ion mobility-mass spectrometry lipidomics data from samples spiked with U¹³C-labeled lipid internal standards (fully labeled yeast extract) and want to assess whether measured CCS values systematically deviate from a validated DT CCS N₂ reference library, indicating bias that may.
+description: Use when you have ion mobility-mass spectrometry lipidomics data from
+  samples spiked with U¹³C-labeled lipid internal standards (fully labeled yeast extract)
+  and want to assess whether measured CCS values systematically deviate from a validated
+  DT CCS N₂ reference library, indicating bias that may.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -13,11 +15,14 @@ metadata:
   - MobiLipid
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c01253
   title: mobilipid
 evidence_spans:
-- Our tool enhances CCS quality control by providing a R Markdown that integrates into IM-MS lipidomics workflows
+- Our tool enhances CCS quality control by providing a R Markdown that integrates
+  into IM-MS lipidomics workflows
 - providing a R Markdown that integrates into IM-MS lipidomics workflows
 claims: []
 provenance:

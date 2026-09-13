@@ -1,9 +1,11 @@
 ---
 name: query-representation-validation
-description: Use when after parsing a MassQL query string into an abstract syntax tree or intermediate representation, before executing it against mass spectrometry data files (mzML, mzXML, etc.). Validation is essential when the query contains complex MS-specific patterns (e.
+description: Use when after parsing a MassQL query string into an abstract syntax
+  tree or intermediate representation, before executing it against mass spectrometry
+  data files (mzML, mzXML, etc.). Validation is essential when the query contains
+  complex MS-specific patterns (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0337
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +17,8 @@ metadata:
   - MassQL Web API (/parse endpoint)
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-025-02785-1
   title: MassQL

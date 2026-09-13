@@ -1,9 +1,10 @@
 ---
 name: activity-score-robustness-assessment
-description: Use when after computing PLAGE-derived activity scores for pathways or metabolite sets (Molecular Families, Mass2Motifs) from log2-standardized metabolomics intensity data.
+description: Use when after computing PLAGE-derived activity scores for pathways or
+  metabolite sets (Molecular Families, Mass2Motifs) from log2-standardized metabolomics
+  intensity data.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -17,14 +18,18 @@ metadata:
   - Reactome
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
 - doi: 10.1186/1471-2105-6-225
   title: ''
 evidence_spans:
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways, decomposes activity levels in pathways
-- we introduce PALS (Pathway Activity Level Scoring), a complete tool that performs database queries of pathways, decomposes activity levels in pathways
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways, decomposes activity levels in pathways
+- we introduce PALS (Pathway Activity Level Scoring), a complete tool that performs
+  database queries of pathways, decomposes activity levels in pathways
 - Molecular Families from GNPS
 - Mass2Motifs from MS2LDA
 claims: []

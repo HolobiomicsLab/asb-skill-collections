@@ -3,7 +3,6 @@ name: molecular-formula-calculation
 description: Use when you have user-specified lipid class constraints (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -13,6 +12,8 @@ metadata:
   - Excalibur
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04518
   title: Lipid Spectrum Generator

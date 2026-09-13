@@ -1,9 +1,11 @@
 ---
 name: metabolomic-meta-analysis-workflow-design
-description: Use when you have multiple metabolomic studies with aggregate summary statistics (p-values, fold-change estimates) and need to perform meta-analysis while harmonizing compound nomenclature across datasets. Use this skill when the underlying R package (e.
+description: Use when you have multiple metabolomic studies with aggregate summary
+  statistics (p-values, fold-change estimates) and need to perform meta-analysis while
+  harmonizing compound nomenclature across datasets. Use this skill when the underlying
+  R package (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3674
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,6 +18,8 @@ metadata:
   - R package webchem
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/jrsm.1713
   title: Easy-Amanida

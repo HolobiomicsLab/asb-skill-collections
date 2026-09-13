@@ -1,9 +1,9 @@
 ---
 name: isotope-and-adduct-pattern-recognition
-description: Use when when processing MS1 mass tracks from a single sample and you have already constructed per-bin mass tracks with consensus m/z and intensity vectors.
+description: Use when when processing MS1 mass tracks from a single sample and you
+  have already constructed per-bin mass tracks with consensus m/z and intensity vectors.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -16,12 +16,15 @@ metadata:
   - asari
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
 - The default method uses `pymzml` to parse mzML files.
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:

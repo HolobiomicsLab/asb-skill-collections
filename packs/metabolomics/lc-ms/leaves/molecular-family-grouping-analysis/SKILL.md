@@ -1,9 +1,10 @@
 ---
 name: molecular-family-grouping-analysis
-description: Use when you have untargeted metabolomics peak intensity data and spectral groupings (Molecular Families or Mass2Motifs) but lack confident chemical annotations or want to avoid pathway database dependency.
+description: Use when you have untargeted metabolomics peak intensity data and spectral
+  groupings (Molecular Families or Mass2Motifs) but lack confident chemical annotations
+  or want to avoid pathway database dependency.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3501
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -17,6 +18,8 @@ metadata:
   - PALS Viewer
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals

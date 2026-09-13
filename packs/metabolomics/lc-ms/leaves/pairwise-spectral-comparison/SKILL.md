@@ -1,9 +1,11 @@
 ---
 name: pairwise-spectral-comparison
-description: Use when you have a collection of preprocessed mass spectra (in mzML, mzXML, msp, MGF, or JSON format) and need to quantify similarity relationships across all pairs—for instance, to identify redundant spectra in a library, cluster related compounds, or perform spectral library searches.
+description: Use when you have a collection of preprocessed mass spectra (in mzML,
+  mzXML, msp, MGF, or JSON format) and need to quantify similarity relationships across
+  all pairs—for instance, to identify redundant spectra in a library, cluster related
+  compounds, or perform spectral library searches.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,12 +17,15 @@ metadata:
   - MS2DeepScore
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
 evidence_spans:
 - Matchms offers an array of tools for metadata cleaning and validation
-- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+- Matchms is a versatile open-source Python package developed for importing, processing,
+  cleaning, and comparing mass spectrometry data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

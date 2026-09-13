@@ -1,9 +1,9 @@
 ---
 name: mzml-file-parsing-and-ingestion
-description: Use when you have raw profile LC-MS data in .mzML format and need to prepare it for targeted or untargeted peak detection.
+description: Use when you have raw profile LC-MS data in .mzML format and need to
+  prepare it for targeted or untargeted peak detection.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0580
@@ -15,6 +15,8 @@ metadata:
   - PyArrow / pandas
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c04531
   title: QuanFormer

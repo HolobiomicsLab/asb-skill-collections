@@ -1,14 +1,18 @@
 ---
 name: conditional-allocation-design-patterns
-description: 'Use when when designing a dataset storage layer that must handle variable dataset sizes, block layouts, and platform-specific constraints (e.g., Windows vs. non-Windows). Specifically: (1) you have parsed dataset metadata including cache-file flags, total point counts, and block configuration;'
+description: 'Use when when designing a dataset storage layer that must handle variable
+  dataset sizes, block layouts, and platform-specific constraints (e.g., Windows vs.
+  non-Windows). Specifically: (1) you have parsed dataset metadata including cache-file
+  flags, total point counts, and block configuration;'
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_topics: []
   tools:
   - NMRFx
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx

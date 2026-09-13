@@ -1,9 +1,10 @@
 ---
 name: hdf5-feature-table-loading
-description: Use when you have mass spectrometry feature data stored in HDF5 format (.h5 files) and need to load specific dimensional columns (m/z, drift time, retention time, intensity) for multi-dimensional alignment, CCS calibration, or isotope detection.
+description: Use when you have mass spectrometry feature data stored in HDF5 format
+  (.h5 files) and need to load specific dimensional columns (m/z, drift time, retention
+  time, intensity) for multi-dimensional alignment, CCS calibration, or isotope detection.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,11 +15,14 @@ metadata:
   - h5py
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
-- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python application programming interface and command-line tool
+- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python
+  application programming interface and command-line tool
 - import deimos
 - is a Python application programming interface and command-line tool
 claims: []

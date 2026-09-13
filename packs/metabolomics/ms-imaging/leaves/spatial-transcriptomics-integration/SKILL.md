@@ -1,9 +1,11 @@
 ---
 name: spatial-transcriptomics-integration
-description: Use when you have paired spatial transcriptomics and spatial metabolomics datasets from the same sample(s) that are at different spatial resolutions or coordinate systems, and you need to integrate them for joint analysis of cross-modal spatial patterns.
+description: Use when you have paired spatial transcriptomics and spatial metabolomics
+  datasets from the same sample(s) that are at different spatial resolutions or coordinate
+  systems, and you need to integrate them for joint analysis of cross-modal spatial
+  patterns.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3307
@@ -15,6 +17,8 @@ metadata:
   - AnnData
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-63915-z
   title: SpatialMETA

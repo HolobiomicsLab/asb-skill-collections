@@ -1,9 +1,10 @@
 ---
 name: pathway-activity-decomposition-via-svd
-description: Use when when you have a metabolite intensity matrix (samples × metabolites) with compound annotations and need to score pathway activity levels for pathway enrichment analysis.
+description: Use when when you have a metabolite intensity matrix (samples × metabolites)
+  with compound annotations and need to score pathway activity levels for pathway
+  enrichment analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -18,12 +19,16 @@ metadata:
   - MS2LDA
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals
 evidence_spans:
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways
-- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs database queries of pathways,
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways
+- we introduce **PALS (Pathway Activity Level Scoring)**, a complete tool that performs
+  database queries of pathways,
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

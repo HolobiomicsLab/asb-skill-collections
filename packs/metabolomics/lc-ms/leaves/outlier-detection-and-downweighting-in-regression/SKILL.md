@@ -1,9 +1,11 @@
 ---
 name: outlier-detection-and-downweighting-in-regression
-description: Use when when fitting a nonlinear regression (GAM spline) through retention time anchor points derived from feature pair alignments in LC-MS metabolomics, and you suspect some anchor points are measurement errors or misaligned features that could bias the smooth curve.
+description: Use when when fitting a nonlinear regression (GAM spline) through retention
+  time anchor points derived from feature pair alignments in LC-MS metabolomics, and
+  you suspect some anchor points are measurement errors or misaligned features that
+  could bias the smooth curve.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,13 +16,17 @@ metadata:
   - metabCombiner
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
 - a modified form of the `gam` function implemented in the *mgcv* R package
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

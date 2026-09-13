@@ -1,9 +1,10 @@
 ---
 name: noise-threshold-filtering-spectral-data
-description: Use when working with raw IM-MS data (Agilent MassHunter .d or UIMF format) that contains low-abundance background noise, isolated high-intensity artifacts, or jagged peaks characteristic of low-abundance ions.
+description: Use when working with raw IM-MS data (Agilent MassHunter .d or UIMF format)
+  that contains low-abundance background noise, isolated high-intensity artifacts,
+  or jagged peaks characteristic of low-abundance ions.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,14 +16,19 @@ metadata:
   - Microsoft Visual C++ Runtime x64
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00220
   title: PNNL PreProcessor
 - doi: 10.1021/acs.jproteome.1c00425
   title: ''
 evidence_spans:
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files) from drift tube (DT) and structure for lossless ion manipulations (SLIM) IM-MS
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files (MS-files) from drift tube (DT) and structure for lossless
+  ion manipulations (SLIM) IM-MS
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files)
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files
 claims: []

@@ -1,0 +1,53 @@
+# Declared membership for the metabolomics technique packs.
+#
+# A pack is a *view* of one collection, not a second corpus. Every byte a pack
+# ships under `leaves/` is copied from the collection leaf of the same slug, and
+# both pack indexes are filtered rows of the collection's own indexes. This file
+# is the only place that says which leaves belong to which pack.
+#
+# Read by scripts/build_packs.py (which re-derives the packs from it) and by
+# scripts/unit_closure.py (which fails a pack that has drifted from it). Before
+# this file existed the membership lived nowhere: the packs were split once, by
+# hand, on 2026-06-22, and the leaf added on 2026-06-23 was still missing from
+# `lc-ms` when this was written.
+#
+# The rule is a single membership test, verified as an equality against all
+# eight packs as they stood before the first generated build:
+#
+#     slug ∈ pack  ⟺  tag ∈ skills_index[slug].techniques
+#
+# A skill tagged with several techniques belongs to several packs; that overlap
+# is intended and is what the plugin descriptions mean by "skills may also
+# appear in other technique packs".
+
+schema: asb-pack-map/1.0
+
+# The parent this tree is derived from, repository-root-relative. `collection`
+# and `version` repeat what each pack's kb_bundle.json declares, which is what
+# unit_closure's --prune already resolves its parent through.
+collection: metabolomics
+version: 2
+source: collections/metabolomics/v2
+
+# `dir` is the pack directory under this file's own directory, and is also the
+# suffix of the marketplace plugin name (`metabolomics-<dir>`). `tag` is the
+# value looked for in a skill's `techniques` list -- spelled exactly as the
+# collection spells it, which is not always the directory name (`ms-generic`
+# selects `mass-spectrometry`, `direct-infusion` selects `direct-infusion-MS`).
+packs:
+  - dir: ce-ms
+    tag: CE-MS
+  - dir: direct-infusion
+    tag: direct-infusion-MS
+  - dir: gc-ms
+    tag: GC-MS
+  - dir: ion-mobility
+    tag: ion-mobility-MS
+  - dir: lc-ms
+    tag: LC-MS
+  - dir: ms-generic
+    tag: mass-spectrometry
+  - dir: ms-imaging
+    tag: MS-imaging
+  - dir: nmr
+    tag: NMR

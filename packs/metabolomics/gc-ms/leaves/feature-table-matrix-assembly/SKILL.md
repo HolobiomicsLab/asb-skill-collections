@@ -1,9 +1,11 @@
 ---
 name: feature-table-matrix-assembly
-description: Use when when you need to generate a realistic LC/GC-MS feature table (peak intensity matrix) with controlled, quantifiable condition effects (e.g., differential metabolite abundance across disease states) and batch effects (e.g., instrument drift, sample processing day).
+description: Use when when you need to generate a realistic LC/GC-MS feature table
+  (peak intensity matrix) with controlled, quantifiable condition effects (e.g., differential
+  metabolite abundance across disease states) and batch effects (e.g., instrument
+  drift, sample processing day).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3635
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,11 +17,14 @@ metadata:
   - R base
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
 - github.com__yufree__mzrtsim
 claims: []
 provenance:

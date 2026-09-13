@@ -1,9 +1,9 @@
 ---
 name: pca-dimensionality-reduction-unsupervised
-description: Use when you have a feature-by-sample matrix (rows = annotated chemical features such as m/z, retention time, GNPS spectral library matches;
+description: Use when you have a feature-by-sample matrix (rows = annotated chemical
+  features such as m/z, retention time, GNPS spectral library matches;
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3935
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -17,6 +17,8 @@ metadata:
   - GNPS
   techniques:
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU

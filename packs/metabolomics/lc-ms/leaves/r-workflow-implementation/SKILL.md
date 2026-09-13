@@ -1,9 +1,9 @@
 ---
 name: r-workflow-implementation
-description: Use when you have raw mass spectrometry data in mzXML, mzML, or netCDF format from untargeted LC/HRMS analysis that has been pre-processed by IDSL.
+description: Use when you have raw mass spectrometry data in mzXML, mzML, or netCDF
+  format from untargeted LC/HRMS analysis that has been pre-processed by IDSL.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,11 +15,14 @@ metadata:
   - IDSL.FSA
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c00376
   title: IDSL.CSA
 evidence_spans:
-- The **Composite Spectra Analysis (IDSL.CSA)** R package for the analysis of mass spectrometry data
+- The **Composite Spectra Analysis (IDSL.CSA)** R package for the analysis of mass
+  spectrometry data
 - The **Composite Spectra Analysis (IDSL.CSA)** R package
 claims: []
 provenance:

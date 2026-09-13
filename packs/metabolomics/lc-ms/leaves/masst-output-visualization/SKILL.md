@@ -1,9 +1,10 @@
 ---
 name: masst-output-visualization
-description: Use when you have completed one or more domain-specific MASST searches (microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST) and have aggregated search outputs (matches.tsv, library.tsv, datasets.
+description: Use when you have completed one or more domain-specific MASST searches
+  (microbeMASST, plantMASST, tissueMASST, microbiomeMASST, foodMASST) and have aggregated
+  search outputs (matches.tsv, library.tsv, datasets.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -21,6 +22,8 @@ metadata:
   - Fast Search API
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst

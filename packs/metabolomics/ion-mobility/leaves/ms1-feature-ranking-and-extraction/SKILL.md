@@ -1,9 +1,11 @@
 ---
 name: ms1-feature-ranking-and-extraction
-description: Use when when you have raw LC-MS data files and need to identify which compounds were actually detected at high abundance during a gradient run, prior to evaluating whether the gradient provided good separation across the chemical space.
+description: Use when when you have raw LC-MS data files and need to identify which
+  compounds were actually detected at high abundance during a gradient run, prior
+  to evaluating whether the gradient provided good separation across the chemical
+  space.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -18,6 +20,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.09.08.556930
   title: BAGO

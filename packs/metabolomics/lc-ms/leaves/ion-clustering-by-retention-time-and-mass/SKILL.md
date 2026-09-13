@@ -1,9 +1,10 @@
 ---
 name: ion-clustering-by-retention-time-and-mass
-description: Use when your peak table contains suspected mispicked ions—ions with similar m/z and retention time that likely represent the same metabolite split across multiple features due to preprocessing errors.
+description: Use when your peak table contains suspected mispicked ions—ions with
+  similar m/z and retention time that likely represent the same metabolite split across
+  multiple features due to preprocessing errors.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,6 +16,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04632
   title: MPACT

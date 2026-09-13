@@ -1,9 +1,10 @@
 ---
 name: mass-spectrum-preprocessing-and-normalization
-description: Use when when you have raw MS/MS spectra in MGF or mzML/mzXML formats and need to feed them into Casanovo or similar transformer-based de novo sequencing models.
+description: Use when when you have raw MS/MS spectra in MGF or mzML/mzXML formats
+  and need to feed them into Casanovo or similar transformer-based de novo sequencing
+  models.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -18,6 +19,8 @@ metadata:
   - MSI-Explorer
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo
@@ -26,8 +29,10 @@ derived_from:
 - doi: 10.1021/acs.analchem.5c01513
   title: ''
 evidence_spans:
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing.
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing.
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing
 - Pytorch is installed automatically when installing Casanovo
 - Upgraded minimum Lightning version to 2.6.
 - Upgraded minimum DepthCharge version to 0.4.10.

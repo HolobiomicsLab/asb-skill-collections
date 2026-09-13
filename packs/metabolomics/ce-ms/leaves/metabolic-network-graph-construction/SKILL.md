@@ -1,9 +1,10 @@
 ---
 name: metabolic-network-graph-construction
-description: Use when when you have an untargeted metabolomics feature table (m/z values, retention times, intensities) and aim to predict functional pathway activity without explicit metabolite identification.
+description: Use when when you have an untargeted metabolomics feature table (m/z
+  values, retention times, intensities) and aim to predict functional pathway activity
+  without explicit metabolite identification.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3439
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -14,11 +15,14 @@ metadata:
   - JMS
   techniques:
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: mummichog
 evidence_spans:
-- Mummichog is a Python program for analyzing data from high throughput, untargeted metabolomics
+- Mummichog is a Python program for analyzing data from high throughput, untargeted
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

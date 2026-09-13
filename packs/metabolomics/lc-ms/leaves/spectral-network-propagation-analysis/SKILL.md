@@ -1,9 +1,11 @@
 ---
 name: spectral-network-propagation-analysis
-description: Use when after running MetaMiner's Dereplicator stage to identify some RiPPs via direct database matching against a constructed structure database, apply this skill to enlarge the set of identifications by propagating those matches through spectral clusters and visualizing the connected components.
+description: Use when after running MetaMiner's Dereplicator stage to identify some
+  RiPPs via direct database matching against a constructed structure database, apply
+  this skill to enlarge the set of identifications by propagating those matches through
+  spectral clusters and visualizing the connected components.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3938
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -19,15 +21,23 @@ metadata:
   - ProteoWizard
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-018-06082-8
   title: dereplicator
 evidence_spans:
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel RiPPs
-- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally modified Peptides (RiPPs)
-- The latest version is available in the Natural Product Discovery toolkit (NPDtools) at https://github.com/ablab/npdtools
-- Spectral network can be easily run through GNPS. Detailed instructions can be found in the [GNPS documentation]
-- For presenting Spectral Network propagation graphs, MetaMiner also requires `matplotlib` and `networkx` Python libraries
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel RiPPs
+- MetaMiner is a metabologenomic pipeline which integrates metabolomic (tandem mass
+  spectra) and genomic data to identify novel Ribosmally synthesized and Post-translationally
+  modified Peptides (RiPPs)
+- The latest version is available in the Natural Product Discovery toolkit (NPDtools)
+  at https://github.com/ablab/npdtools
+- Spectral network can be easily run through GNPS. Detailed instructions can be found
+  in the [GNPS documentation]
+- For presenting Spectral Network propagation graphs, MetaMiner also requires `matplotlib`
+  and `networkx` Python libraries
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

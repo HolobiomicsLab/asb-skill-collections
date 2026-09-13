@@ -1,9 +1,11 @@
 ---
 name: microbe-compound-identification
-description: Use when you have collected MS/MS spectra from a microbial sample (pure culture, environmental isolate, or mixed community) and need to assign chemical identities to observed m/z features while simultaneously resolving which microbial taxa are likely producers of each metabolite.
+description: Use when you have collected MS/MS spectra from a microbial sample (pure
+  culture, environmental isolate, or mixed community) and need to assign chemical
+  identities to observed m/z features while simultaneously resolving which microbial
+  taxa are likely producers of each metabolite.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -18,6 +20,8 @@ metadata:
   - MZmine
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41538-022-00137-3
   title: foodMASST

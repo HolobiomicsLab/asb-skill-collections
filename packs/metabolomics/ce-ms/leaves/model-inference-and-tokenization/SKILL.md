@@ -1,9 +1,11 @@
 ---
 name: model-inference-and-tokenization
-description: Use when you have MS/MS spectra in .msp format and need to retrieve similar compounds or compute spectral similarities for compound identification. The input spectra should already be cleaned (malformed or invalid SMILES removed), and you have access to a pre-trained SpecEmbedding model checkpoint.
+description: Use when you have MS/MS spectra in .msp format and need to retrieve similar
+  compounds or compute spectral similarities for compound identification. The input
+  spectra should already be cleaned (malformed or invalid SMILES removed), and you
+  have access to a pre-trained SpecEmbedding model checkpoint.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -21,6 +23,8 @@ metadata:
   - PyTorch 2.6.0
   techniques:
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding

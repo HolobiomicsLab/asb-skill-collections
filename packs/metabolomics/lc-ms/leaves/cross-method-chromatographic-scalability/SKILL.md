@@ -1,9 +1,11 @@
 ---
 name: cross-method-chromatographic-scalability
-description: Use when you have a pretrained RT-Transformer model checkpoint from a large, well-characterized chromatographic dataset (e.g., SMRT) and need to predict retention times for a different chromatographic method or instrument condition represented in a smaller, domain-specific dataset (e.g., PredRet).
+description: Use when you have a pretrained RT-Transformer model checkpoint from a
+  large, well-characterized chromatographic dataset (e.g., SMRT) and need to predict
+  retention times for a different chromatographic method or instrument condition represented
+  in a smaller, domain-specific dataset (e.g., PredRet).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -23,6 +25,8 @@ metadata:
   - PredRet
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btae084
   title: RT-Transformer

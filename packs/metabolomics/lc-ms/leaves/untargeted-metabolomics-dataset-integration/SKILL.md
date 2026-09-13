@@ -1,9 +1,11 @@
 ---
 name: untargeted-metabolomics-dataset-integration
-description: Use when you have two LC-MS feature tables (each with m/z, retention time, and intensity columns) from independent untargeted metabolomic experiments or replicates and need to establish one-to-one feature correspondence across them to compare abundances, detect shared metabolites, or merge datasets.
+description: Use when you have two LC-MS feature tables (each with m/z, retention
+  time, and intensity columns) from independent untargeted metabolomic experiments
+  or replicates and need to establish one-to-one feature correspondence across them
+  to compare abundances, detect shared metabolites, or merge datasets.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -13,6 +15,8 @@ metadata:
   - M2S
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c03592
   title: m2s

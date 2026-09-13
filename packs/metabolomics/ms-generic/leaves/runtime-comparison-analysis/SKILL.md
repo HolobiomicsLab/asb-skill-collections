@@ -1,9 +1,11 @@
 ---
 name: runtime-comparison-analysis
-description: Use when when a new version or variant of a tool claims performance improvements over a prior version (e.g., MASST+ vs. MASST), and you need empirical evidence that the claimed speedup (e.g., ~100-fold reduction in search time) is real, reproducible, and quantifiable.
+description: Use when when a new version or variant of a tool claims performance improvements
+  over a prior version (e.g., MASST+ vs. MASST), and you need empirical evidence that
+  the claimed speedup (e.g., ~100-fold reduction in search time) is real, reproducible,
+  and quantifiable.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,6 +15,8 @@ metadata:
   - MASST+
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41587-023-01985-4
   title: MASST

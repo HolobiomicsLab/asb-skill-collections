@@ -1,9 +1,11 @@
 ---
 name: molecular-structure-dataset-curation
-description: Use when you have a collection of molecular structures (with SMILES strings, InChI, or similar identifiers) and corresponding experimentally determined or reference CCS values, and you need to format and validate them as input to a machine learning CCS prediction model.
+description: Use when you have a collection of molecular structures (with SMILES strings,
+  InChI, or similar identifiers) and corresponding experimentally determined or reference
+  CCS values, and you need to format and validate them as input to a machine learning
+  CCS prediction model.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -16,6 +18,8 @@ metadata:
   - CCSP 2.0
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c03491
   title: CCS Predictor 2.0

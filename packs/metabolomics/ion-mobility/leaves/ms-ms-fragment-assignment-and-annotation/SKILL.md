@@ -1,9 +1,11 @@
 ---
 name: ms-ms-fragment-assignment-and-annotation
-description: Use when when you have predicted MS/MS fragments from quantum chemistry calculations on N-Me derived unsaturated sterol structures and need to map each fragment to its precursor lipid, calculate exact m/z values, estimate relative intensities, and produce a machine-readable reference table for.
+description: Use when when you have predicted MS/MS fragments from quantum chemistry
+  calculations on N-Me derived unsaturated sterol structures and need to map each
+  fragment to its precursor lipid, calculate exact m/z values, estimate relative intensities,
+  and produce a machine-readable reference table for.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +18,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA

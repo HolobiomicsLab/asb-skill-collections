@@ -1,9 +1,9 @@
 ---
 name: multi-instrument-data-integration
-description: Use when you have DIA mass spectrometry raw files from multiple instrument types (timsTOF, TripleTOF, Orbitrap) in their native formats (.raw, .d, .
+description: Use when you have DIA mass spectrometry raw files from multiple instrument
+  types (timsTOF, TripleTOF, Orbitrap) in their native formats (.raw, .d, .
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +15,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-024-54871-1
   title: iDIA-QC

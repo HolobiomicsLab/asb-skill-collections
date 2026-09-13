@@ -1,9 +1,9 @@
 ---
 name: similarity-ranking-and-retrieval-evaluation
-description: Use when after training contrastive embeddings that unify MS/MS spectra and molecular structures into a shared embedding space.
+description: Use when after training contrastive embeddings that unify MS/MS spectra
+  and molecular structures into a shared embedding space.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3439
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -20,6 +20,8 @@ metadata:
   - numpy
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01594
   title: CSU-MS2

@@ -1,9 +1,11 @@
 ---
 name: intensity-dependent-missing-value-simulation
-description: Use when augmenting mass spectrometry ion images in ISO mode (isotope ions from the same molecule) and you need to simulate intensity-dependent data loss that reflects real detector behavior where lower-intensity pixels are more likely to be missed or undetected.
+description: Use when augmenting mass spectrometry ion images in ISO mode (isotope
+  ions from the same molecule) and you need to simulate intensity-dependent data loss
+  that reflects real detector behavior where lower-intensity pixels are more likely
+  to be missed or undetected.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,13 +18,16 @@ metadata:
   - PyTorch
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
 evidence_spans:
 - Two augmented images are propagated through a pair of ResNet18-based encoders
 - T_COL including color jitter, filtering, Poisson noise, and random missing value
-- T_ISO introduces an additional process of intensity-dependent missing value in ISO mode
+- T_ISO introduces an additional process of intensity-dependent missing value in ISO
+  mode
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,10 @@
 ---
 name: error-handling-confirmation
-description: Use when when implementing or auditing a data replacement method (e.g., `mz<-`, `intensity<-`) in an MsBackend subclass that must enforce ordering or format constraints on peak data.
+description: Use when when implementing or auditing a data replacement method (e.g.,
+  `mz<-`, `intensity<-`) in an MsBackend subclass that must enforce ordering or format
+  constraints on peak data.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,13 +15,16 @@ metadata:
   - Spectra
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
 - library(Spectra) library(IRanges)
 - library(Spectra)
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

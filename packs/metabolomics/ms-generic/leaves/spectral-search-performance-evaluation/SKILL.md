@@ -1,9 +1,9 @@
 ---
 name: spectral-search-performance-evaluation
-description: Use when when you have implemented or obtained a spectral library search tool (e.
+description: Use when when you have implemented or obtained a spectral library search
+  tool (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0362
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,6 +17,8 @@ metadata:
   - MSEntropy (Python package)
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-023-02012-9
   title: Flash entropy search

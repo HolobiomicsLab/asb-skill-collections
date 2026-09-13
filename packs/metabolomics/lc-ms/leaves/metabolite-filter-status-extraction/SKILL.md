@@ -1,9 +1,10 @@
 ---
 name: metabolite-filter-status-extraction
-description: Use when after chaining one or more mpactr filter operations (mispicked, group, cv, insource) on an imported peak table and before generating quality-control reports or interactive visualizations.
+description: Use when after chaining one or more mpactr filter operations (mispicked,
+  group, cv, insource) on an imported peak table and before generating quality-control
+  reports or interactive visualizations.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,6 +16,8 @@ metadata:
   - ggplot & plotly
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04632
   title: MPACT

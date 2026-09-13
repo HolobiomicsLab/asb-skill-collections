@@ -1,9 +1,10 @@
 ---
 name: imzml-file-loading-and-import
-description: Use when when you have one or more imzML files containing mass spectrometry imaging data and need to import them into LipidQMap for ion image extraction, isotopic correction, and quantitative analysis.
+description: Use when when you have one or more imzML files containing mass spectrometry
+  imaging data and need to import them into LipidQMap for ion image extraction, isotopic
+  correction, and quantitative analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -13,12 +14,15 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.10.15.682422v1
   title: LipidQMap
 evidence_spans:
 - LipidQMap writes MSI exports as HDF5 containers
-- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org) conventions.
+- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org)
+  conventions.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,11 @@
 ---
 name: mass-spectrometry-peak-identification-and-extraction
-description: Use when when you have raw mass spectrometry data from direct-infusion (DI-MS) or ambient surface analysis probe (ASAP-MS) instruments and need to identify which m/z peaks are biologically or chemically informative for sample classification, rather than processing the entire spectrum including.
+description: Use when when you have raw mass spectrometry data from direct-infusion
+  (DI-MS) or ambient surface analysis probe (ASAP-MS) instruments and need to identify
+  which m/z peaks are biologically or chemically informative for sample classification,
+  rather than processing the entire spectrum including.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +16,8 @@ metadata:
   - ASAP-MS
   techniques:
   - direct-infusion-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass

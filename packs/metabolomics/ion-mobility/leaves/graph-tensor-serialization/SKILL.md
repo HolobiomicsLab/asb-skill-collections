@@ -1,9 +1,11 @@
 ---
 name: graph-tensor-serialization
-description: Use when after constructing feature tensors encoding atom adjacency matrices, bond types, and chemical properties from canonical SMILES—and before feeding graphs into a GNN training loop—to enable reproducible, portable, and memory-efficient storage of graph objects that will be loaded in batches.
+description: Use when after constructing feature tensors encoding atom adjacency matrices,
+  bond types, and chemical properties from canonical SMILES—and before feeding graphs
+  into a GNN training loop—to enable reproducible, portable, and memory-efficient
+  storage of graph objects that will be loaded in batches.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3429
   edam_topics:
   - http://edamontology.org/topic_3314
@@ -15,6 +17,8 @@ metadata:
   - Python pickle module
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs

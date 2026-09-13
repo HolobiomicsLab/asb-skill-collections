@@ -1,9 +1,11 @@
 ---
 name: mass-spectrometry-data-structure-mapping
-description: Use when after feature extraction and peak recognition have produced detected MS/MS spectra (precursor m/z, charge, retention time, and fragment ion peaks), and you need to export these spectra for external spectral database searching, cross-platform comparison, or archival in a format compatible.
+description: Use when after feature extraction and peak recognition have produced
+  detected MS/MS spectra (precursor m/z, charge, retention time, and fragment ion
+  peaks), and you need to export these spectra for external spectral database searching,
+  cross-platform comparison, or archival in a format compatible.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -13,6 +15,8 @@ metadata:
   - BreathXplorer
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00152
   title: BreathXplorer

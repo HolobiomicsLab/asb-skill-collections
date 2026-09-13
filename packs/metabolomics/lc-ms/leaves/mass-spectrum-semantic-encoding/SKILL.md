@@ -1,9 +1,11 @@
 ---
 name: mass-spectrum-semantic-encoding
-description: Use when when you have an unknown compound's mass spectrum (m/z peaks and intensities in .mgf or equivalent format) and need to identify structurally related metabolites from a reference database by computing similarity in learned semantic space rather than direct spectral matching.
+description: Use when when you have an unknown compound's mass spectrum (m/z peaks
+  and intensities in .mgf or equivalent format) and need to identify structurally
+  related metabolites from a reference database by computing similarity in learned
+  semantic space rather than direct spectral matching.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -13,11 +15,14 @@ metadata:
   - Ms2Vec (neural embedding model)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.05.30.596727v2
   title: DeepMASS
 evidence_spans:
-- DeepMASS2 is a cross-platform GUI software tool, which enables deep-learning based metabolite annotation
+- DeepMASS2 is a cross-platform GUI software tool, which enables deep-learning based
+  metabolite annotation
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

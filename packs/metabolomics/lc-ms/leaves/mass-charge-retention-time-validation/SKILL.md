@@ -1,9 +1,11 @@
 ---
 name: mass-charge-retention-time-validation
-description: Use when after loading centroided .mzML LC-MS data and creating a target list with compound ID, name, theoretical or measured m/z, expected RT (in minutes), and polarity designation, perform this validation step to confirm target visibility and refine m/z and RT window parameters before running.
+description: Use when after loading centroided .mzML LC-MS data and creating a target
+  list with compound ID, name, theoretical or measured m/z, expected RT (in minutes),
+  and polarity designation, perform this validation step to confirm target visibility
+  and refine m/z and RT window parameters before running.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -15,11 +17,14 @@ metadata:
   - Spectra
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
 evidence_spans:
-- It makes use of an established retention time correction algorithm from the `xcms` package
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
 - R package for *TArgeted Raw Data Integration In Spectrometry*
 claims: []
 provenance:

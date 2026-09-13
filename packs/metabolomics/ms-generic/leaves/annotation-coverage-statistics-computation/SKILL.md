@@ -1,9 +1,9 @@
 ---
 name: annotation-coverage-statistics-computation
-description: Use when you have run MSMetaEnhancer's annotate_spectra() method on a .
+description: Use when you have run MSMetaEnhancer's annotate_spectra() method on a
+  .
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3500
   edam_topics:
   - http://edamontology.org/topic_0769
@@ -19,6 +19,8 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

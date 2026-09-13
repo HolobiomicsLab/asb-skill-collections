@@ -1,9 +1,11 @@
 ---
 name: mass-spectrometry-file-format-parsing
-description: Use when you have raw MS/MS spectral data in one or more standard mass spectrometry file formats (.mgf, .msp, or .mzML) and need to convert them into a standardized bag-of-fragments representation for unsupervised topic modeling or substructure discovery workflows.
+description: Use when you have raw MS/MS spectral data in one or more standard mass
+  spectrometry file formats (.mgf, .msp, or .mzML) and need to convert them into a
+  standardized bag-of-fragments representation for unsupervised topic modeling or
+  substructure discovery workflows.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -19,6 +21,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
@@ -26,18 +30,20 @@ derived_from:
   title: ''
 evidence_spans:
 - MS2LDA (Mass Spectrometry–Latent Dirichlet Allocation) is a framework
-- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely to explain the observed fragmentation patterns
+- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely
+  to explain the observed fragmentation patterns
 - from MS2LDA.Preprocessing import load_and_clean
 - Configure the Python environment (set PYTHONPATH, activate conda, etc.)
 - These steps assume you have Conda installed
-- The ProteoWizard Library and Tools are a set of modular and extensible open-source, cross-platform tools and software libraries
+- The ProteoWizard Library and Tools are a set of modular and extensible open-source,
+  cross-platform tools and software libraries
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_eclipse_cq
-    doi: 10.1093/bioinformatics/btaf290/8128335
+    doi: 10.1093/bioinformatics/btaf290
     title: Eclipse
   - build: coll_matchms_cq
     doi: 10.1186/s13321-024-00878-1

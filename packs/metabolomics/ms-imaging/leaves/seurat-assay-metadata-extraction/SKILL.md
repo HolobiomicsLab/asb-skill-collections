@@ -1,9 +1,9 @@
 ---
 name: seurat-assay-metadata-extraction
-description: Use when you have a SpaMTP Seurat object with a 'Spatial' assay containing metabolomics features (m/z values) and their associated metadata columns (e.
+description: Use when you have a SpaMTP Seurat object with a 'Spatial' assay containing
+  metabolomics features (m/z values) and their associated metadata columns (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -18,6 +18,13 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ''
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP

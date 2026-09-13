@@ -1,9 +1,11 @@
 ---
 name: automated-feature-extraction-from-spectra
-description: Use when when you have raw or processed direct-infusion MS (DI-MS) or ASAP-MS spectra as mz/intensity pairs and need to rapidly identify salient peaks for species authentication, sample scoring, or comparative profiling without manual inspection.
+description: Use when when you have raw or processed direct-infusion MS (DI-MS) or
+  ASAP-MS spectra as mz/intensity pairs and need to rapidly identify salient peaks
+  for species authentication, sample scoring, or comparative profiling without manual
+  inspection.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +17,8 @@ metadata:
   techniques:
   - LC-MS
   - direct-infusion-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass

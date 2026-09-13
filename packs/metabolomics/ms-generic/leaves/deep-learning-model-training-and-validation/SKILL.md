@@ -1,9 +1,10 @@
 ---
 name: deep-learning-model-training-and-validation
-description: Use when you have paired mass-spectrometry spectral data (m/z and intensity arrays) with known molecular fingerprints or InChIKeys, and need to train a supervised deep learning model to predict fingerprints for novel spectra.
+description: Use when you have paired mass-spectrometry spectral data (m/z and intensity
+  arrays) with known molecular fingerprints or InChIKeys, and need to train a supervised
+  deep learning model to predict fingerprints for novel spectra.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +17,8 @@ metadata:
   - PyFingerprint
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s11306-020-01726-7
   title: MetFID

@@ -1,9 +1,9 @@
 ---
 name: executable-path-resolution
-description: Use when when preparing to run QCxMS2 or similar multi-tool orchestration software that depends on five or more external programs with strict version floors.
+description: Use when when preparing to run QCxMS2 or similar multi-tool orchestration
+  software that depends on five or more external programs with strict version floors.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3071
@@ -16,11 +16,14 @@ metadata:
   - orca
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00234
   title: QCxMS2
 evidence_spans:
-- Program package for the quantum mechanical calculation of EI mass spectra using automated reaction network exploration
+- Program package for the quantum mechanical calculation of EI mass spectra using
+  automated reaction network exploration
 - '**xtb** (version > 6.7.1 - bleeding edge version)'
 - '**molbar** (version >= 1.1.3)'
 - '**geodesic_interpolate** (version'

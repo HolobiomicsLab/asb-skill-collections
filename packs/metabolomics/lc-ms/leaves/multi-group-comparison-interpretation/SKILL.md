@@ -1,9 +1,11 @@
 ---
 name: multi-group-comparison-interpretation
-description: Use when after performing an ANOVA-style multi-group de_design() analysis on a LipidomicsExperiment object, when you need to determine whether a categorical sample variable (e.g., Cancer Stage, SampleType, Race) significantly associates with the lipid molecular profile.
+description: Use when after performing an ANOVA-style multi-group de_design() analysis
+  on a LipidomicsExperiment object, when you need to determine whether a categorical
+  sample variable (e.g., Cancer Stage, SampleType, Race) significantly associates
+  with the lipid molecular profile.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,12 +16,16 @@ metadata:
   - R
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00082
   title: lipidr
 evidence_spans:
-- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object using `lipidr` function `fetch_mw_study()`
-- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr` provides an easy way to re-analyze and visualize these datasets.'
+- Datasets can be easily downloaded and parsed into `LipidomicsExperiment` object
+  using `lipidr` function `fetch_mw_study()`
+- '`lipidr` allows users, to quickly explore public lipidomics experiments. `lipidr`
+  provides an easy way to re-analyze and visualize these datasets.'
 - This step of the workflow requires the `limma` package to be installed.
 - Data Mining and Analysis of Lipidomics Datasets in R
 claims: []

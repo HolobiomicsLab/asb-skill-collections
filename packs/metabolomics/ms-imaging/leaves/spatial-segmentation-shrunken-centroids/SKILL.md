@@ -1,9 +1,10 @@
 ---
 name: spatial-segmentation-shrunken-centroids
-description: Use when apply SSC when you have preprocessed and normalized MS imaging data (e.g., after TIC normalization and peak processing) and need to discover spatially distinct metabolite regions without prior tissue annotation.
+description: Use when apply SSC when you have preprocessed and normalized MS imaging
+  data (e.g., after TIC normalization and peak processing) and need to discover spatially
+  distinct metabolite regions without prior tissue annotation.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,6 +18,13 @@ metadata:
   - Seurat
   techniques:
   - MS-imaging
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ''
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP

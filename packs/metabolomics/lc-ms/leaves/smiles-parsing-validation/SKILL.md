@@ -1,9 +1,9 @@
 ---
 name: smiles-parsing-validation
-description: Use when when you have a dataset of molecular structures encoded as SMILES strings that will be processed downstream (e.
+description: Use when when you have a dataset of molecular structures encoded as SMILES
+  strings that will be processed downstream (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3762
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -13,6 +13,8 @@ metadata:
   - HassounLab/BAM
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c01565
   title: bam

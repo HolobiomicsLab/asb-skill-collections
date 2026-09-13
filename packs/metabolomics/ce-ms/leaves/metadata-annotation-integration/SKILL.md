@@ -1,9 +1,10 @@
 ---
 name: metadata-annotation-integration
-description: Use when you have chemical annotations (GNPS spectral library matches) assigned to MS/MS samples and a validated ReDU sample-information template (TSV) with categorical metadata (e.g., sample type, extraction method, ionization source).
+description: Use when you have chemical annotations (GNPS spectral library matches)
+  assigned to MS/MS samples and a validated ReDU sample-information template (TSV)
+  with categorical metadata (e.g., sample type, extraction method, ionization source).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,6 +17,8 @@ metadata:
   - Emperor
   techniques:
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU

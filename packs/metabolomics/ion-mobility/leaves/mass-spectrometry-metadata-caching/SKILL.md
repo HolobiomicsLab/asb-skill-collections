@@ -1,9 +1,10 @@
 ---
 name: mass-spectrometry-metadata-caching
-description: Use when you plan to perform repeated queries or filtering on MS metadata attributes (e.g., extract all MS2 spectra with collision energy > 30 eV, or collect all scans in a retention time window) across a large MZA HDF5 file.
+description: Use when you plan to perform repeated queries or filtering on MS metadata
+  attributes (e.g., extract all MS2 spectra with collision energy > 30 eV, or collect
+  all scans in a retention time window) across a large MZA HDF5 file.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,6 +18,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c01653
   title: mzapy

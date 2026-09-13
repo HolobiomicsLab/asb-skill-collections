@@ -1,9 +1,10 @@
 ---
 name: col-mode-augmentation-pipeline-implementation
-description: Use when when you have preprocessed mass spectrometry imaging (MSI) ion images and need to generate augmented image pairs for contrastive learning in co-localized ion discovery tasks.
+description: Use when when you have preprocessed mass spectrometry imaging (MSI) ion
+  images and need to generate augmented image pairs for contrastive learning in co-localized
+  ion discovery tasks.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -18,13 +19,16 @@ metadata:
   - kornia
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
 evidence_spans:
 - Two augmented images are propagated through a pair of ResNet18-based encoders
 - T_COL including color jitter, filtering, Poisson noise, and random missing value
-- T_ISO introduces an additional process of intensity-dependent missing value in ISO mode
+- T_ISO introduces an additional process of intensity-dependent missing value in ISO
+  mode
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

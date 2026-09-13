@@ -1,9 +1,10 @@
 ---
 name: spectral-mz-window-filtering
-description: Use when when you have resolved mzML or mzXML spectrum files and need to isolate signals for a target m/z value (e.g., 870.954) across all retention times or a specific scan.
+description: Use when when you have resolved mzML or mzXML spectrum files and need
+  to isolate signals for a target m/z value (e.g., 870.954) across all retention times
+  or a specific scan.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +15,8 @@ metadata:
   - mzmine
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-021-01339-5
   title: GNPS Dashboard

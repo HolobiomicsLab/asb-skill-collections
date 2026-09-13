@@ -1,20 +1,25 @@
 ---
 name: optimal-transport-scoring
-description: Use when when you have an observed NMR mixture spectrum and one or more candidate reconstructed spectra (each formed by combining single-compound reference spectra from a library), and you need a scalar similarity score to rank or select the approximation.
+description: Use when when you have an observed NMR mixture spectrum and one or more
+  candidate reconstructed spectra (each formed by combining single-compound reference
+  spectra from a library), and you need a scalar similarity score to rank or select
+  the approximation.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172
   - http://edamontology.org/topic_0769
   tools:
-  - SciPy (scipy.stats.wasserstein_distance or scipy.optimize.linprog for optimal transport)
+  - SciPy (scipy.stats.wasserstein_distance or scipy.optimize.linprog for optimal
+    transport)
   - SciPy wasserstein_distance
   - SciPy linprog (linear programming)
   - mcfNMR
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c01652
   title: mcfNMR

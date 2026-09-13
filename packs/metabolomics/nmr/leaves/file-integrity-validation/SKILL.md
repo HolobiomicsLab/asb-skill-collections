@@ -1,9 +1,9 @@
 ---
 name: file-integrity-validation
-description: Use when you have a raw NV (NMRViewJ) binary file and need to confirm it is well-formed before parsing or processing.
+description: Use when you have a raw NV (NMRViewJ) binary file and need to confirm
+  it is well-formed before parsing or processing.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0336
   edam_topics:
   - http://edamontology.org/topic_3314
@@ -11,6 +11,8 @@ metadata:
   - NMRFx
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx

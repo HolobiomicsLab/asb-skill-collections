@@ -1,9 +1,9 @@
 ---
 name: aird-format-conversion-and-validation
-description: Use when you have vendor mass spectrometry raw files (e.g., .raw, .d, .
+description: Use when you have vendor mass spectrometry raw files (e.g., .raw, .d,
+  .
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -21,6 +21,8 @@ metadata:
   - Redis
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird

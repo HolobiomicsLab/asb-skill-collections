@@ -1,9 +1,10 @@
 ---
 name: detection-limit-threshold-definition
-description: Use when when preparing metabolomics abundance tables with left-censored missingness (values below instrument detection limit or quantification limit) for imputation.
+description: Use when when preparing metabolomics abundance tables with left-censored
+  missingness (values below instrument detection limit or quantification limit) for
+  imputation.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +17,13 @@ metadata:
   - kNN-TN (Truncation k-nearest neighbors)
   techniques:
   - LC-MS
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-SA-4.0
+    url: WandeRum/GSimp
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp

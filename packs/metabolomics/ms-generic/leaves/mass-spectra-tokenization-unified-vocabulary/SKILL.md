@@ -1,9 +1,11 @@
 ---
 name: mass-spectra-tokenization-unified-vocabulary
-description: Use when when you have paired mass spectra and molecular structure data and need to train a unified model for structure elucidation. Use this skill at the data preparation stage before pretraining, when you want both modalities to share representational capacity rather than operate in isolation.
+description: Use when when you have paired mass spectra and molecular structure data
+  and need to train a unified model for structure elucidation. Use this skill at the
+  data preparation stage before pretraining, when you want both modalities to share
+  representational capacity rather than operate in isolation.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_2429
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -13,6 +15,8 @@ metadata:
   - Hugging Face Transformers
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.48550/arxiv.2510.20615
   title: MS-BART

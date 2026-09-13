@@ -1,9 +1,10 @@
 ---
 name: neutral-loss-extraction-from-fragmentation-spectra
-description: Use when preparing MS/MS spectra for bag-of-fragments conversion and LDA-based motif discovery. You have raw spectra in supported formats (.mgf, .mzML, or .
+description: Use when preparing MS/MS spectra for bag-of-fragments conversion and
+  LDA-based motif discovery. You have raw spectra in supported formats (.mgf, .mzML,
+  or .
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,11 +15,14 @@ metadata:
   - Conda
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
-- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
+- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural
+  language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
 - Invoke the main script `ms2lda_runfull.py` with your arguments
 - configure the Python environment (set `PYTHONPATH`, activate conda, etc.)
 - Configure the Python environment (set `PYTHONPATH`, activate conda, etc.)

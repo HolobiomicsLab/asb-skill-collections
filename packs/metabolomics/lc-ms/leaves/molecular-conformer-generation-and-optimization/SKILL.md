@@ -1,9 +1,11 @@
 ---
 name: molecular-conformer-generation-and-optimization
-description: Use when you have SMILES strings or 2D molecular structures of N-Me derived unsaturated sterol lipids (or other C=C-containing molecules) and need to generate 3D conformational and electronic structure data as input to a machine-learning CCS prediction model.
+description: Use when you have SMILES strings or 2D molecular structures of N-Me derived
+  unsaturated sterol lipids (or other C=C-containing molecules) and need to generate
+  3D conformational and electronic structure data as input to a machine-learning CCS
+  prediction model.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0321
   edam_topics:
   - http://edamontology.org/topic_3314
@@ -18,6 +20,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA

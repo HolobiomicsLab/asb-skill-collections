@@ -1,9 +1,11 @@
 ---
 name: batch-normalization-implementation
-description: Use when apply batch normalization after dense hidden layers (but not the final embedding layer) in a deep neural network trained on MS/MS spectral data, particularly when the network processes high-dimensional binned spectra (9948-dimensional vectors) and you need to stabilize gradient flow across.
+description: Use when apply batch normalization after dense hidden layers (but not
+  the final embedding layer) in a deep neural network trained on MS/MS spectral data,
+  particularly when the network processes high-dimensional binned spectra (9948-dimensional
+  vectors) and you need to stabilize gradient flow across.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,11 +17,14 @@ metadata:
   - PyTorch or TensorFlow
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included cleaning compound names
+- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included
+  cleaning compound names
 - Our MS2DeepScore Python library offers two types of data generators
 - Our MS2DeepScore Python library
 claims: []

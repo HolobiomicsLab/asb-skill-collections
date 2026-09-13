@@ -1,9 +1,10 @@
 ---
 name: mass-accuracy-validation
-description: Use when after implementing or modifying an mzML parser module that converts mzML files into MS-DIAL's internal data model, and before integrating the parser into the production analysis pipeline.
+description: Use when after implementing or modifying an mzML parser module that converts
+  mzML files into MS-DIAL's internal data model, and before integrating the parser
+  into the production analysis pipeline.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -23,6 +24,13 @@ metadata:
   - Rapid QC-MS
   techniques:
   - mass-spectrometry
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: huaxuyu/masscube
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
@@ -31,11 +39,15 @@ derived_from:
 - doi: 10.1021/acs.analchem.4c00786
   title: ''
 evidence_spans:
-- we primarily utilize the frameworks of .NET Framework 4.7.2, .NET Core 3.1, and .NET 6
-- The .NET class libraries adhere at least to the specifications of .NET Standard 2.0
+- we primarily utilize the frameworks of .NET Framework 4.7.2, .NET Core 3.1, and
+  .NET 6
+- The .NET class libraries adhere at least to the specifications of .NET Standard
+  2.0
 - To conduct tests, please refer to section `test:` of GitHub Actions
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing.
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing.
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing
 - masscube is an integrated Python package
 claims: []
 provenance:

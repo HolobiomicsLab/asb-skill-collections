@@ -1,9 +1,10 @@
 ---
 name: nextflow-workflow-execution
-description: Use when you have .mzML or .abf LC-HRMS metabolomics raw data files and need to perform peak detection, feature identification, and chromatogram alignment reproducibly across different compute environments (local workstations, HPC clusters).
+description: Use when you have .mzML or .abf LC-HRMS metabolomics raw data files and
+  need to perform peak detection, feature identification, and chromatogram alignment
+  reproducibly across different compute environments (local workstations, HPC clusters).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -21,6 +22,8 @@ metadata:
   - Conda/Mamba
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial

@@ -1,9 +1,10 @@
 ---
 name: ms-peak-table-format-validation
-description: Use when immediately after loading a raw GC-MS CSV file and before executing the spreadOut() function. Use it when you have received peak table data from an instrument vendor (e.
+description: Use when immediately after loading a raw GC-MS CSV file and before executing
+  the spreadOut() function. Use it when you have received peak table data from an
+  instrument vendor (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,13 +18,18 @@ metadata:
   - uafR spreadOut()
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- any software or utility that generates the necessary information can be used with simple modifications
-- any software or utility that generates the necessary information can be used with simple modifications (e.g. changing the column names)
-- The recommended software for generating the necessary data in the default format (i.e. with correct column names) is Unknowns Analysis
+- any software or utility that generates the necessary information can be used with
+  simple modifications
+- any software or utility that generates the necessary information can be used with
+  simple modifications (e.g. changing the column names)
+- The recommended software for generating the necessary data in the default format
+  (i.e. with correct column names) is Unknowns Analysis
 - uafR taps into an amazing set of cheminformatics packages -- ChemmineR, fmcsR, webchem
 claims: []
 provenance:

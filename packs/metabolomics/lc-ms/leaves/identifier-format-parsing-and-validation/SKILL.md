@@ -1,9 +1,11 @@
 ---
 name: identifier-format-parsing-and-validation
-description: Use when you receive mass spectrometry data through heterogeneous identifier formats—specifically when the input could be a GNPS Task ID, a Universal Spectrum Identifier (USI), or a Feature-Based Molecular Networking (FBMN) identifier—and you need to programmatically determine which format was.
+description: Use when you receive mass spectrometry data through heterogeneous identifier
+  formats—specifically when the input could be a GNPS Task ID, a Universal Spectrum
+  Identifier (USI), or a Feature-Based Molecular Networking (FBMN) identifier—and
+  you need to programmatically determine which format was.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +17,8 @@ metadata:
   - Flask
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00237
   title: MMSA

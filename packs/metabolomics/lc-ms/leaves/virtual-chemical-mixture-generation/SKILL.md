@@ -1,9 +1,10 @@
 ---
 name: virtual-chemical-mixture-generation
-description: Use when you need to create a synthetic chemical population for testing data-dependent acquisition (DDA) strategies in a simulation environment before committing to real mass spectrometry analysis.
+description: Use when you need to create a synthetic chemical population for testing
+  data-dependent acquisition (DDA) strategies in a simulation environment before committing
+  to real mass spectrometry analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,6 +15,8 @@ metadata:
   - HMDB
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms

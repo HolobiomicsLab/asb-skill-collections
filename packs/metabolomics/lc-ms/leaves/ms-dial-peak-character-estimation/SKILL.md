@@ -1,9 +1,11 @@
 ---
 name: ms-dial-peak-character-estimation
-description: Use when you have a filtered MS-DIAL peak list (post-generic filtering, containing m/z, retention time, and peak intensity metrics for each feature) and need to group features into clusters that represent true metabolite signals rather than instrumental or chemical artifacts.
+description: Use when you have a filtered MS-DIAL peak list (post-generic filtering,
+  containing m/z, retention time, and peak intensity metrics for each feature) and
+  need to group features into clusters that represent true metabolite signals rather
+  than instrumental or chemical artifacts.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,12 +16,15 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR
 evidence_spans:
 - Needs MS-DIAL (v4.00 or higher)
-- Needs MS-DIAL (v4.00 or higher) ... MS-CleanR use as input MS-DIAL peak list processed in data dependent analysis (DDA) or data independent analysis (DIA)
+- Needs MS-DIAL (v4.00 or higher) ... MS-CleanR use as input MS-DIAL peak list processed
+  in data dependent analysis (DDA) or data independent analysis (DIA)
 - MS-CleanR use as input MS-DIAL peak list processed in data dependent analysis
 claims: []
 provenance:

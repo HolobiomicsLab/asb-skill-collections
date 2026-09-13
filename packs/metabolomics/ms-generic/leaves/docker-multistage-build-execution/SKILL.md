@@ -1,9 +1,9 @@
 ---
 name: docker-multistage-build-execution
-description: Use when you need to containerize a C#-based Windows application (like AirdPro CLI) for Linux deployment, require Wine and .NET Framework 4.
+description: Use when you need to containerize a C#-based Windows application (like
+  AirdPro CLI) for Linux deployment, require Wine and .NET Framework 4.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3786
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,6 +16,8 @@ metadata:
   - ProteoWizard
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird

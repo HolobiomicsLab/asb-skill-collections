@@ -1,9 +1,9 @@
 ---
 name: lc-ms-eic-plot-interpretation
-description: Use when after executing TARDIS in screening_mode = TRUE on centroided .mzML files with a defined target compound list.
+description: Use when after executing TARDIS in screening_mode = TRUE on centroided
+  .mzML files with a defined target compound list.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -15,6 +15,8 @@ metadata:
   - xcms
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
@@ -23,7 +25,8 @@ evidence_spans:
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
 - rmarkdown::html_document
 - Quick start for targeted peak integration of LC-MS data using TARDIS
-- It makes use of an established retention time correction algorithm from the `xcms` package
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

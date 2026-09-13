@@ -1,9 +1,10 @@
 ---
 name: docker-container-execution
-description: Use when you have GNPS-style MGF spectral files as input and need to run Mass2SMILES MS/MS-to-structure inference without installing TensorFlow, CUDA, or Python dependencies locally.
+description: Use when you have GNPS-style MGF spectral files as input and need to
+  run Mass2SMILES MS/MS-to-structure inference without installing TensorFlow, CUDA,
+  or Python dependencies locally.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +16,8 @@ metadata:
   - TensorFlow
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.07.06.547963v1
   title: Mass2SMILES

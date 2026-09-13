@@ -1,9 +1,11 @@
 ---
 name: permanova-effect-size-interpretation
-description: Use when after running PERMANOVA on distance matrices derived from FT-ICR MS metabolite peak intensities or other high-dimensional compositional data, when p-values indicate statistical significance but ordination plots (NMDS, PCA) fail to discriminate among treatment groups.
+description: Use when after running PERMANOVA on distance matrices derived from FT-ICR
+  MS metabolite peak intensities or other high-dimensional compositional data, when
+  p-values indicate statistical significance but ordination plots (NMDS, PCA) fail
+  to discriminate among treatment groups.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_2426
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -17,13 +19,17 @@ metadata:
   - ggplot2 / seaborn
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
-- calculate diversity metrics using functions from the R packages vegan [63] and SYNCSA [64]
+- calculate diversity metrics using functions from the R packages vegan [63] and SYNCSA
+  [64]
 - using functions from the R packages vegan [63]
-- Molecular transformation networks for each sample (mass difference network-based approach) are generated in this step
+- Molecular transformation networks for each sample (mass difference network-based
+  approach) are generated in this step
 - The MetaboDirect pipeline consists of 6 major steps/categories (Fig. 1)
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
 claims: []

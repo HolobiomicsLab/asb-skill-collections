@@ -1,9 +1,10 @@
 ---
 name: molecular-structure-representation-learning
-description: Use when when you have paired mass spectra and molecular structure data and need to train a model that can bidirectionally map between experimental spectra and chemical structures.
+description: Use when when you have paired mass spectra and molecular structure data
+  and need to train a model that can bidirectionally map between experimental spectra
+  and chemical structures.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3372
@@ -15,6 +16,8 @@ metadata:
   - MS-BART (OpenDFM/MS-BART)
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.48550/arxiv.2510.20615
   title: MS-BART

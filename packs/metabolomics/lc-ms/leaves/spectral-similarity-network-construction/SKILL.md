@@ -1,9 +1,10 @@
 ---
 name: spectral-similarity-network-construction
-description: Use when after acquiring MS/MS spectral data from untargeted metabolomics experiments and having candidate transformed structures from biotransformation rule application.
+description: Use when after acquiring MS/MS spectral data from untargeted metabolomics
+  experiments and having candidate transformed structures from biotransformation rule
+  application.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -14,6 +15,8 @@ metadata:
   - GNN-SOM
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c01565
   title: bam

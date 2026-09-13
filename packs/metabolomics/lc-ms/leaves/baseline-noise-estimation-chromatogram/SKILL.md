@@ -1,9 +1,10 @@
 ---
 name: baseline-noise-estimation-chromatogram
-description: Use when after auditing and optionally rescaling a mass track (composite mass chromatogram) when you need to subtract background signal and set dynamic prominence thresholds for peak detection.
+description: Use when after auditing and optionally rescaling a mass track (composite
+  mass chromatogram) when you need to subtract background signal and set dynamic prominence
+  thresholds for peak detection.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -15,11 +16,14 @@ metadata:
   - asari.peaks.stats_detect_elution_peaks
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:

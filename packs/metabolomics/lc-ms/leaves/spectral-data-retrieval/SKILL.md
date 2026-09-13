@@ -1,9 +1,11 @@
 ---
 name: spectral-data-retrieval
-description: Use when you have a USI string (e.g., mzspec:GNPS:TASK-d93bdbb5cdda40e48975e6e18a45c3ce-f.mwang87/data/... or mzspec:MSV000084951:AH22) and need to extract the corresponding mass spectrum peak list (m/z and intensity pairs) for downstream analysis, visualization, or cross-repository comparison.
+description: Use when you have a USI string (e.g., mzspec:GNPS:TASK-d93bdbb5cdda40e48975e6e18a45c3ce-f.mwang87/data/...
+  or mzspec:MSV000084951:AH22) and need to extract the corresponding mass spectrum
+  peak list (m/z and intensity pairs) for downstream analysis, visualization, or cross-repository
+  comparison.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -12,6 +14,8 @@ metadata:
   - GNPS LCMS Visualization Dashboard
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-021-01339-5
   title: GNPS Dashboard

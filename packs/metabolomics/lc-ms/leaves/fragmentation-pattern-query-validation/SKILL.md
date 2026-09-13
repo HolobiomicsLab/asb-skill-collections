@@ -1,9 +1,9 @@
 ---
 name: fragmentation-pattern-query-validation
-description: Use when after converting a decision tree path into a MassQL query string, before deployment to production mass spectrometry workflows.
+description: Use when after converting a decision tree path into a MassQL query string,
+  before deployment to production mass spectrometry workflows.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -13,13 +13,16 @@ metadata:
   - ChemEcho
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c02591
   title: ChemEcho
 - doi: 10.1145/2939672.2939778
   title: ''
 evidence_spans:
-- The Mass Query Language (MassQL) is a domain specific language used to describe fragmentation patterns
+- The Mass Query Language (MassQL) is a domain specific language used to describe
+  fragmentation patterns
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

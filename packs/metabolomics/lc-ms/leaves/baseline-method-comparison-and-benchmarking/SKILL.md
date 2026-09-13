@@ -1,9 +1,11 @@
 ---
 name: baseline-method-comparison-and-benchmarking
-description: Use when you have developed or adapted an analytical method (e.g., NPFimg for GC–MS marker identification) and need to demonstrate its reliability or improved performance over a widely-used reference method (e.g., XCMS). Apply this skill when you have access to both the same raw input data (e.
+description: Use when you have developed or adapted an analytical method (e.g., NPFimg
+  for GC–MS marker identification) and need to demonstrate its reliability or improved
+  performance over a widely-used reference method (e.g., XCMS). Apply this skill when
+  you have access to both the same raw input data (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -14,6 +16,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c03163?ref=
   title: NPFimg
@@ -21,9 +25,12 @@ derived_from:
   title: ''
 evidence_spans:
 - github.com__poomcj__NPFimg
-- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker features of analytes in chromatography–mass spectrometry (MS) data by combining image processing and
+- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker
+  features of analytes in chromatography–mass spectrometry (MS) data by combining
+  image processing and
 - Comparison with the widely used XCMS shows the excellent reliability of NPFimg
-- Comparison with the widely used XCMS shows the excellent reliability of NPFimg, in that it has lower error rates of signal acquisition and marker identification.
+- Comparison with the widely used XCMS shows the excellent reliability of NPFimg,
+  in that it has lower error rates of signal acquisition and marker identification.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,11 @@
 ---
 name: sterol-lipid-isomer-characterization
-description: Use when you have LC-IM-MS/MS experimental data (raw mzML or vendor format) containing signals from N-Me derived unsaturated sterol lipids and need to assign double-bond positions and stereochemistry to individual sterol isomers rather than sum compositions.
+description: Use when you have LC-IM-MS/MS experimental data (raw mzML or vendor format)
+  containing signals from N-Me derived unsaturated sterol lipids and need to assign
+  double-bond positions and stereochemistry to individual sterol isomers rather than
+  sum compositions.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -17,6 +19,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA

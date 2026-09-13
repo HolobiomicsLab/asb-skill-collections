@@ -1,9 +1,10 @@
 ---
 name: mass-spectrometry-data-parsing
-description: Use when you have received raw or vendor-converted centroid mzML files from LC-MS, GC-MS, or DI-MS platforms and need to extract MS1 spectra before building mass tracks, performing peak detection, or constructing composite feature maps.
+description: Use when you have received raw or vendor-converted centroid mzML files
+  from LC-MS, GC-MS, or DI-MS platforms and need to extract MS1 spectra before building
+  mass tracks, performing peak detection, or constructing composite feature maps.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3931
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -34,6 +35,8 @@ metadata:
   - LC-MS
   - GC-MS
   - direct-infusion-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
@@ -47,9 +50,12 @@ derived_from:
   title: ''
 evidence_spans:
 - The default method uses `pymzml` to parse mzML files.
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
+  R package'
 - light-weight R package
 - performs spectral database dereplication using R Package
 claims: []

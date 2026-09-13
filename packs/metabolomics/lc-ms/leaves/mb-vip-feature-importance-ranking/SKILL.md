@@ -1,9 +1,11 @@
 ---
 name: mb-vip-feature-importance-ranking
-description: Use when after fitting a Multi-Block PLS (MB-PLS) discriminant or regression model on multi-assay LC-MS intensity data (e.g., HPOS, LPOS, LNEG blocks), and you need to identify which features drive model performance and warrant further statistical validation or biological interpretation.
+description: Use when after fitting a Multi-Block PLS (MB-PLS) discriminant or regression
+  model on multi-assay LC-MS intensity data (e.g., HPOS, LPOS, LNEG blocks), and you
+  need to identify which features drive model performance and warrant further statistical
+  validation or biological interpretation.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3945
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -19,6 +21,8 @@ metadata:
   - MAMSI
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -26,7 +30,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MAMSI is a Python framework
-- 'It is based on MB_PLS package: Baum et al., (2019). Multiblock PLS: Block dependent prediction modeling for Python.'
+- 'It is based on MB_PLS package: Baum et al., (2019). Multiblock PLS: Block dependent
+  prediction modeling for Python.'
 - import pandas as pd
 - import numpy as np
 - from sklearn.model_selection import train_test_split

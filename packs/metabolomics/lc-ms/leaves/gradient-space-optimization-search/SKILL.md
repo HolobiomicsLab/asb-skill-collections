@@ -1,9 +1,10 @@
 ---
 name: gradient-space-optimization-search
-description: Use when after fitting a Gaussian Process regression model to prior LC-MS gradient runs (retention times, separation efficiency scores, or compound identification counts).
+description: Use when after fitting a Gaussian Process regression model to prior LC-MS
+  gradient runs (retention times, separation efficiency scores, or compound identification
+  counts).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +15,8 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.09.08.556930
   title: BAGO
@@ -22,7 +25,8 @@ derived_from:
 evidence_spans:
 - a :class:`sklearn.preprocessing.StandardScaler` object used to scale the data
 - a :class:`sklearn.gaussian_process.GaussianProcessRegressor` object
-- BAGO is a Bayesian optimization strategy for LC gradient optimization for MS-based small molecule analysis
+- BAGO is a Bayesian optimization strategy for LC gradient optimization for MS-based
+  small molecule analysis
 - A :class:`ms1Spectrum` object (supported by :mod:`bago`)
 - Download and install Python 3.8 or later from `python.org`
 - model.computeNextGradient()

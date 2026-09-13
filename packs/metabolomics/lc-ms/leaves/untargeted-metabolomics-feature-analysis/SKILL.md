@@ -1,9 +1,10 @@
 ---
 name: untargeted-metabolomics-feature-analysis
-description: Use when you have a feature table from untargeted metabolomics (with m/z, retention time, and p-values from differential abundance testing) but lack or wish to bypass metabolite annotation.
+description: Use when you have a feature table from untargeted metabolomics (with
+  m/z, retention time, and p-values from differential abundance testing) but lack
+  or wish to bypass metabolite annotation.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3083
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -15,6 +16,8 @@ metadata:
   - mass2chem
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: mummichog

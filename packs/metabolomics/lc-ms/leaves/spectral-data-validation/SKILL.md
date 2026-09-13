@@ -1,9 +1,10 @@
 ---
 name: spectral-data-validation
-description: Use when when raw spectra have been imported from common MS/MS file formats but contain inconsistent, missing, or malformed metadata fields that could compromise spectral similarity comparisons or cause downstream pipeline failures.
+description: Use when when raw spectra have been imported from common MS/MS file formats
+  but contain inconsistent, missing, or malformed metadata fields that could compromise
+  spectral similarity comparisons or cause downstream pipeline failures.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,11 +15,14 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
 evidence_spans:
-- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+- Matchms is a versatile open-source Python package developed for importing, processing,
+  cleaning, and comparing mass spectrometry data
 - make sure the existing tests still work by running ``pytest``
 claims: []
 provenance:

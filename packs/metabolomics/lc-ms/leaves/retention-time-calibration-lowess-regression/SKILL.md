@@ -1,9 +1,11 @@
 ---
 name: retention-time-calibration-lowess-regression
-description: 'Use when after mass track construction and before composite map building, when you need to align retention times across multiple LC-MS samples. Trigger conditions: (1) you have identified high-selectivity landmark peaks (mSelectivity > 0.99) in a reference sample;'
+description: 'Use when after mass track construction and before composite map building,
+  when you need to align retention times across multiple LC-MS samples. Trigger conditions:
+  (1) you have identified high-selectivity landmark peaks (mSelectivity > 0.99) in
+  a reference sample;'
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -19,12 +21,16 @@ metadata:
   - asari (peaks.quick_detect_unique_elution_peak)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Perform a LOWESS (Locally Weighted Scatterplot Smoothing) regression to obtain a function to describe the relationship of the RT values
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Perform a LOWESS (Locally Weighted Scatterplot Smoothing) regression to obtain a
+  function to describe the relationship of the RT values
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - scipy.signal module for LOWESS fitting via the regression function
 claims: []

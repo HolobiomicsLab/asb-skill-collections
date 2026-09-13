@@ -1,9 +1,9 @@
 ---
 name: search-result-aggregation-and-normalization
-description: Use when you have executed batch searches across two or more domain-specific MASST tools and obtained separate output files (_microbe.json, _plant.json, _tissue.
+description: Use when you have executed batch searches across two or more domain-specific
+  MASST tools and obtained separate output files (_microbe.json, _plant.json, _tissue.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3258
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -19,6 +19,8 @@ metadata:
   - GNPS_MASST
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst

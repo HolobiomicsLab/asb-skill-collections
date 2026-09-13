@@ -1,9 +1,11 @@
 ---
 name: mass-spectrum-prediction-neural-networks
-description: Use when when you have molecular structures (SMILES, InChI, or chemical formula) and need to predict their tandem mass spectra for structural elucidation or compound ranking against databases. Use SCARF when operating at the chemical formula level;
+description: Use when when you have molecular structures (SMILES, InChI, or chemical
+  formula) and need to predict their tandem mass spectra for structural elucidation
+  or compound ranking against databases. Use SCARF when operating at the chemical
+  formula level;
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0593
@@ -16,6 +18,8 @@ metadata:
   - MAGMa algorithm
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04654
   title: ICEBERG / fragmentation graph generation

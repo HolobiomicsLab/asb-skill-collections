@@ -1,9 +1,11 @@
 ---
 name: within-batch-randomization-by-metadata-attribute
-description: Use when you have already assigned samples to batches (inter-batch balance is fixed) and need to shuffle injection order within each batch to decorrelate sample properties from time-dependent instrumental effects. Use it when your metadata table includes a randomization dimension (e.
+description: Use when you have already assigned samples to batches (inter-batch balance
+  is fixed) and need to shuffle injection order within each batch to decorrelate sample
+  properties from time-dependent instrumental effects. Use it when your metadata table
+  includes a randomization dimension (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -12,6 +14,8 @@ metadata:
   - InjectionDesign
   techniques:
   - GC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.02.26.530140v1.article-info
   title: InjectionDesign

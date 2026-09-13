@@ -1,9 +1,9 @@
 ---
 name: nearest-neighbor-clustering-by-mass-difference
-description: Use when processing LC-MS metabolomics studies with >10 samples where sample count and memory constraints make pairwise mass alignment infeasible.
+description: Use when processing LC-MS metabolomics studies with >10 samples where
+  sample count and memory constraints make pairwise mass alignment infeasible.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3198
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -16,13 +16,17 @@ metadata:
   - asari chromatograms.get_thousandth_bins
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
-- a nearest neighbor (NN) clustering is performed to establish the number of mass tracks. See [mass_functions.nn_cluster_by_mz_seeds](mass_functions.nn_cluster_by_mz_seeds).
+- a nearest neighbor (NN) clustering is performed to establish the number of mass
+  tracks. See [mass_functions.nn_cluster_by_mz_seeds](mass_functions.nn_cluster_by_mz_seeds).
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

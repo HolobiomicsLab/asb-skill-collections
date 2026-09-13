@@ -1,9 +1,11 @@
 ---
 name: ion-mobility-saturation-detection-and-repair
-description: Use when preprocessing raw Agilent MassHunter (.d) or UIMF IM-MS data files that exhibit signal saturation—ion intensity clipping caused by detector or amplifier limits—which distorts peak shape and abundance estimates across the m/z and drift-time axes.
+description: Use when preprocessing raw Agilent MassHunter (.d) or UIMF IM-MS data
+  files that exhibit signal saturation—ion intensity clipping caused by detector or
+  amplifier limits—which distorts peak shape and abundance estimates across the m/z
+  and drift-time axes.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3635
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,14 +18,19 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00220
   title: PNNL PreProcessor
 - doi: 10.1021/acs.jproteome.1c00425
   title: ''
 evidence_spans:
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files) from drift tube (DT) and structure for lossless ion manipulations (SLIM) IM-MS
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files (MS-files) from drift tube (DT) and structure for lossless
+  ion manipulations (SLIM) IM-MS
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files)
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files
 claims: []

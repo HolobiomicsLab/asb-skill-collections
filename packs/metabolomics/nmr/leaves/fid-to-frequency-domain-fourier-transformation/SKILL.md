@@ -1,9 +1,10 @@
 ---
 name: fid-to-frequency-domain-fourier-transformation
-description: Use when after simulating and convolving individual metabolite multiplets with realistic lineshapes (Lorentzian or Gaussian) and combining them into a single time-domain FID array.
+description: Use when after simulating and convolving individual metabolite multiplets
+  with realistic lineshapes (Lorentzian or Gaussian) and combining them into a single
+  time-domain FID array.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -12,6 +13,8 @@ metadata:
   - MetAssimulo 2
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btaf045
   title: MetAssimulo 2.0

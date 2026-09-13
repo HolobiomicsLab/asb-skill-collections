@@ -1,9 +1,11 @@
 ---
 name: plant-species-authentication-via-mass-spectrometry
-description: Use when when you have mass spectrometry raw data (DI-MS or ASAP-MS format) from plant samples that are easily confused due to morphological similarity, or when you need to verify or authenticate the species identity of a plant material against a reference database.
+description: Use when when you have mass spectrometry raw data (DI-MS or ASAP-MS format)
+  from plant samples that are easily confused due to morphological similarity, or
+  when you need to verify or authenticate the species identity of a plant material
+  against a reference database.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +16,8 @@ metadata:
   - ASAP-MS
   techniques:
   - direct-infusion-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass

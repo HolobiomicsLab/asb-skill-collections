@@ -1,9 +1,11 @@
 ---
 name: multi-dimensional-sample-stratification
-description: Use when you have a parsed sample list with metadata (sample IDs, classification dimensions, QC designations) and need to generate a physical injection-plate layout that (1) will be run across multiple batches, (2) has a known confounding dimension (e.
+description: Use when you have a parsed sample list with metadata (sample IDs, classification
+  dimensions, QC designations) and need to generate a physical injection-plate layout
+  that (1) will be run across multiple batches, (2) has a known confounding dimension
+  (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3897
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,6 +15,8 @@ metadata:
   - pandas / openpyxl
   techniques:
   - GC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.02.26.530140v1.article-info
   title: InjectionDesign

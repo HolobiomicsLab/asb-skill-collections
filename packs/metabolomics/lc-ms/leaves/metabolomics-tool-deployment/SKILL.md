@@ -1,9 +1,11 @@
 ---
 name: metabolomics-tool-deployment
-description: Use when you have a Galaxy installation (specifically Galaxy Master branch commit c429777c93680dcee449fe410f5360afbe673758 or compatible) and need to add metabolomics analysis capabilities including tools for XCMS integration, mass spectrometry file reading (via MSFileReader), and metabolite.
+description: Use when you have a Galaxy installation (specifically Galaxy Master branch
+  commit c429777c93680dcee449fe410f5360afbe673758 or compatible) and need to add metabolomics
+  analysis capabilities including tools for XCMS integration, mass spectrometry file
+  reading (via MSFileReader), and metabolite.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -21,6 +23,8 @@ metadata:
   techniques:
   - LC-MS
   - direct-infusion-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13742-016-0115-8
   title: Galaxy-M

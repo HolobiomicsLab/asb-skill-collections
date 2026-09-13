@@ -1,9 +1,11 @@
 ---
 name: spectral-token-design
-description: Use when when you need to prepare mass spectra and molecular structures for joint modeling in a BART or transformer-based sequence model, and you lack a unified representation scheme that allows both modalities to be encoded and decoded without collision or information loss.
+description: Use when when you need to prepare mass spectra and molecular structures
+  for joint modeling in a BART or transformer-based sequence model, and you lack a
+  unified representation scheme that allows both modalities to be encoded and decoded
+  without collision or information loss.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -14,11 +16,14 @@ metadata:
   - MS-BART
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.48550/arxiv.2510.20615
   title: MS-BART
 evidence_spans:
-- MS-BART is the first to leverage language model for mass spectra structure elucidation by introducing a unified vocabulary
+- MS-BART is the first to leverage language model for mass spectra structure elucidation
+  by introducing a unified vocabulary
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

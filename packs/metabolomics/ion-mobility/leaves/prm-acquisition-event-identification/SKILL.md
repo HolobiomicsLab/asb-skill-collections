@@ -1,9 +1,11 @@
 ---
 name: prm-acquisition-event-identification
-description: Use when you have a Thermo Fisher Scientific .raw file containing PRM data and need to verify that acquisition of a specific precursor ion (e.g., LGGNEQVTR++ at m/z 487.2567) is happening at regular intervals consistent with your instrument method design.
+description: Use when you have a Thermo Fisher Scientific .raw file containing PRM
+  data and need to verify that acquisition of a specific precursor ion (e.g., LGGNEQVTR++
+  at m/z 487.2567) is happening at regular intervals consistent with your instrument
+  method design.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,6 +18,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -23,8 +27,10 @@ derived_from:
   title: ''
 evidence_spans:
 - rawrr::readSpectrum
-- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file
-- The extracted information is written to a temporary location on the harddrive, read back into memory and parsed into `R` objects using RawFileReader API
+- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime,
+  in the `r BiocStyle::Biocpkg('rawrr')` executable file
+- The extracted information is written to a temporary location on the harddrive, read
+  back into memory and parsed into `R` objects using RawFileReader API
 - 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
 claims: []
 provenance:

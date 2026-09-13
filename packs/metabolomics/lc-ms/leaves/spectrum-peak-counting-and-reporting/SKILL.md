@@ -1,9 +1,11 @@
 ---
 name: spectrum-peak-counting-and-reporting
-description: Use when when you need to quantify and compare the filtering efficacy of mutually exclusive noise-threshold methods on the same input mass spectrum, or when validating that a selected noise-filtering strategy retains an expected number of peaks for downstream molecular formula assignment.
+description: Use when when you need to quantify and compare the filtering efficacy
+  of mutually exclusive noise-threshold methods on the same input mass spectrum, or
+  when validating that a selected noise-filtering strategy retains an expected number
+  of peaks for downstream molecular formula assignment.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -17,12 +19,15 @@ metadata:
   - LC-MS
   - GC-MS
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np

@@ -1,9 +1,11 @@
 ---
 name: backend-routing-and-dispatch
-description: Use when you need to support multiple plotting backends for the same data visualization task, and you want to centralize backend selection logic so that users can specify their preferred rendering engine (matplotlib, bokeh, or plotly) at call time without modifying the core plotting logic.
+description: Use when you need to support multiple plotting backends for the same
+  data visualization task, and you want to centralize backend selection logic so that
+  users can specify their preferred rendering engine (matplotlib, bokeh, or plotly)
+  at call time without modifying the core plotting logic.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +18,8 @@ metadata:
   - plotly
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz

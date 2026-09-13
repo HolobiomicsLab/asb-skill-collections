@@ -1,9 +1,10 @@
 ---
 name: gnps-network-processing
-description: Use when you have generated a GNPS mass spectral molecular network (in classical or feature-based mode) and want to annotate network nodes with substructural motifs from MS2LDA or chemical class information.
+description: Use when you have generated a GNPS mass spectral molecular network (in
+  classical or feature-based mode) and want to annotate network nodes with substructural
+  motifs from MS2LDA or chemical class information.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -17,13 +18,18 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo9070144
   title: molnetenhancer
 evidence_spans:
-- pyMolNetEnhancer is a python module integrating chemical class and substructure information
-- mass spectral molecular networks created through the Global Natural Products Social Molecular Networking (GNPS) platform
-- mass spectral molecular networks created through the Global Natural Products Social Molecular Networking (GNPS)
+- pyMolNetEnhancer is a python module integrating chemical class and substructure
+  information
+- mass spectral molecular networks created through the Global Natural Products Social
+  Molecular Networking (GNPS) platform
+- mass spectral molecular networks created through the Global Natural Products Social
+  Molecular Networking (GNPS)
 - pyMolNetEnhancer is a python module
 claims: []
 provenance:

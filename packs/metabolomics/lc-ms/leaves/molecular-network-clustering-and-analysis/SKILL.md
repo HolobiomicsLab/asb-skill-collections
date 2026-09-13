@@ -1,9 +1,10 @@
 ---
 name: molecular-network-clustering-and-analysis
-description: Use when after generating candidate transformed structures from biotransformation rules and when you have MS/MS spectral feature data that you wish to organize into putative molecular families.
+description: Use when after generating candidate transformed structures from biotransformation
+  rules and when you have MS/MS spectral feature data that you wish to organize into
+  putative molecular families.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3925
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,6 +16,8 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c01565
   title: bam

@@ -1,9 +1,10 @@
 ---
 name: external-calibration-model-fitting
-description: Use when you have acquired targeted mass spectrometry data with measured ion intensities for known standard compounds at multiple concentration levels, and you need to convert sample intensities into absolute or relative concentrations.
+description: Use when you have acquired targeted mass spectrometry data with measured
+  ion intensities for known standard compounds at multiple concentration levels, and
+  you need to convert sample intensities into absolute or relative concentrations.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,11 +14,14 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey
 evidence_spans:
-- '**QuantyFey** is a Shiny application for the **visualization, analysis, and quantification** of **mass spectrometry (MS) data**'
+- '**QuantyFey** is a Shiny application for the **visualization, analysis, and quantification**
+  of **mass spectrometry (MS) data**'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

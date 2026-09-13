@@ -1,9 +1,10 @@
 ---
 name: lineshape-convolution-and-broadening
-description: Use when after generating theoretical spin multiplets for individual metabolites via first-order or density-matrix NMR simulation, but before combining spectra or applying Fourier transformation.
+description: Use when after generating theoretical spin multiplets for individual
+  metabolites via first-order or density-matrix NMR simulation, but before combining
+  spectra or applying Fourier transformation.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0593
@@ -12,6 +13,8 @@ metadata:
   - MetAssimulo 2
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btaf045
   title: MetAssimulo 2.0

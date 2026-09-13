@@ -1,9 +1,11 @@
 ---
 name: deep-learning-model-inference-and-ensemble-prediction
-description: Use when you have a trained deep learning model and want to quantify prediction uncertainty for each input pair or decision point. Use this when you need to identify low-confidence predictions (high IQR) and filter them out to reduce error in specific score ranges (e.
+description: Use when you have a trained deep learning model and want to quantify
+  prediction uncertainty for each input pair or decision point. Use this when you
+  need to identify low-confidence predictions (high IQR) and filter them out to reduce
+  error in specific score ranges (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3474
@@ -18,16 +20,21 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included cleaning compound names
+- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included
+  cleaning compound names
 - MS2DeepScore to predict structural similarity scores for spe
-- we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral embeddings for all 3601 spectra in the test set
+- we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral
+  embeddings for all 3601 spectra in the test set
 - Our MS2DeepScore Python library offers two types of data generators
 - Our MS2DeepScore Python library
-- we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
+- we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute
+  structural similarities
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

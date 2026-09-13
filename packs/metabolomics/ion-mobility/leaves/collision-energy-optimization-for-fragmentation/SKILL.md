@@ -1,9 +1,11 @@
 ---
 name: collision-energy-optimization-for-fragmentation
-description: Use when when you have N-Me derivatized unsaturated sterol lipid structures (as SMILES or molecular formula) and need to predict MS/MS fragmentation patterns with collision-energy-dependent m/z values and intensities for downstream CCS prediction or LC-IM-MS/MS library matching.
+description: Use when when you have N-Me derivatized unsaturated sterol lipid structures
+  (as SMILES or molecular formula) and need to predict MS/MS fragmentation patterns
+  with collision-energy-dependent m/z values and intensities for downstream CCS prediction
+  or LC-IM-MS/MS library matching.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +18,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA

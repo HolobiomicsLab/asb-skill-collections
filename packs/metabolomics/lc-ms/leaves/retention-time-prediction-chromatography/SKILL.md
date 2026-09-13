@@ -1,9 +1,11 @@
 ---
 name: retention-time-prediction-chromatography
-description: Use when you have a new chromatographic dataset with molecular structures (as InChI or SMILES) and experimentally measured retention times, and you want to predict retention times for unannotated metabolites or validate predictions on a held-out test set without retraining from scratch.
+description: Use when you have a new chromatographic dataset with molecular structures
+  (as InChI or SMILES) and experimentally measured retention times, and you want to
+  predict retention times for unannotated metabolites or validate predictions on a
+  held-out test set without retraining from scratch.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -24,6 +26,8 @@ metadata:
   - torch-scatter, torch-sparse, torch-cluster
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btae084
   title: RT-Transformer

@@ -1,9 +1,9 @@
 ---
 name: ms1-full-scan-acquisition-simulation
-description: Use when when you need to prototype, test, or benchmark MS1-only acquisition strategies on a defined set of metabolites (e.
+description: Use when when you need to prototype, test, or benchmark MS1-only acquisition
+  strategies on a defined set of metabolites (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,6 +15,8 @@ metadata:
   - OpenMS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms

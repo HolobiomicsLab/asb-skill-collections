@@ -1,9 +1,10 @@
 ---
 name: mass-delta-computation
-description: Use when when you have parsed two or more MS/MS spectra (precursor m/z and fragment ion lists) and need to quantify all pairwise mass differences between fragment ions before alignment or similarity scoring.
+description: Use when when you have parsed two or more MS/MS spectra (precursor m/z
+  and fragment ion lists) and need to quantify all pairwise mass differences between
+  fragment ions before alignment or similarity scoring.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -13,11 +14,14 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-022-30118-9
   title: SIMILE
 evidence_spans:
-- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python library
+- SIMILE (Significant Interrelation of MS/MS Ions via Laplacian Embedding) is a Python
+  library
 - is a Python library for interrelating fragmentation spectra with significance estimation
 claims: []
 provenance:

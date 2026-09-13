@@ -1,9 +1,10 @@
 ---
 name: excel-file-parsing-for-metabolomics
-description: 'Use when you have a preprocessed LC-MS peak table exported from peak-picking software (e.g., MS-DIAL) in Excel format with three logical compartments: sample annotation (rows), feature annotation (columns), and abundance matrix (numeric values).'
+description: 'Use when you have a preprocessed LC-MS peak table exported from peak-picking
+  software (e.g., MS-DIAL) in Excel format with three logical compartments: sample
+  annotation (rows), feature annotation (columns), and abundance matrix (numeric values).'
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +16,8 @@ metadata:
   - ExpressionSet
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo10040135
   title: notame
@@ -24,8 +27,10 @@ evidence_spans:
 - This package can be used to analyze preprocessed LC-MS data in non-targeted metabolomics
 - library(notame)
 - reads them to R, conducts additional preprocessing and statistical analyses
-- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package by Bioconductor'
-- '```MetaboSet``` objects are the primary data structure of this package. ```MetaboSet``` is built upon the ```ExpressionSet``` class'
+- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package
+  by Bioconductor'
+- '```MetaboSet``` objects are the primary data structure of this package. ```MetaboSet```
+  is built upon the ```ExpressionSet``` class'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

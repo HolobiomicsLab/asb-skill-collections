@@ -1,9 +1,10 @@
 ---
 name: r-package-function-execution
-description: Use when you have raw Bruker NMR spectral data files (1D 1H format) stored in a directory structure and need to prepare them for automated metabolite identification and quantification in ASICS.
+description: Use when you have raw Bruker NMR spectral data files (1D 1H format) stored
+  in a directory structure and need to prepare them for automated metabolite identification
+  and quantification in ASICS.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0593
@@ -13,13 +14,16 @@ metadata:
   - R
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c04232
   title: ASICS
 - doi: 10.1007/s11306-017-1244-5
   title: ''
 evidence_spans:
-- The **R** package `ASICS` is a fully automated procedure to identify and quantify metabolites in $^1$H 1D-NMR spectra
+- The **R** package `ASICS` is a fully automated procedure to identify and quantify
+  metabolites in $^1$H 1D-NMR spectra
 - The **R** package `ASICS`
 claims: []
 provenance:

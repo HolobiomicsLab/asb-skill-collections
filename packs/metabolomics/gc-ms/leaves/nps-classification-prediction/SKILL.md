@@ -1,9 +1,11 @@
 ---
 name: nps-classification-prediction
-description: Use when you have an unknown mass spectrum from a suspicious analyte and need to determine whether it matches a known NPS or a derivative thereof. The analyte's mass spectrum is available in MSP or equivalent format, and you have a core drug structure to enumerate derivatives from.
+description: Use when you have an unknown mass spectrum from a suspicious analyte
+  and need to determine whether it matches a known NPS or a derivative thereof. The
+  analyte's mass spectrum is available in MSP or equivalent format, and you have a
+  core drug structure to enumerate derivatives from.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0081
@@ -17,6 +19,8 @@ metadata:
   - rdkit
   techniques:
   - GC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05019
   title: ps2ms

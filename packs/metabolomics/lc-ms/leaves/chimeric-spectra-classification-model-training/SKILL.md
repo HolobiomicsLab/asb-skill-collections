@@ -1,9 +1,11 @@
 ---
 name: chimeric-spectra-classification-model-training
-description: Use when when your DDA-mode LC-MS/MS data exhibits chimeric spectra patterns that differ systematically from the reference training set used in DNMS2Purifier, or when you wish to optimize purification sensitivity/specificity for your particular instrument, ionization method, or sample matrix.
+description: Use when when your DDA-mode LC-MS/MS data exhibits chimeric spectra patterns
+  that differ systematically from the reference training set used in DNMS2Purifier,
+  or when you wish to optimize purification sensitivity/specificity for your particular
+  instrument, ionization method, or sample matrix.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +17,8 @@ metadata:
   - DNMS2Purifier.r
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c00736
   title: DNMS2Purifier

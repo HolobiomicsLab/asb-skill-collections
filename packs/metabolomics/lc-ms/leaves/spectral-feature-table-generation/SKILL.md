@@ -1,9 +1,11 @@
 ---
 name: spectral-feature-table-generation
-description: Use when you have raw LC-MS data in mzXML format (or vendor formats convertible via MS-Convert) and need to identify and quantify metabolic features before multi-sample alignment. Use MS1 peak picking for full-scan or DDA data to extract Gaussian and non-Gaussian shaped peaks;
+description: Use when you have raw LC-MS data in mzXML format (or vendor formats convertible
+  via MS-Convert) and need to identify and quantify metabolic features before multi-sample
+  alignment. Use MS1 peak picking for full-scan or DDA data to extract Gaussian and
+  non-Gaussian shaped peaks;
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +17,8 @@ metadata:
   - MS-Convert
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12030212
   title: JPA

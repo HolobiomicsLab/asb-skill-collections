@@ -1,9 +1,11 @@
 ---
 name: chemical-structure-serialization
-description: Use when you need to export a stored chemical structure (sequence or building-block entry) from the MassSpecBlocks database to enable mass spectra analysis in CycloBranch or when preparing structures for import into other cheminformatics workflows that require a standardized structure interchange.
+description: Use when you need to export a stored chemical structure (sequence or
+  building-block entry) from the MassSpecBlocks database to enable mass spectra analysis
+  in CycloBranch or when preparing structures for import into other cheminformatics
+  workflows that require a standardized structure interchange.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -17,6 +19,8 @@ metadata:
   - MySQL 8 / MariaDB 10
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-021-00530-2
   title: MassSpecBlocks

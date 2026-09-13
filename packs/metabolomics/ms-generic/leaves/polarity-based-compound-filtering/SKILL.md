@@ -1,9 +1,11 @@
 ---
 name: polarity-based-compound-filtering
-description: Use when you have a multi-polarity compound target list (e.g., a .xlsx file with a polarity or ionization mode column indicating positive or negative ESI mode) and you are about to perform targeted peak detection in a single LC–MS acquisition mode (e.g., positive-ion mode only).
+description: Use when you have a multi-polarity compound target list (e.g., a .xlsx
+  file with a polarity or ionization mode column indicating positive or negative ESI
+  mode) and you are about to perform targeted peak detection in a single LC–MS acquisition
+  mode (e.g., positive-ion mode only).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0593
@@ -13,6 +15,8 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis

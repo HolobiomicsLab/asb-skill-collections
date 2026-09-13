@@ -1,9 +1,11 @@
 ---
 name: reference-dataset-validation-for-metabolite-ions
-description: Use when after computing expected adduct ions for a metabolite using a derivatizing matrix ruleset, validate the predicted m/z values and adduct formulas against a curated reference dataset that documents which ions are actually produced by that matrix under standard ionization conditions.
+description: Use when after computing expected adduct ions for a metabolite using
+  a derivatizing matrix ruleset, validate the predicted m/z values and adduct formulas
+  against a curated reference dataset that documents which ions are actually produced
+  by that matrix under standard ionization conditions.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,6 +15,8 @@ metadata:
   - Met-ID
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid

@@ -1,9 +1,10 @@
 ---
 name: filter-criteria-composition-and-validation
-description: Use when you are preparing to reuse public tandem MS data from MassIVE via ReDU and need to partition files by sample metadata (e.g., organism, tissue type, extraction method, ionization source, pre-MS separation) into groups for co-analysis.
+description: Use when you are preparing to reuse public tandem MS data from MassIVE
+  via ReDU and need to partition files by sample metadata (e.g., organism, tissue
+  type, extraction method, ionization source, pre-MS separation) into groups for co-analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -14,6 +15,8 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU

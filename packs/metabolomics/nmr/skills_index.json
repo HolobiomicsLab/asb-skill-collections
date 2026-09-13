@@ -17,7 +17,10 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": []
  },
  {
   "slug": "accuracy-metric-computation",
@@ -38,7 +41,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "accurate-mass-metabolite-search-against-hmdb",
@@ -64,7 +76,16 @@
    "direct-infusion-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "openms",
+   "pyopenms",
+   "smartpeak",
+   "smartpeakcli",
+   "smartpeakgui"
+  ]
  },
  {
   "slug": "algorithm-parameter-comparison-analysis",
@@ -89,7 +110,17 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bruker-solarix",
+   "corems",
+   "docker",
+   "matplotlib",
+   "numpy",
+   "pandas"
+  ]
  },
  {
   "slug": "annotation-confidence-assessment",
@@ -112,7 +143,15 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "ms-cleanr",
+   "ms-dial-or-higher",
+   "ms-dial-v4-00-or-higher",
+   "ms-finder"
+  ]
  },
  {
   "slug": "annotation-confidence-scoring",
@@ -133,7 +172,12 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mrnannoalgo3-metdna3"
+  ]
  },
  {
   "slug": "annotation-scoring-and-ranking",
@@ -158,7 +202,19 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "commons-math3",
+   "jfreechart",
+   "jopt-simple",
+   "msbackendmzr",
+   "msnbase",
+   "s4vectors",
+   "spectra",
+   "trove4j"
+  ]
  },
  {
   "slug": "api-request-response-handling",
@@ -179,7 +235,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "tensorflow-serving"
+  ]
  },
  {
   "slug": "array-of-objects-construction",
@@ -202,7 +263,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "jsonschema",
+   "messes",
+   "mwtab",
+   "pandas",
+   "python"
+  ]
  },
  {
   "slug": "bi-encoder-cross-encoder-architecture-design",
@@ -224,7 +294,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "python",
+   "pytorch-cu118"
+  ]
  },
  {
   "slug": "binary-file-format-parsing",
@@ -243,7 +320,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "nmrfx"
+  ]
  },
  {
   "slug": "bioassay-activity-data-integration",
@@ -269,7 +351,15 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "mzmine2",
+   "openms",
+   "optimus"
+  ]
  },
  {
   "slug": "biotransformation-rule-application-to-metabolites",
@@ -293,7 +383,14 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bam",
+   "hassounlab-bam",
+   "rdkit"
+  ]
  },
  {
   "slug": "block-layout-analysis-for-io-optimization",
@@ -310,7 +407,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "nmrfx"
+  ]
  },
  {
   "slug": "blood-sample-processing-parameter-extraction",
@@ -331,7 +433,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "prima-panel"
+  ]
  },
  {
   "slug": "bond-connectivity-prediction",
@@ -352,7 +459,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "browser-security-policy-configuration",
@@ -374,7 +490,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "google-chrome",
+   "mozilla-firefox",
+   "safari",
+   "webassembly",
+   "webworker"
+  ]
  },
  {
   "slug": "bruker-nmr-spectral-data-import",
@@ -396,7 +521,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asics"
+  ]
  },
  {
   "slug": "candidate-formula-ranking-by-mass-error",
@@ -418,7 +548,13 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "docker",
+   "metaboshiny"
+  ]
  },
  {
   "slug": "chemical-database-querying-and-retrieval",
@@ -442,7 +578,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biotransformer"
+  ]
  },
  {
   "slug": "chemical-graph-connectivity-validation",
@@ -465,7 +606,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "chemical-name-normalization-and-publish-database-integration",
@@ -496,7 +646,17 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-unknowns-analysis",
+   "chemminer",
+   "fmcsr",
+   "mzexacto",
+   "spreadout",
+   "webchem"
+  ]
  },
  {
   "slug": "chemical-shift-annotation",
@@ -520,7 +680,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "mwastools",
+   "statistical-total-correlation-spectroscopy-stocsy"
+  ]
  },
  {
   "slug": "chemical-shift-coordinate-extraction",
@@ -541,7 +708,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "pyineta",
+   "python"
+  ]
  },
  {
   "slug": "chemical-shift-data-formatting",
@@ -562,7 +735,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "tensorflow-serving"
+  ]
  },
  {
   "slug": "chemical-shift-reference-matching",
@@ -585,7 +763,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "numpy",
+   "pandas",
+   "python",
+   "pytorch",
+   "scipy"
+  ]
  },
  {
   "slug": "clustered-peak-output-formatting",
@@ -606,7 +793,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "pyineta",
+   "python"
+  ]
  },
  {
   "slug": "cnn-spectral-feature-extraction",
@@ -627,7 +820,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "coefficient-of-variation-computation",
@@ -653,7 +855,18 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "dynamic-time-warping-dtw",
+   "graphical-time-warping-gtw",
+   "mwastools",
+   "ncgtw",
+   "statistical-total-correlation-spectroscopy-stocsy",
+   "xcms"
+  ]
  },
  {
   "slug": "coefficient-of-variation-threshold-analysis",
@@ -676,7 +889,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "mwastools",
+   "statistical-total-correlation-spectroscopy-stocsy"
+  ]
  },
  {
   "slug": "cohort-performance-reporting",
@@ -696,7 +916,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "prima-panel"
+  ]
  },
  {
   "slug": "cohort-stratified-metabolic-performance-analysis",
@@ -720,7 +945,12 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "prima-panel"
+  ]
  },
  {
   "slug": "column-name-variant-matching",
@@ -742,7 +972,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "jsonschema",
+   "messes",
+   "mwtab",
+   "pandas",
+   "python"
+  ]
  },
  {
   "slug": "command-line-interface-invocation",
@@ -760,7 +999,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "metabolabpy",
+   "python"
+  ]
  },
  {
   "slug": "compound-abundance-quantification-from-flow",
@@ -781,7 +1026,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mcfnmr",
+   "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
+  ]
  },
  {
   "slug": "compound-clustering-from-inadequate-spectra",
@@ -802,7 +1053,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "pyineta",
+   "python"
+  ]
  },
  {
   "slug": "compound-identification-ranking-evaluation",
@@ -827,7 +1084,14 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "python",
+   "pytorch-cu118"
+  ]
  },
  {
   "slug": "compound-identifier-mapping",
@@ -853,7 +1117,16 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "data-table",
+   "ggplot",
+   "ggplot2",
+   "github",
+   "mpactr"
+  ]
  },
  {
   "slug": "compound-peak-association-inference",
@@ -874,7 +1147,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "pyineta",
+   "python"
+  ]
  },
  {
   "slug": "conditional-allocation-design-patterns",
@@ -891,7 +1170,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "nmrfx"
+  ]
  },
  {
   "slug": "confounder-adjustment-epidemiological-analysis",
@@ -914,7 +1198,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "mwastools",
+   "statistical-total-correlation-spectroscopy-stocsy"
+  ]
  },
  {
   "slug": "container-image-build-and-deployment",
@@ -934,7 +1225,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "docker"
+  ]
  },
  {
   "slug": "convolutional-neural-network-layer-design",
@@ -958,7 +1254,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "python",
+   "pytorch-cu118"
+  ]
  },
  {
   "slug": "cross-assay-feature-linkage-analysis",
@@ -986,7 +1289,24 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cytoscape",
+   "mamsi-mamsistructsearch",
+   "mamsistructsearch",
+   "matplotlib",
+   "mbpls",
+   "networkx",
+   "numpy",
+   "pandas",
+   "python",
+   "pyvis",
+   "scikit-learn",
+   "scipy",
+   "xcms"
+  ]
  },
  {
   "slug": "cumulative-distribution-visualization",
@@ -1007,7 +1327,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "mwastools",
+   "statistical-total-correlation-spectroscopy-stocsy"
+  ]
  },
  {
   "slug": "data-normalization-in-mass-spectrometry",
@@ -1029,7 +1356,12 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mzmine"
+  ]
  },
  {
   "slug": "data-pipeline-module-design-and-integration",
@@ -1054,7 +1386,15 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "multimodalspectraltransformer",
+   "numpy",
+   "pandas",
+   "python"
+  ]
  },
  {
   "slug": "dataset-storage-interface-architecture",
@@ -1071,7 +1411,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "nmrfx"
+  ]
  },
  {
   "slug": "deep-learning-metabolite-annotation",
@@ -1095,7 +1440,15 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "msconvert",
+   "msthunder",
+   "ubuntu",
+   "windows"
+  ]
  },
  {
   "slug": "deep-learning-spectral-language-model",
@@ -1116,7 +1469,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "deepmass2"
+  ]
  },
  {
   "slug": "dependency-version-management",
@@ -1141,7 +1499,18 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "human-metabolome-database-hmdb",
+   "openpyxl",
+   "pandas",
+   "pyqt5",
+   "python",
+   "python-3-9",
+   "xlsxwriter"
+  ]
  },
  {
   "slug": "diffusion-model-inference",
@@ -1163,7 +1532,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "diffspectra"
+  ]
  },
  {
   "slug": "docker-environment-configuration",
@@ -1184,7 +1558,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "docker"
+  ]
  },
  {
   "slug": "dom-chemodiversity-characterization",
@@ -1204,7 +1583,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "moletrans"
+  ]
  },
  {
   "slug": "emd-spectral-distance-computation",
@@ -1224,7 +1608,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mcfnmr",
+   "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
+  ]
  },
  {
   "slug": "endianness-detection-and-handling",
@@ -1244,7 +1634,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "nmrfx"
+  ]
  },
  {
   "slug": "entrypoint-verification",
@@ -1269,7 +1664,18 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "human-metabolome-database-hmdb",
+   "openpyxl",
+   "pandas",
+   "pyqt5",
+   "python",
+   "python-3-9",
+   "xlsxwriter"
+  ]
  },
  {
   "slug": "fda-repeatability-compliance-assessment",
@@ -1290,7 +1696,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "mwastools",
+   "statistical-total-correlation-spectroscopy-stocsy"
+  ]
  },
  {
   "slug": "feature-table-consensus-aggregation",
@@ -1315,7 +1728,18 @@
    "ion-mobility-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "fid-to-frequency-domain-fourier-transformation",
@@ -1335,7 +1759,10 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": []
  },
  {
   "slug": "file-api-endpoint-implementation",
@@ -1359,7 +1786,18 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "chem-spectra-app",
+   "curl",
+   "docker",
+   "flask",
+   "gunicorn",
+   "proteowizard-pwiz-skyline",
+   "python-3"
+  ]
  },
  {
   "slug": "file-integrity-validation",
@@ -1378,7 +1816,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "nmrfx"
+  ]
  },
  {
   "slug": "form-encoded-request-handling",
@@ -1403,7 +1846,18 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "chem-spectra-app",
+   "curl",
+   "docker",
+   "flask",
+   "gunicorn",
+   "proteowizard-pwiz-skyline",
+   "python-3"
+  ]
  },
  {
   "slug": "fragment-assembly-transformer-architecture",
@@ -1424,7 +1878,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "fragment-ion-theoretical-mass-calculation",
@@ -1446,7 +1909,13 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "camera",
+   "xcms"
+  ]
  },
  {
   "slug": "fragment-to-structure-assembly",
@@ -1467,7 +1936,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "fragmentation-pattern-similarity-scoring",
@@ -1499,7 +1977,21 @@
    "CE-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "clumsid",
+   "clumsiddata",
+   "grid",
+   "msentropy",
+   "msmssim",
+   "orgmassspecr",
+   "pheatmap",
+   "readxl",
+   "reshape2",
+   "tidyverse"
+  ]
  },
  {
   "slug": "fusion-pooling-strategy-implementation",
@@ -1522,7 +2014,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "python",
+   "pytorch-cu118"
+  ]
  },
  {
   "slug": "graph-based-molecular-representation",
@@ -1544,7 +2043,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "graph-neural-network-design-for-chemistry",
@@ -1566,7 +2074,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "heteronuclear-homonuclear-correlation-extraction",
@@ -1588,7 +2105,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "madbyte",
+   "python"
+  ]
  },
  {
   "slug": "hmdb-metabolite-query-and-retrieval",
@@ -1614,7 +2138,18 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "human-metabolome-database-hmdb",
+   "openpyxl",
+   "pandas",
+   "pyqt5",
+   "python",
+   "python-3-9",
+   "xlsxwriter"
+  ]
  },
  {
   "slug": "http-api-endpoint-design",
@@ -1638,7 +2173,18 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "chem-spectra-app",
+   "curl",
+   "docker",
+   "flask",
+   "gunicorn",
+   "proteowizard-pwiz-skyline",
+   "python-3"
+  ]
  },
  {
   "slug": "http-api-integration-with-external-services",
@@ -1662,7 +2208,18 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "chem-spectra-app",
+   "curl",
+   "docker",
+   "flask",
+   "gunicorn",
+   "proteowizard-pwiz-skyline",
+   "python-3"
+  ]
  },
  {
   "slug": "http-post-request-assembly",
@@ -1684,7 +2241,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "tensorflow-serving"
+  ]
  },
  {
   "slug": "hybrid-model-fusion-strategy",
@@ -1706,7 +2268,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "python",
+   "pytorch-cu118"
+  ]
  },
  {
   "slug": "in-silico-fragment-m-z-calculation",
@@ -1732,7 +2301,20 @@
    "direct-infusion-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-q-tof-uhplc-hrms-ms",
+   "bruker-q-tof-uhplc-hrms-ms",
+   "compound-discoverer",
+   "lipidmatch",
+   "ms-dial",
+   "mzmine",
+   "q-exactive-orbitrap",
+   "sciex-q-tof-uhplc-hrms-ms",
+   "xcms"
+  ]
  },
  {
   "slug": "in-silico-fragmentation-prediction",
@@ -1755,7 +2337,12 @@
    "ion-mobility-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "magma"
+  ]
  },
  {
   "slug": "inadequate-spectral-interpretation",
@@ -1776,7 +2363,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "pyineta",
+   "python"
+  ]
  },
  {
   "slug": "inadequate-spectral-processing",
@@ -1797,7 +2390,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "pyineta",
+   "python"
+  ]
  },
  {
   "slug": "interactive-data-exploration-design",
@@ -1818,7 +2417,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "prima-panel"
+  ]
  },
  {
   "slug": "isotopic-impurity-accounting",
@@ -1839,7 +2443,12 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "elemcor"
+  ]
  },
  {
   "slug": "j-coupling-multiplet-generation",
@@ -1859,7 +2468,10 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": []
  },
  {
   "slug": "jcamp-file-parsing",
@@ -1883,7 +2495,18 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "chem-spectra-app",
+   "curl",
+   "docker",
+   "flask",
+   "gunicorn",
+   "proteowizard-pwiz-skyline",
+   "python-3"
+  ]
  },
  {
   "slug": "json-payload-construction-for-nmr-spectra",
@@ -1904,7 +2527,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "tensorflow-serving"
+  ]
  },
  {
   "slug": "json-response-serialization",
@@ -1927,7 +2555,18 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "chem-spectra-app",
+   "curl",
+   "docker",
+   "flask",
+   "gunicorn",
+   "proteowizard-pwiz-skyline",
+   "python-3"
+  ]
  },
  {
   "slug": "json-schema-validation",
@@ -1955,7 +2594,18 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github",
+   "jsonschema",
+   "messes",
+   "mwtab",
+   "npm",
+   "pandas",
+   "python"
+  ]
  },
  {
   "slug": "linear-score-calculation-from-coefficients",
@@ -1980,7 +2630,12 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mimir"
+  ]
  },
  {
   "slug": "lineshape-convolution-and-broadening",
@@ -2000,7 +2655,10 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": []
  },
  {
   "slug": "mass-difference-network-construction",
@@ -2029,7 +2687,33 @@
    "direct-infusion-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cytoscape",
+   "dropms",
+   "formularity",
+   "freda",
+   "i-van-krevelen",
+   "keggrest",
+   "matplotlib",
+   "metaboanalyst",
+   "metabodirect",
+   "numpy",
+   "pandas",
+   "pmartr",
+   "py4cytoscape",
+   "python",
+   "python-numpy-pandas",
+   "r-4-0-2",
+   "r-vegan-package",
+   "seaborn",
+   "syncsa",
+   "ultramassexplorer",
+   "vegan",
+   "vegan-r-package"
+  ]
  },
  {
   "slug": "mass-spectral-data-validation",
@@ -2053,7 +2737,15 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "jupyter",
+   "jupyter-notebooks",
+   "ms2deepscore",
+   "python"
+  ]
  },
  {
   "slug": "mass-spectral-query-submission",
@@ -2081,7 +2773,18 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "foodmasst",
+   "gnps-masst",
+   "metadatamasst",
+   "microbemasst",
+   "microbiomemasst",
+   "plantmasst",
+   "tissuemasst"
+  ]
  },
  {
   "slug": "mass-spectrometry-data-processing",
@@ -2129,7 +2832,26 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "chem-spectra-app",
+   "cuda",
+   "curl",
+   "docker",
+   "flask",
+   "gunicorn",
+   "hyperspec",
+   "idsl-csa",
+   "jpa",
+   "jpa-r-package",
+   "metscriber",
+   "proteowizard-pwiz-skyline",
+   "python-3",
+   "python-3-8",
+   "shiny"
+  ]
  },
  {
   "slug": "mass-spectrum-structure-elucidation",
@@ -2153,7 +2875,17 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "iceberg-webui",
+   "ms-pred-iceberg",
+   "ms-pred-scarf-model",
+   "pubchem",
+   "pytorch",
+   "tensorflow"
+  ]
  },
  {
   "slug": "memory-mapped-file-selection-strategy",
@@ -2170,7 +2902,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "nmrfx"
+  ]
  },
  {
   "slug": "metabolic-age-prediction-from-nmr-features",
@@ -2194,7 +2931,12 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mimir"
+  ]
  },
  {
   "slug": "metabolic-parameter-visualization",
@@ -2216,7 +2958,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "prima-panel"
+  ]
  },
  {
   "slug": "metabolite-concentration-to-spectrum-mapping",
@@ -2236,7 +2983,10 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": []
  },
  {
   "slug": "metabolite-database-matching",
@@ -2257,7 +3007,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "pyineta",
+   "python"
+  ]
  },
  {
   "slug": "metabolite-dataset-preprocessing",
@@ -2278,7 +3034,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "prima-panel"
+  ]
  },
  {
   "slug": "metabolite-feature-quality-control",
@@ -2301,7 +3062,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "mwastools",
+   "statistical-total-correlation-spectroscopy-stocsy"
+  ]
  },
  {
   "slug": "metabolite-identification-from-transformation-rules",
@@ -2322,7 +3090,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biotransformer"
+  ]
  },
  {
   "slug": "metabolite-identifier-annotation",
@@ -2346,7 +3119,12 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biotransformer"
+  ]
  },
  {
   "slug": "metabolite-metadata-column-matching",
@@ -2368,7 +3146,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "jsonschema",
+   "messes",
+   "mwtab",
+   "pandas",
+   "python"
+  ]
  },
  {
   "slug": "metabolite-peak-assignment-from-nmr",
@@ -2392,7 +3179,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "numpy",
+   "pandas",
+   "python",
+   "pytorch",
+   "scipy"
+  ]
  },
  {
   "slug": "metabolite-phenotype-association-partial-correlation",
@@ -2415,7 +3211,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "mwastools",
+   "statistical-total-correlation-spectroscopy-stocsy"
+  ]
  },
  {
   "slug": "metabolite-prediction-pathway-selection",
@@ -2437,7 +3240,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biotransformer"
+  ]
  },
  {
   "slug": "metabolite-reference-library-filtering",
@@ -2463,7 +3271,18 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "human-metabolome-database-hmdb",
+   "openpyxl",
+   "pandas",
+   "pyqt5",
+   "python",
+   "python-3-9",
+   "xlsxwriter"
+  ]
  },
  {
   "slug": "metabolite-score-projection",
@@ -2489,7 +3308,12 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mimir"
+  ]
  },
  {
   "slug": "metabolite-signal-drift-detection",
@@ -2516,7 +3340,15 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "dplyr",
+   "hruv",
+   "ruv-iii",
+   "summarizedexperiment"
+  ]
  },
  {
   "slug": "metabolite-spectral-matching",
@@ -2540,7 +3372,13 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "masst"
+  ]
  },
  {
   "slug": "metabolite-stability-assessment-across-cohorts",
@@ -2561,7 +3399,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "prima-panel"
+  ]
  },
  {
   "slug": "metabolite-structure-prediction",
@@ -2584,7 +3427,12 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biotransformer"
+  ]
  },
  {
   "slug": "metabolomics-data-loading-and-formatting",
@@ -2608,7 +3456,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "assign-hierarchy",
+   "ggplot2",
+   "keggrest",
+   "omu-omu-summary-function",
+   "randomforest"
+  ]
  },
  {
   "slug": "metabolomics-data-representation",
@@ -2631,7 +3488,25 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "docker",
+   "gensim",
+   "latent-dirichlet-allocation-lda",
+   "mag",
+   "mag-mass2motif-annotation-guidance",
+   "massql",
+   "motifdb",
+   "ms2lda",
+   "ms2lda-preprocessing-generate-corpus",
+   "ms2lda-preprocessing-load-and-clean",
+   "postgresql",
+   "python",
+   "spec2vec"
+  ]
  },
  {
   "slug": "metabolomics-data-standardization",
@@ -2653,7 +3528,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "nmrbox",
+   "nmrpipe",
+   "sand"
+  ]
  },
  {
   "slug": "metabolomics-database-search-and-formula-matching",
@@ -2679,7 +3561,28 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "asari-mass-functions-module-nn-cluster-by-mz-seeds",
+   "asari-massgrid-class-build-grid-sample-wise-add-sample-build-grid-by-centroiding-bin-track-mzs",
+   "asari-peaks-module",
+   "hmdb-4",
+   "https-github-com-shuzhao-li-asari",
+   "jms",
+   "khipu",
+   "lowess",
+   "mass-functions-nn-cluster-by-mz-seeds",
+   "numpy",
+   "proteowizard",
+   "pymzml",
+   "python",
+   "scipy",
+   "scipy-signal-detrend",
+   "scipy-signal-find-peaks"
+  ]
  },
  {
   "slug": "metabolomics-file-format-parsing",
@@ -2707,7 +3610,17 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "jsonschema",
+   "messes",
+   "mwtab",
+   "pandas",
+   "python",
+   "r-gui"
+  ]
  },
  {
   "slug": "metabolomics-model-coefficient-application",
@@ -2731,7 +3644,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mimir"
+  ]
  },
  {
   "slug": "metadata-extraction-from-fixed-offset-records",
@@ -2750,7 +3668,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "nmrfx"
+  ]
  },
  {
   "slug": "metadata-structure-transformation",
@@ -2773,7 +3696,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "jsonschema",
+   "messes",
+   "mwtab",
+   "pandas",
+   "python"
+  ]
  },
  {
   "slug": "microbiome-metabolome-data-preprocessing",
@@ -2806,7 +3738,41 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "adam-optimizer",
+   "canonical-correlation-analysis-cca",
+   "cca-canonical-correlation-analysis",
+   "consensus-clustering",
+   "cytoscape",
+   "elastic-net",
+   "elastic-net-regression",
+   "hierarchical-clustering-euclidean-distance-complete-linkage",
+   "melonnpan",
+   "melonnpan-elastic-net-linear-regression",
+   "mimenet",
+   "ned",
+   "neural-networks",
+   "neural-networks-mlpnn-with-relu-activation",
+   "numpy",
+   "python",
+   "python-scikit-learn",
+   "python-scikit-learn-seaborn-or-matplotlib-for-visualization",
+   "random-forest",
+   "random-forest-regression",
+   "relu-activation",
+   "scikit-learn",
+   "scikit-learn-mlpregressor",
+   "scikit-learn-python",
+   "scipy-spearman-correlation",
+   "seaborn",
+   "seaborn-clustermap",
+   "tensorflow",
+   "tensorflow-or-pytorch",
+   "wgcna"
+  ]
  },
  {
   "slug": "minimum-cost-flow-formulation",
@@ -2826,7 +3792,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mcfnmr",
+   "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
+  ]
  },
  {
   "slug": "mixture-spectrum-comparison",
@@ -2848,7 +3820,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mcfnmr",
+   "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
+  ]
  },
  {
   "slug": "modality-contribution-quantification",
@@ -2869,7 +3847,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "model-generalization-assessment-across-molecular-size-regimes",
@@ -2891,7 +3878,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "model-metadata-extraction",
@@ -2909,7 +3905,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "tensorflow-serving"
+  ]
  },
  {
   "slug": "model-metadata-schema-inspection",
@@ -2926,7 +3927,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "tensorflow-serving"
+  ]
  },
  {
   "slug": "model-metadata-schema-verification",
@@ -2944,7 +3950,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "tensorflow-serving"
+  ]
  },
  {
   "slug": "modification-site-localization",
@@ -2969,7 +3980,17 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "basicevaluationengine",
+   "matplotlib",
+   "modifinder",
+   "pillow",
+   "python",
+   "rdkit"
+  ]
  },
  {
   "slug": "molecular-connectivity-inference",
@@ -2990,7 +4011,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "molecular-formula-prediction",
@@ -3012,7 +4042,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "molecular-fragment-assembly-from-transformer-predictions",
@@ -3034,7 +4073,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "molecular-geometry-neural-network-potential-evaluation",
@@ -3058,7 +4106,16 @@
    "ion-mobility-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "ase-ani",
+   "dimorphite-dl",
+   "quick",
+   "rdkit",
+   "snakemake"
+  ]
  },
  {
   "slug": "molecular-graph-encoder-decoder-training",
@@ -3079,7 +4136,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "molecular-network-clustering-and-analysis",
@@ -3102,7 +4168,14 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bam",
+   "hassounlab-bam",
+   "rdkit"
+  ]
  },
  {
   "slug": "molecular-structure-conformer-generation",
@@ -3134,7 +4207,19 @@
    "ion-mobility-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "numpy",
+   "pandas",
+   "pip",
+   "pyg",
+   "python-3",
+   "pytorch",
+   "rdkit"
+  ]
  },
  {
   "slug": "molecular-structure-ground-truth-matching-and-accuracy-evaluation",
@@ -3156,7 +4241,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "molecular-structure-prediction-evaluation",
@@ -3179,7 +4273,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "molecular-structure-prediction-from-spectra",
@@ -3200,7 +4303,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "molecular-structure-prediction-out-of-distribution",
@@ -3222,7 +4334,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "molecular-structure-prediction-validation",
@@ -3247,7 +4368,15 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "multimodalspectraltransformer",
+   "numpy",
+   "pandas",
+   "python"
+  ]
  },
  {
   "slug": "molecular-transformation-frequency-filtering",
@@ -3267,7 +4396,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "moletrans"
+  ]
  },
  {
   "slug": "multi-database-structure-querying",
@@ -3291,7 +4425,15 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "ms-cleanr",
+   "ms-dial-or-higher",
+   "ms-dial-v4-00-or-higher",
+   "ms-finder"
+  ]
  },
  {
   "slug": "multi-modal-spectroscopic-data-integration",
@@ -3316,7 +4458,15 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "multimodalspectraltransformer",
+   "numpy",
+   "pandas",
+   "python"
+  ]
  },
  {
   "slug": "multimodal-spectral-alignment-by-molecular-identifier",
@@ -3339,7 +4489,15 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "multimodalspectraltransformer",
+   "numpy",
+   "pandas",
+   "python"
+  ]
  },
  {
   "slug": "multimodal-tensor-construction-and-validation",
@@ -3365,7 +4523,15 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "multimodalspectraltransformer",
+   "numpy",
+   "pandas",
+   "python"
+  ]
  },
  {
   "slug": "multiple-testing-correction-metabolomics",
@@ -3387,7 +4553,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "mwastools",
+   "statistical-total-correlation-spectroscopy-stocsy"
+  ]
  },
  {
   "slug": "multitask-model-inference",
@@ -3408,7 +4581,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "mwtab-file-parsing",
@@ -3431,7 +4613,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "jsonschema",
+   "messes",
+   "mwtab",
+   "pandas",
+   "python"
+  ]
  },
  {
   "slug": "mwtab-to-json-conversion",
@@ -3456,7 +4647,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "jsonschema",
+   "messes",
+   "mwtab",
+   "pandas",
+   "python"
+  ]
  },
  {
   "slug": "mzmine-quantitative-table-parsing",
@@ -3484,7 +4684,24 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "canopus",
+   "gnps",
+   "ion-identity",
+   "javafx-24",
+   "jdk-25",
+   "lotus-database",
+   "memo",
+   "mzmine",
+   "mzmine2",
+   "mzmine3",
+   "open-tree-of-life",
+   "sirius",
+   "timar"
+  ]
  },
  {
   "slug": "neural-network-model-deployment",
@@ -3511,7 +4728,13 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "pyeva",
+   "python"
+  ]
  },
  {
   "slug": "nightingale-1h-nmr-data-integration",
@@ -3534,7 +4757,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mimir"
+  ]
  },
  {
   "slug": "nmr-chemical-shift-interval-matching",
@@ -3560,7 +4788,18 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "human-metabolome-database-hmdb",
+   "openpyxl",
+   "pandas",
+   "pyqt5",
+   "python",
+   "python-3-9",
+   "xlsxwriter"
+  ]
  },
  {
   "slug": "nmr-inadequate-spectra-acquisition-and-preprocessing",
@@ -3582,7 +4821,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "pyineta",
+   "python"
+  ]
  },
  {
   "slug": "nmr-metabolite-identity-confirmation",
@@ -3605,7 +4850,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "mwastools",
+   "statistical-total-correlation-spectroscopy-stocsy"
+  ]
  },
  {
   "slug": "nmr-metabolomic-quality-control-reporting",
@@ -3629,7 +4881,12 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "prima-panel"
+  ]
  },
  {
   "slug": "nmr-modality-ablation-analysis",
@@ -3651,7 +4908,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "nmr-network-visualization-and-interpretation",
@@ -3674,7 +4940,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "madbyte",
+   "python"
+  ]
  },
  {
   "slug": "nmr-peak-deconvolution",
@@ -3696,7 +4969,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "nmrbox",
+   "nmrpipe",
+   "sand"
+  ]
  },
  {
   "slug": "nmr-peak-json-serialization",
@@ -3718,7 +4998,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "tensorflow-serving"
+  ]
  },
  {
   "slug": "nmr-peak-prediction-via-database-lookup",
@@ -3743,7 +5028,18 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "chem-spectra-app",
+   "curl",
+   "docker",
+   "flask",
+   "gunicorn",
+   "proteowizard-pwiz-skyline",
+   "python-3"
+  ]
  },
  {
   "slug": "nmr-peak-quality-filtering",
@@ -3766,7 +5062,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "numpy",
+   "pandas",
+   "python",
+   "pytorch",
+   "scipy"
+  ]
  },
  {
   "slug": "nmr-peak-table-generation",
@@ -3788,7 +5093,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "nmrbox",
+   "nmrpipe",
+   "sand"
+  ]
  },
  {
   "slug": "nmr-spectra-deep-learning-encoding",
@@ -3811,7 +5123,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "python",
+   "pytorch-cu118"
+  ]
  },
  {
   "slug": "nmr-spectra-preprocessing",
@@ -3833,7 +5152,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "nmrbox",
+   "nmrpipe",
+   "sand"
+  ]
  },
  {
   "slug": "nmr-spectra-preprocessing-and-feature-extraction",
@@ -3854,7 +5180,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "nmr-spectral-comparative-analysis",
@@ -3876,7 +5211,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "madbyte",
+   "python"
+  ]
  },
  {
   "slug": "nmr-spectral-data-format-serialization",
@@ -3898,7 +5240,10 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": []
  },
  {
   "slug": "nmr-spectral-feature-extraction",
@@ -3921,7 +5266,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "python",
+   "pytorch-cu118"
+  ]
  },
  {
   "slug": "nmr-spectral-preprocessing-and-phasing",
@@ -3946,7 +5298,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "mwastools",
+   "statistical-total-correlation-spectroscopy-stocsy"
+  ]
  },
  {
   "slug": "nmr-spectral-processing",
@@ -3971,7 +5330,18 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "chem-spectra-app",
+   "curl",
+   "docker",
+   "flask",
+   "gunicorn",
+   "proteowizard-pwiz-skyline",
+   "python-3"
+  ]
  },
  {
   "slug": "nmr-spectrum-data-import-and-parsing",
@@ -3995,7 +5365,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "numpy",
+   "pandas",
+   "python",
+   "pytorch",
+   "scipy"
+  ]
  },
  {
   "slug": "nmr-spectrum-normalization",
@@ -4017,7 +5396,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mcfnmr",
+   "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
+  ]
  },
  {
   "slug": "nmr-spectrum-object-construction",
@@ -4039,7 +5424,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asics"
+  ]
  },
  {
   "slug": "nmr-spectrum-peak-detection",
@@ -4060,7 +5450,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "pyineta",
+   "python"
+  ]
  },
  {
   "slug": "nmr-spectrum-phase-adjustment",
@@ -4081,7 +5477,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "nmrbox",
+   "nmrpipe",
+   "sand"
+  ]
  },
  {
   "slug": "nmr-spectrum-preprocessing",
@@ -4103,7 +5506,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "nmr-spectrum-reconstruction-from-library",
@@ -4124,7 +5536,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mcfnmr",
+   "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
+  ]
  },
  {
   "slug": "nmr-spectrum-tiling-format-interpretation",
@@ -4141,7 +5559,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "nmrfx"
+  ]
  },
  {
   "slug": "nmr-spectrum-to-structure-inference",
@@ -4162,7 +5585,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "nmr-spin-system-simulation",
@@ -4182,7 +5614,10 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": []
  },
  {
   "slug": "nmr-workflow-pipeline-execution",
@@ -4204,7 +5639,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "nmrbox",
+   "nmrpipe",
+   "sand"
+  ]
  },
  {
   "slug": "nmrbox-environment-management",
@@ -4225,7 +5667,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "nmrbox",
+   "nmrpipe",
+   "sand"
+  ]
  },
  {
   "slug": "nv-header-structure-interpretation",
@@ -4244,7 +5693,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "nmrfx"
+  ]
  },
  {
   "slug": "optimal-transport-scoring",
@@ -4267,7 +5721,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mcfnmr",
+   "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
+  ]
  },
  {
   "slug": "pathway-ranking-and-prioritization",
@@ -4296,7 +5756,17 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "ms2lda",
+   "pals",
+   "pals-pathway-activity-level-scoring",
+   "pals-viewer",
+   "plage-method-within-pals"
+  ]
  },
  {
   "slug": "peak-list-filtering-for-quality-control",
@@ -4320,7 +5790,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "numpy",
+   "pandas",
+   "python",
+   "pytorch",
+   "scipy"
+  ]
  },
  {
   "slug": "peak-network-clustering-inadequate",
@@ -4343,7 +5822,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "pyineta",
+   "python"
+  ]
  },
  {
   "slug": "peak-network-to-metabolite-assignment",
@@ -4364,7 +5849,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "pyineta",
+   "python"
+  ]
  },
  {
   "slug": "peak-similarity-assessment",
@@ -4385,7 +5876,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "pyineta",
+   "python"
+  ]
  },
  {
   "slug": "peak-table-extraction",
@@ -4411,7 +5908,18 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "chem-spectra-app",
+   "curl",
+   "docker",
+   "flask",
+   "gunicorn",
+   "proteowizard-pwiz-skyline",
+   "python-3"
+  ]
  },
  {
   "slug": "peaklist-metabolite-assignment-prioritization",
@@ -4434,7 +5942,13 @@
    "CE-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "idsl-ipa",
+   "idsl-ufa"
+  ]
  },
  {
   "slug": "per-browser-developer-setting-navigation",
@@ -4455,7 +5969,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "google-chrome",
+   "mozilla-firefox",
+   "safari",
+   "webassembly",
+   "webworker"
+  ]
  },
  {
   "slug": "performance-degradation-quantification-and-analysis",
@@ -4476,7 +5999,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "pfas-characteristic-mass-difference-detection",
@@ -4501,7 +6033,15 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "msconvert",
+   "openms",
+   "pyopenms",
+   "python"
+  ]
  },
  {
   "slug": "plasma-serum-sample-comparison",
@@ -4521,7 +6061,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "prima-panel"
+  ]
  },
  {
   "slug": "pre-analytical-delay-effect-quantification",
@@ -4542,7 +6087,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "prima-panel"
+  ]
  },
  {
   "slug": "pre-analytical-delay-stratification",
@@ -4562,7 +6112,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "prima-panel"
+  ]
  },
  {
   "slug": "published-metabolic-profile-implementation",
@@ -4587,7 +6142,12 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mimir"
+  ]
  },
  {
   "slug": "python-deep-learning-model-loading-and-execution",
@@ -4612,7 +6172,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "numpy",
+   "pandas",
+   "python",
+   "pytorch",
+   "scipy"
+  ]
  },
  {
   "slug": "python-environment-setup",
@@ -4636,7 +6205,18 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "human-metabolome-database-hmdb",
+   "openpyxl",
+   "pandas",
+   "pyqt5",
+   "python",
+   "python-3-9",
+   "xlsxwriter"
+  ]
  },
  {
   "slug": "pytorch-module-composition",
@@ -4660,7 +6240,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "python",
+   "pytorch-cu118"
+  ]
  },
  {
   "slug": "qc-coefficient-of-variation-calculation",
@@ -4682,7 +6269,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "mwastools",
+   "statistical-total-correlation-spectroscopy-stocsy"
+  ]
  },
  {
   "slug": "quality-metrics-summarization",
@@ -4703,7 +6297,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "mwastools",
+   "statistical-total-correlation-spectroscopy-stocsy"
+  ]
  },
  {
   "slug": "r-package-function-execution",
@@ -4725,7 +6326,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asics"
+  ]
  },
  {
   "slug": "r-package-function-integration",
@@ -4749,7 +6355,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mimir"
+  ]
  },
  {
   "slug": "record-grouping-and-collation",
@@ -4771,7 +6382,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "jsonschema",
+   "messes",
+   "mwtab",
+   "pandas",
+   "python"
+  ]
  },
  {
   "slug": "replicate-consistency-assessment",
@@ -4794,7 +6414,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "mwastools",
+   "statistical-total-correlation-spectroscopy-stocsy"
+  ]
  },
  {
   "slug": "repository-cloning-and-initialization",
@@ -4818,7 +6445,18 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "human-metabolome-database-hmdb",
+   "openpyxl",
+   "pandas",
+   "pyqt5",
+   "python",
+   "python-3-9",
+   "xlsxwriter"
+  ]
  },
  {
   "slug": "repository-cloning-and-setup",
@@ -4839,7 +6477,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "docker"
+  ]
  },
  {
   "slug": "restful-api-endpoint-invocation",
@@ -4861,7 +6504,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "tensorflow-serving"
+  ]
  },
  {
   "slug": "sample-prioritization-through-structural-clustering",
@@ -4884,7 +6532,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "madbyte",
+   "python"
+  ]
  },
  {
   "slug": "signal-to-noise-ratio-assessment",
@@ -4908,7 +6563,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "numpy",
+   "pandas",
+   "python",
+   "pytorch",
+   "scipy"
+  ]
  },
  {
   "slug": "small-molecule-structure-matching",
@@ -4930,7 +6594,12 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biotransformer"
+  ]
  },
  {
   "slug": "smiles-structure-annotation",
@@ -4957,7 +6626,18 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cfm-id",
+   "cfmid",
+   "msgo-model",
+   "python",
+   "python-3-7",
+   "torch",
+   "torch-1-7-1"
+  ]
  },
  {
   "slug": "spatial-overlap-analysis-imaging",
@@ -4982,7 +6662,15 @@
    "MS-imaging",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "devtools",
+   "rmsi",
+   "rmsicleanup",
+   "rmsiproc"
+  ]
  },
  {
   "slug": "spearman-correlation-computation",
@@ -5005,7 +6693,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "mwastools",
+   "statistical-total-correlation-spectroscopy-stocsy"
+  ]
  },
  {
   "slug": "spectra-to-structure-elucidation",
@@ -5028,7 +6723,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "diffspectra"
+  ]
  },
  {
   "slug": "spectral-connectivity-filtering",
@@ -5049,7 +6749,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "pyineta",
+   "python"
+  ]
  },
  {
   "slug": "spectral-correlation-interpretation",
@@ -5073,7 +6779,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "mwastools",
+   "statistical-total-correlation-spectroscopy-stocsy"
+  ]
  },
  {
   "slug": "spectral-data-format-parsing-nmr-hsqc-cosy-ir",
@@ -5098,7 +6811,15 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "multimodalspectraltransformer",
+   "numpy",
+   "pandas",
+   "python"
+  ]
  },
  {
   "slug": "spectral-database-matching",
@@ -5124,7 +6845,18 @@
    "ion-mobility-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "metfrag",
+   "pubchem",
+   "pubchempy",
+   "python",
+   "rdkit",
+   "sirius",
+   "spectra"
+  ]
  },
  {
   "slug": "spectral-feature-engineering",
@@ -5142,7 +6874,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "chemprop",
+   "chemprop-ir"
+  ]
  },
  {
   "slug": "spectral-file-format-parsing",
@@ -5168,7 +6906,18 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "chem-spectra-app",
+   "curl",
+   "docker",
+   "flask",
+   "gunicorn",
+   "proteowizard-pwiz-skyline",
+   "python-3"
+  ]
  },
  {
   "slug": "spectral-graph-interpretation",
@@ -5194,7 +6943,15 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "mzmine2",
+   "openms",
+   "optimus"
+  ]
  },
  {
   "slug": "spectral-image-rendering",
@@ -5217,7 +6974,18 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "chem-spectra-app",
+   "curl",
+   "docker",
+   "flask",
+   "gunicorn",
+   "proteowizard-pwiz-skyline",
+   "python-3"
+  ]
  },
  {
   "slug": "spectral-intensity-normalization-across-modalities",
@@ -5240,7 +7008,15 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "multimodalspectraltransformer",
+   "numpy",
+   "pandas",
+   "python"
+  ]
  },
  {
   "slug": "spectral-intensity-thresholding",
@@ -5261,7 +7037,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "pyineta",
+   "python"
+  ]
  },
  {
   "slug": "spectral-library-matching-gnps",
@@ -5286,7 +7068,16 @@
    "CE-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "emperor",
+   "gnps",
+   "gnps2",
+   "massive",
+   "redu"
+  ]
  },
  {
   "slug": "spectral-mixture-deconvolution",
@@ -5307,7 +7098,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mcfnmr",
+   "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
+  ]
  },
  {
   "slug": "spectral-modality-preprocessing",
@@ -5333,7 +7130,15 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "multimodalspectraltransformer",
+   "numpy",
+   "pandas",
+   "python"
+  ]
  },
  {
   "slug": "spectral-overview-representation-generation",
@@ -5357,7 +7162,15 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "jupyter",
+   "jupyter-notebooks",
+   "ms2deepscore",
+   "python"
+  ]
  },
  {
   "slug": "spectral-peak-data-validation-and-parsing",
@@ -5381,7 +7194,18 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "chem-spectra-app",
+   "curl",
+   "docker",
+   "flask",
+   "gunicorn",
+   "proteowizard-pwiz-skyline",
+   "python-3"
+  ]
  },
  {
   "slug": "spectral-peak-deconvolution",
@@ -5403,7 +7227,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "nmrbox",
+   "nmrpipe",
+   "sand"
+  ]
  },
  {
   "slug": "spectral-peak-detection-and-picking",
@@ -5425,7 +7256,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "pyineta",
+   "python"
+  ]
  },
  {
   "slug": "spectral-peak-network-grouping",
@@ -5446,7 +7283,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "pyineta",
+   "python"
+  ]
  },
  {
   "slug": "spectral-peak-validation",
@@ -5469,7 +7312,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "numpy",
+   "pandas",
+   "python",
+   "pytorch",
+   "scipy"
+  ]
  },
  {
   "slug": "spectral-quality-filtering-signal-to-noise",
@@ -5492,7 +7344,15 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "multimodalspectraltransformer",
+   "numpy",
+   "pandas",
+   "python"
+  ]
  },
  {
   "slug": "spectral-query-formulation",
@@ -5515,7 +7375,13 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "masst"
+  ]
  },
  {
   "slug": "spectral-roi-boundary-definition",
@@ -5542,7 +7408,18 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "human-metabolome-database-hmdb",
+   "openpyxl",
+   "pandas",
+   "pyqt5",
+   "python",
+   "python-3-9",
+   "xlsxwriter"
+  ]
  },
  {
   "slug": "spectral-similarity-matching-and-comparison",
@@ -5569,7 +7446,24 @@
    "CE-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "github",
+   "gnps",
+   "limma",
+   "massspecwavelet",
+   "metabocoreutils",
+   "msbackendmgf",
+   "msdatahub",
+   "msfeatures",
+   "pheatmap",
+   "spectra",
+   "xcms",
+   "zenodo"
+  ]
  },
  {
   "slug": "spectral-similarity-scoring-parent-tp",
@@ -5592,7 +7486,17 @@
    "ion-mobility-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biotransformer",
+   "cts",
+   "metfrag",
+   "patroon",
+   "pubchem",
+   "sirius"
+  ]
  },
  {
   "slug": "spectral-to-structure-mapping-prediction",
@@ -5614,7 +7518,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "spectral-visualization-and-result-interpretation",
@@ -5635,7 +7548,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "pyineta",
+   "python"
+  ]
  },
  {
   "slug": "spectroscopic-data-preprocessing",
@@ -5656,7 +7575,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "diffspectra"
+  ]
  },
  {
   "slug": "stocsy-metabolite-assignment",
@@ -5681,7 +7605,14 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "mwastools",
+   "statistical-total-correlation-spectroscopy-stocsy"
+  ]
  },
  {
   "slug": "structural-scaffold-feature-identification",
@@ -5704,7 +7635,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "madbyte",
+   "python"
+  ]
  },
  {
   "slug": "structural-similarity-scoring-metabolites",
@@ -5729,7 +7667,10 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": []
  },
  {
   "slug": "structure-prediction-from-spectra",
@@ -5757,7 +7698,18 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cfm-id",
+   "cfmid",
+   "msgo-model",
+   "python",
+   "python-3-7",
+   "torch",
+   "torch-1-7-1"
+  ]
  },
  {
   "slug": "structure-similarity-comparison",
@@ -5778,7 +7730,15 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "multimodalspectraltransformer",
+   "numpy",
+   "pandas",
+   "python"
+  ]
  },
  {
   "slug": "structure-similarity-evaluation",
@@ -5799,7 +7759,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "structured-report-generation",
@@ -5824,7 +7793,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "jsonschema",
+   "messes",
+   "mwtab",
+   "pandas",
+   "python"
+  ]
  },
  {
   "slug": "summarized-experiment-object-handling",
@@ -5847,7 +7825,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "mwastools",
+   "statistical-total-correlation-spectroscopy-stocsy"
+  ]
  },
  {
   "slug": "summarized-experiment-subsetting",
@@ -5869,7 +7854,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "mwastools",
+   "statistical-total-correlation-spectroscopy-stocsy"
+  ]
  },
  {
   "slug": "tabular-data-cleaning",
@@ -5892,7 +7884,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "numpy",
+   "pandas",
+   "python",
+   "pytorch",
+   "scipy"
+  ]
  },
  {
   "slug": "tabular-data-transformation-with-pandas",
@@ -5917,7 +7918,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "jsonschema",
+   "messes",
+   "mwtab",
+   "pandas",
+   "python"
+  ]
  },
  {
   "slug": "tensorflow-serving-endpoint-integration",
@@ -5938,7 +7948,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "link-only",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "tensorflow-serving"
+  ]
  },
  {
   "slug": "tool-initialization-verification",
@@ -5958,7 +7973,12 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "docker"
+  ]
  },
  {
   "slug": "top-k-accuracy-ranking-and-evaluation",
@@ -5978,7 +7998,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "transformer-architecture-inference",
@@ -6005,7 +8034,17 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "chemprop",
+   "chemprop-ir",
+   "multimodalspectraltransformer",
+   "numpy",
+   "pandas",
+   "python"
+  ]
  },
  {
   "slug": "transformer-attention-mechanism-implementation",
@@ -6026,7 +8065,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "transformer-based-fragment-assembly",
@@ -6047,7 +8095,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "convolutional-neural-network",
+   "convolutional-neural-network-cnn",
+   "pytorch",
+   "transformer",
+   "transformer-architecture"
+  ]
  },
  {
   "slug": "transformer-cnn-hybrid-model-training",
@@ -6070,7 +8127,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "python",
+   "pytorch-cu118"
+  ]
  },
  {
   "slug": "transformer-encoder-architecture-implementation",
@@ -6093,7 +8157,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "python",
+   "pytorch-cu118"
+  ]
  },
  {
   "slug": "transformer-model-inference-on-spectral-data",
@@ -6117,7 +8188,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "numpy",
+   "pandas",
+   "python",
+   "pytorch",
+   "scipy"
+  ]
  },
  {
   "slug": "unannotated-feature-characterization",
@@ -6146,7 +8226,24 @@
    "LC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "canopus",
+   "gnps",
+   "ion-identity",
+   "javafx-24",
+   "jdk-25",
+   "lotus-database",
+   "memo",
+   "mzmine",
+   "mzmine2",
+   "mzmine3",
+   "open-tree-of-life",
+   "sirius",
+   "timar"
+  ]
  },
  {
   "slug": "unknown-chemical-identification-in-complex-mixtures",
@@ -6171,7 +8268,18 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "cfm-id",
+   "cfmid",
+   "msgo-model",
+   "python",
+   "python-3-7",
+   "torch",
+   "torch-1-7-1"
+  ]
  },
  {
   "slug": "validation-error-categorization",
@@ -6194,7 +8302,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "jsonschema",
+   "messes",
+   "mwtab",
+   "pandas",
+   "python"
+  ]
  },
  {
   "slug": "virtual-environment-configuration",
@@ -6217,7 +8334,18 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "human-metabolome-database-hmdb",
+   "openpyxl",
+   "pandas",
+   "pyqt5",
+   "python",
+   "python-3-9",
+   "xlsxwriter"
+  ]
  },
  {
   "slug": "wasserstein-distance-computation",
@@ -6239,7 +8367,13 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mcfnmr",
+   "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
+  ]
  },
  {
   "slug": "webassembly-local-loading-setup",
@@ -6261,7 +8395,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "google-chrome",
+   "mozilla-firefox",
+   "safari",
+   "webassembly",
+   "webworker"
+  ]
  },
  {
   "slug": "webworker-file-access-enabling",
@@ -6283,7 +8426,16 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "google-chrome",
+   "mozilla-firefox",
+   "safari",
+   "webassembly",
+   "webworker"
+  ]
  },
  {
   "slug": "weighted-loss-function-optimization",
@@ -6306,7 +8458,14 @@
   "techniques": [
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "python",
+   "pytorch-cu118"
+  ]
  },
  {
   "slug": "xcms-feature-extraction-and-grouping",
@@ -6330,6 +8489,12 @@
    "GC-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "george",
+   "xcms"
+  ]
  }
 ]

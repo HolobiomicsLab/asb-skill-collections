@@ -1,9 +1,10 @@
 ---
 name: reaction-pathway-interpolation
-description: Use when after CREST (version >= 3.0.2) has identified an ensemble of low-energy conformers and stationary points (minima and transition states), and before submitting interpolated geometries to ORCA (version >= 6.0.
+description: Use when after CREST (version >= 3.0.2) has identified an ensemble of
+  low-energy conformers and stationary points (minima and transition states), and
+  before submitting interpolated geometries to ORCA (version >= 6.0.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0321
   edam_topics:
   - http://edamontology.org/topic_0176
@@ -18,11 +19,14 @@ metadata:
   - CREST
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00234
   title: QCxMS2
 evidence_spans:
-- Program package for the quantum mechanical calculation of EI mass spectra using automated reaction network exploration
+- Program package for the quantum mechanical calculation of EI mass spectra using
+  automated reaction network exploration
 - '**xtb** (version > 6.7.1 - bleeding edge version)'
 - '**orca** (version >= 6.0.0)'
 - '**molbar** (version >= 1.1.3)'

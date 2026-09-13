@@ -1,9 +1,10 @@
 ---
 name: transformer-input-representation-construction
-description: Use when you have variable-length MS/MS peak lists (m/z arrays and intensity arrays) that must be fed into a transformer architecture for tasks like compound identification or spectral clustering.
+description: Use when you have variable-length MS/MS peak lists (m/z arrays and intensity
+  arrays) that must be fed into a transformer architecture for tasks like compound
+  identification or spectral clustering.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +16,8 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c00260
   title: CLERMS

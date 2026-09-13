@@ -1,9 +1,11 @@
 ---
 name: encoder-decoder-end-to-end-training
-description: Use when you have a pretrained encoder that produces fixed-size embeddings from MS/MS spectra (or similar spectral data), a tokenized target dataset of canonical SMILES strings representing molecular structures, and you need to learn a decoder that reliably reconstructs the molecular structure from.
+description: Use when you have a pretrained encoder that produces fixed-size embeddings
+  from MS/MS spectra (or similar spectral data), a tokenized target dataset of canonical
+  SMILES strings representing molecular structures, and you need to learn a decoder
+  that reliably reconstructs the molecular structure from.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3314
@@ -14,11 +16,14 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s42004-023-00932-3
   title: Spec2Mol
 evidence_spans:
-- Processing of the chemical data is based on the [RDKit](https://www.rdkit.org/) software.
+- Processing of the chemical data is based on the [RDKit](https://www.rdkit.org/)
+  software.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

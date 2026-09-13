@@ -1,9 +1,10 @@
 ---
 name: quantum-input-file-preparation
-description: Use when you have a set of RDKit-generated conformers ranked by ASE-ANI single-point energies, and you need to submit the lowest-energy subset to quantum software (e.g. QUICK) for CCS-relevant electronic structure calculations.
+description: Use when you have a set of RDKit-generated conformers ranked by ASE-ANI
+  single-point energies, and you need to submit the lowest-energy subset to quantum
+  software (e.g. QUICK) for CCS-relevant electronic structure calculations.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0176
@@ -15,6 +16,8 @@ metadata:
   - Dimorphite-DL
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS

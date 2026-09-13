@@ -1,9 +1,10 @@
 ---
 name: search-performance-benchmarking
-description: Use when when you have two or more implementations of a spectral search tool (e.g., MASST vs. MASST+) and need to quantify whether claimed performance improvements (e.g., '100-fold speedup') are reproducible.
+description: Use when when you have two or more implementations of a spectral search
+  tool (e.g., MASST vs. MASST+) and need to quantify whether claimed performance improvements
+  (e.g., '100-fold speedup') are reproducible.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3945
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,6 +15,8 @@ metadata:
   - MASST+
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41587-023-01985-4
   title: MASST

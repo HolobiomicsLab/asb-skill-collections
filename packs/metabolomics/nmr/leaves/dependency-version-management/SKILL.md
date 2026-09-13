@@ -1,9 +1,11 @@
 ---
 name: dependency-version-management
-description: Use when when you need to document or reproduce a Python-based research application (or any package-dependent workflow) and discover that the original publication or repository specifies dependencies without versions, or when you want to verify that a documented set of pinned versions can be.
+description: Use when when you need to document or reproduce a Python-based research
+  application (or any package-dependent workflow) and discover that the original publication
+  or repository specifies dependencies without versions, or when you want to verify
+  that a documented set of pinned versions can be.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_0769
@@ -17,6 +19,8 @@ metadata:
   - venv
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/nbm.70131
   title: ROIAL-NMR

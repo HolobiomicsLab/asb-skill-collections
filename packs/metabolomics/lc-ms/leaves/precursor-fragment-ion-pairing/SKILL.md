@@ -1,9 +1,10 @@
 ---
 name: precursor-fragment-ion-pairing
-description: Use when you have raw LC-MS/MS data files (mzML/mzXML format from Thermo, Waters, or Bruker instruments) and a list of target compounds defined by precursor m/z values (and optionally retention time windows).
+description: Use when you have raw LC-MS/MS data files (mzML/mzXML format from Thermo,
+  Waters, or Bruker instruments) and a list of target compounds defined by precursor
+  m/z values (and optionally retention time windows).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +16,8 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04343
   title: MeRgeION

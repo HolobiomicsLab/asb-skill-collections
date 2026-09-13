@@ -1,9 +1,10 @@
 ---
 name: dataframe-and-numericlist-manipulation
-description: Use when you are implementing a new MsBackend subclass and need to store spectra metadata (sample names, retention times, precursor m/z, etc.) separately from peak data (m/z and intensity pairs) while maintaining row-wise alignment.
+description: Use when you are implementing a new MsBackend subclass and need to store
+  spectra metadata (sample names, retention times, precursor m/z, etc.) separately
+  from peak data (m/z and intensity pairs) while maintaining row-wise alignment.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3365
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,11 +16,14 @@ metadata:
   - IRanges
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 - library(Spectra) library(IRanges)
 - library(Spectra)
 claims: []

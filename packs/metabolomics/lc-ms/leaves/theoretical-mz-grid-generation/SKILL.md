@@ -1,9 +1,10 @@
 ---
 name: theoretical-mz-grid-generation
-description: Use when you have a feature table from untargeted LC-MS (m/z, retention time, intensity) and need to annotate which observed m/z values correspond to isotopologues and adducts of the same neutral compound.
+description: Use when you have a feature table from untargeted LC-MS (m/z, retention
+  time, intensity) and need to annotate which observed m/z values correspond to isotopologues
+  and adducts of the same neutral compound.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +17,8 @@ metadata:
   - asari
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu

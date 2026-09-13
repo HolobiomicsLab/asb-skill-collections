@@ -1,9 +1,9 @@
 ---
 name: decoy-database-generation-for-metabolomics
-description: Use when performing large-scale untargeted metabolomics annotation where you need to estimate the false discovery rate of metabolite identifications.
+description: Use when performing large-scale untargeted metabolomics annotation where
+  you need to estimate the false discovery rate of metabolite identifications.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3628
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +16,8 @@ metadata:
   - Passatutto
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra

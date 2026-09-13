@@ -1,9 +1,10 @@
 ---
 name: fragmentation-pattern-similarity-scoring
-description: Use when after feature detection and alignment have produced a feature table with MS/MS spectra, and you have access to a reference spectral database (e.g., xenobiotic reaction libraries or public databases).
+description: Use when after feature detection and alignment have produced a feature
+  table with MS/MS spectra, and you have access to a reference spectral database (e.g.,
+  xenobiotic reaction libraries or public databases).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -24,6 +25,8 @@ metadata:
   techniques:
   - CE-MS
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.est.5c08558
   title: CMDN

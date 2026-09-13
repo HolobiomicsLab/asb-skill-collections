@@ -1,9 +1,10 @@
 ---
 name: mass-spectral-matrix-prediction
-description: Use when you have raw GC-MS data with overlapped peaks in a specific retention time region and need to resolve the individual pure mass spectra of all components present in that region.
+description: Use when you have raw GC-MS data with overlapped peaks in a specific
+  retention time region and need to resolve the individual pure mass spectra of all
+  components present in that region.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3628
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -15,6 +16,8 @@ metadata:
   - GCMSFormer
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05772
   title: GCMSFormer

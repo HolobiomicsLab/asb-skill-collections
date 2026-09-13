@@ -1,9 +1,11 @@
 ---
 name: session-object-serialization
-description: Use when after you have processed raw LC-MS/MS spectral data through the specXplore importing pipeline in a Jupyter notebook and produced an in-memory specXplore session data object containing t-SNE embeddings (based on ms2deepscore similarity scores) and associated spectral metadata.
+description: Use when after you have processed raw LC-MS/MS spectral data through
+  the specXplore importing pipeline in a Jupyter notebook and produced an in-memory
+  specXplore session data object containing t-SNE embeddings (based on ms2deepscore
+  similarity scores) and associated spectral metadata.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +16,8 @@ metadata:
   - ms2deepscore
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore

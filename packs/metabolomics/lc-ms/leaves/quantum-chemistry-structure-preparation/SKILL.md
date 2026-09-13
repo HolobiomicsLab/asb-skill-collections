@@ -1,9 +1,10 @@
 ---
 name: quantum-chemistry-structure-preparation
-description: Use when when you have a collection of N-Me derived unsaturated sterol lipid identifiers or structures and need to generate predicted collision cross section (CCS) values for LC-IM-MS/MS analysis.
+description: Use when when you have a collection of N-Me derived unsaturated sterol
+  lipid identifiers or structures and need to generate predicted collision cross section
+  (CCS) values for LC-IM-MS/MS analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_3314
@@ -15,6 +16,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA

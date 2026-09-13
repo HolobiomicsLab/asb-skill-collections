@@ -1,9 +1,11 @@
 ---
 name: chemical-structure-smiles-assignment
-description: Use when you have a mass spectral library (EI or MS2 format) loaded into R via read_lib() and possess either MOL files (from Lib2NIST export) or an SDF file containing the corresponding chemical structures, but the library entries lack SMILES fields or have incomplete structure information.
+description: Use when you have a mass spectral library (EI or MS2 format) loaded into
+  R via read_lib() and possess either MOL files (from Lib2NIST export) or an SDF file
+  containing the corresponding chemical structures, but the library entries lack SMILES
+  fields or have incomplete structure information.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -23,6 +25,8 @@ metadata:
   - future / future.apply
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler

@@ -1,9 +1,10 @@
 ---
 name: adduct-mass-offset-assignment
-description: Use when when you have an LC-MS feature table with m/z and retention time columns and need to identify which observed ions correspond to the same neutral compound under different ionization conditions and isotopic enrichment.
+description: Use when when you have an LC-MS feature table with m/z and retention
+  time columns and need to identify which observed ions correspond to the same neutral
+  compound under different ionization conditions and isotopic enrichment.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,6 +15,8 @@ metadata:
   - khipu
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu

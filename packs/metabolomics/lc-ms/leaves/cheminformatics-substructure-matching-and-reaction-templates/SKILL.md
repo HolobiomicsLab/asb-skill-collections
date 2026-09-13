@@ -1,9 +1,10 @@
 ---
 name: cheminformatics-substructure-matching-and-reaction-templates
-description: 'Use when you have a chemical substrate and need to predict its biotransformation products using rule-based metabolism prediction. This applies when: (1) you possess a library of biotransformation rules extracted from a curated database (e.'
+description: 'Use when you have a chemical substrate and need to predict its biotransformation
+  products using rule-based metabolism prediction. This applies when: (1) you possess
+  a library of biotransformation rules extracted from a curated database (e.'
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_0250
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -12,11 +13,20 @@ metadata:
   - BioTransformer
   techniques:
   - LC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: Academic use free; commercial use/redistribution by permission of the authors
+      (Wishart Lab). Env. module data CC-BY-NC-SA (enviPath/EAWAG).
+    url: https://bitbucket.org/wishartlab/biotransformer.git
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-019-0375-2
   title: BioTransformer 1.0
 evidence_spans:
-- This is version 3.0.0 of BioTransformer. BioTransformer is a software tool that predicts small molecule metabolism
+- This is version 3.0.0 of BioTransformer. BioTransformer is a software tool that
+  predicts small molecule metabolism
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

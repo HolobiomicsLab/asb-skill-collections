@@ -1,9 +1,10 @@
 ---
 name: cdf-file-format-parsing
-description: 'Use when when you have multiple CDF files from mass spectrometry imaging experiments (e.g., root tissue MALDI-MS data) that need to be ingested into Matlab for linear imaging analysis. Trigger: presence of .'
+description: 'Use when when you have multiple CDF files from mass spectrometry imaging
+  experiments (e.g., root tissue MALDI-MS data) that need to be ingested into Matlab
+  for linear imaging analysis. Trigger: presence of .'
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,6 +14,8 @@ metadata:
   - DIMPLE-code
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.09.22.677919v1
   title: DIMPLE

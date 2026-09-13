@@ -1,9 +1,11 @@
 ---
 name: spectral-peak-fragment-matching
-description: Use when you have MS/MS spectral data (mzML, mzXML format) and a parent mass or molecular formula, and you need to identify the metabolite(s) responsible for the observed fragmentation pattern by scoring candidates against their theoretical fragmentation profiles.
+description: Use when you have MS/MS spectral data (mzML, mzXML format) and a parent
+  mass or molecular formula, and you need to identify the metabolite(s) responsible
+  for the observed fragmentation pattern by scoring candidates against their theoretical
+  fragmentation profiles.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -13,6 +15,8 @@ metadata:
   - PubChem
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.5702/massspectrometry.S0033
   title: magma

@@ -1,9 +1,10 @@
 ---
 name: spectral-library-metadata-assignment
-description: Use when you have a compiled EI or MS2 library object (read from MSP format via read_lib) and access to NIST ri.dat and USER.DBU files; you need to populate RI values for capillary GC-MS workflows.
+description: Use when you have a compiled EI or MS2 library object (read from MSP
+  format via read_lib) and access to NIST ri.dat and USER.DBU files; you need to populate
+  RI values for capillary GC-MS workflows.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -16,6 +17,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler

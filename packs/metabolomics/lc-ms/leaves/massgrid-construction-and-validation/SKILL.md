@@ -1,9 +1,11 @@
 ---
 name: massgrid-construction-and-validation
-description: 'Use when after individual mass tracks (EICs) have been extracted from each sample''s mzML file and you need to create a unified, cross-sample m/z reference structure. Triggered when: (1) you have ≥2 samples in a cohort; (2) mass tracks have been binned at 0.'
+description: 'Use when after individual mass tracks (EICs) have been extracted from
+  each sample''s mzML file and you need to create a unified, cross-sample m/z reference
+  structure. Triggered when: (1) you have ≥2 samples in a cohort; (2) mass tracks
+  have been binned at 0.'
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3557
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -21,11 +23,14 @@ metadata:
   - MassGrid.bin_track_mzs
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - The default method uses `pymzml` to parse mzML files.
 claims: []

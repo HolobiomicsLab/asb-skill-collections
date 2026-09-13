@@ -1,9 +1,10 @@
 ---
 name: transformer-based-fragment-assembly
-description: Use when when you have CNN-encoded spectral features (¹H and/or ¹³C NMR) and a set of predicted or candidate molecular fragments, and you need to determine which fragments are present and how they connect to form a valid molecular structure.
+description: Use when when you have CNN-encoded spectral features (¹H and/or ¹³C NMR)
+  and a set of predicted or candidate molecular fragments, and you need to determine
+  which fragments are present and how they connect to form a valid molecular structure.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0593
@@ -13,12 +14,16 @@ metadata:
   - Transformer
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
 evidence_spans:
-- Integrating this capability with a convolutional neural network, we build an end-to-end model
-- a transformer architecture can be constructed to efficiently solve the task, traditionally performed by chemists, of assembling large numbers of molecular fragments into molecular
+- Integrating this capability with a convolutional neural network, we build an end-to-end
+  model
+- a transformer architecture can be constructed to efficiently solve the task, traditionally
+  performed by chemists, of assembling large numbers of molecular fragments into molecular
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

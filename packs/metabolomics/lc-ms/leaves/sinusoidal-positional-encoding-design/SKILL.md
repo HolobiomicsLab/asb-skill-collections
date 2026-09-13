@@ -1,9 +1,10 @@
 ---
 name: sinusoidal-positional-encoding-design
-description: Use when you have variable-length lists of MS/MS peaks (m/z and intensity pairs) that need to be encoded into a fixed-dimensional representation compatible with transformer architecture.
+description: Use when you have variable-length lists of MS/MS peaks (m/z and intensity
+  pairs) that need to be encoded into a fixed-dimensional representation compatible
+  with transformer architecture.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3444
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +16,8 @@ metadata:
   - CLERMS
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c00260
   title: CLERMS

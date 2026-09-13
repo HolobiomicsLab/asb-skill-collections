@@ -1,9 +1,10 @@
 ---
 name: chemical-formula-manipulation
-description: Use when when you have a parent drug's raw chemical formula and need to predict its potential metabolites in mass spectrometry data (mzML format) to match against observed peaks.
+description: Use when when you have a parent drug's raw chemical formula and need
+  to predict its potential metabolites in mass spectrometry data (mzML format) to
+  match against observed peaks.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0820
@@ -16,6 +17,8 @@ metadata:
   - MetApp
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c02281
   title: MetIDfyR

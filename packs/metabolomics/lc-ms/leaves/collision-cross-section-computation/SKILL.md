@@ -1,9 +1,10 @@
 ---
 name: collision-cross-section-computation
-description: Use when you have a set of molecular structures in SMILES format that require CCS prediction for metabolite annotation in untargeted mass spectrometry workflows.
+description: Use when you have a set of molecular structures in SMILES format that
+  require CCS prediction for metabolite annotation in untargeted mass spectrometry
+  workflows.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0570
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -18,12 +19,15 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS
 evidence_spans:
 - Snakemake workflow manager for predicting collisional cross sections
-- This repository contains a Snakemake workflow manager for predicting collisional cross sections (CCS)
+- This repository contains a Snakemake workflow manager for predicting collisional
+  cross sections (CCS)
 - 'Dimorphite-DL: For ionization state determination'
 - 'ASE-ANI: For conformation filtering'
 - 'QUICK: For quantum calculations'

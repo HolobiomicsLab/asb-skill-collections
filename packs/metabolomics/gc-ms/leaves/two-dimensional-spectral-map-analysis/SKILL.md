@@ -1,9 +1,11 @@
 ---
 name: two-dimensional-spectral-map-analysis
-description: Use when you have GC–MS or LC–MS data represented as a two-dimensional map with m/z values on one axis and retention time on the other, and you need to identify analyte signals and chemo-/biomarker features while minimizing false positive and false negative peak detections.
+description: Use when you have GC–MS or LC–MS data represented as a two-dimensional
+  map with m/z values on one axis and retention time on the other, and you need to
+  identify analyte signals and chemo-/biomarker features while minimizing false positive
+  and false negative peak detections.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +18,8 @@ metadata:
   - LC-MS
   - GC-MS
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c03163?ref=
   title: NPFimg
@@ -23,9 +27,12 @@ derived_from:
   title: ''
 evidence_spans:
 - github.com__poomcj__NPFimg
-- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker features of analytes in chromatography–mass spectrometry (MS) data by combining image processing and
+- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker
+  features of analytes in chromatography–mass spectrometry (MS) data by combining
+  image processing and
 - Comparison with the widely used XCMS shows the excellent reliability of NPFimg
-- Comparison with the widely used XCMS shows the excellent reliability of NPFimg, in that it has lower error rates of signal acquisition and marker identification.
+- Comparison with the widely used XCMS shows the excellent reliability of NPFimg,
+  in that it has lower error rates of signal acquisition and marker identification.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

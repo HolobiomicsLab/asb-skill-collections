@@ -1,9 +1,11 @@
 ---
 name: retrieval-metric-hit-k-calculation
-description: Use when when you have generated embeddings for query and reference MS/MS spectra, computed a cosine similarity matrix between them, and need to evaluate how often the correct compound appears in the top-1, top-5, or top-10 retrieved candidates.
+description: Use when when you have generated embeddings for query and reference MS/MS
+  spectra, computed a cosine similarity matrix between them, and need to evaluate
+  how often the correct compound appears in the top-1, top-5, or top-10 retrieved
+  candidates.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3814
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -19,6 +21,8 @@ metadata:
   - read_raw_spectra (SpecEmbedding.utils.clean)
   techniques:
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding

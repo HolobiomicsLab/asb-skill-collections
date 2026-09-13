@@ -1,9 +1,11 @@
 ---
 name: msi-data-processing-speed-measurement
-description: Use when when you need to validate that MSI software (e.g., LipidQMap) achieves documented processing speeds on your target hardware, or when you need to establish a performance baseline before deploying the software for high-throughput imaging studies.
+description: Use when when you need to validate that MSI software (e.g., LipidQMap)
+  achieves documented processing speeds on your target hardware, or when you need
+  to establish a performance baseline before deploying the software for high-throughput
+  imaging studies.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -12,12 +14,15 @@ metadata:
   - LipidQMap
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.10.15.682422v1
   title: LipidQMap
 evidence_spans:
 - LipidQMap writes MSI exports as HDF5 containers
-- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org) conventions.
+- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org)
+  conventions.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

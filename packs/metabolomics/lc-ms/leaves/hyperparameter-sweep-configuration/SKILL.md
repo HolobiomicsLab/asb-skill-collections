@@ -3,7 +3,6 @@ name: hyperparameter-sweep-configuration
 description: Use when when implementing multiple competing model architectures (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3664
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +15,8 @@ metadata:
   - coleygroup/ms-pred repository
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04654
   title: ICEBERG / fragmentation graph generation

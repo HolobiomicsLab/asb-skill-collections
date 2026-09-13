@@ -1,9 +1,11 @@
 ---
 name: reproducibility-signal-detection-nonparametric
-description: Use when when you have high-dimensional replicate experimental data (e.g., metabolomics, proteomics, genomics assays) where technical or biological variability threatens reproducibility, and you need to distinguish genuine reproducible signals from noise without assuming normality.
+description: Use when when you have high-dimensional replicate experimental data (e.g.,
+  metabolomics, proteomics, genomics assays) where technical or biological variability
+  threatens reproducibility, and you need to distinguish genuine reproducible signals
+  from noise without assuming normality.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -18,6 +20,8 @@ metadata:
   - SummarizedExperiment
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s12859-021-04336-9
   title: marr

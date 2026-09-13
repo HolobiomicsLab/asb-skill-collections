@@ -1,9 +1,10 @@
 ---
 name: file-format-validation-proteomics
-description: Use when when raw MS files are uploaded to MSConnect via the Raw File Uploader and must be verified for compatibility with downstream processing tools (e.g., Proteomics_Data_Processor) before routing to the processing queue.
+description: Use when when raw MS files are uploaded to MSConnect via the Raw File
+  Uploader and must be verified for compatibility with downstream processing tools
+  (e.g., Proteomics_Data_Processor) before routing to the processing queue.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -20,6 +21,8 @@ metadata:
   - MSConnect
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00854
   title: MSConnect

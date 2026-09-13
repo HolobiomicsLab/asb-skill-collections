@@ -1,9 +1,10 @@
 ---
 name: virtual-environment-configuration
-description: Use when you have a Python application (e.g., ROIAL-NMR) with documented dependencies and version constraints, and you need to install it on a fresh machine or verify that the environment can be reconstructed without import or runtime errors.
+description: Use when you have a Python application (e.g., ROIAL-NMR) with documented
+  dependencies and version constraints, and you need to install it on a fresh machine
+  or verify that the environment can be reconstructed without import or runtime errors.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_topics: []
   tools:
   - XlsxWriter
@@ -15,6 +16,8 @@ metadata:
   - venv
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/nbm.70131
   title: ROIAL-NMR

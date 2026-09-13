@@ -1,9 +1,11 @@
 ---
 name: statistical-distribution-analysis-across-cohorts
-description: Use when when you have prediction scores (softmax probabilities, uncertainties) from a trained deep learning model evaluated on a heterogeneous dataset and you need to determine whether prediction confidence or accuracy varies systematically across structurally distinct or novel compound.
+description: Use when when you have prediction scores (softmax probabilities, uncertainties)
+  from a trained deep learning model evaluated on a heterogeneous dataset and you
+  need to determine whether prediction confidence or accuracy varies systematically
+  across structurally distinct or novel compound.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,6 +18,8 @@ metadata:
   - Matplotlib or Seaborn
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05019
   title: ps2ms

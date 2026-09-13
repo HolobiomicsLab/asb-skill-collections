@@ -1,9 +1,9 @@
 ---
 name: homologous-series-clustering
-description: Use when you have a feature list (m/z, retention time, intensity) from HRMS data and want to identify potential PFAS homologous series for prioritization.
+description: Use when you have a feature list (m/z, retention time, intensity) from
+  HRMS data and want to identify potential PFAS homologous series for prioritization.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +15,8 @@ metadata:
   - pyOpenMS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen

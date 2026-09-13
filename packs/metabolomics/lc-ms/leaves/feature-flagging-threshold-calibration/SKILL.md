@@ -1,9 +1,11 @@
 ---
 name: feature-flagging-threshold-calibration
-description: Use when after drift correction in non-targeted LC-MS metabolomics workflows, when you need to decide which molecular features are sufficiently reproducible (low instrument/QC variance) and biologically informative (high QC-versus-biological signal ratio) to retain for downstream statistical.
+description: Use when after drift correction in non-targeted LC-MS metabolomics workflows,
+  when you need to decide which molecular features are sufficiently reproducible (low
+  instrument/QC variance) and biologically informative (high QC-versus-biological
+  signal ratio) to retain for downstream statistical.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -14,6 +16,8 @@ metadata:
   - Biobase
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo10040135
   title: notame
@@ -23,7 +27,8 @@ evidence_spans:
 - This package can be used to analyze preprocessed LC-MS data in non-targeted metabolomics
 - library(notame)
 - reads them to R, conducts additional preprocessing and statistical analyses
-- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package by Bioconductor'
+- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package
+  by Bioconductor'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

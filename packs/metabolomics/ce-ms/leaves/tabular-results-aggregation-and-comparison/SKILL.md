@@ -1,9 +1,11 @@
 ---
 name: tabular-results-aggregation-and-comparison
-description: Use when when you have chemical annotations (GNPS matches) distributed across multiple sample groups (e.g., by sample type, extraction method, ionization source) with unequal numbers of files per group, and you need to compare enrichment fairly without group-size bias.
+description: Use when when you have chemical annotations (GNPS matches) distributed
+  across multiple sample groups (e.g., by sample type, extraction method, ionization
+  source) with unequal numbers of files per group, and you need to compare enrichment
+  fairly without group-size bias.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,6 +17,8 @@ metadata:
   - Emperor
   techniques:
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU

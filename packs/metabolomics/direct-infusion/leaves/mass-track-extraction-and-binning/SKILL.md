@@ -1,9 +1,10 @@
 ---
 name: mass-track-extraction-and-binning
-description: 'Use when when you have centroid mzML files from LC-MS metabolomics acquisition and need to construct sample-level mass tracks before cross-sample alignment. Specifically: you are starting fresh with vendor-converted or pre-processed mzML input;'
+description: 'Use when when you have centroid mzML files from LC-MS metabolomics acquisition
+  and need to construct sample-level mass tracks before cross-sample alignment. Specifically:
+  you are starting fresh with vendor-converted or pre-processed mzML input;'
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -19,14 +20,18 @@ metadata:
   techniques:
   - LC-MS
   - direct-infusion-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - The default method uses `pymzml` to parse mzML files.
-- nearest neighbor (NN) clustering is performed to establish the number of mass tracks. The NN clustering assigns each data point to its nearest 'peak mz value'.
+- nearest neighbor (NN) clustering is performed to establish the number of mass tracks.
+  The NN clustering assigns each data point to its nearest 'peak mz value'.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

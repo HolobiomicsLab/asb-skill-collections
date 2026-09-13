@@ -1,9 +1,10 @@
 ---
 name: drop-down-interface-population-from-filtered-data
-description: Use when you have search results from DIA mass spectrometry data containing feature Q-value scores and need to restrict the analyte choices available to users in a GUI to only those meeting a 1% feature Q-value threshold.
+description: Use when you have search results from DIA mass spectrometry data containing
+  feature Q-value scores and need to restrict the analyte choices available to users
+  in a GUI to only those meeting a 1% feature Q-value threshold.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,12 +15,15 @@ metadata:
   - Streamlit
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash
 evidence_spans:
 - ResultsLoader
-- MassDash is a modular and flexible python package that has a streamlit graphical user interface (GUI)
+- MassDash is a modular and flexible python package that has a streamlit graphical
+  user interface (GUI)
 - ':mod:`massdash.loaders`: Classes for loading data'
 claims: []
 provenance:

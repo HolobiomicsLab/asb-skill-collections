@@ -1,9 +1,10 @@
 ---
 name: peak-intensity-normalization
-description: Use when you have raw MS/MS spectral peak lists with absolute intensity values and need to compare spectra using entropy similarity, dot product, or other distance metrics.
+description: Use when you have raw MS/MS spectral peak lists with absolute intensity
+  values and need to compare spectra using entropy similarity, dot product, or other
+  distance metrics.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +15,8 @@ metadata:
   - spectral_similarity module
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-021-01331-z
   title: Spectral entropy

@@ -1,9 +1,11 @@
 ---
 name: chromatographic-window-coverage-assessment
-description: Use when after extracting retention times from top MS1 features detected in an LC-MS run, and when you need to evaluate whether a given gradient time range (e.g., 0–30 minutes) is being used efficiently to separate compounds. Apply this skill as the objective function in gradient optimization (e.
+description: Use when after extracting retention times from top MS1 features detected
+  in an LC-MS run, and when you need to evaluate whether a given gradient time range
+  (e.g., 0–30 minutes) is being used efficiently to separate compounds. Apply this
+  skill as the objective function in gradient optimization (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -15,6 +17,8 @@ metadata:
   - pyopenms
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.09.08.556930
   title: BAGO

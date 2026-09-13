@@ -1,9 +1,11 @@
 ---
 name: spectral-data-preprocessing
-description: Use when you have raw or processed MS spectrum data (mz/intensity pairs) from direct-injection MS (DI-MS), ASAP-MS, or other ambient ionization instruments (AI-MS, LDI-MS), and you need to identify peaks of interest, assign confidence scores, and prepare the data for database matching or species.
+description: Use when you have raw or processed MS spectrum data (mz/intensity pairs)
+  from direct-injection MS (DI-MS), ASAP-MS, or other ambient ionization instruments
+  (AI-MS, LDI-MS), and you need to identify peaks of interest, assign confidence scores,
+  and prepare the data for database matching or species.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +16,8 @@ metadata:
   - ASAP-MS
   techniques:
   - direct-infusion-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass

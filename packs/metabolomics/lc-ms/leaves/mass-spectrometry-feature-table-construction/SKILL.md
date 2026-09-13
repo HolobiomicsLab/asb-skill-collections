@@ -1,9 +1,11 @@
 ---
 name: mass-spectrometry-feature-table-construction
-description: Use when you have vendor-independent centroided mzML files from LC- or GC-HRMS data acquired in data-dependent acquisition (ddMS2) mode and need to extract detected features with m/z, retention time, and intensity attributes as input for non-target screening or PFAS prioritization workflows.
+description: Use when you have vendor-independent centroided mzML files from LC- or
+  GC-HRMS data acquired in data-dependent acquisition (ddMS2) mode and need to extract
+  detected features with m/z, retention time, and intensity attributes as input for
+  non-target screening or PFAS prioritization workflows.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,12 +18,15 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
 - PFΔScreen is an open-source Python based non-target screening software tool
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 - pyOpenMS (Python interface to the C++ OpenMS library)
 claims: []
 provenance:

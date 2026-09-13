@@ -1,9 +1,11 @@
 ---
 name: msi-feature-metadata-preservation
-description: Use when you are converting a processed Cardinal MSImagingExperiment object (containing normalized peaks, optional spatial shrunken centroids segmentation, and feature m/z annotations) into a Seurat object for downstream pathway analysis, differential metabolite expression, or integrative.
+description: Use when you are converting a processed Cardinal MSImagingExperiment
+  object (containing normalized peaks, optional spatial shrunken centroids segmentation,
+  and feature m/z annotations) into a Seurat object for downstream pathway analysis,
+  differential metabolite expression, or integrative.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +18,13 @@ metadata:
   techniques:
   - CE-MS
   - MS-imaging
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ''
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP

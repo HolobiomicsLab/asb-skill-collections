@@ -1,9 +1,11 @@
 ---
 name: missing-value-imputation-for-pca
-description: Use when your metabolomic dataset contains missing values (common in untargeted or targeted mass spectrometry data) and you need to perform PCA for outlier detection at multiple standard deviation thresholds (e.g., 3 SD, 4 SD, 5 SD) on principal component scores.
+description: Use when your metabolomic dataset contains missing values (common in
+  untargeted or targeted mass spectrometry data) and you need to perform PCA for outlier
+  detection at multiple standard deviation thresholds (e.g., 3 SD, 4 SD, 5 SD) on
+  principal component scores.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,8 +16,10 @@ metadata:
   - metaboprep
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
-- doi: 10.1093/bioinformatics/btac059/6522114
+- doi: 10.1093/bioinformatics/btac059
   title: Metaboprep
 evidence_spans:
 - library(metaboprep)
@@ -26,15 +30,15 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_metaboprep_cq
-    doi: 10.1093/bioinformatics/btac059/6522114
+    doi: 10.1093/bioinformatics/btac059
     title: Metaboprep
   dedup_kept_from: coll_metaboprep_cq
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bioinformatics/btac059/6522114
+  original_doi: 10.1093/bioinformatics/btac059
   all_source_dois:
-  - 10.1093/bioinformatics/btac059/6522114
+  - 10.1093/bioinformatics/btac059
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias

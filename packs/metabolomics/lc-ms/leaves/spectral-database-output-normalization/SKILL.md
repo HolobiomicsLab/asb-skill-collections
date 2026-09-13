@@ -1,9 +1,11 @@
 ---
 name: spectral-database-output-normalization
-description: Use when you have executed batch spectral searches against two or more domain-specific MASST tools and received heterogeneous output formats (domain-specific HTML trees, JSON objects, TSV match tables) that need to be reconciled into a single normalized schema for downstream aggregation.
+description: Use when you have executed batch spectral searches against two or more
+  domain-specific MASST tools and received heterogeneous output formats (domain-specific
+  HTML trees, JSON objects, TSV match tables) that need to be reconciled into a single
+  normalized schema for downstream aggregation.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -21,6 +23,8 @@ metadata:
   - GNPS_MASST
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41538-022-00137-3
   title: foodMASST

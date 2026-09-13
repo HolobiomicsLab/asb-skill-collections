@@ -1,9 +1,11 @@
 ---
 name: msms-spectral-database-retrieval
-description: Use when when you have a target compound (modified or unmodified) and need to obtain its experimental MS/MS spectrum and metadata to serve as a known reference for ModiFinder analysis, or when benchmarking evaluation methods like average_distance scoring.
+description: Use when when you have a target compound (modified or unmodified) and
+  need to obtain its experimental MS/MS spectrum and metadata to serve as a known
+  reference for ModiFinder analysis, or when benchmarking evaluation methods like
+  average_distance scoring.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3860
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +17,8 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00061
   title: ModiFinder

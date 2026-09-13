@@ -1,9 +1,10 @@
 ---
 name: mass-accuracy-tolerance-filtering
-description: Use when when you have a peaklist from IDSL.IPA or similar peak-picking tools (containing observed m/z and intensity values) and need to assign molecular formulas from a prioritized chemical space.
+description: Use when when you have a peaklist from IDSL.IPA or similar peak-picking
+  tools (containing observed m/z and intensity values) and need to assign molecular
+  formulas from a prioritized chemical space.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,11 +15,15 @@ metadata:
   - R
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c00563
   title: IDSL.UFA
 evidence_spans:
-- '**United Formula Annotation (UFA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me/) is a light-weight R package'
+- '**United Formula Annotation (UFA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me/) is a light-weight
+  R package'
 - annotate peaklists from the IDSL.IPA package with molecular formula
 - light-weight R package
 claims: []
