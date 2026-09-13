@@ -1,9 +1,10 @@
 ---
 name: metabcombiner-object-construction
-description: Use when you have two peak-picked, conventionally aligned untargeted LC-MS metabolomics datasets (metabData objects) acquired under different conditions and need to identify overlapping <m/z, retention time> features across them.
+description: Use when you have two peak-picked, conventionally aligned untargeted
+  LC-MS metabolomics datasets (metabData objects) acquired under different conditions
+  and need to identify overlapping <m/z, retention time> features across them.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3345
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -14,12 +15,16 @@ metadata:
   - mgcv
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 - Combine LC-MS Metabolomics Datasets with metabCombiner
 claims: []
 provenance:

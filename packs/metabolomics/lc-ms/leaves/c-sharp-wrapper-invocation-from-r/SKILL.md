@@ -1,9 +1,11 @@
 ---
 name: c-sharp-wrapper-invocation-from-r
-description: Use when when you need to read proprietary or binary data formats (e.g., Thermo Fisher .raw files) from R but the native implementation is in .NET/C#, and direct language bindings are unavailable or impractical. Use this when the target assembly requires Windows/.
+description: Use when when you need to read proprietary or binary data formats (e.g.,
+  Thermo Fisher .raw files) from R but the native implementation is in .NET/C#, and
+  direct language bindings are unavailable or impractical. Use this when the target
+  assembly requires Windows/.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,6 +18,8 @@ metadata:
   - Spectra (Bioconductor)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -23,10 +27,13 @@ derived_from:
   title: ''
 evidence_spans:
 - rawrr::readSpectrum
-- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file
-- The extracted information is written to a temporary location on the harddrive, read back into memory and parsed into `R` objects using RawFileReader API
+- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime,
+  in the `r BiocStyle::Biocpkg('rawrr')` executable file
+- The extracted information is written to a temporary location on the harddrive, read
+  back into memory and parsed into `R` objects using RawFileReader API
 - 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
-- In case you prefer to compile `rawrr.exe` from C# source code, please install the .NET 8.0
+- In case you prefer to compile `rawrr.exe` from C# source code, please install the
+  .NET 8.0
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

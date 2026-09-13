@@ -1,9 +1,11 @@
 ---
 name: inchikey-normalization-and-deduplication
-description: Use when you have an annotated MS/MS spectral dataset with structure metadata (InChI or SMILES records) linked to InChIKey identifiers, and you observe that some InChIKeys are associated with multiple or variant InChI strings due to curation inconsistencies, stereoisomerism notation differences, or.
+description: Use when you have an annotated MS/MS spectral dataset with structure
+  metadata (InChI or SMILES records) linked to InChIKey identifiers, and you observe
+  that some InChIKeys are associated with multiple or variant InChI strings due to
+  curation inconsistencies, stereoisomerism notation differences, or.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -14,15 +16,24 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities.
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included cleaning compound names, extracting adduct information from the given metadata, moving metadata to consistent fields
-- For each pair of molecular fingerprints Tanimoto scores were calculated, indicating the structural similarity of that pair. (as implemented in matchms [18])
-- Our MS2DeepScore Python library offers two types of data generators, one which iterates over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over all spectra and was used for
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities.
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities
+- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included
+  cleaning compound names, extracting adduct information from the given metadata,
+  moving metadata to consistent fields
+- For each pair of molecular fingerprints Tanimoto scores were calculated, indicating
+  the structural similarity of that pair. (as implemented in matchms [18])
+- Our MS2DeepScore Python library offers two types of data generators, one which iterates
+  over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over
+  all spectra and was used for
 - Our MS2DeepScore Python library offers two types of data generators
 claims: []
 provenance:

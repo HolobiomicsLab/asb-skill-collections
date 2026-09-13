@@ -1,9 +1,11 @@
 ---
 name: metabolite-to-gene-mapping
-description: Use when you have metabolomic data (e.g., from LC-MS or GC-MS comparing patient to controls) showing differential abundant metabolites (DAMs), candidate genes from exome sequencing or variant calling, and access to a protein–protein or gene–gene interaction network (e.g., STRING).
+description: Use when you have metabolomic data (e.g., from LC-MS or GC-MS comparing
+  patient to controls) showing differential abundant metabolites (DAMs), candidate
+  genes from exome sequencing or variant calling, and access to a protein–protein
+  or gene–gene interaction network (e.g., STRING).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3439
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -18,6 +20,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41525-020-0132-5
   title: metPropagate

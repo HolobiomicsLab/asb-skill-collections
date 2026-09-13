@@ -1,9 +1,11 @@
 ---
 name: molecular-fingerprint-representation-learning
-description: Use when when you have labeled mass-spectrometry spectral data (precursor m/z and fragment m/z–intensity pairs) paired with known molecular structures (as InChIKeys or SMILES), and need to perform metabolite annotation by ranking candidate compounds based on spectral similarity.
+description: Use when when you have labeled mass-spectrometry spectral data (precursor
+  m/z and fragment m/z–intensity pairs) paired with known molecular structures (as
+  InChIKeys or SMILES), and need to perform metabolite annotation by ranking candidate
+  compounds based on spectral similarity.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -19,6 +21,8 @@ metadata:
   - Open Babel
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s11306-020-01726-7
   title: MetFID

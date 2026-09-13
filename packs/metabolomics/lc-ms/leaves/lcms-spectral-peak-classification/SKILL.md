@@ -1,9 +1,10 @@
 ---
 name: lcms-spectral-peak-classification
-description: Use when you have raw LC-MS spectral peak data (in the format provided by DOI 10.25345/C5FD2F) and need to build a classifier that can distinguish valid peaks from false positives or background noise without manual feature engineering.
+description: Use when you have raw LC-MS spectral peak data (in the format provided
+  by DOI 10.25345/C5FD2F) and need to build a classifier that can distinguish valid
+  peaks from false positives or background noise without manual feature engineering.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +15,8 @@ metadata:
   - EDML_deep_learning2.py
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b02983
   title: DNN peak classifier

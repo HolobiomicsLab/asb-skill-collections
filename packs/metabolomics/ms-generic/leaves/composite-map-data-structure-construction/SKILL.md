@@ -1,9 +1,11 @@
 ---
 name: composite-map-data-structure-construction
-description: Use when after mass track extraction and alignment across samples, when you have a MassGrid structure (m/z-aligned mass tracks) and corresponding retention time calibration dictionaries for each sample, and need to prepare input for composite peak detection rather than per-sample peak detection.
+description: Use when after mass track extraction and alignment across samples, when
+  you have a MassGrid structure (m/z-aligned mass tracks) and corresponding retention
+  time calibration dictionaries for each sample, and need to prepare input for composite
+  peak detection rather than per-sample peak detection.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,11 +17,14 @@ metadata:
   - metDataModel
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:

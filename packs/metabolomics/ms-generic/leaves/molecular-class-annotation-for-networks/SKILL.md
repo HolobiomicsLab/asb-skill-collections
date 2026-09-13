@@ -1,9 +1,11 @@
 ---
 name: molecular-class-annotation-for-networks
-description: Use when after molecular formulas have been assigned to detected peaks (via CoreMS, Formularity, or equivalent) and you are constructing biochemical transformation networks where node interpretation requires understanding what chemical classes are being transformed.
+description: Use when after molecular formulas have been assigned to detected peaks
+  (via CoreMS, Formularity, or equivalent) and you are constructing biochemical transformation
+  networks where node interpretation requires understanding what chemical classes
+  are being transformed.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,16 +19,22 @@ metadata:
   - CoreMS
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
-- Molecular transformation networks for each sample (mass difference network-based approach) are generated in this step
+- Molecular transformation networks for each sample (mass difference network-based
+  approach) are generated in this step
 - The MetaboDirect pipeline consists of 6 major steps/categories (Fig. 1)
-- The MetaboDirect pipeline was developed in Python 3.8 and requires the Python dependencies NumPy, pandas
+- The MetaboDirect pipeline was developed in Python 3.8 and requires the Python dependencies
+  NumPy, pandas
 - developed in Python 3.8 [38] and R 4.0.2 [39]
-- Networks are then constructed using Cytoscape and colored based on their molecular class
-- Networks are then constructed using Cytoscape [79] and colored based on their molecular class.
+- Networks are then constructed using Cytoscape and colored based on their molecular
+  class
+- Networks are then constructed using Cytoscape [79] and colored based on their molecular
+  class.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

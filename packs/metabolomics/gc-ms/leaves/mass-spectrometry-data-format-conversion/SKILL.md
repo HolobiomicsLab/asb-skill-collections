@@ -1,9 +1,11 @@
 ---
 name: mass-spectrometry-data-format-conversion
-description: Use when you have mass spectral libraries from multiple sources (e.g., NIST EI, RIKEN MS2, MoNA GC-MS or LC-MS/MS, GNPS mgf) that need to be consolidated for use in MS-DIAL, or you have a single library with incomplete or malformed metadata (e.
+description: Use when you have mass spectral libraries from multiple sources (e.g.,
+  NIST EI, RIKEN MS2, MoNA GC-MS or LC-MS/MS, GNPS mgf) that need to be consolidated
+  for use in MS-DIAL, or you have a single library with incomplete or malformed metadata
+  (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -25,6 +27,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -37,8 +41,11 @@ evidence_spans:
 - Read the msp file into R.
 - MS-DIAL friendly msp file
 - organize them into a neat and up-to-date msp file that can be used in MS-DIAL.
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files) from drift tube (DT) and structure for lossless ion manipulations (SLIM) IM-MS
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files (MS-files) from drift tube (DT) and structure for lossless
+  ion manipulations (SLIM) IM-MS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

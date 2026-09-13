@@ -1,9 +1,11 @@
 ---
 name: file-handler-interface-integration
-description: Use when you have mass spectrometry data stored in a non-standard format (SQLite database, custom indexed gzip files, or other database backends) and want to enable pymzML's Reader to access it with both random-access by spectrum ID and sequential iteration capabilities, avoiding the need to.
+description: Use when you have mass spectrometry data stored in a non-standard format
+  (SQLite database, custom indexed gzip files, or other database backends) and want
+  to enable pymzML's Reader to access it with both random-access by spectrum ID and
+  sequential iteration capabilities, avoiding the need to.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +17,8 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml

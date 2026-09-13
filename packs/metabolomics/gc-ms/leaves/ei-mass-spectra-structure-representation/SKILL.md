@@ -1,9 +1,11 @@
 ---
 name: ei-mass-spectra-structure-representation
-description: Use when you have raw or archived MSP spectral library files and need to load them into R for library searching, spectral matching, or batch reprocessing. Specifically, when you must extract precursor m/z values, peak intensity pairs, and spectrum metadata (e.
+description: Use when you have raw or archived MSP spectral library files and need
+  to load them into R for library searching, spectral matching, or batch reprocessing.
+  Specifically, when you must extract precursor m/z values, peak intensity pairs,
+  and spectrum metadata (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,12 +16,17 @@ metadata:
   - NIST API
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
 evidence_spans:
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users for conducting library searches against electron ionization mass spectral databases.
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users for conducting library searches against electron ionization mass spectral
+  databases.
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users
 - enhance the capabilities of R users for conducting library searches
 claims: []
 provenance:

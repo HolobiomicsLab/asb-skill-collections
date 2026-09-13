@@ -1,9 +1,11 @@
 ---
 name: ms2-spectrum-consolidation
-description: Use when after sample alignment and feature grouping steps in untargeted LC-MS workflows, when you have DDA-mode raw files with both MS1 and MS2 scans and need to link tandem mass spectra to quantified features for annotation and structural characterization.
+description: Use when after sample alignment and feature grouping steps in untargeted
+  LC-MS workflows, when you have DDA-mode raw files with both MS1 and MS2 scans and
+  need to link tandem mass spectra to quantified features for annotation and structural
+  characterization.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,11 +19,14 @@ metadata:
   - SLAW (zamboni-lab/SLAW)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
 evidence_spans:
-- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo, ADAP'
+- 'Wrapping of three main peak picking algorithms: Centwave, FeatureFinderMetabo,
+  ADAP'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

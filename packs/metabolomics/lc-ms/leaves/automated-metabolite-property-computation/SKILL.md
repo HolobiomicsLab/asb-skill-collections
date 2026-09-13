@@ -1,9 +1,11 @@
 ---
 name: automated-metabolite-property-computation
-description: Use when you have ion mobility-mass spectrometry data (raw drift times, m/z values, and feature intensities) from DTIMS-MS or SLIM-based IMS-MS platforms and need to compute collision cross section values using a calibration standard (e.g., Agilent tune-mix).
+description: Use when you have ion mobility-mass spectrometry data (raw drift times,
+  m/z values, and feature intensities) from DTIMS-MS or SLIM-based IMS-MS platforms
+  and need to compute collision cross section values using a calibration standard
+  (e.g., Agilent tune-mix).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -14,6 +16,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btab429
   title: AutoCCS

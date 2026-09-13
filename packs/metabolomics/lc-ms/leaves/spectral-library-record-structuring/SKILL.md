@@ -1,9 +1,11 @@
 ---
 name: spectral-library-record-structuring
-description: Use when you have extracted MS1 and MS2 scans (in mzML/mzXML format) from raw chromatogram files and possess user-provided metadata (retention time, m/z, compound name, molecular weight, annotation fields) that you need to bind together into a queryable spectral library record for local compound.
+description: Use when you have extracted MS1 and MS2 scans (in mzML/mzXML format)
+  from raw chromatogram files and possess user-provided metadata (retention time,
+  m/z, compound name, molecular weight, annotation fields) that you need to bind together
+  into a queryable spectral library record for local compound.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +16,8 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04343
   title: MeRgeION

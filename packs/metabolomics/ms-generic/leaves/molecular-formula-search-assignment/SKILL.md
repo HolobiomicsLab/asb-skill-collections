@@ -1,9 +1,11 @@
 ---
 name: molecular-formula-search-assignment
-description: Use when you have a recalibrated FT-ICR mass spectrum (Bruker .d format or equivalent) with detected, noise-thresholded peaks and need to assign chemical formulas to each peak. This is particularly relevant when analyzing samples with unknown composition (e.
+description: Use when you have a recalibrated FT-ICR mass spectrum (Bruker .d format
+  or equivalent) with detected, noise-thresholded peaks and need to assign chemical
+  formulas to each peak. This is particularly relevant when analyzing samples with
+  unknown composition (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,12 +18,15 @@ metadata:
   - EnviroMS
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.transient.input.brukerSolarix import ReadBrukerSolarix
-- '**CoreMS** is a comprehensive mass spectrometry framework for software development and data analysis of small molecules analysis.'
+- '**CoreMS** is a comprehensive mass spectrometry framework for software development
+  and data analysis of small molecules analysis.'
 - import pandas as pd
 - import numpy as np
 claims: []

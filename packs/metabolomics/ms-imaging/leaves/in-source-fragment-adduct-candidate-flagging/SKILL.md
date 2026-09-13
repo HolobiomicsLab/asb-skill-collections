@@ -1,9 +1,11 @@
 ---
 name: in-source-fragment-adduct-candidate-flagging
-description: Use when you have aligned, imputed time-resolved mass spectrometric data from direct-injection plasma ionization (e.g., DBDI, DESI) without chromatographic separation, and you suspect multiple m/z features belong to the same neutral analyte as in-source fragments or oxygen-bound adducts.
+description: Use when you have aligned, imputed time-resolved mass spectrometric data
+  from direct-injection plasma ionization (e.g., DBDI, DESI) without chromatographic
+  separation, and you suspect multiple m/z features belong to the same neutral analyte
+  as in-source fragments or oxygen-bound adducts.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3680
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,11 +19,14 @@ metadata:
   - matchms
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
-- doi: 10.1093/bioinformatics/btad088/7036334
+- doi: 10.1093/bioinformatics/btad088
   title: DBDIpy
 evidence_spans:
-- DBDIpy is an open-source Python library for the curation and interpretation of dielectric barrier discharge ionisation mass spectrometric datasets
+- DBDIpy is an open-source Python library for the curation and interpretation of dielectric
+  barrier discharge ionisation mass spectrometric datasets
 - DBDIpy is an open-source Python library
 claims: []
 provenance:
@@ -29,15 +34,15 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_dbdipy_cq
-    doi: 10.1093/bioinformatics/btad088/7036334
+    doi: 10.1093/bioinformatics/btad088
     title: DBDIpy
   dedup_kept_from: coll_dbdipy_cq
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bioinformatics/btad088/7036334
+  original_doi: 10.1093/bioinformatics/btad088
   all_source_dois:
-  - 10.1093/bioinformatics/btad088/7036334
+  - 10.1093/bioinformatics/btad088
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias

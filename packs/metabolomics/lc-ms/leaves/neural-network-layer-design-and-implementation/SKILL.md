@@ -3,7 +3,6 @@ name: neural-network-layer-design-and-implementation
 description: Use when when replacing deprecated model components (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3562
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -15,6 +14,8 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

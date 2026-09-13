@@ -1,9 +1,10 @@
 ---
 name: ms1-data-preprocessing-normalization
-description: Use when when you have loaded raw MS1 data from multiple instrument formats (Agilent, Thermo, Bruker, mzML) across a multi-sample cohort and need to prepare the ion intensity feature matrix for PCA analysis or cross-sample quality assessment.
+description: Use when when you have loaded raw MS1 data from multiple instrument formats
+  (Agilent, Thermo, Bruker, mzML) across a multi-sample cohort and need to prepare
+  the ion intensity feature matrix for PCA analysis or cross-sample quality assessment.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -13,6 +14,8 @@ metadata:
   - PeakQC
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00146
   title: PeakQC

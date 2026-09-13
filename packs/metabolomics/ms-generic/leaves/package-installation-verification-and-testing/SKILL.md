@@ -1,9 +1,10 @@
 ---
 name: package-installation-verification-and-testing
-description: Use when a Python package has been relocated to a new repository location, reorganized to conform to new organizational standards (e.g., metabolomics-cloud conventions), or its dependencies, metadata, or CI/CD workflows have been modified.
+description: Use when a Python package has been relocated to a new repository location,
+  reorganized to conform to new organizational standards (e.g., metabolomics-cloud
+  conventions), or its dependencies, metadata, or CI/CD workflows have been modified.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -15,6 +16,8 @@ metadata:
   - pytest or unittest
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: mummichog

@@ -1,9 +1,9 @@
 ---
 name: metabolomic-feature-table-filtering
-description: Use when after feature detection (e.g., Asari processing of mzML files to feature tables) but before normalization, batch correction, or annotation.
+description: Use when after feature detection (e.g., Asari processing of mzML files
+  to feature tables) but before normalization, batch correction, or annotation.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +16,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

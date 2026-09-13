@@ -1,9 +1,11 @@
 ---
 name: smiles-structure-annotation-from-molfiles
-description: Use when you have a mass spectral library in MSP format (e.g., from NIST, SWGDRUG, or other sources) exported alongside a folder of MOL files, and you need to populate the SMILES field in each library record to enable structure-based filtering, annotation, or downstream MS-DIAL analysis.
+description: Use when you have a mass spectral library in MSP format (e.g., from NIST,
+  SWGDRUG, or other sources) exported alongside a folder of MOL files, and you need
+  to populate the SMILES field in each library record to enable structure-based filtering,
+  annotation, or downstream MS-DIAL analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0362
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -22,6 +24,8 @@ metadata:
   - ChemmineOB
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -31,7 +35,8 @@ evidence_spans:
 - library(future.apply)
 - you can transformed it into a msp file by *Lib2NIST*
 - MS-DIAL friendly msp file
-- both positive and negative modes are in a single file as well. Therefore, we need to separated the polarity
+- both positive and negative modes are in a single file as well. Therefore, we need
+  to separated the polarity
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

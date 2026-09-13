@@ -1,9 +1,11 @@
 ---
 name: metabolite-false-positive-filtering
-description: Use when you have ion-mobility mass spectrometry metabolomics data with putative metabolite identifications (e.g., from database matching) and want to reduce false positives by cross-validating compound identities against machine-learned CCS predictions.
+description: Use when you have ion-mobility mass spectrometry metabolomics data with
+  putative metabolite identifications (e.g., from database matching) and want to reduce
+  false positives by cross-validating compound identities against machine-learned
+  CCS predictions.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3960
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -17,6 +19,8 @@ metadata:
   - CCSP 2.0
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c03491
   title: CCS Predictor 2.0

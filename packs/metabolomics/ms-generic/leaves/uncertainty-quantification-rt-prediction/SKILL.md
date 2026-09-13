@@ -1,9 +1,11 @@
 ---
 name: uncertainty-quantification-rt-prediction
-description: 'Use when you have trained a DNN retention time predictor and need to rank candidate metabolites for an unknown compound: the DNN outputs both point estimates and uncertainty bounds for each candidate''s RT, and you need to convert these into probabilistic scores that reflect confidence in each.'
+description: 'Use when you have trained a DNN retention time predictor and need to
+  rank candidate metabolites for an unknown compound: the DNN outputs both point estimates
+  and uncertainty bounds for each candidate''s RT, and you need to convert these into
+  probabilistic scores that reflect confidence in each.'
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -14,11 +16,14 @@ metadata:
   - cmmrt
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

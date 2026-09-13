@@ -1,9 +1,11 @@
 ---
 name: imaging-mass-spectrometry-characterization
-description: Use when you have raw mass spectrometry data files (mzML, NetCDF, or vendor formats) with unknown or mixed acquisition modalities, and you need to automatically determine whether the input is LC-MS, GC-MS, IMS (ion mobility spectrometry), or MS imaging (e.
+description: Use when you have raw mass spectrometry data files (mzML, NetCDF, or
+  vendor formats) with unknown or mixed acquisition modalities, and you need to automatically
+  determine whether the input is LC-MS, GC-MS, IMS (ion mobility spectrometry), or
+  MS imaging (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,6 +19,8 @@ metadata:
   - GC-MS
   - MS-imaging
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3

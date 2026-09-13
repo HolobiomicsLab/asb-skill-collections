@@ -1,9 +1,10 @@
 ---
 name: mass-spectrum-peak-list-handling
-description: Use when you have raw or preprocessed electron ionization (EI) mass spectral data that must be stored in, retrieved from, or validated against the MSP file format (used by NIST MS Search and similar spectral library tools).
+description: Use when you have raw or preprocessed electron ionization (EI) mass spectral
+  data that must be stored in, retrieved from, or validated against the MSP file format
+  (used by NIST MS Search and similar spectral library tools).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -13,12 +14,17 @@ metadata:
   - R
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
 evidence_spans:
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users for conducting library searches against electron ionization mass spectral databases.
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users for conducting library searches against electron ionization mass spectral
+  databases.
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users
 - enhance the capabilities of R users for conducting library searches
 claims: []
 provenance:

@@ -1,9 +1,11 @@
 ---
 name: smiles-adduct-form-enumeration
-description: Use when when you have SMILES structures of small organic molecules and need to predict CCS values for metabolite annotation in untargeted mass spectrometry workflows. Specifically, apply this skill when the same chemical entity may appear in multiple ionization states (e.
+description: Use when when you have SMILES structures of small organic molecules and
+  need to predict CCS values for metabolite annotation in untargeted mass spectrometry
+  workflows. Specifically, apply this skill when the same chemical entity may appear
+  in multiple ionization states (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -13,6 +15,8 @@ metadata:
   - RDKit
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS

@@ -1,9 +1,9 @@
 ---
 name: proteomics-output-record-parsing
-description: Use when after the Proteomics_Data_Processor tool has completed analysis of raw mass spectrometry files and returned structured output records.
+description: Use when after the Proteomics_Data_Processor tool has completed analysis
+  of raw mass spectrometry files and returned structured output records.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,6 +17,8 @@ metadata:
   - MSConnect (Django + Python + SQL database)
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00854
   title: MSConnect

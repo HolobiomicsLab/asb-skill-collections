@@ -1,9 +1,11 @@
 ---
 name: regex-capture-group-application
-description: Use when when you have PSM files (output from search engines like MaxQuant, MSGFPlus, or Sage) and spectrum files in mzML or MGF format with non-trivial or inconsistent naming schemes, and you need to establish which PSMs correspond to which spectra.
+description: Use when when you have PSM files (output from search engines like MaxQuant,
+  MSGFPlus, or Sage) and spectrum files in mzML or MGF format with non-trivial or
+  inconsistent naming schemes, and you need to establish which PSMs correspond to
+  which spectra.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -13,6 +15,8 @@ metadata:
   - psm_utils
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/pmic.202300336
   title: MS2Rescore (immunopeptidome rescoring)

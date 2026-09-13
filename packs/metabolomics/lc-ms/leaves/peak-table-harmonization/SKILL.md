@@ -1,9 +1,11 @@
 ---
 name: peak-table-harmonization
-description: Use when when you have extracted peak tables from multiple independent LC/HRMS analysis batches (each with retention time and m/z values) and need to align peaks across batches to create a unified feature matrix for downstream statistical analysis.
+description: Use when when you have extracted peak tables from multiple independent
+  LC/HRMS analysis batches (each with retention time and m/z values) and need to align
+  peaks across batches to create a unified feature matrix for downstream statistical
+  analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,11 +17,15 @@ metadata:
   - IDSL.CSA
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA
 evidence_spans:
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
+  R package'
 - light-weight R package
 claims: []
 provenance:

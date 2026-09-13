@@ -1,9 +1,10 @@
 ---
 name: mass-spectrum-noise-threshold-parameter-selection
-description: Use when when processing raw or centroid mass spectra (e.g., ESI-MS or FT-ICR data from Bruker .d or Thermo .raw formats) and you need to remove instrument noise and low-abundance peaks before peak picking or molecular formula assignment.
+description: Use when when processing raw or centroid mass spectra (e.g., ESI-MS or
+  FT-ICR data from Bruker .d or Thermo .raw formats) and you need to remove instrument
+  noise and low-abundance peaks before peak picking or molecular formula assignment.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,12 +16,15 @@ metadata:
   - numpy
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np

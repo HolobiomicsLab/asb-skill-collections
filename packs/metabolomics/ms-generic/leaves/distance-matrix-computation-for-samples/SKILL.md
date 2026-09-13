@@ -1,9 +1,11 @@
 ---
 name: distance-matrix-computation-for-samples
-description: Use when after batch effect removal and data integration, when you have a feature-by-sample matrix (finalData) and wish to separate and visualize sample groups by their metabolomic profiles using clustering methods such as hierarchical clustering analysis (HCA).
+description: Use when after batch effect removal and data integration, when you have
+  a feature-by-sample matrix (finalData) and wish to separate and visualize sample
+  groups by their metabolomic profiles using clustering methods such as hierarchical
+  clustering analysis (HCA).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -14,13 +16,17 @@ metadata:
   - ggplot2
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
 evidence_spans:
 - install_github("LargeMetabo/LargeMetabo", force = TRUE, build_vignettes = TRUE)
-- several R packages are utilized in the background processes, including factoextra, FSelector, genefilter
-- several R packages are utilized in the background processes, including ggfortify, ggplot2, igraph
+- several R packages are utilized in the background processes, including factoextra,
+  FSelector, genefilter
+- several R packages are utilized in the background processes, including ggfortify,
+  ggplot2, igraph
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

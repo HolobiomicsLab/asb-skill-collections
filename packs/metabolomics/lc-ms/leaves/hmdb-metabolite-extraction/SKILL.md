@@ -1,9 +1,10 @@
 ---
 name: hmdb-metabolite-extraction
-description: Use when you have downloaded raw HMDB data (hmdb_metabolites.zip or pickle file) and need to generate a representative set of chemical objects for simulating LC-MS/MS acquisition strategies.
+description: Use when you have downloaded raw HMDB data (hmdb_metabolites.zip or pickle
+  file) and need to generate a representative set of chemical objects for simulating
+  LC-MS/MS acquisition strategies.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -15,6 +16,8 @@ metadata:
   - vimms-data
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms

@@ -1,9 +1,11 @@
 ---
 name: sample-batch-metadata-organization
-description: Use when you have tab-delimited metabolomics data with columns for aliquot identifiers, compound names, peak areas (primary and internal standard), sample type (QC, study sample, calibration), batch labels, and injection times, and need to construct a single unified object for batch correction.
+description: Use when you have tab-delimited metabolomics data with columns for aliquot
+  identifiers, compound names, peak areas (primary and internal standard), sample
+  type (QC, study sample, calibration), batch labels, and injection times, and need
+  to construct a single unified object for batch correction.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +18,8 @@ metadata:
   - xcms
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -24,8 +28,10 @@ evidence_spans:
 - knitr::rmarkdown, library(mzQuality)
 - mzQuality requires a specific format for the input data.
 - mzQuality requires a specific format for the input data
-- The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.
-- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data
+- The `buildExperiment` function will then take the data and create an experiment
+  object that can be used for analysis.
+- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store
+  the data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

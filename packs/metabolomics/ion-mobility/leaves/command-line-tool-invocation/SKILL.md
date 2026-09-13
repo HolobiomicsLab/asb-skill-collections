@@ -1,9 +1,11 @@
 ---
 name: command-line-tool-invocation
-description: Use when you need to bootstrap a tool workflow by generating a version- or instrument-specific default configuration file (e.g., for MS-DIAL 4 vs. 5), execute an analysis on formatted input files (e.g., MS-DIAL export .txt files), or capture tool output for downstream validation.
+description: Use when you need to bootstrap a tool workflow by generating a version-
+  or instrument-specific default configuration file (e.g., for MS-DIAL 4 vs. 5), execute
+  an analysis on formatted input files (e.g., MS-DIAL export .txt files), or capture
+  tool output for downstream validation.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -20,6 +22,8 @@ metadata:
   - Apache Parquet
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c04040
   title: lipoclean

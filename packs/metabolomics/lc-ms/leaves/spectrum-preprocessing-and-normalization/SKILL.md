@@ -1,9 +1,11 @@
 ---
 name: spectrum-preprocessing-and-normalization
-description: Use when you have raw MS/MS spectra in MGF or other standard formats that need to be ingested into a machine learning pipeline for cross-modal matching against molecular structures, or when spectra from different collision energy levels or instruments require standardization before comparative.
+description: Use when you have raw MS/MS spectra in MGF or other standard formats
+  that need to be ingested into a machine learning pipeline for cross-modal matching
+  against molecular structures, or when spectra from different collision energy levels
+  or instruments require standardization before comparative.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -18,6 +20,8 @@ metadata:
   - pip
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01594
   title: CSU-MS2

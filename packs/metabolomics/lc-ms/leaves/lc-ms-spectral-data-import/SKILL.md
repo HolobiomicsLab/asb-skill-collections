@@ -1,9 +1,10 @@
 ---
 name: lc-ms-spectral-data-import
-description: Use when you have raw LC-MS/MS spectral data in .mgf format (or vendor-specific raw data that can be converted to .mgf via MZmine or similar tools) and need to prepare it for interactive exploration using the specXplore dashboard.
+description: Use when you have raw LC-MS/MS spectral data in .mgf format (or vendor-specific
+  raw data that can be converted to .mgf via MZmine or similar tools) and need to
+  prepare it for interactive exploration using the specXplore dashboard.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,6 +18,8 @@ metadata:
   - ms2query
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore

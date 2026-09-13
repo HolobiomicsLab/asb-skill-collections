@@ -1,9 +1,11 @@
 ---
 name: metabolite-cluster-identification-from-correlated-features
-description: Use when after preprocessing, imputation, and batch correction of LC-MS peak tables when you need to group redundant or related feature measurements (e.g., [M+H]+ and [M+Na]+ adducts, or isotope peaks) into metabolite-level clusters before statistical testing or identification.
+description: Use when after preprocessing, imputation, and batch correction of LC-MS
+  peak tables when you need to group redundant or related feature measurements (e.g.,
+  [M+H]+ and [M+Na]+ adducts, or isotope peaks) into metabolite-level clusters before
+  statistical testing or identification.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,6 +17,8 @@ metadata:
   - igraph
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo10040135
   title: notame
@@ -24,7 +28,8 @@ evidence_spans:
 - This package can be used to analyze preprocessed LC-MS data in non-targeted metabolomics
 - library(notame)
 - reads them to R, conducts additional preprocessing and statistical analyses
-- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package by Bioconductor'
+- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package
+  by Bioconductor'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

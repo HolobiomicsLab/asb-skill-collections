@@ -1,9 +1,10 @@
 ---
 name: isotope-pattern-and-adduct-assignment
-description: Use when after feature detection has produced a TSV feature table (from Asari or equivalent) containing m/z, retention time, and intensity columns, and before MS1 or MS2 annotation.
+description: Use when after feature detection has produced a TSV feature table (from
+  Asari or equivalent) containing m/z, retention time, and intensity columns, and
+  before MS1 or MS2 annotation.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3932
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,6 +17,8 @@ metadata:
   - mass2chem
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

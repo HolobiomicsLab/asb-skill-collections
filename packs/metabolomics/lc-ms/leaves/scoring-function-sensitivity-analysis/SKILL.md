@@ -1,9 +1,11 @@
 ---
 name: scoring-function-sensitivity-analysis
-description: Use when you have two or more complementary scoring functions (e.g., strain correlation and IOKR scores) that you wish to combine, and you need to determine which combination strategy and parameters maximize enrichment of known true links in a validation set.
+description: Use when you have two or more complementary scoring functions (e.g.,
+  strain correlation and IOKR scores) that you wish to combine, and you need to determine
+  which combination strategy and parameters maximize enrichment of known true links
+  in a validation set.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -15,15 +17,19 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- after downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - genomes were run through antiSMASH v5.0.0 for BGC detection
-- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining the hierarchical relationship between them
+- NPLinker creates objects for spectra, MFs, BGCs and GCFs in the data set, maintaining
+  the hierarchical relationship between them
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

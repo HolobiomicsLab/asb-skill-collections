@@ -1,9 +1,9 @@
 ---
 name: adduct-fragment-formula-interpretation
-description: Use when after temporal correlation has identified candidate feature pairs with matching intensity profiles across time-resolved DBDI-MS experiments.
+description: Use when after temporal correlation has identified candidate feature
+  pairs with matching intensity profiles across time-resolved DBDI-MS experiments.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,11 +16,14 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
-- doi: 10.1093/bioinformatics/btad088/7036334
+- doi: 10.1093/bioinformatics/btad088
   title: DBDIpy
 evidence_spans:
-- DBDIpy is an open-source Python library for the curation and interpretation of dielectric barrier discharge ionisation mass spectrometric datasets
+- DBDIpy is an open-source Python library for the curation and interpretation of dielectric
+  barrier discharge ionisation mass spectrometric datasets
 - DBDIpy is an open-source Python library
 claims: []
 provenance:
@@ -28,15 +31,15 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_dbdipy_cq
-    doi: 10.1093/bioinformatics/btad088/7036334
+    doi: 10.1093/bioinformatics/btad088
     title: DBDIpy
   dedup_kept_from: coll_dbdipy_cq
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bioinformatics/btad088/7036334
+  original_doi: 10.1093/bioinformatics/btad088
   all_source_dois:
-  - 10.1093/bioinformatics/btad088/7036334
+  - 10.1093/bioinformatics/btad088
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias

@@ -1,9 +1,10 @@
 ---
 name: formula-database-querying
-description: Use when you have calibrated m/z peak lists, configured adduct transformations (e.g., [M+H]+, [M+Na]+, [M-H]−), and need to annotate peaks with molecular formulae from KEGG, PubChem, or custom databases.
+description: Use when you have calibrated m/z peak lists, configured adduct transformations
+  (e.g., [M+H]+, [M+Na]+, [M-H]−), and need to annotate peaks with molecular formulae
+  from KEGG, PubChem, or custom databases.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3664
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -13,6 +14,8 @@ metadata:
   - R
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s11306-020-01717-8
   title: MetaboShiny

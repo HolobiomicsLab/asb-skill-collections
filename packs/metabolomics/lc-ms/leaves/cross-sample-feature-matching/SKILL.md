@@ -1,9 +1,10 @@
 ---
 name: cross-sample-feature-matching
-description: Use when you have detected feature tables from two or more LC-IMS-MS/MS samples and need to establish correspondence between features across samples to enable quantitative comparison, statistical analysis, or consensus feature calling.
+description: Use when you have detected feature tables from two or more LC-IMS-MS/MS
+  samples and need to establish correspondence between features across samples to
+  enable quantitative comparison, statistical analysis, or consensus feature calling.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,13 +18,16 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
 - DEIMoS is a Python application programming interface
 - DEIMoS is a Python application programming interface and command-line tool
-- Functionality includes feature detection, feature alignment, collision cross section (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
+- Functionality includes feature detection, feature alignment, collision cross section
+  (CCS) calibration, isotope detection, and MS/MS spectral deconvolution
 - import deimos
 - import numpy as np
 claims: []

@@ -1,9 +1,10 @@
 ---
 name: data-ingestion-pipeline-design
-description: Use when when building a platform that must accept raw MS data files (e.g., .raw, .mzML, .mzXML) from instrument runs or external sources as the first stage of an automated omics workflow.
+description: Use when when building a platform that must accept raw MS data files
+  (e.g., .raw, .mzML, .mzXML) from instrument runs or external sources as the first
+  stage of an automated omics workflow.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,6 +18,8 @@ metadata:
   - MSConnect
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00854
   title: MSConnect

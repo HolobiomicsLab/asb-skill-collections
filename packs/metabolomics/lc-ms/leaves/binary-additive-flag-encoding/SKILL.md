@@ -1,9 +1,11 @@
 ---
 name: binary-additive-flag-encoding
-description: Use when constructing HPLC column feature vectors from raw metadata that includes additive composition flags (e.g., presence/absence or concentration of formic acid, acetic acid, TFA, or phosphoric acid in mobile phase eluents A and B).
+description: Use when constructing HPLC column feature vectors from raw metadata that
+  includes additive composition flags (e.g., presence/absence or concentration of
+  formic acid, acetic acid, TFA, or phosphoric acid in mobile phase eluents A and
+  B).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +16,8 @@ metadata:
   - Graphormer-RT
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT

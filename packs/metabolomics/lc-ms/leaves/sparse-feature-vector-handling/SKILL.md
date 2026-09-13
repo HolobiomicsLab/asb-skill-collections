@@ -1,9 +1,9 @@
 ---
 name: sparse-feature-vector-handling
-description: Use when when you have tandem mass spectra (mz/intensity pairs with precursor m/z) and need to train an interpretable model (e.
+description: Use when when you have tandem mass spectra (mz/intensity pairs with precursor
+  m/z) and need to train an interpretable model (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -14,6 +14,8 @@ metadata:
   - Decision Tree Classifier (scikit-learn or equivalent)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c02591
   title: ChemEcho

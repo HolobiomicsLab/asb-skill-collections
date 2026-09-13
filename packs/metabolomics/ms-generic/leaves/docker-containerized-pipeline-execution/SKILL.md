@@ -1,9 +1,10 @@
 ---
 name: docker-containerized-pipeline-execution
-description: Use when you have raw mass spectrometry data converted to MS1 format and need to predict peptide features (charge, isotope count, retention time) without installing complex dependencies or configuring GPU/Python environments locally.
+description: Use when you have raw mass spectrometry data converted to MS1 format
+  and need to predict peptide features (charge, isotope count, retention time) without
+  installing complex dependencies or configuring GPU/Python environments locally.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +15,8 @@ metadata:
   - Docker
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.26599/bdma.2024.9020059
   title: IsoFusion

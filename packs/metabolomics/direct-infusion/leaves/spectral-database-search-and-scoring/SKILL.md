@@ -1,9 +1,11 @@
 ---
 name: spectral-database-search-and-scoring
-description: Use when you have preprocessed mass spectrometry data (peak-picked, baseline-corrected) from DI-MS, ASAP-MS, or LDI-MS instruments and need to identify unknown samples by comparing their spectral fingerprints against a validated reference database of known species or compounds.
+description: Use when you have preprocessed mass spectrometry data (peak-picked, baseline-corrected)
+  from DI-MS, ASAP-MS, or LDI-MS instruments and need to identify unknown samples
+  by comparing their spectral fingerprints against a validated reference database
+  of known species or compounds.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +17,8 @@ metadata:
   - LDI-MS
   techniques:
   - direct-infusion-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass

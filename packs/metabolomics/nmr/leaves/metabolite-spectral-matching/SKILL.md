@@ -1,9 +1,10 @@
 ---
 name: metabolite-spectral-matching
-description: Use when you have an experimental mass spectrum (or a set of spectra from LC-MS/MS data) and need to identify the underlying metabolite(s) by comparing against known reference spectra in GNPS or a local indexed repository.
+description: Use when you have an experimental mass spectrum (or a set of spectra
+  from LC-MS/MS data) and need to identify the underlying metabolite(s) by comparing
+  against known reference spectra in GNPS or a local indexed repository.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +17,8 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41587-023-01985-4
   title: MASST

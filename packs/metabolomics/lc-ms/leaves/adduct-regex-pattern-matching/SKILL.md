@@ -1,9 +1,10 @@
 ---
 name: adduct-regex-pattern-matching
-description: Use when ingesting mass spectrometry spectra from heterogeneous databases or libraries where adduct annotations may be incomplete, incorrectly formatted, or inconsistent with the ionization mode. Use it before downstream analysis (e.
+description: Use when ingesting mass spectrometry spectra from heterogeneous databases
+  or libraries where adduct annotations may be incomplete, incorrectly formatted,
+  or inconsistent with the ionization mode. Use it before downstream analysis (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -15,6 +16,13 @@ metadata:
   - spectra-hash
   techniques:
   - LC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub

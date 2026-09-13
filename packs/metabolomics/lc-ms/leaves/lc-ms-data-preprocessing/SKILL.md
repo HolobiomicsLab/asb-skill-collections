@@ -1,9 +1,11 @@
 ---
 name: lc-ms-data-preprocessing
-description: 'Use when you have raw mzML files and corresponding feature tables (CSV format, mzmine-formatted) from untargeted LCMS experiments, and you need to convert them into uniformly-shaped peak matrices (2 × 120 per peak: margin + signal regions) as input for neural network classification of MS1 peak.'
+description: 'Use when you have raw mzML files and corresponding feature tables (CSV
+  format, mzmine-formatted) from untargeted LCMS experiments, and you need to convert
+  them into uniformly-shaped peak matrices (2 × 120 per peak: margin + signal regions)
+  as input for neural network classification of MS1 peak.'
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,11 +17,14 @@ metadata:
   - pandas
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c02220
   title: neatms
 evidence_spans:
-- NeatMS provides the necessary functions to do that, all we will have to do is create a `Neural network handler` object
+- NeatMS provides the necessary functions to do that, all we will have to do is create
+  a `Neural network handler` object
 - Calling the method `get_threshold()` will compute and return the optimal threshold
 - After installation, you should be able to import NeatMS
 - Import the required libraries first

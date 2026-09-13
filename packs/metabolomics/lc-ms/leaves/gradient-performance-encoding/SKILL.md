@@ -1,9 +1,11 @@
 ---
 name: gradient-performance-encoding
-description: Use when when you have extracted retention times from the top detected MS1 features in a LC-MS run and need to evaluate whether the gradient spreads those compounds efficiently across the available chromatographic time window—particularly during iterative gradient optimization where you need a.
+description: Use when when you have extracted retention times from the top detected
+  MS1 features in a LC-MS run and need to evaluate whether the gradient spreads those
+  compounds efficiently across the available chromatographic time window—particularly
+  during iterative gradient optimization where you need a.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,6 +19,8 @@ metadata:
   techniques:
   - LC-MS
   - direct-infusion-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.09.08.556930
   title: BAGO

@@ -1,9 +1,11 @@
 ---
 name: molecular-formula-assignment
-description: 'Use when you have acquired MS/MS spectra (in MGF format with required fields: TITLE, PRECURSOR_MZ, PRECURSOR_TYPE, COLLISION_ENERGY) from known or unknown compounds and need to predict their molecular formulas with ranked candidates and confidence scores.'
+description: 'Use when you have acquired MS/MS spectra (in MGF format with required
+  fields: TITLE, PRECURSOR_MZ, PRECURSOR_TYPE, COLLISION_ENERGY) from known or unknown
+  compounds and need to predict their molecular formulas with ranked candidates and
+  confidence scores.'
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0718
@@ -15,6 +17,8 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

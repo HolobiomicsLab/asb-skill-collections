@@ -1,9 +1,11 @@
 ---
 name: jupyter-notebook-workflow-execution
-description: Use when you have a curated training dataset of molecular structures with known CCS values, a target set of ≤10,000 molecules requiring CCS predictions, and need to apply a pre-configured Sklearn-based machine learning model within a reproducible, browser-accessible environment.
+description: Use when you have a curated training dataset of molecular structures
+  with known CCS values, a target set of ≤10,000 molecules requiring CCS predictions,
+  and need to apply a pre-configured Sklearn-based machine learning model within a
+  reproducible, browser-accessible environment.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,6 +18,8 @@ metadata:
   - CCSP 2.0
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c03491
   title: CCS Predictor 2.0

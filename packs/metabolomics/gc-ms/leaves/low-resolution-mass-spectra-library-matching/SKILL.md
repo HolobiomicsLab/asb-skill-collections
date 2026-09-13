@@ -1,9 +1,11 @@
 ---
 name: low-resolution-mass-spectra-library-matching
-description: Use when when processing low-resolution GC-MS data in NetCDF format where you have already performed retention-index calibration and peak deconvolution, and you need to assign compound identities by comparing experimental mass spectra to a curated reference library such as PNNLMetV20191015.MSL.
+description: Use when when processing low-resolution GC-MS data in NetCDF format where
+  you have already performed retention-index calibration and peak deconvolution, and
+  you need to assign compound identities by comparing experimental mass spectra to
+  a curated reference library such as PNNLMetV20191015.MSL.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0769
@@ -15,12 +17,15 @@ metadata:
   - numpy
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np

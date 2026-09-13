@@ -1,9 +1,11 @@
 ---
 name: thermodynamic-molecular-index-calculation-from-elemental-composition
-description: 'Use when when you have peak-abundance .csv files with assigned molecular formulas (elemental composition: C, H, O, N, P, S) from FT-ICR MS or high-resolution MS and need to characterize the redox and structural properties of the molecular pool—e.'
+description: 'Use when when you have peak-abundance .csv files with assigned molecular
+  formulas (elemental composition: C, H, O, N, P, S) from FT-ICR MS or high-resolution
+  MS and need to characterize the redox and structural properties of the molecular
+  pool—e.'
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -22,12 +24,15 @@ metadata:
   - SYNCSA (R)
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
 - The MetaboDirect pipeline was developed in Python 3.8
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2
 - It requires the Python dependencies NumPy

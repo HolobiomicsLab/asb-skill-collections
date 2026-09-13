@@ -1,9 +1,10 @@
 ---
 name: feature-annotation-via-isotope-adduct-grouping
-description: Use when after peak detection and feature extraction have produced a composite feature table with m/z, retention time, and intensity values for individual samples.
+description: Use when after peak detection and feature extraction have produced a
+  composite feature table with m/z, retention time, and intensity values for individual
+  samples.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -18,15 +19,19 @@ metadata:
   - mass2chem
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - The default method uses `pymzml` to parse mzML files.
 - The preannotaion is done via another package khipu (https://github.com/shuzhao-li-lab/khipu)
-- The empirical compounds are searched against known compound database (default HMDB 4) via another package JMS (https://github.com/shuzhao-li/JMS).
+- The empirical compounds are searched against known compound database (default HMDB
+  4) via another package JMS (https://github.com/shuzhao-li/JMS).
 - known compound database (default HMDB 4)
 claims: []
 provenance:

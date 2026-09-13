@@ -1,9 +1,10 @@
 ---
 name: latent-feature-interpretation
-description: Use when you have imaging mass spectrometry (IMS) data preprocessed into an h5py-backed feature matrix, and a trained graph-attention autoencoder has already extracted latent low-dimensional peak features.
+description: Use when you have imaging mass spectrometry (IMS) data preprocessed into
+  an h5py-backed feature matrix, and a trained graph-attention autoencoder has already
+  extracted latent low-dimensional peak features.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_2238
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,6 +18,8 @@ metadata:
   techniques:
   - MS-imaging
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART

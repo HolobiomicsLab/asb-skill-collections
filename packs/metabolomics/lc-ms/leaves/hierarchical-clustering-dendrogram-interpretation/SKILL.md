@@ -1,9 +1,11 @@
 ---
 name: hierarchical-clustering-dendrogram-interpretation
-description: Use when you have a pre-computed hierarchical dendrogram from correlation-based clustering of LC-MS features (with fixed linkage criterion and distance metric) and need to decide whether a single constant-threshold cut or data-driven silhouette optimization better resolves the underlying cluster.
+description: Use when you have a pre-computed hierarchical dendrogram from correlation-based
+  clustering of LC-MS features (with fixed linkage criterion and distance metric)
+  and need to decide whether a single constant-threshold cut or data-driven silhouette
+  optimization better resolves the underlying cluster.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -22,6 +24,8 @@ metadata:
   - scipy.cluster.hierarchy (linkage, dendrogram, fcluster)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi

@@ -1,9 +1,11 @@
 ---
 name: ms2-fragmentation-spectrum-parsing
-description: Use when you have raw MS2 spectra in common formats (mzML, mzXML, msp, MGF, JSON) and need to convert them into normalized, queryable spectral objects for downstream analysis such as MS2 fingerprinting, spectral similarity scoring, or sample comparison.
+description: Use when you have raw MS2 spectra in common formats (mzML, mzXML, msp,
+  MGF, JSON) and need to convert them into normalized, queryable spectral objects
+  for downstream analysis such as MS2 fingerprinting, spectral similarity scoring,
+  or sample comparison.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3439
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,12 +17,16 @@ metadata:
   - numpy
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo
 evidence_spans:
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra and converting them into documents.
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra and converting them into documents.
 - conda create --name memo python=3.8
 - pip install numpy
 claims: []

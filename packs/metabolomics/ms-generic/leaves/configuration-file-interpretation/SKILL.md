@@ -1,9 +1,10 @@
 ---
 name: configuration-file-interpretation
-description: Use when when you have PSM files from proteomics search engines (MaxQuant, MSGFPlus, Sage, etc.) that use non-standard modification notation (e.g., 'ox', '+57.02146', or mass-shift labels) and need to resccore peptide identifications with MS²Rescore.
+description: Use when when you have PSM files from proteomics search engines (MaxQuant,
+  MSGFPlus, Sage, etc.) that use non-standard modification notation (e.g., 'ox', '+57.02146',
+  or mass-shift labels) and need to resccore peptide identifications with MS²Rescore.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,6 +17,8 @@ metadata:
   - DeepLC
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/pmic.202300336
   title: MS2Rescore (immunopeptidome rescoring)

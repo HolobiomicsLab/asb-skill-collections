@@ -1,9 +1,11 @@
 ---
 name: mass-spectrometry-file-inventory-management
-description: Use when you have uploaded MS/MS data to MassIVE with validated sample-information metadata and need to subset public files by sample attributes (organism, tissue type, extraction method, ionization source, pre-MS separation) to create reproducible, manageable cohorts for molecular networking.
+description: Use when you have uploaded MS/MS data to MassIVE with validated sample-information
+  metadata and need to subset public files by sample attributes (organism, tissue
+  type, extraction method, ionization source, pre-MS separation) to create reproducible,
+  manageable cohorts for molecular networking.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,6 +18,8 @@ metadata:
   - ReDU metadata validator
   techniques:
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU

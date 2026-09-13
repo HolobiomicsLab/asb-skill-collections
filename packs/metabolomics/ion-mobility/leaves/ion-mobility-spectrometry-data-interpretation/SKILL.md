@@ -1,9 +1,11 @@
 ---
 name: ion-mobility-spectrometry-data-interpretation
-description: Use when you have raw ion mobility-mass spectrometry data (drift time and m/z measurements) from DTIMS-MS, TWIMS-MS, or SLIM-based IMS-MS instruments and need to derive collision cross section values for molecular ion characterization. Use it specifically when calibrant standards (e.
+description: Use when you have raw ion mobility-mass spectrometry data (drift time
+  and m/z measurements) from DTIMS-MS, TWIMS-MS, or SLIM-based IMS-MS instruments
+  and need to derive collision cross section values for molecular ion characterization.
+  Use it specifically when calibrant standards (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -12,6 +14,8 @@ metadata:
   - AutoCCS
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btab429
   title: AutoCCS

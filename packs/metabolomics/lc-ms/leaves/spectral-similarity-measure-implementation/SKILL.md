@@ -1,9 +1,11 @@
 ---
 name: spectral-similarity-measure-implementation
-description: Use when you have MSMS spectra from two or more compounds and need to identify which are structurally related. Use this skill when you want to rank spectrum pairs by similarity to discover novel analogs or validate structural assignments in untargeted metabolomics or natural products discovery.
+description: Use when you have MSMS spectra from two or more compounds and need to
+  identify which are structurally related. Use this skill when you want to rank spectrum
+  pairs by similarity to discover novel analogs or validate structural assignments
+  in untargeted metabolomics or natural products discovery.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3960
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,6 +15,8 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.2c00153
   title: Neutral-loss similarity

@@ -1,9 +1,10 @@
 ---
 name: conformer-ensemble-energy-ranking
-description: Use when after RDKit has generated a large set of 3D conformers for a molecule in SDF or XYZ format, and before submitting conformers to computationally expensive quantum-chemical methods (e.g., QUICK).
+description: Use when after RDKit has generated a large set of 3D conformers for a
+  molecule in SDF or XYZ format, and before submitting conformers to computationally
+  expensive quantum-chemical methods (e.g., QUICK).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3938
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -15,6 +16,8 @@ metadata:
   - Snakemake
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS

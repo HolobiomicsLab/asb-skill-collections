@@ -1,9 +1,10 @@
 ---
 name: mass-spectrometry-reference-standard-mapping
-description: Use when you have acquired tunemix data (positive or negative ion mode, in .h5 format) with known CCS reference values and need to construct a calibration function that will later predict CCS values for unknown analytes.
+description: Use when you have acquired tunemix data (positive or negative ion mode,
+  in .h5 format) with known CCS reference values and need to construct a calibration
+  function that will later predict CCS values for unknown analytes.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,11 +16,14 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
-- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python application programming interface and command-line tool
+- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python
+  application programming interface and command-line tool
 - import deimos
 - is a Python application programming interface and command-line tool
 - import numpy as np

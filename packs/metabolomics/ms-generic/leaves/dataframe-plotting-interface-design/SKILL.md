@@ -1,9 +1,10 @@
 ---
 name: dataframe-plotting-interface-design
-description: 'Use when when building a scientific visualization library that must support multiple plotting backends and needs to avoid backend-specific code duplication. Specifically: (1) your domain (e.'
+description: 'Use when when building a scientific visualization library that must
+  support multiple plotting backends and needs to avoid backend-specific code duplication.
+  Specifically: (1) your domain (e.'
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,6 +17,8 @@ metadata:
   - pyOpenMS-Viz
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz

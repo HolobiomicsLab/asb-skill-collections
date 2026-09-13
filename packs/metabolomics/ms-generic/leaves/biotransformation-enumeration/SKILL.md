@@ -1,9 +1,10 @@
 ---
 name: biotransformation-enumeration
-description: Use when you have a known parent drug chemical formula and aim to predict its metabolite landscape prior to or during high-resolution mass spectrometry analysis (mzML).
+description: Use when you have a known parent drug chemical formula and aim to predict
+  its metabolite landscape prior to or during high-resolution mass spectrometry analysis
+  (mzML).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3660
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -16,6 +17,8 @@ metadata:
   - R (v3.6.1 – v4.0)
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c02281
   title: MetIDfyR

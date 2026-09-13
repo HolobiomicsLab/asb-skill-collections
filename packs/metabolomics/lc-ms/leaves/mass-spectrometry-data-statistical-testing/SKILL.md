@@ -1,9 +1,11 @@
 ---
 name: mass-spectrometry-data-statistical-testing
-description: Use when you have a normalized abundance matrix from LC-MS/MS profiling with sample class assignments (e.g., phenotypic groups, disease states, treatment conditions) and need to filter metabolic features for downstream pathway analysis or biological validation.
+description: Use when you have a normalized abundance matrix from LC-MS/MS profiling
+  with sample class assignments (e.g., phenotypic groups, disease states, treatment
+  conditions) and need to filter metabolic features for downstream pathway analysis
+  or biological validation.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -15,13 +17,17 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
 - doi: 10.1101/2024.06.20.599545
   title: ''
 evidence_spans:
-- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
+  spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
 - The R package margheRita addresses the complete workflow
 - The R package margheRita

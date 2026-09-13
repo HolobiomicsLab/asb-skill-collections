@@ -1,9 +1,9 @@
 ---
 name: blood-sample-processing-parameter-extraction
-description: Use when when you have peripheral blood sample cohorts (plasma/serum) with multiple timestamps (e.
+description: Use when when you have peripheral blood sample cohorts (plasma/serum)
+  with multiple timestamps (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,6 +13,8 @@ metadata:
   - QC-Tool
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c04938
   title: PRIMA-Panel

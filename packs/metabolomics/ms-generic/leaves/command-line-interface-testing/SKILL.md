@@ -1,9 +1,11 @@
 ---
 name: command-line-interface-testing
-description: Use when after installing a Python package or before running a computational workflow for the first time, to verify that the CLI entry point is properly configured, the Python environment is correctly set up, and to discover available command-line arguments and their defaults (e.
+description: Use when after installing a Python package or before running a computational
+  workflow for the first time, to verify that the CLI entry point is properly configured,
+  the Python environment is correctly set up, and to discover available command-line
+  arguments and their defaults (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -13,6 +15,8 @@ metadata:
   - annotate.py
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/bty080
   title: ChemDistiller

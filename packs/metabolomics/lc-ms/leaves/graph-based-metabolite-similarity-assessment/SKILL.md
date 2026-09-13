@@ -1,9 +1,11 @@
 ---
 name: graph-based-metabolite-similarity-assessment
-description: Use when you have a collection of MS/MS spectra (stored as Spectrum2 objects in an ms2Lib class) and need to identify which spectra share identical fragmentation patterns—particularly when coupled to a GNPS molecular network to focus on explaining network components (connected components, cliques.
+description: Use when you have a collection of MS/MS spectra (stored as Spectrum2
+  objects in an ms2Lib class) and need to identify which spectra share identical fragmentation
+  patterns—particularly when coupled to a GNPS molecular network to focus on explaining
+  network components (connected components, cliques.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3647
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -17,6 +19,8 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-025-01051-y
   title: minems2

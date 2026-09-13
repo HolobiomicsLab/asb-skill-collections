@@ -1,9 +1,11 @@
 ---
 name: metabolomic-feature-extraction-from-mzml
-description: Use when you have centroid mzML files from LC-MS acquisitions and need to detect, group, and quantify metabolomic features for a PCPFM experiment. Use it as the first feature-level processing step after file format conversion from raw instrument files (e.g., .raw to mzML via ThermoRawFileParser).
+description: Use when you have centroid mzML files from LC-MS acquisitions and need
+  to detect, group, and quantify metabolomic features for a PCPFM experiment. Use
+  it as the first feature-level processing step after file format conversion from
+  raw instrument files (e.g., .raw to mzML via ThermoRawFileParser).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3557
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +18,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

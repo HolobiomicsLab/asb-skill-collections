@@ -1,9 +1,11 @@
 ---
 name: transformer-attention-mechanism-implementation
-description: 'Use when you have a sequence-to-structure prediction task where: (1) inputs are token sequences or embeddings representing molecular fragments or spectral data; (2) outputs are structured molecular representations (adjacency matrices for connectivity, formula vectors);'
+description: 'Use when you have a sequence-to-structure prediction task where: (1)
+  inputs are token sequences or embeddings representing molecular fragments or spectral
+  data; (2) outputs are structured molecular representations (adjacency matrices for
+  connectivity, formula vectors);'
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -13,6 +15,8 @@ metadata:
   - Transformer (architecture)
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct

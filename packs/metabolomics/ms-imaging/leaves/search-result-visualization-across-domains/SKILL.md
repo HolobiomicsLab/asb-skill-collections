@@ -1,9 +1,9 @@
 ---
 name: search-result-visualization-across-domains
-description: Use when you have executed batch searches of MS/MS spectra against multiple domain-specific MASST indices and need to synthesize results across domains (e.
+description: Use when you have executed batch searches of MS/MS spectra against multiple
+  domain-specific MASST indices and need to synthesize results across domains (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0224
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -20,6 +20,8 @@ metadata:
   - GNPS_MASST
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41538-022-00137-3
   title: foodMASST

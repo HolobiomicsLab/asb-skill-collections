@@ -1,9 +1,11 @@
 ---
 name: spectral-data-object-construction-and-integration
-description: Use when you have centroided mzML files from LC–MS experiments and need to perform targeted metabolomics or lipidomics analysis. Specifically, use it when you require polarity filtering, QC-sample stratification, or batch-aware peak detection—all of which depend on sampleData$type annotations (e.
+description: Use when you have centroided mzML files from LC–MS experiments and need
+  to perform targeted metabolomics or lipidomics analysis. Specifically, use it when
+  you require polarity filtering, QC-sample stratification, or batch-aware peak detection—all
+  of which depend on sampleData$type annotations (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3209
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -18,13 +20,17 @@ metadata:
   - ProteoWizard (MSConvert)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
 evidence_spans:
-- It makes use of an established retention time correction algorithm from the `xcms` package
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
-- Alternatively, instead of using file paths as input for TARDIS, the user can also use an `MsExperiment` object
+- Alternatively, instead of using file paths as input for TARDIS, the user can also
+  use an `MsExperiment` object
 - R package for *TArgeted Raw Data Integration In Spectrometry*
 - knitr::include_graphics
 claims: []

@@ -3,7 +3,6 @@ name: search-result-integration-with-raw-mass-spectrometry-data
 description: Use when when you have completed a DIA-MS proteomics search (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3634
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -20,11 +19,14 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash
 evidence_spans:
-- MassDash is a modular and flexible python package that has a streamlit graphical user interface (GUI)
+- MassDash is a modular and flexible python package that has a streamlit graphical
+  user interface (GUI)
 - ':mod:`massdash.loaders`: Classes for loading data'
 - MzMLDataLoader
 - InteractiveTwoDimensionPlotter

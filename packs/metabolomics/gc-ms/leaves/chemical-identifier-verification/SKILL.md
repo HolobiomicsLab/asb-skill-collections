@@ -1,9 +1,11 @@
 ---
 name: chemical-identifier-verification
-description: Use when when you have a list of chemically known compounds and need to validate that an MS processing pipeline (e.g., mzExacto) correctly retrieves their characteristic m/z, retention time, match factor, and area values from GC-MS data.
+description: Use when when you have a list of chemically known compounds and need
+  to validate that an MS processing pipeline (e.g., mzExacto) correctly retrieves
+  their characteristic m/z, retention time, match factor, and area values from GC-MS
+  data.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0769
@@ -14,13 +16,18 @@ metadata:
   - spreadOut
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- any software or utility that generates the necessary information can be used with simple modifications
-- any software or utility that generates the necessary information can be used with simple modifications (e.g. changing the column names)
-- mzExacto() collects the same information for a set of query chemicals and uses it to precisely search the advanced dictionary for samples that have those chemicals
+- any software or utility that generates the necessary information can be used with
+  simple modifications
+- any software or utility that generates the necessary information can be used with
+  simple modifications (e.g. changing the column names)
+- mzExacto() collects the same information for a set of query chemicals and uses it
+  to precisely search the advanced dictionary for samples that have those chemicals
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

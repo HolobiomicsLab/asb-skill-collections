@@ -1,9 +1,10 @@
 ---
 name: neural-network-scoring-ranking
-description: Use when when you have an unknown MS/MS spectrum (m/z and intensity pairs), a set of candidate chemical formula–adduct pairs (enumerated via SIRIUS or another generator), and need to rank them by credibility without access to a spectrum library.
+description: Use when when you have an unknown MS/MS spectrum (m/z and intensity pairs),
+  a set of candidate chemical formula–adduct pairs (enumerated via SIRIUS or another
+  generator), and need to rank them by credibility without access to a spectrum library.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,6 +14,8 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf

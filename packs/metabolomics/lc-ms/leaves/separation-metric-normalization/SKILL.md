@@ -1,9 +1,10 @@
 ---
 name: separation-metric-normalization
-description: Use when you have extracted retention times from top MS1 features across an LC-MS run and need a single, comparable metric to evaluate how effectively a gradient spreads compounds across the chromatographic window.
+description: Use when you have extracted retention times from top MS1 features across
+  an LC-MS run and need a single, comparable metric to evaluate how effectively a
+  gradient spreads compounds across the chromatographic window.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,6 +17,8 @@ metadata:
   - scikit-learn
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.09.08.556930
   title: BAGO

@@ -1,9 +1,11 @@
 ---
 name: bioinformatic-object-conversion
-description: Use when when you have processed Cardinal MSI data (normalized peak intensities, optional SSC segmentation results) and need to transition to Seurat-based workflows for differential expression, pathway analysis, or integration with spatial transcriptomics data.
+description: Use when when you have processed Cardinal MSI data (normalized peak intensities,
+  optional SSC segmentation results) and need to transition to Seurat-based workflows
+  for differential expression, pathway analysis, or integration with spatial transcriptomics
+  data.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,6 +18,13 @@ metadata:
   - Seurat
   techniques:
   - MS-imaging
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ''
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP

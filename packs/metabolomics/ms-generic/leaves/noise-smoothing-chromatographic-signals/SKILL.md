@@ -1,9 +1,10 @@
 ---
 name: noise-smoothing-chromatographic-signals
-description: Use when when you have raw LC-HRMS profile-mode data (rt × mz intensity matrices) and need to detect chromatographic peaks using gradient-descent or local-maxima algorithms.
+description: Use when when you have raw LC-HRMS profile-mode data (rt × mz intensity
+  matrices) and need to detect chromatographic peaks using gradient-descent or local-maxima
+  algorithms.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -14,6 +15,13 @@ metadata:
   - TensorFlow
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: christophuv/PeakBot
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot

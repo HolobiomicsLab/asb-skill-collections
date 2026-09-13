@@ -1,9 +1,10 @@
 ---
 name: metabolite-ms-ms-annotation
-description: Use when when you have SWATH-MS raw data (mzML or vendor format) containing multiplexed MS/MS spectra from multiple co-eluting precursor ions and need to separate these spectra into individual, annotatable component spectra for metabolite identification.
+description: Use when when you have SWATH-MS raw data (mzML or vendor format) containing
+  multiplexed MS/MS spectra from multiple co-eluting precursor ions and need to separate
+  these spectra into individual, annotatable component spectra for metabolite identification.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -13,6 +14,13 @@ metadata:
   - DecoMetDIA
   techniques:
   - LC-MS
+  license_tier: open
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ZhuMSLab/DecoMetDIA
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b02655
   title: DecoMetDIA

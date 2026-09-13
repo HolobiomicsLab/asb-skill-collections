@@ -1,9 +1,10 @@
 ---
 name: regression-model-validation-quantification
-description: Use when when you have fitted one or more regression models (linear or polynomial) to external calibration standards in MS data and need to verify model adequacy before applying it to unknown samples.
+description: Use when when you have fitted one or more regression models (linear or
+  polynomial) to external calibration standards in MS data and need to verify model
+  adequacy before applying it to unknown samples.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3659
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -12,6 +13,8 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.aca.2025.344571
   title: quantyfey

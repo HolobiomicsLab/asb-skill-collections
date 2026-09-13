@@ -1,9 +1,11 @@
 ---
 name: compound-count-verification
-description: Use when after modifying a FIDDLE configuration file to add or remove instrument types from the allowlist (e.g., adding 'ftms' to gnps_orbitrap), run the full preprocessing pipeline and validate that the resulting training and test set sizes match documented targets.
+description: Use when after modifying a FIDDLE configuration file to add or remove
+  instrument types from the allowlist (e.g., adding 'ftms' to gnps_orbitrap), run
+  the full preprocessing pipeline and validate that the resulting training and test
+  set sizes match documented targets.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -13,6 +15,8 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

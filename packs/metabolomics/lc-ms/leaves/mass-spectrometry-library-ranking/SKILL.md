@@ -1,9 +1,10 @@
 ---
 name: mass-spectrometry-library-ranking
-description: Use when you have a set of unidentified tandem mass spectra (queries) and need to identify them by matching against a curated reference library (e.g., GNPS Orbitrap dataset).
+description: Use when you have a set of unidentified tandem mass spectra (queries)
+  and need to identify them by matching against a curated reference library (e.g.,
+  GNPS Orbitrap dataset).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -18,6 +19,8 @@ metadata:
   - Spec2Vec
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c02426
   title: MSBERT

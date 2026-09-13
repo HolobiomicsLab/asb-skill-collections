@@ -22,7 +22,16 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "python",
+   "pytorch",
+   "pytorch-or-equivalent-deep-learning-framework-inferred-from-gnn-contrastive-learning-context",
+   "zenodo"
+  ]
  },
  {
   "slug": "accurate-mass-database-search",
@@ -49,7 +58,16 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "openms",
+   "pyopenms",
+   "smartpeak",
+   "smartpeakcli",
+   "smartpeakgui"
+  ]
  },
  {
   "slug": "acquisition-method-overlap-analysis",
@@ -74,7 +92,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "adduct-fragment-formula-interpretation",
@@ -92,13 +120,19 @@
    "matchms"
   ],
   "dois": [
-   "10.1093/bioinformatics/btad088/7036334"
+   "10.1093/bioinformatics/btad088"
   ],
   "techniques": [
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "dbdipy",
+   "python"
+  ]
  },
  {
   "slug": "api-adapter-layer-design",
@@ -113,12 +147,17 @@
    "tinyxml2"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab636/6363791"
+   "10.1093/bioinformatics/btab636"
   ],
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mspack"
+  ]
  },
  {
   "slug": "arrival-time-based-class-assignment",
@@ -140,7 +179,14 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hineslab-moccal",
+   "moccal",
+   "python"
+  ]
  },
  {
   "slug": "arrival-time-to-ccs-conversion",
@@ -163,7 +209,14 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hineslab-moccal",
+   "moccal",
+   "python"
+  ]
  },
  {
   "slug": "arrival-time-to-drift-time-conversion",
@@ -185,7 +238,14 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hineslab-moccal",
+   "moccal",
+   "python"
+  ]
  },
  {
   "slug": "artifact-removal-in-ims-data",
@@ -210,7 +270,15 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-masshunter",
+   "microsoft-visual-c-runtime-x64",
+   "net-framework",
+   "pnnl-preprocessor"
+  ]
  },
  {
   "slug": "atom-bond-feature-importance-ranking",
@@ -233,7 +301,18 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "manual-expert-review",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "atom-feature-extraction-chemistry",
@@ -257,7 +336,18 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "manual-expert-review",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "attention-mechanism-implementation",
@@ -283,7 +373,16 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "autoencoder-encoder-decoder-design",
@@ -307,7 +406,16 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "automated-metabolite-property-computation",
@@ -329,7 +437,12 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "autoccs"
+  ]
  },
  {
   "slug": "baseline-and-noise-level-estimation-from-quartile-statistics",
@@ -354,7 +467,28 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "asari",
+   "asari-mass-functions-module-nn-cluster-by-mz-seeds",
+   "asari-massgrid-class-build-grid-sample-wise-add-sample-build-grid-by-centroiding-bin-track-mzs",
+   "asari-peaks-module",
+   "hmdb-4",
+   "https-github-com-shuzhao-li-asari",
+   "jms",
+   "khipu",
+   "lowess",
+   "mass-functions-nn-cluster-by-mz-seeds",
+   "numpy",
+   "proteowizard",
+   "pymzml",
+   "python",
+   "scipy",
+   "scipy-signal-detrend",
+   "scipy-signal-find-peaks"
+  ]
  },
  {
   "slug": "binary-data-integrity-verification",
@@ -372,12 +506,17 @@
    "msconvert"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab636/6363791"
+   "10.1093/bioinformatics/btab636"
   ],
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mspack"
+  ]
  },
  {
   "slug": "binary-spectral-data-extraction",
@@ -402,7 +541,15 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "calculator",
+   "pewlib",
+   "pewpew",
+   "python"
+  ]
  },
  {
   "slug": "biomolecular-class-annotation",
@@ -424,7 +571,14 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hineslab-moccal",
+   "moccal",
+   "python"
+  ]
  },
  {
   "slug": "biomolecular-class-ccs-mapping",
@@ -446,7 +600,14 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hineslab-moccal",
+   "moccal",
+   "python"
+  ]
  },
  {
   "slug": "biomolecular-class-label-assignment",
@@ -470,7 +631,14 @@
    "CE-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hineslab-moccal",
+   "moccal",
+   "python"
+  ]
  },
  {
   "slug": "bruker-baf-data-import-and-conversion",
@@ -498,7 +666,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "c-module-integration",
@@ -516,12 +696,17 @@
    "gzip / bsc"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab636/6363791"
+   "10.1093/bioinformatics/btab636"
   ],
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mspack"
+  ]
  },
  {
   "slug": "calibration-coefficient-accuracy-assessment",
@@ -544,7 +729,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "ccs-bias-quantification",
@@ -567,7 +763,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mobilipid"
+  ]
  },
  {
   "slug": "ccs-calibration-polynomial-fitting",
@@ -590,7 +791,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "ccs-calibration-tunemix-execution",
@@ -612,7 +824,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "ccs-library-format-parsing",
@@ -634,7 +857,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mobilipid"
+  ]
  },
  {
   "slug": "ccs-prediction-model-application",
@@ -659,7 +887,16 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "python",
+   "pytorch",
+   "pytorch-or-equivalent-deep-learning-framework-inferred-from-gnn-contrastive-learning-context",
+   "zenodo"
+  ]
  },
  {
   "slug": "ccs-prediction-model-design",
@@ -682,7 +919,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "transformer"
+  ]
  },
  {
   "slug": "ccs-prediction-model-training",
@@ -712,7 +954,19 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "numpy",
+   "pandas",
+   "pip",
+   "pyg",
+   "python-3",
+   "pytorch",
+   "rdkit"
+  ]
  },
  {
   "slug": "ccs-reference-data-extraction",
@@ -733,7 +987,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mobilipid"
+  ]
  },
  {
   "slug": "ccs-value-assignment-from-standards",
@@ -755,7 +1014,14 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hineslab-moccal",
+   "moccal",
+   "python"
+  ]
  },
  {
   "slug": "charge-state-specific-peak-matching",
@@ -778,7 +1044,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "chemical-class-novelty-detection",
@@ -809,7 +1086,24 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "canopus",
+   "gnps",
+   "ion-identity",
+   "javafx-24",
+   "jdk-25",
+   "lotus-database",
+   "memo",
+   "mzmine",
+   "mzmine2",
+   "mzmine3",
+   "open-tree-of-life",
+   "sirius",
+   "timar"
+  ]
  },
  {
   "slug": "chemical-structure-descriptor-computation",
@@ -834,7 +1128,16 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "python",
+   "pytorch",
+   "pytorch-or-equivalent-deep-learning-framework-inferred-from-gnn-contrastive-learning-context",
+   "zenodo"
+  ]
  },
  {
   "slug": "chromatogram-peak-boundary-detection",
@@ -858,7 +1161,31 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bokeh",
+   "dia-nn",
+   "interactiveplotter",
+   "interactivetwodimensionplotter",
+   "massdash",
+   "massdash-loaders-resultsloader",
+   "massdash-peakpickers-mrmtransitiongrouppicker",
+   "massdash-peakpickers-pymrmtransitiongrouppicker",
+   "massdash-plotting-interactiveplotter",
+   "massdash-structs-featuremap",
+   "mrmtransitiongrouppicker",
+   "mzmldataloader",
+   "onnxruntime",
+   "oswdataaccess",
+   "pymrmtransitiongrouppicker",
+   "pytest",
+   "resultsloader",
+   "sqmassloader",
+   "streamlit",
+   "syrupy"
+  ]
  },
  {
   "slug": "chromatogram-plot-generation-retention-time",
@@ -886,7 +1213,23 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "alphatims",
+   "bokeh",
+   "matplotlib",
+   "pandas",
+   "plotly",
+   "pymzml",
+   "pyopenms",
+   "pyopenms-viz",
+   "pyteomics",
+   "python",
+   "rdkit",
+   "sphinx"
+  ]
  },
  {
   "slug": "chromatographic-modality-classification",
@@ -910,7 +1253,14 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "javafx-24",
+   "jdk-25",
+   "mzmine"
+  ]
  },
  {
   "slug": "chromatographic-peak-detection-and-segmentation",
@@ -933,7 +1283,13 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "noncommercial"
+  "license_tier": "noncommercial",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "masscube",
+   "python"
+  ]
  },
  {
   "slug": "chromatography-data-decimation",
@@ -954,7 +1310,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "class-conditional-calibration-mapping",
@@ -976,7 +1337,14 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hineslab-moccal",
+   "moccal",
+   "python"
+  ]
  },
  {
   "slug": "class-specific-ccs-calculation",
@@ -999,7 +1367,14 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hineslab-moccal",
+   "moccal",
+   "python"
+  ]
  },
  {
   "slug": "class-stratified-calibration-model-application",
@@ -1021,7 +1396,14 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hineslab-moccal",
+   "moccal",
+   "python"
+  ]
  },
  {
   "slug": "cli-application-invocation-with-file-io-management",
@@ -1047,7 +1429,23 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "airdpro-v5",
+   "airdpro-v6",
+   "docker-desktop-for-mac",
+   "docker-docker-build-docker-inspect-docker-system-df",
+   "docker-engine",
+   "dockerfile-multi-stage-build-with-target-flag",
+   "net-framework",
+   "net-framework-4-8",
+   "proteowizard",
+   "pwiz-bindings-cli-dll",
+   "wine",
+   "xquartz"
+  ]
  },
  {
   "slug": "cloud-hosted-computational-chemistry",
@@ -1071,7 +1469,15 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "google-colaboratory",
+   "jupyter-lab",
+   "python",
+   "sklearn"
+  ]
  },
  {
   "slug": "cluster-statistics-integration",
@@ -1092,7 +1498,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "cnn-transformer-hybrid-architecture-design",
@@ -1115,7 +1526,13 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "python",
+   "python-3-8-1"
+  ]
  },
  {
   "slug": "collision-cross-section-bias-estimation",
@@ -1139,7 +1556,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mobilipid"
+  ]
  },
  {
   "slug": "collision-cross-section-bias-quantification",
@@ -1160,7 +1582,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mobilipid"
+  ]
  },
  {
   "slug": "collision-cross-section-calculation",
@@ -1186,7 +1613,14 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hineslab-moccal",
+   "moccal",
+   "python"
+  ]
  },
  {
   "slug": "collision-cross-section-calibration",
@@ -1212,7 +1646,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "collision-cross-section-calibration-ccs",
@@ -1237,7 +1682,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "collision-cross-section-computation",
@@ -1263,7 +1719,16 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "ase-ani",
+   "dimorphite-dl",
+   "quick",
+   "rdkit",
+   "snakemake"
+  ]
  },
  {
   "slug": "collision-cross-section-matching-and-annotation",
@@ -1286,7 +1751,16 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "python",
+   "pytorch",
+   "pytorch-or-equivalent-deep-learning-framework-inferred-from-gnn-contrastive-learning-context",
+   "zenodo"
+  ]
  },
  {
   "slug": "collision-cross-section-measurement-quality-control",
@@ -1309,7 +1783,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mobilipid"
+  ]
  },
  {
   "slug": "collision-cross-section-model-validation",
@@ -1331,7 +1810,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "collision-cross-section-prediction",
@@ -1361,7 +1851,19 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "numpy",
+   "pandas",
+   "pip",
+   "pyg",
+   "python-3",
+   "pytorch",
+   "rdkit"
+  ]
  },
  {
   "slug": "collision-cross-section-prediction-evaluation",
@@ -1384,7 +1886,18 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "manual-expert-review",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "collision-energy-optimization-for-fragmentation",
@@ -1408,7 +1921,16 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "python",
+   "pytorch",
+   "pytorch-or-equivalent-deep-learning-framework-inferred-from-gnn-contrastive-learning-context",
+   "zenodo"
+  ]
  },
  {
   "slug": "command-line-interface-configuration-and-automation",
@@ -1434,7 +1956,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "command-line-tool-invocation",
@@ -1463,7 +1996,21 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "arrow",
+   "docker",
+   "lipoclean",
+   "ms-dial",
+   "ms-dial-4",
+   "ms-dial-5",
+   "openms",
+   "pyarrow",
+   "python",
+   "rust"
+  ]
  },
  {
   "slug": "comparative-omics-report-generation",
@@ -1487,7 +2034,17 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "compound-structure-comparison-metrics",
@@ -1511,7 +2068,17 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "basicevaluationengine",
+   "matplotlib",
+   "modifinder",
+   "pillow",
+   "python",
+   "rdkit"
+  ]
  },
  {
   "slug": "conditional-routing-logic-extraction",
@@ -1536,7 +2103,24 @@
    "CE-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "canopus",
+   "gnps",
+   "ion-identity",
+   "javafx-24",
+   "jdk-25",
+   "lotus-database",
+   "memo",
+   "mzmine",
+   "mzmine2",
+   "mzmine3",
+   "open-tree-of-life",
+   "sirius",
+   "timar"
+  ]
  },
  {
   "slug": "conformer-ensemble-energy-ranking",
@@ -1559,7 +2143,16 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "ase-ani",
+   "dimorphite-dl",
+   "quick",
+   "rdkit",
+   "snakemake"
+  ]
  },
  {
   "slug": "conformer-ensemble-processing",
@@ -1581,7 +2174,16 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "ase-ani",
+   "dimorphite-dl",
+   "quick",
+   "rdkit",
+   "snakemake"
+  ]
  },
  {
   "slug": "conformer-filtering-threshold-selection",
@@ -1604,7 +2206,16 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "ase-ani",
+   "dimorphite-dl",
+   "quick",
+   "rdkit",
+   "snakemake"
+  ]
  },
  {
   "slug": "conformer-generation-and-enumeration",
@@ -1628,7 +2239,16 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "ase-ani",
+   "dimorphite-dl",
+   "quick",
+   "rdkit",
+   "snakemake"
+  ]
  },
  {
   "slug": "conformer-generation-rdkit",
@@ -1651,7 +2271,16 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "ase-ani",
+   "dimorphite-dl",
+   "quick",
+   "rdkit",
+   "snakemake"
+  ]
  },
  {
   "slug": "container-resource-allocation-tuning",
@@ -1675,7 +2304,23 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "airdpro-v5",
+   "airdpro-v6",
+   "docker-desktop-for-mac",
+   "docker-docker-build-docker-inspect-docker-system-df",
+   "docker-engine",
+   "dockerfile-multi-stage-build-with-target-flag",
+   "net-framework",
+   "net-framework-4-8",
+   "proteowizard",
+   "pwiz-bindings-cli-dll",
+   "wine",
+   "xquartz"
+  ]
  },
  {
   "slug": "control-flow-diagram-synthesis",
@@ -1699,7 +2344,24 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "canopus",
+   "gnps",
+   "ion-identity",
+   "javafx-24",
+   "jdk-25",
+   "lotus-database",
+   "memo",
+   "mzmine",
+   "mzmine2",
+   "mzmine3",
+   "open-tree-of-life",
+   "sirius",
+   "timar"
+  ]
  },
  {
   "slug": "cross-language-data-format-interoperability",
@@ -1723,7 +2385,21 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "hdf5",
+   "hdf5plugin",
+   "matplotlib",
+   "mza",
+   "numpy",
+   "pandas",
+   "python",
+   "rhdf5",
+   "scipy"
+  ]
  },
  {
   "slug": "cross-sample-feature-matching",
@@ -1748,7 +2424,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "cross-software-feature-matching",
@@ -1772,7 +2459,17 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "data-format-validation-and-integrity-checking",
@@ -1799,7 +2496,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "data-type-classification-schema-design",
@@ -1823,7 +2532,24 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "canopus",
+   "gnps",
+   "ion-identity",
+   "javafx-24",
+   "jdk-25",
+   "lotus-database",
+   "memo",
+   "mzmine",
+   "mzmine2",
+   "mzmine3",
+   "open-tree-of-life",
+   "sirius",
+   "timar"
+  ]
  },
  {
   "slug": "deep-learning-model-architecture-design",
@@ -1852,7 +2578,19 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "numpy",
+   "pandas",
+   "pip",
+   "pyg",
+   "python-3",
+   "pytorch",
+   "rdkit"
+  ]
  },
  {
   "slug": "deep-learning-model-assembly",
@@ -1875,7 +2613,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "transformer"
+  ]
  },
  {
   "slug": "deep-learning-signal-inference-with-onnx",
@@ -1898,7 +2641,31 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bokeh",
+   "dia-nn",
+   "interactiveplotter",
+   "interactivetwodimensionplotter",
+   "massdash",
+   "massdash-loaders-resultsloader",
+   "massdash-peakpickers-mrmtransitiongrouppicker",
+   "massdash-peakpickers-pymrmtransitiongrouppicker",
+   "massdash-plotting-interactiveplotter",
+   "massdash-structs-featuremap",
+   "mrmtransitiongrouppicker",
+   "mzmldataloader",
+   "onnxruntime",
+   "oswdataaccess",
+   "pymrmtransitiongrouppicker",
+   "pytest",
+   "resultsloader",
+   "sqmassloader",
+   "streamlit",
+   "syrupy"
+  ]
  },
  {
   "slug": "dia-file-format-parsing",
@@ -1920,7 +2687,13 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "msconvert",
+   "python"
+  ]
  },
  {
   "slug": "dia-file-quality-prediction",
@@ -1944,7 +2717,13 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "msconvert",
+   "python"
+  ]
  },
  {
   "slug": "distance-clustering-in-high-dimensions",
@@ -1968,7 +2747,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "distance-geometry-embedding",
@@ -1991,7 +2781,16 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "ase-ani",
+   "dimorphite-dl",
+   "quick",
+   "rdkit",
+   "snakemake"
+  ]
  },
  {
   "slug": "drift-retention-time-alignment",
@@ -2015,7 +2814,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "drift-time-filtering",
@@ -2038,7 +2842,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "drift-time-retention-time-distance-metric-selection",
@@ -2059,7 +2868,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "drift-time-to-ccs-correlation-modeling",
@@ -2085,7 +2899,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "extracted-ion-chromatogram-generation",
@@ -2109,7 +2934,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "extraction-parameter-optimization-ppm-retention-time-ion-mobility",
@@ -2136,7 +2971,31 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bokeh",
+   "dia-nn",
+   "interactiveplotter",
+   "interactivetwodimensionplotter",
+   "massdash",
+   "massdash-loaders-resultsloader",
+   "massdash-peakpickers-mrmtransitiongrouppicker",
+   "massdash-peakpickers-pymrmtransitiongrouppicker",
+   "massdash-plotting-interactiveplotter",
+   "massdash-structs-featuremap",
+   "mrmtransitiongrouppicker",
+   "mzmldataloader",
+   "onnxruntime",
+   "oswdataaccess",
+   "pymrmtransitiongrouppicker",
+   "pytest",
+   "resultsloader",
+   "sqmassloader",
+   "streamlit",
+   "syrupy"
+  ]
  },
  {
   "slug": "feature-ablation-analysis",
@@ -2161,7 +3020,18 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "manual-expert-review",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "feature-list-harmonization-across-methods",
@@ -2186,7 +3056,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "feature-table-consensus-aggregation",
@@ -2211,7 +3091,18 @@
    "ion-mobility-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "file-format-conversion-validation",
@@ -2229,12 +3120,17 @@
    "bsc"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab636/6363791"
+   "10.1093/bioinformatics/btab636"
   ],
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mspack"
+  ]
  },
  {
   "slug": "file-format-identification-mass-spectrometry",
@@ -2258,7 +3154,21 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "hdf5",
+   "hdf5plugin",
+   "matplotlib",
+   "mza",
+   "numpy",
+   "pandas",
+   "python",
+   "rhdf5",
+   "scipy"
+  ]
  },
  {
   "slug": "fixed-size-integration-method",
@@ -2280,7 +3190,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "force-field-minimization-mmff94",
@@ -2302,7 +3217,16 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "ase-ani",
+   "dimorphite-dl",
+   "quick",
+   "rdkit",
+   "snakemake"
+  ]
  },
  {
   "slug": "format-agnostic-data-ingestion",
@@ -2319,12 +3243,17 @@
    "tinyxml2"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab636/6363791"
+   "10.1093/bioinformatics/btab636"
   ],
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mspack"
+  ]
  },
  {
   "slug": "format-conversion-conditional-logic",
@@ -2347,7 +3276,14 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "excalibur",
+   "lsg",
+   "lsg-lipid-spectrum-generator"
+  ]
  },
  {
   "slug": "fragment-ion-difference-counting",
@@ -2369,7 +3305,13 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "python",
+   "simile"
+  ]
  },
  {
   "slug": "fragment-ion-peak-annotation",
@@ -2392,7 +3334,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "fragmentation-pattern-spectral-matching",
@@ -2415,7 +3367,16 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "python",
+   "pytorch",
+   "pytorch-or-equivalent-deep-learning-framework-inferred-from-gnn-contrastive-learning-context",
+   "zenodo"
+  ]
  },
  {
   "slug": "frame-metadata-extraction-and-export",
@@ -2437,7 +3398,15 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-masshunter",
+   "microsoft-visual-c-runtime-x64",
+   "net-framework",
+   "pnnl-preprocessor"
+  ]
  },
  {
   "slug": "gc-ims-matrix-table-generation",
@@ -2459,7 +3428,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "gc-ims-peak-alignment-evaluation",
@@ -2481,7 +3455,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "gcims-dataset-object-creation",
@@ -2504,7 +3483,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "generic-hdf5-library-api-usage",
@@ -2529,7 +3513,21 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "hdf5",
+   "hdf5plugin",
+   "matplotlib",
+   "mza",
+   "numpy",
+   "pandas",
+   "python",
+   "rhdf5",
+   "scipy"
+  ]
  },
  {
   "slug": "gnn-model-inference-and-prediction",
@@ -2553,7 +3551,18 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "manual-expert-review",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "gradient-based-saliency-mapping",
@@ -2576,7 +3585,18 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "manual-expert-review",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "graph-clustering-community-detection",
@@ -2598,7 +3618,14 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gnps",
+   "gnps-gc",
+   "mshub"
+  ]
  },
  {
   "slug": "graph-neural-network-architecture-implementation",
@@ -2621,7 +3648,18 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "manual-expert-review",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "graph-neural-network-implementation",
@@ -2654,7 +3692,19 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "numpy",
+   "pandas",
+   "pip",
+   "pyg",
+   "python-3",
+   "pytorch",
+   "rdkit"
+  ]
  },
  {
   "slug": "graph-neural-network-model-inference",
@@ -2677,7 +3727,18 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "manual-expert-review",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "graph-neural-network-model-loading",
@@ -2698,12 +3759,23 @@
   "dois": [
    "10.1186/s13321-024-00899-w",
    "10.5281/zenodo.11199061",
-   "10.5281/zenodo.11199061.svg"
+   "10.5281/zenodo.11199061"
   ],
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "manual-expert-review",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "graph-tensor-serialization",
@@ -2726,7 +3798,18 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "manual-expert-review",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "hdf5-feature-table-loading",
@@ -2748,7 +3831,18 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "hdf5-file-io-operations",
@@ -2772,7 +3866,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "hdf5-file-structure-traversal",
@@ -2795,7 +3900,21 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "hdf5",
+   "hdf5plugin",
+   "matplotlib",
+   "mza",
+   "numpy",
+   "pandas",
+   "python",
+   "rhdf5",
+   "scipy"
+  ]
  },
  {
   "slug": "hdf5-hierarchical-data-access",
@@ -2823,7 +3942,21 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "hdf5",
+   "hdf5plugin",
+   "matplotlib",
+   "mza",
+   "numpy",
+   "pandas",
+   "python",
+   "rhdf5",
+   "scipy"
+  ]
  },
  {
   "slug": "hdf5-output-validation-verification",
@@ -2848,7 +3981,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "hdf5-schema-validation",
@@ -2871,7 +4015,21 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "hdf5",
+   "hdf5plugin",
+   "matplotlib",
+   "mza",
+   "numpy",
+   "pandas",
+   "python",
+   "rhdf5",
+   "scipy"
+  ]
  },
  {
   "slug": "hierarchical-clustering-parameter-optimization",
@@ -2893,7 +4051,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "hierarchical-dataset-metadata-extraction",
@@ -2916,7 +4079,21 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "hdf5",
+   "hdf5plugin",
+   "matplotlib",
+   "mza",
+   "numpy",
+   "pandas",
+   "python",
+   "rhdf5",
+   "scipy"
+  ]
  },
  {
   "slug": "hpc-job-parallelization",
@@ -2938,7 +4115,16 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "ase-ani",
+   "dimorphite-dl",
+   "quick",
+   "rdkit",
+   "snakemake"
+  ]
  },
  {
   "slug": "im-ms-drift-time-correction",
@@ -2959,7 +4145,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mobilipid"
+  ]
  },
  {
   "slug": "imaging-mass-spectrometry-characterization",
@@ -2984,7 +4175,14 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "javafx-24",
+   "jdk-25",
+   "mzmine"
+  ]
  },
  {
   "slug": "imaging-mass-spectrometry-ion-identification",
@@ -3008,7 +4206,16 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "imms-data-format-conversion",
@@ -3031,7 +4238,15 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-masshunter",
+   "microsoft-visual-c-runtime-x64",
+   "net-framework",
+   "pnnl-preprocessor"
+  ]
  },
  {
   "slug": "imzml-file-format-parsing",
@@ -3053,7 +4268,14 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "github-com-wanluliulab-spatialmeta",
+   "scikit-learn-nearestneighbors-for-knn-index-construction",
+   "spatialmeta"
+  ]
  },
  {
   "slug": "in-memory-optimization-for-large-datasets",
@@ -3079,7 +4301,21 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "hdf5",
+   "hdf5plugin",
+   "matplotlib",
+   "mza",
+   "numpy",
+   "pandas",
+   "python",
+   "rhdf5",
+   "scipy"
+  ]
  },
  {
   "slug": "in-silico-fragmentation-prediction",
@@ -3102,7 +4338,12 @@
    "ion-mobility-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "magma"
+  ]
  },
  {
   "slug": "inference-performance-benchmarking",
@@ -3124,7 +4365,18 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "manual-expert-review",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "instrument-agnostic-feature-engineering",
@@ -3148,7 +4400,13 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "msconvert",
+   "python"
+  ]
  },
  {
   "slug": "instrument-metadata-parsing",
@@ -3172,7 +4430,14 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "javafx-24",
+   "jdk-25",
+   "mzmine"
+  ]
  },
  {
   "slug": "intensity-color-representation",
@@ -3197,7 +4462,23 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "alphatims",
+   "bokeh",
+   "matplotlib",
+   "pandas",
+   "plotly",
+   "pymzml",
+   "pyopenms",
+   "pyopenms-viz",
+   "pyteomics",
+   "python",
+   "rdkit",
+   "sphinx"
+  ]
  },
  {
   "slug": "interactive-html-figure-generation-plotly",
@@ -3223,7 +4504,23 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "alphatims",
+   "bokeh",
+   "matplotlib",
+   "pandas",
+   "plotly",
+   "pymzml",
+   "pyopenms",
+   "pyopenms-viz",
+   "pyteomics",
+   "python",
+   "rdkit",
+   "sphinx"
+  ]
  },
  {
   "slug": "interactive-mass-spectrometry-plot-generation-and-annotation",
@@ -3251,7 +4548,31 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bokeh",
+   "dia-nn",
+   "interactiveplotter",
+   "interactivetwodimensionplotter",
+   "massdash",
+   "massdash-loaders-resultsloader",
+   "massdash-peakpickers-mrmtransitiongrouppicker",
+   "massdash-peakpickers-pymrmtransitiongrouppicker",
+   "massdash-plotting-interactiveplotter",
+   "massdash-structs-featuremap",
+   "mrmtransitiongrouppicker",
+   "mzmldataloader",
+   "onnxruntime",
+   "oswdataaccess",
+   "pymrmtransitiongrouppicker",
+   "pytest",
+   "resultsloader",
+   "sqmassloader",
+   "streamlit",
+   "syrupy"
+  ]
  },
  {
   "slug": "interactive-plot-rendering-bokeh",
@@ -3274,7 +4595,23 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "alphatims",
+   "bokeh",
+   "matplotlib",
+   "pandas",
+   "plotly",
+   "pymzml",
+   "pyopenms",
+   "pyopenms-viz",
+   "pyteomics",
+   "python",
+   "rdkit",
+   "sphinx"
+  ]
  },
  {
   "slug": "interference-profile-identification",
@@ -3298,7 +4635,15 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-masshunter",
+   "microsoft-visual-c-runtime-x64",
+   "net-framework",
+   "pnnl-preprocessor"
+  ]
  },
  {
   "slug": "internal-standard-intensity-calibration",
@@ -3321,7 +4666,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "internal-standardization-correction-lipidomes",
@@ -3344,7 +4701,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mobilipid"
+  ]
  },
  {
   "slug": "internal-standardization-lipid-mapping",
@@ -3367,7 +4729,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mobilipid"
+  ]
  },
  {
   "slug": "internal-standardization-with-isotope-labels",
@@ -3388,7 +4755,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mobilipid"
+  ]
  },
  {
   "slug": "ion-chromatogram-mobilogram-visualization-and-interpretation",
@@ -3415,7 +4787,31 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bokeh",
+   "dia-nn",
+   "interactiveplotter",
+   "interactivetwodimensionplotter",
+   "massdash",
+   "massdash-loaders-resultsloader",
+   "massdash-peakpickers-mrmtransitiongrouppicker",
+   "massdash-peakpickers-pymrmtransitiongrouppicker",
+   "massdash-plotting-interactiveplotter",
+   "massdash-structs-featuremap",
+   "mrmtransitiongrouppicker",
+   "mzmldataloader",
+   "onnxruntime",
+   "oswdataaccess",
+   "pymrmtransitiongrouppicker",
+   "pytest",
+   "resultsloader",
+   "sqmassloader",
+   "streamlit",
+   "syrupy"
+  ]
  },
  {
   "slug": "ion-clustering-by-retention-time-and-mass",
@@ -3438,7 +4834,16 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "data-table",
+   "ggplot",
+   "ggplot2",
+   "github",
+   "mpactr"
+  ]
  },
  {
   "slug": "ion-mobility-arrival-time-conversion",
@@ -3460,7 +4865,14 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hineslab-moccal",
+   "moccal",
+   "python"
+  ]
  },
  {
   "slug": "ion-mobility-calibration-curve-fitting",
@@ -3482,7 +4894,14 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hineslab-moccal",
+   "moccal",
+   "python"
+  ]
  },
  {
   "slug": "ion-mobility-calibration-validation",
@@ -3506,7 +4925,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "ion-mobility-class-stratification",
@@ -3528,7 +4958,14 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hineslab-moccal",
+   "moccal",
+   "python"
+  ]
  },
  {
   "slug": "ion-mobility-demultiplexing-algorithm",
@@ -3555,7 +4992,15 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-masshunter",
+   "microsoft-visual-c-runtime-x64",
+   "net-framework",
+   "pnnl-preprocessor"
+  ]
  },
  {
   "slug": "ion-mobility-dimension-detection",
@@ -3579,7 +5024,14 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "javafx-24",
+   "jdk-25",
+   "mzmine"
+  ]
  },
  {
   "slug": "ion-mobility-dimension-interpolation",
@@ -3602,7 +5054,15 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-masshunter",
+   "microsoft-visual-c-runtime-x64",
+   "net-framework",
+   "pnnl-preprocessor"
+  ]
  },
  {
   "slug": "ion-mobility-feature-classification",
@@ -3624,7 +5084,14 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hineslab-moccal",
+   "moccal",
+   "python"
+  ]
  },
  {
   "slug": "ion-mobility-feature-engineering",
@@ -3649,7 +5116,15 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "google-colaboratory",
+   "jupyter-lab",
+   "python",
+   "sklearn"
+  ]
  },
  {
   "slug": "ion-mobility-filtering-and-tolerance-tuning",
@@ -3673,7 +5148,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "ion-mobility-heatmap-visualization",
@@ -3696,7 +5183,17 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "ion-mobility-machine-learning-training",
@@ -3721,7 +5218,15 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "google-colaboratory",
+   "jupyter-lab",
+   "python",
+   "sklearn"
+  ]
  },
  {
   "slug": "ion-mobility-mass-spectrometry-data-preprocessing",
@@ -3748,7 +5253,15 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-masshunter",
+   "microsoft-visual-c-runtime-x64",
+   "net-framework",
+   "pnnl-preprocessor"
+  ]
  },
  {
   "slug": "ion-mobility-mass-spectrometry-data-processing",
@@ -3772,7 +5285,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mobilipid"
+  ]
  },
  {
   "slug": "ion-mobility-mobilogram-visualization",
@@ -3799,7 +5317,23 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "alphatims",
+   "bokeh",
+   "matplotlib",
+   "pandas",
+   "plotly",
+   "pymzml",
+   "pyopenms",
+   "pyopenms-viz",
+   "pyteomics",
+   "python",
+   "rdkit",
+   "sphinx"
+  ]
  },
  {
   "slug": "ion-mobility-peak-picking",
@@ -3823,7 +5357,31 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bokeh",
+   "dia-nn",
+   "interactiveplotter",
+   "interactivetwodimensionplotter",
+   "massdash",
+   "massdash-loaders-resultsloader",
+   "massdash-peakpickers-mrmtransitiongrouppicker",
+   "massdash-peakpickers-pymrmtransitiongrouppicker",
+   "massdash-plotting-interactiveplotter",
+   "massdash-structs-featuremap",
+   "mrmtransitiongrouppicker",
+   "mzmldataloader",
+   "onnxruntime",
+   "oswdataaccess",
+   "pymrmtransitiongrouppicker",
+   "pytest",
+   "resultsloader",
+   "sqmassloader",
+   "streamlit",
+   "syrupy"
+  ]
  },
  {
   "slug": "ion-mobility-reference-matching",
@@ -3845,7 +5403,14 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hineslab-moccal",
+   "moccal",
+   "python"
+  ]
  },
  {
   "slug": "ion-mobility-saturation-detection-and-repair",
@@ -3870,7 +5435,15 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-masshunter",
+   "microsoft-visual-c-runtime-x64",
+   "net-framework",
+   "pnnl-preprocessor"
+  ]
  },
  {
   "slug": "ion-mobility-spectrometry-data-interpretation",
@@ -3890,7 +5463,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "autoccs"
+  ]
  },
  {
   "slug": "ion-mobility-spectrometry-peak-extraction",
@@ -3912,7 +5490,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "ion-mode-specific-ccs-model-generation",
@@ -3935,7 +5518,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "ionisation-method-hardware-correspondence",
@@ -3957,7 +5551,14 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "javafx-24",
+   "jdk-25",
+   "mzmine"
+  ]
  },
  {
   "slug": "ionization-state-prediction",
@@ -3980,7 +5581,16 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "ase-ani",
+   "dimorphite-dl",
+   "quick",
+   "rdkit",
+   "snakemake"
+  ]
  },
  {
   "slug": "isotope-mass-offset-enumeration",
@@ -4004,7 +5614,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "isotopic-signature-clustering-and-grouping",
@@ -4028,7 +5649,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "isotopic-signature-detection-and-filtering",
@@ -4053,7 +5685,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "isotopic-signature-validation-and-filtering",
@@ -4075,7 +5718,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "iterative-peak-selection-from-latent-space",
@@ -4100,7 +5754,16 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "java-source-code-inspection",
@@ -4124,7 +5787,24 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "canopus",
+   "gnps",
+   "ion-identity",
+   "javafx-24",
+   "jdk-25",
+   "lotus-database",
+   "memo",
+   "mzmine",
+   "mzmine2",
+   "mzmine3",
+   "open-tree-of-life",
+   "sirius",
+   "timar"
+  ]
  },
  {
   "slug": "jupyter-notebook-development-python",
@@ -4150,7 +5830,15 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "google-colaboratory",
+   "jupyter-lab",
+   "python",
+   "sklearn"
+  ]
  },
  {
   "slug": "jupyter-notebook-workflow-execution",
@@ -4175,7 +5863,15 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "google-colaboratory",
+   "jupyter-lab",
+   "python",
+   "sklearn"
+  ]
  },
  {
   "slug": "large-scale-database-construction",
@@ -4205,7 +5901,19 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "numpy",
+   "pandas",
+   "pip",
+   "pyg",
+   "python-3",
+   "pytorch",
+   "rdkit"
+  ]
  },
  {
   "slug": "latent-feature-interpretation",
@@ -4230,7 +5938,16 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "latent-space-dimensionality-reduction",
@@ -4254,7 +5971,16 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "lcims-msms-data-preprocessing-peak-detection",
@@ -4280,7 +6006,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "lcms-feature-table-parsing",
@@ -4298,13 +6035,19 @@
    "Chroma"
   ],
   "dois": [
-   "10.1093/bioinformatics/btaf290/8128335"
+   "10.1093/bioinformatics/btaf290"
   ],
   "techniques": [
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bmxp",
+   "python"
+  ]
  },
  {
   "slug": "lipid-class-coverage-assessment",
@@ -4325,7 +6068,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mobilipid"
+  ]
  },
  {
   "slug": "lipid-class-stratified-analysis",
@@ -4348,7 +6096,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mobilipid"
+  ]
  },
  {
   "slug": "lipid-database-query-and-annotation",
@@ -4369,7 +6122,17 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "matplotlib",
+   "pandas",
+   "python",
+   "python-pandas-numpy-scipy",
+   "r-base-stats-tidyverse-or-similar",
+   "seaborn"
+  ]
  },
  {
   "slug": "lipid-derivatization-chemistry-modeling",
@@ -4393,7 +6156,16 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "python",
+   "pytorch",
+   "pytorch-or-equivalent-deep-learning-framework-inferred-from-gnn-contrastive-learning-context",
+   "zenodo"
+  ]
  },
  {
   "slug": "lipid-fingerprint-regeneration-neural-networks",
@@ -4418,7 +6190,13 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "camera",
+   "xcms"
+  ]
  },
  {
   "slug": "lipid-identification-quality-filtering",
@@ -4440,7 +6218,16 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "docker",
+   "lipoclean",
+   "ms-dial",
+   "ms-dial-4",
+   "ms-dial-5"
+  ]
  },
  {
   "slug": "lipid-library-curation",
@@ -4462,7 +6249,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mobilipid"
+  ]
  },
  {
   "slug": "lossless-compression-decompression",
@@ -4480,12 +6272,17 @@
    "msconvert"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab636/6363791"
+   "10.1093/bioinformatics/btab636"
   ],
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mspack"
+  ]
  },
  {
   "slug": "low-energy-structure-selection",
@@ -4508,7 +6305,16 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "ase-ani",
+   "dimorphite-dl",
+   "quick",
+   "rdkit",
+   "snakemake"
+  ]
  },
  {
   "slug": "m-z-tolerance-window-matching",
@@ -4532,7 +6338,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "machine-learning-based-conformation-filtering",
@@ -4556,7 +6373,16 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "ase-ani",
+   "dimorphite-dl",
+   "quick",
+   "rdkit",
+   "snakemake"
+  ]
  },
  {
   "slug": "machine-learning-model-application-to-lipidomics",
@@ -4580,7 +6406,16 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "docker",
+   "lipoclean",
+   "ms-dial",
+   "ms-dial-4",
+   "ms-dial-5"
+  ]
  },
  {
   "slug": "machine-learning-model-training",
@@ -4605,7 +6440,13 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "msconvert",
+   "python"
+  ]
  },
  {
   "slug": "machine-learning-model-training-sklearn",
@@ -4630,7 +6471,15 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "google-colaboratory",
+   "jupyter-lab",
+   "python",
+   "sklearn"
+  ]
  },
  {
   "slug": "marker-ion-ranking-and-filtering",
@@ -4654,7 +6503,16 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "mass-accuracy-alignment",
@@ -4677,7 +6535,17 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "matplotlib",
+   "pandas",
+   "python",
+   "python-pandas-numpy-scipy",
+   "r-base-stats-tidyverse-or-similar",
+   "seaborn"
+  ]
  },
  {
   "slug": "mass-spectrometry-data-file-parsing",
@@ -4703,7 +6571,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "mass-spectrometry-data-loading",
@@ -4730,7 +6608,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "mass-spectrometry-data-preparation",
@@ -4753,7 +6641,23 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "alphatims",
+   "bokeh",
+   "matplotlib",
+   "pandas",
+   "plotly",
+   "pymzml",
+   "pyopenms",
+   "pyopenms-viz",
+   "pyteomics",
+   "python",
+   "rdkit",
+   "sphinx"
+  ]
  },
  {
   "slug": "mass-spectrometry-data-structure-interpretation",
@@ -4782,7 +6686,25 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "arrow",
+   "h5py",
+   "hdf5",
+   "hdf5plugin",
+   "matplotlib",
+   "mza",
+   "numpy",
+   "openms",
+   "pandas",
+   "pyarrow",
+   "python",
+   "rhdf5",
+   "rust",
+   "scipy"
+  ]
  },
  {
   "slug": "mass-spectrometry-data-table-formatting",
@@ -4805,7 +6727,14 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hineslab-moccal",
+   "moccal",
+   "python"
+  ]
  },
  {
   "slug": "mass-spectrometry-data-visualization-pandas",
@@ -4832,7 +6761,23 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "alphatims",
+   "bokeh",
+   "matplotlib",
+   "pandas",
+   "plotly",
+   "pymzml",
+   "pyopenms",
+   "pyopenms-viz",
+   "pyteomics",
+   "python",
+   "rdkit",
+   "sphinx"
+  ]
  },
  {
   "slug": "mass-spectrometry-drift-time-processing",
@@ -4853,7 +6798,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "autoccs"
+  ]
  },
  {
   "slug": "mass-spectrometry-file-format-parsing",
@@ -4881,7 +6831,27 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "docker",
+   "gensim",
+   "latent-dirichlet-allocation-lda",
+   "mag",
+   "mag-mass2motif-annotation-guidance",
+   "massql",
+   "motifdb",
+   "ms2lda",
+   "ms2lda-preprocessing-generate-corpus",
+   "ms2lda-preprocessing-load-and-clean",
+   "postgresql",
+   "proteowizard-library-and-tools",
+   "pwiz",
+   "python",
+   "spec2vec"
+  ]
  },
  {
   "slug": "mass-spectrometry-format-parsing",
@@ -4898,12 +6868,17 @@
    "msconvert"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab636/6363791"
+   "10.1093/bioinformatics/btab636"
   ],
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mspack"
+  ]
  },
  {
   "slug": "mass-spectrometry-image-normalization",
@@ -4928,7 +6903,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "mass-spectrometry-imaging-line-scan-data-handling",
@@ -4954,7 +6941,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "mass-spectrometry-imaging-vendor-format-support",
@@ -4982,7 +6981,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "mass-spectrometry-metadata-caching",
@@ -5008,7 +7019,21 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "hdf5",
+   "hdf5plugin",
+   "matplotlib",
+   "mza",
+   "numpy",
+   "pandas",
+   "python",
+   "rhdf5",
+   "scipy"
+  ]
  },
  {
   "slug": "mass-spectrometry-metric-engineering",
@@ -5032,7 +7057,13 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "msconvert",
+   "python"
+  ]
  },
  {
   "slug": "mass-spectrometry-outlier-detection",
@@ -5056,7 +7087,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "mass-spectrometry-peak-intensity-encoding",
@@ -5081,7 +7122,16 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "mass-spectrometry-plot-taxonomy-implementation",
@@ -5107,7 +7157,23 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "alphatims",
+   "bokeh",
+   "matplotlib",
+   "pandas",
+   "plotly",
+   "pymzml",
+   "pyopenms",
+   "pyopenms-viz",
+   "pyteomics",
+   "python",
+   "rdkit",
+   "sphinx"
+  ]
  },
  {
   "slug": "mass-spectrometry-raw-data-preprocessing",
@@ -5131,7 +7197,13 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "msconvert",
+   "python"
+  ]
  },
  {
   "slug": "mass-spectrometry-reference-standard-alignment",
@@ -5154,7 +7226,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "mass-spectrometry-reference-standard-mapping",
@@ -5177,7 +7260,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "mass-spectrometry-screening-workflows",
@@ -5210,7 +7304,17 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biotransformer",
+   "cts",
+   "metfrag",
+   "patroon",
+   "pubchem",
+   "sirius"
+  ]
  },
  {
   "slug": "mass-spectrometry-tune-data-loading",
@@ -5232,7 +7336,18 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "mass-spectrometry-workflow-orchestration",
@@ -5259,7 +7374,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "mass-spectrometry-workflow-orchestration-snakemake",
@@ -5285,7 +7411,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "mass-spectrum-m-z-alignment",
@@ -5312,7 +7449,21 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "hdf5",
+   "hdf5plugin",
+   "matplotlib",
+   "mza",
+   "numpy",
+   "pandas",
+   "python",
+   "rhdf5",
+   "scipy"
+  ]
  },
  {
   "slug": "mass-spectrum-visualization",
@@ -5337,7 +7488,21 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "hdf5",
+   "hdf5plugin",
+   "matplotlib",
+   "mza",
+   "numpy",
+   "pandas",
+   "python",
+   "rhdf5",
+   "scipy"
+  ]
  },
  {
   "slug": "mass-tolerance-parameter-calibration",
@@ -5361,7 +7526,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "matplotlib-bokeh-plotly-backend-switching",
@@ -5388,7 +7565,23 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "alphatims",
+   "bokeh",
+   "matplotlib",
+   "pandas",
+   "plotly",
+   "pymzml",
+   "pyopenms",
+   "pyopenms-viz",
+   "pyteomics",
+   "python",
+   "rdkit",
+   "sphinx"
+  ]
  },
  {
   "slug": "message-passing-variant-selection-and-adaptation",
@@ -5410,7 +7603,18 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "manual-expert-review",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "metabolite-false-positive-filtering",
@@ -5436,7 +7640,15 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "google-colaboratory",
+   "jupyter-lab",
+   "python",
+   "sklearn"
+  ]
  },
  {
   "slug": "metabolite-taxonomy-database-lookup",
@@ -5467,7 +7679,24 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "canopus",
+   "gnps",
+   "ion-identity",
+   "javafx-24",
+   "jdk-25",
+   "lotus-database",
+   "memo",
+   "mzmine",
+   "mzmine2",
+   "mzmine3",
+   "open-tree-of-life",
+   "sirius",
+   "timar"
+  ]
  },
  {
   "slug": "metabolomics-data-format-handling",
@@ -5488,7 +7717,12 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "metaboanalystr"
+  ]
  },
  {
   "slug": "metadata-normalization-and-reconciliation",
@@ -5510,7 +7744,17 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "mobility-dimension-interpolation-for-peak-resolution",
@@ -5535,7 +7779,15 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-masshunter",
+   "microsoft-visual-c-runtime-x64",
+   "net-framework",
+   "pnnl-preprocessor"
+  ]
  },
  {
   "slug": "model-generalizability-assessment",
@@ -5558,7 +7810,18 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "manual-expert-review",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "model-generalizability-evaluation",
@@ -5581,7 +7844,18 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "manual-expert-review",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "model-hyperparameter-transfer-and-tuning",
@@ -5603,7 +7877,18 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "manual-expert-review",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "module-coverage-mapping",
@@ -5625,7 +7910,14 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "javafx-24",
+   "jdk-25",
+   "mzmine"
+  ]
  },
  {
   "slug": "module-dispatch-architecture-analysis",
@@ -5649,7 +7941,24 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "canopus",
+   "gnps",
+   "ion-identity",
+   "javafx-24",
+   "jdk-25",
+   "lotus-database",
+   "memo",
+   "mzmine",
+   "mzmine2",
+   "mzmine3",
+   "open-tree-of-life",
+   "sirius",
+   "timar"
+  ]
  },
  {
   "slug": "molecular-ccs-prediction-model-training",
@@ -5672,7 +7981,18 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "manual-expert-review",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "molecular-conformer-generation-and-optimization",
@@ -5698,7 +8018,16 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "python",
+   "pytorch",
+   "pytorch-or-equivalent-deep-learning-framework-inferred-from-gnn-contrastive-learning-context",
+   "zenodo"
+  ]
  },
  {
   "slug": "molecular-conformer-preprocessing",
@@ -5726,7 +8055,19 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "numpy",
+   "pandas",
+   "pip",
+   "pyg",
+   "python-3",
+   "pytorch",
+   "rdkit"
+  ]
  },
  {
   "slug": "molecular-database-loading-and-parsing",
@@ -5749,7 +8090,20 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "chemicalmixturefrommzml",
+   "environment",
+   "independentmassspectrometer",
+   "mzmine",
+   "openms",
+   "poetry",
+   "python",
+   "topncontroller",
+   "vimms"
+  ]
  },
  {
   "slug": "molecular-dataset-partitioning-and-preprocessing",
@@ -5774,7 +8128,18 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "manual-expert-review",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "molecular-descriptor-graph-representation",
@@ -5797,7 +8162,18 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "manual-expert-review",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "molecular-descriptor-indexing",
@@ -5827,7 +8203,19 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "numpy",
+   "pandas",
+   "pip",
+   "pyg",
+   "python-3",
+   "pytorch",
+   "rdkit"
+  ]
  },
  {
   "slug": "molecular-formula-representation-and-manipulation",
@@ -5852,7 +8240,21 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "hdf5",
+   "hdf5plugin",
+   "matplotlib",
+   "mza",
+   "numpy",
+   "pandas",
+   "python",
+   "rhdf5",
+   "scipy"
+  ]
  },
  {
   "slug": "molecular-geometry-neural-network-potential-evaluation",
@@ -5876,7 +8278,16 @@
    "ion-mobility-MS",
    "NMR"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "ase-ani",
+   "dimorphite-dl",
+   "quick",
+   "rdkit",
+   "snakemake"
+  ]
  },
  {
   "slug": "molecular-graph-construction-from-smiles",
@@ -5899,7 +8310,18 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "manual-expert-review",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "molecular-structure-attribution",
@@ -5924,7 +8346,18 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "manual-expert-review",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "molecular-structure-conformer-generation",
@@ -5956,7 +8389,19 @@
    "ion-mobility-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "numpy",
+   "pandas",
+   "pip",
+   "pyg",
+   "python-3",
+   "pytorch",
+   "rdkit"
+  ]
  },
  {
   "slug": "molecular-structure-dataset-curation",
@@ -5981,7 +8426,15 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "google-colaboratory",
+   "jupyter-lab",
+   "python",
+   "sklearn"
+  ]
  },
  {
   "slug": "molecular-structure-encoding",
@@ -6004,7 +8457,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "transformer"
+  ]
  },
  {
   "slug": "ms-data-format-identification",
@@ -6028,7 +8486,14 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "javafx-24",
+   "jdk-25",
+   "mzmine"
+  ]
  },
  {
   "slug": "ms-instrument-type-classification",
@@ -6050,7 +8515,14 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "javafx-24",
+   "jdk-25",
+   "mzmine"
+  ]
  },
  {
   "slug": "ms-ms-fragment-assignment-and-annotation",
@@ -6074,7 +8546,16 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "python",
+   "pytorch",
+   "pytorch-or-equivalent-deep-learning-framework-inferred-from-gnn-contrastive-learning-context",
+   "zenodo"
+  ]
  },
  {
   "slug": "ms-ms-spectrum-preprocessing",
@@ -6109,7 +8590,19 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "casanovo",
+   "cuda-toolkit",
+   "depthcharge",
+   "mist",
+   "mist-cf",
+   "pytorch",
+   "scarf",
+   "sirius"
+  ]
  },
  {
   "slug": "ms-spectrum-filtering-and-normalization",
@@ -6138,7 +8631,23 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "matplotlib",
+   "numba",
+   "numpy",
+   "pandas",
+   "proforma-2-0",
+   "pymzml",
+   "pyopenms",
+   "pyteomics",
+   "python",
+   "seaborn",
+   "spectrum-utils",
+   "unimod"
+  ]
  },
  {
   "slug": "ms1-feature-ranking-and-extraction",
@@ -6165,7 +8674,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bago",
+   "ms-dial",
+   "mzmine-3",
+   "pyopenms",
+   "python",
+   "scikit-learn",
+   "xcms"
+  ]
  },
  {
   "slug": "ms2-spectral-deconvolution-and-annotation",
@@ -6191,7 +8711,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "msi-metadata-curation-and-storage",
@@ -6215,7 +8746,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "msi-preprocessing-parameter-configuration",
@@ -6243,7 +8786,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "multi-backend-visualization-abstraction",
@@ -6268,7 +8823,23 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "alphatims",
+   "bokeh",
+   "matplotlib",
+   "pandas",
+   "plotly",
+   "pymzml",
+   "pyopenms",
+   "pyopenms-viz",
+   "pyteomics",
+   "python",
+   "rdkit",
+   "sphinx"
+  ]
  },
  {
   "slug": "multi-charge-state-ccs-handling",
@@ -6290,7 +8861,14 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hineslab-moccal",
+   "moccal",
+   "python"
+  ]
  },
  {
   "slug": "multi-dimensional-data-loading-and-formatting",
@@ -6315,7 +8893,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "multi-instrument-data-integration",
@@ -6338,7 +8927,13 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "msconvert",
+   "python"
+  ]
  },
  {
   "slug": "multi-omic-data-integration",
@@ -6361,7 +8956,14 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hineslab-moccal",
+   "moccal",
+   "python"
+  ]
  },
  {
   "slug": "multi-panel-spectra-comparison",
@@ -6386,7 +8988,21 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "hdf5",
+   "hdf5plugin",
+   "matplotlib",
+   "mza",
+   "numpy",
+   "pandas",
+   "python",
+   "rhdf5",
+   "scipy"
+  ]
  },
  {
   "slug": "multi-sample-cohort-assessment",
@@ -6409,7 +9025,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "multidimensional-coordinate-alignment",
@@ -6433,7 +9059,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "multidimensional-feature-annotation",
@@ -6456,7 +9093,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "multidimensional-feature-detection-and-alignment",
@@ -6482,7 +9130,18 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "multidimensional-ms-data-conversion",
@@ -6507,7 +9166,21 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "hdf5",
+   "hdf5plugin",
+   "matplotlib",
+   "mza",
+   "numpy",
+   "pandas",
+   "python",
+   "rhdf5",
+   "scipy"
+  ]
  },
  {
   "slug": "multidimensional-signal-smoothing-imms",
@@ -6532,7 +9205,15 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-masshunter",
+   "microsoft-visual-c-runtime-x64",
+   "net-framework",
+   "pnnl-preprocessor"
+  ]
  },
  {
   "slug": "multidimensional-spectral-array-extraction",
@@ -6560,7 +9241,21 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "hdf5",
+   "hdf5plugin",
+   "matplotlib",
+   "mza",
+   "numpy",
+   "pandas",
+   "python",
+   "rhdf5",
+   "scipy"
+  ]
  },
  {
   "slug": "multiformat-data-export-to-pdf-csv",
@@ -6583,7 +9278,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "multiplexed-spectra-recovery-and-deconvolution",
@@ -6611,7 +9316,15 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-masshunter",
+   "microsoft-visual-c-runtime-x64",
+   "net-framework",
+   "pnnl-preprocessor"
+  ]
  },
  {
   "slug": "mzml-data-parsing-pymzml-pyopenms",
@@ -6635,7 +9348,23 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "alphatims",
+   "bokeh",
+   "matplotlib",
+   "pandas",
+   "plotly",
+   "pymzml",
+   "pyopenms",
+   "pyopenms-viz",
+   "pyteomics",
+   "python",
+   "rdkit",
+   "sphinx"
+  ]
  },
  {
   "slug": "mzml-mzxml-spectrum-reading",
@@ -6652,12 +9381,17 @@
    "tinyxml2"
   ],
   "dois": [
-   "10.1093/bioinformatics/btab636/6363791"
+   "10.1093/bioinformatics/btab636"
   ],
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mspack"
+  ]
  },
  {
   "slug": "neural-network-model-deployment-in-python",
@@ -6680,7 +9414,31 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bokeh",
+   "dia-nn",
+   "interactiveplotter",
+   "interactivetwodimensionplotter",
+   "massdash",
+   "massdash-loaders-resultsloader",
+   "massdash-peakpickers-mrmtransitiongrouppicker",
+   "massdash-peakpickers-pymrmtransitiongrouppicker",
+   "massdash-plotting-interactiveplotter",
+   "massdash-structs-featuremap",
+   "mrmtransitiongrouppicker",
+   "mzmldataloader",
+   "onnxruntime",
+   "oswdataaccess",
+   "pymrmtransitiongrouppicker",
+   "pytest",
+   "resultsloader",
+   "sqmassloader",
+   "streamlit",
+   "syrupy"
+  ]
  },
  {
   "slug": "noise-level-parameter-tuning",
@@ -6702,7 +9460,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "noise-threshold-filtering-spectral-data",
@@ -6726,7 +9489,15 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-masshunter",
+   "microsoft-visual-c-runtime-x64",
+   "net-framework",
+   "pnnl-preprocessor"
+  ]
  },
  {
   "slug": "open-source-mass-spectrometry-file-format-interoperability",
@@ -6755,7 +9526,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "pandas-dataframe-column-specification",
@@ -6780,7 +9563,23 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "alphatims",
+   "bokeh",
+   "matplotlib",
+   "pandas",
+   "plotly",
+   "pymzml",
+   "pyopenms",
+   "pyopenms-viz",
+   "pyteomics",
+   "python",
+   "rdkit",
+   "sphinx"
+  ]
  },
  {
   "slug": "parameter-range-filtering-for-chromatographic-data",
@@ -6804,7 +9603,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "peak-boundary-identification-in-extracted-ion-data",
@@ -6830,7 +9639,31 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bokeh",
+   "dia-nn",
+   "interactiveplotter",
+   "interactivetwodimensionplotter",
+   "massdash",
+   "massdash-loaders-resultsloader",
+   "massdash-peakpickers-mrmtransitiongrouppicker",
+   "massdash-peakpickers-pymrmtransitiongrouppicker",
+   "massdash-plotting-interactiveplotter",
+   "massdash-structs-featuremap",
+   "mrmtransitiongrouppicker",
+   "mzmldataloader",
+   "onnxruntime",
+   "oswdataaccess",
+   "pymrmtransitiongrouppicker",
+   "pytest",
+   "resultsloader",
+   "sqmassloader",
+   "streamlit",
+   "syrupy"
+  ]
  },
  {
   "slug": "peak-deconvolution-preprocessing",
@@ -6855,7 +9688,15 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-masshunter",
+   "microsoft-visual-c-runtime-x64",
+   "net-framework",
+   "pnnl-preprocessor"
+  ]
  },
  {
   "slug": "peak-detection-cwt-optimization",
@@ -6877,7 +9718,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "peak-integration-parameter-optimization",
@@ -6899,7 +9745,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "peak-map-rendering-retention-time-mz-intensity",
@@ -6928,7 +9779,23 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "alphatims",
+   "bokeh",
+   "matplotlib",
+   "pandas",
+   "plotly",
+   "pymzml",
+   "pyopenms",
+   "pyopenms-viz",
+   "pyteomics",
+   "python",
+   "rdkit",
+   "sphinx"
+  ]
  },
  {
   "slug": "peakmap-visualization-generation",
@@ -6953,7 +9820,23 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "alphatims",
+   "bokeh",
+   "matplotlib",
+   "pandas",
+   "plotly",
+   "pymzml",
+   "pyopenms",
+   "pyopenms-viz",
+   "pyteomics",
+   "python",
+   "rdkit",
+   "sphinx"
+  ]
  },
  {
   "slug": "peptide-sequence-to-spectrum-conversion",
@@ -6977,7 +9860,14 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "aerith",
+   "mzr",
+   "raxport"
+  ]
  },
  {
   "slug": "per-lipid-class-normalization",
@@ -7001,7 +9891,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mobilipid"
+  ]
  },
  {
   "slug": "physicochemical-property-computation",
@@ -7030,7 +9925,23 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconda",
+   "conda",
+   "h5py",
+   "hdf5plugin",
+   "matplotlib",
+   "numpy",
+   "pandas",
+   "pip",
+   "psims",
+   "pyteomics",
+   "python",
+   "sqlalchemy"
+  ]
  },
  {
   "slug": "pixel-binning-and-spatial-registration",
@@ -7056,7 +9967,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "polarizability-tensor-extraction",
@@ -7078,7 +10001,16 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "ase-ani",
+   "dimorphite-dl",
+   "quick",
+   "rdkit",
+   "snakemake"
+  ]
  },
  {
   "slug": "polynomial-regression-quality-assessment",
@@ -7101,7 +10033,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "post-hoc-model-interpretability",
@@ -7125,7 +10068,18 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "manual-expert-review",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "ppb-level-marker-detection-and-sensitivity-assessment",
@@ -7150,7 +10104,13 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "npfimg",
+   "xcms"
+  ]
  },
  {
   "slug": "ppm-mass-accuracy-filtering",
@@ -7174,7 +10134,15 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "calculator",
+   "pewlib",
+   "pewpew",
+   "python"
+  ]
  },
  {
   "slug": "precursor-ion-chromatogram-extraction",
@@ -7197,7 +10165,13 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "msconvert",
+   "python"
+  ]
  },
  {
   "slug": "preprocessing-pipeline-parameter-optimization",
@@ -7220,7 +10194,15 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-masshunter",
+   "microsoft-visual-c-runtime-x64",
+   "net-framework",
+   "pnnl-preprocessor"
+  ]
  },
  {
   "slug": "prm-acquisition-event-identification",
@@ -7245,7 +10227,21 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "maxquant",
+   "msconvert",
+   "net-8-0",
+   "openms",
+   "proteowizard",
+   "rawfilereader",
+   "rawrr",
+   "rjson",
+   "skyline"
+  ]
  },
  {
   "slug": "projected-area-computation",
@@ -7276,7 +10272,19 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "numpy",
+   "pandas",
+   "pip",
+   "pyg",
+   "python-3",
+   "pytorch",
+   "rdkit"
+  ]
  },
  {
   "slug": "proprietary-data-structure-mapping",
@@ -7300,7 +10308,21 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "hdf5",
+   "hdf5plugin",
+   "matplotlib",
+   "mza",
+   "numpy",
+   "pandas",
+   "python",
+   "rhdf5",
+   "scipy"
+  ]
  },
  {
   "slug": "proteomics-data-format-conversion",
@@ -7327,7 +10349,23 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "airdpro-v5",
+   "airdpro-v6",
+   "docker-desktop-for-mac",
+   "docker-docker-build-docker-inspect-docker-system-df",
+   "docker-engine",
+   "dockerfile-multi-stage-build-with-target-flag",
+   "net-framework",
+   "net-framework-4-8",
+   "proteowizard",
+   "pwiz-bindings-cli-dll",
+   "wine",
+   "xquartz"
+  ]
  },
  {
   "slug": "protonation-state-assignment",
@@ -7349,7 +10387,16 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "ase-ani",
+   "dimorphite-dl",
+   "quick",
+   "rdkit",
+   "snakemake"
+  ]
  },
  {
   "slug": "python-package-dependency-installation",
@@ -7375,7 +10422,23 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconda",
+   "conda",
+   "h5py",
+   "hdf5plugin",
+   "matplotlib",
+   "numpy",
+   "pandas",
+   "pip",
+   "psims",
+   "pyteomics",
+   "python",
+   "sqlalchemy"
+  ]
  },
  {
   "slug": "pytorch-or-tensorflow-model-definition",
@@ -7399,7 +10462,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "transformer"
+  ]
  },
  {
   "slug": "qm-output-parsing-and-aggregation",
@@ -7421,7 +10489,16 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "ase-ani",
+   "dimorphite-dl",
+   "quick",
+   "rdkit",
+   "snakemake"
+  ]
  },
  {
   "slug": "quality-control-metric-evaluation",
@@ -7442,7 +10519,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mobilipid"
+  ]
  },
  {
   "slug": "quality-metric-computation-from-mass-spectrometry-data",
@@ -7465,7 +10547,13 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "msconvert",
+   "python"
+  ]
  },
  {
   "slug": "quantitation-table-generation",
@@ -7488,7 +10576,17 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "quantum-chemistry-based-fragmentation-prediction",
@@ -7512,7 +10610,16 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "python",
+   "pytorch",
+   "pytorch-or-equivalent-deep-learning-framework-inferred-from-gnn-contrastive-learning-context",
+   "zenodo"
+  ]
  },
  {
   "slug": "quantum-chemistry-structure-preparation",
@@ -7535,7 +10642,16 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "python",
+   "pytorch",
+   "pytorch-or-equivalent-deep-learning-framework-inferred-from-gnn-contrastive-learning-context",
+   "zenodo"
+  ]
  },
  {
   "slug": "quantum-input-file-preparation",
@@ -7558,7 +10674,16 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "ase-ani",
+   "dimorphite-dl",
+   "quick",
+   "rdkit",
+   "snakemake"
+  ]
  },
  {
   "slug": "r-data-structure-processing",
@@ -7581,7 +10706,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "reactant-ion-peak-exclusion",
@@ -7603,7 +10733,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "reference-based-vs-global-coordinate-registration",
@@ -7627,7 +10762,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "reference-library-alignment",
@@ -7649,7 +10795,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mobilipid"
+  ]
  },
  {
   "slug": "regression-metric-computation-and-comparison",
@@ -7671,7 +10822,18 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "manual-expert-review",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "regression-metric-computation-rmse-mae-r2",
@@ -7693,7 +10855,18 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "manual-expert-review",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "regression-model-evaluation-metrics",
@@ -7721,7 +10894,19 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "numpy",
+   "pandas",
+   "pip",
+   "pyg",
+   "python-3",
+   "pytorch",
+   "rdkit"
+  ]
  },
  {
   "slug": "regression-performance-metric-computation",
@@ -7740,12 +10925,23 @@
   "dois": [
    "10.1186/s13321-024-00899-w",
    "10.5281/zenodo.11199061",
-   "10.5281/zenodo.11199061.svg"
+   "10.5281/zenodo.11199061"
   ],
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "manual-expert-review",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "retention-time-drift-time-m-z-querying",
@@ -7772,7 +10968,21 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "hdf5",
+   "hdf5plugin",
+   "matplotlib",
+   "mza",
+   "numpy",
+   "pandas",
+   "python",
+   "rhdf5",
+   "scipy"
+  ]
  },
  {
   "slug": "retention-time-filtering",
@@ -7793,7 +11003,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "retention-time-mz-alignment",
@@ -7815,7 +11030,12 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mzembed"
+  ]
  },
  {
   "slug": "retention-time-mz-coordinate-mapping",
@@ -7839,7 +11059,23 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "alphatims",
+   "bokeh",
+   "matplotlib",
+   "pandas",
+   "plotly",
+   "pymzml",
+   "pyopenms",
+   "pyopenms-viz",
+   "pyteomics",
+   "python",
+   "rdkit",
+   "sphinx"
+  ]
  },
  {
   "slug": "retention-time-range-filtering",
@@ -7861,7 +11097,15 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-masshunter",
+   "microsoft-visual-c-runtime-x64",
+   "net-framework",
+   "pnnl-preprocessor"
+  ]
  },
  {
   "slug": "sample-membership-tracking",
@@ -7885,7 +11129,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "saturated-peak-reconstruction",
@@ -7909,7 +11164,15 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-masshunter",
+   "microsoft-visual-c-runtime-x64",
+   "net-framework",
+   "pnnl-preprocessor"
+  ]
  },
  {
   "slug": "saturation-threshold-configuration",
@@ -7929,7 +11192,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "savitzky-golay-smoothing-application",
@@ -7953,7 +11221,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "search-result-integration-with-raw-mass-spectrometry-data",
@@ -7981,7 +11254,31 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bokeh",
+   "dia-nn",
+   "interactiveplotter",
+   "interactivetwodimensionplotter",
+   "massdash",
+   "massdash-loaders-resultsloader",
+   "massdash-peakpickers-mrmtransitiongrouppicker",
+   "massdash-peakpickers-pymrmtransitiongrouppicker",
+   "massdash-plotting-interactiveplotter",
+   "massdash-structs-featuremap",
+   "mrmtransitiongrouppicker",
+   "mzmldataloader",
+   "onnxruntime",
+   "oswdataaccess",
+   "pymrmtransitiongrouppicker",
+   "pytest",
+   "resultsloader",
+   "sqmassloader",
+   "streamlit",
+   "syrupy"
+  ]
  },
  {
   "slug": "separation-technique-workflow-alignment",
@@ -8003,7 +11300,14 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "javafx-24",
+   "jdk-25",
+   "mzmine"
+  ]
  },
  {
   "slug": "signal-noise-ratio-improvement-validation",
@@ -8026,7 +11330,15 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-masshunter",
+   "microsoft-visual-c-runtime-x64",
+   "net-framework",
+   "pnnl-preprocessor"
+  ]
  },
  {
   "slug": "signal-quality-enhancement-low-abundance-ions",
@@ -8048,7 +11360,15 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-masshunter",
+   "microsoft-visual-c-runtime-x64",
+   "net-framework",
+   "pnnl-preprocessor"
+  ]
  },
  {
   "slug": "signal-residual-deconvolution",
@@ -8074,7 +11394,21 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "hdf5",
+   "hdf5plugin",
+   "matplotlib",
+   "mza",
+   "numpy",
+   "pandas",
+   "python",
+   "rhdf5",
+   "scipy"
+  ]
  },
  {
   "slug": "simulation-control-loop-architecture",
@@ -8102,7 +11436,20 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "chemicalmixturefrommzml",
+   "environment",
+   "independentmassspectrometer",
+   "mzmine",
+   "openms",
+   "poetry",
+   "python",
+   "topncontroller",
+   "vimms"
+  ]
  },
  {
   "slug": "singly-charged-ion-mass-calculation",
@@ -8126,7 +11473,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "small-molecule-3d-structure-preparation",
@@ -8149,7 +11507,16 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "ase-ani",
+   "dimorphite-dl",
+   "quick",
+   "rdkit",
+   "snakemake"
+  ]
  },
  {
   "slug": "smiles-adduct-form-enumeration",
@@ -8170,7 +11537,16 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "ase-ani",
+   "dimorphite-dl",
+   "quick",
+   "rdkit",
+   "snakemake"
+  ]
  },
  {
   "slug": "smiles-canonicalization-rdkit",
@@ -8196,7 +11572,21 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "enveda-ccs-prediction-repository-model-code-and-pre-trained-weights",
+   "graph-neural-network-gnn-framework-pytorch-geometric-or-equivalent",
+   "make",
+   "manual-expert-review",
+   "python",
+   "python-3",
+   "pytorch",
+   "pytorch-geometric-pyg",
+   "pytorch-or-tensorflow",
+   "rdkit"
+  ]
  },
  {
   "slug": "smiles-structure-preparation",
@@ -8220,7 +11610,16 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "ase-ani",
+   "dimorphite-dl",
+   "quick",
+   "rdkit",
+   "snakemake"
+  ]
  },
  {
   "slug": "snakemake-dag-generation-and-execution",
@@ -8246,7 +11645,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "software-architecture-documentation-review",
@@ -8269,7 +11679,14 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "javafx-24",
+   "jdk-25",
+   "mzmine"
+  ]
  },
  {
   "slug": "spatial-feature-embedding",
@@ -8294,7 +11711,16 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "pandas",
+   "scanpy",
+   "smart",
+   "stagate"
+  ]
  },
  {
   "slug": "spectral-data-compression-by-frame-and-mobility",
@@ -8318,7 +11744,15 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-masshunter",
+   "microsoft-visual-c-runtime-x64",
+   "net-framework",
+   "pnnl-preprocessor"
+  ]
  },
  {
   "slug": "spectral-database-matching",
@@ -8344,7 +11778,18 @@
    "ion-mobility-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "metfrag",
+   "pubchem",
+   "pubchempy",
+   "python",
+   "rdkit",
+   "sirius",
+   "spectra"
+  ]
  },
  {
   "slug": "spectral-feature-annotation-and-labeling",
@@ -8368,7 +11813,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "spectral-intensity-normalization",
@@ -8392,7 +11848,23 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "matplotlib",
+   "numba",
+   "numpy",
+   "pandas",
+   "proforma-2-0",
+   "pymzml",
+   "pyopenms",
+   "pyteomics",
+   "python",
+   "seaborn",
+   "spectrum-utils",
+   "unimod"
+  ]
  },
  {
   "slug": "spectral-ion-matching-across-vendors",
@@ -8416,7 +11888,19 @@
    "MS-imaging",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "anaconda",
+   "git",
+   "miniconda",
+   "msconvert",
+   "msigen",
+   "proteowizard-msconvert",
+   "pybaf2sql",
+   "python"
+  ]
  },
  {
   "slug": "spectral-library-merging-and-deduplication",
@@ -8442,7 +11926,22 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "future",
+   "future-apply",
+   "gnps",
+   "lib2nist",
+   "mona",
+   "ms-dial",
+   "ms-search",
+   "mspcompiler",
+   "nist",
+   "parallel",
+   "riken"
+  ]
  },
  {
   "slug": "spectral-noise-filtering",
@@ -8466,7 +11965,14 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "idsl-ipa",
+   "mzmine-2",
+   "xcms"
+  ]
  },
  {
   "slug": "spectral-peak-binning-and-vectorization",
@@ -8490,7 +11996,20 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "matchms",
+   "monte-carlo-dropout",
+   "ms2deepscore",
+   "numpy",
+   "pubchempy",
+   "python",
+   "rdkit",
+   "scikit-learn",
+   "spec2vec"
+  ]
  },
  {
   "slug": "spectral-peak-binning-preprocessing",
@@ -8513,7 +12032,14 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "falcon",
+   "python-3-8",
+   "spectrum-utils-0-3-5"
+  ]
  },
  {
   "slug": "spectral-peak-clustering-gc-ims",
@@ -8535,7 +12061,12 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "gcims"
+  ]
  },
  {
   "slug": "spectral-peak-smoothing-artifact-removal",
@@ -8560,7 +12091,15 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-masshunter",
+   "microsoft-visual-c-runtime-x64",
+   "net-framework",
+   "pnnl-preprocessor"
+  ]
  },
  {
   "slug": "spectral-similarity-scoring-parent-tp",
@@ -8583,7 +12122,17 @@
    "ion-mobility-MS",
    "NMR"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biotransformer",
+   "cts",
+   "metfrag",
+   "patroon",
+   "pubchem",
+   "sirius"
+  ]
  },
  {
   "slug": "spectral-window-extraction",
@@ -8609,7 +12158,21 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "hdf5",
+   "hdf5plugin",
+   "matplotlib",
+   "mza",
+   "numpy",
+   "pandas",
+   "python",
+   "rhdf5",
+   "scipy"
+  ]
  },
  {
   "slug": "spectrum-preprocessing-binning-normalization",
@@ -8633,7 +12196,20 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "matchms",
+   "monte-carlo-dropout",
+   "ms2deepscore",
+   "numpy",
+   "pubchempy",
+   "python",
+   "rdkit",
+   "scikit-learn",
+   "spec2vec"
+  ]
  },
  {
   "slug": "spike-artifact-detection-and-removal",
@@ -8655,7 +12231,15 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-masshunter",
+   "microsoft-visual-c-runtime-x64",
+   "net-framework",
+   "pnnl-preprocessor"
+  ]
  },
  {
   "slug": "sterol-isomer-classification",
@@ -8682,7 +12266,16 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "python",
+   "pytorch",
+   "pytorch-or-equivalent-deep-learning-framework-inferred-from-gnn-contrastive-learning-context",
+   "zenodo"
+  ]
  },
  {
   "slug": "sterol-lipid-isomer-characterization",
@@ -8707,7 +12300,16 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "python",
+   "pytorch",
+   "pytorch-or-equivalent-deep-learning-framework-inferred-from-gnn-contrastive-learning-context",
+   "zenodo"
+  ]
  },
  {
   "slug": "sterol-structure-representation-and-curation",
@@ -8730,7 +12332,16 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "python",
+   "pytorch",
+   "pytorch-or-equivalent-deep-learning-framework-inferred-from-gnn-contrastive-learning-context",
+   "zenodo"
+  ]
  },
  {
   "slug": "structured-data-table-creation",
@@ -8751,7 +12362,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mobilipid"
+  ]
  },
  {
   "slug": "tandem-mass-spectrometry-mirror-plot-construction",
@@ -8775,7 +12391,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "tandem-mass-spectrum-deconvolution-isotope-annotation",
@@ -8802,7 +12428,18 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "conda",
+   "deimos",
+   "numpy",
+   "pip",
+   "proteowizard-msconvert",
+   "python",
+   "snakemake"
+  ]
  },
  {
   "slug": "target-list-coordinate-mapping",
@@ -8826,7 +12463,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "targeted-dia-data-extraction-from-raw-spectra",
@@ -8854,7 +12501,31 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bokeh",
+   "dia-nn",
+   "interactiveplotter",
+   "interactivetwodimensionplotter",
+   "massdash",
+   "massdash-loaders-resultsloader",
+   "massdash-peakpickers-mrmtransitiongrouppicker",
+   "massdash-peakpickers-pymrmtransitiongrouppicker",
+   "massdash-plotting-interactiveplotter",
+   "massdash-structs-featuremap",
+   "mrmtransitiongrouppicker",
+   "mzmldataloader",
+   "onnxruntime",
+   "oswdataaccess",
+   "pymrmtransitiongrouppicker",
+   "pytest",
+   "resultsloader",
+   "sqmassloader",
+   "streamlit",
+   "syrupy"
+  ]
  },
  {
   "slug": "targeted-peak-extraction-ms1",
@@ -8880,7 +12551,17 @@
    "direct-infusion-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "comparador",
+   "iontoolpack",
+   "mirador",
+   "peakqc",
+   "peakquant",
+   "tandemmatch"
+  ]
  },
  {
   "slug": "thermo-raw-file-format-parsing",
@@ -8905,7 +12586,21 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "hdf5",
+   "hdf5plugin",
+   "matplotlib",
+   "mza",
+   "numpy",
+   "pandas",
+   "python",
+   "rhdf5",
+   "scipy"
+  ]
  },
  {
   "slug": "tissue-specific-metabolite-quantification",
@@ -8930,7 +12625,16 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "git",
+   "python",
+   "pytorch",
+   "pytorch-or-equivalent-deep-learning-framework-inferred-from-gnn-contrastive-learning-context",
+   "zenodo"
+  ]
  },
  {
   "slug": "tof-ms-signal-enhancement-low-abundance",
@@ -8955,7 +12659,15 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "agilent-masshunter",
+   "microsoft-visual-c-runtime-x64",
+   "net-framework",
+   "pnnl-preprocessor"
+  ]
  },
  {
   "slug": "toml-configuration-file-preparation",
@@ -8976,7 +12688,16 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "docker",
+   "lipoclean",
+   "ms-dial",
+   "ms-dial-4",
+   "ms-dial-5"
+  ]
  },
  {
   "slug": "transformation-product-prediction",
@@ -9003,7 +12724,17 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "biotransformer",
+   "cts",
+   "metfrag",
+   "patroon",
+   "pubchem",
+   "sirius"
+  ]
  },
  {
   "slug": "transition-group-feature-extraction",
@@ -9027,7 +12758,31 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bokeh",
+   "dia-nn",
+   "interactiveplotter",
+   "interactivetwodimensionplotter",
+   "massdash",
+   "massdash-loaders-resultsloader",
+   "massdash-peakpickers-mrmtransitiongrouppicker",
+   "massdash-peakpickers-pymrmtransitiongrouppicker",
+   "massdash-plotting-interactiveplotter",
+   "massdash-structs-featuremap",
+   "mrmtransitiongrouppicker",
+   "mzmldataloader",
+   "onnxruntime",
+   "oswdataaccess",
+   "pymrmtransitiongrouppicker",
+   "pytest",
+   "resultsloader",
+   "sqmassloader",
+   "streamlit",
+   "syrupy"
+  ]
  },
  {
   "slug": "twim-instrument-offset-correction",
@@ -9049,7 +12804,14 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hineslab-moccal",
+   "moccal",
+   "python"
+  ]
  },
  {
   "slug": "twim-ms-calibration-mapping",
@@ -9071,7 +12833,14 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hineslab-moccal",
+   "moccal",
+   "python"
+  ]
  },
  {
   "slug": "twim-ms-data-preprocessing",
@@ -9093,7 +12862,14 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hineslab-moccal",
+   "moccal",
+   "python"
+  ]
  },
  {
   "slug": "twim-ms-data-processing",
@@ -9116,7 +12892,14 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "hineslab-moccal",
+   "moccal",
+   "python"
+  ]
  },
  {
   "slug": "u13c-labeled-lipid-identification",
@@ -9140,7 +12923,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mobilipid"
+  ]
  },
  {
   "slug": "u13c-labeled-standard-reference-matching",
@@ -9162,7 +12950,12 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "mobilipid"
+  ]
  },
  {
   "slug": "unified-api-design-for-heterogeneous-data-sources",
@@ -9183,7 +12976,13 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "proteowizard-library-and-tools",
+   "pwiz"
+  ]
  },
  {
   "slug": "vendor-format-routing-dispatch",
@@ -9206,7 +13005,21 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "hdf5",
+   "hdf5plugin",
+   "matplotlib",
+   "mza",
+   "numpy",
+   "pandas",
+   "python",
+   "rhdf5",
+   "scipy"
+  ]
  },
  {
   "slug": "vendor-proprietary-format-interoperability",
@@ -9231,7 +13044,21 @@
    "LC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "h5py",
+   "hdf5",
+   "hdf5plugin",
+   "matplotlib",
+   "mza",
+   "numpy",
+   "pandas",
+   "python",
+   "rhdf5",
+   "scipy"
+  ]
  },
  {
   "slug": "workflow-orchestration-and-parallelization",
@@ -9256,7 +13083,16 @@
   "techniques": [
    "ion-mobility-MS"
   ],
-  "license_tier": "restricted"
+  "license_tier": "restricted",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "ase-ani",
+   "dimorphite-dl",
+   "quick",
+   "rdkit",
+   "snakemake"
+  ]
  },
  {
   "slug": "workflow-routing-configuration",
@@ -9280,7 +13116,14 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "javafx-24",
+   "jdk-25",
+   "mzmine"
+  ]
  },
  {
   "slug": "xcms-workflow-execution",
@@ -9306,6 +13149,23 @@
    "GC-MS",
    "ion-mobility-MS"
   ],
-  "license_tier": "open"
+  "license_tier": "open",
+  "grounding_tier": "repo",
+  "provenance_tier": "literature",
+  "tools_used": [
+   "bioconductor",
+   "github",
+   "gnps",
+   "limma",
+   "massspecwavelet",
+   "metabocoreutils",
+   "msbackendmgf",
+   "msdatahub",
+   "msfeatures",
+   "pheatmap",
+   "spectra",
+   "xcms",
+   "zenodo"
+  ]
  }
 ]

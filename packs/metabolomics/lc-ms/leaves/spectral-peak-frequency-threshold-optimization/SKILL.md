@@ -1,9 +1,11 @@
 ---
 name: spectral-peak-frequency-threshold-optimization
-description: 'Use when you have MS/MS spectra with fragment frequency annotations (from consensus spectrum generation) and need to decide which fragments to retain versus remove. Trigger conditions: (1) you have replicate MS/MS spectra for the same feature with per-fragment recurrence frequencies calculated;'
+description: 'Use when you have MS/MS spectra with fragment frequency annotations
+  (from consensus spectrum generation) and need to decide which fragments to retain
+  versus remove. Trigger conditions: (1) you have replicate MS/MS spectra for the
+  same feature with per-fragment recurrence frequencies calculated;'
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -19,13 +21,19 @@ metadata:
   - data.table
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
 evidence_spans:
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim"
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager", "knitr", "markdown"),
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager",
+  "knitr", "markdown"),
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

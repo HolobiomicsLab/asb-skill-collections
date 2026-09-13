@@ -1,9 +1,11 @@
 ---
 name: mass-spectrometry-data-import-and-export
-description: Use when use this skill at the start of any mass spectrometry analysis pipeline when you have raw spectral data in mzML, mzXML, msp, MGF, JSON, or metabolomics-USI format and need to load it into a Python environment for preprocessing, cleaning, filtering, or similarity comparison.
+description: Use when use this skill at the start of any mass spectrometry analysis
+  pipeline when you have raw spectral data in mzML, mzXML, msp, MGF, JSON, or metabolomics-USI
+  format and need to load it into a Python environment for preprocessing, cleaning,
+  filtering, or similarity comparison.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,11 +17,14 @@ metadata:
   - bioconda
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-024-00878-1
   title: matchms
 evidence_spans:
-- Matchms is a versatile open-source Python package developed for importing, processing, cleaning, and comparing mass spectrometry data
+- Matchms is a versatile open-source Python package developed for importing, processing,
+  cleaning, and comparing mass spectrometry data
 - make sure the existing tests still work by running ``pytest``
 claims: []
 provenance:

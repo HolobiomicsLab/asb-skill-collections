@@ -1,9 +1,10 @@
 ---
 name: tanaka-physicochemical-descriptor-handling
-description: Use when you have raw HPLC column metadata arrays containing Tanaka parameter blocks that will be fed into a featurizer for machine learning on retention times. Tanaka parameters are present but may contain string artifacts ('2.7 spp', '2.
+description: Use when you have raw HPLC column metadata arrays containing Tanaka parameter
+  blocks that will be fed into a featurizer for machine learning on retention times.
+  Tanaka parameters are present but may contain string artifacts ('2.7 spp', '2.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -15,6 +16,8 @@ metadata:
   - Graphormer-RT
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT

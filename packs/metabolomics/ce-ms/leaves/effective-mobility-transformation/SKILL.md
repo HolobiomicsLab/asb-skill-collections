@@ -1,9 +1,10 @@
 ---
 name: effective-mobility-transformation
-description: Use when you have raw CE-MS data (mzML or netCDF format) with migration time measurements and need to establish a reproducible compound-specific axis that is independent of run-to-run electroosmotic flow fluctuations.
+description: Use when you have raw CE-MS data (mzML or netCDF format) with migration
+  time measurements and need to establish a reproducible compound-specific axis that
+  is independent of run-to-run electroosmotic flow fluctuations.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -18,6 +19,8 @@ metadata:
   - ROMANCE
   techniques:
   - CE-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR

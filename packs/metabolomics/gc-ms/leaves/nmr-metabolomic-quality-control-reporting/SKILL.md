@@ -1,9 +1,11 @@
 ---
 name: nmr-metabolomic-quality-control-reporting
-description: Use when you have uploaded a pre-analytical data table containing sample metadata, processing delay timestamps (pre- and post-centrifugation), and NMR metabolomic measurements for a cohort of plasma or serum samples, and you need to assess how processing delays affect metabolite concentrations and.
+description: Use when you have uploaded a pre-analytical data table containing sample
+  metadata, processing delay timestamps (pre- and post-centrifugation), and NMR metabolomic
+  measurements for a cohort of plasma or serum samples, and you need to assess how
+  processing delays affect metabolite concentrations and.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +18,8 @@ metadata:
   - LC-MS
   - GC-MS
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c04938
   title: PRIMA-Panel

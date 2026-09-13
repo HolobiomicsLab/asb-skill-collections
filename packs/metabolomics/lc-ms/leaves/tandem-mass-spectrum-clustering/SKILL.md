@@ -1,9 +1,10 @@
 ---
 name: tandem-mass-spectrum-clustering
-description: Use when you have a large collection of tandem mass spectra (mzML, mzXML, or MGF format) and want to group similar spectra into clusters to identify redundancy, discover novel peptides or metabolites, or prepare data for downstream annotation.
+description: Use when you have a large collection of tandem mass spectra (mzML, mzXML,
+  or MGF format) and want to group similar spectra into clusters to identify redundancy,
+  discover novel peptides or metabolites, or prepare data for downstream annotation.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,11 +16,14 @@ metadata:
   - Python 3.8+
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 - pip install falcon-ms spectrum-utils==0.3.5
 claims: []
 provenance:

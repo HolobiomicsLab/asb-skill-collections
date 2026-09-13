@@ -1,9 +1,10 @@
 ---
 name: compound-candidate-ranking
-description: Use when after compound database dereplication has produced candidate annotations (from SIRIUS or MetFrag) and you need to select the most reliable candidates for final annotation.
+description: Use when after compound database dereplication has produced candidate
+  annotations (from SIRIUS or MetFrag) and you need to select the most reliable candidates
+  for final annotation.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -16,6 +17,8 @@ metadata:
   - MetFrag
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-023-00695-y
   title: MAW

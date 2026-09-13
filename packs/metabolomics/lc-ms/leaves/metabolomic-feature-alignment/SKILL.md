@@ -1,9 +1,11 @@
 ---
 name: metabolomic-feature-alignment
-description: Use when you have two or more CSV feature tables from independent metabolomic experiments (each with RT, m/z, intensity, isotope, and adduct columns), and you need to merge them into a single aligned feature matrix for downstream batch effect removal, marker identification, or pathway analysis.
+description: Use when you have two or more CSV feature tables from independent metabolomic
+  experiments (each with RT, m/z, intensity, isotope, and adduct columns), and you
+  need to merge them into a single aligned feature matrix for downstream batch effect
+  removal, marker identification, or pathway analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,6 +17,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo

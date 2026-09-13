@@ -1,9 +1,11 @@
 ---
 name: missing-value-imputation-with-na
-description: Use when you are implementing a custom MsBackend subclass for the Spectra package and need to ensure that spectraData() returns all core spectra variables (e.g., centroided, polarity, collisionEnergy) regardless of which ones are explicitly stored in your backend.
+description: Use when you are implementing a custom MsBackend subclass for the Spectra
+  package and need to ensure that spectraData() returns all core spectra variables
+  (e.g., centroided, polarity, collisionEnergy) regardless of which ones are explicitly
+  stored in your backend.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3391
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,11 +16,14 @@ metadata:
   - MsBackendMemory
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 - library(Spectra) library(IRanges)
 - library(Spectra)
 claims: []

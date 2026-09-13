@@ -1,9 +1,11 @@
 ---
 name: m-z-annotation-reduction-quantification
-description: Use when you have spatial metabolomics data with semi-colon-delimited multi-isomer annotations (e.g., 'all_IsomerNames' column in SpaMTP Seurat objects) and you want to quantify the benefit of RefineLipids simplification with lipid_info='simple' parameter.
+description: Use when you have spatial metabolomics data with semi-colon-delimited
+  multi-isomer annotations (e.g., 'all_IsomerNames' column in SpaMTP Seurat objects)
+  and you want to quantify the benefit of RefineLipids simplification with lipid_info='simple'
+  parameter.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,6 +19,13 @@ metadata:
   - RefineLipids
   techniques:
   - MS-imaging
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ''
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP

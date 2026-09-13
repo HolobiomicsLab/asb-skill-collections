@@ -1,9 +1,11 @@
 ---
 name: ms-spectra-inference-with-neural-networks
-description: Use when you have MGF or native MS/MS arrays (mz_array, intensity_array, precursor_mz, adduct) and want to predict the most likely molecular formula. The input spectra must include required MGF fields (TITLE, PRECURSOR_MZ, PRECURSOR_TYPE, COLLISION_ENERGY) or equivalent Python API parameters.
+description: Use when you have MGF or native MS/MS arrays (mz_array, intensity_array,
+  precursor_mz, adduct) and want to predict the most likely molecular formula. The
+  input spectra must include required MGF fields (TITLE, PRECURSOR_MZ, PRECURSOR_TYPE,
+  COLLISION_ENERGY) or equivalent Python API parameters.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +17,8 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

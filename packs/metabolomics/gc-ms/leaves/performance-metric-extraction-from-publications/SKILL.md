@@ -1,9 +1,11 @@
 ---
 name: performance-metric-extraction-from-publications
-description: Use when you have identified a claim that one tool outperforms another (e.g., 'IDSL.IPA outperforms MZmine 2 and xcms') in a research article's abstract or introduction, but the specific metrics and results table are not included in the introductory text.
+description: Use when you have identified a claim that one tool outperforms another
+  (e.g., 'IDSL.IPA outperforms MZmine 2 and xcms') in a research article's abstract
+  or introduction, but the specific metrics and results table are not included in
+  the introductory text.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,11 +18,15 @@ metadata:
   - MS-DIAL
   techniques:
   - GC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA
 evidence_spans:
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
+  R package'
 - IDSL.IPA is able to outperform similar peak picking tools such as MZmine 2
 - IDSL.IPA is able to outperform similar peak picking tools such as MZmine 2, *xcms
 - similar peak picking tools such as MZmine 2, *xcms

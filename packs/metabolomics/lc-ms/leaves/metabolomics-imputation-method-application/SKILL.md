@@ -1,9 +1,11 @@
 ---
 name: metabolomics-imputation-method-application
-description: Use when your metabolomics dataset (LC/MS or GC/MS) contains missing values encoded as NA or zero that represent compounds below the instrument's limit of detection (LOD) or limit of quantification (LOQ), rather than values missing completely at random.
+description: Use when your metabolomics dataset (LC/MS or GC/MS) contains missing
+  values encoded as NA or zero that represent compounds below the instrument's limit
+  of detection (LOD) or limit of quantification (LOQ), rather than values missing
+  completely at random.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -17,6 +19,13 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-SA-4.0
+    url: WandeRum/GSimp
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp

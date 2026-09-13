@@ -1,9 +1,11 @@
 ---
 name: ion-mode-specific-ccs-model-generation
-description: Use when you have tunemix reference data acquired in both positive and negative ion modes and need to establish independent CCS calibration curves for each mode. The skill is required when downstream CCS assignments must achieve R² ≥ 0.
+description: Use when you have tunemix reference data acquired in both positive and
+  negative ion modes and need to establish independent CCS calibration curves for
+  each mode. The skill is required when downstream CCS assignments must achieve R²
+  ≥ 0.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,11 +17,14 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos
 evidence_spans:
-- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python application programming interface and command-line tool
+- DEIMoS, or Data Extraction for Integrated Multidimensional Spectrometry, is a Python
+  application programming interface and command-line tool
 - import deimos
 - is a Python application programming interface and command-line tool
 - import numpy as np

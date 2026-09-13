@@ -1,9 +1,10 @@
 ---
 name: data-structure-validation
-description: Use when after converting or filtering objects (e.g., transformation products to suspect lists, feature groups through componentization) and before passing them to downstream functions like screenSuspects or generateComponents.
+description: Use when after converting or filtering objects (e.g., transformation
+  products to suspect lists, feature groups through componentization) and before passing
+  them to downstream functions like screenSuspects or generateComponents.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,6 +14,8 @@ metadata:
   - patRoonData
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-020-00477-w
   title: patRoon

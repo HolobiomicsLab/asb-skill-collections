@@ -1,9 +1,10 @@
 ---
 name: retention-time-filtering
-description: Use when working with GCIMS datasets where retention time spans a wide range (e.g., 0–1500 s) but your analytes of interest are confined to a narrower window (e.g., 0–1100 s).
+description: Use when working with GCIMS datasets where retention time spans a wide
+  range (e.g., 0–1500 s) but your analytes of interest are confined to a narrower
+  window (e.g., 0–1100 s).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,6 +14,8 @@ metadata:
   techniques:
   - GC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS

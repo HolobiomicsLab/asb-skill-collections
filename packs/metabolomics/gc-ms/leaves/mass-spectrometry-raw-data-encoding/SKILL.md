@@ -1,9 +1,10 @@
 ---
 name: mass-spectrometry-raw-data-encoding
-description: Use when you have generated or obtained a two-dimensional mass-spectrometry intensity matrix (m/z × retention time scan points) with simulated or experimental peak shapes, noise, and background, and need to encode it as a binary .
+description: Use when you have generated or obtained a two-dimensional mass-spectrometry
+  intensity matrix (m/z × retention time scan points) with simulated or experimental
+  peak shapes, noise, and background, and need to encode it as a binary .
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,11 +18,14 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
 - The underlying engine handles binary data encoding via the `base64enc` package
 - github.com__yufree__mzrtsim
 claims: []

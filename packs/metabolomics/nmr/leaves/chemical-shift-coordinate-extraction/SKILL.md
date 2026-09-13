@@ -1,9 +1,11 @@
 ---
 name: chemical-shift-coordinate-extraction
-description: Use when you have loaded an INADEQUATE NMR spectrum file and need to detect individual peaks (local maxima) across the chemical shift dimension with associated intensity values. This is the mandatory first processing step before filtering peaks into networks or matching against metabolite databases.
+description: Use when you have loaded an INADEQUATE NMR spectrum file and need to
+  detect individual peaks (local maxima) across the chemical shift dimension with
+  associated intensity values. This is the mandatory first processing step before
+  filtering peaks into networks or matching against metabolite databases.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0593
@@ -13,6 +15,8 @@ metadata:
   - PyINETA
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c03966
   title: PyINETA

@@ -1,9 +1,11 @@
 ---
 name: mass-spectrometry-peak-alignment-visualization
-description: Use when when you have aligned peak data from molecular networking (with m/z, intensity, retention time, and alignment quality metrics across multiple spectra) and need to interactively explore peak alignments under multiple filtering criteria (intensity thresholds, alignment score cutoffs, peak.
+description: Use when when you have aligned peak data from molecular networking (with
+  m/z, intensity, retention time, and alignment quality metrics across multiple spectra)
+  and need to interactively explore peak alignments under multiple filtering criteria
+  (intensity thresholds, alignment score cutoffs, peak.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3630
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,6 +19,8 @@ metadata:
   - pandas
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00237
   title: MMSA

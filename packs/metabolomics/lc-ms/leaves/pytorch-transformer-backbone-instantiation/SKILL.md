@@ -1,9 +1,10 @@
 ---
 name: pytorch-transformer-backbone-instantiation
-description: Use when when building a graph-based molecular property prediction model that must process both molecular structures (as heterogeneous graphs) and tabular metadata (chromatographic column parameters).
+description: Use when when building a graph-based molecular property prediction model
+  that must process both molecular structures (as heterogeneous graphs) and tabular
+  metadata (chromatographic column parameters).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0570
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -16,11 +17,14 @@ metadata:
   - RDKit
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT
 evidence_spans:
-- Graphormer-RT is an extension to the Graphormer package, with documentation, and the original code on Github
+- Graphormer-RT is an extension to the Graphormer package, with documentation, and
+  the original code on Github
 - import dgl
 - import torch
 claims: []

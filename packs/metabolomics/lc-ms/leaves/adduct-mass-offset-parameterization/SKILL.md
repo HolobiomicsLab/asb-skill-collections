@@ -1,9 +1,10 @@
 ---
 name: adduct-mass-offset-parameterization
-description: Use when when processing LC-MS metabolomics feature tables where adduct annotation is absent or incomplete, and you need to identify which ionization adducts are present in your mass spectrometry data.
+description: Use when when processing LC-MS metabolomics feature tables where adduct
+  annotation is absent or incomplete, and you need to identify which ionization adducts
+  are present in your mass spectrometry data.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +15,8 @@ metadata:
   - fermo_core
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-024-50111-8
   title: FERMO

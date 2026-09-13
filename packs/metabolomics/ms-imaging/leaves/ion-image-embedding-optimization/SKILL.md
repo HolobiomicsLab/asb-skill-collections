@@ -1,9 +1,11 @@
 ---
 name: ion-image-embedding-optimization
-description: Use when you have 512-dimensional representation vectors output from ResNet18 encoders processing paired augmented ion images, and you need to prevent trivial solutions (representation collapse) during contrastive learning—specifically when optimizing for maximized similarity between augmentations.
+description: Use when you have 512-dimensional representation vectors output from
+  ResNet18 encoders processing paired augmented ion images, and you need to prevent
+  trivial solutions (representation collapse) during contrastive learning—specifically
+  when optimizing for maximized similarity between augmentations.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +16,8 @@ metadata:
   - PyTorch
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion

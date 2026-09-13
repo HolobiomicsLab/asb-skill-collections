@@ -1,9 +1,10 @@
 ---
 name: gcf-mf-link-scoring-computation
-description: Use when you have paired GCF and MF datasets with strain membership information and need to rank candidate GCF–MF links to identify which biosynthetic gene clusters likely produce detected metabolites.
+description: Use when you have paired GCF and MF datasets with strain membership information
+  and need to rank candidate GCF–MF links to identify which biosynthetic gene clusters
+  likely produce detected metabolites.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0621
@@ -19,6 +20,8 @@ metadata:
   - MIBiG
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
@@ -26,7 +29,8 @@ derived_from:
   title: ''
 evidence_spans:
 - follows the hypergeometric distribution as previously stated
-- NPLinker, a Python module to accelerate and support the process of automatically linking GCFs
+- NPLinker, a Python module to accelerate and support the process of automatically
+  linking GCFs
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,10 @@
 ---
 name: adduct-ionmode-consistency-checking
-description: Use when parsing, standardizing, or filtering MS spectra from mixed or heterogeneous databases where adduct assignment may be manually entered, auto-inferred, or missing.
+description: Use when parsing, standardizing, or filtering MS spectra from mixed or
+  heterogeneous databases where adduct assignment may be manually entered, auto-inferred,
+  or missing.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,6 +16,13 @@ metadata:
   - FragHub
   techniques:
   - GC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub

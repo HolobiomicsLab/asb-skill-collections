@@ -1,9 +1,11 @@
 ---
 name: retention-time-drift-time-m-z-querying
-description: 'Use when you have multidimensional MS data converted to MZA HDF5 format and need to retrieve specific spectra or chromatographic slices defined by one or more of: retention time (in minutes), ion mobility arrival time (in milliseconds for DT/SLIM or Vs/cm² for TimsTOF), or m/z value (as a float or.'
+description: 'Use when you have multidimensional MS data converted to MZA HDF5 format
+  and need to retrieve specific spectra or chromatographic slices defined by one or
+  more of: retention time (in minutes), ion mobility arrival time (in milliseconds
+  for DT/SLIM or Vs/cm² for TimsTOF), or m/z value (as a float or.'
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -18,6 +20,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c01653
   title: mzapy

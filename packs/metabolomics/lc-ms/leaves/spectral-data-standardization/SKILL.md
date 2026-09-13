@@ -1,9 +1,11 @@
 ---
 name: spectral-data-standardization
-description: Use when you have completed a GNPS1 (METABOLOMICS-SNETS, METABOLOMICS-SNETS-V2, FEATURE-BASED-MOLECULAR-NETWORKING) or GNPS2 (classical_networking_workflow, feature_based_molecular_networking_workflow) molecular networking job and need to access its output files in a standardized format for.
+description: Use when you have completed a GNPS1 (METABOLOMICS-SNETS, METABOLOMICS-SNETS-V2,
+  FEATURE-BASED-MOLECULAR-NETWORKING) or GNPS2 (classical_networking_workflow, feature_based_molecular_networking_workflow)
+  molecular networking job and need to access its output files in a standardized format
+  for.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +16,8 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker

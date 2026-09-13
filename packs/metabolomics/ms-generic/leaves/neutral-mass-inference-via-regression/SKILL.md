@@ -1,9 +1,11 @@
 ---
 name: neutral-mass-inference-via-regression
-description: Use when use this skill after khipu has assigned observed ions to grid positions (isotope and adduct combinations). Apply it when you have a connected subnetwork of feature ions that have been matched to known isotope and adduct patterns and need to estimate the neutral mass of the parent compound.
+description: Use when use this skill after khipu has assigned observed ions to grid
+  positions (isotope and adduct combinations). Apply it when you have a connected
+  subnetwork of feature ions that have been matched to known isotope and adduct patterns
+  and need to estimate the neutral mass of the parent compound.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -18,6 +20,8 @@ metadata:
   - Python 3 (scipy.stats or sklearn.linear_model)
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu

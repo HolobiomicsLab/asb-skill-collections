@@ -1,9 +1,9 @@
 ---
 name: metabolomic-feature-table-imputation
-description: Use when after feature detection and peak alignment have produced a feature table with zero or missing values across samples.
+description: Use when after feature detection and peak alignment have produced a feature
+  table with zero or missing values across samples.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +16,8 @@ metadata:
   - PCPFM (PythonCentricPipelineForMetabolomics)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

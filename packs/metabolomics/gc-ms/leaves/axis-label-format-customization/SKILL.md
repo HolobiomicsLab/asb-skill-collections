@@ -1,14 +1,17 @@
 ---
 name: axis-label-format-customization
-description: Use when when designing injection plate layouts in InjectionDesign and needing to display sample positions with clear, domain-appropriate labels on the y-axis (e.g., row identifiers, well coordinates, or sample indices).
+description: Use when when designing injection plate layouts in InjectionDesign and
+  needing to display sample positions with clear, domain-appropriate labels on the
+  y-axis (e.g., row identifiers, well coordinates, or sample indices).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_topics: []
   tools:
   - InjectionDesign
   techniques:
   - GC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.02.26.530140v1.article-info
   title: InjectionDesign

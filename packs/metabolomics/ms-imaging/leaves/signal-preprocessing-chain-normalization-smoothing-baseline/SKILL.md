@@ -1,9 +1,10 @@
 ---
 name: signal-preprocessing-chain-normalization-smoothing-baseline
-description: Use when apply this preprocessing chain when you have loaded raw or continuous imzML mass spectra into a Cardinal MSImagingArrays object and need to prepare them for peak picking, statistical analysis, or imaging.
+description: Use when apply this preprocessing chain when you have loaded raw or continuous
+  imzML mass spectra into a Cardinal MSImagingArrays object and need to prepare them
+  for peak picking, statistical analysis, or imaging.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,14 +18,19 @@ metadata:
   - CardinalIO
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btv146
   title: Cardinal
 evidence_spans:
 - library(Cardinal)
-- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of the new low-level signal processing functions'
-- Parallel processing support via the *BiocParallel* package for all pre-processing methods
-- Parallel processing support via the *BiocParallel* package for all pre-processing methods and any statistical analysis methods with a `BPPARAM` option
+- '*Cardinal 3.6* is a major update with breaking changes. It bring support many of
+  the new low-level signal processing functions'
+- Parallel processing support via the *BiocParallel* package for all pre-processing
+  methods
+- Parallel processing support via the *BiocParallel* package for all pre-processing
+  methods and any statistical analysis methods with a `BPPARAM` option
 - 'Once installed, Cardinal can be loaded with library(): library(Cardinal)'
 claims: []
 provenance:

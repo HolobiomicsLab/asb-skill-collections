@@ -1,9 +1,11 @@
 ---
 name: ms-ms-spectrum-matching
-description: Use when you have a cleaned and clustered set of LC-MS features (m/z, retention time, MS/MS spectra) from MS-CleanR output and need to assign putative compound identities by matching observed MS/MS fragmentation patterns against reference spectral libraries using HRR-based scoring.
+description: Use when you have a cleaned and clustered set of LC-MS features (m/z,
+  retention time, MS/MS spectra) from MS-CleanR output and need to assign putative
+  compound identities by matching observed MS/MS fragmentation patterns against reference
+  spectral libraries using HRR-based scoring.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3094
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,6 +18,8 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR

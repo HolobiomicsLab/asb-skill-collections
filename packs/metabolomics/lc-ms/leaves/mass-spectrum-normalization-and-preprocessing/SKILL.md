@@ -1,9 +1,10 @@
 ---
 name: mass-spectrum-normalization-and-preprocessing
-description: Use when you have raw tandem mass spectra data (mz/intensity pairs and precursor m/z values) and need to train interpretable machine learning models (regression or tree-based) where feature interpretability and direct chemical meaning are required.
+description: Use when you have raw tandem mass spectra data (mz/intensity pairs and
+  precursor m/z values) and need to train interpretable machine learning models (regression
+  or tree-based) where feature interpretability and direct chemical meaning are required.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,13 +14,16 @@ metadata:
   - ChemEcho
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c02591
   title: ChemEcho
 - doi: 10.1145/2939672.2939778
   title: ''
 evidence_spans:
-- The Mass Query Language (MassQL) is a domain specific language used to describe fragmentation patterns
+- The Mass Query Language (MassQL) is a domain specific language used to describe
+  fragmentation patterns
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

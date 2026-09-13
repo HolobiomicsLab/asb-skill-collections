@@ -1,9 +1,11 @@
 ---
 name: spectral-library-msp-serialization
-description: Use when after generating in-memory lipid spectra (with m/z, intensity, and metadata such as lipid class, fatty acid composition, and adduct type) when you need to export those spectra as a reusable MSP-format spectral library for downstream identification tasks in Excalibur, Skyline, or NIST MS.
+description: Use when after generating in-memory lipid spectra (with m/z, intensity,
+  and metadata such as lipid class, fatty acid composition, and adduct type) when
+  you need to export those spectra as a reusable MSP-format spectral library for downstream
+  identification tasks in Excalibur, Skyline, or NIST MS.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -13,6 +15,8 @@ metadata:
   - LSG
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04518
   title: Lipid Spectrum Generator

@@ -1,9 +1,11 @@
 ---
 name: mass-action-law-flux-prediction
-description: Use when when you have quantified intracellular metabolite abundances (LC-MS normalized values) from multiple samples and need to predict how differences in substrate availability translate into differences in metabolic flux for specific reactions in a constraint-based metabolic model.
+description: Use when when you have quantified intracellular metabolite abundances
+  (LC-MS normalized values) from multiple samples and need to predict how differences
+  in substrate availability translate into differences in metabolic flux for specific
+  reactions in a constraint-based metabolic model.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3929
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -15,11 +17,14 @@ metadata:
   - COBRApy (implied by workflow)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- Data analysis and isotopic natural abundance correction were performed with MassHunter ProFinder (Agilent)
+- Data analysis and isotopic natural abundance correction were performed with MassHunter
+  ProFinder (Agilent)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: model-generalization-assessment-across-molecular-size-regimes
-description: Use when a deep learning model for molecular structure prediction (e.g., NMR2Struct) has been trained and evaluated on a limited molecular size range (e.
+description: Use when a deep learning model for molecular structure prediction (e.g.,
+  NMR2Struct) has been trained and evaluated on a limited molecular size range (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0337
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -14,6 +14,8 @@ metadata:
   - NMR spectrum simulator or experimental database
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct

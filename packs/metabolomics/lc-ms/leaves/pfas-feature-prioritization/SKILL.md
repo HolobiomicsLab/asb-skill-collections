@@ -1,9 +1,10 @@
 ---
 name: pfas-feature-prioritization
-description: Use when you have detected features in LC- or GC-HRMS data (via pyOpenMS or custom feature tables) and need to systematically rank them for likelihood of being PFAS compounds.
+description: Use when you have detected features in LC- or GC-HRMS data (via pyOpenMS
+  or custom feature tables) and need to systematically rank them for likelihood of
+  being PFAS compounds.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +16,8 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen

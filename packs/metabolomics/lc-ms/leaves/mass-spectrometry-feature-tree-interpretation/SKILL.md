@@ -1,9 +1,9 @@
 ---
 name: mass-spectrometry-feature-tree-interpretation
-description: Use when after running qiime qemistree make-hierarchy and obtaining a tree artifact (qemistree.
+description: Use when after running qiime qemistree make-hierarchy and obtaining a
+  tree artifact (qemistree.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0566
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,11 +14,14 @@ metadata:
   - SIRIUS / CSI:FingerID
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
 evidence_spans:
-- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed comparison of untargeted metabolomic profiles.
+- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed
+  comparison of untargeted metabolomic profiles.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,11 @@
 ---
 name: instrument-type-filtering-gnps
-description: Use when you have a large, mixed-instrument GNPS spectral dataset and need to create an instrument-specific training set for FIDDLE or similar deep learning models. Use this skill when your configuration file specifies an instrument allowlist (e.
+description: Use when you have a large, mixed-instrument GNPS spectral dataset and
+  need to create an instrument-specific training set for FIDDLE or similar deep learning
+  models. Use this skill when your configuration file specifies an instrument allowlist
+  (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,6 +15,8 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

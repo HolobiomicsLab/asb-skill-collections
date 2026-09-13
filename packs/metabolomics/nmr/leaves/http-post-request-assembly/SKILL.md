@@ -1,9 +1,12 @@
 ---
 name: http-post-request-assembly
-description: Use when you have NMR peak data (1H and 13C chemical shift values) that must be submitted to a remote DeepSAT SMART 3 classification API for structural prediction, and you need to format the data correctly, validate the endpoint schema, and parse the response to extract predictions and confidence.
+description: Use when you have NMR peak data (1H and 13C chemical shift values) that
+  must be submitted to a remote DeepSAT SMART 3 classification API for structural
+  prediction, and you need to format the data correctly, validate the endpoint schema,
+  and parse the response to extract predictions and confidence.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -14,6 +17,8 @@ metadata:
   - DeepSAT
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-023-00738-4
   title: DeepSAT

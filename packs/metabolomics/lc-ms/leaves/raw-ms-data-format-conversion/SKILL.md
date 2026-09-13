@@ -1,9 +1,11 @@
 ---
 name: raw-ms-data-format-conversion
-description: Use when you have raw UPLC-HRMS data from ThermoFisher or Agilent instruments and need to feed it into MSThunder for nontargeted pollutant identification. Your input is a vendor binary format (.raw or .d) that MSThunder cannot directly ingest. Environment constraints (e.
+description: Use when you have raw UPLC-HRMS data from ThermoFisher or Agilent instruments
+  and need to feed it into MSThunder for nontargeted pollutant identification. Your
+  input is a vendor binary format (.raw or .d) that MSThunder cannot directly ingest.
+  Environment constraints (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,11 +17,14 @@ metadata:
   - Ubuntu 20.04
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.enceco.2025.07.022
   title: MSThunder
 evidence_spans:
-- MSThunder provide a deep learning-based nontargeted analytical framework for the accurate and rapid identification of unknown organic pollutants in water
+- MSThunder provide a deep learning-based nontargeted analytical framework for the
+  accurate and rapid identification of unknown organic pollutants in water
 - available through our experiments conducted on an Ubuntu 20.04 environment
 claims: []
 provenance:

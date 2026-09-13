@@ -1,9 +1,10 @@
 ---
 name: chemical-formula-representation
-description: Use when you need to feed chemical formulas into a neural network-based formula scorer (such as MIST-CF) that must learn data-dependent representations of formula structure and composition.
+description: Use when you need to feed chemical formulas into a neural network-based
+  formula scorer (such as MIST-CF) that must learn data-dependent representations
+  of formula structure and composition.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0218
@@ -15,13 +16,16 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data
 - Utilizing sinusoidal formula embeddings as developed in our previous work SCARF
-- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum
+  using an end-to-end energy based modeling approach
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

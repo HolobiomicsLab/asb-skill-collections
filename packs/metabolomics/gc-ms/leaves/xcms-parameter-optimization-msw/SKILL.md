@@ -1,9 +1,11 @@
 ---
 name: xcms-parameter-optimization-msw
-description: Use when when you have direct-injection or low-complexity mass spectrometry data (mzML files) and need to detect chromatographic peaks using wavelet-based methods instead of centWave, especially when standard retention-time-dependent peak detection is not suitable or when you need to tune.
+description: Use when when you have direct-injection or low-complexity mass spectrometry
+  data (mzML files) and need to detect chromatographic peaks using wavelet-based methods
+  instead of centWave, especially when standard retention-time-dependent peak detection
+  is not suitable or when you need to tune.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,14 +18,18 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
-- The *xcms* R package provides functionality to efficiently preprocess LC-MS (as well as GC-MS and LC-MS/MS) data.
+- The *xcms* R package provides functionality to efficiently preprocess LC-MS (as
+  well as GC-MS and LC-MS/MS) data.
 - 'Package: xcms'
 - library(MsDataHub)
-- '`r Biocpkg("xcms")` uses functionality from the *MassSpecWavelet* package to identify such peaks'
+- '`r Biocpkg("xcms")` uses functionality from the *MassSpecWavelet* package to identify
+  such peaks'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

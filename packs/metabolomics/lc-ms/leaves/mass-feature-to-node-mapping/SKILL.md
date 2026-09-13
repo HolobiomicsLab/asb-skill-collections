@@ -1,9 +1,11 @@
 ---
 name: mass-feature-to-node-mapping
-description: Use when you have an untargeted metabolomics feature table with m/z values, retention times, and intensity measurements, a metabolic network representation with compound nodes and chemical formulas, and you want to infer functional pathway activity directly from features without performing.
+description: Use when you have an untargeted metabolomics feature table with m/z values,
+  retention times, and intensity measurements, a metabolic network representation
+  with compound nodes and chemical formulas, and you want to infer functional pathway
+  activity directly from features without performing.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,11 +17,14 @@ metadata:
   - JMS
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: mummichog
 evidence_spans:
-- Mummichog is a Python program for analyzing data from high throughput, untargeted metabolomics
+- Mummichog is a Python program for analyzing data from high throughput, untargeted
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

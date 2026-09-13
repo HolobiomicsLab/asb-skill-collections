@@ -1,9 +1,11 @@
 ---
 name: synthetic-training-instance-generation
-description: Use when when you have a small set of matched reference features (isolated, high-quality chromatographic peaks from reference chromatograms that have been aligned to a ground-truth reference list) and need to train a CNN model for peak detection in LC-HRMS profile mode data.
+description: Use when when you have a small set of matched reference features (isolated,
+  high-quality chromatographic peaks from reference chromatograms that have been aligned
+  to a ground-truth reference list) and need to train a CNN model for peak detection
+  in LC-HRMS profile mode data.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +17,13 @@ metadata:
   - CUDA
   techniques:
   - mass-spectrometry
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: christophuv/PeakBot
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac344
   title: PeakBot

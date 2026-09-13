@@ -1,9 +1,10 @@
 ---
 name: entropy-similarity-scoring
-description: Use when you need to quantify the degree of match between two MS/MS spectra—either to validate that a denoised spectrum remains faithful to a reference ground-truth spectrum, or to rank candidate library matches for a query spectrum.
+description: Use when you need to quantify the degree of match between two MS/MS spectra—either
+  to validate that a denoised spectrum remains faithful to a reference ground-truth
+  spectrum, or to rank candidate library matches for a query spectrum.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -20,6 +21,8 @@ metadata:
   - numpy
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-025-02646-x
   title: Spectral Denoising

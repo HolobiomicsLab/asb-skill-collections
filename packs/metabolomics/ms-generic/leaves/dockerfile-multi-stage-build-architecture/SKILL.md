@@ -1,9 +1,11 @@
 ---
 name: dockerfile-multi-stage-build-architecture
-description: Use when when you need to containerize a Windows-only .NET Framework GUI application (such as AirdPro V5/V6 written in C# for .NET Framework 4.8) for execution on macOS or Linux hosts, and you want to avoid shipping compile-time tooling (SDK) in the production image.
+description: Use when when you need to containerize a Windows-only .NET Framework
+  GUI application (such as AirdPro V5/V6 written in C# for .NET Framework 4.8) for
+  execution on macOS or Linux hosts, and you want to avoid shipping compile-time tooling
+  (SDK) in the production image.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -18,6 +20,8 @@ metadata:
   - .NET Framework 4.8
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird

@@ -1,9 +1,10 @@
 ---
 name: exact-mass-database-matching
-description: Use when after feature detection and alignment on raw MS data, when you have a list of unknown feature m/z values and need to assign them to known xenobiotic metabolites or their predicted biotransformation products.
+description: Use when after feature detection and alignment on raw MS data, when you
+  have a list of unknown feature m/z values and need to assign them to known xenobiotic
+  metabolites or their predicted biotransformation products.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -23,6 +24,8 @@ metadata:
   - Biotransformer
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.est.5c08558
   title: CMDN

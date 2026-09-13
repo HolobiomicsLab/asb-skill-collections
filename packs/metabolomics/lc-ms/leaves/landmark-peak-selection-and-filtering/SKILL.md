@@ -1,9 +1,9 @@
 ---
 name: landmark-peak-selection-and-filtering
-description: Use when when preparing mass tracks for retention-time (RT) alignment across multiple LC-MS samples.
+description: Use when when preparing mass tracks for retention-time (RT) alignment
+  across multiple LC-MS samples.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -17,11 +17,14 @@ metadata:
   - asari.CompositeMap.calibrate_sample_RT
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - scipy.signal module for LOWESS fitting via the regression function
 claims: []

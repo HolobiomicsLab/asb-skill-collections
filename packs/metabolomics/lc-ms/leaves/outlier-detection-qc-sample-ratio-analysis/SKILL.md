@@ -1,9 +1,11 @@
 ---
 name: outlier-detection-qc-sample-ratio-analysis
-description: Use when after building a SummarizedExperiment object from metabolomics LC-MS data with QC and Study Sample types defined, when you need to identify QC samples with aberrant Compound/Internal Standard ratios (indicating instrument drift, matrix effects, or sample degradation) and Study Samples with.
+description: Use when after building a SummarizedExperiment object from metabolomics
+  LC-MS data with QC and Study Sample types defined, when you need to identify QC
+  samples with aberrant Compound/Internal Standard ratios (indicating instrument drift,
+  matrix effects, or sample degradation) and Study Samples with.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -15,6 +17,8 @@ metadata:
   - mzQualityDashboard
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00073
   title: mzquality
@@ -23,8 +27,10 @@ evidence_spans:
 - mzQuality requires a specific format for the input data
 - library(mzQuality)
 - knitr::rmarkdown, library(mzQuality)
-- The `buildExperiment` function will then take the data and create an experiment object that can be used for analysis.
-- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store the data
+- The `buildExperiment` function will then take the data and create an experiment
+  object that can be used for analysis.
+- Internally, mzQuality uses Bioconductors' *SummarizedExperiment* object to store
+  the data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

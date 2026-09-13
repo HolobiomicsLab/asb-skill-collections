@@ -1,9 +1,11 @@
 ---
 name: pre-analytical-delay-effect-quantification
-description: Use when you have uploaded a pre-analytical data table containing sample metadata, processing delay annotations (pre- and post-centrifugation timestamps or duration), and paired NMR metabolomic measurements for a sample cohort, and you need to quantify how delays at different time-points affect.
+description: Use when you have uploaded a pre-analytical data table containing sample
+  metadata, processing delay annotations (pre- and post-centrifugation timestamps
+  or duration), and paired NMR metabolomic measurements for a sample cohort, and you
+  need to quantify how delays at different time-points affect.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,6 +15,8 @@ metadata:
   - QC-Tool
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c04938
   title: PRIMA-Panel

@@ -1,9 +1,11 @@
 ---
 name: bayesian-meta-learning-chromatographic-projection
-description: Use when you have experimental retention times (RTs) for a small set of calibration molecules (≥10) measured on both a source chromatographic method and a target method, and you need to predict RTs for candidate metabolites on the target method to rank annotation candidates.
+description: Use when you have experimental retention times (RTs) for a small set
+  of calibration molecules (≥10) measured on both a source chromatographic method
+  and a target method, and you need to predict RTs for candidate metabolites on the
+  target method to rank annotation candidates.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3664
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,11 +15,14 @@ metadata:
   - cmmrt (constantino-garcia/cmmrt)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

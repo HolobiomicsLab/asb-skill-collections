@@ -1,9 +1,11 @@
 ---
 name: gnps-network-file-handling
-description: Use when you have a GNPS molecular network job and need to programmatically load the network structure, merge external annotations (chemical class, MS2LDA substructural motifs), and export a unified annotated network for visualization in Cytoscape or other graph analysis tools.
+description: Use when you have a GNPS molecular network job and need to programmatically
+  load the network structure, merge external annotations (chemical class, MS2LDA substructural
+  motifs), and export a unified annotated network for visualization in Cytoscape or
+  other graph analysis tools.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_0092
@@ -17,14 +19,18 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo9070144
   title: molnetenhancer
 evidence_spans:
-- pyMolNetEnhancer is a python module integrating chemical class and substructure information
+- pyMolNetEnhancer is a python module integrating chemical class and substructure
+  information
 - pyMolNetEnhancer is a python module
 - Global Natural Products Social Molecular Networking (GNPS)
-- mass spectral molecular networks created through the Global Natural Products Social Molecular Networking (GNPS) platform
+- mass spectral molecular networks created through the Global Natural Products Social
+  Molecular Networking (GNPS) platform
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

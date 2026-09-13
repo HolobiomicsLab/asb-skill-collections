@@ -1,9 +1,10 @@
 ---
 name: spectrum-alignment-performance-benchmarking
-description: Use when you have tandem MS spectra from structurally related or known compounds and need to decide which similarity metric will maximize correct ranking of related molecules in a spectral library search.
+description: Use when you have tandem MS spectra from structurally related or known
+  compounds and need to decide which similarity metric will maximize correct ranking
+  of related molecules in a spectral library search.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,6 +14,8 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.2c00153
   title: Neutral-loss similarity

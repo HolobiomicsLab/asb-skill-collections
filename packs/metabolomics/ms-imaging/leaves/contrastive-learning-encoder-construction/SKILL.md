@@ -1,9 +1,10 @@
 ---
 name: contrastive-learning-encoder-construction
-description: Use when you have mass spectrometry imaging (MSI) data with ion images that need low-dimensional representation learning for downstream tasks like co-localized ion searching or isotope discovery.
+description: Use when you have mass spectrometry imaging (MSI) data with ion images
+  that need low-dimensional representation learning for downstream tasks like co-localized
+  ion searching or isotope discovery.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3928
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +16,8 @@ metadata:
   - PyTorch
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion

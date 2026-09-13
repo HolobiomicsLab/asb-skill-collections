@@ -1,9 +1,10 @@
 ---
 name: pytorch-model-training-and-optimization
-description: Use when when you have preprocessed molecular graph representations (from Preprocess.py or equivalent) and need to train a regression model to predict continuous retention time targets.
+description: Use when when you have preprocessed molecular graph representations (from
+  Preprocess.py or equivalent) and need to train a regression model to predict continuous
+  retention time targets.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -14,6 +15,8 @@ metadata:
   - RDKit
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c04071
   title: GNN-RT

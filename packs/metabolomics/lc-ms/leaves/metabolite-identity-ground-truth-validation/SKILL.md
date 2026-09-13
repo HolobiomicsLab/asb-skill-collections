@@ -1,9 +1,10 @@
 ---
 name: metabolite-identity-ground-truth-validation
-description: Use when after constructing candidate feature pair alignments and retention-time spline mappings in a multi-dataset LC-MS metabolomics integration workflow, when you have access to independent ground-truth annotations (e.
+description: Use when after constructing candidate feature pair alignments and retention-time
+  spline mappings in a multi-dataset LC-MS metabolomics integration workflow, when
+  you have access to independent ground-truth annotations (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3941
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -13,12 +14,16 @@ metadata:
   - metabCombiner
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c03693
   title: metabCombiner
 evidence_spans:
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics.
-- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS metabolomics
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics.
+- This is an R package for aligning a pair of disparately-acquired untargeted LC-MS
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

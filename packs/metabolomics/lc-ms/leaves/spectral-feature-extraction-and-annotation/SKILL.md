@@ -1,9 +1,10 @@
 ---
 name: spectral-feature-extraction-and-annotation
-description: Use when you have raw LC/MS data in mzML format and need to perform non-targeted screening to discover unknown chemical features without a predefined list of target compounds.
+description: Use when you have raw LC/MS data in mzML format and need to perform non-targeted
+  screening to discover unknown chemical features without a predefined list of target
+  compounds.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -21,6 +22,8 @@ metadata:
   - pandas, numpy, scipy
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00060
   title: LAGF

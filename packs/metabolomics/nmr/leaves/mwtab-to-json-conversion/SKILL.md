@@ -1,9 +1,11 @@
 ---
 name: mwtab-to-json-conversion
-description: Use when you have mwTab-formatted files from the Metabolomics Workbench containing MS or NMR experimental metadata and data blocks that need to be converted to JSON for integration with REST APIs, web applications, or downstream tools that expect JSON input.
+description: Use when you have mwTab-formatted files from the Metabolomics Workbench
+  containing MS or NMR experimental metadata and data blocks that need to be converted
+  to JSON for integration with REST APIs, web applications, or downstream tools that
+  expect JSON input.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -17,11 +19,14 @@ metadata:
   - Python json module
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo11030163
   title: mwtab Python Library for RESTful Access
 evidence_spans:
-- The ``mwtab`` package is a Python library that facilitates reading and writing files in
+- The ``mwtab`` package is a Python library that facilitates reading and writing files
+  in
 - The ``mwtab`` package is a Python library
 - jsonschema_ for validating functionality of ``mwTab`` files based on ``JSON`` schema
 claims: []

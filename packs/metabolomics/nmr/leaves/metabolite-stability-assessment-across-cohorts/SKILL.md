@@ -1,9 +1,11 @@
 ---
 name: metabolite-stability-assessment-across-cohorts
-description: Use when you have uploaded a pre-analytical data table containing sample metadata, processing timestamps (pre- and post-centrifugation), and NMR metabolomic measurements for a cohort of peripheral blood samples (plasma/serum), and you need to quantify the magnitude and direction of metabolite.
+description: Use when you have uploaded a pre-analytical data table containing sample
+  metadata, processing timestamps (pre- and post-centrifugation), and NMR metabolomic
+  measurements for a cohort of peripheral blood samples (plasma/serum), and you need
+  to quantify the magnitude and direction of metabolite.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_0769
@@ -13,6 +15,8 @@ metadata:
   - QC-Tool
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c04938
   title: PRIMA-Panel

@@ -1,9 +1,10 @@
 ---
 name: dual-branch-feature-fusion
-description: Use when when you have molecular input data available in two or more distinct formats (e.g., RDKit-extracted fingerprints AND torch_geometric Graph objects representing molecular topology) and your prediction target (e.
+description: Use when when you have molecular input data available in two or more
+  distinct formats (e.g., RDKit-extracted fingerprints AND torch_geometric Graph objects
+  representing molecular topology) and your prediction target (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -21,6 +22,8 @@ metadata:
   - RT-Transformer
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btae084
   title: RT-Transformer

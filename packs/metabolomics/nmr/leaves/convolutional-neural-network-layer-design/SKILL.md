@@ -1,9 +1,10 @@
 ---
 name: convolutional-neural-network-layer-design
-description: Use when you have 1H NMR spectral tensors as input and need to extract local features (e.g., peak patterns, signal neighborhoods) before applying attention-based or sequence-level processing.
+description: Use when you have 1H NMR spectral tensors as input and need to extract
+  local features (e.g., peak patterns, signal neighborhoods) before applying attention-based
+  or sequence-level processing.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3465
   edam_topics:
   - http://edamontology.org/topic_0593
@@ -16,6 +17,8 @@ metadata:
   - FlavorFormer
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.microc.2025.115372
   title: FlavorFormer

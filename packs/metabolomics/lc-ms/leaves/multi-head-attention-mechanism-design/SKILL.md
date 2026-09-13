@@ -1,9 +1,10 @@
 ---
 name: multi-head-attention-mechanism-design
-description: Use when when building a transformer-based model to process mass spectrometry data (MS/MS spectra or fingerprints) where you need the model to learn multiple independent attention patterns across spectrum features simultaneously.
+description: Use when when building a transformer-based model to process mass spectrometry
+  data (MS/MS spectra or fingerprints) where you need the model to learn multiple
+  independent attention patterns across spectrum features simultaneously.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0224
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,6 +15,8 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-024-00804-5
   title: idslmint

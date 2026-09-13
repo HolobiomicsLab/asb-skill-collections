@@ -1,9 +1,11 @@
 ---
 name: graph-neural-network-model-loading
-description: Use when when you need to evaluate GNN performance on collision cross section prediction using the enveda/ccs-prediction repository, either by loading an existing pre-trained model checkpoint or by retraining from scratch using deposited datasets and published hyperparameters.
+description: Use when when you need to evaluate GNN performance on collision cross
+  section prediction using the enveda/ccs-prediction repository, either by loading
+  an existing pre-trained model checkpoint or by retraining from scratch using deposited
+  datasets and published hyperparameters.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -16,12 +18,14 @@ metadata:
   - Zenodo Dataset (DOI:10.5281/zenodo.11199061)
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-024-00899-w
   title: mol2ccs
 - doi: 10.5281/zenodo.11199061
   title: ''
-- doi: 10.5281/zenodo.11199061.svg
+- doi: 10.5281/zenodo.11199061
   title: ''
 evidence_spans: []
 claims: []
@@ -40,7 +44,7 @@ attribution:
   all_source_dois:
   - 10.1186/s13321-024-00899-w
   - 10.5281/zenodo.11199061
-  - 10.5281/zenodo.11199061.svg
+  - 10.5281/zenodo.11199061
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias
@@ -88,7 +92,7 @@ First, clone or access the enveda/ccs-prediction GitHub repository and install d
 - **train-test.py** (Executes GNN training and prediction pipeline with specified datasets, hyperparameters, and output paths) — https://github.com/enveda/ccs-prediction
 - **Poetry** (Dependency and environment manager for installing GNN training framework and pre-commit hooks)
 - **Makefile** (Provides pre-configured training commands (e.g., make train-metlin-test-metlin) for common model configurations) — https://github.com/enveda/ccs-prediction
-- **Zenodo Dataset (DOI:10.5281/zenodo.11199061)** (Hosts pre-computed predictions and model outputs for direct download without retraining) — https://zenodo.org/badge/DOI/10.5281/zenodo.11199061.svg
+- **Zenodo Dataset (DOI:10.5281/zenodo.11199061)** (Hosts pre-computed predictions and model outputs for direct download without retraining) — https://zenodo.org/badge/DOI/10.5281/zenodo.11199061
 
 ## Examples
 

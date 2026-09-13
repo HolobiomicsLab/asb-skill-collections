@@ -1,9 +1,11 @@
 ---
 name: qiime2-artifact-handling
-description: Use when you have raw mass-spectrometry files (MGF, BIOM, mzXML, mzML) or feature abundance tables from external tools (MZmine2, peak detection software) and need to convert them into QIIME 2's typed artifact format before running downstream plugins like q2-qemistree, diversity analyses, or.
+description: Use when you have raw mass-spectrometry files (MGF, BIOM, mzXML, mzML)
+  or feature abundance tables from external tools (MZmine2, peak detection software)
+  and need to convert them into QIIME 2's typed artifact format before running downstream
+  plugins like q2-qemistree, diversity analyses, or.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -15,11 +17,14 @@ metadata:
   - MZmine2
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
 evidence_spans:
-- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed comparison of untargeted metabolomic profiles.
+- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed
+  comparison of untargeted metabolomic profiles.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

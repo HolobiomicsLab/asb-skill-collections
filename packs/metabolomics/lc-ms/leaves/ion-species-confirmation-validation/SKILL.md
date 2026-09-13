@@ -1,9 +1,10 @@
 ---
 name: ion-species-confirmation-validation
-description: Use when after you have identified candidate ion-species pairs through pointwise correlation analysis of XIC temporal profiles and exact mass difference refinement, and you have MS2 fragment spectra available for those candidates.
+description: Use when after you have identified candidate ion-species pairs through
+  pointwise correlation analysis of XIC temporal profiles and exact mass difference
+  refinement, and you have MS2 fragment spectra available for those candidates.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,11 +15,14 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
-- doi: 10.1093/bioinformatics/btad088/7036334
+- doi: 10.1093/bioinformatics/btad088
   title: DBDIpy
 evidence_spans:
-- DBDIpy is an open-source Python library for the curation and interpretation of dielectric barrier discharge ionisation mass spectrometric datasets
+- DBDIpy is an open-source Python library for the curation and interpretation of dielectric
+  barrier discharge ionisation mass spectrometric datasets
 - DBDIpy is an open-source Python library
 claims: []
 provenance:
@@ -26,15 +30,15 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_dbdipy_cq
-    doi: 10.1093/bioinformatics/btad088/7036334
+    doi: 10.1093/bioinformatics/btad088
     title: DBDIpy
   dedup_kept_from: coll_dbdipy_cq
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bioinformatics/btad088/7036334
+  original_doi: 10.1093/bioinformatics/btad088
   all_source_dois:
-  - 10.1093/bioinformatics/btad088/7036334
+  - 10.1093/bioinformatics/btad088
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias

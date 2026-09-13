@@ -1,9 +1,11 @@
 ---
 name: retention-time-mass-correspondence-resolution
-description: Use when you have two LC-MS untargeted metabolomic feature tables (each containing m/z, retention time, and intensity columns) and need to establish which features in dataset A correspond to which features in dataset B, typically for comparative metabolomics, batch effect correction, or.
+description: Use when you have two LC-MS untargeted metabolomic feature tables (each
+  containing m/z, retention time, and intensity columns) and need to establish which
+  features in dataset A correspond to which features in dataset B, typically for comparative
+  metabolomics, batch effect correction, or.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -13,6 +15,8 @@ metadata:
   - M2S
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c03592
   title: m2s

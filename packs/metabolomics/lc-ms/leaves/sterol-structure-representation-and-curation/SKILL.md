@@ -1,9 +1,10 @@
 ---
 name: sterol-structure-representation-and-curation
-description: Use when when you have a collection of N-Me derivatized unsaturated sterol structures from tissue samples or standards that must be fed into MS/MS fragmentation prediction or collision cross section (CCS) prediction workflows.
+description: Use when when you have a collection of N-Me derivatized unsaturated sterol
+  structures from tissue samples or standards that must be fed into MS/MS fragmentation
+  prediction or collision cross section (CCS) prediction workflows.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3280
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -15,6 +16,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA

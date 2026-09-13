@@ -1,9 +1,10 @@
 ---
 name: structure-similarity-evaluation
-description: Use when after an NMR-based structure prediction model has generated predicted molecular structures (formula and connectivity) for a test set of molecules with up to 19 heavy atoms.
+description: Use when after an NMR-based structure prediction model has generated
+  predicted molecular structures (formula and connectivity) for a test set of molecules
+  with up to 19 heavy atoms.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0292
   edam_topics:
   - http://edamontology.org/topic_3047
@@ -13,11 +14,14 @@ metadata:
   - Transformer architecture
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct
 evidence_spans:
-- Integrating this capability with a convolutional neural network, we build an end-to-end model
+- Integrating this capability with a convolutional neural network, we build an end-to-end
+  model
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

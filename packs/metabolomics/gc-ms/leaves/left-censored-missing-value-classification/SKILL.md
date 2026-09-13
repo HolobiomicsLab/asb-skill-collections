@@ -1,9 +1,11 @@
 ---
 name: left-censored-missing-value-classification
-description: Use when you have a metabolomics dataset (LC/MS or GC/MS) with missing values and need to determine which are below the limit of detection (LOD) or limit of quantification (LOQ). Left-censored classification is necessary when the missingness is informative—i.
+description: Use when you have a metabolomics dataset (LC/MS or GC/MS) with missing
+  values and need to determine which are below the limit of detection (LOD) or limit
+  of quantification (LOQ). Left-censored classification is necessary when the missingness
+  is informative—i.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -17,6 +19,13 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-SA-4.0
+    url: WandeRum/GSimp
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp

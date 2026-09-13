@@ -1,9 +1,10 @@
 ---
 name: weighted-loss-function-optimization
-description: Use when when training a dual-encoder architecture (bi-encoder + cross-encoder) on NMR spectral data where independent encoding and joint pair processing produce competing or imbalanced gradient signals.
+description: Use when when training a dual-encoder architecture (bi-encoder + cross-encoder)
+  on NMR spectral data where independent encoding and joint pair processing produce
+  competing or imbalanced gradient signals.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,6 +16,8 @@ metadata:
   - FlavorFormer
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.microc.2025.115372
   title: FlavorFormer

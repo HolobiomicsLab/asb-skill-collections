@@ -1,9 +1,9 @@
 ---
 name: neighbourhood-density-computation
-description: Use when after library-matching has produced ranked candidate spectra with MS2Deepscore embeddings.
+description: Use when after library-matching has produced ranked candidate spectra
+  with MS2Deepscore embeddings.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +15,8 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query

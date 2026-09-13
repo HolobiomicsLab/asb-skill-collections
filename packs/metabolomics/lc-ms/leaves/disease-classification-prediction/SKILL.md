@@ -1,9 +1,9 @@
 ---
 name: disease-classification-prediction
-description: Use when you have raw LC-MS metabolomics data from multiple disease groups (in .npy or .
+description: Use when you have raw LC-MS metabolomics data from multiple disease groups
+  (in .npy or .
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3464
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,6 +16,8 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-024-51433-3
   title: DeepMSProfiler

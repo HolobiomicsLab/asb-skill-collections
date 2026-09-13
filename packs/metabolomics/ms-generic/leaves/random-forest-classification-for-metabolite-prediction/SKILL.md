@@ -1,9 +1,9 @@
 ---
 name: random-forest-classification-for-metabolite-prediction
-description: Use when you have a metabolomics count table (rows=metabolites, columns=samples) with associated metadata containing a categorical grouping factor (e.
+description: Use when you have a metabolomics count table (rows=metabolites, columns=samples)
+  with associated metadata containing a categorical grouping factor (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3935
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -16,6 +16,8 @@ metadata:
   - read.metabo
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00129-19
   title: omu metabolomics count data tool

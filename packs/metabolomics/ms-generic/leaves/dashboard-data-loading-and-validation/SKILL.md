@@ -1,9 +1,11 @@
 ---
 name: dashboard-data-loading-and-validation
-description: Use when after generating a dashboard_data.json file from the msFeaST Jupyter pipeline, use this skill to verify that the JSON file is correctly formatted and completely loaded into the interactive dashboard before conducting visual exploration or sharing the dashboard with collaborators.
+description: Use when after generating a dashboard_data.json file from the msFeaST
+  Jupyter pipeline, use this skill to verify that the JSON file is correctly formatted
+  and completely loaded into the interactive dashboard before conducting visual exploration
+  or sharing the dashboard with collaborators.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3925
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,6 +15,8 @@ metadata:
   - jupyter-notebook
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btae584
   title: msFeaST

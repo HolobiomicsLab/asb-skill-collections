@@ -1,9 +1,10 @@
 ---
 name: spectral-peak-smoothing-artifact-removal
-description: Use when raw Agilent MassHunter (.d) or UIMF mass spectrometry files exhibit jagged or noisy peaks, particularly for low-abundance ions where signal-to-noise ratio is poor.
+description: Use when raw Agilent MassHunter (.d) or UIMF mass spectrometry files
+  exhibit jagged or noisy peaks, particularly for low-abundance ions where signal-to-noise
+  ratio is poor.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,14 +17,19 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00220
   title: PNNL PreProcessor
 - doi: 10.1021/acs.jproteome.1c00425
   title: ''
 evidence_spans:
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files) from drift tube (DT) and structure for lossless ion manipulations (SLIM) IM-MS
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files (MS-files) from drift tube (DT) and structure for lossless
+  ion manipulations (SLIM) IM-MS
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files)
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files
 claims: []

@@ -1,9 +1,10 @@
 ---
 name: spectral-feature-extraction
-description: Use when you have raw mass-spectrometry data (precursor m/z, ionization mode, and fragment m/z–intensity pairs) and need to feed it into a CNN-based metabolite annotation pipeline.
+description: Use when you have raw mass-spectrometry data (precursor m/z, ionization
+  mode, and fragment m/z–intensity pairs) and need to feed it into a CNN-based metabolite
+  annotation pipeline.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -23,6 +24,8 @@ metadata:
   - PyTorch Geometric
   techniques:
   - GC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s11306-020-01726-7
   title: MetFID

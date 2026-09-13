@@ -1,9 +1,11 @@
 ---
 name: peak-formula-enumeration
-description: Use when when you have tandem mass spectra (mz/intensity pairs with precursor m/z) and need to train interpretable machine learning models—particularly decision trees or regression models—where each feature must correspond to a concrete chemical entity (peak or neutral loss) rather than a latent.
+description: Use when when you have tandem mass spectra (mz/intensity pairs with precursor
+  m/z) and need to train interpretable machine learning models—particularly decision
+  trees or regression models—where each feature must correspond to a concrete chemical
+  entity (peak or neutral loss) rather than a latent.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,6 +15,8 @@ metadata:
   - Mass Query Language (MassQL)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c02591
   title: ChemEcho

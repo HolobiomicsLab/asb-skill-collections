@@ -1,9 +1,11 @@
 ---
 name: spectral-noise-synthesis-poisson-distribution
-description: Use when when you have clean, baseline MS/MS spectra and need to create test datasets with known noise characteristics to benchmark denoising algorithms, compare denoising search performance, or validate that electronic and chemical noise removal functions correctly identify and remove injected.
+description: Use when when you have clean, baseline MS/MS spectra and need to create
+  test datasets with known noise characteristics to benchmark denoising algorithms,
+  compare denoising search performance, or validate that electronic and chemical noise
+  removal functions correctly identify and remove injected.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,6 +18,8 @@ metadata:
   - RDkit
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-025-02646-x
   title: Spectral Denoising

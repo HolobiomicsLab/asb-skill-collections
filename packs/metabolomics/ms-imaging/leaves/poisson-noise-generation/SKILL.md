@@ -1,9 +1,10 @@
 ---
 name: poisson-noise-generation
-description: Use when when preparing augmented variants of ion images (single-channel 2D arrays or multi-channel spectral images) for contrastive learning in mass spectrometry imaging tasks.
+description: Use when when preparing augmented variants of ion images (single-channel
+  2D arrays or multi-channel spectral images) for contrastive learning in mass spectrometry
+  imaging tasks.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,12 +15,15 @@ metadata:
   - PyTorch
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion
 evidence_spans:
 - Two augmented images are propagated through a pair of ResNet18-based encoders
-- Two augmented images are propagated through a pair of ResNet18-based encoders that shared parameters
+- Two augmented images are propagated through a pair of ResNet18-based encoders that
+  shared parameters
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

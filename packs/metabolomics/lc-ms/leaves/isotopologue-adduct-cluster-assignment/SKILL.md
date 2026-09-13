@@ -1,9 +1,9 @@
 ---
 name: isotopologue-adduct-cluster-assignment
-description: Use when after sample alignment and peak picking have produced an aligned feature table with m/z and retention time coordinates.
+description: Use when after sample alignment and peak picking have produced an aligned
+  feature table with m/z and retention time coordinates.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -13,6 +13,8 @@ metadata:
   - SLAW grouping module
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw

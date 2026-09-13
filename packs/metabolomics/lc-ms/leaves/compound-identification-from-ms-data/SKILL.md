@@ -1,9 +1,10 @@
 ---
 name: compound-identification-from-ms-data
-description: Use when you have raw GC-MS or LC-MS data in vendor format (NetCDF, .raw, .d) or generic mass lists, and you need to assign chemical identities to detected peaks.
+description: Use when you have raw GC-MS or LC-MS data in vendor format (NetCDF, .raw,
+  .d) or generic mass lists, and you need to assign chemical identities to detected
+  peaks.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3647
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -18,12 +19,15 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np

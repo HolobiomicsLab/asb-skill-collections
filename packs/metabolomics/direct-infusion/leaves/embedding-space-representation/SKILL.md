@@ -1,9 +1,11 @@
 ---
 name: embedding-space-representation
-description: Use when you have pairs or triplets of MS/MS spectra with associated metadata (compound structural information, Tanimoto similarity scores) and want to learn embeddings that simultaneously preserve spectral similarity relationships and reconstruct peak intensities.
+description: Use when you have pairs or triplets of MS/MS spectra with associated
+  metadata (compound structural information, Tanimoto similarity scores) and want
+  to learn embeddings that simultaneously preserve spectral similarity relationships
+  and reconstruct peak intensities.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +17,8 @@ metadata:
   - matchms
   techniques:
   - direct-infusion-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c00260
   title: CLERMS

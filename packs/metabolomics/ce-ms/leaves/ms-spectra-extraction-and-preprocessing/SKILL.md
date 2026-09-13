@@ -1,9 +1,11 @@
 ---
 name: ms-spectra-extraction-and-preprocessing
-description: 'Use when you have raw LC-MS/MS data in mzML or mzXML format and need to: (1) identify the top-abundance MS1 signals in an LC run, (2) compute a single scalar metric (separation efficiency) that summarizes how well compounds are resolved across the chromatogram, and (3) feed that metric into a.'
+description: 'Use when you have raw LC-MS/MS data in mzML or mzXML format and need
+  to: (1) identify the top-abundance MS1 signals in an LC run, (2) compute a single
+  scalar metric (separation efficiency) that summarizes how well compounds are resolved
+  across the chromatogram, and (3) feed that metric into a.'
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,13 +19,16 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.09.08.556930
   title: BAGO
 - doi: 10.1002/9780470508183
   title: ''
 evidence_spans:
-- BAGO is a Bayesian optimization strategy for LC gradient optimization for MS-based small molecule analysis
+- BAGO is a Bayesian optimization strategy for LC gradient optimization for MS-based
+  small molecule analysis
 - A :class:`ms1Spectrum` object (supported by :mod:`bago`)
 - A :class:`MSExperiment` object (supported by :mod:`pyopenms`)
 - a :class:`sklearn.preprocessing.StandardScaler` object used to scale the data

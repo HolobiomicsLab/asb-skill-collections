@@ -1,9 +1,11 @@
 ---
 name: metabolite-set-analysis
-description: Use when you have a metabolite intensity matrix (rows=metabolites or peaks, columns=samples) paired with metabolite-to-pathway or metabolite-to-feature-group annotations, and you want to score activity levels across pathways or metabolite groupings in a way that tolerates missing peaks and.
+description: Use when you have a metabolite intensity matrix (rows=metabolites or
+  peaks, columns=samples) paired with metabolite-to-pathway or metabolite-to-feature-group
+  annotations, and you want to score activity levels across pathways or metabolite
+  groupings in a way that tolerates missing peaks and.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3628
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -17,6 +19,8 @@ metadata:
   - MS2LDA
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals

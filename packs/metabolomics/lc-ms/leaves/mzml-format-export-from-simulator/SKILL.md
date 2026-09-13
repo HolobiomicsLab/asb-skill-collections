@@ -1,9 +1,11 @@
 ---
 name: mzml-format-export-from-simulator
-description: Use when after running an Environment simulation in ViMMS that has generated MS1 and/or MS/MS scans from a virtual mass spectrometer and controller pair. Use this skill when you need to preserve the generated scans in a standard format compatible with existing metabolomics software (e.
+description: Use when after running an Environment simulation in ViMMS that has generated
+  MS1 and/or MS/MS scans from a virtual mass spectrometer and controller pair. Use
+  this skill when you need to preserve the generated scans in a standard format compatible
+  with existing metabolomics software (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,6 +18,8 @@ metadata:
   - MZmine
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms

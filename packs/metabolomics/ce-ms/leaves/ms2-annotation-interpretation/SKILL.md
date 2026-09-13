@@ -1,9 +1,9 @@
 ---
 name: ms2-annotation-interpretation
-description: Use when after GNPS spectral library search has returned matched chemical annotations (with m/z values and cosine similarity scores) for MS/MS spectra.
+description: Use when after GNPS spectral library search has returned matched chemical
+  annotations (with m/z values and cosine similarity scores) for MS/MS spectra.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -17,6 +17,8 @@ metadata:
   techniques:
   - CE-MS
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU

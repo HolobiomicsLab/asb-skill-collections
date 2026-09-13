@@ -1,9 +1,10 @@
 ---
 name: mass-spectrometry-data-interpretation
-description: Use when you have a set of ions already matched to a khipu instance (i.e., ions whose isotope and adduct assignments are known and positioned on the theoretical khipu grid), and you need to estimate the neutral mass of the parent compound.
+description: Use when you have a set of ions already matched to a khipu instance (i.e.,
+  ions whose isotope and adduct assignments are known and positioned on the theoretical
+  khipu grid), and you need to estimate the neutral mass of the parent compound.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -17,6 +18,8 @@ metadata:
   - Python 3 (scipy.stats / numpy.linalg)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu
@@ -30,7 +33,7 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_dbdipy_cq
-    doi: 10.1093/bioinformatics/btad088/7036334
+    doi: 10.1093/bioinformatics/btad088
     title: DBDIpy
   - build: coll_khipu_cq
     doi: 10.1021/acs.analchem.2c05810

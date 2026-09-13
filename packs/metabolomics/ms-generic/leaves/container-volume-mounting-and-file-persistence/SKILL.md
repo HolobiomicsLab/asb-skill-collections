@@ -1,9 +1,11 @@
 ---
 name: container-volume-mounting-and-file-persistence
-description: Use when executing containerized conversion tools (e.g., AirdPro CLI) that must read vendor-format mass spectrometry raw files from the host filesystem and write converted output (e.g., .aird files) back to a persistent host directory. This is essential when first-run Wine initialization and .
+description: Use when executing containerized conversion tools (e.g., AirdPro CLI)
+  that must read vendor-format mass spectrometry raw files from the host filesystem
+  and write converted output (e.g., .aird files) back to a persistent host directory.
+  This is essential when first-run Wine initialization and .
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -19,6 +21,8 @@ metadata:
   - run-cli.sh
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird

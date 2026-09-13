@@ -1,9 +1,10 @@
 ---
 name: metadata-field-based-sample-stratification
-description: Use when you have a feature table and accompanying CSV metadata that includes a 'Sample Type' field (or equivalent) with entries such as 'BLANK', 'QC', 'STD', or 'Unknown'.
+description: Use when you have a feature table and accompanying CSV metadata that
+  includes a 'Sample Type' field (or equivalent) with entries such as 'BLANK', 'QC',
+  'STD', or 'Unknown'.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,6 +14,8 @@ metadata:
   - PCPFM
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

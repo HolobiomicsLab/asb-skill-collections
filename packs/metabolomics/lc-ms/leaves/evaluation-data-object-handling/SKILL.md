@@ -1,9 +1,11 @@
 ---
 name: evaluation-data-object-handling
-description: Use when after completing an Environment simulation run with save_eval flag enabled, when you need to preserve the EvaluationData object containing scan provenance, chemical source definitions, and fragmentation events for later inspection, validation, or reanalysis without re-running the full.
+description: Use when after completing an Environment simulation run with save_eval
+  flag enabled, when you need to preserve the EvaluationData object containing scan
+  provenance, chemical source definitions, and fragmentation events for later inspection,
+  validation, or reanalysis without re-running the full.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -13,14 +15,18 @@ metadata:
   - Python pickle module
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
 evidence_spans:
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible and modular framework designed to simulate fragmentation strategies'
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive and modular framework for the simulation of fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible
+  and modular framework designed to simulate fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive
+  and modular framework for the simulation of fragmentation strategies'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,10 @@
 ---
 name: multivariate-lipid-metabolite-analysis
-description: Use when you have integrated, normalized lipidomic and metabolomic feature tables from the Multi-ABLE method or similar concurrent multiomics workflows, with matched sample phenotypes (e.
+description: Use when you have integrated, normalized lipidomic and metabolomic feature
+  tables from the Multi-ABLE method or similar concurrent multiomics workflows, with
+  matched sample phenotypes (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3935
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +17,8 @@ metadata:
   - ProteoMM
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.isci.2023.106881
   title: MultiABLER

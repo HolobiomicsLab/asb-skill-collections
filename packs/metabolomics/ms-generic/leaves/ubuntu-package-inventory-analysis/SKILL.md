@@ -1,9 +1,11 @@
 ---
 name: ubuntu-package-inventory-analysis
-description: Use when when you have a Ubuntu-based software package (e.g., MetumpX) that advertises bundling a specific number of tools (~89) but the individual tool names, versions, installation sources, and installation methods are not enumerated in the README or primary documentation.
+description: Use when when you have a Ubuntu-based software package (e.g., MetumpX)
+  that advertises bundling a specific number of tools (~89) but the individual tool
+  names, versions, installation sources, and installation methods are not enumerated
+  in the README or primary documentation.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -13,6 +15,8 @@ metadata:
   - Git
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btz765
   title: MetumpX untargeted MS support package

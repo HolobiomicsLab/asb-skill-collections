@@ -1,9 +1,11 @@
 ---
 name: kovats-retention-index-extraction-and-assignment
-description: Use when you have compiled a multi-source EI library (NIST, RIKEN, MoNA, SWGDRUG) into a single msp object and want to enrich it with experimental retention index metadata. Apply this skill when you have access to NIST library installation files (ri.dat and USER.
+description: Use when you have compiled a multi-source EI library (NIST, RIKEN, MoNA,
+  SWGDRUG) into a single msp object and want to enrich it with experimental retention
+  index metadata. Apply this skill when you have access to NIST library installation
+  files (ri.dat and USER.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -19,6 +21,8 @@ metadata:
   - NIST Library Installation
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -28,7 +32,8 @@ evidence_spans:
 - library(future)
 - library(future.apply)
 - you can transformed it into a msp file by *Lib2NIST*
-- The total number of spectra that your NIST library have can be checked in the *MS Search* program
+- The total number of spectra that your NIST library have can be checked in the *MS
+  Search* program
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

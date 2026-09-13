@@ -1,9 +1,11 @@
 ---
 name: candidate-peak-filtering-annotation
-description: Use when you have a peak list extracted from MSI data that includes candidate peaks with potential m/z overlap or spatial co-localization patterns across tissue images.
+description: Use when you have a peak list extracted from MSI data that includes candidate
+  peaks with potential m/z overlap or spatial co-localization patterns across tissue
+  images.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,11 +17,14 @@ metadata:
   - rMSIproc
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-020-00449-0
   title: ''
 evidence_spans:
-- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI data
+- rMSIcleanup is an open-source R package to annotate matrix-related signals in MSI
+  data
 - devtools::install_github("prafols/rMSI", ref = "0.8")
 - rMSIcleanup is an open-source R package
 claims: []

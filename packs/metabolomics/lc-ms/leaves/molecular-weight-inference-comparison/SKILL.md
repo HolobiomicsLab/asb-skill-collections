@@ -1,9 +1,11 @@
 ---
 name: molecular-weight-inference-comparison
-description: Use when after RAMClustR clustering of XCMS-detected features and prior to final compound annotation, when you need to verify the robustness of molecular weight inference or when findMain and RAMClustR predictions are available for the same compound clusters and you want to assess concordance or.
+description: Use when after RAMClustR clustering of XCMS-detected features and prior
+  to final compound annotation, when you need to verify the robustness of molecular
+  weight inference or when findMain and RAMClustR predictions are available for the
+  same compound clusters and you want to assess concordance or.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +17,8 @@ metadata:
   - XCMS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust

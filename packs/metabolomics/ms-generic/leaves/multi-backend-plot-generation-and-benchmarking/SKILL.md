@@ -1,9 +1,11 @@
 ---
 name: multi-backend-plot-generation-and-benchmarking
-description: Use when when you have a suite of Sphinx gallery example scripts targeting multiple plotting library backends and need to verify that all examples execute successfully within expected time constraints and produce output across matplotlib (static), bokeh (interactive), and plotly (interactive).
+description: Use when when you have a suite of Sphinx gallery example scripts targeting
+  multiple plotting library backends and need to verify that all examples execute
+  successfully within expected time constraints and produce output across matplotlib
+  (static), bokeh (interactive), and plotly (interactive).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0337
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -18,12 +20,15 @@ metadata:
   - pandas
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
 evidence_spans:
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 - Multiple backends supported including matplotlib, bokeh, and plotly
 - Rendering is typically slower than the BOKEH backend
 - ms_data.plot(x="m/z", y="intensity", kind="spectrum")

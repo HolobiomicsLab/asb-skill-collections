@@ -1,9 +1,10 @@
 ---
 name: classification-performance-evaluation
-description: Use when after running inference on test mass spectrometry spectra with a trained deep learning model (e.g., PS2MS) to verify that class label predictions and confidence scores match expected reference outputs.
+description: Use when after running inference on test mass spectrometry spectra with
+  a trained deep learning model (e.g., PS2MS) to verify that class label predictions
+  and confidence scores match expected reference outputs.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -13,6 +14,8 @@ metadata:
   - scikit-learn metrics module
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05019
   title: ps2ms

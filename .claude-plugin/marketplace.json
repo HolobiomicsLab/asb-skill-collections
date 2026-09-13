@@ -110,7 +110,7 @@
     {
       "name": "metabolomics-lc-ms",
       "source": "./packs/metabolomics/lc-ms",
-      "description": "ASB Metabolomics — LC-MS. LC-MS subset of the ASB metabolomics collection: 2616 evidence-grounded skills (lighter than the full collection; skills may also appear in other technique packs).",
+      "description": "ASB Metabolomics — LC-MS. LC-MS subset of the ASB metabolomics collection: 2617 evidence-grounded skills (lighter than the full collection; skills may also appear in other technique packs).",
       "version": "0.1.0",
       "author": {
         "name": "Holobiomics Lab",

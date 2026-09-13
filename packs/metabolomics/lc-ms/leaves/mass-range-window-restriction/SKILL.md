@@ -1,9 +1,9 @@
 ---
 name: mass-range-window-restriction
-description: Use when you have loaded an MsmsSpectrum object and need to focus analysis on a biologically or chemically relevant mass window.
+description: Use when you have loaded an MsmsSpectrum object and need to focus analysis
+  on a biologically or chemically relevant mass window.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,15 +15,21 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
-- Spectrum processing in spectrum_utils has been optimized for computational efficiency using [NumPy](https://www.numpy.org/)
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
+- Spectrum processing in spectrum_utils has been optimized for computational efficiency
+  using [NumPy](https://www.numpy.org/)
 - import numpy as np
-- optimized for computational efficiency using [NumPy](https://www.numpy.org/) and [Numba](http://numba.pydata.org/)
+- optimized for computational efficiency using [NumPy](https://www.numpy.org/) and
+  [Numba](http://numba.pydata.org/)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

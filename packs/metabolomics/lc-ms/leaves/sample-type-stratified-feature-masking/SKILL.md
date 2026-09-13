@@ -1,9 +1,11 @@
 ---
 name: sample-type-stratified-feature-masking
-description: Use when after feature detection but before statistical analysis, when your study includes blank samples (e.g., solvent or extraction blanks) and you want to remove features that fail to show meaningful enrichment in actual study samples relative to blank contamination.
+description: Use when after feature detection but before statistical analysis, when
+  your study includes blank samples (e.g., solvent or extraction blanks) and you want
+  to remove features that fail to show meaningful enrichment in actual study samples
+  relative to blank contamination.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -15,6 +17,8 @@ metadata:
   - Asari
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

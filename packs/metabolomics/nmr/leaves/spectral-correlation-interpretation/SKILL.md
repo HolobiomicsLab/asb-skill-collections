@@ -1,9 +1,10 @@
 ---
 name: spectral-correlation-interpretation
-description: Use when you have preprocessed 1H NMR spectral data (e.g., from plasma or biological samples acquired on a 600 MHz instrument) and need to identify the chemical composition of a prominent but structurally ambiguous peak.
+description: Use when you have preprocessed 1H NMR spectral data (e.g., from plasma
+  or biological samples acquired on a 600 MHz instrument) and need to identify the
+  chemical composition of a prominent but structurally ambiguous peak.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +17,8 @@ metadata:
   - TopSpin 3.2
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btx477
   title: MWASTools
@@ -23,7 +26,8 @@ evidence_spans:
 - metabolite assignment using Statistical Total Correlation Spectroscopy (STOCSY)
 - Assuming that R (>=3.3) and Bioconductor have been correctly installed
 - Here, we present a package to perform MWAS using univariate hypothesis testing
-- '"MWASTools" is an R package designed to provide an integrated and user-friendly pipeline'
+- '"MWASTools" is an R package designed to provide an integrated and user-friendly
+  pipeline'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

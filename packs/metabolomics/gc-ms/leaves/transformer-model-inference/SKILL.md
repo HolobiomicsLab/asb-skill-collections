@@ -1,9 +1,11 @@
 ---
 name: transformer-model-inference
-description: Use when you have electron ionization mass spectrum data (m/z and intensity pairs) and a pre-trained transformer model checkpoint, and you need to predict molecular weight directly from the spectrum without manual feature engineering or rule-based methods.
+description: Use when you have electron ionization mass spectrum data (m/z and intensity
+  pairs) and a pre-trained transformer model checkpoint, and you need to predict molecular
+  weight directly from the spectrum without manual feature engineering or rule-based
+  methods.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,6 +19,8 @@ metadata:
   - MWFormer
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c03781
   title: MWFormer

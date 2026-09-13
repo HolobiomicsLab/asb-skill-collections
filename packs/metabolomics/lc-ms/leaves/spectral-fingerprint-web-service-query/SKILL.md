@@ -1,9 +1,10 @@
 ---
 name: spectral-fingerprint-web-service-query
-description: Use when you have a high-resolution LC-MS/MS spectrum or pre-computed molecular fingerprint from a small-molecule sample and need to retrieve a systematic structural classification (compound class and subclass) with confidence estimates.
+description: Use when you have a high-resolution LC-MS/MS spectrum or pre-computed
+  molecular fingerprint from a small-molecule sample and need to retrieve a systematic
+  structural classification (compound class and subclass) with confidence estimates.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -16,6 +17,8 @@ metadata:
   - ClassyFire
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41587-021-01045-9
   title: cosmic

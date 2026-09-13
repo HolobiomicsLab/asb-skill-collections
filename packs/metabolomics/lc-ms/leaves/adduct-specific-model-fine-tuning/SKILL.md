@@ -1,9 +1,9 @@
 ---
 name: adduct-specific-model-fine-tuning
-description: Use when when you have access to annotated MS/MS spectra from a specific ionization mode (e.g., negative ESI) or adduct class (e.
+description: Use when when you have access to annotated MS/MS spectra from a specific
+  ionization mode (e.g., negative ESI) or adduct class (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +16,8 @@ metadata:
   - SIRIUS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf

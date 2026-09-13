@@ -1,9 +1,11 @@
 ---
 name: notebook-execution-and-reproducibility
-description: Use when when you have access to a peer-reviewed manuscript with an accompanying interactive notebook and public data repository, and you need to verify that the published figures can be regenerated from the original data through the documented processing pipeline, or when you want to reuse the.
+description: Use when when you have access to a peer-reviewed manuscript with an accompanying
+  interactive notebook and public data repository, and you need to verify that the
+  published figures can be regenerated from the original data through the documented
+  processing pipeline, or when you want to reuse the.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +16,8 @@ metadata:
   - MetaboLights
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-021-01198-0
   title: SpaceM

@@ -1,9 +1,10 @@
 ---
 name: peak-height-threshold-optimization
-description: Use when you have raw metabolomic LC-MS data processed through XCMS CentWave feature extraction and want to improve true positive feature recovery while controlling false positive rate and crash likelihood.
+description: Use when you have raw metabolomic LC-MS data processed through XCMS CentWave
+  feature extraction and want to improve true positive feature recovery while controlling
+  false positive rate and crash likelihood.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,6 +14,8 @@ metadata:
   - XCMS CentWave
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c04758
   title: Paramounter

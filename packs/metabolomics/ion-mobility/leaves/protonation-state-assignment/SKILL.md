@@ -1,9 +1,10 @@
 ---
 name: protonation-state-assignment
-description: Use when you have SMILES-encoded molecular structures and need to model their behavior under electrospray ionization (ESI) or other ionization methods in mass spectrometry.
+description: Use when you have SMILES-encoded molecular structures and need to model
+  their behavior under electrospray ionization (ESI) or other ionization methods in
+  mass spectrometry.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0417
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,6 +15,8 @@ metadata:
   - Snakemake
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS

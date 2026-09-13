@@ -1,9 +1,10 @@
 ---
 name: binary-spectral-data-extraction
-description: Use when you have parsed imzML XML metadata and loaded the corresponding .ibd binary intensity file, and need to extract specific ion images at one or more target m/z values.
+description: Use when you have parsed imzML XML metadata and loaded the corresponding
+  .ibd binary intensity file, and need to extract specific ion images at one or more
+  target m/z values.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,13 +17,16 @@ metadata:
   techniques:
   - MS-imaging
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c02138
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
 evidence_spans:
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally defined threshold
+- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
+  defined threshold
 - '|pewpew| is an open-source LA-ICP-MS data import and processing application'
 - based on the python library pewlib_
 claims: []

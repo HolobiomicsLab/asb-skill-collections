@@ -1,9 +1,11 @@
 ---
 name: compound-ground-truth-matching
-description: Use when when you have pre-computed embeddings for query and reference MS/MS spectra, computed their cosine similarity matrix, and need to measure retrieval success by verifying whether the correct compound (identified by SMILES string) appears in the top-1, top-5, or top-10 ranked candidates from.
+description: Use when when you have pre-computed embeddings for query and reference
+  MS/MS spectra, computed their cosine similarity matrix, and need to measure retrieval
+  success by verifying whether the correct compound (identified by SMILES string)
+  appears in the top-1, top-5, or top-10 ranked candidates from.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -19,6 +21,8 @@ metadata:
   - embedding
   techniques:
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding

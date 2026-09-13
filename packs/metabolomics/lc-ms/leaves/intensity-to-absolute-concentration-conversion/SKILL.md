@@ -1,9 +1,10 @@
 ---
 name: intensity-to-absolute-concentration-conversion
-description: Use when your lipidomics experiment includes spiked internal lipid standards of known concentration, and you have raw signal intensity matrices from LipidSearch or LIQUID output.
+description: Use when your lipidomics experiment includes spiked internal lipid standards
+  of known concentration, and you have raw signal intensity matrices from LipidSearch
+  or LIQUID output.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,13 +16,17 @@ metadata:
   - LIPID MAPS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac706
   title: ADViSELipidomics
 evidence_spans:
 - outputs from LipidSearch and LIQUID for lipid identification and quantification
-- ADViSELipidomics can normalize the data matrix, providing absolute values of concentration per lipid and sample
-- ADViSELipidomics is a novel Shiny app for the preprocessing, analysis, and visualization of lipidomics data.
+- ADViSELipidomics can normalize the data matrix, providing absolute values of concentration
+  per lipid and sample
+- ADViSELipidomics is a novel Shiny app for the preprocessing, analysis, and visualization
+  of lipidomics data.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

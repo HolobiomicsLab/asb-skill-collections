@@ -1,9 +1,10 @@
 ---
 name: peak-table-deconvolution
-description: Use when your peak table contains ions with similar retention time and mass-to-charge ratios that likely represent isotopic patterns incorrectly split during preprocessing or detector artifacts.
+description: Use when your peak table contains ions with similar retention time and
+  mass-to-charge ratios that likely represent isotopic patterns incorrectly split
+  during preprocessing or detector artifacts.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +16,8 @@ metadata:
   - MPACT
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04632
   title: MPACT

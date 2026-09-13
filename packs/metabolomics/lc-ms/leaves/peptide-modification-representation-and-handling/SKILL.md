@@ -1,9 +1,11 @@
 ---
 name: peptide-modification-representation-and-handling
-description: 'Use when when you have an observed MS/MS spectrum and need to annotate fragment peaks against a known modified peptide sequence. Specifically: (1) you possess a peptide amino acid sequence with known or predicted post-translational modifications at specific positions;'
+description: 'Use when when you have an observed MS/MS spectrum and need to annotate
+  fragment peaks against a known modified peptide sequence. Specifically: (1) you
+  possess a peptide amino acid sequence with known or predicted post-translational
+  modifications at specific positions;'
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3649
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,12 +18,16 @@ metadata:
   - Numba
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

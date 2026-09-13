@@ -1,9 +1,11 @@
 ---
 name: mass-spectrometry-feature-clustering
-description: Use when after XCMS feature detection and alignment when you have a CSV-formatted feature table with m/z and retention time annotations and want to deduplicate isotopic peaks, adducts, and in-source fragments into compound-level clusters before molecular weight inference or spectral matching.
+description: Use when after XCMS feature detection and alignment when you have a CSV-formatted
+  feature table with m/z and retention time annotations and want to deduplicate isotopic
+  peaks, adducts, and in-source fragments into compound-level clusters before molecular
+  weight inference or spectral matching.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -18,13 +20,16 @@ metadata:
   - Sirius
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
 evidence_spans:
 - ramclustR function is built to use xcms data
 - RC <- ramclustR(xcmsObj = xset, ExpDes=experiment)
-- submitting this score matrix for heirarchical clustering, and then cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
+- submitting this score matrix for heirarchical clustering, and then cutting the resulting
+  dendrogram into neat chunks using the dynamicTreeCut package
 - cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
 claims: []
 provenance:

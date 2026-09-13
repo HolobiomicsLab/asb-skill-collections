@@ -1,9 +1,10 @@
 ---
 name: file-grouping-by-sample-attributes
-description: Use when you have a validated ReDU sample-information metadata table (gnps_metadata.tsv) loaded from a MassIVE accession, and you need to partition public MS/MS files into multiple analysis cohorts by one or more sample attributes.
+description: Use when you have a validated ReDU sample-information metadata table
+  (gnps_metadata.tsv) loaded from a MassIVE accession, and you need to partition public
+  MS/MS files into multiple analysis cohorts by one or more sample attributes.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,6 +18,8 @@ metadata:
   - ReDU metadata validator
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU

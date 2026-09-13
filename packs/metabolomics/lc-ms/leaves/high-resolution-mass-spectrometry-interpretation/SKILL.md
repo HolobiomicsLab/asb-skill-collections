@@ -1,9 +1,10 @@
 ---
 name: high-resolution-mass-spectrometry-interpretation
-description: Use when you have centroided LC- or GC-HRMS data (in mzML format, ideally from data-dependent acquisition) and need to identify potential PFAS candidates from a large feature list.
+description: Use when you have centroided LC- or GC-HRMS data (in mzML format, ideally
+  from data-dependent acquisition) and need to identify potential PFAS candidates
+  from a large feature list.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,6 +18,8 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen

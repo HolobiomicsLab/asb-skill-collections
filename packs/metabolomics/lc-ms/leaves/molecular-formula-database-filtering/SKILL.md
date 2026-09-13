@@ -1,9 +1,11 @@
 ---
 name: molecular-formula-database-filtering
-description: Use when when you need to constrain a large metabolite database to a specific instrumental range (e.g., m/z 100–1000) before generating virtual chemical mixtures for LC-MS/MS simulation, or when you need to verify that a reported filtered database count can be reproduced from raw database files.
+description: Use when when you need to constrain a large metabolite database to a
+  specific instrumental range (e.g., m/z 100–1000) before generating virtual chemical
+  mixtures for LC-MS/MS simulation, or when you need to verify that a reported filtered
+  database count can be reproduced from raw database files.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,6 +16,8 @@ metadata:
   - HMDB database
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms

@@ -1,9 +1,9 @@
 ---
 name: nv-header-structure-interpretation
-description: Use when you have a raw NV file from NMRViewJ or compatible NMR acquisition software and need to extract header metadata before processing spectroscopic data.
+description: Use when you have a raw NV file from NMRViewJ or compatible NMR acquisition
+  software and need to extract header metadata before processing spectroscopic data.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0593
@@ -11,6 +11,8 @@ metadata:
   - NMRFx
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx

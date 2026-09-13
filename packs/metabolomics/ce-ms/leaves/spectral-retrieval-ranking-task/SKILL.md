@@ -1,9 +1,11 @@
 ---
 name: spectral-retrieval-ranking-task
-description: Use when when you have pre-computed dense embeddings for query spectra (unknown compounds) and reference spectra (spectral library), and you need to rank library entries by similarity to each query for compound identification or structural similarity retrieval.
+description: Use when when you have pre-computed dense embeddings for query spectra
+  (unknown compounds) and reference spectra (spectral library), and you need to rank
+  library entries by similarity to each query for compound identification or structural
+  similarity retrieval.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -18,6 +20,8 @@ metadata:
   - Tokenizer
   techniques:
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding

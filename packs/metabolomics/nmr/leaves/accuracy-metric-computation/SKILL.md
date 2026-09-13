@@ -1,9 +1,11 @@
 ---
 name: accuracy-metric-computation
-description: Use when after running inference on a trained structure prediction model with one or more input modalities (1H NMR, 13C NMR, or combined), you have generated predicted molecular formulas and connectivity graphs that need to be compared against known ground truth structures.
+description: Use when after running inference on a trained structure prediction model
+  with one or more input modalities (1H NMR, 13C NMR, or combined), you have generated
+  predicted molecular formulas and connectivity graphs that need to be compared against
+  known ground truth structures.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -13,6 +15,8 @@ metadata:
   - convolutional neural network
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct

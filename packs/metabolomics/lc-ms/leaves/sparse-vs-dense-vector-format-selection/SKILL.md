@@ -1,9 +1,11 @@
 ---
 name: sparse-vs-dense-vector-format-selection
-description: Use when when converting high-resolution tandem mass spectra to vectors for clustering or similarity searching, you must decide whether to output sparse or dense vectors. Use this decision point after binning spectra into mass bins but before constructing nearest-neighbor indexes.
+description: Use when when converting high-resolution tandem mass spectra to vectors
+  for clustering or similarity searching, you must decide whether to output sparse
+  or dense vectors. Use this decision point after binning spectra into mass bins but
+  before constructing nearest-neighbor indexes.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -13,11 +15,14 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

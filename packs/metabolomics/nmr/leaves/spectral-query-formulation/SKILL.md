@@ -1,9 +1,10 @@
 ---
 name: spectral-query-formulation
-description: Use when you have a query mass spectrum (or representative metabolite spectrum from public data) and need to identify it by searching against large spectral reference databases (millions to billions of spectra).
+description: Use when you have a query mass spectrum (or representative metabolite
+  spectrum from public data) and need to identify it by searching against large spectral
+  reference databases (millions to billions of spectra).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +16,8 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41587-023-01985-4
   title: MASST

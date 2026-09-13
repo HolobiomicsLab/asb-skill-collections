@@ -1,9 +1,10 @@
 ---
 name: gcims-dataset-object-creation
-description: Use when you have raw GCIMS sample files (from a GC–IMS instrument) and an annotations table (Excel, CSV, or TSV) with sample metadata, and you need to begin the GCIMS preprocessing pipeline.
+description: Use when you have raw GCIMS sample files (from a GC–IMS instrument) and
+  an annotations table (Excel, CSV, or TSV) with sample metadata, and you need to
+  begin the GCIMS preprocessing pipeline.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +16,8 @@ metadata:
   - LC-MS
   - GC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.chemolab.2023.104938
   title: GCIMS

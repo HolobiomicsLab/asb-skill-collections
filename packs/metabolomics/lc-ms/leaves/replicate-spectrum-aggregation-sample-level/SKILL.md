@@ -1,9 +1,10 @@
 ---
 name: replicate-spectrum-aggregation-sample-level
-description: Use when after frequency-based denoising has been applied to individual replicate spectra within each feature (via generate_denoised_spectra), you have a collection of denoised fragment ion lists per feature per scan.
+description: Use when after frequency-based denoising has been applied to individual
+  replicate spectra within each feature (via generate_denoised_spectra), you have
+  a collection of denoised fragment ion lists per feature per scan.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -19,13 +20,19 @@ metadata:
   - data.table
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
 evidence_spans:
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager", "knitr", "markdown"),
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager",
+  "knitr", "markdown"),
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim"
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

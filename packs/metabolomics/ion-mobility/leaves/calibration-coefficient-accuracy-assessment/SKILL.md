@@ -1,9 +1,11 @@
 ---
 name: calibration-coefficient-accuracy-assessment
-description: Use when after applying deimos.calibration.tunemix() to positive-mode or negative-mode tune mix reference data (containing known CCS values across m/z range 118–1522), assess whether the single-field calibration model's r-squared coefficient meets the expected precision (typically ≥0.
+description: Use when after applying deimos.calibration.tunemix() to positive-mode
+  or negative-mode tune mix reference data (containing known CCS values across m/z
+  range 118–1522), assess whether the single-field calibration model's r-squared coefficient
+  meets the expected precision (typically ≥0.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +17,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos

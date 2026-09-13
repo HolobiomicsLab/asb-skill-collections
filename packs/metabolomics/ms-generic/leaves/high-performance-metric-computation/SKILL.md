@@ -1,9 +1,11 @@
 ---
 name: high-performance-metric-computation
-description: Use when you have implemented or are evaluating an algorithmic or system optimization (e.g., MASST+) that claims to reduce execution time, and you need to quantify and statistically validate the speedup against a baseline system (e.g., MASST).
+description: Use when you have implemented or are evaluating an algorithmic or system
+  optimization (e.g., MASST+) that claims to reduce execution time, and you need to
+  quantify and statistically validate the speedup against a baseline system (e.g.,
+  MASST).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -14,6 +16,8 @@ metadata:
   - MASST+
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41587-023-01985-4
   title: MASST

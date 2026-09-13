@@ -1,9 +1,11 @@
 ---
 name: spectral-peak-visualization
-description: Use when you have a resolved mass spectrum (m/z values, intensities, and metadata) from a supported USI source (GNPS, MassBank, MetaboLights, Metabolomics Workbench, ProteoXchange, MS2LDA, or MassIVE) and need to create a publication-ready image that retains a link back to an interactive spectrum.
+description: Use when you have a resolved mass spectrum (m/z values, intensities,
+  and metadata) from a supported USI source (GNPS, MassBank, MetaboLights, Metabolomics
+  Workbench, ProteoXchange, MS2LDA, or MassIVE) and need to create a publication-ready
+  image that retains a link back to an interactive spectrum.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -19,6 +21,8 @@ metadata:
   - MetabolomicsSpectrumResolver
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.05.09.086066
   title: Metabolomics Spectrum Resolver

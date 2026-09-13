@@ -1,9 +1,10 @@
 ---
 name: psm-to-spectrum-linking-validation
-description: Use when when you have PSM files from a proteomics search engine (e.g., MaxQuant, MSGFPlus, Mascot) and corresponding spectrum files (mzML or MGF format) that need to be linked before rescoring.
+description: Use when when you have PSM files from a proteomics search engine (e.g.,
+  MaxQuant, MSGFPlus, Mascot) and corresponding spectrum files (mzML or MGF format)
+  that need to be linked before rescoring.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -13,6 +14,8 @@ metadata:
   - psm_utils
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/pmic.202300336
   title: MS2Rescore (immunopeptidome rescoring)

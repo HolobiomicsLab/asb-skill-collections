@@ -1,9 +1,11 @@
 ---
 name: metabolomics-data-format-handling
-description: Use when you have raw LC-MS data in mzML or equivalent binary format from a public repository (MetaboLights, MassIVE) or instrument vendor output, and need to ingest it into MetaboAnalystR 4.0 for unified LC-MS1 feature detection and MS/MS spectra processing.
+description: Use when you have raw LC-MS data in mzML or equivalent binary format
+  from a public repository (MetaboLights, MassIVE) or instrument vendor output, and
+  need to ingest it into MetaboAnalystR 4.0 for unified LC-MS1 feature detection and
+  MS/MS spectra processing.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -13,6 +15,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-024-48009-6
   title: metaboanalystr

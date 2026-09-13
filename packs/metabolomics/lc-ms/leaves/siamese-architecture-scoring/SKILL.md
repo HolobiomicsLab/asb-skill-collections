@@ -1,9 +1,10 @@
 ---
 name: siamese-architecture-scoring
-description: Use when after a TCN-based formula prediction model has generated initial formula candidates from MS/MS spectra, apply this skill to rescore and refine those candidates when you need to improve ranking accuracy.
+description: Use when after a TCN-based formula prediction model has generated initial
+  formula candidates from MS/MS spectra, apply this skill to rescore and refine those
+  candidates when you need to improve ranking accuracy.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,6 +14,8 @@ metadata:
   - FIDDLE (research codebase)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

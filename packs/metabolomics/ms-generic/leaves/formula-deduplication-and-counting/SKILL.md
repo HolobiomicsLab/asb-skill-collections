@@ -1,9 +1,11 @@
 ---
 name: formula-deduplication-and-counting
-description: Use when when you have loaded a chemical database (e.g., HMDB pickle file) and need to understand how many distinct molecular formulas remain after filtering for a specific m/z range (e.g., 100–1000) and MS acquisition level (typically MS level 1).
+description: Use when when you have loaded a chemical database (e.g., HMDB pickle
+  file) and need to understand how many distinct molecular formulas remain after filtering
+  for a specific m/z range (e.g., 100–1000) and MS acquisition level (typically MS
+  level 1).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3439
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,14 +16,18 @@ metadata:
   - pandas
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
 evidence_spans:
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible and modular framework designed to simulate fragmentation strategies'
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive and modular framework for the simulation of fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible
+  and modular framework designed to simulate fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive
+  and modular framework for the simulation of fragmentation strategies'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

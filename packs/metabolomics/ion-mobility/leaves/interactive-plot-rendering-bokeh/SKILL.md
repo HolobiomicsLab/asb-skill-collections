@@ -1,9 +1,11 @@
 ---
 name: interactive-plot-rendering-bokeh
-description: Use when when you have mass spectrometry data in a Pandas DataFrame with columns for m/z, retention time (or ion mobility), and intensity, and you want to generate interactive (rather than static) visualizations for exploratory analysis, interactive drill-down, or deployment in web applications or.
+description: Use when when you have mass spectrometry data in a Pandas DataFrame with
+  columns for m/z, retention time (or ion mobility), and intensity, and you want to
+  generate interactive (rather than static) visualizations for exploratory analysis,
+  interactive drill-down, or deployment in web applications or.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,12 +17,15 @@ metadata:
   - Pandas
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
 evidence_spans:
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 - These examples are generated if `backend='ms_bokheh'
 - Multiple backends supported including matplotlib, bokeh, and plotly
 - ms_data.plot(x="m/z", y="intensity", kind="spectrum")

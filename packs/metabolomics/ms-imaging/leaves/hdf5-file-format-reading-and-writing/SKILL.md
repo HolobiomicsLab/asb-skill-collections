@@ -1,9 +1,11 @@
 ---
 name: hdf5-file-format-reading-and-writing
-description: 'Use when you have isotope-corrected or raw ion-image intensity matrices from LipidQMap or similar MSI software and need to: (1) export them as persistent HDF5 containers for archival or sharing, (2) programmatically read an existing Cardinal::HDF5 export to extract intensity matrices and feature.'
+description: 'Use when you have isotope-corrected or raw ion-image intensity matrices
+  from LipidQMap or similar MSI software and need to: (1) export them as persistent
+  HDF5 containers for archival or sharing, (2) programmatically read an existing Cardinal::HDF5
+  export to extract intensity matrices and feature.'
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,12 +18,15 @@ metadata:
   - Cardinal
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.10.15.682422v1
   title: LipidQMap
 evidence_spans:
 - LipidQMap writes MSI exports as HDF5 containers
-- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org) conventions.
+- LipidQMap writes MSI exports as HDF5 containers that follow the [`Cardinal::HDF5`](https://cardinalmsi.org)
+  conventions.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

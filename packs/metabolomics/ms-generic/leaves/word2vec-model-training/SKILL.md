@@ -3,7 +3,6 @@ name: word2vec-model-training
 description: Use when when you have a collection of mass spectra (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3465
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +14,8 @@ metadata:
   - Anaconda
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39279-7
   title: FastEI

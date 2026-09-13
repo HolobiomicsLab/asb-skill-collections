@@ -1,9 +1,10 @@
 ---
 name: ion-feature-extraction
-description: Use when you have raw mass-spectrometry data files (mzML, mzXML, or vendor formats) from untargeted metabolomics experiments and need to identify and quantify differential metabolic ion peaks.
+description: Use when you have raw mass-spectrometry data files (mzML, mzXML, or vendor
+  formats) from untargeted metabolomics experiments and need to identify and quantify
+  differential metabolic ion peaks.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0769
@@ -13,6 +14,8 @@ metadata:
   - MetaQC
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21147/j.issn.1000-9604.2023.05.11
   title: OpenNAU

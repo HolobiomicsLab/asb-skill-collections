@@ -1,9 +1,11 @@
 ---
 name: fragment-recurrence-frequency-calculation
-description: Use when after extracting and grouping fragments from top x% TIC-filtered replicate spectra for a given feature, to quantify which fragments consistently appear across replicates. Use this when you have multiple MS/MS spectra for the same precursor (e.
+description: Use when after extracting and grouping fragments from top x% TIC-filtered
+  replicate spectra for a given feature, to quantify which fragments consistently
+  appear across replicates. Use this when you have multiple MS/MS spectra for the
+  same precursor (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -18,13 +20,18 @@ metadata:
   - label_individual_spectrum
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
 evidence_spans:
 - devtools::install_github("BiosystemEngineeringLab-IITB/dures", auth_token = NULL)
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager", "knitr", "markdown"),
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager",
+  "knitr", "markdown"),
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

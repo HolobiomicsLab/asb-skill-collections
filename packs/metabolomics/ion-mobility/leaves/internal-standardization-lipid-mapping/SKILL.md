@@ -1,9 +1,11 @@
 ---
 name: internal-standardization-lipid-mapping
-description: Use when you have (LC-)IM-MS lipidomics data from samples spiked with U13C-labeled yeast extract, measured CCS values for both labeled and unlabeled lipids, and need to quantify systematic CCS bias between your instrument and a reference library before applying bias correction.
+description: Use when you have (LC-)IM-MS lipidomics data from samples spiked with
+  U13C-labeled yeast extract, measured CCS values for both labeled and unlabeled lipids,
+  and need to quantify systematic CCS bias between your instrument and a reference
+  library before applying bias correction.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -15,11 +17,14 @@ metadata:
   - data.table
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c01253
   title: mobilipid
 evidence_spans:
-- Our tool enhances CCS quality control by providing a R Markdown that integrates into IM-MS lipidomics workflows
+- Our tool enhances CCS quality control by providing a R Markdown that integrates
+  into IM-MS lipidomics workflows
 - providing a R Markdown that integrates into IM-MS lipidomics workflows
 claims: []
 provenance:

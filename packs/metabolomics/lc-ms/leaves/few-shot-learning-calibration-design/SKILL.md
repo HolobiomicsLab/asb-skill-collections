@@ -1,9 +1,10 @@
 ---
 name: few-shot-learning-calibration-design
-description: Use when you have experimental retention times measured on a source chromatographic method and want to predict RTs on a target chromatographic method, but possess only a small set (10–100) of molecules with ground-truth measurements on both methods.
+description: Use when you have experimental retention times measured on a source chromatographic
+  method and want to predict RTs on a target chromatographic method, but possess only
+  a small set (10–100) of molecules with ground-truth measurements on both methods.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -13,11 +14,14 @@ metadata:
   - cmmrt
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

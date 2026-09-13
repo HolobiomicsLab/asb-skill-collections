@@ -1,9 +1,9 @@
 ---
 name: kegg-pathway-prediction-from-spectra
-description: Use when you have untargeted MS2 spectral data (in MS2MP-compatible format) and need to assign KEGG pathway annotations to unknown metabolites.
+description: Use when you have untargeted MS2 spectral data (in MS2MP-compatible format)
+  and need to assign KEGG pathway annotations to unknown metabolites.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -12,11 +12,14 @@ metadata:
   - MS2MP
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c06875
   title: MS2MP
 evidence_spans:
-- MS2MP is a novel deep learning-based framework for KEGG pathway prediction directly from untargeted tandem mass spectrometry(MS2)
+- MS2MP is a novel deep learning-based framework for KEGG pathway prediction directly
+  from untargeted tandem mass spectrometry(MS2)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,11 @@
 ---
 name: spectra-object-instantiation-and-manipulation
-description: Use when you have mass spectrometry spectral data (m/z and intensity pairs, precursor m/z, MS level, and metadata) in R memory or in a file format (mzML, mzXML, CDF, MGF, MSP), and you need to organize it into a queryable, processable object before performing spectral similarity calculations.
+description: Use when you have mass spectrometry spectral data (m/z and intensity
+  pairs, precursor m/z, MS level, and metadata) in R memory or in a file format (mzML,
+  mzXML, CDF, MGF, MSP), and you need to organize it into a queryable, processable
+  object before performing spectral similarity calculations.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3218
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,13 +19,18 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
 evidence_spans:
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R.
-- integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based MS analysis in R
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
+  MS analysis in R
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
+  MS analysis in R.
+- integration of Python MS packages into a [*Spectra*](https://github.com/RforMassSpectrometry/Spectra)-based
+  MS analysis in R
 - integration of Python MS packages into a [*Spectra*]-based MS analysis in R
 claims: []
 provenance:

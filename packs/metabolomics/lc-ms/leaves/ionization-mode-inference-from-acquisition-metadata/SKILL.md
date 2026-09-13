@@ -1,9 +1,10 @@
 ---
 name: ionization-mode-inference-from-acquisition-metadata
-description: Use when when beginning preprocessing of a new LC-MS dataset with mzML files or raw acquisitions and you need to determine which ionization mode was used before running feature detection (Asari) or empirical compound grouping (khipu).
+description: Use when when beginning preprocessing of a new LC-MS dataset with mzML
+  files or raw acquisitions and you need to determine which ionization mode was used
+  before running feature detection (Asari) or empirical compound grouping (khipu).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3803
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,6 +16,8 @@ metadata:
   - Asari
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

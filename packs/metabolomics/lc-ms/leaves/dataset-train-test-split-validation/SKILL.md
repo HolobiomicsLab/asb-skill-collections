@@ -1,9 +1,11 @@
 ---
 name: dataset-train-test-split-validation
-description: Use when when preparing MS/MS spectra for deep learning model training on a specific instrument type (e.g., Orbitrap, Q-TOF), and you need to verify that configuration-driven filtering (e.g., adding 'ftms' to an instrument allowlist) produces training and test sets of the expected size (e.
+description: Use when when preparing MS/MS spectra for deep learning model training
+  on a specific instrument type (e.g., Orbitrap, Q-TOF), and you need to verify that
+  configuration-driven filtering (e.g., adding 'ftms' to an instrument allowlist)
+  produces training and test sets of the expected size (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,6 +15,8 @@ metadata:
   - msfiddle
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

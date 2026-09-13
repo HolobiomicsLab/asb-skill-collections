@@ -1,9 +1,11 @@
 ---
 name: hierarchical-clustering-dendrogram-cutting
-description: Use when after XCMS feature detection, grouping, retention time correction, and missing value filling have produced an aligned feature matrix, when you need to group features (m/z, retention time pairs) that likely originate from the same metabolite.
+description: Use when after XCMS feature detection, grouping, retention time correction,
+  and missing value filling have produced an aligned feature matrix, when you need
+  to group features (m/z, retention time pairs) that likely originate from the same
+  metabolite.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -18,13 +20,16 @@ metadata:
   - Sirius
   techniques:
   - direct-infusion-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
 evidence_spans:
 - ramclustR function is built to use xcms data
 - RC <- ramclustR(xcmsObj = xset, ExpDes=experiment)
-- submitting this score matrix for heirarchical clustering, and then cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
+- submitting this score matrix for heirarchical clustering, and then cutting the resulting
+  dendrogram into neat chunks using the dynamicTreeCut package
 - cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
 - We have adapted the 'findMain' function from the 'InterpretMSSpectrum' CRAN package
 claims: []

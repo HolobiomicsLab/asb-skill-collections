@@ -1,9 +1,11 @@
 ---
 name: confidence-score-thresholding-in-proteomics
-description: Use when when loading search results from Data-Independent Acquisition (DIA) mass spectrometry workflows (e.g., output from OpenSwath or similar feature detection tools) and you need to restrict the analyte pool to those meeting a strict false-discovery rate (FDR) threshold.
+description: Use when when loading search results from Data-Independent Acquisition
+  (DIA) mass spectrometry workflows (e.g., output from OpenSwath or similar feature
+  detection tools) and you need to restrict the analyte pool to those meeting a strict
+  false-discovery rate (FDR) threshold.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,12 +16,15 @@ metadata:
   - OpenSwath
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash
 evidence_spans:
 - ResultsLoader
-- MassDash is a modular and flexible python package that has a streamlit graphical user interface (GUI)
+- MassDash is a modular and flexible python package that has a streamlit graphical
+  user interface (GUI)
 - ':mod:`massdash.loaders`: Classes for loading data'
 claims: []
 provenance:

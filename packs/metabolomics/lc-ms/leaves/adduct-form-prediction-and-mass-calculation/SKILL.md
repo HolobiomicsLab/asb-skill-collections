@@ -1,9 +1,11 @@
 ---
 name: adduct-form-prediction-and-mass-calculation
-description: Use when you have a characterized lipid species (with defined class and fatty acid composition) and need to predict which adduct forms will ionize under your experimental ionization mode (positive or negative ESI), and you require accurate precursor m/z values for DDA method configuration or.
+description: Use when you have a characterized lipid species (with defined class and
+  fatty acid composition) and need to predict which adduct forms will ionize under
+  your experimental ionization mode (positive or negative ESI), and you require accurate
+  precursor m/z values for DDA method configuration or.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -13,6 +15,8 @@ metadata:
   - LSG (Lipid Spectrum Generator)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04518
   title: Lipid Spectrum Generator

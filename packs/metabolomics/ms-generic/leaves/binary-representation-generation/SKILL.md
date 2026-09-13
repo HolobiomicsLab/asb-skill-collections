@@ -1,9 +1,10 @@
 ---
 name: binary-representation-generation
-description: Use when you have raw mass spectra data (MGF format with m/z/intensity pairs) that need to be clustered rapidly, especially on large-scale proteomics datasets (millions of spectra).
+description: Use when you have raw mass spectra data (MGF format with m/z/intensity
+  pairs) that need to be clustered rapidly, especially on large-scale proteomics datasets
+  (millions of spectra).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,6 +17,8 @@ metadata:
   - Docker
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00612
   title: HyperSpec

@@ -1,9 +1,11 @@
 ---
 name: spatial-metabolomics-feature-annotation
-description: Use when your spatial metabolomics dataset contains raw m/z features (e.g., from MALDI-MS imaging or LC-MS/MS) without metabolite annotations, and you have selected a reference database and adduct type appropriate for your ionization mode and biological sample.
+description: Use when your spatial metabolomics dataset contains raw m/z features
+  (e.g., from MALDI-MS imaging or LC-MS/MS) without metabolite annotations, and you
+  have selected a reference database and adduct type appropriate for your ionization
+  mode and biological sample.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3755
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -17,6 +19,13 @@ metadata:
   techniques:
   - LC-MS
   - MS-imaging
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ''
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP

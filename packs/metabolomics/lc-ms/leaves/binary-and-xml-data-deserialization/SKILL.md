@@ -1,9 +1,10 @@
 ---
 name: binary-and-xml-data-deserialization
-description: Use when you have raw LC-MS data in .mzML (XML-based) or Thermo .raw (proprietary binary) format and need to load it into memory for visualization, querying, or downstream analysis.
+description: Use when you have raw LC-MS data in .mzML (XML-based) or Thermo .raw
+  (proprietary binary) format and need to load it into memory for visualization, querying,
+  or downstream analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +15,8 @@ metadata:
   - XML parser (mzML)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.0c00618
   title: lcmsWorld

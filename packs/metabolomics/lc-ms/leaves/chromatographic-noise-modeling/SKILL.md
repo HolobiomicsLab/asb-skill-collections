@@ -1,9 +1,11 @@
 ---
 name: chromatographic-noise-modeling
-description: Use when you need to generate blank or background-only .mzML files for method validation, when you want to create synthetic negative controls with realistic instrumental noise but no analyte peaks, or when you need to simulate serum matrix background (e.
+description: Use when you need to generate blank or background-only .mzML files for
+  method validation, when you want to create synthetic negative controls with realistic
+  instrumental noise but no analyte peaks, or when you need to simulate serum matrix
+  background (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,11 +17,14 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
 - The underlying engine handles binary data encoding via the `base64enc` package
 - github.com__yufree__mzrtsim
 claims: []

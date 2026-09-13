@@ -1,9 +1,11 @@
 ---
 name: cross-script-consistency-verification
-description: Use when when a deep learning pipeline processes mass spectrometry spectra through multiple independent scripts (e.g., train_rescore.py, run_fiddle.py, test_caffeine.py) and a specific feature must be removed or masked to prevent the model from learning directly from a protected input (e.
+description: Use when when a deep learning pipeline processes mass spectrometry spectra
+  through multiple independent scripts (e.g., train_rescore.py, run_fiddle.py, test_caffeine.py)
+  and a specific feature must be removed or masked to prevent the model from learning
+  directly from a protected input (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,6 +15,8 @@ metadata:
   - FIDDLE
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

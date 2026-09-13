@@ -1,9 +1,11 @@
 ---
 name: metabolomic-feature-tree-construction
-description: Use when when you have preprocessed LC-MS/MS data (MGF file with MS1 and MS2 spectra and a feature abundance table from MZmine2 or similar peak detection tool) and need to perform chemical phylogeny-based diversity analyses or meta-analyses comparing metabolomic profiles across multiple samples or.
+description: Use when when you have preprocessed LC-MS/MS data (MGF file with MS1
+  and MS2 spectra and a feature abundance table from MZmine2 or similar peak detection
+  tool) and need to perform chemical phylogeny-based diversity analyses or meta-analyses
+  comparing metabolomic profiles across multiple samples or.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3934
   edam_topics:
   - http://edamontology.org/topic_0637
@@ -16,11 +18,14 @@ metadata:
   - GNPS (Feature-Based Molecular Networking)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
 evidence_spans:
-- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed comparison of untargeted metabolomic profiles.
+- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed
+  comparison of untargeted metabolomic profiles.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

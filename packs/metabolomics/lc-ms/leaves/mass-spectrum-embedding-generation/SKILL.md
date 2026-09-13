@@ -1,9 +1,9 @@
 ---
 name: mass-spectrum-embedding-generation
-description: Use when you have cleaned MS/MS spectra (in formats like .mgf, .msp, .
+description: Use when you have cleaned MS/MS spectra (in formats like .mgf, .msp,
+  .
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,16 +17,23 @@ metadata:
   - UMAP
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
 - Our MS2DeepScore Python library offers two types of data generators
 - To estimate the uncertainty of a prediction we used Monte-Carlo Dropout ensembles
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities.
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
-- Our MS2DeepScore Python library offers two types of data generators, one which iterates over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over all spectra and was used for
-- Using the t-SNE [28] implementation from scikit-learn [29] we computed two-dimensional coordinates
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities.
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities
+- Our MS2DeepScore Python library offers two types of data generators, one which iterates
+  over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over
+  all spectra and was used for
+- Using the t-SNE [28] implementation from scikit-learn [29] we computed two-dimensional
+  coordinates
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

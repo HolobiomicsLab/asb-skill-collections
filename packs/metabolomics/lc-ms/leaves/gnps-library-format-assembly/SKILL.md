@@ -1,9 +1,11 @@
 ---
 name: gnps-library-format-assembly
-description: Use when you have extracted MS1 and MS2 scans (in mzML/mzXML format) from raw chromatogram files and possess user-provided metadata (retention time, m/z, compound name, molecular weight, annotation fields) that must be combined into a single structured library entry suitable for spectral library.
+description: Use when you have extracted MS1 and MS2 scans (in mzML/mzXML format)
+  from raw chromatogram files and possess user-provided metadata (retention time,
+  m/z, compound name, molecular weight, annotation fields) that must be combined into
+  a single structured library entry suitable for spectral library.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3347
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,12 +17,15 @@ metadata:
   - MassBank
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04343
   title: MeRgeION
 evidence_spans:
 - merged into a GNPS-style spectral library
-- search and annotate an unknown spectrum in their local database or public databases (i.e. drug structures in GNPS, MASSBANK and DrugBANK)
+- search and annotate an unknown spectrum in their local database or public databases
+  (i.e. drug structures in GNPS, MASSBANK and DrugBANK)
 - github.com__daniellyz__meRgeION2
 claims: []
 provenance:

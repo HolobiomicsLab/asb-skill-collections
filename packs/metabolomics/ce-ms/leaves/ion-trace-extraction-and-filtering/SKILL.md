@@ -1,9 +1,10 @@
 ---
 name: ion-trace-extraction-and-filtering
-description: Use when you have CE-MS raw data (mzML or netCDF format) containing a known target analyte with a precise m/z value, and you need to isolate its signal within a defined effective mobility window (e.
+description: Use when you have CE-MS raw data (mzML or netCDF format) containing a
+  known target analyte with a precise m/z value, and you need to isolate its signal
+  within a defined effective mobility window (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,6 +18,8 @@ metadata:
   - R
   techniques:
   - CE-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR

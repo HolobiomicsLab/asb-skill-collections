@@ -1,9 +1,10 @@
 ---
 name: qc-reference-chromatogram-extraction
-description: Use when when processing a batch of LC-MS samples in mzML or mzXML format where at least one file has been designated as a quality control (QC) file, extract its TIC or BPC before performing retention time correction.
+description: Use when when processing a batch of LC-MS samples in mzML or mzXML format
+  where at least one file has been designated as a quality control (QC) file, extract
+  its TIC or BPC before performing retention time correction.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -12,12 +13,16 @@ metadata:
   - MetCohort
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c04906
   title: MetCohort
 evidence_spans:
-- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data processing tool for large-scale metabolomics and exposomics
-- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data processing tool
+- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data
+  processing tool for large-scale metabolomics and exposomics
+- MetCohort is an untargeted liquid chromatography-mass spectrometry (LC-MS) data
+  processing tool
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

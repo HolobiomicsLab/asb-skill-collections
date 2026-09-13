@@ -1,9 +1,11 @@
 ---
 name: heterogeneous-graph-embedding-design
-description: Use when when building a Graph Transformer model for continuous property prediction on molecules with associated experimental or instrumental metadata (e.g., retention time prediction across different chromatographic columns, methods, or conditions).
+description: Use when when building a Graph Transformer model for continuous property
+  prediction on molecules with associated experimental or instrumental metadata (e.g.,
+  retention time prediction across different chromatographic columns, methods, or
+  conditions).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0292
   edam_topics:
   - http://edamontology.org/topic_3343
@@ -17,11 +19,14 @@ metadata:
   - NumPy
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT
 evidence_spans:
-- Graphormer-RT is an extension to the Graphormer package, with documentation, and the original code on Github
+- Graphormer-RT is an extension to the Graphormer package, with documentation, and
+  the original code on Github
 - import dgl
 claims: []
 provenance:

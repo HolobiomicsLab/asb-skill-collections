@@ -1,9 +1,10 @@
 ---
 name: ms1-spectrum-simulation
-description: Use when when you need to generate synthetic LC-MS/MS data to test fragmentation strategies, validate acquisition controllers, or benchmark peak-picking and spectral matching algorithms before deployment on real mass spectrometers.
+description: Use when when you need to generate synthetic LC-MS/MS data to test fragmentation
+  strategies, validate acquisition controllers, or benchmark peak-picking and spectral
+  matching algorithms before deployment on real mass spectrometers.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -17,14 +18,18 @@ metadata:
   - MZMine
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
 evidence_spans:
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible and modular framework designed to simulate fragmentation strategies'
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive and modular framework for the simulation of fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible
+  and modular framework designed to simulate fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive
+  and modular framework for the simulation of fragmentation strategies'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,10 @@
 ---
 name: mass-to-charge-tolerance-matching
-description: Use when you have statistically significant LC-MS features and need to group them into structural clusters. Specifically, use it after selecting features by p-value threshold (e.g., p < 0.
+description: Use when you have statistically significant LC-MS features and need to
+  group them into structural clusters. Specifically, use it after selecting features
+  by p-value threshold (e.g., p < 0.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -21,6 +22,8 @@ metadata:
   - metDataModel
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
@@ -29,7 +32,8 @@ derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: ''
 evidence_spans:
-- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry datasets.
+- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry
+  datasets.
 - import pandas as pd
 - import numpy as np
 - 'Dependencies: scipy'

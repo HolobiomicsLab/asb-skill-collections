@@ -1,9 +1,9 @@
 ---
 name: feature-based-molecular-network-interpretation
-description: Use when you have a feature-based molecular network generated from non-targeted LC-MS/MS metabolomics data (e.
+description: Use when you have a feature-based molecular network generated from non-targeted
+  LC-MS/MS metabolomics data (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_2238
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -17,6 +17,8 @@ metadata:
   - Google Colab
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41596-024-01046-3
   title: FBMN-STATS

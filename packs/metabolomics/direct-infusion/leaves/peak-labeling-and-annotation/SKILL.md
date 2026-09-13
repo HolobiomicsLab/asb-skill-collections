@@ -1,9 +1,10 @@
 ---
 name: peak-labeling-and-annotation
-description: Use when immediately after automatic peak detection on a raw or processed MS spectrum when you have a list of candidate peaks with m/z and intensity values but lack systematic identifiers, confidence estimates, or ranked ordering.
+description: Use when immediately after automatic peak detection on a raw or processed
+  MS spectrum when you have a list of candidate peaks with m/z and intensity values
+  but lack systematic identifiers, confidence estimates, or ranked ordering.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +15,8 @@ metadata:
   - ASAP-MS
   techniques:
   - direct-infusion-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass

@@ -1,9 +1,11 @@
 ---
 name: motif-database-lookup-and-retrieval
-description: Use when after completing the MS2LDA LDA modeling step when you have a JSON-serialized inferred motifset (Mass2Motifs with fragment and neutral-loss patterns) and need to annotate those motifs by comparing them against a curated MotifDB reference database to identify known structural subpatterns.
+description: Use when after completing the MS2LDA LDA modeling step when you have
+  a JSON-serialized inferred motifset (Mass2Motifs with fragment and neutral-loss
+  patterns) and need to annotate those motifs by comparing them against a curated
+  MotifDB reference database to identify known structural subpatterns.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +16,8 @@ metadata:
   - MS2LDA
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
@@ -21,7 +25,8 @@ evidence_spans:
 - Integration with MassQL-searchable MotifDB
 - Compare motifs to known entries in MotifDB
 - MS2LDA (Mass Spectrometry–Latent Dirichlet Allocation) is a framework
-- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely to explain the observed fragmentation patterns
+- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely
+  to explain the observed fragmentation patterns
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

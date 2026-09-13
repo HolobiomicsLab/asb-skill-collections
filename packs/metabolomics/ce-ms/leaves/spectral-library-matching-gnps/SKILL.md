@@ -1,9 +1,11 @@
 ---
 name: spectral-library-matching-gnps
-description: Use when you have MS2 product-ion spectra in open formats (.mzML or .mzXML) from public mass spectrometry datasets (e.g., from MassIVE with a valid accession) and need to identify chemical compounds by comparing fragmentation patterns against the GNPS reference spectral library.
+description: Use when you have MS2 product-ion spectra in open formats (.mzML or .mzXML)
+  from public mass spectrometry datasets (e.g., from MassIVE with a valid accession)
+  and need to identify chemical compounds by comparing fragmentation patterns against
+  the GNPS reference spectral library.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +18,8 @@ metadata:
   techniques:
   - CE-MS
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU

@@ -1,9 +1,11 @@
 ---
 name: cross-dataset-score-distribution-comparison
-description: 'Use when when you have applied multiple scoring functions (e.g., strain correlation and IOKR) to rank genomic-metabolomic (GCF-MF or BGC-spectrum) links and need to verify that: (1) standardisation produces zero mean and unit variance across all links;'
+description: 'Use when when you have applied multiple scoring functions (e.g., strain
+  correlation and IOKR) to rank genomic-metabolomic (GCF-MF or BGC-spectrum) links
+  and need to verify that: (1) standardisation produces zero mean and unit variance
+  across all links;'
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_0203
@@ -18,18 +20,24 @@ metadata:
   - Paired Omics Data Platform (PoDP)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- After downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- After downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE clusters the BGCs separately by product type
-- antiSMASH to score the correspondence between the MIBiG entries and the detected BGCs
-- the MIBiG database [32] has emerged as a central repository of characterised microbial BGCs
-- this way, we built a set of known BGC-spectrum pairs. To avoid etabolites based on properties absent from an MS2 spectrum,
+- antiSMASH to score the correspondence between the MIBiG entries and the detected
+  BGCs
+- the MIBiG database [32] has emerged as a central repository of characterised microbial
+  BGCs
+- this way, we built a set of known BGC-spectrum pairs. To avoid etabolites based
+  on properties absent from an MS2 spectrum,
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

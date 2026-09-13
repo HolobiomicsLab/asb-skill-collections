@@ -3,7 +3,6 @@ name: acquisition-mode-enumeration-and-validation
 description: Use when adopting a mass spectrometry-based analysis tool (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_topics:
   - http://edamontology.org/topic_3520
   - http://edamontology.org/topic_0121
@@ -17,6 +16,8 @@ metadata:
   - MZmine
   techniques:
   - direct-infusion-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch

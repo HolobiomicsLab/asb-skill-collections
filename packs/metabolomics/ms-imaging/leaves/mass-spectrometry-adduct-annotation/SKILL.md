@@ -1,9 +1,10 @@
 ---
 name: mass-spectrometry-adduct-annotation
-description: Use when you have tabulated pairwise mass differences from a MALDI-MS imaging dataset (via massdiff()) and need to identify which observed mass differences correspond to known chemical adducts (e.g., [M+H]+, [M+Na]+, [M-H2O]+).
+description: Use when you have tabulated pairwise mass differences from a MALDI-MS
+  imaging dataset (via massdiff()) and need to identify which observed mass differences
+  correspond to known chemical adducts (e.g., [M+H]+, [M+Na]+, [M-H2O]+).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -24,6 +25,8 @@ metadata:
   - SCARF
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
@@ -32,9 +35,11 @@ derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: ''
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - We can match massdiffs to specific adduct types using the same function `adductMatch`
-- If the data matrix is very large, it may need to be reformatted to be loaded into memory during an R session.
+- If the data matrix is very large, it may need to be reformatted to be loaded into
+  memory during an R session.
 - corrPairsMSI(d,d.diff.annot)
 - Powered by RDKit
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data

@@ -1,9 +1,11 @@
 ---
 name: cross-reference-publication-linking
-description: Use when when cataloging a suite of related bioinformatics tools or web applications (particularly in domains like metabolomics, microbiology, or systems biology) and you need to establish the authoritative peer-reviewed or preprint publication for each tool, verify publication URLs are live, and.
+description: Use when when cataloging a suite of related bioinformatics tools or web
+  applications (particularly in domains like metabolomics, microbiology, or systems
+  biology) and you need to establish the authoritative peer-reviewed or preprint publication
+  for each tool, verify publication URLs are live, and.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0089
@@ -18,6 +20,8 @@ metadata:
   - robinschmid/microbe_masst
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41564-023-01575-9
   title: microbemasst

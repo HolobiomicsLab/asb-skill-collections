@@ -1,9 +1,10 @@
 ---
 name: adduct-mass-adjustment-calculation
-description: Use when you have a set of in silico-predicted compounds (with SMILES structures) and an experimental metabolomics peak list (m/z values), and you need to filter predictions to only those that could plausibly be detected.
+description: Use when you have a set of in silico-predicted compounds (with SMILES
+  structures) and an experimental metabolomics peak list (m/z values), and you need
+  to filter predictions to only those that could plausibly be detected.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -15,6 +16,8 @@ metadata:
   - MINE-Database Filter base class
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe

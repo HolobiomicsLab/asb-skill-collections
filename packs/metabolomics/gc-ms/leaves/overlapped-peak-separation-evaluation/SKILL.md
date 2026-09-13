@@ -1,9 +1,10 @@
 ---
 name: overlapped-peak-separation-evaluation
-description: Use when you have trained a GCMSFormer Transformer model on augmented simulated overlapped peaks and need to measure its generalization performance on unseen test data.
+description: Use when you have trained a GCMSFormer Transformer model on augmented
+  simulated overlapped peaks and need to measure its generalization performance on
+  unseen test data.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +16,8 @@ metadata:
   - GCMSFormer
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05772
   title: GCMSFormer

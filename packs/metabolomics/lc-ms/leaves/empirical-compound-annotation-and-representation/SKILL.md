@@ -1,9 +1,11 @@
 ---
 name: empirical-compound-annotation-and-representation
-description: Use when you have a tab-delimited feature table (m/z, retention time, intensities) from LC-MS preprocessing and need to group related ions (isotopologues, adducts, in-source fragments) into compound-level annotations with inferred neutral mass.
+description: Use when you have a tab-delimited feature table (m/z, retention time,
+  intensities) from LC-MS preprocessing and need to group related ions (isotopologues,
+  adducts, in-source fragments) into compound-level annotations with inferred neutral
+  mass.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -18,6 +20,8 @@ metadata:
   - khipu
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu

@@ -1,9 +1,11 @@
 ---
 name: chromatographic-peak-detection-and-integration
-description: 'Use when after loading centroided .mzML LC-MS data and defining a target list (compound ID, name, m/z, RT, polarity) when you need to: (1) automatically locate and integrate peaks for known compounds across multiple runs; (2) generate per-target and per-run quantitative metrics;'
+description: 'Use when after loading centroided .mzML LC-MS data and defining a target
+  list (compound ID, name, m/z, RT, polarity) when you need to: (1) automatically
+  locate and integrate peaks for known compounds across multiple runs; (2) generate
+  per-target and per-run quantitative metrics;'
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -18,12 +20,15 @@ metadata:
   - MsExperiment
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
 evidence_spans:
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
-- It makes use of an established retention time correction algorithm from the `xcms` package
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
 - R package for *TArgeted Raw Data Integration In Spectrometry*
 - knitr::include_graphics
 - kableExtra::kable

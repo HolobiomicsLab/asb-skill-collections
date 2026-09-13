@@ -1,9 +1,11 @@
 ---
 name: false-positive-negative-detection-in-pattern-matching
-description: Use when when reconstructing or validating the ColumnFinder component in mwtab, you need to assess whether the combined NameMatcher.dict_match and ValueMatcher.series_match operations are correctly populating database-ID columns. Apply this skill after defining NameMatcher patterns (e.
+description: Use when when reconstructing or validating the ColumnFinder component
+  in mwtab, you need to assess whether the combined NameMatcher.dict_match and ValueMatcher.series_match
+  operations are correctly populating database-ID columns. Apply this skill after
+  defining NameMatcher patterns (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,6 +18,8 @@ metadata:
   - Python regular expressions (re module)
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo11030163
   title: mwtab Python Library for RESTful Access

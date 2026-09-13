@@ -1,9 +1,11 @@
 ---
 name: transformation-product-parent-linkage
-description: Use when after suspect screening has identified both parent features (from before-treatment or reference samples) and TP candidate features (from after-treatment or exposed samples) in the same analysis set, and you have MS/MS spectral data or formula annotations available.
+description: Use when after suspect screening has identified both parent features
+  (from before-treatment or reference samples) and TP candidate features (from after-treatment
+  or exposed samples) in the same analysis set, and you have MS/MS spectral data or
+  formula annotations available.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +17,8 @@ metadata:
   - MetFrag
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-020-00477-w
   title: patRoon

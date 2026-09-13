@@ -1,9 +1,10 @@
 ---
 name: file-format-dispatch-and-handler-routing
-description: Use when you have a parser library that must support multiple file formats (e.g., mzML, SQLite, compressed gzip) and want to avoid conditional logic scattered throughout the parsing code.
+description: Use when you have a parser library that must support multiple file formats
+  (e.g., mzML, SQLite, compressed gzip) and want to avoid conditional logic scattered
+  throughout the parsing code.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +16,8 @@ metadata:
   - black
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml

@@ -1,9 +1,10 @@
 ---
 name: visual-pattern-recognition-in-spectral-data
-description: Use when after database search algorithms have scored unknown MS samples against reference species, and you need to visually inspect and confirm species assignments or identify ambiguous classifications.
+description: Use when after database search algorithms have scored unknown MS samples
+  against reference species, and you need to visually inspect and confirm species
+  assignments or identify ambiguous classifications.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3552
   edam_topics:
   - http://edamontology.org/topic_0081
@@ -14,6 +15,8 @@ metadata:
   - ASAP-MS
   techniques:
   - direct-infusion-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass

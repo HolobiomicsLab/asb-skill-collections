@@ -1,14 +1,16 @@
 ---
 name: block-layout-analysis-for-io-optimization
-description: Use when when preparing NMR datasets for processing in NMRFx and the Dataset.createDataFile() method must choose among competing storage backends.
+description: Use when when preparing NMR datasets for processing in NMRFx and the
+  Dataset.createDataFile() method must choose among competing storage backends.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_topics: []
   tools:
   - NMRFx
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx

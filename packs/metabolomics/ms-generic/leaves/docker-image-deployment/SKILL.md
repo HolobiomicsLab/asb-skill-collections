@@ -1,9 +1,9 @@
 ---
 name: docker-image-deployment
-description: Use when when you have a containerized scientific tool available on Docker Hub (e.
+description: Use when when you have a containerized scientific tool available on Docker
+  Hub (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3173
@@ -15,12 +15,15 @@ metadata:
   - Java 21
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-016-0115-9
   title: MetFrag
 evidence_spans:
 - docker run -it --rm -p 8888:8080 ipbhalle/metfragweb
-- This container packages the MetFrag (https://github.com/ipb-halle/MetFragRelaunched) webapp
+- This container packages the MetFrag (https://github.com/ipb-halle/MetFragRelaunched)
+  webapp
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

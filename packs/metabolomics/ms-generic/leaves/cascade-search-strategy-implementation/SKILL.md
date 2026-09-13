@@ -1,9 +1,10 @@
 ---
 name: cascade-search-strategy-implementation
-description: Use when when performing open modification spectral library searches on high-resolution mass spectra where computational cost is prohibitive if every query is scored against every library spectrum.
+description: Use when when performing open modification spectral library searches
+  on high-resolution mass spectra where computational cost is prohibitive if every
+  query is scored against every library spectrum.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -13,12 +14,16 @@ metadata:
   - Faiss
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00359
   title: ANN-SoLo
 evidence_spans:
-- ANN-SoLo (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine
-- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is a spectral library search engine'
+- ANN-SoLo (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary) is
+  a spectral library search engine
+- '**ANN-SoLo** (**A**pproximate **N**earest **N**eighbor **S**pectral **L**ibrary)
+  is a spectral library search engine'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

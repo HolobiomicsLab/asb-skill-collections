@@ -1,9 +1,11 @@
 ---
 name: fatty-acid-composition-generation
-description: Use when you need to systematically enumerate all possible lipid species within a defined analytical scope—specifically when you have specified one or more lipid classes (e.g., phosphatidylcholine, triacylglycerol) and fatty acid composition ranges (e.
+description: Use when you need to systematically enumerate all possible lipid species
+  within a defined analytical scope—specifically when you have specified one or more
+  lipid classes (e.g., phosphatidylcholine, triacylglycerol) and fatty acid composition
+  ranges (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -12,6 +14,8 @@ metadata:
   - LSG
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04518
   title: Lipid Spectrum Generator

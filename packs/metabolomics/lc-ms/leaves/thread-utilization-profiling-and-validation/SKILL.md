@@ -1,9 +1,11 @@
 ---
 name: thread-utilization-profiling-and-validation
-description: Use when when deploying Mass2SMILES inference on CPU-only hardware (e.g., when GPU/CUDA support is unavailable), you need to verify that the InferenceModel cpu_threads parameter (e.g., cpu_threads=128) actually controls thread allocation during execution.
+description: Use when when deploying Mass2SMILES inference on CPU-only hardware (e.g.,
+  when GPU/CUDA support is unavailable), you need to verify that the InferenceModel
+  cpu_threads parameter (e.g., cpu_threads=128) actually controls thread allocation
+  during execution.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_topics: []
   tools:
   - Python
@@ -12,6 +14,8 @@ metadata:
   - Mass2SMILES (delser292/mass2smiles:final)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.07.06.547963v1
   title: Mass2SMILES

@@ -1,9 +1,9 @@
 ---
 name: backend-performance-comparison
-description: Use when you have execution-time metrics (from a benchmark table or profiling logs) across multiple visualization backends for the same set of plots (e.
+description: Use when you have execution-time metrics (from a benchmark table or profiling
+  logs) across multiple visualization backends for the same set of plots (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,12 +17,15 @@ metadata:
   - Pandas
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
 evidence_spans:
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 - ms_data.plot(x="m/z", y="intensity", kind="spectrum")
 - conda create --name=pyopenms-viz python=3.12
 - Multiple backends supported including matplotlib, bokeh, and plotly

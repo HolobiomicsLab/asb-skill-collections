@@ -1,9 +1,11 @@
 ---
 name: transformer-cnn-hybrid-model-training
-description: Use when you have preprocessed 1H NMR spectral data with compound labels and need to identify multiple compounds in a flavor mixture where both local spectral patterns (handled by CNN) and long-range spectral dependencies (handled by Transformer) are diagnostic.
+description: Use when you have preprocessed 1H NMR spectral data with compound labels
+  and need to identify multiple compounds in a flavor mixture where both local spectral
+  patterns (handled by CNN) and long-range spectral dependencies (handled by Transformer)
+  are diagnostic.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0621
@@ -15,6 +17,8 @@ metadata:
   - FlavorFormer
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.microc.2025.115372
   title: FlavorFormer

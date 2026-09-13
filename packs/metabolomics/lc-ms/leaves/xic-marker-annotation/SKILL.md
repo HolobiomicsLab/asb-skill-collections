@@ -1,9 +1,9 @@
 ---
 name: xic-marker-annotation
-description: Use when when you have a resolved spectrum file (mzML, mzXML) and need to visualize where MS2 precursor scans occur on an XIC display.
+description: Use when when you have a resolved spectrum file (mzML, mzXML) and need
+  to visualize where MS2 precursor scans occur on an XIC display.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3694
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -13,6 +13,8 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-021-01339-5
   title: GNPS Dashboard

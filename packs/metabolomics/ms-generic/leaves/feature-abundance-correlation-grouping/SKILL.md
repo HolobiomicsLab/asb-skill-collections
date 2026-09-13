@@ -1,9 +1,10 @@
 ---
 name: feature-abundance-correlation-grouping
-description: Use when after performing retention-time-based feature grouping (e.g., 10–20 second windows), when you observe large feature groups that may conflate multiple independent compounds with coincidentally similar retention times.
+description: Use when after performing retention-time-based feature grouping (e.g.,
+  10–20 second windows), when you observe large feature groups that may conflate multiple
+  independent compounds with coincidentally similar retention times.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,11 +14,14 @@ metadata:
   - xcms
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package with additional functionality being implemented
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package with additional functionality being implemented
 - VignetteDepends{xcms,BiocStyle,faahKO,pheatmap,MsFeatures}
 claims: []
 provenance:

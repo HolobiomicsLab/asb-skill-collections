@@ -1,9 +1,11 @@
 ---
 name: gcf-mf-link-scoring
-description: Use when after BGC detection and clustering (producing GCFs) and metabolomics profiling (producing MFs with MS/MS spectra), when you have paired genomic and metabolomic data from the same microbial strains and need to rank which GCF–MF pairs are likely to represent true biosynthetic relationships.
+description: Use when after BGC detection and clustering (producing GCFs) and metabolomics
+  profiling (producing MFs with MS/MS spectra), when you have paired genomic and metabolomic
+  data from the same microbial strains and need to rank which GCF–MF pairs are likely
+  to represent true biosynthetic relationships.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3697
@@ -17,18 +19,23 @@ metadata:
   - NPLinker
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.11.617756
   title: NPLinker
 - doi: 10.1371/journal.pcbi.1008920
   title: ''
 evidence_spans:
-- after downloading the strain assemblies and metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+- after downloading the strain assemblies and metabolomics data, the genomes were
+  run through antiSMASH v5.0.0 for BGC detection
 - genomes were run through antiSMASH v5.0.0 for BGC detection
 - and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
 - BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
-- the metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
-- we use library MS2 spectra from the public, community-driven GNPS knowledge base [33] as a training set for the IOKR model
+- the metabolomics data, the genomes were run through antiSMASH v5.0.0 for BGC detection
+  and BiG-SCAPE v1.0.0 to cluster the BGCs into GCFs
+- we use library MS2 spectra from the public, community-driven GNPS knowledge base
+  [33] as a training set for the IOKR model
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

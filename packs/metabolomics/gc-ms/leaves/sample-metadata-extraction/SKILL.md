@@ -1,9 +1,11 @@
 ---
 name: sample-metadata-extraction
-description: Use when when you have an Excel file uploaded by a user following the InjectionDesign template schema and need to convert it into a modifiable, structured sample list that preserves up to three classification dimensions and QC type assignments for LC/GC-MS multi-omics experiments.
+description: Use when when you have an Excel file uploaded by a user following the
+  InjectionDesign template schema and need to convert it into a modifiable, structured
+  sample list that preserves up to three classification dimensions and QC type assignments
+  for LC/GC-MS multi-omics experiments.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -12,6 +14,8 @@ metadata:
   - InjectionDesign
   techniques:
   - GC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.02.26.530140v1.article-info
   title: InjectionDesign

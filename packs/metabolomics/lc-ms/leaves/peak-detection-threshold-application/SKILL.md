@@ -1,9 +1,10 @@
 ---
 name: peak-detection-threshold-application
-description: Use when converting raw MS/MS spectra from library files (e.g., .msp format) into structured library entries, or when annotating experimental LC–MS features against fragment databases.
+description: Use when converting raw MS/MS spectra from library files (e.g., .msp
+  format) into structured library entries, or when annotating experimental LC–MS features
+  against fragment databases.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -15,11 +16,14 @@ metadata:
   - RamClustR
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - To install this package, start R (version "4.5.0" or higher)
 claims: []
 provenance:

@@ -1,9 +1,11 @@
 ---
 name: tabular-data-field-comparison
-description: Use when you have multiple independent implementations of the same data format reader (e.g., Rust, Python, R versions) and need to verify they produce identical or equivalent output.
+description: Use when you have multiple independent implementations of the same data
+  format reader (e.g., Rust, Python, R versions) and need to verify they produce identical
+  or equivalent output.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,6 +19,8 @@ metadata:
   - R arrow
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak

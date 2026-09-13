@@ -1,9 +1,10 @@
 ---
 name: irt-peptide-calibration-and-scoring
-description: Use when when you need to assess whether retention times measured on a given LC-MS run follow the expected linear relationship defined by iRT peptide standards (e.g., Pierce or Biognosys iRT peptides).
+description: Use when when you need to assess whether retention times measured on
+  a given LC-MS run follow the expected linear relationship defined by iRT peptide
+  standards (e.g., Pierce or Biognosys iRT peptides).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +15,8 @@ metadata:
   - R base (stats::lm)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -21,8 +24,10 @@ derived_from:
   title: ''
 evidence_spans:
 - rawrr::readSpectrum
-- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file
-- The extracted information is written to a temporary location on the harddrive, read back into memory and parsed into `R` objects using RawFileReader API
+- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime,
+  in the `r BiocStyle::Biocpkg('rawrr')` executable file
+- The extracted information is written to a temporary location on the harddrive, read
+  back into memory and parsed into `R` objects using RawFileReader API
 - 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
 claims: []
 provenance:

@@ -1,9 +1,11 @@
 ---
 name: scan-index-parsing-and-filtering
-description: Use when you have a Thermo Orbitrap .raw file and need to (1) verify that a targeted acquisition method (e.g., PRM) maintains consistent scan spacing across all cycles; (2) extract only scans matching a specific precursor ion and fragmentation method;
+description: Use when you have a Thermo Orbitrap .raw file and need to (1) verify
+  that a targeted acquisition method (e.g., PRM) maintains consistent scan spacing
+  across all cycles; (2) extract only scans matching a specific precursor ion and
+  fragmentation method;
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +16,8 @@ metadata:
   - Spectra
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -21,8 +25,10 @@ derived_from:
   title: ''
 evidence_spans:
 - rawrr::readSpectrum
-- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime, in the `r BiocStyle::Biocpkg('rawrr')` executable file
-- The extracted information is written to a temporary location on the harddrive, read back into memory and parsed into `R` objects using RawFileReader API
+- Our .NET 8.0 [@dotnet] precompiled wrapper methods are bundled, including the runtime,
+  in the `r BiocStyle::Biocpkg('rawrr')` executable file
+- The extracted information is written to a temporary location on the harddrive, read
+  back into memory and parsed into `R` objects using RawFileReader API
 - 'ThermoFisher.CommonCore dlls can be obtained through: https://github.com/thermofisherlsms/RawFileReader'
 claims: []
 provenance:

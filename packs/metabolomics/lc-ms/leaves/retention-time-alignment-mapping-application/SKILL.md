@@ -1,9 +1,11 @@
 ---
 name: retention-time-alignment-mapping-application
-description: Use when after mass tracks have been aligned across samples into a MassGrid structure and retention time calibration dictionaries (rt_cal_dict) have been computed for each sample, but before summing intensity vectors element-wise to construct the composite map.
+description: Use when after mass tracks have been aligned across samples into a MassGrid
+  structure and retention time calibration dictionaries (rt_cal_dict) have been computed
+  for each sample, but before summing intensity vectors element-wise to construct
+  the composite map.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,11 +16,14 @@ metadata:
   - asari (CompositeMap module)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:

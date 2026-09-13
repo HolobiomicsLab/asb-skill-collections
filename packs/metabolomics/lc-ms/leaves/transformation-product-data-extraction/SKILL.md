@@ -1,9 +1,11 @@
 ---
 name: transformation-product-data-extraction
-description: Use when after generating or obtaining a TP object (via generateTPs with library, in-silico, or BioTransformer algorithms) that contains SMILES, InChIKey, or formula information for transformation products, and you need to screen those TPs in LC-HRMS data or annotate them using MetFrag.
+description: Use when after generating or obtaining a TP object (via generateTPs with
+  library, in-silico, or BioTransformer algorithms) that contains SMILES, InChIKey,
+  or formula information for transformation products, and you need to screen those
+  TPs in LC-HRMS data or annotate them using MetFrag.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -14,13 +16,16 @@ metadata:
   - screenSuspects
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-020-00477-w
   title: patRoon
 evidence_spans:
 - The `generateTPs` function is used to obtain TPs for a particular set of parents.
 - componTP <- generateComponents(algorithm = "tp",
-- convertToMFDB | Generates a [MetFrag] database for all TPs (and optionally parents, only for TPs with structural information)
+- convertToMFDB | Generates a [MetFrag] database for all TPs (and optionally parents,
+  only for TPs with structural information)
 - Generates a [MetFrag] database for all TPs
 claims: []
 provenance:

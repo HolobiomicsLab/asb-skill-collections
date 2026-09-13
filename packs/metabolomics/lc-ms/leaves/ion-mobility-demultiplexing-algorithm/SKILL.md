@@ -1,9 +1,11 @@
 ---
 name: ion-mobility-demultiplexing-algorithm
-description: Use when you have raw IM-MS data in UIMF or Agilent MassHunter .d format acquired using multiplexed (compressed) ion mobility pulse sequences, and you need to recover conventional (non-multiplexed) IM-MS spectra with resolved mobility and mass dimensions.
+description: Use when you have raw IM-MS data in UIMF or Agilent MassHunter .d format
+  acquired using multiplexed (compressed) ion mobility pulse sequences, and you need
+  to recover conventional (non-multiplexed) IM-MS spectra with resolved mobility and
+  mass dimensions.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -18,18 +20,24 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00220
   title: PNNL PreProcessor
 - doi: 10.1021/acs.jproteome.1c00425
   title: ''
 evidence_spans:
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files) from drift tube (DT) and structure for lossless ion manipulations (SLIM) IM-MS
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files (MS-files) from drift tube (DT) and structure for lossless
+  ion manipulations (SLIM) IM-MS
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files)
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files
 - .NET Framework 4.7.2 or later (included with Windows 10 update 1803 and later releases
-- Microsoft Visual C++ Runtime x64 (may already be installed, if the program doesn't work then you can download vcredist_x64.exe
+- Microsoft Visual C++ Runtime x64 (may already be installed, if the program doesn't
+  work then you can download vcredist_x64.exe
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

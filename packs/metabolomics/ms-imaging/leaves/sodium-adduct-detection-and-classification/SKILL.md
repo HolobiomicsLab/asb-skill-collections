@@ -1,9 +1,10 @@
 ---
 name: sodium-adduct-detection-and-classification
-description: Use when analyzing MALDI-mass spectrometry imaging data in which sodium or other alkali metal contamination is suspected, or when peak lists show unexplained mass differences in the range of ~20–25 Da (characteristic of Na adducts).
+description: Use when analyzing MALDI-mass spectrometry imaging data in which sodium
+  or other alkali metal contamination is suspected, or when peak lists show unexplained
+  mass differences in the range of ~20–25 Da (characteristic of Na adducts).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -18,11 +19,14 @@ metadata:
   techniques:
   - CE-MS
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - library(mass2adduct)
 claims: []
 provenance:

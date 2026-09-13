@@ -1,9 +1,11 @@
 ---
 name: lipid-fragmentation-pattern-application
-description: Use when you have an enumerated list of lipid species (identified by class, fatty acid composition, and chain length) and need to generate theoretical precursor m/z values, fragment ion masses, and relative intensities for targeted or untargeted lipidomics experiments.
+description: Use when you have an enumerated list of lipid species (identified by
+  class, fatty acid composition, and chain length) and need to generate theoretical
+  precursor m/z values, fragment ion masses, and relative intensities for targeted
+  or untargeted lipidomics experiments.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -13,6 +15,8 @@ metadata:
   - Excalibur
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04518
   title: Lipid Spectrum Generator

@@ -1,9 +1,10 @@
 ---
 name: ms-ms-spectral-preprocessing-normalization
-description: Use when you have paired MS/MS spectra from unknown and known metabolites with raw intensity values and need to prepare them as input for a deep-learning model that will predict structural similarity.
+description: Use when you have paired MS/MS spectra from unknown and known metabolites
+  with raw intensity values and need to prepare them as input for a deep-learning
+  model that will predict structural similarity.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +15,8 @@ metadata:
   - Keras
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.8b05405
   title: Deep MS/MS similarity

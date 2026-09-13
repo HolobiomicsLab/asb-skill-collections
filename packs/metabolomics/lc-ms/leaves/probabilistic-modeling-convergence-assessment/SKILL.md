@@ -1,9 +1,9 @@
 ---
 name: probabilistic-modeling-convergence-assessment
-description: Use when during the LDA training phase when you need to decide whether the model has learned a stable representation of Mass2Motifs.
+description: Use when during the LDA training phase when you need to decide whether
+  the model has learned a stable representation of Mass2Motifs.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,11 +15,14 @@ metadata:
   - Latent Dirichlet Allocation (LDA)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
-- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
+- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural
+  language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
 - ms2lda_runfull.py
 - Configure the Python environment (set `PYTHONPATH`, activate conda, etc.)
 - configure the Python environment (set `PYTHONPATH`, activate conda, etc.)

@@ -1,9 +1,10 @@
 ---
 name: transformer-encoder-architecture-implementation
-description: Use when when processing sequential spectroscopic data (1H NMR spectra) where both local chemical shift patterns and global spectral dependencies are needed for compound classification.
+description: Use when when processing sequential spectroscopic data (1H NMR spectra)
+  where both local chemical shift patterns and global spectral dependencies are needed
+  for compound classification.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0218
@@ -15,6 +16,8 @@ metadata:
   - FlavorFormer
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.microc.2025.115372
   title: FlavorFormer

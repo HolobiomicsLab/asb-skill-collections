@@ -1,9 +1,10 @@
 ---
 name: distance-matrix-clustering
-description: Use when you have a sparse pairwise distance matrix derived from nearest neighbor indexing of MS/MS spectra (or similar high-dimensional objects) and need to partition spectra into groups based on local density and neighborhood connectivity.
+description: Use when you have a sparse pairwise distance matrix derived from nearest
+  neighbor indexing of MS/MS spectra (or similar high-dimensional objects) and need
+  to partition spectra into groups based on local density and neighborhood connectivity.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,11 +15,14 @@ metadata:
   - DBSCAN
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

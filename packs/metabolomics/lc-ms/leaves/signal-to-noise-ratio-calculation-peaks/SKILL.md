@@ -1,9 +1,10 @@
 ---
 name: signal-to-noise-ratio-calculation-peaks
-description: Use when after elution peaks have been detected on composite mass tracks using local maxima and prominence detection, before reporting features in the final feature table.
+description: Use when after elution peaks have been detected on composite mass tracks
+  using local maxima and prominence detection, before reporting features in the final
+  feature table.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,13 +17,19 @@ metadata:
   - asari.peaks.stats_detect_elution_peaks
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Asari uses a simple local maxima method (scipy.signal.find_peaks), with prominence control that is dynamically determined on each mass track then each segment.
-- detrend (scipy.signal.detrend) is performed on the mass track. Detrend is a regression method to ensure the baseline is not significantly rising or decreasing over the chromatography.
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Asari uses a simple local maxima method (scipy.signal.find_peaks), with prominence
+  control that is dynamically determined on each mass track then each segment.
+- detrend (scipy.signal.detrend) is performed on the mass track. Detrend is a regression
+  method to ensure the baseline is not significantly rising or decreasing over the
+  chromatography.
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:

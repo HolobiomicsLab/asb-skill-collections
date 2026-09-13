@@ -1,9 +1,9 @@
 ---
 name: feature-grouping-by-molecular-ion
-description: Use when after peak picking and sample alignment have produced an aligned feature table with m/z and retention time coordinates.
+description: Use when after peak picking and sample alignment have produced an aligned
+  feature table with m/z and retention time coordinates.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +15,8 @@ metadata:
   - ADAP
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw

@@ -1,9 +1,9 @@
 ---
 name: feature-correlation-graph-construction
-description: Use when after imputing missing values and before assigning Cluster_IDs in the notame preprocessing pipeline.
+description: Use when after imputing missing values and before assigning Cluster_IDs
+  in the notame preprocessing pipeline.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +14,8 @@ metadata:
   - Biobase
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo10040135
   title: notame
@@ -23,7 +25,8 @@ evidence_spans:
 - This package can be used to analyze preprocessed LC-MS data in non-targeted metabolomics
 - library(notame)
 - reads them to R, conducts additional preprocessing and statistical analyses
-- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package by Bioconductor'
+- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package
+  by Bioconductor'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

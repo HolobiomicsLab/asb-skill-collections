@@ -1,9 +1,11 @@
 ---
 name: ms-dial-output-parsing
-description: Use when you have completed peak picking in MS-DIAL (generating files like Urine_RP_NEG_norm.txt or Urine_RP_POS_norm.txt) and need to load the resulting feature table into R for quality control, feature filtering, normalization, or metabolite annotation.
+description: Use when you have completed peak picking in MS-DIAL (generating files
+  like Urine_RP_NEG_norm.txt or Urine_RP_POS_norm.txt) and need to load the resulting
+  feature table into R for quality control, feature filtering, normalization, or metabolite
+  annotation.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -17,17 +19,22 @@ metadata:
   - Biobase
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
 - doi: 10.1101/2024.06.20.599545
   title: ''
 evidence_spans:
-- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
+  spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
 - The R package margheRita addresses the complete workflow
 - The R package margheRita
-- margheRita is intended to be used after having done a number of data acquisition steps through MS-Dial
+- margheRita is intended to be used after having done a number of data acquisition
+  steps through MS-Dial
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

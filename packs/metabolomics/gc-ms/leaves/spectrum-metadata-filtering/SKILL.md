@@ -1,9 +1,10 @@
 ---
 name: spectrum-metadata-filtering
-description: Use when importing mass spectra from multiple open mass spectra libraries (OMSLs) or databases with heterogeneous metadata quality. Use when you observe spectra annotated with negative adducts (e.
+description: Use when importing mass spectra from multiple open mass spectra libraries
+  (OMSLs) or databases with heterogeneous metadata quality. Use when you observe spectra
+  annotated with negative adducts (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +15,13 @@ metadata:
   - spectra-hash
   techniques:
   - GC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: eMetaboHUB/FragHub
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c02219
   title: FragHub

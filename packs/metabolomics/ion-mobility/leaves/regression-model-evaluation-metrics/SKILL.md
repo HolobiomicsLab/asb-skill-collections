@@ -1,9 +1,10 @@
 ---
 name: regression-model-evaluation-metrics
-description: Use when after training a deep-learning regression model (e.g., for CCS prediction from voxel projected area features), evaluate it on held-out test data to report per-molecule predictions and aggregate performance metrics.
+description: Use when after training a deep-learning regression model (e.g., for CCS
+  prediction from voxel projected area features), evaluate it on held-out test data
+  to report per-molecule predictions and aggregate performance metrics.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -20,6 +21,8 @@ metadata:
   - scikit-learn
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/cem.70040
   title: PACCS

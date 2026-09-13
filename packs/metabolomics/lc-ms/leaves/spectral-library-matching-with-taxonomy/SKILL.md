@@ -1,9 +1,11 @@
 ---
 name: spectral-library-matching-with-taxonomy
-description: Use when you have MS/MS spectra (.mgf) and candidate metabolite annotations (with m/z, retention time, chemical identifiers) linked to a known organism or taxon, and you want to rank annotations by both spectral similarity AND biochemical likelihood in that organism's lineage.
+description: Use when you have MS/MS spectra (.mgf) and candidate metabolite annotations
+  (with m/z, retention time, chemical identifiers) linked to a known organism or taxon,
+  and you want to rank annotations by both spectral similarity AND biochemical likelihood
+  in that organism's lineage.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3628
   edam_topics:
   - http://edamontology.org/topic_0599
@@ -19,6 +21,8 @@ metadata:
   - R (with tidyverse, Spectra, MetaboCoreUtils)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3389/fpls.2019.01329
   title: tima

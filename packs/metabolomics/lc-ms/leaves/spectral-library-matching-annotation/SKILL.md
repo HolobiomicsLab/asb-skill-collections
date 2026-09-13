@@ -1,9 +1,10 @@
 ---
 name: spectral-library-matching-annotation
-description: Use when you have MS2 spectral data (precursor m/z, retention time, and fragment ion patterns) from UPLC-HRMS analysis of environmental or biological samples and need to assign compound identities by comparing against known reference spectra.
+description: Use when you have MS2 spectral data (precursor m/z, retention time, and
+  fragment ion patterns) from UPLC-HRMS analysis of environmental or biological samples
+  and need to assign compound identities by comparing against known reference spectra.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0089
@@ -16,11 +17,14 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.enceco.2025.07.022
   title: MSThunder
 evidence_spans:
-- MSThunder provide a deep learning-based nontargeted analytical framework for the accurate and rapid identification of unknown organic pollutants in water
+- MSThunder provide a deep learning-based nontargeted analytical framework for the
+  accurate and rapid identification of unknown organic pollutants in water
 - A case file named “Pesticides” can be run in the Windows environment
 claims: []
 provenance:

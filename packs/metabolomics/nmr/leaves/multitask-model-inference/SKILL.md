@@ -1,9 +1,11 @@
 ---
 name: multitask-model-inference
-description: Use when you have a trained multitask model checkpoint and preprocessed spectral inputs (1D NMR spectra, 1H-only, 13C-only, or combined 1H+13C), and you need to generate simultaneous predictions of molecular formula and connectivity structure to quantify modality contributions, compare single vs..
+description: Use when you have a trained multitask model checkpoint and preprocessed
+  spectral inputs (1D NMR spectra, 1H-only, 13C-only, or combined 1H+13C), and you
+  need to generate simultaneous predictions of molecular formula and connectivity
+  structure to quantify modality contributions, compare single vs..
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3379
@@ -13,6 +15,8 @@ metadata:
   - transformer architecture
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acscentsci.4c01132
   title: NMR2Struct

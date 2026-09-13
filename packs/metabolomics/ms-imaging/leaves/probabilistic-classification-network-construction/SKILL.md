@@ -1,9 +1,10 @@
 ---
 name: probabilistic-classification-network-construction
-description: Use when when you have raw mass spectrometry imaging data tensors and need to build a trainable deep-learning classifier that outputs class probabilities (tumor vs. non-tumor) without preprocessing or manual peak detection.
+description: Use when when you have raw mass spectrometry imaging data tensors and
+  need to build a trainable deep-learning classifier that outputs class probabilities
+  (tumor vs. non-tumor) without preprocessing or manual peak detection.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3383
@@ -18,8 +19,10 @@ metadata:
   - massNet
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
-- doi: 10.1093/bioinformatics/btac032/6510930
+- doi: 10.1093/bioinformatics/btac032
   title: massNet
 evidence_spans:
 - numpy(1.15.4)
@@ -31,15 +34,15 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_massnet_cq
-    doi: 10.1093/bioinformatics/btac032/6510930
+    doi: 10.1093/bioinformatics/btac032
     title: massNet
   dedup_kept_from: coll_massnet_cq
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bioinformatics/btac032/6510930
+  original_doi: 10.1093/bioinformatics/btac032
   all_source_dois:
-  - 10.1093/bioinformatics/btac032/6510930
+  - 10.1093/bioinformatics/btac032
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias

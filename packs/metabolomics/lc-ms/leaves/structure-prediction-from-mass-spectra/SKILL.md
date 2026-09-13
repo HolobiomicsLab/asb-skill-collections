@@ -1,9 +1,9 @@
 ---
 name: structure-prediction-from-mass-spectra
-description: Use when you have GNPS-style MGF spectral files from MS/MS experiments and need to predict the molecular structure (as SMILES) of unknown compounds.
+description: Use when you have GNPS-style MGF spectral files from MS/MS experiments
+  and need to predict the molecular structure (as SMILES) of unknown compounds.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -15,6 +15,8 @@ metadata:
   - Docker
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.07.06.547963v1
   title: Mass2SMILES

@@ -1,9 +1,11 @@
 ---
 name: neural-network-inference-execution
-description: Use when you have (1) a molecular structure input in SMILES, InChI, or chemical formula format, (2) a pretrained ICEBERG model checkpoint with fragment generation and intensity prediction weights, and (3) a goal to predict fragmentation patterns and m/z intensities for unknown compound.
+description: Use when you have (1) a molecular structure input in SMILES, InChI, or
+  chemical formula format, (2) a pretrained ICEBERG model checkpoint with fragment
+  generation and intensity prediction weights, and (3) a goal to predict fragmentation
+  patterns and m/z intensities for unknown compound.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_0630
@@ -16,6 +18,8 @@ metadata:
   - PubChem
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04654
   title: ICEBERG / fragmentation graph generation

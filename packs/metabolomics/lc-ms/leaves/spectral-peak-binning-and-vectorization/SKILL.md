@@ -1,9 +1,10 @@
 ---
 name: spectral-peak-binning-and-vectorization
-description: Use when you have raw MS/MS spectra with variable numbers of peaks at continuous m/z values and need to feed them to a neural network (e.g., Siamese network for similarity prediction) that requires fixed-size vector input.
+description: Use when you have raw MS/MS spectra with variable numbers of peaks at
+  continuous m/z values and need to feed them to a neural network (e.g., Siamese network
+  for similarity prediction) that requires fixed-size vector input.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,11 +17,14 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included cleaning compound names
+- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included
+  cleaning compound names
 - Our MS2DeepScore Python library offers two types of data generators
 - Our MS2DeepScore Python library
 claims: []

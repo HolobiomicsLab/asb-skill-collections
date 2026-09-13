@@ -1,9 +1,11 @@
 ---
 name: candidate-formula-ranking-by-mass-error
-description: Use when after querying a formula database (KEGG, PubChem, or user-supplied) with neutral mass values derived from observed m/z peaks and adduct transformations, when multiple candidate formulae fall within the configured mass tolerance window (ppm or Da) and you need to rank them by likelihood.
+description: Use when after querying a formula database (KEGG, PubChem, or user-supplied)
+  with neutral mass values derived from observed m/z peaks and adduct transformations,
+  when multiple candidate formulae fall within the configured mass tolerance window
+  (ppm or Da) and you need to rank them by likelihood.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3731
   edam_topics:
   - http://edamontology.org/topic_0218
@@ -14,6 +16,8 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s11306-020-01717-8
   title: MetaboShiny

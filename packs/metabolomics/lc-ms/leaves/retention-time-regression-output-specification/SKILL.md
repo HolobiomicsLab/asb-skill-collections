@@ -1,9 +1,11 @@
 ---
 name: retention-time-regression-output-specification
-description: Use when after initializing and executing a forward pass through a dual-branch RT-Transformer model (combining fingerprint and molecular graph inputs) on a batch of molecular samples, to verify that the output tensor conforms to the expected shape, data type, and numeric range for retention time.
+description: Use when after initializing and executing a forward pass through a dual-branch
+  RT-Transformer model (combining fingerprint and molecular graph inputs) on a batch
+  of molecular samples, to verify that the output tensor conforms to the expected
+  shape, data type, and numeric range for retention time.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -19,6 +21,8 @@ metadata:
   - RT-Transformer reference implementation
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btae084
   title: RT-Transformer

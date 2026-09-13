@@ -1,9 +1,11 @@
 ---
 name: raw-file-routing-and-queuing
-description: Use when you have collected raw MS files via an uploader tool and need to automatically forward them to a data processor for proteomics analysis, ensuring format compatibility and maintaining linkage to the original upload session and user project.
+description: Use when you have collected raw MS files via an uploader tool and need
+  to automatically forward them to a data processor for proteomics analysis, ensuring
+  format compatibility and maintaining linkage to the original upload session and
+  user project.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,6 +18,8 @@ metadata:
   - MSConnect
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00854
   title: MSConnect

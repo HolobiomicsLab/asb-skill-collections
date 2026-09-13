@@ -1,9 +1,10 @@
 ---
 name: composite-mass-track-construction
-description: Use when when processing a multi-sample LC-MS metabolomics project after mass-track extraction and retention-time calibration have been applied to all individual samples, and you need to detect peaks across the entire cohort.
+description: Use when when processing a multi-sample LC-MS metabolomics project after
+  mass-track extraction and retention-time calibration have been applied to all individual
+  samples, and you need to detect peaks across the entire cohort.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3643
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -16,11 +17,14 @@ metadata:
   - asari chromatograms.rt_lowess_calibration
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:

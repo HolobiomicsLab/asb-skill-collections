@@ -1,9 +1,11 @@
 ---
 name: retention-time-indexed-spectral-aggregation
-description: Use when you have Thermo Fisher Scientific .raw files from an LC-MS experiment and need to extract spectral features (base-peak m/z, intensity, scan-level properties) indexed by retention time for downstream statistical analysis, method optimization, or diagnostic visualization.
+description: Use when you have Thermo Fisher Scientific .raw files from an LC-MS experiment
+  and need to extract spectral features (base-peak m/z, intensity, scan-level properties)
+  indexed by retention time for downstream statistical analysis, method optimization,
+  or diagnostic visualization.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,15 +19,21 @@ metadata:
   - rawDiag
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
 - doi: 10.1021/acs.jproteome.0c00866
   title: ''
 evidence_spans:
-- Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific.
-- invoke compiled `C#` wrapper methods using a system call. Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo
-- Our implementation consists of two language layers, the top `R` layer and the hidden `C#` layer.
+- Calling a wrapper method typically results in the execution of methods defined in
+  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific.
+- invoke compiled `C#` wrapper methods using a system call. Calling a wrapper method
+  typically results in the execution of methods defined in the `RawFileReader` dynamic
+  link library provided by Thermo
+- Our implementation consists of two language layers, the top `R` layer and the hidden
+  `C#` layer.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,11 @@
 ---
 name: lchrms-chromatographic-peak-boundary-extraction
-description: Use when you have a set of target molecules with known molecular formula, main adduct, and experimentally determined retention time boundaries, and you want to extract their chromatographic peaks and isotopologues from LC-HRMS mzML files to generate a ground-truth benchmark for validating.
+description: Use when you have a set of target molecules with known molecular formula,
+  main adduct, and experimentally determined retention time boundaries, and you want
+  to extract their chromatographic peaks and isotopologues from LC-HRMS mzML files
+  to generate a ground-truth benchmark for validating.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -17,13 +19,17 @@ metadata:
   - MSconvert
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
-- doi: 10.1093/bioinformatics/btab231/6214530
+- doi: 10.1093/bioinformatics/btab231
   title: mzRAPP
 evidence_spans:
 - 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
-- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing (NPP)
-- mzRAPP extracts and validates chromatographic peaks for which boundaries are provided for all (enviPat predicted) isotopologues
+- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing
+  (NPP)
+- mzRAPP extracts and validates chromatographic peaks for which boundaries are provided
+  for all (enviPat predicted) isotopologues
 - library(mzRAPP)
 claims: []
 provenance:
@@ -31,15 +37,15 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_mzrapp_cq
-    doi: 10.1093/bioinformatics/btab231/6214530
+    doi: 10.1093/bioinformatics/btab231
     title: mzRAPP
   dedup_kept_from: coll_mzrapp_cq
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bioinformatics/btab231/6214530
+  original_doi: 10.1093/bioinformatics/btab231
   all_source_dois:
-  - 10.1093/bioinformatics/btab231/6214530
+  - 10.1093/bioinformatics/btab231
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias

@@ -1,9 +1,11 @@
 ---
 name: targeted-peak-detection-screening-and-validation
-description: Use when you have centroided mzML LC–MS data, a curated list of target compounds (with theoretical m/z, expected retention time, and polarity), and you need to confirm target presence and extract quantitative metrics (area under curve, max intensity, signal-to-noise ratio, peak correlation, point.
+description: Use when you have centroided mzML LC–MS data, a curated list of target
+  compounds (with theoretical m/z, expected retention time, and polarity), and you
+  need to confirm target presence and extract quantitative metrics (area under curve,
+  max intensity, signal-to-noise ratio, peak correlation, point.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -18,13 +20,17 @@ metadata:
   - ProteoWizard MSConvert
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
 evidence_spans:
-- It makes use of an established retention time correction algorithm from the `xcms` package
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
-- Alternatively, instead of using file paths as input for TARDIS, the user can also use an `MsExperiment` object
+- Alternatively, instead of using file paths as input for TARDIS, the user can also
+  use an `MsExperiment` object
 - R package for *TArgeted Raw Data Integration In Spectrometry*
 - knitr::include_graphics
 claims: []

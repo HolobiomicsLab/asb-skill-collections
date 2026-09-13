@@ -1,9 +1,11 @@
 ---
 name: log-transformation-preprocessing
-description: Use when apply log transformation when peak intensity distributions are right-skewed with heteroscedastic variance (intensity-dependent noise), particularly in QC-based batch correction workflows where variance stabilization improves the effectiveness of subsequent Pareto scaling normalization.
+description: Use when apply log transformation when peak intensity distributions are
+  right-skewed with heteroscedastic variance (intensity-dependent noise), particularly
+  in QC-based batch correction workflows where variance stabilization improves the
+  effectiveness of subsequent Pareto scaling normalization.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -14,11 +16,14 @@ metadata:
   - bcpareto
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
 - github.com__yufree__mzrtsim
 claims: []
 provenance:

@@ -1,9 +1,10 @@
 ---
 name: deep-learning-model-architecture-design
-description: Use when you have extracted molecular features (voxel projected areas, molecular graphs, m/z values, adduct encodings) and need to build a predictive model to map these features to a continuous molecular property (CCS).
+description: Use when you have extracted molecular features (voxel projected areas,
+  molecular graphs, m/z values, adduct encodings) and need to build a predictive model
+  to map these features to a continuous molecular property (CCS).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0006
   edam_topics:
   - http://edamontology.org/topic_3474
@@ -21,6 +22,8 @@ metadata:
   - PyG (PyTorch Geometric)
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/cem.70040
   title: PACCS
@@ -37,7 +40,7 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_massnet_cq
-    doi: 10.1093/bioinformatics/btac032/6510930
+    doi: 10.1093/bioinformatics/btac032
     title: massNet
   - build: coll_paccs_cq
     doi: 10.1002/cem.70040

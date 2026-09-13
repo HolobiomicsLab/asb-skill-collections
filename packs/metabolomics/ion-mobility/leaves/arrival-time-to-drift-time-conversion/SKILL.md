@@ -1,9 +1,10 @@
 ---
 name: arrival-time-to-drift-time-conversion
-description: Use when when processing raw TWIM-MS experimental data that contains arrival time measurements but you need drift times for CCS calibration or class-specific CCS calculations.
+description: Use when when processing raw TWIM-MS experimental data that contains
+  arrival time measurements but you need drift times for CCS calibration or class-specific
+  CCS calculations.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +15,8 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal

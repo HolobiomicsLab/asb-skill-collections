@@ -1,9 +1,10 @@
 ---
 name: spectral-similarity-distance-metric-selection
-description: Use when when you have processed LC-MS/MS spectral data in .mgf format with feature identifiers and need to compute a pairwise similarity matrix to support interactive exploration.
+description: Use when when you have processed LC-MS/MS spectral data in .mgf format
+  with feature identifiers and need to compute a pairwise similarity matrix to support
+  interactive exploration.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_2945
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,11 +17,14 @@ metadata:
   - Jupyter notebooks
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore
 evidence_spans:
-- t-SNE embedding that serves as an overview representation of mass spectral similarities based on ms2deepscore
+- t-SNE embedding that serves as an overview representation of mass spectral similarities
+  based on ms2deepscore
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

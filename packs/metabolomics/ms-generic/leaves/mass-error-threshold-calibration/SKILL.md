@@ -1,9 +1,10 @@
 ---
 name: mass-error-threshold-calibration
-description: Use when you have isolated TIC peak regions and need to extract ion chromatograms (EICs) for XCMS parameter estimation via the EICparams function. Use it specifically when your mass analyzer's measurement accuracy is known (e.
+description: Use when you have isolated TIC peak regions and need to extract ion chromatograms
+  (EICs) for XCMS parameter estimation via the EICparams function. Use it specifically
+  when your mass analyzer's measurement accuracy is known (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3628
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -15,6 +16,8 @@ metadata:
   - MSconvert
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/812370
   title: AutoTuner parameter selection

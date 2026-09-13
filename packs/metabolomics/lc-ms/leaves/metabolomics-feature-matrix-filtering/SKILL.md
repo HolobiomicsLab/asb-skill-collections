@@ -1,9 +1,10 @@
 ---
 name: metabolomics-feature-matrix-filtering
-description: Use when you have an aligned MemoMatrix (sample-by-feature occurrence matrix where features are MS2 peaks and neutral losses) and need to remove background noise before applying visualization or clustering techniques (MDS/PCoA, TMAP, Heatmap).
+description: Use when you have an aligned MemoMatrix (sample-by-feature occurrence
+  matrix where features are MS2 peaks and neutral losses) and need to remove background
+  noise before applying visualization or clustering techniques (MDS/PCoA, TMAP, Heatmap).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,12 +16,16 @@ metadata:
   - pandas
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo
 evidence_spans:
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra and converting them into documents.
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra and converting them into documents.
 - conda create --name memo python=3.8
 - pip install numpy
 claims: []

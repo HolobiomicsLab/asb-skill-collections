@@ -1,9 +1,10 @@
 ---
 name: pathway-annotation-database-matching
-description: Use when after marker identification or metabolite annotation has produced a curated list of compound IDs (e.g., KEGG IDs or CAS numbers) and you need to determine which metabolic pathways are statistically overrepresented in your dataset.
+description: Use when after marker identification or metabolite annotation has produced
+  a curated list of compound IDs (e.g., KEGG IDs or CAS numbers) and you need to determine
+  which metabolic pathways are statistically overrepresented in your dataset.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3501
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -17,12 +18,16 @@ metadata:
   - KEGG_Enrich_Plot
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
 evidence_spans:
-- several R packages are utilized in the background processes, including ggfortify, ggplot2, igraph
-- several R packages are utilized in the background processes, including ggplot2, igraph, MASS
+- several R packages are utilized in the background processes, including ggfortify,
+  ggplot2, igraph
+- several R packages are utilized in the background processes, including ggplot2,
+  igraph, MASS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

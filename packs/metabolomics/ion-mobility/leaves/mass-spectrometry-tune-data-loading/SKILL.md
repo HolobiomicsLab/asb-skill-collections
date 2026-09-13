@@ -1,9 +1,11 @@
 ---
 name: mass-spectrometry-tune-data-loading
-description: Use when you have positive- or negative-mode tune reference compound data stored in HDF5 format (e.g., example_tune_pos.h5) and need to extract the tune mass spectrum for CCS calibration. This skill is the entry point before applying deimos.calibration.
+description: Use when you have positive- or negative-mode tune reference compound
+  data stored in HDF5 format (e.g., example_tune_pos.h5) and need to extract the tune
+  mass spectrum for CCS calibration. This skill is the entry point before applying
+  deimos.calibration.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +16,8 @@ metadata:
   - ProteoWizard
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos

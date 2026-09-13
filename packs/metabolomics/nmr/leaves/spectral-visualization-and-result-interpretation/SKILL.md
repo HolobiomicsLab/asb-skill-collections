@@ -1,9 +1,9 @@
 ---
 name: spectral-visualization-and-result-interpretation
-description: Use when after peak clustering, network filtering, and database matching have identified candidate metabolites and their associated peak networks.
+description: Use when after peak clustering, network filtering, and database matching
+  have identified candidate metabolites and their associated peak networks.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -13,6 +13,8 @@ metadata:
   - PyINETA
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c03966
   title: PyINETA

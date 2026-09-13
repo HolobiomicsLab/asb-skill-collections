@@ -1,9 +1,11 @@
 ---
 name: graph-enrichment-operations
-description: Use when you have a GNPS mass spectral molecular network and wish to annotate its nodes with both chemical class assignments (from GNPS public library matches) and MS2LDA-derived substructural motifs (from classical or feature-based LDA experiments) in a single integrated operation, typically for.
+description: Use when you have a GNPS mass spectral molecular network and wish to
+  annotate its nodes with both chemical class assignments (from GNPS public library
+  matches) and MS2LDA-derived substructural motifs (from classical or feature-based
+  LDA experiments) in a single integrated operation, typically for.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0337
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -18,11 +20,14 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo9070144
   title: molnetenhancer
 evidence_spans:
-- pyMolNetEnhancer is a python module integrating chemical class and substructure information
+- pyMolNetEnhancer is a python module integrating chemical class and substructure
+  information
 - pyMolNetEnhancer is a python module
 claims: []
 provenance:

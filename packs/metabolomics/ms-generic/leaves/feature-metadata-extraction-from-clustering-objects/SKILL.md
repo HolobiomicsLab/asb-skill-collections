@@ -1,9 +1,9 @@
 ---
 name: feature-metadata-extraction-from-clustering-objects
-description: Use when after RAMClustR clustering and do.findmain molecular weight inference have been completed on XCMS-detected metabolomics features.
+description: Use when after RAMClustR clustering and do.findmain molecular weight
+  inference have been completed on XCMS-detected metabolomics features.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,6 +17,8 @@ metadata:
   - XCMS
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust

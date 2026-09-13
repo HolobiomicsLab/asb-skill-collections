@@ -1,9 +1,10 @@
 ---
 name: composite-mass-track-assembly-and-peak-detection
-description: Use when after mass tracks have been aligned across all samples into a MassGrid (via sample-wise or centroid-based alignment), you have a unified set of m/z features tracked across the entire study.
+description: Use when after mass tracks have been aligned across all samples into
+  a MassGrid (via sample-wise or centroid-based alignment), you have a unified set
+  of m/z features tracked across the entire study.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -22,15 +23,19 @@ metadata:
   - asari.MassGrid
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - The default method uses `pymzml` to parse mzML files.
 - The preannotaion is done via another package khipu (https://github.com/shuzhao-li-lab/khipu)
-- The empirical compounds are searched against known compound database (default HMDB 4) via another package JMS (https://github.com/shuzhao-li/JMS).
+- The empirical compounds are searched against known compound database (default HMDB
+  4) via another package JMS (https://github.com/shuzhao-li/JMS).
 - known compound database (default HMDB 4)
 claims: []
 provenance:

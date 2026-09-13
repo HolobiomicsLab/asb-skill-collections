@@ -1,9 +1,11 @@
 ---
 name: mass-spectrometry-compound-extraction
-description: Use when you have a preprocessed GC-MS dataset (from spreadOut) with standardized column names (Compound.Name, Component.RT, Base.Peak.MZ, Component.Area, Match.Factor) and a specific list of chemical compounds you want to extract and aggregate across multiple sample runs.
+description: Use when you have a preprocessed GC-MS dataset (from spreadOut) with
+  standardized column names (Compound.Name, Component.RT, Base.Peak.MZ, Component.Area,
+  Match.Factor) and a specific list of chemical compounds you want to extract and
+  aggregate across multiple sample runs.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -18,13 +20,18 @@ metadata:
   - webchem
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pone.0306202
   title: uafr
 evidence_spans:
-- any software or utility that generates the necessary information can be used with simple modifications
-- any software or utility that generates the necessary information can be used with simple modifications (e.g. changing the column names)
-- mzExacto() collects the same information for a set of query chemicals and uses it to precisely search the advanced dictionary for samples that have those chemicals
+- any software or utility that generates the necessary information can be used with
+  simple modifications
+- any software or utility that generates the necessary information can be used with
+  simple modifications (e.g. changing the column names)
+- mzExacto() collects the same information for a set of query chemicals and uses it
+  to precisely search the advanced dictionary for samples that have those chemicals
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

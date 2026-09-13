@@ -1,9 +1,10 @@
 ---
 name: csv-delimiter-parsing-and-configuration
-description: Use when when uploading a new mass spectrometry data file to Punc'data in CSV or delimited-text format, before attempting to map columns to their semantic roles (m/z value, intensity, formula).
+description: Use when when uploading a new mass spectrometry data file to Punc'data
+  in CSV or delimited-text format, before attempting to map columns to their semantic
+  roles (m/z value, intensity, formula).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,6 +14,8 @@ metadata:
   - Punc'data
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00151
   title: Punc’data

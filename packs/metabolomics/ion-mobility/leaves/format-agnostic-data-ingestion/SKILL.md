@@ -1,9 +1,10 @@
 ---
 name: format-agnostic-data-ingestion
-description: Use when when you have mass spectrometry data in multiple formats (mzML, mzXML) that must be fed into a compression, analysis, or transformation pipeline that operates on a single canonical spectral data model.
+description: Use when when you have mass spectrometry data in multiple formats (mzML,
+  mzXML) that must be fed into a compression, analysis, or transformation pipeline
+  that operates on a single canonical spectral data model.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,8 +15,10 @@ metadata:
   - tinyxml2
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
-- doi: 10.1093/bioinformatics/btab636/6363791
+- doi: 10.1093/bioinformatics/btab636
   title: mspack
 evidence_spans:
 - mspack is a C++ program for lossless and lossy mass spectrometry data compression
@@ -25,15 +28,15 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_mspack_cq
-    doi: 10.1093/bioinformatics/btab636/6363791
+    doi: 10.1093/bioinformatics/btab636
     title: mspack
   dedup_kept_from: coll_mspack_cq
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bioinformatics/btab636/6363791
+  original_doi: 10.1093/bioinformatics/btab636
   all_source_dois:
-  - 10.1093/bioinformatics/btab636/6363791
+  - 10.1093/bioinformatics/btab636
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias

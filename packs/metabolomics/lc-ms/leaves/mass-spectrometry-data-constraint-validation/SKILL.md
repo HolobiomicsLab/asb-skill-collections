@@ -1,9 +1,10 @@
 ---
 name: mass-spectrometry-data-constraint-validation
-description: Use when implementing replacement methods ($<-, [<-, spectraData<-, mz<-, intensity<-, peaksData<-) for a writable MsBackend subclass, or when modifying peak data in an existing backend.
+description: Use when implementing replacement methods ($<-, [<-, spectraData<-, mz<-,
+  intensity<-, peaksData<-) for a writable MsBackend subclass, or when modifying peak
+  data in an existing backend.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +16,8 @@ metadata:
   - IRanges
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra

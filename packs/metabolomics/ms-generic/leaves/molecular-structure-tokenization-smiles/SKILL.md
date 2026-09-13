@@ -1,9 +1,10 @@
 ---
 name: molecular-structure-tokenization-smiles
-description: Use when when you have molecular structures encoded as SMILES strings and need to incorporate them into a multi-modal language model (such as BART) that also processes mass spectra.
+description: Use when when you have molecular structures encoded as SMILES strings
+  and need to incorporate them into a multi-modal language model (such as BART) that
+  also processes mass spectra.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3762
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -12,11 +13,14 @@ metadata:
   - BART
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.48550/arxiv.2510.20615
   title: MS-BART
 evidence_spans:
-- MS-BART is the first to leverage language model for mass spectra structure elucidation by introducing a unified vocabulary
+- MS-BART is the first to leverage language model for mass spectra structure elucidation
+  by introducing a unified vocabulary
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

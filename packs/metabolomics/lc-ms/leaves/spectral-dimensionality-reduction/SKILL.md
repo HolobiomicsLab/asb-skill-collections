@@ -1,9 +1,9 @@
 ---
 name: spectral-dimensionality-reduction
-description: Use when you have high-resolution tandem MS spectra (in mzML, mzXML, or MGF format) that need to be clustered or searched at scale (millions of spectra).
+description: Use when you have high-resolution tandem MS spectra (in mzML, mzXML,
+  or MGF format) that need to be clustered or searched at scale (millions of spectra).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,11 +13,14 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

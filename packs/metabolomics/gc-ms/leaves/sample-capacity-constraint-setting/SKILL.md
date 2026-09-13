@@ -1,9 +1,11 @@
 ---
 name: sample-capacity-constraint-setting
-description: Use when when designing injection sequences for LC/GC-MS multi-omics experiments where you need to distribute samples across multiple plates and must account for mandatory QC sample positions (Blank QC, Solvent QC, Pooled QC, Long-Term Reference QC, and custom QC).
+description: Use when when designing injection sequences for LC/GC-MS multi-omics
+  experiments where you need to distribute samples across multiple plates and must
+  account for mandatory QC sample positions (Blank QC, Solvent QC, Pooled QC, Long-Term
+  Reference QC, and custom QC).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -12,6 +14,8 @@ metadata:
   - InjectionDesign
   techniques:
   - GC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.02.26.530140v1.article-info
   title: InjectionDesign

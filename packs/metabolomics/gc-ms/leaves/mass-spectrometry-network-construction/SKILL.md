@@ -1,9 +1,10 @@
 ---
 name: mass-spectrometry-network-construction
-description: Use when you have deconvolved GC-MS spectra (output from auto-deconvolution) and want to group similar spectra into clusters to discover spectral families, identify co-eluting compounds, or organize unknown metabolites by structural similarity.
+description: Use when you have deconvolved GC-MS spectra (output from auto-deconvolution)
+  and want to group similar spectra into clusters to discover spectral families, identify
+  co-eluting compounds, or organize unknown metabolites by structural similarity.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0769
@@ -12,6 +13,8 @@ metadata:
   - GNPS_GC
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41587-020-0700-3
   title: mshub

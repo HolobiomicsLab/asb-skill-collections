@@ -1,9 +1,10 @@
 ---
 name: automated-lipid-identification
-description: Use when you have high-resolution tandem mass spectrometry (MS2) data in .ms2 format and need to systematically identify and annotate lipid A molecular structures.
+description: Use when you have high-resolution tandem mass spectrometry (MS2) data
+  in .ms2 format and need to systematically identify and annotate lipid A molecular
+  structures.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -14,6 +15,8 @@ metadata:
   - MSConvert (ProteoWizard)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00520
   title: LipidA-IDER

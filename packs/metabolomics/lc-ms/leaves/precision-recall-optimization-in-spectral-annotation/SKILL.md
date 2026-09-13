@@ -1,9 +1,11 @@
 ---
 name: precision-recall-optimization-in-spectral-annotation
-description: Use when you have extracted fragmentation patterns from a collection of MS/MS spectra (using mineMS2) and have partitioned spectra into components via GNPS molecular networking (e.g., connected components, cliques, or high-similarity pairs with cosine > threshold).
+description: Use when you have extracted fragmentation patterns from a collection
+  of MS/MS spectra (using mineMS2) and have partitioned spectra into components via
+  GNPS molecular networking (e.g., connected components, cliques, or high-similarity
+  pairs with cosine > threshold).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3941
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +18,8 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-025-01051-y
   title: minems2

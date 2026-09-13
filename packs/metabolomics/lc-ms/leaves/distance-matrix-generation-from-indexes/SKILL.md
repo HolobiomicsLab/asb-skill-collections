@@ -1,9 +1,10 @@
 ---
 name: distance-matrix-generation-from-indexes
-description: Use when you have pre-computed feature-hashed spectrum vectors and nearest neighbor indexes constructed from those vectors, and you need a pairwise distance matrix as input to density-based clustering (e.g., DBSCAN).
+description: Use when you have pre-computed feature-hashed spectrum vectors and nearest
+  neighbor indexes constructed from those vectors, and you need a pairwise distance
+  matrix as input to density-based clustering (e.g., DBSCAN).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3071
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,11 +14,14 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

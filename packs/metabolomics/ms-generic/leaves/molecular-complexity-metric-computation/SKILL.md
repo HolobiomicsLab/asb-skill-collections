@@ -1,9 +1,11 @@
 ---
 name: molecular-complexity-metric-computation
-description: Use when you have a formula-assigned FT-ICR MS dataset (CSV or tab-delimited table with molecular formulas and mass values) and need to quantify the structural diversity, elemental stoichiometry patterns, or complexity landscape of the organic mixture.
+description: Use when you have a formula-assigned FT-ICR MS dataset (CSV or tab-delimited
+  table with molecular formulas and mass values) and need to quantify the structural
+  diversity, elemental stoichiometry patterns, or complexity landscape of the organic
+  mixture.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0081
@@ -12,11 +14,14 @@ metadata:
   - MoleTrans
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.estlett.5c00284
   title: MoleTrans
 evidence_spans:
-- MoleTrans is a webtool for post analysis and data mining on the formula assigned datasets from FT-ICR MS
+- MoleTrans is a webtool for post analysis and data mining on the formula assigned
+  datasets from FT-ICR MS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

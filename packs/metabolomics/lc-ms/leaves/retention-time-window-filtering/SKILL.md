@@ -1,9 +1,10 @@
 ---
 name: retention-time-window-filtering
-description: Use when you have mzML/mzXML chromatogram files from Thermo, Waters, or Bruker instruments and need to extract MS1 and MS2 scans matching both a target m/z value AND a known or suspected retention time range.
+description: Use when you have mzML/mzXML chromatogram files from Thermo, Waters,
+  or Bruker instruments and need to extract MS1 and MS2 scans matching both a target
+  m/z value AND a known or suspected retention time range.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +16,8 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04343
   title: MeRgeION

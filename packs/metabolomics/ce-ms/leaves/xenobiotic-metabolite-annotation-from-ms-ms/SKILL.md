@@ -1,9 +1,11 @@
 ---
 name: xenobiotic-metabolite-annotation-from-ms-ms
-description: Use when you have aligned MS/MS feature tables (e.g., from MSDial ver. 4.80) representing unknown metabolites suspected to be Phase I/II transformation products of xenobiotics, and you need to assign both chemical identity and biotransformation pathway context to each feature.
+description: Use when you have aligned MS/MS feature tables (e.g., from MSDial ver.
+  4.80) representing unknown metabolites suspected to be Phase I/II transformation
+  products of xenobiotics, and you need to assign both chemical identity and biotransformation
+  pathway context to each feature.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -23,6 +25,8 @@ metadata:
   - MSDial
   techniques:
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.est.5c08558
   title: CMDN

@@ -1,9 +1,10 @@
 ---
 name: precursor-m-z-based-filtering
-description: 'Use when you have an unknown MS/MS query spectrum with a known or measured precursor m/z value and need to search a spectral library (local or public: GNPS, MASSBANK, DrugBANK) to annotate the compound.'
+description: 'Use when you have an unknown MS/MS query spectrum with a known or measured
+  precursor m/z value and need to search a spectral library (local or public: GNPS,
+  MASSBANK, DrugBANK) to annotate the compound.'
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,11 +17,14 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04343
   title: MeRgeION
 evidence_spans:
-- search and annotate an unknown spectrum in their local database or public databases (i.e. drug structures in GNPS, MASSBANK and DrugBANK)
+- search and annotate an unknown spectrum in their local database or public databases
+  (i.e. drug structures in GNPS, MASSBANK and DrugBANK)
 - github.com__daniellyz__meRgeION2
 claims: []
 provenance:

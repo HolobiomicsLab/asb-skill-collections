@@ -1,9 +1,11 @@
 ---
 name: convolutional-neural-network-encoding
-description: Use when you have pairs of augmented ion images from mass spectrometry imaging data and need to generate low-dimensional representation vectors that maximize similarity between augmentations of the same image while avoiding representation collapse.
+description: Use when you have pairs of augmented ion images from mass spectrometry
+  imaging data and need to generate low-dimensional representation vectors that maximize
+  similarity between augmentations of the same image while avoiding representation
+  collapse.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +16,8 @@ metadata:
   - torchvision
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion

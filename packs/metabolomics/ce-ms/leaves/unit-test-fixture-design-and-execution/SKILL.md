@@ -1,9 +1,10 @@
 ---
 name: unit-test-fixture-design-and-execution
-description: Use when when implementing or modifying a numerical compression/decompression component (e.g., Numpress for mass-spectrometry m/z and intensity arrays) and you need to verify that round-trip encoding and decoding preserves numerical fidelity.
+description: Use when when implementing or modifying a numerical compression/decompression
+  component (e.g., Numpress for mass-spectrometry m/z and intensity arrays) and you
+  need to verify that round-trip encoding and decoding preserves numerical fidelity.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0234
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -13,6 +14,8 @@ metadata:
   - OpenMS
   techniques:
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS

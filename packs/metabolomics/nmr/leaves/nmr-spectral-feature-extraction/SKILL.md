@@ -1,9 +1,11 @@
 ---
 name: nmr-spectral-feature-extraction
-description: Use when when you have raw or preprocessed 1H NMR spectral tensors from flavor or chemical mixtures and need to generate high-level feature representations that capture both fine-grained local patterns (e.g., peak multiplet structure, coupling constants) and global spectral context (e.
+description: Use when when you have raw or preprocessed 1H NMR spectral tensors from
+  flavor or chemical mixtures and need to generate high-level feature representations
+  that capture both fine-grained local patterns (e.g., peak multiplet structure, coupling
+  constants) and global spectral context (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3382
@@ -15,6 +17,8 @@ metadata:
   - FlavorFormer
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.microc.2025.115372
   title: FlavorFormer

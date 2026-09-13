@@ -1,9 +1,11 @@
 ---
 name: hybrid-model-fusion-strategy
-description: Use when you have 1H NMR spectral data from complex mixtures and need to identify component compounds, but a single architecture (CNN or Transformer alone) fails to capture both fine local patterns in peak structures and long-range dependencies across the full spectral range.
+description: Use when you have 1H NMR spectral data from complex mixtures and need
+  to identify component compounds, but a single architecture (CNN or Transformer alone)
+  fails to capture both fine local patterns in peak structures and long-range dependencies
+  across the full spectral range.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -14,6 +16,8 @@ metadata:
   - PyTorch
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.microc.2025.115372
   title: FlavorFormer

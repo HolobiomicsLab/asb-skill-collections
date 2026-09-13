@@ -1,9 +1,11 @@
 ---
 name: mass-spectrometry-database-search
-description: Use when you have an unknown mass spectrum (or a representative metabolite spectrum from public data) and need to identify it by comparing it against a large reference library—particularly when the database contains billions of spectra and earlier tools like MASST are too slow or resource-intensive.
+description: Use when you have an unknown mass spectrum (or a representative metabolite
+  spectrum from public data) and need to identify it by comparing it against a large
+  reference library—particularly when the database contains billions of spectra and
+  earlier tools like MASST are too slow or resource-intensive.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,6 +16,8 @@ metadata:
   - GNPS Molecular Networking
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41587-023-01985-4
   title: MASST

@@ -1,9 +1,11 @@
 ---
 name: feature-group-spectral-mapping
-description: Use when after sample alignment and isotopologue/adduct grouping are complete, when you need to associate MS2 spectral data (DDA-acquired) with the consolidated feature groups to enable MS/MS-based compound annotation or to bundle MS1 quantification with MS2 evidence.
+description: Use when after sample alignment and isotopologue/adduct grouping are
+  complete, when you need to associate MS2 spectral data (DDA-acquired) with the consolidated
+  feature groups to enable MS/MS-based compound annotation or to bundle MS1 quantification
+  with MS2 evidence.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,11 +15,15 @@ metadata:
   - SLAW
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c02687
   title: slaw
 evidence_spans:
-- Complete processing including peak picking, sample alignment, pick picking, grouping of isotopologues and adducts, gap-filling by data recursion, extraction of consolidated MS2 spectra and isotopic
+- Complete processing including peak picking, sample alignment, pick picking, grouping
+  of isotopologues and adducts, gap-filling by data recursion, extraction of consolidated
+  MS2 spectra and isotopic
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

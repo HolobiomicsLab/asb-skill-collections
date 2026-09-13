@@ -1,9 +1,11 @@
 ---
 name: chromatographic-peak-annotation-visualization
-description: Use when after running tardisPeaks() with screening_mode=TRUE on centroided .mzML LC-MS data, when you need to visually inspect whether the 10 target compounds (internal standards and endogenous metabolites) were correctly detected within their expected m/z and retention time windows.
+description: Use when after running tardisPeaks() with screening_mode=TRUE on centroided
+  .mzML LC-MS data, when you need to visually inspect whether the 10 target compounds
+  (internal standards and endogenous metabolites) were correctly detected within their
+  expected m/z and retention time windows.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -18,14 +20,18 @@ metadata:
   - ProteoWizard (MSConvert)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
 evidence_spans:
 - R package for *TArgeted Raw Data Integration In Spectrometry*
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
-- It makes use of an established retention time correction algorithm from the `xcms` package
-- Alternatively, instead of using file paths as input for TARDIS, the user can also use an `MsExperiment` object
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
+- Alternatively, instead of using file paths as input for TARDIS, the user can also
+  use an `MsExperiment` object
 - knitr::include_graphics
 claims: []
 provenance:

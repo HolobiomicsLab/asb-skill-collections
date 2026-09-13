@@ -1,9 +1,11 @@
 ---
 name: benchmarking-and-comparative-performance-evaluation
-description: Use when you have trained a new machine learning model for chemical formula or adduct assignment from MS/MS spectra and need to assess whether it offers genuine performance gains over established baselines. Use it specifically when you have access to ground-truth annotations (e.
+description: Use when you have trained a new machine learning model for chemical formula
+  or adduct assignment from MS/MS spectra and need to assess whether it offers genuine
+  performance gains over established baselines. Use it specifically when you have
+  access to ground-truth annotations (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_3372
@@ -18,13 +20,17 @@ metadata:
   - Xformer
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jcim.3c01082
   title: mistcf
 evidence_spans:
 - an extension of MIST for annotating MS1 precursor masses from MS/MS data
-- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum using an end-to-end energy based modeling approach
-- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS fragmentation trees)
+- MIST-CF ranks chemical formula and adduct assignments for an unknown mass spectrum
+  using an end-to-end energy based modeling approach
+- Utilizing an internal chemical subformula assignment protocol (rather than SIRIUS
+  fragmentation trees)
 - Utilizing sinusoidal formula embeddings as developed in our previous work SCARF
 claims: []
 provenance:

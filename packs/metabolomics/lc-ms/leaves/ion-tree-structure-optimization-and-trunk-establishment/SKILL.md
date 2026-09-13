@@ -1,9 +1,9 @@
 ---
 name: ion-tree-structure-optimization-and-trunk-establishment
-description: Use when after you have partitioned a feature network into connected subnetworks (each containing ion features linked by isotope or adduct mass differences).
+description: Use when after you have partitioned a feature network into connected
+  subnetworks (each containing ion features linked by isotope or adduct mass differences).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3680
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -17,6 +17,8 @@ metadata:
   - metDataModel
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu

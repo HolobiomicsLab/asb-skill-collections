@@ -1,9 +1,11 @@
 ---
 name: error-metric-comparison-and-benchmarking
-description: Use when you have predicted retention times from one or more machine learning models (DNN, Gaussian Process, or ensemble) applied to small-molecule chromatography data, along with corresponding experimental ground-truth retention times, and need to quantify prediction accuracy and rank competing.
+description: Use when you have predicted retention times from one or more machine
+  learning models (DNN, Gaussian Process, or ensemble) applied to small-molecule chromatography
+  data, along with corresponding experimental ground-truth retention times, and need
+  to quantify prediction accuracy and rank competing.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_3372
@@ -13,11 +15,14 @@ metadata:
   - cmmrt (constantino-garcia/cmmrt)
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-022-00613-8
   title: cmmrt
 evidence_spans:
-- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity, and Path Fingerprints fingerprints) were generated with the alvaDesc software
+- 5,666 molecular descriptors and 2,214 fingerprints (MACCS166, Extended Connectivity,
+  and Path Fingerprints fingerprints) were generated with the alvaDesc software
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,9 @@
 ---
 name: metadata-structure-mapping
-description: Use when you have mzML-format raw data files from mass spectrometry experiments and need to ingest them into MS-DIAL for untargeted metabolomics or lipidomics analysis.
+description: Use when you have mzML-format raw data files from mass spectrometry experiments
+  and need to ingest them into MS-DIAL for untargeted metabolomics or lipidomics analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,12 +17,16 @@ metadata:
   - MsdialWorkbench repository
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c01980
   title: CorrDec
 evidence_spans:
-- we primarily utilize the frameworks of .NET Framework 4.7.2, .NET Core 3.1, and .NET 6
-- The .NET class libraries adhere at least to the specifications of .NET Standard 2.0
+- we primarily utilize the frameworks of .NET Framework 4.7.2, .NET Core 3.1, and
+  .NET 6
+- The .NET class libraries adhere at least to the specifications of .NET Standard
+  2.0
 - To conduct tests, please refer to section `test:` of GitHub Actions
 claims: []
 provenance:

@@ -1,9 +1,11 @@
 ---
 name: interactive-visualization-inspection
-description: Use when after msFeaST pipeline execution has produced a dashboard_data.json file containing quantification, metadata, and spectral matrices, or when you need to validate that preprocessing steps correctly loaded and rendered ms/ms feature data before downstream statistical or network analysis.
+description: Use when after msFeaST pipeline execution has produced a dashboard_data.json
+  file containing quantification, metadata, and spectral matrices, or when you need
+  to validate that preprocessing steps correctly loaded and rendered ms/ms feature
+  data before downstream statistical or network analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -13,6 +15,8 @@ metadata:
   - Desktop web browser
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btae584
   title: msFeaST

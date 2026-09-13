@@ -1,9 +1,10 @@
 ---
 name: isotopologue-mass-delta-calculation
-description: Use when when constructing a reference mass-matching framework for untargeted metabolomics or isotope-tracing LC-MS data, before pattern-matching observed features to isotopic and adduct variants.
+description: Use when when constructing a reference mass-matching framework for untargeted
+  metabolomics or isotope-tracing LC-MS data, before pattern-matching observed features
+  to isotopic and adduct variants.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,6 +15,8 @@ metadata:
   - khipu
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu

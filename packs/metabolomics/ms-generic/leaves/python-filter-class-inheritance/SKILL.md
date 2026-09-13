@@ -1,9 +1,10 @@
 ---
 name: python-filter-class-inheritance
-description: Use when you need to filter compounds during Pickaxe network expansion based on domain-specific criteria (e.g., mass matching, similarity thresholds, retention time windows) that are not covered by built-in filters.
+description: Use when you need to filter compounds during Pickaxe network expansion
+  based on domain-specific criteria (e.g., mass matching, similarity thresholds, retention
+  time windows) that are not covered by built-in filters.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -16,11 +17,14 @@ metadata:
   - MINE-Database
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s12859-023-05149-8
   title: Pickaxe
 evidence_spans:
-- MINE-Database, also referred to as Pickaxe, is a python library allows you to efficiently create reaction networks
+- MINE-Database, also referred to as Pickaxe, is a python library allows you to efficiently
+  create reaction networks
 - Pickaxe supports running through a command line interface
 claims: []
 provenance:

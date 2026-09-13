@@ -1,9 +1,10 @@
 ---
 name: projected-area-computation
-description: Use when you have 3D optimized molecular conformers (RDKit mol objects or SDF files) and need to extract shape-based features for collision cross section prediction, graph neural network input, or conformer comparison.
+description: Use when you have 3D optimized molecular conformers (RDKit mol objects
+  or SDF files) and need to extract shape-based features for collision cross section
+  prediction, graph neural network input, or conformer comparison.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0250
   edam_topics:
   - http://edamontology.org/topic_3314
@@ -23,6 +24,8 @@ metadata:
   - MolecularRepresentations.py
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/cem.70040
   title: PACCS

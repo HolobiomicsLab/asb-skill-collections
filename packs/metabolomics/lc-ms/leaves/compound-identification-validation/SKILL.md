@@ -3,7 +3,6 @@ name: compound-identification-validation
 description: Use when when you have an unknown MS/MS spectrum (in .
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -18,6 +17,8 @@ metadata:
   - pip
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01594
   title: CSU-MS2

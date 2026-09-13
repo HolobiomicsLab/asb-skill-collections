@@ -1,9 +1,10 @@
 ---
 name: spectral-data-object-construction
-description: Use when you have a set of centroided .mzML LC-MS files from a targeted metabolomics or lipidomics experiment and need to represent them as a structured object that links raw spectra to sample-level metadata (e.
+description: Use when you have a set of centroided .mzML LC-MS files from a targeted
+  metabolomics or lipidomics experiment and need to represent them as a structured
+  object that links raw spectra to sample-level metadata (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,6 +18,8 @@ metadata:
   - TARDIS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis

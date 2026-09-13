@@ -1,9 +1,11 @@
 ---
 name: repository-cloning-and-initialization
-description: Use when you have a GitHub repository URL, a documented Python version requirement, and a list of pinned package versions, and you need to verify that the application will initialize without import or runtime errors before proceeding to data analysis or method replication.
+description: Use when you have a GitHub repository URL, a documented Python version
+  requirement, and a list of pinned package versions, and you need to verify that
+  the application will initialize without import or runtime errors before proceeding
+  to data analysis or method replication.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3429
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,6 +18,8 @@ metadata:
   - Python
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/nbm.70131
   title: ROIAL-NMR

@@ -1,9 +1,11 @@
 ---
 name: spectral-modality-preprocessing
-description: Use when you have downloaded raw spectroscopic data files (NMR, HSQC, COSY, IR modalities) from the Zenodo repositories and need to convert them into the standardized multi-modal input format required by the MultiModalSpectralTransformer before inference or retraining.
+description: Use when you have downloaded raw spectroscopic data files (NMR, HSQC,
+  COSY, IR modalities) from the Zenodo repositories and need to convert them into
+  the standardized multi-modal input format required by the MultiModalSpectralTransformer
+  before inference or retraining.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +17,8 @@ metadata:
   - PyTorch
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/ange.202517611
   title: MMST

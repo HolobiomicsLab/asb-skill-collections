@@ -1,9 +1,9 @@
 ---
 name: knowledge-data-driven-layer-integration
-description: Use when you have untargeted metabolomics data (MS/MS spectra) and need to annotate metabolites at scale.
+description: Use when you have untargeted metabolomics data (MS/MS spectra) and need
+  to annotate metabolites at scale.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -12,11 +12,19 @@ metadata:
   - MrnAnnoAlgo3 (MetDNA3)
   techniques:
   - LC-MS
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ZhuMetLab/MrnAnnoAlgo3
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-63536-6
   title: MetDNA3
 evidence_spans:
-- '`MrnAnnoAlgo3` is the core algorithm module of **MetDNA3**, designed to annotate metabolites'
+- '`MrnAnnoAlgo3` is the core algorithm module of **MetDNA3**, designed to annotate
+  metabolites'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

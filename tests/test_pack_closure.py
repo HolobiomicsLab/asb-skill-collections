@@ -542,3 +542,208 @@ def test_isolated_feedback_helper_requires_its_vendored_pii_module(tmp_path):
     assert result.returncode != 0
     assert "ModuleNotFoundError" in result.stderr
     assert "scripts.pii_config" in result.stderr
+
+
+# --------------------------------------------------------------------------- #
+# Derivation: a pack against the collection it declares itself a view of.
+#
+# Index closure above is internal to one unit. A pack that ships a leaf set its
+# collection no longer has, or copies that lost a front-matter key, satisfies
+# every check above while being a different corpus from the one it advertises.
+# These cases cover the comparison that catches that, and the one that does not.
+# --------------------------------------------------------------------------- #
+
+from scripts import build_packs  # noqa: E402
+
+DERIVED_DOMAIN = "astronomy"
+DERIVED_TAG = "optical"
+SELECTED = "stellar-photometry"
+UNSELECTED = "radio-interferometry"
+
+
+def _derived_repository(tmp_path: pathlib.Path) -> tuple[pathlib.Path, pathlib.Path]:
+    """A built pack and the root it lives in: a correct derivation to break."""
+    root = tmp_path / "repository"
+    collection = root / "collections" / DERIVED_DOMAIN / "v4"
+    membership = {SELECTED: [DERIVED_TAG, "survey"], UNSELECTED: ["radio"]}
+    for slug in membership:
+        skill = collection / "leaves" / slug / "SKILL.md"
+        skill.parent.mkdir(parents=True, exist_ok=True)
+        skill.write_text(
+            "---\n"
+            + yaml.safe_dump(
+                {
+                    "name": slug,
+                    "metadata": {"license_tier": "open", "provenance_tier": "literature"},
+                },
+                sort_keys=False,
+            )
+            + f"---\n# {slug}\n",
+            encoding="utf-8",
+        )
+    (collection / "skills_index.json").write_text(
+        json.dumps(
+            [
+                {"slug": slug, "techniques": tags}
+                for slug, tags in sorted(membership.items())
+            ],
+            indent=1,
+        ),
+        encoding="utf-8",
+    )
+    (collection / "kb_bundle.json").write_text(
+        json.dumps(
+            {
+                "collection": DERIVED_DOMAIN,
+                "version": 4,
+                "skills": {slug: {} for slug in sorted(membership)},
+            },
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    map_path = root / "packs" / DERIVED_DOMAIN / build_packs.MAP_FILENAME
+    map_path.parent.mkdir(parents=True, exist_ok=True)
+    map_path.write_text(
+        yaml.safe_dump(
+            {
+                "schema": build_packs.SCHEMA,
+                "collection": DERIVED_DOMAIN,
+                "version": 4,
+                "source": f"collections/{DERIVED_DOMAIN}/v4",
+                "packs": [{"dir": DERIVED_TAG, "tag": DERIVED_TAG}],
+            },
+            sort_keys=False,
+        ),
+        encoding="utf-8",
+    )
+    (pack_map,) = build_packs.discover_maps(root)
+    build_packs.build_map(pack_map)
+    return root, root / "packs" / DERIVED_DOMAIN / DERIVED_TAG
+
+
+def _ship(pack: pathlib.Path, slug: str, text: str) -> None:
+    """Put a leaf in a pack and name it in both indexes — a self-consistent pack."""
+    leaf = pack / "leaves" / slug / "SKILL.md"
+    leaf.parent.mkdir(parents=True, exist_ok=True)
+    leaf.write_text(text, encoding="utf-8")
+    index = json.loads((pack / "skills_index.json").read_text(encoding="utf-8"))
+    index.append({"slug": slug})
+    (pack / "skills_index.json").write_text(json.dumps(index, indent=1), encoding="utf-8")
+    bundle = json.loads((pack / "kb_bundle.json").read_text(encoding="utf-8"))
+    bundle["skills"][slug] = {}
+    (pack / "kb_bundle.json").write_text(json.dumps(bundle, indent=2) + "\n", encoding="utf-8")
+
+
+def _drop(pack: pathlib.Path, slug: str) -> None:
+    """Remove a leaf and its rows — the state `lc-ms` was in for months."""
+    shutil.rmtree(pack / "leaves" / slug)
+    index = json.loads((pack / "skills_index.json").read_text(encoding="utf-8"))
+    (pack / "skills_index.json").write_text(
+        json.dumps([row for row in index if row["slug"] != slug], indent=1),
+        encoding="utf-8",
+    )
+    bundle = json.loads((pack / "kb_bundle.json").read_text(encoding="utf-8"))
+    bundle["skills"].pop(slug, None)
+    (pack / "kb_bundle.json").write_text(json.dumps(bundle, indent=2) + "\n", encoding="utf-8")
+
+
+def test_a_correctly_derived_pack_reports_nothing(tmp_path):
+    root, _ = _derived_repository(tmp_path)
+
+    assert unit_closure.derivation_findings(root) == []
+
+
+def test_a_selected_leaf_missing_from_the_pack_is_a_violation(tmp_path):
+    root, pack = _derived_repository(tmp_path)
+    _drop(pack, SELECTED)
+
+    findings = unit_closure.derivation_findings(root)
+
+    assert _finding_tuples(findings) == [
+        (f"leaves/{SELECTED}/SKILL.md", SELECTED, "pack-to-collection")
+    ]
+    assert "absent from the pack" in findings[0].message
+    assert f"source: collections/{DERIVED_DOMAIN}/v4" in findings[0].message
+
+
+def test_internal_closure_alone_passes_the_pack_that_lost_a_leaf(tmp_path):
+    """Why this check exists. The pack is complete with respect to its own
+    indexes and short one leaf with respect to the collection it advertises."""
+    root, pack = _derived_repository(tmp_path)
+    _drop(pack, SELECTED)
+
+    assert unit_closure.check_unit(pack) == []
+    assert unit_closure.derivation_findings(root) != []
+
+
+def test_a_leaf_the_rule_does_not_select_is_a_violation(tmp_path):
+    root, pack = _derived_repository(tmp_path)
+    _ship(pack, UNSELECTED, "---\nname: radio-interferometry\n---\n# radio\n")
+
+    findings = unit_closure.derivation_findings(root)
+
+    assert _finding_tuples(findings) == [
+        (f"leaves/{UNSELECTED}/SKILL.md", UNSELECTED, "pack-to-collection")
+    ]
+    assert "not selected by techniques" in findings[0].message
+
+
+def test_a_front_matter_field_absent_from_the_copy_is_a_violation(tmp_path):
+    """The copy is well-formed, indexed, and missing a key its source has."""
+    root, pack = _derived_repository(tmp_path)
+    copy = pack / "leaves" / SELECTED / "SKILL.md"
+    copy.write_text(
+        copy.read_text(encoding="utf-8").replace("  provenance_tier: literature\n", ""),
+        encoding="utf-8",
+    )
+
+    findings = unit_closure.derivation_findings(root)
+
+    assert unit_closure.check_unit(pack) == []
+    assert _finding_tuples(findings) == [
+        (f"leaves/{SELECTED}/SKILL.md", SELECTED, "pack-to-collection")
+    ]
+    assert "front matter absent from the copy: metadata.provenance_tier" in (
+        findings[0].message
+    )
+
+
+def test_derivation_is_scoped_to_the_collection_a_gate_runs_for(tmp_path):
+    root, pack = _derived_repository(tmp_path)
+    _drop(pack, SELECTED)
+    unrelated = root / "collections/climate-science/v1"
+
+    assert unit_closure.derivation_findings(root, unrelated) == []
+    assert unit_closure.derivation_findings(
+        root, root / f"collections/{DERIVED_DOMAIN}/v4"
+    ) != []
+
+
+def test_the_release_gate_reports_a_pack_that_has_drifted(tmp_path):
+    root, pack = _derived_repository(tmp_path)
+    _drop(pack, SELECTED)
+
+    findings = unit_closure.gate_findings(root / f"collections/{DERIVED_DOMAIN}/v4")
+
+    assert [item.direction for item in findings] == ["pack-to-collection"]
+
+
+def test_the_cli_fails_on_a_pack_that_has_drifted(tmp_path, capsys):
+    root, pack = _derived_repository(tmp_path)
+    _drop(pack, SELECTED)
+
+    assert unit_closure.main(["--root", str(root)]) == 1
+    output = capsys.readouterr().out
+    assert "pack-to-collection" in output
+    assert SELECTED in output
+    assert "absent from the pack" in output
+
+
+def test_shipped_packs_are_faithful_derivations_of_their_collection():
+    findings = unit_closure.derivation_findings(REPO_ROOT)
+
+    assert findings == [], "\n".join(
+        f"{item.unit.relative_to(REPO_ROOT)}: {item.message}" for item in findings[:20]
+    )

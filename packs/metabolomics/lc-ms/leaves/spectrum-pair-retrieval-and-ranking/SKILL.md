@@ -1,9 +1,11 @@
 ---
 name: spectrum-pair-retrieval-and-ranking
-description: Use when you have a test set of annotated MS/MS spectra with known structural similarity (via molecular fingerprints or InChIKey), and you want to assess how well a spectral similarity measure (learned or classical) retrieves structurally related compound pairs across a full range of thresholds.
+description: Use when you have a test set of annotated MS/MS spectra with known structural
+  similarity (via molecular fingerprints or InChIKey), and you want to assess how
+  well a spectral similarity measure (learned or classical) retrieves structurally
+  related compound pairs across a full range of thresholds.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -17,6 +19,8 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -24,9 +28,13 @@ evidence_spans:
 - Our MS2DeepScore Python library offers two types of data generators
 - To estimate the uncertainty of a prediction we used Monte-Carlo Dropout ensembles
 - recently introduced unsupervised Spec2V
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities.
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
-- Our MS2DeepScore Python library offers two types of data generators, one which iterates over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over all spectra and was used for
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities.
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities
+- Our MS2DeepScore Python library offers two types of data generators, one which iterates
+  over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over
+  all spectra and was used for
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,10 @@
 ---
 name: spectrum-processing-pipeline-construction
-description: Use when you have raw mass spectrometry spectra (in MGF, mzML, or similar formats) that must undergo standardized preprocessing before library matching, similarity searching, or performance benchmarking.
+description: Use when you have raw mass spectrometry spectra (in MGF, mzML, or similar
+  formats) that must undergo standardized preprocessing before library matching, similarity
+  searching, or performance benchmarking.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -20,12 +21,16 @@ metadata:
   - Python time module
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma) specification
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- fragment ions can be annotated based on the [ProForma 2.0](https://www.psidev.info/proforma)
+  specification
 - pymzML](https://github.com/pymzml/pymzML/) (version 2.5.2)
 - pyOpenMS](https://pyopenms.readthedocs.io/) (version 2.7.0)
 - spectrum_utils is a Python package

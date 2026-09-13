@@ -1,9 +1,10 @@
 ---
 name: metabolomic-feature-table-processing
-description: Use when you have a metabolomics feature table (rows=features, columns=samples) generated from LC-MS or GC-MS preprocessing and need to identify which features contain systematic errors from peak integration or alignment.
+description: Use when you have a metabolomics feature table (rows=features, columns=samples)
+  generated from LC-MS or GC-MS preprocessing and need to identify which features
+  contain systematic errors from peak integration or alignment.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,11 +15,14 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04046
   title: AVIR
 evidence_spans:
-- AVIR.R is a program developed to recognize computational variation among metabolic features in samples
+- AVIR.R is a program developed to recognize computational variation among metabolic
+  features in samples
 - AVIR.R
 claims: []
 provenance:

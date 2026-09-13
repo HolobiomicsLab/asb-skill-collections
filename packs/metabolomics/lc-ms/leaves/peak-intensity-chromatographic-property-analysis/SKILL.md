@@ -1,9 +1,10 @@
 ---
 name: peak-intensity-chromatographic-property-analysis
-description: Use when you have a filtered MS-DIAL peak list (post-generic filtering) containing m/z, retention time, and peak intensity metrics, and you need to group LC-MS features into clusters to reduce redundancy before parental signal extraction.
+description: Use when you have a filtered MS-DIAL peak list (post-generic filtering)
+  containing m/z, retention time, and peak intensity metrics, and you need to group
+  LC-MS features into clusters to reduce redundancy before parental signal extraction.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -13,6 +14,8 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR

@@ -1,9 +1,9 @@
 ---
 name: peak-selectivity-metric-evaluation
-description: Use when when identifying landmark peaks for retention time alignment in multi-sample LC-MS metabolomics workflows.
+description: Use when when identifying landmark peaks for retention time alignment
+  in multi-sample LC-MS metabolomics workflows.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -17,11 +17,14 @@ metadata:
   - asari (constructors.set_RT_reference)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - scipy.signal module for LOWESS fitting via the regression function
 claims: []

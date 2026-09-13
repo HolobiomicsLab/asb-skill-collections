@@ -1,9 +1,11 @@
 ---
 name: chemical-space-similarity-computation
-description: Use when you have retrieved multiple candidate structures from a molecular structure database (e.g., PubChem, HMDB) for an unknown compound, and you have predictions of structurally related metabolites from a deep-learning mass spectral model (e.g., DeepMASS2).
+description: Use when you have retrieved multiple candidate structures from a molecular
+  structure database (e.g., PubChem, HMDB) for an unknown compound, and you have predictions
+  of structurally related metabolites from a deep-learning mass spectral model (e.g.,
+  DeepMASS2).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -12,11 +14,14 @@ metadata:
   - DeepMASS2
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.05.30.596727v2
   title: DeepMASS
 evidence_spans:
-- DeepMASS2 is a cross-platform GUI software tool, which enables deep-learning based metabolite annotation
+- DeepMASS2 is a cross-platform GUI software tool, which enables deep-learning based
+  metabolite annotation
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

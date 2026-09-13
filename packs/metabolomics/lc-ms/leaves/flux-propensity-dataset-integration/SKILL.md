@@ -1,9 +1,11 @@
 ---
 name: flux-propensity-dataset-integration
-description: Use when when you have (1) LC-MS normalized intracellular metabolite abundance data across multiple cell lines or samples, (2) a constraint-based metabolic model with stoichiometric coefficients, and (3) a need to quantify metabolic control through substrate availability independently of enzymatic.
+description: Use when when you have (1) LC-MS normalized intracellular metabolite
+  abundance data across multiple cell lines or samples, (2) a constraint-based metabolic
+  model with stoichiometric coefficients, and (3) a need to quantify metabolic control
+  through substrate availability independently of enzymatic.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -15,11 +17,14 @@ metadata:
   - 'INTEGRATE pipeline (Step 10: concordanceAnalysis.py)'
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- Data analysis and isotopic natural abundance correction were performed with MassHunter ProFinder (Agilent)
+- Data analysis and isotopic natural abundance correction were performed with MassHunter
+  ProFinder (Agilent)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

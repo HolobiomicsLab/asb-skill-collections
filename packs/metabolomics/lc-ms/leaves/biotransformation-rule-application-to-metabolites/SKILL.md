@@ -1,9 +1,11 @@
 ---
 name: biotransformation-rule-application-to-metabolites
-description: Use when you have untargeted metabolomics data with unknown or ambiguous molecular identities, anchor metabolites (known structures in SMILES or MOL format), and a curated database of biotransformation rules (e.g., from KEGG, RetroRules, or domain-specific repositories).
+description: Use when you have untargeted metabolomics data with unknown or ambiguous
+  molecular identities, anchor metabolites (known structures in SMILES or MOL format),
+  and a curated database of biotransformation rules (e.g., from KEGG, RetroRules,
+  or domain-specific repositories).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3658
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +18,8 @@ metadata:
   techniques:
   - LC-MS
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c01565
   title: bam

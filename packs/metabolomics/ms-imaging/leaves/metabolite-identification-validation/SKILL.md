@@ -1,9 +1,9 @@
 ---
 name: metabolite-identification-validation
-description: Use when you have extended a metabolite identification tool (such as Met-ID) to support a new derivatizing matrix beyond the default (e.
+description: Use when you have extended a metabolite identification tool (such as
+  Met-ID) to support a new derivatizing matrix beyond the default (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,6 +13,8 @@ metadata:
   - Met-ID
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00633
   title: metid

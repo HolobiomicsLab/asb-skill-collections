@@ -1,9 +1,10 @@
 ---
 name: tissue-spatial-analysis-pipeline-execution
-description: Use when you have raw IMC (protein imaging) and SIMS (metabolite imaging) data from tissue regions that require spatial co-registration, single-cell-level intensity quantification, and joint analysis of protein–metabolite relationships.
+description: Use when you have raw IMC (protein imaging) and SIMS (metabolite imaging)
+  data from tissue regions that require spatial co-registration, single-cell-level
+  intensity quantification, and joint analysis of protein–metabolite relationships.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,6 +18,8 @@ metadata:
   - Zenodo Data Repository
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-43917-5
   title: scSpaMet

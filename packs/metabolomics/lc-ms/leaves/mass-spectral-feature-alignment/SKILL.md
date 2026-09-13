@@ -1,9 +1,10 @@
 ---
 name: mass-spectral-feature-alignment
-description: Use when when you have separate LC-MS peak tables for unlabeled (C12) and labeled (C13) isotope tracer experiments and need to identify which features correspond to the same metabolite across the two labeling conditions.
+description: Use when when you have separate LC-MS peak tables for unlabeled (C12)
+  and labeled (C13) isotope tracer experiments and need to identify which features
+  correspond to the same metabolite across the two labeling conditions.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -23,6 +24,8 @@ metadata:
   - IsoPairFinder
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2021.12.05.471237v2
   title: isopair

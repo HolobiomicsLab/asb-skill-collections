@@ -1,9 +1,11 @@
 ---
 name: molecular-network-annotation-integration
-description: Use when you have a GNPS mass spectral molecular network (classical or feature-based) and MS2LDA-derived Mass2Motif data, and you need to annotate network nodes with both chemical class information from GNPS library matches and substructural motifs from MS2LDA to enable joint interpretation of.
+description: Use when you have a GNPS mass spectral molecular network (classical or
+  feature-based) and MS2LDA-derived Mass2Motif data, and you need to annotate network
+  nodes with both chemical class information from GNPS library matches and substructural
+  motifs from MS2LDA to enable joint interpretation of.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3439
   edam_topics:
   - http://edamontology.org/topic_0203
@@ -17,11 +19,14 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo9070144
   title: molnetenhancer
 evidence_spans:
-- pyMolNetEnhancer is a python module integrating chemical class and substructure information
+- pyMolNetEnhancer is a python module integrating chemical class and substructure
+  information
 - pyMolNetEnhancer is a python module
 claims: []
 provenance:

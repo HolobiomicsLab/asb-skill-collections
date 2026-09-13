@@ -1,9 +1,11 @@
 ---
 name: collision-cross-section-measurement-quality-control
-description: Use when you have IM-MS lipidomics data from samples spiked with U13C-labeled internal standards (fully labeled yeast extract) and you need to quantify whether measured CCS values deviate systematically from theoretical values, or when you want to correct CCS measurements before downstream lipid.
+description: Use when you have IM-MS lipidomics data from samples spiked with U13C-labeled
+  internal standards (fully labeled yeast extract) and you need to quantify whether
+  measured CCS values deviate systematically from theoretical values, or when you
+  want to correct CCS measurements before downstream lipid.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,11 +17,14 @@ metadata:
   - data.table
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c01253
   title: mobilipid
 evidence_spans:
-- Our tool enhances CCS quality control by providing a R Markdown that integrates into IM-MS lipidomics workflows
+- Our tool enhances CCS quality control by providing a R Markdown that integrates
+  into IM-MS lipidomics workflows
 - providing a R Markdown that integrates into IM-MS lipidomics workflows
 claims: []
 provenance:

@@ -1,9 +1,10 @@
 ---
 name: similarity-score-computation
-description: Use when when you have a query electron ionization mass spectrum (m/z and intensity pairs) and need to identify the most similar spectra from an MSP-formatted spectral library.
+description: Use when when you have a query electron ionization mass spectrum (m/z
+  and intensity pairs) and need to identify the most similar spectra from an MSP-formatted
+  spectral library.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,12 +15,17 @@ metadata:
   - NIST API
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00322
   title: mspepsearchr
 evidence_spans:
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users for conducting library searches against electron ionization mass spectral databases.
-- The primary goal of the `mssearchr` package is to enhance the capabilities of R users
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users for conducting library searches against electron ionization mass spectral
+  databases.
+- The primary goal of the `mssearchr` package is to enhance the capabilities of R
+  users
 - enhance the capabilities of R users for conducting library searches
 claims: []
 provenance:

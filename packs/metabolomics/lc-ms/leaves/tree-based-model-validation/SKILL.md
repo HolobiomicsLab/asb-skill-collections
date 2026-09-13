@@ -1,9 +1,11 @@
 ---
 name: tree-based-model-validation
-description: Use when after training a decision tree classifier on ChemEcho sparse feature vectors (representing tandem mass spectra fragmentation patterns), especially when the goal is to deploy predictions as executable queries or to validate that learned splits correspond to chemically meaningful.
+description: Use when after training a decision tree classifier on ChemEcho sparse
+  feature vectors (representing tandem mass spectra fragmentation patterns), especially
+  when the goal is to deploy predictions as executable queries or to validate that
+  learned splits correspond to chemically meaningful.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +18,8 @@ metadata:
   - LIME
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c02591
   title: ChemEcho
@@ -23,7 +27,8 @@ derived_from:
   title: ''
 evidence_spans:
 - github.com__biorack__chemecho
-- Using ChemEcho vectors, we can train decision trees which are able to be directly converted to MassQL
+- Using ChemEcho vectors, we can train decision trees which are able to be directly
+  converted to MassQL
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

@@ -1,9 +1,10 @@
 ---
 name: cross-view-similarity-scoring
-description: Use when you have an experimental mass spectrum (query) and a set of molecular candidate structures, and you need to rank the candidates by how well their predicted spectral features match the query spectrum.
+description: Use when you have an experimental mass spectrum (query) and a set of
+  molecular candidate structures, and you need to rank the candidates by how well
+  their predicted spectral features match the query spectrum.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3765
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -17,6 +18,8 @@ metadata:
   - MassSpecGym
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.11.12.688047v1
   title: MVP

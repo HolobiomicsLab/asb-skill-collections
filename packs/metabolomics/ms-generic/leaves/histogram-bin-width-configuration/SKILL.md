@@ -1,9 +1,10 @@
 ---
 name: histogram-bin-width-configuration
-description: Use when you have uploaded a numeric column (e.g., H/C ratio, O/C ratio, or other derived properties from high-resolution mass spectrometry) and you are generating a histogram in Punc'data's Canvas tab.
+description: Use when you have uploaded a numeric column (e.g., H/C ratio, O/C ratio,
+  or other derived properties from high-resolution mass spectrometry) and you are
+  generating a histogram in Punc'data's Canvas tab.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -12,6 +13,8 @@ metadata:
   - Punc'data
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00151
   title: Punc’data

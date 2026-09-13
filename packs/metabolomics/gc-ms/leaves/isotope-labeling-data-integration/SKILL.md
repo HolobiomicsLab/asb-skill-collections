@@ -1,9 +1,11 @@
 ---
 name: isotope-labeling-data-integration
-description: Use when you have LC-MS peak tables from parallel unlabeled and labeled (isotope-traced) sample cohorts, sample metadata defining groups and conditions, and you seek to identify metabolic intermediates that accumulate differentially in a perturbed system (e.
+description: Use when you have LC-MS peak tables from parallel unlabeled and labeled
+  (isotope-traced) sample cohorts, sample metadata defining groups and conditions,
+  and you seek to identify metabolic intermediates that accumulate differentially
+  in a perturbed system (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -24,6 +26,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2021.12.05.471237v2
   title: isopair

@@ -1,9 +1,10 @@
 ---
 name: technical-variation-removal-in-lcms-data
-description: Use when after merging feature tables from non-targeted LC-MS/MS data and before statistical analysis, when samples were acquired across multiple instrument runs, different days, or instrumental calibration cycles.
+description: Use when after merging feature tables from non-targeted LC-MS/MS data
+  and before statistical analysis, when samples were acquired across multiple instrument
+  runs, different days, or instrumental calibration cycles.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +15,8 @@ metadata:
   - FBMN-STATS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41596-024-01046-3
   title: FBMN-STATS

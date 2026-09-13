@@ -1,9 +1,9 @@
 ---
 name: mass-spectrum-scan-parsing
-description: Use when you have raw mass spectrometry data files from a Thermo instrument (e.
+description: Use when you have raw mass spectrometry data files from a Thermo instrument
+  (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,12 +17,16 @@ metadata:
   - MSnbase
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c03207
   title: Aerith
 evidence_spans:
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans, calculate the theoretical isotopic peak envelope
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans, calculate the theoretical isotopic peak envelope
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans
 - Extract visualization information from `.FT2` files
 - Aerith is an R package
 claims: []

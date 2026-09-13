@@ -1,9 +1,10 @@
 ---
 name: baseline-model-implementation-for-comparison
-description: Use when you are introducing a novel spectrum prediction model and need to demonstrate that performance improvements come from architectural innovation rather than experimental advantage.
+description: Use when you are introducing a novel spectrum prediction model and need
+  to demonstrate that performance improvements come from architectural innovation
+  rather than experimental advantage.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3439
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,11 +15,14 @@ metadata:
   - MAGMa
   techniques:
   - direct-infusion-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s42256-024-00816-8
   title: ICEBERG
 evidence_spans:
-- By inputting the chemical formula and your experimental spectrum, the WebUI will rank it against all candidates from PubChem.
+- By inputting the chemical formula and your experimental spectrum, the WebUI will
+  rank it against all candidates from PubChem.
 - the WebUI will rank it against all candidates from PubChem
 claims: []
 provenance:

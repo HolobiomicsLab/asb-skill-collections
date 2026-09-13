@@ -1,9 +1,10 @@
 ---
 name: ci-cd-workflow-monitoring
-description: Use when when you need to verify that a continuous integration pipeline for a scientific software project (e.g., mzmine) completes successfully, produces expected build artifacts, or fails in a reproducible manner.
+description: Use when when you need to verify that a continuous integration pipeline
+  for a scientific software project (e.g., mzmine) completes successfully, produces
+  expected build artifacts, or fails in a reproducible manner.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3552
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -15,6 +16,8 @@ metadata:
   - GitHub Actions
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41587-023-01690-2
   title: mzmine3

@@ -1,9 +1,10 @@
 ---
 name: ms-dial-feature-detection-and-alignment
-description: Use when when you have raw LC-HRMS data in .mzML or .abf format and need to detect metabolite features (peaks) across multiple samples, align them temporally and by mass-to-charge ratio, and generate a reproducible feature matrix.
+description: Use when when you have raw LC-HRMS data in .mzML or .abf format and need
+  to detect metabolite features (peaks) across multiple samples, align them temporally
+  and by mass-to-charge ratio, and generate a reproducible feature matrix.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +17,8 @@ metadata:
   - MSFLO
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial

@@ -1,9 +1,10 @@
 ---
 name: spectral-metadata-enrichment-via-api
-description: Use when you have .msp spectrum files with minimal metadata (e.g., only compound name and mass) and need to augment them with chemical structure descriptors, identifiers, and properties from external databases.
+description: Use when you have .msp spectrum files with minimal metadata (e.g., only
+  compound name and mass) and need to augment them with chemical structure descriptors,
+  identifiers, and properties from external databases.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3696
   edam_topics:
   - http://edamontology.org/topic_0218
@@ -21,6 +22,8 @@ metadata:
   - pytest
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.04494
   title: msmetaenhancer

@@ -1,9 +1,9 @@
 ---
 name: network-based-metabolite-identification
-description: Use when when you have m/z values from spatially-resolved mass spectrometry imaging (MSI) and need to predict their molecular formulae with high precision.
+description: Use when when you have m/z values from spatially-resolved mass spectrometry
+  imaging (MSI) and need to predict their molecular formulae with high precision.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3860
   edam_topics:
   - http://edamontology.org/topic_0769
@@ -14,11 +14,14 @@ metadata:
   techniques:
   - LC-MS
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART
 evidence_spans:
-- we present SMART, an open-source platform designed for precise formula assignment in mass spectrometry imaging
+- we present SMART, an open-source platform designed for precise formula assignment
+  in mass spectrometry imaging
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

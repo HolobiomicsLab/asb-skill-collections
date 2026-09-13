@@ -1,9 +1,9 @@
 ---
 name: mass-spectral-data-validation
-description: Use when you have raw LC-MS/MS spectral data in vendor formats or unvalidated .mgf files before feeding them into the specXplore importing pipeline.
+description: Use when you have raw LC-MS/MS spectral data in vendor formats or unvalidated
+  .mgf files before feeding them into the specXplore importing pipeline.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +16,8 @@ metadata:
   - LC-MS
   - GC-MS
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04444
   title: specxplore

@@ -1,9 +1,10 @@
 ---
 name: network-diffusion-prioritization
-description: Use when after clustering and filtering KEGG candidates for LC-MS features, when you have a ranked set of candidate metabolites per feature and access to a metabolite interaction network (e.g., from FELLA).
+description: Use when after clustering and filtering KEGG candidates for LC-MS features,
+  when you have a ranked set of candidate metabolites per feature and access to a
+  metabolite interaction network (e.g., from FELLA).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -17,14 +18,19 @@ metadata:
   - igraph
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c00238
   title: mWISE
 evidence_spans:
-- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides tools for context-based annotation of untargeted LC-MS data.
+- mWISE (metabolomics Wise Inference of Speck Entities) is an R package that provides
+  tools for context-based annotation of untargeted LC-MS data.
 - mWISE (metabolomics Wise Inference of Speck Entities) is an R package
-- The default table of adducts and fragments is built using information from CAMERA R package
-- The default table of adducts and fragments is built using information from CAMERA R package, H. Tong et al., and cliqueMS.
+- The default table of adducts and fragments is built using information from CAMERA
+  R package
+- The default table of adducts and fragments is built using information from CAMERA
+  R package, H. Tong et al., and cliqueMS.
 - information from CAMERA R package, H. Tong et al., and cliqueMS.
 - we will now use the sample graph provided by FELLA R package
 claims: []

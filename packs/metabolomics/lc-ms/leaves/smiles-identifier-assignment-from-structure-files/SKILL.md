@@ -1,9 +1,10 @@
 ---
 name: smiles-identifier-assignment-from-structure-files
-description: Use when when you have a mass spectral library (MSP format) that lacks SMILES annotations but is paired with a folder of MOL structure files (from Lib2NIST export or similar source).
+description: Use when when you have a mass spectral library (MSP format) that lacks
+  SMILES annotations but is paired with a folder of MOL structure files (from Lib2NIST
+  export or similar source).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -20,6 +21,8 @@ metadata:
   - ChemineOB
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler
@@ -29,7 +32,8 @@ evidence_spans:
 - library(future)
 - library(future.apply)
 - you can transformed it into a msp file by *Lib2NIST*
-- The total number of spectra that your NIST library have can be checked in the *MS Search* program
+- The total number of spectra that your NIST library have can be checked in the *MS
+  Search* program
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

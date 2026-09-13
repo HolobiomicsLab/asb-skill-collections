@@ -1,9 +1,11 @@
 ---
 name: colocalization-coefficient-computation
-description: Use when you have two co-registered LA-ICP-MS element channel images and need to quantify whether their spatial distributions are statistically correlated or independent. Use it specifically when investigating whether two elements co-occur spatially (e.
+description: Use when you have two co-registered LA-ICP-MS element channel images
+  and need to quantify whether their spatial distributions are statistically correlated
+  or independent. Use it specifically when investigating whether two elements co-occur
+  spatially (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3500
@@ -14,13 +16,16 @@ metadata:
   - Python
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c02138
   title: Pew2
 - doi: 10.1529/biophysj.103.038422
   title: ''
 evidence_spans:
-- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally defined threshold
+- The built in `Filtering Tool` removes spikes by comparing pixel values to a locally
+  defined threshold
 - '|pewpew| is an open-source LA-ICP-MS data import and processing application'
 - based on the python library pewlib_
 - python library [pewlib]

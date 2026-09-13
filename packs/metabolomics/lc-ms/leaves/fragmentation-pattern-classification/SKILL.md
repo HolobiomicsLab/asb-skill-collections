@@ -1,9 +1,9 @@
 ---
 name: fragmentation-pattern-classification
-description: Use when you have tandem mass spectra for compounds with known binary or categorical molecular properties (e.
+description: Use when you have tandem mass spectra for compounds with known binary
+  or categorical molecular properties (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3502
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -14,6 +14,8 @@ metadata:
   - Mass Query Language (MassQL)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c02591
   title: ChemEcho

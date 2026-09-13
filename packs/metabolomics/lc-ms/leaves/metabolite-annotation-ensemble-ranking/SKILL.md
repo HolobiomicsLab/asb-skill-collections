@@ -1,9 +1,11 @@
 ---
 name: metabolite-annotation-ensemble-ranking
-description: Use when you have ESI/LC-MS test spectra requiring candidate metabolite ranking, pre-trained MLP (NEIMS) and GNN baseline models are available or can be trained, you seek quantified improvement over single-model average rank performance (baseline MLP shows ~339 average rank), and your evaluation.
+description: Use when you have ESI/LC-MS test spectra requiring candidate metabolite
+  ranking, pre-trained MLP (NEIMS) and GNN baseline models are available or can be
+  trained, you seek quantified improvement over single-model average rank performance
+  (baseline MLP shows ~339 average rank), and your evaluation.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -19,6 +21,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btae490
   title: ESP

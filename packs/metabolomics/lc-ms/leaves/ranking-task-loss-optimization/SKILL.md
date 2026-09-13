@@ -1,9 +1,11 @@
 ---
 name: ranking-task-loss-optimization
-description: Use when you have multiple pre-trained neural network models (e.g., MLP and GNN) that produce overlapping predictions on the same set of candidates, and your evaluation metric is rank-based (average rank, Rank@K) rather than point-wise accuracy or RMSE.
+description: Use when you have multiple pre-trained neural network models (e.g., MLP
+  and GNN) that produce overlapping predictions on the same set of candidates, and
+  your evaluation metric is rank-based (average rank, Rank@K) rather than point-wise
+  accuracy or RMSE.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,6 +18,8 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btae490
   title: ESP

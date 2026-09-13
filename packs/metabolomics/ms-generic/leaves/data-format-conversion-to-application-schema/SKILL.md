@@ -1,9 +1,11 @@
 ---
 name: data-format-conversion-to-application-schema
-description: Use when you have m/z peak lists (positive and negative mode) and sample metadata from peak-picking software (e.g., XCMS with MetaboAnalyst export, MSnbase, or MetaboLights format) and need to load them into MetaboShiny for compound identification, statistical analysis, or machine learning.
+description: Use when you have m/z peak lists (positive and negative mode) and sample
+  metadata from peak-picking software (e.g., XCMS with MetaboAnalyst export, MSnbase,
+  or MetaboLights format) and need to load them into MetaboShiny for compound identification,
+  statistical analysis, or machine learning.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,6 +17,8 @@ metadata:
   - MSnbase
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s11306-020-01717-8
   title: MetaboShiny

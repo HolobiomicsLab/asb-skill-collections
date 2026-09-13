@@ -1,9 +1,11 @@
 ---
 name: ms2-spectral-similarity-computation
-description: Use when you have two or more LC-MS/MS datasets (in mzML, mzXML, or MGF format) and need to quantify their overall spectral content similarity—typical scenarios include data quality control, species identification, molecular phylogenetics, or proteome comparison across samples, cell lines, or.
+description: Use when you have two or more LC-MS/MS datasets (in mzML, mzXML, or MGF
+  format) and need to quantify their overall spectral content similarity—typical scenarios
+  include data quality control, species identification, molecular phylogenetics, or
+  proteome comparison across samples, cell lines, or.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3365
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -13,6 +15,8 @@ metadata:
   - DISMS2
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00457
   title: compareMS2 2.0

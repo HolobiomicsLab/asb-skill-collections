@@ -1,9 +1,9 @@
 ---
 name: multi-inheritance-class-hierarchy
-description: Use when when you need to support multiple plotting library backends (static or interactive) for the same data visualization domain (e.
+description: Use when when you need to support multiple plotting library backends
+  (static or interactive) for the same data visualization domain (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +16,8 @@ metadata:
   - Plotly
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz

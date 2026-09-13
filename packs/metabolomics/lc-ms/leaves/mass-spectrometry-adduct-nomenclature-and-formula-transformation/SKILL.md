@@ -1,9 +1,9 @@
 ---
 name: mass-spectrometry-adduct-nomenclature-and-formula-transformation
-description: Use when you have a neutral molecular formula (e.g., C3H8O2) and need to compute the adducted formula that will actually be observed in MS data;
+description: Use when you have a neutral molecular formula (e.g., C3H8O2) and need
+  to compute the adducted formula that will actually be observed in MS data;
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3803
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +14,8 @@ metadata:
   - collections.UserDict
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c01653
   title: mzapy

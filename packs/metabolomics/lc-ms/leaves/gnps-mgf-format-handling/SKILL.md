@@ -1,9 +1,10 @@
 ---
 name: gnps-mgf-format-handling
-description: Use when you have mass spectrometry MS/MS spectral data in GNPS-style MGF format and need to feed it into the Mass2SMILES deep learning model for structure and functional group prediction.
+description: Use when you have mass spectrometry MS/MS spectral data in GNPS-style
+  MGF format and need to feed it into the Mass2SMILES deep learning model for structure
+  and functional group prediction.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +16,8 @@ metadata:
   - Python (TensorFlow-based inference script)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.07.06.547963v1
   title: Mass2SMILES

@@ -1,9 +1,10 @@
 ---
 name: data-augmentation-metabolomics
-description: Use when you have preprocessed and normalized ROI feature data extracted from mzXML or mzML mass spectrometry files and seek to increase feature representation and robustness before statistical modeling or machine learning.
+description: Use when you have preprocessed and normalized ROI feature data extracted
+  from mzXML or mzML mass spectrometry files and seek to increase feature representation
+  and robustness before statistical modeling or machine learning.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -22,12 +23,17 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-04715-6
   title: AriumMS
 evidence_spans:
-- functions (ROIpeaks, MSroiaug) developed by Romà Tauler, Eva Gorrochategui and Joaquim Jaumot
-- 'Required toolboxes for the app version: Bioinformatic Toolbox, Statistics And Machine Learning Toolbox, Wavelet Toolbox, Image Processing Toolbox, Signal Processing Toolbox, Parallel Computing'
+- functions (ROIpeaks, MSroiaug) developed by Romà Tauler, Eva Gorrochategui and Joaquim
+  Jaumot
+- 'Required toolboxes for the app version: Bioinformatic Toolbox, Statistics And Machine
+  Learning Toolbox, Wavelet Toolbox, Image Processing Toolbox, Signal Processing Toolbox,
+  Parallel Computing'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

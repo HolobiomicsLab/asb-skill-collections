@@ -1,9 +1,10 @@
 ---
 name: parameter-tuning-metabolomics
-description: Use when you have at least 3 raw mass spectrometry samples in open formats (mzML, mzXML, CDF) from untargeted metabolomics experiments and need to configure parameters for XCMS, MZmine2, or similar processing software.
+description: Use when you have at least 3 raw mass spectrometry samples in open formats
+  (mzML, mzXML, CDF) from untargeted metabolomics experiments and need to configure
+  parameters for XCMS, MZmine2, or similar processing software.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +17,8 @@ metadata:
   - MSconvert
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/812370
   title: AutoTuner parameter selection

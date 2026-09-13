@@ -1,9 +1,10 @@
 ---
 name: pseudo-data-pair-construction
-description: Use when when you have a raw list of SMILES strings but lack sufficient real mass spectrometry reference data (typically <300 spectra) to train a generative model for unknown chemical identification.
+description: Use when when you have a raw list of SMILES strings but lack sufficient
+  real mass spectrometry reference data (typically <300 spectra) to train a generative
+  model for unknown chemical identification.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0361
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -14,6 +15,8 @@ metadata:
   - MSGO
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s42256-025-01140-5
   title: MSGo

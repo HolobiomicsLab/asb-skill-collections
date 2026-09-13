@@ -1,9 +1,9 @@
 ---
 name: mass-to-charge-tolerance-filtering
-description: Use when extracting migration times of specific analyte or reference markers (e.g., Paracetamol EOF marker) from CE-MS files using peak-picking workflows.
+description: Use when extracting migration times of specific analyte or reference
+  markers (e.g., Paracetamol EOF marker) from CE-MS files using peak-picking workflows.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -18,11 +18,14 @@ metadata:
   - Spectra
   techniques:
   - CE-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btac441
   title: MobilityTransformR
 evidence_spans:
-- there is no implementation in R that performs effective mobility transformation of CE-MS(/MS) data
+- there is no implementation in R that performs effective mobility transformation
+  of CE-MS(/MS) data
 - Description and usage of MobilityTransformR
 - compute Procaine's effective mobility using mobilityTransform
 - The CE-MS test data are from the `r BiocStyle::Biocpkg("msdata")` package

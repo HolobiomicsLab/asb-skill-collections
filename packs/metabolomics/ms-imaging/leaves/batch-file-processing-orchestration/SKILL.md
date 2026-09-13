@@ -1,9 +1,11 @@
 ---
 name: batch-file-processing-orchestration
-description: Use when when you have multiple CDF imaging files (e.g., from mass spectrometry imaging scans of biological samples) that need to be read into a single Matlab workspace with consistent structure and metadata (spectral intensity, m/z arrays, spatial coordinates).
+description: Use when when you have multiple CDF imaging files (e.g., from mass spectrometry
+  imaging scans of biological samples) that need to be read into a single Matlab workspace
+  with consistent structure and metadata (spectral intensity, m/z arrays, spatial
+  coordinates).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +16,8 @@ metadata:
   - DIMPLE pipeline
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.09.22.677919v1
   title: DIMPLE

@@ -1,9 +1,10 @@
 ---
 name: structure-ranking-from-spectral-data
-description: Use when you have an experimental tandem mass spectrum (collision-induced dissociation or ESI-MS/MS) and a chemical formula, and you need to identify the correct structure among multiple isomeric candidates in a database like PubChem.
+description: Use when you have an experimental tandem mass spectrum (collision-induced
+  dissociation or ESI-MS/MS) and a chemical formula, and you need to identify the
+  correct structure among multiple isomeric candidates in a database like PubChem.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0218
@@ -15,6 +16,8 @@ metadata:
   - SCARF
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04654
   title: ICEBERG / fragmentation graph generation

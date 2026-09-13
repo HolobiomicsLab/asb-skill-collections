@@ -1,9 +1,11 @@
 ---
 name: metadata-field-validation
-description: Use when you have received new or updated MassBank records (in plain-text or structured format) that must be integrated into the MassBank-data repository and you need to ensure they conform to the MassBank format specification before acceptance.
+description: Use when you have received new or updated MassBank records (in plain-text
+  or structured format) that must be integrated into the MassBank-data repository
+  and you need to ensure they conform to the MassBank format specification before
+  acceptance.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3071
@@ -14,6 +16,8 @@ metadata:
   - MassBank-cli-tools
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/jms.1777
   title: MassBank

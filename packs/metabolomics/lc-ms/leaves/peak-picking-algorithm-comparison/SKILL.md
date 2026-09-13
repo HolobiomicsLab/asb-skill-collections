@@ -1,9 +1,11 @@
 ---
 name: peak-picking-algorithm-comparison
-description: Use when you have claims in a paper or tool documentation that one peak picking method outperforms others (e.g., 'IDSL.IPA outperforms MZmine 2 and xcms'), but the specific comparison metrics, numerical results, and source tables are not provided in the abstract or introduction.
+description: Use when you have claims in a paper or tool documentation that one peak
+  picking method outperforms others (e.g., 'IDSL.IPA outperforms MZmine 2 and xcms'),
+  but the specific comparison metrics, numerical results, and source tables are not
+  provided in the abstract or introduction.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -17,11 +19,15 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA
 evidence_spans:
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
+  R package'
 - IDSL.IPA is able to outperform similar peak picking tools such as MZmine 2
 - IDSL.IPA is able to outperform similar peak picking tools such as MZmine 2, *xcms
 - similar peak picking tools such as MZmine 2, *xcms

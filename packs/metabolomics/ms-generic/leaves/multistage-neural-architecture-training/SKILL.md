@@ -1,9 +1,11 @@
 ---
 name: multistage-neural-architecture-training
-description: 'Use when you have paired mass spectra and molecular structure datasets and need to train a model that jointly understands both modalities for tasks like structure elucidation. Specifically, use it when: (1) you have large unlabeled or weakly-labeled pretraining data with both spectra and molecules;'
+description: 'Use when you have paired mass spectra and molecular structure datasets
+  and need to train a model that jointly understands both modalities for tasks like
+  structure elucidation. Specifically, use it when: (1) you have large unlabeled or
+  weakly-labeled pretraining data with both spectra and molecules;'
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0417
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,6 +17,8 @@ metadata:
   - MS-BART
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.48550/arxiv.2510.20615
   title: MS-BART

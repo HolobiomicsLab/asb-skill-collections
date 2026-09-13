@@ -1,9 +1,11 @@
 ---
 name: ft-icr-ms-analysis-tool-evaluation
-description: Use when you are evaluating or selecting FT-ICR MS software for a specific metabolomics workflow and need to assess which tools support your required analytical dimensions (e.g., Van Krevelen diagrams, PERMANOVA, thermodynamic indices, chemodiversity metrics, transformation networks).
+description: Use when you are evaluating or selecting FT-ICR MS software for a specific
+  metabolomics workflow and need to assess which tools support your required analytical
+  dimensions (e.g., Van Krevelen diagrams, PERMANOVA, thermodynamic indices, chemodiversity
+  metrics, transformation networks).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0362
   edam_topics:
   - http://edamontology.org/topic_0769
@@ -24,16 +26,21 @@ metadata:
   - UltraMassExplorer (UME)
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
 - web-based applications such as UltraMassExplorer (UME)
 - web-based applications such as UltraMassExplorer (UME) [27], FREDA [28]
-- web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst [29]
-- web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst [29], and DropMS [30]
+- web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst
+  [29]
+- web-based applications such as UltraMassExplorer (UME) [27], FREDA [28], MetaboAnalyst
+  [29], and DropMS [30]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

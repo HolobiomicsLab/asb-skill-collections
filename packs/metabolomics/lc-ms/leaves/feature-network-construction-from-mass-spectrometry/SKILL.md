@@ -1,9 +1,11 @@
 ---
 name: feature-network-construction-from-mass-spectrometry
-description: 'Use when you have a preprocessed feature table (tab-delimited: feature ID, m/z, retention time, intensity columns) from LC-MS data and need to annotate which observed features represent the same underlying compound via isotope or adduct relationships.'
+description: 'Use when you have a preprocessed feature table (tab-delimited: feature
+  ID, m/z, retention time, intensity columns) from LC-MS data and need to annotate
+  which observed features represent the same underlying compound via isotope or adduct
+  relationships.'
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -18,6 +20,8 @@ metadata:
   - khipu
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05810
   title: khipu

@@ -1,9 +1,11 @@
 ---
 name: feature-list-format-validation
-description: Use when a user supplies a custom feature list from external feature-finding software (vendor tools, alternative open-source pipelines) instead of using pyOpenMS automatic detection, or wishes to augment/replace pyOpenMS results with pre-processed features.
+description: Use when a user supplies a custom feature list from external feature-finding
+  software (vendor tools, alternative open-source pipelines) instead of using pyOpenMS
+  automatic detection, or wishes to augment/replace pyOpenMS results with pre-processed
+  features.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,12 +17,15 @@ metadata:
   - MSConvert
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
 - PFΔScreen is an open-source Python based non-target screening software tool
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

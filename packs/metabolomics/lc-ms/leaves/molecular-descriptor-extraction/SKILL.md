@@ -1,9 +1,10 @@
 ---
 name: molecular-descriptor-extraction
-description: Use when you have a collection of chemical structures in SMILES format and need to create paired structure–spectrum training data for a generative model, but do not have experimental MS/MS spectra available.
+description: Use when you have a collection of chemical structures in SMILES format
+  and need to create paired structure–spectrum training data for a generative model,
+  but do not have experimental MS/MS spectra available.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -22,6 +23,8 @@ metadata:
   - Retip Python package (pyRetip)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s42256-025-01140-5
   title: MSGo

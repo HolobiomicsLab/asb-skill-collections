@@ -1,9 +1,10 @@
 ---
 name: parent-ion-fragment-hierarchy-organization
-description: Use when after ISF features have been identified and annotated in Part 4 of the ISFrag workflow, and you need to represent the structural relationships among ISF features and their parent ions hierarchically.
+description: Use when after ISF features have been identified and annotated in Part
+  4 of the ISFrag workflow, and you need to represent the structural relationships
+  among ISF features and their parent ions hierarchically.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,12 +15,16 @@ metadata:
   - RStudio
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c01644
   title: ISFrag
 evidence_spans:
-- ISFrag is an R package for identifying and annotating in-source fragments in LCMS metabolite feature table.
-- ISFrag is an R package for identifying and annotating in-source fragments in LCMS metabolite feature table
+- ISFrag is an R package for identifying and annotating in-source fragments in LCMS
+  metabolite feature table.
+- ISFrag is an R package for identifying and annotating in-source fragments in LCMS
+  metabolite feature table
 - To install ISFrag package R version 4.0.0 or above is required
 - we recommend using RStudio to complete the installation and usage of ISFrag
 claims: []

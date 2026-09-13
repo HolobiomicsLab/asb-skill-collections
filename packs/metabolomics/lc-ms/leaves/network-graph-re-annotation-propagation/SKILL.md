@@ -1,9 +1,10 @@
 ---
 name: network-graph-re-annotation-propagation
-description: Use when when you have completed an initial ModiFinder analysis on a compound pair (known compound + modified analog with unknown structure), and you subsequently acquire or determine the structure of the modified compound.
+description: Use when when you have completed an initial ModiFinder analysis on a
+  compound pair (known compound + modified analog with unknown structure), and you
+  subsequently acquire or determine the structure of the modified compound.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3803
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -18,6 +19,8 @@ metadata:
   - MAGMaAnnotationEngine
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00061
   title: ModiFinder
@@ -27,7 +30,8 @@ evidence_spans:
 - ModiFinder requires Python 3.9 or above.
 - ModiFinder requires Python 3.9 or above
 - 'rdkit: http://www.rdkit.org/'
-- ModiFinder includes powerful visualization tools built on RDKit and matplotlib for creating publication-quality figures.
+- ModiFinder includes powerful visualization tools built on RDKit and matplotlib for
+  creating publication-quality figures.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

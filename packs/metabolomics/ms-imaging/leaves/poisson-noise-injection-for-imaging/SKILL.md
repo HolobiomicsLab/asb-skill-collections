@@ -1,9 +1,10 @@
 ---
 name: poisson-noise-injection-for-imaging
-description: Use when augmenting mass spectrometry ion images for contrastive learning, particularly when the model must generalize across different detector conditions or signal-to-noise ratios.
+description: Use when augmenting mass spectrometry ion images for contrastive learning,
+  particularly when the model must generalize across different detector conditions
+  or signal-to-noise ratios.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +16,8 @@ metadata:
   - boly_pytorch
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion

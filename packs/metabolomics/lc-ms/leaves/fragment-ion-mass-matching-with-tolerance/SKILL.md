@@ -1,9 +1,11 @@
 ---
 name: fragment-ion-mass-matching-with-tolerance
-description: 'Use when denoising MS/MS spectra and you have: (1) a precursor ion with measured m/z and known molecular formula (from SMILES or direct formula input), (2) an adduct type ([M+H]+, [M+Na]+, etc.), (3) a list of fragment ions with observed m/z values, and (4) a need to distinguish chemically valid.'
+description: 'Use when denoising MS/MS spectra and you have: (1) a precursor ion with
+  measured m/z and known molecular formula (from SMILES or direct formula input),
+  (2) an adduct type ([M+H]+, [M+Na]+, etc.), (3) a list of fragment ions with observed
+  m/z values, and (4) a need to distinguish chemically valid.'
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -22,6 +24,8 @@ metadata:
   - get_denoise_tag
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-025-02646-x
   title: Spectral Denoising

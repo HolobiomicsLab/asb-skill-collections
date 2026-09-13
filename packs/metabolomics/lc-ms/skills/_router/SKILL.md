@@ -1,9 +1,9 @@
 ---
 name: metabolomics-lc-ms-router
-description: Use when a task needs a skill from ASB Metabolomics — LC-MS — search this unit's 2,616 evidence-grounded skills, then apply and optionally ground the one that fits.
+description: Use when a task needs a skill from ASB Metabolomics — LC-MS — search this unit's 2,617 evidence-grounded skills, then apply and optionally ground the one that fits.
 license: CC-BY-4.0
 metadata:
-  skills_count: 2616
+  skills_count: 2617
   leaf_dir: leaves
   retrieval: bin/search_skills.py
   indexes:
@@ -13,7 +13,7 @@ schema_version: 0.2.0
 
 # ASB Metabolomics — LC-MS — router
 
-Entry point for **2,616 evidence-grounded skills**, each distilled from a
+Entry point for **2,617 evidence-grounded skills**, each distilled from a
 peer-reviewed method paper and its public code repository.
 
 ## How this unit is laid out

@@ -1,9 +1,11 @@
 ---
 name: xml-spectrum-element-deserialization
-description: Use when when you have retrieved a decompressed XML data block from an indexed gzip file (via GSGR bracket notation) and need to convert that raw XML string into a usable Python spectrum or chromatogram object for downstream analysis, filtering, or comparison.
+description: Use when when you have retrieved a decompressed XML data block from an
+  indexed gzip file (via GSGR bracket notation) and need to convert that raw XML string
+  into a usable Python spectrum or chromatogram object for downstream analysis, filtering,
+  or comparison.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +16,8 @@ metadata:
   - ElementTree (xml.etree.ElementTree)
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml

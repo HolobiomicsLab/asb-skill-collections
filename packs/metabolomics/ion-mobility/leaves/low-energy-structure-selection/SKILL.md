@@ -1,9 +1,10 @@
 ---
 name: low-energy-structure-selection
-description: Use when after generating an ensemble of 3D conformers via RDKit conformation sampling, when you need to reduce the conformer set size before expensive quantum-chemical calculations (e.g., QUICK).
+description: Use when after generating an ensemble of 3D conformers via RDKit conformation
+  sampling, when you need to reduce the conformer set size before expensive quantum-chemical
+  calculations (e.g., QUICK).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0337
   edam_topics:
   - http://edamontology.org/topic_3314
@@ -15,6 +16,8 @@ metadata:
   - QUICK
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS

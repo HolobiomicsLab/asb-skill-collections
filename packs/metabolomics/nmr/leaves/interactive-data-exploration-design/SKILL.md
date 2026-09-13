@@ -1,9 +1,11 @@
 ---
 name: interactive-data-exploration-design
-description: Use when you have NMR metabolomics measurements paired with pre-analytical metadata (processing delay times, centrifugation timing, sample type such as plasma vs. serum, cohort identifiers) and need to interactively explore how variation in processing conditions drives changes in metabolic.
+description: Use when you have NMR metabolomics measurements paired with pre-analytical
+  metadata (processing delay times, centrifugation timing, sample type such as plasma
+  vs. serum, cohort identifiers) and need to interactively explore how variation in
+  processing conditions drives changes in metabolic.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_2409
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -13,6 +15,8 @@ metadata:
   - PRIMA-Panel
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c04938
   title: PRIMA-Panel

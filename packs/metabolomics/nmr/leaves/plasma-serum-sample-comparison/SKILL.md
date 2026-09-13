@@ -1,9 +1,11 @@
 ---
 name: plasma-serum-sample-comparison
-description: Use when you have NMR-based metabolomics measurements from a cohort containing both plasma and serum samples with associated processing delay metadata (pre- and post-centrifugation times), and you need to determine whether metabolic parameter stability differs between the two sample types or to.
+description: Use when you have NMR-based metabolomics measurements from a cohort containing
+  both plasma and serum samples with associated processing delay metadata (pre- and
+  post-centrifugation times), and you need to determine whether metabolic parameter
+  stability differs between the two sample types or to.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -12,6 +14,8 @@ metadata:
   - PRIMA-Panel
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c04938
   title: PRIMA-Panel

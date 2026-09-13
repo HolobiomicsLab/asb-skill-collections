@@ -1,9 +1,11 @@
 ---
 name: metabolite-set-decomposition-plage
-description: Use when you have peak intensity data from metabolomics experiments with annotated metabolites assigned to known groupings (KEGG pathways, Reactome, GNPS Molecular Families, or MS2LDA Mass2Motifs) and need to identify which metabolite sets change significantly across experimental comparisons while.
+description: Use when you have peak intensity data from metabolomics experiments with
+  annotated metabolites assigned to known groupings (KEGG pathways, Reactome, GNPS
+  Molecular Families, or MS2LDA Mass2Motifs) and need to identify which metabolite
+  sets change significantly across experimental comparisons while.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -17,6 +19,8 @@ metadata:
   - Reactome
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals

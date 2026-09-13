@@ -1,9 +1,9 @@
 ---
 name: metabolite-database-construction
-description: Use when when performing untargeted metabolomics annotation at scale and you need to estimate false discovery rates for candidate metabolite identifications.
+description: Use when when performing untargeted metabolomics annotation at scale
+  and you need to estimate false discovery rates for candidate metabolite identifications.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +16,8 @@ metadata:
   - Passatutto
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra

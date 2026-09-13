@@ -1,9 +1,10 @@
 ---
 name: multidimensional-spectral-array-extraction
-description: Use when you have multidimensional MS data (with LC and/or ion mobility dimensions) converted to MZA HDF5 format and need to retrieve raw spectral intensity and m/z values for specific scans, retention times, drift times, or mass ranges.
+description: Use when you have multidimensional MS data (with LC and/or ion mobility
+  dimensions) converted to MZA HDF5 format and need to retrieve raw spectral intensity
+  and m/z values for specific scans, retention times, drift times, or mass ranges.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -19,6 +20,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c01653
   title: mzapy

@@ -1,9 +1,11 @@
 ---
 name: chemical-class-mapping
-description: Use when you have a GNPS molecular network (GML or GraphML format) and wish to annotate network nodes with chemical class labels to support metabolite family interpretation. Use it specifically when you need to overlay chemical classification schemes (e.
+description: Use when you have a GNPS molecular network (GML or GraphML format) and
+  wish to annotate network nodes with chemical class labels to support metabolite
+  family interpretation. Use it specifically when you need to overlay chemical classification
+  schemes (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -16,11 +18,14 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo9070144
   title: molnetenhancer
 evidence_spans:
-- pyMolNetEnhancer is a python module integrating chemical class and substructure information
+- pyMolNetEnhancer is a python module integrating chemical class and substructure
+  information
 - pyMolNetEnhancer is a python module
 claims: []
 provenance:

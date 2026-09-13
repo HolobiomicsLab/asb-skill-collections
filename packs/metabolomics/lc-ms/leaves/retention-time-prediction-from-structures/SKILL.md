@@ -1,9 +1,10 @@
 ---
 name: retention-time-prediction-from-structures
-description: Use when you have molecular structures (SMILES or SDF format) for which you need to predict retention time in liquid chromatography, especially when your target dataset contains fewer than ~500 annotated examples.
+description: Use when you have molecular structures (SMILES or SDF format) for which
+  you need to predict retention time in liquid chromatography, especially when your
+  target dataset contains fewer than ~500 annotated examples.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3791
   edam_topics:
   - http://edamontology.org/topic_3174
@@ -16,6 +17,8 @@ metadata:
   - retention_time_gnn
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c03177
   title: retention_time_gnn

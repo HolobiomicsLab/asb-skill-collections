@@ -1,9 +1,11 @@
 ---
 name: polymorphic-method-dispatch-on-plot-kind
-description: Use when when building a plotting library that must support multiple visualization types (1D spectra, chromatograms, mobilograms, 2D peak maps) across heterogeneous rendering backends, and you want users to specify plot type via a single kind parameter rather than importing backend-specific classes.
+description: Use when when building a plotting library that must support multiple
+  visualization types (1D spectra, chromatograms, mobilograms, 2D peak maps) across
+  heterogeneous rendering backends, and you want users to specify plot type via a
+  single kind parameter rather than importing backend-specific classes.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,6 +19,8 @@ metadata:
   - bokeh
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz
@@ -26,7 +30,8 @@ evidence_spans:
 - Multiple backends supported including matplotlib, bokeh, and plotly
 - Rendering is typically slower than the BOKEH backend
 - Chromatograms can be plotted using kind = chromatogram
-- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from pandas dataframes
+- pyOpenMS-Viz is a visualization package for mass spectrometry data directly from
+  pandas dataframes
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

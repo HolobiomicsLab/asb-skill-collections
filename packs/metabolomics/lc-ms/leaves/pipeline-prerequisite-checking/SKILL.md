@@ -1,9 +1,10 @@
 ---
 name: pipeline-prerequisite-checking
-description: Use when before launching the DaDIA metabolomics pipeline or any multi-package workflow, when you have an R environment with potentially mixed or unknown package versions and need to confirm that R ≥4.0, XCMS ≥3.11.4, metaMS ≥1.25.
+description: Use when before launching the DaDIA metabolomics pipeline or any multi-package
+  workflow, when you have an R environment with potentially mixed or unknown package
+  versions and need to confirm that R ≥4.0, XCMS ≥3.11.4, metaMS ≥1.25.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0004
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -14,6 +15,8 @@ metadata:
   - DaDIA
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c05022
   title: DaDIA

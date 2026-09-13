@@ -1,9 +1,11 @@
 ---
 name: c-python-interface-wrapping
-description: Use when you have a mature C++ library (like OpenMS) with stable APIs that you want to make accessible from Python environments, and you need to preserve performance-critical C++ execution while supporting rapid prototyping or integration into Python-based data pipelines (e.
+description: Use when you have a mature C++ library (like OpenMS) with stable APIs
+  that you want to make accessible from Python environments, and you need to preserve
+  performance-critical C++ execution while supporting rapid prototyping or integration
+  into Python-based data pipelines (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -14,6 +16,8 @@ metadata:
   - OpenMS C++ library
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/nmeth.3959
   title: OpenMS

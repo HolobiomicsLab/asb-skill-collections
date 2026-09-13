@@ -1,9 +1,11 @@
 ---
 name: molecular-geometry-neural-network-potential-evaluation
-description: Use when after RDKit has generated multiple conformations for a molecule in an SDF or XYZ format, and you need to reduce the conformational ensemble to a tractable size (by energy-based ranking) before submitting to expensive quantum-chemical calculations (e.g., QUICK).
+description: Use when after RDKit has generated multiple conformations for a molecule
+  in an SDF or XYZ format, and you need to reduce the conformational ensemble to a
+  tractable size (by energy-based ranking) before submitting to expensive quantum-chemical
+  calculations (e.g., QUICK).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_2996
   edam_topics:
   - http://edamontology.org/topic_3314
@@ -16,6 +18,8 @@ metadata:
   techniques:
   - ion-mobility-MS
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS

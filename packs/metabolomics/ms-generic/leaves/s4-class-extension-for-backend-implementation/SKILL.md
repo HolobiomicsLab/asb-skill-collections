@@ -1,9 +1,10 @@
 ---
 name: s4-class-extension-for-backend-implementation
-description: Use when you are building a new data representation or storage strategy for MS spectra (e.g., on-disk HDF5, SQL database, remote file access) and need to integrate it seamlessly into workflows that use the Spectra package.
+description: Use when you are building a new data representation or storage strategy
+  for MS spectra (e.g., on-disk HDF5, SQL database, remote file access) and need to
+  integrate it seamlessly into workflows that use the Spectra package.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,14 +17,18 @@ metadata:
   - IRanges
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
-- Backends such as the `MsBackendMzR` for example retrieve the data on the fly from the raw MS data files
+- Backends such as the `MsBackendMzR` for example retrieve the data on the fly from
+  the raw MS data files
 - library(Spectra) library(IRanges)
 - library(Spectra)
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

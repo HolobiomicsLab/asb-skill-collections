@@ -1,9 +1,10 @@
 ---
 name: qc-summary-table-extraction
-description: Use when after applying one or more mpactr filters (filter_mispicked_ions, filter_group, filter_cv, filter_insource_ions) to an mpactr object, call qc_summary() to obtain a structured report of which ions passed or failed each filter.
+description: Use when after applying one or more mpactr filters (filter_mispicked_ions,
+  filter_group, filter_cv, filter_insource_ions) to an mpactr object, call qc_summary()
+  to obtain a structured report of which ions passed or failed each filter.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +17,8 @@ metadata:
   - ggplot2
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -23,7 +26,8 @@ derived_from:
   title: ''
 evidence_spans:
 - This table can be used for a variety of analyses that can be conducted in R
-- creating an interactive plot of input features and the filters they failed, if any, using `ggplot` and `plotly`
+- creating an interactive plot of input features and the filters they failed, if any,
+  using `ggplot` and `plotly`
 - library(data.table)
 claims: []
 provenance:

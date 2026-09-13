@@ -1,9 +1,10 @@
 ---
 name: high-quality-spectral-library-benchmarking
-description: Use when you have a pre-trained MS/MS spectral embedding model and need to validate that it achieves strong and consistent retrieval performance on curated spectral libraries that represent real-world data quality standards.
+description: Use when you have a pre-trained MS/MS spectral embedding model and need
+  to validate that it achieves strong and consistent retrieval performance on curated
+  spectral libraries that represent real-world data quality standards.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -19,6 +20,8 @@ metadata:
   - SpecEmbedding-Comparison
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding

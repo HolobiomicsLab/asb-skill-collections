@@ -1,9 +1,10 @@
 ---
 name: vendor-raw-file-format-recognition
-description: Use when you have a directory containing mass spectrometry data files from multiple instrument vendors (Thermo, AB Sciex, Agilent, Bruker, etc.) and need to convert them to a common format (Aird or mzML).
+description: Use when you have a directory containing mass spectrometry data files
+  from multiple instrument vendors (Thermo, AB Sciex, Agilent, Bruker, etc.) and need
+  to convert them to a common format (Aird or mzML).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +17,8 @@ metadata:
   - ProteoWizard MSConvert
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird

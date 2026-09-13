@@ -1,9 +1,11 @@
 ---
 name: feature-wise-spectrum-count-aggregation
-description: Use when when you have extracted concatenated MS/MS spectra for multiple features from replicate mzML files and need to verify that a TIC-based filtering step (e.g., top x% TIC extraction) reduces per-feature spectrum counts to expected target levels.
+description: Use when when you have extracted concatenated MS/MS spectra for multiple
+  features from replicate mzML files and need to verify that a TIC-based filtering
+  step (e.g., top x% TIC extraction) reduces per-feature spectrum counts to expected
+  target levels.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,13 +18,18 @@ metadata:
   - data.table
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01726
   title: DuReS
 evidence_spans:
 - devtools::install_github("BiosystemEngineeringLab-IITB/dures", auth_token = NULL)
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
-- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils", "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager", "knitr", "markdown"),
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra"
+- invisible(lapply(c("dplyr", "readr", "data.table", "pbapply", "magrittr", "utils",
+  "stats", "rPref", "ggplot2", "DEoptim", "patchwork", "S4Vectors", "Spectra", "BiocManager",
+  "knitr", "markdown"),
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

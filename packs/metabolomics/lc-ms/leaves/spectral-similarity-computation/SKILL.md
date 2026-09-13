@@ -1,9 +1,9 @@
 ---
 name: spectral-similarity-computation
-description: Use when after inferring Mass2Motif definitions from LDA modeling when you need to build a network representation of motif relationships.
+description: Use when after inferring Mass2Motif definitions from LDA modeling when
+  you need to build a network representation of motif relationships.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -18,6 +18,8 @@ metadata:
   - GNPS_GC
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
@@ -25,7 +27,8 @@ derived_from:
   title: ''
 evidence_spans:
 - MS2LDA (Mass Spectrometry–Latent Dirichlet Allocation) is a framework
-- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely to explain the observed fragmentation patterns
+- MS2LDA uses Latent Dirichlet Allocation (LDA) to infer which motifs are most likely
+  to explain the observed fragmentation patterns
 - Configure the Python environment (set PYTHONPATH, activate conda, etc.)
 - bittremieux/GNPS_GC
 claims: []

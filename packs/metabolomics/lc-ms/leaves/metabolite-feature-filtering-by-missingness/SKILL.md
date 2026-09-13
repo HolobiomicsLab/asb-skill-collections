@@ -1,9 +1,10 @@
 ---
 name: metabolite-feature-filtering-by-missingness
-description: Use when you have a raw metabolite abundance matrix (e.g., from MSPrep or another LC-MS/MS pipeline) with many features and samples, and you observe that a substantial fraction of metabolites are missing (NA or zero-valued) across replicates.
+description: Use when you have a raw metabolite abundance matrix (e.g., from MSPrep
+  or another LC-MS/MS pipeline) with many features and samples, and you observe that
+  a substantial fraction of metabolites are missing (NA or zero-valued) across replicates.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -15,6 +16,8 @@ metadata:
   - marr
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s12859-021-04336-9
   title: marr
@@ -23,7 +26,8 @@ derived_from:
 evidence_spans:
 - 'marr: An R/Bioconductor package for Maximum Rank Reproducibility'
 - The R-package **marr** can be installed from GitHub using the R package [devtools]
-- The **msprepCOPD** data in the **marr** package was pre-processed using the MSPrep software
+- The **msprepCOPD** data in the **marr** package was pre-processed using the MSPrep
+  software
 - '`marr`: An R/Bioconductor package for Maximum Rank Reproducibility'
 claims: []
 provenance:

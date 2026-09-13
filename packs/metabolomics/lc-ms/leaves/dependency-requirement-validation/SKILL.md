@@ -1,9 +1,10 @@
 ---
 name: dependency-requirement-validation
-description: Use when before launching the DaDIA pipeline or any multi-package R workflow that has strict version constraints. Use this skill when you have access to an R environment and need to confirm that R ≥4.0, XCMS ≥3.11.4, and metaMS ≥1.25.
+description: Use when before launching the DaDIA pipeline or any multi-package R workflow
+  that has strict version constraints. Use this skill when you have access to an R
+  environment and need to confirm that R ≥4.0, XCMS ≥3.11.4, and metaMS ≥1.25.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0338
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +16,8 @@ metadata:
   - DaDIA
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c05022
   title: DaDIA

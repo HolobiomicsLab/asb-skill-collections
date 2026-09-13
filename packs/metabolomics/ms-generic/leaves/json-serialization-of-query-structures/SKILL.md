@@ -1,9 +1,10 @@
 ---
 name: json-serialization-of-query-structures
-description: Use when you have parsed a MassQL query string into an AST representation and need to store, validate, transmit, or integrate the query structure with other tools or systems.
+description: Use when you have parsed a MassQL query string into an AST representation
+  and need to store, validate, transmit, or integrate the query structure with other
+  tools or systems.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +16,8 @@ metadata:
   - massql Command Line Tool
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-025-02785-1
   title: MassQL

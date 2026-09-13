@@ -1,9 +1,11 @@
 ---
 name: metabolomic-heatmap-visualization
-description: Use when after completing feature annotation and reaction assignment in an untargeted metabolomics workflow, specifically when you have a feature-by-sample intensity matrix aligned with metabolite identities and want to communicate cluster structure, reaction pathway groupings, and feature.
+description: Use when after completing feature annotation and reaction assignment
+  in an untargeted metabolomics workflow, specifically when you have a feature-by-sample
+  intensity matrix aligned with metabolite identities and want to communicate cluster
+  structure, reaction pathway groupings, and feature.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0571
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -21,6 +23,8 @@ metadata:
   - readxl
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.est.5c08558
   title: CMDN

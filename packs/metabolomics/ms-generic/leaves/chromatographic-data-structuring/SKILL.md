@@ -1,9 +1,10 @@
 ---
 name: chromatographic-data-structuring
-description: Use when after parsing a centroid mzML file into (m/z, scan_number, intensity) tuples, when you need to organize sparse MS1 data for efficient peak detection and cross-sample alignment. Apply this skill when high mass resolution (e.
+description: Use when after parsing a centroid mzML file into (m/z, scan_number, intensity)
+  tuples, when you need to organize sparse MS1 data for efficient peak detection and
+  cross-sample alignment. Apply this skill when high mass resolution (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3633
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -17,12 +18,15 @@ metadata:
   - metDataModel
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
 - The default method uses `pymzml` to parse mzML files.
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:

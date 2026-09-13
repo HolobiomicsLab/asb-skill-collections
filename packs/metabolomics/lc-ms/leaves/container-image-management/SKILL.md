@@ -1,9 +1,11 @@
 ---
 name: container-image-management
-description: Use when your LC-HRMS metabolomics data (.mzML or .abf files) must be processed reproducibly across multiple machines (local workstations, HPCs, cloud) without manual tool installation, or when you need to enforce identical computational environments for peer review and long-term archival.
+description: Use when your LC-HRMS metabolomics data (.mzML or .abf files) must be
+  processed reproducibly across multiple machines (local workstations, HPCs, cloud)
+  without manual tool installation, or when you need to enforce identical computational
+  environments for peer review and long-term archival.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +18,8 @@ metadata:
   - MSFLO
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial

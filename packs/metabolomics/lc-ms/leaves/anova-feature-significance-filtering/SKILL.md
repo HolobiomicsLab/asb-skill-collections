@@ -1,9 +1,9 @@
 ---
 name: anova-feature-significance-filtering
-description: Use when you have a normalized LC-MS/MS metabolite abundance matrix (e.g., from MS-DIAL preprocessing) with multiple samples across experimental groups (e.
+description: Use when you have a normalized LC-MS/MS metabolite abundance matrix (e.g.,
+  from MS-DIAL preprocessing) with multiple samples across experimental groups (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -15,14 +15,19 @@ metadata:
   - ComplexHeatmap
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.06.20.599545v1
   title: MargheRita
 - doi: 10.1101/2024.06.20.599545
   title: ''
 evidence_spans:
-- margheRita implements both Over Representation Analysis (ORA) and Metabolite Set Enrichment Analysis (MSEA), based on clusterProfiler
-- The R package margheRita addresses the complete workflow for metabolomic profiling in untargeted studies based on liquid chromatography (LC) coupled with tandem mass spectrometry (MS/MS)
+- margheRita implements both Over Representation Analysis (ORA) and Metabolite Set
+  Enrichment Analysis (MSEA), based on clusterProfiler
+- The R package margheRita addresses the complete workflow for metabolomic profiling
+  in untargeted studies based on liquid chromatography (LC) coupled with tandem mass
+  spectrometry (MS/MS)
 - The R package margheRita addresses the complete workflow for metabolomic profiling
 - The R package margheRita addresses the complete workflow
 - The R package margheRita

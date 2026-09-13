@@ -1,9 +1,11 @@
 ---
 name: ccs-prediction-model-training
-description: Use when you have a dataset of SMILES strings with corresponding experimental CCS measurements and want to build a predictive model that can rapidly generate CCS values for new molecules without running expensive ion-mobility spectrometry experiments.
+description: Use when you have a dataset of SMILES strings with corresponding experimental
+  CCS measurements and want to build a predictive model that can rapidly generate
+  CCS values for new molecules without running expensive ion-mobility spectrometry
+  experiments.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3373
@@ -22,6 +24,8 @@ metadata:
   - conda/pip
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/cem.70040
   title: PACCS

@@ -1,9 +1,11 @@
 ---
 name: mass-spectrometry-fragment-matching
-description: Use when you have experimental fragment m/z peaklists from Q-Exactive orbitrap, Agilent Q-TOF, Bruker Q-TOF, or SCIEX Q-TOF UHPLC-HRMS/MS instruments (in CSV or mzML-derived table formats) and need to assign lipid identities using untargeted or targeted tandem MS data.
+description: Use when you have experimental fragment m/z peaklists from Q-Exactive
+  orbitrap, Agilent Q-TOF, Bruker Q-TOF, or SCIEX Q-TOF UHPLC-HRMS/MS instruments
+  (in CSV or mzML-derived table formats) and need to assign lipid identities using
+  untargeted or targeted tandem MS data.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -20,6 +22,8 @@ metadata:
   - SCIEX Q-TOF UHPLC-HRMS/MS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch

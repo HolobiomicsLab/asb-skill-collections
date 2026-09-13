@@ -58,6 +58,15 @@
       ],
       "repo_urls": [
         "https://github.com/AutoFlowResearch/SmartPeak"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "openms",
+        "pyopenms",
+        "smartpeak",
+        "smartpeakcli",
+        "smartpeakgui"
       ]
     },
     "accurate-mass-metabolite-search-against-hmdb": {
@@ -77,6 +86,15 @@
       ],
       "repo_urls": [
         "https://github.com/AutoFlowResearch/SmartPeak"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "openms",
+        "pyopenms",
+        "smartpeak",
+        "smartpeakcli",
+        "smartpeakgui"
       ]
     },
     "acquisition-method-overlap-analysis": {
@@ -94,6 +112,16 @@
       ],
       "repo_urls": [
         "https://github.com/pnnl/IonToolPack"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "comparador",
+        "iontoolpack",
+        "mirador",
+        "peakqc",
+        "peakquant",
+        "tandemmatch"
       ]
     },
     "acquisition-mode-enumeration-and-validation": {
@@ -113,9 +141,20 @@
         "asb-paper-10-1186-s12859-017-1744-3"
       ],
       "repo_urls": [
-        "https://github.com/GarrettLab-UF/LipidMatch",
-        "https://github.com/FrigerioGianfranco/GetFeatistics",
-        "https://github.com/13479776/statTarget"
+        "https://github.com/GarrettLab-UF/LipidMatch"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "agilent-q-tof-uhplc-hrms-ms",
+        "bruker-q-tof-uhplc-hrms-ms",
+        "compound-discoverer",
+        "lipidmatch",
+        "ms-dial",
+        "mzmine",
+        "q-exactive-orbitrap",
+        "sciex-q-tof-uhplc-hrms-ms",
+        "xcms"
       ]
     },
     "adduct-based-feature-consolidation": {
@@ -135,6 +174,15 @@
       ],
       "repo_urls": [
         "https://github.com/AutoFlowResearch/SmartPeak"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "openms",
+        "pyopenms",
+        "smartpeak",
+        "smartpeakcli",
+        "smartpeakgui"
       ]
     },
     "aromaticity-index-computation": {
@@ -150,14 +198,33 @@
         "asb-paper-10-1186-s40168-023-01476-3"
       ],
       "repo_urls": [
-        "https://github.com/Karnovsky-Lab/DNEA",
-        "https://github.com/biodatalab/enrichmet",
-        "https://github.com/PNNL-m-q/mzapy",
-        "https://github.com/13479776/statTarget",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/pmartR/PMart_ShinyApp",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/chopralab/CLAW"
+        "https://github.com/Coayala/MetaboDirect"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cytoscape",
+        "dropms",
+        "formularity",
+        "freda",
+        "i-van-krevelen",
+        "keggrest",
+        "matplotlib",
+        "metaboanalyst",
+        "metabodirect",
+        "numpy",
+        "pandas",
+        "pmartr",
+        "py4cytoscape",
+        "python",
+        "python-numpy-pandas",
+        "r-4-0-2",
+        "r-vegan-package",
+        "seaborn",
+        "syncsa",
+        "ultramassexplorer",
+        "vegan",
+        "vegan-r-package"
       ]
     },
     "automated-feature-extraction-from-spectra": {
@@ -174,6 +241,13 @@
       ],
       "repo_urls": [
         "https://github.com/Katherine00689/RapidMass"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asap-ms",
+        "di-ms",
+        "rapidmass"
       ]
     },
     "baseline-model-implementation-for-comparison": {
@@ -189,10 +263,17 @@
         "asb-paper-10-1038-s42256-024-00816-8"
       ],
       "repo_urls": [
-        "https://github.com/samgoldman97/ms-pred",
-        "https://github.com/RECETOX/MSMetaEnhancer",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/JainLab/Manuscript-DNNs-for-Classification-of-LCMS-Peaks"
+        "https://github.com/samgoldman97/ms-pred"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "iceberg-webui",
+        "ms-pred-iceberg",
+        "ms-pred-scarf-model",
+        "pubchem",
+        "pytorch",
+        "tensorflow"
       ]
     },
     "biochemical-transformation-matching": {
@@ -210,14 +291,33 @@
         "asb-paper-10-1186-s40168-023-01476-3"
       ],
       "repo_urls": [
-        "https://github.com/Karnovsky-Lab/DNEA",
-        "https://github.com/biodatalab/enrichmet",
-        "https://github.com/PNNL-m-q/mzapy",
-        "https://github.com/13479776/statTarget",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/pmartR/PMart_ShinyApp",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/chopralab/CLAW"
+        "https://github.com/Coayala/MetaboDirect"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cytoscape",
+        "dropms",
+        "formularity",
+        "freda",
+        "i-van-krevelen",
+        "keggrest",
+        "matplotlib",
+        "metaboanalyst",
+        "metabodirect",
+        "numpy",
+        "pandas",
+        "pmartr",
+        "py4cytoscape",
+        "python",
+        "python-numpy-pandas",
+        "r-4-0-2",
+        "r-vegan-package",
+        "seaborn",
+        "syncsa",
+        "ultramassexplorer",
+        "vegan",
+        "vegan-r-package"
       ]
     },
     "blank-sample-background-interference-estimation": {
@@ -237,6 +337,15 @@
       ],
       "repo_urls": [
         "https://github.com/AutoFlowResearch/SmartPeak"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "openms",
+        "pyopenms",
+        "smartpeak",
+        "smartpeakcli",
+        "smartpeakgui"
       ]
     },
     "compound-class-assignment-from-molecular-formula": {
@@ -253,14 +362,33 @@
         "asb-paper-10-1186-s40168-023-01476-3"
       ],
       "repo_urls": [
-        "https://github.com/Karnovsky-Lab/DNEA",
-        "https://github.com/biodatalab/enrichmet",
-        "https://github.com/PNNL-m-q/mzapy",
-        "https://github.com/13479776/statTarget",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/pmartR/PMart_ShinyApp",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/chopralab/CLAW"
+        "https://github.com/Coayala/MetaboDirect"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cytoscape",
+        "dropms",
+        "formularity",
+        "freda",
+        "i-van-krevelen",
+        "keggrest",
+        "matplotlib",
+        "metaboanalyst",
+        "metabodirect",
+        "numpy",
+        "pandas",
+        "pmartr",
+        "py4cytoscape",
+        "python",
+        "python-numpy-pandas",
+        "r-4-0-2",
+        "r-vegan-package",
+        "seaborn",
+        "syncsa",
+        "ultramassexplorer",
+        "vegan",
+        "vegan-r-package"
       ]
     },
     "cross-instrument-data-harmonization": {
@@ -278,6 +406,13 @@
       ],
       "repo_urls": [
         "https://github.com/Katherine00689/RapidMass"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asap-ms",
+        "di-ms",
+        "rapidmass"
       ]
     },
     "dimension-scale-linking-and-cross-group-indexing": {
@@ -293,8 +428,14 @@
         "asb-paper-10-1101-2025-10-15-682422v1"
       ],
       "repo_urls": [
-        "https://github.com/swinnenteam/LipidQMap",
-        "https://github.com/GenomicsMachineLearning/SpaMTP"
+        "https://github.com/swinnenteam/LipidQMap"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cardinal",
+        "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
+        "lipidqmap"
       ]
     },
     "diversity-visualization-by-treatment": {
@@ -310,14 +451,33 @@
         "asb-paper-10-1186-s40168-023-01476-3"
       ],
       "repo_urls": [
-        "https://github.com/Karnovsky-Lab/DNEA",
-        "https://github.com/biodatalab/enrichmet",
-        "https://github.com/PNNL-m-q/mzapy",
-        "https://github.com/13479776/statTarget",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/pmartR/PMart_ShinyApp",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/chopralab/CLAW"
+        "https://github.com/Coayala/MetaboDirect"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cytoscape",
+        "dropms",
+        "formularity",
+        "freda",
+        "i-van-krevelen",
+        "keggrest",
+        "matplotlib",
+        "metaboanalyst",
+        "metabodirect",
+        "numpy",
+        "pandas",
+        "pmartr",
+        "py4cytoscape",
+        "python",
+        "python-numpy-pandas",
+        "r-4-0-2",
+        "r-vegan-package",
+        "seaborn",
+        "syncsa",
+        "ultramassexplorer",
+        "vegan",
+        "vegan-r-package"
       ]
     },
     "embedding-space-representation": {
@@ -335,6 +495,11 @@
       ],
       "repo_urls": [
         "https://github.com/HaldamirS/CLERMS"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "transformer"
       ]
     },
     "environment-dependency-management": {
@@ -359,6 +524,14 @@
       ],
       "repo_urls": [
         "https://github.com/Viant-Metabolomics/Galaxy-M"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "galaxy",
+        "matlab-compiler-runtime-8-3",
+        "python-2-7",
+        "r-3-0-1"
       ]
     },
     "experimental-design-metadata-integration": {
@@ -375,6 +548,11 @@
       ],
       "repo_urls": [
         "https://github.com/MolecularCartography/Optimus"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "knime"
       ]
     },
     "extracted-ion-chromatogram-generation": {
@@ -391,6 +569,16 @@
       ],
       "repo_urls": [
         "https://github.com/pnnl/IonToolPack"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "comparador",
+        "iontoolpack",
+        "mirador",
+        "peakqc",
+        "peakquant",
+        "tandemmatch"
       ]
     },
     "feature-list-harmonization-across-methods": {
@@ -408,6 +596,16 @@
       ],
       "repo_urls": [
         "https://github.com/pnnl/IonToolPack"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "comparador",
+        "iontoolpack",
+        "mirador",
+        "peakqc",
+        "peakquant",
+        "tandemmatch"
       ]
     },
     "feature-quality-assessment-metrics": {
@@ -422,8 +620,13 @@
         "asb-paper-10-1038-s41467-025-60640-5"
       ],
       "repo_urls": [
-        "https://github.com/huaxuyu/masscube",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/huaxuyu/masscube"
+      ],
+      "license_tier": "noncommercial",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "masscube",
+        "python"
       ]
     },
     "feature-table-export-and-formatting": {
@@ -441,8 +644,15 @@
         "asb-paper-10-1021-acs-jnatprod-7b00737"
       ],
       "repo_urls": [
-        "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
-        "https://github.com/AutoFlowResearch/SmartPeak"
+        "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "gnps",
+        "mzmine2",
+        "openms",
+        "optimus"
       ]
     },
     "fiams-spectra-window-extraction-and-merging": {
@@ -461,6 +671,15 @@
       ],
       "repo_urls": [
         "https://github.com/AutoFlowResearch/SmartPeak"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "openms",
+        "pyopenms",
+        "smartpeak",
+        "smartpeakcli",
+        "smartpeakgui"
       ]
     },
     "fragment-ion-peak-annotation": {
@@ -477,6 +696,16 @@
       ],
       "repo_urls": [
         "https://github.com/pnnl/IonToolPack"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "comparador",
+        "iontoolpack",
+        "mirador",
+        "peakqc",
+        "peakquant",
+        "tandemmatch"
       ]
     },
     "gradient-performance-encoding": {
@@ -496,11 +725,18 @@
         "asb-paper-10-1002-9780470508183"
       ],
       "repo_urls": [
-        "https://github.com/huaxuyu/bago",
-        "https://github.com/FrigerioGianfranco/GetFeatistics",
-        "https://github.com/AutoFlowResearch/SmartPeak",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/13479776/statTarget"
+        "https://github.com/huaxuyu/bago"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bago",
+        "ms-dial",
+        "mzmine-3",
+        "pyopenms",
+        "python",
+        "scikit-learn",
+        "xcms"
       ]
     },
     "hierarchical-clustering-dendrogram-cutting": {
@@ -520,9 +756,17 @@
         "asb-paper-10-1021-ac501530d"
       ],
       "repo_urls": [
-        "https://github.com/cbroeckl/RAMClustR",
-        "https://github.com/boecker-lab/sirius",
-        "https://github.com/13479776/statTarget"
+        "https://github.com/cbroeckl/RAMClustR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "dynamictreecut",
+        "interpretmsspectrum",
+        "msfinder",
+        "ramclustr",
+        "sirius",
+        "xcms"
       ]
     },
     "in-silico-fragment-m-z-calculation": {
@@ -540,9 +784,20 @@
         "asb-paper-10-1186-s12859-017-1744-3"
       ],
       "repo_urls": [
-        "https://github.com/GarrettLab-UF/LipidMatch",
-        "https://github.com/FrigerioGianfranco/GetFeatistics",
-        "https://github.com/13479776/statTarget"
+        "https://github.com/GarrettLab-UF/LipidMatch"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "agilent-q-tof-uhplc-hrms-ms",
+        "bruker-q-tof-uhplc-hrms-ms",
+        "compound-discoverer",
+        "lipidmatch",
+        "ms-dial",
+        "mzmine",
+        "q-exactive-orbitrap",
+        "sciex-q-tof-uhplc-hrms-ms",
+        "xcms"
       ]
     },
     "in-silico-fragmentation-simulation-validation": {
@@ -562,9 +817,20 @@
         "asb-paper-10-1186-s12859-017-1744-3"
       ],
       "repo_urls": [
-        "https://github.com/GarrettLab-UF/LipidMatch",
-        "https://github.com/FrigerioGianfranco/GetFeatistics",
-        "https://github.com/13479776/statTarget"
+        "https://github.com/GarrettLab-UF/LipidMatch"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "agilent-q-tof-uhplc-hrms-ms",
+        "bruker-q-tof-uhplc-hrms-ms",
+        "compound-discoverer",
+        "lipidmatch",
+        "ms-dial",
+        "mzmine",
+        "q-exactive-orbitrap",
+        "sciex-q-tof-uhplc-hrms-ms",
+        "xcms"
       ]
     },
     "instrument-platform-compatibility-mapping": {
@@ -582,9 +848,20 @@
         "asb-paper-10-1186-s12859-017-1744-3"
       ],
       "repo_urls": [
-        "https://github.com/GarrettLab-UF/LipidMatch",
-        "https://github.com/FrigerioGianfranco/GetFeatistics",
-        "https://github.com/13479776/statTarget"
+        "https://github.com/GarrettLab-UF/LipidMatch"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "agilent-q-tof-uhplc-hrms-ms",
+        "bruker-q-tof-uhplc-hrms-ms",
+        "compound-discoverer",
+        "lipidmatch",
+        "ms-dial",
+        "mzmine",
+        "q-exactive-orbitrap",
+        "sciex-q-tof-uhplc-hrms-ms",
+        "xcms"
       ]
     },
     "ion-image-quantification-workflow": {
@@ -599,8 +876,14 @@
         "asb-paper-10-1101-2025-10-15-682422v1"
       ],
       "repo_urls": [
-        "https://github.com/swinnenteam/LipidQMap",
-        "https://github.com/GenomicsMachineLearning/SpaMTP"
+        "https://github.com/swinnenteam/LipidQMap"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cardinal",
+        "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
+        "lipidqmap"
       ]
     },
     "knime-workflow-orchestration": {
@@ -620,6 +903,11 @@
       ],
       "repo_urls": [
         "https://github.com/MolecularCartography/Optimus"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "knime"
       ]
     },
     "lc-ms-dataset-acquisition-and-curation": {
@@ -637,11 +925,28 @@
         "asb-paper-10-1038-s41467-023-39889-1"
       ],
       "repo_urls": [
-        "https://github.com/shuzhao-li-lab/asari",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/AdrianHaun/AriumMS",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/FanzhouKong/spectral_denoising"
+        "https://github.com/shuzhao-li-lab/asari"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asari",
+        "asari-mass-functions-module-nn-cluster-by-mz-seeds",
+        "asari-massgrid-class-build-grid-sample-wise-add-sample-build-grid-by-centroiding-bin-track-mzs",
+        "asari-peaks-module",
+        "hmdb-4",
+        "https-github-com-shuzhao-li-asari",
+        "jms",
+        "khipu",
+        "lowess",
+        "mass-functions-nn-cluster-by-mz-seeds",
+        "numpy",
+        "proteowizard",
+        "pymzml",
+        "python",
+        "scipy",
+        "scipy-signal-detrend",
+        "scipy-signal-find-peaks"
       ]
     },
     "lipid-candidate-matching": {
@@ -659,9 +964,20 @@
         "asb-paper-10-1186-s12859-017-1744-3"
       ],
       "repo_urls": [
-        "https://github.com/GarrettLab-UF/LipidMatch",
-        "https://github.com/FrigerioGianfranco/GetFeatistics",
-        "https://github.com/13479776/statTarget"
+        "https://github.com/GarrettLab-UF/LipidMatch"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "agilent-q-tof-uhplc-hrms-ms",
+        "bruker-q-tof-uhplc-hrms-ms",
+        "compound-discoverer",
+        "lipidmatch",
+        "ms-dial",
+        "mzmine",
+        "q-exactive-orbitrap",
+        "sciex-q-tof-uhplc-hrms-ms",
+        "xcms"
       ]
     },
     "lipid-feature-annotation-and-sorting": {
@@ -676,8 +992,14 @@
         "asb-paper-10-1101-2025-10-15-682422v1"
       ],
       "repo_urls": [
-        "https://github.com/swinnenteam/LipidQMap",
-        "https://github.com/GenomicsMachineLearning/SpaMTP"
+        "https://github.com/swinnenteam/LipidQMap"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cardinal",
+        "hdf5-reader-writer-library-h5py-h5netcdf-or-equivalent",
+        "lipidqmap"
       ]
     },
     "lipid-fingerprint-regeneration-neural-networks": {
@@ -694,8 +1016,13 @@
         "asb-paper-10-1038-s41467-025-59683-5"
       ],
       "repo_urls": [
-        "https://github.com/LinShuhaiLAB/LipidIN",
-        "https://github.com/13479776/statTarget"
+        "https://github.com/LinShuhaiLAB/LipidIN"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "camera",
+        "xcms"
       ]
     },
     "lipid-mass-spectral-matching": {
@@ -714,9 +1041,20 @@
         "asb-paper-10-1186-s12859-017-1744-3"
       ],
       "repo_urls": [
-        "https://github.com/GarrettLab-UF/LipidMatch",
-        "https://github.com/FrigerioGianfranco/GetFeatistics",
-        "https://github.com/13479776/statTarget"
+        "https://github.com/GarrettLab-UF/LipidMatch"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "agilent-q-tof-uhplc-hrms-ms",
+        "bruker-q-tof-uhplc-hrms-ms",
+        "compound-discoverer",
+        "lipidmatch",
+        "ms-dial",
+        "mzmine",
+        "q-exactive-orbitrap",
+        "sciex-q-tof-uhplc-hrms-ms",
+        "xcms"
       ]
     },
     "m-z-intensity-calibration": {
@@ -733,6 +1071,13 @@
       ],
       "repo_urls": [
         "https://github.com/Katherine00689/RapidMass"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asap-ms",
+        "di-ms",
+        "rapidmass"
       ]
     },
     "marker-feature-identification-and-validation": {
@@ -749,8 +1094,13 @@
         "asb-paper-10-1021-acs-analchem-1c03163"
       ],
       "repo_urls": [
-        "https://github.com/poomcj/NPFimg",
-        "https://github.com/13479776/statTarget"
+        "https://github.com/poomcj/NPFimg"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "npfimg",
+        "xcms"
       ]
     },
     "mass-difference-network-construction": {
@@ -770,14 +1120,33 @@
         "asb-paper-10-1186-s40168-023-01476-3"
       ],
       "repo_urls": [
-        "https://github.com/Karnovsky-Lab/DNEA",
-        "https://github.com/biodatalab/enrichmet",
-        "https://github.com/PNNL-m-q/mzapy",
-        "https://github.com/13479776/statTarget",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/pmartR/PMart_ShinyApp",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/chopralab/CLAW"
+        "https://github.com/Coayala/MetaboDirect"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cytoscape",
+        "dropms",
+        "formularity",
+        "freda",
+        "i-van-krevelen",
+        "keggrest",
+        "matplotlib",
+        "metaboanalyst",
+        "metabodirect",
+        "numpy",
+        "pandas",
+        "pmartr",
+        "py4cytoscape",
+        "python",
+        "python-numpy-pandas",
+        "r-4-0-2",
+        "r-vegan-package",
+        "seaborn",
+        "syncsa",
+        "ultramassexplorer",
+        "vegan",
+        "vegan-r-package"
       ]
     },
     "mass-spectrometry-data-file-parsing": {
@@ -796,6 +1165,16 @@
       ],
       "repo_urls": [
         "https://github.com/pnnl/IonToolPack"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "comparador",
+        "iontoolpack",
+        "mirador",
+        "peakqc",
+        "peakquant",
+        "tandemmatch"
       ]
     },
     "mass-spectrometry-data-loading": {
@@ -815,6 +1194,16 @@
       ],
       "repo_urls": [
         "https://github.com/pnnl/IonToolPack"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "comparador",
+        "iontoolpack",
+        "mirador",
+        "peakqc",
+        "peakquant",
+        "tandemmatch"
       ]
     },
     "mass-spectrometry-data-parsing": {
@@ -857,21 +1246,43 @@
         "https://github.com/Wang-Bioinformatics-Lab/GNPS_LCMSDashboard",
         "https://github.com/idslme/IDSL.IPA",
         "https://github.com/zmahnoor14/MAW",
-        "https://github.com/mandelbrot-project/memo",
-        "https://github.com/matchms/MS2DeepScore",
-        "https://github.com/luigiquiros/inventa",
-        "https://github.com/FrigerioGianfranco/GetFeatistics",
-        "https://github.com/YasinEl/mzRAPP",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/AdrianHaun/AriumMS",
-        "https://github.com/RECETOX/MSMetaEnhancer",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/DasSusanta/snakemake_ccs",
-        "https://github.com/FanzhouKong/spectral_denoising",
-        "https://github.com/boecker-lab/sirius",
-        "https://github.com/vdhooftcompmet/MS2LDA",
-        "https://github.com/BiosystemEngineeringLab-IITB/dures",
-        "https://github.com/13479776/statTarget"
+        "https://github.com/mandelbrot-project/memo"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asari",
+        "asari-mass-functions-module-nn-cluster-by-mz-seeds",
+        "asari-massgrid-class-build-grid-sample-wise-add-sample-build-grid-by-centroiding-bin-track-mzs",
+        "asari-peaks-module",
+        "gnps-lcms-visualization-dashboard",
+        "hmdb-4",
+        "https-github-com-shuzhao-li-asari",
+        "idsl-ipa",
+        "jms",
+        "khipu",
+        "lowess",
+        "mass-functions-nn-cluster-by-mz-seeds",
+        "matchms",
+        "memo",
+        "memo-ms",
+        "metfrag",
+        "mzmine-2",
+        "numpy",
+        "proteowizard",
+        "pubchem",
+        "pubchempy",
+        "pymzml",
+        "python",
+        "rdkit",
+        "scikit-bio",
+        "scipy",
+        "scipy-signal-detrend",
+        "scipy-signal-find-peaks",
+        "sirius",
+        "spec2vec",
+        "spectra",
+        "xcms"
       ]
     },
     "mass-spectrometry-feature-similarity-modeling": {
@@ -886,6 +1297,11 @@
       ],
       "repo_urls": [
         "https://github.com/ZhuMetLab/MrnAnnoAlgo3"
+      ],
+      "license_tier": "noncommercial",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "mrnannoalgo3-metdna3"
       ]
     },
     "mass-spectrometry-instrument-format-compatibility": {
@@ -902,6 +1318,13 @@
       ],
       "repo_urls": [
         "https://github.com/Katherine00689/RapidMass"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asap-ms",
+        "di-ms",
+        "rapidmass"
       ]
     },
     "mass-spectrometry-outlier-detection": {
@@ -918,6 +1341,16 @@
       ],
       "repo_urls": [
         "https://github.com/pnnl/IonToolPack"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "comparador",
+        "iontoolpack",
+        "mirador",
+        "peakqc",
+        "peakquant",
+        "tandemmatch"
       ]
     },
     "mass-spectrometry-peak-identification-and-extraction": {
@@ -934,6 +1367,13 @@
       ],
       "repo_urls": [
         "https://github.com/Katherine00689/RapidMass"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asap-ms",
+        "di-ms",
+        "rapidmass"
       ]
     },
     "mass-spectrometry-peak-intensity-encoding": {
@@ -950,9 +1390,16 @@
         "asb-paper-10-1021-acs-analchem-4c06210"
       ],
       "repo_urls": [
-        "https://github.com/bioinfo-ibms-pumc/SMART",
-        "https://github.com/PNNL-m-q/mza",
-        "https://github.com/FangYuan717/ROASMI"
+        "https://github.com/bioinfo-ibms-pumc/SMART"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "h5py",
+        "pandas",
+        "scanpy",
+        "smart",
+        "stagate"
       ]
     },
     "mass-spectrum-database-matching": {
@@ -979,11 +1426,25 @@
       ],
       "repo_urls": [
         "https://github.com/ablab/npdtools",
-        "https://github.com/Katherine00689/RapidMass",
-        "https://github.com/NPLinker/nplinker",
-        "https://github.com/PNNL-m-q/mzapy",
-        "https://github.com/AdrianHaun/AriumMS",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/Katherine00689/RapidMass"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "antismash",
+        "asap-ms",
+        "dereplicator",
+        "di-ms",
+        "gnps-spectral-networking-molecular-networking",
+        "joblib",
+        "matplotlib",
+        "metaminer",
+        "networkx",
+        "npdtools",
+        "npdtools-2-5-0",
+        "proteowizard",
+        "python",
+        "rapidmass"
       ]
     },
     "mass-spectrum-peak-detection": {
@@ -1000,6 +1461,13 @@
       ],
       "repo_urls": [
         "https://github.com/Katherine00689/RapidMass"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asap-ms",
+        "di-ms",
+        "rapidmass"
       ]
     },
     "mass-track-construction-from-centroided-spectra": {
@@ -1021,11 +1489,28 @@
         "asb-paper-10-1038-s41467-023-39889-1"
       ],
       "repo_urls": [
-        "https://github.com/shuzhao-li-lab/asari",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/AdrianHaun/AriumMS",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/FanzhouKong/spectral_denoising"
+        "https://github.com/shuzhao-li-lab/asari"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asari",
+        "asari-mass-functions-module-nn-cluster-by-mz-seeds",
+        "asari-massgrid-class-build-grid-sample-wise-add-sample-build-grid-by-centroiding-bin-track-mzs",
+        "asari-peaks-module",
+        "hmdb-4",
+        "https-github-com-shuzhao-li-asari",
+        "jms",
+        "khipu",
+        "lowess",
+        "mass-functions-nn-cluster-by-mz-seeds",
+        "numpy",
+        "proteowizard",
+        "pymzml",
+        "python",
+        "scipy",
+        "scipy-signal-detrend",
+        "scipy-signal-find-peaks"
       ]
     },
     "mass-track-extraction-and-binning": {
@@ -1045,11 +1530,28 @@
         "asb-paper-10-1038-s41467-023-39889-1"
       ],
       "repo_urls": [
-        "https://github.com/shuzhao-li-lab/asari",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/AdrianHaun/AriumMS",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/FanzhouKong/spectral_denoising"
+        "https://github.com/shuzhao-li-lab/asari"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asari",
+        "asari-mass-functions-module-nn-cluster-by-mz-seeds",
+        "asari-massgrid-class-build-grid-sample-wise-add-sample-build-grid-by-centroiding-bin-track-mzs",
+        "asari-peaks-module",
+        "hmdb-4",
+        "https-github-com-shuzhao-li-asari",
+        "jms",
+        "khipu",
+        "lowess",
+        "mass-functions-nn-cluster-by-mz-seeds",
+        "numpy",
+        "proteowizard",
+        "pymzml",
+        "python",
+        "scipy",
+        "scipy-signal-detrend",
+        "scipy-signal-find-peaks"
       ]
     },
     "metabolite-feature-clustering-by-retention-time": {
@@ -1069,9 +1571,17 @@
         "asb-paper-10-1021-ac501530d"
       ],
       "repo_urls": [
-        "https://github.com/cbroeckl/RAMClustR",
-        "https://github.com/boecker-lab/sirius",
-        "https://github.com/13479776/statTarget"
+        "https://github.com/cbroeckl/RAMClustR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "dynamictreecut",
+        "interpretmsspectrum",
+        "msfinder",
+        "ramclustr",
+        "sirius",
+        "xcms"
       ]
     },
     "metabolite-feature-grouping-by-adduct-isotope": {
@@ -1087,11 +1597,20 @@
         "asb-paper-10-1371-journal-pcbi-1011912"
       ],
       "repo_urls": [
-        "https://github.com/shuzhao-li-lab/asari",
-        "https://github.com/griquelme/tidyms",
-        "https://github.com/matchms/MS2DeepScore",
-        "https://github.com/13479776/statTarget",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/shuzhao-li-lab/PythonCentricPipelineForMetabolomics"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asari",
+        "hmdb",
+        "khipu",
+        "lipid-map",
+        "matchms",
+        "metaboanalyst",
+        "pycombat",
+        "python",
+        "thermorawfileparser"
       ]
     },
     "metabolite-feature-grouping-by-compound": {
@@ -1111,9 +1630,17 @@
         "asb-paper-10-1021-ac501530d"
       ],
       "repo_urls": [
-        "https://github.com/cbroeckl/RAMClustR",
-        "https://github.com/boecker-lab/sirius",
-        "https://github.com/13479776/statTarget"
+        "https://github.com/cbroeckl/RAMClustR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "dynamictreecut",
+        "interpretmsspectrum",
+        "msfinder",
+        "ramclustr",
+        "sirius",
+        "xcms"
       ]
     },
     "metabolite-identifier-mapping": {
@@ -1131,6 +1658,15 @@
       ],
       "repo_urls": [
         "https://github.com/AutoFlowResearch/SmartPeak"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "openms",
+        "pyopenms",
+        "smartpeak",
+        "smartpeakcli",
+        "smartpeakgui"
       ]
     },
     "metabolomics-feature-preprocessing": {
@@ -1148,8 +1684,13 @@
         "asb-paper-10-1021-acs-analchem-4c04531"
       ],
       "repo_urls": [
-        "https://github.com/LinShuhaiLAB/QuanFormer",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/LinShuhaiLAB/QuanFormer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "python",
+        "python-3-8-1"
       ]
     },
     "metabolomics-tool-deployment": {
@@ -1172,6 +1713,14 @@
       ],
       "repo_urls": [
         "https://github.com/Viant-Metabolomics/Galaxy-M"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "galaxy",
+        "matlab-compiler-runtime-8-3",
+        "python-2-7",
+        "r-3-0-1"
       ]
     },
     "microbial-metabolomics-phage-impact-assessment": {
@@ -1189,14 +1738,33 @@
         "asb-paper-10-1186-s40168-023-01476-3"
       ],
       "repo_urls": [
-        "https://github.com/Karnovsky-Lab/DNEA",
-        "https://github.com/biodatalab/enrichmet",
-        "https://github.com/PNNL-m-q/mzapy",
-        "https://github.com/13479776/statTarget",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/pmartR/PMart_ShinyApp",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/chopralab/CLAW"
+        "https://github.com/Coayala/MetaboDirect"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cytoscape",
+        "dropms",
+        "formularity",
+        "freda",
+        "i-van-krevelen",
+        "keggrest",
+        "matplotlib",
+        "metaboanalyst",
+        "metabodirect",
+        "numpy",
+        "pandas",
+        "pmartr",
+        "py4cytoscape",
+        "python",
+        "python-numpy-pandas",
+        "r-4-0-2",
+        "r-vegan-package",
+        "seaborn",
+        "syncsa",
+        "ultramassexplorer",
+        "vegan",
+        "vegan-r-package"
       ]
     },
     "missing-value-imputation-in-quantification-tables": {
@@ -1212,8 +1780,15 @@
         "asb-paper-10-1021-acs-jnatprod-7b00737"
       ],
       "repo_urls": [
-        "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
-        "https://github.com/AutoFlowResearch/SmartPeak"
+        "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "gnps",
+        "mzmine2",
+        "openms",
+        "optimus"
       ]
     },
     "ms-ms-raw-data-loading": {
@@ -1230,8 +1805,15 @@
         "asb-paper-10-1021-acs-jnatprod-7b00737"
       ],
       "repo_urls": [
-        "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
-        "https://github.com/AutoFlowResearch/SmartPeak"
+        "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "gnps",
+        "mzmine2",
+        "openms",
+        "optimus"
       ]
     },
     "ms-vendor-documentation-extraction": {
@@ -1250,9 +1832,20 @@
         "asb-paper-10-1186-s12859-017-1744-3"
       ],
       "repo_urls": [
-        "https://github.com/GarrettLab-UF/LipidMatch",
-        "https://github.com/FrigerioGianfranco/GetFeatistics",
-        "https://github.com/13479776/statTarget"
+        "https://github.com/GarrettLab-UF/LipidMatch"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "agilent-q-tof-uhplc-hrms-ms",
+        "bruker-q-tof-uhplc-hrms-ms",
+        "compound-discoverer",
+        "lipidmatch",
+        "ms-dial",
+        "mzmine",
+        "q-exactive-orbitrap",
+        "sciex-q-tof-uhplc-hrms-ms",
+        "xcms"
       ]
     },
     "ms1-feature-detection-and-annotation": {
@@ -1271,6 +1864,15 @@
       ],
       "repo_urls": [
         "https://github.com/AutoFlowResearch/SmartPeak"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "openms",
+        "pyopenms",
+        "smartpeak",
+        "smartpeakcli",
+        "smartpeakgui"
       ]
     },
     "ms1-feature-peak-detection-in-full-scan": {
@@ -1290,6 +1892,15 @@
       ],
       "repo_urls": [
         "https://github.com/AutoFlowResearch/SmartPeak"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "openms",
+        "pyopenms",
+        "smartpeak",
+        "smartpeakcli",
+        "smartpeakgui"
       ]
     },
     "multi-sample-cohort-assessment": {
@@ -1305,6 +1916,16 @@
       ],
       "repo_urls": [
         "https://github.com/pnnl/IonToolPack"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "comparador",
+        "iontoolpack",
+        "mirador",
+        "peakqc",
+        "peakquant",
+        "tandemmatch"
       ]
     },
     "multidimensional-feature-detection-and-alignment": {
@@ -1323,11 +1944,18 @@
         "asb-paper-10-1021-acs-analchem-1c05017"
       ],
       "repo_urls": [
-        "https://github.com/HassounLab/JESTR1",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/LabLaskin/MSIGen",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/DasSusanta/snakemake_ccs"
+        "https://github.com/pnnl/deimos"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "conda",
+        "deimos",
+        "numpy",
+        "pip",
+        "proteowizard-msconvert",
+        "python",
+        "snakemake"
       ]
     },
     "multiformat-data-export-to-pdf-csv": {
@@ -1343,6 +1971,16 @@
       ],
       "repo_urls": [
         "https://github.com/pnnl/IonToolPack"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "comparador",
+        "iontoolpack",
+        "mirador",
+        "peakqc",
+        "peakquant",
+        "tandemmatch"
       ]
     },
     "mz-retention-time-tolerance-parameter-configuration": {
@@ -1358,11 +1996,20 @@
         "asb-paper-10-1371-journal-pcbi-1011912"
       ],
       "repo_urls": [
-        "https://github.com/shuzhao-li-lab/asari",
-        "https://github.com/griquelme/tidyms",
-        "https://github.com/matchms/MS2DeepScore",
-        "https://github.com/13479776/statTarget",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/shuzhao-li-lab/PythonCentricPipelineForMetabolomics"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asari",
+        "hmdb",
+        "khipu",
+        "lipid-map",
+        "matchms",
+        "metaboanalyst",
+        "pycombat",
+        "python",
+        "thermorawfileparser"
       ]
     },
     "mztab-format-generation": {
@@ -1381,6 +2028,15 @@
       ],
       "repo_urls": [
         "https://github.com/AutoFlowResearch/SmartPeak"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "openms",
+        "pyopenms",
+        "smartpeak",
+        "smartpeakcli",
+        "smartpeakgui"
       ]
     },
     "nontargeted-metabolomics-data-processing": {
@@ -1395,8 +2051,13 @@
         "asb-paper-10-1038-s41467-025-60640-5"
       ],
       "repo_urls": [
-        "https://github.com/huaxuyu/masscube",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/huaxuyu/masscube"
+      ],
+      "license_tier": "noncommercial",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "masscube",
+        "python"
       ]
     },
     "parameter-range-filtering-for-chromatographic-data": {
@@ -1413,6 +2074,16 @@
       ],
       "repo_urls": [
         "https://github.com/pnnl/IonToolPack"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "comparador",
+        "iontoolpack",
+        "mirador",
+        "peakqc",
+        "peakquant",
+        "tandemmatch"
       ]
     },
     "peak-detection-and-mass-alignment": {
@@ -1428,8 +2099,15 @@
         "asb-paper-10-1021-acs-jnatprod-7b00737"
       ],
       "repo_urls": [
-        "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
-        "https://github.com/AutoFlowResearch/SmartPeak"
+        "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "gnps",
+        "mzmine2",
+        "openms",
+        "optimus"
       ]
     },
     "peak-integration-quality-assessment": {
@@ -1445,6 +2123,11 @@
       ],
       "repo_urls": [
         "https://github.com/HuanLab/AVIR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "avir-r"
       ]
     },
     "peak-labeling-and-annotation": {
@@ -1461,6 +2144,13 @@
       ],
       "repo_urls": [
         "https://github.com/Katherine00689/RapidMass"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asap-ms",
+        "di-ms",
+        "rapidmass"
       ]
     },
     "plant-species-authentication-via-mass-spectrometry": {
@@ -1477,6 +2167,13 @@
       ],
       "repo_urls": [
         "https://github.com/Katherine00689/RapidMass"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asap-ms",
+        "di-ms",
+        "rapidmass"
       ]
     },
     "pure-component-spectrum-extraction": {
@@ -1493,10 +2190,14 @@
         "asb-paper-10-1021-acs-analchem-3c05772"
       ],
       "repo_urls": [
-        "https://github.com/zxguocsu/GCMSFormer",
-        "https://github.com/HassounLab/JESTR1",
-        "https://github.com/ComPlat/chem-spectra-app",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol"
+        "https://github.com/zxguocsu/GCMSFormer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "conda",
+        "python-3",
+        "pytorch"
       ]
     },
     "quality-control-metric-distribution-analysis": {
@@ -1514,11 +2215,28 @@
         "asb-paper-10-1038-s41467-023-39889-1"
       ],
       "repo_urls": [
-        "https://github.com/shuzhao-li-lab/asari",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/AdrianHaun/AriumMS",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/FanzhouKong/spectral_denoising"
+        "https://github.com/shuzhao-li-lab/asari"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asari",
+        "asari-mass-functions-module-nn-cluster-by-mz-seeds",
+        "asari-massgrid-class-build-grid-sample-wise-add-sample-build-grid-by-centroiding-bin-track-mzs",
+        "asari-peaks-module",
+        "hmdb-4",
+        "https-github-com-shuzhao-li-asari",
+        "jms",
+        "khipu",
+        "lowess",
+        "mass-functions-nn-cluster-by-mz-seeds",
+        "numpy",
+        "proteowizard",
+        "pymzml",
+        "python",
+        "scipy",
+        "scipy-signal-detrend",
+        "scipy-signal-find-peaks"
       ]
     },
     "retention-time-prediction-modeling": {
@@ -1537,6 +2255,11 @@
       ],
       "repo_urls": [
         "https://github.com/oloBion/Retip"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "retip"
       ]
     },
     "retention-time-window-clustering": {
@@ -1557,13 +2280,24 @@
         "asb-paper-10-1371-journal-pcbi-1011814"
       ],
       "repo_urls": [
-        "https://github.com/Karnovsky-Lab/DNEA",
-        "https://github.com/PNNL-m-q/mzapy",
-        "https://github.com/ablab/npdtools",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/FanzhouKong/spectral_denoising",
-        "https://github.com/13479776/statTarget"
+        "https://github.com/kopeckylukas/py-mamsi"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cytoscape",
+        "mamsi-mamsistructsearch",
+        "mamsistructsearch",
+        "matplotlib",
+        "mbpls",
+        "networkx",
+        "numpy",
+        "pandas",
+        "python",
+        "pyvis",
+        "scikit-learn",
+        "scipy",
+        "xcms"
       ]
     },
     "sample-group-injection-aggregation": {
@@ -1583,6 +2317,15 @@
       ],
       "repo_urls": [
         "https://github.com/AutoFlowResearch/SmartPeak"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "openms",
+        "pyopenms",
+        "smartpeak",
+        "smartpeakcli",
+        "smartpeakgui"
       ]
     },
     "siamese-neural-network-architecture-design": {
@@ -1599,9 +2342,14 @@
         "asb-paper-10-1101-2024-03-25-586580v5"
       ],
       "repo_urls": [
-        "https://github.com/matchms/MS2DeepScore",
-        "https://github.com/13479776/statTarget",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/matchms/MS2DeepScore"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "github",
+        "ms2deepscore",
+        "python"
       ]
     },
     "software-support-matrix-construction": {
@@ -1620,9 +2368,20 @@
         "asb-paper-10-1186-s12859-017-1744-3"
       ],
       "repo_urls": [
-        "https://github.com/GarrettLab-UF/LipidMatch",
-        "https://github.com/FrigerioGianfranco/GetFeatistics",
-        "https://github.com/13479776/statTarget"
+        "https://github.com/GarrettLab-UF/LipidMatch"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "agilent-q-tof-uhplc-hrms-ms",
+        "bruker-q-tof-uhplc-hrms-ms",
+        "compound-discoverer",
+        "lipidmatch",
+        "ms-dial",
+        "mzmine",
+        "q-exactive-orbitrap",
+        "sciex-q-tof-uhplc-hrms-ms",
+        "xcms"
       ]
     },
     "spatial-correlation-filtering-in-msi": {
@@ -1638,7 +2397,14 @@
         "asb-paper-10-1021-acs-analchem-0c04720"
       ],
       "repo_urls": [
-        "https://github.com/GenomicsMachineLearning/SpaMTP"
+        "https://github.com/kbseah/mass2adduct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cardinal",
+        "github-kbseah-mass2adduct",
+        "mass2adduct"
       ]
     },
     "species-authentication-classification-evaluation": {
@@ -1656,6 +2422,13 @@
       ],
       "repo_urls": [
         "https://github.com/Katherine00689/RapidMass"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asap-ms",
+        "di-ms",
+        "rapidmass"
       ]
     },
     "species-candidate-ranking-from-spectral-alignment": {
@@ -1670,6 +2443,13 @@
       ],
       "repo_urls": [
         "https://github.com/Katherine00689/RapidMass"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asap-ms",
+        "di-ms",
+        "rapidmass"
       ]
     },
     "spectral-data-normalization-and-merging": {
@@ -1687,6 +2467,15 @@
       ],
       "repo_urls": [
         "https://github.com/AutoFlowResearch/SmartPeak"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "openms",
+        "pyopenms",
+        "smartpeak",
+        "smartpeakcli",
+        "smartpeakgui"
       ]
     },
     "spectral-data-preprocessing": {
@@ -1703,6 +2492,13 @@
       ],
       "repo_urls": [
         "https://github.com/Katherine00689/RapidMass"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asap-ms",
+        "di-ms",
+        "rapidmass"
       ]
     },
     "spectral-database-search-and-scoring": {
@@ -1720,6 +2516,13 @@
       ],
       "repo_urls": [
         "https://github.com/Katherine00689/RapidMass"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asap-ms",
+        "di-ms",
+        "rapidmass"
       ]
     },
     "spectral-peak-detection-and-alignment": {
@@ -1736,6 +2539,13 @@
       ],
       "repo_urls": [
         "https://github.com/Katherine00689/RapidMass"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asap-ms",
+        "di-ms",
+        "rapidmass"
       ]
     },
     "spectral-quality-metrics-extraction": {
@@ -1752,6 +2562,16 @@
       ],
       "repo_urls": [
         "https://github.com/pnnl/IonToolPack"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "comparador",
+        "iontoolpack",
+        "mirador",
+        "peakqc",
+        "peakquant",
+        "tandemmatch"
       ]
     },
     "tandem-mass-spectrometry-mirror-plot-construction": {
@@ -1768,6 +2588,16 @@
       ],
       "repo_urls": [
         "https://github.com/pnnl/IonToolPack"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "comparador",
+        "iontoolpack",
+        "mirador",
+        "peakqc",
+        "peakquant",
+        "tandemmatch"
       ]
     },
     "target-list-coordinate-mapping": {
@@ -1784,6 +2614,16 @@
       ],
       "repo_urls": [
         "https://github.com/pnnl/IonToolPack"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "comparador",
+        "iontoolpack",
+        "mirador",
+        "peakqc",
+        "peakquant",
+        "tandemmatch"
       ]
     },
     "targeted-peak-extraction-ms1": {
@@ -1801,6 +2641,16 @@
       ],
       "repo_urls": [
         "https://github.com/pnnl/IonToolPack"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "comparador",
+        "iontoolpack",
+        "mirador",
+        "peakqc",
+        "peakquant",
+        "tandemmatch"
       ]
     },
     "technical-specification-tabulation": {
@@ -1818,9 +2668,20 @@
         "asb-paper-10-1186-s12859-017-1744-3"
       ],
       "repo_urls": [
-        "https://github.com/GarrettLab-UF/LipidMatch",
-        "https://github.com/FrigerioGianfranco/GetFeatistics",
-        "https://github.com/13479776/statTarget"
+        "https://github.com/GarrettLab-UF/LipidMatch"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "agilent-q-tof-uhplc-hrms-ms",
+        "bruker-q-tof-uhplc-hrms-ms",
+        "compound-discoverer",
+        "lipidmatch",
+        "ms-dial",
+        "mzmine",
+        "q-exactive-orbitrap",
+        "sciex-q-tof-uhplc-hrms-ms",
+        "xcms"
       ]
     },
     "transformation-network-topology-analysis": {
@@ -1839,14 +2700,33 @@
         "asb-paper-10-1186-s40168-023-01476-3"
       ],
       "repo_urls": [
-        "https://github.com/Karnovsky-Lab/DNEA",
-        "https://github.com/biodatalab/enrichmet",
-        "https://github.com/PNNL-m-q/mzapy",
-        "https://github.com/13479776/statTarget",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/pmartR/PMart_ShinyApp",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/chopralab/CLAW"
+        "https://github.com/Coayala/MetaboDirect"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cytoscape",
+        "dropms",
+        "formularity",
+        "freda",
+        "i-van-krevelen",
+        "keggrest",
+        "matplotlib",
+        "metaboanalyst",
+        "metabodirect",
+        "numpy",
+        "pandas",
+        "pmartr",
+        "py4cytoscape",
+        "python",
+        "python-numpy-pandas",
+        "r-4-0-2",
+        "r-vegan-package",
+        "seaborn",
+        "syncsa",
+        "ultramassexplorer",
+        "vegan",
+        "vegan-r-package"
       ]
     },
     "transformer-model-training": {
@@ -1863,10 +2743,14 @@
         "asb-paper-10-1021-acs-analchem-3c05772"
       ],
       "repo_urls": [
-        "https://github.com/zxguocsu/GCMSFormer",
-        "https://github.com/HassounLab/JESTR1",
-        "https://github.com/ComPlat/chem-spectra-app",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol"
+        "https://github.com/zxguocsu/GCMSFormer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "conda",
+        "python-3",
+        "pytorch"
       ]
     },
     "unknown-sample-reference-comparison": {
@@ -1881,6 +2765,13 @@
       ],
       "repo_urls": [
         "https://github.com/Katherine00689/RapidMass"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asap-ms",
+        "di-ms",
+        "rapidmass"
       ]
     },
     "visual-pattern-recognition-in-spectral-data": {
@@ -1897,6 +2788,13 @@
       ],
       "repo_urls": [
         "https://github.com/Katherine00689/RapidMass"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asap-ms",
+        "di-ms",
+        "rapidmass"
       ]
     },
     "xcms-data-import-preprocessing": {
@@ -1914,15 +2812,24 @@
         "asb-paper-10-1021-ac051437y"
       ],
       "repo_urls": [
-        "https://github.com/sneumann/xcms",
-        "https://github.com/AndreaRMICL/MWASTools",
-        "https://github.com/13479776/statTarget",
-        "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
-        "https://github.com/LiesaSalzer/MobilityTransformR",
-        "https://github.com/LeaveMeNotTonight/CMDN",
-        "https://github.com/BiosystemEngineeringLab-IITB/dures",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol"
+        "https://github.com/sneumann/xcms"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "github",
+        "gnps",
+        "limma",
+        "massspecwavelet",
+        "metabocoreutils",
+        "msbackendmgf",
+        "msdatahub",
+        "msfeatures",
+        "pheatmap",
+        "spectra",
+        "xcms",
+        "zenodo"
       ]
     }
   }

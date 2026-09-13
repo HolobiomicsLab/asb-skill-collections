@@ -1,9 +1,11 @@
 ---
 name: proforma-peptidoform-parsing
-description: Use when when you have a ProForma 2.0–formatted peptide string with PSI-MOD or UniMod modification labels and need to extract the underlying amino acid sequence and modification positions before performing theoretical fragment ion calculation or spectrum peak matching.
+description: Use when when you have a ProForma 2.0–formatted peptide string with PSI-MOD
+  or UniMod modification labels and need to extract the underlying amino acid sequence
+  and modification positions before performing theoretical fragment ion calculation
+  or spectrum peak matching.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,12 +17,16 @@ metadata:
   - spectrum_utils MsmsSpectrum.annotate_proforma()
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

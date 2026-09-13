@@ -1,9 +1,10 @@
 ---
 name: graph-neural-network-implementation
-description: Use when when your input includes molecular structures (SMILES, conformers) and you need to predict a continuous property (e.g., CCS, binding affinity, solubility) that depends on molecular connectivity and spatial relationships.
+description: Use when when your input includes molecular structures (SMILES, conformers)
+  and you need to predict a continuous property (e.g., CCS, binding affinity, solubility)
+  that depends on molecular connectivity and spatial relationships.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3314
@@ -24,6 +25,8 @@ metadata:
   - DGL
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/cem.70040
   title: PACCS

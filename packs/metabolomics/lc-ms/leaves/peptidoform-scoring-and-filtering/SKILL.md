@@ -1,9 +1,10 @@
 ---
 name: peptidoform-scoring-and-filtering
-description: Use when after a transformer-based de novo sequencing model (such as Casanovo) generates candidate peptide sequences from MS/MS spectra, before exporting results or using them in database matching or visualization workflows.
+description: Use when after a transformer-based de novo sequencing model (such as
+  Casanovo) generates candidate peptide sequences from MS/MS spectra, before exporting
+  results or using them in database matching or visualization workflows.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3645
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,14 +18,18 @@ metadata:
   - PDV
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-024-49731-x
   title: Casanovo
 - doi: 10.1093/bib/bbac542
   title: ''
 evidence_spans:
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing.
-- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide sequencing
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing.
+- Casanovo is a state-of-the-art deep learning tool designed for _de novo_ peptide
+  sequencing
 - Pytorch is installed automatically when installing Casanovo
 - Upgraded minimum Lightning version to 2.6.
 - Upgraded minimum DepthCharge version to 0.4.10.

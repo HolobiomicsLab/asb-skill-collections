@@ -1,9 +1,11 @@
 ---
 name: vendor-mass-spectrometry-file-format-handling
-description: Use when you have one or more vendor mass spectrometry raw files (Thermo .raw, Agilent .d, Sciex .wiff2, or other MSConvert-supported formats) that must be converted to Aird format for batch processing, cloud deployment, or integration with downstream analysis tools.
+description: Use when you have one or more vendor mass spectrometry raw files (Thermo
+  .raw, Agilent .d, Sciex .wiff2, or other MSConvert-supported formats) that must
+  be converted to Aird format for batch processing, cloud deployment, or integration
+  with downstream analysis tools.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -21,6 +23,8 @@ metadata:
   - AirdSDK
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird

@@ -1,9 +1,9 @@
 ---
 name: retention-time-correlation-similarity-scoring
-description: Use when when you have detected multiple features from non-targeted mass spectrometry and need to group them by putative compound origin.
+description: Use when when you have detected multiple features from non-targeted mass
+  spectrometry and need to group them by putative compound origin.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_0769
@@ -16,13 +16,16 @@ metadata:
   - InterpretMSSpectrum
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
 evidence_spans:
 - ramclustR function is built to use xcms data
 - RC <- ramclustR(xcmsObj = xset, ExpDes=experiment)
-- submitting this score matrix for heirarchical clustering, and then cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
+- submitting this score matrix for heirarchical clustering, and then cutting the resulting
+  dendrogram into neat chunks using the dynamicTreeCut package
 - cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
 claims: []
 provenance:

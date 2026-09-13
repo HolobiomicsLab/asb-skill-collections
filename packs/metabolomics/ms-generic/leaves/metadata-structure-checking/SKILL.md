@@ -1,9 +1,10 @@
 ---
 name: metadata-structure-checking
-description: Use when after loading a metadata file but before merging it with positive and negative mode m/z peaklists. Apply this skill when you have a candidate metadata table (e.
+description: Use when after loading a metadata file but before merging it with positive
+  and negative mode m/z peaklists. Apply this skill when you have a candidate metadata
+  table (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,6 +14,8 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s11306-020-01717-8
   title: MetaboShiny

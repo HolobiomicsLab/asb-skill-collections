@@ -1,9 +1,11 @@
 ---
 name: s4-class-method-inspection
-description: Use when you need to verify that an S4 replacement method (e.g., `mz<-`) in a bioinformatics backend class correctly validates input data using vectorized operations on NumericList or similar container objects, rather than inefficient loops or apply functions.
+description: Use when you need to verify that an S4 replacement method (e.g., `mz<-`)
+  in a bioinformatics backend class correctly validates input data using vectorized
+  operations on NumericList or similar container objects, rather than inefficient
+  loops or apply functions.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0335
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,13 +16,16 @@ metadata:
   - Spectra
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
 - library(Spectra) library(IRanges)
 - library(Spectra)
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

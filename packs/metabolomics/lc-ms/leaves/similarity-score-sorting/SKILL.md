@@ -1,9 +1,10 @@
 ---
 name: similarity-score-sorting
-description: Use when after a deep-learning model has predicted structural similarity scores between an unknown metabolite's MS/MS spectrum and all known metabolites in a reference database.
+description: Use when after a deep-learning model has predicted structural similarity
+  scores between an unknown metabolite's MS/MS spectrum and all known metabolites
+  in a reference database.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_0208
@@ -12,6 +13,8 @@ metadata:
   - DeepMASS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.8b05405
   title: Deep MS/MS similarity

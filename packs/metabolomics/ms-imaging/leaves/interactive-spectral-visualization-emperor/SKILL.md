@@ -1,9 +1,9 @@
 ---
 name: interactive-spectral-visualization-emperor
-description: Use when when you have computed PCA coordinates from chemical annotation matrices (e.
+description: Use when when you have computed PCA coordinates from chemical annotation
+  matrices (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3441
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -18,6 +18,8 @@ metadata:
   techniques:
   - CE-MS
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU

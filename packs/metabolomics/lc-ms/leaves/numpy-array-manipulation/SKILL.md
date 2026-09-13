@@ -1,9 +1,9 @@
 ---
 name: numpy-array-manipulation
-description: Use when when you have raw MS/MS peak lists that need to be loaded, analyzed for intensity frequency patterns, or filtered based on noise characteristics.
+description: Use when when you have raw MS/MS peak lists that need to be loaded, analyzed
+  for intensity frequency patterns, or filtered based on noise characteristics.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,6 +14,8 @@ metadata:
   - spectral_denoising
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-025-02646-x
   title: Spectral Denoising

@@ -1,9 +1,11 @@
 ---
 name: mass-spectrometry-data-loading-and-formatting
-description: Use when you have raw or curated mass spectrometry data (MS1, MS2, or MSMS) in mzML, mzXML, CDF, MGF, MSP formats, or from a MassBank/MetaboLights repository, and need to convert it into an in-memory or on-disk spectral object that supports filtering, comparison, and annotation workflows.
+description: Use when you have raw or curated mass spectrometry data (MS1, MS2, or
+  MSMS) in mzML, mzXML, CDF, MGF, MSP formats, or from a MassBank/MetaboLights repository,
+  and need to convert it into an in-memory or on-disk spectral object that supports
+  filtering, comparison, and annotation workflows.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -22,12 +24,16 @@ metadata:
   - MsBackendMetaboLights
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.08070
   title: spectripy
 evidence_spans:
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R
-- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based MS analysis in R.
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
+  MS analysis in R
+- The *SpectriPy* package allows integration of Python MS packages into a [*Spectra*]-based
+  MS analysis in R.
 - integration of Python MS packages into a [*Spectra*]-based MS analysis in R
 claims: []
 provenance:

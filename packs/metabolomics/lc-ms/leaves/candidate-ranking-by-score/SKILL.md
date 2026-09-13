@@ -1,9 +1,11 @@
 ---
 name: candidate-ranking-by-score
-description: 'Use when you have a query mass spectrum and a set of candidate molecular structures, and you need to prioritize candidates by their likelihood of matching the query. Typical triggers include: (1) you have computed or extracted spectral features (e.'
+description: 'Use when you have a query mass spectrum and a set of candidate molecular
+  structures, and you need to prioritize candidates by their likelihood of matching
+  the query. Typical triggers include: (1) you have computed or extracted spectral
+  features (e.'
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -18,6 +20,8 @@ metadata:
   - MassSpecGym
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.11.12.688047v1
   title: MVP

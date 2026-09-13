@@ -1,9 +1,9 @@
 ---
 name: heavy-isotope-labeling-interpretation
-description: Use when your peptide sample has been enriched with stable isotope labels (13C, 15N, etc.) at a known incorporation probability (e.g., 52% 13C).
+description: Use when your peptide sample has been enriched with stable isotope labels
+  (13C, 15N, etc.) at a known incorporation probability (e.g., 52% 13C).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,12 +17,16 @@ metadata:
   - Sipros 5
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c03207
   title: Aerith
 evidence_spans:
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans, calculate the theoretical isotopic peak envelope
-- Aerith is an R package that provides interfaces to read and write mass spectrum scans
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans, calculate the theoretical isotopic peak envelope
+- Aerith is an R package that provides interfaces to read and write mass spectrum
+  scans
 - Extract visualization information from `.FT2` files
 - Aerith is an R package
 claims: []

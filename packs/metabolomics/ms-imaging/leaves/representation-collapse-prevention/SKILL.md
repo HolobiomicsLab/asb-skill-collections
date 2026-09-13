@@ -1,9 +1,10 @@
 ---
 name: representation-collapse-prevention
-description: Use when training a contrastive learning model on ion image data (mass spectrometry imaging) where augmented pairs of the same ion image must maximize similarity while different images minimize similarity.
+description: Use when training a contrastive learning model on ion image data (mass
+  spectrometry imaging) where augmented pairs of the same ion image must maximize
+  similarity while different images minimize similarity.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3925
   edam_topics:
   - http://edamontology.org/topic_3674
@@ -14,6 +15,8 @@ metadata:
   - kornia
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion

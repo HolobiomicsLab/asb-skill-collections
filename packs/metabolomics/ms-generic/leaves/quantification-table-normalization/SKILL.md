@@ -1,9 +1,11 @@
 ---
 name: quantification-table-normalization
-description: Use when you have raw quantification data (abundance or intensity values across samples and features) from mass spectrometry or similar high-dimensional assays and need to prepare it for msFeaST's feature selection workflow, which requires standardized internal data structures compatible with.
+description: Use when you have raw quantification data (abundance or intensity values
+  across samples and features) from mass spectrometry or similar high-dimensional
+  assays and need to prepare it for msFeaST's feature selection workflow, which requires
+  standardized internal data structures compatible with.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -18,6 +20,8 @@ metadata:
   - QuantyFey
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btae584
   title: msFeaST
@@ -25,7 +29,8 @@ derived_from:
   title: ''
 evidence_spans:
 - github.com__kevinmildau__msFeaST
-- '**QuantyFey** is a Shiny application for the **visualization, analysis, and quantification** of **mass spectrometry (MS) data**'
+- '**QuantyFey** is a Shiny application for the **visualization, analysis, and quantification**
+  of **mass spectrometry (MS) data**'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

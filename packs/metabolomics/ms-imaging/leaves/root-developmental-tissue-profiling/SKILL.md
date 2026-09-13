@@ -1,9 +1,11 @@
 ---
 name: root-developmental-tissue-profiling
-description: Use when you have CDF-format mass spectrometry imaging files from plant roots with accompanying MATLAB workspace files (.mat), and your research goal is to reproduce linear-axis intensity profiles, feature distributions, and spatial metrics reported in a prior publication (e.g., Sama et al. 2025).
+description: Use when you have CDF-format mass spectrometry imaging files from plant
+  roots with accompanying MATLAB workspace files (.mat), and your research goal is
+  to reproduce linear-axis intensity profiles, feature distributions, and spatial
+  metrics reported in a prior publication (e.g., Sama et al. 2025).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3630
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +16,8 @@ metadata:
   - batchcdfread
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2025.09.22.677919v1
   title: DIMPLE

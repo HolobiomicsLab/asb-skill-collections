@@ -1,9 +1,10 @@
 ---
 name: massql-query-language-syntax
-description: Use when you need to search for specific mass spectrometry patterns (e.g., precursor ion m/z, product ion presence, retention time windows, intensity constraints, neutral loss patterns) across one or more mzML files.
+description: Use when you need to search for specific mass spectrometry patterns (e.g.,
+  precursor ion m/z, product ion presence, retention time windows, intensity constraints,
+  neutral loss patterns) across one or more mzML files.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -13,6 +14,8 @@ metadata:
   - MassQLab
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/rcm.10132
   title: MassQLab

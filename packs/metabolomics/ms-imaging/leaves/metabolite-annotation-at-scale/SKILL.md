@@ -1,9 +1,10 @@
 ---
 name: metabolite-annotation-at-scale
-description: Use when you have extracted a large feature set of m/z values (hundreds to tens of thousands) from a Cardinal MSImagingExperiment object or similar MS dataset and need to assign putative metabolite identities using public structural databases.
+description: Use when you have extracted a large feature set of m/z values (hundreds
+  to tens of thousands) from a Cardinal MSImagingExperiment object or similar MS dataset
+  and need to assign putative metabolite identities using public structural databases.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -20,6 +21,13 @@ metadata:
   techniques:
   - LC-MS
   - MS-imaging
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-ND-4.0
+    url: ''
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.10.31.621429v1
   title: SpaMTP

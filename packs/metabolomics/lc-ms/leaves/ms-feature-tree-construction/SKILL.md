@@ -1,9 +1,10 @@
 ---
 name: ms-feature-tree-construction
-description: Use when you have untargeted LC-MS/MS metabolomic data (peak-detected .mzXML/.mzML/.mzDATA files processed through MZmine2) and need to relate MS1 features by chemical similarity rather than sequence homology.
+description: Use when you have untargeted LC-MS/MS metabolomic data (peak-detected
+  .mzXML/.mzML/.mzDATA files processed through MZmine2) and need to relate MS1 features
+  by chemical similarity rather than sequence homology.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,11 +16,14 @@ metadata:
   - Classyfire
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41589-020-00677-3
   title: qemistree
 evidence_spans:
-- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed comparison of untargeted metabolomic profiles.
+- A tool to build a tree of mass-spectrometry (LC-MS/MS) features to perform chemically-informed
+  comparison of untargeted metabolomic profiles.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

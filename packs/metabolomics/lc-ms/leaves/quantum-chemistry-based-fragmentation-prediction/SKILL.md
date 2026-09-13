@@ -1,9 +1,11 @@
 ---
 name: quantum-chemistry-based-fragmentation-prediction
-description: Use when when you have SMILES strings or molecular formulae for N-Me derivatized unsaturated sterol lipids and need to generate theoretical MS/MS spectra (predicted fragment m/z values and intensities) to compare against experimental LC-IM-MS/MS data before performing CCS prediction or downstream.
+description: Use when when you have SMILES strings or molecular formulae for N-Me
+  derivatized unsaturated sterol lipids and need to generate theoretical MS/MS spectra
+  (predicted fragment m/z values and intensities) to compare against experimental
+  LC-IM-MS/MS data before performing CCS prediction or downstream.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3637
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -16,6 +18,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA

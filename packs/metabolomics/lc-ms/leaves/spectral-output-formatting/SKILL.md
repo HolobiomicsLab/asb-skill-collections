@@ -1,9 +1,10 @@
 ---
 name: spectral-output-formatting
-description: Use when after generating tandem mass spectrum predictions from a neural model (ICEBERG, SCARF, or baseline), and before attempting retrieval ranking, metric computation, or validation against experimental spectra.
+description: Use when after generating tandem mass spectrum predictions from a neural
+  model (ICEBERG, SCARF, or baseline), and before attempting retrieval ranking, metric
+  computation, or validation against experimental spectra.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3932
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,6 +17,8 @@ metadata:
   - PubChem
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04654
   title: ICEBERG / fragmentation graph generation

@@ -1,9 +1,11 @@
 ---
 name: molecular-formula-representation-and-manipulation
-description: Use when you need to represent, validate, and manipulate molecular compositions in MS analysis—specifically when annotating precursor or product ions with elemental formulas, computing monoisotopic masses for formula-to-charge assignments, predicting isotope patterns ([M]+, [M+H]+, [M+Na]+, etc.).
+description: Use when you need to represent, validate, and manipulate molecular compositions
+  in MS analysis—specifically when annotating precursor or product ions with elemental
+  formulas, computing monoisotopic masses for formula-to-charge assignments, predicting
+  isotope patterns ([M]+, [M+H]+, [M+Na]+, etc.).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +18,8 @@ metadata:
   - MZA converter
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c01653
   title: mzapy

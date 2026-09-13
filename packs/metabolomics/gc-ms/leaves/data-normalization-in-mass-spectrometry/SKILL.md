@@ -1,9 +1,10 @@
 ---
 name: data-normalization-in-mass-spectrometry
-description: Use when you have raw or partially processed metabolomics data (mzML/mzXML format) from LC-MS or GC-MS runs and need to apply standardized feature detection, alignment, and intensity normalization as part of a reproducible workflow.
+description: Use when you have raw or partially processed metabolomics data (mzML/mzXML
+  format) from LC-MS or GC-MS runs and need to apply standardized feature detection,
+  alignment, and intensity normalization as part of a reproducible workflow.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +15,8 @@ metadata:
   - LC-MS
   - GC-MS
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2024.05.13.593988v1
   title: plantMASST

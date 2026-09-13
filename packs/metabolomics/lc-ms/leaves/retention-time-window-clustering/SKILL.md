@@ -1,9 +1,10 @@
 ---
 name: retention-time-window-clustering
-description: Use when after filtering LC-MS features by statistical significance (e.g., p-value < 0.01) and you need to link individual m/z features into structural clusters representing the same metabolite in different ionization states or isotopic forms.
+description: Use when after filtering LC-MS features by statistical significance (e.g.,
+  p-value < 0.01) and you need to link individual m/z features into structural clusters
+  representing the same metabolite in different ionization states or isotopic forms.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -19,13 +20,16 @@ metadata:
   techniques:
   - LC-MS
   - direct-infusion-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi
 - doi: 10.1371/journal.pcbi.1011814
   title: ''
 evidence_spans:
-- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry datasets.
+- MAMSI is a Python framework designed for the integration of multi-assay mass spectrometry
+  datasets.
 - import pandas as pd
 - import numpy as np
 - 'Dependencies: scipy'

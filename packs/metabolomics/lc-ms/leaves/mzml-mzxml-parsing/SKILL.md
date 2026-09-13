@@ -1,9 +1,10 @@
 ---
 name: mzml-mzxml-parsing
-description: Use when you have raw LC-MS/MS data in mzML or mzXML format and need to isolate specific MS1/MS2 scan pairs for a targeted compound list or for building a local spectral library.
+description: Use when you have raw LC-MS/MS data in mzML or mzXML format and need
+  to isolate specific MS1/MS2 scan pairs for a targeted compound list or for building
+  a local spectral library.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -13,6 +14,8 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04343
   title: MeRgeION

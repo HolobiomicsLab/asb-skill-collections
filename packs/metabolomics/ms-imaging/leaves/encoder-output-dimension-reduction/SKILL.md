@@ -1,9 +1,11 @@
 ---
 name: encoder-output-dimension-reduction
-description: 'Use when you have 512-dimensional representation vectors output from paired ResNet18 encoders processing augmented ion images, and you need to: (1) introduce an intermediate projection space to enable contrastive loss optimization without trivial/collapsed solutions, (2) further compress learned.'
+description: 'Use when you have 512-dimensional representation vectors output from
+  paired ResNet18 encoders processing augmented ion images, and you need to: (1) introduce
+  an intermediate projection space to enable contrastive loss optimization without
+  trivial/collapsed solutions, (2) further compress learned.'
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +17,8 @@ metadata:
   - kornia
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion

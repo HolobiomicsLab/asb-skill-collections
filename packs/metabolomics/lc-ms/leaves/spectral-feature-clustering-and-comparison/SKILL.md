@@ -3,7 +3,6 @@ name: spectral-feature-clustering-and-comparison
 description: Use when after identifying statistically significant LC-MS features (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3932
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -18,6 +17,8 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi

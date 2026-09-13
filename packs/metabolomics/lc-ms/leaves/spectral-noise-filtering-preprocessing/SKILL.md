@@ -1,9 +1,10 @@
 ---
 name: spectral-noise-filtering-preprocessing
-description: Use when you have raw MS/MS spectral data and plan to calculate spectral similarity scores (whether using entropy distance, dot product, or other algorithms) for compound identification.
+description: Use when you have raw MS/MS spectral data and plan to calculate spectral
+  similarity scores (whether using entropy distance, dot product, or other algorithms)
+  for compound identification.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +17,8 @@ metadata:
   - spectral_similarity module
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-021-01331-z
   title: Spectral entropy

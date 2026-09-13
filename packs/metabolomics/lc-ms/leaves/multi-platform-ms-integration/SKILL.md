@@ -1,9 +1,9 @@
 ---
 name: multi-platform-ms-integration
-description: Use when you have untargeted metabolomics data from multiple MS instruments (e.
+description: Use when you have untargeted metabolomics data from multiple MS instruments
+  (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_0769
@@ -23,14 +23,19 @@ metadata:
   techniques:
   - LC-MS
   - CE-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-04715-6
   title: AriumMS
 - doi: 10.1038/protex.2015.102
   title: ''
 evidence_spans:
-- functions (ROIpeaks, MSroiaug) developed by Romà Tauler, Eva Gorrochategui and Joaquim Jaumot
-- 'Required toolboxes for the app version: Bioinformatic Toolbox, Statistics And Machine Learning Toolbox, Wavelet Toolbox, Image Processing Toolbox, Signal Processing Toolbox, Parallel Computing'
+- functions (ROIpeaks, MSroiaug) developed by Romà Tauler, Eva Gorrochategui and Joaquim
+  Jaumot
+- 'Required toolboxes for the app version: Bioinformatic Toolbox, Statistics And Machine
+  Learning Toolbox, Wavelet Toolbox, Image Processing Toolbox, Signal Processing Toolbox,
+  Parallel Computing'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

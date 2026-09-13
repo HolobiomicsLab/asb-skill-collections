@@ -1,9 +1,11 @@
 ---
 name: chemical-annotation-integration
-description: Use when after training a tandem mass spectrometry embedding model (such as MSBERT) on a reference spectral library (e.g., GNPS), apply this skill to confirm that the high-dimensional embedding vectors project into interpretable chemical space.
+description: Use when after training a tandem mass spectrometry embedding model (such
+  as MSBERT) on a reference spectral library (e.g., GNPS), apply this skill to confirm
+  that the high-dimensional embedding vectors project into interpretable chemical
+  space.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_2422
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -20,6 +22,8 @@ metadata:
   - matchms
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c02426
   title: MSBERT

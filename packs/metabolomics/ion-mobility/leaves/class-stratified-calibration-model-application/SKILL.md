@@ -1,9 +1,11 @@
 ---
 name: class-stratified-calibration-model-application
-description: Use when you have a feature table with assigned biomolecular class labels (e.g., from preceding class assignment step) and raw ion mobility arrival time measurements from TWIM-MS data, and you need to compute class-appropriate CCS values for downstream multi-omic analysis.
+description: Use when you have a feature table with assigned biomolecular class labels
+  (e.g., from preceding class assignment step) and raw ion mobility arrival time measurements
+  from TWIM-MS data, and you need to compute class-appropriate CCS values for downstream
+  multi-omic analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +16,8 @@ metadata:
   - DEIMoS
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal

@@ -1,9 +1,10 @@
 ---
 name: multi-tool-results-comparison
-description: Use when you have feature identification outputs from two or more DIA-MS search tools (e.g., DIA-NN and OpenSwath result files) and need to assess their agreement on analyte detection, quantification, and scoring.
+description: Use when you have feature identification outputs from two or more DIA-MS
+  search tools (e.g., DIA-NN and OpenSwath result files) and need to assess their
+  agreement on analyte detection, quantification, and scoring.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3925
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,6 +18,8 @@ metadata:
   - Bokeh
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash

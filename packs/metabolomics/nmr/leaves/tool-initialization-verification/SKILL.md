@@ -1,9 +1,9 @@
 ---
 name: tool-initialization-verification
-description: Use when after completing Docker installation and container build steps for CloMet, before attempting substantive data analysis or pipeline execution.
+description: Use when after completing Docker installation and container build steps
+  for CloMet, before attempting substantive data analysis or pipeline execution.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_topics:
   - http://edamontology.org/topic_3172
   tools:
@@ -11,6 +11,8 @@ metadata:
   - CloMet
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00602
   title: CloMet

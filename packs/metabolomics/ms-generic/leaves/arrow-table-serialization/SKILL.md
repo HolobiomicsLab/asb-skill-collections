@@ -1,9 +1,12 @@
 ---
 name: arrow-table-serialization
-description: Use when you have loaded mzPeak spectrum or chromatogram metadata and signal data into PyArrow Table structures (via the Python mzPeak reader or equivalent) and need to persist them to disk in Parquet format for downstream analysis, interoperability with other languages (R, .
+description: Use when you have loaded mzPeak spectrum or chromatogram metadata and
+  signal data into PyArrow Table structures (via the Python mzPeak reader or equivalent)
+  and need to persist them to disk in Parquet format for downstream analysis, interoperability
+  with other languages (R, .
 license: CC-BY-4.0
 metadata:
-  license_tier: open
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_1812
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -17,6 +20,8 @@ metadata:
   - mzPeak specification JSON Schemas
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak

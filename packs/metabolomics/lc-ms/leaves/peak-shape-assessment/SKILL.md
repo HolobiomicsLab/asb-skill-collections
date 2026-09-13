@@ -1,9 +1,11 @@
 ---
 name: peak-shape-assessment
-description: Use when after peak detection in a nontargeted LC-MS workflow when you have a feature table with detected peaks and need to filter low-quality features or understand why certain features have inconsistent intensity or poor annotation confidence.
+description: Use when after peak detection in a nontargeted LC-MS workflow when you
+  have a feature table with detected peaks and need to filter low-quality features
+  or understand why certain features have inconsistent intensity or poor annotation
+  confidence.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -13,12 +15,21 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-4.0
+    url: huaxuyu/masscube
+  license_tier: noncommercial
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-60640-5
   title: MassCube
 evidence_spans:
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing.
-- masscube is an integrated Python package for liquid chromatography-mass spectrometry (LC-MS) data processing
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing.
+- masscube is an integrated Python package for liquid chromatography-mass spectrometry
+  (LC-MS) data processing
 - masscube is an integrated Python package
 claims: []
 provenance:

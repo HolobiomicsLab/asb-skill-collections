@@ -1,9 +1,10 @@
 ---
 name: attention-mechanism-validation
-description: Use when after instantiating a transformer encoder module for mass spectrometry data processing (e.g., in IDSL_MINT), before training on large MS/MS datasets or running inference on test spectra.
+description: Use when after instantiating a transformer encoder module for mass spectrometry
+  data processing (e.g., in IDSL_MINT), before training on large MS/MS datasets or
+  running inference on test spectra.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3465
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +15,8 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-024-00804-5
   title: idslmint

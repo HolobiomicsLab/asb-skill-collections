@@ -1,9 +1,9 @@
 ---
 name: msi-data-visualization-and-spatial-analysis
-description: Use when when you have imzML-format MSI data and need to identify biochemical species in specific tissue regions or anatomical structures.
+description: Use when when you have imzML-format MSI data and need to identify biochemical
+  species in specific tissue regions or anatomical structures.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3214
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,11 +15,14 @@ metadata:
   - MSI-Explorer
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01513
   title: MSI-Explorer
 evidence_spans:
-- The MSI-Explorer napari plugin is a powerful tool designed for targeted biochemical annotations in MSI data.
+- The MSI-Explorer napari plugin is a powerful tool designed for targeted biochemical
+  annotations in MSI data.
 - '[![Python Version](https://img.shields.io/pypi/pyversions/MSI-Explorer.svg?color=green)](https://python.org)'
 claims: []
 provenance:

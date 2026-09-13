@@ -1,9 +1,9 @@
 ---
 name: positional-encoding-for-spectral-sequences
-description: Use when preparing mass spectrum input tensors for transformer encoder layers in IDSL_MINT.
+description: Use when preparing mass spectrum input tensors for transformer encoder
+  layers in IDSL_MINT.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0226
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -14,6 +14,8 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-024-00804-5
   title: idslmint

@@ -1,9 +1,11 @@
 ---
 name: preprocessing-pipeline-parameter-optimization
-description: Use when you have raw TOF-MS or IM-MS data in Agilent MassHunter (.d) or UIMF format with jagged peaks and low-abundance ions that require signal enhancement, but you need to decide whether to apply smoothing, and at what strength, to avoid over-smoothing real signals or under-removing artifacts.
+description: Use when you have raw TOF-MS or IM-MS data in Agilent MassHunter (.d)
+  or UIMF format with jagged peaks and low-abundance ions that require signal enhancement,
+  but you need to decide whether to apply smoothing, and at what strength, to avoid
+  over-smoothing real signals or under-removing artifacts.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,14 +16,19 @@ metadata:
   - IM-MS Browser
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00220
   title: PNNL PreProcessor
 - doi: 10.1021/acs.jproteome.1c00425
   title: ''
 evidence_spans:
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files
-- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files) from drift tube (DT) and structure for lossless ion manipulations (SLIM) IM-MS
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files
+- we have developed this user-friendly tool for Agilent MassHunter (.d) and UIMF mass
+  spectrometry data files (MS-files) from drift tube (DT) and structure for lossless
+  ion manipulations (SLIM) IM-MS
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files (MS-files)
 - Agilent MassHunter (.d) and UIMF mass spectrometry data files
 claims: []

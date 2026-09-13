@@ -1,9 +1,11 @@
 ---
 name: metabolomics-noise-perturbation-simulation
-description: Use when when benchmarking or validating a pathway analysis method (such as PALS, ORA, or GSEA) on metabolomics data, you need quantitative evidence that the method's pathway rankings remain stable despite noise and missing peaks—conditions prevalent in real LC-MS/MS datasets.
+description: Use when when benchmarking or validating a pathway analysis method (such
+  as PALS, ORA, or GSEA) on metabolomics data, you need quantitative evidence that
+  the method's pathway rankings remain stable despite noise and missing peaks—conditions
+  prevalent in real LC-MS/MS datasets.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,6 +18,8 @@ metadata:
   - GSEA (Gene Set Enrichment Analysis)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo11020103
   title: pals

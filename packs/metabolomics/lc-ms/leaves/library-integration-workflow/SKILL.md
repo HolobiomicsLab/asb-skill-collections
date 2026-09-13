@@ -1,9 +1,11 @@
 ---
 name: library-integration-workflow
-description: Use when you have custom lipid entries (e.g., synthetic lipids, rare natural variants, or isotopically labeled standards) not covered by LipidMatch's default in-silico library, and you want to include them as matching candidates in your UHPLC-HRMS/MS fragment m/z matching workflow without modifying.
+description: Use when you have custom lipid entries (e.g., synthetic lipids, rare
+  natural variants, or isotopically labeled standards) not covered by LipidMatch's
+  default in-silico library, and you want to include them as matching candidates in
+  your UHPLC-HRMS/MS fragment m/z matching workflow without modifying.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -16,6 +18,8 @@ metadata:
   - Compound Discoverer
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s12859-017-1744-3
   title: lipidmatch

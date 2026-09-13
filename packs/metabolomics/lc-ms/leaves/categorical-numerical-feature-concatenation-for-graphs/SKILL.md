@@ -1,9 +1,10 @@
 ---
 name: categorical-numerical-feature-concatenation-for-graphs
-description: 'Use when when preparing heterogeneous column-metadata inputs for a graph transformer model that operates on molecular graphs. Specifically: (1) you have both categorical metadata (e.'
+description: 'Use when when preparing heterogeneous column-metadata inputs for a graph
+  transformer model that operates on molecular graphs. Specifically: (1) you have
+  both categorical metadata (e.'
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3407
@@ -17,11 +18,14 @@ metadata:
   - Graphormer-RT
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT
 evidence_spans:
-- Graphormer-RT is an extension to the Graphormer package, with documentation, and the original code on Github
+- Graphormer-RT is an extension to the Graphormer package, with documentation, and
+  the original code on Github
 - import dgl
 claims: []
 provenance:

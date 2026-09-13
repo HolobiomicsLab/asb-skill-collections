@@ -1,9 +1,10 @@
 ---
 name: spectral-topic-modeling-lda
-description: Use when when you have a collection of normalized mass spectrometry spectra (peak intensities or binned m/z representations) and seek to enrich neural network training signals for metabolite identification by discovering latent spectral patterns.
+description: Use when when you have a collection of normalized mass spectrometry spectra
+  (peak intensities or binned m/z representations) and seek to enrich neural network
+  training signals for metabolite identification by discovering latent spectral patterns.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,6 +15,8 @@ metadata:
   - scikit-learn
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btae490
   title: ESP

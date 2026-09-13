@@ -1,9 +1,11 @@
 ---
 name: msexperiment-backend-configuration
-description: Use when you have multiple centroided .mzML LC-MS files that need to be loaded into a unified object for targeted peak integration, and you need to distinguish QC runs from sample runs to compute per-group quality metrics (e.g., average SNR, peak correlation, area under curve per QC cohort).
+description: Use when you have multiple centroided .mzML LC-MS files that need to
+  be loaded into a unified object for targeted peak integration, and you need to distinguish
+  QC runs from sample runs to compute per-group quality metrics (e.g., average SNR,
+  peak correlation, area under curve per QC cohort).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,11 +18,14 @@ metadata:
   - TARDIS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
 evidence_spans:
-- Alternatively, instead of using file paths as input for TARDIS, the user can also use an `MsExperiment` object
+- Alternatively, instead of using file paths as input for TARDIS, the user can also
+  use an `MsExperiment` object
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
 - rmarkdown::html_document
 - Quick start for targeted peak integration of LC-MS data using TARDIS

@@ -1,9 +1,10 @@
 ---
 name: mass-spectrometry-spectral-preprocessing
-description: Use when you have raw mass spectrometry spectra from an unknown analyte or a synthetic compound library and need to feed them into PS2MS or similar deep learning classifiers for NPS detection.
+description: Use when you have raw mass spectrometry spectra from an unknown analyte
+  or a synthetic compound library and need to feed them into PS2MS or similar deep
+  learning classifiers for NPS detection.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -14,6 +15,8 @@ metadata:
   - DeepEI
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05019
   title: ps2ms

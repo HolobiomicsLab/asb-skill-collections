@@ -1,9 +1,10 @@
 ---
 name: spectral-database-query-execution
-description: Use when when you have an unknown mass spectrum (query spectrum) and need to search it against a reference database of billions of spectra to find matching or structurally related compounds.
+description: Use when when you have an unknown mass spectrum (query spectrum) and
+  need to search it against a reference database of billions of spectra to find matching
+  or structurally related compounds.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3647
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +17,8 @@ metadata:
   - PAIRING+
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41587-023-01985-4
   title: MASST

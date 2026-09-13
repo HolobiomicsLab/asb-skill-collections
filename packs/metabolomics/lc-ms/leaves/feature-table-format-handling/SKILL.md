@@ -1,9 +1,9 @@
 ---
 name: feature-table-format-handling
-description: Use when transitioning feature intensity data between pipeline stages (e.
+description: Use when transitioning feature intensity data between pipeline stages
+  (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3906
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +14,8 @@ metadata:
   - OUKS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.1c00392
   title: Omics Untargeted Key Script

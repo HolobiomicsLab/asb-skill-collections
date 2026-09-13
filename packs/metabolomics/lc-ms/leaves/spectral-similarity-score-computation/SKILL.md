@@ -1,9 +1,10 @@
 ---
 name: spectral-similarity-score-computation
-description: Use when when you have pairs of MS/MS spectra (in mgf, msp, mzml, mzxml, json, or usi format) and need to retrieve structurally related compounds or rank spectral similarity on a continuous scale (Tanimoto prediction).
+description: Use when when you have pairs of MS/MS spectra (in mgf, msp, mzml, mzxml,
+  json, or usi format) and need to retrieve structurally related compounds or rank
+  spectral similarity on a continuous scale (Tanimoto prediction).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -19,6 +20,8 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
@@ -26,9 +29,13 @@ evidence_spans:
 - Our MS2DeepScore Python library offers two types of data generators
 - To estimate the uncertainty of a prediction we used Monte-Carlo Dropout ensembles
 - recently introduced unsupervised Spec2V
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities.
-- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
-- Our MS2DeepScore Python library offers two types of data generators, one which iterates over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over all spectra and was used for
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities.
+- Unless noted otherwise, we used Tanimoto scores on RDKit [23] Daylight fingerprints
+  (2048 bits) to compute structural similarities
+- Our MS2DeepScore Python library offers two types of data generators, one which iterates
+  over all unique InChIKeys (DataGeneratorAllInchikeys) and one which iterates over
+  all spectra and was used for
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

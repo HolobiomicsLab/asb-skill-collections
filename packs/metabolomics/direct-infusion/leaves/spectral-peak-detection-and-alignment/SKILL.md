@@ -1,9 +1,10 @@
 ---
 name: spectral-peak-detection-and-alignment
-description: Use when after noise filtering and baseline correction have been applied to mass spectrometry data (DI-MS, ASAP-MS, LDI-MS, or other high-throughput MS formats in mzML, mzXML, or vendor formats).
+description: Use when after noise filtering and baseline correction have been applied
+  to mass spectrometry data (DI-MS, ASAP-MS, LDI-MS, or other high-throughput MS formats
+  in mzML, mzXML, or vendor formats).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3630
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +15,8 @@ metadata:
   - ASAP-MS
   techniques:
   - direct-infusion-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass

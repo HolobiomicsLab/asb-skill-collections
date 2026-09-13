@@ -1,9 +1,10 @@
 ---
 name: tensor-operation-element-wise-product
-description: Use when you have two embedding tensors of identical shape (e.g., both 512-dimensional) and need to produce a fused representation that captures multiplicative interactions between modalities.
+description: Use when you have two embedding tensors of identical shape (e.g., both
+  512-dimensional) and need to produce a fused representation that captures multiplicative
+  interactions between modalities.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,6 +14,8 @@ metadata:
   - PyTorch
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-66060-9
   title: fiddle

@@ -1,9 +1,10 @@
 ---
 name: mass-spectrometry-benchmark-design
-description: Use when when claiming that one mass spectrometry processing library achieves higher throughput than competitors, or when evaluating whether a new or optimized implementation delivers the expected computational efficiency gains.
+description: Use when when claiming that one mass spectrometry processing library
+  achieves higher throughput than competitors, or when evaluating whether a new or
+  optimized implementation delivers the expected computational efficiency gains.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -21,6 +22,8 @@ metadata:
   - Python time module
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils

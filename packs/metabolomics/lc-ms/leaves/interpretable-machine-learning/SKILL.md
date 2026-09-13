@@ -1,9 +1,10 @@
 ---
 name: interpretable-machine-learning
-description: Use when when you have tandem mass spectra data and need to predict a binary molecular property (e.g., presence of a functional group like a sulfo group) while maintaining full interpretability of the model's decision logic.
+description: Use when when you have tandem mass spectra data and need to predict a
+  binary molecular property (e.g., presence of a functional group like a sulfo group)
+  while maintaining full interpretability of the model's decision logic.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_1812
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,6 +17,8 @@ metadata:
   - LIME
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c02591
   title: ChemEcho

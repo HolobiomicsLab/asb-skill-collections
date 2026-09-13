@@ -1,9 +1,9 @@
 ---
 name: tic-peak-boundary-estimation
-description: Use when after sliding-window analysis has identified candidate TIC peaks but before parameter extraction from Extracted Ion Chromatograms (EICs).
+description: Use when after sliding-window analysis has identified candidate TIC peaks
+  but before parameter extraction from Extracted Ion Chromatograms (EICs).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -16,6 +16,8 @@ metadata:
   - MZmine2
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/812370
   title: AutoTuner parameter selection

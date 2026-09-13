@@ -1,9 +1,11 @@
 ---
 name: adduct-mass-difference-ranking
-description: Use when you have computed a histogram of mass differences from all pairwise mass comparisons in your MALDI-MS imaging dataset and need to prioritize which mass differences are most frequent and likely represent genuine molecular adducts (e.g., metabolite + matrix ions) rather than noise.
+description: Use when you have computed a histogram of mass differences from all pairwise
+  mass comparisons in your MALDI-MS imaging dataset and need to prioritize which mass
+  differences are most frequent and likely represent genuine molecular adducts (e.g.,
+  metabolite + matrix ions) rather than noise.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,13 +15,17 @@ metadata:
   - R
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c04720
   title: mass2adduct
 evidence_spans:
-- This package presents tools for counting and identifying possible adducts in MS data
+- This package presents tools for counting and identifying possible adducts in MS
+  data
 - We can match massdiffs to specific adduct types using the same function `adductMatch`
-- If the data matrix is very large, it may need to be reformatted to be loaded into memory during an R session.
+- If the data matrix is very large, it may need to be reformatted to be loaded into
+  memory during an R session.
 - corrPairsMSI(d,d.diff.annot)
 claims: []
 provenance:

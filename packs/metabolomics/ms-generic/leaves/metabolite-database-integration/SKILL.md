@@ -1,9 +1,11 @@
 ---
 name: metabolite-database-integration
-description: Use when you need to construct a reference metabolomics database from scratch or when existing public databases (HMDB, MassBank, METLIN) need to be merged into a single queryable resource for metabolite annotation in untargeted mass spectrometry analysis.
+description: Use when you need to construct a reference metabolomics database from
+  scratch or when existing public databases (HMDB, MassBank, METLIN) need to be merged
+  into a single queryable resource for metabolite annotation in untargeted mass spectrometry
+  analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_0639
@@ -12,6 +14,8 @@ metadata:
   - openNAU
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21147/j.issn.1000-9604.2023.05.11
   title: OpenNAU

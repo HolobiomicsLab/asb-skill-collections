@@ -1,9 +1,11 @@
 ---
 name: chemical-class-metadata-integration
-description: Use when you have generated a GNPS molecular network (classical or feature-based workflow) and possess chemical class annotations (from GNPS library matching, ClassyFire, or other structural classifiers) that you wish to propagate onto network nodes and edges to enable chemical family-level.
+description: Use when you have generated a GNPS molecular network (classical or feature-based
+  workflow) and possess chemical class annotations (from GNPS library matching, ClassyFire,
+  or other structural classifiers) that you wish to propagate onto network nodes and
+  edges to enable chemical family-level.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3359
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -16,11 +18,14 @@ metadata:
   - Cytoscape
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo9070144
   title: molnetenhancer
 evidence_spans:
-- pyMolNetEnhancer is a python module integrating chemical class and substructure information
+- pyMolNetEnhancer is a python module integrating chemical class and substructure
+  information
 - pyMolNetEnhancer is a python module
 claims: []
 provenance:

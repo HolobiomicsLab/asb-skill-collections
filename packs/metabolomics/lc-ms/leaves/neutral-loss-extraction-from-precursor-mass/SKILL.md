@@ -1,9 +1,9 @@
 ---
 name: neutral-loss-extraction-from-precursor-mass
-description: Use when after loading and noise-filtering raw MS/MS spectra (in .mgf, .mzML, or .msp format) and before applying LDA for Mass2Motif inference.
+description: Use when after loading and noise-filtering raw MS/MS spectra (in .mgf,
+  .mzML, or .msp format) and before applying LDA for Mass2Motif inference.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,11 +15,14 @@ metadata:
   - Conda
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1073/pnas.1608041113
   title: MS2LDA
 evidence_spans:
-- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
+- '**MS2LDA** applies *probabilistic topic modeling*, originally developed for natural
+  language processing (NLP), to **tandem mass spectrometry (MS/MS)** data.'
 - ms2lda_runfull.py
 - '::: MS2LDA.Preprocessing.load_and_clean'
 - Configure the Python environment (set `PYTHONPATH`, activate conda, etc.)

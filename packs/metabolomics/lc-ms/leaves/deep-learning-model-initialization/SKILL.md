@@ -1,9 +1,9 @@
 ---
 name: deep-learning-model-initialization
-description: Use when you have downloaded the LC-MS spectral peak dataset (DOI 10.25345/C5FD2F) and need to train a DNN model from scratch rather than using a pre-trained checkpoint.
+description: Use when you have downloaded the LC-MS spectral peak dataset (DOI 10.25345/C5FD2F)
+  and need to train a DNN model from scratch rather than using a pre-trained checkpoint.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -14,6 +14,8 @@ metadata:
   - EDML_deep_learning2.py
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b02983
   title: DNN peak classifier

@@ -1,9 +1,10 @@
 ---
 name: feature-matrix-normalization-and-scaling
-description: Use when you have a heterogeneous feature matrix combining molecular descriptors (from RDKit/mordred) and chromatographic metadata (column length, temperature, pH, flow rate, particle size) with different physical units, ranges, and scales.
+description: Use when you have a heterogeneous feature matrix combining molecular
+  descriptors (from RDKit/mordred) and chromatographic metadata (column length, temperature,
+  pH, flow rate, particle size) with different physical units, ranges, and scales.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,6 +17,8 @@ metadata:
   - RDKit
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c05859
   title: Graphormer-RT

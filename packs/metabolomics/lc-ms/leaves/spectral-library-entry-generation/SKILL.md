@@ -1,9 +1,10 @@
 ---
 name: spectral-library-entry-generation
-description: Use when you have an experimental or public MS/MS spectrum (e.g., from MassBank in msp format, or a raw centroid-mode chromatogram) and need to create a reusable library entry for a known metabolite.
+description: Use when you have an experimental or public MS/MS spectrum (e.g., from
+  MassBank in msp format, or a raw centroid-mode chromatogram) and need to create
+  a reusable library entry for a known metabolite.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3636
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -15,11 +16,14 @@ metadata:
   - RamClustR
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c03032
   title: metaboannotator
 evidence_spans:
-- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS All-ion fragmentation (AIF) datasets
+- MetaboAnnotatoR is designed to perform metabolite annotation of features from LC-MS
+  All-ion fragmentation (AIF) datasets
 - To install this package, start R (version "4.5.0" or higher)
 claims: []
 provenance:

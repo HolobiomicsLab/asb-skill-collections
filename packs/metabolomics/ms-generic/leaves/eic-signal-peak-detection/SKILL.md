@@ -1,9 +1,11 @@
 ---
 name: eic-signal-peak-detection
-description: Use when after EIC candidate generation from LC/HRMS data (mzXML, mzML, or netCDF formats), when you need to localize discrete peaks within chromatographic profiles and assign retention time boundaries, apex intensities, and quality scores prior to peak annotation or cross-sample alignment.
+description: Use when after EIC candidate generation from LC/HRMS data (mzXML, mzML,
+  or netCDF formats), when you need to localize discrete peaks within chromatographic
+  profiles and assign retention time boundaries, apex intensities, and quality scores
+  prior to peak annotation or cross-sample alignment.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,11 +18,15 @@ metadata:
   - xcms
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00120
   title: IDSL.IPA
 evidence_spans:
-- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight R package'
+- '**Intrinsic Peak Analysis (IPA)** by the [**Integrated Data Science Laboratory
+  for Metabolomics and Exposomics (IDSL.ME)**](https://www.idsl.me) is a light-weight
+  R package'
 - light-weight R package
 claims: []
 provenance:

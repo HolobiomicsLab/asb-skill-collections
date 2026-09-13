@@ -1,9 +1,10 @@
 ---
 name: coeluting-compound-resolution
-description: Use when analyzing complex GC-MS mixtures where two or more chemical compounds elute at similar or identical retention times, producing overlapping or merged peaks in the raw chromatogram.
+description: Use when analyzing complex GC-MS mixtures where two or more chemical
+  compounds elute at similar or identical retention times, producing overlapping or
+  merged peaks in the raw chromatogram.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,12 +14,15 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41587-020-0700-3
   title: mshub
 evidence_spans:
 - MSHub auto-deconvolution
-- Auto-deconvolution and molecular networking of gas chromatography–mass spectrometry data
+- Auto-deconvolution and molecular networking of gas chromatography–mass spectrometry
+  data
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

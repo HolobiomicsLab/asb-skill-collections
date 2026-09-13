@@ -1,9 +1,10 @@
 ---
 name: feature-intensity-ratio-calculation
-description: Use when after generating a feature table from LC-MS/MS data when your experiment includes blank control samples and you need to remove features driven by background ions or instrumental contamination.
+description: Use when after generating a feature table from LC-MS/MS data when your
+  experiment includes blank control samples and you need to remove features driven
+  by background ions or instrumental contamination.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +15,8 @@ metadata:
   - PCPFM (Python-Centric Pipeline for Metabolomics)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1011912
   title: pcpfm

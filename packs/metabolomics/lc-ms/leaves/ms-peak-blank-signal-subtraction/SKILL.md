@@ -1,9 +1,10 @@
 ---
 name: ms-peak-blank-signal-subtraction
-description: Use when you have an MS-DIAL feature table from DDA or DIA LC-MS analysis that includes blank injection samples (at least 3 recommended), and you need to eliminate features that are artifactual contamination rather than genuine metabolites.
+description: Use when you have an MS-DIAL feature table from DDA or DIA LC-MS analysis
+  that includes blank injection samples (at least 3 recommended), and you need to
+  eliminate features that are artifactual contamination rather than genuine metabolites.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -13,6 +14,8 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR

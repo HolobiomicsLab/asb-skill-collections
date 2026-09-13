@@ -1,9 +1,10 @@
 ---
 name: workflow-architecture-documentation
-description: Use when you need to understand how a complex MS/MS spectral search system routes query spectra through multiple parallel processing pipelines with different objectives (e.g., reliable exact matching vs. fast approximate matching).
+description: Use when you need to understand how a complex MS/MS spectral search system
+  routes query spectra through multiple parallel processing pipelines with different
+  objectives (e.g., reliable exact matching vs. fast approximate matching).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0570
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,6 +17,8 @@ metadata:
   - GitHub
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-37446-4
   title: ms2query

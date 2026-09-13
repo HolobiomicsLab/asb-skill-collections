@@ -1,9 +1,11 @@
 ---
 name: machine-learning-model-training-sklearn
-description: Use when your metabolomics analysis pipeline requires CCS value prediction for ion-mobility mass spectrometry data, you have access to a curated training set of known metabolites with experimentally validated CCS values, and you plan to predict CCS values on target datasets containing 10,000+.
+description: Use when your metabolomics analysis pipeline requires CCS value prediction
+  for ion-mobility mass spectrometry data, you have access to a curated training set
+  of known metabolites with experimentally validated CCS values, and you plan to predict
+  CCS values on target datasets containing 10,000+.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3501
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +18,8 @@ metadata:
   - CCSP 2.0
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c03491
   title: CCS Predictor 2.0

@@ -1,9 +1,11 @@
 ---
 name: mass-spectrum-simulation
-description: Use when when you have one or more peptide sequences (as strings) and need to predict their theoretical isotopic distribution patterns to compare against experimental MS data, validate peak assignments, or generate synthetic spectra for method development.
+description: Use when when you have one or more peptide sequences (as strings) and
+  need to predict their theoretical isotopic distribution patterns to compare against
+  experimental MS data, validate peak assignments, or generate synthetic spectra for
+  method development.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -18,6 +20,8 @@ metadata:
   - pip / conda
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.8b00717
   title: pyteomics

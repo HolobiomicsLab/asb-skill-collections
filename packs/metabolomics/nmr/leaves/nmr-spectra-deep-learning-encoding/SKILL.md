@@ -1,9 +1,10 @@
 ---
 name: nmr-spectra-deep-learning-encoding
-description: Use when when you have preprocessed 1H NMR spectral data from flavor mixtures or similar compound identification tasks, and you need to identify which compounds are present.
+description: Use when when you have preprocessed 1H NMR spectral data from flavor
+  mixtures or similar compound identification tasks, and you need to identify which
+  compounds are present.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +16,8 @@ metadata:
   - FlavorFormer
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1016/j.microc.2025.115372
   title: FlavorFormer

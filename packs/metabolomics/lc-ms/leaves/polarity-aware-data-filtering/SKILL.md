@@ -1,9 +1,11 @@
 ---
 name: polarity-aware-data-filtering
-description: Use when when performing targeted peak detection on LC-MS data where compounds have been assigned expected ionization polarities (positive or negative mode) in the target list, and you want to prevent false peak assignments from the opposite polarity and avoid manual pre-filtering of raw data by.
+description: Use when when performing targeted peak detection on LC-MS data where
+  compounds have been assigned expected ionization polarities (positive or negative
+  mode) in the target list, and you want to prevent false peak assignments from the
+  opposite polarity and avoid manual pre-filtering of raw data by.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0593
@@ -17,12 +19,15 @@ metadata:
   - TARDIS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
 evidence_spans:
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
-- It makes use of an established retention time correction algorithm from the `xcms` package
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
 - R package for *TArgeted Raw Data Integration In Spectrometry*
 - knitr::include_graphics
 - kableExtra::kable

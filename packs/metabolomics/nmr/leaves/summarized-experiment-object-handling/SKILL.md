@@ -1,9 +1,10 @@
 ---
 name: summarized-experiment-object-handling
-description: Use when you have cross-validated, filtered metabolomic NMR or MS data in a SummarizedExperiment container and need to prepare it for metabolome-wide association studies (MWAS) with epidemiological confounders.
+description: Use when you have cross-validated, filtered metabolomic NMR or MS data
+  in a SummarizedExperiment container and need to prepare it for metabolome-wide association
+  studies (MWAS) with epidemiological confounders.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,12 +16,15 @@ metadata:
   - Bioconductor
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btx477
   title: MWASTools
 evidence_spans:
 - Here, we present a package to perform MWAS using univariate hypothesis testing
-- '"MWASTools" is an R package designed to provide an integrated and user-friendly pipeline'
+- '"MWASTools" is an R package designed to provide an integrated and user-friendly
+  pipeline'
 - Assuming that R (>=3.3) and Bioconductor have been correctly installed
 claims: []
 provenance:

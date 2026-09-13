@@ -1,9 +1,11 @@
 ---
 name: separation-efficiency-calculation-from-retention-times
-description: Use when you have extracted retention times from MS1 spectra for top signals in a single LC-MS/MS run and need to evaluate whether that gradient's separation performance is sufficient, or when you are building the objective function for an iterative gradient optimization loop where each candidate.
+description: Use when you have extracted retention times from MS1 spectra for top
+  signals in a single LC-MS/MS run and need to evaluate whether that gradient's separation
+  performance is sufficient, or when you are building the objective function for an
+  iterative gradient optimization loop where each candidate.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -16,13 +18,16 @@ metadata:
   - bago
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.09.08.556930
   title: BAGO
 - doi: 10.1002/9780470508183
   title: ''
 evidence_spans:
-- BAGO is a Bayesian optimization strategy for LC gradient optimization for MS-based small molecule analysis
+- BAGO is a Bayesian optimization strategy for LC gradient optimization for MS-based
+  small molecule analysis
 - A :class:`ms1Spectrum` object (supported by :mod:`bago`)
 - A :class:`MSExperiment` object (supported by :mod:`pyopenms`)
 - a :class:`sklearn.preprocessing.StandardScaler` object used to scale the data

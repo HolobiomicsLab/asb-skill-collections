@@ -1,9 +1,11 @@
 ---
 name: spectral-dataset-partitioning-and-train-test-curation
-description: Use when when you have a pre-cleaned spectral library (e.g., GNPS, MoNA, or MTBLS1572) with an existing training/test boundary established by prior work (e.g., MSBERT), and you need to report model performance with uncertainty quantification across multiple random partitions.
+description: Use when when you have a pre-cleaned spectral library (e.g., GNPS, MoNA,
+  or MTBLS1572) with an existing training/test boundary established by prior work
+  (e.g., MSBERT), and you need to report model performance with uncertainty quantification
+  across multiple random partitions.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3359
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -18,6 +20,8 @@ metadata:
   - SpecEmbedding
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding

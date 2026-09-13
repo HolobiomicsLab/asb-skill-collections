@@ -1,9 +1,11 @@
 ---
 name: search-results-loader-integration
-description: Use when you have search result files from one or more DIA-MS analysis tools and need to load them into a unified environment for Q-value filtering, cross-tool comparison (upset plots), and interactive visualization of identifications, quantifications, and coefficient of variation metrics across.
+description: Use when you have search result files from one or more DIA-MS analysis
+  tools and need to load them into a unified environment for Q-value filtering, cross-tool
+  comparison (upset plots), and interactive visualization of identifications, quantifications,
+  and coefficient of variation metrics across.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,6 +18,8 @@ metadata:
   - Bokeh
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00026
   title: MassDash

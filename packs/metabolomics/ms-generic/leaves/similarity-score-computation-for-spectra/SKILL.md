@@ -1,9 +1,10 @@
 ---
 name: similarity-score-computation-for-spectra
-description: Use when you have a preprocessed unknown sample spectrum (m/z peaks and intensities) and need to identify the most likely species or reference entries by scoring it against a database of known spectra.
+description: Use when you have a preprocessed unknown sample spectrum (m/z peaks and
+  intensities) and need to identify the most likely species or reference entries by
+  scoring it against a database of known spectra.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3800
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -12,6 +13,8 @@ metadata:
   - RapidMass
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass

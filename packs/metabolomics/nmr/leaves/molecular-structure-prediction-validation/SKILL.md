@@ -1,9 +1,11 @@
 ---
 name: molecular-structure-prediction-validation
-description: Use when when you have executed the MultiModalSpectralTransformer architecture on a set of multi-modal spectroscopic inputs (NMR, HSQC, COSY, IR) and obtained predicted molecular structures, and you need to assess prediction accuracy and structural correctness against ground-truth or reference.
+description: Use when when you have executed the MultiModalSpectralTransformer architecture
+  on a set of multi-modal spectroscopic inputs (NMR, HSQC, COSY, IR) and obtained
+  predicted molecular structures, and you need to assess prediction accuracy and structural
+  correctness against ground-truth or reference.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3937
   edam_topics:
   - http://edamontology.org/topic_3314
@@ -14,6 +16,8 @@ metadata:
   - RDKit
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/ange.202517611
   title: MMST

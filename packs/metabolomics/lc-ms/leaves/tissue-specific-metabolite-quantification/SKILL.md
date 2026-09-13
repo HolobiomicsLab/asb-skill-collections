@@ -1,9 +1,10 @@
 ---
 name: tissue-specific-metabolite-quantification
-description: Use when you have LC-IM-MS/MS raw data from multiple tissue samples and need to identify and quantify unsaturated sterol lipids at the isomer level (distinguishing double-bond position and stereochemistry).
+description: Use when you have LC-IM-MS/MS raw data from multiple tissue samples and
+  need to identify and quantify unsaturated sterol lipids at the isomer level (distinguishing
+  double-bond position and stereochemistry).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -17,6 +18,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA

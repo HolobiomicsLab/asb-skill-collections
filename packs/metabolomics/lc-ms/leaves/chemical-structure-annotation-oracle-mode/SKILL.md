@@ -1,9 +1,11 @@
 ---
 name: chemical-structure-annotation-oracle-mode
-description: Use when you have a known compound structure with validated MS/MS spectrum and a structural analog (modified version) with its own MS/MS spectrum, and you need to assess whether a modification site prediction method correctly identifies which atoms were altered.
+description: Use when you have a known compound structure with validated MS/MS spectrum
+  and a structural analog (modified version) with its own MS/MS spectrum, and you
+  need to assess whether a modification site prediction method correctly identifies
+  which atoms were altered.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0593
@@ -19,6 +21,8 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00061
   title: ModiFinder

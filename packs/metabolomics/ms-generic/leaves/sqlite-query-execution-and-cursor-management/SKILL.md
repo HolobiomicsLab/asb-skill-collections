@@ -1,9 +1,10 @@
 ---
 name: sqlite-query-execution-and-cursor-management
-description: Use when you have mass spectrometry data stored in a SQLite database indexed by spectrum ID and need to retrieve specific spectra by ID (random access via __getitem__) or iterate through all spectra sequentially (via read method).
+description: Use when you have mass spectrometry data stored in a SQLite database
+  indexed by spectrum ID and need to retrieve specific spectra by ID (random access
+  via __getitem__) or iterate through all spectra sequentially (via read method).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3436
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +16,8 @@ metadata:
   - Python
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/bty046
   title: pymzml

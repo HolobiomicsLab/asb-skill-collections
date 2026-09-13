@@ -1,9 +1,11 @@
 ---
 name: basepeak-intensity-identification
-description: Use when when you have Thermo Fisher Scientific .raw files from an Orbitrap instrument and need to identify the m/z value and corresponding intensity of the most abundant ion in each MS1 scan for quality control, method optimization, or feature extraction in a modular R-based proteomics pipeline.
+description: Use when when you have Thermo Fisher Scientific .raw files from an Orbitrap
+  instrument and need to identify the m/z value and corresponding intensity of the
+  most abundant ion in each MS1 scan for quality control, method optimization, or
+  feature extraction in a modular R-based proteomics pipeline.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +17,8 @@ metadata:
   - MsBackendRawFileReader
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2020.10.30.362533
   title: rawrr
@@ -22,9 +26,12 @@ derived_from:
   title: ''
 evidence_spans:
 - The `rawrr` executable will run out of the box
-- '`R` functions requesting access to data stored in binary raw files (reader family functions listed in Table 1) invoke compiled `C#` wrapper methods'
-- Calling a wrapper method typically results in the execution of methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
-- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
+- '`R` functions requesting access to data stored in binary raw files (reader family
+  functions listed in Table 1) invoke compiled `C#` wrapper methods'
+- Calling a wrapper method typically results in the execution of methods defined in
+  the `RawFileReader` dynamic link library provided by Thermo Fisher Scientific
+- methods defined in the `RawFileReader` dynamic link library provided by Thermo Fisher
+  Scientific
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

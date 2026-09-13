@@ -1,9 +1,10 @@
 ---
 name: spatial-coordinate-metadata-extraction
-description: Use when you have raw imzML files (paired with .ibd binary data) from imaging mass spectrometry experiments and need to construct an AnnData object for spatial metabolomics analysis.
+description: Use when you have raw imzML files (paired with .ibd binary data) from
+  imaging mass spectrometry experiments and need to construct an AnnData object for
+  spatial metabolomics analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3434
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -12,6 +13,8 @@ metadata:
   - spatialMETA
   techniques:
   - MS-imaging
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-025-63915-z
   title: SpatialMETA

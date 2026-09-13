@@ -1,9 +1,9 @@
 ---
 name: lc-ms-quality-metric-computation
-description: Use when after performing peak detection on centroided .mzML LC-MS data with screening_mode=FALSE in TARDIS.
+description: Use when after performing peak detection on centroided .mzML LC-MS data
+  with screening_mode=FALSE in TARDIS.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -19,12 +19,15 @@ metadata:
   - MsExperiment
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c00567
   title: tardis
 evidence_spans:
 - loads MS data as `Spectra` objects so it's easily integrated with other tools
-- It makes use of an established retention time correction algorithm from the `xcms` package
+- It makes use of an established retention time correction algorithm from the `xcms`
+  package
 - R package for *TArgeted Raw Data Integration In Spectrometry*
 - knitr::include_graphics
 - kableExtra::kable

@@ -1,9 +1,10 @@
 ---
 name: r-s4-object-accessor-usage
-description: Use when you have constructed or received a SummarizedExperiment object (or similar S4 class) containing MS feature tables, counts matrices, or sample-level metadata, and need to retrieve specific slots (e.
+description: Use when you have constructed or received a SummarizedExperiment object
+  (or similar S4 class) containing MS feature tables, counts matrices, or sample-level
+  metadata, and need to retrieve specific slots (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3437
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -14,12 +15,16 @@ metadata:
   - mzrtsim
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01213
   title: mzrtsim
 evidence_spans:
-- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager") BiocManager::install("mzrtsim")
-- For seamless integration with Bioconductor workflows, use `mzrtsim_se()` which wraps the simulation in a `SummarizedExperiment`
+- if (!requireNamespace("BiocManager", quietly = TRUE)) install.packages("BiocManager")
+  BiocManager::install("mzrtsim")
+- For seamless integration with Bioconductor workflows, use `mzrtsim_se()` which wraps
+  the simulation in a `SummarizedExperiment`
 - github.com__yufree__mzrtsim
 claims: []
 provenance:

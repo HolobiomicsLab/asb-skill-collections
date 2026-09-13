@@ -1,9 +1,11 @@
 ---
 name: tanimoto-fingerprint-ground-truth-computation
-description: Use when when preparing paired MS/MS spectra for training or validation of a siamese neural network model, and you have chemical structure annotations (InChI, SMILES, or InChIKey) for each spectrum but lack pre-computed structural similarity labels.
+description: Use when when preparing paired MS/MS spectra for training or validation
+  of a siamese neural network model, and you have chemical structure annotations (InChI,
+  SMILES, or InChIKey) for each spectrum but lack pre-computed structural similarity
+  labels.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0564
   edam_topics:
   - http://edamontology.org/topic_0154
@@ -17,16 +19,21 @@ metadata:
   - pubchempy
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-021-00558-4
   title: MS2DeepScore
 evidence_spans:
 - MS2DeepScore to predict structural similarity scores for spe
-- we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral embeddings for all 3601 spectra in the test set
-- we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute structural similarities
+- we used the MS2DeepScore base network (Fig. 1) to compute the 200-dimensional spectral
+  embeddings for all 3601 spectra in the test set
+- we used Tanimoto scores on RDKit [23] Daylight fingerprints (2048 bits) to compute
+  structural similarities
 - Our MS2DeepScore Python library offers two types of data generators
 - Our MS2DeepScore Python library
-- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included cleaning compound names
+- Metadata was cleaned and checked using matchms [18] version 0.8.2, which included
+  cleaning compound names
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

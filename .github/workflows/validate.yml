@@ -290,15 +290,48 @@ jobs:
           print(f"PASS: LinkML validation OK ({len(collection_files)} files)")
           EOF
 
+      # -- Gate: packs are re-derivable from their collection ------------------
+      # marketplace.json advertises eight technique packs beside the collection,
+      # so the pack tree is what most installs actually get. It was split from
+      # the collection once, by hand, and nothing re-derived it afterwards: a
+      # leaf added the next day never arrived, three front-matter keys were
+      # dropped from all 4,949 copies, and a later DOI repair reached only the
+      # collection. Every gate stayed green, because each pack was internally
+      # consistent with its own indexes. This one compares the packs with the
+      # collection they claim to be a view of.
+      - name: Pack-derivation gate
+        run: python -m scripts.build_packs --check
+
+      # Every number the repository advertises about itself, against the census
+      # of the unit that number is a claim about. The script and its tests
+      # already existed; nothing ever ran them outside the suite's own fixtures.
+      #
+      # It would not have caught the stale lc-ms count, and that is worth
+      # recording rather than glossing: the pack really did hold 2,616 leaves,
+      # so `advertised=2616, actual=2616` passed, while the collection's own
+      # ABOUT.md said 2,617 for the same technique. Both numbers were true of
+      # their own unit and contradicted each other, and no census could see it
+      # because they counted different units. The gate above is what makes them
+      # one number; this one is what keeps them one number, across the six sites
+      # that now carry 2,617 and the 138 claims beside them.
+      - name: Advertised-count gate
+        run: python -m scripts.check_advertised_counts
+
       # -- Gate: License-tier enforcement ------
+      # Aimed at the packs as well as the collection: the tiers a consumer
+      # actually installs are the copies'. A pack ships no corpus of its own, so
+      # the corpus half of this gate reports "no corpus of its own" rather than
+      # passing silently -- see scripts/check_license_tiers.corpus_violations.
       - name: License-tier gate
-        run: python -m scripts.check_license_tiers collections/metabolomics/v2
+        run: python -m scripts.check_license_tiers collections/metabolomics/v2 packs/*/*/
 
       # Every published skill must be able to show where its content came from,
       # and the SKILL.md must agree with the index. Ported from the dev line and
-      # wired here once its producer had been run over the corpus.
+      # wired here once its producer had been run over the corpus. Aimed at the
+      # packs too: before the pack generator existed, every pack index entry
+      # carried no provenance_tier at all and this gate failed on the first row.
       - name: Provenance-tier gate
-        run: python -m scripts.check_provenance_tiers collections/metabolomics/v2
+        run: python -m scripts.check_provenance_tiers collections/metabolomics/v2 packs/*/*/
 
       # The catalogue's own licence fields must agree with tools_index.json, and
       # every tool a skill claims to use must exist. Wired once the enrichers had

@@ -1,9 +1,11 @@
 ---
 name: pipeline-end-to-end-execution-and-validation
-description: Use when you have a published computational pipeline with deposited code and validation data, and you need to verify that the pipeline can be executed end-to-end to reproduce reported validation metrics (annotation accuracy, coverage, or equivalent performance benchmarks).
+description: Use when you have a published computational pipeline with deposited code
+  and validation data, and you need to verify that the pipeline can be executed end-to-end
+  to reproduce reported validation metrics (annotation accuracy, coverage, or equivalent
+  performance benchmarks).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3762
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +18,8 @@ metadata:
   - BAM
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c01565
   title: bam

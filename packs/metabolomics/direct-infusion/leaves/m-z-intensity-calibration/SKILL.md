@@ -1,9 +1,10 @@
 ---
 name: m-z-intensity-calibration
-description: Use when you have raw or processed MS spectrum data (m/z and intensity pairs) from DI-MS, ASAP-MS, or other high-throughput mass spectrometry instruments that requires automated peak detection.
+description: Use when you have raw or processed MS spectrum data (m/z and intensity
+  pairs) from DI-MS, ASAP-MS, or other high-throughput mass spectrometry instruments
+  that requires automated peak detection.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +15,8 @@ metadata:
   - ASAP-MS
   techniques:
   - direct-infusion-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c05062
   title: RapidMass

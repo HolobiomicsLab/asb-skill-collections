@@ -1,9 +1,9 @@
 ---
 name: fragmentation-pattern-extraction-and-ranking
-description: Use when you have a collection of MS/MS spectra (≥2 spectra) and wish to identify fragmentation signatures common to subsets of those spectra.
+description: Use when you have a collection of MS/MS spectra (≥2 spectra) and wish
+  to identify fragmentation signatures common to subsets of those spectra.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0226
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,6 +17,8 @@ metadata:
   - MSnbase
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-025-01051-y
   title: minems2

@@ -1,9 +1,11 @@
 ---
 name: lipid-spectral-data-export
-description: Use when after generating a complete lipid spectral library with adduct-specific fragmentation patterns and retention time metadata, when you need to deploy the library for targeted or data-dependent acquisition on specific mass spectrometry instruments—either Excalibur-controlled orbitrap.
+description: Use when after generating a complete lipid spectral library with adduct-specific
+  fragmentation patterns and retention time metadata, when you need to deploy the
+  library for targeted or data-dependent acquisition on specific mass spectrometry
+  instruments—either Excalibur-controlled orbitrap.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -13,6 +15,8 @@ metadata:
   - Skyline
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04518
   title: Lipid Spectrum Generator

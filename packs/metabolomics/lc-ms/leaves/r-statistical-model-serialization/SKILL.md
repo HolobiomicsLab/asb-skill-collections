@@ -1,9 +1,10 @@
 ---
 name: r-statistical-model-serialization
-description: Use when after training a customized R statistical or machine learning model on annotated training data, you need to persist the trained model object for reuse in downstream analysis workflows without retraining.
+description: Use when after training a customized R statistical or machine learning
+  model on annotated training data, you need to persist the trained model object for
+  reuse in downstream analysis workflows without retraining.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -15,6 +16,8 @@ metadata:
   - DNMS2Purifier.r
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c00736
   title: DNMS2Purifier

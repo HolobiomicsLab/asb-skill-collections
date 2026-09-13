@@ -1,9 +1,11 @@
 ---
 name: metabolomics-scan-metadata-linking
-description: Use when after running a ViMMS Environment simulation with save_eval flag enabled, when you need to preserve the link between each simulated MS/MS scan in the output mzML file and its source chemical definition, fragmentation parameters, and evaluation metrics for later analysis, comparison, or.
+description: Use when after running a ViMMS Environment simulation with save_eval
+  flag enabled, when you need to preserve the link between each simulated MS/MS scan
+  in the output mzML file and its source chemical definition, fragmentation parameters,
+  and evaluation metrics for later analysis, comparison, or.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3429
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -13,14 +15,18 @@ metadata:
   - Python pickle module
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.21105/joss.03990
   title: vimms
 - doi: 10.1021/acs.analchem.0c03895
   title: ''
 evidence_spans:
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible and modular framework designed to simulate fragmentation strategies'
-- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive and modular framework for the simulation of fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a flexible
+  and modular framework designed to simulate fragmentation strategies'
+- '**V**irtual **M**etabolomics **M**ass **S**pectrometer (**VIMMS**), a comprehensive
+  and modular framework for the simulation of fragmentation strategies'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

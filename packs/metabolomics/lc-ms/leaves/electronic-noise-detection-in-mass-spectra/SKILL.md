@@ -1,9 +1,11 @@
 ---
 name: electronic-noise-detection-in-mass-spectra
-description: Use when you have raw MS/MS peak lists and suspect electronic noise contamination—particularly when peaks show repeated, identical intensity values across multiple m/z entries within a single spectrum, which are rare in genuine biological spectra but common in instrument artifacts.
+description: Use when you have raw MS/MS peak lists and suspect electronic noise contamination—particularly
+  when peaks show repeated, identical intensity values across multiple m/z entries
+  within a single spectrum, which are rare in genuine biological spectra but common
+  in instrument artifacts.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,6 +17,8 @@ metadata:
   - ms_entropy
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-025-02646-x
   title: Spectral Denoising

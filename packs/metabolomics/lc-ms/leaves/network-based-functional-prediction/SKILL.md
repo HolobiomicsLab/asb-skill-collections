@@ -1,9 +1,10 @@
 ---
 name: network-based-functional-prediction
-description: Use when you have an untargeted metabolomics feature table with m/z values, retention times, intensity measurements, and p-values from statistical testing, but lack or wish to bypass metabolite identification.
+description: Use when you have an untargeted metabolomics feature table with m/z values,
+  retention times, intensity measurements, and p-values from statistical testing,
+  but lack or wish to bypass metabolite identification.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3501
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,11 +17,14 @@ metadata:
   - mass2chem
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: mummichog
 evidence_spans:
-- Mummichog is a Python program for analyzing data from high throughput, untargeted metabolomics
+- Mummichog is a Python program for analyzing data from high throughput, untargeted
+  metabolomics
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

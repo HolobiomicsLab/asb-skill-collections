@@ -1,9 +1,11 @@
 ---
 name: mass-spectrometry-feature-representation
-description: Use when after LC-MS feature clustering based on MS-DIAL peak character estimation, when you have grouped features that share similar chromatographic or spectral properties and need to select a single representative feature per cluster to reduce false positives and redundant annotations before.
+description: Use when after LC-MS feature clustering based on MS-DIAL peak character
+  estimation, when you have grouped features that share similar chromatographic or
+  spectral properties and need to select a single representative feature per cluster
+  to reduce false positives and redundant annotations before.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_2928
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -14,6 +16,8 @@ metadata:
   - MS-FINDER 3.30 or higher
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c01594
   title: MS-CleanR

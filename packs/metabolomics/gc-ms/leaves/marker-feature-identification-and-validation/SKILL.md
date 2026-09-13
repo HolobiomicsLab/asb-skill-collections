@@ -1,9 +1,11 @@
 ---
 name: marker-feature-identification-and-validation
-description: Use when when processing GC–MS or LC–MS data as m/z vs retention time chromatograms and you need to identify biomarker or chemical marker features without conventional peak picking, particularly when false positive detection rates from peak detection algorithms are problematic.
+description: Use when when processing GC–MS or LC–MS data as m/z vs retention time
+  chromatograms and you need to identify biomarker or chemical marker features without
+  conventional peak picking, particularly when false positive detection rates from
+  peak detection algorithms are problematic.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3647
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,6 +18,8 @@ metadata:
   - LC-MS
   - GC-MS
   - direct-infusion-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c03163?ref=
   title: NPFimg
@@ -23,9 +27,12 @@ derived_from:
   title: ''
 evidence_spans:
 - github.com__poomcj__NPFimg
-- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker features of analytes in chromatography–mass spectrometry (MS) data by combining image processing and
+- We present a method named NPFimg, which automatically identifies multivariate chemo-/biomarker
+  features of analytes in chromatography–mass spectrometry (MS) data by combining
+  image processing and
 - Comparison with the widely used XCMS shows the excellent reliability of NPFimg
-- Comparison with the widely used XCMS shows the excellent reliability of NPFimg, in that it has lower error rates of signal acquisition and marker identification.
+- Comparison with the widely used XCMS shows the excellent reliability of NPFimg,
+  in that it has lower error rates of signal acquisition and marker identification.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

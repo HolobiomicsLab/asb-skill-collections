@@ -1,9 +1,9 @@
 ---
 name: metabolite-feature-annotation-aggregation
-description: Use when after selecting statistically significant features from multi-assay LC-MS metabolomics datasets (e.g., via MB-VIP and permutation testing with p < 0.01).
+description: Use when after selecting statistically significant features from multi-assay
+  LC-MS metabolomics datasets (e.g., via MB-VIP and permutation testing with p < 0.01).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -22,6 +22,8 @@ metadata:
   - pandas / numpy
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c01327
   title: mamsi

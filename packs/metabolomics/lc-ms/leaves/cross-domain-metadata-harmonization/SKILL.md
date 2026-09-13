@@ -1,9 +1,10 @@
 ---
 name: cross-domain-metadata-harmonization
-description: Use when when you have submitted the same MS/MS spectrum query to multiple domain-specific MASST tools and need to compare matches, combine ranked results, or generate cross-domain summary statistics.
+description: Use when when you have submitted the same MS/MS spectrum query to multiple
+  domain-specific MASST tools and need to compare matches, combine ranked results,
+  or generate cross-domain summary statistics.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -21,6 +22,8 @@ metadata:
   - jobs.py
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41538-022-00137-3
   title: foodMASST

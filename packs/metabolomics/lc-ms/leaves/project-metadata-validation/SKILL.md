@@ -1,9 +1,11 @@
 ---
 name: project-metadata-validation
-description: Use when when a user uploads a JSON project document to the Pairing Omics Data Platform, before accepting it into the repository or indexing it for search. Use this skill to catch missing required fields, incorrect field types, and constraint violations early in the submission workflow.
+description: Use when when a user uploads a JSON project document to the Pairing Omics
+  Data Platform, before accepting it into the repository or indexing it for search.
+  Use this skill to catch missing required fields, incorrect field types, and constraint
+  violations early in the submission workflow.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3364
   edam_topics:
   - http://edamontology.org/topic_3377
@@ -13,11 +15,14 @@ metadata:
   - ajv
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41589-020-00724-z
   title: pairedomicsdatapla
 evidence_spans:
-- make sure the existing tests still work by running ``npm run test`` in `api/` and/or `app/` directory
+- make sure the existing tests still work by running ``npm run test`` in `api/` and/or
+  `app/` directory
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

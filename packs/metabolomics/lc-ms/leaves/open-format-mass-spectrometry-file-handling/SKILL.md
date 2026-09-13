@@ -1,9 +1,10 @@
 ---
 name: open-format-mass-spectrometry-file-handling
-description: Use when you have raw mass spectrometry data in vendor-proprietary formats (e.g., .raw, .d, .ms) that you need to upload to MassIVE for public sharing or submit to GNPS for spectral library matching and chemical annotation.
+description: Use when you have raw mass spectrometry data in vendor-proprietary formats
+  (e.g., .raw, .d, .ms) that you need to upload to MassIVE for public sharing or submit
+  to GNPS for spectral library matching and chemical annotation.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3650
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +15,8 @@ metadata:
   - ReDU
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-020-0916-7
   title: ReDU

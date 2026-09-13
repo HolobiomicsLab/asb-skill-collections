@@ -1,9 +1,11 @@
 ---
 name: software-dependency-management-and-environment-setup
-description: Use when you are preparing to run the MetaboDirect pipeline for the first time on a new machine, or you need to reproduce a published benchmark or analysis on a different OS (Windows, Linux, MacOS) and want to guarantee that all six pipeline steps (data pre-processing, diagnostics, exploration.
+description: Use when you are preparing to run the MetaboDirect pipeline for the first
+  time on a new machine, or you need to reproduce a published benchmark or analysis
+  on a different OS (Windows, Linux, MacOS) and want to guarantee that all six pipeline
+  steps (data pre-processing, diagnostics, exploration.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0227
   edam_topics:
   - http://edamontology.org/topic_0092
@@ -25,16 +27,21 @@ metadata:
   - py4cytoscape
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
-- Molecular transformation networks for each sample (mass difference network-based approach) are generated in this step
+- Molecular transformation networks for each sample (mass difference network-based
+  approach) are generated in this step
 - The MetaboDirect pipeline consists of 6 major steps/categories (Fig. 1)
 - The MetaboDirect pipeline was developed in Python 3.8 [38]
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
 - requires the Python dependencies NumPy [40], pandas [41, 42]
-- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39] and is available to install through the Python Package Index... It requires the Python dependencies NumPy
+- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39] and
+  is available to install through the Python Package Index... It requires the Python
+  dependencies NumPy
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

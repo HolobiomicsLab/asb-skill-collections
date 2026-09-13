@@ -1,9 +1,10 @@
 ---
 name: ms2-fingerprint-blank-contamination-removal
-description: Use when after aligning MS2 fingerprints across samples (generating a sample-by-feature occurrence matrix) and before applying visualization techniques (MDS/PCoA, TMAP, Heatmap) or statistical comparisons.
+description: Use when after aligning MS2 fingerprints across samples (generating a
+  sample-by-feature occurrence matrix) and before applying visualization techniques
+  (MDS/PCoA, TMAP, Heatmap) or statistical comparisons.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,12 +16,16 @@ metadata:
   - MEMO
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo
 evidence_spans:
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra
-- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2 spectra and converting them into documents.
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra
+- MEMO is mainly built on `matchms`_ and `spec2vec`_ packages for handling the MS2
+  spectra and converting them into documents.
 - conda create --name memo python=3.8
 - pip install numpy
 claims: []

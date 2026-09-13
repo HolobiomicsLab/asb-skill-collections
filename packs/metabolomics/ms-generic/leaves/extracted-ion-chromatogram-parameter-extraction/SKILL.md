@@ -1,9 +1,10 @@
 ---
 name: extracted-ion-chromatogram-parameter-extraction
-description: Use when after isolating TIC peak regions via sliding window analysis and peak expansion (isolatePeaks), apply this skill when you need dataset-specific XCMS parameter estimates.
+description: Use when after isolating TIC peak regions via sliding window analysis
+  and peak expansion (isolatePeaks), apply this skill when you need dataset-specific
+  XCMS parameter estimates.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +16,8 @@ metadata:
   - MSconvert
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/812370
   title: AutoTuner parameter selection

@@ -1,9 +1,10 @@
 ---
 name: multi-cell-line-rps-calculation
-description: Use when when you have LC-MS normalized intracellular metabolite abundance measurements for multiple cell lines and need to estimate reaction activity driven by substrate availability rather than enzyme expression alone.
+description: Use when when you have LC-MS normalized intracellular metabolite abundance
+  measurements for multiple cell lines and need to estimate reaction activity driven
+  by substrate availability rather than enzyme expression alone.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -14,11 +15,14 @@ metadata:
   - concordanceAnalysis.py
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1009337
   title: INTEGRATE
 evidence_spans:
-- Data analysis and isotopic natural abundance correction were performed with MassHunter ProFinder (Agilent)
+- Data analysis and isotopic natural abundance correction were performed with MassHunter
+  ProFinder (Agilent)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

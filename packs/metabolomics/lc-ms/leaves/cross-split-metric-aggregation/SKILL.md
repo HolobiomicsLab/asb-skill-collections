@@ -1,9 +1,11 @@
 ---
 name: cross-split-metric-aggregation
-description: 'Use when when you have a pre-trained model and need to report stable, generalizable performance on a fixed training set with multiple held-out test splits. Specifically: when you have 10 (or n) random query/reference splits on the same dataset (e.'
+description: 'Use when when you have a pre-trained model and need to report stable,
+  generalizable performance on a fixed training set with multiple held-out test splits.
+  Specifically: when you have 10 (or n) random query/reference splits on the same
+  dataset (e.'
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3745
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -20,6 +22,8 @@ metadata:
   - top_k_indices
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.5c02655
   title: SpecEmbedding

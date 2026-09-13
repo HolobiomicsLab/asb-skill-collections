@@ -1,9 +1,11 @@
 ---
 name: metabolomics-quantification-table-processing
-description: Use when you have a quantification table (rows = metabolite features, columns = samples with abundance values), corresponding metadata table (sample annotations, groupings), and spectral data files, and you need to produce a unified JSON dashboard artifact that can be loaded into an interactive.
+description: Use when you have a quantification table (rows = metabolite features,
+  columns = samples with abundance values), corresponding metadata table (sample annotations,
+  groupings), and spectral data files, and you need to produce a unified JSON dashboard
+  artifact that can be loaded into an interactive.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3801
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,6 +18,8 @@ metadata:
   - R (v4.3.3) with globaltest, dplyr, tibble, readr dependencies
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bioinformatics/btae584
   title: msFeaST

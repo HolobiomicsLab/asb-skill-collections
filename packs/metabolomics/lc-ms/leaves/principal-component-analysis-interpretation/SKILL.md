@@ -1,9 +1,11 @@
 ---
 name: principal-component-analysis-interpretation
-description: Use when when you have normalized MS1 ion intensity features from multiple samples and need to assess overall data quality, detect systematic batch effects or instrumental drift, or identify which samples deviate significantly from the cohort norm in an omics-agnostic manner (metabolomics.
+description: Use when when you have normalized MS1 ion intensity features from multiple
+  samples and need to assess overall data quality, detect systematic batch effects
+  or instrumental drift, or identify which samples deviate significantly from the
+  cohort norm in an omics-agnostic manner (metabolomics.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3935
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,6 +16,8 @@ metadata:
   - Mirador
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00146
   title: PeakQC

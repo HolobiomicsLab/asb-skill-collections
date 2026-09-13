@@ -1,9 +1,10 @@
 ---
 name: interactive-plot-axis-selection-ui
-description: Use when when you have a high-resolution mass spectrometry dataset with m/z values and need to generate Kendrick mass plots where users should choose between plotting raw m/z or computed Normalized Kendrick Mass (NKM) on the x-axis.
+description: Use when when you have a high-resolution mass spectrometry dataset with
+  m/z values and need to generate Kendrick mass plots where users should choose between
+  plotting raw m/z or computed Normalized Kendrick Mass (NKM) on the x-axis.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0532
   edam_topics:
   - http://edamontology.org/topic_3370
@@ -12,6 +13,8 @@ metadata:
   - Punc'data
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.5c00151
   title: Punc’data

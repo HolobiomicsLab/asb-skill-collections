@@ -1,9 +1,11 @@
 ---
 name: mnar-data-handling
-description: Use when you have metabolomics data (targeted LC/MS or untargeted GC/MS) with left-censored missing values below the limit of quantification (LOQ) or limit of detection (LOD), and you need to impute these values while preserving the underlying distributional structure and avoiding bias from.
+description: Use when you have metabolomics data (targeted LC/MS or untargeted GC/MS)
+  with left-censored missing values below the limit of quantification (LOQ) or limit
+  of detection (LOD), and you need to impute these values while preserving the underlying
+  distributional structure and avoiding bias from.
 license: CC-BY-4.0
 metadata:
-  license_tier: noncommercial
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -19,6 +21,13 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: noncommercial
+  tool_license:
+    tier: noncommercial
+    requires_ack: true
+    ref: CC-BY-NC-SA-4.0
+    url: WandeRum/GSimp
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1005973
   title: GSimp

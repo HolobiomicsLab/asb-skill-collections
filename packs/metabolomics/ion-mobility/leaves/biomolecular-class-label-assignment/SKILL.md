@@ -1,9 +1,10 @@
 ---
 name: biomolecular-class-label-assignment
-description: Use when you have raw or processed TWIM-MS data with arrival time and m/z values for multiple features, but lack prior structural identification (e.g., from spectral libraries or databases).
+description: Use when you have raw or processed TWIM-MS data with arrival time and
+  m/z values for multiple features, but lack prior structural identification (e.g.,
+  from spectral libraries or databases).
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0625
@@ -16,6 +17,8 @@ metadata:
   techniques:
   - CE-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c04290
   title: moccal

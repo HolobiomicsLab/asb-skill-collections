@@ -1,9 +1,10 @@
 ---
 name: lipid-nomenclature-mapping
-description: Use when you need to generate a comprehensive, non-redundant inventory of lipid species that span a defined lipid class (e.g., phosphatidylcholine, triacylglycerol) and a range of fatty acid compositions (e.g., C14:0 to C22:6).
+description: Use when you need to generate a comprehensive, non-redundant inventory
+  of lipid species that span a defined lipid class (e.g., phosphatidylcholine, triacylglycerol)
+  and a range of fatty acid compositions (e.g., C14:0 to C22:6).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -12,6 +13,8 @@ metadata:
   - LSG
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04518
   title: Lipid Spectrum Generator

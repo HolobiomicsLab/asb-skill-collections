@@ -1,9 +1,9 @@
 ---
 name: ion-count-percentage-calculation
-description: Use when after applying one or more mpactr filters (mispicked, group, cv, insource) to an mpactr object and generating a qc_summary() data.
+description: Use when after applying one or more mpactr filters (mispicked, group,
+  cv, insource) to an mpactr object and generating a qc_summary() data.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3208
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +16,8 @@ metadata:
   - ggplot2
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1128/mra.00997-24
   title: mpactr
@@ -23,7 +25,8 @@ derived_from:
   title: ''
 evidence_spans:
 - This table can be used for a variety of analyses that can be conducted in R
-- creating an interactive plot of input features and the filters they failed, if any, using `ggplot` and `plotly`
+- creating an interactive plot of input features and the filters they failed, if any,
+  using `ggplot` and `plotly`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

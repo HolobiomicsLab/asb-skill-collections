@@ -1,14 +1,18 @@
 ---
 name: nmr-spectrum-tiling-format-interpretation
-description: 'Use when when loading or creating an NMR spectral dataset (Dataset.createDataFile) and the system must decide between multiple storage backends (SubMatrixFile, BigMappedMatrixFile, MappedSubMatrixFile, MappedMatrixFile). Triggers include: (1) dataset metadata specifies a cache-file flag;'
+description: 'Use when when loading or creating an NMR spectral dataset (Dataset.createDataFile)
+  and the system must decide between multiple storage backends (SubMatrixFile, BigMappedMatrixFile,
+  MappedSubMatrixFile, MappedMatrixFile). Triggers include: (1) dataset metadata specifies
+  a cache-file flag;'
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_topics: []
   tools:
   - NMRFx
   techniques:
   - NMR
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s42004-025-01812-8
   title: NMRFx

@@ -1,9 +1,10 @@
 ---
 name: force-field-minimization-mmff94
-description: Use when after RDKit generates multiple 3D conformers from ionized molecular structures using distance-geometry embedding, before filtering with ASE-ANI or submitting to quantum calculations.
+description: Use when after RDKit generates multiple 3D conformers from ionized molecular
+  structures using distance-geometry embedding, before filtering with ASE-ANI or submitting
+  to quantum calculations.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_0321
   edam_topics:
   - http://edamontology.org/topic_0176
@@ -14,12 +15,15 @@ metadata:
   - ASE-ANI
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.1c00315
   title: POMICS
 evidence_spans:
 - Snakemake workflow manager for predicting collisional cross sections
-- This repository contains a Snakemake workflow manager for predicting collisional cross sections (CCS)
+- This repository contains a Snakemake workflow manager for predicting collisional
+  cross sections (CCS)
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

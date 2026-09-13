@@ -1,9 +1,11 @@
 ---
 name: dataframe-lazy-loading-comparison
-description: Use when when designing or optimizing an MsBackend implementation (or similar columnar data structure) you must decide whether to pre-allocate all known columns in the backing DataFrame at initialization or defer column creation until first access.
+description: Use when when designing or optimizing an MsBackend implementation (or
+  similar columnar data structure) you must decide whether to pre-allocate all known
+  columns in the backing DataFrame at initialization or defer column creation until
+  first access.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0337
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,13 +16,16 @@ metadata:
   - R base
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
 - library(Spectra) library(IRanges)
 - library(Spectra)
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

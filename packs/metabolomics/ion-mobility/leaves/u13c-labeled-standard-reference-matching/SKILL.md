@@ -1,9 +1,10 @@
 ---
 name: u13c-labeled-standard-reference-matching
-description: Use when you have IM-MS measurements of samples spiked with U13C-labeled internal standards (e.g., fully labeled yeast extract) and need to assess whether measured CCS values systematically deviate from their true reference values.
+description: Use when you have IM-MS measurements of samples spiked with U13C-labeled
+  internal standards (e.g., fully labeled yeast extract) and need to assess whether
+  measured CCS values systematically deviate from their true reference values.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0153
@@ -14,12 +15,16 @@ metadata:
   - DTCCS_N2 library for U13C labeled lipids
   techniques:
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c01253
   title: mobilipid
 evidence_spans:
-- Our tool enhances CCS quality control by providing a R Markdown that integrates into IM-MS lipidomics workflows
-- MobiLipid aims to streamline lipidomics workflows by offering a fully automated solution for assessing and correcting collision cross section (CCS) bias
+- Our tool enhances CCS quality control by providing a R Markdown that integrates
+  into IM-MS lipidomics workflows
+- MobiLipid aims to streamline lipidomics workflows by offering a fully automated
+  solution for assessing and correcting collision cross section (CCS) bias
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

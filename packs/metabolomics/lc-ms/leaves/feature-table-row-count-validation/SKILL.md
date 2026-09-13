@@ -1,9 +1,10 @@
 ---
 name: feature-table-row-count-validation
-description: Use when after peak quality filtering has been applied to a composite map peak detection output using SNR (>2), goodness-of-fit (peakshape > 0.5), minimum peak height (default 1e5), and prominence (≥20% of peak_height) thresholds.
+description: Use when after peak quality filtering has been applied to a composite
+  map peak detection output using SNR (>2), goodness-of-fit (peakshape > 0.5), minimum
+  peak height (default 1e5), and prominence (≥20% of peak_height) thresholds.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,13 +15,17 @@ metadata:
   - scipy.signal.find_peaks
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
-- See [peaks.evaluate_gaussian_peak_on_intensity_list](peaks.evaluate_gaussian_peak_on_intensity_list), [peaks.__peaks_cSelectivity_stats_](peaks.__peaks_cSelectivity_stats_),
+- See [peaks.evaluate_gaussian_peak_on_intensity_list](peaks.evaluate_gaussian_peak_on_intensity_list),
+  [peaks.__peaks_cSelectivity_stats_](peaks.__peaks_cSelectivity_stats_),
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

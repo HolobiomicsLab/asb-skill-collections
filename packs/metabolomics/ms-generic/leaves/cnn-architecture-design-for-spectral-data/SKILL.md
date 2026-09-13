@@ -1,9 +1,11 @@
 ---
 name: cnn-architecture-design-for-spectral-data
-description: Use when when you have mass-spectrometry data (m/z and intensity pairs or spectral matrices) paired with ground-truth molecular fingerprints or InChIKeys, and you need to learn a non-linear mapping from spectral patterns to structural fingerprints for downstream metabolite ranking or annotation.
+description: Use when when you have mass-spectrometry data (m/z and intensity pairs
+  or spectral matrices) paired with ground-truth molecular fingerprints or InChIKeys,
+  and you need to learn a non-linear mapping from spectral patterns to structural
+  fingerprints for downstream metabolite ranking or annotation.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3445
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -18,6 +20,8 @@ metadata:
   - Open Babel
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s11306-020-01726-7
   title: MetFID

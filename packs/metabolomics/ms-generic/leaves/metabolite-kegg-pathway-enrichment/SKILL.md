@@ -1,9 +1,10 @@
 ---
 name: metabolite-kegg-pathway-enrichment
-description: Use when you have an annotated list of metabolite compounds (with associated m/z features or compound IDs) and want to determine which KEGG metabolic pathways are significantly enriched or depleted in your experimental samples.
+description: Use when you have an annotated list of metabolite compounds (with associated
+  m/z features or compound IDs) and want to determine which KEGG metabolic pathways
+  are significantly enriched or depleted in your experimental samples.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3501
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,12 +18,16 @@ metadata:
   - KEGG_Enrich_Plot
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1093/bib/bbac455
   title: LargeMetabo
 evidence_spans:
-- several R packages are utilized in the background processes, including ggfortify, ggplot2, igraph
-- several R packages are utilized in the background processes, including ggplot2, igraph, MASS
+- several R packages are utilized in the background processes, including ggfortify,
+  ggplot2, igraph
+- several R packages are utilized in the background processes, including ggplot2,
+  igraph, MASS
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

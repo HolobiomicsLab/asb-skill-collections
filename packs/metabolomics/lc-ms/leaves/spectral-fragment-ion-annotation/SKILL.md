@@ -1,9 +1,10 @@
 ---
 name: spectral-fragment-ion-annotation
-description: Use when you have an MS/MS spectrum (m/z and intensity arrays) and a known or hypothesized peptide sequence (optionally with post-translational modifications in ProForma 2.
+description: Use when you have an MS/MS spectrum (m/z and intensity arrays) and a
+  known or hypothesized peptide sequence (optionally with post-translational modifications
+  in ProForma 2.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,12 +17,16 @@ metadata:
   - Numba
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils
 evidence_spans:
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization.
-- spectrum_utils is a Python package for efficient mass spectrometry data processing and visualization
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization.
+- spectrum_utils is a Python package for efficient mass spectrometry data processing
+  and visualization
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

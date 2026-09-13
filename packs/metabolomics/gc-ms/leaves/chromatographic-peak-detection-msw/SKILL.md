@@ -1,9 +1,11 @@
 ---
 name: chromatographic-peak-detection-msw
-description: Use when you have raw mzML files from an FTICR-MS or other direct-injection MS instrument and need to identify discrete chromatographic peaks across the m/z and retention-time dimensions. Use this skill when you must isolate individual ion signals before applying calibration corrections (e.
+description: Use when you have raw mzML files from an FTICR-MS or other direct-injection
+  MS instrument and need to identify discrete chromatographic peaks across the m/z
+  and retention-time dimensions. Use this skill when you must isolate individual ion
+  signals before applying calibration corrections (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3627
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -17,13 +19,16 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 - doi: 10.5281/zenodo.18494293
   title: ''
 evidence_spans:
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package
 - library(Spectra)
 - library(MsBackendMgf)
 - '%\VignetteDepends{xcms,MsDataHub,BiocStyle,pander,Spectra,MsBackendMgf,MetaboCoreUtils}'

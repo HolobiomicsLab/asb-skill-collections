@@ -1,9 +1,11 @@
 ---
 name: molecular-formula-computation-from-structure
-description: Use when processing tandem MS/MS libraries in mgf format (such as GNPS) that lack a Molecular Formula (MF) field but contain valid SMILES strings. The computed formulas are required before combining libraries or writing them to msp format for MS-DIAL compatibility.
+description: Use when processing tandem MS/MS libraries in mgf format (such as GNPS)
+  that lack a Molecular Formula (MF) field but contain valid SMILES strings. The computed
+  formulas are required before combining libraries or writing them to msp format for
+  MS-DIAL compatibility.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0393
   edam_topics:
   - http://edamontology.org/topic_0593
@@ -14,6 +16,8 @@ metadata:
   - MS-DIAL
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c05389
   title: mspcompiler

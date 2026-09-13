@@ -1,9 +1,9 @@
 ---
 name: pairwise-alignment-with-anchor-prioritization
-description: Use when when processing LC-MS metabolomics datasets with 10 or fewer samples and requiring reproducible mass track alignment across the cohort.
+description: Use when when processing LC-MS metabolomics datasets with 10 or fewer
+  samples and requiring reproducible mass track alignment across the cohort.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3644
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,11 +16,14 @@ metadata:
   - Python (3.8+)
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 claims: []
 provenance:

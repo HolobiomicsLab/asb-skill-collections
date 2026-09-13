@@ -1,9 +1,11 @@
 ---
 name: ms2-precursor-extraction
-description: Use when when you have a resolved spectrum file in mzML or mzXML format and need to identify where MS2 (tandem mass spectrometry) scans occur within an LC-MS run, particularly to annotate XIC displays with MS2 precursor positions or validate that MS2 events align with expected chromatographic.
+description: Use when when you have a resolved spectrum file in mzML or mzXML format
+  and need to identify where MS2 (tandem mass spectrometry) scans occur within an
+  LC-MS run, particularly to annotate XIC displays with MS2 precursor positions or
+  validate that MS2 events align with expected chromatographic.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -12,6 +14,8 @@ metadata:
   - GNPS LCMS Visualization Dashboard
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-021-01339-5
   title: GNPS Dashboard

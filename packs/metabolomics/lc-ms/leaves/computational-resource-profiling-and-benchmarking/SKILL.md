@@ -1,9 +1,11 @@
 ---
 name: computational-resource-profiling-and-benchmarking
-description: Use when when evaluating a new or updated version of a data processing tool (especially asari or similar LC-MS workflows) before production deployment, or when verifying claims about scalability, memory efficiency, or throughput on specific hardware classes (e.g., ≤16 GB RAM single-core systems).
+description: Use when when evaluating a new or updated version of a data processing
+  tool (especially asari or similar LC-MS workflows) before production deployment,
+  or when verifying claims about scalability, memory efficiency, or throughput on
+  specific hardware classes (e.g., ≤16 GB RAM single-core systems).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,11 +18,14 @@ metadata:
   - Unix time command
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - The default method uses `pymzml` to parse mzML files.
 claims: []

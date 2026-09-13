@@ -1,9 +1,11 @@
 ---
 name: mass-error-calculation-and-reporting
-description: Use when after molecular formula assignment has been performed on calibrated m/z values. Apply this skill when you need to quantify the accuracy of formula-to-peak matching, validate mass calibration performance against reference standards (e.g., SRFA.
+description: Use when after molecular formula assignment has been performed on calibrated
+  m/z values. Apply this skill when you need to quantify the accuracy of formula-to-peak
+  matching, validate mass calibration performance against reference standards (e.g.,
+  SRFA.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3631
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,12 +18,15 @@ metadata:
   - EnviroMS
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.5281/zenodo.14009575
   title: corems
 evidence_spans:
 - from corems.encapsulation.factory.parameters import MSParameters
-- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters import MSParameters']
+- CoreMS [section=results; evidence='from corems.encapsulation.factory.parameters
+  import MSParameters']
 - import pandas as pd
 - pandas [section=results; evidence='import pandas as pd']
 - import numpy as np

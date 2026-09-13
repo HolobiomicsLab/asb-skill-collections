@@ -1,9 +1,11 @@
 ---
 name: mass-spectrometry-data-processing
-description: Use when you have raw mass spectrometry data in vendor-specific formats (Thermo RAW, Waters RAW, or open formats like mzML/jcamp) that need to be ingested, validated, and converted to a standardized representation for downstream peak detection, quantification, or integration with other NMR/IR/MS.
+description: Use when you have raw mass spectrometry data in vendor-specific formats
+  (Thermo RAW, Waters RAW, or open formats like mzML/jcamp) that need to be ingested,
+  validated, and converted to a standardized representation for downstream peak detection,
+  quantification, or integration with other NMR/IR/MS.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -35,6 +37,8 @@ metadata:
   - tima R package
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s13321-020-00481-0
   title: ChemSpectra
@@ -51,9 +55,11 @@ derived_from:
 evidence_spans:
 - Use the file pyproject.toml to determine the version of Python required.
 - export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run
-- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run --host=0.0.0.0 --port=3007
+- export FLASK_APP=chem_spectra && export FLASK_DEBUG=true && flask run --host=0.0.0.0
+  --port=3007
 - docker pull proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses
-- docker run --detach --name msconvert_docker --rm -it -e WINEDEBUG=-all -v ./chem_spectra/tmp:/data proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses bash
+- docker run --detach --name msconvert_docker --rm -it -e WINEDEBUG=-all -v ./chem_spectra/tmp:/data
+  proteowizard/pwiz-skyline-i-agree-to-the-vendor-licenses bash
 - HyperSpec requires `Python 3.8+` with `CUDA` environment
 claims: []
 provenance:

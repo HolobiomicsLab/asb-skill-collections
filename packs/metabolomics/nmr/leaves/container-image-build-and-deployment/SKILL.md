@@ -1,9 +1,10 @@
 ---
 name: container-image-build-and-deployment
-description: Use when you have a Dockerfile and source repository for a bioinformatics tool (e.g., CloMet) and need to verify that the tool can be containerized, deployed, and made executable in an isolated environment.
+description: Use when you have a Dockerfile and source repository for a bioinformatics
+  tool (e.g., CloMet) and need to verify that the tool can be containerized, deployed,
+  and made executable in an isolated environment.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3572
@@ -12,6 +13,8 @@ metadata:
   - Docker
   techniques:
   - NMR
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.2c00602
   title: CloMet

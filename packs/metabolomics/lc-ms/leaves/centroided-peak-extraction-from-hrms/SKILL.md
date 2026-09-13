@@ -1,9 +1,11 @@
 ---
 name: centroided-peak-extraction-from-hrms
-description: Use when you have centroided data-dependent acquisition (DDA/ddMS2) mzML files from LC- or GC-HRMS measurements and need to systematically detect and characterize MS1 features across the mass-to-charge and retention-time dimensions prior to compound prioritization or suspect screening.
+description: Use when you have centroided data-dependent acquisition (DDA/ddMS2) mzML
+  files from LC- or GC-HRMS measurements and need to systematically detect and characterize
+  MS1 features across the mass-to-charge and retention-time dimensions prior to compound
+  prioritization or suspect screening.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3634
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -16,13 +18,17 @@ metadata:
   - PFΔScreen
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1007/s00216-023-05070-2
   title: pfdeltascreen
 evidence_spans:
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data
 - pyOpenMS (Python interface to the C++ OpenMS library)
-- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection in MS raw data.
+- pyOpenMS (Python interface to the C++ OpenMS library) is used for feature detection
+  in MS raw data.
 - PFΔScreen is an open-source Python based non-target screening software tool
 claims: []
 provenance:

@@ -1,9 +1,10 @@
 ---
 name: s4-class-definition-and-slot-management
-description: 'Use when you are extending the MsBackend virtual class to create a new backend for storing MS spectra data and need to define the internal data structure. Specifically: when you have multiple types of spectra variables (e.'
+description: 'Use when you are extending the MsBackend virtual class to create a new
+  backend for storing MS spectra data and need to define the internal data structure.
+  Specifically: when you have multiple types of spectra variables (e.'
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3088
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -15,11 +16,14 @@ metadata:
   - R (S4 OOP system)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo12020173
   title: spectra
 evidence_spans:
-- return the **full** spectra data within a backend as a `DataFrame` object (defined in the `r Biocpkg("S4Vectors")`
+- return the **full** spectra data within a backend as a `DataFrame` object (defined
+  in the `r Biocpkg("S4Vectors")`
 - library(Spectra) library(IRanges)
 - library(Spectra)
 claims: []

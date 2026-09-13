@@ -1,9 +1,11 @@
 ---
 name: standalone-web-application-deployment
-description: Use when you have cloned the GNPS_MASST codebase and need to instantiate a domain-specific MASST variant (microbeMASST, plantMASST, tissueMASST, microbiomeMASST, or foodMASST) to accept individual MS/MS spectra as input queries and perform searches against the corresponding curated reference.
+description: Use when you have cloned the GNPS_MASST codebase and need to instantiate
+  a domain-specific MASST variant (microbeMASST, plantMASST, tissueMASST, microbiomeMASST,
+  or foodMASST) to accept individual MS/MS spectra as input queries and perform searches
+  against the corresponding curated reference.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3802
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -17,6 +19,8 @@ metadata:
   - MZmine
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41538-022-00137-3
   title: foodMASST

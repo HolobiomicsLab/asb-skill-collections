@@ -3,7 +3,6 @@ name: sequential-tool-integration-and-data-routing
 description: Use when when you have raw LC-HRMS metabolomics data in .mzML or .
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3215
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -17,6 +16,8 @@ metadata:
   - ProteoWizard msConvert
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00364
   title: nextflow4msdial

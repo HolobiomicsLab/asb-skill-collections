@@ -1,9 +1,10 @@
 ---
 name: gaussian-process-regression-model-fitting
-description: Use when after you have accumulated experimental MS data from ≥2 LC gradient trials, extracted separation efficiency metrics (retention time spacing) from each trial, and encoded each gradient as a feature vector.
+description: Use when after you have accumulated experimental MS data from ≥2 LC gradient
+  trials, extracted separation efficiency metrics (retention time spacing) from each
+  trial, and encoded each gradient as a feature vector.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3463
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,13 +17,16 @@ metadata:
   - bago
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2023.09.08.556930
   title: BAGO
 - doi: 10.1002/9780470508183
   title: ''
 evidence_spans:
-- BAGO is a Bayesian optimization strategy for LC gradient optimization for MS-based small molecule analysis
+- BAGO is a Bayesian optimization strategy for LC gradient optimization for MS-based
+  small molecule analysis
 - A :class:`ms1Spectrum` object (supported by :mod:`bago`)
 - A :class:`MSExperiment` object (supported by :mod:`pyopenms`)
 - a :class:`sklearn.preprocessing.StandardScaler` object used to scale the data

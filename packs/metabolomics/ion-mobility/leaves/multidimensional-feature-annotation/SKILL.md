@@ -1,9 +1,11 @@
 ---
 name: multidimensional-feature-annotation
-description: Use when you have a peak-picked feature table (HDF5 format) from high-dimensional MS data (m/z, drift_time, retention_time, intensity) and need to identify and label isotopic signatures to distinguish monoisotopic peaks from isotopologues, reduce feature redundancy, and support multi-dimensional.
+description: Use when you have a peak-picked feature table (HDF5 format) from high-dimensional
+  MS data (m/z, drift_time, retention_time, intensity) and need to identify and label
+  isotopic signatures to distinguish monoisotopic peaks from isotopologues, reduce
+  feature redundancy, and support multi-dimensional.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3648
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +17,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.1c05017
   title: deimos

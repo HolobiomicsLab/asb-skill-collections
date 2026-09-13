@@ -1,9 +1,11 @@
 ---
 name: transition-list-formatting-for-targeted-analysis
-description: Use when you have generated or assembled a lipid spectral library with precursor m/z values, adduct information, and fragmentation patterns, and you need to import those spectra into Skyline for targeted data-independent or parallel-reaction-monitoring (PRM) analysis.
+description: Use when you have generated or assembled a lipid spectral library with
+  precursor m/z values, adduct information, and fragmentation patterns, and you need
+  to import those spectra into Skyline for targeted data-independent or parallel-reaction-monitoring
+  (PRM) analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3763
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,6 +16,8 @@ metadata:
   - LSG
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04518
   title: Lipid Spectrum Generator

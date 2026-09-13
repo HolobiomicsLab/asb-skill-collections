@@ -1,9 +1,10 @@
 ---
 name: molecular-network-construction-for-metabolomics
-description: Use when you have untargeted metabolomics data (e.g., LC-MS/MS spectra) and need to organize compounds by structural relatedness to enable structure discovery for unknown metabolites.
+description: Use when you have untargeted metabolomics data (e.g., LC-MS/MS spectra)
+  and need to organize compounds by structural relatedness to enable structure discovery
+  for unknown metabolites.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -15,6 +16,8 @@ metadata:
   - BAM
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c01565
   title: bam

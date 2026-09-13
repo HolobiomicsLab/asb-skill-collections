@@ -1,9 +1,10 @@
 ---
 name: container-resource-allocation-tuning
-description: Use when deploying a containerized .NET Framework application (e.g., AirdPro) that performs computationally intensive batch operations such as vendor file conversion to Aird format.
+description: Use when deploying a containerized .NET Framework application (e.g.,
+  AirdPro) that performs computationally intensive batch operations such as vendor
+  file conversion to Aird format.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_topics: []
   tools:
   - C#
@@ -16,6 +17,8 @@ metadata:
   - .NET Framework 4.8
   techniques:
   - ion-mobility-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s12859-021-04490-0
   title: aird

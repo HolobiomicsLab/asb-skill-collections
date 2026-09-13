@@ -1,9 +1,11 @@
 ---
 name: molecular-formula-quality-assessment
-description: Use when immediately after formula assignment from raw FT-ICR MS peak detection, when you have a peak intensity matrix with assigned molecular formulas and need to remove spurious or low-confidence assignments before calculating thermodynamic indices, determining compound classes, or performing.
+description: Use when immediately after formula assignment from raw FT-ICR MS peak
+  detection, when you have a peak intensity matrix with assigned molecular formulas
+  and need to remove spurious or low-confidence assignments before calculating thermodynamic
+  indices, determining compound classes, or performing.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,15 +17,21 @@ metadata:
   - MetaboDirect
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - requires the Python dependencies NumPy [40], pandas [41, 42]
 - It requires the Python dependencies NumPy [40], pandas [41, 42]
-- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39] and is available to install through the Python Package Index... It requires the Python dependencies NumPy
-- it has been designed to work with the output file (in .csv format) generated directly by Formularity [24] which uses FT-ICR MS data in .xml format
-- it has been designed to work with the output file (in .csv format) generated directly by Formularity [24]
+- The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39] and
+  is available to install through the Python Package Index... It requires the Python
+  dependencies NumPy
+- it has been designed to work with the output file (in .csv format) generated directly
+  by Formularity [24] which uses FT-ICR MS data in .xml format
+- it has been designed to work with the output file (in .csv format) generated directly
+  by Formularity [24]
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

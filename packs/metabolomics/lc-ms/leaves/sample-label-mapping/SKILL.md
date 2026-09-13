@@ -1,9 +1,10 @@
 ---
 name: sample-label-mapping
-description: Use when you have a raw peak table (CSV format, from any of 12 supported LC-MS software tools or standardized format) and a separate label file that assigns each sample to an experimental class (e.
+description: Use when you have a raw peak table (CSV format, from any of 12 supported
+  LC-MS software tools or standardized format) and a separate label file that assigns
+  each sample to an experimental class (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3437
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -16,6 +17,8 @@ metadata:
   - R base (read.csv, data.frame manipulation)
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41596-021-00636-9
   title: NOREVA

@@ -8,7 +8,7 @@
     "10.1002/cem.70040",
     "10.1002/nbm.70131",
     "10.1007/s00216-023-05070-2",
-    "10.1007/s10858-025-00465-y#sec2",
+    "10.1007/s10858-025-00465-y",
     "10.1007/s11306-017-1244-5",
     "10.1007/s11306-020-01717-8",
     "10.1016/j.enceco.2025.07.022",
@@ -109,7 +109,10 @@
       ],
       "repo_urls": [
         "https://github.com/yanyan5420/MetAssimulo_2"
-      ]
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": []
     },
     "accuracy-metric-computation": {
       "dois": [
@@ -123,9 +126,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "accurate-mass-metabolite-search-against-hmdb": {
@@ -145,6 +155,15 @@
       ],
       "repo_urls": [
         "https://github.com/AutoFlowResearch/SmartPeak"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "openms",
+        "pyopenms",
+        "smartpeak",
+        "smartpeakcli",
+        "smartpeakgui"
       ]
     },
     "algorithm-parameter-comparison-analysis": {
@@ -162,9 +181,17 @@
         "asb-paper-10-5281-zenodo-14009575"
       ],
       "repo_urls": [
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
-        "https://github.com/PNNL-m-q/mzapy",
-        "https://github.com/FangYuan717/ROASMI"
+        "https://github.com/EMSL-Computing/CoreMS"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bruker-solarix",
+        "corems",
+        "docker",
+        "matplotlib",
+        "numpy",
+        "pandas"
       ]
     },
     "annotation-confidence-assessment": {
@@ -181,6 +208,14 @@
       ],
       "repo_urls": [
         "https://github.com/eMetaboHUB/MS-CleanR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "ms-cleanr",
+        "ms-dial-or-higher",
+        "ms-dial-v4-00-or-higher",
+        "ms-finder"
       ]
     },
     "annotation-confidence-scoring": {
@@ -195,6 +230,11 @@
       ],
       "repo_urls": [
         "https://github.com/ZhuMetLab/MrnAnnoAlgo3"
+      ],
+      "license_tier": "noncommercial",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "mrnannoalgo3-metdna3"
       ]
     },
     "annotation-scoring-and-ranking": {
@@ -212,9 +252,19 @@
         "asb-paper-10-3390-metabo12020173"
       ],
       "repo_urls": [
-        "https://github.com/rformassspectrometry/Spectra",
-        "https://github.com/LiesaSalzer/MobilityTransformR",
-        "https://github.com/BiosystemEngineeringLab-IITB/dures"
+        "https://github.com/rformassspectrometry/Spectra"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "commons-math3",
+        "jfreechart",
+        "jopt-simple",
+        "msbackendmzr",
+        "msnbase",
+        "s4vectors",
+        "spectra",
+        "trove4j"
       ]
     },
     "api-request-response-handling": {
@@ -228,8 +278,11 @@
       "kb_slugs": [
         "asb-paper-10-1186-s13321-023-00738-4"
       ],
-      "repo_urls": [
-        "https://github.com/mwang87/NP-Classifier"
+      "repo_urls": [],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "tensorflow-serving"
       ]
     },
     "array-of-objects-construction": {
@@ -247,9 +300,17 @@
         "asb-paper-10-3390-metabo11030163"
       ],
       "repo_urls": [
-        "https://github.com/MoseleyBioinformaticsLab/mwtab",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/MoseleyBioinformaticsLab/MESSES",
+        "https://github.com/MoseleyBioinformaticsLab/mwtab"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "jsonschema",
+        "messes",
+        "mwtab",
+        "pandas",
+        "python"
       ]
     },
     "bi-encoder-cross-encoder-architecture-design": {
@@ -265,9 +326,14 @@
         "asb-paper-10-1016-j-microc-2025-115372"
       ],
       "repo_urls": [
-        "https://github.com/yfWang01/FlavorFormer",
-        "https://github.com/LabLaskin/MSIGen",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/yfWang01/FlavorFormer"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "anaconda",
+        "python",
+        "pytorch-cu118"
       ]
     },
     "binary-file-format-parsing": {
@@ -282,6 +348,11 @@
       ],
       "repo_urls": [
         "https://github.com/nanalysis/nmrfx"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "nmrfx"
       ]
     },
     "bioassay-activity-data-integration": {
@@ -299,8 +370,15 @@
         "asb-paper-10-1021-acs-jnatprod-7b00737"
       ],
       "repo_urls": [
-        "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
-        "https://github.com/AutoFlowResearch/SmartPeak"
+        "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "gnps",
+        "mzmine2",
+        "openms",
+        "optimus"
       ]
     },
     "biotransformation-rule-application-to-metabolites": {
@@ -316,7 +394,14 @@
         "asb-paper-10-1021-acs-analchem-4c01565"
       ],
       "repo_urls": [
-        "https://github.com/DasSusanta/snakemake_ccs"
+        "https://github.com/HassounLab/BAM"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bam",
+        "hassounlab-bam",
+        "rdkit"
       ]
     },
     "block-layout-analysis-for-io-optimization": {
@@ -331,6 +416,11 @@
       ],
       "repo_urls": [
         "https://github.com/nanalysis/nmrfx"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "nmrfx"
       ]
     },
     "blood-sample-processing-parameter-extraction": {
@@ -346,6 +436,11 @@
       ],
       "repo_urls": [
         "https://github.com/funkam/PRIMA"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "prima-panel"
       ]
     },
     "bond-connectivity-prediction": {
@@ -360,14 +455,21 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "browser-security-policy-configuration": {
       "dois": [
-        "10.1007/s10858-025-00465-y#sec2"
+        "10.1007/s10858-025-00465-y"
       ],
       "tools": [
         "Google Chrome",
@@ -382,6 +484,15 @@
       ],
       "repo_urls": [
         "https://github.com/lidawei1975/colmarvista"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "google-chrome",
+        "mozilla-firefox",
+        "safari",
+        "webassembly",
+        "webworker"
       ]
     },
     "bruker-nmr-spectral-data-import": {
@@ -399,6 +510,11 @@
       ],
       "repo_urls": [
         "https://github.com/GaelleLefort/ASICS"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asics"
       ]
     },
     "candidate-formula-ranking-by-mass-error": {
@@ -413,8 +529,13 @@
         "asb-paper-10-1007-s11306-020-01717-8"
       ],
       "repo_urls": [
-        "https://github.com/joannawolthuis/MetaboShiny",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
+        "https://github.com/joannawolthuis/MetaboShiny"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "docker",
+        "metaboshiny"
       ]
     },
     "chemical-database-querying-and-retrieval": {
@@ -431,8 +552,12 @@
         "asb-paper-10-1093-nar-gkac408"
       ],
       "repo_urls": [
-        "https://bitbucket.org/wishartlab/biotransformer3.0jar.git",
-        "https://bitbucket.org/wishartlab/biotransformer.git"
+        "https://bitbucket.org/wishartlab/biotransformer3.0jar.git"
+      ],
+      "license_tier": "noncommercial",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "biotransformer"
       ]
     },
     "chemical-graph-connectivity-validation": {
@@ -448,9 +573,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "chemical-name-normalization-and-publish-database-integration": {
@@ -473,7 +605,17 @@
         "asb-paper-10-1371-journal-pone-0306202"
       ],
       "repo_urls": [
-        "https://github.com/mariallr/amanida"
+        "https://github.com/castratton/uafR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "agilent-unknowns-analysis",
+        "chemminer",
+        "fmcsr",
+        "mzexacto",
+        "spreadout",
+        "webchem"
       ]
     },
     "chemical-shift-annotation": {
@@ -492,6 +634,13 @@
       ],
       "repo_urls": [
         "https://github.com/AndreaRMICL/MWASTools"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "mwastools",
+        "statistical-total-correlation-spectroscopy-stocsy"
       ]
     },
     "chemical-shift-coordinate-extraction": {
@@ -506,8 +655,13 @@
         "asb-paper-10-1021-acs-analchem-4c03966"
       ],
       "repo_urls": [
-        "https://github.com/edisonomics/PyINETA",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/edisonomics/PyINETA"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "pyineta",
+        "python"
       ]
     },
     "chemical-shift-data-formatting": {
@@ -521,8 +675,11 @@
       "kb_slugs": [
         "asb-paper-10-1186-s13321-023-00738-4"
       ],
-      "repo_urls": [
-        "https://github.com/mwang87/NP-Classifier"
+      "repo_urls": [],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "tensorflow-serving"
       ]
     },
     "chemical-shift-reference-matching": {
@@ -539,11 +696,16 @@
         "asb-paper-10-1021-acs-analchem-4c05632"
       ],
       "repo_urls": [
-        "https://github.com/zza1211/NMRformer",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/FanzhouKong/spectral_denoising"
+        "https://github.com/zza1211/NMRformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "numpy",
+        "pandas",
+        "python",
+        "pytorch",
+        "scipy"
       ]
     },
     "clustered-peak-output-formatting": {
@@ -558,8 +720,13 @@
         "asb-paper-10-1021-acs-analchem-4c03966"
       ],
       "repo_urls": [
-        "https://github.com/edisonomics/PyINETA",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/edisonomics/PyINETA"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "pyineta",
+        "python"
       ]
     },
     "cnn-spectral-feature-extraction": {
@@ -574,9 +741,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "coefficient-of-variation-computation": {
@@ -597,8 +771,18 @@
       ],
       "repo_urls": [
         "https://github.com/AndreaRMICL/MWASTools",
-        "https://github.com/ChiungTingWu/ncGTW",
-        "https://github.com/13479776/statTarget"
+        "https://github.com/ChiungTingWu/ncGTW"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "dynamic-time-warping-dtw",
+        "graphical-time-warping-gtw",
+        "mwastools",
+        "ncgtw",
+        "statistical-total-correlation-spectroscopy-stocsy",
+        "xcms"
       ]
     },
     "coefficient-of-variation-threshold-analysis": {
@@ -608,7 +792,7 @@
       "tools": [
         "R",
         "MWASTools",
-        "R (\u22653.3)",
+        "R (≥3.3)",
         "Bioconductor"
       ],
       "kb_slugs": [
@@ -616,6 +800,13 @@
       ],
       "repo_urls": [
         "https://github.com/AndreaRMICL/MWASTools"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "mwastools",
+        "statistical-total-correlation-spectroscopy-stocsy"
       ]
     },
     "cohort-performance-reporting": {
@@ -630,6 +821,11 @@
       ],
       "repo_urls": [
         "https://github.com/funkam/PRIMA"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "prima-panel"
       ]
     },
     "cohort-stratified-metabolic-performance-analysis": {
@@ -645,6 +841,11 @@
       ],
       "repo_urls": [
         "https://github.com/funkam/PRIMA"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "prima-panel"
       ]
     },
     "column-name-variant-matching": {
@@ -660,9 +861,16 @@
         "asb-paper-10-3390-metabo11030163"
       ],
       "repo_urls": [
-        "https://github.com/MoseleyBioinformaticsLab/mwtab",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/MoseleyBioinformaticsLab/mwtab"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "jsonschema",
+        "messes",
+        "mwtab",
+        "pandas",
+        "python"
       ]
     },
     "command-line-interface-invocation": {
@@ -677,8 +885,13 @@
         "asb-paper-10-3390-metabo15010048"
       ],
       "repo_urls": [
-        "https://github.com/ludwigc/metabolabpy",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/ludwigc/metabolabpy"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "metabolabpy",
+        "python"
       ]
     },
     "compound-abundance-quantification-from-flow": {
@@ -694,6 +907,12 @@
       ],
       "repo_urls": [
         "https://github.com/GeoMetabolomics-ICBM/mcfNMR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "mcfnmr",
+        "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
       ]
     },
     "compound-clustering-from-inadequate-spectra": {
@@ -708,8 +927,13 @@
         "asb-paper-10-1021-acs-analchem-4c03966"
       ],
       "repo_urls": [
-        "https://github.com/edisonomics/PyINETA",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/edisonomics/PyINETA"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "pyineta",
+        "python"
       ]
     },
     "compound-identification-ranking-evaluation": {
@@ -727,9 +951,14 @@
         "asb-paper-10-1016-j-microc-2025-115372"
       ],
       "repo_urls": [
-        "https://github.com/yfWang01/FlavorFormer",
-        "https://github.com/LabLaskin/MSIGen",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/yfWang01/FlavorFormer"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "anaconda",
+        "python",
+        "pytorch-cu118"
       ]
     },
     "compound-identifier-mapping": {
@@ -748,9 +977,16 @@
         "asb-paper-10-1021-acs-analchem-2c04632"
       ],
       "repo_urls": [
-        "https://github.com/BalunasLab/mpact",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
-        "https://github.com/13479776/statTarget"
+        "https://github.com/BalunasLab/mpact"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "data-table",
+        "ggplot",
+        "ggplot2",
+        "github",
+        "mpactr"
       ]
     },
     "compound-peak-association-inference": {
@@ -765,8 +1001,13 @@
         "asb-paper-10-1021-acs-analchem-4c03966"
       ],
       "repo_urls": [
-        "https://github.com/edisonomics/PyINETA",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/edisonomics/PyINETA"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "pyineta",
+        "python"
       ]
     },
     "conditional-allocation-design-patterns": {
@@ -781,6 +1022,11 @@
       ],
       "repo_urls": [
         "https://github.com/nanalysis/nmrfx"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "nmrfx"
       ]
     },
     "confounder-adjustment-epidemiological-analysis": {
@@ -797,6 +1043,13 @@
       ],
       "repo_urls": [
         "https://github.com/AndreaRMICL/MWASTools"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "mwastools",
+        "statistical-total-correlation-spectroscopy-stocsy"
       ]
     },
     "container-image-build-and-deployment": {
@@ -810,8 +1063,12 @@
         "asb-paper-10-1021-acs-jproteome-2c00602"
       ],
       "repo_urls": [
-        "https://github.com/rmallol/clomet",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
+        "https://github.com/rmallol/clomet"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "docker"
       ]
     },
     "convolutional-neural-network-layer-design": {
@@ -828,9 +1085,14 @@
         "asb-paper-10-1016-j-microc-2025-115372"
       ],
       "repo_urls": [
-        "https://github.com/yfWang01/FlavorFormer",
-        "https://github.com/LabLaskin/MSIGen",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/yfWang01/FlavorFormer"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "anaconda",
+        "python",
+        "pytorch-cu118"
       ]
     },
     "cross-assay-feature-linkage-analysis": {
@@ -851,13 +1113,24 @@
         "asb-paper-10-1371-journal-pcbi-1011814"
       ],
       "repo_urls": [
-        "https://github.com/Karnovsky-Lab/DNEA",
-        "https://github.com/PNNL-m-q/mzapy",
-        "https://github.com/ablab/npdtools",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/FanzhouKong/spectral_denoising",
-        "https://github.com/13479776/statTarget"
+        "https://github.com/kopeckylukas/py-mamsi"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cytoscape",
+        "mamsi-mamsistructsearch",
+        "mamsistructsearch",
+        "matplotlib",
+        "mbpls",
+        "networkx",
+        "numpy",
+        "pandas",
+        "python",
+        "pyvis",
+        "scikit-learn",
+        "scipy",
+        "xcms"
       ]
     },
     "cumulative-distribution-visualization": {
@@ -873,6 +1146,13 @@
       ],
       "repo_urls": [
         "https://github.com/AndreaRMICL/MWASTools"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "mwastools",
+        "statistical-total-correlation-spectroscopy-stocsy"
       ]
     },
     "data-normalization-in-mass-spectrometry": {
@@ -886,8 +1166,12 @@
         "asb-paper-10-1101-2024-05-13-593988v1"
       ],
       "repo_urls": [
-        "https://github.com/helenamrusso/plantmasst",
-        "https://github.com/GarrettLab-UF/LipidMatch"
+        "https://github.com/helenamrusso/plantmasst"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "mzmine"
       ]
     },
     "data-pipeline-module-design-and-integration": {
@@ -909,9 +1193,15 @@
         "asb-paper-10-5281-zenodo-17284940"
       ],
       "repo_urls": [
-        "https://github.com/mpriessner/MultiModalSpectralTransformer",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/mpriessner/MultiModalSpectralTransformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "multimodalspectraltransformer",
+        "numpy",
+        "pandas",
+        "python"
       ]
     },
     "dataset-storage-interface-architecture": {
@@ -926,6 +1216,11 @@
       ],
       "repo_urls": [
         "https://github.com/nanalysis/nmrfx"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "nmrfx"
       ]
     },
     "deep-learning-metabolite-annotation": {
@@ -942,8 +1237,15 @@
         "asb-paper-10-1016-j-enceco-2025-07-022"
       ],
       "repo_urls": [
-        "https://github.com/LQZ0123/MSThunder",
-        "https://github.com/AdrianHaun/AriumMS"
+        "https://github.com/LQZ0123/MSThunder"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "msconvert",
+        "msthunder",
+        "ubuntu",
+        "windows"
       ]
     },
     "deep-learning-spectral-language-model": {
@@ -958,6 +1260,11 @@
       ],
       "repo_urls": [
         "https://github.com/hcji/DeepMASS2_Data_Processing"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "deepmass2"
       ]
     },
     "dependency-version-management": {
@@ -977,9 +1284,18 @@
         "asb-paper-10-1002-nbm-70131"
       ],
       "repo_urls": [
-        "https://github.com/Leo-Cheng-Lab/ROIAL-NMR",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/Leo-Cheng-Lab/ROIAL-NMR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "human-metabolome-database-hmdb",
+        "openpyxl",
+        "pandas",
+        "pyqt5",
+        "python",
+        "python-3-9",
+        "xlsxwriter"
       ]
     },
     "diffusion-model-inference": {
@@ -996,6 +1312,11 @@
       ],
       "repo_urls": [
         "https://github.com/AzureLeon1/DiffSpectra"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "diffspectra"
       ]
     },
     "docker-environment-configuration": {
@@ -1010,8 +1331,12 @@
         "asb-paper-10-1021-acs-jproteome-2c00602"
       ],
       "repo_urls": [
-        "https://github.com/rmallol/clomet",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
+        "https://github.com/rmallol/clomet"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "docker"
       ]
     },
     "dom-chemodiversity-characterization": {
@@ -1026,6 +1351,11 @@
       ],
       "repo_urls": [
         "https://github.com/JibaoLiu/MoleTrans"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "moletrans"
       ]
     },
     "emd-spectral-distance-computation": {
@@ -1040,6 +1370,12 @@
       ],
       "repo_urls": [
         "https://github.com/GeoMetabolomics-ICBM/mcfNMR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "mcfnmr",
+        "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
       ]
     },
     "endianness-detection-and-handling": {
@@ -1054,6 +1390,11 @@
       ],
       "repo_urls": [
         "https://github.com/nanalysis/nmrfx"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "nmrfx"
       ]
     },
     "entrypoint-verification": {
@@ -1073,9 +1414,18 @@
         "asb-paper-10-1002-nbm-70131"
       ],
       "repo_urls": [
-        "https://github.com/Leo-Cheng-Lab/ROIAL-NMR",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/Leo-Cheng-Lab/ROIAL-NMR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "human-metabolome-database-hmdb",
+        "openpyxl",
+        "pandas",
+        "pyqt5",
+        "python",
+        "python-3-9",
+        "xlsxwriter"
       ]
     },
     "fda-repeatability-compliance-assessment": {
@@ -1091,6 +1441,13 @@
       ],
       "repo_urls": [
         "https://github.com/AndreaRMICL/MWASTools"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "mwastools",
+        "statistical-total-correlation-spectroscopy-stocsy"
       ]
     },
     "feature-table-consensus-aggregation": {
@@ -1107,11 +1464,18 @@
         "asb-paper-10-1021-acs-analchem-1c05017"
       ],
       "repo_urls": [
-        "https://github.com/HassounLab/JESTR1",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/LabLaskin/MSIGen",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/DasSusanta/snakemake_ccs"
+        "https://github.com/pnnl/deimos"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "conda",
+        "deimos",
+        "numpy",
+        "pip",
+        "proteowizard-msconvert",
+        "python",
+        "snakemake"
       ]
     },
     "fid-to-frequency-domain-fourier-transformation": {
@@ -1126,7 +1490,10 @@
       ],
       "repo_urls": [
         "https://github.com/yanyan5420/MetAssimulo_2"
-      ]
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": []
     },
     "file-api-endpoint-implementation": {
       "dois": [
@@ -1143,8 +1510,18 @@
         "asb-paper-10-1186-s13321-020-00481-0"
       ],
       "repo_urls": [
-        "https://github.com/ComPlat/chem-spectra-app",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
+        "https://github.com/ComPlat/chem-spectra-app"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "chem-spectra-app",
+        "curl",
+        "docker",
+        "flask",
+        "gunicorn",
+        "proteowizard-pwiz-skyline",
+        "python-3"
       ]
     },
     "file-integrity-validation": {
@@ -1159,6 +1536,11 @@
       ],
       "repo_urls": [
         "https://github.com/nanalysis/nmrfx"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "nmrfx"
       ]
     },
     "form-encoded-request-handling": {
@@ -1176,8 +1558,18 @@
         "asb-paper-10-1186-s13321-020-00481-0"
       ],
       "repo_urls": [
-        "https://github.com/ComPlat/chem-spectra-app",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
+        "https://github.com/ComPlat/chem-spectra-app"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "chem-spectra-app",
+        "curl",
+        "docker",
+        "flask",
+        "gunicorn",
+        "proteowizard-pwiz-skyline",
+        "python-3"
       ]
     },
     "fragment-assembly-transformer-architecture": {
@@ -1192,9 +1584,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "fragment-ion-theoretical-mass-calculation": {
@@ -1209,8 +1608,13 @@
         "asb-paper-10-1038-s41467-025-59683-5"
       ],
       "repo_urls": [
-        "https://github.com/LinShuhaiLAB/LipidIN",
-        "https://github.com/13479776/statTarget"
+        "https://github.com/LinShuhaiLAB/LipidIN"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "camera",
+        "xcms"
       ]
     },
     "fragment-to-structure-assembly": {
@@ -1225,9 +1629,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "fragmentation-pattern-similarity-scoring": {
@@ -1253,6 +1664,20 @@
       ],
       "repo_urls": [
         "https://github.com/LeaveMeNotTonight/CMDN"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "clumsid",
+        "clumsiddata",
+        "grid",
+        "msentropy",
+        "msmssim",
+        "orgmassspecr",
+        "pheatmap",
+        "readxl",
+        "reshape2",
+        "tidyverse"
       ]
     },
     "fusion-pooling-strategy-implementation": {
@@ -1269,9 +1694,14 @@
         "asb-paper-10-1016-j-microc-2025-115372"
       ],
       "repo_urls": [
-        "https://github.com/yfWang01/FlavorFormer",
-        "https://github.com/LabLaskin/MSIGen",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/yfWang01/FlavorFormer"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "anaconda",
+        "python",
+        "pytorch-cu118"
       ]
     },
     "graph-based-molecular-representation": {
@@ -1286,9 +1716,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "graph-neural-network-design-for-chemistry": {
@@ -1303,9 +1740,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "heteronuclear-homonuclear-correlation-extraction": {
@@ -1321,9 +1765,14 @@
         "asb-paper-10-1021-acs-jnatprod-0c01076"
       ],
       "repo_urls": [
-        "https://github.com/liningtonlab/madbyte",
-        "https://github.com/HassounLab/JESTR1",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/liningtonlab/madbyte"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "conda",
+        "madbyte",
+        "python"
       ]
     },
     "hmdb-metabolite-query-and-retrieval": {
@@ -1341,9 +1790,18 @@
         "asb-paper-10-1002-nbm-70131"
       ],
       "repo_urls": [
-        "https://github.com/Leo-Cheng-Lab/ROIAL-NMR",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/Leo-Cheng-Lab/ROIAL-NMR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "human-metabolome-database-hmdb",
+        "openpyxl",
+        "pandas",
+        "pyqt5",
+        "python",
+        "python-3-9",
+        "xlsxwriter"
       ]
     },
     "http-api-endpoint-design": {
@@ -1361,8 +1819,18 @@
         "asb-paper-10-1186-s13321-020-00481-0"
       ],
       "repo_urls": [
-        "https://github.com/ComPlat/chem-spectra-app",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
+        "https://github.com/ComPlat/chem-spectra-app"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "chem-spectra-app",
+        "curl",
+        "docker",
+        "flask",
+        "gunicorn",
+        "proteowizard-pwiz-skyline",
+        "python-3"
       ]
     },
     "http-api-integration-with-external-services": {
@@ -1380,8 +1848,18 @@
         "asb-paper-10-1186-s13321-020-00481-0"
       ],
       "repo_urls": [
-        "https://github.com/ComPlat/chem-spectra-app",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
+        "https://github.com/ComPlat/chem-spectra-app"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "chem-spectra-app",
+        "curl",
+        "docker",
+        "flask",
+        "gunicorn",
+        "proteowizard-pwiz-skyline",
+        "python-3"
       ]
     },
     "http-post-request-assembly": {
@@ -1396,8 +1874,11 @@
       "kb_slugs": [
         "asb-paper-10-1186-s13321-023-00738-4"
       ],
-      "repo_urls": [
-        "https://github.com/mwang87/NP-Classifier"
+      "repo_urls": [],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "tensorflow-serving"
       ]
     },
     "hybrid-model-fusion-strategy": {
@@ -1413,9 +1894,14 @@
         "asb-paper-10-1016-j-microc-2025-115372"
       ],
       "repo_urls": [
-        "https://github.com/yfWang01/FlavorFormer",
-        "https://github.com/LabLaskin/MSIGen",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/yfWang01/FlavorFormer"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "anaconda",
+        "python",
+        "pytorch-cu118"
       ]
     },
     "in-silico-fragment-m-z-calculation": {
@@ -1433,9 +1919,20 @@
         "asb-paper-10-1186-s12859-017-1744-3"
       ],
       "repo_urls": [
-        "https://github.com/GarrettLab-UF/LipidMatch",
-        "https://github.com/FrigerioGianfranco/GetFeatistics",
-        "https://github.com/13479776/statTarget"
+        "https://github.com/GarrettLab-UF/LipidMatch"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "agilent-q-tof-uhplc-hrms-ms",
+        "bruker-q-tof-uhplc-hrms-ms",
+        "compound-discoverer",
+        "lipidmatch",
+        "ms-dial",
+        "mzmine",
+        "q-exactive-orbitrap",
+        "sciex-q-tof-uhplc-hrms-ms",
+        "xcms"
       ]
     },
     "in-silico-fragmentation-prediction": {
@@ -1449,7 +1946,14 @@
       "kb_slugs": [
         "asb-paper-10-5702-massspectrometry-s0033"
       ],
-      "repo_urls": []
+      "repo_urls": [
+        "https://github.com/NLeSC/MAGMa"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "magma"
+      ]
     },
     "inadequate-spectral-interpretation": {
       "dois": [
@@ -1463,8 +1967,13 @@
         "asb-paper-10-1021-acs-analchem-4c03966"
       ],
       "repo_urls": [
-        "https://github.com/edisonomics/PyINETA",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/edisonomics/PyINETA"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "pyineta",
+        "python"
       ]
     },
     "inadequate-spectral-processing": {
@@ -1479,8 +1988,13 @@
         "asb-paper-10-1021-acs-analchem-4c03966"
       ],
       "repo_urls": [
-        "https://github.com/edisonomics/PyINETA",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/edisonomics/PyINETA"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "pyineta",
+        "python"
       ]
     },
     "interactive-data-exploration-design": {
@@ -1495,6 +2009,11 @@
       ],
       "repo_urls": [
         "https://github.com/funkam/PRIMA"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "prima-panel"
       ]
     },
     "isotopic-impurity-accounting": {
@@ -1509,6 +2028,11 @@
       ],
       "repo_urls": [
         "https://github.com/4dsoftware/elemcor"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "elemcor"
       ]
     },
     "j-coupling-multiplet-generation": {
@@ -1523,7 +2047,10 @@
       ],
       "repo_urls": [
         "https://github.com/yanyan5420/MetAssimulo_2"
-      ]
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": []
     },
     "jcamp-file-parsing": {
       "dois": [
@@ -1540,8 +2067,18 @@
         "asb-paper-10-1186-s13321-020-00481-0"
       ],
       "repo_urls": [
-        "https://github.com/ComPlat/chem-spectra-app",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
+        "https://github.com/ComPlat/chem-spectra-app"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "chem-spectra-app",
+        "curl",
+        "docker",
+        "flask",
+        "gunicorn",
+        "proteowizard-pwiz-skyline",
+        "python-3"
       ]
     },
     "json-payload-construction-for-nmr-spectra": {
@@ -1556,8 +2093,11 @@
       "kb_slugs": [
         "asb-paper-10-1186-s13321-023-00738-4"
       ],
-      "repo_urls": [
-        "https://github.com/mwang87/NP-Classifier"
+      "repo_urls": [],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "tensorflow-serving"
       ]
     },
     "json-response-serialization": {
@@ -1574,8 +2114,18 @@
         "asb-paper-10-1186-s13321-020-00481-0"
       ],
       "repo_urls": [
-        "https://github.com/ComPlat/chem-spectra-app",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
+        "https://github.com/ComPlat/chem-spectra-app"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "chem-spectra-app",
+        "curl",
+        "docker",
+        "flask",
+        "gunicorn",
+        "proteowizard-pwiz-skyline",
+        "python-3"
       ]
     },
     "json-schema-validation": {
@@ -1597,10 +2147,18 @@
       ],
       "repo_urls": [
         "https://github.com/MoseleyBioinformaticsLab/mwtab",
-        "https://github.com/iomega/paired-data-form",
-        "https://github.com/13479776/statTarget",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/iomega/paired-data-form"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "github",
+        "jsonschema",
+        "messes",
+        "mwtab",
+        "npm",
+        "pandas",
+        "python"
       ]
     },
     "linear-score-calculation-from-coefficients": {
@@ -1618,6 +2176,11 @@
       ],
       "repo_urls": [
         "https://github.com/DanieleBizzarri/MiMIR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "mimir"
       ]
     },
     "lineshape-convolution-and-broadening": {
@@ -1632,7 +2195,10 @@
       ],
       "repo_urls": [
         "https://github.com/yanyan5420/MetAssimulo_2"
-      ]
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": []
     },
     "mass-difference-network-construction": {
       "dois": [
@@ -1651,14 +2217,33 @@
         "asb-paper-10-1186-s40168-023-01476-3"
       ],
       "repo_urls": [
-        "https://github.com/Karnovsky-Lab/DNEA",
-        "https://github.com/biodatalab/enrichmet",
-        "https://github.com/PNNL-m-q/mzapy",
-        "https://github.com/13479776/statTarget",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/pmartR/PMart_ShinyApp",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/chopralab/CLAW"
+        "https://github.com/Coayala/MetaboDirect"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cytoscape",
+        "dropms",
+        "formularity",
+        "freda",
+        "i-van-krevelen",
+        "keggrest",
+        "matplotlib",
+        "metaboanalyst",
+        "metabodirect",
+        "numpy",
+        "pandas",
+        "pmartr",
+        "py4cytoscape",
+        "python",
+        "python-numpy-pandas",
+        "r-4-0-2",
+        "r-vegan-package",
+        "seaborn",
+        "syncsa",
+        "ultramassexplorer",
+        "vegan",
+        "vegan-r-package"
       ]
     },
     "mass-spectral-data-validation": {
@@ -1674,9 +2259,15 @@
         "asb-paper-10-1021-acs-analchem-3c04444"
       ],
       "repo_urls": [
-        "https://github.com/griquelme/tidyms",
-        "https://github.com/matchms/MS2DeepScore",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/kevinmildau/specXplore"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "jupyter",
+        "jupyter-notebooks",
+        "ms2deepscore",
+        "python"
       ]
     },
     "mass-spectral-query-submission": {
@@ -1696,8 +2287,18 @@
         "asb-paper-10-1038-s41564-023-01575-9"
       ],
       "repo_urls": [
-        "https://github.com/robinschmid/microbe_masst",
-        "https://github.com/mwang87/MASST"
+        "https://github.com/robinschmid/microbe_masst"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "foodmasst",
+        "gnps-masst",
+        "metadatamasst",
+        "microbemasst",
+        "microbiomemasst",
+        "plantmasst",
+        "tissuemasst"
       ]
     },
     "mass-spectrometry-data-processing": {
@@ -1747,10 +2348,26 @@
         "https://github.com/idslme/IDSL.CSA",
         "https://github.com/HuanLab/JPA",
         "https://github.com/ncats/metScribeR",
-        "https://github.com/taxonomicallyinformedannotation/tima",
-        "https://github.com/HassounLab/JESTR1",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
-        "https://github.com/Fraunhofer-ITMP/alister"
+        "https://github.com/taxonomicallyinformedannotation/tima"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "chem-spectra-app",
+        "cuda",
+        "curl",
+        "docker",
+        "flask",
+        "gunicorn",
+        "hyperspec",
+        "idsl-csa",
+        "jpa",
+        "jpa-r-package",
+        "metscriber",
+        "proteowizard-pwiz-skyline",
+        "python-3",
+        "python-3-8",
+        "shiny"
       ]
     },
     "mass-spectrum-structure-elucidation": {
@@ -1767,10 +2384,17 @@
         "asb-paper-10-1038-s42256-024-00816-8"
       ],
       "repo_urls": [
-        "https://github.com/samgoldman97/ms-pred",
-        "https://github.com/RECETOX/MSMetaEnhancer",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/JainLab/Manuscript-DNNs-for-Classification-of-LCMS-Peaks"
+        "https://github.com/samgoldman97/ms-pred"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "iceberg-webui",
+        "ms-pred-iceberg",
+        "ms-pred-scarf-model",
+        "pubchem",
+        "pytorch",
+        "tensorflow"
       ]
     },
     "memory-mapped-file-selection-strategy": {
@@ -1785,6 +2409,11 @@
       ],
       "repo_urls": [
         "https://github.com/nanalysis/nmrfx"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "nmrfx"
       ]
     },
     "metabolic-age-prediction-from-nmr-features": {
@@ -1802,6 +2431,11 @@
       ],
       "repo_urls": [
         "https://github.com/DanieleBizzarri/MiMIR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "mimir"
       ]
     },
     "metabolic-parameter-visualization": {
@@ -1817,6 +2451,11 @@
       ],
       "repo_urls": [
         "https://github.com/funkam/PRIMA"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "prima-panel"
       ]
     },
     "metabolite-concentration-to-spectrum-mapping": {
@@ -1831,7 +2470,10 @@
       ],
       "repo_urls": [
         "https://github.com/yanyan5420/MetAssimulo_2"
-      ]
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": []
     },
     "metabolite-database-matching": {
       "dois": [
@@ -1845,8 +2487,13 @@
         "asb-paper-10-1021-acs-analchem-4c03966"
       ],
       "repo_urls": [
-        "https://github.com/edisonomics/PyINETA",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/edisonomics/PyINETA"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "pyineta",
+        "python"
       ]
     },
     "metabolite-dataset-preprocessing": {
@@ -1861,6 +2508,11 @@
       ],
       "repo_urls": [
         "https://github.com/funkam/PRIMA"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "prima-panel"
       ]
     },
     "metabolite-feature-quality-control": {
@@ -1877,6 +2529,13 @@
       ],
       "repo_urls": [
         "https://github.com/AndreaRMICL/MWASTools"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "mwastools",
+        "statistical-total-correlation-spectroscopy-stocsy"
       ]
     },
     "metabolite-identification-from-transformation-rules": {
@@ -1891,6 +2550,11 @@
       ],
       "repo_urls": [
         "https://bitbucket.org/wishartlab/biotransformer.git"
+      ],
+      "license_tier": "noncommercial",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "biotransformer"
       ]
     },
     "metabolite-identifier-annotation": {
@@ -1907,6 +2571,11 @@
       ],
       "repo_urls": [
         "https://bitbucket.org/wishartlab/biotransformer.git"
+      ],
+      "license_tier": "noncommercial",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "biotransformer"
       ]
     },
     "metabolite-metadata-column-matching": {
@@ -1922,9 +2591,16 @@
         "asb-paper-10-3390-metabo11030163"
       ],
       "repo_urls": [
-        "https://github.com/MoseleyBioinformaticsLab/mwtab",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/MoseleyBioinformaticsLab/mwtab"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "jsonschema",
+        "messes",
+        "mwtab",
+        "pandas",
+        "python"
       ]
     },
     "metabolite-peak-assignment-from-nmr": {
@@ -1942,11 +2618,16 @@
         "asb-paper-10-1021-acs-analchem-4c05632"
       ],
       "repo_urls": [
-        "https://github.com/zza1211/NMRformer",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/FanzhouKong/spectral_denoising"
+        "https://github.com/zza1211/NMRformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "numpy",
+        "pandas",
+        "python",
+        "pytorch",
+        "scipy"
       ]
     },
     "metabolite-phenotype-association-partial-correlation": {
@@ -1963,6 +2644,13 @@
       ],
       "repo_urls": [
         "https://github.com/AndreaRMICL/MWASTools"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "mwastools",
+        "statistical-total-correlation-spectroscopy-stocsy"
       ]
     },
     "metabolite-prediction-pathway-selection": {
@@ -1979,6 +2667,11 @@
       ],
       "repo_urls": [
         "https://bitbucket.org/wishartlab/biotransformer.git"
+      ],
+      "license_tier": "noncommercial",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "biotransformer"
       ]
     },
     "metabolite-reference-library-filtering": {
@@ -1997,9 +2690,18 @@
         "asb-paper-10-1002-nbm-70131"
       ],
       "repo_urls": [
-        "https://github.com/Leo-Cheng-Lab/ROIAL-NMR",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/Leo-Cheng-Lab/ROIAL-NMR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "human-metabolome-database-hmdb",
+        "openpyxl",
+        "pandas",
+        "pyqt5",
+        "python",
+        "python-3-9",
+        "xlsxwriter"
       ]
     },
     "metabolite-score-projection": {
@@ -2018,6 +2720,11 @@
       ],
       "repo_urls": [
         "https://github.com/DanieleBizzarri/MiMIR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "mimir"
       ]
     },
     "metabolite-signal-drift-detection": {
@@ -2036,8 +2743,15 @@
         "asb-paper-10-1101-2020-12-21-423723"
       ],
       "repo_urls": [
-        "https://github.com/SydneyBioX/hRUV",
-        "https://github.com/BiosystemEngineeringLab-IITB/dures"
+        "https://github.com/SydneyBioX/hRUV"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "dplyr",
+        "hruv",
+        "ruv-iii",
+        "summarizedexperiment"
       ]
     },
     "metabolite-spectral-matching": {
@@ -2054,8 +2768,13 @@
         "asb-paper-10-1038-s41587-023-01985-4"
       ],
       "repo_urls": [
-        "https://github.com/mohimanilab/MASSTplus",
-        "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks"
+        "https://github.com/mohimanilab/MASSTplus"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "gnps",
+        "masst"
       ]
     },
     "metabolite-stability-assessment-across-cohorts": {
@@ -2071,6 +2790,11 @@
       ],
       "repo_urls": [
         "https://github.com/funkam/PRIMA"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "prima-panel"
       ]
     },
     "metabolite-structure-prediction": {
@@ -2086,6 +2810,11 @@
       ],
       "repo_urls": [
         "https://bitbucket.org/wishartlab/biotransformer.git"
+      ],
+      "license_tier": "noncommercial",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "biotransformer"
       ]
     },
     "metabolomics-data-loading-and-formatting": {
@@ -2103,9 +2832,16 @@
         "asb-paper-10-1128-mra-00129-19"
       ],
       "repo_urls": [
-        "https://github.com/connor-reid-tiffany/Omu",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
-        "https://github.com/biodatalab/enrichmet"
+        "https://github.com/connor-reid-tiffany/Omu"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "assign-hierarchy",
+        "ggplot2",
+        "keggrest",
+        "omu-omu-summary-function",
+        "randomforest"
       ]
     },
     "metabolomics-data-representation": {
@@ -2121,13 +2857,25 @@
         "asb-paper-10-1073-pnas-1608041113"
       ],
       "repo_urls": [
-        "https://github.com/vdhooftcompmet/MS2LDA",
-        "https://github.com/HassounLab/JESTR1",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
-        "https://github.com/Qiong-Yang/FastEI",
-        "https://github.com/JohnsonDylan/MassQLab",
-        "https://github.com/glasgowcompbio/PALS",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/vdhooftcompmet/MS2LDA"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "conda",
+        "docker",
+        "gensim",
+        "latent-dirichlet-allocation-lda",
+        "mag",
+        "mag-mass2motif-annotation-guidance",
+        "massql",
+        "motifdb",
+        "ms2lda",
+        "ms2lda-preprocessing-generate-corpus",
+        "ms2lda-preprocessing-load-and-clean",
+        "postgresql",
+        "python",
+        "spec2vec"
       ]
     },
     "metabolomics-data-standardization": {
@@ -2144,6 +2892,13 @@
       ],
       "repo_urls": [
         "https://github.com/edisonomics/SAND"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "nmrbox",
+        "nmrpipe",
+        "sand"
       ]
     },
     "metabolomics-database-search-and-formula-matching": {
@@ -2162,11 +2917,28 @@
         "asb-paper-10-1038-s41467-023-39889-1"
       ],
       "repo_urls": [
-        "https://github.com/shuzhao-li-lab/asari",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/AdrianHaun/AriumMS",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/FanzhouKong/spectral_denoising"
+        "https://github.com/shuzhao-li-lab/asari"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asari",
+        "asari-mass-functions-module-nn-cluster-by-mz-seeds",
+        "asari-massgrid-class-build-grid-sample-wise-add-sample-build-grid-by-centroiding-bin-track-mzs",
+        "asari-peaks-module",
+        "hmdb-4",
+        "https-github-com-shuzhao-li-asari",
+        "jms",
+        "khipu",
+        "lowess",
+        "mass-functions-nn-cluster-by-mz-seeds",
+        "numpy",
+        "proteowizard",
+        "pymzml",
+        "python",
+        "scipy",
+        "scipy-signal-detrend",
+        "scipy-signal-find-peaks"
       ]
     },
     "metabolomics-file-format-parsing": {
@@ -2189,9 +2961,17 @@
       ],
       "repo_urls": [
         "https://github.com/MoseleyBioinformaticsLab/mwtab",
-        "https://github.com/YuJenL/SMART",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/YuJenL/SMART"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "jsonschema",
+        "messes",
+        "mwtab",
+        "pandas",
+        "python",
+        "r-gui"
       ]
     },
     "metabolomics-model-coefficient-application": {
@@ -2210,6 +2990,11 @@
       ],
       "repo_urls": [
         "https://github.com/DanieleBizzarri/MiMIR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "mimir"
       ]
     },
     "metadata-extraction-from-fixed-offset-records": {
@@ -2224,6 +3009,11 @@
       ],
       "repo_urls": [
         "https://github.com/nanalysis/nmrfx"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "nmrfx"
       ]
     },
     "metadata-structure-transformation": {
@@ -2241,9 +3031,17 @@
         "asb-paper-10-3390-metabo11030163"
       ],
       "repo_urls": [
-        "https://github.com/MoseleyBioinformaticsLab/mwtab",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/MoseleyBioinformaticsLab/MESSES",
+        "https://github.com/MoseleyBioinformaticsLab/mwtab"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "jsonschema",
+        "messes",
+        "mwtab",
+        "pandas",
+        "python"
       ]
     },
     "microbiome-metabolome-data-preprocessing": {
@@ -2268,12 +3066,41 @@
         "asb-paper-10-1371-journal-pcbi-1009021"
       ],
       "repo_urls": [
-        "https://github.com/Karnovsky-Lab/DNEA",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/chopralab/CLAW",
-        "https://github.com/JainLab/Manuscript-DNNs-for-Classification-of-LCMS-Peaks",
-        "https://github.com/andreasmock/MetaboDiff"
+        "https://github.com/YDaiLab/MiMeNet"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "adam-optimizer",
+        "canonical-correlation-analysis-cca",
+        "cca-canonical-correlation-analysis",
+        "consensus-clustering",
+        "cytoscape",
+        "elastic-net",
+        "elastic-net-regression",
+        "hierarchical-clustering-euclidean-distance-complete-linkage",
+        "melonnpan",
+        "melonnpan-elastic-net-linear-regression",
+        "mimenet",
+        "ned",
+        "neural-networks",
+        "neural-networks-mlpnn-with-relu-activation",
+        "numpy",
+        "python",
+        "python-scikit-learn",
+        "python-scikit-learn-seaborn-or-matplotlib-for-visualization",
+        "random-forest",
+        "random-forest-regression",
+        "relu-activation",
+        "scikit-learn",
+        "scikit-learn-mlpregressor",
+        "scikit-learn-python",
+        "scipy-spearman-correlation",
+        "seaborn",
+        "seaborn-clustermap",
+        "tensorflow",
+        "tensorflow-or-pytorch",
+        "wgcna"
       ]
     },
     "minimum-cost-flow-formulation": {
@@ -2288,6 +3115,12 @@
       ],
       "repo_urls": [
         "https://github.com/GeoMetabolomics-ICBM/mcfNMR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "mcfnmr",
+        "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
       ]
     },
     "mixture-spectrum-comparison": {
@@ -2304,6 +3137,12 @@
       ],
       "repo_urls": [
         "https://github.com/GeoMetabolomics-ICBM/mcfNMR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "mcfnmr",
+        "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
       ]
     },
     "modality-contribution-quantification": {
@@ -2318,9 +3157,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "model-generalization-assessment-across-molecular-size-regimes": {
@@ -2336,9 +3182,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "model-metadata-extraction": {
@@ -2352,8 +3205,11 @@
       "kb_slugs": [
         "asb-paper-10-1186-s13321-023-00738-4"
       ],
-      "repo_urls": [
-        "https://github.com/mwang87/NP-Classifier"
+      "repo_urls": [],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "tensorflow-serving"
       ]
     },
     "model-metadata-schema-inspection": {
@@ -2366,8 +3222,11 @@
       "kb_slugs": [
         "asb-paper-10-1186-s13321-023-00738-4"
       ],
-      "repo_urls": [
-        "https://github.com/mwang87/NP-Classifier"
+      "repo_urls": [],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "tensorflow-serving"
       ]
     },
     "model-metadata-schema-verification": {
@@ -2381,8 +3240,11 @@
       "kb_slugs": [
         "asb-paper-10-1186-s13321-023-00738-4"
       ],
-      "repo_urls": [
-        "https://github.com/mwang87/NP-Classifier"
+      "repo_urls": [],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "tensorflow-serving"
       ]
     },
     "modification-site-localization": {
@@ -2400,10 +3262,17 @@
         "asb-paper-10-1021-jasms-4c00061"
       ],
       "repo_urls": [
-        "https://github.com/Wang-Bioinformatics-Lab/ModiFinder_base",
-        "https://github.com/PNNL-m-q/mzapy",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/DasSusanta/snakemake_ccs"
+        "https://github.com/Wang-Bioinformatics-Lab/ModiFinder_base"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "basicevaluationengine",
+        "matplotlib",
+        "modifinder",
+        "pillow",
+        "python",
+        "rdkit"
       ]
     },
     "molecular-connectivity-inference": {
@@ -2418,9 +3287,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "molecular-formula-prediction": {
@@ -2435,9 +3311,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "molecular-fragment-assembly-from-transformer-predictions": {
@@ -2452,9 +3335,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "molecular-geometry-neural-network-potential-evaluation": {
@@ -2472,6 +3362,15 @@
       ],
       "repo_urls": [
         "https://github.com/DasSusanta/snakemake_ccs"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "ase-ani",
+        "dimorphite-dl",
+        "quick",
+        "rdkit",
+        "snakemake"
       ]
     },
     "molecular-graph-encoder-decoder-training": {
@@ -2486,9 +3385,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "molecular-network-clustering-and-analysis": {
@@ -2504,7 +3410,14 @@
         "asb-paper-10-1021-acs-analchem-4c01565"
       ],
       "repo_urls": [
-        "https://github.com/DasSusanta/snakemake_ccs"
+        "https://github.com/HassounLab/BAM"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bam",
+        "hassounlab-bam",
+        "rdkit"
       ]
     },
     "molecular-structure-conformer-generation": {
@@ -2529,13 +3442,19 @@
         "asb-paper-10-1002-cem-70040"
       ],
       "repo_urls": [
-        "https://github.com/yuxuanliao/PACCS",
-        "https://github.com/HassounLab/JESTR1",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/RiverCCC/ABCoRT",
-        "https://github.com/ComPlat/chem-spectra-app",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/DasSusanta/snakemake_ccs"
+        "https://github.com/yuxuanliao/PACCS"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "conda",
+        "numpy",
+        "pandas",
+        "pip",
+        "pyg",
+        "python-3",
+        "pytorch",
+        "rdkit"
       ]
     },
     "molecular-structure-ground-truth-matching-and-accuracy-evaluation": {
@@ -2550,9 +3469,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "molecular-structure-prediction-evaluation": {
@@ -2568,9 +3494,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "molecular-structure-prediction-from-spectra": {
@@ -2585,9 +3518,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "molecular-structure-prediction-out-of-distribution": {
@@ -2602,9 +3542,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "molecular-structure-prediction-validation": {
@@ -2625,9 +3572,15 @@
         "asb-paper-10-5281-zenodo-17284940"
       ],
       "repo_urls": [
-        "https://github.com/mpriessner/MultiModalSpectralTransformer",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/mpriessner/MultiModalSpectralTransformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "multimodalspectraltransformer",
+        "numpy",
+        "pandas",
+        "python"
       ]
     },
     "molecular-transformation-frequency-filtering": {
@@ -2642,6 +3595,11 @@
       ],
       "repo_urls": [
         "https://github.com/JibaoLiu/MoleTrans"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "moletrans"
       ]
     },
     "multi-database-structure-querying": {
@@ -2658,6 +3616,14 @@
       ],
       "repo_urls": [
         "https://github.com/eMetaboHUB/MS-CleanR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "ms-cleanr",
+        "ms-dial-or-higher",
+        "ms-dial-v4-00-or-higher",
+        "ms-finder"
       ]
     },
     "multi-modal-spectroscopic-data-integration": {
@@ -2676,9 +3642,15 @@
         "asb-paper-10-5281-zenodo-14712886"
       ],
       "repo_urls": [
-        "https://github.com/mpriessner/MultiModalSpectralTransformer",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/mpriessner/MultiModalSpectralTransformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "multimodalspectraltransformer",
+        "numpy",
+        "pandas",
+        "python"
       ]
     },
     "multimodal-spectral-alignment-by-molecular-identifier": {
@@ -2695,9 +3667,15 @@
         "asb-paper-10-1002-ange-202517611"
       ],
       "repo_urls": [
-        "https://github.com/mpriessner/MultiModalSpectralTransformer",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/mpriessner/MultiModalSpectralTransformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "multimodalspectraltransformer",
+        "numpy",
+        "pandas",
+        "python"
       ]
     },
     "multimodal-tensor-construction-and-validation": {
@@ -2719,9 +3697,15 @@
         "asb-paper-10-5281-zenodo-17284940"
       ],
       "repo_urls": [
-        "https://github.com/mpriessner/MultiModalSpectralTransformer",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/mpriessner/MultiModalSpectralTransformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "multimodalspectraltransformer",
+        "numpy",
+        "pandas",
+        "python"
       ]
     },
     "multiple-testing-correction-metabolomics": {
@@ -2738,6 +3722,13 @@
       ],
       "repo_urls": [
         "https://github.com/AndreaRMICL/MWASTools"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "mwastools",
+        "statistical-total-correlation-spectroscopy-stocsy"
       ]
     },
     "multitask-model-inference": {
@@ -2752,9 +3743,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "mwtab-file-parsing": {
@@ -2771,9 +3769,16 @@
         "asb-paper-10-3390-metabo11030163"
       ],
       "repo_urls": [
-        "https://github.com/MoseleyBioinformaticsLab/mwtab",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/MoseleyBioinformaticsLab/mwtab"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "jsonschema",
+        "messes",
+        "mwtab",
+        "pandas",
+        "python"
       ]
     },
     "mwtab-to-json-conversion": {
@@ -2791,9 +3796,16 @@
         "asb-paper-10-3390-metabo11030163"
       ],
       "repo_urls": [
-        "https://github.com/MoseleyBioinformaticsLab/mwtab",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/MoseleyBioinformaticsLab/mwtab"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "jsonschema",
+        "messes",
+        "mwtab",
+        "pandas",
+        "python"
       ]
     },
     "mzmine-quantitative-table-parsing": {
@@ -2816,11 +3828,24 @@
       ],
       "repo_urls": [
         "https://github.com/luigiquiros/inventa",
-        "https://github.com/mzmine/mzmine",
-        "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
-        "https://github.com/GarrettLab-UF/LipidMatch",
-        "https://github.com/Functional-Metabolomics-Lab/FBMN-STATS",
-        "https://github.com/boecker-lab/sirius"
+        "https://github.com/mzmine/mzmine"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "canopus",
+        "gnps",
+        "ion-identity",
+        "javafx-24",
+        "jdk-25",
+        "lotus-database",
+        "memo",
+        "mzmine",
+        "mzmine2",
+        "mzmine3",
+        "open-tree-of-life",
+        "sirius",
+        "timar"
       ]
     },
     "neural-network-model-deployment": {
@@ -2838,8 +3863,13 @@
         "asb-paper-10-1021-acs-analchem-1c01309"
       ],
       "repo_urls": [
-        "https://github.com/HuanLab-backup/EVA",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/HuanLab-backup/EVA"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "pyeva",
+        "python"
       ]
     },
     "nightingale-1h-nmr-data-integration": {
@@ -2857,6 +3887,11 @@
       ],
       "repo_urls": [
         "https://github.com/DanieleBizzarri/MiMIR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "mimir"
       ]
     },
     "nmr-chemical-shift-interval-matching": {
@@ -2875,9 +3910,18 @@
         "asb-paper-10-1002-nbm-70131"
       ],
       "repo_urls": [
-        "https://github.com/Leo-Cheng-Lab/ROIAL-NMR",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/Leo-Cheng-Lab/ROIAL-NMR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "human-metabolome-database-hmdb",
+        "openpyxl",
+        "pandas",
+        "pyqt5",
+        "python",
+        "python-3-9",
+        "xlsxwriter"
       ]
     },
     "nmr-inadequate-spectra-acquisition-and-preprocessing": {
@@ -2893,8 +3937,13 @@
         "asb-paper-10-1021-acs-analchem-4c03966"
       ],
       "repo_urls": [
-        "https://github.com/edisonomics/PyINETA",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/edisonomics/PyINETA"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "pyineta",
+        "python"
       ]
     },
     "nmr-metabolite-identity-confirmation": {
@@ -2912,6 +3961,13 @@
       ],
       "repo_urls": [
         "https://github.com/AndreaRMICL/MWASTools"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "mwastools",
+        "statistical-total-correlation-spectroscopy-stocsy"
       ]
     },
     "nmr-metabolomic-quality-control-reporting": {
@@ -2927,6 +3983,11 @@
       ],
       "repo_urls": [
         "https://github.com/funkam/PRIMA"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "prima-panel"
       ]
     },
     "nmr-modality-ablation-analysis": {
@@ -2942,9 +4003,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "nmr-network-visualization-and-interpretation": {
@@ -2960,9 +4028,14 @@
         "asb-paper-10-1021-acs-jnatprod-0c01076"
       ],
       "repo_urls": [
-        "https://github.com/liningtonlab/madbyte",
-        "https://github.com/HassounLab/JESTR1",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/liningtonlab/madbyte"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "conda",
+        "madbyte",
+        "python"
       ]
     },
     "nmr-peak-deconvolution": {
@@ -2979,6 +4052,13 @@
       ],
       "repo_urls": [
         "https://github.com/edisonomics/SAND"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "nmrbox",
+        "nmrpipe",
+        "sand"
       ]
     },
     "nmr-peak-json-serialization": {
@@ -2992,8 +4072,11 @@
       "kb_slugs": [
         "asb-paper-10-1186-s13321-023-00738-4"
       ],
-      "repo_urls": [
-        "https://github.com/mwang87/NP-Classifier"
+      "repo_urls": [],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "tensorflow-serving"
       ]
     },
     "nmr-peak-prediction-via-database-lookup": {
@@ -3012,8 +4095,18 @@
         "asb-paper-10-1186-s13321-020-00481-0"
       ],
       "repo_urls": [
-        "https://github.com/ComPlat/chem-spectra-app",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
+        "https://github.com/ComPlat/chem-spectra-app"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "chem-spectra-app",
+        "curl",
+        "docker",
+        "flask",
+        "gunicorn",
+        "proteowizard-pwiz-skyline",
+        "python-3"
       ]
     },
     "nmr-peak-quality-filtering": {
@@ -3030,11 +4123,16 @@
         "asb-paper-10-1021-acs-analchem-4c05632"
       ],
       "repo_urls": [
-        "https://github.com/zza1211/NMRformer",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/FanzhouKong/spectral_denoising"
+        "https://github.com/zza1211/NMRformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "numpy",
+        "pandas",
+        "python",
+        "pytorch",
+        "scipy"
       ]
     },
     "nmr-peak-table-generation": {
@@ -3051,6 +4149,13 @@
       ],
       "repo_urls": [
         "https://github.com/edisonomics/SAND"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "nmrbox",
+        "nmrpipe",
+        "sand"
       ]
     },
     "nmr-spectra-deep-learning-encoding": {
@@ -3067,9 +4172,14 @@
         "asb-paper-10-1016-j-microc-2025-115372"
       ],
       "repo_urls": [
-        "https://github.com/yfWang01/FlavorFormer",
-        "https://github.com/LabLaskin/MSIGen",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/yfWang01/FlavorFormer"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "anaconda",
+        "python",
+        "pytorch-cu118"
       ]
     },
     "nmr-spectra-preprocessing": {
@@ -3086,6 +4196,13 @@
       ],
       "repo_urls": [
         "https://github.com/edisonomics/SAND"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "nmrbox",
+        "nmrpipe",
+        "sand"
       ]
     },
     "nmr-spectra-preprocessing-and-feature-extraction": {
@@ -3100,9 +4217,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "nmr-spectral-comparative-analysis": {
@@ -3118,9 +4242,14 @@
         "asb-paper-10-1021-acs-jnatprod-0c01076"
       ],
       "repo_urls": [
-        "https://github.com/liningtonlab/madbyte",
-        "https://github.com/HassounLab/JESTR1",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/liningtonlab/madbyte"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "conda",
+        "madbyte",
+        "python"
       ]
     },
     "nmr-spectral-data-format-serialization": {
@@ -3137,7 +4266,10 @@
       ],
       "repo_urls": [
         "https://github.com/yanyan5420/MetAssimulo_2"
-      ]
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": []
     },
     "nmr-spectral-feature-extraction": {
       "dois": [
@@ -3153,9 +4285,14 @@
         "asb-paper-10-1016-j-microc-2025-115372"
       ],
       "repo_urls": [
-        "https://github.com/yfWang01/FlavorFormer",
-        "https://github.com/LabLaskin/MSIGen",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/yfWang01/FlavorFormer"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "anaconda",
+        "python",
+        "pytorch-cu118"
       ]
     },
     "nmr-spectral-preprocessing-and-phasing": {
@@ -3175,6 +4312,13 @@
       ],
       "repo_urls": [
         "https://github.com/AndreaRMICL/MWASTools"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "mwastools",
+        "statistical-total-correlation-spectroscopy-stocsy"
       ]
     },
     "nmr-spectral-processing": {
@@ -3193,8 +4337,18 @@
         "asb-paper-10-1186-s13321-020-00481-0"
       ],
       "repo_urls": [
-        "https://github.com/ComPlat/chem-spectra-app",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
+        "https://github.com/ComPlat/chem-spectra-app"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "chem-spectra-app",
+        "curl",
+        "docker",
+        "flask",
+        "gunicorn",
+        "proteowizard-pwiz-skyline",
+        "python-3"
       ]
     },
     "nmr-spectrum-data-import-and-parsing": {
@@ -3212,11 +4366,16 @@
         "asb-paper-10-1021-acs-analchem-4c05632"
       ],
       "repo_urls": [
-        "https://github.com/zza1211/NMRformer",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/FanzhouKong/spectral_denoising"
+        "https://github.com/zza1211/NMRformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "numpy",
+        "pandas",
+        "python",
+        "pytorch",
+        "scipy"
       ]
     },
     "nmr-spectrum-normalization": {
@@ -3233,6 +4392,12 @@
       ],
       "repo_urls": [
         "https://github.com/GeoMetabolomics-ICBM/mcfNMR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "mcfnmr",
+        "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
       ]
     },
     "nmr-spectrum-object-construction": {
@@ -3250,6 +4415,11 @@
       ],
       "repo_urls": [
         "https://github.com/GaelleLefort/ASICS"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asics"
       ]
     },
     "nmr-spectrum-peak-detection": {
@@ -3264,8 +4434,13 @@
         "asb-paper-10-1021-acs-analchem-4c03966"
       ],
       "repo_urls": [
-        "https://github.com/edisonomics/PyINETA",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/edisonomics/PyINETA"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "pyineta",
+        "python"
       ]
     },
     "nmr-spectrum-phase-adjustment": {
@@ -3282,6 +4457,13 @@
       ],
       "repo_urls": [
         "https://github.com/edisonomics/SAND"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "nmrbox",
+        "nmrpipe",
+        "sand"
       ]
     },
     "nmr-spectrum-preprocessing": {
@@ -3296,9 +4478,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "nmr-spectrum-reconstruction-from-library": {
@@ -3314,6 +4503,12 @@
       ],
       "repo_urls": [
         "https://github.com/GeoMetabolomics-ICBM/mcfNMR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "mcfnmr",
+        "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
       ]
     },
     "nmr-spectrum-tiling-format-interpretation": {
@@ -3328,6 +4523,11 @@
       ],
       "repo_urls": [
         "https://github.com/nanalysis/nmrfx"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "nmrfx"
       ]
     },
     "nmr-spectrum-to-structure-inference": {
@@ -3342,9 +4542,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "nmr-spin-system-simulation": {
@@ -3359,7 +4566,10 @@
       ],
       "repo_urls": [
         "https://github.com/yanyan5420/MetAssimulo_2"
-      ]
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": []
     },
     "nmr-workflow-pipeline-execution": {
       "dois": [
@@ -3375,6 +4585,13 @@
       ],
       "repo_urls": [
         "https://github.com/edisonomics/SAND"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "nmrbox",
+        "nmrpipe",
+        "sand"
       ]
     },
     "nmrbox-environment-management": {
@@ -3393,6 +4610,13 @@
       ],
       "repo_urls": [
         "https://github.com/edisonomics/SAND"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "nmrbox",
+        "nmrpipe",
+        "sand"
       ]
     },
     "nv-header-structure-interpretation": {
@@ -3407,6 +4631,11 @@
       ],
       "repo_urls": [
         "https://github.com/nanalysis/nmrfx"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "nmrfx"
       ]
     },
     "optimal-transport-scoring": {
@@ -3424,6 +4653,12 @@
       ],
       "repo_urls": [
         "https://github.com/GeoMetabolomics-ICBM/mcfNMR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "mcfnmr",
+        "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
       ]
     },
     "pathway-ranking-and-prioritization": {
@@ -3445,8 +4680,17 @@
         "asb-paper-10-1186-1471-2105-6-225"
       ],
       "repo_urls": [
-        "https://github.com/glasgowcompbio/PALS",
-        "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks"
+        "https://github.com/glasgowcompbio/PALS"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "gnps",
+        "ms2lda",
+        "pals",
+        "pals-pathway-activity-level-scoring",
+        "pals-viewer",
+        "plage-method-within-pals"
       ]
     },
     "peak-list-filtering-for-quality-control": {
@@ -3464,11 +4708,16 @@
         "asb-paper-10-1021-acs-analchem-4c05632"
       ],
       "repo_urls": [
-        "https://github.com/zza1211/NMRformer",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/FanzhouKong/spectral_denoising"
+        "https://github.com/zza1211/NMRformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "numpy",
+        "pandas",
+        "python",
+        "pytorch",
+        "scipy"
       ]
     },
     "peak-network-clustering-inadequate": {
@@ -3485,8 +4734,13 @@
         "asb-paper-10-1021-acs-analchem-4c03966"
       ],
       "repo_urls": [
-        "https://github.com/edisonomics/PyINETA",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/edisonomics/PyINETA"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "pyineta",
+        "python"
       ]
     },
     "peak-network-to-metabolite-assignment": {
@@ -3501,8 +4755,13 @@
         "asb-paper-10-1021-acs-analchem-4c03966"
       ],
       "repo_urls": [
-        "https://github.com/edisonomics/PyINETA",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/edisonomics/PyINETA"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "pyineta",
+        "python"
       ]
     },
     "peak-similarity-assessment": {
@@ -3517,8 +4776,13 @@
         "asb-paper-10-1021-acs-analchem-4c03966"
       ],
       "repo_urls": [
-        "https://github.com/edisonomics/PyINETA",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/edisonomics/PyINETA"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "pyineta",
+        "python"
       ]
     },
     "peak-table-extraction": {
@@ -3537,8 +4801,18 @@
         "asb-paper-10-1186-s13321-020-00481-0"
       ],
       "repo_urls": [
-        "https://github.com/ComPlat/chem-spectra-app",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
+        "https://github.com/ComPlat/chem-spectra-app"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "chem-spectra-app",
+        "curl",
+        "docker",
+        "flask",
+        "gunicorn",
+        "proteowizard-pwiz-skyline",
+        "python-3"
       ]
     },
     "peaklist-metabolite-assignment-prioritization": {
@@ -3554,13 +4828,18 @@
         "asb-paper-10-1021-acs-analchem-2c00563"
       ],
       "repo_urls": [
-        "https://github.com/idslme/IDSL.UFA",
-        "https://github.com/idslme/IDSL.IPA"
+        "https://github.com/idslme/IDSL.UFA"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "idsl-ipa",
+        "idsl-ufa"
       ]
     },
     "per-browser-developer-setting-navigation": {
       "dois": [
-        "10.1007/s10858-025-00465-y#sec2"
+        "10.1007/s10858-025-00465-y"
       ],
       "tools": [
         "Google Chrome",
@@ -3574,6 +4853,15 @@
       ],
       "repo_urls": [
         "https://github.com/lidawei1975/colmarvista"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "google-chrome",
+        "mozilla-firefox",
+        "safari",
+        "webassembly",
+        "webworker"
       ]
     },
     "performance-degradation-quantification-and-analysis": {
@@ -3588,9 +4876,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "pfas-characteristic-mass-difference-detection": {
@@ -3602,15 +4897,21 @@
         "Python",
         "OpenMS",
         "MSConvert",
-        "PF\u0394Screen"
+        "PFΔScreen"
       ],
       "kb_slugs": [
         "asb-paper-10-1007-s00216-023-05070-2"
       ],
       "repo_urls": [
-        "https://github.com/AdrianHaun/AriumMS",
-        "https://github.com/AutoFlowResearch/SmartPeak",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/JonZwe/PFAScreen"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "msconvert",
+        "openms",
+        "pyopenms",
+        "python"
       ]
     },
     "plasma-serum-sample-comparison": {
@@ -3625,6 +4926,11 @@
       ],
       "repo_urls": [
         "https://github.com/funkam/PRIMA"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "prima-panel"
       ]
     },
     "pre-analytical-delay-effect-quantification": {
@@ -3640,6 +4946,11 @@
       ],
       "repo_urls": [
         "https://github.com/funkam/PRIMA"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "prima-panel"
       ]
     },
     "pre-analytical-delay-stratification": {
@@ -3654,6 +4965,11 @@
       ],
       "repo_urls": [
         "https://github.com/funkam/PRIMA"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "prima-panel"
       ]
     },
     "published-metabolic-profile-implementation": {
@@ -3671,6 +4987,11 @@
       ],
       "repo_urls": [
         "https://github.com/DanieleBizzarri/MiMIR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "mimir"
       ]
     },
     "python-deep-learning-model-loading-and-execution": {
@@ -3689,11 +5010,16 @@
         "asb-paper-10-1021-acs-analchem-4c05632"
       ],
       "repo_urls": [
-        "https://github.com/zza1211/NMRformer",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/FanzhouKong/spectral_denoising"
+        "https://github.com/zza1211/NMRformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "numpy",
+        "pandas",
+        "python",
+        "pytorch",
+        "scipy"
       ]
     },
     "python-environment-setup": {
@@ -3712,9 +5038,18 @@
         "asb-paper-10-1002-nbm-70131"
       ],
       "repo_urls": [
-        "https://github.com/Leo-Cheng-Lab/ROIAL-NMR",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/Leo-Cheng-Lab/ROIAL-NMR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "human-metabolome-database-hmdb",
+        "openpyxl",
+        "pandas",
+        "pyqt5",
+        "python",
+        "python-3-9",
+        "xlsxwriter"
       ]
     },
     "pytorch-module-composition": {
@@ -3732,9 +5067,14 @@
         "asb-paper-10-1016-j-microc-2025-115372"
       ],
       "repo_urls": [
-        "https://github.com/yfWang01/FlavorFormer",
-        "https://github.com/LabLaskin/MSIGen",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/yfWang01/FlavorFormer"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "anaconda",
+        "python",
+        "pytorch-cu118"
       ]
     },
     "qc-coefficient-of-variation-calculation": {
@@ -3751,6 +5091,13 @@
       ],
       "repo_urls": [
         "https://github.com/AndreaRMICL/MWASTools"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "mwastools",
+        "statistical-total-correlation-spectroscopy-stocsy"
       ]
     },
     "quality-metrics-summarization": {
@@ -3766,6 +5113,13 @@
       ],
       "repo_urls": [
         "https://github.com/AndreaRMICL/MWASTools"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "mwastools",
+        "statistical-total-correlation-spectroscopy-stocsy"
       ]
     },
     "r-package-function-execution": {
@@ -3783,6 +5137,11 @@
       ],
       "repo_urls": [
         "https://github.com/GaelleLefort/ASICS"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "asics"
       ]
     },
     "r-package-function-integration": {
@@ -3801,6 +5160,11 @@
       ],
       "repo_urls": [
         "https://github.com/DanieleBizzarri/MiMIR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "mimir"
       ]
     },
     "record-grouping-and-collation": {
@@ -3817,9 +5181,17 @@
         "asb-paper-10-3390-metabo11030163"
       ],
       "repo_urls": [
-        "https://github.com/MoseleyBioinformaticsLab/mwtab",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/MoseleyBioinformaticsLab/MESSES",
+        "https://github.com/MoseleyBioinformaticsLab/mwtab"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "jsonschema",
+        "messes",
+        "mwtab",
+        "pandas",
+        "python"
       ]
     },
     "replicate-consistency-assessment": {
@@ -3837,6 +5209,13 @@
       ],
       "repo_urls": [
         "https://github.com/AndreaRMICL/MWASTools"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "mwastools",
+        "statistical-total-correlation-spectroscopy-stocsy"
       ]
     },
     "repository-cloning-and-initialization": {
@@ -3854,9 +5233,18 @@
         "asb-paper-10-1002-nbm-70131"
       ],
       "repo_urls": [
-        "https://github.com/Leo-Cheng-Lab/ROIAL-NMR",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/Leo-Cheng-Lab/ROIAL-NMR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "human-metabolome-database-hmdb",
+        "openpyxl",
+        "pandas",
+        "pyqt5",
+        "python",
+        "python-3-9",
+        "xlsxwriter"
       ]
     },
     "repository-cloning-and-setup": {
@@ -3872,8 +5260,12 @@
         "asb-paper-10-1021-acs-jproteome-2c00602"
       ],
       "repo_urls": [
-        "https://github.com/rmallol/clomet",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
+        "https://github.com/rmallol/clomet"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "docker"
       ]
     },
     "restful-api-endpoint-invocation": {
@@ -3888,8 +5280,11 @@
       "kb_slugs": [
         "asb-paper-10-1186-s13321-023-00738-4"
       ],
-      "repo_urls": [
-        "https://github.com/mwang87/NP-Classifier"
+      "repo_urls": [],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "tensorflow-serving"
       ]
     },
     "sample-prioritization-through-structural-clustering": {
@@ -3905,9 +5300,14 @@
         "asb-paper-10-1021-acs-jnatprod-0c01076"
       ],
       "repo_urls": [
-        "https://github.com/liningtonlab/madbyte",
-        "https://github.com/HassounLab/JESTR1",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/liningtonlab/madbyte"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "conda",
+        "madbyte",
+        "python"
       ]
     },
     "signal-to-noise-ratio-assessment": {
@@ -3924,11 +5324,16 @@
         "asb-paper-10-1021-acs-analchem-4c05632"
       ],
       "repo_urls": [
-        "https://github.com/zza1211/NMRformer",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/FanzhouKong/spectral_denoising"
+        "https://github.com/zza1211/NMRformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "numpy",
+        "pandas",
+        "python",
+        "pytorch",
+        "scipy"
       ]
     },
     "small-molecule-structure-matching": {
@@ -3943,6 +5348,11 @@
       ],
       "repo_urls": [
         "https://bitbucket.org/wishartlab/biotransformer.git"
+      ],
+      "license_tier": "noncommercial",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "biotransformer"
       ]
     },
     "smiles-structure-annotation": {
@@ -3961,8 +5371,18 @@
         "asb-paper-10-1038-s42256-025-01140-5"
       ],
       "repo_urls": [
-        "https://github.com/aaronma2020/MSGO",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/aaronma2020/MSGO"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cfm-id",
+        "cfmid",
+        "msgo-model",
+        "python",
+        "python-3-7",
+        "torch",
+        "torch-1-7-1"
       ]
     },
     "spatial-overlap-analysis-imaging": {
@@ -3978,8 +5398,14 @@
       "kb_slugs": [
         "asb-paper-10-1186-s13321-020-00449-0"
       ],
-      "repo_urls": [
-        "https://github.com/Ghoshlab/marr"
+      "repo_urls": [],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "devtools",
+        "rmsi",
+        "rmsicleanup",
+        "rmsiproc"
       ]
     },
     "spearman-correlation-computation": {
@@ -3996,6 +5422,13 @@
       ],
       "repo_urls": [
         "https://github.com/AndreaRMICL/MWASTools"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "mwastools",
+        "statistical-total-correlation-spectroscopy-stocsy"
       ]
     },
     "spectra-to-structure-elucidation": {
@@ -4013,6 +5446,11 @@
       ],
       "repo_urls": [
         "https://github.com/AzureLeon1/DiffSpectra"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "diffspectra"
       ]
     },
     "spectral-connectivity-filtering": {
@@ -4027,8 +5465,13 @@
         "asb-paper-10-1021-acs-analchem-4c03966"
       ],
       "repo_urls": [
-        "https://github.com/edisonomics/PyINETA",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/edisonomics/PyINETA"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "pyineta",
+        "python"
       ]
     },
     "spectral-correlation-interpretation": {
@@ -4047,6 +5490,13 @@
       ],
       "repo_urls": [
         "https://github.com/AndreaRMICL/MWASTools"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "mwastools",
+        "statistical-total-correlation-spectroscopy-stocsy"
       ]
     },
     "spectral-data-format-parsing-nmr-hsqc-cosy-ir": {
@@ -4068,9 +5518,15 @@
         "asb-paper-10-5281-zenodo-17284940"
       ],
       "repo_urls": [
-        "https://github.com/mpriessner/MultiModalSpectralTransformer",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/mpriessner/MultiModalSpectralTransformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "multimodalspectraltransformer",
+        "numpy",
+        "pandas",
+        "python"
       ]
     },
     "spectral-database-matching": {
@@ -4088,13 +5544,18 @@
         "asb-paper-10-1186-s13321-023-00695-y"
       ],
       "repo_urls": [
-        "https://github.com/zmahnoor14/MAW",
-        "https://github.com/FrigerioGianfranco/GetFeatistics",
-        "https://github.com/RECETOX/MSMetaEnhancer",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/DasSusanta/snakemake_ccs",
-        "https://github.com/boecker-lab/sirius",
-        "https://github.com/BiosystemEngineeringLab-IITB/dures"
+        "https://github.com/zmahnoor14/MAW"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "metfrag",
+        "pubchem",
+        "pubchempy",
+        "python",
+        "rdkit",
+        "sirius",
+        "spectra"
       ]
     },
     "spectral-feature-engineering": {
@@ -4108,7 +5569,15 @@
       "kb_slugs": [
         "asb-paper-10-1021-acs-jcim-1c00055"
       ],
-      "repo_urls": []
+      "repo_urls": [
+        "https://github.com/gfm-collab/chemprop-IR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "chemprop",
+        "chemprop-ir"
+      ]
     },
     "spectral-file-format-parsing": {
       "dois": [
@@ -4126,8 +5595,18 @@
         "asb-paper-10-1186-s13321-020-00481-0"
       ],
       "repo_urls": [
-        "https://github.com/ComPlat/chem-spectra-app",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
+        "https://github.com/ComPlat/chem-spectra-app"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "chem-spectra-app",
+        "curl",
+        "docker",
+        "flask",
+        "gunicorn",
+        "proteowizard-pwiz-skyline",
+        "python-3"
       ]
     },
     "spectral-graph-interpretation": {
@@ -4145,8 +5624,15 @@
         "asb-paper-10-1021-acs-jnatprod-7b00737"
       ],
       "repo_urls": [
-        "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
-        "https://github.com/AutoFlowResearch/SmartPeak"
+        "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "gnps",
+        "mzmine2",
+        "openms",
+        "optimus"
       ]
     },
     "spectral-image-rendering": {
@@ -4163,8 +5649,18 @@
         "asb-paper-10-1186-s13321-020-00481-0"
       ],
       "repo_urls": [
-        "https://github.com/ComPlat/chem-spectra-app",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
+        "https://github.com/ComPlat/chem-spectra-app"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "chem-spectra-app",
+        "curl",
+        "docker",
+        "flask",
+        "gunicorn",
+        "proteowizard-pwiz-skyline",
+        "python-3"
       ]
     },
     "spectral-intensity-normalization-across-modalities": {
@@ -4181,9 +5677,15 @@
         "asb-paper-10-1002-ange-202517611"
       ],
       "repo_urls": [
-        "https://github.com/mpriessner/MultiModalSpectralTransformer",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/mpriessner/MultiModalSpectralTransformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "multimodalspectraltransformer",
+        "numpy",
+        "pandas",
+        "python"
       ]
     },
     "spectral-intensity-thresholding": {
@@ -4198,8 +5700,13 @@
         "asb-paper-10-1021-acs-analchem-4c03966"
       ],
       "repo_urls": [
-        "https://github.com/edisonomics/PyINETA",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/edisonomics/PyINETA"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "pyineta",
+        "python"
       ]
     },
     "spectral-library-matching-gnps": {
@@ -4218,9 +5725,16 @@
         "asb-paper-10-1186-2047-217x-2-16"
       ],
       "repo_urls": [
-        "https://github.com/mwang87/ReDU-MS2-Documentation",
-        "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
-        "https://github.com/NPLinker/nplinker"
+        "https://github.com/mwang87/ReDU-MS2-Documentation"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "emperor",
+        "gnps",
+        "gnps2",
+        "massive",
+        "redu"
       ]
     },
     "spectral-mixture-deconvolution": {
@@ -4236,6 +5750,12 @@
       ],
       "repo_urls": [
         "https://github.com/GeoMetabolomics-ICBM/mcfNMR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "mcfnmr",
+        "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
       ]
     },
     "spectral-modality-preprocessing": {
@@ -4257,9 +5777,15 @@
         "asb-paper-10-5281-zenodo-17284940"
       ],
       "repo_urls": [
-        "https://github.com/mpriessner/MultiModalSpectralTransformer",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/mpriessner/MultiModalSpectralTransformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "multimodalspectraltransformer",
+        "numpy",
+        "pandas",
+        "python"
       ]
     },
     "spectral-overview-representation-generation": {
@@ -4276,9 +5802,15 @@
         "asb-paper-10-1021-acs-analchem-3c04444"
       ],
       "repo_urls": [
-        "https://github.com/griquelme/tidyms",
-        "https://github.com/matchms/MS2DeepScore",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/kevinmildau/specXplore"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "jupyter",
+        "jupyter-notebooks",
+        "ms2deepscore",
+        "python"
       ]
     },
     "spectral-peak-data-validation-and-parsing": {
@@ -4296,8 +5828,18 @@
         "asb-paper-10-1186-s13321-020-00481-0"
       ],
       "repo_urls": [
-        "https://github.com/ComPlat/chem-spectra-app",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
+        "https://github.com/ComPlat/chem-spectra-app"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "chem-spectra-app",
+        "curl",
+        "docker",
+        "flask",
+        "gunicorn",
+        "proteowizard-pwiz-skyline",
+        "python-3"
       ]
     },
     "spectral-peak-deconvolution": {
@@ -4314,6 +5856,13 @@
       ],
       "repo_urls": [
         "https://github.com/edisonomics/SAND"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "nmrbox",
+        "nmrpipe",
+        "sand"
       ]
     },
     "spectral-peak-detection-and-picking": {
@@ -4329,8 +5878,13 @@
         "asb-paper-10-1021-acs-analchem-4c03966"
       ],
       "repo_urls": [
-        "https://github.com/edisonomics/PyINETA",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/edisonomics/PyINETA"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "pyineta",
+        "python"
       ]
     },
     "spectral-peak-network-grouping": {
@@ -4345,8 +5899,13 @@
         "asb-paper-10-1021-acs-analchem-4c03966"
       ],
       "repo_urls": [
-        "https://github.com/edisonomics/PyINETA",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/edisonomics/PyINETA"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "pyineta",
+        "python"
       ]
     },
     "spectral-peak-validation": {
@@ -4363,11 +5922,16 @@
         "asb-paper-10-1021-acs-analchem-4c05632"
       ],
       "repo_urls": [
-        "https://github.com/zza1211/NMRformer",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/FanzhouKong/spectral_denoising"
+        "https://github.com/zza1211/NMRformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "numpy",
+        "pandas",
+        "python",
+        "pytorch",
+        "scipy"
       ]
     },
     "spectral-quality-filtering-signal-to-noise": {
@@ -4384,9 +5948,15 @@
         "asb-paper-10-1002-ange-202517611"
       ],
       "repo_urls": [
-        "https://github.com/mpriessner/MultiModalSpectralTransformer",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/mpriessner/MultiModalSpectralTransformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "multimodalspectraltransformer",
+        "numpy",
+        "pandas",
+        "python"
       ]
     },
     "spectral-query-formulation": {
@@ -4402,8 +5972,13 @@
         "asb-paper-10-1038-s41587-023-01985-4"
       ],
       "repo_urls": [
-        "https://github.com/mohimanilab/MASSTplus",
-        "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks"
+        "https://github.com/mohimanilab/MASSTplus"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "gnps",
+        "masst"
       ]
     },
     "spectral-roi-boundary-definition": {
@@ -4423,9 +5998,18 @@
         "asb-paper-10-1002-nbm-70131"
       ],
       "repo_urls": [
-        "https://github.com/Leo-Cheng-Lab/ROIAL-NMR",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/Leo-Cheng-Lab/ROIAL-NMR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "human-metabolome-database-hmdb",
+        "openpyxl",
+        "pandas",
+        "pyqt5",
+        "python",
+        "python-3-9",
+        "xlsxwriter"
       ]
     },
     "spectral-similarity-matching-and-comparison": {
@@ -4443,15 +6027,24 @@
         "asb-paper-10-1021-ac051437y"
       ],
       "repo_urls": [
-        "https://github.com/sneumann/xcms",
-        "https://github.com/AndreaRMICL/MWASTools",
-        "https://github.com/13479776/statTarget",
-        "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses",
-        "https://github.com/LiesaSalzer/MobilityTransformR",
-        "https://github.com/LeaveMeNotTonight/CMDN",
-        "https://github.com/BiosystemEngineeringLab-IITB/dures",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol"
+        "https://github.com/sneumann/xcms"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "github",
+        "gnps",
+        "limma",
+        "massspecwavelet",
+        "metabocoreutils",
+        "msbackendmgf",
+        "msdatahub",
+        "msfeatures",
+        "pheatmap",
+        "spectra",
+        "xcms",
+        "zenodo"
       ]
     },
     "spectral-similarity-scoring-parent-tp": {
@@ -4466,11 +6059,17 @@
         "asb-paper-10-1186-s13321-020-00477-w"
       ],
       "repo_urls": [
-        "https://github.com/rickhelmus/patRoon",
-        "https://bitbucket.org/wishartlab/biotransformer.git",
-        "https://github.com/RECETOX/MSMetaEnhancer",
-        "https://github.com/FrigerioGianfranco/GetFeatistics",
-        "https://github.com/boecker-lab/sirius"
+        "https://github.com/rickhelmus/patRoon"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "biotransformer",
+        "cts",
+        "metfrag",
+        "patroon",
+        "pubchem",
+        "sirius"
       ]
     },
     "spectral-to-structure-mapping-prediction": {
@@ -4485,9 +6084,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "spectral-visualization-and-result-interpretation": {
@@ -4502,8 +6108,13 @@
         "asb-paper-10-1021-acs-analchem-4c03966"
       ],
       "repo_urls": [
-        "https://github.com/edisonomics/PyINETA",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/edisonomics/PyINETA"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "pyineta",
+        "python"
       ]
     },
     "spectroscopic-data-preprocessing": {
@@ -4519,6 +6130,11 @@
       ],
       "repo_urls": [
         "https://github.com/AzureLeon1/DiffSpectra"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "diffspectra"
       ]
     },
     "stocsy-metabolite-assignment": {
@@ -4537,6 +6153,13 @@
       ],
       "repo_urls": [
         "https://github.com/AndreaRMICL/MWASTools"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "mwastools",
+        "statistical-total-correlation-spectroscopy-stocsy"
       ]
     },
     "structural-scaffold-feature-identification": {
@@ -4552,9 +6175,14 @@
         "asb-paper-10-1021-acs-jnatprod-0c01076"
       ],
       "repo_urls": [
-        "https://github.com/liningtonlab/madbyte",
-        "https://github.com/HassounLab/JESTR1",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/liningtonlab/madbyte"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "conda",
+        "madbyte",
+        "python"
       ]
     },
     "structural-similarity-scoring-metabolites": {
@@ -4572,7 +6200,10 @@
       ],
       "repo_urls": [
         "https://github.com/hcji/DeepMASS"
-      ]
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": []
     },
     "structure-prediction-from-spectra": {
       "dois": [
@@ -4591,8 +6222,18 @@
         "asb-paper-10-1038-s42256-025-01140-5"
       ],
       "repo_urls": [
-        "https://github.com/aaronma2020/MSGO",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/aaronma2020/MSGO"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cfm-id",
+        "cfmid",
+        "msgo-model",
+        "python",
+        "python-3-7",
+        "torch",
+        "torch-1-7-1"
       ]
     },
     "structure-similarity-comparison": {
@@ -4607,9 +6248,15 @@
         "asb-paper-10-1002-ange-202517611"
       ],
       "repo_urls": [
-        "https://github.com/mpriessner/MultiModalSpectralTransformer",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/mpriessner/MultiModalSpectralTransformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "multimodalspectraltransformer",
+        "numpy",
+        "pandas",
+        "python"
       ]
     },
     "structure-similarity-evaluation": {
@@ -4624,9 +6271,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "structured-report-generation": {
@@ -4645,9 +6299,16 @@
         "asb-paper-10-3390-metabo11030163"
       ],
       "repo_urls": [
-        "https://github.com/MoseleyBioinformaticsLab/mwtab",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/MoseleyBioinformaticsLab/mwtab"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "jsonschema",
+        "messes",
+        "mwtab",
+        "pandas",
+        "python"
       ]
     },
     "summarized-experiment-object-handling": {
@@ -4664,6 +6325,13 @@
       ],
       "repo_urls": [
         "https://github.com/AndreaRMICL/MWASTools"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "mwastools",
+        "statistical-total-correlation-spectroscopy-stocsy"
       ]
     },
     "summarized-experiment-subsetting": {
@@ -4680,6 +6348,13 @@
       ],
       "repo_urls": [
         "https://github.com/AndreaRMICL/MWASTools"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "bioconductor",
+        "mwastools",
+        "statistical-total-correlation-spectroscopy-stocsy"
       ]
     },
     "tabular-data-cleaning": {
@@ -4696,11 +6371,16 @@
         "asb-paper-10-1021-acs-analchem-4c05632"
       ],
       "repo_urls": [
-        "https://github.com/zza1211/NMRformer",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/FanzhouKong/spectral_denoising"
+        "https://github.com/zza1211/NMRformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "numpy",
+        "pandas",
+        "python",
+        "pytorch",
+        "scipy"
       ]
     },
     "tabular-data-transformation-with-pandas": {
@@ -4718,9 +6398,16 @@
         "asb-paper-10-3390-metabo11030163"
       ],
       "repo_urls": [
-        "https://github.com/MoseleyBioinformaticsLab/mwtab",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/MoseleyBioinformaticsLab/mwtab"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "jsonschema",
+        "messes",
+        "mwtab",
+        "pandas",
+        "python"
       ]
     },
     "tensorflow-serving-endpoint-integration": {
@@ -4734,8 +6421,11 @@
       "kb_slugs": [
         "asb-paper-10-1186-s13321-023-00738-4"
       ],
-      "repo_urls": [
-        "https://github.com/mwang87/NP-Classifier"
+      "repo_urls": [],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "tensorflow-serving"
       ]
     },
     "tool-initialization-verification": {
@@ -4750,8 +6440,12 @@
         "asb-paper-10-1021-acs-jproteome-2c00602"
       ],
       "repo_urls": [
-        "https://github.com/rmallol/clomet",
-        "https://github.com/ASAGlab/MOI--An-integrated-solution-for-omics-analyses"
+        "https://github.com/rmallol/clomet"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "docker"
       ]
     },
     "top-k-accuracy-ranking-and-evaluation": {
@@ -4765,9 +6459,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "transformer-architecture-inference": {
@@ -4790,8 +6491,17 @@
       ],
       "repo_urls": [
         "https://github.com/mpriessner/MultiModalSpectralTransformer",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/gfm-collab/chemprop-IR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "chemprop",
+        "chemprop-ir",
+        "multimodalspectraltransformer",
+        "numpy",
+        "pandas",
+        "python"
       ]
     },
     "transformer-attention-mechanism-implementation": {
@@ -4806,9 +6516,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "transformer-based-fragment-assembly": {
@@ -4823,9 +6540,16 @@
         "asb-paper-10-1021-acscentsci-4c01132"
       ],
       "repo_urls": [
-        "https://github.com/massspecdl/ChemEmbed",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/HaldamirS/CLERMS"
+        "https://github.com/MarklandGroup/NMR2Struct"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "convolutional-neural-network",
+        "convolutional-neural-network-cnn",
+        "pytorch",
+        "transformer",
+        "transformer-architecture"
       ]
     },
     "transformer-cnn-hybrid-model-training": {
@@ -4842,9 +6566,14 @@
         "asb-paper-10-1016-j-microc-2025-115372"
       ],
       "repo_urls": [
-        "https://github.com/yfWang01/FlavorFormer",
-        "https://github.com/LabLaskin/MSIGen",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/yfWang01/FlavorFormer"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "anaconda",
+        "python",
+        "pytorch-cu118"
       ]
     },
     "transformer-encoder-architecture-implementation": {
@@ -4861,9 +6590,14 @@
         "asb-paper-10-1016-j-microc-2025-115372"
       ],
       "repo_urls": [
-        "https://github.com/yfWang01/FlavorFormer",
-        "https://github.com/LabLaskin/MSIGen",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/yfWang01/FlavorFormer"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "anaconda",
+        "python",
+        "pytorch-cu118"
       ]
     },
     "transformer-model-inference-on-spectral-data": {
@@ -4881,11 +6615,16 @@
         "asb-paper-10-1021-acs-analchem-4c05632"
       ],
       "repo_urls": [
-        "https://github.com/zza1211/NMRformer",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer",
-        "https://github.com/Chen-micslab/QCCAssisted4DSterol",
-        "https://github.com/FanzhouKong/spectral_denoising"
+        "https://github.com/zza1211/NMRformer"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "numpy",
+        "pandas",
+        "python",
+        "pytorch",
+        "scipy"
       ]
     },
     "unannotated-feature-characterization": {
@@ -4908,11 +6647,24 @@
       ],
       "repo_urls": [
         "https://github.com/luigiquiros/inventa",
-        "https://github.com/mzmine/mzmine",
-        "https://github.com/DorresteinLaboratory/Bioactive_Molecular_Networks",
-        "https://github.com/GarrettLab-UF/LipidMatch",
-        "https://github.com/Functional-Metabolomics-Lab/FBMN-STATS",
-        "https://github.com/boecker-lab/sirius"
+        "https://github.com/mzmine/mzmine"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "canopus",
+        "gnps",
+        "ion-identity",
+        "javafx-24",
+        "jdk-25",
+        "lotus-database",
+        "memo",
+        "mzmine",
+        "mzmine2",
+        "mzmine3",
+        "open-tree-of-life",
+        "sirius",
+        "timar"
       ]
     },
     "unknown-chemical-identification-in-complex-mixtures": {
@@ -4930,8 +6682,18 @@
         "asb-paper-10-1038-s42256-025-01140-5"
       ],
       "repo_urls": [
-        "https://github.com/aaronma2020/MSGO",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/aaronma2020/MSGO"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "cfm-id",
+        "cfmid",
+        "msgo-model",
+        "python",
+        "python-3-7",
+        "torch",
+        "torch-1-7-1"
       ]
     },
     "validation-error-categorization": {
@@ -4947,9 +6709,16 @@
         "asb-paper-10-3390-metabo11030163"
       ],
       "repo_urls": [
-        "https://github.com/MoseleyBioinformaticsLab/mwtab",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/MoseleyBioinformaticsLab/mwtab"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "jsonschema",
+        "messes",
+        "mwtab",
+        "pandas",
+        "python"
       ]
     },
     "virtual-environment-configuration": {
@@ -4969,9 +6738,18 @@
         "asb-paper-10-1002-nbm-70131"
       ],
       "repo_urls": [
-        "https://github.com/Leo-Cheng-Lab/ROIAL-NMR",
-        "https://github.com/FangYuan717/ROASMI",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/Leo-Cheng-Lab/ROIAL-NMR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "human-metabolome-database-hmdb",
+        "openpyxl",
+        "pandas",
+        "pyqt5",
+        "python",
+        "python-3-9",
+        "xlsxwriter"
       ]
     },
     "wasserstein-distance-computation": {
@@ -4988,11 +6766,17 @@
       ],
       "repo_urls": [
         "https://github.com/GeoMetabolomics-ICBM/mcfNMR"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "mcfnmr",
+        "scipy-scipy-stats-wasserstein-distance-or-scipy-optimize-linprog-for-optimal-transport"
       ]
     },
     "webassembly-local-loading-setup": {
       "dois": [
-        "10.1007/s10858-025-00465-y#sec2"
+        "10.1007/s10858-025-00465-y"
       ],
       "tools": [
         "Google Chrome",
@@ -5007,11 +6791,20 @@
       ],
       "repo_urls": [
         "https://github.com/lidawei1975/colmarvista"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "google-chrome",
+        "mozilla-firefox",
+        "safari",
+        "webassembly",
+        "webworker"
       ]
     },
     "webworker-file-access-enabling": {
       "dois": [
-        "10.1007/s10858-025-00465-y#sec2"
+        "10.1007/s10858-025-00465-y"
       ],
       "tools": [
         "Google Chrome",
@@ -5026,6 +6819,15 @@
       ],
       "repo_urls": [
         "https://github.com/lidawei1975/colmarvista"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "google-chrome",
+        "mozilla-firefox",
+        "safari",
+        "webassembly",
+        "webworker"
       ]
     },
     "weighted-loss-function-optimization": {
@@ -5042,9 +6844,14 @@
         "asb-paper-10-1016-j-microc-2025-115372"
       ],
       "repo_urls": [
-        "https://github.com/yfWang01/FlavorFormer",
-        "https://github.com/LabLaskin/MSIGen",
-        "https://github.com/01dadada/RT-Transformer"
+        "https://github.com/yfWang01/FlavorFormer"
+      ],
+      "license_tier": "restricted",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "anaconda",
+        "python",
+        "pytorch-cu118"
       ]
     },
     "xcms-feature-extraction-and-grouping": {
@@ -5060,8 +6867,13 @@
         "asb-paper-10-1021-acs-analchem-5b03628"
       ],
       "repo_urls": [
-        "https://github.com/jcapelladesto/geoRge",
-        "https://github.com/13479776/statTarget"
+        "https://github.com/jcapelladesto/geoRge"
+      ],
+      "license_tier": "open",
+      "provenance_tier": "literature",
+      "tools_used": [
+        "george",
+        "xcms"
       ]
     }
   }

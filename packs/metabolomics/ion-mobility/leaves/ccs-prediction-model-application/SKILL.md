@@ -1,9 +1,10 @@
 ---
 name: ccs-prediction-model-application
-description: Use when you have structural input data (SMILES or molecular geometry files) for N-Me derived unsaturated sterol lipids and need to generate a predicted CCS dataset indexed by lipid identifier and structural isomer class.
+description: Use when you have structural input data (SMILES or molecular geometry
+  files) for N-Me derived unsaturated sterol lipids and need to generate a predicted
+  CCS dataset indexed by lipid identifier and structural isomer class.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -17,6 +18,8 @@ metadata:
   techniques:
   - LC-MS
   - ion-mobility-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/anie.202507483
   title: NA

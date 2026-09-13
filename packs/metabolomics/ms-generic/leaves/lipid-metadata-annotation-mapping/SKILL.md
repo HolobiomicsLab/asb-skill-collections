@@ -1,9 +1,10 @@
 ---
 name: lipid-metadata-annotation-mapping
-description: Use when when exporting in-memory generated spectra as MSP-format spectral libraries, you must first map each spectrum record to required MSP fields (NAME, PRECURSORMZ, SPECTRUM) and optional metadata annotations.
+description: Use when when exporting in-memory generated spectra as MSP-format spectral
+  libraries, you must first map each spectrum record to required MSP fields (NAME,
+  PRECURSORMZ, SPECTRUM) and optional metadata annotations.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3778
   edam_topics:
   - http://edamontology.org/topic_3375
@@ -13,6 +14,8 @@ metadata:
   - LSG
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.2c04518
   title: Lipid Spectrum Generator

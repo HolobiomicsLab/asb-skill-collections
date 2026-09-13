@@ -1,9 +1,11 @@
 ---
 name: backend-compatibility-verification-visualization-library
-description: Use when you have mass spectrometry data loaded into a pandas DataFrame with m/z, retention time, and intensity columns, and need to confirm that pyOpenMS-Viz can produce visualizations (spectra, chromatograms, or peak maps) using a specific plotting backend (matplotlib, Bokeh, or Plotly) on real.
+description: Use when you have mass spectrometry data loaded into a pandas DataFrame
+  with m/z, retention time, and intensity columns, and need to confirm that pyOpenMS-Viz
+  can produce visualizations (spectra, chromatograms, or peak maps) using a specific
+  plotting backend (matplotlib, Bokeh, or Plotly) on real.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_0570
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -20,6 +22,8 @@ metadata:
   - alphatims
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.4c00873
   title: pyopenmsviz

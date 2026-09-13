@@ -1,9 +1,9 @@
 ---
 name: isotopologue-ratio-quality-assessment
-description: Use when evaluating the reliability of non-targeted data pre-processing (NPP) tools (XCMS, MZmine 2, MS-DIAL, etc.) on known metabolite peaks.
+description: Use when evaluating the reliability of non-targeted data pre-processing
+  (NPP) tools (XCMS, MZmine 2, MS-DIAL, etc.) on known metabolite peaks.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3629
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,12 +16,15 @@ metadata:
   - enviPat
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
-- doi: 10.1093/bioinformatics/btab231/6214530
+- doi: 10.1093/bioinformatics/btab231
   title: mzRAPP
 evidence_spans:
 - 'You can now start mzRAPP using: library(mzRAPP); callmzRAPP()'
-- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing (NPP)
+- The goal of mzRAPP is to allow reliability assessment of non-targeted data pre-processing
+  (NPP)
 - You can then assess the performance of NPP runs we have performed via XCMS
 - Download the XCMS- and MZmine 2-output files from [ucloud]
 - library(mzRAPP)
@@ -32,15 +35,15 @@ provenance:
   assembled_by: scripts/collect_metabolomics_collection.py
   sources:
   - build: coll_mzrapp_cq
-    doi: 10.1093/bioinformatics/btab231/6214530
+    doi: 10.1093/bioinformatics/btab231
     title: mzRAPP
   dedup_kept_from: coll_mzrapp_cq
 schema_version: 0.2.0
 attribution:
   generator: AgenticScienceBuilder
-  original_doi: 10.1093/bioinformatics/btab231/6214530
+  original_doi: 10.1093/bioinformatics/btab231
   all_source_dois:
-  - 10.1093/bioinformatics/btab231/6214530
+  - 10.1093/bioinformatics/btab231
   zenodo_doi: 10.5281/zenodo.20794027
   curators: []
   promoter: Louis-Félix Nothias

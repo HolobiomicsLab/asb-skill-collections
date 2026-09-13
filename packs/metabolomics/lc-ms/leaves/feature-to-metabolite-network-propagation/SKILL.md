@@ -1,9 +1,10 @@
 ---
 name: feature-to-metabolite-network-propagation
-description: Use when you have an untargeted metabolomics feature table (m/z, retention time, p-value from statistical test) but lack comprehensive metabolite identifications or MS/MS annotations.
+description: Use when you have an untargeted metabolomics feature table (m/z, retention
+  time, p-value from statistical test) but lack comprehensive metabolite identifications
+  or MS/MS annotations.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3628
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +16,8 @@ metadata:
   - mass2chem
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1371/journal.pcbi.1003123
   title: mummichog

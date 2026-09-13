@@ -1,9 +1,10 @@
 ---
 name: scalability-extrapolation-and-throughput-estimation
-description: Use when you have a new or modified LC-MS data processing tool and need to determine whether it can handle production-scale sample cohorts (50–100+ samples) on modest hardware (single-core CPU, ≤16 GB RAM).
+description: Use when you have a new or modified LC-MS data processing tool and need
+  to determine whether it can handle production-scale sample cohorts (50–100+ samples)
+  on modest hardware (single-core CPU, ≤16 GB RAM).
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -18,11 +19,14 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41467-023-39889-1
   title: asari
 evidence_spans:
-- Trackable and scalable Python program for high-resolution LC-MS metabolomics data preprocessing
+- Trackable and scalable Python program for high-resolution LC-MS metabolomics data
+  preprocessing
 - Trackable and scalable Python program for high-resolution metabolomics data processing.
 - The default method uses `pymzml` to parse mzML files.
 claims: []

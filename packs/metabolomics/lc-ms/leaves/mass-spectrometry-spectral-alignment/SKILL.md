@@ -1,9 +1,10 @@
 ---
 name: mass-spectrometry-spectral-alignment
-description: Use when you have a pair of MS/MS spectra—one from a known compound and one from a structurally modified variant of that compound—and you need to identify which atoms in the structure likely bear the modification.
+description: Use when you have a pair of MS/MS spectra—one from a known compound and
+  one from a structurally modified variant of that compound—and you need to identify
+  which atoms in the structure likely bear the modification.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3650
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +17,8 @@ metadata:
   - GNPS
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00061
   title: ModiFinder
@@ -25,7 +28,8 @@ evidence_spans:
 - ModiFinder requires Python 3.9 or above.
 - ModiFinder requires Python 3.9 or above
 - 'rdkit: http://www.rdkit.org/'
-- ModiFinder includes powerful visualization tools built on RDKit and matplotlib for creating publication-quality figures.
+- ModiFinder includes powerful visualization tools built on RDKit and matplotlib for
+  creating publication-quality figures.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

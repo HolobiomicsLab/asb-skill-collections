@@ -1,9 +1,11 @@
 ---
 name: distance-metric-calculation-bray-curtis-euclidean-jaccard
-description: Use when you have normalized peak intensity data (or absence/presence matrices) from metabolomics experiments with multiple samples and need to quantify compositional differences between them prior to multivariate analysis. This step is essential when testing whether categorical factors (e.
+description: Use when you have normalized peak intensity data (or absence/presence
+  matrices) from metabolomics experiments with multiple samples and need to quantify
+  compositional differences between them prior to multivariate analysis. This step
+  is essential when testing whether categorical factors (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,13 +18,18 @@ metadata:
   - R (version 4.0.2 or above)
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1186/s40168-023-01476-3
   title: MetaboDirect
 evidence_spans:
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2 [39]
-- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis (e.g., chemodiversity analysis, multivariate statistics)
-- distances (depending on the selected normalization method) using the "vegdist" function for the vegan package and then used to perform a permutational analysis of variance (PERMANOVA)
+- develop MetaboDirect, an open‑source, command‑line‑based pipeline for the analysis
+  (e.g., chemodiversity analysis, multivariate statistics)
+- distances (depending on the selected normalization method) using the "vegdist" function
+  for the vegan package and then used to perform a permutational analysis of variance
+  (PERMANOVA)
 - The MetaboDirect pipeline was developed in Python 3.8
 - The MetaboDirect pipeline was developed in Python 3.8 [38] and R 4.0.2
 claims: []

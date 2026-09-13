@@ -1,9 +1,11 @@
 ---
 name: peak-annotation-refinement-structure-driven
-description: Use when you have two related compounds (a known reference and its structural analog with unknown modification site), baseline peak annotations from cosine alignment, and newly available structural information (SMILES or molecular structure) for the modified compound.
+description: Use when you have two related compounds (a known reference and its structural
+  analog with unknown modification site), baseline peak annotations from cosine alignment,
+  and newly available structural information (SMILES or molecular structure) for the
+  modified compound.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -18,6 +20,8 @@ metadata:
   - MAGMaAnnotationEngine
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/jasms.4c00061
   title: ModiFinder
@@ -27,7 +31,8 @@ evidence_spans:
 - ModiFinder requires Python 3.9 or above.
 - ModiFinder requires Python 3.9 or above
 - 'rdkit: http://www.rdkit.org/'
-- ModiFinder includes powerful visualization tools built on RDKit and matplotlib for creating publication-quality figures.
+- ModiFinder includes powerful visualization tools built on RDKit and matplotlib for
+  creating publication-quality figures.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

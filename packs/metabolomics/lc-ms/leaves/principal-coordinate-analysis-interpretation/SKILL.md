@@ -1,9 +1,10 @@
 ---
 name: principal-coordinate-analysis-interpretation
-description: Use when when you have computed pairwise distances between MS2 fingerprint vectors from multiple metabolomics samples and need to visualize sample similarity relationships in low dimensions.
+description: Use when when you have computed pairwise distances between MS2 fingerprint
+  vectors from multiple metabolomics samples and need to visualize sample similarity
+  relationships in low dimensions.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3935
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -17,6 +18,8 @@ metadata:
   - MEMO
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.3389/fbinf.2022.842964
   title: memo

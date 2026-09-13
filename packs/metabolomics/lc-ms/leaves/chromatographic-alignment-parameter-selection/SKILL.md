@@ -1,9 +1,10 @@
 ---
 name: chromatographic-alignment-parameter-selection
-description: Use when after chromatographic peak detection (e.g. centWave) has been performed on LC-MS data and you need to group features that likely originate from the same compound.
+description: Use when after chromatographic peak detection (e.g. centWave) has been
+  performed on LC-MS data and you need to group features that likely originate from
+  the same compound.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -14,11 +15,14 @@ metadata:
   - MsExperiment
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac051437y
   title: XCMS
 evidence_spans:
-- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")` package with additional functionality being implemented
+- General MS feature grouping functionality if defined by the `r Biocpkg("MsFeatures")`
+  package with additional functionality being implemented
 - VignetteDepends{xcms,BiocStyle,faahKO,pheatmap,MsFeatures}
 claims: []
 provenance:

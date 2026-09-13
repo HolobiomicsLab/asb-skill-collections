@@ -1,9 +1,11 @@
 ---
 name: dda-acquisition-data-handling
-description: Use when you have raw or processed LC-MS/MS data from DDA mode acquisitions and need to extract, annotate, and structure MS/MS spectra with purity labels (or quality indicators) to serve as input to the DNMS2Purifier customized model training workflow, or to prepare data for purification of.
+description: Use when you have raw or processed LC-MS/MS data from DDA mode acquisitions
+  and need to extract, annotate, and structure MS/MS spectra with purity labels (or
+  quality indicators) to serve as input to the DNMS2Purifier customized model training
+  workflow, or to prepare data for purification of.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3632
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -15,6 +17,8 @@ metadata:
   - R 4.2.1
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c00736
   title: DNMS2Purifier

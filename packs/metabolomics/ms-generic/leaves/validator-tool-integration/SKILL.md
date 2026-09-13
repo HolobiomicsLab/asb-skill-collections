@@ -1,9 +1,10 @@
 ---
 name: validator-tool-integration
-description: Use when you have a repository of structured records (e.g., mass spectrometry data, metadata, or domain-specific formats) and need to enforce validation rules systematically across all records.
+description: Use when you have a repository of structured records (e.g., mass spectrometry
+  data, metadata, or domain-specific formats) and need to enforce validation rules
+  systematically across all records.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3096
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -13,6 +14,8 @@ metadata:
   - MassBank-cli-tools
   techniques:
   - mass-spectrometry
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/jms.1777
   title: MassBank

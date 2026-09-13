@@ -1,9 +1,10 @@
 ---
 name: neural-network-model-training
-description: Use when you have downloaded LC-MS spectral peak data (DOI 10.25345/C5FD2F or equivalent) and need to build a supervised deep neural network classifier to distinguish peak classes in mass spectrometry data.
+description: Use when you have downloaded LC-MS spectral peak data (DOI 10.25345/C5FD2F
+  or equivalent) and need to build a supervised deep neural network classifier to
+  distinguish peak classes in mass spectrometry data.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3927
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,6 +16,8 @@ metadata:
   - EDML_deep_learning2.py
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b02983
   title: DNN peak classifier

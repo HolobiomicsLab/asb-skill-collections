@@ -1,9 +1,11 @@
 ---
 name: compound-isotope-and-adduct-grouping
-description: Use when after XCMS feature detection, retention time correction, regrouping, and missing value imputation have produced an aligned feature table with multiple signals per compound. Use it when your data contains isotopic peaks (e.g., ¹³C variants) and multiple ionization products (e.
+description: Use when after XCMS feature detection, retention time correction, regrouping,
+  and missing value imputation have produced an aligned feature table with multiple
+  signals per compound. Use it when your data contains isotopic peaks (e.g., ¹³C variants)
+  and multiple ionization products (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3933
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -19,13 +21,16 @@ metadata:
   techniques:
   - LC-MS
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/ac501530d
   title: RAMClust
 evidence_spans:
 - ramclustR function is built to use xcms data
 - RC <- ramclustR(xcmsObj = xset, ExpDes=experiment)
-- submitting this score matrix for heirarchical clustering, and then cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
+- submitting this score matrix for heirarchical clustering, and then cutting the resulting
+  dendrogram into neat chunks using the dynamicTreeCut package
 - cutting the resulting dendrogram into neat chunks using the dynamicTreeCut package
 - We have adapted the 'findMain' function from the 'InterpretMSSpectrum' CRAN package
 claims: []

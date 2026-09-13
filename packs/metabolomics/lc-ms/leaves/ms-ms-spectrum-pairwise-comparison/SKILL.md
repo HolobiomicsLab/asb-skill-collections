@@ -1,9 +1,10 @@
 ---
 name: ms-ms-spectrum-pairwise-comparison
-description: Use when you have millions of MS/MS spectra in mzML, mzXML, or MGF format that have been converted to low-dimensional vectors via feature hashing, and you need to identify which spectra are similar enough to cluster together.
+description: Use when you have millions of MS/MS spectra in mzML, mzXML, or MGF format
+  that have been converted to low-dimensional vectors via feature hashing, and you
+  need to identify which spectra are similar enough to cluster together.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3767
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -13,11 +14,14 @@ metadata:
   - spectrum-utils
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1002/rcm.9153
   title: falcon
 evidence_spans:
-- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly efficient processing of millions of MS/MS spectra.
+- The _falcon_ spectrum clustering tool uses advanced algorithmic techniques for highly
+  efficient processing of millions of MS/MS spectra.
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

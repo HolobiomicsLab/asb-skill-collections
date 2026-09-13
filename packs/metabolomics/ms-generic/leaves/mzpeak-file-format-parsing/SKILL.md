@@ -1,9 +1,12 @@
 ---
 name: mzpeak-file-format-parsing
-description: Use when when you have mass spectrometry data stored in mzPeak format (ZIP archive containing Parquet files) and need to read spectrum metadata, chromatogram metadata, and signal data (m/z and intensity arrays) for analysis. Use this skill if your input is an .
+description: Use when when you have mass spectrometry data stored in mzPeak format
+  (ZIP archive containing Parquet files) and need to read spectrum metadata, chromatogram
+  metadata, and signal data (m/z and intensity arrays) for analysis. Use this skill
+  if your input is an .
 license: CC-BY-4.0
 metadata:
-  license_tier: open
+  grounding_tier: link-only
   edam_operation: http://edamontology.org/operation_3357
   edam_topics:
   - http://edamontology.org/topic_3520
@@ -16,6 +19,8 @@ metadata:
   - mzPeak specification
   techniques:
   - mass-spectrometry
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.jproteome.5c00435
   title: mzpeak

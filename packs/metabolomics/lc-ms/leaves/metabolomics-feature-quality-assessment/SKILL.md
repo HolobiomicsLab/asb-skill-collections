@@ -1,9 +1,9 @@
 ---
 name: metabolomics-feature-quality-assessment
-description: Use when after drift correction and before missing value imputation when your LC-MS peak table contains features with variable detection rates across samples.
+description: Use when after drift correction and before missing value imputation when
+  your LC-MS peak table contains features with variable detection rates across samples.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -16,6 +16,8 @@ metadata:
   - Biobase
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.3390/metabo10040135
   title: notame
@@ -27,7 +29,8 @@ evidence_spans:
 - reads them to R, conducts additional preprocessing and statistical analyses
 - The implementation we use (from the missForest package) can be parallelized
 - Load the libraries (doParallel is used for parallel processing)
-- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package by Bioconductor'
+- '```MetaboSet``` is built upon the ```ExpressionSet``` class from the Biobase package
+  by Bioconductor'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

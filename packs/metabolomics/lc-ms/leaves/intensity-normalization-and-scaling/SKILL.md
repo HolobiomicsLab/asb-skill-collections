@@ -1,9 +1,10 @@
 ---
 name: intensity-normalization-and-scaling
-description: Use when when working with raw or filtered MsmsSpectrum objects where peak intensities span a wide dynamic range and need to be normalized for downstream spectrum comparison, database matching, or publication-quality visualization.
+description: Use when when working with raw or filtered MsmsSpectrum objects where
+  peak intensities span a wide dynamic range and need to be normalized for downstream
+  spectrum comparison, database matching, or publication-quality visualization.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3435
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -13,6 +14,8 @@ metadata:
   - spectrum_utils
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.9b04884
   title: spectrumutils

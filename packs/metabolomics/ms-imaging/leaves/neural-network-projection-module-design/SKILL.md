@@ -1,9 +1,10 @@
 ---
 name: neural-network-projection-module-design
-description: Use when when you have 512-dimensional (or other fixed-size) representation vectors output from paired encoders processing augmented versions of the same input (e.
+description: Use when when you have 512-dimensional (or other fixed-size) representation
+  vectors output from paired encoders processing augmented versions of the same input
+  (e.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3891
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -13,6 +14,8 @@ metadata:
   - PyTorch
   techniques:
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c05002
   title: deepion

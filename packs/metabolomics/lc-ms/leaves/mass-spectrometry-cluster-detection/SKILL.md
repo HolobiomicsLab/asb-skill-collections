@@ -1,9 +1,9 @@
 ---
 name: mass-spectrometry-cluster-detection
-description: Use when you have 32-dimensional GLEAMS embeddings (output from the `gleams embed` step) and need to group spectra by their underlying peptide identity.
+description: Use when you have 32-dimensional GLEAMS embeddings (output from the `gleams
+  embed` step) and need to group spectra by their underlying peptide identity.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3432
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -13,12 +13,15 @@ metadata:
   - Python
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41592-022-01496-1
   title: GLEAMS
 evidence_spans:
 - GLEAMS encodes mass spectra as vectors of features and feeds them to a neural network
-- GLEAMS is a Learned Embedding for Annotating Mass Spectra. GLEAMS encodes mass spectra as vectors of features and feeds them to a neural network
+- GLEAMS is a Learned Embedding for Annotating Mass Spectra. GLEAMS encodes mass spectra
+  as vectors of features and feeds them to a neural network
 - GLEAMS requires Python 3.8, a Linux operating system, and a CUDA-enabled GPU
 claims: []
 provenance:

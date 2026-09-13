@@ -1,9 +1,10 @@
 ---
 name: gc-ms-abundance-preprocessing
-description: Use when after autoQ has extracted isotopologue peak area measurements from mz(X)ML files and you need to prepare the integrations data frame for visualization with metBarPlot or comparative analysis.
+description: Use when after autoQ has extracted isotopologue peak area measurements
+  from mz(X)ML files and you need to prepare the integrations data frame for visualization
+  with metBarPlot or comparative analysis.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3438
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,6 +16,8 @@ metadata:
   - metBarPlot
   techniques:
   - GC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c02998
   title: isoSCAN
@@ -22,7 +25,8 @@ evidence_spans:
 - install_github("jcapelladesto/isoSCAN") library(isoSCAN)
 - install_github("jcapelladesto/isoSCAN")
 - To Install from R console
-- 'To Install from R console: ```` install.packages("devtools", dependencies=TRUE) library(devtools)'
+- 'To Install from R console: ```` install.packages("devtools", dependencies=TRUE)
+  library(devtools)'
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2

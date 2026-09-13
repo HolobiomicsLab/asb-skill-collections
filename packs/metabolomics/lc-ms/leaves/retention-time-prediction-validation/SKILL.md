@@ -1,9 +1,10 @@
 ---
 name: retention-time-prediction-validation
-description: Use when after training a GNN-RT model on preprocessed molecular graph data (from Train.py) or after applying transfer learning to an in-house dataset (from Transferlearning.
+description: Use when after training a GNN-RT model on preprocessed molecular graph
+  data (from Train.py) or after applying transfer learning to an in-house dataset
+  (from Transferlearning.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3443
   edam_topics:
   - http://edamontology.org/topic_3407
@@ -18,6 +19,8 @@ metadata:
   - Transferlearning.py
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.0c04071
   title: GNN-RT

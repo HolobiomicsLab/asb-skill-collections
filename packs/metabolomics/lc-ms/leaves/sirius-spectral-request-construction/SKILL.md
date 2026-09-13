@@ -1,9 +1,11 @@
 ---
 name: sirius-spectral-request-construction
-description: Use when when you have processed LC-MS/MS data with precursor m/z, ionization mode, collision energy (if available), and fragment peak lists (m/z and intensity pairs), and need to query CSI:FingerID for molecular fingerprint predictions as part of an automated metabolite identification workflow.
+description: Use when when you have processed LC-MS/MS data with precursor m/z, ionization
+  mode, collision energy (if available), and fragment peak lists (m/z and intensity
+  pairs), and need to query CSI:FingerID for molecular fingerprint predictions as
+  part of an automated metabolite identification workflow.
 license: CC-BY-4.0
 metadata:
-  license_tier: open
   edam_operation: http://edamontology.org/operation_3647
   edam_topics:
   - http://edamontology.org/topic_0602
@@ -14,6 +16,8 @@ metadata:
   - CANOPUS
   techniques:
   - LC-MS
+  license_tier: open
+  provenance_tier: literature
 derived_from:
 - doi: 10.1038/s41587-021-01045-9
   title: cosmic

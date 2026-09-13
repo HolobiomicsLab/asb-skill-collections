@@ -1,9 +1,11 @@
 ---
 name: statistical-filtering-metabolite-features
-description: Use when when you have peak area tables (unlabeled C12 and labeled C13) from LC-MS metabolomics with sample metadata indicating case and control groups, and you need to distinguish true metabolic changes from instrumental noise or batch artifacts before attempting isotopic pairing.
+description: Use when when you have peak area tables (unlabeled C12 and labeled C13)
+  from LC-MS metabolomics with sample metadata indicating case and control groups,
+  and you need to distinguish true metabolic changes from instrumental noise or batch
+  artifacts before attempting isotopic pairing.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3695
   edam_topics:
   - http://edamontology.org/topic_0091
@@ -23,6 +25,8 @@ metadata:
   - IsoPairFinder
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1101/2021.12.05.471237v2
   title: isopair

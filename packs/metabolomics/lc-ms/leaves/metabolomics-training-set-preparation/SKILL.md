@@ -1,9 +1,10 @@
 ---
 name: metabolomics-training-set-preparation
-description: Use when when you have LC-MS/MS acquisitions in DDA mode and need to train a customized DNMS2Purifier model to purify chimeric MS/MS spectra specific to your experimental conditions, metabolite classes, or ionization settings.
+description: Use when when you have LC-MS/MS acquisitions in DDA mode and need to
+  train a customized DNMS2Purifier model to purify chimeric MS/MS spectra specific
+  to your experimental conditions, metabolite classes, or ionization settings.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3799
   edam_topics:
   - http://edamontology.org/topic_3172
@@ -15,6 +16,8 @@ metadata:
   - DNMS2Purifier.r
   techniques:
   - LC-MS
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.3c00736
   title: DNMS2Purifier

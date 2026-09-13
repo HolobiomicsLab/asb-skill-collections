@@ -1,9 +1,11 @@
 ---
 name: chemical-database-query-and-matching
-description: Use when when you have mass-to-charge (m/z) values from mass spectrometry imaging or other MS experiments and need to assign molecular formulae with high precision, especially in spatially-resolved metabolomics where traditional LC-MS annotation methods are insufficient.
+description: Use when when you have mass-to-charge (m/z) values from mass spectrometry
+  imaging or other MS experiments and need to assign molecular formulae with high
+  precision, especially in spatially-resolved metabolomics where traditional LC-MS
+  annotation methods are insufficient.
 license: CC-BY-4.0
 metadata:
-  license_tier: restricted
   edam_operation: http://edamontology.org/operation_3282
   edam_topics:
   - http://edamontology.org/topic_0121
@@ -14,11 +16,14 @@ metadata:
   techniques:
   - LC-MS
   - MS-imaging
+  license_tier: restricted
+  provenance_tier: literature
 derived_from:
 - doi: 10.1021/acs.analchem.4c06210
   title: SMART
 evidence_spans:
-- we present SMART, an open-source platform designed for precise formula assignment in mass spectrometry imaging
+- we present SMART, an open-source platform designed for precise formula assignment
+  in mass spectrometry imaging
 claims: []
 provenance:
   collection: https://w3id.org/holobiomicslab/asb-skill/collection/metabolomics/v2
