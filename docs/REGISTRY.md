@@ -266,7 +266,7 @@ asb-skill-collections/
 │   │       │   └── leaderboard.jsonld
 │   │       ├── kb.yaml                    # KB dependency + pinned profile
 │   │       ├── CITATION.cff               # per-collection citation (updated at release)
-│   │       ├── ro-crate-metadata.json     # RO-Crate 1.1 + Workflow Run 0.5
+│   │       ├── ro-crate-metadata.json     # RO-Crate 1.1 + Workflow Run 0.5 — declared, not yet shipped
 │   │       └── README.md
 │   └── epigenomics/
 │       └── v1/ ...
@@ -539,7 +539,7 @@ follows.
 | --- | --- |
 | `collection.yaml` schema compliance | Nothing. `layout_packaging` checks the on-disk layout and `unit_closure` that every declared member resolves, and `--catalogue-membership` checks that the catalogue's advertised members exist — none of them validates `collection.yaml` against a schema. |
 | All `derived_from` DOIs resolve | `provenance_doi_license` checks that each leaf carries a source DOI **or** a repository URL, plus a licence tag. Nothing in this repository resolves a DOI over the network. |
-| RO-Crate metadata validity | No replacement. The gate contains no RO-Crate check. |
+| RO-Crate metadata validity | No replacement. The release gate contains no RO-Crate check, and `validate.yml` gate 8 finds no crate to validate: every `collection.yaml` declares `ro_crate_path: ro-crate-metadata.json` and no collection ships that file. |
 | SKILL.md frontmatter discipline (description length, no marketing terms) | `python scripts/lint_skill_descriptions.py` — a separate script, not part of the gate. |
 | Open-access source tags (if `--require-open-access`) | `access_tier_oa`, which runs unconditionally; `release_gate.py` has no `--require-open-access` flag. |
 
@@ -663,7 +663,7 @@ The promotion step is manual (move the directory), not automated. This allows:
 | **DOI resolution** | `validate.yml` gate 2 | PR | every commit |
 | **Description discipline** | `validate.yml` gate 5 | PR | every commit |
 | **EDAM IRI resolution** | `validate.yml` gate 6 | PR | every commit |
-| **RO-Crate validity** | `validate.yml` gate 8 | PR | every commit |
+| **RO-Crate validity** | `validate.yml` gate 8 | no — `continue-on-error`, and it currently validates zero files | every commit |
 | **indicium round-trip** | `validate.yml` gate 9 | PR | every commit (warn-only if indicium-adapters unavailable) |
 | **Marketplace.json schema** | `validate.yml` gate 10 | PR | every commit |
 | **Release-gate (release.yml)** | `release.yml` + human sign-off | tag | on `<slug>-v[0-9]*` tag |

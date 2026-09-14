@@ -26,7 +26,7 @@
 - [ ] `collection.yaml` validates against LinkML schema
 - [ ] `curator-criteria.yaml` is filled in for the domain
 - [ ] `CITATION.cff` includes all contributors
-- [ ] RO-Crate metadata is valid (Workflow Run Profile 0.5)
+- [ ] RO-Crate metadata is valid (Workflow Run Profile 0.5) — n/a while no collection ships a crate
 - [ ] At least 1 skill has `evidence_spans` linking to a verifiable paper quote
 - [ ] Description discipline passes CI lint (50-300 chars, "Use when..." lead)
 

@@ -486,10 +486,15 @@ Neither command runs in that workflow. What `validate.yml` actually runs, on eve
 PR to `main` and every push to `main` — not on a `staged-collections/` path filter —
 is: the test suite; `scripts.skill_index`; `marketplace.json` validation;
 `scripts.lint_skill_descriptions`; a sampled `derived_from` DOI resolution; EDAM IRI
-resolution; RO-Crate validation; the indicium round-trip (inert — the CLI is not on
-PyPI, so it emits a `::warning::` and never blocks); LinkML schema validation; and the
-license-tier, provenance-tier and tool-catalogue gates over
-`collections/metabolomics/v2`.
+resolution; RO-Crate validation (inert — no collection ships an
+`ro-crate-metadata.json`, so the step validates zero files, emits a `::warning::` and
+never blocks, while every `collection.yaml` declares `ro_crate_path`); the indicium
+round-trip (inert — the CLI is not on PyPI, so it emits a `::warning::` and never
+blocks); LinkML schema validation; the pack-derivation gate
+(`scripts.build_packs --check`); the advertised-count gate
+(`scripts.check_advertised_counts`); and the license-tier, provenance-tier and
+tool-catalogue gates — the first two over `collections/metabolomics/v2` and every
+pack, the third over the collection.
 
 Three separate errors are corrected here.
 

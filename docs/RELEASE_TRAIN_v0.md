@@ -71,7 +71,7 @@ This runbook documents the complete **linear release pipeline** for ASB-Skill-Co
 - ✓ No orphan skills (every skill is rooted in at least one paper)
 - ✓ Description discipline: starts with approved prefix, 50–300 chars, no marketing terms
 - ✓ EDAM IRIs are well-formed (http://edamontology.org/...)
-- ✓ RO-Crate metadata is present and valid
+- ✗ RO-Crate metadata is present and valid — no collection ships a crate; gate 8 validates zero files
 - ✓ verify-claims round-trip (indicium adapter) passes (gate 9)
 - ✓ Marketplace.json declares all skills
 
@@ -356,7 +356,7 @@ The release-gate reviews (gates 13, 14 in the SPEC: independent co-reviewer and 
 | 2 | No orphan skills (DOI resolution sample) | PR, push-main, tag | ✓ | ✓ |
 | 5 | Description discipline lint | PR, push-main, tag | ✓ | ✓ |
 | 6 | EDAM IRI resolution | PR, push-main, tag | ✓ | ✓ |
-| 8 | RO-Crate validation (Workflow Run Profile 0.5) | PR, push-main, tag | ✓ | ✓ |
+| 8 | RO-Crate validation (Workflow Run Profile 0.5) | PR, push-main, tag | ✓ | inert — no crate exists, so the step validates zero files and never blocks |
 | 9 | indicium round-trip (verify-claims CLI) | PR, push-main, tag | ✓ | warn-only (indicium-adapters not yet on PyPI) |
 | 10 | Plugin manifest validation (.claude-plugin/marketplace.json) | PR, push-main, tag | ✓ | ✓ |
 | 3, 4, 7 | PII/dual-use gate (FAIL on clinical IDs, WARN else) | TBD | ✗ | n/a |

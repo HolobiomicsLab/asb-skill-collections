@@ -51,6 +51,17 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   and never re-run over the packs. Pack leaves are now byte copies of the
   collection leaf of the same slug and both indexes are the collection's own
   rows filtered to the pack's members.
+- Say what the RO-Crate gate measured. No collection ships an
+  `ro-crate-metadata.json`, so `validate.yml` gate 8 validated zero files and
+  printed `PASS: RO-Crate validation OK (0 crates checked)` — which reads in the
+  PR checks exactly like an enforced gate that passed, and it is
+  `continue-on-error` besides. It now emits a `::warning::` and says it did not
+  run, the way gate 9 already does, and `docs/REGISTRY.md`,
+  `docs/RELEASE_TRAIN_v0.md`, the PR template and `governance/CONTENT_POLICY.md`
+  no longer assert that a crate is present and valid. All four `collection.yaml`
+  files still declare `ro_crate_path: ro-crate-metadata.json`; whether to drop
+  the field or ship the crates is recorded for the maintainers, not decided
+  here.
 - Stop binding compiled-bytecode caches into a release receipt. The gate
   snapshots the tree it finds on disk, so the two `__pycache__` files that
   running `collections/metabolomics/v2/bin/`'s own search scripts leaves behind
