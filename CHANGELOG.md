@@ -28,6 +28,12 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   keeps its historical score/slug order unchanged. See `docs/selection.md`.
 
 ### Fixed
+- Write unit `kb_bundle.json` the way every other producer writes it.
+  `build_grounding_bundle.py` used the `json.dumps` default `ensure_ascii=True`
+  while `build_packs.py` and `skill_index.py` write `ensure_ascii=False`, so
+  running the repository's own `scripts/build_all_grounding.sh` over a tree
+  another producer had written re-escaped every non-ASCII tool name — 85 rows
+  across six packs, changing no content.
 - An installed unit that is moved on disk stays usable and stays removable. Every
   bound entry now names its asset root relative to its own directory alongside the
   absolute path, and its documented first step resolves from the entry rather than

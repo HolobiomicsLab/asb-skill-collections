@@ -138,7 +138,13 @@ def build_unit(unit_dir, collection_dir, bind_script):
     full = json.loads((collection_dir / "kb_bundle.json").read_text())
     bundle = filter_and_enrich_bundle(full, slugs, _read_corpus(collection_dir))
     written = []
-    (unit_dir / "kb_bundle.json").write_text(json.dumps(bundle, indent=2) + "\n")
+    # ensure_ascii=False matches every other producer of this file
+    # (scripts/build_packs.py, scripts/skill_index.py); the default escapes the
+    # non-ASCII tool names the shipped bundles carry literally, so re-running
+    # this over a tree another producer wrote reformatted hundreds of rows.
+    (unit_dir / "kb_bundle.json").write_text(
+        json.dumps(bundle, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
+    )
     written.append("kb_bundle.json")
     (unit_dir / "bin").mkdir(exist_ok=True)
     shutil.copyfile(bind_script, unit_dir / "bin" / "perspicacite_kb_bind.py")
