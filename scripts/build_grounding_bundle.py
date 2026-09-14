@@ -40,15 +40,26 @@ def _normalize_repo_url(u):
     return u
 
 
-def resolve_repo_urls(skill_dois, corpus_papers):
-    """Repositories to clone as `repo`-tier grounding for a skill: its own papers'.
+def resolve_repo_urls(skill_dois, corpus_papers, declared=None):
+    """Repositories to clone as `repo`-tier grounding for a skill: its own sources'.
 
     Tool records used to contribute here too, via their `canonical_url`. That field
     held the repository of *some* paper citing the tool, not necessarily one of this
     skill's papers and never the tool's own home, so a skill grounded on paper A
     could be handed paper B's repository to read. Issue #42.
+
+    A skill with no papers is the other half of that rule. Deriving from its DOIs
+    yields nothing, but its declared `repo_urls` is not another paper's repository —
+    it is the skill's own source, the only one it has, so it is kept rather than
+    erased.
     """
     out = []
+    if not skill_dois:
+        for u in declared or []:
+            url = _normalize_repo_url(u)
+            if url and url not in out:
+                out.append(url)
+        return out
     by_doi = {p.get("doi"): p for p in corpus_papers}
     for d in skill_dois:
         url = _normalize_repo_url((by_doi.get(d) or {}).get("repo_url"))
@@ -66,7 +77,9 @@ def filter_and_enrich_bundle(full_bundle, skill_slugs, corpus_papers):
         if rec is None:
             continue
         rec = dict(rec)
-        rec["repo_urls"] = resolve_repo_urls(rec.get("dois") or [], corpus_papers)
+        rec["repo_urls"] = resolve_repo_urls(
+            rec.get("dois") or [], corpus_papers, rec.get("repo_urls")
+        )
         kept[slug] = rec
         dois.update(rec.get("dois") or [])
     out = {

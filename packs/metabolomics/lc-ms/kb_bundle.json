@@ -33399,7 +33399,9 @@
       "dois": [],
       "kb_slugs": [],
       "license_tier": "noncommercial",
-      "repo_urls": [],
+      "repo_urls": [
+        "https://github.com/zamboni-lab/masster-dist"
+      ],
       "tools": [
         "Masster"
       ],

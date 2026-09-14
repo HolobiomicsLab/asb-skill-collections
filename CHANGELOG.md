@@ -28,6 +28,15 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   keeps its historical score/slug order unchanged. See `docs/selection.md`.
 
 ### Fixed
+- Stop erasing the repository of a skill that has no papers. `resolve_repo_urls`
+  exists so a skill is never handed another paper's repository (issue #42), and
+  it derives from the skill's DOIs — which leaves a skill with no DOIs with
+  nothing. The corpus has one, `masster` (`provenance_tier: repository`), whose
+  declared repository is its own source and not somebody else's; deriving the
+  `lc-ms` pack in R7 both added that leaf to the pack for the first time and
+  shipped it with an empty grounding map. A record with no papers now keeps its
+  declared `repo_urls`; a record with papers is still re-derived and its declared
+  list still ignored.
 - Write unit `kb_bundle.json` the way every other producer writes it.
   `build_grounding_bundle.py` used the `json.dumps` default `ensure_ascii=True`
   while `build_packs.py` and `skill_index.py` write `ensure_ascii=False`, so
