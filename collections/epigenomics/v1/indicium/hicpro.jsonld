@@ -865,7 +865,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_001/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Reads are first aligned on the reference genome using the bowtie2 end-to-end algorithm [26]. At this point, unmapped reads are mainly composed of chimeric fragments spanning the ligation junction. According to the Hi-C protocol and the fill-in strategy, HiC-Pro is then able to detect the ligation site using an exact matching procedure and to align back on the genome the 5\u2032 fraction of the read. Both mapping steps are then merged in a single alignment file. Low mapping quality reads, multiple hits and singletons can be discarded.",
       "asbval:note": "The paper describes post-processing of alignment output including ligation site detection, chimeric read handling, and filtering of low-quality reads.",
@@ -885,7 +885,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_001/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Reads are first aligned on the reference genome using the bowtie2 end-to-end algorithm [26].",
       "asbval:note": "bowtie2 is explicitly named as the read alignment tool used in HiC-Pro.",
@@ -905,7 +905,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_001/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the bowtie2 mapper [26], R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19), Python (>2.7)",
       "asbval:note": "Paper specifies Samtools (>0.1.19), not samtools (>=1.9). The version requirement in the card is more stringent than what the paper states.",
@@ -925,7 +925,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_001/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MultiQC is not mentioned anywhere in the provided passages. The paper describes quality controls performed by HiC-Pro itself (Fig. 5), not use of MultiQC.",
@@ -945,7 +945,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_001/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of a 'config-system.txt' file in the passages. The paper mentions 'a single configuration file' where 'Analysis parameters are all defined' but does not name it or describe it as containing resolved paths to binaries.",
@@ -965,7 +965,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_001/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_001/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "HiC-Pro is organized into four distinct modules following the main steps of Hi-C data analysis: (i) read alignment, (ii) detection and filtering of valid interaction products, (iii) binning and (iv) contact map normalization",
       "asbval:note": "The paper describes the read alignment stage as a core module of HiC-Pro using bowtie2.",
@@ -985,7 +985,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card's research question focuses narrowly on post-processing of SAM/BAM files, but the paper's scope is broader: HiC-Pro is a complete pipeline from raw reads to normalized contact maps, with alignment being only the first of four modules.",
@@ -1002,7 +1002,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_002/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes SAM/BAM processing and filtering of aligned reads (passages 5-6), but the task card title claims to 'reconstruct' this stage, which is not a stated research objective. The paper presents HiC-Pro as an existing pipeline that performs these steps, not a reconstruction task. Title does not align with the research_question or expected_outputs.",
@@ -1022,7 +1022,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_002/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "HiC-Pro proposes a fast sparse-based implementation of the iterative correction method [17], allowing normalization of genome-wide high-resolution contact matrices in a short time and with reasonable memory requirements.",
       "asbval:note": "The paper extensively discusses iterative correction (ICE) algorithm and its implementation. Passage 5 explicitly compares HiC-Pro's implementation with the iced package: 'The code for the normalization is available as a standalone package (https://github.com/hiclib/iced) as well as being included in HiC-Pro.'",
@@ -1042,7 +1042,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_002/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The code for the normalization is available as a standalone package (https://github.com/hiclib/iced) as well as being included in HiC-Pro.",
       "asbval:note": "iced is confirmed as a standalone Python package for iterative correction normalization.",
@@ -1062,7 +1062,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_002/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper specifies Python (>2.7), not (>3.7). The card claims a higher minimum version than the paper states.",
@@ -1082,7 +1082,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_002/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_002/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper confirms numpy is required but does not specify version >=1.18.1. No version constraint is stated in the paper.",
@@ -1102,7 +1102,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_002/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_002/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper confirms scipy is required but does not specify version >=1.4.1. No version constraint is stated in the paper.",
@@ -1122,7 +1122,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_002/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_002/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MultiQC is not mentioned anywhere in the provided passages. HiC-Pro performs its own quality controls (passage 7) but does not reference MultiQC.",
@@ -1142,7 +1142,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_002/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_002/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The code for the normalization is available as a standalone package (https://github.com/hiclib/iced) as well as being included in HiC-Pro.",
       "asbval:note": "iced is confirmed as an installable standalone Python package.",
@@ -1162,7 +1162,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_002/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_002/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our normalization implementation exploits numpy's dense array format and fast operations, scipy's sparse matrices representation and Cython to combine C and Python",
       "asbval:note": "Paper confirms iced depends on numpy and scipy, but does not describe validation logging as an expected output of installation.",
@@ -1182,7 +1182,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The task card title ('Reconstruct the SAM processing stage...') does not align with the research_question (about ICE normalization algorithm). These appear to be from different tasks.",
@@ -1200,7 +1200,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_003/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Most of the installation steps are fully automatic using a simple command line. The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "Paper confirms automatic detection and installation of bowtie2 and samtools, but does not describe the mechanism for detecting paths or generating config files. The paper mentions 'Analysis parameters are all defined in a single configuration file' but does not detail how paths are detected or encoded in config-system.txt.",
@@ -1220,7 +1220,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_003/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'config-system.txt' file in any passage. Paper mentions 'a single configuration file' for analysis parameters but does not name it or describe encoding of binary paths and cluster scheduler type.",
@@ -1240,7 +1240,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_003/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "HiC-Pro proposes a fast sparse-based implementation of the iterative correction method [17], allowing normalization of genome-wide high-resolution contact matrices in a short time and with reasonable memory requirements.",
       "asbval:note": "Paper extensively describes iterative correction (ICE) normalization as a core component of HiC-Pro pipeline.",
@@ -1260,7 +1260,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_003/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MultiQC is not mentioned anywhere in the paper. Paper does not reference MultiQC for quality control aggregation.",
@@ -1280,7 +1280,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_003/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Reads are first aligned on the reference genome using the bowtie2 end-to-end algorithm [26].",
       "asbval:note": "bowtie2 is confirmed as the read alignment tool used by HiC-Pro.",
@@ -1300,7 +1300,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_003/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_003/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Samtools (>0.1.19), Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper specifies samtools requirement as '>0.1.19', not '>=1.9'. The version constraint in the card is more recent than stated in the paper.",
@@ -1320,7 +1320,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_003/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_003/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the bowtie2 mapper [26], R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19), Python (>2.7)",
       "asbval:note": "R is confirmed as a required software dependency.",
@@ -1340,7 +1340,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_003/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_003/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper specifies Python requirement as '>2.7', not '>3.7'. The version constraint in the card is more recent than stated in the paper.",
@@ -1360,7 +1360,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The research_question focuses on installation/configuration detection, which is a setup/infrastructure concern. The title focuses on ICE normalization, which is a core algorithmic task. These are misaligned.",
@@ -1378,7 +1378,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_004/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_004/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The following additional software and libraries are required: the bowtie2 mapper [26], R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19), Python (>2.7) with the pysam, bx.python, numpy and scipy libraries, and the g++ compiler.",
       "asbval:note": "Paper specifies Python >2.7 (not >3.7 as claimed in card). Paper does not mention Conda or environment specification files; it only lists software requirements. The research question assumes a Conda-based installation workflow that is not described in the paper.",
@@ -1398,7 +1398,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_004/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_004/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MultiQC is not mentioned anywhere in the paper passages. No evidence of its use in HiC-Pro.",
@@ -1418,7 +1418,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_004/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_004/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Conda is not mentioned in the paper. The paper describes installation via command line but does not specify Conda as the package manager.",
@@ -1438,7 +1438,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_004/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_004/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper specifies Python >2.7, not >3.7. The minimum version requirement in the card is higher than stated in the paper.",
@@ -1458,7 +1458,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_004/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_004/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R and the BioConductor packages RColorBrewer, ggplot2, grid",
       "asbval:note": "R is explicitly required as a dependency.",
@@ -1478,7 +1478,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_004/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_004/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the bowtie2 mapper [26]",
       "asbval:note": "bowtie2 is explicitly listed as a required tool.",
@@ -1498,7 +1498,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_004/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_004/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Samtools (>0.1.19)",
       "asbval:note": "Paper specifies Samtools >0.1.19, not >=1.9. The version constraint in the card is more restrictive than the paper's requirement.",
@@ -1518,7 +1518,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_004/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_004/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "bx.python",
       "asbval:note": "Paper lists 'bx.python' as a required library but does not specify a version constraint. Card specifies >=0.8.8.",
@@ -1538,7 +1538,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_004/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_004/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "numpy",
       "asbval:note": "Paper lists numpy as required but does not specify a version. Card specifies >=1.18.1.",
@@ -1558,7 +1558,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_004/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_004/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "scipy",
       "asbval:note": "Paper lists scipy as required but does not specify a version. Card specifies >=1.4.1.",
@@ -1578,7 +1578,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_004/010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_004/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "pysam",
       "asbval:note": "Paper lists pysam as required but does not specify a version. Card specifies >=0.15.4.",
@@ -1598,7 +1598,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_004/011",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_004/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ggplot2",
       "asbval:note": "Paper lists ggplot2 as a BioConductor package but does not specify a version. Card specifies >2.2.1.",
@@ -1618,7 +1618,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_004/012",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_004/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "RColorBrewer",
       "asbval:note": "RColorBrewer is explicitly listed as a required BioConductor package.",
@@ -1638,7 +1638,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_004/013",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_004/013",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The code for the normalization is available as a standalone package (https://github.com/hiclib/iced) as well as being included in HiC-Pro.",
       "asbval:note": "iced is mentioned as a standalone normalization package included in HiC-Pro.",
@@ -1658,7 +1658,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_004/014",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_004/014",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe Conda environments or environment activation. The paper only states that installation steps are 'fully automatic using a simple command line' but does not detail Conda-specific workflows.",
@@ -1678,7 +1678,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_004/015",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_004/015",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe generation of a dependency verification report or config-system.txt file. No such output is mentioned in the paper.",
@@ -1698,7 +1698,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_004/016",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_004/016",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention 'config-system.txt' or any configuration system file generation step. The paper mentions a 'configuration file' for analysis parameters but not a system configuration file.",
@@ -1718,7 +1718,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1186_s13059_015_0831_x__task_004/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/card/10_1186_s13059_015_0831_x__task_004/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card describes a Conda-based environment setup workflow that is not present in the paper. The paper only mentions automatic installation via command line without specifying Conda.",
@@ -1737,7 +1737,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/binary-path-detection-and-validation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/binary-path-detection-and-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Most of the installation steps are fully automatic using a simple command line. The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "Paper confirms automatic detection and installation of bowtie2 and samtools if not detected, and mentions a configuration file approach. However, the paper does not explicitly describe a 'locked configuration file' mechanism or comprehensive version constraint validation across all four tools (bowtie2, samtools, R, Python). The paper states version requirements (samtools >0.1.19, bowtie2 >2.2.2 for allele-specific analysis, Python >2.7) but does not detail a unified validation and locking mechanism.",
@@ -1757,7 +1757,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/binary-path-detection-and-validation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/binary-path-detection-and-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the bowtie2 mapper [26]... The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "Confirmed: bowtie2 is used for read alignment and is auto-installed if not detected.",
@@ -1777,7 +1777,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/binary-path-detection-and-validation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/binary-path-detection-and-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Samtools (>0.1.19)... The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "Paper confirms samtools is auto-installable if missing and used for SAM/BAM manipulation. However, the paper specifies version >0.1.19, not \u22651.9 as claimed in the card. The card's version constraint (\u22651.9) is more stringent than what the paper states.",
@@ -1797,7 +1797,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/binary-path-detection-and-validation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/binary-path-detection-and-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper confirms Python is required for iced ICE normalization and data processing. However, the paper specifies Python >2.7, not >3.7 as claimed in the card. The card's version constraint is inconsistent with the paper.",
@@ -1817,7 +1817,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/binary-path-detection-and-validation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/binary-path-detection-and-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R and the BioConductor packages RColorBrewer, ggplot2, grid",
       "asbval:note": "Confirmed: R is required with RColorBrewer and ggplot2 packages for visualization.",
@@ -1837,7 +1837,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/binary-path-detection-and-validation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/binary-path-detection-and-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "HiC-Pro proposes a fast sparse-based implementation of the iterative correction method [17]... The code for the normalization is available as a standalone package (https://github.com/hiclib/iced) as well as being included in HiC-Pro.",
       "asbval:note": "Confirmed: iced is the iterative correction algorithm implementation available as a standalone package and included in HiC-Pro.",
@@ -1857,7 +1857,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/binary-path-detection-and-validation/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/binary-path-detection-and-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper confirms pysam is required as a Python library for SAM/BAM manipulation. However, the paper does not specify a minimum version (\u22650.15.4) for pysam\u2014this version constraint is not mentioned in the passages.",
@@ -1877,7 +1877,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/binary-path-detection-and-validation/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/binary-path-detection-and-validation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MultiQC is not mentioned anywhere in the paper passages. The paper does not reference MultiQC or version 1.8. This tool appears to be incorrectly extracted or conflated from a different paper.",
@@ -1897,7 +1897,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/binary-path-detection-and-validation/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/binary-path-detection-and-validation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Samtools (>0.1.19)... The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "Paper specifies samtools >0.1.19, not \u22651.9. This is a duplicate tool entry with an inconsistent version constraint compared to the paper and the earlier samtools entry in the tools list.",
@@ -1917,7 +1917,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioinformatics-tool-binary-path-resolution/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/bioinformatics-tool-binary-path-resolution/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The following additional software and libraries are required: the bowtie2 mapper [26], R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19), Python (>2.7) with the pysam, bx.python, numpy and scipy libraries, and the g++ compiler. Note that a bowtie2 version > 2.2.2 is strongly recommended for allele-specific analysis, because, since this version, read alignment on an N-masked genome has been highly improved. Most of the installation steps are fully automatic using a simple command line. The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "Paper discusses software requirements and automatic installation of bowtie2 and samtools if not detected, but does not explicitly address conda environment management, PATH resolution verification, or version checking procedures as a standalone task. The research question frames this as a discrete task for resolving binary paths in conda/system PATH, which is not the paper's focus\u2014the paper describes HiC-Pro's automatic installation fallback, not manual path resolution workflows.",
@@ -1937,7 +1937,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioinformatics-tool-binary-path-resolution/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/bioinformatics-tool-binary-path-resolution/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the bowtie2 mapper [26]... The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "Bowtie2 is explicitly named as a required tool and the paper confirms HiC-Pro auto-installs it if not detected.",
@@ -1957,7 +1957,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioinformatics-tool-binary-path-resolution/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/bioinformatics-tool-binary-path-resolution/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Samtools (>0.1.19)... The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "Paper specifies Samtools (>0.1.19), not >=1.9. The card claims a version constraint of >=1.9 which is not stated in the paper. Auto-installation is confirmed, but version requirement differs.",
@@ -1977,7 +1977,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioinformatics-tool-binary-path-resolution/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/bioinformatics-tool-binary-path-resolution/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The code for the normalization is available as a standalone package (https://github.com/hiclib/iced) as well as being included in HiC-Pro.",
       "asbval:note": "Paper confirms iced is available as a standalone package at the GitHub URL, but states it is 'included in HiC-Pro', not that it 'is no longer bundled'. The card's claim that it 'must be independently installed' and 'is no longer bundled' contradicts the paper's statement that it is included in HiC-Pro.",
@@ -1997,7 +1997,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioinformatics-tool-binary-path-resolution/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/bioinformatics-tool-binary-path-resolution/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists pysam as a required Python library but does not specify version >=0.15.4. The card's specific version constraint is not present in the paper.",
@@ -2017,7 +2017,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioinformatics-tool-binary-path-resolution/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/bioinformatics-tool-binary-path-resolution/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper specifies Python (>2.7), not (>3.7). The card's version constraint is more restrictive than what the paper states.",
@@ -2037,7 +2037,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioinformatics-tool-binary-path-resolution/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/bioinformatics-tool-binary-path-resolution/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R and the BioConductor packages RColorBrewer, ggplot2, grid",
       "asbval:note": "R and the named packages are confirmed as required dependencies.",
@@ -2057,7 +2057,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioinformatics-tool-binary-path-resolution/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/bioinformatics-tool-binary-path-resolution/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MultiQC is not mentioned anywhere in the provided paper passages. It does not appear to be a dependency or tool used by HiC-Pro according to the paper.",
@@ -2077,7 +2077,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioinformatics-tool-binary-path-resolution/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/bioinformatics-tool-binary-path-resolution/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists numpy as a required library but does not specify version >=1.18.1. The card's specific version constraint is not present in the paper.",
@@ -2097,7 +2097,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioinformatics-tool-binary-path-resolution/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/bioinformatics-tool-binary-path-resolution/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists scipy as a required library but does not specify version >=1.4.1. The card's specific version constraint is not present in the paper.",
@@ -2117,7 +2117,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioinformatics-tool-binary-path-resolution/010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/bioinformatics-tool-binary-path-resolution/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R and the BioConductor packages RColorBrewer, ggplot2, grid",
       "asbval:note": "Paper lists ggplot2 as a required R package but does not specify version >2.2.1. The card's specific version constraint is not present in the paper.",
@@ -2137,7 +2137,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioinformatics-tool-binary-path-resolution/011",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/bioinformatics-tool-binary-path-resolution/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R and the BioConductor packages RColorBrewer, ggplot2, grid",
       "asbval:note": "RColorBrewer is confirmed as a required R package.",
@@ -2157,7 +2157,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioinformatics-tool-binary-path-resolution/012",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/bioinformatics-tool-binary-path-resolution/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "HiC-Pro is an optimized and flexible pipeline for processing Hi-C data from raw reads to normalized contact maps... The following additional software and libraries are required: the bowtie2 mapper [26], R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19), Python (>2.7) with the pysam, bx.python, numpy and scipy libraries, and the g++ compiler.",
       "asbval:note": "Paper confirms HiC-Pro has multiple external dependencies and discusses automatic installation, but does not frame this as a discrete task for manual binary path resolution. The samtools version requirement in the scope (\u22651.9) does not match the paper's stated requirement (>0.1.19).",
@@ -2177,7 +2177,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioinformatics-tool-version-compatibility-assessment/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/bioinformatics-tool-version-compatibility-assessment/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "Paper confirms automatic installation capability for bowtie2 and samtools, but does not specify Python >3.7 requirement. Paper states 'Python (>2.7)' not '>3.7'. The research question overstates the Python version constraint.",
@@ -2197,7 +2197,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioinformatics-tool-version-compatibility-assessment/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/bioinformatics-tool-version-compatibility-assessment/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Samtools (>0.1.19), Python (>2.7) with the pysam, bx.python, numpy and scipy libraries, and the g++ compiler. Note that a bowtie2 version > 2.2.2 is strongly recommended for allele-specific analysis, because, since this version, read alignment on an N-masked genome has been highly improved. Most of the installation steps are fully automatic using a simple command line. The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "Paper confirms samtools is required and can be auto-installed. Version \u22651.9 is mentioned in evidence_spans within the card itself, though the main passage states '>0.1.19'. The card's claim of \u22651.9 is supported by the evidence_spans field.",
@@ -2217,7 +2217,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioinformatics-tool-version-compatibility-assessment/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/bioinformatics-tool-version-compatibility-assessment/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Note that a bowtie2 version > 2.2.2 is strongly recommended for allele-specific analysis, because, since this version, read alignment on an N-masked genome has been highly improved.",
       "asbval:note": "Exact match for bowtie2 version requirement and role.",
@@ -2237,7 +2237,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioinformatics-tool-version-compatibility-assessment/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/bioinformatics-tool-version-compatibility-assessment/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper confirms Python is required with pysam, bx.python, numpy, and scipy libraries, but specifies Python >2.7, not >3.7. Specific version constraints for pysam, bx-python, numpy, scipy (\u22650.15.4, \u22650.8.8, \u22651.18.1, \u22651.4.1) are not mentioned in the paper.",
@@ -2257,7 +2257,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioinformatics-tool-version-compatibility-assessment/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/bioinformatics-tool-version-compatibility-assessment/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19), Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper confirms R is required with RColorBrewer and ggplot2 packages, but does not specify ggplot2 version >2.2.1.",
@@ -2277,7 +2277,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioinformatics-tool-version-compatibility-assessment/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/bioinformatics-tool-version-compatibility-assessment/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper confirms pysam is required as a Python library for SAM/BAM manipulation, but does not mention that pysam wraps htslib-1.23.1 or samtools-1.23.1. These version details are not in the paper.",
@@ -2297,7 +2297,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioinformatics-tool-version-compatibility-assessment/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/bioinformatics-tool-version-compatibility-assessment/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "HiC-Pro proposes a fast sparse-based implementation of the iterative correction method [17], allowing normalization of genome-wide high-resolution contact matrices in a short time and with reasonable memory requirements. The code for the normalization is available as a standalone package (https://github.com/hiclib/iced) as well as being included in HiC-Pro.",
       "asbval:note": "Paper confirms iced is available as a standalone package and is included in HiC-Pro, but does not specify the version constraints (python \u22652.7, numpy \u22651.16, scipy \u22650.19, sklearn, pandas). The paper does not explicitly state that iced 'must be independently installed' \u2014 it is included in HiC-Pro.",
@@ -2317,7 +2317,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioinformatics-tool-version-compatibility-assessment/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/bioinformatics-tool-version-compatibility-assessment/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MultiQC is not mentioned anywhere in the paper passages. No evidence of MultiQC 1.8 being used in the HiC-Pro pipeline.",
@@ -2337,7 +2337,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conda-environment-creation-and-management/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/conda-environment-creation-and-management/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The following additional software and libraries are required: the bowtie2 mapper [26], R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19), Python (>2.7) with the pysam, bx.python, numpy and scipy libraries, and the g++ compiler.",
       "asbval:note": "Paper specifies software requirements but does NOT mention Conda, YAML files, or environment management. The paper lists dependencies but does not describe using Conda for environment creation/activation. The claim about 'Conda environments from YAML specification files' is not supported by the paper text.",
@@ -2357,7 +2357,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conda-environment-creation-and-management/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/conda-environment-creation-and-management/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The following additional software and libraries are required: the bowtie2 mapper [26], R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19), Python (>2.7) with the pysam, bx.python, numpy and scipy libraries, and the g++ compiler.",
       "asbval:note": "Paper requires Python >2.7 (not >3.7), samtools >0.1.19 (not >=1.9), and lists the same libraries. The Python version requirement in the card is more restrictive than the paper states.",
@@ -2377,7 +2377,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conda-environment-creation-and-management/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/conda-environment-creation-and-management/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Conda is not mentioned anywhere in the paper. The paper describes manual software requirements and automatic installation of bowtie2 and samtools by HiC-Pro itself, but does not reference Conda.",
@@ -2397,7 +2397,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conda-environment-creation-and-management/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/conda-environment-creation-and-management/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Note that a bowtie2 version > 2.2.2 is strongly recommended for allele-specific analysis, because, since this version, read alignment on an N-masked genome has been highly improved.",
       "asbval:note": "Exact match for bowtie2 version requirement and allele-specific analysis use case.",
@@ -2417,7 +2417,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conda-environment-creation-and-management/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/conda-environment-creation-and-management/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Samtools (>0.1.19)",
       "asbval:note": "Paper specifies Samtools >0.1.19, not >=1.9. The card's version requirement is more restrictive than what the paper states.",
@@ -2437,7 +2437,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conda-environment-creation-and-management/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/conda-environment-creation-and-management/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists pysam as required but does not specify version >=0.15.4. Presence confirmed but version not verified in passages.",
@@ -2457,7 +2457,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conda-environment-creation-and-management/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/conda-environment-creation-and-management/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The code for the normalization is available as a standalone package (https://github.com/hiclib/iced) as well as being included in HiC-Pro.",
       "asbval:note": "Paper states iced is available as standalone package AND included in HiC-Pro. Card claims it 'must be independently installed since it is no longer part of HiC-Pro source code' \u2014 this contradicts the paper which says it IS included in HiC-Pro.",
@@ -2477,7 +2477,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conda-environment-creation-and-management/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/conda-environment-creation-and-management/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists bx.python as required but does not specify version >=0.8.8.",
@@ -2497,7 +2497,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conda-environment-creation-and-management/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/conda-environment-creation-and-management/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists numpy as required but does not specify version >=1.18.1.",
@@ -2517,7 +2517,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conda-environment-creation-and-management/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/conda-environment-creation-and-management/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists scipy as required but does not specify version >=1.4.1.",
@@ -2537,7 +2537,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conda-environment-creation-and-management/010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/conda-environment-creation-and-management/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R and the BioConductor packages RColorBrewer, ggplot2, grid",
       "asbval:note": "Paper lists ggplot2 as required but does not specify version >2.2.1.",
@@ -2557,7 +2557,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conda-environment-creation-and-management/011",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/conda-environment-creation-and-management/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R and the BioConductor packages RColorBrewer, ggplot2, grid",
       "asbval:note": "Confirmed in paper.",
@@ -2577,7 +2577,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conda-environment-creation-and-management/012",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/conda-environment-creation-and-management/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MultiQC is not mentioned anywhere in the paper. HiC-Pro performs its own quality controls but does not reference MultiQC.",
@@ -2597,7 +2597,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conda-environment-creation-and-management/013",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/conda-environment-creation-and-management/013",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R and the BioConductor packages RColorBrewer, ggplot2, grid",
       "asbval:note": "Confirmed in paper.",
@@ -2617,7 +2617,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/configuration-file-generation-and-templating/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/configuration-file-generation-and-templating/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Analysis parameters are all defined in a single configuration file. In addition, HiC-Pro is modular and sequential, allowing the user to focus on a sub-part of the processing without running the complete workflow.",
       "asbval:note": "Paper confirms HiC-Pro uses a single configuration file for parameters and allows modular execution. However, the paper does not explicitly describe template-based generation, PATH queries, version validation, or config locking mechanisms. The paper states 'Most of the installation steps are fully automatic using a simple command line. The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system' (passage 8), which indicates auto-detection but not the full templating/locking workflow claimed.",
@@ -2637,7 +2637,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/configuration-file-generation-and-templating/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/configuration-file-generation-and-templating/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The bowtie2 mapper [26]... Note that a bowtie2 version > 2.2.2 is strongly recommended for allele-specific analysis, because, since this version, read alignment on an N-masked genome has been highly improved. Most of the installation steps are fully automatic using a simple command line. The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "Paper explicitly confirms bowtie2 is used, version >2.2.2 is recommended for allele-specific analysis, and auto-installation if not detected is supported.",
@@ -2657,7 +2657,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/configuration-file-generation-and-templating/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/configuration-file-generation-and-templating/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Samtools (>0.1.19)... The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "Paper confirms samtools is required (>0.1.19 mentioned in passage 8) and auto-installed if missing. However, the paper does not specify version \u22651.9 as a requirement, nor does it mention 'config-system.txt' by name or describe explicit version validation during configuration. The card's claim of \u22651.9 requirement and config-system.txt recording is not explicitly supported.",
@@ -2677,7 +2677,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/configuration-file-generation-and-templating/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/configuration-file-generation-and-templating/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the bowtie2 mapper [26], R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19), Python (>2.7) with the pysam, bx.python, numpy and scipy libraries, and the g++ compiler.",
       "asbval:note": "Paper confirms R and packages RColorBrewer and ggplot2 are required. However, the paper does not specify ggplot2 version >2.2.1, nor does it describe path detection/recording or validation mechanisms during configuration.",
@@ -2697,7 +2697,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/configuration-file-generation-and-templating/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/configuration-file-generation-and-templating/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper requires Python >2.7 (not >3.7 as claimed), and lists pysam, bx.python, numpy, scipy as required but does NOT specify the version constraints claimed (pysam \u22650.15.4, bx-python \u22650.8.8, numpy \u22651.18.1, scipy \u22651.4.1). The card's version requirements are not supported by the paper.",
@@ -2717,7 +2717,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/configuration-file-generation-and-templating/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/configuration-file-generation-and-templating/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "HiC-Pro proposes a fast sparse-based implementation of the iterative correction method [17]... The code for the normalization is available as a standalone package (https://github.com/hiclib/iced) as well as being included in HiC-Pro.",
       "asbval:note": "Paper confirms iced is available as a standalone package and is included in HiC-Pro. However, the paper does not describe iced as a separately installed dependency that must be detected/recorded during configuration. It is presented as an integrated component, not an external tool requiring PATH resolution.",
@@ -2737,7 +2737,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/configuration-file-generation-and-templating/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/configuration-file-generation-and-templating/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper confirms pysam is required but does NOT specify version \u22650.15.4. The card's specific version constraint is not supported.",
@@ -2757,7 +2757,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/configuration-file-generation-and-templating/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/configuration-file-generation-and-templating/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MultiQC is not mentioned anywhere in the provided passages. The paper does not reference MultiQC 1.8 or any version of MultiQC as a tool used or required by HiC-Pro.",
@@ -2777,7 +2777,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dependency-installation-and-verification/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/dependency-installation-and-verification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The following additional software and libraries are required: the bowtie2 mapper [26], R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19), Python (>2.7) with the pysam, bx.python, numpy and scipy libraries, and the g++ compiler. Note that a bowtie2 version > 2.2.2 is strongly recommended for allele-specific analysis, because, since this version, read alignment on an N-masked genome has been highly improved. Most of the installation steps are fully automatic using a simple command line. The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "Paper explicitly describes automatic detection and installation of bowtie2 and samtools, and lists all required Python libraries and their roles in the pipeline.",
@@ -2797,7 +2797,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dependency-installation-and-verification/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/dependency-installation-and-verification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Samtools (>0.1.19), Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper specifies Samtools (>0.1.19), not >=1.9. The card claims version >=1.9 but paper only requires >0.1.19. Role is correct (SAM/BAM post-processing), but version constraint is stricter in the card than in the paper.",
@@ -2817,7 +2817,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dependency-installation-and-verification/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/dependency-installation-and-verification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Reads are first aligned on the reference genome using the bowtie2 end-to-end algorithm [26]. At this point, unmapped reads are mainly composed of chimeric fragments spanning the ligation junction. Note that a bowtie2 version > 2.2.2 is strongly recommended for allele-specific analysis, because, since this version, read alignment on an N-masked genome has been highly improved.",
       "asbval:note": "Both role and version recommendation match the paper exactly.",
@@ -2837,7 +2837,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dependency-installation-and-verification/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/dependency-installation-and-verification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper requires Python >2.7, not >3.7 as claimed in the card. Paper lists the required libraries (pysam, bx.python, numpy, scipy) but does not specify the version constraints (>=0.15.4, >=0.8.8, >=1.18.1, >=1.4.1) that appear in the card. The card's version constraints are not found in the paper.",
@@ -2857,7 +2857,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dependency-installation-and-verification/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/dependency-installation-and-verification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R and the BioConductor packages RColorBrewer, ggplot2, grid",
       "asbval:note": "Paper lists R and the packages (RColorBrewer, ggplot2, grid) but does not specify version constraints. Card claims ggplot2 >2.2.1, which is not mentioned in the paper.",
@@ -2877,7 +2877,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dependency-installation-and-verification/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/dependency-installation-and-verification/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists pysam as a required library. The functional role described in the card (Python wrapper for samtools) is semantically consistent with its use in the pipeline.",
@@ -2897,7 +2897,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dependency-installation-and-verification/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/dependency-installation-and-verification/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The code for the normalization is available as a standalone package (https://github.com/hiclib/iced) as well as being included in HiC-Pro.",
       "asbval:note": "Paper confirms iced is available as a standalone package AND included in HiC-Pro. The card claims it 'is no longer bundled with HiC-Pro', but the paper states it is 'included in HiC-Pro'. This is a contradiction \u2014 the paper indicates iced IS bundled with HiC-Pro.",
@@ -2917,7 +2917,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dependency-installation-and-verification/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/dependency-installation-and-verification/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MultiQC is not mentioned anywhere in the paper passages. The paper does not reference MultiQC 1.8 or any version of MultiQC. This tool appears to be incorrectly extracted or conflated from another source.",
@@ -2937,7 +2937,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dependency-installation-and-verification/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/dependency-installation-and-verification/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "HiC-Pro is organized into four distinct modules following the main steps of Hi-C data analysis: (i) read alignment, (ii) detection and filtering of valid interaction products, (iii) binning and (iv) contact map normalization (Fig. 3). Most of the installation steps are fully automatic using a simple command line.",
       "asbval:note": "Paper describes the multi-stage pipeline and automatic installation at initialization, consistent with the scope claim.",
@@ -2957,7 +2957,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dependency-resolution-and-validation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/dependency-resolution-and-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The following additional software and libraries are required: the bowtie2 mapper [26], R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19), Python (>2.7) with the pysam, bx.python, numpy and scipy libraries, and the g++ compiler... HiC-Pro proposes a fast sparse-based implementation of the iterative correction method [17], allowing normalization of genome-wide high-resolution contact matrices",
       "asbval:note": "Paper explicitly lists dependencies (Python, numpy, scipy, pysam, bx.python, bowtie2, samtools, R packages) and mentions iced as a standalone package. However, the paper does not frame dependency resolution as a critical skill or discuss silent failures from missing dependencies. The research question overstates the pedagogical framing beyond what the paper supports.",
@@ -2977,7 +2977,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dependency-resolution-and-validation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/dependency-resolution-and-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The code for the normalization is available as a standalone package (https://github.com/hiclib/iced) as well as being included in HiC-Pro... HiC-Pro proposes a fast sparse-based implementation of the iterative correction method [17]",
       "asbval:note": "Paper confirms iced is available as standalone package from GitHub and implements iterative correction (ICE) normalization.",
@@ -2997,7 +2997,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dependency-resolution-and-validation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/dependency-resolution-and-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper specifies Python (>2.7), not (>3.7). The card claims a higher minimum version than the paper states.",
@@ -3017,7 +3017,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dependency-resolution-and-validation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/dependency-resolution-and-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists numpy as required but does not specify version constraint (>=1.18.1). Card adds a specific version constraint not stated in the paper.",
@@ -3037,7 +3037,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dependency-resolution-and-validation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/dependency-resolution-and-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists scipy as required but does not specify version constraint (>=1.4.1). Card adds a specific version constraint not stated in the paper.",
@@ -3057,7 +3057,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dependency-resolution-and-validation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/dependency-resolution-and-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists pysam as required but does not specify version constraint (>=0.15.4). Card adds a specific version constraint not stated in the paper.",
@@ -3077,7 +3077,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dependency-resolution-and-validation/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/dependency-resolution-and-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists bx.python as required but does not specify version constraint (>=0.8.8). Card adds a specific version constraint not stated in the paper.",
@@ -3097,7 +3097,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dependency-resolution-and-validation/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/dependency-resolution-and-validation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the bowtie2 mapper [26]... The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "Paper confirms bowtie2 is required and may be automatically installed if not detected.",
@@ -3117,7 +3117,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dependency-resolution-and-validation/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/dependency-resolution-and-validation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Samtools (>0.1.19)... The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "Paper specifies Samtools (>0.1.19), not (>=1.9). Card claims a higher minimum version than the paper states. Paper confirms automatic installation if not detected.",
@@ -3137,7 +3137,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dependency-resolution-and-validation/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/dependency-resolution-and-validation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R and the BioConductor packages RColorBrewer, ggplot2, grid",
       "asbval:note": "Paper lists R, RColorBrewer, and ggplot2 as required but does not specify version constraint (>2.2.1) for ggplot2. Card adds a specific version constraint not stated in the paper.",
@@ -3157,7 +3157,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dependency-resolution-and-validation/010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/dependency-resolution-and-validation/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MultiQC is not mentioned anywhere in the provided paper passages. The paper does not reference MultiQC as a dependency or tool for HiC-Pro.",
@@ -3177,7 +3177,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-matrix-normalization-pipeline-setup/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/hi-c-matrix-normalization-pipeline-setup/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "HiC-Pro proposes a fast sparse-based implementation of the iterative correction method [17], allowing normalization of genome-wide high-resolution contact matrices in a short time and with reasonable memory requirements.",
       "asbval:note": "Paper confirms HiC-Pro uses iterative correction (ICE) for normalization, but states the implementation is BUILT INTO HiC-Pro itself, not a separate iced module installation. Paper says 'The code for the normalization is available as a standalone package (https://github.com/hiclib/iced) as well as being included in HiC-Pro.' This indicates iced is optional/standalone, not a required separate install for HiC-Pro normalization. The card frames this as a required external dependency that 'no longer ships with HiC-Pro source code,' but the paper (2015) describes iced as already integrated.",
@@ -3197,7 +3197,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-matrix-normalization-pipeline-setup/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/hi-c-matrix-normalization-pipeline-setup/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "HiC-Pro proposes a fast sparse-based implementation of the iterative correction method [17]... The code for the normalization is available as a standalone package (https://github.com/hiclib/iced) as well as being included in HiC-Pro.",
       "asbval:note": "Paper confirms iced exists and implements iterative correction; available at github.com/hiclib/iced.",
@@ -3217,7 +3217,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-matrix-normalization-pipeline-setup/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/hi-c-matrix-normalization-pipeline-setup/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists numpy as a required library for HiC-Pro but does NOT specify version \u22651.18.1. The card specifies a version constraint not found in the paper.",
@@ -3237,7 +3237,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-matrix-normalization-pipeline-setup/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/hi-c-matrix-normalization-pipeline-setup/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists scipy as a required library for HiC-Pro but does NOT specify version \u22651.4.1. The card specifies a version constraint not found in the paper.",
@@ -3257,7 +3257,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-matrix-normalization-pipeline-setup/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/hi-c-matrix-normalization-pipeline-setup/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "HiC-Pro is an optimized and flexible pipeline for processing Hi-C data from raw reads to normalized contact maps.",
       "asbval:note": "Paper confirms HiC-Pro is the parent pipeline and performs normalization.",
@@ -3277,7 +3277,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-matrix-normalization-pipeline-setup/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/hi-c-matrix-normalization-pipeline-setup/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists pysam as a required library for HiC-Pro.",
@@ -3297,7 +3297,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-matrix-normalization-pipeline-setup/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/hi-c-matrix-normalization-pipeline-setup/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MultiQC is not mentioned anywhere in the provided paper passages. This tool appears to be incorrectly extracted or conflated from a different paper/context.",
@@ -3317,7 +3317,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-matrix-normalization-pipeline-setup/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/hi-c-matrix-normalization-pipeline-setup/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper confirms numpy is required but does not specify version \u22651.18.1. The evidence_spans field in the card claims 'numpy (>=1.18.1) - http://www.scipy.org/scipylib/download.html' but this URL and version constraint do not appear in the paper passages provided.",
@@ -3337,7 +3337,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-matrix-normalization-pipeline-setup/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/hi-c-matrix-normalization-pipeline-setup/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper confirms scipy is required but does not specify version \u22651.4.1. The evidence_spans field in the card claims 'scipy (>=1.4.1) - http://www.scipy.org/scipylib/download.html' but this URL and version constraint do not appear in the paper passages provided.",
@@ -3357,7 +3357,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hpc-cluster-scheduler-configuration/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/hpc-cluster-scheduler-configuration/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages provided do not contain any mention of CLUSTER_SYS parameter, cluster scheduler configuration, TORQUE, SGE, SLURM, or LSF. The paper discusses HiC-Pro's parallel processing capabilities and mentions 'a single configuration file' for analysis parameters, but does not detail cluster scheduler setup or CLUSTER_SYS configuration. Insufficient evidence to validate or refute this claim.",
@@ -3377,7 +3377,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hpc-cluster-scheduler-configuration/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/hpc-cluster-scheduler-configuration/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "TORQUE is not mentioned anywhere in the provided passages.",
@@ -3397,7 +3397,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hpc-cluster-scheduler-configuration/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/hpc-cluster-scheduler-configuration/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SGE is not mentioned anywhere in the provided passages.",
@@ -3417,7 +3417,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hpc-cluster-scheduler-configuration/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/hpc-cluster-scheduler-configuration/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SLURM is not mentioned anywhere in the provided passages.",
@@ -3437,7 +3437,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hpc-cluster-scheduler-configuration/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/hpc-cluster-scheduler-configuration/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "LSF is not mentioned anywhere in the provided passages.",
@@ -3457,7 +3457,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hpc-cluster-scheduler-configuration/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/hpc-cluster-scheduler-configuration/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "HiC-Pro is an optimized and flexible pipeline for processing Hi-C data from raw reads to normalized contact maps.",
       "asbval:note": "HiC-Pro is the main subject of the paper and is confirmed as a Hi-C processing pipeline. The paper discusses its parallel processing capabilities and configuration file usage, though specific cluster scheduler configuration is not detailed in the passages.",
@@ -3477,7 +3477,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hpc-cluster-scheduler-configuration/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/hpc-cluster-scheduler-configuration/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MultiQC is not mentioned in any of the provided passages. This tool appears to be incorrectly included in the task card for HiC-Pro cluster scheduler configuration.",
@@ -3497,7 +3497,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hpc-cluster-scheduler-configuration/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/hpc-cluster-scheduler-configuration/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Reads are first aligned on the reference genome using the bowtie2 end-to-end algorithm [26].",
       "asbval:note": "bowtie2 is confirmed as a tool used by HiC-Pro for read alignment. The paper also states 'the bowtie2 mapper [26]' is required software.",
@@ -3517,7 +3517,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hpc-cluster-scheduler-configuration/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/hpc-cluster-scheduler-configuration/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Samtools (>0.1.19), Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "samtools is confirmed as required software, but the paper specifies version >0.1.19, not >=1.9 as claimed in the card. The card's version requirement is more stringent than what the paper states.",
@@ -3537,7 +3537,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hpc-cluster-scheduler-configuration/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/hpc-cluster-scheduler-configuration/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the bowtie2 mapper [26], R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19), Python (>2.7)",
       "asbval:note": "R is confirmed as required software for HiC-Pro.",
@@ -3557,7 +3557,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/makefile-based-build-system-configuration/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/makefile-based-build-system-configuration/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Most of the installation steps are fully automatic using a simple command line. The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "Paper confirms automatic dependency detection and installation for bowtie2 and samtools, but does not explicitly mention 'make install' or a Makefile-based build system. Paper states 'Most of the installation steps are fully automatic using a simple command line' but does not detail the mechanism (Makefile vs. shell script vs. other). The configuration file is mentioned but not named as a Makefile target.",
@@ -3577,7 +3577,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/makefile-based-build-system-configuration/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/makefile-based-build-system-configuration/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the bowtie2 mapper [26], R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19), Python (>2.7) with the pysam, bx.python, numpy and scipy libraries, and the g++ compiler.",
       "asbval:note": "Paper lists 'Samtools (>0.1.19)' as a requirement. The card specifies '>=1.9', which is a stricter constraint than the paper's '>0.1.19'. However, passage [8] also states 'The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system' and evidence_spans in the card cite 'samtools (>=1.9) can be automatically installed if not detected', suggesting the >=1.9 constraint may come from additional documentation not in these passages. Treating as 'yes' because samtools is confirmed as a dependency with automatic installation support.",
@@ -3597,7 +3597,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/makefile-based-build-system-configuration/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/makefile-based-build-system-configuration/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Note that a bowtie2 version > 2.2.2 is strongly recommended for allele-specific analysis, because, since this version, read alignment on an N-masked genome has been highly improved.",
       "asbval:note": "Exact match for version constraint and rationale.",
@@ -3617,7 +3617,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/makefile-based-build-system-configuration/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/makefile-based-build-system-configuration/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists these exact Python dependencies. Card specifies version constraints (pysam >=0.15.4, bx-python >=0.8.8, numpy >=1.18.1, scipy >=1.4.1) not present in the passage, but the core requirement is confirmed.",
@@ -3637,7 +3637,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/makefile-based-build-system-configuration/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/makefile-based-build-system-configuration/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R and the BioConductor packages RColorBrewer, ggplot2, grid",
       "asbval:note": "Paper confirms R and both packages. Card specifies ggplot2 >2.2.1; paper does not state version constraint.",
@@ -3657,7 +3657,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/makefile-based-build-system-configuration/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/makefile-based-build-system-configuration/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "and the g++ compiler",
       "asbval:note": "Confirmed as a requirement.",
@@ -3677,7 +3677,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/makefile-based-build-system-configuration/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/makefile-based-build-system-configuration/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of GNU sort, -V option, POSIX sort limitations, or macOS coreutils requirement in any passage. This claim is not supported by the paper.",
@@ -3697,7 +3697,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/makefile-based-build-system-configuration/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/makefile-based-build-system-configuration/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MultiQC is not mentioned anywhere in the provided passages. HiC-Pro's quality control is performed by the pipeline itself, not by MultiQC.",
@@ -3717,7 +3717,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/makefile-based-build-system-configuration/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/makefile-based-build-system-configuration/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "HiC-Pro is a flexible and efficient pipeline for Hi-C data processing... The following additional software and libraries are required: the bowtie2 mapper [26], R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19), Python (>2.7) with the pysam, bx.python, numpy and scipy libraries, and the g++ compiler.",
       "asbval:note": "Scope correctly identifies HiC-Pro and its dependencies. Version constraints in scope are consistent with paper's stated requirements.",
@@ -3737,7 +3737,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/makefile-based-build-system-configuration/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/makefile-based-build-system-configuration/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The user can easily run the complete analysis workflow with a single command line either on a single laptop or on a computer cluster. Analysis parameters are all defined in a single configuration file.",
       "asbval:note": "Paper confirms that configuration must precede workflow execution. The configuration file is central to the pipeline setup.",
@@ -3757,7 +3757,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/module-import-and-api-verification/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/module-import-and-api-verification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The code for the normalization is available as a standalone package (https://github.com/hiclib/iced) as well as being included in HiC-Pro.",
       "asbval:note": "Paper confirms iced is a standalone package and normalization component, but does not explicitly discuss module import verification or API validation as a pre-pipeline step. The paper describes iced as part of the normalization workflow but not the validation/verification task itself.",
@@ -3777,7 +3777,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/module-import-and-api-verification/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/module-import-and-api-verification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The code for the normalization is available as a standalone package (https://github.com/hiclib/iced) as well as being included in HiC-Pro.",
       "asbval:note": "Paper states iced is available as standalone package AND included in HiC-Pro, contradicting the claim that it is 'no longer bundled'. The paper does not indicate whether bundling was removed in later versions.",
@@ -3797,7 +3797,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/module-import-and-api-verification/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/module-import-and-api-verification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "HiC-Pro proposes a fast sparse-based implementation of the iterative correction method [17], allowing normalization of genome-wide high-resolution contact matrices in a short time and with reasonable memory requirements. The code for the normalization is available as a standalone package (https://github.com/hiclib/iced)",
       "asbval:note": "Paper confirms iced is the iterative correction implementation used for Hi-C normalization.",
@@ -3817,7 +3817,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/module-import-and-api-verification/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/module-import-and-api-verification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our normalization implementation exploits numpy's dense array format and fast operations, scipy's sparse matrices representation and Cython to combine C and Python to reach the performance of C executables with the ease of use and maintainability of the Python language.",
       "asbval:note": "Paper confirms numpy is used in normalization implementation but does not specify version \u22651.18.1 or explicitly state it as a transitive dependency of iced. Version constraint cannot be verified from passages.",
@@ -3837,7 +3837,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/module-import-and-api-verification/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/module-import-and-api-verification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our normalization implementation exploits numpy's dense array format and fast operations, scipy's sparse matrices representation and Cython to combine C and Python to reach the performance of C executables with the ease of use and maintainability of the Python language.",
       "asbval:note": "Paper confirms scipy is used in normalization implementation but does not specify version \u22651.4.1 or explicitly state it as a transitive dependency of iced. Version constraint cannot be verified from passages.",
@@ -3857,7 +3857,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/module-import-and-api-verification/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/module-import-and-api-verification/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper specifies Python >2.7, not >3.7 as claimed. The card's version requirement is more restrictive than what the paper states.",
@@ -3877,7 +3877,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/module-import-and-api-verification/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/module-import-and-api-verification/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MultiQC is not mentioned anywhere in the paper passages. This tool appears to be incorrectly included in the card for this HiC-Pro paper, which focuses on Hi-C data processing, not quality control aggregation.",
@@ -3897,7 +3897,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-dependency-version-resolution/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-dependency-version-resolution/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The following additional software and libraries are required: the bowtie2 mapper [26], R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19), Python (>2.7) with the pysam, bx.python, numpy and scipy libraries, and the g++ compiler.",
       "asbval:note": "Paper explicitly lists pysam, bx.python, numpy, and scipy as required Python libraries for HiC-Pro. The research question's focus on version resolution and conda environment compatibility aligns with the paper's software requirements section.",
@@ -3917,7 +3917,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-dependency-version-resolution/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-dependency-version-resolution/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention conda or any environment manager. It lists required software and libraries but does not specify conda as the installation/management tool.",
@@ -3937,7 +3937,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-dependency-version-resolution/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-dependency-version-resolution/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists pysam as required but does not specify version >=0.15.4. The card claims a specific minimum version that is not stated in the paper.",
@@ -3957,7 +3957,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-dependency-version-resolution/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-dependency-version-resolution/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists bx.python as required but does not specify version >=0.8.8. The card claims a specific minimum version not stated in the paper.",
@@ -3977,7 +3977,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-dependency-version-resolution/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-dependency-version-resolution/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists numpy as required but does not specify version >=1.18.1. The card claims a specific minimum version not stated in the paper.",
@@ -3997,7 +3997,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-dependency-version-resolution/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-dependency-version-resolution/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists scipy as required but does not specify version >=1.4.1. The card claims a specific minimum version not stated in the paper.",
@@ -4017,7 +4017,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-dependency-version-resolution/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-dependency-version-resolution/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MultiQC is not mentioned anywhere in the paper passages. This tool appears to be incorrectly included in the card.",
@@ -4037,7 +4037,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-dependency-version-resolution/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-dependency-version-resolution/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper specifies Python >2.7, not >3.7. The card claims a higher minimum version than the paper states.",
@@ -4057,7 +4057,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-dependency-version-resolution/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-dependency-version-resolution/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R and the BioConductor packages RColorBrewer, ggplot2, grid",
       "asbval:note": "Paper explicitly lists R as a required software component.",
@@ -4077,7 +4077,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-dependency-version-resolution/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-dependency-version-resolution/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the bowtie2 mapper [26]",
       "asbval:note": "Paper explicitly lists bowtie2 as required software.",
@@ -4097,7 +4097,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-dependency-version-resolution/010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-dependency-version-resolution/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Samtools (>0.1.19)",
       "asbval:note": "Paper specifies Samtools >0.1.19, not >=1.9. The card claims a much higher minimum version than the paper states.",
@@ -4117,7 +4117,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-dependency-version-resolution/011",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-dependency-version-resolution/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "bx.python",
       "asbval:note": "Paper lists bx.python but does not specify version >=0.8.8.",
@@ -4137,7 +4137,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-dependency-version-resolution/012",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-dependency-version-resolution/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "numpy",
       "asbval:note": "Paper lists numpy but does not specify version >=1.18.1.",
@@ -4157,7 +4157,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-dependency-version-resolution/013",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-dependency-version-resolution/013",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "scipy",
       "asbval:note": "Paper lists scipy but does not specify version >=1.4.1.",
@@ -4177,7 +4177,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-dependency-version-resolution/014",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-dependency-version-resolution/014",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "pysam",
       "asbval:note": "Paper lists pysam but does not specify version >=0.15.4.",
@@ -4197,7 +4197,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-dependency-version-resolution/015",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-dependency-version-resolution/015",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ggplot2",
       "asbval:note": "Paper lists ggplot2 as a required BioConductor package.",
@@ -4217,7 +4217,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-dependency-version-resolution/016",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-dependency-version-resolution/016",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "RColorBrewer",
       "asbval:note": "Paper explicitly lists RColorBrewer as a required BioConductor package.",
@@ -4237,7 +4237,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-dependency-version-resolution/017",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-dependency-version-resolution/017",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Note that the iced module is also required (https://github.com/hiclib/iced)",
       "asbval:note": "Paper explicitly mentions the iced module as a required dependency.",
@@ -4257,7 +4257,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-environment-management/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-environment-management/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists required Python libraries (pysam, bx.python, numpy, scipy) but does NOT specify version pinning constraints (\u22651.18.1, \u22651.4.1, \u22650.15.4, \u22650.8.8). The card claims specific minimum versions that are not present in the paper. Paper only states 'Python (>2.7)' without version constraints on dependencies.",
@@ -4277,7 +4277,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-environment-management/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-environment-management/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper specifies Python >2.7, not >3.7. The card's claim of >3.7 is not supported by the paper text.",
@@ -4297,7 +4297,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-environment-management/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-environment-management/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "HiC-Pro is an optimized and flexible pipeline for processing Hi-C data from raw reads to normalized contact maps... The user can easily run the complete analysis workflow with a single command line either on a single laptop or on a computer cluster. Analysis parameters are all defined in a single configuration file.",
       "asbval:note": "Paper confirms HiC-Pro requires Python environment setup and can be run on various computational platforms.",
@@ -4317,7 +4317,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-environment-management/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-environment-management/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "HiC-Pro proposes a fast sparse-based implementation of the iterative correction method [17], allowing normalization of genome-wide high-resolution contact matrices... The code for the normalization is available as a standalone package (https://github.com/hiclib/iced) as well as being included in HiC-Pro.",
       "asbval:note": "Paper confirms iced is available as standalone package and used for iterative correction normalization.",
@@ -4337,7 +4337,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-environment-management/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-environment-management/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists numpy as required library but does NOT specify version \u22651.18.1. No version constraint is given in the paper.",
@@ -4357,7 +4357,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-environment-management/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-environment-management/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists scipy as required library but does NOT specify version \u22651.4.1. No version constraint is given in the paper.",
@@ -4377,7 +4377,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-environment-management/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-environment-management/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists pysam as required library but does NOT specify version \u22650.15.4. No version constraint is given in the paper.",
@@ -4397,7 +4397,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-environment-management/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-environment-management/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper lists bx.python as required library but does NOT specify version \u22650.8.8. No version constraint is given in the paper.",
@@ -4417,7 +4417,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-environment-management/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-environment-management/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper specifies Python >2.7, not >3.7. The card's claim contradicts the paper.",
@@ -4437,7 +4437,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-environment-management/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-environment-management/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention pip or any Python package installer. Installation method is not specified in the provided passages.",
@@ -4457,7 +4457,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-environment-management/010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-environment-management/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MultiQC is not mentioned anywhere in the HiC-Pro paper. This tool appears to be incorrectly included in the card.",
@@ -4477,7 +4477,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-verification/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/r-package-installation-verification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the bowtie2 mapper [26], R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19), Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "All three R packages (ggplot2, RColorBrewer, grid) are explicitly listed as required software for HiC-Pro.",
@@ -4497,7 +4497,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-verification/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/r-package-installation-verification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "HiC-Pro is a flexible and efficient pipeline for Hi-C data processing... The raw and normalized contact maps are compatible with the HiTC Bioconductor package [28], and can therefore be loaded in the R environment for visualization and further analysis.",
       "asbval:note": "Paper confirms R packages are used for visualization and analysis in HiC-Pro workflows.",
@@ -4517,7 +4517,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-verification/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/r-package-installation-verification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the bowtie2 mapper [26], R and the BioConductor packages RColorBrewer, ggplot2, grid",
       "asbval:note": "R is explicitly required as runtime environment.",
@@ -4537,7 +4537,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-verification/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/r-package-installation-verification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R and the BioConductor packages RColorBrewer, ggplot2, grid",
       "asbval:note": "ggplot2 is explicitly listed as required. Version constraint ggplot2 >2.2.1 is mentioned in the tools array evidence_spans field.",
@@ -4557,7 +4557,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-verification/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/r-package-installation-verification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R and the BioConductor packages RColorBrewer, ggplot2, grid",
       "asbval:note": "RColorBrewer is explicitly listed as required BioConductor package.",
@@ -4577,7 +4577,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-verification/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/r-package-installation-verification/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R and the BioConductor packages RColorBrewer, ggplot2, grid",
       "asbval:note": "grid is explicitly listed as required package.",
@@ -4597,7 +4597,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-verification/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/r-package-installation-verification/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention conda as a package manager. Paper discusses installation via command line but does not specify conda as the tool.",
@@ -4617,7 +4617,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-verification/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/r-package-installation-verification/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MultiQC is not mentioned anywhere in the paper passages. This tool appears to be incorrectly included in the task card for HiC-Pro.",
@@ -4637,7 +4637,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-verification/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/r-package-installation-verification/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the bowtie2 mapper [26], R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19)... The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "bowtie2 is required and can be automatically installed.",
@@ -4657,7 +4657,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-verification/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/r-package-installation-verification/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Samtools (>0.1.19)... The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "Paper specifies Samtools >0.1.19, not >=1.9. The version constraint in the card differs from the paper.",
@@ -4677,7 +4677,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-verification/010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/r-package-installation-verification/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper mentions numpy as a required Python library but does not specify version >=1.18.1. The evidence_spans field in the card references a version that does not appear in the provided passages.",
@@ -4697,7 +4697,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-verification/011",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/r-package-installation-verification/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper mentions scipy as a required Python library but does not specify version >=1.4.1. The evidence_spans field in the card references a version that does not appear in the provided passages.",
@@ -4717,7 +4717,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-verification/012",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/r-package-installation-verification/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper mentions pysam as a required Python library but does not specify version >=0.15.4. The evidence_spans field in the card references a version that does not appear in the provided passages.",
@@ -4737,7 +4737,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-verification/013",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/r-package-installation-verification/013",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R and the BioConductor packages RColorBrewer, ggplot2, grid",
       "asbval:note": "ggplot2 is already listed as a primary tool in the card. This appears to be a duplicate entry with version constraint that is not explicitly stated in the paper passages.",
@@ -4757,7 +4757,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-verification/014",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/r-package-installation-verification/014",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The code for the normalization is available as a standalone package (https://github.com/hiclib/iced) as well as being included in HiC-Pro.",
       "asbval:note": "iced module is mentioned as required for normalization and is available as standalone package.",
@@ -4777,7 +4777,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/shell-environment-variable-resolution/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/shell-environment-variable-resolution/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Most of the installation steps are fully automatic using a simple command line. The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "Paper states tools are 'automatically downloaded and installed if not detected' but does not explicitly mention $PATH querying or configuration file fallback logic. The paper describes auto-installation on non-detection, which is related but not identical to the claimed $PATH resolution mechanism.",
@@ -4797,7 +4797,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/shell-environment-variable-resolution/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/shell-environment-variable-resolution/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The bowtie2 mapper [26]... The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "bowtie2 is confirmed as a required tool with auto-installation capability when not detected.",
@@ -4817,7 +4817,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/shell-environment-variable-resolution/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/shell-environment-variable-resolution/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Samtools (>0.1.19), Python (>2.7)... The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "Paper specifies Samtools >0.1.19 (not \u22651.9 as claimed), but confirms auto-installation when not detected. Version requirement in card differs from paper.",
@@ -4837,7 +4837,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/shell-environment-variable-resolution/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/shell-environment-variable-resolution/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the bowtie2 mapper [26], R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19), Python (>2.7)...",
       "asbval:note": "R is confirmed as a required tool. Paper does not explicitly state auto-installation for R, only for bowtie2 and Samtools.",
@@ -4857,7 +4857,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/shell-environment-variable-resolution/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/shell-environment-variable-resolution/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper specifies Python >2.7, not >3.7 as claimed in card. Required libraries (pysam, bx.python, numpy, scipy) are confirmed.",
@@ -4877,7 +4877,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/shell-environment-variable-resolution/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/shell-environment-variable-resolution/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "pysam is confirmed as a required Python library, but no specific version (\u22650.15.4) is mentioned in the paper.",
@@ -4897,7 +4897,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/shell-environment-variable-resolution/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/shell-environment-variable-resolution/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The code for the normalization is available as a standalone package (https://github.com/hiclib/iced) as well as being included in HiC-Pro.",
       "asbval:note": "iced is confirmed as a standalone package available for normalization, included in HiC-Pro.",
@@ -4917,7 +4917,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/shell-environment-variable-resolution/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/shell-environment-variable-resolution/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MultiQC is not mentioned anywhere in the provided paper passages. No evidence of its use in HiC-Pro pipeline.",
@@ -4937,7 +4937,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/shell-environment-variable-resolution/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/shell-environment-variable-resolution/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Samtools (>0.1.19)",
       "asbval:note": "Paper specifies Samtools >0.1.19, not >=1.9. This appears to be a duplicate/conflicting entry with different version requirement than the earlier samtools claim.",
@@ -4957,7 +4957,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-environment-containerization-setup/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/software-environment-containerization-setup/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "HiC-Pro is an optimized and flexible pipeline for processing Hi-C data from raw reads to normalized contact maps... The following additional software and libraries are required: the bowtie2 mapper, R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19), Python (>2.7) with the pysam, bx.python, numpy and scipy libraries, and the g++ compiler.",
       "asbval:note": "Paper specifies Python >2.7, not >3.7. The research question's focus on Conda environment creation and reproducibility is not explicitly discussed in the paper; the paper only lists dependencies. The claim about Conda-based environment setup is inferred but not directly stated in the paper.",
@@ -4977,7 +4977,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-environment-containerization-setup/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/software-environment-containerization-setup/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Conda is not mentioned anywhere in the paper. The paper discusses software requirements but does not recommend or use Conda for environment management.",
@@ -4997,7 +4997,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-environment-containerization-setup/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/software-environment-containerization-setup/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper specifies Python >2.7, not >3.7. The version requirement in the card is more restrictive than what the paper states.",
@@ -5017,7 +5017,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-environment-containerization-setup/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/software-environment-containerization-setup/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "bx.python is confirmed as a required dependency. Specific version >=0.8.8 is not stated in paper but tool is present.",
@@ -5037,7 +5037,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-environment-containerization-setup/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/software-environment-containerization-setup/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "numpy is confirmed as required. Specific version >=1.18.1 is not stated in paper.",
@@ -5057,7 +5057,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-environment-containerization-setup/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/software-environment-containerization-setup/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "scipy is confirmed as required. Specific version >=1.4.1 is not stated in paper.",
@@ -5077,7 +5077,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-environment-containerization-setup/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/software-environment-containerization-setup/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "pysam is confirmed as required. Specific version >=0.15.4 is not stated in paper.",
@@ -5097,7 +5097,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-environment-containerization-setup/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/software-environment-containerization-setup/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19)",
       "asbval:note": "R is confirmed as a required dependency.",
@@ -5117,7 +5117,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-environment-containerization-setup/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/software-environment-containerization-setup/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R and the BioConductor packages RColorBrewer, ggplot2, grid",
       "asbval:note": "ggplot2 is confirmed as required. Specific version >2.2.1 is not stated in paper.",
@@ -5137,7 +5137,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-environment-containerization-setup/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/software-environment-containerization-setup/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R and the BioConductor packages RColorBrewer, ggplot2, grid",
       "asbval:note": "RColorBrewer is confirmed as required.",
@@ -5157,7 +5157,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-environment-containerization-setup/010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/software-environment-containerization-setup/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the bowtie2 mapper [26]... The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "bowtie2 is confirmed as required and noted as auto-installable if absent, consistent with card claim.",
@@ -5177,7 +5177,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-environment-containerization-setup/011",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/software-environment-containerization-setup/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Samtools (>0.1.19)... The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "samtools is confirmed as required and auto-installable. Paper specifies >0.1.19, not >=1.9 as claimed in card.",
@@ -5197,7 +5197,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-environment-containerization-setup/012",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/software-environment-containerization-setup/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "HiC-Pro proposes a fast sparse-based implementation of the iterative correction method [17]... The code for the normalization is available as a standalone package (https://github.com/hiclib/iced) as well as being included in HiC-Pro.",
       "asbval:note": "iced is confirmed as available as a standalone package from external repo. The paper indicates it is included in HiC-Pro but also available separately.",
@@ -5217,7 +5217,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-environment-containerization-setup/013",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/software-environment-containerization-setup/013",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Miniconda is not mentioned in the paper. The paper does not discuss conda or Miniconda for environment management.",
@@ -5237,7 +5237,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-environment-containerization-setup/014",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/software-environment-containerization-setup/014",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MultiQC is not mentioned anywhere in the paper. HiC-Pro performs its own quality controls but does not reference MultiQC.",
@@ -5257,7 +5257,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-dependency-version-checking/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/system-dependency-version-checking/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The following additional software and libraries are required: the bowtie2 mapper [26], R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19), Python (>2.7) with the pysam, bx.python, numpy and scipy libraries, and the g++ compiler. Note that a bowtie2 version > 2.2.2 is strongly recommended for allele-specific analysis, because, since this version, read alignment on an N-masked genome has been highly improved. Most of the installation steps are fully automatic using a simple command line. The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "Paper confirms automatic installation of bowtie2 and samtools if not detected, and version requirements for bowtie2 (>2.2.2 for allele-specific analysis) and samtools (>0.1.19). However, the paper does NOT mention automatic version checking or installation for R or Python themselves\u2014only that they are required. The card claims automatic installation of 'missing or outdated tools' but the paper only states automatic download/install 'if not detected', not version validation and upgrade. This is a partial match: the function exists but is narrower than claimed.",
@@ -5277,7 +5277,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-dependency-version-checking/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/system-dependency-version-checking/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Note that a bowtie2 version > 2.2.2 is strongly recommended for allele-specific analysis, because, since this version, read alignment on an N-masked genome has been highly improved. Most of the installation steps are fully automatic using a simple command line. The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": null,
@@ -5297,7 +5297,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-dependency-version-checking/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/system-dependency-version-checking/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Samtools (>0.1.19), Python (>2.7) with the pysam, bx.python, numpy and scipy libraries, and the g++ compiler. Most of the installation steps are fully automatic using a simple command line. The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "Paper states samtools >0.1.19 is required and auto-installable if not detected. Card claims >=1.9, which is a much higher version threshold than the paper specifies (>0.1.19). The auto-install claim is supported, but the version requirement differs significantly.",
@@ -5317,7 +5317,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-dependency-version-checking/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/system-dependency-version-checking/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The following additional software and libraries are required: the bowtie2 mapper [26], R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19), Python (>2.7)",
       "asbval:note": null,
@@ -5337,7 +5337,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-dependency-version-checking/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/system-dependency-version-checking/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper specifies Python >2.7, not >3.7 as claimed in the card. The libraries (pysam, bx.python, numpy, scipy) are correctly identified.",
@@ -5357,7 +5357,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-dependency-version-checking/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/system-dependency-version-checking/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper confirms pysam is required but does NOT specify a minimum version (>=0.15.4). Card version requirement cannot be verified from passages.",
@@ -5377,7 +5377,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-dependency-version-checking/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/system-dependency-version-checking/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper confirms bx.python is required but does NOT specify a minimum version (>=0.8.8). Card version requirement cannot be verified from passages.",
@@ -5397,7 +5397,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-dependency-version-checking/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/system-dependency-version-checking/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper confirms numpy is required but does NOT specify a minimum version (>=1.18.1). Card version requirement cannot be verified from passages.",
@@ -5417,7 +5417,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-dependency-version-checking/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/system-dependency-version-checking/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper confirms scipy is required but does NOT specify a minimum version (>=1.4.1). Card version requirement cannot be verified from passages.",
@@ -5437,7 +5437,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-dependency-version-checking/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/system-dependency-version-checking/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The code is also available as a standalone package (https://github.com/hiclib/iced) as well as being included in HiC-Pro.",
       "asbval:note": null,
@@ -5457,7 +5457,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-dependency-version-checking/010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/system-dependency-version-checking/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MultiQC is not mentioned anywhere in the paper passages. The paper does not reference MultiQC as a dependency or tool used by HiC-Pro.",
@@ -5477,7 +5477,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-path-configuration-and-environment-setup/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/system-path-configuration-and-environment-setup/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Most of the installation steps are fully automatic using a simple command line. The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "Paper explicitly describes automated dependency detection and installation for bowtie2 and samtools. Configuration file mentioned in passage 8: 'Analysis parameters are all defined in a single configuration file.'",
@@ -5497,7 +5497,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-path-configuration-and-environment-setup/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/system-path-configuration-and-environment-setup/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the bowtie2 mapper [26], R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19), Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "samtools explicitly listed as required software",
@@ -5517,7 +5517,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-path-configuration-and-environment-setup/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/system-path-configuration-and-environment-setup/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Samtools (>0.1.19)",
       "asbval:note": "Paper specifies Samtools (>0.1.19), not >=1.9. The card claims version >=1.9 but paper only requires >0.1.19. Role of post-processing SAM/BAM is consistent with standard samtools usage but not explicitly stated in passages.",
@@ -5537,7 +5537,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-path-configuration-and-environment-setup/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/system-path-configuration-and-environment-setup/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the bowtie2 mapper [26], R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19), Python (>2.7)",
       "asbval:note": "bowtie2 explicitly listed as required software",
@@ -5557,7 +5557,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-path-configuration-and-environment-setup/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/system-path-configuration-and-environment-setup/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Reads are first aligned on the reference genome using the bowtie2 end-to-end algorithm [26].",
       "asbval:note": "bowtie2 explicitly used for read alignment in HiC-Pro workflow",
@@ -5577,7 +5577,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-path-configuration-and-environment-setup/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/system-path-configuration-and-environment-setup/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the bowtie2 mapper [26], R and the BioConductor packages RColorBrewer, ggplot2, grid, Samtools (>0.1.19), Python (>2.7)",
       "asbval:note": "R explicitly listed as required software",
@@ -5597,7 +5597,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-path-configuration-and-environment-setup/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/system-path-configuration-and-environment-setup/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R and the BioConductor packages RColorBrewer, ggplot2, grid",
       "asbval:note": "Paper lists RColorBrewer and ggplot2 as required packages but does not specify version >=2.2.1 for ggplot2. Also mentions grid package which card does not list.",
@@ -5617,7 +5617,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-path-configuration-and-environment-setup/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/system-path-configuration-and-environment-setup/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Python explicitly listed as required software",
@@ -5637,7 +5637,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-path-configuration-and-environment-setup/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/system-path-configuration-and-environment-setup/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Python (>2.7) with the pysam, bx.python, numpy and scipy libraries",
       "asbval:note": "Paper specifies Python >2.7, not >3.7 as claimed. Required libraries are listed (pysam, bx.python, numpy, scipy) but without specific version constraints (>=0.15.4, >=0.8.8, >=1.18.1, >=1.4.1). Card claims are more restrictive than paper.",
@@ -5657,7 +5657,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-path-configuration-and-environment-setup/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/system-path-configuration-and-environment-setup/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MultiQC is not mentioned anywhere in the provided passages. The paper does not reference MultiQC as a required tool for HiC-Pro.",
@@ -5677,7 +5677,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-path-configuration-and-environment-setup/010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/system-path-configuration-and-environment-setup/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The bowtie2 and Samtools software are automatically downloaded and installed if not detected on the system.",
       "asbval:note": "Paper confirms automatic installation of samtools but specifies version >0.1.19 in software requirements section, not >=1.9. The evidence_spans in the card cite a passage not present in provided excerpts.",
@@ -5697,7 +5697,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/binary-path-detection-and-validation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/binary-path-detection-and-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "binary-path-detection-and-validation",
@@ -5710,7 +5710,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioinformatics-tool-binary-path-resolution/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/bioinformatics-tool-binary-path-resolution/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 13,
       "asbval:target_artifact_id": "bioinformatics-tool-binary-path-resolution",
@@ -5723,7 +5723,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioinformatics-tool-version-compatibility-assessment/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/bioinformatics-tool-version-compatibility-assessment/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "bioinformatics-tool-version-compatibility-assessment",
@@ -5736,7 +5736,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conda-environment-creation-and-management/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/conda-environment-creation-and-management/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 14,
       "asbval:target_artifact_id": "conda-environment-creation-and-management",
@@ -5749,7 +5749,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/configuration-file-generation-and-templating/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/configuration-file-generation-and-templating/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "configuration-file-generation-and-templating",
@@ -5762,7 +5762,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dependency-installation-and-verification/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/dependency-installation-and-verification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "dependency-installation-and-verification",
@@ -5775,7 +5775,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/dependency-resolution-and-validation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/dependency-resolution-and-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 11,
       "asbval:target_artifact_id": "dependency-resolution-and-validation",
@@ -5788,7 +5788,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-matrix-normalization-pipeline-setup/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/hi-c-matrix-normalization-pipeline-setup/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "hi-c-matrix-normalization-pipeline-setup",
@@ -5801,7 +5801,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hpc-cluster-scheduler-configuration/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/hpc-cluster-scheduler-configuration/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "hpc-cluster-scheduler-configuration",
@@ -5814,7 +5814,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/makefile-based-build-system-configuration/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/makefile-based-build-system-configuration/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "makefile-based-build-system-configuration",
@@ -5827,7 +5827,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/module-import-and-api-verification/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/module-import-and-api-verification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "module-import-and-api-verification",
@@ -5840,7 +5840,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-dependency-version-resolution/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-dependency-version-resolution/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 17,
       "asbval:target_artifact_id": "python-dependency-version-resolution",
@@ -5853,7 +5853,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-environment-management/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/python-environment-management/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 11,
       "asbval:target_artifact_id": "python-environment-management",
@@ -5866,7 +5866,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-verification/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/r-package-installation-verification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 14,
       "asbval:target_artifact_id": "r-package-installation-verification",
@@ -5879,7 +5879,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/shell-environment-variable-resolution/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/shell-environment-variable-resolution/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "shell-environment-variable-resolution",
@@ -5892,7 +5892,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-environment-containerization-setup/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/software-environment-containerization-setup/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 14,
       "asbval:target_artifact_id": "software-environment-containerization-setup",
@@ -5905,7 +5905,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-dependency-version-checking/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/system-dependency-version-checking/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 11,
       "asbval:target_artifact_id": "system-dependency-version-checking",
@@ -5918,7 +5918,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/system-path-configuration-and-environment-setup/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/skill/system-path-configuration-and-environment-setup/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "system-path-configuration-and-environment-setup",
@@ -5931,7 +5931,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "HiC-Pro is an optimized and flexible pipeline for Hi-C data processing.",
       "asbval:note": null,
@@ -5951,7 +5951,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "R version with ggplot2 greater than 2.2.1 is required as a dependency.",
       "asbval:note": null,
@@ -5971,7 +5971,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Python greater than 3.7 is required as a dependency.",
       "asbval:note": null,
@@ -5991,7 +5991,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "bx-python version 0.8.8 or greater is required.",
       "asbval:note": null,
@@ -6011,7 +6011,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "numpy version 1.18.1 or greater is required.",
       "asbval:note": null,
@@ -6031,7 +6031,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "scipy version 1.4.1 or greater is required.",
       "asbval:note": null,
@@ -6051,7 +6051,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "pysam version 0.15.4 or greater is required.",
       "asbval:note": null,
@@ -6071,7 +6071,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "samtools version 1.9 or greater can be automatically installed if not detected.",
       "asbval:note": "Text omits that bowtie2 is also mentioned as automatically installable in the same sentence",
@@ -6091,7 +6091,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "bowtie2 can be automatically installed if not detected.",
       "asbval:note": null,
@@ -6111,7 +6111,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The iced module is required for HiC-Pro installation.",
       "asbval:note": null,
@@ -6131,7 +6131,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Iced is no longer part of the HiC-Pro source code and should be independently installed.",
       "asbval:note": null,
@@ -6151,7 +6151,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_012",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_012",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "HiC-Pro version 3.X provides conda, Docker, and Singularity recipes.",
       "asbval:note": null,
@@ -6171,7 +6171,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_013",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_013",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A conda environment can be created using the provided yml file from HiC-Pro.",
       "asbval:note": null,
@@ -6191,7 +6191,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_014",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_014",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "miniconda must be installed first to build a conda environment for HiC-Pro.",
       "asbval:note": null,
@@ -6211,7 +6211,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_015",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_015",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A Docker image for HiC-Pro is automatically built and available on Docker Hub.",
       "asbval:note": null,
@@ -6231,7 +6231,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_016",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_016",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The docker pull command nservant/hicpro:latest retrieves the latest HiC-Pro Docker image.",
       "asbval:note": null,
@@ -6251,7 +6251,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_017",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_017",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A ready-to-use Singularity container for HiC-Pro is available at a specified URL.",
       "asbval:note": null,
@@ -6271,7 +6271,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_018",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_018",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The config-install.txt file must be edited to set paths for HiC-Pro installation.",
       "asbval:note": null,
@@ -6291,7 +6291,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_019",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_019",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "CLUSTER_SYS configuration must be set to TORQUE, SGE, or SLURM for cluster submission.",
       "asbval:note": null,
@@ -6311,7 +6311,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_020",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_020",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The installation command for HiC-Pro is make CONFIG_SYS=config-install.txt install.",
       "asbval:note": null,
@@ -6331,7 +6331,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_021",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_021",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Installation generates a config-system.txt file that defines all paths to HiC-Pro dependencies.",
       "asbval:note": null,
@@ -6351,7 +6351,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_022",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_022",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The config-system.txt file should not be edited.",
       "asbval:note": "Source excerpt 'Please, do not edit this file !' is an instruction but lacks explicit context that it refers to config-system.txt; requires surrounding context confirmation",
@@ -6371,7 +6371,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_023",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_023",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "RColorBrewer is a required R package for HiC-Pro.",
       "asbval:note": "Source excerpt only lists 'RColorBrewer' without explicit statement it is 'required'; substring_in_paper=false and minimal context provided",
@@ -6391,7 +6391,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_024",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_024",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The R grid package is required for HiC-Pro.",
       "asbval:note": "Source excerpt only lists 'grid' without explicit statement it is 'required'; substring_in_paper=false and minimal context provided",
@@ -6411,7 +6411,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_025",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-015-0831-x/claim/claim_025",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "argparse is a required Python library for HiC-Pro.",
       "asbval:note": "Source excerpt is minimal ('--- argparse') and substring not found in paper; claim about argparse being 'required' for HiC-Pro cannot be verified from the provided excerpt alone, though context suggests it may be listed as a dependency.",

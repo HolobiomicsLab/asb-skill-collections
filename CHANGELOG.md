@@ -28,6 +28,21 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
   keeps its historical score/slug order unchanged. See `docs/selection.md`.
 
 ### Fixed
+- Scope all 16,583 validation assertion IDs in the three v1 collections to
+  their source paper, preserving each existing local suffix. The 82 indicium
+  records now use `asbval:assertion/paper/<URL-escaped DOI>/<local suffix>`;
+  all IDs are distinct across records. Source identity comes from the exact
+  workflow/build provenance join for 78 records and four caller-confirmed paper
+  DOIs, using ASB's production normalization and scope helpers. Assertion
+  contents, serialization and the 24 records without assertions are unchanged.
+  `scripts/migrate_v1_assertion_ids.py` reproduces the migration, the three
+  receipts are regenerated, and `tests/test_v1_assertion_ids.py` guards source
+  identity and uniqueness. Supply the four confirmed metabolomics identities
+  with repeated `--confirmed-doi COLLECTION/RECORD=DOI` arguments:
+  `metabolomics/featurefindermetab=10.1074/mcp.m113.031278`,
+  `metabolomics/mzmine2=10.1186/1471-2105-11-395`,
+  `metabolomics/np_analyst=10.1021/acscentsci.1c01108`, and
+  `metabolomics/sirius=10.1038/s41592-019-0344-8`.
 - Name real ontology terms in the 16,583 validation assertions of the three v1
   collections (82 `indicium/*.jsonld` files: 14,912 `ClaimAssessment`, 1,374
   `SkillTriageAssertion`, 297 `ScopeDriftAssertion`). They carried

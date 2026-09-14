@@ -1457,7 +1457,7 @@
       "workflow_coupling": "tight"
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The GNPS network from the 51 spectra was rebuilt... This network contains two large connected components of respective size 21 and 11, two pairs, and 15 spectra remaining isolated. The main components to be explained (disjoint cliques of size above 3, as well as pairs with similarity above 0.9) were extracted (findGNPSComponents method), leading to 5 disjoint cliques, in addition to the initial 4 connected components of the network. Finally, mineMS2 patterns of highest recall for these components were selected (findPatternsExplainingComponents method), with the precision and size of the patterns being used to split ties (see the package vignette): patterns explaining each component were found, with a minimum recall of 0.9 and a mean F1-score of 0.89 (minimum of 0.55).",
       "asbval:note": "The paper describes the general workflow of findPatternsExplainingComponents applied to P. nordicum network components, but does NOT provide specific details about 'component 8' with precursor m/z values 370.1283 and 404.0891, nor does it name a specific pattern 'P70' or report its F1-score as 1.0. The paper reports mean F1-score of 0.89 (minimum 0.55) across all components, not component-specific metrics. The specific component and pattern identifiers appear to be fabricated or from supplementary materials not provided in the passages.",
@@ -1477,7 +1477,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No such table or data frame is provided in the passages. The paper reports aggregate statistics (mean F1-score 0.89, minimum 0.55) but not per-component breakdowns with specific pattern identifiers like 'P70' or component numbers like '8'.",
@@ -1497,7 +1497,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No such verification report exists in the passages. The paper does not name pattern 'P70' or provide component-level F1-score breakdowns. The claim of 'all other top-5 patterns have recall=1.0' contradicts the paper's statement that patterns were selected with 'minimum recall of 0.9', not 1.0.",
@@ -1517,7 +1517,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/card/task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The GNPS network from the 51 spectra was rebuilt, with selected parameter values to obtain the more consistent network with the one reported by the authors (see Supplementary File 1, Note S2). This network contains two large connected components of respective size 21 and 11, two pairs, and 15 spectra remaining isolated. The main components to be explained (disjoint cliques of size above 3, as well as pairs with similarity above 0.9) were extracted (findGNPSComponents method), leading to 5 disjoint cliques, in addition to the initial 4 connected components of the network.",
       "asbval:note": "The paper does report component counts (2 large connected components, 2 pairs, 15 isolated spectra; 5 disjoint cliques extracted), but the title claims to 'reproduce the count' while the research_question and expected_outputs focus on pattern P70 and component 8 metrics\u2014a mismatch. The title is narrower in scope than the actual research question.",
@@ -1537,7 +1537,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/card/task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The mineMS2 analysis of the spectra collection was performed in 14 s for the P.verrucosum dataset (respectively, 24 s for the P. nordicum dataset)... Finally, mineMS2 patterns of highest recall for these components were selected (findPatternsExplainingComponents method)...",
       "asbval:note": "mineMS2 is explicitly used in the P. nordicum analysis and the findPatternsExplainingComponents method is part of the mineMS2 package.",
@@ -1557,7 +1557,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/card/task_001/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "igraph is not mentioned anywhere in the provided passages. The paper uses GNPS for molecular network generation and mineMS2 for pattern extraction, but does not name igraph as a tool.",
@@ -1577,7 +1577,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/card/task_001/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The mineMS2 software is publicly available as an R package ( https://github.com/odisce/mineMS2 ). ... The described algorithm was written in C++ using Boost, and wrapped with Rcpp into the mineMS2 R package",
       "asbval:note": "mineMS2 is an R package, so R is the language/environment used.",
@@ -1597,7 +1597,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The title ('Reproduce the count of GNPS components') is narrower and different in focus from the research_question (which asks about pattern P70 F1-score on component 8). This is a significant scope mismatch.",
@@ -1615,7 +1615,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/fragmentation-pattern-extraction-and-ranking/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We propose an innovative de novo strategy for searching for exact fragmentation patterns within collections of MS/MS spectra. This approach is based on (i) a new representation of spectra as graphs of m/z differences, and (ii) an efficient frequent-subgraph mining algorithm... maximal subgraphs (i.e. closed subgraphs) are mined at the selected frequency threshold... select the patterns that best explain these components... patterns explaining each component were found, with a minimum recall of 0.9 and a mean F1-score of 0.89",
       "asbval:note": "All core claims verified: closed subgraph mining of m/z differences, ranking by recall/precision/F1-score metrics, and network component explanation.",
@@ -1635,7 +1635,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/fragmentation-pattern-extraction-and-ranking/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Importantly, such approaches do not require any information from spectral or molecular databases, nor any knowledge about molecular formulas... This new graph representation is exact and makes no assumption about the fragmentation path leading to a given fragment ion, nor about the molecular formula of the precursor.",
       "asbval:note": "Paper explicitly states no database or molecular formula requirement.",
@@ -1655,7 +1655,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/fragmentation-pattern-extraction-and-ranking/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The spectra are converted to Directed Acyclic Graphs built on a common set of edge labels extracted from the whole spectra collection... The search for common patterns of m/z differences (edges) among the fragmentation graphs is performed by an efficient Frequent Subgraph Mining (FSM) algorithm... spectra common to at least two spectra",
       "asbval:note": "Minimum frequency threshold of 2 is standard in the paper's examples.",
@@ -1675,7 +1675,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/fragmentation-pattern-extraction-and-ranking/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The coupling of mineMS2 to molecular networks [27] is a valuable strategy to focus on the patterns that best-explain each component of the network... The package thus enables to (1) automatically extracts connected components, cliques of a selected minimum size, and pairs of spectra of a specified minimum similarity, and (2) select the patterns that best explain these components.",
       "asbval:note": "Explicit integration with GNPS networks for component and clique explanation.",
@@ -1695,7 +1695,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/fragmentation-pattern-extraction-and-ranking/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Direct matching to databases, however, is limited by the amount of available MS/MS data obtained from pure standards... Importantly, such approaches do not require any information from spectral or molecular databases, nor any knowledge about molecular formulas.",
       "asbval:note": "Paper emphasizes de novo approach independent of databases and formulas.",
@@ -1715,7 +1715,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/fragmentation-pattern-extraction-and-ranking/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The spectra are converted to Directed Acyclic Graphs... Frequency testing: Subgraphs with frequencies below the specified threshold are discarded.",
       "asbval:note": "Frequency threshold is a core parameter; minimum 2 is implicit in pattern mining.",
@@ -1735,7 +1735,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/fragmentation-pattern-extraction-and-ranking/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mineMS2 detects m/z differences that MS2LDA does not consider because they are not neutral losses but differences between peaks from two distinct fragmentation paths... all m/z differences for mineMS2 versus fragments and precursor losses for MS2LDA",
       "asbval:note": "Paper explicitly states mineMS2 includes non-neutral-loss m/z differences (differences between alternative fragmentation paths), making it unsuitable if only neutral losses are desired. Claim text is incomplete in the card.",
@@ -1755,7 +1755,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/fragmentation-pattern-extraction-and-ranking/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The mineMS2 software is publicly available as an R package (https://github.com/odisce/mineMS2)... Our approach, named mineMS2, relies on a new representation of spectra as fragmentation graphs of m/z differences, and on a dedicated suite of mining algorithms for these particular graphs... the patterns that best explain these components were found, with a minimum recall of 0.9 and a mean F1-score of 0.89",
       "asbval:note": "mineMS2 is the primary tool; all functions confirmed.",
@@ -1775,7 +1775,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/fragmentation-pattern-extraction-and-ranking/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention igraph by name. While mineMS2 package includes methods to extract connected components and cliques (findGNPSComponents, findPatternsExplainingComponents), the paper does not specify igraph as the underlying library. The paper states 'The package thus enables to (1) automatically extracts connected components, cliques of a selected minimum size, and pairs of spectra of a specified minimum similarity' but does not name igraph.",
@@ -1795,7 +1795,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/fragmentation-pattern-extraction-and-ranking/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In molecular networks, as generated by the GNPS platform [27], each vertex is a spectrum and an edge indicates a high pairwise similarity according to the modified cosine score... The coupling of mineMS2 to molecular networks such as those generated by GNPS was therefore included as a feature of the mineMS2 software",
       "asbval:note": "GNPS is confirmed as the molecular networking platform used with mineMS2.",
@@ -1815,7 +1815,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/fragmentation-pattern-extraction-and-ranking/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Cytoscape. While figures show network visualizations (e.g., Fig. 6 of fungisporin cluster), the paper does not name Cytoscape as the visualization tool.",
@@ -1835,7 +1835,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/011",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/fragmentation-pattern-extraction-and-ranking/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention MSnbase. Input format is specified as .mgf (mass spectrometry data format), but no R package for spectrum object management is named.",
@@ -1855,7 +1855,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/012",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/fragmentation-pattern-extraction-and-ranking/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The mineMS2 software is publicly available as an R package (https://github.com/odisce/mineMS2)... The described algorithm was written in C++ using Boost, and wrapped with Rcpp into the mineMS2 R package",
       "asbval:note": "mineMS2 is confirmed as an R package with C++ backend wrapped via Rcpp.",
@@ -1875,7 +1875,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gnps-molecular-network-integration/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/gnps-molecular-network-integration/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The coupling of mineMS2 to molecular networks [27] is a valuable strategy to focus on the patterns that best-explain each component of the network. Since mineMS2 works best at explaining small dense components, patterns specific to the connected components of the network, including cliques and high similarity pairs, are of particular interest. The coupling to molecular networks such as those generated by GNPS was therefore included as a feature of the mineMS2 software... The package thus enables to (1) automatically extracts connected components, cliques of a selected minimum size, and pairs of spectra of a specified minimum similarity, and (2) select the patterns that best explain these components.",
       "asbval:note": "Claim is directly supported by passage describing the coupling strategy and its implementation.",
@@ -1895,7 +1895,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gnps-molecular-network-integration/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/gnps-molecular-network-integration/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The coupling of mineMS2 to molecular networks [27] is a valuable strategy to focus on the patterns that best-explain each component of the network... Our methodology thus enables to automatically extract the clusters from a molecular network and provide common fragmentation patterns to help interpret these clusters in terms of common m/z differences.",
       "asbval:note": "Paper supports the targeted annotation aspect but does not explicitly claim independence from cosine-score thresholds. The paper describes using GNPS networks with 'selected parameter values' but does not frame mineMS2 patterns as independent of cosine similarity.",
@@ -1915,7 +1915,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gnps-molecular-network-integration/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/gnps-molecular-network-integration/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The mineMS2 software is publicly available as an R package ( https://github.com/odisce/mineMS2 )... The package thus enables to (1) automatically extracts connected components, cliques of a selected minimum size, and pairs of spectra of a specified minimum similarity, and (2) select the patterns that best explain these components. This protocol was applied to the P. nordicum study ([51]; see the mineMS2 coupling to gnps vignette from the package)... Finally, mineMS2 patterns of highest recall for these components were selected (findPatternsExplainingComponents method)",
       "asbval:note": "Function name findPatternsExplainingComponents is explicitly mentioned in passage 14.",
@@ -1935,7 +1935,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gnps-molecular-network-integration/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/gnps-molecular-network-integration/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "igraph is not mentioned anywhere in the paper passages. The paper describes mineMS2 extracting components and cliques but does not name igraph as the tool used for this purpose.",
@@ -1955,7 +1955,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gnps-molecular-network-integration/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/gnps-molecular-network-integration/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The coupling to molecular networks such as those generated by GNPS was therefore included as a feature of the mineMS2 software... The GNPS network from the 51 spectra was rebuilt, with selected parameter values to obtain the more consistent network with the one reported by the authors",
       "asbval:note": "GNPS is confirmed as the source of molecular networks and network topology. Cosine similarity is mentioned in the paper as the basis for GNPS edges.",
@@ -1975,7 +1975,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gnps-molecular-network-integration/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/gnps-molecular-network-integration/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Cytoscape is not mentioned in any of the paper passages. The paper does not discuss visualization tools for the annotated networks.",
@@ -1995,7 +1995,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gnps-molecular-network-integration/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/gnps-molecular-network-integration/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The mineMS2 software is publicly available as an R package ( https://github.com/odisce/mineMS2 )... The described algorithm was written in C++ using Boost, and wrapped with Rcpp into the mineMS2 R package",
       "asbval:note": "R is confirmed as the environment for mineMS2 package distribution and use.",
@@ -2015,7 +2015,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gnps-molecular-network-integration/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/gnps-molecular-network-integration/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Since mineMS2 works best at explaining small dense components, patterns specific to the connected components of the network, including cliques and high similarity pairs, are of particular interest... For the applications to large collections of spectra, coupling mineMS2 with a similarity network such as GNPS [27] enables to focus on motifs that explain groups of spectra (cliques or connected components) and facilitate their interpretation.",
       "asbval:note": "Scope description aligns with paper's stated use case for coupling mineMS2 with GNPS networks.",
@@ -2035,7 +2035,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gnps-molecular-network-integration/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/gnps-molecular-network-integration/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss minimum spectrum count thresholds or spectral diversity requirements for the GNPS coupling workflow. Insufficient information to validate this negative criterion.",
@@ -2055,7 +2055,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-based-metabolite-similarity-assessment/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/graph-based-metabolite-similarity-assessment/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We propose an innovative de novo strategy for searching for exact fragmentation patterns within collections of MS/MS spectra. This approach is based on (i) a new representation of spectra as graphs of m/z differences, and (ii) an efficient frequent-subgraph mining algorithm... Importantly, such approaches do not require any information from spectral or molecular databases, nor any knowledge about molecular formulas.",
       "asbval:note": "Core research question is directly supported by abstract and introduction.",
@@ -2075,7 +2075,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-based-metabolite-similarity-assessment/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/graph-based-metabolite-similarity-assessment/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our approach, named mineMS2, relies on a new representation of spectra as fragmentation graphs of m/z differences, and on a dedicated suite of mining algorithms for these particular graphs... The mineMS2 software is publicly available as an R package (https://github.com/odisce/mineMS2).",
       "asbval:note": "mineMS2 confirmed as R package with stated functionality for graph construction and pattern mining.",
@@ -2095,7 +2095,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-based-metabolite-similarity-assessment/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/graph-based-metabolite-similarity-assessment/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "igraph is not mentioned in any passage. While the paper discusses GNPS networks and component extraction, no specific tool name is given for this functionality. Insufficient evidence to confirm or deny.",
@@ -2115,7 +2115,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-based-metabolite-similarity-assessment/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/graph-based-metabolite-similarity-assessment/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MSnbase is not mentioned in any passage. The paper discusses MS/MS spectra and their representation but does not name the R class or package used for storage.",
@@ -2135,7 +2135,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-based-metabolite-similarity-assessment/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/graph-based-metabolite-similarity-assessment/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In molecular networks, as generated by the GNPS platform [27], each vertex is a spectrum and an edge indicates a high pairwise similarity according to the modified cosine score... The coupling to molecular networks such as those generated by GNPS was therefore included as a feature of the mineMS2 software, as described in a dedicated vignette (the precomputed molecular network is provided as a file, in addition to the library of MS/MS spectra).",
       "asbval:note": "GNPS is confirmed as source of molecular networks used for component extraction and pattern interpretation.",
@@ -2155,7 +2155,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-based-metabolite-similarity-assessment/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/graph-based-metabolite-similarity-assessment/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Cytoscape is not mentioned in any passage. The paper discusses visualization of networks and patterns but does not name Cytoscape as the tool used.",
@@ -2175,7 +2175,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-based-metabolite-similarity-assessment/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/graph-based-metabolite-similarity-assessment/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The mineMS2 software is publicly available as an R package (https://github.com/odisce/mineMS2)... The described algorithm was written in C++ using Boost, and wrapped with Rcpp into the mineMS2 R package.",
       "asbval:note": "R is confirmed as the language/environment for mineMS2 package.",
@@ -2195,7 +2195,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-based-metabolite-similarity-assessment/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/graph-based-metabolite-similarity-assessment/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The coupling to molecular networks such as those generated by GNPS was therefore included as a feature of the mineMS2 software... The package thus enables to (1) automatically extracts connected components, cliques of a selected minimum size, and pairs of spectra of a specified minimum similarity, and (2) select the patterns that best explain these components.",
       "asbval:note": "Paper confirms GNPS network coupling and component/clique extraction, but does not mention 'Spectrum2 objects' or 'ms2Lib class' by name. The paper uses .mgf format for input and discusses spectra collections but does not specify these R class names.",
@@ -2215,7 +2215,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-based-metabolite-similarity-assessment/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/graph-based-metabolite-similarity-assessment/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Importantly, such approaches do not require any information from spectral or molecular databases, nor any knowledge about molecular formulas... This approach is based on (i) a new representation of spectra as graphs of m/z differences, and (ii) an efficient frequent-subgraph mining algorithm.",
       "asbval:note": "Paper explicitly states independence from databases and molecular formulas.",
@@ -2235,7 +2235,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-based-metabolite-similarity-assessment/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/graph-based-metabolite-similarity-assessment/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The spectra are converted to Directed Acyclic Graphs built on a common set of edge labels extracted from the whole spectra collection... FSM algorithms extract all or a subset of the subgraphs from a set of graphs with a frequency above a specified threshold.",
       "asbval:note": "Paper discusses frequency thresholds and pattern mining on collections, implying minimum collection size requirement.",
@@ -2255,7 +2255,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/network-component-identification-and-filtering/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/network-component-identification-and-filtering/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The coupling to molecular networks such as those generated by GNPS was therefore included as a feature of the mineMS2 software, as described in a dedicated vignette (the precomputed molecular network is provided as a file, in addition to the library of MS/MS spectra). The package thus enables to (1) automatically extracts connected components, cliques of a selected minimum size, and pairs of spectra of a specified minimum similarity",
       "asbval:note": "Exact match: connected components, cliques, minimum size, and similarity-based pairs are all explicitly mentioned as features of mineMS2 for network component extraction.",
@@ -2275,7 +2275,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/network-component-identification-and-filtering/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/network-component-identification-and-filtering/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "igraph is not mentioned anywhere in the provided passages. The paper states mineMS2 is an R package that performs these operations, but does not name igraph as the underlying library used for graph parsing or component extraction.",
@@ -2295,7 +2295,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/network-component-identification-and-filtering/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/network-component-identification-and-filtering/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The coupling to molecular networks such as those generated by GNPS was therefore included as a feature of the mineMS2 software... The GNPS network from the 51 spectra was rebuilt, with selected parameter values to obtain the more consistent network with the one reported by the authors",
       "asbval:note": "GNPS is confirmed as the source of molecular networks that mineMS2 accepts as input. Cosine similarity is mentioned in passage 3 as the basis for GNPS network construction.",
@@ -2315,7 +2315,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/network-component-identification-and-filtering/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/network-component-identification-and-filtering/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Finally, mineMS2 patterns of highest recall for these components were selected (findPatternsExplainingComponents method), with the precision and size of the patterns being used to split ties... patterns explaining each component were found, with a minimum recall of 0.9 and a mean F1-score of 0.89",
       "asbval:note": "mineMS2 explicitly ranks patterns by recall, precision, and size to identify best-explaining patterns per network component via the findPatternsExplainingComponents method.",
@@ -2335,7 +2335,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/network-component-identification-and-filtering/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/network-component-identification-and-filtering/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The mineMS2 software is publicly available as an R package ( https://github.com/odisce/mineMS2 )",
       "asbval:note": "mineMS2 is confirmed as an R package. The vignette and methods described are R-based.",
@@ -2355,7 +2355,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precision-recall-optimization-in-spectral-annotation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/precision-recall-optimization-in-spectral-annotation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The coupling to molecular networks such as those generated by GNPS was therefore included as a feature of the mineMS2 software... The package thus enables to (1) automatically extracts connected components, cliques of a selected minimum size, and pairs of spectra of a specified minimum similarity, and (2) select the patterns that best explain these components... patterns explaining each component were found, with a minimum recall of 0.9 and a mean F1-score of 0.89",
       "asbval:note": "Fully supported. Paper explicitly describes F1-score-based ranking of patterns to explain GNPS network components.",
@@ -2375,7 +2375,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precision-recall-optimization-in-spectral-annotation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/precision-recall-optimization-in-spectral-annotation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The package thus enables to (1) automatically extracts connected components, cliques of a selected minimum size, and pairs of spectra of a specified minimum similarity, and (2) select the patterns that best explain these components... (findGNPSComponents method)... (findPatternsExplainingComponents method)",
       "asbval:note": "Function names confirmed in passage. ms2Lib class name not explicitly mentioned but mineMS2 R package structure is confirmed.",
@@ -2395,7 +2395,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precision-recall-optimization-in-spectral-annotation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/precision-recall-optimization-in-spectral-annotation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention igraph by name. Paper states 'The GNPS network from the 51 spectra was rebuilt' and describes extracting components, but does not name the tool used for GraphML parsing or network manipulation.",
@@ -2415,7 +2415,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precision-recall-optimization-in-spectral-annotation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/precision-recall-optimization-in-spectral-annotation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The coupling of mineMS2 to molecular networks [27] is a valuable strategy to focus on the patterns that best-explain each component of the network... the precomputed molecular network is provided as a file, in addition to the library of MS/MS spectra",
       "asbval:note": "GNPS role confirmed. Paper describes GNPS network as input to mineMS2 workflow.",
@@ -2435,7 +2435,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precision-recall-optimization-in-spectral-annotation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/precision-recall-optimization-in-spectral-annotation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Cytoscape is not mentioned anywhere in the paper. Paper uses GNPS for visualization but does not reference Cytoscape.",
@@ -2455,7 +2455,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precision-recall-optimization-in-spectral-annotation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/precision-recall-optimization-in-spectral-annotation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The mineMS2 software is publicly available as an R package ( https://github.com/odisce/mineMS2 )",
       "asbval:note": "R confirmed as host language for mineMS2. igraph not mentioned in paper.",
@@ -2475,7 +2475,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precision-recall-optimization-in-spectral-annotation/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/precision-recall-optimization-in-spectral-annotation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The GNPS network from the 51 spectra was rebuilt... This network contains two large connected components of respective size 21 and 11, two pairs, and 15 spectra remaining isolated. The main components to be explained (disjoint cliques of size above 3, as well as pairs with similarity above 0.9) were extracted",
       "asbval:note": "Scope fully supported. Paper describes exactly this workflow: mineMS2 pattern extraction followed by GNPS component extraction.",
@@ -2495,7 +2495,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precision-recall-optimization-in-spectral-annotation/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/precision-recall-optimization-in-spectral-annotation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Finally, mineMS2 patterns of highest recall for these components were selected (findPatternsExplainingComponents method), with the precision and size of the patterns being used to split ties",
       "asbval:note": "Supported. Paper describes ranking patterns by recall, precision, and F1-score to select best patterns per component.",
@@ -2515,7 +2515,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-pattern-extraction-and-ranking/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/fragmentation-pattern-extraction-and-ranking/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 12,
       "asbval:target_artifact_id": "fragmentation-pattern-extraction-and-ranking",
@@ -2528,7 +2528,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gnps-molecular-network-integration/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/gnps-molecular-network-integration/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "gnps-molecular-network-integration",
@@ -2541,7 +2541,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/graph-based-metabolite-similarity-assessment/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/graph-based-metabolite-similarity-assessment/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "graph-based-metabolite-similarity-assessment",
@@ -2554,7 +2554,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/network-component-identification-and-filtering/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/network-component-identification-and-filtering/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "network-component-identification-and-filtering",
@@ -2567,7 +2567,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precision-recall-optimization-in-spectral-annotation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/skill/precision-recall-optimization-in-spectral-annotation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "precision-recall-optimization-in-spectral-annotation",
@@ -2580,7 +2580,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mineMS2 patterns are graphs with ion peaks as nodes and m/z differences as edges.",
       "asbval:note": "substring_in_paper=false; claim content is reasonable but source_excerpt provided does not contain relevant information about mineMS2 patterns",
@@ -2600,7 +2600,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mineMS2 m/z differences include not only neutral losses but also m/z differences between ions that belong to distinct fragmentation paths.",
       "asbval:note": "substring_in_paper=false; excerpt mentions m/z differences but does not explicitly state they include ions from distinct fragmentation paths",
@@ -2620,7 +2620,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The mineMS2 method is independent of external spectral databases and knowledge of the molecular formula of precursor ions.",
       "asbval:note": "substring_in_paper=false; source_excerpt does not address independence from databases or molecular formula knowledge",
@@ -2640,7 +2640,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mineMS2 patterns are complementary to MS2LDA patterns because they consist of exact graphs rather than probabilistic lists.",
       "asbval:note": "Text accurately represents the source_excerpt about complementarity to MS2LDA and exact graph structure",
@@ -2660,7 +2660,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The dataset contains 51 MS/MS spectra from secondary metabolites of Penicillium nordicum.",
       "asbval:note": "Text accurately represents the source_excerpt about 51 MS/MS spectra from Penicillium nordicum",
@@ -2680,7 +2680,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The Penicillium nordicum spectra were acquired on a Luna C18 column using HPLC coupled to an LTQ Orbitrap XL hybrid mass spectrometer.",
       "asbval:note": "Text accurately represents the source_excerpt about Luna C18 column, HPLC, and LTQ Orbitrap XL hybrid",
@@ -2700,7 +2700,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The Penicillium nordicum spectra were acquired in positive ionization mode at HCD20 collision energy with a resolution of 7,500.",
       "asbval:note": "Text accurately represents the source_excerpt about positive ionization mode, HCD20 collision energy, and 7,500 resolution",
@@ -2720,7 +2720,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The molecular network was precomputed on the GNPS website and extracted in GraphML format.",
       "asbval:note": "Text accurately represents the source_excerpt about molecular network precomputed on GNPS and extracted in GraphML format",
@@ -2740,7 +2740,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mineMS2 can be coupled to GNPS MS/MS molecular networking to focus on patterns that best explain components of the network.",
       "asbval:note": "Text accurately represents the source_excerpt about coupling mineMS2 to GNPS molecular networking",
@@ -2760,7 +2760,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "It is recommended to compute the patterns and the GNPS network using the same .mgf input file to avoid matching issues.",
       "asbval:note": "Text accurately represents the source_excerpt about using the same .mgf input file",
@@ -2780,7 +2780,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The ms2Lib class is used throughout the workflow to store the spectra data and metadata, the m/z differences, the fragmentation graphs, and the patterns.",
       "asbval:note": "Text accurately represents the source_excerpt about ms2Lib class storing spectra data, metadata, m/z differences, fragmentation graphs, and patterns",
@@ -2800,7 +2800,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_012",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_012",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The ms2Lib constructor function can take the collection of MS/MS spectra as input as a single mgf file, a vector of individual mgf file names, the name of a directory containing individual spectra as mgf files, or a list of Spectrum2 objects.",
       "asbval:note": "Text accurately represents the source_excerpt about ms2Lib constructor accepting multiple input formats",
@@ -2820,7 +2820,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_013",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_013",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Supplementary metadata about the spectra can be provided as a tsv tabular file.",
       "asbval:note": null,
@@ -2840,7 +2840,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_014",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_014",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The metadata are not used in the computations of m/z differences, fragmentation graphs, or frequent patterns but can be displayed in plot titles.",
       "asbval:note": null,
@@ -2860,7 +2860,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_015",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_015",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Two columns mz.precursor and file are automatically inserted at the beginning of the metadata table stored in the ms2Lib object.",
       "asbval:note": "Text omits 'automatically' qualifier and 'with the information borrowed from the mgf file' context",
@@ -2880,7 +2880,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_016",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_016",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The discretizeMzDifferences method computes the m/z differences between the peaks in each spectrum and discretizes them for the whole spectra collection.",
       "asbval:note": null,
@@ -2900,7 +2900,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_017",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_017",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The m/z differences computed by discretizeMzDifferences include not only neutral losses but also differences between ions that belong to distinct fragmentation paths of the precursor.",
       "asbval:note": null,
@@ -2920,7 +2920,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_018",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_018",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The default value of the ppm parameter in discretizeMzDifferences is 15.",
       "asbval:note": "Text simplifies parameter description; source indicates ppm is used for kernel density estimation bandwidth, not just a standalone default",
@@ -2940,7 +2940,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_019",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_019",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The default value of the dmz parameter in discretizeMzDifferences is 0.007 Da.",
       "asbval:note": null,
@@ -2960,7 +2960,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_020",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_020",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The default value of the count parameter in discretizeMzDifferences is 2.",
       "asbval:note": null,
@@ -2980,7 +2980,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_021",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_021",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The default value of the maxFrags parameter in discretizeMzDifferences is 15.",
       "asbval:note": null,
@@ -3000,7 +3000,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_022",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_022",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The default value of the limMzFormula parameter in discretizeMzDifferences is c(14.5, 200).",
       "asbval:note": null,
@@ -3020,7 +3020,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_023",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_023",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The mineClosedSubgraphs method extracts frequent subgraphs among the fragmentation graphs.",
       "asbval:note": null,
@@ -3040,7 +3040,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_024",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_024",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The default value of the count parameter in mineClosedSubgraphs is 2.",
       "asbval:note": null,
@@ -3060,7 +3060,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_025",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_025",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The default value of the sizeMin parameter in mineClosedSubgraphs is 1.",
       "asbval:note": null,
@@ -3080,7 +3080,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_026",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_026",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "When the number of frequent m/z differences is above 600 and sizeMin is set to 1, the sizeMin value will be automatically increased to 2.",
       "asbval:note": null,
@@ -3100,7 +3100,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_027",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_027",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The findGNPSComponents function extracts connected components from the molecular network.",
       "asbval:note": "Text claims function 'extracts' connected components, but source only describes what connected components are; doesn't explicitly state the function extracts them (though context suggests it does).",
@@ -3120,7 +3120,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_028",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_028",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The findGNPSComponents function can extract cliques from the molecular network.",
       "asbval:note": "Source describes cliques as a type of component but doesn't explicitly state findGNPSComponents extracts cliques; inferred from context.",
@@ -3140,7 +3140,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_029",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_029",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The findGNPSComponents function selects a set of disjoint cliques by decreasing order of size.",
       "asbval:note": "Source attributes clique selection to 'mineMS2' function, not 'findGNPSComponents'; different function names.",
@@ -3160,7 +3160,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_030",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_030",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The findGNPSComponents function can extract high similarity pairs of nodes from the molecular network.",
       "asbval:note": "Source describes high similarity pairs as a component type but doesn't explicitly state findGNPSComponents extracts them; inferred from context.",
@@ -3180,7 +3180,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_031",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_031",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The minSize parameter of findGNPSComponents specifies the minimum size of detected cliques.",
       "asbval:note": null,
@@ -3200,7 +3200,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_032",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_032",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The pairThreshold parameter of findGNPSComponents specifies the threshold of the cosine score for high similarity pairs of nodes.",
       "asbval:note": null,
@@ -3220,7 +3220,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_033",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_033",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Nine components were selected from the Penicillium nordicum GNPS molecular network.",
       "asbval:note": "Source states 'Nine components have been selected' but doesn't specify they are from Penicillium nordicum GNPS network in the excerpt.",
@@ -3240,7 +3240,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_034",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_034",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Components 6, 7, 8 and 9 are the connected components of the Penicillium nordicum network.",
       "asbval:note": null,
@@ -3260,7 +3260,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_035",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_035",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Components 1, 3, and 4 are disjoint cliques from component 6 (the larger cluster).",
       "asbval:note": null,
@@ -3280,7 +3280,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_036",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_036",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Components 2 and 5 are disjoint cliques from component 7 (the smaller cluster).",
       "asbval:note": null,
@@ -3300,7 +3300,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_037",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_037",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The recall metric measures the proportion of explained spectra among the component spectra.",
       "asbval:note": null,
@@ -3320,7 +3320,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_038",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_038",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The precision metric measures the proportion of component spectra among the explained spectra.",
       "asbval:note": null,
@@ -3340,7 +3340,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_039",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_039",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The F1-score is the harmonic mean of precision and recall.",
       "asbval:note": null,
@@ -3360,7 +3360,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_040",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_040",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "For the pair of spectra with precursor m/z values of 370.1283 and 404.0891 (component 8), the best explaining pattern P70 has an F1-score of 1.",
       "asbval:note": null,
@@ -3380,7 +3380,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_041",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_041",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The largest component in the Penicillium nordicum GNPS network consists of 21 spectra.",
       "asbval:note": null,
@@ -3400,7 +3400,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_042",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_042",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The m/z difference of 99.0683 is shared by 19 out of 21 fragmentation spectra in the largest component.",
       "asbval:note": null,
@@ -3420,7 +3420,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_043",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_043",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The m/z difference of 99.0683 has a precision of 1, indicating it is not present in any other spectra of the dataset.",
       "asbval:note": null,
@@ -3440,7 +3440,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_045",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_045",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The m/z difference of 186.079 has a possible formula of C11H10ON2.",
       "asbval:note": null,
@@ -3460,7 +3460,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_047",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_047",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A total of multiple patterns include the m/z difference of 186.079.",
       "asbval:note": "Text says 'multiple patterns' but source specifies an exact count via code reference; vague quantifier omits specificity",
@@ -3480,7 +3480,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_048",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_048",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A pattern including the m/z difference 186.079 is found in 7 spectra.",
       "asbval:note": null,
@@ -3500,7 +3500,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_049",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_049",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mineMS2 discovers new similarities between spectra that are not all linked together in the GNPS network.",
       "asbval:note": "Source excerpt describes spectra not linked in GNPS network but doesn't explicitly attribute discovery to mineMS2; attribution is inferred rather than stated",
@@ -3520,7 +3520,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_050",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_050",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The default ppm tolerance in mineMS2 is 15 ppm.",
       "asbval:note": "Source excerpt provided does not contain information about ppm tolerance; appears to be unrelated code snippet",
@@ -3540,7 +3540,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_051",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_051",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "When ppm tolerance was set to 7 ppm on the LIMS-DB dataset, the average F1-score decreased to 0.47.",
       "asbval:note": null,
@@ -3560,7 +3560,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_052",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_052",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "With the default ppm tolerance of 15 ppm on the LIMS-DB dataset, the average F1-score is 0.53.",
       "asbval:note": null,
@@ -3580,7 +3580,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_053",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_053",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "At 7 ppm tolerance, patterns explaining ChemOnt concepts contained 5.2 m/z differences on average.",
       "asbval:note": null,
@@ -3600,7 +3600,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_054",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_054",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "At 15 ppm tolerance, patterns explaining ChemOnt concepts contained 6.8 m/z differences on average.",
       "asbval:note": null,
@@ -3620,7 +3620,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_055",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_055",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The default maximum number of fragments in discretizeMzDifferences is set to 15.",
       "asbval:note": null,
@@ -3640,7 +3640,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_056",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_056",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Mining the LIMS-DB dataset with maxFrags of 20 increased running time to 1.5 hours.",
       "asbval:note": null,
@@ -3660,7 +3660,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_057",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_057",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The default maxFrags of 15 requires 20 minutes to mine the LIMS-DB dataset.",
       "asbval:note": null,
@@ -3680,7 +3680,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_058",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-025-01051-y/claim/claim_058",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The GNPS network for Penicillium nordicum contains 2 clusters of sizes 21 and 11, in addition to 2 pairs.",
       "asbval:note": null,

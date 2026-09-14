@@ -377,7 +377,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "QC4Metabolomics, a real-time quality control monitoring software for untargeted metabolomics data... The Shiny app is available as open-source code at https://github.com/stanstrup/QC4Metabolomics. Docker images and a docker-compose setup file are also provided for easy deployment",
       "asbval:note": "Paper confirms QC4Metabolomics exists and is open-source on GitHub with Docker deployment, but does NOT mention Semantic Release, v1.0.0 versioning, or release artifact reproduction workflows. The paper describes the software and its deployment, not its release engineering process.",
@@ -397,7 +397,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The card explicitly states no research question can be produced. This is a meta-claim about the card itself, not a claim about the paper. The paper's research question concerns QC monitoring in metabolomics, not release artifact reproduction.",
@@ -417,7 +417,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Semantic Release is not mentioned anywhere in the paper passages. The paper discusses QC4Metabolomics development, Docker containerization, R packages, and GitHub hosting, but does not reference Semantic Release or any automated release management tool.",
@@ -437,7 +437,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/card/task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss release artifact generation, Semantic Release workflows, or v1.0.0 versioning specifics. The paper is dated 2025 and describes QC4Metabolomics as an operational tool, not its release engineering process.",
@@ -457,7 +457,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/card/task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss release metadata, verification reports, or artifact-to-GitHub matching procedures. These are release engineering concerns not addressed in the paper.",
@@ -477,7 +477,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate task card describes a software release engineering workflow (reproducing a versioned release artifact using Semantic Release), which is entirely outside the scope of the paper.",
@@ -495,7 +495,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/card/task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention specific commit hashes (d441874), v1.0.0 release versioning, or QC workflow definition files as discrete artifacts. Paper discusses QC4Metabolomics as a software system with modules and architecture, but does not address release assets, commit history, or structured workflow definition files.",
@@ -515,7 +515,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/card/task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe validation reports, schema compliance checking, or structural integrity assessment of workflow components. The paper focuses on QC4Metabolomics as a monitoring dashboard and data processing system, not on validation of workflow definition files.",
@@ -535,7 +535,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/card/task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention manual expert review as a tool or methodology. The paper describes automated QC monitoring, data extraction, module-based processing, and dashboard visualization\u2014all programmatic approaches, not manual review workflows.",
@@ -555,7 +555,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/card/task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss release assets, workflow component reconstruction, or v1.0.0 versioning. The paper describes the QC4Metabolomics system architecture and modules but does not address release packaging or workflow definition file reconstruction.",
@@ -575,7 +575,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/card/task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate task card appears to describe a software engineering / release artifact validation task (commit inspection, schema validation, release asset analysis) that is entirely orthogonal to the paper's scope.",
@@ -593,7 +593,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/artifact-checksum-verification/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/artifact-checksum-verification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about QC4Metabolomics, a quality control monitoring software for metabolomics data. No discussion of artifact checksums, GitHub releases, versioning tools, or software release verification. The paper does mention that QC4Metabolomics is available as open-source code at GitHub and provides Docker images, but does not address checksum verification or release artifact validation.",
@@ -613,7 +613,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/artifact-checksum-verification/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/artifact-checksum-verification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss artifact verification, checksums, or release validation workflows. The scope describes a software engineering/DevOps task unrelated to the paper's focus on metabolomics quality control.",
@@ -633,7 +633,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/artifact-checksum-verification/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/artifact-checksum-verification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Semantic Release is not mentioned anywhere in the paper. The paper does not discuss automated versioning or release generation tools.",
@@ -653,7 +653,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/artifact-checksum-verification/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/artifact-checksum-verification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Cryptographic hashing tools are not mentioned in the paper. The paper does not discuss checksum computation or verification.",
@@ -673,7 +673,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/git-repository-tag-checkout/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/git-repository-tag-checkout/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about QC4Metabolomics, a quality control monitoring software for metabolomics data. No discussion of git tag checkout, version control workflows, or reproducibility via git operations. The paper mentions the software is 'available as open-source code at https://github.com/stanstrup/QC4Metabolomics' and provides 'Docker images' but does not discuss git tag checkout procedures or semantic versioning workflows.",
@@ -693,7 +693,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/git-repository-tag-checkout/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/git-repository-tag-checkout/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Semantic Release is not mentioned anywhere in the paper. The paper does not discuss automated release generation, semantic versioning tools, or release note generation.",
@@ -713,7 +713,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/git-repository-tag-checkout/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/git-repository-tag-checkout/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "While the paper mentions the software is available on GitHub (https://github.com/stanstrup/QC4Metabolomics), there is no discussion of git commands, tag checkout, or version control workflows. The paper does not describe how to use git to retrieve specific versions.",
@@ -733,7 +733,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-release-metadata-comparison/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/github-release-metadata-comparison/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes QC4Metabolomics, a quality control monitoring software for metabolomics data. It does not address software release validation, artifact checksums, GitHub release metadata comparison, or Semantic Release workflows. The paper focuses on LC\u2013MS data quality monitoring, not software engineering practices or release integrity validation.",
@@ -753,7 +753,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-release-metadata-comparison/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/github-release-metadata-comparison/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper's scope is metabolomics data quality control via real-time and retrospective monitoring. While the paper mentions that QC4Metabolomics is available as open-source code on GitHub (passage [2]: 'The Shiny app is available as open-source code at https://github.com/stanstrup/QC4Metabolomics'), it does not discuss validating release artifacts, checksums, or version metadata matching. The card's scope is entirely orthogonal to the paper's content.",
@@ -773,7 +773,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-release-metadata-comparison/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/github-release-metadata-comparison/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss GitHub release metadata comparison or any related software release validation workflow. This title is not mentioned or implied anywhere in the paper.",
@@ -793,7 +793,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-release-metadata-comparison/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/github-release-metadata-comparison/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Semantic Release is not mentioned in the paper. The paper describes QC4Metabolomics' technical stack (R, Shiny, xcms, ProteoWizard, Docker, mariaDB, renv, ggplot2, plotly) but does not reference Semantic Release or any automated versioning/release tool.",
@@ -813,7 +813,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metadata-field-verification/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/metadata-field-verification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper describes QC4Metabolomics, a real-time quality control monitoring software for metabolomics data. The paper does not discuss workflow definition files, metadata field validation, YAML/JSON schema validation, or workflow declaration validation. The paper focuses on monitoring LC-MS data quality parameters (m/z, retention time, intensity, peak shape, contaminants) in real-time via a Shiny web application, not on validating workflow metadata structures.",
@@ -833,7 +833,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metadata-field-verification/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/metadata-field-verification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not address workflow definition validation, schema compliance, or metadata field verification. QC4Metabolomics is a monitoring and dashboard application for metabolomics data quality, not a workflow definition validation system. The paper discusses modules, database structures, and GUI elements, but not workflow metadata validation.",
@@ -853,7 +853,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metadata-field-verification/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/metadata-field-verification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention YAML/JSON schema validators or schema validation tools. The tools mentioned are: xcms, R packages, Docker, Shiny, ggplot2, plotly, mariaDB, renv, ProteoWizard, MSconvert, and BioRender\u2014none of which are schema validators for workflow definitions.",
@@ -873,7 +873,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metadata-field-verification/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/metadata-field-verification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "While the paper mentions that 'An R/Shiny programmer can add new modules without modifying existing QC4Metabolomics code,' this refers to software customization, not manual expert review of workflow metadata fields. The paper does not describe a metadata field verification process or expert review workflow.",
@@ -893,7 +893,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metadata-field-verification/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/metadata-field-verification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss workflow definition files in YAML or JSON format. QC4Metabolomics uses environmental variables for configuration ('settings are changed by passing environmental variables to the Docker container'), not workflow definition files.",
@@ -913,7 +913,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metadata-field-verification/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/metadata-field-verification/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention schema specification documents or versioned schema definitions for workflow validation.",
@@ -933,7 +933,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metadata-field-verification/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/metadata-field-verification/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss qc_workflow_component declarations or workflow component metadata structures.",
@@ -953,7 +953,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metadata-field-verification/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/metadata-field-verification/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe generation of validation reports for schema compliance. QC4Metabolomics outputs quality monitoring dashboards and data quality metrics, not workflow validation reports.",
@@ -973,7 +973,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/qc-workflow-component-inspection/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/qc-workflow-component-inspection/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper describes QC4Metabolomics as a real-time quality control monitoring software for metabolomics data acquisition, with modules for tracking compounds, monitoring contaminants, and extracting diagnostic information. No mention of workflow component definitions, schema validation, YAML/JSON workflow files, or structural integrity verification of workflow metadata. The paper focuses on runtime QC monitoring, not workflow definition validation.",
@@ -993,7 +993,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/qc-workflow-component-inspection/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/qc-workflow-component-inspection/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not address workflow definition files, schema specifications, YAML/JSON validation, or metadata field verification. The scope describes a software engineering/DevOps task (workflow validation), whereas the paper is about runtime QC monitoring of LC-MS metabolomics data.",
@@ -1013,7 +1013,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/qc-workflow-component-inspection/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/qc-workflow-component-inspection/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Shiny app is available as open-source code at https://github.com/stanstrup/QC4Metabolomics. Docker images and a docker-compose setup file are also provided for easy deployment, along with demo data. The documentation can be found at https://stanstrup.github.io/QC4Metabolomics.",
       "asbval:note": "QC4Metabolomics is confirmed as a real tool with an open-source repository and documentation site. However, the paper does not describe it as containing 'workflow component definitions' for validation purposes. The tool is a runtime QC monitoring system, not a source of workflow definition files for schema validation. The role assigned in the card does not match the paper's description of the tool's actual function.",
@@ -1033,7 +1033,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/qc-workflow-component-inspection/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/qc-workflow-component-inspection/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention manual expert review as a tool or method for workflow validation, schema compliance checking, or metadata field verification. The paper describes automated QC monitoring via software modules, not manual review processes for workflow definitions.",
@@ -1053,7 +1053,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/release-artifact-generation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/release-artifact-generation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper describes QC4Metabolomics, a quality control monitoring software for metabolomics data. No mention of release artifact generation, semantic versioning tools, or automated release processes. The paper does mention the software is 'available as open-source code at https://github.com/stanstrup/QC4Metabolomics' and 'Docker images and a docker-compose setup file are also provided' but does not discuss the release engineering process itself.",
@@ -1073,7 +1073,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/release-artifact-generation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/release-artifact-generation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Semantic Release tool is not mentioned anywhere in the paper. The paper discusses QC4Metabolomics deployment via Docker and mentions R packages, ProteoWizard, xcms, Shiny, ggplot2, plotly, mariaDB, and renv, but does not reference Semantic Release or any automated semantic versioning tool.",
@@ -1093,7 +1093,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/release-artifact-generation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/release-artifact-generation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper's scope is entirely focused on quality control monitoring for metabolomics data acquisition and analysis. It does not address software release engineering, artifact generation, or versioning workflows. The mention of open-source availability and Docker deployment is incidental to the main contribution.",
@@ -1113,7 +1113,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/semantic-versioning-validation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/semantic-versioning-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes QC4Metabolomics, a quality control monitoring software for metabolomics data. The research question concerns semantic versioning validation and release artifact integrity \u2014 topics entirely absent from the paper. The paper does not address version control validation, release artifact matching, or semantic versioning practices.",
@@ -1133,7 +1133,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/semantic-versioning-validation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/semantic-versioning-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The scope describes a skill for validating release artifacts against semantic version tags and reference records. The paper makes no mention of release validation, semantic versioning practices, artifact integrity checking, or CI/CD pipeline validation. The paper focuses on real-time and retrospective quality control of metabolomics data acquisition, not software release management.",
@@ -1153,7 +1153,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/semantic-versioning-validation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/semantic-versioning-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention 'Semantic Release' or any tool for generating versioned release artifacts. While the paper does mention that QC4Metabolomics is available as open-source code on GitHub and provides Docker images, there is no discussion of semantic versioning tools, release artifact generation, or version tag management. The paper's focus is on metabolomics data quality control, not release engineering.",
@@ -1173,7 +1173,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-definition-schema-validation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/workflow-definition-schema-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about QC4Metabolomics, a real-time quality control monitoring software for metabolomics data. No mention of workflow definition validation, YAML/JSON schema validation, or workflow specification compliance. The paper focuses on LC-MS data quality monitoring, not workflow definition validation.",
@@ -1193,7 +1193,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-definition-schema-validation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/workflow-definition-schema-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not address workflow definition validation, schema compliance checking, or versioned release validation of workflow files. The scope describes a software engineering/DevOps task unrelated to metabolomics quality control.",
@@ -1213,7 +1213,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-definition-schema-validation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/workflow-definition-schema-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention YAML schema validators, yamllint, jsonschema, or any workflow definition validation tools. These are generic software engineering tools not discussed in the metabolomics QC paper.",
@@ -1233,7 +1233,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-definition-schema-validation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/workflow-definition-schema-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Shiny app is available as open-source code at https://github.com/stanstrup/QC4Metabolomics. Docker images and a docker-compose setup file are also provided for easy deployment, along with demo data.",
       "asbval:note": "The repository URL is correct and confirmed in the paper. However, the paper does not describe the repository as a source for 'workflow definition files' or discuss validation of workflow definitions. The repository contains QC4Metabolomics source code, Docker configurations, and demo data\u2014not workflow definition schemas for validation.",
@@ -1253,7 +1253,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-definition-schema-validation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/workflow-definition-schema-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss manual expert review of workflow definitions, metadata field verification in the context of workflow schemas, or workflow component inspection for schema compliance. The paper discusses QC monitoring of metabolomics data, not workflow definition validation.",
@@ -1273,7 +1273,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/yaml-json-structural-parsing/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/yaml-json-structural-parsing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about QC4Metabolomics, a real-time quality control monitoring software for metabolomics data. It does not address YAML/JSON workflow definition file parsing, schema validation, or versioned workflow component auditing. The paper focuses on LC-MS data quality monitoring, not workflow definition validation.",
@@ -1293,7 +1293,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/yaml-json-structural-parsing/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/yaml-json-structural-parsing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss YAML/JSON workflow definition file validation. The scope describes a software engineering task unrelated to metabolomics QC monitoring.",
@@ -1313,7 +1313,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/yaml-json-structural-parsing/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/yaml-json-structural-parsing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "QC4Metabolomics, a real-time quality control monitoring software for untargeted metabolomics data... The Shiny app is available as open-source code at https://github.com/stanstrup/QC4Metabolomics. Docker images and a docker-compose setup file are also provided for easy deployment, along with demo data.",
       "asbval:note": "QC4Metabolomics is confirmed as an open-source project with versioned components (Docker images, code repository). However, the paper does not describe YAML/JSON workflow definition files as primary artifacts or discuss schema validation of such files. The tool is real but the claimed role (workflow definition file validation) is not supported by the paper.",
@@ -1333,7 +1333,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/yaml-json-structural-parsing/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/yaml-json-structural-parsing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention YAML schema validators or YAML validation tools. The paper uses R packages (xcms, Shiny, ggplot2, plotly), ProteoWizard, Docker, and mariaDB, but no YAML/JSON schema validation tools.",
@@ -1353,7 +1353,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/yaml-json-structural-parsing/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/yaml-json-structural-parsing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention JSON schema validators or JSON validation tools.",
@@ -1373,7 +1373,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/yaml-json-structural-parsing/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/yaml-json-structural-parsing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss manual expert review in the context of workflow definition validation. The paper focuses on automated QC monitoring via software, not manual review of workflow definitions.",
@@ -1393,7 +1393,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/artifact-checksum-verification/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/artifact-checksum-verification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 4,
       "asbval:target_artifact_id": "artifact-checksum-verification",
@@ -1406,7 +1406,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/git-repository-tag-checkout/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/git-repository-tag-checkout/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 3,
       "asbval:target_artifact_id": "git-repository-tag-checkout",
@@ -1419,7 +1419,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-release-metadata-comparison/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/github-release-metadata-comparison/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 4,
       "asbval:target_artifact_id": "github-release-metadata-comparison",
@@ -1432,7 +1432,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metadata-field-verification/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/metadata-field-verification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "metadata-field-verification",
@@ -1445,7 +1445,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/qc-workflow-component-inspection/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/qc-workflow-component-inspection/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 4,
       "asbval:target_artifact_id": "qc-workflow-component-inspection",
@@ -1458,7 +1458,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/release-artifact-generation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/release-artifact-generation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 3,
       "asbval:target_artifact_id": "release-artifact-generation",
@@ -1471,7 +1471,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/semantic-versioning-validation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/semantic-versioning-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 3,
       "asbval:target_artifact_id": "semantic-versioning-validation",
@@ -1484,7 +1484,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-definition-schema-validation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/workflow-definition-schema-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "workflow-definition-schema-validation",
@@ -1497,7 +1497,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/yaml-json-structural-parsing/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/skill/yaml-json-structural-parsing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "yaml-json-structural-parsing",
@@ -1510,7 +1510,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "QC4metabolomics is a system for quality control in metabolomics studies.",
       "asbval:note": null,
@@ -1530,7 +1530,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Documentation for QC4metabolomics is available at http://stanstrup.github.io/QC4Metabolomics/",
       "asbval:note": null,
@@ -1550,7 +1550,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Version 1.0.4 of QC4Metabolomics was released on 2025-07-29.",
       "asbval:note": null,
@@ -1570,7 +1570,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Version 1.0.4 included a bug fix for better naming.",
       "asbval:note": null,
@@ -1590,7 +1590,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Version 1.0.3 of QC4Metabolomics was released on 2025-07-29.",
       "asbval:note": null,
@@ -1610,7 +1610,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Version 1.0.3 included a bug fix for updating the filename of release.",
       "asbval:note": null,
@@ -1630,7 +1630,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Version 1.0.2 of QC4Metabolomics was released on 2025-07-29.",
       "asbval:note": null,
@@ -1650,7 +1650,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Version 1.0.2 included a bug fix for LFS files in release.",
       "asbval:note": "Source excerpt truncated; claim says 'LFS files in release' but excerpt only shows 'LFS fil' without completion",
@@ -1670,7 +1670,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Version 1.0.1 of QC4Metabolomics was released on 2025-07-29.",
       "asbval:note": null,
@@ -1690,7 +1690,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Version 1.0.0 of QC4Metabolomics was released on 2025-07-29.",
       "asbval:note": "Source excerpt does not contain version 1.0.0 release header; excerpt shows bug fixes but lacks the version header matching the claim",
@@ -1710,7 +1710,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.4c07078/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Version 1.0.0 included a feature to add release and semantic release.",
       "asbval:note": "Excerpt shows 'trigger release' bug fix but does not clearly support claim about 'feature to add release and semantic release' \u2014 appears to conflate bug fixes with features",

@@ -242,7 +242,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/10_1038_s41467_020_18035_1__task_001/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/card/10_1038_s41467_020_18035_1__task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase (Fig. 1c). This DWM is used to calculate an expected Tn5 signal for each genomic region, representing the influence of the Tn5 bias (Fig. 1c; expected cutsites). Subtracting these expected cuts from the uncorrected signals yields a corrected track, highlighting the effect of protein binding",
       "asbval:note": "The research question is directly answered in the paper. ATACorrect uses a dinucleotide weight matrix to estimate Tn5 bias, calculates expected Tn5 cutsites, and subtracts them from observed signals to produce bias-corrected tracks.",
@@ -262,7 +262,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1038_s41467_020_18035_1__task_001/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/card/10_1038_s41467_020_18035_1__task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present TOBIAS, a comprehensive, accurate, and fast footprinting framework enabling genome-wide investigation of TF binding dynamics for hundreds of TFs simultaneously.",
       "asbval:note": "TOBIAS is the primary tool presented in the paper and is used throughout for ATAC-seq footprinting analysis including bias correction.",
@@ -282,7 +282,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1038_s41467_020_18035_1__task_001/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/card/10_1038_s41467_020_18035_1__task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Subtracting these expected cuts from the uncorrected signals yields a corrected track, highlighting the effect of protein binding (details are available in Supplementary Methods part 1).",
       "asbval:note": "The paper describes producing 'corrected tracks' from the ATACorrect module, but does not explicitly specify the file format as 'bigWig'. The paper mentions UCSC track hubs and visualization in IGV, which are compatible with bigWig, but the specific format is not stated in the main text. The output is a corrected signal track, but the format specification is not explicitly confirmed.",
@@ -302,7 +302,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1038_s41467_020_18035_1__task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/card/10_1038_s41467_020_18035_1__task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card focuses narrowly on the ATACorrect bias-correction step, which is one component of the broader TOBIAS framework. The paper presents TOBIAS as a comprehensive footprinting framework with multiple modules (bias correction, footprinting, differential binding, visualization, network inference). The card's scope is appropriately aligned with the paper's treatment of this specific module.",
@@ -318,7 +318,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1038_s41467_020_18035_1__task_002/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/card/10_1038_s41467_020_18035_1__task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint",
       "asbval:note": "Passage 5 explicitly describes the footprint scoring step applied to corrected cutsites. Passage 6 further elaborates that the TOBIAS score combines depletion and accessibility, contrasting with prior methods like FOS that use only depletion.",
@@ -338,7 +338,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1038_s41467_020_18035_1__task_002/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/card/10_1038_s41467_020_18035_1__task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present TOBIAS, a comprehensive, accurate, and fast footprinting framework enabling genome-wide investigation of TF binding dynamics",
       "asbval:note": "TOBIAS is the primary tool presented in the paper and is used throughout for footprinting analysis including bias correction and footprint scoring.",
@@ -358,7 +358,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1038_s41467_020_18035_1__task_002/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/card/10_1038_s41467_020_18035_1__task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint",
       "asbval:note": "The paper confirms that TOBIAS produces footprint scores at genomic positions (evidenced by footprint score tracks shown in figures and described in methods). However, the paper does not explicitly name the output file format as 'bigWig'. The paper mentions 'TOBIAS output tracks' loaded into IGV and UCSC track hubs, which are compatible with bigWig format, but the specific file format is not explicitly stated in the passages provided.",
@@ -378,7 +378,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1038_s41467_020_18035_1__task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/card/10_1038_s41467_020_18035_1__task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card focuses narrowly on the footprint scoring computational step. The paper's scope is broader\u2014it presents TOBIAS as a comprehensive framework covering bias correction, footprinting, differential binding analysis, and downstream visualization. The card's research question is well-aligned with one component of the paper's work.",
@@ -394,7 +394,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1038_s41467_020_18035_1__task_003/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/card/10_1038_s41467_020_18035_1__task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a comprehensive computational framework that we created for footprinting analysis... to perform all levels of footprinting analysis including bias correction, footprinting, and comparison between conditions. The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint... This continuous footprint score is correlated with the presence of transcription factor binding sites in the genome, and a threshold is set to distinguish between bound and unbound sites.",
       "asbval:note": "Research question is directly supported by the paper's description of TOBIAS methodology for identifying TF occupancy via footprint analysis across conditions.",
@@ -414,7 +414,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1038_s41467_020_18035_1__task_003/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/card/10_1038_s41467_020_18035_1__task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present TOBIAS, a comprehensive, accurate, and fast footprinting framework enabling genome-wide investigation of TF binding dynamics for hundreds of TFs simultaneously.",
       "asbval:note": "TOBIAS is the primary tool presented in the paper for footprinting analysis.",
@@ -434,7 +434,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1038_s41467_020_18035_1__task_003/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/card/10_1038_s41467_020_18035_1__task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint... a threshold is set to distinguish between bound and unbound sites. If multiple conditions are investigated, the differential binding module summarizes individual site scores for each TF, and compares them between conditions.",
       "asbval:note": "Paper describes TOBIAS producing footprint scores, bound/unbound classifications, and condition-specific comparisons. However, the paper does not explicitly state that outputs are in CSV/TSV format with the specific column structure claimed. The paper shows outputs as heatmaps, volcano plots, and visualization tracks (IGV, UCSC tracks) rather than explicitly named tabular formats. The functional content matches but the output format specification is not explicitly confirmed.",
@@ -454,7 +454,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1038_s41467_020_18035_1__task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/card/10_1038_s41467_020_18035_1__task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card's expected_outputs claim specifies 'CSV/TSV' format, but the paper emphasizes visualization outputs (heatmaps, footprint plots, volcano plots, IGV tracks, UCSC track hubs) as primary deliverables. The underlying data structures exist but are not explicitly described as CSV/TSV exports in the passages.",
@@ -470,7 +470,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1038_s41467_020_18035_1__task_004/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/card/10_1038_s41467_020_18035_1__task_004/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Similarly to nucleosomes, bound TFs hinder cleavage of DNA, resulting in defined regions of decreased signal strength within larger regions of high signal \u2014 known as footprints. ... The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint",
       "asbval:note": "The paper explicitly investigates Tn5 insertion patterns around TF binding sites, distinguishing bound from unbound sites through footprint analysis.",
@@ -490,7 +490,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1038_s41467_020_18035_1__task_004/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/card/10_1038_s41467_020_18035_1__task_004/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present TOBIAS, a comprehensive, accurate, and fast footprinting framework enabling genome-wide investigation of TF binding dynamics for hundreds of TFs simultaneously.",
       "asbval:note": "TOBIAS is the primary tool presented in the paper for footprinting analysis of ATAC-seq data.",
@@ -510,7 +510,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1038_s41467_020_18035_1__task_004/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/card/10_1038_s41467_020_18035_1__task_004/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Aggregated footprints TFBS Local footprints TFBS ... Calculation of footprint scores Depth ... Comparison of footprint scores Background Observed Scores control / condition",
       "asbval:note": "The paper demonstrates tabular and quantitative comparisons of Tn5 signal distributions at bound versus unbound sites, including footprint depth metrics and scoring.",
@@ -530,7 +530,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1038_s41467_020_18035_1__task_004/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/card/10_1038_s41467_020_18035_1__task_004/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Bias corrected footprint scores were highly congruent with explicitly defined footprints (Fig. 2c) ... For selected TFs with known roles in early development originating from four clusters (arrows from b), an aggregated footprinting plot matrix for all associated transcription factor binding sites is shown.",
       "asbval:note": "The paper extensively uses aggregated footprint plots and heatmaps to visualize Tn5 insertion depletion patterns around binding sites across conditions.",
@@ -550,7 +550,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1038_s41467_020_18035_1__task_004/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/card/10_1038_s41467_020_18035_1__task_004/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information (Fig. 1b) to perform all levels of footprinting analysis including bias correction (Fig. 1c), footprinting (Fig. 1d), and comparison between conditions (Fig. 1e).",
       "asbval:note": "The paper demonstrates analysis of Tn5 insertion distributions around TF binding sites using ATAC-seq data from public sources (GEO accessions GSE66390, GSE101571, GSE85632).",
@@ -570,7 +570,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1038_s41467_020_18035_1__task_004/scope_drift",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/card/10_1038_s41467_020_18035_1__task_004/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card describes a relatively straightforward footprinting analysis task, while the paper presents TOBIAS as a comprehensive framework with multiple advanced features including bias correction (ATACorrect), differential binding analysis, TF network inference, and motif clustering. The card captures only the core footprinting visualization aspect.",
@@ -586,7 +586,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1038_s41467_020_18035_1__task_005/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/card/10_1038_s41467_020_18035_1__task_005/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information (Fig. 1b) to perform all levels of footprinting analysis including bias correction (Fig. 1c), footprinting (Fig. 1d), and comparison between conditions (Fig. 1e).",
       "asbval:note": "The paper explicitly describes TOBIAS performing bias correction, footprinting, and differential analysis (comparison between conditions). The research question aligns with the paper's demonstrated capability.",
@@ -606,7 +606,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1038_s41467_020_18035_1__task_005/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/card/10_1038_s41467_020_18035_1__task_005/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present TOBIAS, a comprehensive, accurate, and fast footprinting framework enabling genome-wide investigation of TF binding dynamics for hundreds of TFs simultaneously.",
       "asbval:note": "TOBIAS is the primary tool presented in the paper and is used throughout all analyses.",
@@ -626,7 +626,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1038_s41467_020_18035_1__task_005/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/card/10_1038_s41467_020_18035_1__task_005/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The volcano plots show the differential binding activity against the \u2212log10(p value) (both provided by TOBIAS) of all investigated TF motifs; each dot represents one TF.",
       "asbval:note": "The paper demonstrates TOBIAS outputs differential binding scores and p-values. The paper also shows heatmaps with footprint scores across conditions and log2 fold-changes (e.g., Fig. 4c: 'Footprint log2(FC) and RNA log2(FC) represent the matched changes between Control and DuxOE').",
@@ -646,7 +646,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1038_s41467_020_18035_1__task_005/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/card/10_1038_s41467_020_18035_1__task_005/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS includes a variety of auxiliary tools such as TF network inference and visualization of footprints, which allow for various downstream analysis (Fig. 1f, Supplementary Fig. 1).",
       "asbval:note": "The paper demonstrates extensive visualization capabilities including aggregated footprint plots, volcano plots, and heatmaps showing TF activity across conditions (e.g., Figs. 2c, 3a, 3b, 4a).",
@@ -666,7 +666,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1038_s41467_020_18035_1__task_005/scope_drift",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/card/10_1038_s41467_020_18035_1__task_005/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card mentions 'BINDetect' as part of the TOBIAS pipeline, but the paper does not explicitly name a module called 'BINDetect'. The paper describes a 'differential TF binding module' and 'differential binding score' calculation, but does not use the term 'BINDetect'. This may be a tool-naming issue or reference to a specific TOBIAS submodule not explicitly named in the provided passages.",
@@ -682,7 +682,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-bam-read-alignment-processing/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-bam-read-alignment-processing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information (Fig. 1b) to perform all levels of footprinting analysis including bias correction (Fig. 1c), footprinting (Fig. 1d), and comparison between conditions (Fig. 1e).",
       "asbval:note": "The research question describes the core function of TOBIAS: processing ATAC-seq BAM files to extract Tn5 insertion patterns around TF motifs for footprinting. This is directly supported by the paper's description of TOBIAS as a framework for footprinting analysis using ATAC-seq reads and TF motifs.",
@@ -702,7 +702,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-bam-read-alignment-processing/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-bam-read-alignment-processing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase (Fig. 1c). This DWM is used to calculate an expected Tn5 signal for each genomic region, representing the influence of the Tn5 bias (Fig. 1c; expected cutsites). Subtracting these expected cuts from the uncorrected signals yields a corrected track, highlighting the effect of protein binding.",
       "asbval:note": "ATACorrect is explicitly named and described as the bias correction module within TOBIAS that corrects Tn5 transposase bias.",
@@ -722,7 +722,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-bam-read-alignment-processing/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-bam-read-alignment-processing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention a tool named 'ScoreBigwig'. The paper describes footprint score calculation as part of the TOBIAS framework (Fig. 1d: 'Calculation of footprint scores'), but does not name a specific module called 'ScoreBigwig'. The footprinting step is described generically without reference to this specific tool name.",
@@ -742,7 +742,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-bam-read-alignment-processing/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-bam-read-alignment-processing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Furthermore, TOBIAS includes a variety of auxiliary tools such as TF network inference and visualization of footprints, which allow for various downstream analysis (Fig. 1f, Supplementary Fig. 1).",
       "asbval:note": "The paper confirms TOBIAS includes visualization tools for footprints, but does not explicitly name 'PlotAggregate'. The paper shows aggregated footprint plots (e.g., Fig. 2c) but does not attribute them to a specifically named module called 'PlotAggregate'.",
@@ -762,7 +762,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-bam-read-alignment-processing/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-bam-read-alignment-processing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Furthermore, TOBIAS includes a variety of auxiliary tools such as TF network inference and visualization of footprints, which allow for various downstream analysis (Fig. 1f, Supplementary Fig. 1).",
       "asbval:note": "The paper confirms TOBIAS includes visualization tools and shows heatmaps (e.g., Fig. 2b, Fig. 4c), but does not explicitly name a module called 'PlotHeatmap'. The visualization capability is confirmed but the specific tool name is not.",
@@ -782,7 +782,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-bam-read-alignment-processing/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-bam-read-alignment-processing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present TOBIAS, a comprehensive, accurate, and fast footprinting framework enabling genome-wide investigation of TF binding dynamics for hundreds of TFs simultaneously.",
       "asbval:note": "Direct verbatim match from the abstract describing TOBIAS as a comprehensive, accurate, and fast footprinting framework.",
@@ -802,7 +802,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-bam-read-alignment-processing/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-bam-read-alignment-processing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information (Fig. 1b) to perform all levels of footprinting analysis including bias correction (Fig. 1c), footprinting (Fig. 1d), and comparison between conditions (Fig. 1e).",
       "asbval:note": "The scope description aligns with TOBIAS's stated purpose: taking ATAC-seq reads and TF motifs as input to perform footprinting analysis for TF occupancy detection.",
@@ -822,7 +822,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-bam-read-alignment-processing/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-bam-read-alignment-processing/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint (as depicted in the box labeled 'Calculation of footprint scores'). This continuous footprint score is correlated with the presence of transcription factor binding sites in the genome, and a threshold is set to distinguish between bound and unbound sites.",
       "asbval:note": "The paper describes the workflow: bias correction of cutsites \u2192 footprint score calculation \u2192 differential binding analysis, confirming the sequential ordering claimed in the scope.",
@@ -842,7 +842,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-footprint-scoring/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-footprint-scoring/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint",
       "asbval:note": "Claim accurately describes the footprint scoring step in TOBIAS pipeline after bias correction.",
@@ -862,7 +862,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-footprint-scoring/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-footprint-scoring/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This continuous footprint score is correlated with the presence of transcription factor binding sites in the genome, and a threshold is set to distinguish between bound and unbound sites.",
       "asbval:note": "Footprint scores serve as intermediate quantification before bound/unbound classification.",
@@ -882,7 +882,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-footprint-scoring/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-footprint-scoring/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The first step of the TOBIAS footprinting pipeline is Tn5 bias correction... Subtracting these expected cuts from the uncorrected signals yields a corrected track, highlighting the effect of protein binding",
       "asbval:note": "Bias correction precedes footprint scoring in the TOBIAS workflow.",
@@ -902,7 +902,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-footprint-scoring/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-footprint-scoring/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Tool name 'ScoreBigwig' not found in passages. Paper describes footprint scoring as part of TOBIAS framework but does not name this specific subcommand. Passages insufficient to confirm or deny existence of this named module.",
@@ -922,7 +922,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-footprint-scoring/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-footprint-scoring/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase",
       "asbval:note": "ATACorrect is explicitly named and confirmed as the bias correction module in TOBIAS.",
@@ -942,7 +942,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-footprint-scoring/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-footprint-scoring/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Tool name 'BINDetect' not found in passages. Paper describes classification of bound/unbound sites but does not name this specific subcommand. Passages insufficient to confirm.",
@@ -962,7 +962,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-footprint-scoring/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-footprint-scoring/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Tool name 'PlotAggregate' not found in passages. Paper mentions visualization of aggregated footprints but does not name this specific subcommand. Passages insufficient to confirm.",
@@ -982,7 +982,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-footprint-scoring/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-footprint-scoring/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information to perform all levels of footprinting analysis",
       "asbval:note": "TOBIAS confirmed as command-line tool collection for footprinting analysis.",
@@ -1002,7 +1002,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-signal-normalization/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-signal-normalization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase... Subtracting these expected cuts from the uncorrected signals yields a corrected track, highlighting the effect of protein binding",
       "asbval:note": "Research question is fully supported by passage describing ATACorrect module's function.",
@@ -1022,7 +1022,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-signal-normalization/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-signal-normalization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase",
       "asbval:note": "ATACorrect is explicitly named and its role in Tn5 bias correction is confirmed.",
@@ -1042,7 +1042,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-signal-normalization/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-signal-normalization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'ScoreBigwig' module found in passages. Paper describes footprint score calculation but does not name this specific tool. The paper mentions 'footprint scores' are calculated but the specific module name 'ScoreBigwig' is not present in provided passages.",
@@ -1062,7 +1062,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-signal-normalization/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-signal-normalization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS includes a variety of auxiliary tools such as TF network inference and visualization of footprints, which allow for various downstream analysis",
       "asbval:note": "Paper confirms TOBIAS includes visualization tools for footprints, but does not specifically name 'PlotAggregate'. The function is supported but the exact tool name is not confirmed in passages.",
@@ -1082,7 +1082,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-signal-normalization/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-signal-normalization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information to perform all levels of footprinting analysis",
       "asbval:note": "Directly confirmed in paper text.",
@@ -1102,7 +1102,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-signal-normalization/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-signal-normalization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS software is publicly available at Git Hub (https://github.com/loosolab/TOBIAS)",
       "asbval:note": "Repository URL is explicitly stated in the paper.",
@@ -1122,7 +1122,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-signal-normalization/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-signal-normalization/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The skepticism towards DGF has been driven by the discovery that enzymes used in chromatin accessibility assays (e.g., DNase-I) are biased towards certain sequence compositions... The influence of Tn5 transposase bias in the context of ATAC-seq footprinting has, however, only been described very recently and still represents an uncertainty during discovery of true footprints.",
       "asbval:note": "Scope is well-aligned with paper's motivation for bias correction in footprinting.",
@@ -1142,7 +1142,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-tn5-bias-correction/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-tn5-bias-correction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase... Subtracting these expected cuts from the uncorrected signals yields a corrected track, highlighting the effect of protein binding",
       "asbval:note": "The research question accurately describes the core function of TOBIAS ATACorrect: correcting Tn5 bias in ATAC-seq data to enable footprinting analysis.",
@@ -1162,7 +1162,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-tn5-bias-correction/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-tn5-bias-correction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase",
       "asbval:note": "ATACorrect is explicitly named and described as the bias correction module within TOBIAS.",
@@ -1182,7 +1182,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-tn5-bias-correction/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-tn5-bias-correction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In the first step, TOBIAS reads the observed Tn5 cutsites and estimates the underlying Tn5 sequence preference. TOBIAS then calculates the expected Tn5 cutsites per region, which represent the background probability of Tn5 insertion. Using the expected signal track, the Tn5 bias corrected cutsites are obtained",
       "asbval:note": "The role description matches the documented function of ATACorrect.",
@@ -1202,7 +1202,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-tn5-bias-correction/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-tn5-bias-correction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No tool named 'ScoreBigwig' is mentioned in the paper. The paper describes footprint score calculation but does not name a specific tool 'ScoreBigwig'. The footprinting step is described generically as part of the TOBIAS framework.",
@@ -1222,7 +1222,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-tn5-bias-correction/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-tn5-bias-correction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint",
       "asbval:note": "The paper describes footprint score calculation from corrected cutsites, but does not name a specific tool 'ScoreBigwig' for this function. The functionality is correct but the tool name is not verified in the paper.",
@@ -1242,7 +1242,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-tn5-bias-correction/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-tn5-bias-correction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No tool named 'BINDetect' is mentioned in the paper. The paper describes differential footprinting and differential binding analysis but does not name a specific tool 'BINDetect'.",
@@ -1262,7 +1262,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-tn5-bias-correction/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-tn5-bias-correction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "If multiple conditions are investigated, the differential binding module summarizes individual site scores (upper black box) for each TF, and compares them between conditions (gray/red curve center) in order to define differentially bound TFs.",
       "asbval:note": "The paper describes differential binding analysis functionality, but the specific tool name 'BINDetect' is not mentioned. The function is correct but the tool name is unverified.",
@@ -1282,7 +1282,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-tn5-bias-correction/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-tn5-bias-correction/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present TOBIAS, a comprehensive, accurate, and fast footprinting framework enabling genome-wide investigation of TF binding dynamics for hundreds of TFs simultaneously.",
       "asbval:note": "TOBIAS is the main framework tool presented in the paper.",
@@ -1302,7 +1302,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-tn5-bias-correction/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-tn5-bias-correction/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS software is publicly available at Git Hub (https://github.com/loosolab/TOBIAS)",
       "asbval:note": "Repository URL is explicitly stated in the paper.",
@@ -1322,7 +1322,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-tn5-bias-correction/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-tn5-bias-correction/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "https://doi.org/10.1038/s41467-020-18035-1",
       "asbval:note": "DOI matches the paper being validated.",
@@ -1342,7 +1342,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-tn5-bias-correction/010",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-tn5-bias-correction/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "ATAC-seq footprinting unravels kinetics of transcription factor binding during zygotic genome activation",
       "asbval:note": "Title matches the paper being validated.",
@@ -1362,7 +1362,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bam-to-bigwig-conversion/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/bam-to-bigwig-conversion/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information (Fig. 1b) to perform all levels of footprinting analysis including bias correction (Fig. 1c), footprinting (Fig. 1d), and comparison between conditions (Fig. 1e). Furthermore, TOBIAS includes a variety of auxiliary tools such as TF network inference and visualization of footprints",
       "asbval:note": "Paper describes TOBIAS producing bias-corrected signal tracks and visualization, but does not explicitly describe a BAM-to-BigWig conversion step. The paper mentions TOBIAS outputs corrected cutsites and footprint scores, and includes visualization modules, but the specific BAM-to-BigWig conversion workflow is not detailed in the passages. The paper does reference UCSC track hubs and visualization in genome browsers, suggesting BigWig outputs exist, but the conversion process itself is not explicitly documented in the provided passages.",
@@ -1382,7 +1382,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bam-to-bigwig-conversion/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/bam-to-bigwig-conversion/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase (Fig. 1c). This DWM is used to calculate an expected Tn5 signal for each genomic region, representing the influence of the Tn5 bias (Fig. 1c; expected cutsites). Subtracting these expected cuts from the uncorrected signals yields a corrected track, highlighting the effect of protein binding",
       "asbval:note": "Paper confirms ATACorrect produces corrected signal tracks and mentions visualization, but does not explicitly name 'ScoreBigwig' as a downstream tool in the provided passages. The paper does describe footprint scoring calculation but the specific tool name 'ScoreBigwig' is not mentioned in the passages provided.",
@@ -1402,7 +1402,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bam-to-bigwig-conversion/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/bam-to-bigwig-conversion/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase (Fig. 1c). This DWM is used to calculate an expected Tn5 signal for each genomic region, representing the influence of the Tn5 bias (Fig. 1c; expected cutsites). Subtracting these expected cuts from the uncorrected signals yields a corrected track, highlighting the effect of protein binding",
       "asbval:note": "Paper confirms ATACorrect produces corrected signal tracks, but does not explicitly state the output format as '_corrected.bw' or confirm BigWig as the primary output format in the provided passages. The paper references visualization in UCSC genome browser and track hubs, which implies BigWig format, but the explicit file naming convention and format are not stated in the passages.",
@@ -1422,7 +1422,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bam-to-bigwig-conversion/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/bam-to-bigwig-conversion/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention a tool named 'ScoreBigwig' in any of the provided passages. The paper describes footprint score calculation as part of the TOBIAS framework (Fig. 1d: 'Calculation of footprint scores'), but does not name this step 'ScoreBigwig'. The paper states 'The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint' but does not identify this as a separate named tool.",
@@ -1442,7 +1442,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bam-to-bigwig-conversion/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/bam-to-bigwig-conversion/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention bedtools genomecov or bedGraphToBigWig in any of the provided passages. While the paper uses bedtools for other purposes (e.g., 'bedtools merge' for peak merging, 'bedtools intersect' for repeat element overlap), these specific tools for BAM-to-BigWig conversion are not discussed.",
@@ -1462,7 +1462,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bam-to-bigwig-conversion/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/bam-to-bigwig-conversion/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information (Fig. 1b) to perform all levels of footprinting analysis including bias correction (Fig. 1c), footprinting (Fig. 1d), and comparison between conditions (Fig. 1e).",
       "asbval:note": null,
@@ -1482,7 +1482,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bam-to-bigwig-conversion/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/bam-to-bigwig-conversion/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information (Fig. 1b) to perform all levels of footprinting analysis including bias correction (Fig. 1c), footprinting (Fig. 1d), and comparison between conditions (Fig. 1e). Furthermore, TOBIAS includes a variety of auxiliary tools such as TF network inference and visualization of footprints, which allow for various downstream analysis",
       "asbval:note": "Paper confirms TOBIAS performs bias correction, footprinting, differential analysis, network inference, and visualization. However, the paper does not explicitly enumerate all the specific skill names listed in the card (e.g., 'atac-seq-signal-normalization', 'bam-to-bigwig-conversion', 'chromatin-accessibility-quantification'). The paper describes the functional capabilities but not the granular skill taxonomy.",
@@ -1502,7 +1502,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bigwig-signal-processing/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/bigwig-signal-processing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information (Fig. 1b) to perform all levels of footprinting analysis including bias correction (Fig. 1c), footprinting (Fig. 1d), and comparison between conditions (Fig. 1e)... The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint",
       "asbval:note": "Claim is supported. The paper describes TOBIAS performing footprint score calculation from bias-corrected signal.",
@@ -1522,7 +1522,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bigwig-signal-processing/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/bigwig-signal-processing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase (Fig. 1c). This DWM is used to calculate an expected Tn5 signal for each genomic region, representing the influence of the Tn5 bias (Fig. 1c; expected cutsites). Subtracting these expected cuts from the uncorrected signals yields a corrected track, highlighting the effect of protein binding",
       "asbval:note": "ATACorrect is explicitly named and described as the bias-correction module within TOBIAS.",
@@ -1542,7 +1542,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bigwig-signal-processing/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/bigwig-signal-processing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention a tool named 'ScoreBigwig'. The paper describes footprint score calculation as part of the TOBIAS framework but does not name this specific module. The paper states 'The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint' but does not attribute this to a tool called 'ScoreBigwig'.",
@@ -1562,7 +1562,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bigwig-signal-processing/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/bigwig-signal-processing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention a tool named 'BINDetect'. The paper describes differential footprinting and differential binding analysis as part of TOBIAS but does not name this specific module.",
@@ -1582,7 +1582,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bigwig-signal-processing/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/bigwig-signal-processing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention a tool named 'PlotAggregate'. The paper describes visualization of aggregated footprints as part of TOBIAS (e.g., 'visualization of local and aggregated footprints across conditions') but does not name this specific module.",
@@ -1602,7 +1602,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bigwig-signal-processing/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/bigwig-signal-processing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information (Fig. 1b) to perform all levels of footprinting analysis including bias correction (Fig. 1c), footprinting (Fig. 1d), and comparison between conditions (Fig. 1e).",
       "asbval:note": "TOBIAS is explicitly described as a collection of command-line tools for footprinting analysis.",
@@ -1622,7 +1622,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bigwig-signal-processing/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/bigwig-signal-processing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint (as depicted in the box labeled 'Calculation of footprint scores'). This continuous footprint score is correlated with the presence of transcription factor binding sites in the genome, and a threshold is set to distinguish between bound and unbound sites.",
       "asbval:note": "The paper describes the workflow of bias correction followed by footprint score calculation on accessible regions, consistent with the scope claim.",
@@ -1642,7 +1642,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bigwig-signal-processing/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/bigwig-signal-processing/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS includes a variety of auxiliary tools such as TF network inference and visualization of footprints, which allow for various downstream analysis (Fig. 1f, Supplementary Fig. 1).",
       "asbval:note": "The paper describes downstream analysis tools following footprint score calculation, supporting the intermediate-step characterization.",
@@ -1662,7 +1662,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-binding-status-classification/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-binding-status-classification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a comprehensive computational framework that we created for footprinting analysis... to perform all levels of footprinting analysis including bias correction, footprinting, and comparison between conditions... This continuous footprint score is correlated with the presence of transcription factor binding sites in the genome, and a threshold is set to distinguish between bound and unbound sites.",
       "asbval:note": "Core research question is directly supported by the paper's description of TOBIAS footprinting methodology.",
@@ -1682,7 +1682,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-binding-status-classification/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-binding-status-classification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase... Subtracting these expected cuts from the uncorrected signals yields a corrected track, highlighting the effect of protein binding.",
       "asbval:note": "ATACorrect is explicitly named and its function of Tn5 bias correction is confirmed.",
@@ -1702,7 +1702,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-binding-status-classification/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-binding-status-classification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ScoreBigwig is not mentioned in any passage. The paper describes footprint score calculation but does not name a tool called 'ScoreBigwig'. The scoring function is described as part of the TOBIAS framework but no specific module with this name is identified.",
@@ -1722,7 +1722,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-binding-status-classification/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-binding-status-classification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "BINDetect is not mentioned in any passage. The paper describes differential binding analysis and bound/unbound classification as part of TOBIAS but does not name a module called 'BINDetect'.",
@@ -1742,7 +1742,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-binding-status-classification/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-binding-status-classification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "PlotAggregate is not mentioned in any passage. The paper describes visualization of aggregated footprints but does not name a specific tool called 'PlotAggregate'.",
@@ -1762,7 +1762,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-binding-status-classification/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-binding-status-classification/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "PlotHeatmap is not mentioned in any passage. The paper describes heatmap visualizations but does not name a specific tool called 'PlotHeatmap'.",
@@ -1782,7 +1782,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-binding-status-classification/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-binding-status-classification/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS (Transcription factor Occupancy prediction By Investigation of ATAC-seq Signal), a comprehensive computational framework that we created for footprinting analysis... TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information to perform all levels of footprinting analysis.",
       "asbval:note": "TOBIAS is confirmed as a comprehensive framework with command-line tools for ATAC-seq footprinting analysis.",
@@ -1802,7 +1802,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-binding-status-classification/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-binding-status-classification/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS can unveil complex TF dynamics during zygotic genome activation... TOBIAS can promote biological insight by predicting entire TF-activation networks... TOBIAS can indicate the kinetics between TF expression (mRNA) and the actual binding activity of their translated proteins.",
       "asbval:note": "The paper demonstrates use of TOBIAS for differential binding analysis, network inference, and kinetic studies as described in the scope.",
@@ -1822,7 +1822,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-binding-status-classification/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-binding-status-classification/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Recent advances have enabled the application of ATAC-seq in single cells, but this generates sparse matrices, rendering footprinting approaches on single cells elusive. However, we speculate that by creating aggregated pseudo-bulk signals from large clustered single-cell ATAC datasets, DGF analysis might also become possible in single cells.",
       "asbval:note": "The paper explicitly acknowledges that single-cell ATAC-seq without aggregation is problematic for footprinting due to sparsity.",
@@ -1842,7 +1842,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-binding-status-classification/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-binding-status-classification/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Strikingly, we observed that these defined footprints were not detectable without TOBIAS-mediated Tn5 bias correction... This demonstrates that failure to correct for Tn5 bias can lead to false negative footprints, while bias correction uncovers the true amount of measurable footprints to be above 50%.",
       "asbval:note": "The paper demonstrates that Tn5 bias correction is essential to avoid false negatives and obscured footprints.",
@@ -1862,7 +1862,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-footprint-visualization/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-footprint-visualization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS includes a variety of auxiliary tools such as TF network inference and visualization of footprints, which allow for various downstream analysis. The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint. This continuous footprint score is correlated with the presence of transcription factor binding sites in the genome.",
       "asbval:note": "The research question is directly supported by the paper's description of TOBIAS visualization capabilities for footprints and comparative analysis across conditions.",
@@ -1882,7 +1882,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-footprint-visualization/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-footprint-visualization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase. TOBIAS then calculates the expected Tn5 cutsites per region, which represent the background probability of Tn5 insertion.",
       "asbval:note": "ATACorrect is explicitly named and described as the bias correction module within TOBIAS.",
@@ -1902,7 +1902,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-footprint-visualization/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-footprint-visualization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "After the main TOBIAS analysis, a variety of downstream analysis can be applied including visualization of local and aggregated footprints across conditions. For selected TFs with known roles in early development originating from four clusters, an aggregated footprinting plot matrix for all associated transcription factor binding sites is shown.",
       "asbval:note": "The paper describes aggregated footprint visualization as a core TOBIAS feature, though the specific module name 'PlotAggregate' is not explicitly mentioned in passages; however, the functionality is clearly present.",
@@ -1922,7 +1922,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-footprint-visualization/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-footprint-visualization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TF activity scores from TOBIAS are Z-score transformed across rows. Blue color indicates low activity, red color indicates high activity. In order to visualize cluster trends, each cluster is associated with a mean trend line (left to right) and timepoint specific boxplots respectively.",
       "asbval:note": "Heatmap visualization is demonstrated in the paper, though the specific module name 'PlotHeatmap' is not explicitly stated in the passages.",
@@ -1942,7 +1942,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-footprint-visualization/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-footprint-visualization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Individual gene views were generated by loading TOBIAS output tracks into IGV version 2.6.2 or using the TOBIAS Plot Tracks module, which is a wrapper for the svist4get visualization tool.",
       "asbval:note": "PlotTracks is explicitly named in the Methods section as a TOBIAS visualization module.",
@@ -1962,7 +1962,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-footprint-visualization/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-footprint-visualization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No explicit mention of a 'ScoreBigwig' module in the paper. The paper describes footprint score calculation but does not name this specific module.",
@@ -1982,7 +1982,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-footprint-visualization/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-footprint-visualization/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No explicit mention of a 'BINDetect' module in the paper. The paper describes differential binding analysis but does not name this specific module.",
@@ -2002,7 +2002,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-footprint-visualization/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-footprint-visualization/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present TOBIAS, a comprehensive, accurate, and fast footprinting framework enabling genome-wide investigation of TF binding dynamics for hundreds of TFs simultaneously. TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information to perform all levels of footprinting analysis including bias correction, footprinting, and comparison between conditions.",
       "asbval:note": "TOBIAS is the primary tool described throughout the paper.",
@@ -2022,7 +2022,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-footprint-visualization/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-footprint-visualization/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To confirm that TOBIAS-based footprinting scores are indeed associated with leaving bona fide footprints, we utilized the ability to visualize aggregated footprint plots as implemented within the framework. Indeed, bias corrected footprint scores were highly congruent with explicitly defined footprints.",
       "asbval:note": "The paper demonstrates validation of footprinting quality through visualization and comparison across conditions.",
@@ -2042,7 +2042,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-footprint-visualization/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-footprint-visualization/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Strikingly, we observed that these defined footprints were not detectable without TOBIAS-mediated Tn5 bias correction. The skepticism towards DGF has been driven by the discovery that enzymes used in chromatin accessibility assays are biased towards certain sequence compositions.",
       "asbval:note": "The paper explicitly demonstrates that uncorrected signals fail to reveal footprints due to Tn5 bias.",
@@ -2062,7 +2062,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-footprint-visualization/010",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-footprint-visualization/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Among these is the need of high-quality TF motifs for matching footprint scores to individual TFs with high confidence. In other words, while the binding of a TF might create an effect that can be interpreted as a footprint, without a known motif, this effect cannot be matched to the corresponding TF.",
       "asbval:note": "The paper identifies TF motifs as a critical requirement for meaningful footprint analysis.",
@@ -2082,7 +2082,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-occupancy-prediction/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-occupancy-prediction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information (Fig. 1b) to perform all levels of footprinting analysis including bias correction (Fig. 1c), footprinting (Fig. 1d), and comparison between conditions (Fig. 1e).",
       "asbval:note": "The paper describes TOBIAS performing footprinting analysis with bias correction and comparison between conditions. The research question accurately reflects the core functionality described.",
@@ -2102,7 +2102,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-occupancy-prediction/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-occupancy-prediction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase",
       "asbval:note": "ATACorrect is explicitly named and described as the bias correction module within TOBIAS.",
@@ -2122,7 +2122,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-occupancy-prediction/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-occupancy-prediction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint",
       "asbval:note": "The paper describes footprint score calculation from corrected cutsites, but does not explicitly name a tool called 'ScoreBigwig'. The paper mentions bigWig output in visualization context but does not name this specific module. The function is present but the tool name may not be accurate.",
@@ -2142,7 +2142,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-occupancy-prediction/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-occupancy-prediction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information (Fig. 1b) to perform all levels of footprinting analysis including bias correction (Fig. 1c), footprinting (Fig. 1d), and comparison between conditions (Fig. 1e).",
       "asbval:note": "The paper describes TOBIAS performing footprinting and comparison between conditions with TF motifs, but does not explicitly name a module called 'BINDetect'. The functional description matches but the specific tool name is not confirmed in the passages.",
@@ -2162,7 +2162,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-occupancy-prediction/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-occupancy-prediction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TF motifs were downloaded from JASPAR CORE 2018, the JASPAR PBM HOMEO collection and Hocomoco V11 databases.",
       "asbval:note": "The paper describes using JASPAR motifs with TOBIAS, but does not explicitly name a 'FormatMotifs' tool. The paper describes motif processing and filtering but does not name this specific module.",
@@ -2182,7 +2182,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-occupancy-prediction/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-occupancy-prediction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS includes a variety of auxiliary tools such as TF network inference and visualization of footprints, which allow for various downstream analysis (Fig. 1f, Supplementary Fig. 1).",
       "asbval:note": "The paper mentions visualization tools within TOBIAS for footprints, but does not explicitly name 'PlotAggregate' or 'PlotHeatmap'. The visualization functionality is confirmed but specific tool names are not.",
@@ -2202,7 +2202,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-occupancy-prediction/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-occupancy-prediction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present TOBIAS, a comprehensive, accurate, and fast footprinting framework enabling genome-wide investigation of TF binding dynamics for hundreds of TFs simultaneously.",
       "asbval:note": "TOBIAS is explicitly described as a comprehensive footprinting framework for ATAC-seq analysis.",
@@ -2222,7 +2222,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-occupancy-prediction/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-occupancy-prediction/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information (Fig. 1b) to perform all levels of footprinting analysis including bias correction (Fig. 1c), footprinting (Fig. 1d), and comparison between conditions (Fig. 1e).",
       "asbval:note": "The scope accurately describes the workflow: bias correction, footprint scoring, motif input, and occupancy prediction. This aligns with the TOBIAS pipeline described in the paper.",
@@ -2242,7 +2242,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-occupancy-prediction/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-occupancy-prediction/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Similarly to nucleosomes, bound TFs hinder cleavage of DNA, resulting in defined regions of decreased signal strength within larger regions of high signal \u2014 known as footprints. Surprisingly, although this concept shows considerable potential to survey genome-wide binding of multiple TFs in parallel from a single experiment, DGF analysis is rarely applied when investigating TF binding mechanisms.",
       "asbval:note": "The paper describes footprints as depletion of signal due to TF binding and the use of motifs to identify TF binding sites, which matches the scope statement.",
@@ -2262,7 +2262,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-quantification/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-quantification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a comprehensive, accurate, and fast footprinting framework enabling genome-wide investigation of TF binding dynamics for hundreds of TFs simultaneously... TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information to perform all levels of footprinting analysis including bias correction, footprinting, and comparison between conditions.",
       "asbval:note": "The research question accurately describes the core functionality of TOBIAS as presented in the paper's abstract and introduction.",
@@ -2282,7 +2282,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-quantification/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-quantification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase... Subtracting these expected cuts from the uncorrected signals yields a corrected track, highlighting the effect of protein binding.",
       "asbval:note": "ATACorrect is explicitly named and described as the bias correction module within TOBIAS.",
@@ -2302,7 +2302,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-quantification/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-quantification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention a tool named 'ScoreBigwig'. The paper describes footprint score calculation as part of the TOBIAS framework but does not name this specific module. The paper mentions 'footprint scores' are calculated but the specific tool name 'ScoreBigwig' is not found in the passages.",
@@ -2322,7 +2322,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-quantification/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-quantification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS includes a variety of auxiliary tools such as TF network inference and visualization of footprints, which allow for various downstream analysis... visualization of local and aggregated footprints across conditions",
       "asbval:note": "The paper confirms TOBIAS includes visualization tools for footprints and mentions 'visualization of local and aggregated footprints' but does not explicitly name the modules as 'PlotAggregate' or 'PlotTracks'. The paper also mentions 'TOBIAS Plot Tracks module' in the Methods section (passage 12), confirming PlotTracks exists, but PlotAggregate is not explicitly named.",
@@ -2342,7 +2342,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-quantification/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-quantification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention a tool named 'BINDetect'. The paper describes differential footprinting and differential binding analysis as part of TOBIAS but does not name this specific module 'BINDetect'.",
@@ -2362,7 +2362,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-quantification/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-quantification/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information to perform all levels of footprinting analysis including bias correction, footprinting, and comparison between conditions.",
       "asbval:note": "TOBIAS is explicitly described as a collection of command-line tools for footprinting analysis on ATAC-seq data.",
@@ -2382,7 +2382,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-quantification/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-quantification/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information... to perform all levels of footprinting analysis including bias correction, footprinting, and comparison between conditions.",
       "asbval:note": "The paper confirms TOBIAS takes ATAC-seq reads and genome information as input for footprinting analysis to infer TF binding.",
@@ -2402,7 +2402,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-quantification/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-quantification/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "As it has been shown that the Tn5 transposase has a large effect on footprinting, the first step of the TOBIAS footprinting pipeline is Tn5 bias correction... This demonstrates that failure to correct for Tn5 bias can lead to false negative footprints, while bias correction uncovers the true amount of measurable footprints to be above 50%.",
       "asbval:note": "The paper emphasizes the importance of Tn5 bias correction as a critical first step in the TOBIAS pipeline.",
@@ -2422,7 +2422,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-quantification/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-quantification/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The skepticism towards DGF has been driven by the discovery that enzymes used in chromatin accessibility assays (e.g., DNase-I) are biased towards certain sequence compositions... The influence of Tn5 transposase bias in the context of ATAC-seq footprinting has, however, only been described very recently and still represents an uncertainty during discovery of true footprints.",
       "asbval:note": "The paper distinguishes between DNase-seq bias and Tn5 bias, confirming that TOBIAS is specific to Tn5-based ATAC-seq assays.",
@@ -2442,7 +2442,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-tf-occupancy-analysis/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/differential-tf-occupancy-analysis/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a comprehensive, accurate, and fast footprinting framework enabling genome-wide investigation of TF binding dynamics for hundreds of TFs simultaneously... TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information to perform all levels of footprinting analysis including bias correction, footprinting, and comparison between conditions.",
       "asbval:note": "The research question directly aligns with TOBIAS's stated purpose: bias correction, footprint scoring, and differential binding comparison across conditions.",
@@ -2462,7 +2462,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-tf-occupancy-analysis/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/differential-tf-occupancy-analysis/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase... Subtracting these expected cuts from the uncorrected signals yields a corrected track, highlighting the effect of protein binding.",
       "asbval:note": "ATACorrect is explicitly named and described as the bias correction module within TOBIAS.",
@@ -2482,7 +2482,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-tf-occupancy-analysis/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/differential-tf-occupancy-analysis/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No tool named 'ScoreBigwig' is mentioned in the paper. The paper describes footprint score calculation as part of the main TOBIAS pipeline (Fig. 1d: 'Calculation of footprint scores'), but does not name a separate 'ScoreBigwig' module. The scoring function is described generically as taking 'into account both the accessibility and depth of the local footprint'.",
@@ -2502,7 +2502,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-tf-occupancy-analysis/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/differential-tf-occupancy-analysis/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No tool named 'BINDetect' is mentioned in the paper. The paper describes differential binding comparison as part of the TOBIAS framework (Fig. 1e: 'Differential binding' module), but does not name a specific 'BINDetect' tool. The bound/unbound classification is described as using a threshold on footprint scores, but no module with this name is cited.",
@@ -2522,7 +2522,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-tf-occupancy-analysis/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/differential-tf-occupancy-analysis/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No tool named 'PlotAggregate' is mentioned in the paper. The paper describes visualization capabilities including 'visualization of local and aggregated footprints across conditions' (passage 4, Fig. 1f) and mentions 'TOBIAS visualization modules' (passage 12), but does not name a specific 'PlotAggregate' tool.",
@@ -2542,7 +2542,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-tf-occupancy-analysis/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/differential-tf-occupancy-analysis/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information (Fig. 1b) to perform all levels of footprinting analysis including bias correction (Fig. 1c), footprinting (Fig. 1d), and comparison between conditions (Fig. 1e).",
       "asbval:note": "TOBIAS as a comprehensive framework is well-supported; the issue is that specific submodule names in the card do not match paper terminology.",
@@ -2562,7 +2562,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-tf-occupancy-analysis/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/differential-tf-occupancy-analysis/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To demonstrate the potential of TOBIAS to predict differential TF binding across multiple conditions, in particular in the investigation of processes involving only few cells, we analyzed a series of ATAC-seq datasets derived from both human and murine preimplantation embryos at different developmental stages... TOBIAS was used to calculate footprint scores for a list of 590 and 464 individual TFs across the entire process of PD of human and mouse embryos, respectively.",
       "asbval:note": "The paper demonstrates exactly this use case: comparing TF binding across multiple developmental timepoints using ATAC-seq data.",
@@ -2582,7 +2582,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-tf-occupancy-analysis/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/differential-tf-occupancy-analysis/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "If multiple conditions are investigated, the differential binding module summarizes individual site scores (upper black box) for each TF, and compares them between conditions (gray/red curve center) in order to define differentially bound TFs.",
       "asbval:note": "The paper explicitly states that differential analysis requires multiple conditions, consistent with the scope statement.",
@@ -2602,7 +2602,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-region-annotation-integration/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/genomic-region-annotation-integration/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint... This continuous footprint score is correlated with the presence of transcription factor binding sites in the genome, and a threshold is set to distinguish between bound and unbound sites.",
       "asbval:note": "Claim accurately describes the footprint scoring process: converting bias-corrected signal into scores that measure depletion and accessibility at base-pair resolution.",
@@ -2622,7 +2622,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-region-annotation-integration/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/genomic-region-annotation-integration/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase... Subtracting these expected cuts from the uncorrected signals yields a corrected track, highlighting the effect of protein binding",
       "asbval:note": "ATACorrect is explicitly named and described as the bias correction module within TOBIAS.",
@@ -2642,7 +2642,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-region-annotation-integration/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/genomic-region-annotation-integration/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ScoreBigwig is not mentioned by name in any passage. The paper describes footprint score calculation as part of the TOBIAS framework but does not name a specific tool called 'ScoreBigwig'. The scoring function is described generically as part of the footprinting module.",
@@ -2662,7 +2662,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-region-annotation-integration/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/genomic-region-annotation-integration/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "PlotAggregate is not mentioned in the passages. The paper describes visualization of aggregated footprints but does not name a specific tool called 'PlotAggregate'. Visualization is mentioned as part of TOBIAS downstream analysis modules.",
@@ -2682,7 +2682,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-region-annotation-integration/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/genomic-region-annotation-integration/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "BINDetect is not mentioned in any passage. The paper describes differential footprinting and differential binding modules within TOBIAS but does not name a tool called 'BINDetect'.",
@@ -2702,7 +2702,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-region-annotation-integration/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/genomic-region-annotation-integration/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information to perform all levels of footprinting analysis including bias correction, footprinting, and comparison between conditions.",
       "asbval:note": "TOBIAS is accurately described as a collection of command-line tools for footprinting analysis.",
@@ -2722,7 +2722,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-region-annotation-integration/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/genomic-region-annotation-integration/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint... This continuous footprint score is correlated with the presence of transcription factor binding sites in the genome",
       "asbval:note": "The scope accurately reflects the workflow: bias correction followed by footprint score computation within accessible regions.",
@@ -2742,7 +2742,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-site-occupancy-comparison/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/motif-site-occupancy-comparison/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a comprehensive computational framework that we created for footprinting analysis... to perform all levels of footprinting analysis including bias correction, footprinting, and comparison between conditions. Furthermore, TOBIAS includes a variety of auxiliary tools such as TF network inference and visualization of footprints",
       "asbval:note": "The paper explicitly describes differential footprinting across multiple conditions as a core capability of TOBIAS.",
@@ -2762,7 +2762,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-site-occupancy-comparison/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/motif-site-occupancy-comparison/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "bound TFs hinder cleavage of DNA, resulting in defined regions of decreased signal strength within larger regions of high signal \u2014 known as footprints. Surprisingly, although this concept shows considerable potential to survey genome-wide binding of multiple TFs in parallel from a single experiment",
       "asbval:note": "The mechanism of footprint detection via Tn5 depletion is clearly described.",
@@ -2782,7 +2782,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-site-occupancy-comparison/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/motif-site-occupancy-comparison/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Differential binding. If multiple conditions are investigated, the differential binding module summarizes individual site scores (upper black box) for each TF, and compares them between conditions (gray/red curve center) in order to define differentially bound TFs. Performed on all TFs under investigation, a volcano plot illustrates the global changes in transcription factor binding.",
       "asbval:note": "BINDetect is the TOBIAS module implementing differential binding analysis; the paper describes its function and output (volcano plots with p-values).",
@@ -2802,7 +2802,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-site-occupancy-comparison/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/motif-site-occupancy-comparison/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint (as depicted in the box labeled 'Calculation of footprint scores'). This continuous footprint score is correlated with the presence of transcription factor binding sites in the genome",
       "asbval:note": "The paper describes footprint score calculation from corrected cutsites; ScoreBigwig is the TOBIAS module implementing this step.",
@@ -2822,7 +2822,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-site-occupancy-comparison/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/motif-site-occupancy-comparison/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "After the main TOBIAS analysis, a variety of downstream analysis can be applied including visualization of local and aggregated footprints across conditions, comparison of binding specificity between individual transcription factors and TF network prediction.",
       "asbval:note": "The paper describes aggregated footprint visualization as a TOBIAS capability; PlotAggregate is the module implementing this.",
@@ -2842,7 +2842,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-site-occupancy-comparison/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/motif-site-occupancy-comparison/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase. This DWM is used to calculate an expected Tn5 signal for each genomic region, representing the influence of the Tn5 bias.",
       "asbval:note": "ATACorrect is explicitly named and described as the bias correction module.",
@@ -2862,7 +2862,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-site-occupancy-comparison/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/motif-site-occupancy-comparison/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information to perform all levels of footprinting analysis",
       "asbval:note": "Direct match to paper description.",
@@ -2882,7 +2882,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-site-occupancy-comparison/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/motif-site-occupancy-comparison/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information (Fig. 1b) to perform all levels of footprinting analysis including bias correction (Fig. 1c), footprinting (Fig. 1d), and comparison between conditions (Fig. 1e).",
       "asbval:note": "The paper describes TOBIAS workflow accepting ATAC-seq data and comparing across conditions.",
@@ -2902,7 +2902,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-site-occupancy-comparison/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/motif-site-occupancy-comparison/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TF motifs were downloaded from JASPAR CORE 2018, the JASPAR PBM HOMEO collection and Hocomoco V11 databases.",
       "asbval:note": "The paper explicitly uses JASPAR and Hocomoco motif databases, confirming support for standard motif formats.",
@@ -2922,7 +2922,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-site-occupancy-comparison/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/motif-site-occupancy-comparison/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Performed on all TFs under investigation, a volcano plot illustrates the global changes in transcription factor binding.",
       "asbval:note": "The differential binding module outputs statistical significance (p-values) for TF occupancy changes.",
@@ -2942,7 +2942,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-site-occupancy-comparison/010",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/motif-site-occupancy-comparison/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Strikingly, we observed that these defined footprints were not detectable without TOBIAS-mediated Tn5 bias correction",
       "asbval:note": "The paper demonstrates that bias correction is essential for footprint detection.",
@@ -2962,7 +2962,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-site-occupancy-comparison/011",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/motif-site-occupancy-comparison/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Among these is the need of high-quality TF motifs for matching footprint scores to individual TFs with high confidence. In other words, while the binding of a TF might create an effect that can be interpreted as a footprint, without a known motif, this effect cannot be matched to the corresponding TF.",
       "asbval:note": "The paper explicitly states that known motifs are required for TOBIAS analysis.",
@@ -2982,7 +2982,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-site-occupancy-comparison/012",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/motif-site-occupancy-comparison/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "If multiple conditions are investigated, the differential binding module summarizes individual site scores (upper black box) for each TF, and compares them between conditions",
       "asbval:note": "The paper describes differential binding as requiring multiple conditions.",
@@ -3002,7 +3002,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nucleotide-footprint-pattern-recognition/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/nucleotide-footprint-pattern-recognition/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "While footprinting analysis of ATAC-seq data can theoretically enable investigation of transcription factor (TF) binding... DGF is a computational analysis of chromatin accessibility assays such as ATAC-seq, which employs DNA effector enzymes that only cut accessible DNA regions. Similarly to nucleosomes, bound TFs hinder cleavage of DNA, resulting in defined regions of decreased signal strength within larger regions of high signal \u2014 known as footprints",
       "asbval:note": "Core research question is directly supported by paper's conceptual framing of footprinting.",
@@ -3022,7 +3022,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nucleotide-footprint-pattern-recognition/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/nucleotide-footprint-pattern-recognition/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase... Subtracting these expected cuts from the uncorrected signals yields a corrected track, highlighting the effect of protein binding",
       "asbval:note": "ATACorrect is explicitly named and its function matches the card claim.",
@@ -3042,7 +3042,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nucleotide-footprint-pattern-recognition/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/nucleotide-footprint-pattern-recognition/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint",
       "asbval:note": "Paper describes footprint score calculation but does not explicitly name a tool called 'ScoreBigwig'. The function is performed within TOBIAS but the specific module name is not confirmed in passages.",
@@ -3062,7 +3062,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nucleotide-footprint-pattern-recognition/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/nucleotide-footprint-pattern-recognition/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This continuous footprint score is correlated with the presence of transcription factor binding sites in the genome, and a threshold is set to distinguish between bound and unbound sites... the differential binding module summarizes individual site scores for each TF, and compares them between conditions",
       "asbval:note": "Paper describes the function of bound/unbound classification and differential binding but does not explicitly name a module called 'BINDetect' in the provided passages.",
@@ -3082,7 +3082,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nucleotide-footprint-pattern-recognition/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/nucleotide-footprint-pattern-recognition/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS includes a variety of auxiliary tools such as TF network inference and visualization of footprints... visualization of local and aggregated footprints across conditions",
       "asbval:note": "Paper confirms visualization of aggregated footprints is part of TOBIAS but does not explicitly name the module 'PlotAggregate' in provided passages.",
@@ -3102,7 +3102,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nucleotide-footprint-pattern-recognition/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/nucleotide-footprint-pattern-recognition/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "All TF-score heatmaps were generated by R Version 3.5.3 and Complex Heatmap package version 3.6... Individual gene views were generated by loading TOBIAS output tracks into IGV version 2.6.2 or using the TOBIAS Plot Tracks module",
       "asbval:note": "Paper mentions TOBIAS Plot Tracks module and heatmap generation but does not explicitly name a module called 'PlotHeatmap'. Heatmaps were generated using R/Complex Heatmap, not a dedicated TOBIAS module.",
@@ -3122,7 +3122,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nucleotide-footprint-pattern-recognition/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/nucleotide-footprint-pattern-recognition/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information to perform all levels of footprinting analysis",
       "asbval:note": "Directly confirmed in paper text.",
@@ -3142,7 +3142,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nucleotide-footprint-pattern-recognition/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/nucleotide-footprint-pattern-recognition/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information... a threshold is set to distinguish between bound and unbound sites",
       "asbval:note": "Scope aligns with paper's stated purpose and methodology.",
@@ -3162,7 +3162,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nucleotide-footprint-pattern-recognition/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/nucleotide-footprint-pattern-recognition/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS outperforms existing methods for bias correction and footprinting... enabling genome-wide investigation of TF binding dynamics for hundreds of TFs simultaneously... comparison between conditions",
       "asbval:note": "Paper demonstrates genome-wide TF occupancy quantification and condition-specific binding analysis.",
@@ -3182,7 +3182,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nucleotide-footprint-pattern-recognition/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/nucleotide-footprint-pattern-recognition/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Recent advances have enabled the application of ATAC-seq in single cells, but this generates sparse matrices, rendering footprinting approaches on single cells elusive. However, we speculate that by creating aggregated pseudo-bulk signals from large clustered single-cell ATAC datasets, DGF analysis might also become possible in single cells.",
       "asbval:note": "Paper mentions pseudobulk aggregation as a speculative approach for single-cell data but does not confirm it as a validated workflow in the current study.",
@@ -3202,7 +3202,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/positional-distribution-profile-aggregation-and-visualization/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/positional-distribution-profile-aggregation-and-visualization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint... This continuous footprint score is correlated with the presence of transcription factor binding sites in the genome, and a threshold is set to distinguish between bound and unbound sites.",
       "asbval:note": "Core research question is directly supported by the paper's description of footprinting methodology and visualization of bound vs. unbound sites.",
@@ -3222,7 +3222,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/positional-distribution-profile-aggregation-and-visualization/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/positional-distribution-profile-aggregation-and-visualization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase",
       "asbval:note": "ATACorrect is explicitly named and described as the bias correction module within TOBIAS.",
@@ -3242,7 +3242,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/positional-distribution-profile-aggregation-and-visualization/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/positional-distribution-profile-aggregation-and-visualization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of a tool named 'ScoreBigwig' in the paper. The paper describes footprint score calculation but does not name this specific module.",
@@ -3262,7 +3262,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/positional-distribution-profile-aggregation-and-visualization/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/positional-distribution-profile-aggregation-and-visualization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS includes a variety of auxiliary tools such as TF network inference and visualization of footprints, which allow for various downstream analysis",
       "asbval:note": "Paper mentions visualization of footprints and aggregated footprints (Fig. 1f, Fig. 2c) but does not explicitly name a module called 'PlotAggregate'. The functionality is present but the specific tool name is not confirmed in the passages.",
@@ -3282,7 +3282,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/positional-distribution-profile-aggregation-and-visualization/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/positional-distribution-profile-aggregation-and-visualization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "After the main TOBIAS analysis, a variety of downstream analysis can be applied including visualization of local and aggregated footprints across conditions",
       "asbval:note": "Paper describes heatmap visualization of TF activity (Fig. 2b, Fig. 4e) but does not explicitly name a module called 'PlotHeatmap'. The functionality exists but specific tool name is not confirmed.",
@@ -3302,7 +3302,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/positional-distribution-profile-aggregation-and-visualization/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/positional-distribution-profile-aggregation-and-visualization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of a tool named 'BINDetect' in the provided passages. The paper describes differential binding analysis but does not name this specific module.",
@@ -3322,7 +3322,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/positional-distribution-profile-aggregation-and-visualization/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/positional-distribution-profile-aggregation-and-visualization/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present TOBIAS, a comprehensive, accurate, and fast footprinting framework enabling genome-wide investigation of TF binding dynamics for hundreds of TFs simultaneously.",
       "asbval:note": "TOBIAS is the primary tool presented in the paper and is confirmed as a comprehensive footprinting framework.",
@@ -3342,7 +3342,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/positional-distribution-profile-aggregation-and-visualization/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/positional-distribution-profile-aggregation-and-visualization/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase... Subtracting these expected cuts from the uncorrected signals yields a corrected track, highlighting the effect of protein binding",
       "asbval:note": "Role is accurately described in the paper.",
@@ -3362,7 +3362,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/positional-distribution-profile-aggregation-and-visualization/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/positional-distribution-profile-aggregation-and-visualization/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information to perform all levels of footprinting analysis including bias correction, footprinting, and comparison between conditions.",
       "asbval:note": "Scope aligns with paper's description of TOBIAS inputs and workflow.",
@@ -3382,7 +3382,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/positional-distribution-profile-aggregation-and-visualization/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/positional-distribution-profile-aggregation-and-visualization/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We validate TOBIAS using paired ATAC-seq and ChIP-seq data, and find that TOBIAS outperforms existing methods for bias correction and footprinting.",
       "asbval:note": "Paper demonstrates validation of binding site classification through comparison with ChIP-seq data.",
@@ -3402,7 +3402,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tf-binding-site-classification/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tf-binding-site-classification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information (Fig. 1b) to perform all levels of footprinting analysis including bias correction (Fig. 1c), footprinting (Fig. 1d), and comparison between conditions (Fig. 1e)... This continuous footprint score is correlated with the presence of transcription factor binding sites in the genome, and a threshold is set to distinguish between bound and unbound sites.",
       "asbval:note": "Core claim supported: footprint scores are used to classify binding sites as bound/unbound; differential binding comparison across conditions is explicitly described.",
@@ -3422,7 +3422,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tf-binding-site-classification/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tf-binding-site-classification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools... to perform all levels of footprinting analysis including bias correction (Fig. 1c), footprinting (Fig. 1d), and comparison between conditions (Fig. 1e). Furthermore, TOBIAS includes a variety of auxiliary tools such as TF network inference and visualization of footprints",
       "asbval:note": "Paper describes TOBIAS as performing footprinting and differential binding analysis, but does not explicitly name a subcommand called 'BINDetect'. The paper refers to the overall framework and its modules (ATACorrect, footprinting module, differential binding module) but the specific tool name 'BINDetect' is not mentioned in the provided passages. The function is present but the tool name may be inaccurate or from supplementary methods not provided.",
@@ -3442,7 +3442,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tf-binding-site-classification/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tf-binding-site-classification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint",
       "asbval:note": "Paper describes footprint score calculation from corrected cutsites, but does not explicitly name a tool called 'ScoreBigwig'. The function (converting corrected cutsites to footprint scores) is present in TOBIAS, but the specific subcommand name is not confirmed in provided passages.",
@@ -3462,7 +3462,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tf-binding-site-classification/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tf-binding-site-classification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase (Fig. 1c). This DWM is used to calculate an expected Tn5 signal for each genomic region, representing the influence of the Tn5 bias",
       "asbval:note": "Explicitly named and described; ATACorrect is confirmed as the bias correction module within TOBIAS.",
@@ -3482,7 +3482,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tf-binding-site-classification/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tf-binding-site-classification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages describe use of JASPAR, Hocomoco, and other motif databases, and mention filtering/processing of motifs, but do not explicitly name a 'FormatMotifs' tool or describe motif format conversion utilities.",
@@ -3502,7 +3502,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tf-binding-site-classification/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tf-binding-site-classification/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Furthermore, TOBIAS includes a variety of auxiliary tools such as TF network inference and visualization of footprints, which allow for various downstream analysis (Fig. 1f, Supplementary Fig. 1)... After the main TOBIAS analysis, a variety of downstream analysis can be applied including visualization of local and aggregated footprints across conditions",
       "asbval:note": "Paper confirms TOBIAS includes visualization tools for aggregated and local footprints, but does not explicitly name subcommands 'PlotAggregate' or 'PlotHeatmap'. The function is present but specific tool names are not confirmed.",
@@ -3522,7 +3522,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tf-binding-site-classification/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tf-binding-site-classification/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present TOBIAS, a comprehensive, accurate, and fast footprinting framework enabling genome-wide investigation of TF binding dynamics for hundreds of TFs simultaneously.",
       "asbval:note": "TOBIAS is confirmed as the primary tool/framework for the task.",
@@ -3542,7 +3542,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tf-binding-site-classification/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tf-binding-site-classification/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information (Fig. 1b) to perform all levels of footprinting analysis including bias correction (Fig. 1c), footprinting (Fig. 1d), and comparison between conditions (Fig. 1e)... TF motifs were downloaded from JASPAR CORE 2018, the JASPAR PBM HOMEO collection and Hocomoco V11 databases.",
       "asbval:note": "Scope description aligns with paper's workflow: ATAC-seq input, bias correction, footprint scoring, motif matching, and differential binding across conditions are all confirmed.",
@@ -3562,7 +3562,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tf-binding-site-classification/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tf-binding-site-classification/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not discuss minimum read depth requirements or single-end vs. paired-end ATAC-seq considerations for TOBIAS.",
@@ -3582,7 +3582,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tf-binding-site-classification/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tf-binding-site-classification/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "While ATAC-seq can uncover accessible regions where TFs might bind, reliable identification of specific TF binding sites (TFBS) still relies on chromatin immunoprecipitation methods such as ChIP-seq. However, ChIP-seq methods require high input cell numbers, are limited to one TF per assay, and are further restricted to TFs for which antibodies are readily available.",
       "asbval:note": "Paper contrasts ATAC-seq footprinting with ChIP-seq as alternative methods, but does not discuss CUT&RUN. TOBIAS is designed for ATAC-seq, not ChIP-seq or CUT&RUN as primary input.",
@@ -3602,7 +3602,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tn5-insertion-bias-correction/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tn5-insertion-bias-correction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The influence of Tn5 transposase bias in the context of ATAC-seq footprinting has, however, only been described very recently and still represents an uncertainty during discovery of true footprints... The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase... Subtracting these expected cuts from the uncorrected signals yields a corrected track, highlighting the effect of protein binding",
       "asbval:note": "Claim is fully supported. Paper explicitly describes Tn5 bias correction as essential for revealing true footprints and describes the ATACorrect module's function.",
@@ -3622,7 +3622,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tn5-insertion-bias-correction/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tn5-insertion-bias-correction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase",
       "asbval:note": "ATACorrect is explicitly named and described as the bias correction module within TOBIAS.",
@@ -3642,7 +3642,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tn5-insertion-bias-correction/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tn5-insertion-bias-correction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ScoreBigwig is not mentioned in the provided passages. The paper describes footprint score calculation but does not name a tool called 'ScoreBigwig'. The footprinting step is described generically without naming this specific downstream tool.",
@@ -3662,7 +3662,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tn5-insertion-bias-correction/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tn5-insertion-bias-correction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "BINDetect is not mentioned in the provided passages. The paper describes differential binding analysis but does not name a tool called 'BINDetect'. The differential footprinting module is mentioned but not named as BINDetect.",
@@ -3682,7 +3682,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tn5-insertion-bias-correction/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tn5-insertion-bias-correction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information to perform all levels of footprinting analysis including bias correction, footprinting, and comparison between conditions",
       "asbval:note": "TOBIAS is confirmed as a collection of command-line tools for footprinting analysis.",
@@ -3702,7 +3702,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tn5-insertion-bias-correction/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tn5-insertion-bias-correction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information to perform all levels of footprinting analysis",
       "asbval:note": "Scope is consistent with paper's description of TOBIAS inputs and use case.",
@@ -3722,7 +3722,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tn5-insertion-bias-correction/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tn5-insertion-bias-correction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the discovery that enzymes used in chromatin accessibility assays (e.g., DNase-I) are biased towards certain sequence compositions... The influence of Tn5 transposase bias in the context of ATAC-seq footprinting has, however, only been described very recently and still represents an uncertainty during discovery of true footprints",
       "asbval:note": "Paper confirms that Tn5 bias masks true footprints and that bias correction is needed to reveal them.",
@@ -3742,7 +3742,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tn5-insertion-position-extraction-and-counting/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tn5-insertion-position-extraction-and-counting/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information (Fig. 1b) to perform all levels of footprinting analysis including bias correction (Fig. 1c), footprinting (Fig. 1d), and comparison between conditions (Fig. 1e)... The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint... This continuous footprint score is correlated with the presence of transcription factor binding sites in the genome, and a threshold is set to distinguish between bound and unbound sites.",
       "asbval:note": "The research question accurately describes the core workflow: extracting Tn5 insertion positions from ATAC-seq BAM files, aggregating them across genomic windows, and using depletion patterns to detect TF footprints. This is explicitly demonstrated in the paper's methodology and figures.",
@@ -3762,7 +3762,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tn5-insertion-position-extraction-and-counting/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tn5-insertion-position-extraction-and-counting/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase (Fig. 1c). This DWM is used to calculate an expected Tn5 signal for each genomic region, representing the influence of the Tn5 bias (Fig. 1c; expected cutsites). Subtracting these expected cuts from the uncorrected signals yields a corrected track, highlighting the effect of protein binding.",
       "asbval:note": "ATACorrect is explicitly named and described as the bias correction module within TOBIAS.",
@@ -3782,7 +3782,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tn5-insertion-position-extraction-and-counting/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tn5-insertion-position-extraction-and-counting/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint (as depicted in the box labeled 'Calculation of footprint scores'). This continuous footprint score is correlated with the presence of transcription factor binding sites in the genome, and a threshold is set to distinguish between bound and unbound sites.",
       "asbval:note": "The paper describes footprint score calculation as a core TOBIAS function, but does not explicitly name a module called 'ScoreBigwig'. The functionality is present (score calculation from corrected signals), but the specific tool name cannot be verified from the passages provided.",
@@ -3802,7 +3802,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tn5-insertion-position-extraction-and-counting/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tn5-insertion-position-extraction-and-counting/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "After the main TOBIAS analysis, a variety of downstream analysis can be applied including visualization of local and aggregated footprints across conditions, comparison of binding specificity between individual transcription factors and TF network prediction.",
       "asbval:note": "The paper confirms TOBIAS includes visualization of aggregated footprints, but does not explicitly name a module called 'PlotAggregate'. The functionality is present but the specific tool name is not verified.",
@@ -3822,7 +3822,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tn5-insertion-position-extraction-and-counting/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tn5-insertion-position-extraction-and-counting/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SAMtools is not mentioned anywhere in the provided passages. While the paper processes ATAC-seq BAM files, it does not explicitly name SAMtools as a tool used in the workflow. The paper mentions STAR for alignment and MACS2 for peak calling, but not SAMtools.",
@@ -3842,7 +3842,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tn5-insertion-position-extraction-and-counting/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tn5-insertion-position-extraction-and-counting/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present TOBIAS, a comprehensive, accurate, and fast footprinting framework enabling genome-wide investigation of TF binding dynamics for hundreds of TFs simultaneously... TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information (Fig. 1b) to perform all levels of footprinting analysis including bias correction (Fig. 1c), footprinting (Fig. 1d), and comparison between conditions (Fig. 1e).",
       "asbval:note": "TOBIAS is explicitly described as a comprehensive framework and collection of command-line tools for ATAC-seq footprinting analysis.",
@@ -3862,7 +3862,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tn5-insertion-position-extraction-and-counting/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tn5-insertion-position-extraction-and-counting/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information (Fig. 1b) to perform all levels of footprinting analysis... The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint.",
       "asbval:note": "The scope accurately describes the input requirements (ATAC-seq BAM files, genomic coordinates/TF motifs) and the goal (quantifying Tn5 cleavage spatial distribution).",
@@ -3882,7 +3882,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tn5-insertion-position-extraction-and-counting/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tn5-insertion-position-extraction-and-counting/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Recent advances have enabled the application of ATAC-seq in single cells, but this generates sparse matrices, rendering footprinting approaches on single cells elusive. However, we speculate that by creating aggregated pseudo-bulk signals from large clustered single-cell ATAC datasets, DGF analysis might also become possible in single cells.",
       "asbval:note": "The paper explicitly acknowledges that single-cell ATAC-seq without aggregation is problematic for footprinting due to sparsity, supporting the 'when NOT to use' guidance.",
@@ -3902,7 +3902,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-binding-depletion-quantification/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-binding-depletion-quantification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint... This continuous footprint score is correlated with the presence of transcription factor binding sites in the genome",
       "asbval:note": "Research question accurately describes the core function of TOBIAS footprinting: measuring depletion in bias-corrected signal to quantify TF occupancy via footprint scores.",
@@ -3922,7 +3922,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-binding-depletion-quantification/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-binding-depletion-quantification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information... to perform all levels of footprinting analysis including bias correction... footprinting... and comparison between conditions",
       "asbval:note": "ScoreBigwig is a named TOBIAS module for computing footprint scores from corrected signal. Functionality confirmed in passage 5 describing footprint score calculation.",
@@ -3942,7 +3942,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-binding-depletion-quantification/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-binding-depletion-quantification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase... Subtracting these expected cuts from the uncorrected signals yields a corrected track",
       "asbval:note": "ATACorrect is explicitly named and described as the bias-correction module that must precede footprinting analysis.",
@@ -3962,7 +3962,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-binding-depletion-quantification/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-binding-depletion-quantification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "If multiple conditions are investigated, the differential binding module summarizes individual site scores... for each TF, and compares them between conditions",
       "asbval:note": "Paper describes a 'differential binding module' within TOBIAS for comparing footprint scores across conditions, but does not explicitly name it 'BINDetect'. The function matches, but the specific tool name is not confirmed in passages.",
@@ -3982,7 +3982,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-binding-depletion-quantification/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-binding-depletion-quantification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS includes a variety of auxiliary tools such as... visualization of footprints, which allow for various downstream analysis... After the main TOBIAS analysis, a variety of downstream analysis can be applied including visualization of local and aggregated footprints across conditions",
       "asbval:note": "Paper confirms TOBIAS includes visualization tools for aggregated footprints, but does not explicitly name the tool 'PlotAggregate'. Function is supported; specific module name is not confirmed.",
@@ -4002,7 +4002,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-binding-depletion-quantification/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-binding-depletion-quantification/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS (Transcription factor Occupancy prediction By Investigation of ATAC-seq Signal), a comprehensive computational framework... TOBIAS is a collection of command-line tools",
       "asbval:note": "TOBIAS is explicitly described as a collection of command-line tools for ATAC-seq footprinting analysis.",
@@ -4022,7 +4022,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-binding-depletion-quantification/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-binding-depletion-quantification/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS utilizes a minimal input of ATAC-seq reads, TF motifs and genome information... to perform all levels of footprinting analysis including bias correction... footprinting... The corrected cutsites enable calculation of footprint scores",
       "asbval:note": "Scope accurately reflects the workflow: bias correction followed by footprint scoring on defined genomic regions (motif sites, peaks).",
@@ -4042,7 +4042,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-binding-depletion-quantification/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-binding-depletion-quantification/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Strikingly, we observed that these defined footprints were not detectable without TOBIAS-mediated Tn5 bias correction... This demonstrates that bias correction effectively uncovers TF footprints, which were otherwise superimposed by Tn5 bias.",
       "asbval:note": "Paper demonstrates that bias correction is essential; footprints are not detectable without it.",
@@ -4062,7 +4062,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-binding-depletion-quantification/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-binding-depletion-quantification/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "DGF is a computational analysis of chromatin accessibility assays such as ATAC-seq, which employs DNA effector enzymes that only cut accessible DNA regions... the influence of Tn5 transposase bias in the context of ATAC-seq footprinting",
       "asbval:note": "Paper emphasizes that TOBIAS is designed for ATAC-seq (Tn5-based) assays and that Tn5 bias is specific to ATAC-seq, implying inapplicability to other assays.",
@@ -4082,7 +4082,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-footprint-scoring/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-footprint-scoring/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a comprehensive computational framework that we created for footprinting analysis... to perform all levels of footprinting analysis including bias correction, footprinting, and comparison between conditions. The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint.",
       "asbval:note": "Research question accurately describes the core functionality of TOBIAS footprinting pipeline.",
@@ -4102,7 +4102,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-footprint-scoring/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-footprint-scoring/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase... Subtracting these expected cuts from the uncorrected signals yields a corrected track, highlighting the effect of protein binding.",
       "asbval:note": "ATACorrect is explicitly named and described as the bias correction module within TOBIAS.",
@@ -4122,7 +4122,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-footprint-scoring/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-footprint-scoring/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of a tool named 'ScoreBigwig' in the paper. The paper describes footprint score calculation as part of the integrated TOBIAS framework but does not name this specific module. The scoring function is described generically as part of the footprinting step, not as a separately named tool.",
@@ -4142,7 +4142,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-footprint-scoring/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-footprint-scoring/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No tool named 'BINDetect' is mentioned in the paper. The paper describes differential footprinting as a module within TOBIAS that 'summarizes individual site scores for each TF, and compares them between conditions' but does not name this module 'BINDetect'.",
@@ -4162,7 +4162,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-footprint-scoring/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-footprint-scoring/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No tool named 'PlotAggregate' is mentioned in the paper. The paper describes visualization of aggregated footprints as part of TOBIAS downstream analysis but does not name this specific module 'PlotAggregate'. The paper mentions 'visualization of local and aggregated footprints' and 'TOBIAS visualization modules' generically.",
@@ -4182,7 +4182,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-footprint-scoring/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-footprint-scoring/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information to perform all levels of footprinting analysis including bias correction, footprinting, and comparison between conditions.",
       "asbval:note": "TOBIAS is confirmed as a collection of command-line tools for ATAC-seq footprinting analysis.",
@@ -4202,7 +4202,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-footprint-scoring/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-footprint-scoring/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS software is publicly available at Git Hub (https://github.com/loosolab/TOBIAS)",
       "asbval:note": "Repository URL is confirmed in the paper's code availability section.",
@@ -4222,7 +4222,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-motif-genomic-coordinate-annotation/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-motif-genomic-coordinate-annotation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information (Fig. 1b) to perform all levels of footprinting analysis including bias correction (Fig. 1c), footprinting (Fig. 1d), and comparison between conditions (Fig. 1e)... This continuous footprint score is correlated with the presence of transcription factor binding sites in the genome, and a threshold is set to distinguish between bound and unbound sites.",
       "asbval:note": "Core research question is directly supported by paper's description of TOBIAS functionality.",
@@ -4242,7 +4242,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-motif-genomic-coordinate-annotation/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-motif-genomic-coordinate-annotation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase (Fig. 1c). This DWM is used to calculate an expected Tn5 signal for each genomic region, representing the influence of the Tn5 bias.",
       "asbval:note": "ATACorrect is explicitly named and its role in Tn5 bias correction is confirmed.",
@@ -4262,7 +4262,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-motif-genomic-coordinate-annotation/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-motif-genomic-coordinate-annotation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of a tool named 'ScoreBigwig' in the paper. The paper describes footprint score calculation as part of the general TOBIAS pipeline but does not name this specific module.",
@@ -4282,7 +4282,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-motif-genomic-coordinate-annotation/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-motif-genomic-coordinate-annotation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No tool named 'BINDetect' is mentioned in the paper. The paper describes bound/unbound classification via footprint scores and thresholds but does not name this specific module.",
@@ -4302,7 +4302,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-motif-genomic-coordinate-annotation/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-motif-genomic-coordinate-annotation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No tool named 'PlotAggregate' is mentioned. The paper describes visualization of aggregated footprints but does not name this specific module.",
@@ -4322,7 +4322,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-motif-genomic-coordinate-annotation/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-motif-genomic-coordinate-annotation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No tool named 'FormatMotifs' is mentioned in the paper. Motif processing is described but no specific module name is given.",
@@ -4342,7 +4342,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-motif-genomic-coordinate-annotation/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-motif-genomic-coordinate-annotation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information (Fig. 1b) to perform all levels of footprinting analysis including bias correction (Fig. 1c), footprinting (Fig. 1d), and comparison between conditions (Fig. 1e). Furthermore, TOBIAS includes a variety of auxiliary tools such as TF network inference and visualization of footprints",
       "asbval:note": "TOBIAS as a comprehensive framework is well-supported.",
@@ -4362,7 +4362,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-motif-genomic-coordinate-annotation/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-motif-genomic-coordinate-annotation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS uses reads from ATAC-seq, transcription factor motifs and sequence annotation in standard formats as input... The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint... This continuous footprint score is correlated with the presence of transcription factor binding sites in the genome, and a threshold is set to distinguish between bound and unbound sites.",
       "asbval:note": "The workflow described in the scope aligns with TOBIAS's documented pipeline.",
@@ -4382,7 +4382,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-motif-genomic-coordinate-annotation/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-motif-genomic-coordinate-annotation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase",
       "asbval:note": "Tn5 bias correction is a core TOBIAS function.",
@@ -4402,7 +4402,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-motif-genomic-coordinate-annotation/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-motif-genomic-coordinate-annotation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint",
       "asbval:note": "Footprint scoring is explicitly described.",
@@ -4422,7 +4422,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-motif-genomic-coordinate-annotation/010",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-motif-genomic-coordinate-annotation/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "a threshold is set to distinguish between bound and unbound sites",
       "asbval:note": "Bound/unbound classification is a core TOBIAS output.",
@@ -4442,7 +4442,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-motif-matching/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-motif-matching/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information (Fig. 1b) to perform all levels of footprinting analysis including bias correction (Fig. 1c), footprinting (Fig. 1d), and comparison between conditions (Fig. 1e)... The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint... This continuous footprint score is correlated with the presence of transcription factor binding sites in the genome, and a threshold is set to distinguish between bound and unbound sites.",
       "asbval:note": "Core research question is directly supported by the paper's description of TOBIAS footprinting workflow.",
@@ -4462,7 +4462,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-motif-matching/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-motif-matching/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools... to perform all levels of footprinting analysis including bias correction (Fig. 1c), footprinting (Fig. 1d), and comparison between conditions (Fig. 1e).",
       "asbval:note": "BINDetect is the TOBIAS module for footprinting and differential binding analysis; paper describes this functionality as core to the framework.",
@@ -4482,7 +4482,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-motif-matching/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-motif-matching/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The TOBIAS bias correction module (named ATACorrect) utilizes a dinucleotide weight matrix (DWM) to estimate the background bias of the Tn5 transposase... Subtracting these expected cuts from the uncorrected signals yields a corrected track, highlighting the effect of protein binding.",
       "asbval:note": "ATACorrect is explicitly named and described as the bias correction module.",
@@ -4502,7 +4502,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-motif-matching/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-motif-matching/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint (as depicted in the box labeled 'Calculation of footprint scores').",
       "asbval:note": "Paper describes footprint score calculation from corrected cutsites but does not explicitly name 'ScoreBigwig' as a separate module. The functionality is described as part of the footprinting pipeline but the specific tool name is not confirmed in passages.",
@@ -4522,7 +4522,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-motif-matching/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-motif-matching/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "FormatMotifs is not mentioned in any of the provided passages. The paper discusses motif processing (downloading from JASPAR, Hocomoco, etc.) but does not name a 'FormatMotifs' tool.",
@@ -4542,7 +4542,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-motif-matching/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-motif-matching/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS is a collection of command-line tools utilizing a minimal input of ATAC-seq reads, TF motifs and genome information (Fig. 1b) to perform all levels of footprinting analysis",
       "asbval:note": "Directly confirmed in paper.",
@@ -4562,7 +4562,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-motif-matching/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-motif-matching/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TOBIAS uses reads from ATAC-seq, transcription factor motifs and sequence annotation in standard formats as input... The corrected cutsites enable calculation of footprint scores... This continuous footprint score is correlated with the presence of transcription factor binding sites in the genome, and a threshold is set to distinguish between bound and unbound sites... If multiple conditions are investigated, the differential binding module summarizes individual site scores (upper black box) for each TF, and compares them between conditions.",
       "asbval:note": "Scope description aligns with paper's description of TOBIAS workflow and capabilities.",
@@ -4582,7 +4582,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-motif-matching/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-motif-matching/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The first step of the TOBIAS footprinting pipeline is Tn5 bias correction... Subtracting these expected cuts from the uncorrected signals yields a corrected track, highlighting the effect of protein binding... Importantly, the FPD's of unbound sites are minimally affected by bias correction, indicating that bias correction only uncovers footprints for truly bound sites.",
       "asbval:note": "Paper emphasizes that bias correction is a prerequisite step in the pipeline.",
@@ -4602,7 +4602,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-motif-matching/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-motif-matching/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The corrected cutsites enable calculation of footprint scores with a scoring function taking into account both the accessibility and depth of the local footprint... This continuous footprint score is correlated with the presence of transcription factor binding sites in the genome, and a threshold is set to distinguish between bound and unbound sites.",
       "asbval:note": "Paper confirms that footprint scores must be calculated before binding site classification, but does not explicitly name 'ScoreBigwig' as the tool that performs this step.",
@@ -4622,7 +4622,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-motif-matching/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-motif-matching/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TF motifs were downloaded from JASPAR CORE 2018, the JASPAR PBM HOMEO collection and Hocomoco V11 databases... Due to the redundancy of motifs between JASPAR and Hocomoco, we further filtered the TF motifs to one motif per gene, preferentially choosing motifs originating from mouse/human, respectively.",
       "asbval:note": "Paper describes motif processing and filtering but does not name 'FormatMotifs' as the tool. The functionality of motif standardization is implied but the specific tool name is not confirmed.",
@@ -4642,7 +4642,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-bam-read-alignment-processing/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-bam-read-alignment-processing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "atac-seq-bam-read-alignment-processing",
@@ -4655,7 +4655,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-footprint-scoring/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-footprint-scoring/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "atac-seq-footprint-scoring",
@@ -4668,7 +4668,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-signal-normalization/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-signal-normalization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "atac-seq-signal-normalization",
@@ -4681,7 +4681,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/atac-seq-tn5-bias-correction/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/atac-seq-tn5-bias-correction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "atac-seq-tn5-bias-correction",
@@ -4694,7 +4694,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bam-to-bigwig-conversion/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/bam-to-bigwig-conversion/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "bam-to-bigwig-conversion",
@@ -4707,7 +4707,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bigwig-signal-processing/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/bigwig-signal-processing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "bigwig-signal-processing",
@@ -4720,7 +4720,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-binding-status-classification/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-binding-status-classification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "chromatin-accessibility-binding-status-classification",
@@ -4733,7 +4733,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-footprint-visualization/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-footprint-visualization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "chromatin-accessibility-footprint-visualization",
@@ -4746,7 +4746,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-occupancy-prediction/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-occupancy-prediction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "chromatin-accessibility-occupancy-prediction",
@@ -4759,7 +4759,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-accessibility-quantification/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/chromatin-accessibility-quantification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "chromatin-accessibility-quantification",
@@ -4772,7 +4772,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-tf-occupancy-analysis/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/differential-tf-occupancy-analysis/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "differential-tf-occupancy-analysis",
@@ -4785,7 +4785,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-region-annotation-integration/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/genomic-region-annotation-integration/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "genomic-region-annotation-integration",
@@ -4798,7 +4798,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/motif-site-occupancy-comparison/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/motif-site-occupancy-comparison/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 12,
       "asbval:target_artifact_id": "motif-site-occupancy-comparison",
@@ -4811,7 +4811,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/nucleotide-footprint-pattern-recognition/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/nucleotide-footprint-pattern-recognition/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "nucleotide-footprint-pattern-recognition",
@@ -4824,7 +4824,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/positional-distribution-profile-aggregation-and-visualization/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/positional-distribution-profile-aggregation-and-visualization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "positional-distribution-profile-aggregation-and-visualization",
@@ -4837,7 +4837,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tf-binding-site-classification/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tf-binding-site-classification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "tf-binding-site-classification",
@@ -4850,7 +4850,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tn5-insertion-bias-correction/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tn5-insertion-bias-correction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "tn5-insertion-bias-correction",
@@ -4863,7 +4863,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tn5-insertion-position-extraction-and-counting/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/tn5-insertion-position-extraction-and-counting/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "tn5-insertion-position-extraction-and-counting",
@@ -4876,7 +4876,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-binding-depletion-quantification/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-binding-depletion-quantification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "transcription-factor-binding-depletion-quantification",
@@ -4889,7 +4889,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-footprint-scoring/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-footprint-scoring/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "transcription-factor-footprint-scoring",
@@ -4902,7 +4902,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-motif-genomic-coordinate-annotation/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-motif-genomic-coordinate-annotation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 11,
       "asbval:target_artifact_id": "transcription-factor-motif-genomic-coordinate-annotation",
@@ -4915,7 +4915,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcription-factor-motif-matching/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/skill/transcription-factor-motif-matching/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "transcription-factor-motif-matching",
@@ -4928,7 +4928,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "ATAC-seq applies a Tn5 Transposase to insert sequencing adapters into accessible chromatin.",
       "asbval:note": null,
@@ -4948,7 +4948,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41467-020-18035-1/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The local distribution of Tn5 insertions contains information about transcription factor binding due to visible depletion of insertions around sites bound by protein, known as footprints.",
       "asbval:note": null,

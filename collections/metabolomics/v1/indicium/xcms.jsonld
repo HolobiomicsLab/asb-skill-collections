@@ -1380,7 +1380,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper confirms MsFeatures performs feature grouping and mentions grouping by retention time concepts, but does not specifically name 'SimilarRtimeParam', 'groupFeatures' function, or the 'faahKO' dataset. The functional capability (grouping features by retention time) is present but the specific parameter class and dataset are not mentioned in passages.",
@@ -1400,7 +1400,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Since its introduction in 2005, the xcms R package has become one of the most widely used tools for LC-MS data preprocessing.",
       "asbval:note": "xcms is extensively discussed throughout the paper as the primary tool for LC-MS data preprocessing and analysis.",
@@ -1420,7 +1420,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "MsFeatures is explicitly named and described as performing feature grouping in the RforMassSpectrometry ecosystem.",
@@ -1440,7 +1440,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper confirms that MsFeatures performs feature grouping, which would logically produce group counts and distributions, but does not explicitly describe the specific output format (group count table, distribution table) that the card claims.",
@@ -1460,7 +1460,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card specifies a concrete dataset ('faahKO') and specific parameter class ('SimilarRtimeParam') with a precise window value (20 seconds), but the paper passages do not mention this dataset or these specific parameter configurations.",
@@ -1477,7 +1477,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper confirms MsFeatures performs feature grouping/sub-grouping, but does not mention AbundanceSimilarityParam by name, specific threshold values (0.7), transform parameter (log2), or filled parameter. The functional capability (grouping features) is present but the specific parameterization is not documented in passages.",
@@ -1497,7 +1497,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Since its introduction in 2005, the xcms R package has become one of the most widely used tools for LC-MS data preprocessing.",
       "asbval:note": "xcms is extensively documented throughout as a core LC-MS preprocessing and analysis tool.",
@@ -1517,7 +1517,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "MsFeatures is explicitly named and described as performing feature grouping.",
@@ -1537,7 +1537,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "pheatmap is not mentioned in any of the provided passages. While the paper discusses visualization and plotting functions within xcms and R, pheatmap (a specific R heatmap package) is not named or referenced.",
@@ -1557,7 +1557,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_002/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper confirms MsFeatures performs feature sub-grouping, but does not specifically document AbundanceSimilarityParam or quantitative output of sub-group counts.",
@@ -1577,7 +1577,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_002/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Tailored plotting functions have been developed for different stages of the analysis, whether working with the full, raw MS data or examining results at various preprocessing steps.",
       "asbval:note": "Paper confirms xcms supports visualization and plotting functions, but does not specifically mention correlation plots, FG.040 feature group, or abundance similarity visualization.",
@@ -1597,7 +1597,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card specifies a highly parameterized task (AbundanceSimilarityParam with threshold=0.7, transform=log2, filled=TRUE) on a named dataset (faahKO) and specific feature group (FG.040). The paper discusses MsFeatures' general capability to group features but does not document these specific parameters, dataset, or feature group identifiers.",
@@ -1614,7 +1614,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Meanwhile, the MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper mentions MsFeatures for grouping LC-MS features but does not describe EicSimilarityParam, threshold=0.7, n=2, or the specific faahKO dataset analysis with feature groups FG.013.001 and FG.045.001. The functional capability (feature grouping refinement) is present but the specific parameters and case study are not documented in the passages.",
@@ -1634,7 +1634,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Since its introduction in 2005, the xcms R package has become one of the most widely used tools for LC-MS data preprocessing.",
       "asbval:note": "xcms is extensively discussed throughout the paper as the primary tool for LC-MS data preprocessing.",
@@ -1654,7 +1654,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "MsFeatures is explicitly named and described as part of the RforMassSpectrometry initiative for feature grouping.",
@@ -1674,7 +1674,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Meanwhile, the MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper discusses feature grouping via MsFeatures but does not provide specific examples of counting feature groups after EIC similarity refinement or demonstrate this output type.",
@@ -1694,7 +1694,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Tailored plotting functions have been developed for different stages of the analysis, whether working with the full, raw MS data or examining results at various preprocessing steps. Specifically, users can generate base peak chromatograms (BPCs) from raw data, EICs with highlighted chromatographic peaks during peak detection, and density plots for feature grouping, allowing for visual insights throughout the workflow",
       "asbval:note": "Paper describes EIC visualization capabilities in xcms but does not demonstrate overlay EIC plots for specific named feature groups like FG.013.001.",
@@ -1714,7 +1714,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_003/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Tailored plotting functions have been developed for different stages of the analysis, whether working with the full, raw MS data or examining results at various preprocessing steps. Specifically, users can generate base peak chromatograms (BPCs) from raw data, EICs with highlighted chromatographic peaks during peak detection, and density plots for feature grouping, allowing for visual insights throughout the workflow",
       "asbval:note": "Paper describes EIC visualization capabilities in xcms but does not demonstrate overlay EIC plots for specific named feature groups like FG.045.001.",
@@ -1734,7 +1734,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_003/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Meanwhile, the MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper confirms MsFeatures performs feature grouping but does not mention EicSimilarityParam class, threshold=0.7, n=2 parameters, or the faahKO dataset specifically. The functional capability exists but the specific implementation details and dataset are not documented.",
@@ -1754,7 +1754,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card describes a highly specific reproducible case study (faahKO dataset with named feature groups FG.013.001 and FG.045.001 and specific EicSimilarityParam parameters) that is not present in the provided passages.",
@@ -1771,7 +1771,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_004/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'edgeshift' calibration method, direct injection MS, or m/z calibration correction in any passage. The paper focuses on LC-MS/LC-MS/MS preprocessing (chromatographic peak detection, retention time alignment, feature grouping) but does not discuss direct injection MS or edgeshift calibration.",
@@ -1791,7 +1791,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_004/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Since its introduction in 2005, the xcms R package has become one of the most widely used tools for LC-MS data preprocessing.",
       "asbval:note": "xcms is extensively discussed throughout the paper as the primary tool for MS data preprocessing.",
@@ -1811,7 +1811,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_004/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of edgeshift calibration, FTICR-specific calibration workflows, or m/z error plots in the passages. The paper discusses visualization of chromatographic data (BPCs, EICs, density plots) but not m/z calibration difference plots.",
@@ -1831,7 +1831,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_004/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The core data structures of xcms were completely rewritten to gain full support for LC-MS/MS data... These new data structures rely on the established MS data infrastructures of MSnbase and packages from the RforMassSpectrometry initiative, in particular, the Spectra and Chromatograms R packages.",
       "asbval:note": "The paper confirms xcms produces objects with detected chromatographic peaks (core functionality), but does not specifically name 'XCMSnExp' object class or discuss m/z calibration as an output feature. The paper focuses on LC-MS/MS preprocessing (peak detection, retention time alignment) rather than m/z calibration workflows.",
@@ -1851,7 +1851,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_004/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate task card describes a direct injection MS (FTICR) workflow with m/z calibration (edgeshift method), which is outside the scope of the paper. The paper is exclusively about LC-MS/LC-MS/MS data preprocessing within the xcms ecosystem.",
@@ -1868,7 +1868,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_005/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS/MS spectra extracted from xcms objects can be used with the MetaboAnnotation package for matching against reference fragment spectra.",
       "asbval:note": "Paper describes MS2 spectrum matching workflow using MetaboAnnotation package (not named in card), but does not specifically address matching against Flumazenil and Fenamiphos reference spectra or the specific m/z 304.1131 case study.",
@@ -1888,7 +1888,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_005/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of mirror-plot figures, Flumazenil, Fenamiphos, or m/z 304.1131 in passages. Paper discusses visualization capabilities but not this specific output.",
@@ -1908,7 +1908,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_005/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of m/z 304.1131 or consensus MS2 spectrum generation for this specific peak in passages.",
@@ -1928,7 +1928,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_005/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "peak detection is now coupled with peak filtering and refinement, addressing artifacts that can arise in the initial steps by postprocessing detected chromatographic peaks and removing or merging them if necessary. Additionally, peak quality metrics, such as those presented in Kumler et al., can be calculated either during or after peak detection",
       "asbval:note": "Paper describes peak detection with retention time and m/z information as core xcms functionality.",
@@ -1948,7 +1948,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_005/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Since its introduction in 2005, the xcms R package has become one of the most widely used tools for LC-MS data preprocessing.",
       "asbval:note": "xcms is the central tool discussed throughout the paper for LC-MS preprocessing.",
@@ -1968,7 +1968,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_005/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "MsFeatures is explicitly mentioned as part of the xcms ecosystem for feature grouping.",
@@ -1988,7 +1988,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_005/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "in particular, the Spectra and Chromatograms R packages. Apart from a tighter integration with other R packages that will be discussed in the following section, this redesign significantly enhances xcms' ability to handle, subset, and filter data",
       "asbval:note": "Spectra package is explicitly mentioned as part of the RforMassSpectrometry initiative integrated with xcms.",
@@ -2008,7 +2008,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_005/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MsBackendMgf is not mentioned in the provided passages. Passages discuss mzTab-M format support and various data formats but do not specifically name MsBackendMgf. Insufficient information to confirm or deny.",
@@ -2028,7 +2028,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_005/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Meanwhile, the MetaboCoreUtils package provides researchers with a set of basic tools to extend and refine their analysis.",
       "asbval:note": "MetaboCoreUtils is explicitly mentioned as part of the RforMassSpectrometry ecosystem.",
@@ -2048,7 +2048,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_005/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The core data structures of xcms were completely rewritten to gain full support for LC-MS/MS data, as demonstrated in the Supporting File S2 and the GNPS molecular networking case study.",
       "asbval:note": "Paper describes DDA (LC-MS/MS) peak detection and MS2 spectrum annotation workflows, but does not reference the specific dataset 'PestMix1_DDA' or m/z 304.1131.",
@@ -2068,7 +2068,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/card/task_005/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card describes a specific case study (m/z 304.1131, Flumazenil, Fenamiphos, PestMix1_DDA dataset) that is not present in the paper passages. The paper is a general review of xcms capabilities and ecosystem, not a specific compound identification case study.",
@@ -2085,7 +2085,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-peak-detection-msw/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/chromatographic-peak-detection-msw/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "peak detection is now coupled with peak filtering and refinement, addressing artifacts that can arise in the initial steps by postprocessing detected chromatographic peaks",
       "asbval:note": "Paper discusses peak detection and filtering in xcms but does not specifically name or describe MSWParam algorithm. Paper mentions 'centWave and MassifQuant' as 'new LC-specific algorithms' but MSWParam is not mentioned in provided passages. The function findChromPeaks() is confirmed in xcms, but the specific algorithm MSWParam cannot be verified from these passages.",
@@ -2105,7 +2105,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-peak-detection-msw/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/chromatographic-peak-detection-msw/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Preprocessing is the crucial first step in analyzing untargeted liquid chromatography\u2013mass spectrometry (LC-MS) or gas chromatography\u2013mass spectrometry (GC-MS) data. It involves quantifying ion signals in a sample, correcting potential retention time drifts within and across analytical runs, and grouping signals from the same ion species across all samples in an experiment.",
       "asbval:note": "Paper confirms that peak detection is essential for isolating ion signals and is a prerequisite for downstream analysis including feature grouping and annotation.",
@@ -2125,7 +2125,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-peak-detection-msw/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/chromatographic-peak-detection-msw/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Each major preprocessing step, such as peak detection, retention time alignment, and chromatographic peak grouping, is now handled by a dedicated function, with multiple algorithms available for each step.",
       "asbval:note": "Paper confirms xcms provides peak detection functionality and dedicated functions with multiple algorithms, but does not specifically name MSWParam algorithm in provided passages. Paper names centWave and MassifQuant as LC-specific algorithms but MSWParam is not mentioned.",
@@ -2145,7 +2145,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-peak-detection-msw/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/chromatographic-peak-detection-msw/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "MsFeatures is confirmed as part of the RforMassSpectrometry ecosystem for feature grouping.",
@@ -2165,7 +2165,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-peak-detection-msw/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/chromatographic-peak-detection-msw/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the Spectra and Chromatograms R packages. Apart from a tighter integration with other R packages that will be discussed in the following section, this redesign significantly enhances xcms' ability to handle, subset, and filter data",
       "asbval:note": "Spectra is confirmed as part of the RforMassSpectrometry initiative for managing LC-MS data complexity.",
@@ -2185,7 +2185,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-peak-detection-msw/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/chromatographic-peak-detection-msw/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MsBackendMgf is not mentioned in any of the provided passages. Insufficient information to verify.",
@@ -2205,7 +2205,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-peak-detection-msw/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/chromatographic-peak-detection-msw/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the MetaboCoreUtils package provides researchers with a set of basic tools to extend and refine their analysis.",
       "asbval:note": "MetaboCoreUtils is confirmed as part of the RforMassSpectrometry ecosystem.",
@@ -2225,7 +2225,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-peak-detection-msw/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/chromatographic-peak-detection-msw/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Preprocessing software must accommodate data from various column types, such as reversed-phase (RP) chromatography and hydrophilic interaction liquid chromatography (HILIC), which produce diverse metabolite separations and chromatographic peak structures. As high-resolution mass spectrometers like Quadrupole-Time-of-Flight (QTOF) and Orbitrap become increasingly common",
       "asbval:note": "Paper discusses LC-MS and GC-MS preprocessing with various MS instrument types (QTOF, Orbitrap) but does not specifically mention FTICR-MS or direct-injection MS as primary use cases. The scope is broader than what the card claims.",
@@ -2245,7 +2245,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-peak-detection-msw/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/chromatographic-peak-detection-msw/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No information in provided passages about MSWParam algorithm characteristics, signal-to-noise requirements, or when it is appropriate to use. Paper does not discuss algorithm-specific performance characteristics.",
@@ -2265,7 +2265,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-peak-shape-comparison/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/chromatographic-peak-shape-comparison/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Users can generate base peak chromatograms (BPCs) from raw data, EICs with highlighted chromatographic peaks during peak detection, and density plots for feature grouping, allowing for visual insights throughout the workflow",
       "asbval:note": "Paper explicitly discusses EIC visualization and peak detection refinement; scope aligns with xcms preprocessing capabilities for distinguishing features.",
@@ -2285,7 +2285,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-peak-shape-comparison/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/chromatographic-peak-shape-comparison/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The alignment process has also seen substantial improvements with the introduction of new algorithms and the option to base it on a subset of the data set or an external reference data set. The gap-filling step, designed to recover missing values for low-abundance features, has been improved by employing a more accurate estimation of the ions' expected m/z\u2013retention time region.",
       "asbval:note": "Paper discusses retention-time alignment and m/z-retention time region estimation, but does not explicitly address isotopologue/adduct variant discrimination via peak morphology comparison. The claim's specific focus on distinguishing isotopologues/adducts is not directly supported.",
@@ -2305,7 +2305,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-peak-shape-comparison/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/chromatographic-peak-shape-comparison/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Each major preprocessing step, such as peak detection, retention time alignment, and chromatographic peak grouping, is now handled by a dedicated function, with multiple algorithms available for each step. These algorithms are configured via dedicated parameter classes",
       "asbval:note": "Paper confirms xcms has parameter classes for preprocessing steps including peak grouping, and discusses EIC visualization capabilities. However, the paper does not explicitly name 'groupFeatures()' function or 'EicSimilarityParam' by name in the provided passages. The functional capability (EIC-based feature grouping via parameter classes) is present, but the specific function and parameter class names are not verbatim-confirmed in these passages.",
@@ -2325,7 +2325,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-peak-shape-comparison/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/chromatographic-peak-shape-comparison/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper confirms MsFeatures provides feature grouping functionality, but does not explicitly name 'EicSimilarityParam' as a parameter class from MsFeatures in the provided passages. The parameter class is mentioned in the context of xcms preprocessing but not explicitly attributed to MsFeatures.",
@@ -2345,7 +2345,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-peak-shape-comparison/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/chromatographic-peak-shape-comparison/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The core data structures of xcms were completely rewritten to gain full support for LC-MS/MS data, as demonstrated in the Supporting File S2 and the GNPS molecular networking case study. These new data structures rely on the established MS data infrastructures of MSnbase and packages from the RforMassSpectrometry initiative, in particular, the Spectra and Chromatograms R packages.",
       "asbval:note": "Paper explicitly confirms Spectra package is used in xcms v4+ for data structure representation, including chromatographic data.",
@@ -2365,7 +2365,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-peak-shape-comparison/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/chromatographic-peak-shape-comparison/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The alignment process has also seen substantial improvements with the introduction of new algorithms and the option to base it on a subset of the data set or an external reference data set... Lastly, several methods for quality control of features have been developed, adhering to widely accepted standards in metabolomics.",
       "asbval:note": "Paper discusses retention-time alignment and feature grouping as core preprocessing steps, consistent with the scope's workflow positioning.",
@@ -2385,7 +2385,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-peak-shape-comparison/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/chromatographic-peak-shape-comparison/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Users can test and fine-tune settings for each preprocessing step, leading to more informed and justifiable parameter choices. Tailored plotting functions have been developed for different stages of the analysis, whether working with the full, raw MS data or examining results at various preprocessing steps. Specifically, users can generate base peak chromatograms (BPCs) from raw data, EICs with highlighted chromatographic peaks during peak detection, and density plots for feature grouping, allowing for visual insights throughout the workflow",
       "asbval:note": "Paper supports EIC visual inspection and parameter tuning for feature grouping, but does not explicitly mention 'EicSimilarityParam' by name or quantitative EIC-correlation analysis in the provided passages.",
@@ -2405,7 +2405,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/eic-similarity-correlation-analysis/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/eic-similarity-correlation-analysis/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Users can test and fine-tune settings for each preprocessing step, leading to more informed and justifiable parameter choices. Tailored plotting functions have been developed for different stages of the analysis, whether working with the full, raw MS data or examining results at various preprocessing steps. Specifically, users can generate base peak chromatograms (BPCs) from raw data, EICs with highlighted chromatographic peaks during peak detection, and density plots for feature grouping, allowing for visual insights throughout the workflow",
       "asbval:note": "Paper discusses EIC visualization and feature grouping capabilities in xcms, but does not explicitly name 'EicSimilarityParam' class or describe EIC peak-shape correlation as a refinement method. The paper mentions 'parameter classes' as a general design pattern and discusses feature grouping, but the specific EicSimilarityParam functionality for EIC-based sub-grouping refinement is not verbatim present. The functional concept (EIC visualization for feature refinement) is present but the specific parameter class name and its use for peak-shape correlation-based subdivision is not confirmed.",
@@ -2425,7 +2425,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/eic-similarity-correlation-analysis/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/eic-similarity-correlation-analysis/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Each major preprocessing step, such as peak detection, retention time alignment, and chromatographic peak grouping, is now handled by a dedicated function, with multiple algorithms available for each step. These algorithms are configured via dedicated parameter classes, allowing users to easily define and customize settings based on the specific requirements of their experiment.",
       "asbval:note": "Paper confirms xcms uses 'parameter classes' for configurable preprocessing steps including 'chromatographic peak grouping', but does not explicitly name 'groupFeatures()' method or 'EicSimilarityParam' class. The paper discusses parameter classes and grouping functionality generically but does not provide the specific method and class names claimed in the card.",
@@ -2445,7 +2445,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/eic-similarity-correlation-analysis/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/eic-similarity-correlation-analysis/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Tailored plotting functions have been developed for different stages of the analysis, whether working with the full, raw MS data or examining results at various preprocessing steps. Specifically, users can generate base peak chromatograms (BPCs) from raw data, EICs with highlighted chromatographic peaks during peak detection, and density plots for feature grouping, allowing for visual insights throughout the workflow",
       "asbval:note": "Paper confirms xcms provides EIC visualization capabilities and plotting functions, but does not explicitly name a 'plotEICs()' function. The functionality is confirmed but the specific function name is not verbatim present.",
@@ -2465,7 +2465,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/eic-similarity-correlation-analysis/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/eic-similarity-correlation-analysis/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper confirms MsFeatures provides feature grouping functionality for LC-MS features, but describes it as operating in 'postanalysis' for grouping ions and isotopes of the same compound. The paper does not explicitly state that MsFeatures provides EIC-based sub-grouping or is integrated with xcms for EIC-similarity refinement specifically. The role described in the card (EIC-based sub-grouping) is not confirmed; the paper describes a different grouping function (isotope/ion grouping in postanalysis).",
@@ -2485,7 +2485,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/eic-similarity-correlation-analysis/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/eic-similarity-correlation-analysis/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The alignment process has also seen substantial improvements with the introduction of new algorithms and the option to base it on a subset of the data set or an external reference data set. The gap-filling step, designed to recover missing values for low-abundance features, has been improved by employing a more accurate estimation of the ions' expected m/z\u2013retention time region. Lastly, several methods for quality control of features have been developed, adhering to widely accepted standards in metabolomics.",
       "asbval:note": "Paper discusses retention-time alignment and feature grouping improvements, but does not explicitly describe a workflow where EIC-similarity refinement is applied after abundance-correlation-based grouping. The paper mentions alignment and grouping but does not confirm the specific sequential workflow (abundance-correlation \u2192 EIC-similarity refinement) claimed in the card.",
@@ -2505,7 +2505,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/eic-similarity-correlation-analysis/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/eic-similarity-correlation-analysis/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "peak detection is now coupled with peak filtering and refinement, addressing artifacts that can arise in the initial steps by postprocessing detected chromatographic peaks and removing or merging them if necessary",
       "asbval:note": "Paper discusses peak refinement and filtering but does not explicitly describe a post-grouping refinement step using EIC-similarity to resolve co-eluting features with divergent profiles. The concept of refining peaks is present, but the specific use case (EIC-based sub-grouping after m/z-RT grouping) is not confirmed.",
@@ -2525,7 +2525,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-abundance-correlation-analysis/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-abundance-correlation-analysis/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The gap-filling step, designed to recover missing values for low-abundance features, has been improved by employing a more accurate estimation of the ions' expected m/z\u2013retention time region. Lastly, several methods for quality control of features have been developed, adhering to widely accepted standards in metabolomics.",
       "asbval:note": "Paper discusses retention-time alignment and feature grouping refinements in xcms, but does not explicitly describe abundance-correlation-based partitioning of feature groups. The paper mentions 'grouping LC-MS features that represent the signal of ions and isotopes of the same compound' via MsFeatures (passage 5), but does not detail the abundance correlation threshold mechanism claimed in the research question.",
@@ -2545,7 +2545,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-abundance-correlation-analysis/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-abundance-correlation-analysis/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "xcms has continuously evolved to meet the needs of scientists and data analysts, with several key implementations introduced to enhance its functionality. Central to these updates is the introduction of parameter classes, which form the foundation of a modular and flexible programming interface. Each major preprocessing step, such as peak detection, retention time alignment, and chromatographic peak grouping, is now handled by a dedicated function, with multiple algorithms available for each step.",
       "asbval:note": "xcms is confirmed as the preprocessing and grouping tool. The paper explicitly mentions integration with MsFeatures for feature grouping (passage 5): 'The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.'",
@@ -2565,7 +2565,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-abundance-correlation-analysis/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-abundance-correlation-analysis/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper confirms MsFeatures performs feature grouping, but does not explicitly name or describe 'AbundanceSimilarityParam' or detail abundance-correlation-based partitioning logic. The specific parameter class and mechanism are not mentioned in the provided passages.",
@@ -2585,7 +2585,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-abundance-correlation-analysis/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-abundance-correlation-analysis/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "pheatmap is not mentioned anywhere in the provided passages. The paper discusses visualization of xcms results (base peak chromatograms, extracted ion chromatograms, density plots) but does not reference pheatmap or correlation matrix visualization.",
@@ -2605,7 +2605,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-abundance-correlation-analysis/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-abundance-correlation-analysis/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The alignment process has also seen substantial improvements with the introduction of new algorithms and the option to base it on a subset of the data set or an external reference data set.",
       "asbval:note": "Paper confirms retention-time-based grouping and refinement steps exist in xcms, but does not explicitly mention 'SimilarRtimeParam' by name or describe the specific 20-second window parameter or the abundance-correlation sub-grouping workflow described in the scope.",
@@ -2625,7 +2625,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-abundance-correlation-analysis/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-abundance-correlation-analysis/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The specific use-case example (159 features \u2192 94 groups, FG.040, 0.7 correlation threshold) is not present in any passage. This appears to be a concrete example not grounded in the paper's content.",
@@ -2645,7 +2645,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-abundance-pattern-matching/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-abundance-pattern-matching/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound",
       "asbval:note": "Paper mentions MsFeatures for grouping features representing ions and isotopes of the same compound, but does not explicitly describe abundance-pattern correlation as the mechanism. The paper does not detail abundance-correlation-based refinement in the passages provided.",
@@ -2665,7 +2665,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-abundance-pattern-matching/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-abundance-pattern-matching/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of groupFeatures() method or AbundanceSimilarityParam class in any passage. Paper discusses xcms preprocessing steps (peak detection, retention time alignment, chromatographic peak grouping) but does not name these specific functions or parameter classes for abundance-based grouping.",
@@ -2685,7 +2685,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-abundance-pattern-matching/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-abundance-pattern-matching/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound. Meanwhile, the MetaboCoreUtils package provides researchers with a set of basic tools to extend and refine their analysis.",
       "asbval:note": "Paper confirms MsFeatures is used for grouping LC-MS features and is part of the RforMassSpectrometry ecosystem that integrates with xcms.",
@@ -2705,7 +2705,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-annotation-consolidation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-annotation-consolidation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper confirms feature grouping for ions/isotopes of same compound, but does not explicitly name the three-stage pipeline (retention-time grouping \u2192 abundance correlation \u2192 EIC similarity). Paper mentions 'grouping LC-MS features' and discusses EIC visualization capabilities separately, but does not detail this specific multi-stage filtering sequence with those named parameter classes.",
@@ -2725,7 +2725,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-annotation-consolidation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-annotation-consolidation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Each major preprocessing step, such as peak detection, retention time alignment, and chromatographic peak grouping, is now handled by a dedicated function, with multiple algorithms available for each step. These algorithms are configured via dedicated parameter classes, allowing users to easily define and customize settings based on the specific requirements of their experiment.",
       "asbval:note": "Paper confirms xcms uses parameter classes for preprocessing steps including 'chromatographic peak grouping' and mentions flexible parameter configuration, but does not explicitly name the specific parameter classes (SimilarRtimeParam, AbundanceSimilarityParam, EicSimilarityParam) or the groupFeatures() method by name in the provided passages.",
@@ -2745,7 +2745,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-annotation-consolidation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-annotation-consolidation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Directly confirmed: MsFeatures is explicitly described as providing feature grouping functionality for ions and isotopes of the same compound.",
@@ -2765,7 +2765,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-annotation-consolidation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-annotation-consolidation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "faahKO is not mentioned in any of the provided passages. Insufficient evidence to confirm or refute this claim.",
@@ -2785,7 +2785,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-annotation-consolidation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-annotation-consolidation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound. Meanwhile, the MetaboCoreUtils package provides researchers with a set of basic tools to extend and refine their analysis... xcms integration within a rich ecosystem enables incorporating functionalities from diverse infrastructures into xcms-centered R workflows... supporting postanalysis tasks.",
       "asbval:note": "Scope is consistent with paper's description of feature grouping as a postanalysis step following preprocessing, used to consolidate ion signals into compound-level groups.",
@@ -2805,7 +2805,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-group-refinement-multicriteria/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-group-refinement-multicriteria/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper mentions MsFeatures for grouping LC-MS features and isotopes, and discusses feature grouping and gap-filling improvements in xcms, but does not explicitly describe an iterative multi-criterion refinement workflow using retention time, abundance correlation, and EIC shape similarity metrics as the primary research question. The paper discusses these concepts separately (e.g., alignment improvements, EIC visualization, peak quality metrics) but not as an integrated iterative refinement strategy.",
@@ -2825,7 +2825,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-group-refinement-multicriteria/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-group-refinement-multicriteria/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Each major preprocessing step, such as peak detection, retention time alignment, and chromatographic peak grouping, is now handled by a dedicated function, with multiple algorithms available for each step. These algorithms are configured via dedicated parameter classes, allowing users to easily define and customize settings based on the specific requirements of their experiment.",
       "asbval:note": "Paper confirms xcms uses parameter classes for preprocessing steps including 'chromatographic peak grouping' and mentions 'multiple algorithms available for each step,' but does not explicitly name the specific parameter classes SimilarRtimeParam, AbundanceSimilarityParam, or EicSimilarityParam in the provided passages. The groupFeatures() function is not mentioned by name in the passages.",
@@ -2845,7 +2845,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-group-refinement-multicriteria/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-group-refinement-multicriteria/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper confirms MsFeatures is used for grouping LC-MS features and isotopes, but does not explicitly describe it as an 'abstraction layer' that 'encapsulates grouping parameter classes and dispatch logic.' The functional role is confirmed but the architectural characterization is not explicitly stated.",
@@ -2865,7 +2865,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-group-refinement-multicriteria/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-group-refinement-multicriteria/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The core data structures of xcms were completely rewritten to gain full support for LC-MS/MS data, as demonstrated in the Supporting File S2 and the GNPS molecular networking case study. These new data structures rely on the established MS data infrastructures of MSnbase and packages from the RforMassSpectrometry initiative, \u2212 in particular, the Spectra and Chromatograms R packages.",
       "asbval:note": "Paper confirms MSnbase is used for data infrastructure and mentions Spectra package, but does not explicitly name XcmsExperiment as a container class from MSnbase in the provided passages. The role is partially confirmed but the specific class name is not verbatim.",
@@ -2885,7 +2885,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-group-refinement-multicriteria/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-group-refinement-multicriteria/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The alignment process has also seen substantial improvements with the introduction of new algorithms and the option to base it on a subset of the data set or an external reference data set. The gap-filling step, designed to recover missing values for low-abundance features, has been improved by employing a more accurate estimation of the ions' expected m/z\u2013retention time region.",
       "asbval:note": "Paper discusses retention time alignment and gap-filling improvements but does not explicitly mention a \u00b1120 s window parameter or describe a workflow of iterative refinement after initial grouping. The concept of retention-time-based grouping is present but the specific workflow and parameter are not.",
@@ -2905,7 +2905,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-group-refinement-multicriteria/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-group-refinement-multicriteria/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper mentions grouping features representing 'ions and isotopes of the same compound' and discusses peak quality metrics and filtering, but does not explicitly enumerate the specific triggers or use cases for iterative refinement as listed in the card.",
@@ -2925,7 +2925,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-sub-group-refinement-and-validation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-sub-group-refinement-and-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper mentions MsFeatures for grouping LC-MS features in postanalysis, but does not explicitly describe abundance correlation thresholds or pairwise correlation validation as a refinement workflow. The paper discusses feature grouping but not the specific sub-grouping refinement methodology claimed in the card.",
@@ -2945,7 +2945,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-sub-group-refinement-and-validation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-sub-group-refinement-and-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Each major preprocessing step, such as peak detection, retention time alignment, and chromatographic peak grouping, is now handled by a dedicated function, with multiple algorithms available for each step.",
       "asbval:note": "Paper confirms xcms handles peak grouping via dedicated functions and parameter classes, but does not explicitly name or demonstrate groupFeatures() function or describe it as used for post-hoc abundance-based refinement.",
@@ -2965,7 +2965,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-sub-group-refinement-and-validation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-sub-group-refinement-and-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper confirms MsFeatures exists and performs feature grouping in postanalysis, but does not explicitly name AbundanceSimilarityParam class or describe abundance-based similarity thresholding as its mechanism.",
@@ -2985,7 +2985,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-sub-group-refinement-and-validation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-sub-group-refinement-and-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "pheatmap is not mentioned anywhere in the provided passages. Paper discusses visualization of xcms results (BPCs, EICs, density plots) but does not reference pheatmap or correlation heatmaps.",
@@ -3005,7 +3005,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-sub-group-refinement-and-validation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-sub-group-refinement-and-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper confirms postanalysis feature grouping exists in MsFeatures but does not explicitly describe sub-grouping refinement, abundance-based splitting, or homogeneity validation as described in the card's scope.",
@@ -3025,7 +3025,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-sub-group-refinement-and-validation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-sub-group-refinement-and-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Each major preprocessing step, such as peak detection, retention time alignment, and chromatographic peak grouping, is now handled by a dedicated function, with multiple algorithms available for each step. These algorithms are configured via dedicated parameter classes",
       "asbval:note": "Paper confirms retention-time-based grouping via parameter classes exists in xcms, but does not explicitly name SimilarRtimeParam or specify a 20-second window default/example.",
@@ -3045,7 +3045,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fticr-mass-calibration-edgeshift/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/fticr-mass-calibration-edgeshift/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'edgeshift' calibration, FTICR-MS, direct injection, or m/z measurement bias correction in any passage. The paper focuses on LC-MS/MS preprocessing (peak detection, retention time alignment, feature grouping) not mass calibration methods.",
@@ -3065,7 +3065,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fticr-mass-calibration-edgeshift/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/fticr-mass-calibration-edgeshift/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No discussion of m/z correction quantification or visualization in the paper. The paper discusses visualization of chromatographic data (EICs, BPCs, density plots) but not m/z calibration corrections.",
@@ -3085,7 +3085,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fticr-mass-calibration-edgeshift/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/fticr-mass-calibration-edgeshift/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper discusses LC-MS and GC-MS preprocessing, not FTICR-MS. No mention of direct injection or FTICR-specific workflows.",
@@ -3105,7 +3105,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fticr-mass-calibration-edgeshift/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/fticr-mass-calibration-edgeshift/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'edgeshift' method or calibrant-based mass calibration in the paper.",
@@ -3125,7 +3125,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fticr-mass-calibration-edgeshift/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/fticr-mass-calibration-edgeshift/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "peak detection is now coupled with peak filtering and refinement, addressing artifacts that can arise in the initial steps by postprocessing detected chromatographic peaks and removing or merging them if necessary.",
       "asbval:note": "xcms does perform peak detection (confirmed in passages 2, 3, 4), but the paper does not specifically name the function 'findChromPeaks' or the parameter class 'MSWParam'. The paper mentions 'parameter classes' for configuring preprocessing steps including peak detection, but does not detail specific function or parameter class names for this task.",
@@ -3145,7 +3145,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fticr-mass-calibration-edgeshift/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/fticr-mass-calibration-edgeshift/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'CalibrantMassParam', 'edgeshift', or any mass calibration functionality in xcms. The paper focuses on preprocessing steps: peak detection, retention time alignment, and feature grouping\u2014not m/z calibration.",
@@ -3165,7 +3165,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fticr-mass-calibration-edgeshift/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/fticr-mass-calibration-edgeshift/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "While xcms does serve as a result container for preprocessed data (confirmed in passages 2\u20135), there is no evidence it stores or manages calibrated m/z values from a calibration step. The paper does not discuss m/z calibration as a preprocessing step in xcms.",
@@ -3185,7 +3185,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-feature-grouping-and-compounding/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/lc-ms-feature-grouping-and-compounding/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Each major preprocessing step, such as peak detection, retention time alignment, and chromatographic peak grouping, is now handled by a dedicated function, with multiple algorithms available for each step... The gap-filling step, designed to recover missing values for low-abundance features, has been improved by employing a more accurate estimation of the ions' expected m/z\u2013retention time region.",
       "asbval:note": "Paper describes multi-stage preprocessing including peak grouping with retention time and m/z considerations. EIC shape and abundance correlation are implied in the context of feature grouping refinements.",
@@ -3205,7 +3205,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-feature-grouping-and-compounding/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/lc-ms-feature-grouping-and-compounding/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper explicitly mentions grouping ions and isotopes of the same compound, which aligns with the claim about collapsing redundant signals.",
@@ -3225,7 +3225,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-feature-grouping-and-compounding/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/lc-ms-feature-grouping-and-compounding/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The new LC-specific algorithms are centWave and MassifQuant... Each major preprocessing step, such as peak detection, retention time alignment, and chromatographic peak grouping, is now handled by a dedicated function, with multiple algorithms available for each step.",
       "asbval:note": "Paper confirms centWave algorithm and grouping functions in xcms. CentWaveParam is the parameter class for centWave algorithm.",
@@ -3245,7 +3245,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-feature-grouping-and-compounding/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/lc-ms-feature-grouping-and-compounding/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper confirms MsFeatures provides feature grouping functionality, but does not explicitly name the specific parameter classes (SimilarRtimeParam, AbundanceSimilarityParam, EicSimilarityParam). The functional role is confirmed but parameter class names are not verbatim in passages.",
@@ -3265,7 +3265,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-feature-grouping-and-compounding/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/lc-ms-feature-grouping-and-compounding/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "pheatmap is not mentioned anywhere in the provided passages. While the paper discusses visualization and plotting functions in xcms, pheatmap is not named or referenced.",
@@ -3285,7 +3285,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-feature-grouping-and-compounding/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/lc-ms-feature-grouping-and-compounding/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The core data structures of xcms were completely rewritten to gain full support for LC-MS/MS data... These new data structures rely on the established MS data infrastructures of MSnbase and packages from the RforMassSpectrometry initiative",
       "asbval:note": "Paper confirms MSnbase provides data infrastructure for MS data structures used by xcms.",
@@ -3305,7 +3305,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-feature-grouping-and-compounding/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/lc-ms-feature-grouping-and-compounding/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Preprocessing is the crucial first step in analyzing untargeted liquid chromatography\u2013mass spectrometry (LC-MS)... It involves quantifying ion signals in a sample, correcting potential retention time drifts within and across analytical runs, and grouping signals from the same ion species across all samples in an experiment.",
       "asbval:note": "Paper describes the workflow of peak detection followed by grouping signals from the same ion species, which aligns with the scope description.",
@@ -3325,7 +3325,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-feature-grouping-and-compounding/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/lc-ms-feature-grouping-and-compounding/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "peak quality metrics, such as those presented in Kumler et al., can be calculated either during or after peak detection, allowing users to filter the data and retain only high-confidence signals.",
       "asbval:note": "Paper mentions quality metrics and filtering for high-confidence signals, but does not explicitly mention abundance correlation thresholds (\u22650.7) or pairwise correlation validation as a specific grouping quality check.",
@@ -3345,7 +3345,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-chromatogram-alignment/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/mass-chromatogram-alignment/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The alignment process has also seen substantial improvements with the introduction of new algorithms and the option to base it on a subset of the data set or an external reference data set. The gap-filling step, designed to recover missing values for low-abundance features, has been improved by employing a more accurate estimation of the ions' expected m/z\u2013retention time region.",
       "asbval:note": "Core alignment and feature grouping functionality confirmed; m/z and retention time matching is central to xcms preprocessing workflow.",
@@ -3365,7 +3365,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-chromatogram-alignment/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/mass-chromatogram-alignment/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Each major preprocessing step, such as peak detection, retention time alignment, and chromatographic peak grouping, is now handled by a dedicated function, with multiple algorithms available for each step. These algorithms are configured via dedicated parameter classes, allowing users to easily define and customize settings based on the specific requirements of their experiment.",
       "asbval:note": "Parameter classes and modular approach confirmed; gap-filling explicitly mentioned in passage 4.",
@@ -3385,7 +3385,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-chromatogram-alignment/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/mass-chromatogram-alignment/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Feature grouping role confirmed; specific parameter classes (SimilarRtimeParam, AbundanceSimilarityParam, EicSimilarityParam) not explicitly named in passages but functional role of grouping is established.",
@@ -3405,7 +3405,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-chromatogram-alignment/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/mass-chromatogram-alignment/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsExperiment package provides a structured and user-oriented infrastructure that organizes experimental metadata and data files in a way that is directly compatible with xcms.",
       "asbval:note": "Data container role confirmed; compatibility with xcms preprocessing and feature grouping established.",
@@ -3425,7 +3425,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-chromatogram-alignment/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/mass-chromatogram-alignment/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The core data structures of xcms were completely rewritten to gain full support for LC-MS/MS data, as demonstrated in the Supporting File S2 and the GNPS molecular networking case study. These new data structures rely on the established MS data infrastructures of MSnbase and packages from the RforMassSpectrometry initiative, in particular, the Spectra and Chromatograms R packages.",
       "asbval:note": "Spectra package confirmed as part of core data infrastructure for LC-MS/MS data; role in storing MS2 spectra is consistent with paper's description.",
@@ -3445,7 +3445,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-chromatogram-alignment/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/mass-chromatogram-alignment/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Preprocessing is the crucial first step in analyzing untargeted liquid chromatography\u2013mass spectrometry (LC-MS) or gas chromatography\u2013mass spectrometry (GC-MS) data. It involves quantifying ion signals in a sample, correcting potential retention time drifts within and across analytical runs, and grouping signals from the same ion species across all samples in an experiment.",
       "asbval:note": "Workflow sequence and purpose of feature grouping across samples confirmed.",
@@ -3465,7 +3465,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-chromatogram-alignment/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/mass-chromatogram-alignment/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Preprocessing is the crucial first step in analyzing untargeted liquid chromatography\u2013mass spectrometry (LC-MS) or gas chromatography\u2013mass spectrometry (GC-MS) data.",
       "asbval:note": "Logical scope boundary; preprocessing (including alignment) is described as the first step, implying it should not be re-applied to already-aligned data.",
@@ -3485,7 +3485,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-chromatogram-alignment/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/mass-chromatogram-alignment/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "grouping signals from the same ion species across all samples in an experiment",
       "asbval:note": "Alignment is explicitly described as a cross-sample operation, confirming single-sample exclusion.",
@@ -3505,7 +3505,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-chromatogram-alignment/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/mass-chromatogram-alignment/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Each major preprocessing step, such as peak detection, retention time alignment, and chromatographic peak grouping, is now handled by a dedicated function",
       "asbval:note": "Sequential workflow with peak detection preceding alignment is confirmed.",
@@ -3525,7 +3525,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-visualization/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/mass-spectrometry-data-visualization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Tailored plotting functions have been developed for different stages of the analysis, whether working with the full, raw MS data or examining results at various preprocessing steps. Specifically, users can generate base peak chromatograms (BPCs) from raw data, EICs with highlighted chromatographic peaks during peak detection, and density plots for feature grouping, allowing for visual insights throughout the workflow",
       "asbval:note": "Research question is well-supported by passage describing EIC visualization and feature grouping visualization capabilities.",
@@ -3545,7 +3545,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-visualization/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/mass-spectrometry-data-visualization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Each major preprocessing step, such as peak detection, retention time alignment, and chromatographic peak grouping, is now handled by a dedicated function, with multiple algorithms available for each step... Users can test and fine-tune settings for each preprocessing step... users can generate base peak chromatograms (BPCs) from raw data, EICs with highlighted chromatographic peaks during peak detection, and density plots for feature grouping",
       "asbval:note": "xcms is confirmed as the primary tool for feature grouping and EIC visualization. Specific function names (groupFeatures, plotFeatureGroups) are not verbatim in passages, but the functionality is clearly described.",
@@ -3565,7 +3565,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-visualization/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/mass-spectrometry-data-visualization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "MsFeatures is confirmed as a grouping package. Specific parameter class names (SimilarRtimeParam, AbundanceSimilarityParam, EicSimilarityParam) are not mentioned in passages, but the functional role of defining grouping parameters is consistent with the package's purpose.",
@@ -3585,7 +3585,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-visualization/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/mass-spectrometry-data-visualization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The core data structures of xcms were completely rewritten to gain full support for LC-MS/MS data... These new data structures rely on the established MS data infrastructures of MSnbase and packages from the RforMassSpectrometry initiative, in particular, the Spectra and Chromatograms R packages.",
       "asbval:note": "Spectra is confirmed as a core data management package for LC-MS data. The specific functional role (m/z, retention time, intensity access) is semantically consistent with its role in the ecosystem.",
@@ -3605,7 +3605,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-visualization/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/mass-spectrometry-data-visualization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "pheatmap is not mentioned anywhere in the provided passages. No evidence of its use in the xcms ecosystem or this paper.",
@@ -3625,7 +3625,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-visualization/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/mass-spectrometry-data-visualization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MsBackendMgf is not mentioned in any of the provided passages. The evidence_span 'library(MsBackendMgf)' does not appear in the paper text provided.",
@@ -3645,7 +3645,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-visualization/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/mass-spectrometry-data-visualization/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MetaboCoreUtils package provides researchers with a set of basic tools to extend and refine their analysis.",
       "asbval:note": "MetaboCoreUtils is mentioned in the paper as a package in the RforMassSpectrometry initiative, but the specific evidence_span (vignette dependency string) does not appear in the provided passages. The package is confirmed to exist and be part of the ecosystem, but the exact citation format is not present.",
@@ -3665,7 +3665,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-m-z-accuracy-assessment/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/mass-spectrometry-m-z-accuracy-assessment/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper focuses on LC-MS/MS preprocessing (peak detection, retention time alignment, feature grouping) in xcms. No mention of FTICR-MS, direct injection MS, m/z calibration assessment, calibrant mass comparison, or m/z bias quantification. The paper discusses xcms as a preprocessing tool for LC-MS data, not as a tool for m/z accuracy assessment or calibration validation.",
@@ -3685,7 +3685,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-m-z-accuracy-assessment/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/mass-spectrometry-m-z-accuracy-assessment/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "xcms has continuously evolved to meet the needs of scientists and data analysts, with several key implementations introduced to enhance its functionality. Central to these updates is the introduction of parameter classes, which form the foundation of a modular and flexible programming interface. Each major preprocessing step, such as peak detection, retention time alignment, and chromatographic peak grouping, is now handled by a dedicated function, with multiple algorithms available for each step. These algorithms are configured via dedicated parameter classes",
       "asbval:note": "Paper confirms xcms supports mzML files, peak detection via dedicated functions (including chromatographic peak detection), and parameter classes for configuration. However, no mention of CalibrantMassParam or mass calibration functionality in xcms. The paper discusses peak detection, retention time alignment, and feature grouping, but does not address m/z calibration or calibrant-based mass correction as a preprocessing step in xcms.",
@@ -3705,7 +3705,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-m-z-accuracy-assessment/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/mass-spectrometry-m-z-accuracy-assessment/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The core data structures of xcms were completely rewritten to gain full support for LC-MS/MS data, as demonstrated in the Supporting File S2 and the GNPS molecular networking case study. These new data structures rely on the established MS data infrastructures of MSnbase and packages from the RforMassSpectrometry initiative, in particular, the Spectra and Chromatograms R packages.",
       "asbval:note": "Paper confirms Spectra package integrates with xcms for data structure support and MS data handling. Spectra is part of the RforMassSpectrometry initiative and provides infrastructure for xcms version 4+.",
@@ -3725,7 +3725,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-data-structure-handling/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/metabolomics-data-structure-handling/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The core data structures of xcms were completely rewritten to gain full support for LC-MS/MS data... These new data structures rely on the established MS data infrastructures of MSnbase and packages from the RforMassSpectrometry initiative, in particular, the Spectra and Chromatograms R packages... The MsExperiment package provides a structured and user-oriented infrastructure that organizes experimental metadata and data files in a way that is directly compatible with xcms... MS/MS spectra extracted from xcms objects can be used with the MetaboAnnotation package for matching against reference fragment spectra.",
       "asbval:note": "Core claim fully supported: paper explicitly describes XcmsExperiment, MsExperiment, and Spectra as modern container objects for LC-MS data, and discusses integration with downstream annotation and spectral matching.",
@@ -3745,7 +3745,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-data-structure-handling/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/metabolomics-data-structure-handling/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "xcms has continuously evolved to meet the needs of scientists and data analysts... Each major preprocessing step, such as peak detection, retention time alignment, and chromatographic peak grouping, is now handled by a dedicated function... The core data structures of xcms were completely rewritten to gain full support for LC-MS/MS data",
       "asbval:note": "xcms is confirmed as the primary tool for LC-MS preprocessing and data container management. Specific accessor methods (chromPeaks, featureValues, chromPeakSpectra) are not explicitly named in passages, but the functional role is clearly supported.",
@@ -3765,7 +3765,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-data-structure-handling/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/metabolomics-data-structure-handling/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsExperiment package provides a structured and user-oriented infrastructure that organizes experimental metadata and data files in a way that is directly compatible with xcms.",
       "asbval:note": "MsExperiment is explicitly described as a container for organizing experimental metadata and data files compatible with xcms. Integration with Spectra is implied by the ecosystem description.",
@@ -3785,7 +3785,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-data-structure-handling/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/metabolomics-data-structure-handling/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These new data structures rely on the established MS data infrastructures of MSnbase and packages from the RforMassSpectrometry initiative, in particular, the Spectra and Chromatograms R packages... the previously mentioned Spectra and Chromatograms packages stand out as they efficiently manage the complexity of LC-MS data.",
       "asbval:note": "Spectra is confirmed as a key package for managing LC-MS data. The specific claim about 'in-memory or file-backed' representation and extraction from chromatographic peaks is semantically consistent with the paper's description of its role in the ecosystem.",
@@ -3805,7 +3805,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-data-structure-handling/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/metabolomics-data-structure-handling/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "MsFeatures is confirmed to perform feature grouping, but the specific grouping parameters (SimilarRtimeParam, AbundanceSimilarityParam, EicSimilarityParam) are not mentioned in the passages. The functional role is correct but parameter names are not verified.",
@@ -3825,7 +3825,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-data-structure-handling/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/metabolomics-data-structure-handling/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These new data structures rely on the established MS data infrastructures of MSnbase and packages from the RforMassSpectrometry initiative, in particular, the Spectra and Chromatograms R packages.",
       "asbval:note": "MSnbase is explicitly identified as foundational infrastructure for xcms and Spectra. The role as providing base classes and validation framework is semantically supported.",
@@ -3845,7 +3845,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-data-structure-handling/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/metabolomics-data-structure-handling/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Preprocessing is the crucial first step in analyzing untargeted liquid chromatography\u2013mass spectrometry (LC-MS) or gas chromatography\u2013mass spectrometry (GC-MS) data... The aforementioned end-to-end workflow demonstrates this integration of xcms within the broader R/Bioconductor mass spectrometry ecosystem... The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features",
       "asbval:note": "The scope description aligns with the paper's discussion of preprocessing workflows, xcms result objects, and downstream feature grouping. The mention of 'SimilarRtimeParam' is not explicitly in passages but is consistent with the feature grouping functionality described.",
@@ -3865,7 +3865,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-data-structure-handling/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/metabolomics-data-structure-handling/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Preprocessing is the crucial first step in analyzing untargeted liquid chromatography\u2013mass spectrometry (LC-MS)... It involves quantifying ion signals in a sample, correcting potential retention time drifts within and across analytical runs, and grouping signals from the same ion species across all samples... Originally introduced in 2005 with chromatographic peak detection and retention time alignment algorithms, xcms has since been cited over 3800 times",
       "asbval:note": "The paper confirms that chromatographic peak detection is a foundational preprocessing step in xcms workflows, supporting the 'when NOT to use' guidance.",
@@ -3885,7 +3885,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-spectrum-extraction-and-consensus-building/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/ms2-spectrum-extraction-and-consensus-building/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS/MS spectra extracted from xcms objects can be used with the MetaboAnnotation package for matching against reference fragment spectra.",
       "asbval:note": "Paper discusses MS2 spectral extraction from xcms objects and matching against reference spectra, but does not explicitly describe consensus spectrum building (combining multiple MS2 scans into a single spectrum). The extraction and matching components are supported; consensus building is not mentioned in passages.",
@@ -3905,7 +3905,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-spectrum-extraction-and-consensus-building/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/ms2-spectrum-extraction-and-consensus-building/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Each major preprocessing step, such as peak detection, retention time alignment, and chromatographic peak grouping, is now handled by a dedicated function... MS/MS spectra extracted from xcms objects can be used with the MetaboAnnotation package for matching against reference fragment spectra.",
       "asbval:note": "Paper confirms xcms performs peak detection and MS2 spectral extraction from xcms objects, but does not explicitly name the functions 'findChromPeaks' or 'chromPeakSpectra' in the provided passages. The functional capability is present but specific function names are not verbatim-confirmed.",
@@ -3925,7 +3925,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-spectrum-extraction-and-consensus-building/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/ms2-spectrum-extraction-and-consensus-building/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The core data structures of xcms were completely rewritten to gain full support for LC-MS/MS data... These new data structures rely on the established MS data infrastructures of MSnbase and packages from the RforMassSpectrometry initiative, in particular, the Spectra and Chromatograms R packages.",
       "asbval:note": "Spectra package is explicitly named as a core component for MS data handling and representation in the redesigned xcms architecture.",
@@ -3945,7 +3945,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-spectrum-extraction-and-consensus-building/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/ms2-spectrum-extraction-and-consensus-building/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MsBackendMgf is not mentioned in any of the provided passages. Passages discuss mzTab-M format support and JSON/HDF5 formats but do not reference MGF format or MsBackendMgf package.",
@@ -3965,7 +3965,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-spectrum-extraction-and-consensus-building/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/ms2-spectrum-extraction-and-consensus-building/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MetaboCoreUtils package provides researchers with a set of basic tools to extend and refine their analysis.",
       "asbval:note": "MetaboCoreUtils is mentioned as providing basic tools for analysis, but the specific function 'compareSpectra()' and the normalized dot-product similarity metric are not mentioned in the passages. The package is confirmed present but the specific role claimed is not verbatim-supported.",
@@ -3985,7 +3985,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-spectrum-extraction-and-consensus-building/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/ms2-spectrum-extraction-and-consensus-building/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "MsFeatures is explicitly described as handling MS feature grouping, which aligns with the claimed role.",
@@ -4005,7 +4005,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-spectrum-extraction-and-consensus-building/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/ms2-spectrum-extraction-and-consensus-building/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The core data structures of xcms were completely rewritten to gain full support for LC-MS/MS data... ensuring compatibility with emerging data formats.",
       "asbval:note": "Paper confirms LC-MS/MS data support and emerging data format compatibility, but does not explicitly name mzML format in the provided passages. The functional capability is present but the specific format is not verbatim-confirmed.",
@@ -4025,7 +4025,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-spectrum-extraction-and-consensus-building/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/ms2-spectrum-extraction-and-consensus-building/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The alignment process has also seen substantial improvements with the introduction of new algorithms and the option to base it on a subset of the data set or an external reference data set.",
       "asbval:note": "Paper discusses retention time alignment and subsetting capabilities, but does not explicitly describe retention time range specification as a user input parameter for peak extraction.",
@@ -4045,7 +4045,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-spectrum-extraction-and-consensus-building/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/ms2-spectrum-extraction-and-consensus-building/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The provided passages do not discuss precursor m/z specification as a user input parameter for spectral extraction or filtering.",
@@ -4065,7 +4065,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-sample-abundance-pattern-detection/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/multi-sample-abundance-pattern-detection/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper discusses feature grouping and refinement but does not explicitly describe abundance-correlation-based splitting or abundance-similarity parameters as a distinct refinement step. The paper mentions 'grouping LC-MS features' and 'quality control of features' but does not detail abundance-correlation thresholds or co-variance detection across replicates as a specific grouping mechanism.",
@@ -4085,7 +4085,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-sample-abundance-pattern-detection/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/multi-sample-abundance-pattern-detection/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not contain explicit mention of 'groupFeatures()' method, 'AbundanceSimilarityParam' class, or abundance-similarity-based grouping in xcms. Paper discusses feature grouping and parameter classes in general but does not name these specific functions or classes. Insufficient evidence to confirm or deny.",
@@ -4105,7 +4105,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-sample-abundance-pattern-detection/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/multi-sample-abundance-pattern-detection/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper confirms MsFeatures provides feature grouping functionality. General parameter classes for refinement are implied by the broader xcms architecture discussion of parameter classes, though not explicitly tied to MsFeatures in the passages.",
@@ -4125,7 +4125,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-sample-abundance-pattern-detection/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/multi-sample-abundance-pattern-detection/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "pheatmap is not mentioned anywhere in the provided passages. The paper discusses visualization of chromatographic data (BPCs, EICs, density plots) but does not mention correlation heatmaps or pheatmap.",
@@ -4145,7 +4145,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-sample-abundance-pattern-detection/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/multi-sample-abundance-pattern-detection/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "grouping signals from the same ion species across all samples in an experiment... The alignment process has also seen substantial improvements with the introduction of new algorithms and the option to base it on a subset of the data set or an external reference data set.",
       "asbval:note": "Paper discusses retention-time-based grouping and multi-sample analysis, but does not explicitly mention 'SimilarRtimeParam' or a '20-second window' parameter. The concept of distinguishing co-eluting features is implied but not explicitly detailed as an abundance-correlation refinement step.",
@@ -4165,7 +4165,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-table-filtering-by-mz-and-retention-time/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/peak-table-filtering-by-mz-and-retention-time/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "peak detection is now coupled with peak filtering and refinement, addressing artifacts that can arise in the initial steps by postprocessing detected chromatographic peaks and removing or merging them if necessary",
       "asbval:note": "Paper discusses peak filtering and refinement as part of preprocessing workflow; m/z and retention time filtering are core preprocessing concepts in LC-MS analysis.",
@@ -4185,7 +4185,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-table-filtering-by-mz-and-retention-time/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/peak-table-filtering-by-mz-and-retention-time/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Each major preprocessing step, such as peak detection, retention time alignment, and chromatographic peak grouping, is now handled by a dedicated function, with multiple algorithms available for each step.",
       "asbval:note": "Paper confirms xcms has dedicated functions for peak detection and retention time operations, but does not explicitly name chromPeaks() or filterRt() methods by those exact names in the provided passages.",
@@ -4205,7 +4205,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-table-filtering-by-mz-and-retention-time/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/peak-table-filtering-by-mz-and-retention-time/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The core data structures of xcms were completely rewritten to gain full support for LC-MS/MS data... These new data structures rely on the established MS data infrastructures of MSnbase and packages from the RforMassSpectrometry initiative, in particular, the Spectra and Chromatograms R packages.",
       "asbval:note": "Paper confirms Spectra package is used for MS data handling and is part of xcms ecosystem, but does not explicitly describe retention-time and MS-level filtering as a specific Spectra function in the provided passages.",
@@ -4225,7 +4225,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-table-filtering-by-mz-and-retention-time/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/peak-table-filtering-by-mz-and-retention-time/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper explicitly describes MsFeatures as providing feature grouping functionality.",
@@ -4245,7 +4245,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-table-filtering-by-mz-and-retention-time/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/peak-table-filtering-by-mz-and-retention-time/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These new data structures rely on the established MS data infrastructures of MSnbase and packages from the RforMassSpectrometry initiative",
       "asbval:note": "MsBackendMgf is mentioned in evidence_spans as a library dependency but is not explicitly discussed in the paper passages provided as playing a role in peak filtering or the specific task described.",
@@ -4265,7 +4265,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-table-filtering-by-mz-and-retention-time/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/peak-table-filtering-by-mz-and-retention-time/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the MetaboCoreUtils package provides researchers with a set of basic tools to extend and refine their analysis.",
       "asbval:note": "Paper explicitly confirms MetaboCoreUtils provides tools for extending and refining analysis.",
@@ -4285,7 +4285,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-table-filtering-by-mz-and-retention-time/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/peak-table-filtering-by-mz-and-retention-time/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "peak detection is now coupled with peak filtering and refinement, addressing artifacts that can arise in the initial steps by postprocessing detected chromatographic peaks",
       "asbval:note": "Paper describes peak filtering as occurring after peak detection but before downstream analysis steps, consistent with the scope claim.",
@@ -4305,7 +4305,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-abundance-correlation-visualization/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/retention-time-abundance-correlation-visualization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "peak quality metrics, such as those presented in Kumler et al., can be calculated either during or after peak detection, allowing users to filter the data and retain only high-confidence signals... The alignment process has also seen substantial improvements with the introduction of new algorithms and the option to base it on a subset of the data set or an external reference data set. The gap-filling step, designed to recover missing values for low-abundance features, has been improved by employing a more accurate estimation of the ions' expected m/z\u2013retention time region.",
       "asbval:note": "Paper discusses retention-time alignment, gap-filling, and feature grouping, but does not explicitly discuss abundance-correlation-based visualization or AbundanceSimilarityParam. The paper mentions feature grouping and quality metrics but does not detail abundance correlation visualization as a specific workflow step.",
@@ -4325,7 +4325,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-abundance-correlation-visualization/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/retention-time-abundance-correlation-visualization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Each major preprocessing step, such as peak detection, retention time alignment, and chromatographic peak grouping, is now handled by a dedicated function, with multiple algorithms available for each step. These algorithms are configured via dedicated parameter classes, allowing users to easily define and customize settings based on the specific requirements of their experiment.",
       "asbval:note": "Paper confirms xcms has parameter classes and grouping functions, but does not explicitly name 'groupFeatures()' function or 'AbundanceSimilarityParam' class. The paper discusses parameter classes for peak detection, alignment, and grouping generically but does not detail abundance-similarity-specific parameters.",
@@ -4345,7 +4345,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-abundance-correlation-visualization/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/retention-time-abundance-correlation-visualization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper confirms MsFeatures is used for grouping LC-MS features, but does not explicitly mention AbundanceSimilarityParam or abundance-correlation-based refinement. The paper states MsFeatures groups features representing ions and isotopes of the same compound, but does not detail the specific parameter class or abundance-similarity mechanism.",
@@ -4365,7 +4365,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-abundance-correlation-visualization/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/retention-time-abundance-correlation-visualization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "pheatmap is not mentioned anywhere in the provided passages. The paper discusses visualization capabilities of xcms (base peak chromatograms, extracted ion chromatograms, density plots) but does not mention pheatmap or heatmap-based correlation visualization.",
@@ -4385,7 +4385,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-abundance-correlation-visualization/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/retention-time-abundance-correlation-visualization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention AbundanceSimilarityParam, threshold values (0.7), or log2 transformation in the context of abundance-based feature grouping. While the paper discusses parameter classes and gap-filling improvements, it does not specify these particular parameters or their values.",
@@ -4405,7 +4405,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-abundance-correlation-visualization/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/retention-time-abundance-correlation-visualization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SimilarRtimeParam is not mentioned in the provided passages. The paper discusses retention-time alignment and grouping algorithms but does not name this specific parameter class.",
@@ -4425,7 +4425,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-abundance-correlation-visualization/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/retention-time-abundance-correlation-visualization/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe heatmap-based correlation visualization as an output. It mentions visualization of base peak chromatograms, extracted ion chromatograms, and density plots for feature grouping, but not correlation heatmaps.",
@@ -4445,7 +4445,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-abundance-correlation-visualization/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/retention-time-abundance-correlation-visualization/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe a workflow combining retention-time-based grouping with abundance-similarity refinement. While it discusses feature grouping and parameter classes, it does not detail this specific two-stage refinement process.",
@@ -4465,7 +4465,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-based-feature-grouping/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/retention-time-based-feature-grouping/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "grouping signals from the same ion species across all samples in an experiment... The alignment process has also seen substantial improvements with the introduction of new algorithms and the option to base it on a subset of the data set or an external reference data set. The gap-filling step, designed to recover missing values for low-abundance features, has been improved by employing a more accurate estimation of the ions' expected m/z\u2013retention time region.",
       "asbval:note": "Paper discusses feature grouping and retention time-based correspondence, but does not explicitly name or describe a 'sliding window' approach with a specific 20-second parameter, nor does it detail a multi-stage workflow with retention-time-based grouping as the first step followed by abundance correlation or EIC similarity refinement. The paper mentions grouping and m/z\u2013retention time regions but not the specific methodological sequence claimed.",
@@ -4485,7 +4485,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-based-feature-grouping/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/retention-time-based-feature-grouping/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages confirm xcms is used for feature grouping and preprocessing, but do not explicitly mention the groupFeatures() method, SimilarRtimeParam class, or retention-time-specific parameter classes by name. Paper discusses 'parameter classes' and 'dedicated parameter classes' for preprocessing steps but does not name SimilarRtimeParam or confirm groupFeatures() as the specific function for retention-time-based grouping.",
@@ -4505,7 +4505,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-based-feature-grouping/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/retention-time-based-feature-grouping/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper confirms MsFeatures is used for grouping LC-MS features, but describes it as a 'postanalysis' tool for grouping features representing ions and isotopes of the same compound. The card claims it defines/extends grouping parameter classes for retention-time-based grouping specifically; the paper does not confirm this specific role or parameter-class definition.",
@@ -4525,7 +4525,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-based-feature-grouping/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/retention-time-based-feature-grouping/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsExperiment package provides a structured and user-oriented infrastructure that organizes experimental metadata and data files in a way that is directly compatible with xcms.",
       "asbval:note": "Paper confirms MsExperiment is a data container compatible with xcms for organizing metadata and data files, but does not explicitly state it is an alternative to XcmsExperiment or that it serves as input to groupFeatures() for retention-time-based grouping.",
@@ -4545,7 +4545,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-based-feature-grouping/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/retention-time-based-feature-grouping/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Preprocessing is the crucial first step in analyzing untargeted liquid chromatography\u2013mass spectrometry (LC-MS)... It involves quantifying ion signals in a sample, correcting potential retention time drifts within and across analytical runs, and grouping signals from the same ion species across all samples in an experiment.",
       "asbval:note": "Paper confirms the workflow sequence: peak detection followed by grouping signals from the same ion species. XcmsExperiment and xcmsSet are mentioned as xcms result objects in the broader context of the paper.",
@@ -4565,7 +4565,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-based-feature-grouping/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/retention-time-based-feature-grouping/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "peak detection is now coupled with peak filtering and refinement, addressing artifacts that can arise in the initial steps by postprocessing detected chromatographic peaks and removing or merging them if necessary... The alignment process has also seen substantial improvements with the introduction of new algorithms and the option to base it on a subset of the data set or an external reference data set.",
       "asbval:note": "Paper discusses refinement and filtering steps after peak detection and mentions alignment algorithms, but does not explicitly describe a retention-time-based coarse grouping stage followed by abundance or EIC-based refinement, nor does it specify a 20-second window parameter.",
@@ -4585,7 +4585,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-matching-and-comparison/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/spectral-similarity-matching-and-comparison/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS/MS spectra extracted from xcms objects can be used with the MetaboAnnotation package for matching against reference fragment spectra.",
       "asbval:note": "Paper mentions spectral matching against reference spectra via MetaboAnnotation package, not MetaboCoreUtils. The normalized dot-product similarity scoring method is not explicitly named in passages; only 'matching' is mentioned. Function exists but tool attribution differs.",
@@ -4605,7 +4605,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-matching-and-comparison/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/spectral-similarity-matching-and-comparison/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Spectra and Chromatograms R packages... the previously mentioned Spectra and Chromatograms packages stand out as they efficiently manage the complexity of LC-MS data.",
       "asbval:note": "Spectra package confirmed as core MS data management tool in xcms ecosystem.",
@@ -4625,7 +4625,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-matching-and-comparison/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/spectral-similarity-matching-and-comparison/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MsBackendMgf not mentioned in provided passages. Passages discuss MGF format support via MsIO package but do not name MsBackendMgf specifically. Insufficient evidence to confirm or deny.",
@@ -4645,7 +4645,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-matching-and-comparison/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/spectral-similarity-matching-and-comparison/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the MetaboCoreUtils package provides researchers with a set of basic tools to extend and refine their analysis.",
       "asbval:note": "MetaboCoreUtils is mentioned as providing 'basic tools' but the paper does not explicitly state it provides compareSpectra() or normalized dot-product similarity metrics. The card claims it provides the similarity scoring method, but passages do not confirm this specific function.",
@@ -4665,7 +4665,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-matching-and-comparison/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/spectral-similarity-matching-and-comparison/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "peak detection is now coupled with peak filtering and refinement... MS/MS spectra extracted from xcms objects can be used with the MetaboAnnotation package for matching against reference fragment spectra.",
       "asbval:note": "xcms peak detection is confirmed; MS2 spectrum extraction from xcms objects is confirmed. However, specific function names 'findChromPeaks' and 'chromPeakSpectra' are not mentioned in passages. The functional role is supported but function names are not verbatim.",
@@ -4685,7 +4685,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-matching-and-comparison/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/spectral-similarity-matching-and-comparison/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "MsFeatures is confirmed in the ecosystem but described as grouping features, not explicitly for consensus spectrum generation via combineSpectra() or combinePeaks() functions as claimed in the card.",
@@ -4705,7 +4705,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-matching-and-comparison/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/spectral-similarity-matching-and-comparison/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Normalized dot-product is not mentioned in any passage. Paper discusses 'matching' spectra but does not name the specific similarity metric used.",
@@ -4725,7 +4725,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-matching-and-comparison/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/spectral-similarity-matching-and-comparison/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS/MS spectra extracted from xcms objects can be used with the MetaboAnnotation package for matching against reference fragment spectra.",
       "asbval:note": "Compound identification via spectral matching is confirmed, though the tool named is MetaboAnnotation, not MetaboCoreUtils.",
@@ -4745,7 +4745,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-matching-and-comparison/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/spectral-similarity-matching-and-comparison/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MS/MS spectra extracted from xcms objects can be used with the MetaboAnnotation package for matching against reference fragment spectra.",
       "asbval:note": "Workflow of extracting MS2 and matching to reference spectra is confirmed.",
@@ -4765,7 +4765,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/xcms-data-import-preprocessing/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/xcms-data-import-preprocessing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "xcms has since been cited over 3800 times and was downloaded over 150,000 times by distinct IP addresses since the introduction of download statistics in Bioconductor in 2009. Over the two decades since its initial release, xcms has undergone significant transformations to address the aforementioned challenges while maintaining its core principles of flexibility, external collaboration, and open-source innovation.",
       "asbval:note": "Paper confirms xcms is used for LC-MS/MS data preprocessing and import; XCMSnExp objects are the standard xcms result container for this purpose, consistent with paper's discussion of xcms data structures.",
@@ -4785,7 +4785,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/xcms-data-import-preprocessing/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/xcms-data-import-preprocessing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For example, peak detection is now coupled with peak filtering and refinement, addressing artifacts that can arise in the initial steps by postprocessing detected chromatographic peaks and removing or merging them if necessary. Additionally, peak quality metrics, such as those presented in Kumler et al., can be calculated either during or after peak detection, allowing users to filter the data and retain only high-confidence signals. These improved filtering approaches help minimize the inclusion of likely false-positive peaks, a common issue in earlier studies. \u2212 The alignment process has also seen substantial improvements with the introduction of new algorithms and the option to base it on a subset of the data set or an external reference data set. The gap-filling step, designed to recover missing values for low-abundance features, has been improved by employing a more accurate estimation of the ions' expected m/z\u2013retention time region.",
       "asbval:note": "Paper confirms peak detection and retention time alignment/filtering. Mass calibration (edgeshift method) is mentioned in the card but not explicitly found in passages; paper discusses m/z-retention time region estimation but does not name 'edgeshift' or explicit mass calibration as a preprocessing step in the provided passages.",
@@ -4805,7 +4805,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/xcms-data-import-preprocessing/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/xcms-data-import-preprocessing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The core data structures of xcms were completely rewritten to gain full support for LC-MS/MS data, as demonstrated in the Supporting File S2 and the GNPS molecular networking case study. These new data structures rely on the established MS data infrastructures of MSnbase and packages from the RforMassSpectrometry initiative, \u2212 in particular, the Spectra and Chromatograms R packages.",
       "asbval:note": "Paper confirms xcms converts raw data into standardized R objects (via MSnbase, Spectra, Chromatograms) for downstream analysis.",
@@ -4825,7 +4825,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/xcms-data-import-preprocessing/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/xcms-data-import-preprocessing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Since its introduction in 2005, the xcms R package has become one of the most widely used tools for LC-MS data preprocessing. Preprocessing is the crucial first step in analyzing untargeted liquid chromatography\u2013mass spectrometry (LC-MS) or gas chromatography\u2013mass spectrometry (GC-MS) data. It involves quantifying ion signals in a sample, correcting potential retention time drifts within and across analytical runs, and grouping signals from the same ion species across all samples in an experiment.",
       "asbval:note": "Paper confirms xcms handles LC-MS data import, peak detection, and retention time correction. However, 'edgeshift method' for mass calibration is not mentioned in the provided passages; paper discusses m/z-retention time region estimation but does not name this specific calibration method.",
@@ -4845,7 +4845,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/xcms-data-import-preprocessing/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/xcms-data-import-preprocessing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These new data structures rely on the established MS data infrastructures of MSnbase and packages from the RforMassSpectrometry initiative, \u2212 in particular, the Spectra and Chromatograms R packages.",
       "asbval:note": "Paper explicitly confirms MSnbase provides data structures used by xcms.",
@@ -4865,7 +4865,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/xcms-data-import-preprocessing/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/xcms-data-import-preprocessing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These new data structures rely on the established MS data infrastructures of MSnbase and packages from the RforMassSpectrometry initiative, \u2212 in particular, the Spectra and Chromatograms R packages. Apart from a tighter integration with other R packages that will be discussed in the following section, this redesign significantly enhances xcms' ability to handle, subset, and filter data while also ensuring compatibility with emerging data formats.",
       "asbval:note": "Paper confirms Spectra is part of xcms version 4+ data structures for spectrum representation and preprocessing.",
@@ -4885,7 +4885,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/xcms-data-import-preprocessing/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/xcms-data-import-preprocessing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsExperiment package provides a structured and user-oriented infrastructure that organizes experimental metadata and data files in a way that is directly compatible with xcms.",
       "asbval:note": "Paper confirms MsExperiment is compatible with xcms for organizing multi-sample experiments; consistent with card's claim about xcms version 4+ support.",
@@ -4905,7 +4905,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/xcms-data-import-preprocessing/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/xcms-data-import-preprocessing/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "BiocParallel is not mentioned in the provided passages. Paper discusses performance improvements and scalability but does not explicitly name BiocParallel as the tool enabling parallel processing.",
@@ -4925,7 +4925,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/xcms-data-import-preprocessing/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/xcms-data-import-preprocessing/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Preprocessing software must accommodate data from various column types, such as reversed-phase (RP) chromatography and hydrophilic interaction liquid chromatography (HILIC), which produce diverse metabolite separations and chromatographic peak structures. As high-resolution mass spectrometers like Quadrupole-Time-of-Flight (QTOF) and Orbitrap become increasingly common, and with growing demand for high-throughput metabolomics, data processing tools must keep pace with increasing data complexity and volume.",
       "asbval:note": "Paper discusses xcms handling diverse data types and formats but does not explicitly list mzML, NetCDF, or mzXML by name in the provided passages. Paper mentions 'expanded support for diverse mass spectrometry (MS) data formats' but specific format names are not enumerated in the excerpts provided.",
@@ -4945,7 +4945,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/xcms-workflow-execution/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/xcms-workflow-execution/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Preprocessing is the crucial first step in analyzing untargeted liquid chromatography\u2013mass spectrometry (LC-MS)... It involves quantifying ion signals in a sample, correcting potential retention time drifts within and across analytical runs, and grouping signals from the same ion species across all samples in an experiment... peak detection is now coupled with peak filtering and refinement... The alignment process has also seen substantial improvements... The gap-filling step, designed to recover missing values for low-abundance features, has been improved...",
       "asbval:note": "Core preprocessing steps (peak detection, alignment/feature correspondence, gap-filling) are explicitly described as xcms functionality.",
@@ -4965,7 +4965,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/xcms-workflow-execution/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/xcms-workflow-execution/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "xcms has evolved far beyond its initial role as a preprocessing tool, becoming a core component of a flexible, scalable, and interoperable LC-MS/MS data analysis ecosystem... using xcms with R Markdown, or the recently introduced R interface of the Quarto system, allows one to document and describe the analysis and its results transparently.",
       "asbval:note": "Paper emphasizes xcms as a reproducible workflow tool for metabolomics.",
@@ -4985,7 +4985,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/xcms-workflow-execution/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/xcms-workflow-execution/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Each major preprocessing step, such as peak detection, retention time alignment, and chromatographic peak grouping, is now handled by a dedicated function, with multiple algorithms available for each step.",
       "asbval:note": "Paper confirms xcms provides dedicated functions for peak detection, alignment, and grouping. Function names (findChromPeaks, groupFeatures, fillChromPeaks) are standard xcms nomenclature consistent with the paper's description of these steps.",
@@ -5005,7 +5005,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/xcms-workflow-execution/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/xcms-workflow-execution/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsFeatures package adds yet another layer of versatility in postanalysis by grouping LC-MS features that represent the signal of ions and isotopes of the same compound.",
       "asbval:note": "Paper confirms MsFeatures provides feature grouping functionality. Specific parameter class names are not mentioned in passages but are consistent with xcms/Bioconductor conventions for feature grouping.",
@@ -5025,7 +5025,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/xcms-workflow-execution/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/xcms-workflow-execution/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MsExperiment package provides a structured and user-oriented infrastructure that organizes experimental metadata and data files in a way that is directly compatible with xcms.",
       "asbval:note": "Paper confirms MsExperiment's role as a container for organizing experimental data and metadata compatible with xcms.",
@@ -5045,7 +5045,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/xcms-workflow-execution/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/xcms-workflow-execution/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The core data structures of xcms were completely rewritten to gain full support for LC-MS/MS data... These new data structures rely on the established MS data infrastructures of MSnbase and packages from the RforMassSpectrometry initiative, in particular, the Spectra and Chromatograms R packages.",
       "asbval:note": "Paper confirms Spectra as a backend infrastructure for xcms data structures in the redesigned system.",
@@ -5065,7 +5065,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/xcms-workflow-execution/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/xcms-workflow-execution/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Preprocessing software must accommodate data from various column types, such as reversed-phase (RP) chromatography and hydrophilic interaction liquid chromatography (HILIC)... As high-resolution mass spectrometers like Quadrupole-Time-of-Flight (QTOF) and Orbitrap become increasingly common...",
       "asbval:note": "Paper discusses xcms handling of diverse data formats and mass spectrometer types. Specific file formats (mzML, netCDF) are standard metabolomics formats consistent with xcms capabilities.",
@@ -5085,7 +5085,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/xcms-workflow-execution/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/xcms-workflow-execution/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Nevertheless, some limitations remain. For example, while support for ion mobility data exists at the backend level, current preprocessing algorithms do not yet exploit the ion mobility dimension.",
       "asbval:note": "Paper explicitly acknowledges that ion mobility data support is limited at the preprocessing algorithm level.",
@@ -5105,7 +5105,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-peak-detection-msw/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/chromatographic-peak-detection-msw/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "chromatographic-peak-detection-msw",
@@ -5118,7 +5118,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-peak-shape-comparison/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/chromatographic-peak-shape-comparison/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "chromatographic-peak-shape-comparison",
@@ -5131,7 +5131,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/eic-similarity-correlation-analysis/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/eic-similarity-correlation-analysis/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "eic-similarity-correlation-analysis",
@@ -5144,7 +5144,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-abundance-correlation-analysis/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-abundance-correlation-analysis/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "feature-abundance-correlation-analysis",
@@ -5157,7 +5157,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-abundance-pattern-matching/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-abundance-pattern-matching/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 3,
       "asbval:target_artifact_id": "feature-abundance-pattern-matching",
@@ -5170,7 +5170,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-annotation-consolidation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-annotation-consolidation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "feature-annotation-consolidation",
@@ -5183,7 +5183,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-group-refinement-multicriteria/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-group-refinement-multicriteria/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "feature-group-refinement-multicriteria",
@@ -5196,7 +5196,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-sub-group-refinement-and-validation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/feature-sub-group-refinement-and-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "feature-sub-group-refinement-and-validation",
@@ -5209,7 +5209,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fticr-mass-calibration-edgeshift/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/fticr-mass-calibration-edgeshift/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "fticr-mass-calibration-edgeshift",
@@ -5222,7 +5222,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lc-ms-feature-grouping-and-compounding/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/lc-ms-feature-grouping-and-compounding/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "lc-ms-feature-grouping-and-compounding",
@@ -5235,7 +5235,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-chromatogram-alignment/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/mass-chromatogram-alignment/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "mass-chromatogram-alignment",
@@ -5248,7 +5248,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-visualization/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/mass-spectrometry-data-visualization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "mass-spectrometry-data-visualization",
@@ -5261,7 +5261,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-m-z-accuracy-assessment/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/mass-spectrometry-m-z-accuracy-assessment/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 3,
       "asbval:target_artifact_id": "mass-spectrometry-m-z-accuracy-assessment",
@@ -5274,7 +5274,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-data-structure-handling/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/metabolomics-data-structure-handling/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "metabolomics-data-structure-handling",
@@ -5287,7 +5287,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-spectrum-extraction-and-consensus-building/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/ms2-spectrum-extraction-and-consensus-building/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "ms2-spectrum-extraction-and-consensus-building",
@@ -5300,7 +5300,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-sample-abundance-pattern-detection/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/multi-sample-abundance-pattern-detection/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "multi-sample-abundance-pattern-detection",
@@ -5313,7 +5313,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-table-filtering-by-mz-and-retention-time/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/peak-table-filtering-by-mz-and-retention-time/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "peak-table-filtering-by-mz-and-retention-time",
@@ -5326,7 +5326,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-abundance-correlation-visualization/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/retention-time-abundance-correlation-visualization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "retention-time-abundance-correlation-visualization",
@@ -5339,7 +5339,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/retention-time-based-feature-grouping/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/retention-time-based-feature-grouping/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "retention-time-based-feature-grouping",
@@ -5352,7 +5352,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-similarity-matching-and-comparison/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/spectral-similarity-matching-and-comparison/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "spectral-similarity-matching-and-comparison",
@@ -5365,7 +5365,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/xcms-data-import-preprocessing/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/xcms-data-import-preprocessing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "xcms-data-import-preprocessing",
@@ -5378,7 +5378,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/xcms-workflow-execution/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/skill/xcms-workflow-execution/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "xcms-workflow-execution",
@@ -5391,7 +5391,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The xcms R package provides functionality to efficiently preprocess LC-MS, GC-MS, and LC-MS/MS data.",
       "asbval:note": null,
@@ -5411,7 +5411,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "In LC-MS metabolomics experiments, different multiple ions can be generated from the same compound during ionization.",
       "asbval:note": null,
@@ -5431,7 +5431,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Features of the same compound should have similar retention time.",
       "asbval:note": null,
@@ -5451,7 +5451,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The abundance of features of the same compound should have a similar pattern across samples.",
       "asbval:note": null,
@@ -5471,7 +5471,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The peak shape of extracted ion chromatograms of features of the same compound should be similar.",
       "asbval:note": null,
@@ -5491,7 +5491,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "xcms provides AbundanceSimilarityParam for feature grouping based on correlation of feature abundances across samples.",
       "asbval:note": null,
@@ -5511,7 +5511,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "xcms provides EicSimilarityParam for feature grouping based on correlation of EICs.",
       "asbval:note": null,
@@ -5531,7 +5531,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The faahKO dataset consists of samples from 4 mice with knock-out of the fatty acid amide hydrolase and 4 wild type mice.",
       "asbval:note": null,
@@ -5551,7 +5551,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Features grouped by retention time with a 20-second window were further subdivided into multiple feature groups.",
       "asbval:note": "Source excerpt is incomplete/truncated; claim content appears consistent with paper context but cannot fully verify against incomplete excerpt",
@@ -5571,7 +5571,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Abundance correlation analysis can split retention time-based feature groups further.",
       "asbval:note": null,
@@ -5591,7 +5591,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_012",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_012",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "EIC correlation analysis can provide additional sub-grouping of retention time and abundance-based feature groups.",
       "asbval:note": "Source excerpt states feature groups were NOT further subdivided by EIC correlation, contradicting claim that EIC analysis provides additional sub-grouping",
@@ -5611,7 +5611,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_013",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_013",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "In direct injection mass spectrometry experiments, only a single spectrum with an artificial retention time is available for each sample.",
       "asbval:note": "Source excerpt is incomplete; claim adds context about 'direct injection mass spectrometry experiments' not present in provided excerpt fragment",
@@ -5631,7 +5631,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_014",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_014",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "xcms uses functionality from the MassSpecWavelet package to identify peaks in the m/z dimension for direct injection MS data.",
       "asbval:note": "Claim specifies 'direct injection MS data' but source_excerpt only says xcms uses MassSpecWavelet to identify 'such peaks' without specifying the data type context.",
@@ -5651,7 +5651,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_015",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_015",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "In peak detection with MSWParam, scales of 1, 4, and 9 were used.",
       "asbval:note": null,
@@ -5671,7 +5671,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_016",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_016",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The calibrate method can adjust m/z values of identified peaks based on differences between calibrants' m/z values and closest peaks' m/z values.",
       "asbval:note": null,
@@ -5691,7 +5691,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_017",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_017",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The edgeshift calibration method adjusts peaks within the range of calibrant m/z values using linear interpolation.",
       "asbval:note": null,
@@ -5711,7 +5711,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_018",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_018",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "For LC-MS/MS data, data dependent acquisition (DDA) is the most used approach for generating fragmentation spectra.",
       "asbval:note": null,
@@ -5731,7 +5731,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_019",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_019",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "In DDA, the top N most intense ions are selected for fragmentation before the cycle starts again.",
       "asbval:note": null,
@@ -5751,7 +5751,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_020",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_020",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SWATH acquisition uses defined windows of m/z values to reduce overlap of fragment spectra while keeping high coverage.",
       "asbval:note": null,
@@ -5771,7 +5771,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_021",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_021",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The example DDA and SWATH data files are from reversed-phase LC-MS/MS runs of the Agilent Pesticide mix.",
       "asbval:note": "Source mentions both DDA and SWATH data are from Agilent Pesticide mix, but only explicitly states SWATH acquisition mode; DDA mode not explicitly confirmed in excerpt.",
@@ -5791,7 +5791,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_022",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_022",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Most signal in the DDA dataset was measured between approximately 200 and 600 seconds.",
       "asbval:note": null,
@@ -5811,7 +5811,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_023",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_023",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "In the DDA dataset, chromatographic peak detection identified peaks at specific m/z values.",
       "asbval:note": "Source_excerpt is incomplete ('In total') and does not support the claim about chromatographic peak detection identifying peaks at specific m/z values.",
@@ -5831,7 +5831,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_024",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_024",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Some MS manufacturers like Sciex do not export precursor intensity values for MS2 spectra.",
       "asbval:note": null,
@@ -5851,7 +5851,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_025",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_025",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The estimatePrecursorIntensity function can determine precursor intensity based on the intensity of the ion in the previous MS1 scan.",
       "asbval:note": null,
@@ -5871,7 +5871,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_026",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_026",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "CentWaveParam was used for chromatographic peak detection with snthresh of 5, noise of 100, ppm of 10, and peakwidth of 3 to 30.",
       "asbval:note": null,
@@ -5891,7 +5891,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_027",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_027",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The chromPeakSpectra method extracts MS2 spectra with precursor m/z and retention time within the range of chromatographic peaks.",
       "asbval:note": null,
@@ -5911,7 +5911,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_028",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_028",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The returned Spectra from chromPeakSpectra contains a chrom_peak_id spectra variable that identifies the associated chromatographic peak.",
       "asbval:note": null,
@@ -5931,7 +5931,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_029",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_029",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "An example chromatographic peak of an ion with m/z 304.1131 was identified in the DDA dataset.",
       "asbval:note": null,
@@ -5951,7 +5951,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_030",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_030",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Flumazenil (Metlin ID 2724) has experimental MS2 spectra available in reference databases.",
       "asbval:note": "Source only mentions Flumazenil and its Metlin ID; does not explicitly state that experimental MS2 spectra are available in reference databases",
@@ -5971,7 +5971,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_031",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_031",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Fenamiphos (Metlin ID 72445) has experimental MS2 spectra available in reference databases.",
       "asbval:note": "Source only mentions Fenamiphos and its Metlin ID; does not explicitly state that experimental MS2 spectra are available in reference databases",
@@ -5991,7 +5991,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_032",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_032",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "In the example, 5 MS2 spectra were associated with the candidate chromatographic peak.",
       "asbval:note": null,
@@ -6011,7 +6011,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_033",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_033",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The combineSpectra method can reduce multiple fragment spectra into a single consensus spectrum.",
       "asbval:note": "Source describes reducing multiple spectra to a single spectrum but does not explicitly characterize this as creating a 'consensus spectrum'",
@@ -6031,7 +6031,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_034",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_034",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "combinePeaks combines mass peaks from input spectra with m/z differences smaller than 20 ppm into one peak.",
       "asbval:note": null,
@@ -6051,7 +6051,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_035",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_035",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "With minProp parameter set to 0.8, the resulting spectrum contains only peaks present in 80% of input spectra.",
       "asbval:note": null,
@@ -6071,7 +6071,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_036",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_036",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The example experimental spectrum matches Fenamiphos better than Flumanezil in similarity comparisons.",
       "asbval:note": null,
@@ -6091,7 +6091,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_037",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_037",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "In SWATH mode, all ions within pre-defined isolation windows are fragmented and MS2 spectra are measured.",
       "asbval:note": null,
@@ -6111,7 +6111,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_038",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_038",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SWATH isolation window information is available as spectra variables isolationWindowLowerMz and isolationWindowUpperMz.",
       "asbval:note": null,
@@ -6131,7 +6131,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_039",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_039",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Between 422 and 423 MS2 spectra are measured in each isolation window of the SWATH dataset.",
       "asbval:note": null,
@@ -6151,7 +6151,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_040",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_040",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "An isolation window target m/z of 270.85 was used as an example for extracting chromatograms from SWATH data.",
       "asbval:note": null,
@@ -6171,7 +6171,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_041",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_041",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "findChromPeaksIsolationWindow performs chromatographic peak detection in MS level 2 data separately for each isolation window.",
       "asbval:note": null,
@@ -6191,7 +6191,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_042",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_042",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "CentWaveParam with snthresh of 3, noise of 10, ppm of 10, and peakwidth of 3 to 30 was used for MS2 peak detection.",
       "asbval:note": null,
@@ -6211,7 +6211,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_043",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_043",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "findChromPeaksIsolationWindow adds peaks to the chromPeaks matrix that can be identified through the isolationWindow column.",
       "asbval:note": null,
@@ -6231,7 +6231,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_044",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_044",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The EicSimilarityParam is advisable to use as the last refinement step in feature grouping because it is computationally very expensive.",
       "asbval:note": null,
@@ -6251,7 +6251,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_045",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_045",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "AbundanceSimilarityParam uses a correlation coefficient threshold to group features together.",
       "asbval:note": "Source excerpt describes correlation-based grouping but doesn't explicitly name AbundanceSimilarityParam; claim infers the parameter name from context",
@@ -6271,7 +6271,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_046",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_046",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The featureDefinitions function extracts results from correspondence analysis.",
       "asbval:note": null,
@@ -6291,7 +6291,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_047",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_047",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The peakidx column in featureDefinitions provides the index of each chromatographic peak assigned to a feature.",
       "asbval:note": null,
@@ -6311,7 +6311,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_048",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_048",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "featureValues function allows extracting feature abundances in a matrix format with one row per feature.",
       "asbval:note": null,
@@ -6331,7 +6331,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_049",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_049",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Gap-filled data in featureValues integrates all signal from the m/z-retention time range defined by detected peaks.",
       "asbval:note": null,
@@ -6351,7 +6351,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_050",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c04338/claim/claim_050",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Any subsequent groupFeature call will sub-group and refine the previously identified feature groups.",
       "asbval:note": "Text accurately represents the source excerpt. The claim correctly conveys that subsequent groupFeature calls sub-group and refine previously identified feature groups, matching the meaning of the source despite substring_in_paper=false (likely due to formatting/whitespace differences).",

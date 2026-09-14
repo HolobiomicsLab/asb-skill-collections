@@ -532,7 +532,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/10_1093_nar_gkv007__task_001/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/card/10_1093_nar_gkv007__task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The voom method estimates the mean-variance relationship of the log-counts, generates a precision weight for each observation and enters these into the limma empirical Bayes analysis pipeline.",
       "asbval:note": "The paper discusses limma's empirical Bayes procedure and hyperparameter estimation in general terms (e.g., 'facilitate accurate estimate of the prior degrees of freedom determining the optimal amount of squeezing to be applied to the variances' in passage 11), but does not provide detailed mathematical exposition of HOW limma estimates hyperparameters. The research question focuses on hyperparameter estimation methodology, which is mentioned but not deeply explained in the passages. The paper's primary focus is on voom's mean-variance modeling and precision weights, not on limma's internal hyperparameter estimation algorithm.",
@@ -552,7 +552,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1093_nar_gkv007__task_001/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/card/10_1093_nar_gkv007__task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "voom: variance modeling at the observation-level... Our strategy is to estimate non-parametrically the mean-variance trend of the logged read counts and to use this mean-variance relationship to predict the variance of each log-cpm value. The predicted variance is then encapsulated as an inverse weight for the log-cpm value.",
       "asbval:note": "The paper explicitly describes the voom precision-weight computation algorithm in detail, including LOWESS fitting and inverse variance weighting.",
@@ -572,7 +572,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1093_nar_gkv007__task_001/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/card/10_1093_nar_gkv007__task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The voom method estimates the mean-variance relationship of the log-counts, generates a precision weight for each observation and enters these into the limma empirical Bayes analysis pipeline.",
       "asbval:note": "limma is central to the voom methodology and is used throughout the paper for differential expression analysis.",
@@ -592,7 +592,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1093_nar_gkv007__task_001/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/card/10_1093_nar_gkv007__task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The results presented in this article were obtained using R version 3.0.0 and the software packages limma 3.16.2, edgeR 3.2.3, baySeq 1.14.1, DESeq 1.12.0, DSS 1.4.0, PoissonSeq 1.1.2 and tweeDEseqCountData 1.0.8.",
       "asbval:note": "R is explicitly stated as the programming environment used for all analyses.",
@@ -612,7 +612,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1093_nar_gkv007__task_001/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/card/10_1093_nar_gkv007__task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The table shows output from the limma topTable function. As well as gene ID and symbol, columns give chromosome location (Chr), log2-fold-change (logFC), average log2 expression (AveExpr), moderated t, P value, false discovery rate and B-statistic for each gene.",
       "asbval:note": "Table 1 in the paper exemplifies exactly this output format with gene identifiers, logFC, moderated t-statistics, P values, FDR, and B-statistics.",
@@ -632,7 +632,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1093_nar_gkv007__task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/card/10_1093_nar_gkv007__task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The research_question asks specifically about HOW limma estimates hyperparameters of the prior distribution, which is a methodological deep-dive into limma's internal algorithm. While the paper mentions that voom provides access to limma's empirical Bayes procedures and that normal-based methods facilitate 'accurate estimate of the prior degrees of freedom', the paper does not provide detailed mathematical exposition of limma's hyperparameter estimation algorithm itself. The paper's primary contribution is voom's mean-variance modeling at the observation level, not limma's hyperparameter estimation.",
@@ -648,7 +648,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1093_nar_gkv007__task_002/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/card/10_1093_nar_gkv007__task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The above linear model is fitted, by ordinary least squares, to the log-cpm values ygi for each gene. This yields regression coefficient estimates \u03b2^g, fitted values \u03bc^gi=xiT\u03b2^g and residual standard deviations sg.",
       "asbval:note": "Paper describes lmFit applied to RNA-seq log-cpm data (not microarray), producing coefficient estimates, fitted values, and residual standard deviations. The function and outputs exist but the claim specifies 'microarray dataset' while the paper applies lmFit to RNA-seq data via voom. The functional output (coefficient estimates, fitted values) is correct but the data type context differs.",
@@ -668,7 +668,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1093_nar_gkv007__task_002/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/card/10_1093_nar_gkv007__task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The above linear model is fitted, by ordinary least squares, to the log-cpm values ygi for each gene. This yields regression coefficient estimates \u03b2^g, fitted values \u03bc^gi=xiT\u03b2^g and residual standard deviations sg.",
       "asbval:note": "Paper confirms lmFit produces coefficient estimates and fitted values. However, the paper does not explicitly name the output object type as 'MArrayLM' nor does it explicitly mention 'standard errors' or 'design matrix information' as outputs. The paper describes the mathematical outputs but not the R object class or all structural components claimed.",
@@ -688,7 +688,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1093_nar_gkv007__task_002/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/card/10_1093_nar_gkv007__task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "One popular differential expression pipeline is that provided by the limma software package [9]. The limma pipeline includes linear modeling to analyze complex experiments with multiple treatment factors, quantitative weights to account for variations in precision between different observations, and empirical Bayes statistical methods to borrow strength between genes.",
       "asbval:note": "limma is extensively discussed throughout the paper as the primary tool for linear modeling and differential expression analysis.",
@@ -708,7 +708,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1093_nar_gkv007__task_002/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/card/10_1093_nar_gkv007__task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The results presented in this article were obtained using R version 3.0.0 and the software packages limma 3.16.2, edgeR 3.2.3, baySeq 1.14.1, DESeq 1.12.0, DSS 1.4.0, PoissonSeq 1.1.2 and tweeDEseqCountData 1.0.8.",
       "asbval:note": "R is explicitly mentioned as the programming environment used for all analyses.",
@@ -728,7 +728,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1093_nar_gkv007__task_002/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/card/10_1093_nar_gkv007__task_002/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The voom method estimates the mean-variance relationship of the log-counts, generates a precision weight for each observation and enters these into the limma empirical Bayes analysis pipeline.",
       "asbval:note": "Paper discusses limma's empirical Bayes procedure and eBayes function, but the title claims the task is to 'reconstruct' the computation of moderated t-statistics. The paper describes using eBayes as part of the pipeline but does not present a task focused on reconstructing or deriving the eBayes computation itself. The paper applies eBayes rather than reconstructing it.",
@@ -748,7 +748,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1093_nar_gkv007__task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/card/10_1093_nar_gkv007__task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card frames the task around applying lmFit to 'a microarray dataset', but the paper's primary focus is applying lmFit to RNA-seq log-cpm data via the voom method. While lmFit is used in both contexts, the paper does not emphasize microarray application.",
@@ -765,7 +765,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1093_nar_gkv007__task_003/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/card/10_1093_nar_gkv007__task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For our simulations, there are no compositional differences between the libraries so there should be no need to estimate compositional normalization factors. For this reason we did not use the calcNormFactors function with edgeR or estimateSizeFactors with DESeq or estNormFactors with DSS. This should tend to improve the performance of the packages and to make them more comparable, as any differences between the packages can be attributed to the statistical procedures rather than to differences between the normalization strategies.",
       "asbval:note": "Paper explicitly states they did NOT use calcNormFactors in their simulations, and discusses compositional normalization as optional. The paper does mention TMM-scale normalization was used in some real data analyses (e.g., Nigerian lymphoblastoid cell lines, Drosophila), but the research question as framed (comparing calcNormFactors-prepended voom vs. limma-only) is not directly addressed. The paper compares voom vs. count-based methods and discusses normalization options, but does not perform the specific comparison requested in the card.",
@@ -785,7 +785,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1093_nar_gkv007__task_003/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/card/10_1093_nar_gkv007__task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for edgeR | role: tool] 'This article compares the performance of the limma-based pipelines to edgeR [20,34], DESeq [13], baySeq [21], TSPM [25], PoissonSeq [26] and DSS [22]'",
       "asbval:note": "edgeR is used as a comparison method and its calcNormFactors function is discussed in the context of compositional normalization.",
@@ -805,7 +805,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1093_nar_gkv007__task_003/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/card/10_1093_nar_gkv007__task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for limma | role: tool] 'The voom method estimates the mean-variance relationship of the log-counts, generates a precision weight for each observation and enters these into the limma empirical Bayes analysis pipeline.'",
       "asbval:note": "limma is the core tool used throughout the paper for differential expression analysis.",
@@ -825,7 +825,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1093_nar_gkv007__task_003/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/card/10_1093_nar_gkv007__task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for voom | role: tool] 'We call the first method limma-trend and the second method voom, an acronym for 'variance modeling at the observational level'.'",
       "asbval:note": "voom is the primary methodological contribution of the paper.",
@@ -845,7 +845,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1093_nar_gkv007__task_003/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/card/10_1093_nar_gkv007__task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The results presented in this article were obtained using R version 3.0.0 and the software packages limma 3.16.2, edgeR 3.2.3, baySeq 1.14.1, DESeq 1.12.0, DSS 1.4.0, PoissonSeq 1.1.2 and tweeDEseqCountData 1.0.8.",
       "asbval:note": "R is the programming language used for all analyses.",
@@ -865,7 +865,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1093_nar_gkv007__task_003/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/card/10_1093_nar_gkv007__task_003/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The table shows output from the limma topTable function. As well as gene ID and symbol, columns give chromosome location (Chr), log2-fold-change (logFC), average log2 expression (AveExpr), moderated t, P value, false discovery rate and B-statistic for each gene.",
       "asbval:note": "Paper demonstrates voom-limma output with the exact columns described (logFC, AveExpr, t-statistic, p-value, FDR), but the specific comparison of TMM-voom vs. limma-only is not performed in the paper. The Nigerian lymphoblastoid cell lines analysis used TMM normalization prior to voom, but no baseline limma-only comparison is shown.",
@@ -885,7 +885,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1093_nar_gkv007__task_003/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/card/10_1093_nar_gkv007__task_003/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not present a limma-only baseline analysis without normalization for direct comparison. The paper compares voom to count-based methods (edgeR, DESeq, etc.), not to a limma-only non-normalized baseline.",
@@ -905,7 +905,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1093_nar_gkv007__task_003/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/card/10_1093_nar_gkv007__task_003/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not provide a direct comparison of TMM-voom vs. limma-only methods with concordance/discordance metrics. Comparisons are made between voom and count-based methods (edgeR, DESeq, baySeq, etc.), not between voom and a non-normalized limma baseline.",
@@ -925,7 +925,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1093_nar_gkv007__task_003/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/card/10_1093_nar_gkv007__task_003/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper is about applying limma to RNA-seq data (not microarray data), and the focus is on voom (variance modeling at the observational level), not on lmFit directly. The title does not match the paper's actual scope or the research question in the card.",
@@ -945,7 +945,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1093_nar_gkv007__task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/card/10_1093_nar_gkv007__task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card's research question focuses on comparing TMM-voom-limma vs. limma-only (without normalization), but the paper does not perform this specific comparison. Instead, it compares voom and limma-trend to count-based methods (edgeR, DESeq, baySeq, etc.).",
@@ -963,7 +963,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/coefficient-and-standard-error-interpretation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/coefficient-and-standard-error-interpretation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The voom method estimates the mean-variance relationship of the log-counts, generates a precision weight for each observation and enters these into the limma empirical Bayes analysis pipeline... The limma pipeline includes linear modeling to analyze complex experiments with multiple treatment factors, quantitative weights to account for variations in precision between different observations, and empirical Bayes statistical methods to borrow strength between genes.",
       "asbval:note": "Paper explicitly describes linear modeling with limma for differential expression analysis, coefficient estimation, and precision weighting.",
@@ -983,7 +983,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/coefficient-and-standard-error-interpretation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/coefficient-and-standard-error-interpretation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Interest centers on testing whether one or more of the \u03b2gj are equal to zero... Differences in log-cpm between samples can be interpreted as log-fold-changes of expression.",
       "asbval:note": "Paper demonstrates that coefficient estimates (\u03b2) are used for hypothesis testing and fold-change interpretation.",
@@ -1003,7 +1003,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/coefficient-and-standard-error-interpretation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/coefficient-and-standard-error-interpretation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The above linear model is fitted, by ordinary least squares, to the log-cpm values ygi for each gene. This yields regression coefficient estimates \u03b2^g, fitted values \u03bc^gi=xiT\u03b2^g and residual standard deviations sg... We assume that: E(ygi)=\u03bcgi=xiT\u03b2g where xi is a vector of covariates and \u03b2g is a vector of unknown coefficients representing log2-fold-changes between experimental conditions. In matrix terms: E(yg)=X\u03b2g where yg is the vector of log-cpm values for gene g and X is the design matrix with the xi as rows.",
       "asbval:note": "Paper describes linear model fitting with design matrix X, coefficient estimation (\u03b2), and residual standard deviations (sg).",
@@ -1023,7 +1023,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/coefficient-and-standard-error-interpretation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/coefficient-and-standard-error-interpretation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We use linear models to describe how the treatment factors are assigned to the different RNA samples... Interest centers on testing whether one or more of the \u03b2gj are equal to zero.",
       "asbval:note": "Paper emphasizes that the design matrix must correctly encode treatment factors for valid coefficient interpretation.",
@@ -1043,7 +1043,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/coefficient-and-standard-error-interpretation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/coefficient-and-standard-error-interpretation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The log-cpm values are by definition normalized for sequencing depth. Other normalization steps can optionally be done... between-array normalization methods developed for single channel microarray data, such as quantile or cyclic LOESS, can be are applied to the log-cpm values.",
       "asbval:note": "Paper discusses normalization as essential preprocessing step affecting variance estimation.",
@@ -1063,7 +1063,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/coefficient-and-standard-error-interpretation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/coefficient-and-standard-error-interpretation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Borrowing information between genes is a crucial feature of the genome-wide statistical methods, as it allows for gene-specific variation while still providing reliable inference with small sample sizes... The normal-based empirical Bayes statistical procedures can adapt to different types of datasets and can provide exact type I error rate control even for experiments with a small number of replicate samples.",
       "asbval:note": "Paper emphasizes empirical Bayes borrowing strength between genes requires multiple replicates for stable variance estimation.",
@@ -1083,7 +1083,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/coefficient-and-standard-error-interpretation/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/coefficient-and-standard-error-interpretation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "One popular differential expression pipeline is that provided by the limma software package [9]. The limma pipeline includes linear modeling to analyze complex experiments with multiple treatment factors, quantitative weights to account for variations in precision between different observations, and empirical Bayes statistical methods to borrow strength between genes.",
       "asbval:note": "limma is explicitly described as performing linear modeling and empirical Bayes moderation for coefficient and standard error estimation.",
@@ -1103,7 +1103,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/coefficient-and-standard-error-interpretation/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/coefficient-and-standard-error-interpretation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The results presented in this article were obtained using R version 3.0.0 and the software packages limma 3.16.2... The voom methodology proposed in the article is implemented in the voom function of the limma package. The limma package can be installed from the Bioconductor project repository.",
       "asbval:note": "Paper confirms R as the host language for limma and describes using R for analysis workflows.",
@@ -1123,7 +1123,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/design-matrix-construction-experiments/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/design-matrix-construction-experiments/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We use linear models to describe how the treatment factors are assigned to the different RNA samples. We assume that: E(ygi)=\u03bcgi=xiT\u03b2g where xi is a vector of covariates and \u03b2g is a vector of unknown coefficients representing log2-fold-changes between experimental conditions. In matrix terms: E(yg)=X\u03b2g where yg is the vector of log-cpm values for gene g and X is the design matrix with the xi as rows.",
       "asbval:note": "The paper explicitly describes the design matrix X and its role in specifying the linear model structure for differential expression analysis.",
@@ -1143,7 +1143,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/design-matrix-construction-experiments/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/design-matrix-construction-experiments/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "One popular differential expression pipeline is that provided by the limma software package [9]. The limma pipeline includes linear modeling to analyze complex experiments with multiple treatment factors, quantitative weights to account for variations in precision between different observations, and empirical Bayes statistical methods to borrow strength between genes.",
       "asbval:note": "limma is confirmed as the primary tool for linear modeling with design matrices in the paper.",
@@ -1163,7 +1163,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/design-matrix-construction-experiments/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/design-matrix-construction-experiments/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The results presented in this article were obtained using R version 3.0.0 and the software packages limma 3.16.2, edgeR 3.2.3, baySeq 1.14.1, DESeq 1.12.0, DSS 1.4.0, PoissonSeq 1.1.2 and tweeDEseqCountData 1.0.8.",
       "asbval:note": "Paper confirms R is used as the programming environment, but does not explicitly mention model.matrix() or design matrix construction functions. The claim about 'model.matrix()' or 'manual specification' is not verbatim in the paper.",
@@ -1183,7 +1183,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/design-matrix-construction-experiments/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/design-matrix-construction-experiments/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This article compares the performance of the limma-based pipelines to edgeR [20,34], DESeq [13], baySeq [21], TSPM [25], PoissonSeq [26] and DSS [22], all of which are based on NB or over-dispersed Poisson distributions.",
       "asbval:note": "edgeR is mentioned as a comparison method but the paper does not explicitly describe edgeR's use of design matrices for specifying contrasts. The paper focuses on limma and voom, not edgeR's design matrix workflow.",
@@ -1203,7 +1203,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/design-matrix-construction-experiments/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/design-matrix-construction-experiments/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The voom method estimates the mean-variance relationship of the log-counts, generates a precision weight for each observation and enters these into the limma empirical Bayes analysis pipeline.",
       "asbval:note": "voom is confirmed as a method that works with the limma pipeline and design matrices.",
@@ -1223,7 +1223,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/design-matrix-construction-experiments/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/design-matrix-construction-experiments/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Gene expression profiling is one of the most commonly used genomic techniques in biological research... This includes methods for differential expression analysis [1-3], random effects [4,5], gene set enrichment [6], gene set testing [7,8] and so on. One popular differential expression pipeline is that provided by the limma software package [9]. The limma pipeline includes linear modeling to analyze complex experiments with multiple treatment factors...",
       "asbval:note": "The paper describes the use of linear models for differential expression analysis with multiple treatment factors, which aligns with the scope claim.",
@@ -1243,7 +1243,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/design-matrix-construction-experiments/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/design-matrix-construction-experiments/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The above linear model is fitted, by ordinary least squares, to the log-cpm values ygi for each gene... In matrix terms: E(yg)=X\u03b2g where yg is the vector of log-cpm values for gene g and X is the design matrix with the xi as rows.",
       "asbval:note": "The paper confirms that the design matrix X is a required input to the linear modeling pipeline.",
@@ -1263,7 +1263,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/design-matrix-construction-experiments/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/design-matrix-construction-experiments/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We assume that: E(ygi)=\u03bcgi=xiT\u03b2g where xi is a vector of covariates and \u03b2g is a vector of unknown coefficients representing log2-fold-changes between experimental conditions.",
       "asbval:note": "The paper assumes the design matrix is available as input to the linear model fitting process.",
@@ -1283,7 +1283,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/design-matrix-construction-experiments/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/design-matrix-construction-experiments/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "A multidimensional scaling plot of log-cpm values shows the gradual change in gene expression during embryonic development, with each stage intermediate in expression profile between the stages before and after (Figure 9).",
       "asbval:note": "The paper mentions exploratory analysis (MDS plots) but emphasizes that the main focus is on hypothesis-driven differential expression testing with design matrices.",
@@ -1303,7 +1303,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-expression-empirical-bayes-moderation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/differential-expression-empirical-bayes-moderation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The voom method estimates the mean-variance relationship of the log-counts, generates a precision weight for each observation and enters these into the limma empirical Bayes analysis pipeline... The limma pipeline includes linear modeling to analyze complex experiments with multiple treatment factors, quantitative weights to account for variations in precision between different observations, and empirical Bayes statistical methods to borrow strength between genes. Borrowing information between genes is a crucial feature of the genome-wide statistical methods, as it allows for gene-specific variation while still providing reliable inference with small sample sizes.",
       "asbval:note": "The paper explicitly describes empirical Bayes methods for borrowing strength between genes and improving inference with small sample sizes. The voom method feeds into limma's empirical Bayes pipeline.",
@@ -1323,7 +1323,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-expression-empirical-bayes-moderation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/differential-expression-empirical-bayes-moderation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "One popular differential expression pipeline is that provided by the limma software package [9]. The limma pipeline includes linear modeling to analyze complex experiments with multiple treatment factors, quantitative weights to account for variations in precision between different observations, and empirical Bayes statistical methods to borrow strength between genes.",
       "asbval:note": "limma is confirmed as providing linear modeling and empirical Bayes methods. The paper also mentions 'limma's empirical Bayes procedure' and 'limma's standard differential expression pipeline' throughout.",
@@ -1343,7 +1343,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-expression-empirical-bayes-moderation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/differential-expression-empirical-bayes-moderation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The voom method estimates the mean-variance relationship of the log-counts, generates a precision weight for each observation and enters these into the limma empirical Bayes analysis pipeline... Our strategy is to estimate non-parametrically the mean-variance trend of the logged read counts and to use this mean-variance relationship to predict the variance of each log-cpm value. The predicted variance is then encapsulated as an inverse weight for the log-cpm value. When the weights are incorporated into a linear modeling procedure, the mean-variance relationship in the log-cpm values is effectively eliminated.",
       "asbval:note": "voom is explicitly described as generating precision weights that account for the mean-variance relationship and feeding into limma's pipeline.",
@@ -1363,7 +1363,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-expression-empirical-bayes-moderation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/differential-expression-empirical-bayes-moderation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The results presented in this article were obtained using R version 3.0.0 and the software packages limma 3.16.2, edgeR 3.2.3, baySeq 1.14.1, DESeq 1.12.0, DSS 1.4.0, PoissonSeq 1.1.2 and tweeDEseqCountData 1.0.8. All of these packages are part of the Bioconductor project [67,68]... The voom methodology proposed in the article is implemented in the voom function of the limma package.",
       "asbval:note": "R is confirmed as the execution environment for limma and voom functions.",
@@ -1383,7 +1383,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-expression-empirical-bayes-moderation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/differential-expression-empirical-bayes-moderation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Library sizes were scale-normalized by the TMM method [54] using edgeR software [12] prior to the voom analysis... TMM-scale normalization [54] was used for all the analysis methods, except for DESeq and PoissonSeq, which have their own built-in normalization methods.",
       "asbval:note": "The paper uses edgeR for TMM normalization (via calcNormFactors function, though not explicitly named in these passages). However, edgeR is used as a normalization tool prior to voom/limma analysis, not as a primary tool for the empirical Bayes moderation task itself. The card lists edgeR as a tool for this task, but the paper's primary focus is on limma's eBayes for moderation. edgeR is used for normalization preprocessing, which is a supporting role rather than the core eBayes moderation role claimed in the card.",
@@ -1403,7 +1403,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-expression-result-interpretation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/differential-expression-result-interpretation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The voom method estimates the mean-variance relationship of the log-counts, generates a precision weight for each observation and enters these into the limma empirical Bayes analysis pipeline... The limma pipeline includes linear modeling to analyze complex experiments with multiple treatment factors, quantitative weights to account for variations in precision between different observations, and empirical Bayes statistical methods to borrow strength between genes... The normal-based empirical Bayes statistical procedures can adapt to different types of datasets and can provide exact type I error rate control even for experiments with a small number of replicate samples.",
       "asbval:note": "The paper explicitly describes empirical Bayes shrinkage of variance estimates and demonstrates type I error control with small sample sizes. B-statistics are mentioned in results tables (Table 1) as posterior log-odds of differential expression.",
@@ -1423,7 +1423,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-expression-result-interpretation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/differential-expression-result-interpretation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The limma pipeline includes linear modeling to analyze complex experiments with multiple treatment factors, quantitative weights to account for variations in precision between different observations, and empirical Bayes statistical methods to borrow strength between genes. Borrowing information between genes is a crucial feature of the genome-wide statistical methods, as it allows for gene-specific variation while still providing reliable inference with small sample sizes.",
       "asbval:note": "Scope aligns with paper's central claim about empirical Bayes shrinkage enabling small-sample inference.",
@@ -1443,7 +1443,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-expression-result-interpretation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/differential-expression-result-interpretation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This article develops differential expression methods for RNA-seq experiments of arbitrary complexity... We use linear models to describe how the treatment factors are assigned to the different RNA samples.",
       "asbval:note": "Paper focuses on RNA-seq and microarray data; qPCR and proteomics are not mentioned. The scope claim is broader than the paper's actual scope.",
@@ -1463,7 +1463,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-expression-result-interpretation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/differential-expression-result-interpretation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "A key advantage of the limma pipelines is that they provide accurate type I error rate control even when the number of RNA-seq samples is small... The normal-based empirical Bayes statistical procedures can adapt to different types of datasets and can provide exact type I error rate control even for experiments with a small number of replicate samples.",
       "asbval:note": "Paper explicitly demonstrates type I error control with small sample sizes.",
@@ -1483,7 +1483,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-expression-result-interpretation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/differential-expression-result-interpretation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The B-statistic is the posterior log-odds of differential expression... As well as gene ID and symbol, columns give chromosome location (Chr), log2-fold-change (logFC), average log2 expression (AveExpr), moderated t, P value, false discovery rate and B-statistic for each gene.",
       "asbval:note": "Table 1 output from limma topTable function includes both log-fold-change and B-statistic (posterior log-odds).",
@@ -1503,7 +1503,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-expression-result-interpretation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/differential-expression-result-interpretation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Borrowing information between genes is a crucial feature of the genome-wide statistical methods, as it allows for gene-specific variation while still providing reliable inference with small sample sizes.",
       "asbval:note": "Paper explicitly describes borrowing strength between genes as a key feature of empirical Bayes approach.",
@@ -1523,7 +1523,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-expression-result-interpretation/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/differential-expression-result-interpretation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "One popular differential expression pipeline is that provided by the limma software package... The limma pipeline includes linear modeling to analyze complex experiments with multiple treatment factors, quantitative weights to account for variations in precision between different observations, and empirical Bayes statistical methods to borrow strength between genes... The log-cpm values and associated weights are then input into limma's standard differential expression pipeline... The log-cpm values ygi and associated weights wgj are then input into limma's standard linear modeling and empirical Bayes differential expression analysis pipeline... The table shows output from the limma topTable function.",
       "asbval:note": "Paper explicitly names limma and describes lmFit (linear modeling), eBayes (empirical Bayes), and topTable (results extraction) functions.",
@@ -1543,7 +1543,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-expression-result-interpretation/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/differential-expression-result-interpretation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The results presented in this article were obtained using R version 3.0.0 and the software packages limma 3.16.2...",
       "asbval:note": "Paper explicitly states use of R version 3.0.0 for all analyses.",
@@ -1563,7 +1563,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/empirical-bayes-variance-estimation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/empirical-bayes-variance-estimation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The limma pipeline includes linear modeling to analyze complex experiments with multiple treatment factors, quantitative weights to account for variations in precision between different observations, and empirical Bayes statistical methods to borrow strength between genes. Borrowing information between genes is a crucial feature of the genome-wide statistical methods, as it allows for gene-specific variation while still providing reliable inference with small sample sizes. The normal-based empirical Bayes statistical procedures can adapt to different types of datasets and can provide exact type I error rate control even for experiments with a small number of replicate samples.",
       "asbval:note": "The passage directly supports the core claim about empirical Bayes methods stabilizing variance estimates and enabling robust inference with small sample sizes. The paper also mentions 'moderated t-statistics' and 'B-statistics' in the context of limma analysis (Table 1 output shows B-statistic column).",
@@ -1583,7 +1583,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/empirical-bayes-variance-estimation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/empirical-bayes-variance-estimation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "One popular differential expression pipeline is that provided by the limma software package [9]. The limma pipeline includes linear modeling to analyze complex experiments with multiple treatment factors, quantitative weights to account for variations in precision between different observations, and empirical Bayes statistical methods to borrow strength between genes.",
       "asbval:note": "The paper explicitly describes limma as providing linear modeling and empirical Bayes methods. The voom method itself 'enters these into the limma empirical Bayes analysis pipeline' (passage 2). The Materials and Methods section confirms implementation in limma package.",
@@ -1603,7 +1603,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/empirical-bayes-variance-estimation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/empirical-bayes-variance-estimation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The results presented in this article were obtained using R version 3.0.0 and the software packages limma 3.16.2, edgeR 3.2.3, baySeq 1.14.1, DESeq 1.12.0, DSS 1.4.0, PoissonSeq 1.1.2 and tweeDEseqCountData 1.0.8.",
       "asbval:note": "Paper confirms use of R as the statistical programming environment for executing limma and other Bioconductor packages.",
@@ -1623,7 +1623,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/empirical-bayes-variance-estimation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/empirical-bayes-variance-estimation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The normal-based empirical Bayes statistical procedures can adapt to different types of datasets and can provide exact type I error rate control even for experiments with a small number of replicate samples. A key advantage of the limma pipelines is that they provide accurate type I error rate control even when the number of RNA-seq samples is small.",
       "asbval:note": "The paper explicitly states that empirical Bayes methods in limma provide robust inference with small sample sizes for both microarray and RNA-seq data, directly supporting the scope statement.",
@@ -1643,7 +1643,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/empirical-bayes-variance-estimation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/empirical-bayes-variance-estimation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The above linear model is fitted, by ordinary least squares, to the log-cpm values ygi for each gene. This yields regression coefficient estimates \u03b2^g, fitted values \u03bc^gi=xiT\u03b2^g and residual standard deviations sg... The voom methodology proposed in the article is implemented in the voom function of the limma package. The limma-trend method was implemented by inputting the log-cpm values from voom into limma's standard pipeline, with trend=TRUE for the eBayes function.",
       "asbval:note": "The paper describes the workflow as: (1) fit linear models to get residual standard deviations, (2) apply empirical Bayes (eBayes) to stabilize variance estimates. This is a post-hoc step after lmFit.",
@@ -1663,7 +1663,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/empirical-bayes-variance-estimation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/empirical-bayes-variance-estimation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The above linear model is fitted, by ordinary least squares, to the log-cpm values ygi for each gene. This yields regression coefficient estimates \u03b2^g, fitted values \u03bc^gi=xiT\u03b2^g and residual standard deviations sg. Also computed is the average log-cpm y\u00afg for each gene.",
       "asbval:note": "The paper confirms that linear model fitting (lmFit equivalent) must precede empirical Bayes variance estimation, supporting the 'When NOT to use' guidance.",
@@ -1683,7 +1683,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/empirical-bayes-variance-estimation/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/empirical-bayes-variance-estimation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Borrowing information between genes is a crucial feature of the genome-wide statistical methods, as it allows for gene-specific variation while still providing reliable inference with small sample sizes.",
       "asbval:note": "The paper emphasizes that empirical Bayes shrinkage is a key feature for borrowing strength across genes. If raw unadjusted estimates are needed, this method would not be appropriate.",
@@ -1703,7 +1703,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/empirical-bayes-variance-estimation/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/empirical-bayes-variance-estimation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The normal-based empirical Bayes statistical procedures can adapt to different types of datasets and can provide exact type I error rate control even for experiments with a small number of replicate samples.",
       "asbval:note": "The paper emphasizes the advantage of empirical Bayes for small sample sizes but does not explicitly discuss when large sample sizes make shrinkage minimal or when standard t-statistics become preferable. The claim is reasonable but not directly supported by the paper's text.",
@@ -1723,7 +1723,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-linear-modeling/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/gene-expression-linear-modeling/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "New normal linear modeling strategies are presented for analyzing read counts from RNA-seq experiments. The voom method estimates the mean-variance relationship of the log-counts, generates a precision weight for each observation and enters these into the limma empirical Bayes analysis pipeline... The normal-based empirical Bayes statistical procedures can adapt to different types of datasets and can provide exact type I error rate control even for experiments with a small number of replicate samples.",
       "asbval:note": "Core research question is directly supported by abstract and introduction. Paper demonstrates linear modeling with empirical Bayes for differential expression with small sample sizes.",
@@ -1743,7 +1743,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-linear-modeling/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/gene-expression-linear-modeling/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "One popular differential expression pipeline is that provided by the limma software package [9]. The limma pipeline includes linear modeling to analyze complex experiments with multiple treatment factors, quantitative weights to account for variations in precision between different observations, and empirical Bayes statistical methods to borrow strength between genes.",
       "asbval:note": "limma is explicitly named and described as providing linear modeling and empirical Bayes methods. Functions lmFit and topTable are mentioned in Materials and Methods section.",
@@ -1763,7 +1763,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-linear-modeling/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/gene-expression-linear-modeling/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The voom method estimates the mean-variance relationship of the log-counts, generates a precision weight for each observation and enters these into the limma empirical Bayes analysis pipeline... Our strategy is to estimate non-parametrically the mean-variance trend of the logged read counts and to use this mean-variance relationship to predict the variance of each log-cpm value. The predicted variance is then encapsulated as an inverse weight for the log-cpm value.",
       "asbval:note": "voom is explicitly described as estimating mean-variance relationships and generating precision weights for use in limma pipeline.",
@@ -1783,7 +1783,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-linear-modeling/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/gene-expression-linear-modeling/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Library sizes were scale-normalized by the TMM method [54] using edgeR software [12] prior to the voom analysis... The different count-based packages implement different methods of compositional normalization [54].",
       "asbval:note": "edgeR is used for TMM normalization prior to voom analysis in multiple case studies. calcNormFactors is the standard edgeR function for this purpose, though not explicitly named in these passages.",
@@ -1803,7 +1803,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-linear-modeling/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/gene-expression-linear-modeling/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The results presented in this article were obtained using R version 3.0.0 and the software packages limma 3.16.2, edgeR 3.2.3, baySeq 1.14.1, DESeq 1.12.0, DSS 1.4.0, PoissonSeq 1.1.2 and tweeDEseqCountData 1.0.8.",
       "asbval:note": "R is explicitly named as the programming environment used for all analyses.",
@@ -1823,7 +1823,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-linear-modeling/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/gene-expression-linear-modeling/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We assume that: E(ygi)=\u03bcgi=xiT\u03b2g where xi is a vector of covariates and \u03b2g is a vector of unknown coefficients representing log2-fold-changes between experimental conditions... The limma pipeline includes linear modeling to analyze complex experiments with multiple treatment factors, quantitative weights to account for variations in precision between different observations, and empirical Bayes statistical methods to borrow strength between genes.",
       "asbval:note": "Paper explicitly describes use of design matrices with covariates and treatment factors for linear modeling.",
@@ -1843,7 +1843,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-linear-modeling/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/gene-expression-linear-modeling/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "An obstacle to applying normal-based statistical methods to read counts is that the counts have markedly unequal variabilities, even after log-transformation... We explore the idea that it is more important to model the mean-variance relationship correctly than it is to specify the exact probabilistic distribution of the counts.",
       "asbval:note": "Paper emphasizes the necessity of variance stabilization and mean-variance modeling before linear model fitting.",
@@ -1863,7 +1863,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-linear-modeling/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/gene-expression-linear-modeling/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "A key advantage of the limma pipelines is that they provide accurate type I error rate control even when the number of RNA-seq samples is small... Typically G is large, in the tens of thousands or more, whereas n can be as low as three.",
       "asbval:note": "Paper indicates empirical Bayes works well with small n (down to 3), but the card's caveat about 'extremely small' and 'no biological replication' is a reasonable conservative interpretation of limitations.",
@@ -1883,7 +1883,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-linear-modeling/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/gene-expression-linear-modeling/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss single-cell RNA-seq or zero-inflation issues. This is a reasonable extension of the method's scope but not explicitly addressed in the paper.",
@@ -1903,7 +1903,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-statistical-testing/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/gene-expression-statistical-testing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The voom method estimates the mean-variance relationship of the log-counts, generates a precision weight for each observation and enters these into the limma empirical Bayes analysis pipeline... The limma pipeline includes linear modeling to analyze complex experiments with multiple treatment factors, quantitative weights to account for variations in precision between different observations, and empirical Bayes statistical methods to borrow strength between genes. Borrowing information between genes is a crucial feature of the genome-wide statistical methods, as it allows for gene-specific variation while still providing reliable inference with small sample sizes. The normal-based empirical Bayes statistical procedures can adapt to different types of datasets and can provide exact type I error rate control even for experiments with a small number of replicate samples.",
       "asbval:note": "The paper explicitly describes empirical Bayes moderation for variance estimation and borrowing strength between genes for small sample sizes. B-statistics (log-odds) are mentioned in Table 1 output.",
@@ -1923,7 +1923,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-statistical-testing/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/gene-expression-statistical-testing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "One popular differential expression pipeline is that provided by the limma software package [9]. The limma pipeline includes linear modeling to analyze complex experiments with multiple treatment factors, quantitative weights to account for variations in precision between different observations, and empirical Bayes statistical methods to borrow strength between genes... The voom methodology proposed in the article is implemented in the voom function of the limma package.",
       "asbval:note": "limma is confirmed as the R package implementing empirical Bayes methods and linear modeling for gene expression analysis.",
@@ -1943,7 +1943,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-statistical-testing/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/gene-expression-statistical-testing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The results presented in this article were obtained using R version 3.0.0 and the software packages limma 3.16.2, edgeR 3.2.3, baySeq 1.14.1, DESeq 1.12.0, DSS 1.4.0, PoissonSeq 1.1.2 and tweeDEseqCountData 1.0.8.",
       "asbval:note": "R is confirmed as the programming environment used for all analyses including limma.",
@@ -1963,7 +1963,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-statistical-testing/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/gene-expression-statistical-testing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "New normal linear modeling strategies are presented for analyzing read counts from RNA-seq experiments... This opens access for RNA-seq analysts to a large body of methodology developed for microarrays... The limma pipeline includes linear modeling to analyze complex experiments with multiple treatment factors...",
       "asbval:note": "The paper explicitly addresses linear modeling for differential expression testing in both microarray and RNA-seq contexts.",
@@ -1983,7 +1983,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-statistical-testing/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/gene-expression-statistical-testing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Borrowing information between genes is a crucial feature of the genome-wide statistical methods, as it allows for gene-specific variation while still providing reliable inference with small sample sizes. The normal-based empirical Bayes statistical procedures can adapt to different types of datasets and can provide exact type I error rate control even for experiments with a small number of replicate samples [3].",
       "asbval:note": "The paper emphasizes empirical Bayes borrowing strength for small sample sizes and type I error control.",
@@ -2003,7 +2003,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/linear-model-fitting-for-gene-expression/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/linear-model-fitting-for-gene-expression/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The above linear model is fitted, by ordinary least squares, to the log-cpm values ygi for each gene. This yields regression coefficient estimates \u03b2^g, fitted values \u03bc^gi=xiT\u03b2^g and residual standard deviations sg.",
       "asbval:note": "Paper demonstrates linear model fitting to gene expression (RNA-seq log-cpm) with design matrix X and coefficient estimates, but scope is limited to RNA-seq and microarray data. No mention of qPCR or proteomics applications in the passages.",
@@ -2023,7 +2023,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/linear-model-fitting-for-gene-expression/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/linear-model-fitting-for-gene-expression/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "One popular differential expression pipeline is that provided by the limma software package [9]. The limma pipeline includes linear modeling to analyze complex experiments with multiple treatment factors, quantitative weights to account for variations in precision between different observations, and empirical Bayes statistical methods to borrow strength between genes.",
       "asbval:note": "limma is explicitly identified as providing linear modeling for gene expression analysis.",
@@ -2043,7 +2043,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/linear-model-fitting-for-gene-expression/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/linear-model-fitting-for-gene-expression/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The voom methodology proposed in the article is implemented in the voom function of the limma package. The limma-trend method was implemented by inputting the log-cpm values from voom into limma's standard pipeline, with trend=TRUE for the eBayes function.",
       "asbval:note": "Paper confirms limma provides linear modeling functions and eBayes, but does not explicitly name 'lmFit' function in the passages provided. The function is referenced implicitly through the linear model fitting procedure described.",
@@ -2063,7 +2063,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/linear-model-fitting-for-gene-expression/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/linear-model-fitting-for-gene-expression/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The results presented in this article were obtained using R version 3.0.0 and the software packages limma 3.16.2, edgeR 3.2.3, baySeq 1.14.1, DESeq 1.12.0, DSS 1.4.0, PoissonSeq 1.1.2 and tweeDEseqCountData 1.0.8.",
       "asbval:note": "R is confirmed as the programming environment used for all analyses including limma.",
@@ -2083,7 +2083,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/linear-model-fitting-for-gene-expression/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/linear-model-fitting-for-gene-expression/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The limma pipeline includes linear modeling to analyze complex experiments with multiple treatment factors, quantitative weights to account for variations in precision between different observations, and empirical Bayes statistical methods to borrow strength between genes.",
       "asbval:note": "limma's empirical Bayes functionality is explicitly confirmed for moderation and strength borrowing between genes.",
@@ -2103,7 +2103,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/linear-model-fitting-for-gene-expression/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/linear-model-fitting-for-gene-expression/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This article follows the common practice of examining differential expression on a gene-wise basis. Our preferred practice is to count the total number of reads overlapping annotated exons for each genes.",
       "asbval:note": "Paper explicitly demonstrates application to RNA-seq and microarray data (mentioned in abstract and throughout). No evidence of qPCR or proteomics applications in the provided passages.",
@@ -2123,7 +2123,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/linear-model-fitting-for-gene-expression/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/linear-model-fitting-for-gene-expression/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We assume that: E(ygi)=\u03bcgi=xiT\u03b2g where xi is a vector of covariates and \u03b2g is a vector of unknown coefficients representing log2-fold-changes between experimental conditions. In matrix terms: E(yg)=X\u03b2g where yg is the vector of log-cpm values for gene g and X is the design matrix with the xi as rows.",
       "asbval:note": "Design matrix X explicitly encodes experimental conditions and covariates.",
@@ -2143,7 +2143,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/linear-model-fitting-for-gene-expression/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/linear-model-fitting-for-gene-expression/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This yields regression coefficient estimates \u03b2^g, fitted values \u03bc^gi=xiT\u03b2^g and residual standard deviations sg.",
       "asbval:note": "Both coefficient estimates and residual standard deviations (errors) are explicitly produced by the linear model fitting procedure.",
@@ -2163,7 +2163,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/linear-model-fitting-for-gene-expression/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/linear-model-fitting-for-gene-expression/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The log-cpm values ygi and associated weights wgj are then input into limma's standard linear modeling and empirical Bayes differential expression analysis pipeline.",
       "asbval:note": "Linear model outputs are explicitly used for downstream differential expression analysis via limma's empirical Bayes pipeline.",
@@ -2183,7 +2183,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/method-comparison-differential-calls/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/method-comparison-differential-calls/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This article compares the performance of the limma-based pipelines to edgeR [20,34], DESeq [13], baySeq [21], TSPM [25], PoissonSeq [26] and DSS [22]... Simulation studies show that the limma pipelines perform at least as well in terms of power and error rate control as the NB or Poisson methods... voom and limma-trend perform almost equally well when the sequencing depths are the same for each RNA sample. When the sequencing depths are different, voom is the clear best performer.",
       "asbval:note": "Paper directly compares multiple pipelines and evaluates how methodological choices (normalization, precision weighting) affect differential expression results and gene rankings.",
@@ -2203,7 +2203,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/method-comparison-differential-calls/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/method-comparison-differential-calls/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We found that variation in sequencing depth between libraries had a noticeable impact on some RNA-seq analysis methods... voom shows consistent performance in all scenarios... When the library sizes are unequal, voom is the clear best performer.",
       "asbval:note": "Paper demonstrates that normalization and preprocessing choices (library size handling, TMM normalization) materially affect downstream conclusions.",
@@ -2223,7 +2223,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/method-comparison-differential-calls/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/method-comparison-differential-calls/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The voom method estimates the mean-variance relationship of the log-counts, generates a precision weight for each observation and enters these into the limma empirical Bayes analysis pipeline... The log-cpm values ygi and associated weights wgj are then input into limma's standard linear modeling and empirical Bayes differential expression analysis pipeline.",
       "asbval:note": "Paper explicitly describes limma's role in fitting linear models and empirical Bayes procedures; topTable function mentioned in results section for extracting ranked gene lists.",
@@ -2243,7 +2243,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/method-comparison-differential-calls/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/method-comparison-differential-calls/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Library sizes were scale-normalized by the TMM method [54] using edgeR software [12] prior to the voom analysis... The different count-based packages implement different methods of compositional normalization [54].",
       "asbval:note": "Paper explicitly uses edgeR's TMM normalization (calcNormFactors) prior to voom analysis in multiple case studies.",
@@ -2263,7 +2263,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/method-comparison-differential-calls/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/method-comparison-differential-calls/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The voom method estimates the mean-variance relationship of the log-counts, generates a precision weight for each observation and enters these into the limma empirical Bayes analysis pipeline... The log-cpm values ygi and associated weights wgj are then input into limma's standard linear modeling and empirical Bayes differential expression analysis pipeline.",
       "asbval:note": "Paper describes voom's core function: mean-variance estimation, precision weight generation, and integration with limma's linear modeling pipeline.",
@@ -2283,7 +2283,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/method-comparison-differential-calls/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/method-comparison-differential-calls/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The results presented in this article were obtained using R version 3.0.0 and the software packages limma 3.16.2, edgeR 3.2.3, baySeq 1.14.1, DESeq 1.12.0, DSS 1.4.0, PoissonSeq 1.1.2 and tweeDEseqCountData 1.0.8.",
       "asbval:note": "Paper confirms R as the programming environment and lists limma, edgeR, and other packages. However, ggplot2 is not mentioned; visualizations appear to use base R graphics and limma's built-in plotting functions (e.g., plotMA). Card claims ggplot2 but paper does not reference it.",
@@ -2303,7 +2303,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microarray-expression-data-loading/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/microarray-expression-data-loading/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The limma pipeline includes linear modeling to analyze complex experiments with multiple treatment factors, quantitative weights to account for variations in precision between different observations, and empirical Bayes statistical methods to borrow strength between genes.",
       "asbval:note": "Paper discusses limma's linear modeling capabilities and empirical Bayes methods extensively, but does NOT discuss data loading from GEO or use of GEOquery. The paper assumes data are already available as read counts or log-cpm values. The research question conflates microarray data loading (not in paper) with limma's downstream analysis (which IS in paper). Paper focuses on applying limma to RNA-seq data, not on loading microarray data from GEO.",
@@ -2323,7 +2323,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microarray-expression-data-loading/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/microarray-expression-data-loading/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The voom method estimates the mean-variance relationship of the log-counts, generates a precision weight for each observation and enters these into the limma empirical Bayes analysis pipeline.",
       "asbval:note": "limma is central to the paper's methodology; used for differential expression analysis via empirical Bayes procedures.",
@@ -2343,7 +2343,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microarray-expression-data-loading/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/microarray-expression-data-loading/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GEOquery is not mentioned anywhere in the paper. The paper does not discuss loading data from GEO or using GEOquery. Data sources are described as already-processed read counts or log-cpm values.",
@@ -2363,7 +2363,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microarray-expression-data-loading/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/microarray-expression-data-loading/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The results presented in this article were obtained using R version 3.0.0 and the software packages limma 3.16.2, edgeR 3.2.3, baySeq 1.14.1, DESeq 1.12.0, DSS 1.4.0, PoissonSeq 1.1.2 and tweeDEseqCountData 1.0.8.",
       "asbval:note": "R is explicitly used as the programming environment for all analyses.",
@@ -2383,7 +2383,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microarray-expression-data-loading/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/microarray-expression-data-loading/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not address microarray data loading from GEO. It focuses on RNA-seq read count analysis. The paper assumes data are already available as summarized counts or log-cpm values, not on the process of loading microarray data from public repositories.",
@@ -2403,7 +2403,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microarray-expression-data-loading/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/microarray-expression-data-loading/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "New normal linear modeling strategies are presented for analyzing read counts from RNA-seq experiments. The voom method estimates the mean-variance relationship of the log-counts, generates a precision weight for each observation and enters these into the limma empirical Bayes analysis pipeline.",
       "asbval:note": "Paper extensively covers linear modeling and differential expression analysis using limma, though applied to RNA-seq rather than microarray data.",
@@ -2423,7 +2423,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microarray-expression-data-loading/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/microarray-expression-data-loading/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The above linear model is fitted, by ordinary least squares, to the log-cpm values ygi for each gene.",
       "asbval:note": "Paper does use linear models (via lmFit conceptually, though not explicitly named in passages), but the 'essential first step' framing refers to data loading from GEO, which is not discussed in the paper. The paper assumes data are already prepared as log-cpm or read count matrices.",
@@ -2443,7 +2443,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/moderated-t-statistic-computation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/moderated-t-statistic-computation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The voom method estimates the mean-variance relationship of the log-counts, generates a precision weight for each observation and enters these into the limma empirical Bayes analysis pipeline.",
       "asbval:note": "The paper explicitly describes empirical Bayes procedures in limma for stabilizing variance estimates and computing moderated statistics for differential expression.",
@@ -2463,7 +2463,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/moderated-t-statistic-computation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/moderated-t-statistic-computation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Borrowing information between genes is a crucial feature of the genome-wide statistical methods, as it allows for gene-specific variation while still providing reliable inference with small sample sizes. The normal-based empirical Bayes statistical procedures can adapt to different types of datasets and can provide exact type I error rate control even for experiments with a small number of replicate samples.",
       "asbval:note": "Paper explicitly states empirical Bayes methods provide reliable inference with small sample sizes.",
@@ -2483,7 +2483,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/moderated-t-statistic-computation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/moderated-t-statistic-computation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The voom method estimates the mean-variance relationship of the log-counts, generates a precision weight for each observation and enters these into the limma empirical Bayes analysis pipeline. This opens access for RNA-seq analysts to a large body of methodology developed for microarrays.",
       "asbval:note": "Paper demonstrates application to microarray and RNA-seq data. qPCR and proteomics are not explicitly mentioned in the passages; scope is narrower than claimed.",
@@ -2503,7 +2503,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/moderated-t-statistic-computation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/moderated-t-statistic-computation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The B-statistic is the posterior log-odds of differential expression.",
       "asbval:note": "Paper confirms B-statistic is log-odds of differential expression and emphasizes small sample performance.",
@@ -2523,7 +2523,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/moderated-t-statistic-computation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/moderated-t-statistic-computation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "One popular differential expression pipeline is that provided by the limma software package [9]. The limma pipeline includes linear modeling to analyze complex experiments with multiple treatment factors, quantitative weights to account for variations in precision between different observations, and empirical Bayes statistical methods to borrow strength between genes.",
       "asbval:note": "limma package explicitly provides empirical Bayes methods; eBayes function is mentioned in Materials and methods section.",
@@ -2543,7 +2543,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/moderated-t-statistic-computation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/moderated-t-statistic-computation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The above linear model is fitted, by ordinary least squares, to the log-cpm values ygi for each gene. This yields regression coefficient estimates \u03b2^g, fitted values \u03bc^gi=xiT\u03b2^g and residual standard deviations sg.",
       "asbval:note": "Paper describes linear model fitting within limma pipeline; lmFit is the standard limma function for this purpose (mentioned in Materials and methods).",
@@ -2563,7 +2563,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/moderated-t-statistic-computation/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/moderated-t-statistic-computation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The table shows output from the limma topTable function. As well as gene ID and symbol, columns give chromosome location (Chr), log2-fold-change (logFC), average log2 expression (AveExpr), moderated t, P value, false discovery rate and B-statistic for each gene.",
       "asbval:note": "limma's topTable function explicitly extracts and organizes moderated t-statistics and B-statistics.",
@@ -2583,7 +2583,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/moderated-t-statistic-computation/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/moderated-t-statistic-computation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The results presented in this article were obtained using R version 3.0.0 and the software packages limma 3.16.2",
       "asbval:note": "Paper confirms limma is an R package executed in R environment.",
@@ -2603,7 +2603,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precision-weight-calculation-rna-seq/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/precision-weight-calculation-rna-seq/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The voom method estimates the mean-variance relationship of the log-counts, generates a precision weight for each observation and enters these into the limma empirical Bayes analysis pipeline.",
       "asbval:note": null,
@@ -2623,7 +2623,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precision-weight-calculation-rna-seq/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/precision-weight-calculation-rna-seq/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We work with log-counts normalized for sequence depth, specifically with log-counts per million (log-cpm)... The normalized log-counts and associated precision weights can then be entered into the limma analysis pipeline.",
       "asbval:note": null,
@@ -2643,7 +2643,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precision-weight-calculation-rna-seq/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/precision-weight-calculation-rna-seq/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "TMM-scale normalization [54] was used for all the analysis methods... The normalized log-counts and associated precision weights can then be entered into the limma analysis pipeline, or indeed into any statistical pipeline for microarray data that is precision weight aware.",
       "asbval:note": null,
@@ -2663,7 +2663,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precision-weight-calculation-rna-seq/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/precision-weight-calculation-rna-seq/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "A key advantage of the limma pipelines is that they provide accurate type I error rate control even when the number of RNA-seq samples is small. The NB and Poisson based methods either fail to control the error correctly or are excessively conservative.",
       "asbval:note": null,
@@ -2683,7 +2683,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precision-weight-calculation-rna-seq/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/precision-weight-calculation-rna-seq/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The voom methodology proposed in the article is implemented in the voom function of the limma package.",
       "asbval:note": null,
@@ -2703,7 +2703,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precision-weight-calculation-rna-seq/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/precision-weight-calculation-rna-seq/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Effective library sizes were estimated by TMM scale-normalization [54] using edgeR software [12] prior to the voom analysis.",
       "asbval:note": null,
@@ -2723,7 +2723,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precision-weight-calculation-rna-seq/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/precision-weight-calculation-rna-seq/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The results presented in this article were obtained using R version 3.0.0 and the software packages limma 3.16.2, edgeR 3.2.3...",
       "asbval:note": null,
@@ -2743,7 +2743,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precision-weight-calculation-rna-seq/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/precision-weight-calculation-rna-seq/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We call the first method limma-trend and the second method voom, an acronym for 'variance modeling at the observational level'.",
       "asbval:note": null,
@@ -2763,7 +2763,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precision-weight-calculation-rna-seq/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/precision-weight-calculation-rna-seq/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper being validated is 10.1186/gb-2014-15-2-r29 (Law et al. 2014 on voom). The DOI 10.1093/nar/gkv007 appears to be a different paper (likely the limma review paper cited in the card's source_paper_title field). The voom method was first published in the current paper (10.1186/gb-2014-15-2-r29), not in 10.1093/nar/gkv007.",
@@ -2783,7 +2783,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precision-weight-calculation-rna-seq/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/precision-weight-calculation-rna-seq/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The current paper's title is 'voom: precision weights unlock linear model analysis tools for RNA-seq read counts' (Law et al. 2014). The cited source_paper_title appears to refer to a different limma review paper, not the voom paper itself.",
@@ -2803,7 +2803,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/prior-distribution-fitting-for-genomics/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/prior-distribution-fitting-for-genomics/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The limma pipeline includes linear modeling to analyze complex experiments with multiple treatment factors, quantitative weights to account for variations in precision between different observations, and empirical Bayes statistical methods to borrow strength between genes. Borrowing information between genes is a crucial feature of the genome-wide statistical methods, as it allows for gene-specific variation while still providing reliable inference with small sample sizes. The normal-based empirical Bayes statistical procedures can adapt to different types of datasets and can provide exact type I error rate control even for experiments with a small number of replicate samples.",
       "asbval:note": "Passage directly confirms empirical Bayes methods for variance stabilization with small sample sizes and borrowing strength between genes.",
@@ -2823,7 +2823,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/prior-distribution-fitting-for-genomics/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/prior-distribution-fitting-for-genomics/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The voom method estimates the mean-variance relationship of the log-counts, generates a precision weight for each observation and enters these into the limma empirical Bayes analysis pipeline.",
       "asbval:note": "Confirms empirical Bayes pipeline pools information across genes; passage 3 explicitly states 'Borrowing information between genes is a crucial feature'.",
@@ -2843,7 +2843,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/prior-distribution-fitting-for-genomics/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/prior-distribution-fitting-for-genomics/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "One popular differential expression pipeline is that provided by the limma software package [9]. The limma pipeline includes linear modeling to analyze complex experiments with multiple treatment factors, quantitative weights to account for variations in precision between different observations, and empirical Bayes statistical methods to borrow strength between genes.",
       "asbval:note": "limma package explicitly named and described as providing empirical Bayes methods.",
@@ -2863,7 +2863,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/prior-distribution-fitting-for-genomics/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/prior-distribution-fitting-for-genomics/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The voom methodology proposed in the article is implemented in the voom function of the limma package. The limma-trend method was implemented by inputting the log-cpm values from voom into limma's standard pipeline, with trend=TRUE for the eBayes function.",
       "asbval:note": "eBayes function explicitly named in passage 14. lmFit is referenced implicitly in Materials and Methods section discussing linear model fitting.",
@@ -2883,7 +2883,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/prior-distribution-fitting-for-genomics/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/prior-distribution-fitting-for-genomics/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The results presented in this article were obtained using R version 3.0.0 and the software packages limma 3.16.2, edgeR 3.2.3, baySeq 1.14.1, DESeq 1.12.0, DSS 1.4.0, PoissonSeq 1.1.2 and tweeDEseqCountData 1.0.8.",
       "asbval:note": "R explicitly named as runtime environment for limma and other packages.",
@@ -2903,7 +2903,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/prior-distribution-fitting-for-genomics/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/prior-distribution-fitting-for-genomics/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The above linear model is fitted, by ordinary least squares, to the log-cpm values ygi for each gene. This yields regression coefficient estimates \u03b2^g, fitted values \u03bc^gi=xiT\u03b2^g and residual standard deviations sg.",
       "asbval:note": "Passage describes fitting linear models to microarray and RNA-seq data as prerequisite for empirical Bayes procedure.",
@@ -2923,7 +2923,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/prior-distribution-fitting-for-genomics/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/prior-distribution-fitting-for-genomics/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The normal-based empirical Bayes statistical procedures can adapt to different types of datasets and can provide exact type I error rate control even for experiments with a small number of replicate samples.",
       "asbval:note": "Passage confirms empirical Bayes provides reliable inference with small sample sizes; paper demonstrates this with simulations using 3 and 6 samples.",
@@ -2943,7 +2943,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/prior-distribution-fitting-for-genomics/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/prior-distribution-fitting-for-genomics/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "An obstacle to applying normal-based statistical methods to read counts is that the counts have markedly unequal variabilities, even after log-transformation. Large counts have much larger standard deviations than small counts.",
       "asbval:note": "Paper addresses heteroscedasticity and variance modeling to handle genes with different expression levels and technical noise.",
@@ -2963,7 +2963,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/prior-distribution-fitting-for-genomics/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/prior-distribution-fitting-for-genomics/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The above linear model is fitted, by ordinary least squares, to the log-cpm values ygi for each gene. This yields regression coefficient estimates \u03b2^g, fitted values \u03bc^gi=xiT\u03b2^g and residual standard deviations sg. Also computed is the average log-cpm y\u00afg for each gene.",
       "asbval:note": "Passage confirms linear model fitting is prerequisite; empirical Bayes operates on fitted model outputs, not raw counts.",
@@ -2983,7 +2983,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-normalization-tmm/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/rna-seq-count-normalization-tmm/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The different count-based packages implement different methods of compositional normalization [54]. For our simulations, there are no compositional differences between the libraries so there should be no need to estimate compositional normalization factors. For this reason we did not use the calcNormFactors function with edgeR or estimateSizeFactors with DESeq or estNormFactors with DSS.",
       "asbval:note": "Paper mentions TMM-scale normalization and calcNormFactors but does not provide detailed explanation of how TMM works or its role in composition bias correction. The paper uses TMM normalization in some analyses (e.g., Nigerian lymphoblastoid cell lines, Drosophila, mouse strains) but explicitly states it was NOT used in simulations due to no compositional differences. The claim about TMM's function is semantically reasonable but not explicitly detailed in the paper.",
@@ -3003,7 +3003,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-normalization-tmm/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/rna-seq-count-normalization-tmm/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The different count-based packages implement different methods of compositional normalization [54]. For this reason we did not use the calcNormFactors function with edgeR",
       "asbval:note": "Paper confirms edgeR's calcNormFactors function exists and is used for compositional normalization (which includes TMM), but does not explicitly describe DGEList objects or detail how scale factors are stored. The function name and general role are confirmed, but implementation details are not provided in the passages.",
@@ -3023,7 +3023,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-normalization-tmm/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/rna-seq-count-normalization-tmm/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The voom method estimates the mean-variance relationship of the log-counts, generates a precision weight for each observation and enters these into the limma empirical Bayes analysis pipeline... The log-cpm values and associated weights are then input into limma's standard differential expression pipeline.",
       "asbval:note": "Paper explicitly describes voom generating precision weights and entering them into limma's empirical Bayes pipeline. The functions lmFit and eBayes are standard limma functions referenced in the context of linear modeling and empirical Bayes procedures, though not all named explicitly in these passages.",
@@ -3043,7 +3043,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-normalization-tmm/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/rna-seq-count-normalization-tmm/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The voom method estimates the mean-variance relationship of the log-counts, generates a precision weight for each observation and enters these into the limma empirical Bayes analysis pipeline... We work with log-counts normalized for sequence depth, specifically with log-counts per million (log-cpm).",
       "asbval:note": "Paper confirms voom works with log-cpm and generates precision weights accounting for mean-variance relationship. However, the paper does not explicitly state that voom requires or operates on TMM-normalized input. The paper uses TMM normalization in some case studies but voom itself is described as working with log-cpm values after normalization by sequencing depth, not specifically TMM-normalized counts.",
@@ -3063,7 +3063,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-normalization-tmm/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/rna-seq-count-normalization-tmm/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The results presented in this article were obtained using R version 3.0.0 and the software packages limma 3.16.2, edgeR 3.2.3, baySeq 1.14.1, DESeq 1.12.0, DSS 1.4.0, PoissonSeq 1.1.2 and tweeDEseqCountData 1.0.8.",
       "asbval:note": "Paper explicitly confirms R as the execution environment for limma and edgeR packages.",
@@ -3083,7 +3083,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-normalization-tmm/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/rna-seq-count-normalization-tmm/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The different count-based packages implement different methods of compositional normalization [54]. For our simulations, there are no compositional differences between the libraries so there should be no need to estimate compositional normalization factors.",
       "asbval:note": "Paper acknowledges compositional normalization methods exist and are used when compositional differences are present, but does not provide detailed guidance on when to apply TMM specifically. The claim is semantically consistent with the paper's discussion but not explicitly detailed.",
@@ -3103,7 +3103,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-normalization-tmm/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/rna-seq-count-normalization-tmm/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss the interaction between TMM normalization and voom's mean-variance modeling, nor does it explain how composition bias specifically distorts the mean-variance relationship in voom. The paper uses TMM in some analyses with voom but does not explain the mechanistic relationship claimed.",
@@ -3123,7 +3123,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/coefficient-and-standard-error-interpretation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/coefficient-and-standard-error-interpretation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "coefficient-and-standard-error-interpretation",
@@ -3136,7 +3136,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/design-matrix-construction-experiments/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/design-matrix-construction-experiments/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "design-matrix-construction-experiments",
@@ -3149,7 +3149,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-expression-empirical-bayes-moderation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/differential-expression-empirical-bayes-moderation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "differential-expression-empirical-bayes-moderation",
@@ -3162,7 +3162,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-expression-result-interpretation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/differential-expression-result-interpretation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "differential-expression-result-interpretation",
@@ -3175,7 +3175,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/empirical-bayes-variance-estimation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/empirical-bayes-variance-estimation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "empirical-bayes-variance-estimation",
@@ -3188,7 +3188,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-linear-modeling/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/gene-expression-linear-modeling/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "gene-expression-linear-modeling",
@@ -3201,7 +3201,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gene-expression-statistical-testing/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/gene-expression-statistical-testing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "gene-expression-statistical-testing",
@@ -3214,7 +3214,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/linear-model-fitting-for-gene-expression/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/linear-model-fitting-for-gene-expression/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "linear-model-fitting-for-gene-expression",
@@ -3227,7 +3227,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/method-comparison-differential-calls/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/method-comparison-differential-calls/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "method-comparison-differential-calls",
@@ -3240,7 +3240,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microarray-expression-data-loading/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/microarray-expression-data-loading/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "microarray-expression-data-loading",
@@ -3253,7 +3253,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/moderated-t-statistic-computation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/moderated-t-statistic-computation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "moderated-t-statistic-computation",
@@ -3266,7 +3266,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precision-weight-calculation-rna-seq/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/precision-weight-calculation-rna-seq/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "precision-weight-calculation-rna-seq",
@@ -3279,7 +3279,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/prior-distribution-fitting-for-genomics/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/prior-distribution-fitting-for-genomics/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "prior-distribution-fitting-for-genomics",
@@ -3292,7 +3292,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/rna-seq-count-normalization-tmm/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/skill/rna-seq-count-normalization-tmm/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "rna-seq-count-normalization-tmm",
@@ -3305,7 +3305,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Limma is an R package for the analysis of gene expression data.",
       "asbval:note": null,
@@ -3325,7 +3325,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Limma uses linear models for analysing designed experiments and assessment of differential expression.",
       "asbval:note": null,
@@ -3345,7 +3345,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Limma provides the ability to analyse comparisons between many RNA targets simultaneously in complicated designed experiments.",
       "asbval:note": "Omits qualifier 'arbitrary' before 'complicated designed experiments'",
@@ -3365,7 +3365,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Empirical Bayesian methods are used to provide stable results even when the number of arrays is small.",
       "asbval:note": null,
@@ -3385,7 +3385,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Normalization and background correction functions are provided for microarrays and similar technologies.",
       "asbval:note": null,
@@ -3405,7 +3405,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Linear model and differential expression functions apply to microarrays (single-channel or two-color).",
       "asbval:note": "Omits that functions apply to 'a wide variety' of technologies, not just microarrays",
@@ -3425,7 +3425,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Linear model and differential expression functions apply to quantitative PCR.",
       "asbval:note": "Omits that functions apply to 'a wide variety' of technologies; claim isolates one technology from broader list",
@@ -3445,7 +3445,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Linear model and differential expression functions apply to RNA-seq.",
       "asbval:note": "Omits that functions apply to 'a wide variety' of technologies; claim isolates one technology from broader list",
@@ -3465,7 +3465,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Linear model and differential expression functions apply to proteomics.",
       "asbval:note": "Omits that functions apply to 'a wide variety' of technologies; claim isolates one technology from broader list",
@@ -3485,7 +3485,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Ritchie et al. (2015) demonstrated that limma powers differential expression analyses for RNA-sequencing and microarray studies.",
       "asbval:note": null,
@@ -3505,7 +3505,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Phipson et al. (2016) showed that robust hyperparameter estimation protects against hypervariable genes.",
       "asbval:note": "Omits second part of title: 'and improves power to detect differential expression'",
@@ -3525,7 +3525,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_012",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/claim/claim_012",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Phipson et al. (2016) showed that robust hyperparameter estimation improves power to detect differential expression.",
       "asbval:note": null,
@@ -3545,7 +3545,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_013",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/claim/claim_013",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Law et al. (2014) described voom as unlocking precision weights for linear model analysis of RNA-seq read counts.",
       "asbval:note": null,
@@ -3565,7 +3565,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_014",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/claim/claim_014",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Law et al. (2016) presented RNA-seq analysis using limma, Glimma, and edgeR as easy as 1-2-3.",
       "asbval:note": null,
@@ -3585,7 +3585,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_015",
+      "@id": "asbval:assertion/paper/10.1186%2Fgb-2014-15-2-r29/claim/claim_015",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Law et al. (2020) published a guide to creating design matrices for gene expression experiments.",
       "asbval:note": null,

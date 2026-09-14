@@ -552,7 +552,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format. Feature detection in SIRIUS 4 is similar in spirit to a targeted analysis. Instead of searching for all features in a run, SIRIUS first collects all fragmentation spectra and their precursor information and then searches for features that are associated with those fragmentation spectra (precursor ions, adduct ions and isotope peaks).",
       "asbval:note": "Paper describes SIRIUS's data ingestion and feature detection workflow for LC-MS/MS data (mzML/mzXML formats), but does not discuss internal Java framework implementation details or the specific structured representation format used internally.",
@@ -572,7 +572,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format.",
       "asbval:note": "SIRIUS is confirmed as a tool used in the paper for processing LC-MS/MS data.",
@@ -592,7 +592,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection in SIRIUS 4 is similar in spirit to a targeted analysis. Instead of searching for all features in a run, SIRIUS first collects all fragmentation spectra and their precursor information and then searches for features that are associated with those fragmentation spectra (precursor ions, adduct ions and isotope peaks). Adducts and isotopes were detected using predefined lists of mass differences. Fragmentation spectra assigned to the same feature (precursor ion) are merged using an agglomerative clustering algorithm based on cosine distance.",
       "asbval:note": "Paper describes SIRIUS's output as structured feature detection with MS1/MS/MS hierarchies (precursor ions, adducts, isotopes, fragmentation spectra), but does not explicitly name the output format as 'SIRIUS-native format' or provide technical details about the internal data structure representation.",
@@ -612,7 +612,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format. Feature detection in SIRIUS 4 is similar in spirit to a targeted analysis. Instead of searching for all features in a run, SIRIUS first collects all fragmentation spectra and their precursor information and then searches for features that are associated with those fragmentation spectra (precursor ions, adduct ions and isotope peaks).",
       "asbval:note": "Paper describes SIRIUS's role in the LC-MS/MS analysis pipeline (feature detection, data ingestion), but the paper's primary focus is on COSMIC (confidence scoring workflow), not on reconstructing or detailing SIRIUS's internal pipeline architecture.",
@@ -632,7 +632,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card frames the task as reconstructing SIRIUS's internal data ingestion and parsing mechanisms, but the paper uses SIRIUS as a component tool within the broader COSMIC workflow. The paper does not provide implementation-level details about SIRIUS's Java framework or internal data structure design.",
@@ -649,7 +649,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "CSI:FingerID with default parameters was used to rank structure candidates... we use SIRIUS default soft thresholding of molecular formulas when querying CSI:FingerID structure candidates.",
       "asbval:note": "Paper describes CSI:FingerID's role in ranking structure candidates from MS/MS data, but does not document the web-service API dispatch mechanism, request/response formats, or fingerprint prediction workflow in detail. The paper uses CSI:FingerID as a tool within the COSMIC workflow but does not reverse-engineer or document its internal web-service interface.",
@@ -669,7 +669,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "CSI:FingerID with default parameters was used to rank structure candidates... CSI:FingerID15, which is best-of-class among in silico methods18, does not rely on such information.",
       "asbval:note": "CSI:FingerID is extensively used throughout the paper for structure ranking and fingerprint prediction.",
@@ -689,7 +689,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format... We use both isotope patterns and fragmentation patterns to determine the molecular formula de novo using SIRIUS 4 with default parameters and mass accuracy of 10 ppm.",
       "asbval:note": "SIRIUS is used for molecular formula determination and fragmentation tree computation before CSI:FingerID ranking.",
@@ -709,7 +709,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not document CSI:FingerID's web-service response format, JSON structure, fingerprint bit encoding, or confidence score representation. The paper uses CSI:FingerID scores for ranking but does not expose or describe the fingerprint prediction output format or API response structure.",
@@ -729,7 +729,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card frames the task as reverse-engineering or documenting the CSI:FingerID web-service API and dispatch mechanism. However, the paper is a methods paper describing COSMIC, a confidence scoring workflow that *uses* CSI:FingerID as a component tool. The paper does not document CSI:FingerID's internal API, web-service interface, or fingerprint prediction response formats.",
@@ -746,7 +746,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "COSMIC complements compound class annotation tools such as CANOPUS45. COSMIC targets molecular structure annotations but annotates only a fraction of the compounds in a sample; in contrast, CANOPUS annotates practically all compounds in a sample for which fragmentation spectra have been measured but is restricted to annotating compound classes.",
       "asbval:note": "Paper mentions CANOPUS as a complementary tool for compound-class annotation but does not describe the mechanism of how CANOPUS accepts queries or returns results. The paper only states that CANOPUS annotates compound classes from fragmentation spectra, not the technical mechanism of dispatch or query handling.",
@@ -766,7 +766,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format.",
       "asbval:note": "SIRIUS is extensively used throughout the paper for molecular formula determination and fragmentation tree computation.",
@@ -786,7 +786,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "COSMIC complements compound class annotation tools such as CANOPUS45.",
       "asbval:note": "CANOPUS is mentioned in the paper as a complementary tool, but the paper does not describe its internal mechanism or how it processes queries.",
@@ -806,7 +806,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe CANOPUS output format, whether it returns JSON, tabular format, or what the structure of confidence scores looks like. The paper only states that CANOPUS 'annotates practically all compounds in a sample for which fragmentation spectra have been measured but is restricted to annotating compound classes' without specifying output format.",
@@ -826,7 +826,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card asks about CANOPUS web-service dispatch mechanism and query handling, but the paper (COSMIC) is primarily about metabolite structure annotation, not compound-class annotation. CANOPUS is mentioned only as a complementary tool.",
@@ -843,7 +843,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_004/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MSNovelist is not mentioned anywhere in the paper. The paper focuses on COSMIC workflow for structure annotation using CSI:FingerID, not de-novo structure generation via MSNovelist web service.",
@@ -863,7 +863,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_004/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format.",
       "asbval:note": "SIRIUS is used extensively in the COSMIC workflow for molecular formula determination and fragmentation tree computation.",
@@ -883,7 +883,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_004/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MSNovelist is not mentioned in any passage. The paper uses CSI:FingerID for structure ranking, not MSNovelist for de-novo structure generation.",
@@ -903,7 +903,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_004/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The output of this workflow is an ordered list of 1,456 COSMIC structure annotations ('MS features'; Supplementary Data 1).",
       "asbval:note": "The paper does produce ranked structure annotations with confidence scores and metadata, but these are not de-novo generated structures. Instead, they are ranked candidates from existing structure databases (biomolecule structure database, PubChem, ChemSpider) using CSI:FingerID, not de-novo generation.",
@@ -923,7 +923,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/scope_drift",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_004/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card describes a task focused on MSNovelist web service for de-novo structure generation, but the paper is about COSMIC, a workflow for high-confidence structural annotation of metabolites using existing structure databases and CSI:FingerID ranking.",
@@ -940,7 +940,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_005/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss GitHub Actions workflows, CI/CD pipelines, or repository release branches. The paper is a scientific study on metabolite structure annotation using COSMIC; it does not address software development infrastructure or build automation.",
@@ -960,7 +960,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_005/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format.",
       "asbval:note": "SIRIUS is confirmed as a tool used in the paper for processing LC\u2013MS/MS data and molecular formula determination.",
@@ -980,7 +980,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_005/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GitHub Actions is not mentioned anywhere in the paper. The paper does not discuss CI/CD infrastructure or build automation tools.",
@@ -1000,7 +1000,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_005/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss GitHub Actions workflow outputs, CI/CD reports, or build status artifacts.",
@@ -1020,7 +1020,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_005/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention README badges, build status indicators, or repository documentation artifacts.",
@@ -1040,7 +1040,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/scope_drift",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/card/task_005/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate task card describes a software engineering/DevOps task (testing a GitHub Actions CI/CD workflow), which is entirely outside the scope of this scientific paper.",
@@ -1057,7 +1057,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/api-endpoint-communication/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/api-endpoint-communication/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "COSMIC complements compound class annotation tools such as CANOPUS45. COSMIC targets molecular structure annotations but annotates only a fraction of the compounds in a sample; in contrast, CANOPUS annotates practically all compounds in a sample for which fragmentation spectra have been measured but is restricted to annotating compound classes.",
       "asbval:note": "Paper mentions CANOPUS as a complementary tool for compound-class annotation but does not describe submitting data to remote SIRIUS web service endpoints or retrieving predictions via API. The paper focuses on COSMIC workflow using local SIRIUS 4 processing, not web service API communication. CANOPUS is mentioned only as a separate tool, not as part of a web service submission workflow.",
@@ -1077,7 +1077,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/api-endpoint-communication/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/api-endpoint-communication/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format.",
       "asbval:note": "Paper describes SIRIUS 4 as a local processing tool for LC\u2013MS/MS data, not as a framework for web service endpoint communication. No mention of SIRIUS providing web service endpoints or handling remote API submissions.",
@@ -1097,7 +1097,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/api-endpoint-communication/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/api-endpoint-communication/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "COSMIC complements compound class annotation tools such as CANOPUS45. COSMIC targets molecular structure annotations but annotates only a fraction of the compounds in a sample; in contrast, CANOPUS annotates practically all compounds in a sample for which fragmentation spectra have been measured but is restricted to annotating compound classes.",
       "asbval:note": "Paper mentions CANOPUS as a tool for compound-class annotation but does not describe it as a remote web service component or discuss API submission workflows. CANOPUS is referenced only as a complementary method to COSMIC, not as a web service with endpoint communication.",
@@ -1117,7 +1117,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/api-endpoint-communication/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/api-endpoint-communication/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "CSI:FingerID15, which is best-of-class among in silico methods18, does not rely on such information. Second, we have to separate correct and incorrect annotations, as is the case for library search or peptide annotation in shotgun proteomics; this allows one to concentrate downstream analysis on novel compounds most likely to be correctly annotated.",
       "asbval:note": "Paper extensively describes CSI:FingerID as an in silico method used within the COSMIC workflow for structure ranking, but does not describe it as a remote web service endpoint or discuss API submission. CSI:FingerID is used locally as part of SIRIUS processing, not as a separate web service to be called remotely.",
@@ -1137,7 +1137,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/build-badge-verification/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/build-badge-verification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper is about metabolomics structure annotation using the COSMIC workflow, CSI:FingerID, and SIRIUS. It contains no discussion of GitHub Actions, CI/CD pipelines, build workflows, status badges, or continuous integration practices. The research question describes a software engineering task entirely unrelated to the paper's scientific content.",
@@ -1157,7 +1157,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/build-badge-verification/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/build-badge-verification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper's scope is high-confidence structural annotation of metabolites absent from spectral libraries using the COSMIC workflow. No mention of GitHub Actions, CI/CD, build workflows, or artifact publishing pipelines appears in any passage.",
@@ -1177,7 +1177,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/build-badge-verification/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/build-badge-verification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GitHub Actions is not mentioned anywhere in the paper. The paper discusses COSMIC, CSI:FingerID, SIRIUS, and other metabolomics tools, but not GitHub Actions or CI/CD platforms.",
@@ -1197,7 +1197,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/build-badge-verification/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/build-badge-verification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs",
       "asbval:note": "SIRIUS is confirmed as a tool used in the paper (passage 14 and throughout), and the GitHub repository URL is plausible for SIRIUS. However, the claim that GitHub Actions is used for SIRIUS's build/publish workflow is not supported by the paper. The paper uses SIRIUS as a software tool for metabolomics analysis, not as a subject of CI/CD workflow verification.",
@@ -1217,7 +1217,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/build-badge-verification/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/build-badge-verification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss GitHub Actions, CI/CD workflows, build triggers, or workflow logs. This role description is entirely absent from the paper's content.",
@@ -1237,7 +1237,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/build-badge-verification/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/build-badge-verification/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format.",
       "asbval:note": "SIRIUS is confirmed as a tool used in the paper for processing LC\u2013MS/MS data.",
@@ -1257,7 +1257,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/build-badge-verification/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/build-badge-verification/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs",
       "asbval:note": "SIRIUS is confirmed in the paper, and the GitHub URL is plausible, but the paper does not mention or discuss the GitHub repository or any CI/CD aspects of SIRIUS development.",
@@ -1277,7 +1277,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/build-badge-verification/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/build-badge-verification/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes SIRIUS as a tool for processing LC\u2013MS/MS data and computing molecular formulas and fragmentation trees. It does not discuss SIRIUS as a 'target software framework being built and published by a workflow' or any CI/CD context. The role conflates SIRIUS's scientific function with a software engineering/deployment context not present in the paper.",
@@ -1297,7 +1297,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-pipeline-monitoring/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/ci-cd-pipeline-monitoring/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper is about metabolomics structure annotation (COSMIC workflow) and contains no discussion of CI/CD, GitHub Actions, build pipelines, or software deployment workflows. The paper focuses entirely on mass spectrometry data analysis and metabolite identification.",
@@ -1317,7 +1317,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-pipeline-monitoring/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/ci-cd-pipeline-monitoring/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GitHub Actions is not mentioned anywhere in the paper. The paper does not discuss CI/CD infrastructure or GitHub workflows.",
@@ -1337,7 +1337,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-pipeline-monitoring/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/ci-cd-pipeline-monitoring/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No workflow configuration files are mentioned in the paper. The paper does not discuss GitHub Actions workflow definitions.",
@@ -1357,7 +1357,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-pipeline-monitoring/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/ci-cd-pipeline-monitoring/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format.",
       "asbval:note": "SIRIUS is mentioned extensively in the paper, but only as a computational tool for metabolomics data processing (molecular formula determination and fragmentation tree analysis), not as software being built/published by a CI/CD pipeline. The paper uses SIRIUS as an analytical tool, not as a software project with deployment workflows.",
@@ -1377,7 +1377,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-pipeline-monitoring/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/ci-cd-pipeline-monitoring/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper contains no content related to CI/CD monitoring, GitHub Actions, build status tracking, or software deployment pipelines. The scope describes a software engineering task entirely absent from this metabolomics research paper.",
@@ -1397,7 +1397,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/compound-class-annotation-parsing/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/compound-class-annotation-parsing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "COSMIC complements compound class annotation tools such as CANOPUS. COSMIC targets molecular structure annotations but annotates only a fraction of the compounds in a sample; in contrast, CANOPUS annotates practically all compounds in a sample for which fragmentation spectra have been measured but is restricted to annotating compound classes.",
       "asbval:note": "Paper mentions CANOPUS as a complementary tool for compound-class annotation but does NOT describe parsing/validating CANOPUS web service results. The paper uses CANOPUS for compound class assignment (NPClassifier is mentioned for class assignment in Extended Data Fig. 10 context), but the specific task of parsing and validating CANOPUS web service JSON/tabular responses is not demonstrated or discussed in the paper. The card's research question describes a data-processing workflow that is not the focus of this paper.",
@@ -1417,7 +1417,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/compound-class-annotation-parsing/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/compound-class-annotation-parsing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe a workflow for parsing or validating CANOPUS web service responses. CANOPUS is mentioned only as a complementary tool to COSMIC for compound-class annotation. The paper focuses on COSMIC's confidence scoring for structural annotation, not on CANOPUS result parsing or validation.",
@@ -1437,7 +1437,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/compound-class-annotation-parsing/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/compound-class-annotation-parsing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "COSMIC complements compound class annotation tools such as CANOPUS.",
       "asbval:note": "CANOPUS is mentioned in the paper as a complementary tool for compound-class annotation, but the paper does not describe CANOPUS as a web service or discuss parsing its structured results. The paper's focus is on COSMIC, not on CANOPUS result parsing.",
@@ -1457,7 +1457,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/compound-class-annotation-parsing/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/compound-class-annotation-parsing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format.",
       "asbval:note": "Paper confirms SIRIUS is used for processing LC\u2013MS/MS data and mentions SIRIUS 4 in the context of feature detection and molecular formula determination. However, the paper does not explicitly state that SIRIUS integrates CANOPUS web service or handles CANOPUS result retrieval/display. The integration claim is not supported by the passages.",
@@ -1477,7 +1477,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/compound-class-annotation-parsing/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/compound-class-annotation-parsing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages insufficient to judge. The card does not explicitly list expected_outputs, but the research_question implies tabular/JSON output. The paper does not describe CANOPUS output formats or parsing workflows.",
@@ -1497,7 +1497,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/compound-class-annotation-parsing/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/compound-class-annotation-parsing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe methods for parsing or validating CANOPUS web service responses. The paper's methods focus on COSMIC confidence scoring, SIRIUS feature detection, and CSI:FingerID structure ranking\u2014not on CANOPUS result parsing.",
@@ -1517,7 +1517,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/de-novo-structure-candidate-ranking/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/de-novo-structure-candidate-ranking/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MSNovelist is not mentioned anywhere in the paper. The paper focuses on COSMIC workflow, which uses CSI:FingerID for structure ranking, not de-novo structure generation via MSNovelist. The paper does not describe a de-novo structure generation service.",
@@ -1537,7 +1537,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/de-novo-structure-candidate-ranking/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/de-novo-structure-candidate-ranking/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format... We use both isotope patterns and fragmentation patterns to determine the molecular formula de novo using SIRIUS 4 with default parameters and mass accuracy of 10 ppm. CSI:FingerID with default parameters was used to rank structure candidates.",
       "asbval:note": "Paper confirms SIRIUS performs molecular formula assignment and fragmentation tree computation, but does NOT integrate MSNovelist. Instead, SIRIUS integrates with CSI:FingerID for structure ranking.",
@@ -1557,7 +1557,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/de-novo-structure-candidate-ranking/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/de-novo-structure-candidate-ranking/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MSNovelist is not mentioned in any passage. The paper uses CSI:FingerID for structure ranking, not MSNovelist for de-novo structure generation.",
@@ -1577,7 +1577,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/de-novo-structure-candidate-ranking/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/de-novo-structure-candidate-ranking/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "CSI:FingerID with default parameters was used to rank structure candidates... For each fragmentation spectrum, COSMIC considers only the structure candidate that is top ranked by CSI:FingerID as an annotation",
       "asbval:note": "CSI:FingerID is used for structure ranking, but it is the PRIMARY tool, not a secondary validation tool for MSNovelist candidates. The paper does not describe it as validating MSNovelist predictions.",
@@ -1597,7 +1597,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/de-novo-structure-candidate-ranking/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/de-novo-structure-candidate-ranking/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "COSMIC complements compound class annotation tools such as CANOPUS. COSMIC targets molecular structure annotations but annotates only a fraction of the compounds in a sample; in contrast, CANOPUS annotates practically all compounds in a sample for which fragmentation spectra have been measured but is restricted to annotating compound classes.",
       "asbval:note": "CANOPUS is mentioned as a complementary tool to COSMIC, but NOT as a tool for filtering MSNovelist candidates. The paper describes CANOPUS as providing compound class annotations independently, not as a secondary filter for de-novo structure predictions.",
@@ -1617,7 +1617,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/de-novo-structure-candidate-ranking/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/de-novo-structure-candidate-ranking/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We use both isotope patterns and fragmentation patterns to determine the molecular formula de novo using SIRIUS 4 with default parameters and mass accuracy of 10 ppm. CSI:FingerID with default parameters was used to rank structure candidates.",
       "asbval:note": "The paper confirms SIRIUS assigns molecular formula and computes fragmentation tree, but the downstream step is CSI:FingerID structure ranking, not MSNovelist de-novo generation.",
@@ -1637,7 +1637,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-workflow-execution/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/github-actions-workflow-execution/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about metabolomics structure annotation (COSMIC workflow for MS/MS data). No mention of GitHub Actions, CI/CD pipelines, workflow execution, or repository badges. This claim is entirely outside the paper's scope.",
@@ -1657,7 +1657,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-workflow-execution/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/github-actions-workflow-execution/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper contains no discussion of GitHub Actions, CI/CD pipelines, workflow execution, or software engineering practices. The scope describes a software engineering task unrelated to the paper's metabolomics research.",
@@ -1677,7 +1677,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-workflow-execution/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/github-actions-workflow-execution/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Title refers to GitHub Actions workflow execution, which is not discussed in the paper.",
@@ -1697,7 +1697,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-workflow-execution/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/github-actions-workflow-execution/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GitHub Actions is not mentioned anywhere in the paper. The paper focuses on metabolomics analysis tools (COSMIC, CSI:FingerID, SIRIUS) not software engineering CI/CD tools.",
@@ -1717,7 +1717,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-workflow-execution/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/github-actions-workflow-execution/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format.",
       "asbval:note": "SIRIUS is confirmed as a tool used in the paper for LC-MS/MS data analysis (passage 14). However, the claim about 'Build and Publish workflow' automating compilation and distribution is not mentioned in the paper. The paper uses SIRIUS as an analysis tool, not as a subject of GitHub Actions workflow testing. The card conflates SIRIUS (the scientific software) with a hypothetical CI/CD workflow for SIRIUS development, which is not discussed in this paper.",
@@ -1737,7 +1737,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hierarchical-spectrum-object-construction/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/hierarchical-spectrum-object-construction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format. Feature detection in SIRIUS 4 is similar in spirit to a targeted analysis. Instead of searching for all features in a run, SIRIUS first collects all fragmentation spectra and their precursor information and then searches for features that are associated with those fragmentation spectra (precursor ions, adduct ions and isotope peaks).",
       "asbval:note": "Paper describes SIRIUS processing LC-MS/MS data and organizing spectra with precursor/fragment information, but does not explicitly detail 'hierarchical spectrum object construction' or 'in-memory data structures' as a discrete task. The paper uses SIRIUS as a tool for processing but does not frame spectrum object construction as a standalone skill or workflow step.",
@@ -1757,7 +1757,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hierarchical-spectrum-object-construction/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/hierarchical-spectrum-object-construction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Fragmentation spectra assigned to the same feature (precursor ion) are merged using an agglomerative clustering algorithm based on cosine distance... We use both isotope patterns and fragmentation patterns to determine the molecular formula de novo using SIRIUS 4 with default parameters and mass accuracy of 10 ppm.",
       "asbval:note": "Paper confirms SIRIUS preserves precursor ion, fragmentation spectra, collision energy (via merged spectra at different energies), and mass accuracy (10 ppm).",
@@ -1777,7 +1777,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hierarchical-spectrum-object-construction/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/hierarchical-spectrum-object-construction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format.",
       "asbval:note": "Paper explicitly confirms mzML and mzXML format support in SIRIUS.",
@@ -1797,7 +1797,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hierarchical-spectrum-object-construction/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/hierarchical-spectrum-object-construction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We use both isotope patterns and fragmentation patterns to determine the molecular formula de novo using SIRIUS 4 with default parameters and mass accuracy of 10 ppm. CSI:FingerID with default parameters was used to rank structure candidates.",
       "asbval:note": "Paper confirms SIRIUS performs fragmentation tree computation, isotope pattern analysis, and molecular formula determination as core functions.",
@@ -1817,7 +1817,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hierarchical-spectrum-object-construction/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/hierarchical-spectrum-object-construction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LC\u2013MS runs containing spectra in profiled mode were discarded... Compounds with mass beyond 700 Da were discarded to avoid high running time.",
       "asbval:note": "Paper describes quality filtering (profiled mode exclusion, mass range filtering) but does not explicitly frame 'non-zero ion counts' as a quality check step. Mass range validation is confirmed.",
@@ -1837,7 +1837,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hierarchical-spectrum-object-construction/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/hierarchical-spectrum-object-construction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format. Feature detection in SIRIUS 4 is similar in spirit to a targeted analysis.",
       "asbval:note": "SIRIUS is confirmed as the tool used for LC-MS/MS data processing and spectrum organization.",
@@ -1857,7 +1857,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hierarchical-spectrum-object-construction/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/hierarchical-spectrum-object-construction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format. Feature detection in SIRIUS 4 is similar in spirit to a targeted analysis. Instead of searching for all features in a run, SIRIUS first collects all fragmentation spectra and their precursor information and then searches for features that are associated with those fragmentation spectra (precursor ions, adduct ions and isotope peaks). Adducts and isotopes were detected using predefined lists of mass differences. Fragmentation spectra assigned to the same feature (precursor ion) are merged using an agglomerative clustering algorithm based on cosine distance.",
       "asbval:note": "Paper confirms SIRIUS ingests, parses, and organizes LC-MS/MS data with hierarchical feature/spectrum organization. However, paper does not explicitly confirm SIRIUS is a 'Java framework' or detail its serialization format\u2014these are implementation details not discussed in the paper.",
@@ -1877,7 +1877,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-metadata-validation/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/mass-spectrometry-metadata-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format. Feature detection in SIRIUS 4 is similar in spirit to a targeted analysis. Instead of searching for all features in a run, SIRIUS first collects all fragmentation spectra and their precursor information and then searches for features that are associated with those fragmentation spectra (precursor ions, adduct ions and isotope peaks). Adducts and isotopes were detected using predefined lists of mass differences.",
       "asbval:note": "Paper describes SIRIUS processing mzML/mzXML files and detecting precursor ions, adducts, isotopes, and collision energies, but does NOT describe explicit validation/quality-checking of metadata ranges or completeness checks before downstream analysis. The paper focuses on feature detection and molecular formula determination, not metadata validation as a standalone task.",
@@ -1897,7 +1897,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-metadata-validation/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/mass-spectrometry-metadata-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format... We use both isotope patterns and fragmentation patterns to determine the molecular formula de novo using SIRIUS 4 with default parameters and mass accuracy of 10 ppm.",
       "asbval:note": "Paper confirms SIRIUS ingests mzML/mzXML, constructs fragmentation trees, and determines molecular formulas. However, the paper does NOT emphasize metadata validation as a primary function; instead it focuses on molecular formula determination and fragmentation tree computation. The card overstates the validation role.",
@@ -1917,7 +1917,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-metadata-validation/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/mass-spectrometry-metadata-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "CSI:FingerID with default parameters was used to rank structure candidates... For confidence score computation, we restrict the candidate list to those candidates with the same molecular formula as the highest-scoring candidate (hit).",
       "asbval:note": "Paper confirms CSI:FingerID receives fragmentation trees and molecular formulas from SIRIUS and performs structure database matching.",
@@ -1937,7 +1937,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-metadata-validation/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/mass-spectrometry-metadata-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "COSMIC complements compound class annotation tools such as CANOPUS45. COSMIC targets molecular structure annotations but annotates only a fraction of the compounds in a sample; in contrast, CANOPUS annotates practically all compounds in a sample for which fragmentation spectra have been measured but is restricted to annotating compound classes.",
       "asbval:note": "Paper mentions CANOPUS assigns compound classes but does NOT describe it receiving validated fragmentation patterns from SIRIUS or being part of the COSMIC workflow. CANOPUS is mentioned only as a complementary tool, not as a downstream consumer of SIRIUS output in this paper's workflow.",
@@ -1957,7 +1957,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-metadata-validation/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/mass-spectrometry-metadata-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format... We use both isotope patterns and fragmentation patterns to determine the molecular formula de novo using SIRIUS 4 with default parameters and mass accuracy of 10 ppm. CSI:FingerID with default parameters was used to rank structure candidates.",
       "asbval:note": "Paper describes SIRIUS processing and CSI:FingerID use, but does NOT describe a metadata validation step as a distinct task between data import and downstream analysis. The workflow proceeds directly from SIRIUS processing to CSI:FingerID without explicit validation checkpoints described.",
@@ -1977,7 +1977,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-query-formulation/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/mass-spectrometry-query-formulation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MSNovelist is not mentioned anywhere in the paper. The paper focuses on COSMIC workflow, which uses SIRIUS and CSI:FingerID for structure annotation, not MSNovelist for de-novo structure generation. No REST API query payload construction for MSNovelist is discussed.",
@@ -1997,7 +1997,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-query-formulation/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/mass-spectrometry-query-formulation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format. Feature detection in SIRIUS 4 is similar in spirit to a targeted analysis. Instead of searching for all features in a run, SIRIUS first collects all fragmentation spectra and their precursor information and then searches for features that are associated with those fragmentation spectra (precursor ions, adduct ions and isotope peaks).",
       "asbval:note": "Paper uses SIRIUS to process LC-MS/MS data, but does not describe REST API query payload construction or MSNovelist. SIRIUS is used for molecular formula determination and feature detection, not de-novo structure generation via REST API.",
@@ -2017,7 +2017,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-query-formulation/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/mass-spectrometry-query-formulation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format... We use both isotope patterns and fragmentation patterns to determine the molecular formula de novo using SIRIUS 4 with default parameters and mass accuracy of 10 ppm. CSI:FingerID with default parameters was used to rank structure candidates.",
       "asbval:note": "Paper uses SIRIUS for molecular formula determination and feature detection, not as a REST API endpoint provider for MSNovelist. The actual structure ranking is performed by CSI:FingerID, not MSNovelist.",
@@ -2037,7 +2037,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-query-formulation/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/mass-spectrometry-query-formulation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MSNovelist is not mentioned in the paper at all. The paper uses CSI:FingerID for structure ranking and candidate generation, not MSNovelist. CSI:FingerID is described as transforming query spectrum into structure information and searching in structure databases.",
@@ -2057,7 +2057,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-query-formulation/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/mass-spectrometry-query-formulation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Untargeted metabolomics experiments rely on spectral libraries for structure annotation, but, typically, only a small fraction of spectra can be matched... Here we introduce the COSMIC workflow that combines in silico structure database generation and annotation with a confidence score consisting of kernel density P value estimation and a support vector machine with enforced directionality of features.",
       "asbval:note": "The paper does address the problem of annotating metabolites absent from spectral libraries using high-resolution MS/MS data, but the solution is COSMIC (combining SIRIUS, CSI:FingerID, and confidence scoring), not MSNovelist-based query formulation.",
@@ -2077,7 +2077,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-parsing/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/molecular-fingerprint-parsing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "CSI:FingerID15, which is best-of-class among in silico methods18, does not rely on such information... we present the COSMIC (Confidence Of Small Molecule IdentifiCations) workflow that combines selection or generation of a structure database, searching in the structure database with CSI:FingerID and a confidence score to differentiate between correct and incorrect annotations.",
       "asbval:note": "Paper uses CSI:FingerID for fingerprint-based structure ranking and annotation, but the primary focus is on COSMIC's confidence scoring layer applied to CSI:FingerID outputs, not on parsing CSI:FingerID web service responses per se. The paper does not describe a task of extracting and parsing raw fingerprint predictions from a web service endpoint.",
@@ -2097,7 +2097,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-parsing/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/molecular-fingerprint-parsing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Structure annotation of fragmentation spectra through CSI:FingerID; only the candidate that is top ranked by CSI:FingerID is considered... CSI:FingerID with default parameters was used to rank structure candidates.",
       "asbval:note": "CSI:FingerID is confirmed as a tool used for ranking structure candidates based on spectrum queries. The paper describes it as a method that predicts molecular fingerprints and ranks candidates.",
@@ -2117,7 +2117,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-parsing/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/molecular-fingerprint-parsing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Data processing through SIRIUS... SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format... We use both isotope patterns and fragmentation patterns to determine the molecular formula de novo using SIRIUS 4 with default parameters and mass accuracy of 10 ppm. CSI:FingerID with default parameters was used to rank structure candidates.",
       "asbval:note": "SIRIUS is confirmed as the framework that processes spectra and integrates with CSI:FingerID for fingerprint-based ranking. The paper describes SIRIUS as the preprocessing step before CSI:FingerID is applied.",
@@ -2137,7 +2137,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-parsing/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/molecular-fingerprint-parsing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Notably, COSMIC complements compound class annotation tools such as CANOPUS45. COSMIC targets molecular structure annotations but annotates only a fraction of the compounds in a sample; in contrast, CANOPUS annotates practically all compounds in a sample for which fragmentation spectra have been measured but is restricted to annotating compound classes.",
       "asbval:note": "CANOPUS is mentioned as a complementary tool that uses fingerprint-based information for chemical classification. The paper confirms CANOPUS consumes fingerprint predictions for compound class annotation.",
@@ -2157,7 +2157,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-parsing/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/molecular-fingerprint-parsing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "COSMIC's confidence score combines E-value estimation and a linear support vector machine (SVM) with enforced directionality... Besides the calibrated score, COSMIC's confidence score uses features such as score differences to other candidates, the total peak intensity explained by the fragmentation tree and the cardinality of the molecular fingerprints",
       "asbval:note": "The paper describes extracting and using fingerprint cardinality and other features from CSI:FingerID outputs, but the primary task is not parsing web service responses\u2014it is building a confidence scoring layer (COSMIC) on top of CSI:FingerID rankings. The paper does not focus on the mechanics of parsing raw JSON responses from a web service endpoint.",
@@ -2177,7 +2177,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-parsing/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/molecular-fingerprint-parsing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For each fragmentation spectrum, COSMIC considers only the structure candidate that is top ranked by CSI:FingerID as an annotation... CSI:FingerID with default parameters was used to rank structure candidates.",
       "asbval:note": "The paper describes using CSI:FingerID outputs for structure annotation and downstream analysis, but does not explicitly describe a workflow of parsing JSON responses from a web service. The paper focuses on COSMIC's confidence scoring applied to CSI:FingerID results, not on the parsing task itself.",
@@ -2197,7 +2197,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-parsing/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/molecular-fingerprint-parsing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MSNovelist is not mentioned anywhere in the paper. The paper does not discuss de novo structure generation or MSNovelist as an alternative tool.",
@@ -2217,7 +2217,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/release-branch-management/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/release-branch-management/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper is about metabolomics structure annotation (COSMIC workflow for small molecule identification). It contains no discussion of CI/CD workflows, release branch management, GitHub Actions, build pipelines, or software distribution. The research question describes a software engineering task entirely unrelated to the paper's content.",
@@ -2237,7 +2237,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/release-branch-management/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/release-branch-management/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GitHub Actions is not mentioned anywhere in the paper. The paper does not discuss CI/CD platforms, build workflows, or GitHub infrastructure.",
@@ -2257,7 +2257,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/release-branch-management/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/release-branch-management/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format.",
       "asbval:note": "SIRIUS is mentioned in the paper as a tool used for metabolomics data processing (molecular formula determination and feature detection), not as a software project undergoing CI/CD testing or binary distribution. The paper uses SIRIUS as a dependency in the COSMIC workflow, not as the subject of release branch management.",
@@ -2277,7 +2277,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-administration/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/repository-administration/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper is about COSMIC, a metabolomics annotation workflow combining in silico structure database generation with confidence scoring. It does not discuss CI/CD pipelines, GitHub Actions, build automation, or repository administration. The research question is entirely unrelated to the paper's content.",
@@ -2297,7 +2297,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-administration/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/repository-administration/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GitHub Actions is not mentioned anywhere in the paper. The paper does not discuss CI/CD infrastructure or build automation tools.",
@@ -2317,7 +2317,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-administration/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/repository-administration/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format.",
       "asbval:note": "SIRIUS is mentioned in the paper as a tool used for processing LC\u2013MS/MS data (feature detection, molecular formula determination), not as a software framework being built and distributed via CI/CD. The paper uses SIRIUS as an input tool within the COSMIC workflow, not as the subject of build/distribution management.",
@@ -2337,7 +2337,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-administration/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/repository-administration/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper's scope is metabolomics structure annotation using the COSMIC workflow. It does not address repository administration, CI/CD pipelines, or build verification.",
@@ -2357,7 +2357,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sirius-spectral-request-construction/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/sirius-spectral-request-construction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "CSI:FingerID15, which is best-of-class among in silico methods18, does not rely on such information... we present the COSMIC (Confidence Of Small Molecule IdentifiCations) workflow that combines selection or generation of a structure database, searching in the structure database with CSI:FingerID and a confidence score",
       "asbval:note": "Paper uses CSI:FingerID as a core component but does not describe or document the web service API specification, HTTP POST request construction, or payload formatting. The paper integrates CSI:FingerID via SIRIUS 4 for structure annotation but does not detail the mechanics of request construction or API specification conformance.",
@@ -2377,7 +2377,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sirius-spectral-request-construction/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/sirius-spectral-request-construction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs... CSI:FingerID with default parameters was used to rank structure candidates... Data processing through SIRIUS... Structure annotation of fragmentation spectra through CSI:FingerID",
       "asbval:note": "Paper confirms SIRIUS 4 is used to process LC-MS/MS data and dispatch to CSI:FingerID, but does not document SIRIUS as providing API specification or managing HTTP communication details. The paper treats SIRIUS and CSI:FingerID as integrated components but does not expose the web service request/response mechanics.",
@@ -2397,7 +2397,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sirius-spectral-request-construction/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/sirius-spectral-request-construction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "CSI:FingerID15, which is best-of-class among in silico methods18... we use an SVM to classify whether a hit is correct. Besides the calibrated score, COSMIC's confidence score uses features such as score differences to other candidates, the total peak intensity explained by the fragmentation tree and the cardinality of the molecular fingerprints",
       "asbval:note": "Paper confirms CSI:FingerID receives spectrum queries and returns fingerprint predictions with confidence metrics (via SVM-based confidence scoring).",
@@ -2417,7 +2417,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sirius-spectral-request-construction/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/sirius-spectral-request-construction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "COSMIC complements compound class annotation tools such as CANOPUS45. COSMIC targets molecular structure annotations but annotates only a fraction of the compounds in a sample; in contrast, CANOPUS annotates practically all compounds in a sample for which fragmentation spectra have been measured but is restricted to annotating compound classes.",
       "asbval:note": "Paper mentions CANOPUS as a complementary tool for compound class annotation but does not describe CANOPUS as receiving CSI:FingerID fingerprint predictions as input. CANOPUS is presented as an alternative workflow, not as a downstream consumer of CSI:FingerID output in the COSMIC pipeline.",
@@ -2437,7 +2437,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sirius-spectral-request-construction/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/sirius-spectral-request-construction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For each fragmentation spectrum, COSMIC considers only the structure candidate that is top ranked by CSI:FingerID as an annotation... We use both isotope patterns and fragmentation patterns to determine the molecular formula de novo using SIRIUS 4 with default parameters and mass accuracy of 10 ppm. CSI:FingerID with default parameters was used to rank structure candidates.",
       "asbval:note": "Paper confirms the workflow uses processed LC-MS/MS data (precursor m/z, collision energy, fragment peaks) and queries CSI:FingerID for fingerprint-based structure ranking as part of automated metabolite identification.",
@@ -2457,7 +2457,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sirius-spectral-request-construction/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/sirius-spectral-request-construction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention licensing, academic credentials, or Bright Giant GmbH. No evidence of licensing restrictions or commercial access models in the provided passages.",
@@ -2477,7 +2477,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sirius-spectral-request-construction/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/sirius-spectral-request-construction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention MSNovelist or discuss de novo structure generation as an alternative. COSMIC uses CSI:FingerID for fingerprint-based structure ranking from a database, not de novo generation.",
@@ -2497,7 +2497,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-format-parsing/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectral-data-format-parsing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format. Feature detection in SIRIUS 4 is similar in spirit to a targeted analysis. Instead of searching for all features in a run, SIRIUS first collects all fragmentation spectra and their precursor information and then searches for features that are associated with those fragmentation spectra (precursor ions, adduct ions and isotope peaks).",
       "asbval:note": "Paper confirms SIRIUS processes mzML/mzXML formats and constructs indexed MS1/MS/MS hierarchies. However, the card's framing as a standalone 'skill' for format parsing is not how the paper presents it\u2014SIRIUS is used as part of the COSMIC workflow for molecular formula determination and structure annotation, not as a dedicated parsing utility. The parsing is a component of a larger pipeline, not an isolated task.",
@@ -2517,7 +2517,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-format-parsing/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectral-data-format-parsing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format.",
       "asbval:note": "SIRIUS is confirmed as the tool used for processing mzML/mzXML files. The paper describes it as handling feature detection, spectrum collection, and precursor information extraction, consistent with the card's description of data importer and spectrum object construction.",
@@ -2537,7 +2537,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-format-parsing/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectral-data-format-parsing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format. We use both isotope patterns and fragmentation patterns to determine the molecular formula de novo using SIRIUS 4 with default parameters and mass accuracy of 10 ppm. CSI:FingerID with default parameters was used to rank structure candidates.",
       "asbval:note": "Paper confirms SIRIUS processes mzML/mzXML files and feeds into downstream fragmentation tree computation and structure prediction (via CSI:FingerID). Scope alignment is strong.",
@@ -2557,7 +2557,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-format-parsing/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectral-data-format-parsing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Only files with extensions '.mzML' or '.mzXML' were considered, and LC\u2013MS runs containing spectra in profiled mode were discarded.",
       "asbval:note": "Paper confirms that raw file formats (mzML, mzXML) are the input; processed or profiled-mode data are explicitly excluded. This supports the 'when NOT to use' guidance.",
@@ -2577,7 +2577,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-format-parsing/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectral-data-format-parsing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection in SIRIUS 4 is similar in spirit to a targeted analysis. Instead of searching for all features in a run, SIRIUS first collects all fragmentation spectra and their precursor information and then searches for features that are associated with those fragmentation spectra (precursor ions, adduct ions and isotope peaks).",
       "asbval:note": "Paper confirms SIRIUS expects full LC-MS/MS hierarchies with MS1 context (precursor ions, isotope peaks) linked to MS/MS spectra, not isolated peak matrices.",
@@ -2597,7 +2597,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-fingerprint-web-service-query/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectral-fingerprint-web-service-query/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "COSMIC complements compound class annotation tools such as CANOPUS45",
       "asbval:note": "Paper mentions CANOPUS as a complementary tool for compound class annotation but does not describe querying CANOPUS web service with fingerprints or spectra. The paper focuses on COSMIC's structure annotation workflow, not CANOPUS usage. CANOPUS is mentioned only in passing as a tool that annotates compound classes (not structures), which is a different task than what the card describes.",
@@ -2617,7 +2617,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-fingerprint-web-service-query/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectral-fingerprint-web-service-query/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe remote submission workflows or web service APIs for CANOPUS. The paper uses SIRIUS 4 locally for processing LC-MS/MS data and CSI:FingerID for structure annotation, but does not document CANOPUS web service submission procedures.",
@@ -2637,7 +2637,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-fingerprint-web-service-query/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectral-fingerprint-web-service-query/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format",
       "asbval:note": "Paper confirms SIRIUS 4 is used for processing LC-MS/MS data and feature detection, but does not describe it as a framework integrating CANOPUS or document GUI/CLI for web service submission. The paper uses SIRIUS for local processing, not as a web service submission interface.",
@@ -2657,7 +2657,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-fingerprint-web-service-query/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectral-fingerprint-web-service-query/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "CSI:FingerID15, which is best-of-class among in silico methods18, does not rely on such information. Second, we have to separate correct and incorrect annotations... CSI:FingerID with default parameters was used to rank structure candidates.",
       "asbval:note": "Paper confirms CSI:FingerID retrieves candidate structures from databases and generates fingerprints, but does not describe it as providing fingerprints as input to CANOPUS. The paper uses CSI:FingerID for structure ranking, not as a fingerprint source for CANOPUS.",
@@ -2677,7 +2677,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-fingerprint-web-service-query/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectral-fingerprint-web-service-query/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "COSMIC complements compound class annotation tools such as CANOPUS45",
       "asbval:note": "Paper confirms CANOPUS exists as a compound class annotation tool, though it is not the focus of the COSMIC paper.",
@@ -2697,7 +2697,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-fingerprint-web-service-query/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectral-fingerprint-web-service-query/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "COSMIC targets molecular structure annotations but annotates only a fraction of the compounds in a sample; in contrast, CANOPUS annotates practically all compounds in a sample for which fragmentation spectra have been measured but is restricted to annotating compound classes.",
       "asbval:note": "Paper confirms CANOPUS annotates compound classes with confidence, but the card's task is about querying CANOPUS as a web service, which is not demonstrated in this paper. The paper uses COSMIC for structure annotation, not CANOPUS for class prediction.",
@@ -2717,7 +2717,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-fingerprint-web-service-query/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectral-fingerprint-web-service-query/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "CANOPUS annotates practically all compounds in a sample for which fragmentation spectra have been measured but is restricted to annotating compound classes",
       "asbval:note": "Paper confirms CANOPUS is restricted to compound class annotation, not structure identification.",
@@ -2737,7 +2737,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-json-parsing/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectral-json-parsing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MSNovelist is not mentioned anywhere in the paper. The paper focuses on COSMIC workflow, which uses CSI:FingerID for structure annotation, not MSNovelist. No JSON parsing of MSNovelist responses is discussed.",
@@ -2757,7 +2757,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-json-parsing/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectral-json-parsing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MSNovelist is not mentioned in the paper. The paper uses CSI:FingerID for structure ranking and annotation, not MSNovelist.",
@@ -2777,7 +2777,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-json-parsing/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectral-json-parsing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format... We use both isotope patterns and fragmentation patterns to determine the molecular formula de novo using SIRIUS 4 with default parameters and mass accuracy of 10 ppm. CSI:FingerID with default parameters was used to rank structure candidates.",
       "asbval:note": "Paper confirms SIRIUS is used for molecular formula determination and integrates with CSI:FingerID (not MSNovelist) for structure ranking. The card's claim about MSNovelist integration is not supported; SIRIUS integrates with CSI:FingerID instead.",
@@ -2797,7 +2797,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-json-parsing/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectral-json-parsing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "RDKit is not mentioned in the paper. The paper uses PubChem standardization for structure standardization, not RDKit.",
@@ -2817,7 +2817,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-json-parsing/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectral-json-parsing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe submitting spectra to MSNovelist or parsing MSNovelist JSON responses. The workflow uses SIRIUS for molecular formula determination and CSI:FingerID for structure ranking.",
@@ -2837,7 +2837,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-query-formatting/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectrum-query-formatting/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "CSI:FingerID with default parameters was used to rank structure candidates... SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format.",
       "asbval:note": "Paper describes SIRIUS 4 processing LC-MS/MS data and CSI:FingerID ranking candidates, but does not explicitly detail the API payload formatting or web service request encoding. The paper focuses on the workflow output (confidence scoring) rather than the mechanics of spectrum query formatting for the web service.",
@@ -2857,7 +2857,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-query-formatting/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectrum-query-formatting/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format. Feature detection in SIRIUS 4 is similar in spirit to a targeted analysis... CSI:FingerID with default parameters was used to rank structure candidates.",
       "asbval:note": "Paper confirms SIRIUS 4 processes LC-MS/MS data and integrates with CSI:FingerID, but does not explicitly describe SIRIUS as a 'web service gateway' managing 'HTTP POST dispatch' or providing 'API specification for payload formatting.' The paper describes SIRIUS as a processing tool, not as a web service API specification provider.",
@@ -2877,7 +2877,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-query-formatting/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectrum-query-formatting/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "CSI:FingerID with default parameters was used to rank structure candidates... COSMIC's confidence score combines E-value estimation and a linear support vector machine (SVM)... Besides (calibrated) CSI:FingerID scores, score differences between hit and runner-up and the number of candidates turned out to be highly important features.",
       "asbval:note": "Paper confirms CSI:FingerID accepts spectrum queries and returns ranked candidates with scores used in confidence estimation.",
@@ -2897,7 +2897,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-query-formatting/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectrum-query-formatting/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We use both isotope patterns and fragmentation patterns to determine the molecular formula de novo using SIRIUS 4 with default parameters and mass accuracy of 10 ppm. CSI:FingerID with default parameters was used to rank structure candidates.",
       "asbval:note": "Paper describes the workflow of processing LC-MS/MS data (with precursor m/z, collision energy, fragment peaks) through SIRIUS and into CSI:FingerID for molecular fingerprint prediction as part of metabolite identification.",
@@ -2917,7 +2917,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-query-formatting/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectrum-query-formatting/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We use both isotope patterns and fragmentation patterns to determine the molecular formula de novo using SIRIUS 4 with default parameters and mass accuracy of 10 ppm.",
       "asbval:note": "Paper specifies 10 ppm mass accuracy requirement, implying high-resolution data is needed, but does not explicitly state that low-resolution data should not be used or that CSI:FingerID requires high-resolution MS.",
@@ -2937,7 +2937,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-query-formatting/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectrum-query-formatting/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper passages do not contain any reference to SIRIUS README, licensing terms, or commercial use restrictions. This claim cannot be verified from the provided passages.",
@@ -2957,7 +2957,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-result-validation/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/structured-result-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "COSMIC complements compound class annotation tools such as CANOPUS45. COSMIC targets molecular structure annotations but annotates only a fraction of the compounds in a sample; in contrast, CANOPUS annotates practically all compounds in a sample for which fragmentation spectra have been measured but is restricted to annotating compound classes.",
       "asbval:note": "Paper mentions CANOPUS as a complementary tool for compound-class annotation but does NOT describe validation of CANOPUS results, schema conformance checking, or data integrity validation workflows. The paper uses CANOPUS for compound class assignment (Extended Data Fig. 10: 'Compound classes in Extended Data Fig. 10 were assigned by NPClassifier89') but does not discuss validating CANOPUS web service responses or checking for required fields/schemas. The card's research question focuses on validation of web service results; the paper does not address this validation task.",
@@ -2977,7 +2977,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-result-validation/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/structured-result-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "COSMIC complements compound class annotation tools such as CANOPUS45.",
       "asbval:note": "Paper confirms CANOPUS exists and is used for compound-class annotation, but does NOT describe CANOPUS as a web service accepting fingerprint/spectrum queries or returning structured results to be validated. The paper does not detail CANOPUS's input/output interface or validation workflows. CANOPUS is mentioned only as a complementary tool, not as the subject of validation procedures.",
@@ -2997,7 +2997,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-result-validation/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/structured-result-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format.",
       "asbval:note": "Paper confirms SIRIUS is used (SIRIUS 4 specifically) and is Java-based, but does NOT describe SIRIUS as submitting queries to CANOPUS or performing result validation before displaying annotations. The paper describes SIRIUS's role in feature detection, molecular formula determination, and CSI:FingerID ranking, but not integration with CANOPUS or validation of CANOPUS results. The card's claim about SIRIUS-CANOPUS integration and validation is not supported by the paper.",
@@ -3017,7 +3017,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-result-validation/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/structured-result-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe any validation workflow for CANOPUS results, schema checking, or field conformance verification. The paper focuses on COSMIC's confidence scoring for structure annotation, not on validating compound-class predictions from CANOPUS. No passages discuss data integrity validation, schema validation, or malformed-result detection for web service responses.",
@@ -3037,7 +3037,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vendor-format-to-standard-conversion/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/vendor-format-to-standard-conversion/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format. Feature detection in SIRIUS 4 is similar in spirit to a targeted analysis. Instead of searching for all features in a run, SIRIUS first collects all fragmentation spectra and their precursor information and then searches for features that are associated with those fragmentation spectra (precursor ions, adduct ions and isotope peaks).",
       "asbval:note": "Paper confirms SIRIUS processes mzML/mzXML formats and constructs intermediate representations (fragmentation spectra, precursor info, features). However, the card's framing of 'vendor-format-to-standard-conversion' as a standalone task is not the paper's focus. The paper uses SIRIUS for this as part of the larger COSMIC workflow for metabolite annotation, not as an isolated data conversion step. The card abstracts this as a generic conversion task; the paper treats it as integral to structure annotation.",
@@ -3057,7 +3057,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vendor-format-to-standard-conversion/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/vendor-format-to-standard-conversion/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format. Feature detection in SIRIUS 4 is similar in spirit to a targeted analysis. Instead of searching for all features in a run, SIRIUS first collects all fragmentation spectra and their precursor information and then searches for features that are associated with those fragmentation spectra (precursor ions, adduct ions and isotope peaks). Adducts and isotopes were detected using predefined lists of mass differences.",
       "asbval:note": "SIRIUS 4 is confirmed to parse mzML/mzXML, collect fragmentation spectra, detect precursor ions, adducts, and isotopes, and construct in-memory representations. The description aligns with the card's characterization of SIRIUS's role.",
@@ -3077,7 +3077,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vendor-format-to-standard-conversion/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/vendor-format-to-standard-conversion/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We use both isotope patterns and fragmentation patterns to determine the molecular formula de novo using SIRIUS 4 with default parameters and mass accuracy of 10 ppm. CSI:FingerID with default parameters was used to rank structure candidates.",
       "asbval:note": "Paper confirms SIRIUS is used to prepare LC-MS/MS data for molecular formula determination and downstream structure annotation (via CSI:FingerID). Fragmentation tree computation is also mentioned as a key SIRIUS function.",
@@ -3097,7 +3097,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vendor-format-to-standard-conversion/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/vendor-format-to-standard-conversion/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not discuss exclusion criteria or when NOT to use SIRIUS for format conversion. Cannot verify this negative scope claim.",
@@ -3117,7 +3117,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vendor-format-to-standard-conversion/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/vendor-format-to-standard-conversion/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not discuss prior conversion or re-processing scenarios. Cannot verify this negative scope claim.",
@@ -3137,7 +3137,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vendor-format-to-standard-conversion/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/vendor-format-to-standard-conversion/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages focus on MS/MS data and do not discuss single-stage MS or isotope-only workflows. Cannot verify this negative scope claim.",
@@ -3157,7 +3157,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-service-api-integration/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/web-service-api-integration/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs and MassIVE datasets provided in mzML or mzXML format... CSI:FingerID with default parameters was used to rank structure candidates.",
       "asbval:note": "Paper uses SIRIUS 4 and CSI:FingerID but does not describe HTTP POST requests, JSON response parsing, or web service API integration. The paper uses SIRIUS as a command-line/integrated tool, not as a programmatic web service client. MSNovelist is not mentioned in the paper. CANOPUS is mentioned only as a complementary tool: 'COSMIC complements compound class annotation tools such as CANOPUS' but is not used in the workflow.",
@@ -3177,7 +3177,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-service-api-integration/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/web-service-api-integration/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SIRIUS 4 was used to process LC\u2013MS/MS runs... CSI:FingerID with default parameters was used to rank structure candidates.",
       "asbval:note": "Paper confirms SIRIUS 4 is used for LC-MS/MS analysis and integrates CSI:FingerID. However, the paper does not describe SIRIUS as a web service dispatcher or discuss HTTP POST requests. MSNovelist is not mentioned. CANOPUS is mentioned as a separate complementary tool, not integrated into the COSMIC workflow.",
@@ -3197,7 +3197,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-service-api-integration/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/web-service-api-integration/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "CSI:FingerID with default parameters was used to rank structure candidates... COSMIC's confidence score combines E-value estimation and a linear support vector machine (SVM) with enforced directionality... Besides the calibrated score, COSMIC's confidence score uses features such as score differences to other candidates, the total peak intensity explained by the fragmentation tree and the cardinality of the molecular fingerprints.",
       "asbval:note": "CSI:FingerID is confirmed as a tool for molecular fingerprint prediction integrated into SIRIUS workflow.",
@@ -3217,7 +3217,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-service-api-integration/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/web-service-api-integration/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MSNovelist is not mentioned anywhere in the paper. The paper does not discuss de-novo structure generation as a separate tool; instead, it uses CSI:FingerID for structure ranking from a database.",
@@ -3237,7 +3237,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-service-api-integration/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/web-service-api-integration/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "COSMIC complements compound class annotation tools such as CANOPUS. COSMIC targets molecular structure annotations but annotates only a fraction of the compounds in a sample; in contrast, CANOPUS annotates practically all compounds in a sample for which fragmentation spectra have been measured but is restricted to annotating compound classes.",
       "asbval:note": "CANOPUS is mentioned as a complementary tool for chemical classification, but it is not integrated into the COSMIC workflow and is not used in the paper's analyses. The paper does not describe CANOPUS as part of SIRIUS or discuss its use.",
@@ -3257,7 +3257,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-service-api-integration/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/web-service-api-integration/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For each fragmentation spectrum, COSMIC considers only the structure candidate that is top ranked by CSI:FingerID as an annotation... CSI:FingerID and COSMIC are computed here; all other scores are from ref. 18.",
       "asbval:note": "Paper confirms use of molecular fingerprint predictions (CSI:FingerID) from mass spectra. However, the paper does not discuss de-novo structure generation (MSNovelist) or chemical class annotations (CANOPUS) as part of the COSMIC workflow. The paper focuses on structure database searching, not de-novo generation.",
@@ -3277,7 +3277,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/api-endpoint-communication/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/api-endpoint-communication/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 4,
       "asbval:target_artifact_id": "api-endpoint-communication",
@@ -3290,7 +3290,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/build-badge-verification/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/build-badge-verification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "build-badge-verification",
@@ -3303,7 +3303,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-pipeline-monitoring/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/ci-cd-pipeline-monitoring/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "ci-cd-pipeline-monitoring",
@@ -3316,7 +3316,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/compound-class-annotation-parsing/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/compound-class-annotation-parsing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "compound-class-annotation-parsing",
@@ -3329,7 +3329,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/de-novo-structure-candidate-ranking/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/de-novo-structure-candidate-ranking/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "de-novo-structure-candidate-ranking",
@@ -3342,7 +3342,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-workflow-execution/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/github-actions-workflow-execution/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "github-actions-workflow-execution",
@@ -3355,7 +3355,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hierarchical-spectrum-object-construction/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/hierarchical-spectrum-object-construction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "hierarchical-spectrum-object-construction",
@@ -3368,7 +3368,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-metadata-validation/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/mass-spectrometry-metadata-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "mass-spectrometry-metadata-validation",
@@ -3381,7 +3381,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-query-formulation/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/mass-spectrometry-query-formulation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "mass-spectrometry-query-formulation",
@@ -3394,7 +3394,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-fingerprint-parsing/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/molecular-fingerprint-parsing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "molecular-fingerprint-parsing",
@@ -3407,7 +3407,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/release-branch-management/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/release-branch-management/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 3,
       "asbval:target_artifact_id": "release-branch-management",
@@ -3420,7 +3420,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-administration/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/repository-administration/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 4,
       "asbval:target_artifact_id": "repository-administration",
@@ -3433,7 +3433,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sirius-spectral-request-construction/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/sirius-spectral-request-construction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "sirius-spectral-request-construction",
@@ -3446,7 +3446,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-data-format-parsing/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectral-data-format-parsing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "spectral-data-format-parsing",
@@ -3459,7 +3459,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-fingerprint-web-service-query/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectral-fingerprint-web-service-query/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "spectral-fingerprint-web-service-query",
@@ -3472,7 +3472,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-json-parsing/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectral-json-parsing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "spectral-json-parsing",
@@ -3485,7 +3485,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-query-formatting/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/spectrum-query-formatting/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "spectrum-query-formatting",
@@ -3498,7 +3498,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-result-validation/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/structured-result-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 4,
       "asbval:target_artifact_id": "structured-result-validation",
@@ -3511,7 +3511,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/vendor-format-to-standard-conversion/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/vendor-format-to-standard-conversion/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "vendor-format-to-standard-conversion",
@@ -3524,7 +3524,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-service-api-integration/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/skill/web-service-api-integration/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "web-service-api-integration",
@@ -3537,7 +3537,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SIRIUS is licensed under AGPL v3.",
       "asbval:note": null,
@@ -3557,7 +3557,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The current version of SIRIUS is 6.3.7.",
       "asbval:note": null,
@@ -3577,7 +3577,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SIRIUS is a java-based software framework.",
       "asbval:note": null,
@@ -3597,7 +3597,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SIRIUS is used for the analysis of LC-MS/MS data of metabolites.",
       "asbval:note": null,
@@ -3617,7 +3617,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SIRIUS methods are offered to the scientific community as freely available resources.",
       "asbval:note": "Source says 'Our methods' (referring to authors' methods), not specifically SIRIUS methods; scope attribution unclear",
@@ -3637,7 +3637,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Redistribution of SIRIUS methods in whole or in part for commercial purposes is prohibited.",
       "asbval:note": null,
@@ -3657,7 +3657,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SIRIUS web services are hosted by the B\u00f6cker group.",
       "asbval:note": null,
@@ -3677,7 +3677,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SIRIUS web services are for academic research and education use only.",
       "asbval:note": null,
@@ -3697,7 +3697,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "CSI:FingerID is one of the SIRIUS web services.",
       "asbval:note": null,
@@ -3717,7 +3717,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "CANOPUS is one of the SIRIUS web services.",
       "asbval:note": null,
@@ -3737,7 +3737,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MSNovelist is one of the SIRIUS web services.",
       "asbval:note": null,
@@ -3757,7 +3757,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_012",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/claim/claim_012",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Bright Giant GmbH provides licenses and services for non-academic SIRIUS users.",
       "asbval:note": "Source excerpt incomplete; does not explicitly mention 'non-academic users' or 'Bright Giant GmbH' in provided excerpt",
@@ -3777,7 +3777,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_013",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41587-021-01045-9/claim/claim_013",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Users of SIRIUS tools are asked to cite corresponding papers in resulting publications.",
       "asbval:note": "Text accurately represents source_excerpt despite substring_in_paper=false; content is faithful and complete",

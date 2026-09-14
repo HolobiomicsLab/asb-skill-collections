@@ -1489,7 +1489,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c04720__task_001/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/card/10_1021_acs_analchem_0c04720__task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our approach is based on two major steps, calculating \u0394mass values between all peaks of a dataset and testing for spatial correlation only between parent and putative adduct ions... Our workflow is available as a software package for R, called mass2adduct.",
       "asbval:note": "The paper explicitly describes a two-step workflow (mass difference calculation and spatial correlation testing) implemented in the mass2adduct R package for detecting adducts in MSI data.",
@@ -1509,7 +1509,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c04720__task_001/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/card/10_1021_acs_analchem_0c04720__task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our workflow is available as a software package for R, called mass2adduct. It allows data import in various formats (e.g., imzML via Cardinal, intensity tables in CSV format), parallelization to speed up correlation testing, and several visualization tools.",
       "asbval:note": "mass2adduct is explicitly named and described as the primary software tool developed in this study for adduct detection.",
@@ -1529,7 +1529,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c04720__task_001/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/card/10_1021_acs_analchem_0c04720__task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our workflow is available as a software package for R, called mass2adduct... The software and installation instructions are available on GitHub at https://github.com/kbseah/mass2adduct",
       "asbval:note": "The mass2adduct package is explicitly implemented as an R package.",
@@ -1549,7 +1549,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c04720__task_001/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/card/10_1021_acs_analchem_0c04720__task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We applied this idea to high-mass-resolution MSI data... by first calculating mass differences (\u0394mass) between all pairs of detected peaks in a MALDI-MSI dataset from a mouse brain tissue section (dataset #10) and then creating a histogram of all \u0394mass (see Figure 1A).",
       "asbval:note": "The paper describes creating mass difference histograms with labeled peaks for known adducts (Figure 1A shows this), but no specific class name 'massdiffhist' is mentioned in the passages. The function/output exists but the specific class name cannot be verified.",
@@ -1569,7 +1569,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c04720__task_001/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/card/10_1021_acs_analchem_0c04720__task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "A mass difference histogram is matched to a list of known mass differences to identify adducts... (2) A mass difference histogram is matched to a list of known mass differences to identify adducts.",
       "asbval:note": "The paper describes matching mass differences to known adducts and producing summary tables/plots of adduct counts by type, but no specific function name 'adductMatch()' is mentioned in the passages. The functionality exists but the specific function name cannot be verified.",
@@ -1589,7 +1589,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c04720__task_001/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/card/10_1021_acs_analchem_0c04720__task_001/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mass2adduct takes all possible pairwise masses and calculates the mass difference for each pair. (2) A mass difference histogram is matched to a list of known mass differences to identify adducts.",
       "asbval:note": "The paper describes matching mass differences to known adducts and adding match information, but no specific object class name 'massdiff' or column name 'matches' is mentioned in the passages. The functionality of annotating ion pairs with adduct matches exists but specific data structure names cannot be verified.",
@@ -1609,7 +1609,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c04720__task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/card/10_1021_acs_analchem_0c04720__task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card focuses on 'reproducing adduct identification and ranking from built-in mass spectrometry imaging datasets' but the paper does not explicitly describe built-in example datasets within the mass2adduct package itself. The paper uses 20 external MALDI-MSI datasets for validation.",
@@ -1625,7 +1625,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c04720__task_002/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/card/10_1021_acs_analchem_0c04720__task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For each dataset, Pearson's two-sided correlation test was performed for all ion pairs using per-pixel intensity values. We applied three different methods to screen for false positives: (1) The Bonferroni correction was applied to the p-values from the correlation test, and pairs with corrected p \u2265 0.05 were rejected (2) Uncorrected p-values for positively correlated pairs were used for false-discovery-rate analysis with the R package qvalue v2.10.1, and we applied a q-value cutoff of 10\u20137 (3) A minimum correlation coefficient cutoff of r > 0.3 was applied directly",
       "asbval:note": "The paper describes Pearson correlation testing with Bonferroni and FDR corrections, but does not name a specific function 'corrPairsMSI()'. The paper states correlations were calculated in R but does not provide the exact function name. The card references a specific function name that is not explicitly mentioned in the passages.",
@@ -1645,7 +1645,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c04720__task_002/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/card/10_1021_acs_analchem_0c04720__task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Software to perform the adduct identification and correlation testing are implemented in an R package, mass2adduct. The software and installation instructions are available on GitHub at https://github.com/kbseah/mass2adduct",
       "asbval:note": "[SUBSTRING-MATCH for mass2adduct | role: primary tool for adduct identification and correlation testing]",
@@ -1665,7 +1665,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c04720__task_002/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/card/10_1021_acs_analchem_0c04720__task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The intensity matrix was loaded into R, where correlations of adduct pairs were calculated.",
       "asbval:note": "R is used for correlation calculations and statistical analysis",
@@ -1685,7 +1685,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c04720__task_002/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/card/10_1021_acs_analchem_0c04720__task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For each dataset, Pearson's two-sided correlation test was performed for all ion pairs using per-pixel intensity values. We applied three different methods to screen for false positives: (1) The Bonferroni correction was applied to the p-values from the correlation test, and pairs with corrected p \u2265 0.05 were rejected (2) Uncorrected p-values for positively correlated pairs were used for false-discovery-rate analysis with the R package qvalue v2.10.1, and we applied a q-value cutoff of 10\u20137 (3) A minimum correlation coefficient cutoff of r > 0.3 was applied directly",
       "asbval:note": "The paper describes outputs including Pearson correlation coefficients, uncorrected p-values, and Bonferroni-corrected significance, but does not explicitly specify the exact column names or data frame structure claimed in the card. The functional outputs match but the specific data frame schema is not documented in the passages.",
@@ -1705,7 +1705,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c04720__task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/card/10_1021_acs_analchem_0c04720__task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card references a specific function name 'corrPairsMSI()' which does not appear in the paper passages. The paper describes the correlation and statistical correction workflow but does not name this specific function.",
@@ -1722,7 +1722,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c04720__task_003/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/card/10_1021_acs_analchem_0c04720__task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "With mass2adduct, we detected comparable Na+ and K+ adduct counts across different tissue types and MALDI systems.",
       "asbval:note": "Paper addresses adduct detection and spatial correlation analysis broadly (including Na+ adducts), but the specific research question focuses narrowly on visual distinction of Na adducts. The paper's actual approach uses spatial correlation analysis (Pearson correlation) and mass difference matching, not a visualization function called 'pointsAdducts()'. The paper does not describe a function specifically for visual distinction of Na adducts from parent ions.",
@@ -1742,7 +1742,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c04720__task_003/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/card/10_1021_acs_analchem_0c04720__task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our workflow is available as a software package for R, called mass2adduct. It allows data import in various formats (e.g., imzML via Cardinal,29 intensity tables in CSV format), parallelization to speed up correlation testing, and several visualization tools.",
       "asbval:note": "mass2adduct is confirmed as the primary tool developed in this paper for adduct identification and analysis.",
@@ -1762,7 +1762,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c04720__task_003/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/card/10_1021_acs_analchem_0c04720__task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our workflow is available as a software package for R, called mass2adduct.",
       "asbval:note": "R is confirmed as the programming language in which mass2adduct is implemented.",
@@ -1782,7 +1782,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c04720__task_003/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/card/10_1021_acs_analchem_0c04720__task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No evidence in the paper of a visualization function producing plots with blue circle outlines for parent ions and red filled points for adducts. The paper describes spatial correlation matrices (Figure 1D) and ion maps (produced with MSiReader), but not the specific visualization format described in the card. The paper does not mention a function called 'pointsAdducts()' or this specific color-coding scheme.",
@@ -1802,7 +1802,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c04720__task_003/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/card/10_1021_acs_analchem_0c04720__task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No function named 'pointsAdducts()' is mentioned anywhere in the paper. The paper describes mass2adduct as performing adduct identification via mass difference calculation and spatial correlation analysis using Pearson correlation, but does not name or describe a function with this name.",
@@ -1822,7 +1822,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c04720__task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/card/10_1021_acs_analchem_0c04720__task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card's research question is narrowly focused on visual distinction of Na adducts specifically, whereas the paper addresses adduct detection and analysis more broadly across multiple adduct types (Na+, K+, matrix adducts with DHB/CHCA).",
@@ -1839,7 +1839,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c04720__task_004/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/card/10_1021_acs_analchem_0c04720__task_004/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes mass2adduct accepting 'data import in various formats (e.g., imzML via Cardinal, intensity tables in CSV format)' but does not mention: (1) specific function names like massdiff() or adductMatch(), (2) Cardinal object classes MSProcessedImagingExperiment or MSContinuousImagingExperiment, or (3) a cardinal2msimat() conversion function. The paper states mass2adduct imports imzML 'via Cardinal' but does not describe a dedicated conversion pipeline or these specific function names.",
@@ -1859,7 +1859,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c04720__task_004/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/card/10_1021_acs_analchem_0c04720__task_004/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "It allows data import in various formats (e.g., imzML via Cardinal, intensity tables in CSV format)",
       "asbval:note": "Cardinal is mentioned as a tool used for data import in mass2adduct workflow.",
@@ -1879,7 +1879,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c04720__task_004/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/card/10_1021_acs_analchem_0c04720__task_004/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our workflow is available as a software package for R, called mass2adduct.",
       "asbval:note": "mass2adduct is the primary tool developed and described throughout the paper.",
@@ -1899,7 +1899,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c04720__task_004/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/card/10_1021_acs_analchem_0c04720__task_004/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our workflow is available as a software package for R, called mass2adduct.",
       "asbval:note": "R is explicitly mentioned as the language/environment for mass2adduct.",
@@ -1919,7 +1919,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c04720__task_004/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/card/10_1021_acs_analchem_0c04720__task_004/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mass2adduct takes all possible pairwise masses and calculates the mass difference for each pair. A mass difference histogram is matched to a list of known mass differences to identify adducts.",
       "asbval:note": "The paper describes mass2adduct producing outputs that match ion pairs to known adducts and performing mass difference calculations, but does not explicitly name the output object 'massdiff' or specify the exact data.frame column names (A, B, diff, matches). The paper mentions 'mass difference histogram' and correlation matrices as outputs but not the specific tabular format claimed.",
@@ -1939,7 +1939,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1021_acs_analchem_0c04720__task_004/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/card/10_1021_acs_analchem_0c04720__task_004/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card describes a specific technical workflow (cardinal2msimat() conversion function and massdiff()/adductMatch() pipeline) that is not present in the paper. The paper describes mass2adduct as accepting imzML and CSV formats but does not detail internal function names or a dedicated Cardinal object conversion pipeline.",
@@ -1956,7 +1956,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-annotation-against-reference-library/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-annotation-against-reference-library/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We compiled a set of matrix-related adducts into a list of adducts and mass differences for typical chemical transformations to match calculated \u0394mass values of a dataset (see Supporting Table S1). We used the list to identify the number of possible adducts based on specific m/z differences for each ion pair in a dataset.",
       "asbval:note": "Core methodology directly matches the claim: mass differences are calculated and matched against a reference list of known adducts.",
@@ -1976,7 +1976,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-annotation-against-reference-library/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-annotation-against-reference-library/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our approach is based on two major steps, calculating \u0394mass values between all peaks of a dataset and testing for spatial correlation only between parent and putative adduct ions.",
       "asbval:note": "The paper combines mass difference detection with spatial correlation analysis to assign chemical significance to ion pairs.",
@@ -1996,7 +1996,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-annotation-against-reference-library/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-annotation-against-reference-library/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We applied this idea to high-mass-resolution MSI data collected in positive ionization mode by first calculating mass differences (\u0394mass) between all pairs of detected peaks in a MALDI-MSI dataset from a mouse brain tissue section (dataset #10) and then creating a histogram of all \u0394mass (see Figure 1A).",
       "asbval:note": "Paper explicitly describes creating a histogram of mass differences and then matching against known adducts.",
@@ -2016,7 +2016,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-annotation-against-reference-library/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-annotation-against-reference-library/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for mass2adduct | role: R package for adduct identification] Our workflow is available as a software package for R, called mass2adduct. It allows data import in various formats (e.g., imzML via Cardinal, intensity tables in CSV format), parallelization to speed up correlation testing, and several visualization tools.",
       "asbval:note": "mass2adduct is confirmed as the primary tool developed for this workflow.",
@@ -2036,7 +2036,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-annotation-against-reference-library/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-annotation-against-reference-library/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The software and installation instructions are available on GitHub at https://github.com/kbseah/mass2adduct and are also archived on zenodo (https://doi.org/10.5281/zenodo.1405088).",
       "asbval:note": "GitHub repository URL is explicitly provided in the paper.",
@@ -2056,7 +2056,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-annotation-against-reference-library/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-annotation-against-reference-library/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our workflow is available as a software package for R, called mass2adduct. It allows data import in various formats (e.g., imzML via Cardinal, intensity tables in CSV format), parallelization to speed up correlation testing, and several visualization tools.",
       "asbval:note": "Paper confirms mass2adduct is an R package with adduct matching capability and reference libraries (Table S1 mentioned), but does not explicitly name functions 'adductMatch()' or 'topAdducts()' or reference libraries named 'adducts' and 'adducts2' in the provided passages. The paper describes the workflow but not the specific function names.",
@@ -2076,7 +2076,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-annotation-against-reference-library/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-annotation-against-reference-library/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our workflow is available as a software package for R, called mass2adduct.",
       "asbval:note": "Paper confirms mass2adduct is an R package, but does not name the specific functions 'adductMatch()' or 'topAdducts()' in the provided passages. R is the language, but function names are not verified.",
@@ -2096,7 +2096,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-ion-parent-ion-pairing-analysis/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-ion-parent-ion-pairing-analysis/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For each dataset, possible parent\u2013adduct ion pairs were identified in the following way: The mass difference was calculated for all pairs of peaks, and matched against a list of known adduct types... For a true matrix adduct, the parent and adduct ions are expected to be positively spatially correlated. Therefore, for each dataset, Pearson's two-sided correlation test was performed for all ion pairs using per-pixel intensity values.",
       "asbval:note": null,
@@ -2116,7 +2116,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-ion-parent-ion-pairing-analysis/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-ion-parent-ion-pairing-analysis/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Software to perform the adduct identification and correlation testing are implemented in an R package, mass2adduct. The software and installation instructions are available on GitHub at https://github.com/kbseah/mass2adduct",
       "asbval:note": "mass2adduct is confirmed as an R package with GitHub repo. However, the specific function names (massdiff(), adductMatch(), diffGetPeaks(), corrPairsMSI(), pointsAdducts()) are not mentioned in the passages. The paper describes the workflow conceptually but does not list these specific function names.",
@@ -2136,7 +2136,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-ion-parent-ion-pairing-analysis/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-ion-parent-ion-pairing-analysis/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Peak lists were filtered to retain those with an intensity threshold \u22650.05% of the maximum ion intensity of the total ion chromatogram... Datasets #4, #8, #10, #17, and #18 were binned with Cardinal MSI v2 at a bin width of 1 mDa... MSI data in imzML format or intensity matrices in CSV format can be imported to mass2adduct.",
       "asbval:note": "Cardinal is confirmed as used for MSI data preprocessing and binning. However, the specific conversion function cardinal2msimat() and the object types (MSProcessedImagingExperiment, MSContinuousImagingExperiment) are not mentioned in the passages. The paper states data can be imported 'via Cardinal' but does not detail the specific conversion mechanism claimed.",
@@ -2156,7 +2156,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-ion-parent-ion-pairing-analysis/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-ion-parent-ion-pairing-analysis/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Peak lists and intensity matrices for datasets #1\u20133, #5\u20137, #9, #13\u201316, #19, and #20 were generated with SCiLS v2019b (Bruker, Germany), using 5 ppm bin width... Peak intensity matrices were exported in text CSV format.",
       "asbval:note": "SCiLS is confirmed to export peak intensity data as CSV. However, the specific function msimat() for importing SCiLS output into mass2adduct is not mentioned in the passages.",
@@ -2176,7 +2176,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-ion-parent-ion-pairing-analysis/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-ion-parent-ion-pairing-analysis/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "An intensity matrix for every ion of the respective peak list in each pixel on the dataset was exported with the software MSiReader v0.09.",
       "asbval:note": "MSiReader is confirmed as used to export intensity matrices. However, the paper does not explicitly state that it exports CSV format or that output is imported via msimat() function into mass2adduct.",
@@ -2196,7 +2196,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-ion-parent-ion-pairing-analysis/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-ion-parent-ion-pairing-analysis/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Software to perform the adduct identification and correlation testing are implemented in an R package, mass2adduct.",
       "asbval:note": null,
@@ -2216,7 +2216,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-ion-parent-ion-pairing-analysis/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-ion-parent-ion-pairing-analysis/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Metabolites typically form adducts with ions derived from inorganic salts or residual water, inherently present in all biological samples. The most common adducts are formed with H+, Na+, K+, or Cl\u2013... MALDI matrices tend to form abundant ion clusters of matrix molecules and occasionally were described as matrix adducts... we investigated the abundance of adducts across a broad spectrum of MALDI-MSI datasets... Our findings with mass2adduct, developed for adduct abundance estimation, highlight adduct formation of metabolites with known alkali metal ions and also matrix molecules.",
       "asbval:note": null,
@@ -2236,7 +2236,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-ion-parent-ion-pairing-analysis/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-ion-parent-ion-pairing-analysis/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The typically thousands of measured signals in metabolomics experiments often remain unidentified and have been described as dark metabolome... Our results highlight that the dark metabolome of MALDI-MSI datasets might be not so dark after all, but merely clouded by the signals added through matrix adducts.",
       "asbval:note": null,
@@ -2256,7 +2256,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-mass-difference-matching/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-mass-difference-matching/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We compiled a set of matrix-related adducts into a list of adducts and mass differences for typical chemical transformations to match calculated \u0394mass values of a dataset (see Supporting Table S1). We used the list to identify the number of possible adducts based on specific m/z differences for each ion pair in a dataset. Our workflow is available as a software package for R, called mass2adduct.",
       "asbval:note": "Paper confirms mass2adduct matches mass differences against a reference list of known adducts and identifies abundant adducts. However, the paper does not mention specific function names 'adductMatch()' or 'topAdducts()' \u2014 these function names cannot be verified from the passages provided. The core workflow (mass difference calculation, histogram binning, matching to known adducts) is confirmed.",
@@ -2276,7 +2276,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-mass-difference-matching/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-mass-difference-matching/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our workflow is available as a software package for R, called mass2adduct. It allows data import in various formats (e.g., imzML via Cardinal, intensity tables in CSV format), parallelization to speed up correlation testing, and several visualization tools.",
       "asbval:note": "mass2adduct is confirmed as an R package for adduct matching. However, specific function names 'adductMatch()' and 'topAdducts()' are not mentioned in the passages. The paper describes the workflow but does not expose individual function names.",
@@ -2296,7 +2296,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-mass-difference-matching/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-mass-difference-matching/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The software and installation instructions are available on GitHub at https://github.com/kbseah/mass2adduct and are also archived on zenodo (https://doi.org/10.5281/zenodo.1405088).",
       "asbval:note": null,
@@ -2316,7 +2316,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-mass-difference-matching/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-mass-difference-matching/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our workflow is available as a software package for R, called mass2adduct.",
       "asbval:note": null,
@@ -2336,7 +2336,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-mass-difference-matching/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-mass-difference-matching/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "It allows data import in various formats (e.g., imzML via Cardinal, intensity tables in CSV format)",
       "asbval:note": "Cardinal is confirmed as a tool for data preprocessing and import into mass2adduct. The paper also states: 'Peak lists and intensity matrices for datasets #1\u20133, #5\u20137, #9, #13\u201316, #19, and #20 were generated with SCiLS v2019b (Bruker, Germany)' and 'Datasets #4, #8, #10, #17, and #18 were binned with Cardinal MSI v2 at a bin width of 1 mDa.' Cardinal is used for preprocessing.",
@@ -2356,7 +2356,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-mass-difference-matching/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-mass-difference-matching/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "A common method to find adducts is the matching of mass differences between a parent ion and higher m/z values. By leveraging high mass resolution and high mass accuracy data, ideally below 5 ppm, the accuracy of detecting specific and common mass difference is higher. We applied this idea to high-mass-resolution MSI data collected in positive ionization mode by first calculating mass differences (\u0394mass) between all pairs of detected peaks in a MALDI-MSI dataset from a mouse brain tissue section (dataset #10) and then creating a histogram of all \u0394mass (see Figure 1A).",
       "asbval:note": null,
@@ -2376,7 +2376,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-mass-difference-matching/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-mass-difference-matching/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The input data needs to be generated with high mass accuracy (below 5 ppm) to allow for an accurate and reliable detection of \u0394mass for ion pairs. Detection of peaks in each single mass spectrum of an MSI dataset is a challenging task, and rigorous care should be taken to perform this step as accurate as possible.",
       "asbval:note": "The paper confirms that mass2adduct operates on preprocessed, peak-detected MSI data with high mass accuracy. However, the specific function name 'massdiff()' is not mentioned in the passages; the paper refers to 'calculating mass differences (\u0394mass)' but does not name a specific function.",
@@ -2396,7 +2396,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cardinal-imaging-object-conversion/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/cardinal-imaging-object-conversion/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Datasets #4, #8, #10, #17, and #18 were binned with Cardinal MSI v2 at a bin width of 1 mDa, and further processing included a 1% frequency filter (default setting) and a threshold of 0.05% top peak intensity. ... The input data needs to be generated with high mass accuracy (below 5 ppm) to allow for an accurate and reliable detection of \u0394mass for ion pairs. ... MSI data in imzML format or intensity matrices in CSV format can be imported to mass2adduct.",
       "asbval:note": "Paper confirms Cardinal v2 preprocessing and mass2adduct input formats (imzML via Cardinal, CSV intensity tables), but does NOT explicitly name or document a 'cardinal2msimat()' function or 'msimat' format. The paper states mass2adduct accepts 'imzML format or intensity matrices in CSV format' \u2014 no intermediate 'msimat' object type is mentioned. The card appears to invent a conversion function and format name not present in the paper.",
@@ -2416,7 +2416,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cardinal-imaging-object-conversion/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/cardinal-imaging-object-conversion/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MSI data in imzML format or intensity matrices in CSV format can be imported to mass2adduct. ... Datasets #4, #8, #10, #17, and #18 were binned with Cardinal MSI v2 at a bin width of 1 mDa",
       "asbval:note": "Paper confirms Cardinal v2 preprocessing and mass2adduct's ability to consume imzML and CSV formats, but does not document a dedicated 'msimat' format or 'cardinal2msimat()' conversion function. The card's scope conflates Cardinal's output (imzML or CSV) with a hypothetical intermediate 'msimat' format.",
@@ -2436,7 +2436,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cardinal-imaging-object-conversion/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/cardinal-imaging-object-conversion/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Datasets #4, #8, #10, #17, and #18 were binned with Cardinal MSI v2 at a bin width of 1 mDa, and further processing included a 1% frequency filter (default setting) and a threshold of 0.05% top peak intensity.",
       "asbval:note": "Paper confirms Cardinal v2 binning is used, but does not name a specific function 'peakBin()' or specify version 2.2 as a minimum. The paper references 'Cardinal MSI v2' generically without version-specific API documentation.",
@@ -2456,7 +2456,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cardinal-imaging-object-conversion/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/cardinal-imaging-object-conversion/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Cardinal version 2.2 specifically, nor does it document a 'cardinal2msimat()' function or version-specific API requirements. The card invents a version constraint and function name not present in the paper.",
@@ -2476,7 +2476,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cardinal-imaging-object-conversion/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/cardinal-imaging-object-conversion/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MSI data in imzML format or intensity matrices in CSV format can be imported to mass2adduct.",
       "asbval:note": "Paper confirms CSV import capability, but does not name a function 'msimat()' or reference an 'msimat' format. The card invents a format and function name.",
@@ -2496,7 +2496,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cardinal-imaging-object-conversion/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/cardinal-imaging-object-conversion/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Datasets #4, #8, #10, #17, and #18 were binned with Cardinal MSI v2 at a bin width of 1 mDa, and further processing included a 1% frequency filter (default setting) and a threshold of 0.05% top peak intensity.",
       "asbval:note": "Paper confirms Cardinal v2 performs peak binning, but does not explicitly name or document MSProcessedImagingExperiment or MSContinuousImagingExperiment object classes. These are likely Cardinal S4 classes, but the paper does not reference them by name.",
@@ -2516,7 +2516,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cardinal-imaging-object-conversion/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/cardinal-imaging-object-conversion/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MSI data in imzML format or intensity matrices in CSV format can be imported to mass2adduct. ... (1) mass2adduct takes all possible pairwise masses and calculates the mass difference for each pair. (2) A mass difference histogram is matched to a list of known mass differences to identify adducts. (3) Spatial correlation of m/z values is used to identify co-occurring metabolites. Then, a Pearson correlation coefficient is used to validate identified adducts.",
       "asbval:note": "Paper confirms mass2adduct performs mass difference calculation and spatial correlation analysis, but does NOT name specific functions 'massdiff()', 'adductMatch()', or 'corrPairsMSI()'. The paper describes the workflow conceptually but does not document the R function API. The card invents function names.",
@@ -2536,7 +2536,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cardinal-imaging-object-conversion/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/cardinal-imaging-object-conversion/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Software to perform the adduct identification and correlation testing are implemented in an R package, mass2adduct. The software and installation instructions are available on GitHub at https://github.com/kbseah/mass2adduct",
       "asbval:note": "Paper explicitly confirms mass2adduct is an R package.",
@@ -2556,7 +2556,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chemical-transformation-annotation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/chemical-transformation-annotation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We compiled a set of matrix-related adducts into a list of adducts and mass differences for typical chemical transformations to match calculated \u0394mass values of a dataset (see Supporting Table S1). We used the list to identify the number of possible adducts based on specific m/z differences for each ion pair in a dataset.",
       "asbval:note": "The paper explicitly describes matching mass differences to known adducts and chemical transformations using a reference list.",
@@ -2576,7 +2576,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chemical-transformation-annotation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/chemical-transformation-annotation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our workflow is available as a software package for R, called mass2adduct. It allows data import in various formats (e.g., imzML via Cardinal, intensity tables in CSV format), parallelization to speed up correlation testing, and several visualization tools.",
       "asbval:note": "mass2adduct is confirmed as the primary R package for the workflow. However, the paper does not explicitly name functions 'adductMatch()' or 'topAdducts()'. The paper describes the workflow as: (1) mass difference calculation, (2) matching to known mass differences, (3) spatial correlation testing, (4) filtering. The specific function names claimed in the card are not verified in the passages.",
@@ -2596,7 +2596,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chemical-transformation-annotation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/chemical-transformation-annotation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our workflow is available as a software package for R, called mass2adduct... The intensity matrix was loaded into R, where correlations of adduct pairs were calculated.",
       "asbval:note": "R is confirmed as the runtime environment for mass2adduct.",
@@ -2616,7 +2616,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chemical-transformation-annotation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/chemical-transformation-annotation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Peak lists and intensity matrices for datasets #1\u20133, #5\u20137, #9, #13\u201316, #19, and #20 were generated with SCiLS v2019b (Bruker, Germany), using 5 ppm bin width... Peak intensity matrices were exported in text CSV format.",
       "asbval:note": "SCiLS is confirmed as preprocessing software that exports CSV format data.",
@@ -2636,7 +2636,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chemical-transformation-annotation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/chemical-transformation-annotation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "An intensity matrix for every ion of the respective peak list in each pixel on the dataset was exported with the software MSiReader v0.09. The intensity matrix was loaded into R, where correlations of adduct pairs were calculated.",
       "asbval:note": "MSiReader is confirmed as software that exports intensity matrices for downstream analysis.",
@@ -2656,7 +2656,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chemical-transformation-annotation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/chemical-transformation-annotation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "It allows data import in various formats (e.g., imzML via Cardinal, intensity tables in CSV format)... Datasets #4, #8, #10, #17, and #18 were binned with Cardinal MSI v2 at a bin width of 1 mDa, and further processing included a 1% frequency filter (default setting) and a threshold of 0.05% top peak intensity.",
       "asbval:note": "Cardinal is confirmed as an R package for MSI preprocessing and data import. However, the paper does not explicitly mention 'MSProcessedImagingExperiment' or 'MSContinuousImagingExperiment' objects or 'msimat format'. The paper states mass2adduct accepts 'imzML via Cardinal' and 'intensity tables in CSV format' but does not detail the specific object types or conversion process claimed in the card.",
@@ -2676,7 +2676,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-difference-calculation-from-spectral-peaks/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-difference-calculation-from-spectral-peaks/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The mass difference was calculated for all pairs of peaks, and matched against a list of known adduct types... A common method to find adducts is the matching of mass differences between a parent ion and higher m/z values.",
       "asbval:note": "Core methodology explicitly described in paper.",
@@ -2696,7 +2696,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-difference-calculation-from-spectral-peaks/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-difference-calculation-from-spectral-peaks/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Software to perform the adduct identification and correlation testing are implemented in an R package, mass2adduct. The software and installation instructions are available on GitHub at https://github.com/kbseah/mass2adduct... mass2adduct takes all possible pairwise masses and calculates the mass difference for each pair. (2) A mass difference histogram is matched to a list of known mass differences to identify adducts.",
       "asbval:note": "Paper confirms mass2adduct performs pairwise mass difference calculation and histogram matching against known adducts list. However, paper does not explicitly name a function called 'massdiff()' \u2014 the paper describes the functionality but does not document the specific function name. The role description is functionally accurate but the function name is not verified in passages.",
@@ -2716,7 +2716,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-difference-calculation-from-spectral-peaks/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-difference-calculation-from-spectral-peaks/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Peak lists were filtered to retain those with an intensity threshold \u22650.05% of the maximum ion intensity of the total ion chromatogram. Datasets #4, #8, #10, #17, and #18 were binned with Cardinal MSI v2 at a bin width of 1 mDa... MSI data in imzML format or intensity matrices in CSV format can be imported to mass2adduct.",
       "asbval:note": "Paper confirms Cardinal is used for binning/preprocessing MSI data (peakBin-like functionality). However, paper does not mention 'MSProcessedImagingExperiment', 'MSContinuousImagingExperiment' objects, or 'msimat' conversion. The paper uses Cardinal for preprocessing but does not document the specific R object classes or conversion functions claimed in the card.",
@@ -2736,7 +2736,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-difference-calculation-from-spectral-peaks/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-difference-calculation-from-spectral-peaks/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Software to perform the adduct identification and correlation testing are implemented in an R package, mass2adduct... The intensity matrix was loaded into R, where correlations of adduct pairs were calculated.",
       "asbval:note": "Paper explicitly states mass2adduct is an R package and R is used for correlation analysis.",
@@ -2756,7 +2756,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-difference-calculation-from-spectral-peaks/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-difference-calculation-from-spectral-peaks/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Mass spectrometry imaging (MSI) techniques enable the visualization of hundreds of metabolites across tissue sections... In this study, we focus on metabolite adducts in MSI data and how to determine their presence and abundance.",
       "asbval:note": "Paper scope aligns with card's 'when to use' guidance.",
@@ -2776,7 +2776,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-difference-calculation-from-spectral-peaks/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-difference-calculation-from-spectral-peaks/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For a true matrix adduct, the parent and adduct ions are expected to be positively spatially correlated. Therefore, for each dataset, Pearson's two-sided correlation test was performed for all ion pairs using per-pixel intensity values.",
       "asbval:note": "Paper emphasizes spatial correlation as a key validation step, supporting the card's guidance that spatial distribution is important for this workflow.",
@@ -2796,7 +2796,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-difference-pairwise-calculation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-difference-pairwise-calculation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The mass difference was calculated for all pairs of peaks, and matched against a list of known adduct types",
       "asbval:note": "Core methodology explicitly described in paper's Adduct Identification section.",
@@ -2816,7 +2816,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-difference-pairwise-calculation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-difference-pairwise-calculation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Software to perform the adduct identification and correlation testing are implemented in an R package, mass2adduct. The software and installation instructions are available on GitHub at https://github.com/kbseah/mass2adduct",
       "asbval:note": "mass2adduct is confirmed as the R package used. However, the paper does not explicitly name functions 'massdiff()' or 'hist()' \u2014 it describes the workflow as: 'mass2adduct takes all possible pairwise masses and calculates the mass difference for each pair' and 'A mass difference histogram is matched to a list of known mass differences'. The functions may exist but are not named in the passages.",
@@ -2836,7 +2836,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-difference-pairwise-calculation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-difference-pairwise-calculation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'msimat' function in any passage. Paper describes data import as: 'MSI data in imzML format or intensity matrices in CSV format can be imported to mass2adduct' but does not name a specific import function called 'msimat'.",
@@ -2856,7 +2856,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-difference-pairwise-calculation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-difference-pairwise-calculation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Peak lists and intensity matrices for datasets #1\u20133, #5\u20137, #9, #13\u201316, #19, and #20 were generated with SCiLS v2019b (Bruker, Germany), using 5 ppm bin width... Peak intensity matrices were exported in text CSV format.",
       "asbval:note": "SCiLS is confirmed to output CSV format. However, the claim that output is 'readable by msimat()' cannot be verified since msimat() is not mentioned in the paper.",
@@ -2876,7 +2876,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-difference-pairwise-calculation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-difference-pairwise-calculation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "An intensity matrix for every ion of the respective peak list in each pixel on the dataset was exported with the software MSiReader v0.09. The intensity matrix was loaded into R",
       "asbval:note": "MSiReader is confirmed to export intensity matrices that are loaded into R for mass2adduct analysis. Also mentioned: 'MSI ion maps were produced with MSiReader v0.09 using an m/z tolerance window of \u00b12.5 ppm'.",
@@ -2896,7 +2896,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-difference-pairwise-calculation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-difference-pairwise-calculation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Software to perform the adduct identification and correlation testing are implemented in an R package, mass2adduct... The software and installation instructions are available on GitHub at https://github.com/kbseah/mass2adduct",
       "asbval:note": "R is the implementation language for mass2adduct. The paper states 'The intensity matrix was loaded into R, where correlations of adduct pairs were calculated' and describes the R package mass2adduct.",
@@ -2916,7 +2916,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-imaging-data-interpretation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrometry-imaging-data-interpretation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our approach is based on two major steps, calculating \u0394mass values between all peaks of a dataset and testing for spatial correlation only between parent and putative adduct ions... We compiled a set of matrix-related adducts into a list of adducts and mass differences for typical chemical transformations to match calculated \u0394mass values of a dataset... calculating individual correlation values between the intensities of a peak and its putative adduct peak across all pixels of a MALDI-MSI dataset provides statistical support for MS1-based adduct identifications",
       "asbval:note": "The paper describes a workflow for identifying adducts (including Na+ adducts) via mass difference calculation and spatial correlation testing. However, the research question specifically emphasizes 'sodium adduct ions' as the primary focus, while the paper's actual scope is broader\u2014it addresses Na+, K+, Cl\u2212, and especially matrix adducts (DHB, CHCA). The visualization claim ('color-coded scatter plots') is not explicitly described in the passages; the paper mentions 'visualization tools' and ion maps but does not detail scatter plot overlays. The workflow is confirmed but the specificity to sodium adducts alone is overstated.",
@@ -2936,7 +2936,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-imaging-data-interpretation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrometry-imaging-data-interpretation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our workflow is available as a software package for R, called mass2adduct. It allows data import in various formats (e.g., imzML via Cardinal, intensity tables in CSV format), parallelization to speed up correlation testing, and several visualization tools... Software to perform the adduct identification and correlation testing are implemented in an R package, mass2adduct. The software and installation instructions are available on GitHub at https://github.com/kbseah/mass2adduct",
       "asbval:note": "mass2adduct is explicitly named and described as the primary R package for adduct identification and spatial correlation testing.",
@@ -2956,7 +2956,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-imaging-data-interpretation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrometry-imaging-data-interpretation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our workflow is available as a software package for R, called mass2adduct.",
       "asbval:note": "R is confirmed as the host language for mass2adduct.",
@@ -2976,7 +2976,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-imaging-data-interpretation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrometry-imaging-data-interpretation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "It allows data import in various formats (e.g., imzML via Cardinal, intensity tables in CSV format)... Datasets #4, #8, #10, #17, and #18 were binned with Cardinal MSI v2 at a bin width of 1 mDa",
       "asbval:note": "Cardinal is confirmed as a preprocessing tool and its output can be imported into mass2adduct. However, the specific function 'cardinal2msimat()' is not mentioned in the passages; the paper only states that imzML format (which Cardinal outputs) can be imported via Cardinal. The conversion function name cannot be verified.",
@@ -2996,7 +2996,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-imaging-data-interpretation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrometry-imaging-data-interpretation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Peak lists and intensity matrices for datasets #1\u20133, #5\u20137, #9, #13\u201316, #19, and #20 were generated with SCiLS v2019b (Bruker, Germany), using 5 ppm bin width... It allows data import in various formats (e.g., imzML via Cardinal, intensity tables in CSV format)",
       "asbval:note": "SCiLS is confirmed as a preprocessing tool that outputs peak lists and intensity matrices. The paper states mass2adduct accepts 'intensity tables in CSV format' but does not explicitly name a function 'msimat()' or confirm that SCiLS CSV output is directly compatible. The function name cannot be verified from the passages.",
@@ -3016,7 +3016,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-imaging-data-interpretation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrometry-imaging-data-interpretation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "An intensity matrix for every ion of the respective peak list in each pixel on the dataset was exported with the software MSiReader v0.09... It allows data import in various formats (e.g., imzML via Cardinal, intensity tables in CSV format)",
       "asbval:note": "MSiReader is confirmed as a tool for exporting intensity matrices. The paper states mass2adduct accepts 'intensity tables in CSV format' but does not explicitly name a function 'msimat()' or confirm direct compatibility. The function name cannot be verified.",
@@ -3036,7 +3036,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-imaging-data-interpretation/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrometry-imaging-data-interpretation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The passages confirm that mass2adduct performs data import, pairwise mass difference calculation, adduct matching against a known list, spatial correlation testing, and visualization. However, the specific function names (msimat, massdiff, adductMatch, topAdducts, corrPairsMSI, corrPairsMSIchunks, pointsAdducts) are not mentioned in any of the provided passages. The paper describes the workflow conceptually but does not document the API. Insufficient information to verify function names.",
@@ -3056,7 +3056,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-imaging-data-interpretation/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrometry-imaging-data-interpretation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we aimed to develop a method that enables automatic and unbiased detection of abundant adducts in MSI data... Adducts are expected to co-occur in the same spot as their parent metabolite for any given tissue sample... Our results suggest that including metabolite\u2013matrix adducts into database annotations can reduce the number of unannotated peaks and, on the other hand, will prevent possible false annotations and biological misinterpretations.",
       "asbval:note": "The paper confirms the use case of identifying whether peaks are adducts rather than distinct metabolites. However, the specific data format 'msimat' is not mentioned in the passages; the paper refers to 'imzML format' and 'CSV intensity tables' as input formats. The format name cannot be verified.",
@@ -3076,7 +3076,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-imaging-data-interpretation/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrometry-imaging-data-interpretation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "A positive correlation value alone does not guarantee that two ions are chemically related. However, in combination with our prior knowledge on sample and matrix composition, it provides additional confidence to screen for potential adducts... We extended our correlation analysis to every proposed adduct pair within a dataset, which enabled us to remove false positives.",
       "asbval:note": "The paper explicitly describes using spatial correlation patterns to filter false positives and validate adduct identifications.",
@@ -3096,7 +3096,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-peak-pair-analysis/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrometry-peak-pair-analysis/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "A common method to find adducts is the matching of mass differences between a parent ion and higher m/z values... We applied this idea to high-mass-resolution MSI data collected in positive ionization mode by first calculating mass differences (\u0394mass) between all pairs of detected peaks in a MALDI-MSI dataset from a mouse brain tissue section (dataset #10) and then creating a histogram of all \u0394mass... The mass difference was calculated for all pairs of peaks, and matched against a list of known adduct types",
       "asbval:note": "Core methodology directly described in paper.",
@@ -3116,7 +3116,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-peak-pair-analysis/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrometry-peak-pair-analysis/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Software to perform the adduct identification and correlation testing are implemented in an R package, mass2adduct. The software and installation instructions are available on GitHub at https://github.com/kbseah/mass2adduct",
       "asbval:note": "mass2adduct is confirmed as the core R package for adduct identification and correlation testing. However, the specific function names (massdiff, adductMatch, topAdducts, corrPairsMSI, corrPairsMSIchunks, msimat, diffGetPeaks) are not explicitly listed in the passages. The paper describes the workflow and capabilities but does not enumerate these specific function names.",
@@ -3136,7 +3136,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-peak-pair-analysis/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrometry-peak-pair-analysis/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Peak lists and intensity matrices for datasets #1\u20133, #5\u20137, #9, #13\u201316, #19, and #20 were generated with SCiLS v2019b (Bruker, Germany)... Datasets #4, #8, #10, #17, and #18 were binned with Cardinal MSI v2 at a bin width of 1 mDa... MSI data in imzML format or intensity matrices in CSV format can be imported to mass2adduct",
       "asbval:note": "Cardinal is used for preprocessing and binning in the paper. However, the specific function 'cardinal2msimat()' for converting MSProcessedImagingExperiment objects is not mentioned in the passages. The paper confirms Cardinal's role in preprocessing but does not detail the conversion function name.",
@@ -3156,7 +3156,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-peak-pair-analysis/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrometry-peak-pair-analysis/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Peak lists and intensity matrices for datasets #1\u20133, #5\u20137, #9, #13\u201316, #19, and #20 were generated with SCiLS v2019b (Bruker, Germany), using 5 ppm bin width... Peak intensity matrices were exported in text CSV format.",
       "asbval:note": "SCiLS is confirmed for MSI data preprocessing and CSV export.",
@@ -3176,7 +3176,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-peak-pair-analysis/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrometry-peak-pair-analysis/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "An intensity matrix for every ion of the respective peak list in each pixel on the dataset was exported with the software MSiReader v0.09. The intensity matrix was loaded into R, where correlations of adduct pairs were calculated.",
       "asbval:note": "MSiReader is confirmed for intensity matrix export to CSV format for downstream analysis.",
@@ -3196,7 +3196,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-peak-pair-analysis/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrometry-peak-pair-analysis/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Software to perform the adduct identification and correlation testing are implemented in an R package, mass2adduct. The software and installation instructions are available on GitHub at https://github.com/kbseah/mass2adduct... The intensity matrix was loaded into R, where correlations of adduct pairs were calculated.",
       "asbval:note": "R is confirmed as the execution environment for mass2adduct and correlation analysis. However, the specific dependencies (devtools, knitr, rmarkdown, pandoc) are not mentioned in the passages. The paper confirms R usage but does not detail these specific package dependencies.",
@@ -3216,7 +3216,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-peak-pair-analysis/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrometry-peak-pair-analysis/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MSI data in imzML format or intensity matrices in CSV format can be imported to mass2adduct... The input data needs to be generated with high mass accuracy (below 5 ppm) to allow for an accurate and reliable detection of \u0394mass for ion pairs.",
       "asbval:note": "Scope aligns with paper's description of input requirements and use case.",
@@ -3236,7 +3236,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-peak-pair-analysis/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrometry-peak-pair-analysis/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The typically thousands of measured signals in metabolomics experiments often remain unidentified and have been described as dark metabolome... Adducts are expected to co-occur in the same spot as their parent metabolite for any given tissue sample. Consequently, calculating individual correlation values between the intensities of a peak and its putative adduct peak across all pixels of a MALDI-MSI dataset provides statistical support for MS1-based adduct identifications",
       "asbval:note": "Paper explicitly addresses dark metabolome and spatial correlation validation.",
@@ -3256,7 +3256,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-peak-pair-analysis/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrometry-peak-pair-analysis/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The input data needs to be generated with high mass accuracy (below 5 ppm) to allow for an accurate and reliable detection of \u0394mass for ion pairs. Detection of peaks in each single mass spectrum of an MSI dataset is a challenging task, and rigorous care should be taken to perform this step as accurate as possible.",
       "asbval:note": "Paper emphasizes preprocessing requirement and high mass accuracy.",
@@ -3276,7 +3276,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-peak-pair-analysis/009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrometry-peak-pair-analysis/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For untargeted metabolomics approaches using liquid chromatography-mass spectrometry (LC-MS), da Silva et al. estimate that only 1.8% of the spectra can be annotated. Similarly, low numbers of spectra are expected to be annotated in MSI datasets.",
       "asbval:note": "Paper's focus on untargeted MSI and annotation of unidentified peaks supports this scope limitation.",
@@ -3296,7 +3296,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrum-histogram-interpretation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrum-histogram-interpretation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We applied this idea to high-mass-resolution MSI data collected in positive ionization mode by first calculating mass differences (\u0394mass) between all pairs of detected peaks in a MALDI-MSI dataset from a mouse brain tissue section (dataset #10) and then creating a histogram of all \u0394mass (see Figure 1A). We found high counts of \u0394mass of 21.985 and 37.955 Da, which matched the \u0394mass between [M + H]+ and [M + Na]+ or [M + K]+, respectively.",
       "asbval:note": "Core methodology confirmed: mass differences calculated, binned into histogram, peaks identified and matched to known adducts.",
@@ -3316,7 +3316,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrum-histogram-interpretation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrum-histogram-interpretation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We compiled a set of matrix-related adducts into a list of adducts and mass differences for typical chemical transformations to match calculated \u0394mass values of a dataset (see Supporting Table S1). We used the list to identify the number of possible adducts based on specific m/z differences for each ion pair in a dataset.",
       "asbval:note": "Histogram bins matched against known adduct mass differences to annotate adducts.",
@@ -3336,7 +3336,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrum-histogram-interpretation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrum-histogram-interpretation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Software to perform the adduct identification and correlation testing are implemented in an R package, mass2adduct. The software and installation instructions are available on GitHub at https://github.com/kbseah/mass2adduct",
       "asbval:note": "Tool name and repository confirmed.",
@@ -3356,7 +3356,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrum-histogram-interpretation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrum-histogram-interpretation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not detail specific function names (hist(), adductMatch(), topAdducts()) within mass2adduct. Paper describes the workflow conceptually but does not enumerate these specific R function signatures. Cannot verify without access to package documentation or code.",
@@ -3376,7 +3376,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrum-histogram-interpretation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrum-histogram-interpretation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We compiled a set of matrix-related adducts into a list of adducts and mass differences for typical chemical transformations to match calculated \u0394mass values of a dataset (see Supporting Table S1).",
       "asbval:note": "Paper confirms mass2adduct uses a list of known adducts (Supporting Table S1), but does not name the datasets as 'adducts' or 'adducts2'. The paper references a compiled list but does not confirm the specific dataset naming convention claimed in the card.",
@@ -3396,7 +3396,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrum-histogram-interpretation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrum-histogram-interpretation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Software to perform the adduct identification and correlation testing are implemented in an R package, mass2adduct. The intensity matrix was loaded into R, where correlations of adduct pairs were calculated.",
       "asbval:note": "Confirmed that mass2adduct is an R package and R is the host language.",
@@ -3416,7 +3416,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrum-histogram-interpretation/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrum-histogram-interpretation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Peak lists and intensity matrices for datasets #1\u20133, #5\u20137, #9, #13\u201316, #19, and #20 were generated with SCiLS v2019b (Bruker, Germany), using 5 ppm bin width... Peak intensity matrices were exported in text CSV format... An intensity matrix for every ion of the respective peak list in each pixel on the dataset was exported with the software MSiReader v0.09.",
       "asbval:note": "Paper confirms SCiLS and MSiReader are used for data export and CSV export is performed, but does not explicitly state that CSV export is a requirement for mass2adduct import. The workflow description states 'MSI data in imzML format or intensity matrices in CSV format can be imported to mass2adduct' (passage 6), confirming CSV is one accepted format but not the only one.",
@@ -3436,7 +3436,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrum-histogram-interpretation/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrum-histogram-interpretation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Datasets #4, #8, #10, #17, and #18 were binned with Cardinal MSI v2 at a bin width of 1 mDa... MSI data in imzML format or intensity matrices in CSV format can be imported to mass2adduct. (1) mass2adduct takes all possible pairwise masses and calculates the mass difference for each pair.",
       "asbval:note": "Paper confirms Cardinal is used for MSI preprocessing and that mass2adduct accepts imzML format (which Cardinal can output). However, the paper does not mention 'MSProcessedImagingExperiment', 'MSContinuousImagingExperiment', or 'msimat format' conversion. The card's specific technical claims about object types and format conversion are not verified in the passages.",
@@ -3456,7 +3456,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrum-histogram-interpretation/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrum-histogram-interpretation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The mass difference was calculated for all pairs of peaks, and matched against a list of known adduct types within an uncertainty of... For each dataset, possible parent\u2013adduct ion pairs were identified in the following way: The mass difference was calculated for all pairs of peaks, and matched against a list of known adduct types.",
       "asbval:note": "Scope aligns with paper's methodology: all pairwise differences computed, then matched to known adducts.",
@@ -3476,7 +3476,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrum-histogram-interpretation/009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrum-histogram-interpretation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The input data needs to be generated with high mass accuracy (below 5 ppm) to allow for an accurate and reliable detection of \u0394mass for ion pairs.",
       "asbval:note": "Paper emphasizes importance of mass accuracy for reliable matching, consistent with the scope's rationale for using histogram binning.",
@@ -3496,7 +3496,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrum-histogram-interpretation/010",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrum-histogram-interpretation/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "By leveraging high mass resolution and high mass accuracy data, ideally below 5 ppm, the accuracy of detecting specific and common mass difference is higher.",
       "asbval:note": "Paper emphasizes high mass resolution as a requirement, supporting the scope's guidance against low-resolution data.",
@@ -3516,7 +3516,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrum-histogram-interpretation/011",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrum-histogram-interpretation/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The input data needs to be generated with high mass accuracy (below 5 ppm) to allow for an accurate and reliable detection of \u0394mass for ion pairs. Detection of peaks in each single mass spectrum of an MSI dataset is a challenging task, and rigorous care should be taken to perform this step as accurate as possible. One important measure to consider is the signal-to-noise ratio and its estimation using, e.g., three-sigma rule across all spectra of a dataset.",
       "asbval:note": "Paper stresses the importance of known, measurable mass accuracy and signal-to-noise estimation, supporting the scope's guidance.",
@@ -3536,7 +3536,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/msi-data-format-interoperability/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/msi-data-format-interoperability/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Cardinal MSProcessedImagingExperiment, MSContinuousImagingExperiment, or any function called 'cardinal2msimat()'. Paper states mass2adduct accepts 'imzML format or intensity matrices in CSV format' (passage 6) and mentions Cardinal MSI v2 was used for preprocessing (passage 4), but does not describe a Cardinal-to-msimat conversion function or 'msimat matrix format'.",
@@ -3556,7 +3556,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/msi-data-format-interoperability/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/msi-data-format-interoperability/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MSI data in imzML format or intensity matrices in CSV format can be imported to mass2adduct.",
       "asbval:note": "Paper confirms mass2adduct accepts Cardinal-preprocessed data, but via imzML or CSV export, not via a dedicated Cardinal object conversion function. The paper does not describe or name a 'cardinal2msimat()' function or 'msimat' format.",
@@ -3576,7 +3576,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/msi-data-format-interoperability/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/msi-data-format-interoperability/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Datasets #4, #8, #10, #17, and #18 were binned with Cardinal MSI v2 at a bin width of 1 mDa, and further processing included a 1% frequency filter (default setting) and a threshold of 0.05% top peak intensity.",
       "asbval:note": "Paper confirms Cardinal is used for peak binning and preprocessing of MSI data. The specific preprocessing steps (normalize, smooth, reduce baseline) are typical MSI preprocessing but not explicitly listed in the passages for Cardinal; however, peak binning is confirmed.",
@@ -3596,7 +3596,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/msi-data-format-interoperability/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/msi-data-format-interoperability/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mass2adduct takes all possible pairwise masses and calculates the mass difference for each pair. (2) A mass difference histogram is matched to a list of known mass differences to identify adducts.",
       "asbval:note": "Paper confirms mass2adduct computes pairwise mass differences and matches adducts. However, the input format is described as 'imzML format or intensity matrices in CSV format', not 'msimat output'. The term 'msimat' does not appear in the paper.",
@@ -3616,7 +3616,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/msi-data-format-interoperability/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/msi-data-format-interoperability/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The intensity matrix was loaded into R, where correlations of adduct pairs were calculated... Software to perform the adduct identification and correlation testing are implemented in an R package, mass2adduct.",
       "asbval:note": "Paper confirms mass2adduct is an R package and R is used for analysis. However, no mention of 'cardinal2msimat()' function or Cardinal object loading in R is present in the passages.",
@@ -3636,7 +3636,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/msi-data-format-interoperability/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/msi-data-format-interoperability/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper mentions 'Cardinal MSI v2' but does not reference version 2.2+, peakBin() function, or MSProcessedImagingExperiment/MSContinuousImagingExperiment object classes.",
@@ -3656,7 +3656,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/msi-data-format-interoperability/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/msi-data-format-interoperability/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention functions named 'massdiff()' or 'adductMatch()' in mass2adduct. The workflow described in passage 6 involves mass difference calculation and correlation testing, but these specific function names are not used.",
@@ -3676,7 +3676,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/msi-data-format-interoperability/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/msi-data-format-interoperability/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'cardinal2msimat()' function or its requirements in the paper.",
@@ -3696,7 +3696,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/msi-data-format-interoperability/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/msi-data-format-interoperability/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper mentions MSiReader and SCiLS as preprocessing tools but does not describe a 'msimat()' function or CSV-based format conversion function.",
@@ -3716,7 +3716,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/msi-data-matrix-import-and-validation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/msi-data-matrix-import-and-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MSI data in imzML format or intensity matrices in CSV format can be imported to mass2adduct... The input data needs to be generated with high mass accuracy (below 5 ppm) to allow for an accurate and reliable detection of \u0394mass for ion pairs.",
       "asbval:note": "Paper explicitly describes CSV import and validation requirements for mass2adduct workflow.",
@@ -3736,7 +3736,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/msi-data-matrix-import-and-validation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/msi-data-matrix-import-and-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Software to perform the adduct identification and correlation testing are implemented in an R package, mass2adduct. The software and installation instructions are available on GitHub at https://github.com/kbseah/mass2adduct",
       "asbval:note": "Paper confirms mass2adduct is an R package for adduct identification and provides GitHub repo. However, paper does not explicitly name or describe an 'msimat()' function or 'msimat class' \u2014 these appear to be inferred by the extractor. Paper states 'MSI data in imzML format or intensity matrices in CSV format can be imported to mass2adduct' but does not detail the specific function names or class definitions used for import.",
@@ -3756,7 +3756,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/msi-data-matrix-import-and-validation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/msi-data-matrix-import-and-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MSI data in imzML format or intensity matrices in CSV format can be imported to mass2adduct... (e.g., imzML via Cardinal,29 intensity tables in CSV format)",
       "asbval:note": "Paper confirms Cardinal is used for MSI preprocessing and imzML import, and that mass2adduct accepts Cardinal-processed data. However, paper does not explicitly name a 'cardinal2msimat()' conversion function \u2014 this appears to be inferred by the extractor. The paper only states data can be imported 'via Cardinal' without specifying the exact conversion function name.",
@@ -3776,7 +3776,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/msi-data-matrix-import-and-validation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/msi-data-matrix-import-and-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'msimunging.pl', Perl scripts, 'inst/' folder, or 'triplet format' appears in any passage. Paper does not describe any Perl-based preprocessing utilities bundled with mass2adduct.",
@@ -3796,7 +3796,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/msi-data-matrix-import-and-validation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/msi-data-matrix-import-and-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Software to perform the adduct identification and correlation testing are implemented in an R package, mass2adduct.",
       "asbval:note": "Paper confirms mass2adduct is an R package, confirming R is the required environment. The evidence_spans field references 'library(mass2adduct)' which is standard R syntax for loading the package.",
@@ -3816,7 +3816,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiple-testing-correction-bonferroni/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/multiple-testing-correction-bonferroni/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We applied three different methods to screen for false positives: (1) The Bonferroni correction was applied to the p-values from the correlation test, and pairs with corrected p \u2265 0.05 were rejected",
       "asbval:note": "Bonferroni correction is explicitly applied to p-values from Pearson correlation tests across ion pairs in MSI data, matching the research question.",
@@ -3836,7 +3836,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiple-testing-correction-bonferroni/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/multiple-testing-correction-bonferroni/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not name or describe a function called 'corrPairsMSI' or 'corrPairsMSIchunks'. The paper describes mass2adduct as an R package for adduct identification and correlation testing, but does not document specific function names for Bonferroni-corrected correlation computation.",
@@ -3856,7 +3856,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiple-testing-correction-bonferroni/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/multiple-testing-correction-bonferroni/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Software to perform the adduct identification and correlation testing are implemented in an R package, mass2adduct. The software and installation instructions are available on GitHub at https://github.com/kbseah/mass2adduct",
       "asbval:note": "The paper confirms mass2adduct is an R package that performs correlation testing and is available on GitHub. However, the paper does not explicitly state that Bonferroni correction is 'built-in' to the package functions. The Bonferroni correction is described as part of the workflow/methodology (applied to p-values from correlation tests), but it is not clear whether this is automated within the package or performed separately by the user.",
@@ -3876,7 +3876,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiple-testing-correction-bonferroni/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/multiple-testing-correction-bonferroni/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The intensity matrix was loaded into R, where correlations of adduct pairs were calculated.",
       "asbval:note": "R is explicitly used for correlation calculations and statistical analysis in the paper.",
@@ -3896,7 +3896,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiple-testing-correction-bonferroni/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/multiple-testing-correction-bonferroni/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For each dataset, Pearson's two-sided correlation test was performed for all ion pairs using per-pixel intensity values. We applied three different methods to screen for false positives: (1) The Bonferroni correction was applied to the p-values from the correlation test, and pairs with corrected p \u2265 0.05 were rejected",
       "asbval:note": "The paper applies Bonferroni correction to p-values from Pearson correlation tests across all ion pairs, exactly matching the scope description.",
@@ -3916,7 +3916,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiple-testing-correction-bonferroni/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/multiple-testing-correction-bonferroni/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For each dataset, possible parent\u2013adduct ion pairs were identified in the following way: The mass difference was calculated for all pairs of peaks",
       "asbval:note": "The paper applies Bonferroni to thousands of pairwise ion comparisons in MSI datasets, but does not explicitly discuss the appropriateness of Bonferroni for 'moderate' test counts or acknowledge its conservative nature. The paper does apply it to large-scale testing (all peak pairs), which is consistent with the use case, but the scope's guidance about when Bonferroni is 'appropriate' is not directly supported.",
@@ -3936,7 +3936,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiple-testing-correction-bonferroni/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/multiple-testing-correction-bonferroni/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Although changes in local sodium or potassium concentrations can impede strong correlations,16 an effect similar to strong local ion suppression occurs. The correlation values can be influenced by very low abundant ion pairs41 or the presence of isobaric metabolites with overlapping monoisotopic distribution patterns.",
       "asbval:note": "The paper acknowledges that ion pairs can be correlated and that this affects correlation analysis, but does not explicitly discuss the limitation of Bonferroni correction under non-independence. The paper does mention using alternative methods (FDR-based analysis) alongside Bonferroni, suggesting awareness of its limitations, but does not state that Bonferroni is inappropriate for correlated tests.",
@@ -3956,7 +3956,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sodium-adduct-detection-and-classification/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/sodium-adduct-detection-and-classification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We found high counts of \u0394mass of 21.985 and 37.955 Da, which matched the \u0394mass between [M + H]+ and [M + Na]+ or [M + K]+, respectively... Adducts are expected to co-occur in the same spot as their parent metabolite for any given tissue sample. Consequently, calculating individual correlation values between the intensities of a peak and its putative adduct peak across all pixels of a MALDI-MSI dataset provides statistical support for MS1-based adduct identifications",
       "asbval:note": "Core methodology confirmed: mass difference matching for Na+ adducts (\u0394mass 21.985 Da) and spatial correlation filtering for false-positive removal.",
@@ -3976,7 +3976,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sodium-adduct-detection-and-classification/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/sodium-adduct-detection-and-classification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Currently, there is a gap in transforming the measured m/z values to knowledge... The typically thousands of measured signals in metabolomics experiments often remain unidentified and have been described as dark metabolome... We propose to include matrix adducts into annotation processes to improve ion identifications in spatial metabolomics datasets to reduce the high percentage of previously unannotated m/z values",
       "asbval:note": "Paper explicitly frames adduct detection as a method to illuminate the dark metabolome by recovering hidden metabolite identities.",
@@ -3996,7 +3996,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sodium-adduct-detection-and-classification/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/sodium-adduct-detection-and-classification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Software to perform the adduct identification and correlation testing are implemented in an R package, mass2adduct. The software and installation instructions are available on GitHub at https://github.com/kbseah/mass2adduct",
       "asbval:note": "mass2adduct is confirmed as the core R package for adduct detection and correlation testing. However, the specific function names (massdiff, hist, adductMatch, topAdducts, diffGetPeaks, corrPairsMSI, corrPairsMSIchunks, pointsAdducts) are not explicitly listed in the passages. The paper describes the workflow (mass difference calculation, histogram matching, spatial correlation) but does not enumerate individual function names.",
@@ -4016,7 +4016,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sodium-adduct-detection-and-classification/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/sodium-adduct-detection-and-classification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Peak lists and intensity matrices for datasets #1\u20133, #5\u20137, #9, #13\u201316, #19, and #20 were generated with SCiLS v2019b (Bruker, Germany)... Datasets #4, #8, #10, #17, and #18 were binned with Cardinal MSI v2 at a bin width of 1 mDa... MSI data in imzML format or intensity matrices in CSV format can be imported to mass2adduct.",
       "asbval:note": "Cardinal is confirmed as used for MSI preprocessing and binning. The paper states that 'MSI data in imzML format or intensity matrices in CSV format can be imported to mass2adduct' but does not explicitly name a cardinal2msimat() conversion function or describe MSProcessedImagingExperiment/MSContinuousImagingExperiment object conversion.",
@@ -4036,7 +4036,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sodium-adduct-detection-and-classification/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/sodium-adduct-detection-and-classification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Peak lists and intensity matrices for datasets #1\u20133, #5\u20137, #9, #13\u201316, #19, and #20 were generated with SCiLS v2019b (Bruker, Germany)... Peak intensity matrices were exported in text CSV format... MSI data in imzML format or intensity matrices in CSV format can be imported to mass2adduct.",
       "asbval:note": "SCiLS confirmed as commercial software used for preprocessing; CSV export and import to mass2adduct confirmed.",
@@ -4056,7 +4056,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sodium-adduct-detection-and-classification/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/sodium-adduct-detection-and-classification/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "An intensity matrix for every ion of the respective peak list in each pixel on the dataset was exported with the software MSiReader v0.09... The intensity matrix was loaded into R, where correlations of adduct pairs were calculated.",
       "asbval:note": "MSiReader confirmed as open-source software used for exporting intensity matrices; import to mass2adduct via CSV format confirmed.",
@@ -4076,7 +4076,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sodium-adduct-detection-and-classification/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/sodium-adduct-detection-and-classification/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Software to perform the adduct identification and correlation testing are implemented in an R package, mass2adduct... The intensity matrix was loaded into R, where correlations of adduct pairs were calculated.",
       "asbval:note": "R confirmed as the environment for mass2adduct; package implementation in R confirmed.",
@@ -4096,7 +4096,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spatial-correlation-analysis-in-imaging-mass-spectrometry/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spatial-correlation-analysis-in-imaging-mass-spectrometry/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Therefore, for each dataset, Pearson's two-sided correlation test was performed for all ion pairs using per-pixel intensity values.",
       "asbval:note": "Exact match: two-tailed Pearson correlation on per-pixel intensities for ion pairs.",
@@ -4116,7 +4116,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spatial-correlation-analysis-in-imaging-mass-spectrometry/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spatial-correlation-analysis-in-imaging-mass-spectrometry/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For a true matrix adduct, the parent and adduct ions are expected to be positively spatially correlated.",
       "asbval:note": "Semantic equivalence: spatial correlation validates parent-adduct relationships.",
@@ -4136,7 +4136,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spatial-correlation-analysis-in-imaging-mass-spectrometry/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spatial-correlation-analysis-in-imaging-mass-spectrometry/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Function name 'corrPairsMSI' does not appear in paper. Paper describes correlation testing and Bonferroni correction but does not name this specific function.",
@@ -4156,7 +4156,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spatial-correlation-analysis-in-imaging-mass-spectrometry/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spatial-correlation-analysis-in-imaging-mass-spectrometry/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Function name 'corrPairsMSIchunks' does not appear in paper. Paper mentions parallelization but not this specific chunked variant.",
@@ -4176,7 +4176,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spatial-correlation-analysis-in-imaging-mass-spectrometry/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spatial-correlation-analysis-in-imaging-mass-spectrometry/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Function/data structure name 'msimat' does not appear in paper. Paper describes intensity matrices but does not name this specific structure.",
@@ -4196,7 +4196,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spatial-correlation-analysis-in-imaging-mass-spectrometry/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spatial-correlation-analysis-in-imaging-mass-spectrometry/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Function name 'adductMatch' does not appear in paper. Paper describes adduct identification via mass difference matching but does not name this function.",
@@ -4216,7 +4216,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spatial-correlation-analysis-in-imaging-mass-spectrometry/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spatial-correlation-analysis-in-imaging-mass-spectrometry/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Function name 'diffGetPeaks' does not appear in paper. Paper describes mass difference calculation but does not name this function.",
@@ -4236,7 +4236,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spatial-correlation-analysis-in-imaging-mass-spectrometry/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spatial-correlation-analysis-in-imaging-mass-spectrometry/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Software to perform the adduct identification and correlation testing are implemented in an R package, mass2adduct. The software and installation instructions are available on GitHub at https://github.com/kbseah/mass2adduct",
       "asbval:note": "Exact match: mass2adduct is the R package implementing adduct identification and correlation testing.",
@@ -4256,7 +4256,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spatial-correlation-analysis-in-imaging-mass-spectrometry/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spatial-correlation-analysis-in-imaging-mass-spectrometry/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The intensity matrix was loaded into R, where correlations of adduct pairs were calculated.",
       "asbval:note": "R is confirmed as the language used for correlation calculations.",
@@ -4276,7 +4276,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spatial-correlation-analysis-in-imaging-mass-spectrometry/009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spatial-correlation-analysis-in-imaging-mass-spectrometry/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The mass difference was calculated for all pairs of peaks, and matched against a list of known adduct types... For each dataset, Pearson's two-sided correlation test was performed for all ion pairs using per-pixel intensity values.",
       "asbval:note": "Paper describes the workflow (mass difference matching followed by correlation testing) but does not name the functions 'adductMatch' or 'diffGetPeaks'. The functional workflow is correct but function names are not verified.",
@@ -4296,7 +4296,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spatial-correlation-analysis-in-imaging-mass-spectrometry/010",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spatial-correlation-analysis-in-imaging-mass-spectrometry/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Adducts are expected to co-occur in the same spot as their parent metabolite for any given tissue sample. Consequently, calculating individual correlation values between the intensities of a peak and its putative adduct peak across all pixels of a MALDI-MSI dataset provides statistical support for MS1-based adduct identifications",
       "asbval:note": "Semantic equivalence: spatial correlation validates co-localization and co-variance.",
@@ -4316,7 +4316,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spatial-correlation-filtering-in-msi/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spatial-correlation-filtering-in-msi/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Adducts are expected to co-occur in the same spot as their parent metabolite for any given tissue sample. Consequently, calculating individual correlation values between the intensities of a peak and its putative adduct peak across all pixels of a MALDI-MSI dataset provides statistical support for MS1-based adduct identifications",
       "asbval:note": "Core research question is directly supported by the paper's methodology and rationale.",
@@ -4336,7 +4336,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spatial-correlation-filtering-in-msi/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spatial-correlation-filtering-in-msi/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Software to perform the adduct identification and correlation testing are implemented in an R package, mass2adduct. The software and installation instructions are available on GitHub at https://github.com/kbseah/mass2adduct",
       "asbval:note": "mass2adduct is confirmed as an R package for adduct identification and correlation testing. However, the specific function names 'corrPairsMSI()' and 'corrPairsMSIchunks()' are not mentioned in the passages. The paper describes the package's capabilities in general terms (parallelization, visualization tools, data import) but does not name these specific functions.",
@@ -4356,7 +4356,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spatial-correlation-filtering-in-msi/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spatial-correlation-filtering-in-msi/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "It allows data import in various formats (e.g., imzML via Cardinal,29 intensity tables in CSV format)",
       "asbval:note": "Cardinal is confirmed as used for MSI data processing and imzML import. However, the specific claim about converting 'MSProcessedImagingExperiment' or 'MSContinuousImagingExperiment' objects to 'msimat format' is not explicitly stated in the passages. The paper only mentions Cardinal's role in imzML format handling.",
@@ -4376,7 +4376,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spatial-correlation-filtering-in-msi/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spatial-correlation-filtering-in-msi/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Software to perform the adduct identification and correlation testing are implemented in an R package, mass2adduct.",
       "asbval:note": "R is confirmed as the environment for mass2adduct package.",
@@ -4396,7 +4396,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spatial-correlation-filtering-in-msi/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spatial-correlation-filtering-in-msi/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our approach is based on two major steps, calculating \u0394mass values between all peaks of a dataset and testing for spatial correlation only between parent and putative adduct ions",
       "asbval:note": "The workflow of mass-difference calculation followed by spatial correlation filtering is confirmed.",
@@ -4416,7 +4416,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spatial-correlation-filtering-in-msi/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spatial-correlation-filtering-in-msi/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "A positive correlation value alone does not guarantee that two ions are chemically related. However, in combination with our prior knowledge on sample and matrix composition, it provides additional confidence to screen for potential adducts.",
       "asbval:note": "The rationale for spatial correlation as evidence of biochemical relationship is supported, though the paper notes that correlation alone is not definitive.",
@@ -4436,7 +4436,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-annotation-and-overlay-visualization/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spectral-annotation-and-overlay-visualization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MSI ion maps were produced with MSiReader v0.09 using an m/z tolerance window of \u00b12.5 ppm and displayed with a modified Jet heatmap without interpolation.",
       "asbval:note": "Paper uses MSiReader v0.09 for ion map visualization, not pointsAdducts() overlay scatter plots. The paper visualizes spatial distributions but does not describe overlaid scatter plots with contrasting colors/symbols for parent-adduct pairs as claimed. Visualization is heatmap-based, not scatter-plot-based.",
@@ -4456,7 +4456,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-annotation-and-overlay-visualization/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spectral-annotation-and-overlay-visualization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Adducts are expected to co-occur in the same spot as their parent metabolite for any given tissue sample. Consequently, calculating individual correlation values between the intensities of a peak and its putative adduct peak across all pixels of a MALDI-MSI dataset provides statistical support for MS1-based adduct identifications",
       "asbval:note": "Paper confirms that co-occurrence/co-localization patterns are used to discriminate adduct-parent pairs, though via correlation analysis rather than visual scatter plot overlay.",
@@ -4476,7 +4476,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-annotation-and-overlay-visualization/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spectral-annotation-and-overlay-visualization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For each dataset, Pearson's two-sided correlation test was performed for all ion pairs using per-pixel intensity values. We applied three different methods to screen for false positives: (1) The Bonferroni correction was applied to the p-values from the correlation test... (2) Uncorrected p-values for positively correlated pairs were used for false-discovery-rate analysis with the R package qvalue v2.10.1",
       "asbval:note": "Paper performs correlation testing and FDR analysis on ion pairs, but does not name the function corrPairsMSI() or describe massdiff/adductMatch object classes. The functional workflow exists but specific function/object names are not confirmed in passages.",
@@ -4496,7 +4496,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-annotation-and-overlay-visualization/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spectral-annotation-and-overlay-visualization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The parent ion [PC(36:1) + H]+ showed a similarly strong ion intensity correlation to its matrix adduct [PC(36:1) + (DHB-H2O) + H]+ (corr. coeff. r = 0.779)... (Figure 1D). A positive correlation value alone does not guarantee that two ions are chemically related. However, in combination with our prior knowledge on sample and matrix composition, it provides additional confidence to screen for potential adducts.",
       "asbval:note": "Paper confirms spatial co-localization is used to validate adduct pairs, but does not describe colored scatter plot visualization (red/blue points). Visualization is shown as correlation matrices and heatmaps, not overlaid scatter plots with contrasting symbols.",
@@ -4516,7 +4516,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-annotation-and-overlay-visualization/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spectral-annotation-and-overlay-visualization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our workflow is available as a software package for R, called mass2adduct. It allows data import in various formats (e.g., imzML via Cardinal,29 intensity tables in CSV format), parallelization to speed up correlation testing, and several visualization tools.",
       "asbval:note": "Paper confirms mass2adduct is an R package with visualization tools, but does not name the specific function pointsAdducts(). The paper states 'several visualization tools' exist but does not enumerate them or confirm pointsAdducts() by name.",
@@ -4536,7 +4536,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-annotation-and-overlay-visualization/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spectral-annotation-and-overlay-visualization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The software and installation instructions are available on GitHub at https://github.com/kbseah/mass2adduct and are also archived on zenodo (https://doi.org/10.5281/zenodo.1405088).",
       "asbval:note": "GitHub repository URL is explicitly confirmed in the paper.",
@@ -4556,7 +4556,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-annotation-and-overlay-visualization/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spectral-annotation-and-overlay-visualization/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not describe or name specific object classes (msimat, massdiff) used by mass2adduct. The paper mentions 'intensity matrices' and 'peak lists' but does not confirm the object class names claimed in the card.",
@@ -4576,7 +4576,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-annotation-and-overlay-visualization/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spectral-annotation-and-overlay-visualization/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our workflow is available as a software package for R, called mass2adduct.",
       "asbval:note": "Paper confirms mass2adduct is an R package, so R is the runtime environment. However, the specific function pointsAdducts() is not named in the paper.",
@@ -4596,7 +4596,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-annotation-against-reference-library/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-annotation-against-reference-library/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "adduct-annotation-against-reference-library",
@@ -4609,7 +4609,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-ion-parent-ion-pairing-analysis/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-ion-parent-ion-pairing-analysis/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "adduct-ion-parent-ion-pairing-analysis",
@@ -4622,7 +4622,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-mass-difference-matching/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/adduct-mass-difference-matching/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "adduct-mass-difference-matching",
@@ -4635,7 +4635,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cardinal-imaging-object-conversion/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/cardinal-imaging-object-conversion/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "cardinal-imaging-object-conversion",
@@ -4648,7 +4648,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chemical-transformation-annotation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/chemical-transformation-annotation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "chemical-transformation-annotation",
@@ -4661,7 +4661,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-difference-calculation-from-spectral-peaks/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-difference-calculation-from-spectral-peaks/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "mass-difference-calculation-from-spectral-peaks",
@@ -4674,7 +4674,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-difference-pairwise-calculation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-difference-pairwise-calculation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "mass-difference-pairwise-calculation",
@@ -4687,7 +4687,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-imaging-data-interpretation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrometry-imaging-data-interpretation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "mass-spectrometry-imaging-data-interpretation",
@@ -4700,7 +4700,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-peak-pair-analysis/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrometry-peak-pair-analysis/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "mass-spectrometry-peak-pair-analysis",
@@ -4713,7 +4713,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrum-histogram-interpretation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/mass-spectrum-histogram-interpretation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 11,
       "asbval:target_artifact_id": "mass-spectrum-histogram-interpretation",
@@ -4726,7 +4726,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/msi-data-format-interoperability/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/msi-data-format-interoperability/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "msi-data-format-interoperability",
@@ -4739,7 +4739,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/msi-data-matrix-import-and-validation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/msi-data-matrix-import-and-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "msi-data-matrix-import-and-validation",
@@ -4752,7 +4752,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multiple-testing-correction-bonferroni/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/multiple-testing-correction-bonferroni/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "multiple-testing-correction-bonferroni",
@@ -4765,7 +4765,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/sodium-adduct-detection-and-classification/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/sodium-adduct-detection-and-classification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "sodium-adduct-detection-and-classification",
@@ -4778,7 +4778,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spatial-correlation-analysis-in-imaging-mass-spectrometry/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spatial-correlation-analysis-in-imaging-mass-spectrometry/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "spatial-correlation-analysis-in-imaging-mass-spectrometry",
@@ -4791,7 +4791,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spatial-correlation-filtering-in-msi/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spatial-correlation-filtering-in-msi/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "spatial-correlation-filtering-in-msi",
@@ -4804,7 +4804,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-annotation-and-overlay-visualization/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/skill/spectral-annotation-and-overlay-visualization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "spectral-annotation-and-overlay-visualization",
@@ -4817,7 +4817,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "In mass spectrometry imaging, adducts can form between target molecules such as metabolites and other substances such as matrix or salt ions.",
       "asbval:note": null,
@@ -4837,7 +4837,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The mass2adduct package accompanies Janda et al. (2021).",
       "asbval:note": null,
@@ -4857,7 +4857,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Each peak in a mass spectrum represents ions of a given mass/charge ratio (m/z) that have been detected by the instrument.",
       "asbval:note": null,
@@ -4877,7 +4877,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "In mass2adduct documentation, the term 'mass peak' is used to refer to both the ions themselves and to their nominal m/z values.",
       "asbval:note": null,
@@ -4897,7 +4897,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A chemical transformation refers agnostically to the chemical difference between two ions.",
       "asbval:note": null,
@@ -4917,7 +4917,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The abbreviation 'massdiff' refers to 'mass difference' and denotes the absolute difference in m/z values between two mass peaks.",
       "asbval:note": null,
@@ -4937,7 +4937,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "An adduct refers specifically to a transformation caused by the addition of a chemical moiety, often during the MSI procedure.",
       "asbval:note": null,
@@ -4957,7 +4957,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The precursor to an adduct is called the parent ion or parent molecule.",
       "asbval:note": "Text uses 'parent ion or parent molecule' but source says 'parent ion/molecule' \u2014 minor stylistic difference but meaning preserved",
@@ -4977,7 +4977,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The mass2adduct analysis looks at pairs of peaks and attempts to match their massdiffs to known chemical transformations to find adducts derived from the chemical matrix used for MALDI-MSI.",
       "asbval:note": null,
@@ -4997,7 +4997,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Raw MSI data are exported as plain-text CSV files from standard MSI software such as SCiLS or MSiReader.",
       "asbval:note": "Source says 'This should be exported' (prescriptive) but claim states 'are exported' (descriptive); subtle shift in meaning regarding actual practice vs. recommendation",
@@ -5017,7 +5017,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "In the mass2adduct CSV format, columns represent mass peaks with m/z values as column names, and rows represent pixels.",
       "asbval:note": "Source excerpt provided does not contain information about CSV format structure; insufficient evidence in excerpt to validate claim about columns and rows",
@@ -5037,7 +5037,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_012",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_012",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Entries in the mass2adduct data table represent intensity values for a given peak and pixel.",
       "asbval:note": "Source excerpt does not support this claim; excerpt discusses data formats but not table entry contents",
@@ -5057,7 +5057,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_013",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_013",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The cardinal2msimat() function can convert data objects in MSProcessedImagingExperiment or MSContinuousImagingExperiment formats to mass2adduct's msimat format.",
       "asbval:note": null,
@@ -5077,7 +5077,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_014",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_014",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Cardinal version 2.2 or higher is required for use with mass2adduct.",
       "asbval:note": null,
@@ -5097,7 +5097,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_015",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_015",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The default plot method for an msimat object displays a mass spectrum with vertical lines representing the total intensity of each peak.",
       "asbval:note": null,
@@ -5117,7 +5117,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_016",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_016",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The massdiff function returns an object of classes data.frame and massdiff.",
       "asbval:note": null,
@@ -5137,7 +5137,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_017",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_017",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "In the massdiff output, column A represents the parent ion peak mass.",
       "asbval:note": null,
@@ -5157,7 +5157,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_018",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_018",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "In the massdiff output, column B represents the putative adduct ion peak mass (higher than A).",
       "asbval:note": null,
@@ -5177,7 +5177,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_019",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_019",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "In the massdiff output, column diff is the difference between A and B.",
       "asbval:note": null,
@@ -5197,7 +5197,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_020",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_020",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Common chemical transformations are more often encountered than background noise in mass difference distributions.",
       "asbval:note": null,
@@ -5217,7 +5217,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_021",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_021",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The mass2adduct package includes two built-in datasets called adducts and adducts2 that list biologically-relevant chemical species.",
       "asbval:note": null,
@@ -5237,7 +5237,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_022",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_022",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Users can create custom adduct tables with the same three columns as the built-in adducts dataset.",
       "asbval:note": null,
@@ -5257,7 +5257,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_023",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_023",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Interesting transformations or adducts will appear as peaks in a histogram of mass difference values.",
       "asbval:note": null,
@@ -5277,7 +5277,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_024",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_024",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The background of likely non-meaningful mass differences is not uniformly distributed but instead has peaks at integer values.",
       "asbval:note": null,
@@ -5297,7 +5297,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_025",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_025",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Chemical masses themselves are close to integer values, hence the differences between them should be too.",
       "asbval:note": null,
@@ -5317,7 +5317,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_026",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_026",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The adductMatch function looks for known adducts by finding the closest-matching bin in the mass difference histogram.",
       "asbval:note": null,
@@ -5337,7 +5337,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_027",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_027",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "adductMatch reports the number of counts for each mass difference and the quantile.",
       "asbval:note": null,
@@ -5357,7 +5357,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_028",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_028",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Quantile values in adductMatch are usually quite high because the majority of mass differences have zero to few counts.",
       "asbval:note": null,
@@ -5377,7 +5377,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_029",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_029",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The topAdducts function ranks mass differences by their occurrences in descending order and reports matches to known adducts.",
       "asbval:note": null,
@@ -5397,7 +5397,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_030",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_030",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The histogram method bins massdiff values into bins of fixed width.",
       "asbval:note": null,
@@ -5417,7 +5417,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_031",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_031",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The mass resolution of a mass spectrometer varies with the mass.",
       "asbval:note": null,
@@ -5437,7 +5437,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_032",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_032",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "adductMatch can be applied to a massdiff object to add a matches column listing the closest-matching adduct for each ion pair.",
       "asbval:note": null,
@@ -5457,7 +5457,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_033",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_033",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The object produced by adductMatch is a subset of the original massdiff object, as ion pairs without a matching adduct are excluded.",
       "asbval:note": "Text uses generic 'object produced by adductMatch' instead of specific object name 'd.diff.annot' from source",
@@ -5477,7 +5477,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_034",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_034",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "corrPairsMSI performs a correlation test on each pair of peaks in a massdiff object.",
       "asbval:note": null,
@@ -5497,7 +5497,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_035",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_035",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "corrPairsMSI uses the two-tailed Pearson method by default for correlation testing.",
       "asbval:note": null,
@@ -5517,7 +5517,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_036",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_036",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The how=parallel option can speed up corrPairsMSI processing on computers with multiple processors.",
       "asbval:note": null,
@@ -5537,7 +5537,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_037",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_037",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The ncores parameter in corrPairsMSI specifies the number of processors to use.",
       "asbval:note": null,
@@ -5557,7 +5557,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_038",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_038",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "corrPairsMSIchunks can be used instead of corrPairsMSI for larger datasets to avoid running out of memory.",
       "asbval:note": null,
@@ -5577,7 +5577,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_039",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_039",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "corrPairsMSIchunks splits the job into chunks that fit within a specified memory limit.",
       "asbval:note": null,
@@ -5597,7 +5597,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_040",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_040",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Using corrPairsMSIchunks results in more overhead and less speed compared to corrPairsMSI.",
       "asbval:note": null,
@@ -5617,7 +5617,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_041",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_041",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Correlation test results in corrPairsMSI output include Estimate (correlation coefficient), P.value, and Significance.",
       "asbval:note": null,
@@ -5637,7 +5637,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_042",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_042",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The Significance column in corrPairsMSI output indicates whether the p-value is below the threshold after Bonferroni correction.",
       "asbval:note": null,
@@ -5657,7 +5657,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_043",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_043",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Raw p-values are reported in corrPairsMSI output without Bonferroni correction for user-conducted analysis.",
       "asbval:note": null,
@@ -5677,7 +5677,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_044",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_044",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The pointsAdducts function annotates the original mass spectrum using a massdiff object to mark peaks in different colors.",
       "asbval:note": "Text omits that peaks are marked for 'parent ions and adduct ions' specifically; claims only 'peaks' in general",
@@ -5697,7 +5697,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_045",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.0c04720/claim/claim_045",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Some adduct ions may themselves be parents of further adducts.",
       "asbval:note": null,

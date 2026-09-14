@@ -1103,7 +1103,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We strongly recommend using a tab-separated format while exporting; an example can be found in GitHub: https://github.com/hankemeierlab/mzQuality. Additionally, it is important that numbers and symbols are compatible with R. The input file should include the following columns with the specified headers (Table ): aliquot, type, batch, compound, area, and datetime of the sample measurement.",
       "asbval:note": "Paper confirms tab-separated input format and R compatibility, but does not name or describe a 'buildExperiment' function. The paper describes data input validation and processing steps but does not explicitly mention SummarizedExperiment object construction or a function by that name.",
@@ -1123,7 +1123,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The first step involves IS normalization, where for all samples ratios are calculated by dividing the compound area (Peak area_compound) by the corresponding IS area (Peak area_IS) as shown in eq . 1 Ratio=Peakarea_compoundPeakarea_IS",
       "asbval:note": "Paper describes ratio computation from compound and internal standard areas, but does not mention a 'buildExperiment' function or explicit SummarizedExperiment object construction. The function name and object type are not found in the paper.",
@@ -1143,7 +1143,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The first step involves IS normalization, where for all samples ratios are calculated by dividing the compound area (Peak area_compound) by the corresponding IS area (Peak area_IS) as shown in eq . 1 Ratio=Peakarea_compoundPeakarea_IS",
       "asbval:note": "Paper confirms ratio computation and data organization with compound and sample metadata, but does not explicitly mention SummarizedExperiment objects or their structure (rowData, colData, assays). The paper states 'with an R-compatible output, the data are ready for statistical analysis' but does not name the specific R object type.",
@@ -1163,7 +1163,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In this article, we introduce mzQuality, a new open-source metabolomics data quality assessment tool.",
       "asbval:note": null,
@@ -1183,7 +1183,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required.",
       "asbval:note": null,
@@ -1203,7 +1203,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/005",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_001/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SummarizedExperiment is not mentioned anywhere in the paper. The paper describes R-compatible output and data structures but does not reference the Bioconductor SummarizedExperiment class.",
@@ -1223,7 +1223,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card describes a specific function 'buildExperiment' that constructs SummarizedExperiment objects. The paper does not mention this function by name or describe SummarizedExperiment object construction.",
@@ -1241,7 +1241,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality performs several important quality control steps, such as identifying sample outliers, calculating background signal, performing batch correction, detecting trends in total signal intensity for either metabolite or IS, and calculating metrics that highlight variations in metabolite/IS ratios.",
       "asbval:note": "Paper describes batch correction and outlier detection performed by mzQuality, but does not name a specific function called 'doAnalysis'. The paper describes the overall workflow and output assays but does not reference a function with this name in the passages provided.",
@@ -1261,7 +1261,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The next steps involve the identification of QC and study sample outliers using Rosner's test. For QC samples, outliers are identified based on the median area/area_IS ratios, as these samples are assumed to be identical, while for study samples, only the IS areas are used since they may vary biologically. Potential outliers are flagged by mzQuality and are automatically excluded from further calculations.",
       "asbval:note": "Paper describes outlier identification and batch correction processes, but does not name a function 'doAnalysis' or explicitly describe processing of SummarizedExperiment objects in the provided passages. The functional description matches but the specific function name and data structure are not confirmed.",
@@ -1281,7 +1281,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Batchcorrectedarearatio=fcorrection_batch_n\u00d7arearatio. When trends occur within batches, such as a decrease in sensitivity, mzQuality can correct for this using a within-batch correction. The within-batch correction is performed using a first-order regression.",
       "asbval:note": "Paper describes batch-corrected area ratios and within-batch correction, but does not explicitly mention output as a 'SummarizedExperiment object' or an assay named 'ratio_corrected'. The paper states 'with an R-compatible output, the data are ready for statistical analysis' but does not specify SummarizedExperiment format in provided passages.",
@@ -1301,7 +1301,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For QC samples, outliers are identified based on the median area/area_IS ratios, as these samples are assumed to be identical, while for study samples, only the IS areas are used since they may vary biologically. Potential outliers are flagged by mzQuality and are automatically excluded from further calculations.",
       "asbval:note": null,
@@ -1321,7 +1321,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_002/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Rosner's test is used on the IS of study samples to identify and flag potential misinjections and, thus, outliers.",
       "asbval:note": null,
@@ -1341,7 +1341,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/005",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_002/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "While mzQuality does not use the calibration lines for corrections, it can calculate absolute concentrations and inform about the dynamic range in which samples are measured.",
       "asbval:note": "Paper confirms mzQuality can calculate absolute concentrations but does not explicitly state the method is 'linear regression' or describe the mechanism in detail in provided passages.",
@@ -1361,7 +1361,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/006",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_002/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we introduce mzQuality, a user-friendly, open-source R-Shiny app designed to assess and correct technical variations in mass spectrometry-based metabolomics data.",
       "asbval:note": null,
@@ -1381,7 +1381,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/007",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_002/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required.",
       "asbval:note": null,
@@ -1401,7 +1401,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/008",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_002/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SummarizedExperiment is not mentioned anywhere in the provided passages. The paper describes R-compatible output and Excel files but does not reference the SummarizedExperiment Bioconductor class.",
@@ -1421,7 +1421,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card references a specific function 'doAnalysis' which is not mentioned in any of the provided passages. This may indicate the extractor inferred function names not explicitly stated in the paper.",
@@ -1439,7 +1439,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality also provides suggestions for alternative ISs, but the user must check the compatibility of the IS with the compound. These suggestions are based on calculations that evaluate all compound and IS combinations to determine which combination gives the best RSDqc after batch correction.",
       "asbval:note": "Paper describes that mzQuality evaluates compound-IS combinations to find best RSDqc, but the card frames this as a standalone reproducible task with explicit outputs. The paper presents this as a feature suggestion within the tool, not as a documented standalone workflow with reproducible outputs.",
@@ -1459,7 +1459,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe generation of a recommendation table with these specific columns. The paper mentions that mzQuality 'provides suggestions for alternative ISs' but does not document the format or structure of such output.",
@@ -1479,7 +1479,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe generation of a full RSDQC matrix as an output. The paper mentions calculations evaluating 'all compound and IS combinations' but does not document this as a matrix output.",
@@ -1499,7 +1499,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required.",
       "asbval:note": null,
@@ -1519,7 +1519,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we introduce mzQuality, a user-friendly, open-source R-Shiny app designed to assess and correct technical variations in mass spectrometry-based metabolomics data.",
       "asbval:note": null,
@@ -1539,7 +1539,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/005",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_003/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SummarizedExperiment is not mentioned anywhere in the paper. mzQuality uses R and produces Excel files and tab-separated outputs, but SummarizedExperiment is not documented as part of the workflow.",
@@ -1559,7 +1559,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card frames the task as 'reproducing' an output from 'the analysed experiment', but the paper does not present IS recommendation as a standalone reproducible task with documented outputs. It is mentioned as an internal feature suggestion within mzQuality.",
@@ -1576,7 +1576,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_004/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This output folder includes all of the previously mentioned plots and Excel files that can be used for statistical analysis in tools such as R. The Excel file lists all measured compounds, categorized by confidence level.",
       "asbval:note": "Paper describes output folder structure and file types (plots and Excel files) but does not name a function called 'createReports'. The paper discusses mzQuality's output generation capability but does not explicitly reference this function name.",
@@ -1596,7 +1596,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_004/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This output folder includes all of the previously mentioned plots and Excel files that can be used for statistical analysis in tools such as R.",
       "asbval:note": "Paper confirms mzQuality generates output folders with plots and Excel files, but does not name a 'createReports' function or explicitly describe 'Plots' and 'Reports' subdirectories. The paper states 'output folder' generically and references GitHub for details on folder structure.",
@@ -1616,7 +1616,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_004/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The following mzQuality output is provided to demonstrate the visualization of data useful in evaluating data quality... This output folder includes all of the previously mentioned plots and Excel files",
       "asbval:note": "Paper extensively describes multiple plot types (aliquot plots, PCA plots, violin plots, individual compound plots) generated by mzQuality as output.",
@@ -1636,7 +1636,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_004/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Excel file lists all measured compounds, categorized by confidence level. Compounds are organized into three tabs based on quality and user-defined or default settings: the 'High confidence' tab includes compounds with RSDqc values below 15%, the 'With Caution' tab includes compounds with RSDqc values ranging between 15% and 30%, and the 'Low Signal to Noise' tab",
       "asbval:note": "Paper confirms Excel file output with categorized compounds. Tab-delimited text files are mentioned as part of output but not extensively detailed in passages provided.",
@@ -1656,7 +1656,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_004/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for mzQuality | role: primary tool for quality monitoring and reporting]",
       "asbval:note": "mzQuality is the central tool described throughout the paper as an R-Shiny app for quality assessment and correction.",
@@ -1676,7 +1676,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/005",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_004/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required.",
       "asbval:note": "Paper explicitly states mzQuality is an R package.",
@@ -1696,7 +1696,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/006",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_004/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SummarizedExperiment is not mentioned anywhere in the provided passages. The paper describes mzQuality as an R-Shiny app that processes peak-integrated data and outputs Excel files and plots, but does not reference SummarizedExperiment as a tool or data structure used.",
@@ -1716,7 +1716,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_004/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card references a specific function 'createReports' which is not named in the paper. The paper describes mzQuality's output generation capability generically without naming this function.",
@@ -1733,7 +1733,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_005/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "If no IS is available, mzQuality assumes an IS area of 1, meaning that the area ratio, on which most of the calculations are based, is the same as the area.",
       "asbval:note": "Paper confirms that mzQuality already supports no-internal-standard condition by defaulting IS area to 1. The card frames this as an 'extension' task, but the paper describes this as existing functionality. The claim about 'ratio assay defaults to 1' is semantically equivalent to the paper's statement that IS area defaults to 1.",
@@ -1753,7 +1753,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_005/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "If no IS is available, mzQuality assumes an IS area of 1, meaning that the area ratio, on which most of the calculations are based, is the same as the area.",
       "asbval:note": "Paper confirms the functional behavior (ratio equals primary assay when IS defaults to 1), but does not mention 'buildExperiment' or 'secondaryAssay' column terminology. These appear to be SummarizedExperiment/Bioconductor API terms not used in the paper. The underlying logic is present but the specific API/function names are not.",
@@ -1773,7 +1773,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_005/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required.",
       "asbval:note": null,
@@ -1793,7 +1793,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_005/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we introduce mzQuality, a user-friendly, open-source R-Shiny app designed to assess and correct technical variations in mass spectrometry-based metabolomics data.",
       "asbval:note": null,
@@ -1813,7 +1813,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_005/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SummarizedExperiment (a Bioconductor class) is not mentioned anywhere in the paper. The paper does not discuss data structures or object classes used internally by mzQuality beyond describing input/output formats (tab-separated files, Excel files, R-compatible output).",
@@ -1833,7 +1833,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/005",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_005/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality performs a validation on the input file to ensure all necessary information is included and to detect any formatting errors.",
       "asbval:note": "Paper describes validation of input file format and presence of required columns, but does not describe a validation report comparing ratio assay to primary assay values or checking numerical tolerance. The paper does output Excel files with compounds categorized by confidence level, but not the specific validation report described in the card.",
@@ -1853,7 +1853,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/card/task_005/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card frames the task as 'extending' mzQuality to support no-internal-standard condition, but the paper indicates this is already implemented functionality (IS defaults to 1).",
@@ -1871,7 +1871,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/assay-ratio-computation-verification/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/assay-ratio-computation-verification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The first step involves IS normalization, where for all samples ratios are calculated by dividing the compound area (Peak area_compound) by the corresponding IS area (Peak area_IS) as shown in eq . 1 Ratio=Peakarea_compoundPeakarea_IS",
       "asbval:note": "Paper confirms ratio computation (compound/IS) is performed by mzQuality, but does NOT mention SummarizedExperiment objects, buildExperiment function, or secondary assay slots. The card claims verification of ratio computation within a SummarizedExperiment data structure; the paper describes the mathematical operation but not the Bioconductor object framework. This is a partial match: the function (ratio computation) exists, but the claimed implementation context (SummarizedExperiment) is not mentioned in the passages.",
@@ -1891,7 +1891,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/assay-ratio-computation-verification/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/assay-ratio-computation-verification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required. It is available through GitHub: https://github.com/hankemeierlab/mzQuality.",
       "asbval:note": "Paper confirms mzQuality is an R package available on GitHub and performs ratio computation (IS normalization). However, the paper does NOT mention SummarizedExperiment objects, buildExperiment function, or readData function by name. The paper describes data input/validation and ratio calculation but does not reference these specific Bioconductor/function names. The tool exists and performs the ratio computation, but the claimed implementation details (SummarizedExperiment, buildExperiment, readData) are not present in the passages.",
@@ -1911,7 +1911,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/assay-ratio-computation-verification/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/assay-ratio-computation-verification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SummarizedExperiment is not mentioned anywhere in the provided passages. The paper describes mzQuality's data input format (tab-separated file with columns: aliquot, type, batch, compound, area, datetime, etc.) but does not reference Bioconductor's SummarizedExperiment class or confirm it as the core object format for mzQuality.",
@@ -1931,7 +1931,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/assay-ratio-computation-verification/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/assay-ratio-computation-verification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required.",
       "asbval:note": "Paper confirms mzQuality is an R package, but does not mention readData or buildExperiment functions by name. R is confirmed as the implementation language, but the specific functions claimed are not named in the passages.",
@@ -1951,7 +1951,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/assay-ratio-computation-verification/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/assay-ratio-computation-verification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Once the data are imported and validated, mzQuality initiates the first steps of data evaluation to ensure data integrity. 3.3.1 IS Normalization The first step involves IS normalization... The next steps involve the identification of QC and study sample outliers using Rosner's test... To correct for technical variation between individual batches...",
       "asbval:note": "Paper confirms that ratio computation (IS normalization) occurs before outlier detection and batch correction. However, the paper does not mention buildExperiment or SummarizedExperiment. The workflow order is correct, but the claimed implementation context (buildExperiment, SummarizedExperiment) is not present.",
@@ -1971,7 +1971,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-corrected-data-extraction/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/batch-corrected-data-extraction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality performs several important quality control steps, such as identifying sample outliers, calculating background signal, performing batch correction, detecting trends in total signal intensity for either metabolite or IS, and calculating metrics that highlight variations in metabolite/IS ratios... mzQuality uses repeat measurements of quality control samples to flag compounds that do not reach predefined thresholds as low quality.",
       "asbval:note": "Paper confirms mzQuality performs batch correction using QC samples and calculates compound/IS ratios. However, paper does not explicitly mention SummarizedExperiment objects or programmatic extraction of corrected ratios from such containers. The paper focuses on batch correction methodology and visualization outputs, not on SummarizedExperiment data structure manipulation.",
@@ -1991,7 +1991,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-corrected-data-extraction/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/batch-corrected-data-extraction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SQCs, also named intrastudy QC samples, often consist of pooled study samples that contain an average amount of metabolites representative of the study... If SQCs were generated from pooling study samples, then they provide an average signal over the study samples, therefore allowing a direct comparison with the samples investigated with the biological samples... This makes batch corrections based on SQC samples the most reliable.",
       "asbval:note": "Paper explicitly describes SQC-based batch correction as the recommended approach.",
@@ -2011,7 +2011,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-corrected-data-extraction/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/batch-corrected-data-extraction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required. It is available through GitHub: https://github.com/hankemeierlab/mzQuality... mzQuality performs several important quality control steps, such as identifying sample outliers, calculating background signal, performing batch correction... Batchcorrectedarearatio=fcorrection_batch_n\u00d7arearatio",
       "asbval:note": "Paper confirms mzQuality performs batch correction and calculates corrected ratios. However, paper does not mention SummarizedExperiment as the storage container for corrected ratios. The paper describes output as 'Excel files that can be used for statistical analysis in tools such as R' and mentions 'R-compatible output', but does not explicitly state that corrected ratios are stored in SummarizedExperiment assay slots.",
@@ -2031,7 +2031,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-corrected-data-extraction/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/batch-corrected-data-extraction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SummarizedExperiment is not mentioned anywhere in the provided passages. The paper describes mzQuality output as Excel files and R-compatible output, but does not reference SummarizedExperiment data structures.",
@@ -2051,7 +2051,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-corrected-data-extraction/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/batch-corrected-data-extraction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality, a user-friendly, open-source R-Shiny app designed to assess and correct technical variations in mass spectrometry-based metabolomics data.",
       "asbval:note": "Paper confirms mzQuality is an R-Shiny app for assessing and correcting data. However, the tool is called 'mzQuality' (not 'mzQualityDashboard'), and the paper does not explicitly mention a separate 'mzQualityDashboard' tool. The Shiny interface is part of mzQuality itself, not a separate tool.",
@@ -2071,7 +2071,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-corrected-data-extraction/005",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/batch-corrected-data-extraction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required... mzQuality, a user-friendly, open-source R-Shiny app",
       "asbval:note": "Paper explicitly confirms mzQuality is an R package.",
@@ -2091,7 +2091,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-effect-assessment-via-quality-metrics/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/batch-effect-assessment-via-quality-metrics/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The RSDqc is calculated per compound according to eq. 4... Blank samples are used to assess the background signal. The background signal is calculated according to eq. 5... Based on the recommendations of the metabolomics quality assurance and quality control consortium, we set the threshold for the RSDqc at 30%. For the background signal, we recommend that the value of the e-score should not exceed 40%. However, mzQuality allows users to adjust these settings according to their preferences and analytical methods.",
       "asbval:note": "Paper confirms RSDQC, background signal percentage, presence in QC samples, and configurable thresholds. However, 'matrix effect' is not explicitly mentioned as a calculated metric in the paper. The paper focuses on RSDqc (relative standard deviation of QC samples), background signal, and detection percentage, but does not describe a 'matrix effect' metric.",
@@ -2111,7 +2111,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-effect-assessment-via-quality-metrics/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/batch-effect-assessment-via-quality-metrics/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality uses repeat measurements of quality control samples to flag compounds that do not reach predefined thresholds as low quality... Compounds are organized into three tabs based on quality and user-defined or default settings: the 'High confidence' tab includes compounds with RSDqc values below 15%, the 'With Caution' tab includes compounds with RSDqc values ranging between 15% and 30%, and the 'Low Signal to Noise' tab including compounds with either background signal >40% or RSDqc values >30%.",
       "asbval:note": "Directly supported: compounds are flagged and classified into confidence levels for reporting.",
@@ -2131,7 +2131,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-effect-assessment-via-quality-metrics/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/batch-effect-assessment-via-quality-metrics/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Targeted Mass Spectrometry (MS)-based analytical techniques are often used to detect and quantify hundreds of metabolites simultaneously. Mass spectrometers are generally combined with separation techniques, such as liquid chromatography (LC)... It is important to consider whether to use LQC, SQC, or a combination of both in the batch design, as these samples are used for batch correction and assessment of technical variation.",
       "asbval:note": "Paper confirms LC-MS/MS, batch organization, and SQC use. However, 'matrix effects' are not explicitly discussed as a metric assessed by mzQuality in the passages provided.",
@@ -2151,7 +2151,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-effect-assessment-via-quality-metrics/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/batch-effect-assessment-via-quality-metrics/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The first step involves IS normalization, where for all samples ratios are calculated by dividing the compound area (Peak area_compound) by the corresponding IS area (Peak area_IS)... we set the threshold for the RSDqc at 30%. For the background signal, we recommend that the value of the e-score should not exceed 40%.",
       "asbval:note": "Paper confirms IS normalization, RSDQC thresholds (15%, 30%), and background signal threshold (40%). However, the paper does not mention SummarizedExperiment as the data structure used by mzQuality. The paper describes tab-separated input files and R package output, but does not explicitly reference SummarizedExperiment objects.",
@@ -2171,7 +2171,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-effect-assessment-via-quality-metrics/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/batch-effect-assessment-via-quality-metrics/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required. It is available through GitHub: https://github.com/hankemeierlab/mzQuality... mzQuality performs several important quality control steps, such as identifying sample outliers, calculating background signal, performing batch correction, detecting trends in total signal intensity for either metabolite or IS, and calculating metrics that highlight variations in metabolite/IS ratios.",
       "asbval:note": "Paper confirms mzQuality is an R package that computes RSDQC, background signal, and presence metrics. However, the paper does not mention a function called 'doAnalysis()' explicitly, nor does it describe 'matrix effect' as a computed metric. The paper describes the overall workflow but does not name the specific function.",
@@ -2191,7 +2191,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-effect-assessment-via-quality-metrics/005",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/batch-effect-assessment-via-quality-metrics/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SummarizedExperiment is not mentioned anywhere in the provided passages. The paper describes mzQuality input as tab-separated files and output as Excel files and R-compatible data, but does not reference SummarizedExperiment as a data structure used by the tool.",
@@ -2211,7 +2211,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-effect-assessment-via-quality-metrics/006",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/batch-effect-assessment-via-quality-metrics/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required... Additionally, with an R-compatible output, the data are ready for statistical analysis and biological interpretation.",
       "asbval:note": "Paper confirms R is used and mzQuality produces R-compatible output. However, the paper does not mention a function called 'doAnalysis()' or accessing 'rowData/colData' structures.",
@@ -2231,7 +2231,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-effect-assessment-via-quality-metrics/007",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/batch-effect-assessment-via-quality-metrics/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality, a user-friendly, open-source R-Shiny app designed to assess and correct technical variations in mass spectrometry-based metabolomics data... mzQuality visualizes data through sample plots, PCA plots, and violin plots... mzQuality allows users to adjust settings according to their preferences and analytical methods.",
       "asbval:note": "Paper describes mzQuality as an R-Shiny app with interactive visualization and adjustable thresholds. However, the tool is called 'mzQuality' (not 'mzQualityDashboard'), and the paper does not reference a separate tool called 'mzQualityDashboard'. The Shiny interface is part of mzQuality itself.",
@@ -2251,7 +2251,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioconductor-object-structure-inspection/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/bioconductor-object-structure-inspection/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention SummarizedExperiment, Bioconductor, rowData, colData, or assays slots. mzQuality is described as an R-Shiny app that processes peak-integrated data and outputs Excel files and plots, but no reference to SummarizedExperiment object structure or inspection workflows.",
@@ -2271,7 +2271,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioconductor-object-structure-inspection/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/bioconductor-object-structure-inspection/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SummarizedExperiment is not mentioned anywhere in the paper. The paper describes mzQuality as an R-Shiny app, not as a tool that constructs or uses SummarizedExperiment objects.",
@@ -2291,7 +2291,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioconductor-object-structure-inspection/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/bioconductor-object-structure-inspection/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required. It is available through GitHub: https://github.com/hankemeierlab/mzQuality.",
       "asbval:note": "Paper confirms mzQuality is an R package available on GitHub, but does not mention readData() or buildExperiment() functions. Paper describes data input as tab-separated files and mentions data validation and processing steps, but does not name these specific functions or describe SummarizedExperiment construction.",
@@ -2311,7 +2311,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioconductor-object-structure-inspection/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/bioconductor-object-structure-inspection/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required.",
       "asbval:note": "Paper confirms mzQuality is an R package, but does not mention rowData(), colData(), assays() accessor functions or SummarizedExperiment-specific workflows. The paper describes R-compatible output for statistical analysis but not object inspection via Bioconductor accessors.",
@@ -2331,7 +2331,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioconductor-object-structure-inspection/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/bioconductor-object-structure-inspection/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper describes batch correction and ratio computation (IS normalization, batch correction, RSDqc calculation) but does not frame these within a SummarizedExperiment object model or mention inspection of rowData/colData/assays slots. mzQuality outputs Excel files and plots, not SummarizedExperiment objects.",
@@ -2351,7 +2351,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/compound-reliability-filtering-by-rsd-threshold/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/compound-reliability-filtering-by-rsd-threshold/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The RSDqc is calculated per compound according to eq. The standard deviation (SD) of the corrected ratios of all QC samples from all batches (SD_corrected_ratio_QC_all_batches) is divided by the mean of all of these ratios (Mean_corrected_ratio_QC_all_batches). Based on the recommendations of the metabolomics quality assurance and quality control consortium, we set the threshold for the RSDqc at 30%. ... Compounds are organized into three tabs based on quality and user-defined or default settings: the 'High confidence' tab includes compounds with RSDqc values below 15%, the 'With Caution' tab includes compounds with RSDqc values ranging between 15% and 30%, and the 'Low Signal to Noise' tab including compounds with either background signal >40% or RSDqc values >30%.",
       "asbval:note": "The paper explicitly describes RSD-based filtering of compounds using QC samples with a 30% threshold, matching the research question.",
@@ -2371,7 +2371,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/compound-reliability-filtering-by-rsd-threshold/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/compound-reliability-filtering-by-rsd-threshold/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required. It is available through GitHub: https://github.com/hankemeierlab/mzQuality. ... mzQuality performs several important quality control steps, such as identifying sample outliers, calculating background signal, performing batch correction, detecting trends in total signal intensity for either metabolite or IS, and calculating metrics that highlight variations in metabolite/IS ratios.",
       "asbval:note": "Paper confirms mzQuality is an R package that calculates RSDqc and filters compounds by quality thresholds. However, the paper does not mention 'doAnalysis' function or 'rowData$use' assignment explicitly\u2014these appear to be Bioconductor-specific implementation details not detailed in the paper. The functional role (RSD calculation and compound filtering) is confirmed, but the specific function/object names are not verified.",
@@ -2391,7 +2391,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/compound-reliability-filtering-by-rsd-threshold/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/compound-reliability-filtering-by-rsd-threshold/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SummarizedExperiment is not mentioned anywhere in the paper passages. While mzQuality is an R package, the paper does not specify that it uses SummarizedExperiment objects or Bioconductor containers for data storage.",
@@ -2411,7 +2411,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/compound-reliability-filtering-by-rsd-threshold/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/compound-reliability-filtering-by-rsd-threshold/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality, a user-friendly, open-source R-Shiny app designed to assess and correct technical variations in mass spectrometry-based metabolomics data.",
       "asbval:note": "The paper describes mzQuality itself as an 'R-Shiny app', not a separate tool called 'mzQualityDashboard'. The card claims mzQualityDashboard is a separate Shiny application layered on mzQuality, but the paper only mentions mzQuality as the Shiny interface. No separate dashboard tool is named in the paper.",
@@ -2431,7 +2431,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/compound-reliability-filtering-by-rsd-threshold/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/compound-reliability-filtering-by-rsd-threshold/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required. ... mzQuality provides an accessible solution to improve the data quality without requiring prior programming skills.",
       "asbval:note": "R is confirmed as the language for mzQuality. The paper emphasizes the tool is user-friendly and does not require programming skills, but R is the underlying platform.",
@@ -2451,7 +2451,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/compound-reliability-filtering-by-rsd-threshold/005",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/compound-reliability-filtering-by-rsd-threshold/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Once all of the batch corrections are performed, various metrics are calculated to check the quality of compounds. The RSDqc is calculated using the QC samples both before and after batch correction to evaluate the stability of a compound during measurements. ... If SQCs were generated from pooling study samples, then they provide an average signal over the study samples, therefore allowing a direct comparison with the samples investigated with the biological samples.",
       "asbval:note": "The paper confirms RSD filtering is applied post-batch-correction using SQC samples.",
@@ -2471,7 +2471,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/compound-reliability-filtering-by-rsd-threshold/006",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/compound-reliability-filtering-by-rsd-threshold/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Based on the recommendations of the metabolomics quality assurance and quality control consortium, we set the threshold for the RSDqc at 30%. ... Compounds are organized into three tabs based on quality and user-defined or default settings: the 'High confidence' tab includes compounds with RSDqc values below 15%, the 'With Caution' tab includes compounds with RSDqc values ranging between 15% and 30%, and the 'Low Signal to Noise' tab including compounds with either background signal >40% or RSDqc values >30%.",
       "asbval:note": "The paper confirms the 30% RSD threshold and compound classification by quality. However, the specific function name 'doAnalysis' and object field 'rowData$use' are not mentioned in the paper\u2014these are Bioconductor implementation details not detailed in the passages.",
@@ -2491,7 +2491,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/compound-standard-ratio-normalization/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/compound-standard-ratio-normalization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The first step involves IS normalization, where for all samples ratios are calculated by dividing the compound area (Peak area_compound) by the corresponding IS area (Peak area_IS)... To correct for technical variation between individual batches by, e.g., sample preparation, mobile phases, column changes, instrument cleaning, or changes in sensitivity of the system over time, a between-batch correction is performed.",
       "asbval:note": "Claim is directly supported. The paper describes IS normalization as the first step and explicitly links it to correcting for technical variation from sample preparation and instrument sensitivity changes.",
@@ -2511,7 +2511,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/compound-standard-ratio-normalization/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/compound-standard-ratio-normalization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required... mzQuality initiates the first steps of data evaluation... The first step involves IS normalization, where for all samples ratios are calculated by dividing the compound area (Peak area_compound) by the corresponding IS area (Peak area_IS)... a between-batch correction is performed.",
       "asbval:note": "mzQuality is confirmed as an R package that performs ratio calculation and batch correction. However, no mention of SummarizedExperiment framework is found in the passages. The paper describes mzQuality as an 'R-Shiny app' and 'R package' but does not specify use of SummarizedExperiment data containers.",
@@ -2531,7 +2531,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/compound-standard-ratio-normalization/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/compound-standard-ratio-normalization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of SummarizedExperiment or Bioconductor data structures in any passage. The paper describes mzQuality as processing 'peak-integrated data independently of vendor software' and using tab-separated input files, but does not specify internal data container architecture.",
@@ -2551,7 +2551,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/compound-standard-ratio-normalization/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/compound-standard-ratio-normalization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality, a user-friendly, open-source R-Shiny app designed to assess and correct technical variations in mass spectrometry-based metabolomics data.",
       "asbval:note": "The paper describes mzQuality itself as an 'R-Shiny app', not a separate tool called 'mzQualityDashboard'. The card appears to conflate mzQuality (which is the Shiny app) with a separate dashboard tool. The Shiny interface is part of mzQuality, not a wrapper around it.",
@@ -2571,7 +2571,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/compound-standard-ratio-normalization/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/compound-standard-ratio-normalization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required... Its customizable settings integrate seamlessly into research workflows... with an R-compatible output, the data are ready for statistical analysis.",
       "asbval:note": "R is confirmed as the language/environment for mzQuality. The paper explicitly states mzQuality is an R package and mentions R-compatible output.",
@@ -2591,7 +2591,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/compound-standard-ratio-normalization/005",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/compound-standard-ratio-normalization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The first step involves IS normalization, where for all samples ratios are calculated by dividing the compound area (Peak area_compound) by the corresponding IS area (Peak area_IS)... The input file should include the following columns with the specified headers... compound_is and area_is must also be included.",
       "asbval:note": "Scope is well-supported. The paper confirms IS normalization is the first step and requires peak areas for both compounds and internal standards.",
@@ -2611,7 +2611,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/internal-standard-area-mis-injection-flagging/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/internal-standard-area-mis-injection-flagging/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For study samples, only the IS areas are used since they may vary biologically. Potential outliers are flagged by mzQuality and are automatically excluded from further calculations.",
       "asbval:note": "Paper describes outlier detection on IS areas using Rosner's test, but does not explicitly frame this as 'mis-injection' detection or test whether IS areas fall outside 'expected ranges'. The paper states outliers are identified based on IS areas for study samples, but the functional purpose is broader outlier detection, not specifically mis-injection flagging. The paper does mention 'Rosner's test is used on the IS of study samples to identify and flag potential misinjections and, thus, outliers' in passage [3], which supports the mis-injection framing.",
@@ -2631,7 +2631,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/internal-standard-area-mis-injection-flagging/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/internal-standard-area-mis-injection-flagging/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required. It is available through GitHub: https://github.com/hankemeierlab/mzQuality.",
       "asbval:note": "Paper confirms mzQuality is an R package that processes LC-MS peak areas and IS data, but does not explicitly mention SummarizedExperiment objects as the input format. The paper describes tab-separated input files with specific columns (aliquot, type, batch, compound, area, compound_is, area_is, datetime), not SummarizedExperiment objects.",
@@ -2651,7 +2651,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/internal-standard-area-mis-injection-flagging/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/internal-standard-area-mis-injection-flagging/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required. It is available through GitHub: https://github.com/hankemeierlab/mzQuality. For study samples, only the IS areas are used since they may vary biologically. Potential outliers are flagged by mzQuality and are automatically excluded from further calculations.",
       "asbval:note": "Repository URL and tool name confirmed. Paper confirms mzQuality flags outliers using IS areas for study samples, but does not mention a function named 'doAnalysis'. The paper describes the process as part of 'Sample Outlier Determination' using Rosner's test, not a named function.",
@@ -2671,7 +2671,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/internal-standard-area-mis-injection-flagging/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/internal-standard-area-mis-injection-flagging/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention SummarizedExperiment objects at all. Input format is described as tab-separated files with specific columns. No reference to Bioconductor object classes or colData/rowData slots.",
@@ -2691,7 +2691,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/internal-standard-area-mis-injection-flagging/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/internal-standard-area-mis-injection-flagging/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality, a user-friendly, open-source R-Shiny app designed to assess and correct technical variations in mass spectrometry-based metabolomics data.",
       "asbval:note": "Paper describes mzQuality itself as an R-Shiny app, not a separate tool called 'mzQualityDashboard'. The paper does not mention a separate dashboard tool or the repository URL provided in the card.",
@@ -2711,7 +2711,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/internal-standard-area-mis-injection-flagging/005",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/internal-standard-area-mis-injection-flagging/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required.",
       "asbval:note": "Paper confirms R is the implementation language. Many of the listed skills (ratio computation, batch correction, outlier detection, quality metrics) are demonstrated in the paper's methods and results sections.",
@@ -2731,7 +2731,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/internal-standard-selection-optimization/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/internal-standard-selection-optimization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality also provides suggestions for alternative ISs, but the user must check the compatibility of the IS with the compound. These suggestions are based on calculations that evaluate all compound and IS combinations to determine which combination gives the best RSDqc after batch correction.",
       "asbval:note": "Paper confirms mzQuality evaluates IS combinations and calculates RSDqc to suggest optimal ISs. However, the paper does NOT describe an exhaustive search across ALL internal standard candidates per compound. Instead, mzQuality provides suggestions based on evaluating combinations, but the user must validate compatibility. The framing of 'exhaustively calculating RSDQC across all internal standard candidates' overstates the automation; the paper indicates suggestions are provided but user validation is required.",
@@ -2751,7 +2751,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/internal-standard-selection-optimization/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/internal-standard-selection-optimization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These suggestions are based on calculations that evaluate all compound and IS combinations to determine which combination gives the best RSDqc after batch correction.",
       "asbval:note": "Confirmed: mzQuality selects IS combinations that minimize RSDqc (measurement variance).",
@@ -2771,7 +2771,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/internal-standard-selection-optimization/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/internal-standard-selection-optimization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "If SQCs were generated from pooling study samples, then they provide an average signal over the study samples, therefore allowing a direct comparison with the samples investigated with the biological samples... This makes batch corrections based on SQC samples the most reliable... mzQuality also provides suggestions for alternative ISs, but the user must check the compatibility of the IS with the compound. These suggestions are based on calculations that evaluate all compound and IS combinations to determine which combination gives the best RSDqc after batch correction.",
       "asbval:note": "Scope is consistent with paper's description of batch correction using SQC and IS selection optimization.",
@@ -2791,7 +2791,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/internal-standard-selection-optimization/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/internal-standard-selection-optimization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality also provides suggestions for alternative ISs, but the user must check the compatibility of the IS with the compound. These suggestions are based on calculations that evaluate all compound and IS combinations to determine which combination gives the best RSDqc after batch correction.",
       "asbval:note": "mzQuality confirmed to perform batch correction and calculate RSDqc for IS evaluation. However, the paper does NOT mention a function called 'doAnalysis wrapper function' \u2014 this specific function name is not present in the passages. The paper describes IS suggestions being provided but does not name the specific function that performs this task.",
@@ -2811,7 +2811,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/internal-standard-selection-optimization/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/internal-standard-selection-optimization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SummarizedExperiment is not mentioned anywhere in the provided passages. The paper does not describe the internal data structures or Bioconductor classes used by mzQuality.",
@@ -2831,7 +2831,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/internal-standard-selection-optimization/005",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/internal-standard-selection-optimization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "mzQualityDashboard is not mentioned in the passages. The paper describes mzQuality as 'an R-Shiny app' but does not mention a separate tool called 'mzQualityDashboard'. The paper does not describe a dedicated dashboard for IS recommendations.",
@@ -2851,7 +2851,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/internal-standard-selection-optimization/006",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/internal-standard-selection-optimization/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required.",
       "asbval:note": "Confirmed: mzQuality is an R package.",
@@ -2871,7 +2871,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/linear-regression-concentration-calibration/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/linear-regression-concentration-calibration/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "While mzQuality does not use the calibration lines for corrections, it can calculate absolute concentrations and inform about the dynamic range in which samples are measured.",
       "asbval:note": "Paper states mzQuality CAN calculate absolute concentrations but explicitly states it does NOT use calibration lines for corrections. The paper does not describe linear regression fitting to calibration samples as a primary workflow feature. Calibration curves are mentioned as optional (not mandatory) for the tool's functionality.",
@@ -2891,7 +2891,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/linear-regression-concentration-calibration/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/linear-regression-concentration-calibration/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To correct for technical variation between individual batches by, e.g., sample preparation, mobile phases, column changes, instrument cleaning, or changes in sensitivity of the system over time, a between-batch correction is performed... Batchcorrectedarearatio=fcorrection_batch_n\u00d7arearatio",
       "asbval:note": "Batch correction of compound/IS ratios is a core feature of mzQuality.",
@@ -2911,7 +2911,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/linear-regression-concentration-calibration/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/linear-regression-concentration-calibration/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required. It is available through GitHub: https://github.com/hankemeierlab/mzQuality.",
       "asbval:note": "mzQuality is confirmed as an R package available on GitHub. However, no mention of a 'doAnalysis wrapper function' or explicit integration of linear regression concentration calibration as a primary workflow feature is found in the passages. The paper states calibration curves are optional and not used for corrections.",
@@ -2931,7 +2931,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/linear-regression-concentration-calibration/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/linear-regression-concentration-calibration/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SummarizedExperiment is not mentioned anywhere in the provided passages. The paper describes mzQuality output as 'Excel files that can be used for statistical analysis in tools such as R' but does not reference SummarizedExperiment or Bioconductor container classes.",
@@ -2951,7 +2951,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/linear-regression-concentration-calibration/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/linear-regression-concentration-calibration/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required.",
       "asbval:note": "R is confirmed as the environment for mzQuality, but no 'doAnalysis function' or explicit linear regression fitting workflow is documented in the passages.",
@@ -2971,7 +2971,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/linear-regression-concentration-calibration/005",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/linear-regression-concentration-calibration/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Although a calibration curve is not mandatory for the tool's functionality, it can be incorporated into the batch design.",
       "asbval:note": "Paper explicitly states calibration curves are NOT mandatory, contradicting the card's scope statement that they are required inputs.",
@@ -2991,7 +2991,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/linear-regression-concentration-calibration/006",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/linear-regression-concentration-calibration/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "it can calculate absolute concentrations and inform about the dynamic range in which samples are measured",
       "asbval:note": "Paper confirms absolute concentration calculation capability but does not describe downstream applications (pathway modeling, biomarker interpretation) or detail how concentrations are calculated from calibration lines.",
@@ -3011,7 +3011,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-ratio-batch-correction/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolite-ratio-batch-correction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To correct for technical variation between individual batches by, e.g., sample preparation, mobile phases, column changes, instrument cleaning, or changes in sensitivity of the system over time, a between-batch correction is performed... batch-to-batch compound-specific correction factors are calculated using eq and multiplied by the area ratios of each compound... If SQCs were generated from pooling study samples, then they provide an average signal over the study samples, therefore allowing a direct comparison with the samples investigated with the biological samples.",
       "asbval:note": "Core research question is directly supported by the paper's description of batch correction methodology using QC samples.",
@@ -3031,7 +3031,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-ratio-batch-correction/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolite-ratio-batch-correction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required. It is available through GitHub: https://github.com/hankemeierlab/mzQuality... mzQuality performs several important quality control steps, such as identifying sample outliers, calculating background signal, performing batch correction, detecting trends in total signal intensity for either metabolite or IS, and calculating metrics that highlight variations in metabolite/IS ratios.",
       "asbval:note": "Paper confirms mzQuality is an R package with batch correction, outlier detection, and quality filtering capabilities. However, no mention of 'doAnalysis function' or 'SummarizedExperiment' object management found in passages. The card claims specific function names and data structure management that are not verified in the provided text.",
@@ -3051,7 +3051,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-ratio-batch-correction/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolite-ratio-batch-correction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SummarizedExperiment is not mentioned anywhere in the provided passages. The paper describes mzQuality input/output formats using tab-separated files and Excel files, not SummarizedExperiment objects.",
@@ -3071,7 +3071,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-ratio-batch-correction/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolite-ratio-batch-correction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality, a user-friendly, open-source R-Shiny app designed to assess and correct technical variations in mass spectrometry-based metabolomics data.",
       "asbval:note": "Paper confirms mzQuality is an R-Shiny app for quality assessment and correction without programming skills required. However, the specific name 'mzQualityDashboard' is not mentioned; the paper refers to the tool itself as 'mzQuality' (which is the R-Shiny app). The card may be conflating the R package and the Shiny interface, or naming a separate dashboard tool not documented in these passages.",
@@ -3091,7 +3091,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-ratio-batch-correction/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolite-ratio-batch-correction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required.",
       "asbval:note": "R is confirmed as the environment for mzQuality.",
@@ -3111,7 +3111,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-ratio-batch-correction/005",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolite-ratio-batch-correction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The input file should include the following columns with the specified headers (Table ): aliquot, type, batch, compound, area, and datetime of the sample measurement. For quantitative or semiquantitative analysis, the columns compound_is and area_is must also be included... The example data set comprises 6 random yet consecutively measured batches containing 419 EDTA plasma study samples... Also included in the batches were different types of QC samples, blank samples, and calibration curves.",
       "asbval:note": "Paper describes input data structure with multiple batches, study samples, QC replicates, and calibration lines with ion areas and internal standards. However, input format is tab-separated text file, not SummarizedExperiment objects.",
@@ -3131,7 +3131,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-ratio-batch-correction/006",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolite-ratio-batch-correction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality provides an accessible solution to improve the data quality without requiring prior programming skills. Its customizable settings integrate seamlessly into research workflows, enhancing the accuracy and reproducibility of the metabolomics data. Additionally, with an R-compatible output, the data are ready for statistical analysis and biological interpretation.",
       "asbval:note": "Paper confirms that mzQuality harmonizes data across batches using QC samples and produces output ready for statistical analysis.",
@@ -3151,7 +3151,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-ratio-batch-correction/007",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolite-ratio-batch-correction/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "If SQCs were generated from pooling study samples, then they provide an average signal over the study samples, therefore allowing a direct comparison with the samples investigated with the biological samples... When a compound is not detected in LQC or SQC samples, the compound will be assumed to not be present and will not be reported by mzQuality.",
       "asbval:note": "Paper confirms that QC samples are essential for batch correction and compound assessment.",
@@ -3171,7 +3171,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-ratio-batch-correction/008",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolite-ratio-batch-correction/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Whenever more than one batch is present, a batch correction is performed to minimize batch-to-batch variation in the data... If no batches are defined, all samples are assigned to batch 1.",
       "asbval:note": "Paper confirms batch correction is only performed when multiple batches are present.",
@@ -3191,7 +3191,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-data-input-validation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolomics-data-input-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality performs a validation on the input file to ensure all necessary information is included and to detect any formatting errors. It checks for the presence of the required columns and verifies whether a batch is assigned to all aliquots... During the validation process, mzQuality checks if the column \"type\" includes the sample type QC. Additionally, it verifies if there is an observation for every aliquot and every compound and inserts \"NA\" for any missing data.",
       "asbval:note": "Paper confirms tab-delimited validation and column checking, but does NOT mention SummarizedExperiment object construction. mzQuality outputs Excel files and R-compatible data for downstream analysis, not explicit SummarizedExperiment construction. The card conflates mzQuality's output format with Bioconductor's SummarizedExperiment class, which is not mentioned in the paper.",
@@ -3211,7 +3211,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-data-input-validation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolomics-data-input-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality performs a validation on the input file to ensure all necessary information is included and to detect any formatting errors... If any of the necessary columns are absent, mzQuality will not be able to run.",
       "asbval:note": "Validation prevents malformed input from propagating; confirmed as upstream quality gate.",
@@ -3231,7 +3231,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-data-input-validation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolomics-data-input-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required. It is available through GitHub: https://github.com/hankemeierlab/mzQuality.",
       "asbval:note": "mzQuality and GitHub repo confirmed. However, paper does not name functions 'readData' or 'buildExperiment', nor does it mention SummarizedExperiment construction. Paper describes validation and data processing but does not explicitly document these function names or SummarizedExperiment output.",
@@ -3251,7 +3251,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-data-input-validation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolomics-data-input-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SummarizedExperiment is not mentioned anywhere in the paper. Paper states mzQuality provides 'R-compatible output, the data are ready for statistical analysis' and outputs Excel files, but does not reference SummarizedExperiment class.",
@@ -3271,7 +3271,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-data-input-validation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolomics-data-input-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required.",
       "asbval:note": "R confirmed as runtime environment for mzQuality. However, specific function names 'readData' and 'buildExperiment' are not mentioned in the paper.",
@@ -3291,7 +3291,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-data-input-validation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolomics-data-input-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The peak areas of compounds and IS, if applicable, need to be exported for use in mzQuality. We strongly recommend using a tab-separated format... The data were integrated using SCIEX OS (version 2.1.6.59781) and exported using the recommended data format.",
       "asbval:note": "Tab-delimited and SCIEX OS export confirmed as input formats.",
@@ -3311,7 +3311,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-data-input-validation/006",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolomics-data-input-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The input file should include the following columns with the specified headers (Table ): aliquot, type, batch, compound, area, and datetime of the sample measurement... mzQuality performs a validation on the input file to ensure all necessary information is included and to detect any formatting errors.",
       "asbval:note": "Validation of required columns (aliquot, compound, area) and format checking confirmed.",
@@ -3331,7 +3331,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-quality-control-report-generation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolomics-quality-control-report-generation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This output folder includes all of the previously mentioned plots and Excel files that can be used for statistical analysis in tools such as R. The Excel file lists all measured compounds, categorized by confidence level. Compounds are organized into three tabs based on quality and user-defined or default settings: the \"High confidence\" tab includes compounds with RSDqc values below 15%, the \"With Caution\" tab includes compounds with RSDqc values ranging between 15% and 30%, and the \"Low Signal to Noise\" tab including compounds with either background signal >40% or RSDqc values >30%.",
       "asbval:note": "Core functionality confirmed: mzQuality generates organized output folders with plots and Excel files categorizing compounds by confidence levels.",
@@ -3351,7 +3351,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-quality-control-report-generation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolomics-quality-control-report-generation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required. It is available through GitHub: https://github.com/hankemeierlab/mzQuality.",
       "asbval:note": "Tool name and repository confirmed.",
@@ -3371,7 +3371,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-quality-control-report-generation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolomics-quality-control-report-generation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality performs several important quality control steps, such as identifying sample outliers, calculating background signal, performing batch correction, detecting trends in total signal intensity for either metabolite or IS, and calculating metrics that highlight variations in metabolite/IS ratios.",
       "asbval:note": "Paper confirms mzQuality performs outlier detection, batch correction, and quality metric calculation. However, no explicit mention of a 'createReports' function is found in the passages. The paper describes output generation but does not name a specific function called 'createReports'.",
@@ -3391,7 +3391,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-quality-control-report-generation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolomics-quality-control-report-generation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SummarizedExperiment is not mentioned anywhere in the provided passages. The paper describes input as tab-separated files with specific columns (aliquot, type, batch, compound, area, datetime, etc.) but does not reference SummarizedExperiment as a data structure.",
@@ -3411,7 +3411,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-quality-control-report-generation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolomics-quality-control-report-generation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality, a user-friendly, open-source R-Shiny app designed to assess and correct technical variations in mass spectrometry-based metabolomics data.",
       "asbval:note": "Paper confirms mzQuality is an R-Shiny app but does not mention a separate tool called 'mzQualityDashboard' or its repository. The paper describes mzQuality itself as the Shiny application, not a separate dashboard wrapper.",
@@ -3431,7 +3431,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-quality-control-report-generation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolomics-quality-control-report-generation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required.",
       "asbval:note": "R confirmed as the language/runtime for mzQuality.",
@@ -3451,7 +3451,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-quality-control-report-generation/006",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolomics-quality-control-report-generation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality performs several important quality control steps, such as identifying sample outliers, calculating background signal, performing batch correction, detecting trends in total signal intensity for either metabolite or IS, and calculating metrics that highlight variations in metabolite/IS ratios.",
       "asbval:note": "Paper confirms mzQuality performs outlier detection, batch correction, and quality metric calculation, but does not mention a function named 'doAnalysis' or use of SummarizedExperiment objects. The workflow is described generically without naming specific function calls.",
@@ -3471,7 +3471,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-quality-control-report-generation/007",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolomics-quality-control-report-generation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality provides an accessible solution to improve the data quality without requiring prior programming skills. Its customizable settings integrate seamlessly into research workflows, enhancing the accuracy and reproducibility of the metabolomics data. Additionally, with an R-compatible output, the data are ready for statistical analysis and biological interpretation.",
       "asbval:note": "Paper confirms mzQuality is designed for users without programming skills and produces outputs suitable for downstream analysis and sharing.",
@@ -3491,7 +3491,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-quality-metric-interpretation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolomics-quality-metric-interpretation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The RSDqc is calculated per compound according to eq. 4... Blank samples are used to assess the background signal... Based on the recommendations of the metabolomics quality assurance and quality control consortium, we set the threshold for the RSDqc at 30%. For the background signal, we recommend that the value of the e-score should not exceed 40%.",
       "asbval:note": "Paper discusses RSDQC, background signal percentage, and presence in QC samples. However, 'matrix effect' is not mentioned in the passages. The paper does discuss IS selection and quality assessment, but does not explicitly frame this as selecting 'optimal internal standards based on quantitative thresholds' in the way the card describes.",
@@ -3511,7 +3511,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-quality-metric-interpretation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolomics-quality-metric-interpretation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To correct for technical variation between individual batches... a between-batch correction is performed... The RSDqc is calculated using the QC samples both before and after batch correction to evaluate the stability of a compound during measurements... ISs can be predefined in the input file and should be selected based on class behavior and retention times. mzQuality also provides suggestions for alternative ISs... These suggestions are based on calculations that evaluate all compound and IS combinations to determine which combination gives the best RSDqc after batch correction.",
       "asbval:note": "Fully supported: paper describes batch correction using QC samples, RSDQC calculation, and IS selection based on minimizing RSDQC.",
@@ -3531,7 +3531,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-quality-metric-interpretation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolomics-quality-metric-interpretation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required. It is available through GitHub: https://github.com/hankemeierlab/mzQuality... mzQuality uses repeat measurements of quality control samples to flag compounds that do not reach predefined thresholds as low quality. We defined the threshold at a relative standard deviation of QC > 30%... mzQuality also provides suggestions for alternative ISs... These suggestions are based on calculations that evaluate all compound and IS combinations to determine which combination gives the best RSDqc after batch correction.",
       "asbval:note": "Fully supported: mzQuality is confirmed as an R package that calculates RSDQC and flags compounds based on thresholds, and evaluates IS combinations.",
@@ -3551,7 +3551,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-quality-metric-interpretation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolomics-quality-metric-interpretation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality, a user-friendly, open-source R-Shiny app designed to assess and correct technical variations in mass spectrometry-based metabolomics data... mzQuality provides an accessible solution to improve the data quality without requiring prior programming skills.",
       "asbval:note": "Paper describes mzQuality as an 'R-Shiny app' but does not name a separate tool called 'mzQualityDashboard'. The Shiny interface is part of mzQuality itself, not a separate tool. The card appears to conflate the Shiny interface of mzQuality with a separate dashboard tool.",
@@ -3571,7 +3571,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-quality-metric-interpretation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolomics-quality-metric-interpretation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SummarizedExperiment is not mentioned anywhere in the provided passages. The paper describes mzQuality's input/output formats (tab-separated files, Excel files) but does not reference SummarizedExperiment as a data structure used by or output from mzQuality.",
@@ -3591,7 +3591,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-quality-metric-interpretation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolomics-quality-metric-interpretation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required.",
       "asbval:note": "Confirmed: mzQuality is an R package requiring R 4.0 or later.",
@@ -3611,7 +3611,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/numerical-equivalence-testing/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/numerical-equivalence-testing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes mzQuality as a quality control and batch correction tool for metabolomics data. It does not discuss testing numerical equivalence of assays, default parameter behaviors in the sense of optional inputs like 'secondaryAssay', or validating that division by 1 leaves data unchanged. The paper focuses on QC metrics (RSDqc, background signal), batch correction, and outlier detection\u2014not on assay equivalence testing.",
@@ -3631,7 +3631,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/numerical-equivalence-testing/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/numerical-equivalence-testing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The scope repeats the research_question claim. The paper does not address assay equivalence testing, optional parameter defaults, or mathematical transformation validation. The paper's scope is quality assurance and quality control for mass spectrometry metabolomics data.",
@@ -3651,7 +3651,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/numerical-equivalence-testing/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/numerical-equivalence-testing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required. It is available through GitHub: https://github.com/hankemeierlab/mzQuality.",
       "asbval:note": "The paper confirms mzQuality exists and is available at the stated GitHub repo. However, the paper does NOT mention a 'buildExperiment' function, 'SummarizedExperiment' object construction, or 'readData' for input validation in the sense claimed. The paper describes 'readData' implicitly (data import and validation) but does not name it as a function. The paper does not discuss 'ratio assay default behavior' testing or example.tsv for that purpose. The paper mentions an example dataset on GitHub but not specifically for validating ratio assay defaults.",
@@ -3671,7 +3671,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/numerical-equivalence-testing/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/numerical-equivalence-testing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention SummarizedExperiment, Bioconductor, rowData, colData, or assay slots. The paper uses standard R data structures (tab-separated files, Excel exports) and does not reference SummarizedExperiment as a container for the data.",
@@ -3691,7 +3691,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/numerical-equivalence-testing/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/numerical-equivalence-testing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required.",
       "asbval:note": "The paper confirms mzQuality is an R package, so R is the programming environment. However, the paper does not discuss 'buildExperiment', 'readData' as a named function, or 'element-wise assay extraction and comparison operations' in the context of testing equivalence. The paper describes data input validation and processing but not the specific operations claimed.",
@@ -3711,7 +3711,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/qc-sample-variability-assessment/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/qc-sample-variability-assessment/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality also provides suggestions for alternative ISs, but the user must check the compatibility of the IS with the compound. These suggestions are based on calculations that evaluate all compound and IS combinations to determine which combination gives the best RSDqc after batch correction.",
       "asbval:note": "Paper describes mzQuality providing IS suggestions based on RSDqc calculations across IS combinations, but the primary workflow described in the paper uses pre-assigned internal standards. The exhaustive cross-evaluation of all IS candidates is a secondary feature ('suggestions'), not the main task. The paper's primary focus is on calculating RSDqc for pre-assigned IS, not on systematically optimizing IS selection across all candidates as the core research question.",
@@ -3731,7 +3731,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/qc-sample-variability-assessment/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/qc-sample-variability-assessment/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality also provides suggestions for alternative ISs, but the user must check the compatibility of the IS with the compound. These suggestions are based on calculations that evaluate all compound and IS combinations to determine which combination gives the best RSDqc after batch correction.",
       "asbval:note": "The paper describes IS suggestion functionality but emphasizes that users must manually check compatibility. The primary workflow uses pre-assigned ISs. The scope card frames exhaustive IS optimization as the main use case, but the paper treats it as an optional secondary feature.",
@@ -3751,7 +3751,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/qc-sample-variability-assessment/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/qc-sample-variability-assessment/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality also provides suggestions for alternative ISs, but the user must check the compatibility of the IS with the compound. These suggestions are based on calculations that evaluate all compound and IS combinations to determine which combination gives the best RSDqc after batch correction. The RSDqc is calculated per compound according to eq. 4",
       "asbval:note": "mzQuality does calculate RSDqc and provides IS suggestions based on RSDqc comparisons, but the paper does not explicitly state it generates 'recommendation tables' or that this is a primary automated output. The suggestions are provided but require user validation.",
@@ -3771,7 +3771,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/qc-sample-variability-assessment/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/qc-sample-variability-assessment/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SummarizedExperiment is not mentioned anywhere in the paper. mzQuality uses R and outputs Excel files and R-compatible data, but no reference to SummarizedExperiment data structure is present.",
@@ -3791,7 +3791,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/qc-sample-variability-assessment/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/qc-sample-variability-assessment/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes mzQuality as an 'R-Shiny app' but does not mention a separate tool called 'mzQualityDashboard'. The Shiny interface is part of mzQuality itself, not a separate tool.",
@@ -3811,7 +3811,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/qc-sample-variability-assessment/005",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/qc-sample-variability-assessment/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required. It is available through GitHub: https://github.com/hankemeierlab/mzQuality.",
       "asbval:note": null,
@@ -3831,7 +3831,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quality-control-sample-outlier-detection/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/quality-control-sample-outlier-detection/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The next steps involve the identification of QC and study sample outliers using Rosner's test. For QC samples, outliers are identified based on the median area/area_IS ratios, as these samples are assumed to be identical",
       "asbval:note": "Passage 5 explicitly describes Rosner's test for QC outlier detection using area/area_IS ratios.",
@@ -3851,7 +3851,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quality-control-sample-outlier-detection/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/quality-control-sample-outlier-detection/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Potential outliers are flagged by mzQuality and are automatically excluded from further calculations... Once all of the batch corrections are performed, various metrics are calculated to check the quality of compounds.",
       "asbval:note": "Passage 5 confirms outliers are flagged and excluded before batch correction calculations.",
@@ -3871,7 +3871,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quality-control-sample-outlier-detection/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/quality-control-sample-outlier-detection/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The next steps involve the identification of QC and study sample outliers using Rosner's test. For QC samples, outliers are identified based on the median area/area_IS ratios",
       "asbval:note": "Paper confirms mzQuality uses Rosner's test for QC outlier detection on area/area_IS ratios, but does not name a specific function called 'doAnalysis'. The paper describes the functionality but not the exact function name.",
@@ -3891,7 +3891,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quality-control-sample-outlier-detection/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/quality-control-sample-outlier-detection/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "It is available through GitHub: https://github.com/hankemeierlab/mzQuality",
       "asbval:note": "Repository URL confirmed in passage 3.",
@@ -3911,7 +3911,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quality-control-sample-outlier-detection/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/quality-control-sample-outlier-detection/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SummarizedExperiment is not mentioned anywhere in the paper passages. The paper describes mzQuality as an R-Shiny app that processes peak-integrated data in tab-separated format, not as a tool that uses SummarizedExperiment objects.",
@@ -3931,7 +3931,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quality-control-sample-outlier-detection/005",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/quality-control-sample-outlier-detection/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "mzQualityDashboard is not mentioned in any passage. The paper describes mzQuality as an R-Shiny app with visualization features, but does not reference a separate 'mzQualityDashboard' tool.",
@@ -3951,7 +3951,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quality-control-sample-outlier-detection/006",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/quality-control-sample-outlier-detection/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required",
       "asbval:note": "Passage 3 confirms mzQuality is an R package.",
@@ -3971,7 +3971,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-bioconductor-summarizedexperiment-manipulation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-bioconductor-summarizedexperiment-manipulation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention SummarizedExperiment, Bioconductor, or any object-oriented data structure manipulation. mzQuality processes peak-integrated data from tab-separated files directly; no evidence of SummarizedExperiment construction or manipulation in the paper.",
@@ -3991,7 +3991,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-bioconductor-summarizedexperiment-manipulation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-bioconductor-summarizedexperiment-manipulation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The peak areas of compounds and IS, if applicable, need to be exported for use in mzQuality. We strongly recommend using a tab-separated format while exporting... The input file should include the following columns with the specified headers (Table ): aliquot, type, batch, compound, area, and datetime of the sample measurement.",
       "asbval:note": "Paper confirms tab-separated input format and SCIEX OS export (passage 4: 'The data were integrated using SCIEX OS (version 2.1.6.59781) and exported using the recommended data format'). However, no mention of SummarizedExperiment objects, doAnalysis, createReports, or any Bioconductor container structure. mzQuality reads tab-delimited files directly without intermediate object construction.",
@@ -4011,7 +4011,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-bioconductor-summarizedexperiment-manipulation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-bioconductor-summarizedexperiment-manipulation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we introduce mzQuality, a user-friendly, open-source R-Shiny app designed to assess and correct technical variations in mass spectrometry-based metabolomics data",
       "asbval:note": "mzQuality is confirmed as the primary tool in the paper.",
@@ -4031,7 +4031,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-bioconductor-summarizedexperiment-manipulation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-bioconductor-summarizedexperiment-manipulation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "It is available through GitHub: https://github.com/hankemeierlab/mzQuality",
       "asbval:note": "Repository URL confirmed in paper.",
@@ -4051,7 +4051,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-bioconductor-summarizedexperiment-manipulation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-bioconductor-summarizedexperiment-manipulation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality performs several important quality control steps, such as identifying sample outliers, calculating background signal, performing batch correction, detecting trends in total signal intensity for either metabolite or IS, and calculating metrics that highlight variations in metabolite/IS ratios.",
       "asbval:note": "Paper confirms mzQuality performs outlier detection, batch correction, and quality metric calculation. However, no mention of SummarizedExperiment input requirement or doAnalysis function. mzQuality accepts tab-separated files directly, not SummarizedExperiment objects.",
@@ -4071,7 +4071,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-bioconductor-summarizedexperiment-manipulation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-bioconductor-summarizedexperiment-manipulation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SummarizedExperiment is not mentioned anywhere in the paper. mzQuality does not use or require this Bioconductor class.",
@@ -4091,7 +4091,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-bioconductor-summarizedexperiment-manipulation/006",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-bioconductor-summarizedexperiment-manipulation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No evidence that mzQuality uses SummarizedExperiment internally. mzQuality processes tab-separated input files with columns: aliquot, type, batch, compound, area, compound_is, area_is, datetime.",
@@ -4111,7 +4111,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-bioconductor-summarizedexperiment-manipulation/007",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-bioconductor-summarizedexperiment-manipulation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "mzQualityDashboard is not mentioned in the paper. The paper refers to mzQuality as an 'R-Shiny app' but does not name a separate dashboard tool.",
@@ -4131,7 +4131,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-bioconductor-summarizedexperiment-manipulation/008",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-bioconductor-summarizedexperiment-manipulation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "mzQualityDashboard, buildExperiment, and doAnalysis are not mentioned in the paper. mzQuality itself is described as an R-Shiny app, but no separate dashboard or these functions are referenced.",
@@ -4151,7 +4151,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-bioconductor-summarizedexperiment-manipulation/009",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-bioconductor-summarizedexperiment-manipulation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required.",
       "asbval:note": "R is confirmed as the language/environment for mzQuality.",
@@ -4171,7 +4171,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-bioconductor-summarizedexperiment-manipulation/010",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-bioconductor-summarizedexperiment-manipulation/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package... mzQuality, a user-friendly, open-source R-Shiny app",
       "asbval:note": "Paper confirms 'R package' and 'user-friendly' but does not show the literal code 'library(mzQuality)' in the passages provided.",
@@ -4191,7 +4191,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-api-usage/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-package-api-usage/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required. It is available through GitHub: https://github.com/hankemeierlab/mzQuality. For additional information on installation and usage, see the manual on GitHub.",
       "asbval:note": "Paper confirms mzQuality is an R package with documented API and GitHub repository. However, the paper does NOT explicitly mention SummarizedExperiment objects or type-aware object chaining. The paper describes mzQuality as processing 'peak-integrated data independently of vendor software' and provides sequential steps (IS normalization \u2192 outlier detection \u2192 batch correction \u2192 quality assessment), but does not document the internal use of SummarizedExperiment or explicit function-chaining API calls like readData() \u2192 buildExperiment() \u2192 doAnalysis(). The research question assumes a specific programmatic API structure that is not detailed in the paper.",
@@ -4211,7 +4211,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-api-usage/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-package-api-usage/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we introduce mzQuality, a user-friendly, open-source R-Shiny app designed to assess and correct technical variations in mass spectrometry-based metabolomics data.",
       "asbval:note": "mzQuality is explicitly named and described as the primary tool.",
@@ -4231,7 +4231,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-api-usage/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-package-api-usage/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "It is available through GitHub: https://github.com/hankemeierlab/mzQuality.",
       "asbval:note": "Repository URL is explicitly stated in the paper.",
@@ -4251,7 +4251,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-api-usage/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-package-api-usage/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality performs several important quality control steps, such as identifying sample outliers, calculating background signal, performing batch correction, detecting trends in total signal intensity for either metabolite or IS, and calculating metrics that highlight variations in metabolite/IS ratios.",
       "asbval:note": "Paper confirms mzQuality performs quality control, batch correction, and provides plotting functions (aliquot plots, PCA plots, violin plots, individual compound plots). However, the paper does NOT explicitly name or document functions called readData(), buildExperiment(), or doAnalysis(). The paper describes the tool's functionality and workflow but does not expose the specific public API function names claimed in the card.",
@@ -4271,7 +4271,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-api-usage/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-package-api-usage/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SummarizedExperiment is not mentioned anywhere in the paper passages. While mzQuality is an R package and SummarizedExperiment is a common Bioconductor class, the paper provides no evidence that mzQuality uses or exposes SummarizedExperiment objects internally or in its API.",
@@ -4291,7 +4291,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-api-usage/005",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-package-api-usage/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of SummarizedExperiment or Bioconductor class usage in mzQuality in the paper. The paper describes data structures (input columns: aliquot, type, batch, compound, area, datetime, compound_is, area_is) but does not reference SummarizedExperiment.",
@@ -4311,7 +4311,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-api-usage/006",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-package-api-usage/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "mzQualityDashboard is not mentioned in the paper. The paper describes mzQuality as 'an R-Shiny app' but does not name a separate dashboard tool or repository.",
@@ -4331,7 +4331,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-api-usage/007",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-package-api-usage/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No repository URL for mzQualityDashboard is provided in the paper.",
@@ -4351,7 +4351,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-api-usage/008",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-package-api-usage/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality, a user-friendly, open-source R-Shiny app designed to assess and correct technical variations in mass spectrometry-based metabolomics data... mzQuality provides an accessible solution to improve the data quality without requiring prior programming skills.",
       "asbval:note": "The paper describes mzQuality itself as an R-Shiny app that does not require programming skills. The card claims mzQualityDashboard is a separate Shiny wrapper, but the paper does not distinguish between mzQuality and a separate dashboard tool. The Shiny interface and no-programming-skills requirement are confirmed for mzQuality, but the existence of a separate mzQualityDashboard tool is not supported.",
@@ -4371,7 +4371,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-api-usage/009",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-package-api-usage/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "xcms is not mentioned in the paper passages. The paper mentions OpenMS and MZmine as open-source tools but does not reference xcms or state that mzQuality accepts xcms output.",
@@ -4391,7 +4391,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-api-usage/010",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-package-api-usage/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "xcms is not mentioned. The paper states that 'Chromatographic peak areas can be integrated by using open-source or vendor software' and mentions OpenMS and MZmine, but does not specifically name xcms or confirm it as an upstream tool.",
@@ -4411,7 +4411,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-api-usage/011",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-package-api-usage/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required.",
       "asbval:note": "R is confirmed as the language/environment for mzQuality.",
@@ -4431,7 +4431,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-api-usage/012",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-package-api-usage/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The phrase 'library(mzQuality)' does not appear in the paper passages. While the paper confirms mzQuality is an R package, this specific code snippet is not present.",
@@ -4451,7 +4451,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-api-usage/013",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-package-api-usage/013",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality, a user-friendly, open-source R-Shiny app",
       "asbval:note": "Confirmed; mzQuality is described as user-friendly and is an R package (R-Shiny app).",
@@ -4471,7 +4471,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/summarized-experiment-object-construction/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/summarized-experiment-object-construction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is a user-friendly, open-source R-Shiny app designed to assess and correct technical variations in mass spectrometry-based metabolomics data. It processes peak-integrated data independently of vendor software and provides essential quality control features, including batch correction, outlier detection, and background signal assessment",
       "asbval:note": "Paper describes mzQuality as an R-Shiny app for QC assessment and correction, not as a function that constructs SummarizedExperiment objects. The paper does not mention SummarizedExperiment class or a buildExperiment function. The card claims a specific data structure transformation (to SummarizedExperiment) that is not documented in the paper. The paper focuses on QC workflows, not object construction.",
@@ -4491,7 +4491,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/summarized-experiment-object-construction/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/summarized-experiment-object-construction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required. It is available through GitHub: https://github.com/hankemeierlab/mzQuality",
       "asbval:note": "Paper confirms mzQuality is an R package available on GitHub, but does not mention a buildExperiment function. The paper describes mzQuality as providing QC workflows (batch correction, outlier detection, background signal assessment) but does not document a buildExperiment function for SummarizedExperiment construction.",
@@ -4511,7 +4511,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/summarized-experiment-object-construction/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/summarized-experiment-object-construction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SummarizedExperiment is not mentioned anywhere in the paper passages. The paper does not discuss Bioconductor container classes or SummarizedExperiment objects.",
@@ -4531,7 +4531,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/summarized-experiment-object-construction/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/summarized-experiment-object-construction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The peak areas of compounds and IS, if applicable, need to be exported for use in mzQuality. We strongly recommend using a tab-separated format while exporting; an example can be found in GitHub: https://github.com/hankemeierlab/mzQuality. Additionally, it is important that numbers and symbols are compatible with R. The input file should include the following columns with the specified headers (Table ): aliquot, type, batch, compound, area, and datetime of the sample measurement.",
       "asbval:note": "Paper describes tab-delimited input format and validation requirements, but does not name a readData function. Paper states 'mzQuality performs a validation on the input file to ensure all necessary information is included and to detect any formatting errors' but does not attribute this to a separate readData function or describe handoff to buildExperiment.",
@@ -4551,7 +4551,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/summarized-experiment-object-construction/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/summarized-experiment-object-construction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required. It is available through GitHub: https://github.com/hankemeierlab/mzQuality",
       "asbval:note": "Paper confirms mzQuality is an R package. The paper demonstrates ratio computation (Ratio = Peak area_compound / Peak area_IS), batch correction, outlier detection, and QC workflows consistent with the listed skills.",
@@ -4571,7 +4571,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/summarized-experiment-object-construction/005",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/summarized-experiment-object-construction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe conversion to SummarizedExperiment objects. The paper focuses on QC assessment and correction of peak-integrated data, not on constructing Bioconductor container objects.",
@@ -4591,7 +4591,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/summarized-experiment-object-construction/006",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/summarized-experiment-object-construction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The first step involves IS normalization, where for all samples ratios are calculated by dividing the compound area (Peak area_compound) by the corresponding IS area (Peak area_IS) as shown in eq . 1 Ratio=Peakarea_compoundPeakarea_IS",
       "asbval:note": "Paper explicitly describes automatic ratio computation as the first data processing step in mzQuality.",
@@ -4611,7 +4611,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/summarized-experiment-object-construction/007",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/summarized-experiment-object-construction/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is a user-friendly, open-source R-Shiny app designed to assess and correct technical variations in mass spectrometry-based metabolomics data. It processes peak-integrated data independently of vendor software and provides essential quality control features, including batch correction, outlier detection, and background signal assessment",
       "asbval:note": "Paper confirms mzQuality is designed for QC assessment and provides batch correction, outlier detection, and background signal assessment.",
@@ -4631,7 +4631,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tab-delimited-metabolomics-file-parsing/000",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/tab-delimited-metabolomics-file-parsing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The peak areas of compounds and IS, if applicable, need to be exported for use in mzQuality. We strongly recommend using a tab-separated format while exporting... The input file should include the following columns with the specified headers (Table ): aliquot, type, batch, compound, area, and datetime of the sample measurement.",
       "asbval:note": "Paper confirms tab-delimited file parsing with mandatory column validation (aliquot, type, batch, compound, area, datetime, compound_is, area_is). However, paper does NOT mention SummarizedExperiment objects\u2014mzQuality is an R-Shiny app that outputs Excel files and plots, not Bioconductor SummarizedExperiment containers. The card conflates mzQuality's data validation workflow with Bioconductor object construction, which is not described in the paper.",
@@ -4651,7 +4651,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tab-delimited-metabolomics-file-parsing/001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/tab-delimited-metabolomics-file-parsing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required. It is available through GitHub: https://github.com/hankemeierlab/mzQuality... mzQuality performs a validation on the input file to ensure all necessary information is included and to detect any formatting errors.",
       "asbval:note": "Paper confirms mzQuality is an R package that validates tab-delimited metabolomics data. However, paper does NOT name functions 'readData' or 'buildExperiment'\u2014these function names are not mentioned. Paper describes validation and data processing but does not expose specific function names in the passages provided. The card's function names are inferred or from external documentation not in the paper.",
@@ -4671,7 +4671,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tab-delimited-metabolomics-file-parsing/002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/tab-delimited-metabolomics-file-parsing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SummarizedExperiment is not mentioned anywhere in the paper. mzQuality outputs Excel files and visualizations (PCA plots, violin plots, individual compound plots), not Bioconductor SummarizedExperiment objects. This is a tool/workflow conflation by the card extractor.",
@@ -4691,7 +4691,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tab-delimited-metabolomics-file-parsing/003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/tab-delimited-metabolomics-file-parsing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality, a user-friendly, open-source R-Shiny app designed to assess and correct technical variations in mass spectrometry-based metabolomics data.",
       "asbval:note": "Paper confirms mzQuality itself is an R-Shiny app with a graphical interface. However, paper does NOT mention a separate tool called 'mzQualityDashboard'\u2014only 'mzQuality' is described as the Shiny app. The card may be conflating mzQuality (which IS the Shiny app) with a hypothetical separate dashboard wrapper. No evidence of a distinct 'mzQualityDashboard' tool in the paper.",
@@ -4711,7 +4711,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tab-delimited-metabolomics-file-parsing/004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/tab-delimited-metabolomics-file-parsing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mzQuality is distributed as an R package for which version 4.0 or later is required.",
       "asbval:note": "Confirmed: mzQuality is an R package requiring R 4.0 or later.",
@@ -4731,7 +4731,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tab-delimited-metabolomics-file-parsing/005",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/tab-delimited-metabolomics-file-parsing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The data were integrated using SCIEX OS (version 2.1.6.59781) and exported using the recommended data format... The peak areas of compounds and IS, if applicable, need to be exported for use in mzQuality. We strongly recommend using a tab-separated format while exporting.",
       "asbval:note": "Confirmed: paper explicitly mentions SCIEX OS exports in tab-separated format for use in mzQuality.",
@@ -4751,7 +4751,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tab-delimited-metabolomics-file-parsing/006",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/tab-delimited-metabolomics-file-parsing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The input file should include the following columns with the specified headers (Table ): aliquot, type, batch, compound, area, and datetime of the sample measurement. For quantitative or semiquantitative analysis, the columns compound_is and area_is must also be included.",
       "asbval:note": "Confirmed: all required input columns are explicitly listed in the paper.",
@@ -4771,7 +4771,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tab-delimited-metabolomics-file-parsing/007",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/tab-delimited-metabolomics-file-parsing/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper describes validation but does NOT mention SummarizedExperiment construction. mzQuality outputs Excel files and plots, not Bioconductor objects.",
@@ -4791,7 +4791,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/assay-ratio-computation-verification/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/assay-ratio-computation-verification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "assay-ratio-computation-verification",
@@ -4804,7 +4804,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-corrected-data-extraction/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/batch-corrected-data-extraction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "batch-corrected-data-extraction",
@@ -4817,7 +4817,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-effect-assessment-via-quality-metrics/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/batch-effect-assessment-via-quality-metrics/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "batch-effect-assessment-via-quality-metrics",
@@ -4830,7 +4830,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/bioconductor-object-structure-inspection/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/bioconductor-object-structure-inspection/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "bioconductor-object-structure-inspection",
@@ -4843,7 +4843,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/compound-reliability-filtering-by-rsd-threshold/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/compound-reliability-filtering-by-rsd-threshold/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "compound-reliability-filtering-by-rsd-threshold",
@@ -4856,7 +4856,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/compound-standard-ratio-normalization/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/compound-standard-ratio-normalization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "compound-standard-ratio-normalization",
@@ -4869,7 +4869,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/internal-standard-area-mis-injection-flagging/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/internal-standard-area-mis-injection-flagging/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "internal-standard-area-mis-injection-flagging",
@@ -4882,7 +4882,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/internal-standard-selection-optimization/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/internal-standard-selection-optimization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "internal-standard-selection-optimization",
@@ -4895,7 +4895,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/linear-regression-concentration-calibration/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/linear-regression-concentration-calibration/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "linear-regression-concentration-calibration",
@@ -4908,7 +4908,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-ratio-batch-correction/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolite-ratio-batch-correction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "metabolite-ratio-batch-correction",
@@ -4921,7 +4921,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-data-input-validation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolomics-data-input-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "metabolomics-data-input-validation",
@@ -4934,7 +4934,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-quality-control-report-generation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolomics-quality-control-report-generation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "metabolomics-quality-control-report-generation",
@@ -4947,7 +4947,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-quality-metric-interpretation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/metabolomics-quality-metric-interpretation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "metabolomics-quality-metric-interpretation",
@@ -4960,7 +4960,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/numerical-equivalence-testing/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/numerical-equivalence-testing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "numerical-equivalence-testing",
@@ -4973,7 +4973,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/qc-sample-variability-assessment/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/qc-sample-variability-assessment/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "qc-sample-variability-assessment",
@@ -4986,7 +4986,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/quality-control-sample-outlier-detection/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/quality-control-sample-outlier-detection/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "quality-control-sample-outlier-detection",
@@ -4999,7 +4999,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-bioconductor-summarizedexperiment-manipulation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-bioconductor-summarizedexperiment-manipulation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "r-bioconductor-summarizedexperiment-manipulation",
@@ -5012,7 +5012,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-api-usage/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/r-package-api-usage/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 13,
       "asbval:target_artifact_id": "r-package-api-usage",
@@ -5025,7 +5025,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/summarized-experiment-object-construction/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/summarized-experiment-object-construction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "summarized-experiment-object-construction",
@@ -5038,7 +5038,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tab-delimited-metabolomics-file-parsing/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/skill/tab-delimited-metabolomics-file-parsing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "tab-delimited-metabolomics-file-parsing",
@@ -5051,7 +5051,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mzQuality features outlier detection, batch-correction using pooled study quality control samples (SQC), filters for removing unreliable compounds, various plots for inspecting, and generating reports for further processing.",
       "asbval:note": null,
@@ -5071,7 +5071,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mzQuality is available as an interactive Shiny dashboard application called mzQualityDashboard.",
       "asbval:note": null,
@@ -5091,7 +5091,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Quality Control is an important step in the analysis of mass spectrometry data.",
       "asbval:note": null,
@@ -5111,7 +5111,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Existing tools phenomis and qmtools are designed with access to a phenotype in mind.",
       "asbval:note": null,
@@ -5131,7 +5131,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mzQuality was developed to perform outlier detection, batch correction and other quality control steps without the need for defined phenotypes.",
       "asbval:note": null,
@@ -5151,7 +5151,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mzQuality follows the recommendations of the mQACC for quality control by leveraging on proper batch design and the addition of various quality control samples.",
       "asbval:note": null,
@@ -5171,7 +5171,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mzQuality is capable of recommending different internal standards by exhaustively calculating the Relative Standard Deviation of QC samples (RSDQC) of batch-corrected ratios.",
       "asbval:note": null,
@@ -5191,7 +5191,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "By supplying calibration line samples and known concentrations for spiked compounds, mzQuality is able to calculate absolute concentrations.",
       "asbval:note": null,
@@ -5211,7 +5211,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mzQuality features import of data from a variety of formats, including a generalized tab-delimited format and Sciex OS text exports.",
       "asbval:note": null,
@@ -5231,7 +5231,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "phenomis provides tools for post-processing like quality control and normalization, as well as univariate statistics.",
       "asbval:note": null,
@@ -5251,7 +5251,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "qmtools contains functions for processing quantitative metabolomics data, including imputation, normalization and filtering.",
       "asbval:note": "Source excerpt says 'quantative' (likely typo for 'quantitative'); claim correctly interprets intent but substring_in_paper=false",
@@ -5271,7 +5271,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_012",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_012",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MatrixQCvis features interactive visualization of data quality metrics for various -omics datasets and uses the SummarizedExperiment object.",
       "asbval:note": null,
@@ -5291,7 +5291,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_013",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_013",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mQACC is the Metabolomics Quality Assurance and Control Consortium.",
       "asbval:note": null,
@@ -5311,7 +5311,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_014",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_014",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "HUPO is the Human Proteome Organization.",
       "asbval:note": null,
@@ -5331,7 +5331,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_015",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_015",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "HUPO has a Quality Control working group that focuses on quality control in proteomics.",
       "asbval:note": null,
@@ -5351,7 +5351,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_016",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_016",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mzQuality requires input data to be in a tab-delimited format.",
       "asbval:note": null,
@@ -5371,7 +5371,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_017",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_017",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The required columns for mzQuality input data include aliquot, compound, area, type, injection_time, and batch.",
       "asbval:note": null,
@@ -5391,7 +5391,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_018",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_018",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The readData function reads in data and checks for any missing or incorrect columns.",
       "asbval:note": null,
@@ -5411,7 +5411,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_019",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_019",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The buildExperiment function creates a SummarizedExperiment object from a data frame.",
       "asbval:note": "Source says 'experiment object' but claim specifies 'SummarizedExperiment object'; later claims clarify this is SummarizedExperiment but this excerpt alone doesn't explicitly state it",
@@ -5431,7 +5431,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_020",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_020",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "In the current version of mzQuality, only one sample type can be used for calculating concentrations.",
       "asbval:note": null,
@@ -5451,7 +5451,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_021",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_021",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mzQuality internally uses Bioconductor's SummarizedExperiment object to store data.",
       "asbval:note": null,
@@ -5471,7 +5471,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_022",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_022",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The buildExperiment function automatically calculates the compound / Internal Standard ratio for each sample and stores it in the ratio assay.",
       "asbval:note": null,
@@ -5491,7 +5491,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_023",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_023",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The convertExperiment function converts names in an already built SummarizedExperiment object to the ones mzQuality uses.",
       "asbval:note": null,
@@ -5511,7 +5511,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_024",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_024",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The doAnalysis function tests QC samples for outliers using their Compound / Internal Standard ratio.",
       "asbval:note": "Source says package 'tests samples for outliers' but doesn't explicitly state this is done by the doAnalysis function; attribution to specific function is inferred",
@@ -5531,7 +5531,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_025",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_025",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The doAnalysis function tests Study Samples for mis-injections using their Internal Standard areas.",
       "asbval:note": "Claim attributes testing to 'doAnalysis function' but source only states Study Samples are tested; function attribution not in excerpt.",
@@ -5551,7 +5551,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_026",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_026",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "aliquotPlot shows the distribution of the selected assay per aliquot, colored per sample type.",
       "asbval:note": null,
@@ -5571,7 +5571,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_027",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_027",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The aliquotPlot can be used to inspect technical replicates for similar peak areas and peak ratios within a batch.",
       "asbval:note": "Claim attributes capability to 'aliquotPlot' but source says 'This plot is especially useful' without explicitly naming the function; minor attribution drift.",
@@ -5591,7 +5591,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_028",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_028",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "All plots in mzQuality can be faceted using the facetPlot function.",
       "asbval:note": null,
@@ -5611,7 +5611,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_029",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_029",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The facetPlot function allows faceting by any column present in colData.",
       "asbval:note": "Claim omits qualifier that in practice 'type' and 'batch' columns are 'especially useful'; presents technical capability without practical context.",
@@ -5631,7 +5631,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_030",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_030",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "compoundPlot is a scatter plot of a selected compound across samples.",
       "asbval:note": null,
@@ -5651,7 +5651,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_031",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_031",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "PCA plot can be used to inspect variation within- and between batches.",
       "asbval:note": null,
@@ -5671,7 +5671,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_032",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_032",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "In the PCA plot, Quality Control samples used for batch correction should ideally be centered and form a tight cluster.",
       "asbval:note": null,
@@ -5691,7 +5691,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_033",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_033",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The violin plot can be used to inspect the distribution of sample types.",
       "asbval:note": null,
@@ -5711,7 +5711,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_034",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_034",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The Concentration Plot shows a linear model based on calculated ratio and known concentration.",
       "asbval:note": null,
@@ -5731,7 +5731,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_035",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_035",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The createReports function creates a folder containing the results of analysis separated by Plots and Reports.",
       "asbval:note": null,
@@ -5751,7 +5751,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_036",
+      "@id": "asbval:assertion/paper/10.1021%2Fjasms.5c00073/claim/claim_036",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "mzQuality is designed to be used by anyone with basic knowledge of R.",
       "asbval:note": null,

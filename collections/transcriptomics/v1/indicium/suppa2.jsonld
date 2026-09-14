@@ -332,7 +332,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present SUPPA2, a new method that addresses these challenges, and enables streamlined analysis across multiple conditions taking into account biological variability.",
       "asbval:note": "SUPPA2 is the primary tool discussed throughout the paper.",
@@ -352,7 +352,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention a 'generateEvents' subcommand or describe the specific file formats (ioe, ioi, gtf) as outputs from such a command. The paper focuses on differential splicing analysis, PSI calculation, and clustering, not on the internal command structure for generating event indices.",
@@ -372,7 +372,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention 'ioe' files or this specific file format. While the paper discusses PSI values and event definitions, it does not describe the internal file formats used by SUPPA2 for storing event indices.",
@@ -392,7 +392,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/card/task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention 'ioi' files or this specific file format. While isoforms are discussed in the context of transcript quantification, the paper does not describe this particular output file type.",
@@ -412,7 +412,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/card/task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper mentions GTF files as input (e.g., 'Ensembl (version 75, without pseudogenes)') but does not describe GTF as an output file format from SUPPA2 or discuss a 'generateEvents' command that produces GTF output.",
@@ -432,7 +432,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card asks about a specific SUPPA2 subcommand ('generateEvents') and its file outputs (ioe, ioi, gtf). The paper does not document SUPPA2's command-line interface or internal file formats at this level of detail.",
@@ -449,7 +449,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/card/task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples.",
       "asbval:note": "The paper explicitly describes SUPPA2's core function of computing PSI values from transcript quantification. The research question accurately captures this functionality.",
@@ -469,7 +469,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/card/task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present SUPPA2, a new method that addresses these challenges, and enables streamlined analysis across multiple conditions taking into account biological variability.",
       "asbval:note": "SUPPA2 is the primary tool discussed throughout the paper. [SUBSTRING-MATCH for SUPPA2 | role: differential splicing analysis tool]",
@@ -489,7 +489,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/card/task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions: one for the \u0394PSI values between biological replicates and one for the \u0394PSI values between conditions.",
       "asbval:note": "The paper describes PSI computation across multiple samples and events. PSI values are proportions/percentages (range [0,1]) representing splicing inclusion levels. The paper discusses PSI values as the primary quantitative output used in downstream analyses.",
@@ -509,7 +509,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/card/task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card focuses narrowly on the PSI calculation step from transcript quantification and event definitions. The paper discusses this as part of a broader differential splicing analysis pipeline, but the PSI computation itself is well-documented in the Methods section.",
@@ -525,7 +525,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/card/task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions: one for the \u0394PSI values between biological replicates and one for the \u0394PSI values between conditions... Given the observed \u0394PSI and Econd values for an event between conditions, its significance is calculated from the comparison with the \u0394PSI distribution between replicates for events with Erep values in the neighborhood of the observed Econd.",
       "asbval:note": "The paper explicitly describes the mathematical framework for computing \u0394PSI and p-values from PSI matrices and transcript abundance (TPM) data across conditions.",
@@ -545,7 +545,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/card/task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present SUPPA2, a new method that addresses these challenges, and enables streamlined analysis across multiple conditions taking into account biological variability.",
       "asbval:note": "SUPPA2 is the primary tool described throughout the paper for differential splicing analysis.",
@@ -565,7 +565,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/card/task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... The description of the uncertainty in terms of transcript abundances, given in transcripts per million (TPM) units, rather than read counts provides several advantages.",
       "asbval:note": "The paper describes that SUPPA2 computes PSI values, \u0394PSI values, and p-values, and the methods section details the mathematical computation of these statistics. However, the paper does not explicitly specify the exact output file format (TSV/CSV) or confirm all column names (event_id, dpsi, pvalue, per-condition mean PSI). The paper discusses these metrics conceptually but does not provide a sample output table structure.",
@@ -585,7 +585,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/card/task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card focuses specifically on the 'diffSplice subcommand' but the paper does not explicitly name or describe a subcommand with that exact name. The paper describes SUPPA2's differential splicing analysis functionality but does not detail command-line interface specifics.",
@@ -601,7 +601,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/alternative-splicing-event-comparison-across-conditions/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/alternative-splicing-event-comparison-across-conditions/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions: one for the \u0394PSI values between biological replicates and one for the \u0394PSI values between conditions... Given the observed \u0394PSI and Econd values for an event between conditions, its significance is calculated from the comparison with the \u0394PSI distribution between replicates for events with Erep values in the neighborhood of the observed Econd.",
       "asbval:note": "Core research question is directly supported by the paper's methodology section describing SUPPA2's differential splicing computation.",
@@ -621,7 +621,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/alternative-splicing-event-comparison-across-conditions/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/alternative-splicing-event-comparison-across-conditions/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present SUPPA2, a new method that addresses these challenges, and enables streamlined analysis across multiple conditions taking into account biological variability.",
       "asbval:note": "SUPPA2 is the primary tool described throughout the paper for differential splicing analysis.",
@@ -641,7 +641,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/alternative-splicing-event-comparison-across-conditions/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/alternative-splicing-event-comparison-across-conditions/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The software described here is available at https://github.com/comprna/SUPPA.",
       "asbval:note": "Repository URL is explicitly stated in the paper.",
@@ -661,7 +661,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/alternative-splicing-event-comparison-across-conditions/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/alternative-splicing-event-comparison-across-conditions/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... Given the observed \u0394PSI and Econd values for an event between conditions, its significance is calculated from the comparison with the \u0394PSI distribution between replicates",
       "asbval:note": "Paper confirms SUPPA2 computes \u0394PSI and p-values for differential splicing, but does not explicitly mention a 'diffSplice subcommand' by that name. The paper describes the differential splicing functionality but does not document specific command-line subcommand names.",
@@ -681,7 +681,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/alternative-splicing-event-comparison-across-conditions/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/alternative-splicing-event-comparison-across-conditions/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... SUPPA2 can work with multiple replicates per condition and with multiple conditions.",
       "asbval:note": "Paper explicitly states SUPPA2 works with multiple replicates per condition and multiple conditions.",
@@ -701,7 +701,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/alternative-splicing-event-comparison-across-conditions/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/alternative-splicing-event-comparison-across-conditions/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... where TPMa,r indicates the abundance of transcript a in replicate r in transcripts per million (TPM) units.",
       "asbval:note": "Paper confirms transcript quantification (in TPM units) is required as input.",
@@ -721,7 +721,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/alternative-splicing-event-comparison-across-conditions/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/alternative-splicing-event-comparison-across-conditions/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 exploits the between-replicate variability to test for significance... This biological variability provides information on the uncertainty of the PSI estimates.",
       "asbval:note": "Paper confirms that SUPPA2 relies on between-replicate variability to estimate uncertainty and test significance.",
@@ -741,7 +741,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/alternative-splicing-event-comparison-across-conditions/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/alternative-splicing-event-comparison-across-conditions/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 can work with multiple replicates per condition and with multiple conditions.",
       "asbval:note": "Implicit support: paper emphasizes multiple replicates and conditions are required for SUPPA2's methodology.",
@@ -761,7 +761,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/alternative-splicing-event-parsing/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/alternative-splicing-event-parsing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... SUPPA2 currently implements two density-based clustering methods: DBSCAN and OPTICS... These methods generally involve the analysis of either transcript isoforms, clusters of splice junctions, alternative splicing events, or exonic regions.",
       "asbval:note": "Paper describes SUPPA2 as computing PSI values from transcript quantification and analyzing alternative splicing events (SE, A5/A3, RI, MX), but does NOT explicitly describe a GTF parsing or event definition file generation step (ioe, ioi, gtf files). The paper focuses on differential splicing analysis using pre-computed PSI values, not on the upstream GTF parsing task. The card describes a preprocessing step that is not detailed in the provided passages.",
@@ -781,7 +781,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/alternative-splicing-event-parsing/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/alternative-splicing-event-parsing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present SUPPA2, a new method that addresses these challenges, and enables streamlined analysis across multiple conditions taking into account biological variability.",
       "asbval:note": "SUPPA2 is confirmed as the primary tool in the paper.",
@@ -801,7 +801,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/alternative-splicing-event-parsing/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/alternative-splicing-event-parsing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe SUPPA2 parsing GTF files or generating ioe/ioi/gtf event definition files. The paper states 'SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events' but assumes PSI values are already calculated. No mention of generateEvents subcommand or GTF parsing functionality in provided passages.",
@@ -821,7 +821,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/alternative-splicing-event-parsing/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/alternative-splicing-event-parsing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "These methods generally involve the analysis of either transcript isoforms, clusters of splice junctions, alternative splicing events, or exonic regions... SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples.",
       "asbval:note": "Paper confirms SUPPA2 analyzes alternative splicing events (SE, A5/A3, RI, MX) and computes PSI values, but the scope describes GTF parsing as a prerequisite step. The paper does not describe SUPPA2 as performing GTF parsing or event definition generation; it assumes these inputs are already prepared. The card's scope describes a preprocessing task not documented in the paper.",
@@ -841,7 +841,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/alternative-splicing-event-parsing/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/alternative-splicing-event-parsing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The simplicity and modular architecture of SUPPA2 also makes it a very convenient tool in multiple contexts, as PSI values from other methods and for other event types, like complex events, or data types, like transcripts, can be used in SUPPA2 for differential splicing analysis or for clustering across conditions.",
       "asbval:note": "Paper confirms SUPPA2 can accept pre-computed PSI values from other sources, supporting the claim that pre-computed event definitions can be used directly.",
@@ -861,7 +861,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/alternative-splicing-event-parsing/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/alternative-splicing-event-parsing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe GTF files as input to SUPPA2. The paper states SUPPA2 uses 'transcript quantification to compute inclusion values (PSI)' and references transcript abundance from Salmon quantification, not GTF parsing.",
@@ -881,7 +881,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/alternative-splicing-event-parsing/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/alternative-splicing-event-parsing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention ioe, ioi, or gtf output files. The paper describes SUPPA2 outputs as differential splicing results, clustering results, and PSI values, not event definition files.",
@@ -901,7 +901,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-splicing-statistical-testing/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/differential-splicing-statistical-testing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 extends this principle to measure differential splicing between conditions by exploiting the variability between biological replicates to determine the uncertainty in the PSI values... The significance of an observed \u0394PSI value between conditions will depend on where in the distribution of the uncertainty it falls.",
       "asbval:note": "Core research question is directly supported by paper's description of SUPPA2's uncertainty-aware differential splicing methodology.",
@@ -921,7 +921,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-splicing-statistical-testing/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/differential-splicing-statistical-testing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions: one for the \u0394PSI values between biological replicates and one for the \u0394PSI values between conditions.",
       "asbval:note": "Paper confirms SUPPA2 computes differential splicing statistics from PSI matrices and expression data with uncertainty-aware methods. However, the paper does not explicitly name a 'diffSplice subcommand'\u2014it describes the general functionality. The subcommand name cannot be verified from these passages.",
@@ -941,7 +941,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-splicing-statistical-testing/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/differential-splicing-statistical-testing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The software described here is available at https://github.com/comprna/SUPPA.",
       "asbval:note": "Repository URL is verbatim in the paper.",
@@ -961,7 +961,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-splicing-statistical-testing/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/differential-splicing-statistical-testing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 can work with multiple replicates per condition and with multiple conditions... SUPPA2 estimates the uncertainty of \u0394PSI values as a function of the expression of transcripts involved in the event, taking into account all events genome-wide to test the significance of an observed \u0394PSI.",
       "asbval:note": "Paper explicitly states SUPPA2 works with multiple replicates per condition and multiple conditions, and uses transcript expression to estimate uncertainty.",
@@ -981,7 +981,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-splicing-statistical-testing/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/differential-splicing-statistical-testing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 exploits the between-replicate variability to test for significance... To illustrate our approach and to evaluate the dynamic range of SUPPA2 we used it to analyze RNA-seq data obtained after the double knockdown of TRA2A and TRA2B splicing regulators compared with controls [17] (Fig. 1a). The differences in PSI value for each event between biological replicates are higher at low expression, in agreement with the expected higher variability at low read count. This biological variability provides information on the uncertainty of the PSI estimates.",
       "asbval:note": "Paper confirms that biological replicates are essential for SUPPA2's uncertainty estimation methodology.",
@@ -1001,7 +1001,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-splicing-statistical-testing/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/differential-splicing-statistical-testing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions...",
       "asbval:note": "Paper indicates SUPPA2 requires per-sample PSI values as input, not pre-computed statistics.",
@@ -1021,7 +1021,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-splicing-statistical-testing/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/differential-splicing-statistical-testing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 can work with multiple replicates per condition and with multiple conditions.",
       "asbval:note": "Paper confirms SUPPA2 requires condition grouping and multiple conditions for its analysis.",
@@ -1041,7 +1041,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gtf-file-parsing/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/gtf-file-parsing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... SUPPA2 relies on genome annotation to define events",
       "asbval:note": "Paper confirms SUPPA2 operates on genome annotation to define splicing events. GTF parsing is a prerequisite step for event generation, consistent with the research question.",
@@ -1061,7 +1061,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gtf-file-parsing/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/gtf-file-parsing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 enables cost-effective use of RNA sequencing for the robust and streamlined analysis of differential splicing across multiple biological conditions",
       "asbval:note": "Paper describes SUPPA2 as enabling streamlined analysis of differential splicing, which requires prior decomposition of transcript isoforms into events.",
@@ -1081,7 +1081,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gtf-file-parsing/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/gtf-file-parsing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 is available at https://github.com/comprna/SUPPA",
       "asbval:note": "SUPPA2 is confirmed as the primary tool in the paper.",
@@ -1101,7 +1101,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gtf-file-parsing/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/gtf-file-parsing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... SUPPA2 relies on genome annotation to define events",
       "asbval:note": "Paper confirms SUPPA2 operates on genome annotation and generates alternative splicing events, but does not explicitly name the 'generateEvents' subcommand or mention specific output file formats (ioe, ioi). The functional role of parsing GTF and generating events is supported, but the specific command name and file format details are not verified in the passages.",
@@ -1121,7 +1121,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gtf-file-parsing/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/gtf-file-parsing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... exon-cassette (SE; 48.71%) and alternative splice site (A5/A3; 37.71%) events are the most frequent events in humans compared to mutual exclusion (6.22%) or intron-retention (7.36%)",
       "asbval:note": "Paper explicitly discusses PSI computation and multiple event types (SE, A5/A3, mutual exclusion, intron retention), confirming the use case.",
@@ -1141,7 +1141,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gtf-file-parsing/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/gtf-file-parsing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not discuss ioe/ioi file formats or when NOT to use GTF parsing. Insufficient information to validate this negative use case.",
@@ -1161,7 +1161,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gtf-file-parsing/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/gtf-file-parsing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not discuss GTF attribute requirements or preprocessing steps. Insufficient information to validate this constraint.",
@@ -1181,7 +1181,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isoform-structure-annotation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/isoform-structure-annotation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... SUPPA2 currently implements two density-based clustering methods: DBSCAN and OPTICS... Clustering is performed only with events that change significantly in at least one pair of adjacent conditions.",
       "asbval:note": "Paper describes SUPPA2's core function as computing PSI values from transcript quantification and analyzing differential splicing across conditions. However, the paper does NOT explicitly describe a 'generateEvents' subcommand or the production of 'ioi', 'ioe', 'gtf' artifact files. The paper focuses on differential splicing analysis and clustering, not on the upstream event generation step from GTF. The Methods section mentions that SUPPA2 'uses transcript quantification to compute inclusion values (PSI) of alternative splicing events' but does not detail GTF parsing or event definition generation. This appears to be a task card describing a preprocessing step that is not the focus of this paper.",
@@ -1201,7 +1201,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isoform-structure-annotation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/isoform-structure-annotation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions: one for the \u0394PSI values between biological replicates and one for the \u0394PSI values between conditions.",
       "asbval:note": "SUPPA2 is confirmed present in the paper and is used for alternative splicing analysis. However, the paper's primary focus is on differential splicing analysis (computing \u0394PSI, statistical testing, clustering) rather than on GTF-to-event generation. The paper does not describe or name a 'generateEvents' subcommand. The paper states SUPPA2 'relies on genome annotation to define events' (passage 8) but does not detail the event generation workflow from GTF files. The tool is used for a different primary function (differential splicing) than the card claims (event generation from GTF).",
@@ -1221,7 +1221,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isoform-structure-annotation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/isoform-structure-annotation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Alternative splicing is related to a change in the relative abundance of transcript isoforms produced from the same gene... These methods generally involve the analysis of either transcript isoforms [4\u20137], clusters of splice junctions [8, 9], alternative splicing events [10, 11], or exonic regions [12]. Relative abundances of the splicing events or transcript isoforms are generally described in terms of a percentage or proportion spliced-in (PSI)... exon-cassette (SE; 48.71%) and alternative splice site (A5/A3; 37.71%) events are the most frequent events in humans compared to mutual exclusion (6.22%) or intron-retention (7.36%)",
       "asbval:note": "The paper discusses alternative splicing event types (exon skipping/cassette, alternative splice sites, intron retention, mutual exclusion) and PSI quantification. However, the paper's scope is differential splicing analysis across conditions, not the upstream task of generating event definitions from GTF. The paper assumes PSI values are already calculated and focuses on testing for significant differences. The card describes a preprocessing/annotation step; the paper describes a downstream analysis step.",
@@ -1241,7 +1241,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isoform-structure-annotation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/isoform-structure-annotation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'ioi', 'ioe', or 'gtf' output files in any passage. The paper does not describe SUPPA2's output file formats or naming conventions for event annotation artifacts.",
@@ -1261,7 +1261,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isoform-structure-annotation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/isoform-structure-annotation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Although SUPPA2 relies on genome annotation to define events, poorly annotated genomes can be improved and extended before analysis by SUPPA2.",
       "asbval:note": "Paper confirms SUPPA2 relies on genome annotation but does not specify GTF format, exon features, or required attributes (gene_id, transcript_id). The statement is too general to confirm the specific input format and requirements claimed in the card.",
@@ -1281,7 +1281,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/local-splicing-event-detection/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/local-splicing-event-detection/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... SUPPA2 currently implements two density-based clustering methods: DBSCAN and OPTICS... Clustering is performed only with events that change significantly in at least one pair of adjacent conditions.",
       "asbval:note": "Paper confirms SUPPA2 computes PSI from alternative splicing events and performs differential splicing analysis. GTF parsing is implicit in the workflow (transcript quantification from annotation).",
@@ -1301,7 +1301,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/local-splicing-event-detection/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/local-splicing-event-detection/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Since exon-cassette (SE; 48.71%) and alternative splice site (A5/A3; 37.71%) events are the most frequent events in humans compared to mutual exclusion (6.22%) or intron-retention (7.36%)... we decided to match SE and A5/A3 events across all four methods.",
       "asbval:note": "Paper explicitly identifies SE (exon skipping), A5/A3 (alternative splice sites), MX (mutual exclusion), and RI (intron retention) events. AF/AL (alternative first/last exons) not explicitly mentioned in passages but consistent with event type coverage.",
@@ -1321,7 +1321,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/local-splicing-event-detection/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/local-splicing-event-detection/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present SUPPA2, a new method that addresses these challenges, and enables streamlined analysis across multiple conditions taking into account biological variability.",
       "asbval:note": "SUPPA2 is the primary tool discussed throughout the paper.",
@@ -1341,7 +1341,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/local-splicing-event-detection/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/local-splicing-event-detection/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The software described here is available at https://github.com/comprna/SUPPA.",
       "asbval:note": "Repository URL confirmed in paper.",
@@ -1361,7 +1361,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/local-splicing-event-detection/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/local-splicing-event-detection/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events... SUPPA2 relies on genome annotation to define events... The simplicity and modular architecture of SUPPA2 also makes it a very convenient tool in multiple contexts, as PSI values from other methods and for other event types, like complex events, or data types, like transcripts, can be used in SUPPA2 for differential splicing analysis or for clustering across conditions.",
       "asbval:note": "Paper confirms SUPPA2 detects SE, A5/A3, MX, RI event types and relies on genome annotation. However, specific output file formats (ioe/ioi/gtf) are not mentioned in the provided passages. The paper focuses on PSI computation and differential splicing rather than detailed event indexing output formats.",
@@ -1381,7 +1381,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/local-splicing-event-detection/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/local-splicing-event-detection/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 relies on genome annotation to define events... RNA-seq reads from all experiments were used to quantify human and mouse transcripts from Ensembl (version 75, without pseudogenes) with Salmon. Reads were mapped to the human (hg19) or mouse (mm10) genomes using TopHat.",
       "asbval:note": "Paper confirms SUPPA2 works with genome annotation (GTF-like) to define events for downstream analysis.",
@@ -1401,7 +1401,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/psi-calculation-from-isoform-abundance/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/psi-calculation-from-isoform-abundance/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... where TPMa,r indicates the abundance of transcript a in replicate r in transcripts per million (TPM) units.",
       "asbval:note": "Research question directly supported by paper's core methodology.",
@@ -1421,7 +1421,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/psi-calculation-from-isoform-abundance/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/psi-calculation-from-isoform-abundance/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present SUPPA2, a new method that addresses these challenges, and enables streamlined analysis across multiple conditions taking into account biological variability.",
       "asbval:note": "SUPPA2 is the primary tool presented in the paper.",
@@ -1441,7 +1441,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/psi-calculation-from-isoform-abundance/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/psi-calculation-from-isoform-abundance/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The software described here is available at https://github.com/comprna/SUPPA.",
       "asbval:note": "Repository URL confirmed in paper.",
@@ -1461,7 +1461,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/psi-calculation-from-isoform-abundance/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/psi-calculation-from-isoform-abundance/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions: one for the \u0394PSI values between biological replicates and one for the \u0394PSI values between conditions.",
       "asbval:note": "Paper confirms PSI computation from transcript abundances, but does not explicitly name subcommands 'psiPerEvent' and 'psiPerIsoform' in the provided passages. The paper describes the PSI calculation methodology but specific subcommand names are not mentioned in the extracted text.",
@@ -1481,7 +1481,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/psi-calculation-from-isoform-abundance/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/psi-calculation-from-isoform-abundance/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "RNA-seq reads from all experiments were used to quantify human and mouse transcripts from Ensembl (version 75, without pseudogenes) with Salmon [31]... SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples.",
       "asbval:note": "Paper confirms use of Salmon for transcript quantification and SUPPA2 for PSI computation. However, the paper does not explicitly mention 'ioe' or 'ioi' format file specifications in the provided passages.",
@@ -1501,7 +1501,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/psi-calculation-from-isoform-abundance/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/psi-calculation-from-isoform-abundance/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not contain explicit discussion of a 'diffSplice' subcommand or guidance on when to skip PSI calculation. The paper discusses differential splicing analysis but does not clarify whether PSI calculation is mandatory or optional for that workflow.",
@@ -1521,7 +1521,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/psi-matrix-loading-and-normalization/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/psi-matrix-loading-and-normalization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions: one for the \u0394PSI values between biological replicates and one for the \u0394PSI values between conditions.",
       "asbval:note": "The paper describes PSI computation and use across multiple conditions/samples. The concept of loading and normalizing PSI matrices is implicit in the workflow described.",
@@ -1541,7 +1541,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/psi-matrix-loading-and-normalization/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/psi-matrix-loading-and-normalization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The description of the uncertainty in terms of transcript abundances, given in transcripts per million (TPM) units, rather than read counts provides several advantages. These include speed, as there is no need to store or go back to read information, as well as interpretability and application range, as transcript abundances are already normalized for transcript length and remain stable at different library sizes.",
       "asbval:note": "Paper explicitly discusses normalization of transcript expression using TPM units for differential splicing analysis.",
@@ -1561,7 +1561,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/psi-matrix-loading-and-normalization/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/psi-matrix-loading-and-normalization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present SUPPA2, a new method that addresses these challenges, and enables streamlined analysis across multiple conditions taking into account biological variability.",
       "asbval:note": "SUPPA2 is the primary tool discussed throughout the paper.",
@@ -1581,7 +1581,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/psi-matrix-loading-and-normalization/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/psi-matrix-loading-and-normalization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples.",
       "asbval:note": "Paper confirms SUPPA2 computes PSI values and performs differential splicing analysis, but does not explicitly name the subcommands 'psiPerEvent', 'psiPerIsoform', or 'diffSplice'. The paper states 'SUPPA2 uses transcript quantification to compute inclusion values (PSI)' and describes differential splicing computation, but the specific subcommand names are not mentioned in the provided passages. The functional role is correct but the specific command names cannot be verified from these passages.",
@@ -1601,7 +1601,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/psi-matrix-loading-and-normalization/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/psi-matrix-loading-and-normalization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples.",
       "asbval:note": "Paper confirms PSI matrix generation across multiple conditions, but does not explicitly name the subcommands 'psiPerEvent' or 'psiPerIsoform' in the provided passages.",
@@ -1621,7 +1621,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/psi-matrix-loading-and-normalization/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/psi-matrix-loading-and-normalization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "differential splicing is given in terms of the difference of these relative abundances, or \u0394PSI, between conditions. PSI values estimated from RNA-seq data have shown a good agreement with independent experimental measurements, and the magnitude of \u0394PSI represents a good indicator of biological relevance.",
       "asbval:note": "Paper explicitly discusses \u0394PSI and p-values as outputs of differential splicing analysis.",
@@ -1641,7 +1641,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/psi-matrix-loading-and-normalization/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/psi-matrix-loading-and-normalization/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions",
       "asbval:note": "Paper confirms that PSI computation from transcript quantification is a prerequisite step before differential splicing analysis.",
@@ -1661,7 +1661,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/psi-matrix-loading-and-normalization/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/psi-matrix-loading-and-normalization/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 can work with multiple replicates per condition and with multiple conditions.",
       "asbval:note": "Paper emphasizes multiple replicates per condition as a requirement for SUPPA2 analysis.",
@@ -1681,7 +1681,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/splicing-matrix-normalization/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/splicing-matrix-normalization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples.",
       "asbval:note": "Core functionality of SUPPA2 is explicitly stated in Methods section.",
@@ -1701,7 +1701,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/splicing-matrix-normalization/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/splicing-matrix-normalization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The description of the uncertainty in terms of transcript abundances, given in transcripts per million (TPM) units, rather than read counts provides several advantages. These include speed, as there is no need to store or go back to read information, as well as interpretability and application range, as transcript abundances are already normalized for transcript length and remain stable at different library sizes.",
       "asbval:note": "Paper describes how SUPPA2 transforms transcript abundances (TPM) into normalized, comparable metrics across samples.",
@@ -1721,7 +1721,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/splicing-matrix-normalization/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/splicing-matrix-normalization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples.",
       "asbval:note": "Paper confirms SUPPA2 computes PSI from transcript quantification and event definitions. However, the specific subcommands 'psiPerEvent' and 'psiPerIsoform' are not mentioned in the provided passages. The core functionality is confirmed but the specific command names cannot be verified from these excerpts.",
@@ -1741,7 +1741,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/splicing-matrix-normalization/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/splicing-matrix-normalization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "RNA-seq reads from all experiments were used to quantify human and mouse transcripts from Ensembl (version 75, without pseudogenes) with Salmon [31].",
       "asbval:note": "Paper explicitly uses Salmon for transcript quantification that feeds into SUPPA2 analysis.",
@@ -1761,7 +1761,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/splicing-matrix-normalization/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/splicing-matrix-normalization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Kallisto is not mentioned anywhere in the provided passages. While the paper mentions Salmon and other transcript quantification methods, kallisto is not explicitly referenced as a tool used with SUPPA2 in these excerpts.",
@@ -1781,7 +1781,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/splicing-matrix-normalization/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/splicing-matrix-normalization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions: one for the \u0394PSI values between biological replicates and one for the \u0394PSI values between conditions.",
       "asbval:note": "Paper confirms the use case for transcript quantification input and PSI computation for alternative splicing events. Salmon is confirmed as a quantification tool, but kallisto is not mentioned in the passages.",
@@ -1801,7 +1801,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/splicing-matrix-normalization/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/splicing-matrix-normalization/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples.",
       "asbval:note": "Paper clearly states SUPPA2 requires transcript quantification (not exon-level counts) as input.",
@@ -1821,7 +1821,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/splicing-matrix-normalization/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/splicing-matrix-normalization/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Although SUPPA2 relies on genome annotation to define events, poorly annotated genomes can be improved and extended before analysis by SUPPA2.",
       "asbval:note": "Paper confirms SUPPA2 relies on genome annotation/event definitions to define alternative splicing events.",
@@ -1841,7 +1841,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-event-extraction/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-event-extraction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... SUPPA2 enables cost-effective use of RNA sequencing for the robust and streamlined analysis of differential splicing across multiple biological conditions.",
       "asbval:note": "The paper describes SUPPA2's core function of computing PSI values from transcript quantification and analyzing differential splicing across conditions. The GTF parsing and ioe/ioi file generation are standard preprocessing steps for SUPPA2 documented in methods.",
@@ -1861,7 +1861,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-event-extraction/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-event-extraction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for SUPPA2 | role: differential splicing analysis tool]",
       "asbval:note": "SUPPA2 is the primary tool discussed throughout the paper for analyzing alternative splicing events.",
@@ -1881,7 +1881,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-event-extraction/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-event-extraction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events... The simplicity and modular architecture of SUPPA2 also makes it a very convenient tool in multiple contexts, as PSI values from other methods and for other event types, like complex events, or data types, like transcripts, can be used in SUPPA2",
       "asbval:note": "The paper confirms SUPPA2 works with transcript quantification and alternative splicing events, but does not explicitly name the ioe, ioi, or gtf file formats in the provided passages. The paper states 'SUPPA2 uses transcript quantification to compute inclusion values (PSI)' and mentions it can work with 'PSI values from other methods', suggesting it accepts pre-computed inputs rather than necessarily generating these specific artifact files itself. The Methods section references transcript quantification via Salmon but does not detail GTF parsing or ioe/ioi generation in the provided excerpts.",
@@ -1901,7 +1901,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-event-extraction/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-event-extraction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... SUPPA2 enables cost-effective use of RNA sequencing for the robust and streamlined analysis of differential splicing across multiple biological conditions.",
       "asbval:note": "The scope aligns with the paper's central claim that SUPPA2 performs differential splicing analysis across multiple conditions using transcript quantification.",
@@ -1921,7 +1921,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-event-extraction/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-event-extraction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "RNA-seq reads from all experiments were used to quantify human and mouse transcripts from Ensembl (version 75, without pseudogenes) with Salmon [31]... Although SUPPA2 relies on genome annotation to define events, poorly annotated genomes can be improved and extended before analysis by SUPPA2.",
       "asbval:note": "The paper confirms SUPPA2 relies on genome annotation to define events and uses Ensembl transcripts, but does not explicitly detail GTF file format requirements or the specific gene_id/transcript_id attributes in the provided passages.",
@@ -1941,7 +1941,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-event-extraction/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-event-extraction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The provided passages do not mention ioe, ioi, or gtf output file formats by name. The paper discusses PSI values, event definitions, and clustering results, but does not explicitly reference these specific artifact file types in the excerpts provided.",
@@ -1961,7 +1961,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-expression-quantification-handling/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-expression-quantification-handling/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples.",
       "asbval:note": "Paper explicitly describes SUPPA2 consuming transcript quantification (TPM units) to compute PSI values for differential splicing analysis.",
@@ -1981,7 +1981,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-expression-quantification-handling/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-expression-quantification-handling/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions: one for the \u0394PSI values between biological replicates and one for the \u0394PSI values between conditions.",
       "asbval:note": "Paper describes the workflow from transcript quantification \u2192 PSI calculation \u2192 differential splicing analysis.",
@@ -2001,7 +2001,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-expression-quantification-handling/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-expression-quantification-handling/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "RNA-seq reads from all experiments were used to quantify human and mouse transcripts from Ensembl (version 75, without pseudogenes) with Salmon [31]... We used RSEM [39] to simulate sequencing reads",
       "asbval:note": "Paper confirms Salmon and RSEM are used as quantification tools. Kallisto is not explicitly mentioned in the passages, though it is a standard tool in the field. Evidence supports Salmon and RSEM but not Kallisto.",
@@ -2021,7 +2021,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-expression-quantification-handling/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-expression-quantification-handling/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples.",
       "asbval:note": "Directly stated in methods section.",
@@ -2041,7 +2041,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-expression-quantification-handling/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-expression-quantification-handling/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 can work with multiple replicates per condition and with multiple conditions.",
       "asbval:note": "Paper explicitly states SUPPA2 handles multiple replicates and conditions.",
@@ -2061,7 +2061,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-expression-quantification-handling/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-expression-quantification-handling/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... where a indicates the two or more transcripts describing the event, and TPMa,r indicates the abundance of transcript a in replicate r in transcripts per million (TPM) units.",
       "asbval:note": "Paper clearly shows SUPPA2 requires transcript-level (isoform-level) abundances, not gene-level aggregates.",
@@ -2081,7 +2081,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-expression-quantification-handling/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-expression-quantification-handling/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The simplicity and modular architecture of SUPPA2 also makes it a very convenient tool in multiple contexts, as PSI values from other methods and for other event types, like complex events, or data types, like transcripts, can be used in SUPPA2 for differential splicing analysis or for clustering across conditions.",
       "asbval:note": "Paper states SUPPA2 can accept pre-computed PSI values from other methods for downstream differential analysis.",
@@ -2101,7 +2101,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-expression-quantification-handling/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-expression-quantification-handling/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present SUPPA2, a new method that addresses these challenges",
       "asbval:note": "Tool name confirmed throughout paper.",
@@ -2121,7 +2121,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-expression-quantification-handling/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-expression-quantification-handling/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The software described here is available at https://github.com/comprna/SUPPA.",
       "asbval:note": "Repository URL confirmed in paper.",
@@ -2141,7 +2141,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-expression-quantification-handling/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-expression-quantification-handling/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... SUPPA2 estimates the uncertainty of \u0394PSI values as a function of the expression of transcripts involved in the event, taking into account all events genome-wide to test the significance of an observed \u0394PSI",
       "asbval:note": "Paper explicitly describes SUPPA2's role in consuming transcript quantification, computing PSI, and performing uncertainty-aware differential splicing analysis.",
@@ -2161,7 +2161,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-quantification-integration/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-quantification-integration/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... where TPMa,r indicates the abundance of transcript a in replicate r in transcripts per million (TPM) units.",
       "asbval:note": "Paper explicitly describes SUPPA2's use of transcript quantification (TPM) to compute PSI values for alternative splicing events.",
@@ -2181,7 +2181,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-quantification-integration/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-quantification-integration/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions...",
       "asbval:note": "Paper describes aggregation of transcript abundances into event-level PSI values.",
@@ -2201,7 +2201,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-quantification-integration/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-quantification-integration/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples.",
       "asbval:note": "Paper confirms SUPPA2 computes PSI values from transcript quantification, but does not explicitly name the subcommands 'psiPerEvent' and 'psiPerIsoform' in the provided passages. The paper describes the mathematical methodology but not the specific command-line interface names.",
@@ -2221,7 +2221,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-quantification-integration/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-quantification-integration/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "RNA-seq reads from all experiments were used to quantify human and mouse transcripts from Ensembl (version 75, without pseudogenes) with Salmon [31].",
       "asbval:note": "Paper explicitly uses Salmon for transcript quantification. Also mentioned in Methods: 'For the simulation we used the quantification of RefSeq transcripts for the three control samples from [17] (GSE59335) with Salmon [31] as theoretical abundances'.",
@@ -2241,7 +2241,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-quantification-integration/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-quantification-integration/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "kallisto is not mentioned anywhere in the provided passages. The paper uses Salmon for transcript quantification but does not reference kallisto as an alternative or compatible tool.",
@@ -2261,7 +2261,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-quantification-integration/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-quantification-integration/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples... RNA-seq reads from all experiments were used to quantify human and mouse transcripts from Ensembl (version 75, without pseudogenes) with Salmon [31].",
       "asbval:note": "Paper confirms Salmon is used for transcript quantification and SUPPA2 uses this for PSI calculation. However, kallisto is not mentioned in the paper, and the specific file formats (ioe/ioi) and generateEvents step are not explicitly discussed in the provided passages.",
@@ -2281,7 +2281,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-quantification-integration/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-quantification-integration/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 enables cost-effective use of RNA sequencing for the robust and streamlined analysis of differential splicing across multiple biological conditions... SUPPA2 is also able to analyze multiple conditions by computing the pairwise differential splicing between conditions, and can detect groups of events with similar splicing patterns across conditions using density-based clustering",
       "asbval:note": "Paper explicitly describes SUPPA2's use of PSI values for differential splicing analysis and clustering across multiple conditions.",
@@ -2301,7 +2301,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/uncertainty-aware-significance-assessment/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/uncertainty-aware-significance-assessment/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 extends this principle to measure differential splicing between conditions by exploiting the variability between biological replicates to determine the uncertainty in the PSI values... The significance of an observed \u0394PSI value between conditions will depend on where in the distribution of the uncertainty it falls... SUPPA2 estimates the significance considering the distribution between replicates for all events with similar transcript abundance; hence, it provides a lower bound for significant |\u0394PSI| values that vary with the expression of the transcripts describing the event",
       "asbval:note": "Core research question is directly supported by passage 3 and the Methods section (passage 8-9) which describes the empirical cumulative density function approach.",
@@ -2321,7 +2321,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/uncertainty-aware-significance-assessment/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/uncertainty-aware-significance-assessment/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we present SUPPA2, a new method that addresses these challenges, and enables streamlined analysis across multiple conditions taking into account biological variability.",
       "asbval:note": "SUPPA2 is the primary tool described throughout the paper for differential splicing analysis.",
@@ -2341,7 +2341,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/uncertainty-aware-significance-assessment/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/uncertainty-aware-significance-assessment/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The software described here is available at https://github.com/comprna/SUPPA.",
       "asbval:note": "Repository URL confirmed in paper.",
@@ -2361,7 +2361,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/uncertainty-aware-significance-assessment/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/uncertainty-aware-significance-assessment/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions: one for the \u0394PSI values between biological replicates and one for the \u0394PSI values between conditions... Given the observed \u0394PSI and Econd values for an event between conditions, its significance is calculated from the comparison with the \u0394PSI distribution between replicates",
       "asbval:note": "The paper describes SUPPA2 computing \u0394PSI and p-values from PSI matrices and expression data, but does not explicitly name a 'diffSplice subcommand'. The paper refers to 'differential splicing analysis' as a general function but does not document specific subcommand names in the provided passages.",
@@ -2381,7 +2381,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/uncertainty-aware-significance-assessment/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/uncertainty-aware-significance-assessment/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 can work with multiple replicates per condition and with multiple conditions. Additionally, SUPPA2 estimates the uncertainty of \u0394PSI values as a function of the expression of transcripts involved in the event, taking into account all events genome-wide to test the significance of an observed \u0394PSI",
       "asbval:note": "Scope statement is well-supported by the paper's description of SUPPA2's capabilities.",
@@ -2401,7 +2401,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/uncertainty-aware-significance-assessment/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/uncertainty-aware-significance-assessment/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 can work with multiple replicates per condition and with multiple conditions... SUPPA2 estimates the uncertainty of \u0394PSI values as a function of the expression of transcripts involved in the event, taking into account all events genome-wide",
       "asbval:note": "The requirement for replicates is implicit in the method's design, which exploits 'variability between biological replicates' (passage 3). The paper does not explicitly state a minimum of 2 replicates, but the methodology requires replicate structure.",
@@ -2421,7 +2421,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/uncertainty-aware-significance-assessment/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/uncertainty-aware-significance-assessment/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "SUPPA2 uses transcript quantification to compute inclusion values (PSI) of alternative splicing events across multiple samples. Given the calculated PSI values per sample, SUPPA2 considers two distributions: one for the \u0394PSI values between biological replicates and one for the \u0394PSI values between conditions... where r = 1,..,|Rc| runs over the replicates in each condition",
       "asbval:note": "The method explicitly requires per-sample PSI values and per-replicate expression (TPM) values to compute the within-replicate distribution.",
@@ -2441,7 +2441,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/uncertainty-aware-significance-assessment/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/uncertainty-aware-significance-assessment/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For the distribution between conditions, the \u0394PSI values are calculated as the difference of the means in the two conditions",
       "asbval:note": "The method is inherently comparative and requires at least two conditions to compute \u0394PSI.",
@@ -2461,7 +2461,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/alternative-splicing-event-comparison-across-conditions/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/alternative-splicing-event-comparison-across-conditions/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "alternative-splicing-event-comparison-across-conditions",
@@ -2474,7 +2474,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/alternative-splicing-event-parsing/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/alternative-splicing-event-parsing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "alternative-splicing-event-parsing",
@@ -2487,7 +2487,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/differential-splicing-statistical-testing/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/differential-splicing-statistical-testing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "differential-splicing-statistical-testing",
@@ -2500,7 +2500,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/gtf-file-parsing/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/gtf-file-parsing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "gtf-file-parsing",
@@ -2513,7 +2513,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/isoform-structure-annotation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/isoform-structure-annotation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "isoform-structure-annotation",
@@ -2526,7 +2526,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/local-splicing-event-detection/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/local-splicing-event-detection/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "local-splicing-event-detection",
@@ -2539,7 +2539,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/psi-calculation-from-isoform-abundance/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/psi-calculation-from-isoform-abundance/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "psi-calculation-from-isoform-abundance",
@@ -2552,7 +2552,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/psi-matrix-loading-and-normalization/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/psi-matrix-loading-and-normalization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "psi-matrix-loading-and-normalization",
@@ -2565,7 +2565,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/splicing-matrix-normalization/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/splicing-matrix-normalization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "splicing-matrix-normalization",
@@ -2578,7 +2578,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-event-extraction/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-event-extraction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "transcript-event-extraction",
@@ -2591,7 +2591,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-expression-quantification-handling/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-expression-quantification-handling/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "transcript-expression-quantification-handling",
@@ -2604,7 +2604,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transcript-quantification-integration/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/transcript-quantification-integration/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "transcript-quantification-integration",
@@ -2617,7 +2617,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/uncertainty-aware-significance-assessment/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/skill/uncertainty-aware-significance-assessment/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "uncertainty-aware-significance-assessment",
@@ -2630,7 +2630,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SUPPA performs fast, accurate, and uncertainty-aware differential splicing analysis across multiple conditions.",
       "asbval:note": null,
@@ -2650,7 +2650,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SUPPA2 was published in Genome Biology in 2018.",
       "asbval:note": null,
@@ -2670,7 +2670,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Transcript quantification can be leveraged for fast computation of alternative splicing profiles.",
       "asbval:note": null,
@@ -2690,7 +2690,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A short SUPPA tutorial on an example dataset is available on GitHub.",
       "asbval:note": null,
@@ -2710,7 +2710,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SUPPA has command and subcommand structure.",
       "asbval:note": null,
@@ -2730,7 +2730,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SUPPA includes functionality for generation of transcript events and local alternative splicing events.",
       "asbval:note": null,
@@ -2750,7 +2750,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SUPPA includes functionality for PSI calculation for Transcripts and Events.",
       "asbval:note": null,
@@ -2770,7 +2770,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13059-018-1417-1/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "SUPPA is distributed under the MIT license.",
       "asbval:note": "Source excerpt is from metadata/config file (license_spdx field) rather than paper text; substring_in_paper=false suggests this may not be directly stated in the paper body",

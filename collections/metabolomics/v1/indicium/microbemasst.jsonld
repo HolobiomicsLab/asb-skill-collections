@@ -544,7 +544,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_001/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST (https://masst.gnps2.org/microbemasst/), a search tool that leverages public MS repository data to identify the microbial origin of known and unknown metabolites and map them to their microbial producers. microbeMASST is a community-sourced tool that works within the GNPS ecosystem",
       "asbval:note": "Paper documents microbeMASST with live URL and publication details. However, the paper does not enumerate other domain-specific MASST variants (plantMASST, tissueMASST, etc.) or reference a 'domainMASSTs repository'. Only microbeMASST is described in detail in the provided passages.",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_001/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST, a taxonomically informed mass spectrometry (MS) search tool, tackles limited microbial metabolite annotation in untargeted metabolomics experiments.",
       "asbval:note": "microbeMASST is the primary subject of the paper and is extensively documented.",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_001/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "plantMASST is not mentioned anywhere in the provided passages.",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_001/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tissueMASST is not mentioned anywhere in the provided passages.",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_001/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "microbiomeMASST is not mentioned anywhere in the provided passages.",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_001/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_001/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "foodMASST is not mentioned anywhere in the provided passages.",
@@ -664,7 +664,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_001/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_001/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "metadataMASST is not mentioned anywhere in the provided passages.",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_001/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_001/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Different from MASST, which uses a precomputed network of ~110 million MS/MS spectra to enable spectral searching, microbeMASST is based on the recently introduced Fast Search Tool",
       "asbval:note": "The paper mentions MASST as a predecessor tool but does not use the exact name 'GNPS_MASST'. MASST is referenced as an earlier implementation that microbeMASST improves upon.",
@@ -704,7 +704,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_001/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_001/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST (https://masst.gnps2.org/microbemasst/)",
       "asbval:note": "The paper provides one live URL (microbeMASST) and publication details, but does not provide a comprehensive structured inventory of multiple domain-specific MASST applications as the card implies.",
@@ -724,7 +724,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card appears to be asking for a comprehensive enumeration of multiple domain-specific MASST variants from a 'domainMASSTs repository', but the paper is specifically about microbeMASST only.",
@@ -742,7 +742,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_002/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes microbeMASST as a single taxonomically-informed search tool. No mention of a routing mechanism that dispatches spectra to multiple domain-specific MASST applications (plantMASST, tissueMASST, etc.). The paper does not discuss conditional dispatch logic or domain-context-based routing.",
@@ -762,7 +762,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_002/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "plantMASST is not mentioned anywhere in the paper. The paper focuses exclusively on microbeMASST.",
@@ -782,7 +782,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_002/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tissueMASST is not mentioned anywhere in the paper. The paper focuses exclusively on microbeMASST.",
@@ -802,7 +802,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_002/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "microbiomeMASST is not mentioned anywhere in the paper. The paper focuses exclusively on microbeMASST.",
@@ -822,7 +822,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_002/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_002/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "foodMASST is not mentioned anywhere in the paper. The paper focuses exclusively on microbeMASST.",
@@ -842,7 +842,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_002/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_002/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "metadataMASST is not mentioned anywhere in the paper. The paper focuses exclusively on microbeMASST.",
@@ -862,7 +862,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_002/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_002/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST, a taxonomically informed mass spectrometry (MS) search tool, tackles limited microbial metabolite annotation in untargeted metabolomics experiments.",
       "asbval:note": "microbeMASST is the primary tool described in the paper.",
@@ -882,7 +882,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_002/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_002/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST is a community-sourced tool that works within the GNPS ecosystem. Users can search tandem MS (MS/MS) spectra obtained from their experiments against the GNPS/MassIVE repository",
       "asbval:note": "The paper mentions MASST (the original tool) and microbeMASST as a tool within the GNPS ecosystem, but does not refer to 'GNPS_MASST' as a distinct tool name. MASST is mentioned as a predecessor tool that microbeMASST improves upon.",
@@ -902,7 +902,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_002/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_002/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No routing decision module or domain-to-application mappings are described in the paper. The paper describes microbeMASST as a single tool for microbial metabolite annotation, not a routing system.",
@@ -922,7 +922,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_002/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_002/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No routing test results or spectrum dispatch testing is described. The paper demonstrates microbeMASST's ability to match spectra to microbial producers, not dispatch to multiple domain-specific applications.",
@@ -942,7 +942,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card describes a multi-domain routing system with plantMASST, tissueMASST, microbiomeMASST, foodMASST, and metadataMASST as separate applications. The paper describes only microbeMASST, a single tool for microbial metabolite annotation.",
@@ -960,7 +960,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_003/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'metadataMASST' as a tool or aggregation system in any passage. The paper describes microbeMASST as a single domain-specific tool, not as part of a larger metadataMASST framework that combines outputs from multiple MASST variants.",
@@ -980,7 +980,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_003/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Tool name does not appear in paper. Paper focuses exclusively on microbeMASST; no overarching 'metadataMASST' aggregation tool is described.",
@@ -1000,7 +1000,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_003/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST, a taxonomically informed mass spectrometry (MS) search tool, tackles limited microbial metabolite annotation in untargeted metabolomics experiments.",
       "asbval:note": "Tool is central to the paper and extensively documented.",
@@ -1020,7 +1020,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_003/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Tool name does not appear in paper. Only microbeMASST is described; no plant-specific variant is mentioned.",
@@ -1040,7 +1040,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_003/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Tool name does not appear in paper. Only microbeMASST is described; no tissue-specific variant is mentioned.",
@@ -1060,7 +1060,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_003/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_003/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Tool name does not appear in paper. Only microbeMASST is described; no microbiome-specific variant is mentioned.",
@@ -1080,7 +1080,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_003/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_003/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Tool name does not appear in paper. Only microbeMASST is described; no food-specific variant is mentioned.",
@@ -1100,7 +1100,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_003/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_003/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The microbeMASST web app displays query results in interactive taxonomic trees, which can be downloaded as HTML files... To create the final taxonomic tree, the JSON file of the complete microbeMASST taxonomic tree is filtered according to the results and converted into a D3 JavaScript object that can be visualized as an HTML file.",
       "asbval:note": "microbeMASST does produce visualizable summary outputs (interactive taxonomic trees, HTML files, JSON/D3 visualizations), but these are outputs from a single tool (microbeMASST), not from aggregating multiple domain-specific MASST variants. The card's claim implies cross-tool aggregation, which is not supported.",
@@ -1120,7 +1120,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_492844724__task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/card/10_5281_zenodo_492844724__task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card describes a meta-aggregation workflow ('metadataMASST') that combines outputs from multiple domain-specific MASST tools (plantMASST, tissueMASST, microbiomeMASST, foodMASST). The paper describes only microbeMASST, a single domain-specific tool for microbial metabolomics. No evidence of a higher-level aggregation framework or other MASST variants exists in the paper.",
@@ -1137,7 +1137,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conditional-logic-implementation/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/conditional-logic-implementation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST is a community-sourced tool that works within the GNPS ecosystem. Users can search tandem MS (MS/MS) spectra obtained from their experiments against the GNPS/MassIVE repository and retrieve matching samples exclusively acquired from extracts of bacterial, fungal or archaeal monocultures.",
       "asbval:note": "Paper describes microbeMASST as a single domain-specific tool for microbial samples. No evidence of conditional routing logic mapping to six domain-specific MASST variants (plantMASST, tissueMASST, microbiomeMASST, foodMASST, metadataMASST). Paper only discusses microbeMASST; other domain-specific MASST tools are not mentioned or described.",
@@ -1157,7 +1157,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conditional-logic-implementation/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/conditional-logic-implementation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "plantMASST is not mentioned anywhere in the paper. Paper only describes microbeMASST.",
@@ -1177,7 +1177,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conditional-logic-implementation/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/conditional-logic-implementation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tissueMASST is not mentioned anywhere in the paper. Paper only describes microbeMASST.",
@@ -1197,7 +1197,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conditional-logic-implementation/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/conditional-logic-implementation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "microbiomeMASST is not mentioned anywhere in the paper. Paper only describes microbeMASST.",
@@ -1217,7 +1217,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conditional-logic-implementation/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/conditional-logic-implementation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "foodMASST is not mentioned anywhere in the paper. Paper only describes microbeMASST.",
@@ -1237,7 +1237,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conditional-logic-implementation/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/conditional-logic-implementation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "metadataMASST is not mentioned anywhere in the paper. Paper only describes microbeMASST.",
@@ -1257,7 +1257,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conditional-logic-implementation/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/conditional-logic-implementation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we have developed microbeMASST (https://masst.gnps2.org/microbemasst/), a search tool that leverages public MS repository data to identify the microbial origin of known and unknown metabolites and map them to their microbial producers.",
       "asbval:note": "microbeMASST is explicitly named and URL confirmed in paper.",
@@ -1277,7 +1277,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conditional-logic-implementation/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/conditional-logic-implementation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The microbeMASST web application was built using Dash and Flask open-source libraries for Python (https://github.com/mwang87/GNPS_MASST/blob/master/dash_microbemasst.py).",
       "asbval:note": "GitHub repository URL is confirmed for microbeMASST web application code, but paper does not describe it as containing 'routing logic for all six standalone web applications' \u2014 only microbeMASST is discussed.",
@@ -1297,7 +1297,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conditional-logic-implementation/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/conditional-logic-implementation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST is based on the recently introduced Fast Search Tool (https://fasst.gnps2.org/fastsearch/). This tool, originally designed for proteomics, drastically improves search speed by several orders of magnitude by indexing all the MS/MS spectra present in GNPS/MassIVE and restricting the search space to the user input parameters.",
       "asbval:note": "Fast Search API/Tool is confirmed in paper as backend service for microbeMASST.",
@@ -1317,7 +1317,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conditional-logic-implementation/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/conditional-logic-implementation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST, a taxonomically informed mass spectrometry (MS) search tool, tackles limited microbial metabolite annotation in untargeted metabolomics experiments.",
       "asbval:note": "Paper only describes microbeMASST. No mention of plantMASST, tissueMASST, microbiomeMASST, foodMASST, or metadataMASST. The scope card describes a multi-domain routing system that does not exist in the paper.",
@@ -1337,7 +1337,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conditional-logic-implementation/010",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/conditional-logic-implementation/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper describes microbeMASST as a single tool for microbial samples. No conditional routing logic across multiple domain-specific tools is described or implemented in the paper.",
@@ -1357,7 +1357,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-domain-masst-output-parsing/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/cross-domain-masst-output-parsing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST is a community-sourced tool that works within the GNPS ecosystem. Users can search tandem MS (MS/MS) spectra obtained from their experiments against the GNPS/MassIVE repository",
       "asbval:note": "Paper describes microbeMASST as a single domain-specific tool. No evidence of plantMASST, tissueMASST, microbiomeMASST, or foodMASST. No evidence of cross-domain aggregation or metadataMASST. The paper does describe batch search capability via Python script and .mgf file input, but not cross-domain parsing.",
@@ -1377,7 +1377,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-domain-masst-output-parsing/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/cross-domain-masst-output-parsing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "metadataMASST is not mentioned anywhere in the paper. No evidence of a tool by this name or function.",
@@ -1397,7 +1397,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-domain-masst-output-parsing/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/cross-domain-masst-output-parsing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST, a taxonomically informed mass spectrometry (MS) search tool, tackles limited microbial metabolite annotation in untargeted metabolomics experiments",
       "asbval:note": "microbeMASST is confirmed as a search tool that generates outputs. However, the paper does not describe it as part of a cross-domain aggregation workflow.",
@@ -1417,7 +1417,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-domain-masst-output-parsing/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/cross-domain-masst-output-parsing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "plantMASST is not mentioned in the paper.",
@@ -1437,7 +1437,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-domain-masst-output-parsing/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/cross-domain-masst-output-parsing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tissueMASST is not mentioned in the paper.",
@@ -1457,7 +1457,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-domain-masst-output-parsing/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/cross-domain-masst-output-parsing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "microbiomeMASST is not mentioned in the paper.",
@@ -1477,7 +1477,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-domain-masst-output-parsing/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/cross-domain-masst-output-parsing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "foodMASST is not mentioned in the paper.",
@@ -1497,7 +1497,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-domain-masst-output-parsing/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/cross-domain-masst-output-parsing/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "users can leverage microbeMASST Python code to perform batch searches of thousands of MS/MS spectra by providing either a formatted MS/MS file (.mgf) or a list of Universal Spectrum Identifiers (USIs)",
       "asbval:note": "Paper mentions batch search capability via Python script but does not name 'jobs.py' specifically. The paper references a 'customizable Python script' at https://github.com/robinschmid/microbe_masst but does not confirm it is named jobs.py or that it orchestrates multiple domainMASSTs.",
@@ -1517,7 +1517,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-domain-masst-output-parsing/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/cross-domain-masst-output-parsing/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The microbeMASST web application was built using Dash and Flask open-source libraries for Python (https://github.com/mwang87/GNPS_MASST/blob/master/dash_microbemasst.py)",
       "asbval:note": "GNPS_MASST repository is confirmed to contain code for microbeMASST web application. However, no evidence that it contains logic for other domain-specific MASST tools (plantMASST, tissueMASST, etc.), which are not mentioned in the paper.",
@@ -1537,7 +1537,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-domain-masst-output-parsing/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/cross-domain-masst-output-parsing/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes microbeMASST as a single tool for microbial metabolite annotation. It does not describe a cross-domain parsing workflow, multiple parallel MASST tools, or metadataMASST. The scope of the card appears to describe a hypothetical or future extension not present in this paper.",
@@ -1557,7 +1557,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-reference-publication-linking/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/cross-reference-publication-linking/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST is a community-sourced tool that works within the GNPS ecosystem. Users can search tandem MS (MS/MS) spectra obtained from their experiments against the GNPS/MassIVE repository and retrieve matching samples exclusively acquired from extracts of bacterial, fungal or archaeal monocultures.",
       "asbval:note": "The paper describes microbeMASST as a tool and its integration with GNPS/MassIVE, but does not address the research question of extracting/validating publications from repository documentation or verifying linkage integrity. The paper IS itself the peer-reviewed publication for microbeMASST, but the task card's research question describes a meta-level skill (validating publications of tools), not the tool's functionality itself.",
@@ -1577,7 +1577,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-reference-publication-linking/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/cross-reference-publication-linking/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST, a taxonomically informed mass spectrometry (MS) search tool, tackles limited microbial metabolite annotation in untargeted metabolomics experiments.",
       "asbval:note": "Tool is explicitly named and described as the primary focus of the paper.",
@@ -1597,7 +1597,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-reference-publication-linking/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/cross-reference-publication-linking/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "plantMASST is not mentioned anywhere in the provided passages. The paper focuses exclusively on microbeMASST.",
@@ -1617,7 +1617,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-reference-publication-linking/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/cross-reference-publication-linking/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tissueMASST is not mentioned in the provided passages.",
@@ -1637,7 +1637,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-reference-publication-linking/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/cross-reference-publication-linking/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "microbiomeMASST is not mentioned in the provided passages. The paper discusses microbeMASST, not a separate 'microbiomeMASST' tool.",
@@ -1657,7 +1657,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-reference-publication-linking/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/cross-reference-publication-linking/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "foodMASST is not mentioned in the provided passages.",
@@ -1677,7 +1677,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-reference-publication-linking/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/cross-reference-publication-linking/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "metadataMASST is not mentioned in the provided passages.",
@@ -1697,7 +1697,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-reference-publication-linking/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/cross-reference-publication-linking/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The microbeMASST web application was built using Dash and Flask open-source libraries for Python (https://github.com/mwang87/GNPS_MASST/blob/master/dash_microbemasst.py).",
       "asbval:note": "GitHub repository URL is explicitly cited in the Methods section.",
@@ -1717,7 +1717,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-reference-publication-linking/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/cross-reference-publication-linking/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "batch searches can be performed using a customizable Python script that can read either a .tsv file containing a list of USIs or a single .mgf file (https://github.com/robinschmid/microbe_masst).",
       "asbval:note": "GitHub repository URL is explicitly cited for batch search utilities.",
@@ -1737,7 +1737,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-reference-publication-linking/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/cross-reference-publication-linking/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we have developed microbeMASST (https://masst.gnps2.org/microbemasst/), a search tool that leverages public MS repository data",
       "asbval:note": "URL is explicitly provided in the paper.",
@@ -1757,7 +1757,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-reference-publication-linking/010",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/cross-reference-publication-linking/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe a task or methodology for extracting/validating publications from repository documentation. The paper IS a peer-reviewed publication about microbeMASST, but it does not address the meta-task of cross-referencing tool publications or verifying linkage integrity as described in the scope.",
@@ -1777,7 +1777,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/domain-context-to-application-routing/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/domain-context-to-application-routing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST is a community-sourced tool that works within the GNPS ecosystem. Users can search tandem MS (MS/MS) spectra obtained from their experiments against the GNPS/MassIVE repository",
       "asbval:note": "Paper describes microbeMASST as a single domain-specific tool for microbial metabolomics. No evidence of a conditional routing mechanism that dispatches to multiple domain-specific MASST variants (plantMASST, tissueMASST, microbiomeMASST, foodMASST, metadataMASST). The paper focuses exclusively on microbeMASST; other MASST variants are not mentioned or discussed.",
@@ -1797,7 +1797,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/domain-context-to-application-routing/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/domain-context-to-application-routing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST, a taxonomically informed mass spectrometry (MS) search tool, tackles limited microbial metabolite annotation in untargeted metabolomics experiments. Leveraging a curated database of >60,000 microbial monocultures",
       "asbval:note": "microbeMASST is the primary tool described in the paper.",
@@ -1817,7 +1817,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/domain-context-to-application-routing/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/domain-context-to-application-routing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "plantMASST is not mentioned anywhere in the provided passages. No evidence of its existence or use in this paper.",
@@ -1837,7 +1837,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/domain-context-to-application-routing/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/domain-context-to-application-routing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tissueMASST is not mentioned anywhere in the provided passages. No evidence of its existence or use in this paper.",
@@ -1857,7 +1857,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/domain-context-to-application-routing/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/domain-context-to-application-routing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "microbiomeMASST is not mentioned anywhere in the provided passages. No evidence of its existence or use in this paper.",
@@ -1877,7 +1877,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/domain-context-to-application-routing/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/domain-context-to-application-routing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "foodMASST is not mentioned anywhere in the provided passages. No evidence of its existence or use in this paper.",
@@ -1897,7 +1897,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/domain-context-to-application-routing/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/domain-context-to-application-routing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "metadataMASST is not mentioned anywhere in the provided passages. No evidence of its existence or use in this paper.",
@@ -1917,7 +1917,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/domain-context-to-application-routing/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/domain-context-to-application-routing/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The microbeMASST web application was built using Dash and Flask open-source libraries for Python (https://github.com/mwang87/GNPS_MASST/blob/master/dash_microbemasst.py).",
       "asbval:note": "GNPS_MASST repository is confirmed as the source codebase for microbeMASST web application.",
@@ -1937,7 +1937,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/domain-context-to-application-routing/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/domain-context-to-application-routing/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "batch searches can be performed using a customizable Python script that can read either a .tsv file containing a list of USIs or a single .mgf file (https://github.com/robinschmid/microbe_masst)",
       "asbval:note": "Paper mentions a customizable Python script for batch searches at the robinschmid/microbe_masst repository, but does not specifically name it 'jobs.py'. The script exists and performs batch orchestration, but the exact filename is not confirmed in the passages.",
@@ -1957,7 +1957,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/domain-context-to-application-routing/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/domain-context-to-application-routing/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST leverages the Fast Search Tool (https://fasst.gnps2.org/fastsearch/) API and the sample-specific associated metadata to generate taxonomic trees. Fast searches are based on indexing all the MS/MS spectra present in GNPS/MassIVE",
       "asbval:note": "Fast Search Tool (FASST) API is confirmed as the underlying service for spectral searching in microbeMASST.",
@@ -1977,7 +1977,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/domain-context-to-application-routing/010",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/domain-context-to-application-routing/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "As of September 2023, microbeMASST includes 60,781 liquid chromatography (LC)\u2013MS/MS files comprising >100 million MS/MS spectra mapped to 541 strains, 1,336 species, 539 genera, 264 families, 109 orders, 41 classes and 16 phyla",
       "asbval:note": "Paper confirms microbeMASST searches microbial spectral library, but the numbers differ: paper reports 541 strains, 1,336 species, 539 genera (as of Sept 2023), not 561 genera, 1379 species, 542 strains as claimed in the card. No evidence of 'routed spectra with microbial context label' mechanism.",
@@ -1997,7 +1997,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/domain-context-to-application-routing/011",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/domain-context-to-application-routing/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes microbeMASST as a single tool for microbial metabolomics. There is no discussion of a conditional routing mechanism that dispatches to multiple domain-specific MASST variants. The scope describes a multi-domain routing system that is not present in the paper.",
@@ -2017,7 +2017,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metadata-harmonization-across-sources/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/metadata-harmonization-across-sources/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST leverages the Fast Search Tool (https://fasst.gnps2.org/fastsearch/) API and the sample-specific associated metadata to generate taxonomic trees... users can leverage microbeMASST Python code to perform batch searches of thousands of MS/MS spectra by providing either a formatted MS/MS file (.mgf) or a list of Universal Spectrum Identifiers (USIs)",
       "asbval:note": "Paper describes batch processing and aggregation for microbeMASST specifically, with Python code for batch searches. However, the paper does NOT describe aggregation across multiple domain-specific MASST tools (plantMASST, tissueMASST, microbiomeMASST, foodMASST). The card claims a cross-domain aggregation skill that is not evidenced in the paper. The paper only discusses microbeMASST as a single domain tool.",
@@ -2037,7 +2037,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metadata-harmonization-across-sources/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/metadata-harmonization-across-sources/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "metadataMASST is not mentioned anywhere in the paper. The paper discusses microbeMASST, MASST, and Fast Search Tool, but does not reference a 'metadataMASST' tool or interface.",
@@ -2057,7 +2057,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metadata-harmonization-across-sources/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/metadata-harmonization-across-sources/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST, a taxonomically informed mass spectrometry (MS) search tool, tackles limited microbial metabolite annotation in untargeted metabolomics experiments.",
       "asbval:note": "microbeMASST is the primary subject of the paper and is extensively documented.",
@@ -2077,7 +2077,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metadata-harmonization-across-sources/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/metadata-harmonization-across-sources/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "plantMASST is not mentioned in the paper. The paper focuses exclusively on microbeMASST.",
@@ -2097,7 +2097,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metadata-harmonization-across-sources/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/metadata-harmonization-across-sources/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tissueMASST is not mentioned in the paper.",
@@ -2117,7 +2117,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metadata-harmonization-across-sources/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/metadata-harmonization-across-sources/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "microbiomeMASST is not mentioned in the paper.",
@@ -2137,7 +2137,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metadata-harmonization-across-sources/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/metadata-harmonization-across-sources/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "foodMASST is not mentioned in the paper.",
@@ -2157,7 +2157,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metadata-harmonization-across-sources/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/metadata-harmonization-across-sources/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST leverages the Fast Search Tool (https://fasst.gnps2.org/fastsearch/) API and the sample-specific associated metadata to generate taxonomic trees.",
       "asbval:note": "Fast Search Tool (FASST) is explicitly mentioned as the backend API used by microbeMASST.",
@@ -2177,7 +2177,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metadata-harmonization-across-sources/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/metadata-harmonization-across-sources/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "users can leverage microbeMASST Python code to perform batch searches of thousands of MS/MS spectra by providing either a formatted MS/MS file (.mgf) or a list of Universal Spectrum Identifiers (USIs)",
       "asbval:note": "Paper mentions a customizable Python script for batch searches (https://github.com/robinschmid/microbe_masst), but does not specifically name it 'jobs.py' or describe it as orchestrating multi-domain MASST searches. The script is for microbeMASST batch processing only, not cross-domain aggregation.",
@@ -2197,7 +2197,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metadata-harmonization-across-sources/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/metadata-harmonization-across-sources/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The microbeMASST web application was built using Dash and Flask open-source libraries for Python (https://github.com/mwang87/GNPS_MASST/blob/master/dash_microbemasst.py).",
       "asbval:note": "GNPS_MASST repository is cited as the source code for the microbeMASST web application.",
@@ -2217,7 +2217,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metadata-harmonization-across-sources/010",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/metadata-harmonization-across-sources/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST is a community-sourced tool that works within the GNPS ecosystem",
       "asbval:note": "Paper only describes microbeMASST (microbial domain). No evidence of plantMASST, tissueMASST, microbiomeMASST, or foodMASST existing or being integrated. The card describes a cross-domain aggregation workflow that is not present in the paper.",
@@ -2237,7 +2237,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metadata-harmonization-across-sources/011",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/metadata-harmonization-across-sources/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "metadataMASST is not mentioned in the paper. The paper describes the microbeMASST web interface, not a unified metadataMASST interface.",
@@ -2257,7 +2257,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-metadata-extraction/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/repository-metadata-extraction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "users can leverage microbeMASST Python code to perform batch searches of thousands of MS/MS spectra by providing either a formatted MS/MS file (.mgf) or a list of Universal Spectrum Identifiers (USIs), which represent paths to spectra in public datasets. This is particularly useful for creating integrated data analysis pipelines using the standard outputs (.mgf) of already established data processing tools, such as MZmine.",
       "asbval:note": "Paper describes microbeMASST tool and batch search infrastructure but does not discuss a general skill for extracting tool URLs, publications, and metadata from repository README files. The card's research question is framed as a generic methodology for repository metadata extraction, whereas the paper focuses on the specific microbeMASST application. The paper does not present a generalizable extraction workflow or methodology.",
@@ -2277,7 +2277,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-metadata-extraction/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/repository-metadata-extraction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The microbeMASST web application was built using Dash and Flask open-source libraries for Python (https://github.com/mwang87/GNPS_MASST/blob/master/dash_microbemasst.py).",
       "asbval:note": "Repository URL confirmed in paper.",
@@ -2297,7 +2297,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-metadata-extraction/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/repository-metadata-extraction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "batch searches can be performed using a customizable Python script that can read either a .tsv file containing a list of USIs or a single .mgf file (https://github.com/robinschmid/microbe_masst).",
       "asbval:note": "Repository URL confirmed in paper.",
@@ -2317,7 +2317,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-metadata-extraction/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/repository-metadata-extraction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we have developed microbeMASST (https://masst.gnps2.org/microbemasst/), a search tool that leverages public MS repository data to identify the microbial origin of known and unknown metabolites and map them to their microbial producers.",
       "asbval:note": "Web application URL confirmed in paper.",
@@ -2337,7 +2337,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-metadata-extraction/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/repository-metadata-extraction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "plantMASST is not mentioned anywhere in the provided passages. The paper focuses exclusively on microbeMASST for microbial metabolomics.",
@@ -2357,7 +2357,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-metadata-extraction/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/repository-metadata-extraction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tissueMASST is not mentioned in the provided passages.",
@@ -2377,7 +2377,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-metadata-extraction/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/repository-metadata-extraction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "microbiomeMASST is not mentioned in the provided passages.",
@@ -2397,7 +2397,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-metadata-extraction/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/repository-metadata-extraction/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "foodMASST is not mentioned in the provided passages.",
@@ -2417,7 +2417,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-metadata-extraction/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/repository-metadata-extraction/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "metadataMASST is not mentioned in the provided passages.",
@@ -2437,7 +2437,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-metadata-extraction/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/repository-metadata-extraction/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The microbeMASST web application was built using Dash and Flask open-source libraries for Python (https://github.com/mwang87/GNPS_MASST/blob/master/dash_microbemasst.py).",
       "asbval:note": "Paper confirms GNPS_MASST contains microbeMASST code, but does not confirm it contains code for 'all domain-specific standalone web applications' (plantMASST, tissueMASST, etc.). Only microbeMASST is discussed in the paper.",
@@ -2457,7 +2457,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-metadata-extraction/010",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/repository-metadata-extraction/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "batch searches can be performed using a customizable Python script that can read either a .tsv file containing a list of USIs or a single .mgf file (https://github.com/robinschmid/microbe_masst).",
       "asbval:note": "Paper confirms microbe_masst contains batch search scripts for microbeMASST but does not mention plantMASST or specific files like jobs.py.",
@@ -2477,7 +2477,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/routing-module-testing-and-validation/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/routing-module-testing-and-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST is a community-sourced tool that works within the GNPS ecosystem. Users can search tandem MS (MS/MS) spectra obtained from their experiments against the GNPS/MassIVE repository and retrieve matching samples exclusively acquired from extracts of bacterial, fungal or archaeal monocultures.",
       "asbval:note": "Paper describes microbeMASST as a single domain-specific application within GNPS ecosystem. No evidence of conditional routing logic across six standalone MASST applications (plant, tissue, microbiome, food, metadata variants). The paper focuses exclusively on microbeMASST implementation and validation, not a routing module that dispatches to multiple domain-specific endpoints.",
@@ -2497,7 +2497,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/routing-module-testing-and-validation/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/routing-module-testing-and-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The microbeMASST web application was built using Dash and Flask open-source libraries for Python (https://github.com/mwang87/GNPS_MASST/blob/master/dash_microbemasst.py).",
       "asbval:note": "Paper confirms GNPS_MASST repository exists and contains microbeMASST web application code (dash_microbemasst.py), but provides no evidence of conditional routing logic for six domain-specific MASST variants or integration layer across multiple endpoints. Repository is cited only for microbeMASST implementation.",
@@ -2517,7 +2517,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/routing-module-testing-and-validation/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/routing-module-testing-and-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST, a taxonomically informed mass spectrometry (MS) search tool, tackles limited microbial metabolite annotation in untargeted metabolomics experiments. Leveraging a curated database of >60,000 microbial monocultures, users can search known and unknown MS/MS spectra and link them to their respective microbial producers via MS/MS fragmentation patterns.",
       "asbval:note": "microbeMASST is confirmed as a functional MS/MS search tool for microbial spectra, though the paper does not describe it as one of six routing endpoints or discuss routing logic.",
@@ -2537,7 +2537,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/routing-module-testing-and-validation/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/routing-module-testing-and-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "plantMASST is not mentioned anywhere in the provided passages. No evidence of its existence, functionality, or role as a routing endpoint.",
@@ -2557,7 +2557,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/routing-module-testing-and-validation/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/routing-module-testing-and-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tissueMASST is not mentioned anywhere in the provided passages. No evidence of its existence, functionality, or role as a routing endpoint.",
@@ -2577,7 +2577,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/routing-module-testing-and-validation/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/routing-module-testing-and-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "microbiomeMASST is not mentioned anywhere in the provided passages. No evidence of its existence, functionality, or role as a routing endpoint.",
@@ -2597,7 +2597,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/routing-module-testing-and-validation/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/routing-module-testing-and-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "foodMASST is not mentioned anywhere in the provided passages. No evidence of its existence, functionality, or role as a routing endpoint.",
@@ -2617,7 +2617,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/routing-module-testing-and-validation/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/routing-module-testing-and-validation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "metadataMASST is not mentioned anywhere in the provided passages. No evidence of its existence, functionality, or role as a routing endpoint.",
@@ -2637,7 +2637,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/routing-module-testing-and-validation/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/routing-module-testing-and-validation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "users can leverage microbeMASST Python code to perform batch searches of thousands of MS/MS spectra by providing either a formatted MS/MS file (.mgf) or a list of Universal Spectrum Identifiers (USIs), which represent paths to spectra in public datasets. This is particularly useful for creating integrated data analysis pipelines using the standard outputs (.mgf) of already established data processing tools, such as MZmine. ... batch searches can be performed using a customizable Python script that can read either a .tsv file containing a list of USIs or a single .mgf file (https://github.com/robinschmid/microbe_masst).",
       "asbval:note": "Paper confirms batch search Python scripts exist (referenced at https://github.com/robinschmid/microbe_masst), but evidence shows these scripts execute searches within microbeMASST only, not across multiple domain-specific MASST applications. No evidence of cross-domain batch execution.",
@@ -2657,7 +2657,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/search-result-aggregation-and-normalization/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/search-result-aggregation-and-normalization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST is a community-sourced tool that works within the GNPS ecosystem. Users can search tandem MS (MS/MS) spectra obtained from their experiments against the GNPS/MassIVE repository and retrieve matching samples exclusively acquired from extracts of bacterial, fungal or archaeal monocultures.",
       "asbval:note": "Paper describes microbeMASST as a single domain-specific tool for microbial metabolomics. No mention of plantMASST, tissueMASST, microbiomeMASST, foodMASST, or metadataMASST. No aggregation workflow across multiple MASST tools is described. The card claims a cross-domain aggregation task that is not present in the paper.",
@@ -2677,7 +2677,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/search-result-aggregation-and-normalization/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/search-result-aggregation-and-normalization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "metadataMASST is not mentioned anywhere in the paper. The paper only describes microbeMASST and its integration with GNPS/MassIVE ecosystem.",
@@ -2697,7 +2697,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/search-result-aggregation-and-normalization/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/search-result-aggregation-and-normalization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST, a taxonomically informed mass spectrometry (MS) search tool, tackles limited microbial metabolite annotation in untargeted metabolomics experiments. Leveraging a curated database of >60,000 microbial monocultures, users can search known and unknown MS/MS spectra and link them to their respective microbial producers via MS/MS fragmentation patterns.",
       "asbval:note": "microbeMASST is confirmed as a domain-specific tool for microbial metabolomics. However, the card's framing of it as one tool among many to be aggregated is not supported\u2014the paper focuses on microbeMASST as a standalone tool.",
@@ -2717,7 +2717,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/search-result-aggregation-and-normalization/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/search-result-aggregation-and-normalization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "plantMASST is not mentioned in the paper.",
@@ -2737,7 +2737,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/search-result-aggregation-and-normalization/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/search-result-aggregation-and-normalization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tissueMASST is not mentioned in the paper.",
@@ -2757,7 +2757,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/search-result-aggregation-and-normalization/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/search-result-aggregation-and-normalization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "microbiomeMASST is not mentioned in the paper.",
@@ -2777,7 +2777,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/search-result-aggregation-and-normalization/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/search-result-aggregation-and-normalization/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "foodMASST is not mentioned in the paper.",
@@ -2797,7 +2797,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/search-result-aggregation-and-normalization/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/search-result-aggregation-and-normalization/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "users can leverage microbeMASST Python code to perform batch searches of thousands of MS/MS spectra by providing either a formatted MS/MS file (.mgf) or a list of Universal Spectrum Identifiers (USIs), which represent paths to spectra in public datasets. This is particularly useful for creating integrated data analysis pipelines using the standard outputs (.mgf) of already established data processing tools, such as MZmine.",
       "asbval:note": "Paper mentions batch search capability via Python code and references a custom Python script for batch searches, but does not specifically name 'jobs.py' or describe it as generating outputs to be aggregated across multiple MASST tools. The paper describes batch search within microbeMASST only, not cross-tool aggregation.",
@@ -2817,7 +2817,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/search-result-aggregation-and-normalization/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/search-result-aggregation-and-normalization/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The microbeMASST web application was built using Dash and Flask open-source libraries for Python (https://github.com/mwang87/GNPS_MASST/blob/master/dash_microbemasst.py).",
       "asbval:note": "GNPS_MASST repository is mentioned as containing code for microbeMASST specifically, but the paper does not describe it as a parent repository for 'all standalone MASST web applications' (plantMASST, tissueMASST, etc. are not mentioned).",
@@ -2837,7 +2837,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/search-result-aggregation-and-normalization/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/search-result-aggregation-and-normalization/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes microbeMASST as a single tool with batch search capability and integration with GNPS/MassIVE. It does not describe a workflow for aggregating outputs from multiple domain-specific MASST tools (plantMASST, tissueMASST, microbiomeMASST, foodMASST) or integration with metadataMASST. The card's scope describes a cross-domain aggregation task that is entirely absent from the paper.",
@@ -2857,7 +2857,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-match-result-consolidation/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectral-match-result-consolidation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST is a community-sourced tool that works within the GNPS ecosystem. Users can search tandem MS (MS/MS) spectra obtained from their experiments against the GNPS/MassIVE repository",
       "asbval:note": "Paper describes microbeMASST only. No mention of plantMASST, tissueMASST, microbiomeMASST, or foodMASST. The paper does not discuss consolidation across multiple domain-specific MASST tools. Only microbeMASST is documented in this paper.",
@@ -2877,7 +2877,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-match-result-consolidation/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectral-match-result-consolidation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The microbeMASST web app displays query results in interactive taxonomic trees, which can be downloaded as HTML files... In addition, three data tables are generated, linking the search job to other resources in the GNPS/MassIVE ecosystem.",
       "asbval:note": "Paper describes generation of structured outputs (taxonomic trees, HTML files, data tables) for visualization and analysis.",
@@ -2897,7 +2897,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-match-result-consolidation/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectral-match-result-consolidation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "metadataMASST is not mentioned anywhere in the paper passages. No evidence of this tool's existence or use in the paper.",
@@ -2917,7 +2917,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-match-result-consolidation/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectral-match-result-consolidation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for microbeMASST | role: primary tool] microbeMASST, a taxonomically informed mass spectrometry (MS) search tool, tackles limited microbial metabolite annotation in untargeted metabolomics experiments.",
       "asbval:note": "microbeMASST is the primary subject of the paper and is extensively documented.",
@@ -2937,7 +2937,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-match-result-consolidation/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectral-match-result-consolidation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "plantMASST is not mentioned in any of the paper passages. No evidence of this tool in the paper.",
@@ -2957,7 +2957,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-match-result-consolidation/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectral-match-result-consolidation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tissueMASST is not mentioned in any of the paper passages. No evidence of this tool in the paper.",
@@ -2977,7 +2977,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-match-result-consolidation/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectral-match-result-consolidation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "microbiomeMASST is not mentioned in any of the paper passages. No evidence of this tool in the paper.",
@@ -2997,7 +2997,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-match-result-consolidation/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectral-match-result-consolidation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "foodMASST is not mentioned in any of the paper passages. No evidence of this tool in the paper.",
@@ -3017,7 +3017,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-match-result-consolidation/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectral-match-result-consolidation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST is based on the recently introduced Fast Search Tool (https://fasst.gnps2.org/fastsearch/). This tool, originally designed for proteomics, drastically improves search speed by several orders of magnitude by indexing all the MS/MS spectra present in GNPS/MassIVE",
       "asbval:note": "Fast Search Tool (API) is explicitly mentioned as the backend for microbeMASST searches.",
@@ -3037,7 +3037,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-match-result-consolidation/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectral-match-result-consolidation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "users can leverage microbeMASST Python code to perform batch searches of thousands of MS/MS spectra by providing either a formatted MS/MS file (.mgf) or a list of Universal Spectrum Identifiers (USIs)",
       "asbval:note": "Paper mentions batch search capability via Python code; passage [7] references 'a custom Python script of microbeMASST' for batch processing. The specific script name 'jobs.py' is not mentioned in passages, but batch Python scripting is confirmed.",
@@ -3057,7 +3057,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-match-result-consolidation/010",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectral-match-result-consolidation/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The microbeMASST web application was built using Dash and Flask open-source libraries for Python (https://github.com/mwang87/GNPS_MASST/blob/master/dash_microbemasst.py)",
       "asbval:note": "GNPS_MASST repository is mentioned as containing the microbeMASST web application code, but the paper does not describe it as a parent repository for multiple domain MASSTs. Only microbeMASST is documented.",
@@ -3077,7 +3077,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-match-result-consolidation/011",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectral-match-result-consolidation/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "users can leverage microbeMASST Python code to perform batch searches of thousands of MS/MS spectra by providing either a formatted MS/MS file (.mgf) or a list of Universal Spectrum Identifiers (USIs)",
       "asbval:note": "Paper describes batch search capability for microbeMASST only, not across multiple domain-specific MASST indices. The scope claim assumes multiple MASST tools exist and are used together, which is not supported by the paper.",
@@ -3097,7 +3097,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-match-result-consolidation/012",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectral-match-result-consolidation/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "metadataMASST is not mentioned in the paper. Interactive visualizations are generated by microbeMASST itself, not by a separate metadataMASST tool.",
@@ -3117,7 +3117,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-metadata-parsing/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectrum-metadata-parsing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST is a community-sourced tool that works within the GNPS ecosystem. Users can search tandem MS (MS/MS) spectra obtained from their experiments against the GNPS/MassIVE repository and retrieve matching samples exclusively acquired from extracts of bacterial, fungal or archaeal monocultures.",
       "asbval:note": "Paper describes microbeMASST as a single domain-specific tool for microbial spectra. The card claims a general metadata-parsing skill that routes to multiple domain-specific MASST variants (plantMASST, tissueMASST, microbiomeMASST, foodMASST, metadataMASST). Paper only documents microbeMASST; no evidence of conditional routing logic to other domain-specific MASST tools or a general metadata-parsing framework that dispatches across multiple domains.",
@@ -3137,7 +3137,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-metadata-parsing/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectrum-metadata-parsing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Users can search tandem MS (MS/MS) spectra obtained from their experiments against the GNPS/MassIVE repository... Users can leverage microbeMASST Python code to perform batch searches of thousands of MS/MS spectra by providing either a formatted MS/MS file (.mgf) or a list of Universal Spectrum Identifiers (USIs)",
       "asbval:note": "Paper confirms .mgf and USI input formats for microbeMASST only. No evidence of plantMASST, tissueMASST, microbiomeMASST, foodMASST, or metadataMASST tools existing or being mentioned in the paper. The card describes a multi-domain routing framework that is not documented in this paper.",
@@ -3157,7 +3157,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-metadata-parsing/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectrum-metadata-parsing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The microbeMASST web application was built using Dash and Flask open-source libraries for Python (https://github.com/mwang87/GNPS_MASST/blob/master/dash_microbemasst.py).",
       "asbval:note": "Paper confirms GNPS_MASST repository exists and contains microbeMASST web app code. However, no evidence that it provides conditional routing logic to six domain-specific MASST tools or that those other tools exist. The repository link points to microbeMASST implementation only.",
@@ -3177,7 +3177,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-metadata-parsing/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectrum-metadata-parsing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "As of September 2023, microbeMASST includes 60,781 liquid chromatography (LC)\u2013MS/MS files comprising >100 million MS/MS spectra mapped to 541 strains, 1,336 species, 539 genera, 264 families, 109 orders, 41 classes and 16 phyla from the three domains of life: Bacteria, Archaea and Eukaryota",
       "asbval:note": "Paper confirms microbeMASST exists and covers microbial spectra. However, the paper states 16 phyla (not 20), 1,336 species (not 1,379), and three domains (Bacteria, Archaea, Eukaryota \u2014 not 8 kingdoms). The card's coverage statistics are inaccurate. No evidence of 'routing' logic; microbeMASST is presented as a standalone tool, not as one target in a conditional routing system.",
@@ -3197,7 +3197,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-metadata-parsing/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectrum-metadata-parsing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "plantMASST is not mentioned anywhere in the paper. No evidence of its existence, coverage, or role in a routing framework.",
@@ -3217,7 +3217,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-metadata-parsing/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectrum-metadata-parsing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tissueMASST is not mentioned in the paper. No evidence of its existence or role.",
@@ -3237,7 +3237,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-metadata-parsing/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectrum-metadata-parsing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "microbiomeMASST is not mentioned in the paper. No evidence of its existence or role.",
@@ -3257,7 +3257,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-metadata-parsing/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectrum-metadata-parsing/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "foodMASST is not mentioned in the paper. No evidence of its existence or role.",
@@ -3277,7 +3277,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-metadata-parsing/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectrum-metadata-parsing/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "metadataMASST is not mentioned in the paper. No evidence of its existence or role.",
@@ -3297,7 +3297,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-metadata-parsing/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectrum-metadata-parsing/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST leverages the Fast Search Tool (https://fasst.gnps2.org/fastsearch/) API and the sample-specific associated metadata to generate taxonomic trees. Fast searches are based on indexing all the MS/MS spectra present in GNPS/MassIVE according to the mass and intensity of their precursor ions",
       "asbval:note": "Paper confirms Fast Search API exists and is used by microbeMASST. However, no mention of jobs.py as the invoker, and no evidence that it indexes Metabolomics Workbench, Metabolights, or NORMAN \u2014 only GNPS/MassIVE is mentioned.",
@@ -3317,7 +3317,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-metadata-parsing/010",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectrum-metadata-parsing/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "users can leverage microbeMASST Python code to perform batch searches of thousands of MS/MS spectra by providing either a formatted MS/MS file (.mgf) or a list of Universal Spectrum Identifiers (USIs)",
       "asbval:note": "Paper confirms batch search capability via Python code. However, no mention of jobs.py by name, and no evidence of 'dispatching to multiple domain-specific MASSTs' \u2014 only microbeMASST is documented. The card's claim of multi-domain routing is not supported.",
@@ -3337,7 +3337,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-compilation-from-readme/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/structured-data-compilation-from-readme/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes microbeMASST as a search tool and its reference database, but does not discuss or demonstrate a task of extracting/validating resources from README documentation into structured inventory formats. The paper is about the tool itself, not about a methodology for documenting or inventorying tools from READMEs.",
@@ -3357,7 +3357,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-compilation-from-readme/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/structured-data-compilation-from-readme/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST, a taxonomically informed mass spectrometry (MS) search tool",
       "asbval:note": "Tool name confirmed in abstract and throughout paper.",
@@ -3377,7 +3377,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-compilation-from-readme/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/structured-data-compilation-from-readme/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we have developed microbeMASST (https://masst.gnps2.org/microbemasst/)",
       "asbval:note": "URL explicitly stated in paper.",
@@ -3397,7 +3397,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-compilation-from-readme/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/structured-data-compilation-from-readme/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST is a community-sourced tool that works within the GNPS ecosystem. Users can search tandem MS (MS/MS) spectra obtained from their experiments against the GNPS/MassIVE repository and retrieve matching samples exclusively acquired from extracts of bacterial, fungal or archaeal monocultures.",
       "asbval:note": "Role accurately describes the tool's function as a domain-specific (microbial) MASST variant.",
@@ -3417,7 +3417,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-compilation-from-readme/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/structured-data-compilation-from-readme/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "plantMASST is not mentioned anywhere in the provided passages. The paper focuses exclusively on microbeMASST.",
@@ -3437,7 +3437,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-compilation-from-readme/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/structured-data-compilation-from-readme/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of plantMASST or this URL in the paper.",
@@ -3457,7 +3457,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-compilation-from-readme/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/structured-data-compilation-from-readme/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tissueMASST is not mentioned in the provided passages.",
@@ -3477,7 +3477,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-compilation-from-readme/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/structured-data-compilation-from-readme/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of tissueMASST or this URL in the paper.",
@@ -3497,7 +3497,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-compilation-from-readme/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/structured-data-compilation-from-readme/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "microbiomeMASST is not mentioned in the provided passages.",
@@ -3517,7 +3517,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-compilation-from-readme/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/structured-data-compilation-from-readme/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of microbiomeMASST or this URL in the paper.",
@@ -3537,7 +3537,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-compilation-from-readme/010",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/structured-data-compilation-from-readme/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "foodMASST is not mentioned in the provided passages.",
@@ -3557,7 +3557,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-compilation-from-readme/011",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/structured-data-compilation-from-readme/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of foodMASST or this URL in the paper.",
@@ -3577,7 +3577,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-compilation-from-readme/012",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/structured-data-compilation-from-readme/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "metadataMASST is not mentioned in the provided passages.",
@@ -3597,7 +3597,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-compilation-from-readme/013",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/structured-data-compilation-from-readme/013",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of metadataMASST or this URL in the paper.",
@@ -3617,7 +3617,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-compilation-from-readme/014",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/structured-data-compilation-from-readme/014",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The microbeMASST web application was built using Dash and Flask open-source libraries for Python (https://github.com/mwang87/GNPS_MASST/blob/master/dash_microbemasst.py).",
       "asbval:note": "GitHub repository explicitly referenced in Methods section.",
@@ -3637,7 +3637,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-compilation-from-readme/015",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/structured-data-compilation-from-readme/015",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "https://github.com/mwang87/GNPS_MASST/blob/master/dash_microbemasst.py",
       "asbval:note": "Repository URL confirmed in Methods section.",
@@ -3657,7 +3657,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-compilation-from-readme/016",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/structured-data-compilation-from-readme/016",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The microbeMASST web application was built using Dash and Flask open-source libraries for Python (https://github.com/mwang87/GNPS_MASST/blob/master/dash_microbemasst.py).",
       "asbval:note": "Role accurately describes the repository as containing web application source code.",
@@ -3677,7 +3677,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-compilation-from-readme/017",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/structured-data-compilation-from-readme/017",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "batch searches can be performed using a customizable Python script that can read either a .tsv file containing a list of USIs or a single .mgf file (https://github.com/robinschmid/microbe_masst).",
       "asbval:note": "Repository explicitly referenced in Methods section.",
@@ -3697,7 +3697,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-compilation-from-readme/018",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/structured-data-compilation-from-readme/018",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "https://github.com/robinschmid/microbe_masst",
       "asbval:note": "Repository URL confirmed in Methods section.",
@@ -3717,7 +3717,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-compilation-from-readme/019",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/structured-data-compilation-from-readme/019",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "batch searches can be performed using a customizable Python script that can read either a .tsv file containing a list of USIs or a single .mgf file (https://github.com/robinschmid/microbe_masst).",
       "asbval:note": "Role accurately describes the repository's function for batch processing.",
@@ -3737,7 +3737,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/summary-visualization-artifact-generation/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/summary-visualization-artifact-generation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To create the final taxonomic tree, the JSON file of the complete microbeMASST taxonomic tree is filtered according to the results and converted into a D3 JavaScript object that can be visualized as an HTML file. ... users can leverage microbeMASST Python code to perform batch searches of thousands of MS/MS spectra by providing either a formatted MS/MS file (.mgf) or a list of Universal Spectrum Identifiers (USIs)",
       "asbval:note": "Paper demonstrates HTML tree generation and JSON conversion for microbeMASST only. No evidence of cross-domain aggregation (plantMASST, tissueMASST, microbiomeMASST, foodMASST) or unified multi-domain visualization. The research_question overstates scope by claiming consolidation across five domain-specific tools when paper only describes microbeMASST implementation.",
@@ -3757,7 +3757,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/summary-visualization-artifact-generation/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/summary-visualization-artifact-generation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "metadataMASST is not mentioned anywhere in the paper. The paper describes microbeMASST web interface but does not reference a separate metadataMASST tool for cross-domain aggregation.",
@@ -3777,7 +3777,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/summary-visualization-artifact-generation/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/summary-visualization-artifact-generation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The microbeMASST web application was built using Dash and Flask open-source libraries for Python (https://github.com/mwang87/GNPS_MASST/blob/master/dash_microbemasst.py).",
       "asbval:note": "GNPS_MASST repository is confirmed as the codebase for microbeMASST web application.",
@@ -3797,7 +3797,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/summary-visualization-artifact-generation/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/summary-visualization-artifact-generation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST is based on the recently introduced Fast Search Tool (https://fasst.gnps2.org/fastsearch/). This tool, originally designed for proteomics, drastically improves search speed by several orders of magnitude by indexing all the MS/MS spectra present in GNPS/MassIVE and restricting the search space to the user input parameters.",
       "asbval:note": "Fast Search API is confirmed for GNPS/MassIVE indexing, but paper does not mention Metabolomics Workbench, Metabolights, or NORMAN as indexed data sources. Paper only confirms GNPS/MassIVE.",
@@ -3817,7 +3817,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/summary-visualization-artifact-generation/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/summary-visualization-artifact-generation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "users can leverage microbeMASST Python code to perform batch searches of thousands of MS/MS spectra by providing either a formatted MS/MS file (.mgf) or a list of Universal Spectrum Identifiers (USIs). ... batch searches can be performed using a customizable Python script that can read either a .tsv file containing a list of USIs or a single .mgf file (https://github.com/robinschmid/microbe_masst).",
       "asbval:note": "Paper confirms batch processing Python script for microbeMASST only. No evidence that jobs.py orchestrates searches across multiple domain-specific MASST tools (plantMASST, tissueMASST, etc.). The script is confirmed for microbeMASST batch searches, not cross-domain aggregation.",
@@ -3837,7 +3837,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/summary-visualization-artifact-generation/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/summary-visualization-artifact-generation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for microbeMASST | role: domain-specific tool] microbeMASST, a taxonomically informed mass spectrometry (MS) search tool, tackles limited microbial metabolite annotation in untargeted metabolomics experiments.",
       "asbval:note": "microbeMASST is confirmed as the primary tool described in the paper.",
@@ -3857,7 +3857,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/summary-visualization-artifact-generation/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/summary-visualization-artifact-generation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "plantMASST is not mentioned in the paper. The paper focuses exclusively on microbeMASST.",
@@ -3877,7 +3877,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/summary-visualization-artifact-generation/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/summary-visualization-artifact-generation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tissueMASST is not mentioned in the paper.",
@@ -3897,7 +3897,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/summary-visualization-artifact-generation/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/summary-visualization-artifact-generation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "microbiomeMASST is not mentioned in the paper.",
@@ -3917,7 +3917,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/summary-visualization-artifact-generation/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/summary-visualization-artifact-generation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "foodMASST is not mentioned in the paper.",
@@ -3937,7 +3937,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/summary-visualization-artifact-generation/010",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/summary-visualization-artifact-generation/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For example, each MS/MS query is also searched against the public MS/MS reference library of GNPS (587,213 MS/MS spectra, September 2023) to provide spectra annotations when available. The annotations to reference compounds are listed under the 'Library matches' tab",
       "asbval:note": "GNPS reference library is confirmed as providing spectral annotations and library matches.",
@@ -3957,7 +3957,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/url-validation-and-accessibility-verification/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/url-validation-and-accessibility-verification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes microbeMASST as a search tool and web application but does not discuss URL validation, HTTP status checking, or accessibility verification as a research task or methodology. The paper focuses on metabolite annotation and microbial producer identification, not on validating URLs or HTTP responses.",
@@ -3977,7 +3977,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/url-validation-and-accessibility-verification/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/url-validation-and-accessibility-verification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST (https://masst.gnps2.org/microbemasst/), a search tool that leverages public MS repository data to identify the microbial origin of known and unknown metabolites and map them to their microbial producers.",
       "asbval:note": "microbeMASST is confirmed as a real tool in the paper with the exact URL cited. However, the paper does not discuss URL validation or HTTP accessibility verification as a task\u2014it simply documents the tool's existence and functionality. The card's framing of this as a 'URL validation' task is not supported by the paper's content.",
@@ -3997,7 +3997,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/url-validation-and-accessibility-verification/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/url-validation-and-accessibility-verification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "plantMASST is not mentioned anywhere in the provided passages. The paper focuses exclusively on microbeMASST and does not reference other domain-specific MASST variants.",
@@ -4017,7 +4017,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/url-validation-and-accessibility-verification/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/url-validation-and-accessibility-verification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tissueMASST is not mentioned in the provided passages.",
@@ -4037,7 +4037,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/url-validation-and-accessibility-verification/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/url-validation-and-accessibility-verification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "microbiomeMASST is not mentioned in the provided passages.",
@@ -4057,7 +4057,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/url-validation-and-accessibility-verification/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/url-validation-and-accessibility-verification/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "foodMASST is not mentioned in the provided passages.",
@@ -4077,7 +4077,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/url-validation-and-accessibility-verification/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/url-validation-and-accessibility-verification/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "metadataMASST is not mentioned in the provided passages.",
@@ -4097,7 +4097,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/url-validation-and-accessibility-verification/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/url-validation-and-accessibility-verification/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The microbeMASST web application was built using Dash and Flask open-source libraries for Python (https://github.com/mwang87/GNPS_MASST/blob/master/dash_microbemasst.py).",
       "asbval:note": "The GitHub repository URL is confirmed in the paper as the source for the microbeMASST web application code.",
@@ -4117,7 +4117,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/url-validation-and-accessibility-verification/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/url-validation-and-accessibility-verification/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not describe a task or workflow for URL validation, HTTP status checking, or catalog maintenance. The paper is about microbeMASST functionality for metabolite annotation, not about validating URLs or maintaining tool catalogs.",
@@ -4137,7 +4137,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-application-documentation-mining/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/web-application-documentation-mining/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper is a peer-reviewed research article describing microbeMASST, not a README or repository documentation mining task. The paper does not discuss extracting metadata from README files or creating inventories of web applications from documentation.",
@@ -4157,7 +4157,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-application-documentation-mining/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/web-application-documentation-mining/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "plantMASST is not mentioned anywhere in the provided passages. The paper focuses exclusively on microbeMASST.",
@@ -4177,7 +4177,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-application-documentation-mining/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/web-application-documentation-mining/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tissueMASST is not mentioned in the provided passages.",
@@ -4197,7 +4197,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-application-documentation-mining/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/web-application-documentation-mining/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "microbiomeMASST is not mentioned in the provided passages.",
@@ -4217,7 +4217,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-application-documentation-mining/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/web-application-documentation-mining/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "foodMASST is not mentioned in the provided passages.",
@@ -4237,7 +4237,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-application-documentation-mining/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/web-application-documentation-mining/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "metadataMASST is not mentioned in the provided passages.",
@@ -4257,7 +4257,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-application-documentation-mining/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/web-application-documentation-mining/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST (https://masst.gnps2.org/microbemasst/), a search tool that leverages public MS repository data to identify the microbial origin of known and unknown metabolites and map them to their microbial producers.",
       "asbval:note": "Confirmed in abstract and main text with exact URL.",
@@ -4277,7 +4277,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-application-documentation-mining/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/web-application-documentation-mining/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The microbeMASST web application was built using Dash and Flask open-source libraries for Python (https://github.com/mwang87/GNPS_MASST/blob/master/dash_microbemasst.py).",
       "asbval:note": "GitHub repository URL confirmed in Methods section.",
@@ -4297,7 +4297,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-application-documentation-mining/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/web-application-documentation-mining/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "batch searches can be performed using a customizable Python script that can read either a .tsv file containing a list of USIs or a single .mgf file (https://github.com/robinschmid/microbe_masst).",
       "asbval:note": "Paper confirms a batch search Python script exists at https://github.com/robinschmid/microbe_masst but does not specify the exact file path 'jobs.py' or the specific file structure claimed. The repository URL is correct but the specific file path cannot be verified from the passages.",
@@ -4317,7 +4317,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-application-documentation-mining/009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/web-application-documentation-mining/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST is based on the recently introduced Fast Search Tool (https://fasst.gnps2.org/fastsearch/)",
       "asbval:note": "URL and tool name confirmed in main text.",
@@ -4337,7 +4337,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-application-documentation-mining/010",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/web-application-documentation-mining/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This is particularly useful for creating integrated data analysis pipelines using the standard outputs (.mgf) of already established data processing tools, such as MZmine.",
       "asbval:note": "MZmine is mentioned as a tool for generating .mgf files. However, the GitHub URL https://github.com/mzmine/mzmine is not provided in the paper.",
@@ -4357,7 +4357,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-application-documentation-mining/011",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/web-application-documentation-mining/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Fast searches are based on indexing all the MS/MS spectra present in GNPS/MassIVE according to the mass and intensity of their precursor ions",
       "asbval:note": "Paper confirms Fast Search API queries GNPS/MassIVE but does not mention Metabolomics Workbench, Metabolights, or NORMAN databases in the provided passages.",
@@ -4377,7 +4377,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-application-endpoint-mapping/000",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/web-application-endpoint-mapping/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST is a community-sourced tool that works within the GNPS ecosystem. Users can search tandem MS (MS/MS) spectra obtained from their experiments against the GNPS/MassIVE repository",
       "asbval:note": "Paper describes microbeMASST as a single domain-specific MASST application for microbial spectra. No evidence of routing logic to multiple domain-specific MASST variants (plantMASST, tissueMASST, microbiomeMASST, foodMASST, metadataMASST). The card claims a routing/dispatch system across six domain-specific applications; the paper only documents microbeMASST itself.",
@@ -4397,7 +4397,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-application-endpoint-mapping/001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/web-application-endpoint-mapping/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST is a community-sourced tool that works within the GNPS ecosystem. Different from MASST, which uses a precomputed network of ~110 million MS/MS spectra to enable spectral searching, microbeMASST is based on the recently introduced Fast Search Tool",
       "asbval:note": "Paper confirms GNPS ecosystem and MASST framework exist, but only documents microbeMASST as one instantiation. No evidence of six domain-specific variants or a unified routing framework across them. The card's claim of GNPS_MASST providing framework for 'all six domain-specific MASST standalone applications' is not supported; paper only describes microbeMASST.",
@@ -4417,7 +4417,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-application-endpoint-mapping/002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/web-application-endpoint-mapping/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "microbeMASST, a taxonomically informed mass spectrometry (MS) search tool, tackles limited microbial metabolite annotation in untargeted metabolomics experiments. Leveraging a curated database of >60,000 microbial monocultures, users can search known and unknown MS/MS spectra and link them to their respective microbial producers via MS/MS fragmentation patterns.",
       "asbval:note": "Confirmed: microbeMASST is designed for microbial spectra and searches against a curated microbial database.",
@@ -4437,7 +4437,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-application-endpoint-mapping/003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/web-application-endpoint-mapping/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of plantMASST in any passage. Tool does not appear to be documented in this paper.",
@@ -4457,7 +4457,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-application-endpoint-mapping/004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/web-application-endpoint-mapping/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of tissueMASST in any passage. Tool does not appear to be documented in this paper.",
@@ -4477,7 +4477,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-application-endpoint-mapping/005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/web-application-endpoint-mapping/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of microbiomeMASST in any passage. Tool does not appear to be documented in this paper.",
@@ -4497,7 +4497,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-application-endpoint-mapping/006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/web-application-endpoint-mapping/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of foodMASST in any passage. Tool does not appear to be documented in this paper.",
@@ -4517,7 +4517,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-application-endpoint-mapping/007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/web-application-endpoint-mapping/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of metadataMASST in any passage. Tool does not appear to be documented in this paper.",
@@ -4537,7 +4537,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-application-endpoint-mapping/008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/web-application-endpoint-mapping/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes microbeMASST as a single domain-specific tool for microbial spectra. There is no discussion of a routing/dispatch system that maps spectra to multiple domain-specific MASST applications. The scope describes a meta-level orchestration task that is not present in the paper.",
@@ -4557,7 +4557,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/conditional-logic-implementation/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/conditional-logic-implementation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "conditional-logic-implementation",
@@ -4570,7 +4570,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-domain-masst-output-parsing/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/cross-domain-masst-output-parsing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "cross-domain-masst-output-parsing",
@@ -4583,7 +4583,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/cross-reference-publication-linking/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/cross-reference-publication-linking/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 11,
       "asbval:target_artifact_id": "cross-reference-publication-linking",
@@ -4596,7 +4596,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/domain-context-to-application-routing/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/domain-context-to-application-routing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 11,
       "asbval:target_artifact_id": "domain-context-to-application-routing",
@@ -4609,7 +4609,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metadata-harmonization-across-sources/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/metadata-harmonization-across-sources/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 11,
       "asbval:target_artifact_id": "metadata-harmonization-across-sources",
@@ -4622,7 +4622,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-metadata-extraction/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/repository-metadata-extraction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "repository-metadata-extraction",
@@ -4635,7 +4635,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/routing-module-testing-and-validation/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/routing-module-testing-and-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "routing-module-testing-and-validation",
@@ -4648,7 +4648,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/search-result-aggregation-and-normalization/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/search-result-aggregation-and-normalization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "search-result-aggregation-and-normalization",
@@ -4661,7 +4661,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-match-result-consolidation/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectral-match-result-consolidation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 13,
       "asbval:target_artifact_id": "spectral-match-result-consolidation",
@@ -4674,7 +4674,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectrum-metadata-parsing/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/spectrum-metadata-parsing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "spectrum-metadata-parsing",
@@ -4687,7 +4687,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/structured-data-compilation-from-readme/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/structured-data-compilation-from-readme/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 20,
       "asbval:target_artifact_id": "structured-data-compilation-from-readme",
@@ -4700,7 +4700,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/summary-visualization-artifact-generation/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/summary-visualization-artifact-generation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 11,
       "asbval:target_artifact_id": "summary-visualization-artifact-generation",
@@ -4713,7 +4713,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/url-validation-and-accessibility-verification/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/url-validation-and-accessibility-verification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "url-validation-and-accessibility-verification",
@@ -4726,7 +4726,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-application-documentation-mining/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/web-application-documentation-mining/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 12,
       "asbval:target_artifact_id": "web-application-documentation-mining",
@@ -4739,7 +4739,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/web-application-endpoint-mapping/triage",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/skill/web-application-endpoint-mapping/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "web-application-endpoint-mapping",
@@ -4752,7 +4752,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The domainMASSTs repository contains code and data for microbeMASST, plantMASST, tissueMASST, microbiomeMASST, and foodMASST.",
       "asbval:note": null,
@@ -4772,7 +4772,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Aggregated search outputs can be generated and visualized using metadataMASST.",
       "asbval:note": null,
@@ -4792,7 +4792,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The code for different standalone web applications can be found in GNPS_MASST repository.",
       "asbval:note": null,
@@ -4812,7 +4812,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "microbeMASST is available as a standalone web application at https://masst.gnps2.org/microbemasst/.",
       "asbval:note": null,
@@ -4832,7 +4832,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "plantMASST is available as a standalone web application at https://masst.gnps2.org/plantmasst/.",
       "asbval:note": null,
@@ -4852,7 +4852,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "tissueMASST is available as a standalone web application at https://masst.gnps2.org/tissuemasst/.",
       "asbval:note": null,
@@ -4872,7 +4872,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "microbiomeMASST is available as a standalone web application at https://masst.gnps2.org/microbiomemasst/.",
       "asbval:note": null,
@@ -4892,7 +4892,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "foodMASST is available as a standalone web application at https://masst.gnps2.org/foodmasst2/.",
       "asbval:note": null,
@@ -4912,7 +4912,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "metadataMASST is available as a standalone web application at https://masst.gnps2.org/metadatamasst/.",
       "asbval:note": null,
@@ -4932,7 +4932,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "microbeMASST has a publication in Nature Microbiology.",
       "asbval:note": null,
@@ -4952,7 +4952,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "plantMASST has a publication in bioRxiv.",
       "asbval:note": null,
@@ -4972,7 +4972,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_012",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/claim/claim_012",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "tissueMASST has a publication in bioRxiv.",
       "asbval:note": null,
@@ -4992,7 +4992,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_013",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/claim/claim_013",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "microbiomeMASST has a publication in bioRxiv.",
       "asbval:note": "Source excerpt clearly indicates microbiomeMASST has a bioRxiv publication; substring_in_paper=false is acceptable given the hyperlink format",
@@ -5012,7 +5012,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_014",
+      "@id": "asbval:assertion/paper/10.1038%2Fs41564-023-01575-9/claim/claim_014",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "foodMASST has a publication in npj Science of Food.",
       "asbval:note": "Source excerpt clearly indicates foodMASST has a publication in npj Science of Food; substring_in_paper=false is acceptable given the hyperlink format",

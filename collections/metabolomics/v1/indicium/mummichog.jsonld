@@ -267,7 +267,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mummichog requires two lists of m/z features, the significant list (e.g. selected by univariate statistics) and the reference list (all features detected in the MS experiment)... mummichog computes all possibly matched metabolites, and searches the reference metabolic network for all the modules that can be formed by these tentative metabolites... The algorithms were experimentally validated on the activation of innate immune cells.",
       "asbval:note": "Paper describes 'mummichog' (lowercase), not 'Mummichog 3'. The version number '3' is not mentioned anywhere in the paper. The core functionality (feature table input, network mapping without upfront identification) is accurate and well-supported.",
@@ -287,7 +287,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of Python as the implementation language in any passage. The paper states 'The mummichog software is available at http://atcg.googlecode.com' but does not specify the programming language used.",
@@ -307,7 +307,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In return, the predicted metabolites in these significant modules (and similarly for pathways) are more likely to be true, and they form the 'activity network' for this particular experiment... Mummichog collects these metabolites, and look up all their isotopic derivatives and adducts in [reference list]. A confidence rating system is applied to filter for qualified metabolites... All the qualified metabolites carry over their connections in the reference metabolic network, and form the 'activity network' for this specific experiment.",
       "asbval:note": "The paper explicitly describes output as activity networks mapping predicted metabolites to modules and pathways, with statistical significance reporting.",
@@ -327,7 +327,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/card/task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We present a set of computational algorithms which, by leveraging the collective power of metabolic pathways and networks, predict functional activity directly from spectral feature tables without a priori identification of metabolites.",
       "asbval:note": "The paper describes the mummichog pipeline and algorithms, but does not use version designation 'Mummichog 3'. The paper is from 2013 and refers to the tool simply as 'mummichog'.",
@@ -347,7 +347,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card references 'Mummichog 3' but the paper describes 'mummichog' without version number. This appears to be a version conflation by the extractor.",
@@ -364,7 +364,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/card/task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The software implementation of our approach is named mummichog",
       "asbval:note": "Paper describes Mummichog (version 1, 2013), not Mummichog 3. Paper does not mention GitHub organization, metabolomics-cloud, or repository migration. The card describes a software engineering/DevOps task (repository migration, packaging, CI/CD conformance) that is entirely absent from the paper. The paper only documents the original algorithm and its application.",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/card/task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper contains no discussion of Mummichog 3, GitHub organization migration, metabolomics-cloud, repository relocation, or installation verification procedures. The paper is a 2013 methods paper describing the original Mummichog algorithm and its validation on biological data. No software engineering or DevOps tasks are mentioned.",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/card/task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss repository migration, package metadata, configuration standards, or organization-level documentation conformance. The paper only mentions 'The mummichog software is available at http://atcg.googlecode.com' (passage 8), indicating the original distribution location, not a metabolomics-cloud organization.",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/card/task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss pip installation, clean Python environments, or installation verification logs. No modern packaging infrastructure is described.",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/card/task_002/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mummichog computes all possibly matched metabolites, and searches the reference metabolic network for all the modules that can be formed by these tentative metabolites",
       "asbval:note": "Paper describes functional workflows (feature table input, functional activity prediction via module/pathway analysis) but does not describe automated functional test results, test suites, or verification logs. The paper validates the algorithm on biological data (moDC, urine, yeast) but not via formal test infrastructure.",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/card/task_002/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss migration reports, conformance changes, breaking changes, or deprecations. These are software engineering artifacts not present in a methods paper.",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/card/task_002/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not explicitly state the programming language used to implement Mummichog. The paper describes algorithms and validation but does not specify implementation language. While the software is available at a code repository (atcg.googlecode.com), the paper does not confirm Python as the implementation language.",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/card/task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card describes a software engineering / DevOps task (repository migration, packaging, CI/CD conformance) that is entirely orthogonal to the paper's scope. The paper is a 2013 computational methods paper describing the Mummichog algorithm for predicting metabolic network activity from untargeted LC/MS data.",
@@ -523,7 +523,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-workflow-adaptation-to-organization-standards/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/ci-cd-workflow-adaptation-to-organization-standards/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper (Li et al. 2013) is a computational metabolomics methods paper describing the mummichog algorithm for predicting network activity from untargeted metabolomics data. It contains no discussion of CI/CD workflows, GitHub Actions, package migration, or software engineering practices related to repository relocation. The paper focuses entirely on algorithmic development and biological validation.",
@@ -543,7 +543,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-workflow-adaptation-to-organization-standards/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/ci-cd-workflow-adaptation-to-organization-standards/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No CI/CD, GitHub Actions, or workflow migration content appears in the paper. The paper describes mummichog as a computational method with software availability noted ('The mummichog software is available at http://atcg.googlecode.com' in passage [8]), but does not discuss CI/CD practices or organizational standards.",
@@ -563,7 +563,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-workflow-adaptation-to-organization-standards/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/ci-cd-workflow-adaptation-to-organization-standards/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not explicitly state that mummichog is implemented in Python. While the paper describes computational algorithms and software implementation, the programming language is not mentioned in any of the provided passages.",
@@ -583,7 +583,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-workflow-adaptation-to-organization-standards/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/ci-cd-workflow-adaptation-to-organization-standards/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of pip or any Python package management tools appears in the paper. The paper does not discuss package installation methods.",
@@ -603,7 +603,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-workflow-adaptation-to-organization-standards/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/ci-cd-workflow-adaptation-to-organization-standards/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of GitHub Actions, GitHub, or any CI/CD platforms appears in the paper. The paper was published in 2013, predating widespread adoption of GitHub Actions (introduced in 2019).",
@@ -623,7 +623,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-workflow-adaptation-to-organization-standards/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/ci-cd-workflow-adaptation-to-organization-standards/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The software implementation of our approach is named mummichog (mummichog is an American Indian term for by groups, also name of a small fish which live by groups)... The mummichog software is available at http://atcg.googlecode.com.",
       "asbval:note": "The paper describes 'mummichog' (not 'Mummichog 3'). The version number '3' is not mentioned in the paper. The paper presents the original mummichog software, not a third version. The software is hosted on Google Code (http://atcg.googlecode.com), not on GitHub at the metabolomics-cloud organization as the card suggests.",
@@ -643,7 +643,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/documentation-and-metadata-modernization/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/documentation-and-metadata-modernization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper (Li et al. 2013) describes computational algorithms for predicting metabolic network activity from untargeted metabolomics data. It does not address software package migration, GitHub organization standards, metadata auditing, or CI/CD workflows. The paper is a methods paper focused on the mummichog algorithm itself, not on software engineering practices or package modernization.",
@@ -663,7 +663,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/documentation-and-metadata-modernization/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/documentation-and-metadata-modernization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes the original mummichog algorithm and its application to immune cell metabolomics (2013). It does not discuss Mummichog 3, GitHub organization migration, setup.py, pyproject.toml, requirements.txt, or CI/CD workflows. The paper states 'The mummichog software is available at http://atcg.googlecode.com' (passage [8]), indicating early-stage distribution via Google Code, not a mature GitHub-based package with organizational standards.",
@@ -683,7 +683,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/documentation-and-metadata-modernization/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/documentation-and-metadata-modernization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention setuptools, pyproject.toml, or Python packaging infrastructure. The software distribution method mentioned is a Google Code repository (passage [8]).",
@@ -703,7 +703,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/documentation-and-metadata-modernization/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/documentation-and-metadata-modernization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention GitHub, GitHub Actions, or CI/CD workflows. The original distribution was via Google Code (passage [8]), predating GitHub Actions.",
@@ -723,7 +723,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/documentation-and-metadata-modernization/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/documentation-and-metadata-modernization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention virtualenv or Python environment management tools.",
@@ -743,7 +743,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/documentation-and-metadata-modernization/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/documentation-and-metadata-modernization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention scverse.org or reference any exemplar project structures for organizing scientific Python packages.",
@@ -763,7 +763,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-to-metabolite-network-propagation/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/feature-to-metabolite-network-propagation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we report a novel approach of predicting network activity from untargeted metabolomics without upfront identification of metabolites... if a list of significant spectral features reflects a biological activity, the true metabolites they represent should show enrichment on a local structure in the metabolic network [22], while the falsely matched metabolites are distributed more randomly.",
       "asbval:note": "Core research question is directly supported by paper's stated goal and methodology.",
@@ -783,7 +783,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-to-metabolite-network-propagation/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/feature-to-metabolite-network-propagation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "metabolite identification forms the bottleneck of untargeted metabolomics... we report a novel approach of predicting network activity from untargeted metabolomics without upfront identification of metabolites, thus greatly accelerating the work flow.",
       "asbval:note": "Paper explicitly identifies metabolite identification as bottleneck and proposes network-based bypass.",
@@ -803,7 +803,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-to-metabolite-network-propagation/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/feature-to-metabolite-network-propagation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The software implementation of our approach is named mummichog (mummichog is an American Indian term for by groups, also name of a small fish which live by groups).",
       "asbval:note": "Paper describes 'mummichog' (no version number specified). Card claims 'Mummichog 3' but paper does not specify version. The tool is confirmed present and used for the stated purpose (network-based functional prediction from m/z features), but version number cannot be verified from passages.",
@@ -823,7 +823,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-to-metabolite-network-propagation/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/feature-to-metabolite-network-propagation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The mummichog software is available at http://atcg.googlecode.com.",
       "asbval:note": "Paper provides a different repository URL (http://atcg.googlecode.com, a Google Code repository from 2013). The card URL (github.com/metabolomics-cloud/mummichog) is not mentioned in the paper.",
@@ -843,7 +843,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-to-metabolite-network-propagation/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/feature-to-metabolite-network-propagation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'metDataModel' or any tool by this name appears in the paper passages. This tool is not referenced in the mummichog paper.",
@@ -863,7 +863,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-to-metabolite-network-propagation/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/feature-to-metabolite-network-propagation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'JMS' tool appears in the paper. The paper does mention 'apLCMS program' for feature extraction and quantification (passage 9), but this is not the same as JMS.",
@@ -883,7 +883,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-to-metabolite-network-propagation/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/feature-to-metabolite-network-propagation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No tool named 'mass2chem' is mentioned in the paper. While the paper discusses m/z-to-metabolite matching and adduct handling (e.g., 'The m/z - metabolite matching considers all common isotopic derivatives and adducts'), no specific tool by this name is referenced.",
@@ -903,7 +903,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-to-metabolite-network-propagation/007",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/feature-to-metabolite-network-propagation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "From user input, mummichog requires two lists of m/z features, the significant list (e.g. selected by univariate statistics) and the reference list (all features detected in the MS experiment).",
       "asbval:note": "Paper confirms input is feature table with m/z and statistical significance; metabolite identification is not required upfront.",
@@ -923,7 +923,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-to-metabolite-network-propagation/008",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/feature-to-metabolite-network-propagation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mummichog computes significant pathways and modules and the activity network... Both the module analysis and pathway analysis above serve as a framework to estimate the significance of functional activities.",
       "asbval:note": "Paper explicitly describes module and pathway analysis as outputs to predict functional activity.",
@@ -943,7 +943,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/functional-module-inference-from-networks/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/functional-module-inference-from-networks/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we report a novel approach of predicting network activity from untargeted metabolomics without upfront identification of metabolites, thus greatly accelerating the work flow. This is possible because the collective power in metabolic networks helps resolve the ambiguity in metabolite prediction.",
       "asbval:note": "Core research question is directly supported by abstract and introduction.",
@@ -963,7 +963,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/functional-module-inference-from-networks/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/functional-module-inference-from-networks/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mummichog searches for all modules that can be built on user input data, and compute their activity scores... The statistical significance of modules based on user data is calculated on the null distribution.",
       "asbval:note": "Module and pathway analysis methodology directly supports this claim.",
@@ -983,7 +983,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/functional-module-inference-from-networks/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/functional-module-inference-from-networks/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The software implementation of our approach is named mummichog... The mummichog software is available at http://atcg.googlecode.com.",
       "asbval:note": "Paper describes 'mummichog' (no version number specified). Card claims 'Mummichog 3' but paper does not specify version 3. The tool is confirmed present but version number cannot be verified from passages.",
@@ -1003,7 +1003,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/functional-module-inference-from-networks/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/functional-module-inference-from-networks/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'metDataModel' or similar data model framework by that name in any passage. Paper references KEGG, UCSD Recon1, Edinburgh human metabolic network, and BioCyc as metabolic models, but not 'metDataModel'.",
@@ -1023,7 +1023,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/functional-module-inference-from-networks/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/functional-module-inference-from-networks/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'JMS' tool in any passage. Paper does not reference a tool by this name for annotation.",
@@ -1043,7 +1043,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/functional-module-inference-from-networks/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/functional-module-inference-from-networks/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'mass2chem' utility library in any passage. Paper discusses m/z-to-metabolite matching and isotopic derivatives/adducts but does not name this specific tool.",
@@ -1063,7 +1063,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/functional-module-inference-from-networks/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/functional-module-inference-from-networks/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The LC/MS data were processed with apLCMS program [25] for feature extraction and quantification.",
       "asbval:note": "Tool is mentioned in methods section but not in the candidate card's tools list. This is a supporting tool used in the workflow.",
@@ -1083,7 +1083,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/functional-module-inference-from-networks/007",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/functional-module-inference-from-networks/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "From user input, mummichog requires two lists of m/z features, the significant list (e.g. selected by univariate statistics) and the reference list (all features detected in the MS experiment).",
       "asbval:note": "Input requirements match the scope description.",
@@ -1103,7 +1103,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/functional-module-inference-from-networks/008",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/functional-module-inference-from-networks/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The reference metabolic network model contains both metabolites and enzymes... The genome-scale human metabolic network in mummichog is based on KEGG [38], UCSD Recon1 [15] and Edinburgh human metabolic network [16].",
       "asbval:note": "Paper confirms metabolic network models are required and describes their structure (metabolites, reactions, pathways), but does not specify JSON format as the input format.",
@@ -1123,7 +1123,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-to-charge-tolerance-matching/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/mass-to-charge-tolerance-matching/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "From the m/z features in [significant list], mummichog computes all possibly matched metabolites, and searches the reference metabolic network for all the modules that can be formed by these tentative metabolites... The m/z - metabolite matching considers all common isotopic derivatives and adducts.",
       "asbval:note": "Core research question is directly supported by the paper's description of mummichog's m/z-to-metabolite matching and network-based functional inference without upfront metabolite identification.",
@@ -1143,7 +1143,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-to-charge-tolerance-matching/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/mass-to-charge-tolerance-matching/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The software implementation of our approach is named mummichog... The mummichog software is available at http://atcg.googlecode.com.",
       "asbval:note": "Paper describes 'mummichog' (no version number specified in text). Card claims 'Mummichog 3' but paper does not specify version. The tool name and function match, but version is not confirmed in passages.",
@@ -1163,7 +1163,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-to-charge-tolerance-matching/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/mass-to-charge-tolerance-matching/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Tool 'mass2chem' is not mentioned anywhere in the paper passages. No equivalent tool performing mass calculation utilities is named.",
@@ -1183,7 +1183,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-to-charge-tolerance-matching/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/mass-to-charge-tolerance-matching/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Tool 'JMS' is not mentioned in the paper passages. Paper does mention tandem mass spectrometry (MS/MS) for metabolite identification validation, but no tool named JMS is referenced.",
@@ -1203,7 +1203,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-to-charge-tolerance-matching/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/mass-to-charge-tolerance-matching/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Tool 'metDataModel' is not mentioned in the paper passages. No data model framework by this name is referenced.",
@@ -1223,7 +1223,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-to-charge-tolerance-matching/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/mass-to-charge-tolerance-matching/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The m/z - metabolite matching considers all common isotopic derivatives and adducts.",
       "asbval:note": "Paper performs mass calculation and isotopic/adduct handling within mummichog itself, not via a separate 'mass2chem' tool. The function exists but is integrated into mummichog, not a separate utility.",
@@ -1243,7 +1243,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-to-charge-tolerance-matching/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/mass-to-charge-tolerance-matching/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our goal is to predict biological activity in a network of metabolites directly from the feature table, bypassing the bottleneck of metabolite identification... each spectral feature can match to several metabolite candidates... mummichog computes all possibly matched metabolites, and searches the reference metabolic network",
       "asbval:note": "Scope is well-supported by the paper's description of mummichog's core functionality.",
@@ -1263,7 +1263,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-to-charge-tolerance-matching/007",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/mass-to-charge-tolerance-matching/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We present a set of computational algorithms which, by leveraging the collective power of metabolic pathways and networks, predict functional activity directly from spectral feature tables without a priori identification of metabolites.",
       "asbval:note": "Directly stated in abstract.",
@@ -1283,7 +1283,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-network-mapping/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/metabolic-network-mapping/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we report a novel approach of predicting network activity from untargeted metabolomics without upfront identification of metabolites, thus greatly accelerating the work flow... Our goal is to predict biological activity in a network of metabolites directly from the feature table, bypassing the bottleneck of metabolite identification",
       "asbval:note": "Core research question is directly supported by abstract and introduction.",
@@ -1303,7 +1303,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-network-mapping/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/metabolic-network-mapping/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "there is collective power in the organization of metabolic networks, which can be leveraged when the two steps are unified under one theoretical framework... if a list of significant spectral features reflects a biological activity, the true metabolites they represent should show enrichment on a local structure in the metabolic network",
       "asbval:note": "Network-based inference of modules from features is explicitly described.",
@@ -1323,7 +1323,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-network-mapping/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/metabolic-network-mapping/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The software implementation of our approach is named mummichog... mummichog requires two lists of m/z features, the significant list... and the reference list... mummichog computes all possibly matched metabolites, and searches the reference metabolic network for all the modules that can be formed by these tentative metabolites.",
       "asbval:note": "Paper describes 'mummichog' (no version number specified). Card claims 'Mummichog 3' but paper does not specify version. The tool name is confirmed but version is not stated in passages.",
@@ -1343,7 +1343,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-network-mapping/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/metabolic-network-mapping/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'metDataModel' or any data model library by that name in any passage. Tool is not referenced in the paper.",
@@ -1363,7 +1363,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-network-mapping/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/metabolic-network-mapping/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'JMS' tool in any passage. Tool is not referenced in the paper.",
@@ -1383,7 +1383,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-network-mapping/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/metabolic-network-mapping/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'mass2chem' tool in any passage. Tool is not referenced in the paper.",
@@ -1403,7 +1403,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-network-mapping/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/metabolic-network-mapping/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "mummichog computes all possibly matched metabolites, and searches the reference metabolic network for all the modules that can be formed by these tentative metabolites... The activity score should reflect both the enrichment of 'input metabolites' and the modularity.",
       "asbval:note": "Mummichog does perform m/z-to-metabolite mapping and functional activity prediction. However, paper does not explicitly describe 'signal propagation' as a mechanism; instead it uses permutation-based statistical testing and module activity scoring. The functional description is partially aligned but not fully accurate to the paper's actual algorithm.",
@@ -1423,7 +1423,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-network-mapping/007",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/metabolic-network-mapping/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "From user input, mummichog requires two lists of m/z features, the significant list (e.g. selected by univariate statistics) and the reference list (all features detected in the MS experiment)... mummichog searches the reference metabolic network for all the modules that can be formed by these tentative metabolites.",
       "asbval:note": "Input requirements and output (pathway/module prediction) are accurately described.",
@@ -1443,7 +1443,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-network-mapping/008",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/metabolic-network-mapping/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not discuss requirements for chemical formulas or neutral mass specifications in the metabolic model. This is a technical constraint claim that cannot be verified from the provided text.",
@@ -1463,7 +1463,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-functional-prediction-workflow-validation/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/metabolomics-functional-prediction-workflow-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The software implementation of our approach is named mummichog (mummichog is an American Indian term for by groups, also name of a small fish which live by groups).",
       "asbval:note": "Paper describes mummichog (version not specified, likely v1 from 2013) and its core workflows on metabolomics datasets. The card claims validation of 'Mummichog 3' migration to a new GitHub organization. The paper does not discuss version 3, GitHub migration, organizational standards, or CI/CD workflows\u2014these are modern software engineering concerns not addressed in the 2013 paper. The paper validates mummichog's functional prediction on real metabolomics data (moDC, urine, yeast), which aligns with the 'executes core workflows correctly' aspect, but the migration/organizational context is entirely absent from the paper.",
@@ -1483,7 +1483,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-functional-prediction-workflow-validation/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/metabolomics-functional-prediction-workflow-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The software implementation of our approach is named mummichog... From user input, mummichog requires two lists of m/z features, the significant list (e.g. selected by univariate statistics) and the reference list (all features detected in the MS experiment)... mummichog computes all possibly matched metabolites, and searches the reference metabolic network for all the modules that can be formed by these tentative metabolites.",
       "asbval:note": "Paper describes mummichog (version unspecified, not version 3) and its core functional prediction workflow. The paper does not mention version 3 or GitHub organization. The functional role description matches the paper's description of mummichog's core algorithm.",
@@ -1503,7 +1503,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-functional-prediction-workflow-validation/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/metabolomics-functional-prediction-workflow-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "metDataModel is not mentioned anywhere in the paper. The paper does not discuss a data model tool by this name or any tool for structuring annotation from authentic standards for Mummichog input.",
@@ -1523,7 +1523,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-functional-prediction-workflow-validation/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/metabolomics-functional-prediction-workflow-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "JMS is not mentioned in the paper. The paper does not discuss a tool called JMS or any annotation tool that generates JSON-format annotation tables for Mummichog input.",
@@ -1543,7 +1543,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-functional-prediction-workflow-validation/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/metabolomics-functional-prediction-workflow-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss Python virtualenv, pip installation, or modern package management practices. The paper only states 'The mummichog software is available at http://atcg.googlecode.com' (passage 8), indicating distribution via Google Code, not GitHub or pip.",
@@ -1563,7 +1563,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-functional-prediction-workflow-validation/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/metabolomics-functional-prediction-workflow-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention pytest, unittest, or any automated test framework. The paper validates mummichog through manual application to three case studies (moDC, human urine, yeast), not through a formal test suite.",
@@ -1583,7 +1583,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-functional-prediction-workflow-validation/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/metabolomics-functional-prediction-workflow-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss GitHub, package migration, organizational relocation, or modern software engineering practices. The paper is from 2013 and describes the initial development and validation of mummichog, not a migration scenario.",
@@ -1603,7 +1603,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/package-installation-verification-and-testing/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/package-installation-verification-and-testing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper (Li et al. 2013) describes mummichog as a computational method for metabolomics analysis published in PLOS Computational Biology. It does not discuss package migration, relocation, GitHub organization changes, CI/CD workflows, or installation verification procedures. The paper is a scientific methods paper, not a software engineering/DevOps task card.",
@@ -1623,7 +1623,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/package-installation-verification-and-testing/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/package-installation-verification-and-testing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not address package migration, GitHub organization changes, or production readiness workflows. The scope describes a DevOps/software engineering task entirely absent from the scientific paper.",
@@ -1643,7 +1643,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/package-installation-verification-and-testing/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/package-installation-verification-and-testing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention Python pip, package managers, or installation procedures. The paper focuses on the mummichog algorithm and its application to metabolomics data.",
@@ -1663,7 +1663,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/package-installation-verification-and-testing/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/package-installation-verification-and-testing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention virtualenv, virtual environments, or isolated Python environments. These are DevOps/software engineering concepts not addressed in the scientific paper.",
@@ -1683,7 +1683,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/package-installation-verification-and-testing/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/package-installation-verification-and-testing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The software implementation of our approach is named mummichog (mummichog is an American Indian term for by groups, also name of a small fish which live by groups).",
       "asbval:note": "The paper describes mummichog as a software tool for metabolomics analysis. However, the paper does not specify 'version 3' \u2014 it is the original 2013 publication introducing mummichog. The paper states 'The mummichog software is available at http://atcg.googlecode.com' (passage 8), indicating an early release, not version 3. The tool exists and is used for functional prediction, but the version claim is unsupported.",
@@ -1703,7 +1703,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/package-installation-verification-and-testing/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/package-installation-verification-and-testing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention pytest, unittest, or automated test frameworks. The paper validates mummichog by applying it to three case studies (moDC immune cells, human urine, yeast mutants) and comparing predictions to manual annotations, but does not describe a formal test suite or testing framework.",
@@ -1723,7 +1723,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/package-installation-verification-and-testing/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/package-installation-verification-and-testing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The mummichog software is available at http://atcg.googlecode.com.",
       "asbval:note": "The paper provides a different repository URL (http://atcg.googlecode.com, a Google Code repository from 2013). The card claims the repo is on GitHub under 'metabolomics-cloud' organization, but the paper does not mention GitHub or that organization. This appears to be a later migration not documented in the original paper.",
@@ -1743,7 +1743,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-package-migration-and-refactoring/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/python-package-migration-and-refactoring/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes mummichog as a computational tool for metabolomics analysis but contains no discussion of package migration, GitHub organization relocation, CI/CD workflows, or organizational standards adaptation. The paper is about the scientific algorithm and its application, not software engineering practices.",
@@ -1763,7 +1763,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-package-migration-and-refactoring/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/python-package-migration-and-refactoring/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No evidence in the paper for package migration workflows, GitHub organization standards, or refactoring practices. The paper mentions 'The mummichog software is available at http://atcg.googlecode.com' (passage [8]) but does not discuss migration or organizational relocation.",
@@ -1783,7 +1783,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-package-migration-and-refactoring/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/python-package-migration-and-refactoring/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention setuptools, pip, or package installation procedures. It describes mummichog as a software tool but does not document its build or installation infrastructure.",
@@ -1803,7 +1803,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-package-migration-and-refactoring/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/python-package-migration-and-refactoring/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper contains no mention of GitHub Actions, CI/CD workflows, or continuous integration practices. The software availability is mentioned only as a URL.",
@@ -1823,7 +1823,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-package-migration-and-refactoring/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/python-package-migration-and-refactoring/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention pytest or any test framework. Testing is described only in the context of validating the algorithm on biological data (moDC, urine, yeast datasets), not unit testing infrastructure.",
@@ -1843,7 +1843,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-package-migration-and-refactoring/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/python-package-migration-and-refactoring/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The software implementation of our approach is named mummichog",
       "asbval:note": "The paper confirms mummichog is a software tool but does not explicitly state it is written in Python. The evidence span provided in the card ('Mummichog is a Python program...') does not appear verbatim in the passages. The paper describes mummichog as a computational algorithm implementation but does not specify the programming language.",
@@ -1863,7 +1863,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-structure-standardization/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/repository-structure-standardization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper is a 2013 computational metabolomics methods paper describing mummichog algorithm and its application to immune cell metabolomics. It contains no discussion of Python package refactoring, repository standardization, CI/CD workflows, GitHub organization migration, or software engineering practices for code relocation. The research question describes a software engineering task unrelated to the paper's scientific content.",
@@ -1883,7 +1883,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-structure-standardization/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/repository-structure-standardization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes computational algorithms for metabolomics analysis (mummichog), not software engineering practices. No discussion of repository structure standardization, GitHub organization migration, or CI/CD workflows appears in any passage.",
@@ -1903,7 +1903,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-structure-standardization/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/repository-structure-standardization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention setuptools, setup.py, pyproject.toml, or Python package configuration tools. The paper states 'The mummichog software is available at http://atcg.googlecode.com' but provides no details on packaging infrastructure.",
@@ -1923,7 +1923,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-structure-standardization/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/repository-structure-standardization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention pip or package installation procedures. No discussion of dependency management or installation testing appears in the passages.",
@@ -1943,7 +1943,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-structure-standardization/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/repository-structure-standardization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention GitHub Actions, CI/CD workflows, or any continuous integration infrastructure. The software is hosted at 'http://atcg.googlecode.com' (Google Code, not GitHub), and no modern CI/CD systems are discussed.",
@@ -1963,7 +1963,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-structure-standardization/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/repository-structure-standardization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention pytest, unittest, or automated testing frameworks. Testing is described only in the context of validating mummichog's predictions against published datasets and tandem mass spectrometry confirmation, not unit testing infrastructure.",
@@ -1983,7 +1983,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/untargeted-metabolomics-feature-analysis/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/untargeted-metabolomics-feature-analysis/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we present a set of computational algorithms which, by leveraging the collective power of metabolic pathways and networks, predict functional activity directly from spectral feature tables without a priori identification of metabolites",
       "asbval:note": "Core research question is directly stated in abstract and introduction.",
@@ -2003,7 +2003,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/untargeted-metabolomics-feature-analysis/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/untargeted-metabolomics-feature-analysis/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "if a list of significant spectral features reflects a biological activity, the true metabolites they represent should show enrichment on a local structure in the metabolic network, while the falsely matched metabolites are distributed more randomly",
       "asbval:note": "Network-level enrichment logic is core to the method.",
@@ -2023,7 +2023,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/untargeted-metabolomics-feature-analysis/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/untargeted-metabolomics-feature-analysis/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The software implementation of our approach is named mummichog",
       "asbval:note": "Paper names tool as 'mummichog' without version number. Card specifies 'Mummichog 3' but paper does not mention version 3. Paper is from 2013 and describes the original mummichog implementation.",
@@ -2043,7 +2043,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/untargeted-metabolomics-feature-analysis/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/untargeted-metabolomics-feature-analysis/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The mummichog software is available at http://atcg.googlecode.com",
       "asbval:note": "Paper provides different repository URL (http://atcg.googlecode.com, a Google Code repository from 2013). Card URL is a modern GitHub location, likely a later migration, but not verified in paper.",
@@ -2063,7 +2063,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/untargeted-metabolomics-feature-analysis/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/untargeted-metabolomics-feature-analysis/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "From user input, mummichog requires two lists of m/z features, the significant list (e.g. selected by univariate statistics) and the reference list (all features detected in the MS experiment)... mummichog computes all possibly matched metabolites, and searches the reference metabolic network for all the modules that can be formed by these tentative metabolites",
       "asbval:note": "Role description matches paper's description of mummichog functionality.",
@@ -2083,7 +2083,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/untargeted-metabolomics-feature-analysis/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/untargeted-metabolomics-feature-analysis/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'metDataModel' or any tool by that name in the paper passages.",
@@ -2103,7 +2103,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/untargeted-metabolomics-feature-analysis/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/untargeted-metabolomics-feature-analysis/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'JMS' tool in the paper passages. Paper does not discuss a separate metabolite annotation tool named JMS.",
@@ -2123,7 +2123,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/untargeted-metabolomics-feature-analysis/007",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/untargeted-metabolomics-feature-analysis/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'mass2chem' tool in the paper passages. Paper discusses adduct/isotope handling but does not name a separate utility by this name.",
@@ -2143,7 +2143,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/untargeted-metabolomics-feature-analysis/008",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/untargeted-metabolomics-feature-analysis/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "After ionized molecules are scanned in the spectrometer, the spectral peaks are extracted, quantified and aligned into a feature table. At this point, each feature is identified by a mass-to-charge ratio (m/z) and retention time in chromatography, but its chemical identity is not known.",
       "asbval:note": "Scope description aligns with paper's description of untargeted metabolomics workflow and the problem mummichog solves.",
@@ -2163,7 +2163,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/untargeted-metabolomics-feature-analysis/009",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/untargeted-metabolomics-feature-analysis/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Our goal is to predict biological activity in a network of metabolites directly from the feature table, bypassing the bottleneck of metabolite identification",
       "asbval:note": "Scope aligns with paper's stated goal.",
@@ -2183,7 +2183,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-workflow-adaptation-to-organization-standards/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/ci-cd-workflow-adaptation-to-organization-standards/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "ci-cd-workflow-adaptation-to-organization-standards",
@@ -2196,7 +2196,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/documentation-and-metadata-modernization/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/documentation-and-metadata-modernization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "documentation-and-metadata-modernization",
@@ -2209,7 +2209,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-to-metabolite-network-propagation/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/feature-to-metabolite-network-propagation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "feature-to-metabolite-network-propagation",
@@ -2222,7 +2222,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/functional-module-inference-from-networks/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/functional-module-inference-from-networks/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "functional-module-inference-from-networks",
@@ -2235,7 +2235,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-to-charge-tolerance-matching/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/mass-to-charge-tolerance-matching/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "mass-to-charge-tolerance-matching",
@@ -2248,7 +2248,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-network-mapping/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/metabolic-network-mapping/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "metabolic-network-mapping",
@@ -2261,7 +2261,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolomics-functional-prediction-workflow-validation/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/metabolomics-functional-prediction-workflow-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "metabolomics-functional-prediction-workflow-validation",
@@ -2274,7 +2274,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/package-installation-verification-and-testing/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/package-installation-verification-and-testing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "package-installation-verification-and-testing",
@@ -2287,7 +2287,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/python-package-migration-and-refactoring/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/python-package-migration-and-refactoring/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "python-package-migration-and-refactoring",
@@ -2300,7 +2300,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/repository-structure-standardization/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/repository-structure-standardization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "repository-structure-standardization",
@@ -2313,7 +2313,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/untargeted-metabolomics-feature-analysis/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/skill/untargeted-metabolomics-feature-analysis/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "untargeted-metabolomics-feature-analysis",
@@ -2326,7 +2326,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Mummichog is a Python program for analyzing data from high throughput, untargeted metabolomics.",
       "asbval:note": null,
@@ -2346,7 +2346,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Mummichog leverages the organization of metabolic networks to predict functional activity directly from feature tables.",
       "asbval:note": null,
@@ -2366,7 +2366,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Mummichog can predict functional activity by bypassing metabolite identification.",
       "asbval:note": null,
@@ -2386,7 +2386,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The last version of Mummichog 2 is under branch mummichog-2.7.",
       "asbval:note": "Text says 'last version' but source says 'last of version' \u2014 minor wording difference that could imply different meanings",
@@ -2406,7 +2406,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Mummichog version 3 is under development.",
       "asbval:note": null,
@@ -2426,7 +2426,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The Mummichog project has been moved to the new organization at https://github.com/metabolomics-cloud.",
       "asbval:note": null,
@@ -2446,7 +2446,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1003123/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The Mummichog project move follows examples from https://scverse.org/.",
       "asbval:note": null,

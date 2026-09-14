@@ -314,7 +314,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID is installed with a database derived from the Human Metabolome Database (HMDB) and LIPID MAPS and is searchable for common adducts, such as [M + H]+, [M + Na]+ and [M+K]+ in the positive ionization mode and [M-H]\u2212, [M+Cl]\u2212, [M+Na-2H]\u2212, [M+K-2H]\u2212 and [M-H2O\u2013H]\u2212 in the negative ionization mode, along with the derivatizing matrix FMP-10 and the derivatization reagent AMPP",
       "asbval:note": "Paper describes adduct search capabilities but does not detail the computational mechanism for enumerating adducts. The paper states Met-ID searches for specific adducts but does not explain the algorithm or process for computing expected adduct ions. The card's focus on 'how Met-ID computes' adducts is not directly addressed in the passages.",
@@ -334,7 +334,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID is also dependent on rdkit, a C++ framework for computational chemistry. The rdkit functionality was written in python files and turned into executable files using PyInstaller.",
       "asbval:note": "RDKit is confirmed as a dependency used in Met-ID for computational chemistry tasks.",
@@ -354,7 +354,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "By incorporating a priori knowledge about the specificity of derivatizing matrices and reagents, such as FMP-10 and AMPP, respectively, Met-ID uses the chemical structures in the form of simplified molecular-input line-entry system (SMILES) to parse the HMDB and LIPID MAPS and more effectively differentiate between potential candidates and noncandidates.",
       "asbval:note": "Paper describes that Met-ID uses SMILES structures and searches against adducts, but does not explicitly describe output of a 'predicted adduct ions table' with the specific columns mentioned (adduct formula, mass shift, m/z value, ionization state). The paper shows results tables (e.g., Figure 4, Table 1) but these are annotation results, not adduct enumeration outputs.",
@@ -374,7 +374,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/card/task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No passage describes generation of a validation report comparing predicted adduct masses to reference FMP-10 values. The paper discusses mass calibration and recalibration (eq. 1) but not validation of predicted adducts against reference values.",
@@ -394,7 +394,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card frames the task as 'reconstructing' an adduct enumeration module, implying reverse-engineering or detailed algorithmic description. The paper describes Met-ID's functionality at a high level but does not provide algorithmic details of how adducts are enumerated or computed.",
@@ -411,7 +411,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/card/task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The complete codebase is freely available on GitHub, allowing users to install and customize their own versions.",
       "asbval:note": "Paper confirms Met-ID is on GitHub and open-source, but does not mention or discuss CI workflows, main.yml files, or GitHub Actions badges. The research question assumes specific CI infrastructure details not addressed in the paper.",
@@ -431,7 +431,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/card/task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention git or version control systems. While the code is on GitHub, git is not explicitly discussed.",
@@ -451,7 +451,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/card/task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The code was compiled into executable files for Windows, MacOS and Debian systems through Github Actions, allowing for simple compilations upon changes to the codebase.",
       "asbval:note": "Paper confirms GitHub Actions is used for compilation, but does not discuss CI workflows, automated checks, or badge status verification as claimed in the task card.",
@@ -471,7 +471,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/card/task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID is also dependent on rdkit, a C++ framework for computational chemistry. The installation of rdkit is slightly more difficult than an average PYPI project but often works with anaconda. The rdkit functionality was written in python files and turned into executable files using PyInstaller.",
       "asbval:note": "RDKit is confirmed as a dependency of Met-ID.",
@@ -491,7 +491,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/card/task_002/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss CI workflow logs, test results, or pass/fail status reporting. No mention of automated testing infrastructure or test suites.",
@@ -511,7 +511,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/card/task_002/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss verification reports, badge reproducibility, or workflow status documentation.",
@@ -531,7 +531,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/card/task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The task card focuses on reproducing CI/CD infrastructure and GitHub Actions workflows, which is a software engineering/DevOps task rather than a scientific research task.",
@@ -549,7 +549,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/card/task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID also provides tools for calculating and supporting the different masses added by other derivatizing matrices. Additionally, since some metabolites are not included in the HMDB, Met-ID enables users to add new entries, ensuring the software remains adaptable to specific research needs.",
       "asbval:note": "Paper explicitly states Met-ID supports custom derivatizing matrices beyond FMP-10 and is designed to be customizable for different matrices.",
@@ -569,7 +569,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/card/task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID uniquely incorporates derivatization-specific filtering, enabling the accurate identification of metabolites with functional groups targeted by agents like FMP-10.",
       "asbval:note": "Paper demonstrates Met-ID's capability to produce accurate annotations through derivatization-specific filtering.",
@@ -589,7 +589,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/card/task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID is also dependent on rdkit, a C++ framework for computational chemistry. The rdkit functionality was written in python files and turned into executable files using PyInstaller.",
       "asbval:note": "RDKit is confirmed as a dependency of Met-ID for computational chemistry tasks.",
@@ -609,7 +609,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/card/task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID enables users to add new entries, ensuring the software remains adaptable to specific research needs. The MS2 database is built using spectra imported in the mzML format... It also allows users to expand the database by adding their own MS2 spectra.",
       "asbval:note": "Paper confirms users can add custom matrices and spectra, but does not specify the exact file format or structure (JSON, Python plugin, etc.). The paper mentions SQLite database interaction and mzML format for MS2 spectra, but not explicit configuration file formats like 'tahs_config.json'.",
@@ -629,7 +629,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/card/task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID offers two options for exporting results: users can export annotated m/z features from the table within Met-ID or generate a comprehensive table of all m/z features with adjusted m/z values, suitable for downstream analyses.",
       "asbval:note": "Paper confirms Met-ID can export annotation tables; CSV format is explicitly mentioned for feature lists and spectral data export.",
@@ -649,7 +649,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/card/task_003/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In Table 1, comparisons are made between several experimental MALDI-MS2 spectra and the Met-ID database. Experimental spectra obtained from tissue samples were compared with database spectra collected from derivatized standards on a MALDI-target plate.",
       "asbval:note": "Paper demonstrates comparison of experimental spectra against database standards with cosine similarity metrics and ranking, supporting the concept of verification reports.",
@@ -669,7 +669,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/card/task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card specifies 'tahs_config.json or tahs_plugin.py' as example output formats, but the paper does not detail the exact configuration file structure or plugin architecture. The paper mentions SQLite database interaction and mzML format but does not explicitly confirm JSON or Python plugin file formats.",
@@ -686,7 +686,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-mass-calculation-from-smiles/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/adduct-mass-calculation-from-smiles/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID uses chemical structures in the form of simplified molecular-input line-entry system (SMILES) to parse the HMDB and LIPID MAPS and more effectively differentiate between potential candidates and noncandidates... By incorporating a priori knowledge about the specificity of derivatizing matrices and reagents, such as FMP-10 and AMPP, respectively, Met-ID uses the chemical structures in the form of simplified molecular-input line-entry system (SMILES)... The number of matrix targets is precomputed based on the SMILES structure of each molecule.",
       "asbval:note": "The paper explicitly describes Met-ID's use of SMILES strings to predict derivatization outcomes and compute m/z values for derivatized metabolites with FMP-10 and other matrices.",
@@ -706,7 +706,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-mass-calculation-from-smiles/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/adduct-mass-calculation-from-smiles/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID is also dependent on rdkit, a C++ framework for computational chemistry... The rdkit functionality was written in python files and turned into executable files using PyInstaller.",
       "asbval:note": "RDKit is explicitly named as a dependency of Met-ID for computational chemistry tasks.",
@@ -726,7 +726,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-mass-calculation-from-smiles/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/adduct-mass-calculation-from-smiles/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID, a graphical user interface software designed to efficiently identify metabolites from MALDI-MSI data sets... The software is able to identify multiple derivatization sites on the same molecule, facilitating identification of the derivatized compound... While Met-ID can process MS1 and MS2 data independently, a typical MSI workflow involves sequential... Met-ID combines both MS1 and MS2 functionalities.",
       "asbval:note": "Met-ID is described as integrating MS1 (mass matching) and MS2 (spectral matching) functionalities with explicit support for derivatizing matrices like FMP-10.",
@@ -746,7 +746,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-pipeline-reproducibility-verification/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/ci-cd-pipeline-reproducibility-verification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes Met-ID software development, installation, and metabolite annotation workflows. It does not discuss GitHub Actions CI/CD pipeline verification, local workflow execution testing, or badge status validation. The paper mentions the code is 'freely available as an open-source tool on GitHub' and 'compiled into executable files for Windows, MacOS and Debian systems through Github Actions' but does not address verifying CI/CD reproducibility or comparing local runs against official CI logs.",
@@ -766,7 +766,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-pipeline-reproducibility-verification/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/ci-cd-pipeline-reproducibility-verification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not address CI/CD pipeline reproducibility verification, local workflow testing, or comparison of local execution against CI logs. The scope describes a software engineering validation task unrelated to the paper's focus on metabolite identification in MALDI-MSI.",
@@ -786,7 +786,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-pipeline-reproducibility-verification/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/ci-cd-pipeline-reproducibility-verification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "While the paper mentions the code is 'freely available as an open-source tool on GitHub', it does not discuss using git to clone the repository or obtaining workflow definitions. The paper does not address repository cloning as part of any workflow.",
@@ -806,7 +806,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-pipeline-reproducibility-verification/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/ci-cd-pipeline-reproducibility-verification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The code was compiled into executable files for Windows, MacOS and Debian systems through Github Actions, allowing for simple compilations upon changes to the codebase.",
       "asbval:note": "The paper mentions GitHub Actions is used for compilation and code compilation upon changes, but does not discuss monitoring workflows, retrieving execution logs, or validating badge status. The paper's use of GitHub Actions is limited to build automation, not CI/CD pipeline verification or reproducibility testing.",
@@ -826,7 +826,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-pipeline-reproducibility-verification/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/ci-cd-pipeline-reproducibility-verification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID is also dependent on rdkit, a C++ framework for computational chemistry. The rdkit functionality was written in python files and turned into executable files using PyInstaller.",
       "asbval:note": "RDKit is used in Met-ID for computational chemistry operations (SMILES parsing, structure analysis), but the paper does not describe it as executing 'test steps defined in the workflow' or as part of CI/CD pipeline testing. RDKit is a runtime dependency, not a test execution tool in the CI/CD context claimed.",
@@ -846,7 +846,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/derivatizing-matrix-configuration/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/derivatizing-matrix-configuration/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID also provides tools for calculating and supporting the different masses added by other derivatizing matrices. Additionally, since some metabolites are not included in the HMDB, Met-ID enables users to add new entries, ensuring the software remains adaptable to specific research needs.",
       "asbval:note": "Paper confirms Met-ID supports custom derivatizing matrices and is customizable, but does not explicitly describe a formal 'registration' or 'configuration' workflow for novel matrices. The paper states users can add matrices and calculate masses, but the specific procedural steps for configuring non-standard adducts are not detailed in the passages.",
@@ -866,7 +866,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/derivatizing-matrix-configuration/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/derivatizing-matrix-configuration/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To enhance its versatility, Met-ID allows users to customize their own versions. FMP-10 is a suitable matrix for experiments targeting neurotransmitters, and the base version of Met-ID is optimized for its use. However, Met-ID also provides tools for calculating and supporting the different masses added by other derivatizing matrices.",
       "asbval:note": "Paper confirms extensibility and customization for different matrices, but does not explicitly detail the architecture or mechanism for defining ionization behavior and adduct forms programmatically. The claim assumes a formal 'extensibility architecture' that is not explicitly named or described in the passages.",
@@ -886,7 +886,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/derivatizing-matrix-configuration/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/derivatizing-matrix-configuration/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID is also dependent on rdkit, a C++ framework for computational chemistry.",
       "asbval:note": "RDKit is confirmed as a dependency of Met-ID. The paper also mentions SMILES parsing and molecular structure analysis, which are consistent with RDKit's role in computational chemistry.",
@@ -906,7 +906,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/derivatizing-matrix-configuration/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/derivatizing-matrix-configuration/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID allows users to customize their own versions... Met-ID also provides tools for calculating and supporting the different masses added by other derivatizing matrices.",
       "asbval:note": "Met-ID is confirmed as the core platform with customization and matrix support. However, the paper does not explicitly mention a 'plugin registry' or 'configuration loader' architecture. The customization is described as user-facing (adding matrices, metabolites, functional groups) but the internal architecture terminology is not used in the passages.",
@@ -926,7 +926,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/derivatizing-matrix-configuration/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/derivatizing-matrix-configuration/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "There are many examples of reactive matrices and derivatizing agents in the literature, e.g., FMP-10 (4-(anthracen-9-yl)2-fluoro-1-methylpyridin-1-ium iodide), TAHS (p-N,N,N-trimethylammonioanilyl N-hydroxysuccinimidyl carbamate iodide) and Girard-T.",
       "asbval:note": "TAHS is explicitly mentioned as an example derivatizing agent in the paper, supporting the use case scenario.",
@@ -946,7 +946,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/derivatizing-matrix-configuration/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/derivatizing-matrix-configuration/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Met-ID MS2 database currently contains 154 derivatized forms originating from 66 chemical standards, including spectra at collision-induced dissociation (CID) ranges between 0 and 50 eV. Additionally, the MS2 database includes peaks from FMP-10 itself.",
       "asbval:note": "Paper confirms that Met-ID uses MS2 spectra from chemical standards and supports custom MS2 spectra input, aligning with the scope requirement for reference spectra.",
@@ -966,7 +966,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/derivatizing-matrix-configuration/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/derivatizing-matrix-configuration/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "By incorporating a priori knowledge about the specificity of derivatizing matrices and reagents, such as FMP-10 and AMPP, respectively, Met-ID uses the chemical structures in the form of simplified molecular-input line-entry system (SMILES) to parse the HMDB and LIPID MAPS and more effectively differentiate between potential candidates and noncandidates.",
       "asbval:note": "Paper confirms that Met-ID requires a priori knowledge of matrix specificity and chemical properties, supporting the 'when NOT to use' criterion.",
@@ -986,7 +986,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/derivatizing-matrix-configuration/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/derivatizing-matrix-configuration/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "FMP-10 is a suitable matrix for experiments targeting neurotransmitters, and the base version of Met-ID is optimized for its use.",
       "asbval:note": "Paper confirms that Met-ID comes pre-configured with FMP-10, supporting this 'when NOT to use' criterion.",
@@ -1006,7 +1006,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/derivatizing-matrix-ionization-rule-application/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/derivatizing-matrix-ionization-rule-application/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID is installed with a database derived from the Human Metabolome Database (HMDB) and LIPID MAPS and is searchable for common adducts, such as [M + H]+, [M + Na]+ and [M+K]+ in the positive ionization mode and [M-H]\u2212, [M+Cl]\u2212, [M+Na-2H]\u2212, [M+K-2H]\u2212 and [M-H2O\u2013H]\u2212 in the negative ionization mode, along with the derivatizing matrix FMP-10",
       "asbval:note": "Paper explicitly describes handling of non-standard adducts beyond [M+H]+ and [M-H]- for derivatizing matrices like FMP-10.",
@@ -1026,7 +1026,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/derivatizing-matrix-ionization-rule-application/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/derivatizing-matrix-ionization-rule-application/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "A prominent addition to the technique that enhances the detection of diverse metabolites is on-tissue chemical derivatization. This modifies metabolites directly on tissue sections, introducing permanent charges to the structure of target molecules and enhancing their ionization characteristics and detectability in MALDI-MSI.",
       "asbval:note": "Paper confirms that derivatization alters ionization behavior and is essential for metabolite detection in MSI.",
@@ -1046,7 +1046,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/derivatizing-matrix-ionization-rule-application/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/derivatizing-matrix-ionization-rule-application/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID enables annotation of m / z features from any type of MALDI-MSI experiment, involving either derivatizing or conventional matrices. It utilizes structural information for derivatizing matrices to generate a subset of targets that contain only functional groups specific to the derivatization agent.",
       "asbval:note": "Paper describes Met-ID's capability to handle derivatizing matrices in MSI experiments.",
@@ -1066,7 +1066,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/derivatizing-matrix-ionization-rule-application/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/derivatizing-matrix-ionization-rule-application/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Although initially developed for MALDI-MSI, it can be applied to various mass spectrometry-based metabolomic techniques, both spatial and non-spatial.",
       "asbval:note": "Paper indicates Met-ID can handle both derivatized and non-derivatized data, supporting the 'when NOT to use' clause.",
@@ -1086,7 +1086,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/derivatizing-matrix-ionization-rule-application/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/derivatizing-matrix-ionization-rule-application/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID also provides tools for calculating and supporting the different masses added by other derivatizing matrices.",
       "asbval:note": "Paper confirms that matrix-specific rulesets are a key component of Met-ID's functionality.",
@@ -1106,7 +1106,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/derivatizing-matrix-ionization-rule-application/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/derivatizing-matrix-ionization-rule-application/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID uses the chemical structures in the form of simplified molecular-input line-entry system (SMILES) to parse the HMDB and LIPID MAPS and more effectively differentiate between potential candidates and noncandidates.",
       "asbval:note": "Paper confirms SMILES parsing is used in Met-ID's workflow.",
@@ -1126,7 +1126,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/derivatizing-matrix-ionization-rule-application/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/derivatizing-matrix-ionization-rule-application/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID uses the chemical structures in the form of simplified molecular-input line-entry system (SMILES) to parse the HMDB and LIPID MAPS",
       "asbval:note": "SMILES is explicitly used as input for metabolite structure representation.",
@@ -1146,7 +1146,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/derivatizing-matrix-ionization-rule-application/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/derivatizing-matrix-ionization-rule-application/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID is installed with a database derived from the Human Metabolome Database (HMDB) and LIPID MAPS and is searchable for common adducts, such as [M + H]+, [M + Na]+ and [M+K]+ in the positive ionization mode and [M-H]\u2212, [M+Cl]\u2212, [M+Na-2H]\u2212, [M+K-2H]\u2212 and [M-H2O\u2013H]\u2212 in the negative ionization mode, along with the derivatizing matrix FMP-10 and the derivatization reagent AMPP",
       "asbval:note": "Paper confirms FMP-10 and other derivatizing matrices are specified as inputs.",
@@ -1166,7 +1166,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/derivatizing-matrix-ionization-rule-application/008",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/derivatizing-matrix-ionization-rule-application/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "By incorporating a priori knowledge about the specificity of derivatizing matrices and reagents, such as FMP-10 and AMPP, respectively, Met-ID uses the chemical structures in the form of simplified molecular-input line-entry system (SMILES) to parse the HMDB and LIPID MAPS",
       "asbval:note": "Paper describes use of matrix-specific knowledge/rulesets for annotation.",
@@ -1186,7 +1186,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/derivatizing-matrix-ionization-rule-application/009",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/derivatizing-matrix-ionization-rule-application/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID is also dependent on rdkit, a C++ framework for computational chemistry. The rdkit functionality was written in python files and turned into executable files using PyInstaller.",
       "asbval:note": "Paper confirms RDKit is used as a dependency in Met-ID for computational chemistry tasks including SMILES parsing and molecular structure analysis.",
@@ -1206,7 +1206,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/git-repository-cloning-and-version-control/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/git-repository-cloning-and-version-control/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The complete codebase is freely available on GitHub, allowing users to install and customize their own versions. Contributions through pull requests are encouraged to keep the software up-to-date with emerging identification methods.",
       "asbval:note": "Paper confirms Met-ID is available on GitHub and mentions codebase availability, but does not explicitly discuss cloning workflows, CI/CD inspection, or version-control artifact inspection as a task. The paper describes the software's availability and modularity but does not frame Git repository cloning and CI/CD inspection as a reproducibility workflow.",
@@ -1226,7 +1226,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/git-repository-cloning-and-version-control/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/git-repository-cloning-and-version-control/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The complete codebase is freely available on GitHub",
       "asbval:note": "Paper confirms GitHub availability but does not explicitly mention Git as a tool or discuss cloning, commit history inspection, or branch structure analysis. Git is implied by GitHub availability but not named or discussed.",
@@ -1246,7 +1246,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/git-repository-cloning-and-version-control/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/git-repository-cloning-and-version-control/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The code was compiled into executable files for Windows, MacOS and Debian systems through Github Actions, allowing for simple compilations upon changes to the codebase.",
       "asbval:note": "Paper confirms GitHub Actions is used for compilation and CI/CD, but does not mention main.yml workflow file by name, workflow inspection as a task, or API triggering. The paper describes GitHub Actions' role in automated compilation but not the inspection of workflow definitions as a reproducibility task.",
@@ -1266,7 +1266,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/git-repository-cloning-and-version-control/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/git-repository-cloning-and-version-control/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID is also dependent on rdkit,37 a C++ framework for computational chemistry. The installation of rdkit is slightly more difficult than an average PYPI project but often works with anaconda. The rdkit functionality was written in python files and turned into executable files using PyInstaller.",
       "asbval:note": "RDKit is explicitly named and confirmed as a dependency of Met-ID used for computational chemistry tasks including SMILES parsing and molecular structure analysis, which aligns with the related skills listed.",
@@ -1286,7 +1286,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-workflow-inspection-and-execution/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/github-actions-workflow-inspection-and-execution/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The code was compiled into executable files for Windows, MacOS and Debian systems through Github Actions, allowing for simple compilations upon changes to the codebase.",
       "asbval:note": "Paper confirms Met-ID uses GitHub Actions for compilation and mentions the codebase is on GitHub, but does not describe inspecting or locally reproducing the main.yml workflow file, executing test suites, or verifying badge status. The paper focuses on the software's functionality, not CI/CD workflow inspection methodology.",
@@ -1306,7 +1306,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-workflow-inspection-and-execution/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/github-actions-workflow-inspection-and-execution/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The complete codebase is freely available on GitHub",
       "asbval:note": "Paper confirms code is on GitHub but does not explicitly mention using git to clone or access workflow files. The tool's role in the card is inferred rather than directly stated.",
@@ -1326,7 +1326,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-workflow-inspection-and-execution/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/github-actions-workflow-inspection-and-execution/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The code was compiled into executable files for Windows, MacOS and Debian systems through Github Actions, allowing for simple compilations upon changes to the codebase.",
       "asbval:note": "Paper explicitly states Met-ID uses GitHub Actions for compilation and automated builds.",
@@ -1346,7 +1346,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-workflow-inspection-and-execution/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/github-actions-workflow-inspection-and-execution/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID is also dependent on rdkit, a C++ framework for computational chemistry. The installation of rdkit is slightly more difficult than an average PYPI project but often works with anaconda.",
       "asbval:note": "Paper confirms RDKit is a dependency of Met-ID and discusses its installation complexity, supporting its role as a workflow dependency.",
@@ -1366,7 +1366,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-workflow-inspection-and-execution/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/github-actions-workflow-inspection-and-execution/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The code was compiled into executable files for Windows, MacOS and Debian systems through Github Actions, allowing for simple compilations upon changes to the codebase. The complete codebase is freely available on GitHub, allowing users to install and customize their own versions.",
       "asbval:note": "Paper confirms GitHub Actions is used for compilation and that code is freely available on GitHub, but does not describe a workflow inspection methodology, main.yml examination, or badge verification process. The card describes a general CI/CD inspection skill not specifically tied to Met-ID's documented practices.",
@@ -1386,7 +1386,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-adduct-annotation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/mass-spectrometry-adduct-annotation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID enables annotation of m / z features from any type of MALDI-MSI experiment, involving either derivatizing or conventional matrices. It utilizes structural information for derivatizing matrices to generate a subset of targets that contain only functional groups specific to the derivatization agent... The software is able to identify multiple derivatization sites on the same molecule, facilitating identification of the derivatized compound. This ability is exemplified by FMP-10, a reactive matrix that assists the covalent charge-tagging of molecules containing phenolic hydroxyl and/or primary or secondary amine groups.",
       "asbval:note": "Paper describes annotation of derivatized metabolites and support for FMP-10 and TAHS (mentioned in intro), but does NOT describe 'prediction' of adducts in the sense of computational prediction of ionization behavior. Met-ID performs filtering and matching of known adducts ([M+H]+, [M+Na]+, [M+K]+, [M-H]\u2212, [M+Cl]\u2212, etc.) against a precompiled database, not de novo prediction of adduct forms. The card's framing of 'automated prediction' overstates the capability\u2014Met-ID matches observed m/z to known adduct forms in its database, not predict novel adduct forms.",
@@ -1406,7 +1406,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-adduct-annotation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/mass-spectrometry-adduct-annotation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID facilitates mass matching of the intact ionized molecule (MS1) through enhanced database queries... It integrates advanced algorithms to automatically annotate the chemically derivatized metabolites, significantly reducing the time and complexity involved in data analysis. The software supports high-throughput metabolomic studies and minimizes potential errors and biases associated with manual data interpretation.",
       "asbval:note": "Paper explicitly supports high-throughput metabolite identification and mapping of m/z peaks to adduct forms via database matching.",
@@ -1426,7 +1426,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-adduct-annotation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/mass-spectrometry-adduct-annotation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID, a graphical user interface software designed to efficiently identify metabolites from MALDI-MSI data sets... The software is able to identify multiple derivatization sites on the same molecule... Met-ID is installed with a database derived from the Human Metabolome Database (HMDB) and LIPID MAPS and is searchable for common adducts, such as [M + H]+, [M + Na]+ and [M+K]+ in the positive ionization mode and [M-H]\u2212, [M+Cl]\u2212, [M+Na-2H]\u2212, [M+K-2H]\u2212 and [M-H2O\u2013H]\u2212 in the negative ionization mode, along with the derivatizing matrix FMP-10 and the derivatization reagent AMPP.",
       "asbval:note": "Met-ID does automate metabolite identification and supports multiple derivatizing matrices (FMP-10, AMPP confirmed; TAHS mentioned in intro but not confirmed in Met-ID's actual supported matrices). However, the role description claims 'adduct form prediction via RDKit-powered structure analysis'\u2014this is misleading. Met-ID uses RDKit to parse SMILES structures and identify functional groups (to filter which metabolites can be derivatized), not to predict novel adduct forms. Adduct matching is done against a precompiled database of known adducts, not predicted de novo.",
@@ -1446,7 +1446,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-adduct-annotation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/mass-spectrometry-adduct-annotation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID uses chemical structures in the form of simplified molecular-input line-entry system (SMILES) to parse the HMDB and LIPID MAPS and more effectively differentiate between potential candidates and noncandidates... The number of matrix targets is precomputed based on the SMILES structure of each molecule... Met-ID was built in the Tauri software framework... Met-ID is also dependent on rdkit, a C++ framework for computational chemistry.",
       "asbval:note": "RDKit is confirmed as a dependency used to parse SMILES structures and identify functional groups (matrix targets). However, the role description claims RDKit is used to 'predict ionization behavior' and 'compute expected adduct forms'\u2014the paper does not support this. RDKit is used for structural parsing and functional group identification to filter candidates, not for predicting ionization behavior or computing adduct forms. Adduct forms are matched against a precompiled database.",
@@ -1466,7 +1466,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-adduct-annotation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/mass-spectrometry-adduct-annotation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID enables annotation of m / z features from any type of MALDI-MSI experiment, involving either derivatizing or conventional matrices... Met-ID facilitates mass matching of the intact ionized molecule (MS1) through enhanced database queries.",
       "asbval:note": "Paper supports use for derivatized metabolite samples and automatic annotation of ion forms. However, 'predict' is misleading\u2014Met-ID matches observed m/z to known adduct forms in its database, not predict novel forms. The scope should say 'match' or 'annotate' rather than 'predict'.",
@@ -1486,7 +1486,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-adduct-annotation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/mass-spectrometry-adduct-annotation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "A prominent addition to the technique that enhances the detection of diverse metabolites is on-tissue chemical derivatization... Derivatizing agents can be used as complements to conventional matrices or on their own as reactive matrices... There are many examples of reactive matrices and derivatizing agents in the literature, e.g., FMP-10... Unlike traditional matrices that assist in the ionization process, FMP-10 and similar derivatizing matrices possess permanent charges.",
       "asbval:note": "Paper supports the motivation for non-standard matrix support and high-throughput automation.",
@@ -1506,7 +1506,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-ion-formula-assignment/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/mass-spectrometry-ion-formula-assignment/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID enables annotation of m / z features from any type of MALDI-MSI experiment, involving either derivatizing or conventional matrices. It utilizes structural information for derivatizing matrices to generate a subset of targets that contain only functional groups specific to the derivatization agent.",
       "asbval:note": "Paper describes Met-ID as performing metabolite *identification* and *annotation* via database matching and MS2 comparison, not as a tool for *predicting* or *enumerating* adduct formulas de novo. Met-ID uses precomputed derivatization targets based on SMILES structures (passage 4: 'uses the chemical structures in the form of simplified molecular-input line-entry system (SMILES) to parse the HMDB and LIPID MAPS'), but the core function is filtering a precompiled database, not generating predicted adduct m/z values from first principles. The card's framing as 'automated prediction and enumeration' overstates the generative capability; Met-ID is a database-query and matching tool.",
@@ -1526,7 +1526,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-ion-formula-assignment/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/mass-spectrometry-ion-formula-assignment/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID facilitates mass matching of the intact ionized molecule (MS1) through enhanced database queries... It integrates advanced algorithms to automatically annotate the chemically derivatized metabolites, significantly reducing the time and complexity involved in data analysis. The software supports high-throughput metabolomic studies and minimizes potential errors and biases associated with manual data interpretation.",
       "asbval:note": "Paper explicitly states Met-ID automates annotation and reduces manual interpretation burden in high-throughput workflows.",
@@ -1546,7 +1546,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-ion-formula-assignment/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/mass-spectrometry-ion-formula-assignment/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID is also dependent on rdkit, a C++ framework for computational chemistry... The rdkit functionality was written in python files and turned into executable files using PyInstaller.",
       "asbval:note": "Paper confirms RDKit is a dependency of Met-ID and is used for computational chemistry tasks. However, the paper does not explicitly detail RDKit's role in SMILES parsing, molecular graph construction, or m/z calculation. The card's specific functional claims about RDKit are inferred but not directly evidenced in the passages. The paper states Met-ID uses SMILES to parse HMDB/LIPID MAPS (passage 4), but does not explicitly attribute this to RDKit.",
@@ -1566,7 +1566,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-ion-formula-assignment/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/mass-spectrometry-ion-formula-assignment/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID, a graphical user interface software designed to efficiently identify metabolites from MALDI-MSI data sets... It utilizes structural information for derivatizing matrices to generate a subset of targets that contain only functional groups specific to the derivatization agent... The software is able to identify multiple derivatization sites on the same molecule, facilitating identification of the derivatized compound. This ability is exemplified by FMP-10, a reactive matrix that assists the covalent charge-tagging of molecules containing phenolic hydroxyl and/or primary or secondary amine groups.",
       "asbval:note": "Met-ID is confirmed as a metabolite identification platform for MALDI-MSI with support for FMP-10 and derivatizing matrices. However, the card's phrase 'implements adduct ion enumeration' is imprecise. Met-ID does not enumerate adducts de novo; it filters a precompiled database based on derivatization specificity. The paper describes this as 'generate a subset of targets' and 'parse the HMDB and LIPID MAPS' using SMILES, not as generative enumeration of adduct formulas.",
@@ -1586,7 +1586,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-identification-validation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/metabolite-identification-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID enables annotation of m / z features from any type of MALDI-MSI experiment, involving either derivatizing or conventional matrices. It utilizes structural information for derivatizing matrices to generate a subset of targets that contain only functional groups specific to the derivatization agent.",
       "asbval:note": "Paper explicitly describes Met-ID's core function: recognizing derivatizing matrices and applying them to annotate metabolites. The validation aspect is demonstrated through the experimental examples (chemical standards, tissue samples).",
@@ -1606,7 +1606,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-identification-validation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/metabolite-identification-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To enable Met-ID to be used for any type of MSI experiment, it was developed to be dynamic, i.e., users can add their own metabolites, functional groups and matrices, as well as MS2 spectra to customize their own version of Met-ID.",
       "asbval:note": "Paper confirms extensibility to novel matrices. Accuracy validation is demonstrated through comparisons with chemical standards and tissue samples with known metabolites.",
@@ -1626,7 +1626,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-identification-validation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/metabolite-identification-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID also provides tools for calculating and supporting the different masses added by other derivatizing matrices.",
       "asbval:note": "Paper explicitly states Met-ID supports matrices beyond FMP-10 and provides tools for adding new derivatizing matrices.",
@@ -1646,7 +1646,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-identification-validation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/metabolite-identification-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "By incorporating a priori knowledge about the specificity of derivatizing matrices and reagents, such as FMP-10 and AMPP, respectively, Met-ID uses the chemical structures in the form of simplified molecular-input line-entry system (SMILES) to parse the HMDB and LIPID MAPS and more effectively differentiate between potential candidates and noncandidates.",
       "asbval:note": "Paper demonstrates validation against chemical standards and tissue samples with known metabolites, confirming accuracy of adduct annotations.",
@@ -1666,7 +1666,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-identification-validation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/metabolite-identification-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for Met-ID | role: Metabolite identification system in mass spectrometry imaging]",
       "asbval:note": "Met-ID is the primary software tool described throughout the paper for metabolite identification in MALDI-MSI.",
@@ -1686,7 +1686,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-identification-validation/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/metabolite-identification-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID is also dependent on rdkit, a C++ framework for computational chemistry.",
       "asbval:note": "Paper confirms RDKit is a dependency of Met-ID used for computational chemistry tasks.",
@@ -1706,7 +1706,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-identification-validation/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/metabolite-identification-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID also provides tools for calculating and supporting the different masses added by other derivatizing matrices. Additionally, since some metabolites are not included in the HMDB, Met-ID enables users to add new entries, ensuring the software remains adaptable to specific research needs.",
       "asbval:note": "Paper confirms Met-ID supports registration of new matrices and adduct prediction through its customizable database and chemical structure parsing.",
@@ -1726,7 +1726,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-identification-validation/007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/metabolite-identification-validation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID is also dependent on rdkit, a C++ framework for computational chemistry. The rdkit functionality was written in python files and turned into executable files using PyInstaller.",
       "asbval:note": "Paper confirms RDKit is used for computational chemistry, which includes chemical structure handling. The SMILES parsing for structure analysis is mentioned as core to Met-ID's adduct prediction.",
@@ -1746,7 +1746,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-weight-prediction-with-modifications/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/molecular-weight-prediction-with-modifications/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID utilizes structural information for derivatizing matrices to generate a subset of targets that contain only functional groups specific to the derivatization agent. The software is able to identify multiple derivatization sites on the same molecule, facilitating identification of the derivatized compound. This ability is exemplified by FMP-10, a reactive matrix that assists the covalent charge-tagging of molecules containing phenolic hydroxyl and/or primary or secondary amine groups.",
       "asbval:note": "The paper explicitly addresses computing m/z values for FMP-10 derivatized metabolites with multiple derivatization states.",
@@ -1766,7 +1766,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-weight-prediction-with-modifications/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/molecular-weight-prediction-with-modifications/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The software is able to identify multiple derivatization sites on the same molecule, facilitating identification of the derivatized compound... Furthermore, the FMP-10 matrix can derivatize target molecules that have multiple functional groups, leading to formation of several potential ions. For instance, dopamine can undergo single, double or triple derivatization, generating an intricate spectral profile.",
       "asbval:note": "Paper demonstrates multiple derivatization states for single metabolites (dopamine example with 1, 2, 3 derivatizations).",
@@ -1786,7 +1786,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-weight-prediction-with-modifications/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/molecular-weight-prediction-with-modifications/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID uses the chemical structures in the form of simplified molecular-input line-entry system (SMILES) to parse the HMDB and LIPID MAPS and more effectively differentiate between potential candidates and noncandidates.",
       "asbval:note": "Paper explicitly uses SMILES for structure parsing and derivatization-specific filtering.",
@@ -1806,7 +1806,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-weight-prediction-with-modifications/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/molecular-weight-prediction-with-modifications/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID is also dependent on rdkit, a C++ framework for computational chemistry... The rdkit functionality was written in python files and turned into executable files using PyInstaller.",
       "asbval:note": "Paper confirms RDKit is a dependency of Met-ID for computational chemistry tasks including SMILES parsing.",
@@ -1826,7 +1826,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-weight-prediction-with-modifications/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/molecular-weight-prediction-with-modifications/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID is installed with a database derived from the Human Metabolome Database (HMDB) and LIPID MAPS and is searchable for common adducts, such as [M + H]+, [M + Na]+ and [M+K]+ in the positive ionization mode and [M-H]\u2212, [M+Cl]\u2212, [M+Na-2H]\u2212, [M+K-2H]\u2212 and [M-H2O\u2013H]\u2212 in the negative ionization mode, along with the derivatizing matrix FMP-10... To enable Met-ID to be used for any type of MSI experiment, it was developed to be dynamic, i.e., users can add their own metabolites, functional groups and matrices, as well as MS2 spectra to customize their own version of Met-ID.",
       "asbval:note": "Met-ID is confirmed as the host software with extensible matrix support and adduct enumeration capabilities.",
@@ -1846,7 +1846,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-weight-prediction-with-modifications/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/molecular-weight-prediction-with-modifications/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID is also dependent on rdkit, a C++ framework for computational chemistry.",
       "asbval:note": "RDKit is confirmed as a dependency; URL is standard RDKit homepage.",
@@ -1866,7 +1866,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-weight-prediction-with-modifications/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/molecular-weight-prediction-with-modifications/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The complete codebase is freely available on GitHub... Met-ID is released under an open Apache 2.0 license.",
       "asbval:note": "Paper confirms Met-ID is on GitHub; author name (Patrik Bj\u00e4rterot) matches repo path.",
@@ -1886,7 +1886,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reference-dataset-validation-for-metabolite-ions/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/reference-dataset-validation-for-metabolite-ions/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID is installed with a database derived from the Human Metabolome Database (HMDB) and LIPID MAPS and is searchable for common adducts, such as [M + H]+, [M + Na]+ and [M+K]+ in the positive ionization mode and [M-H]\u2212, [M+Cl]\u2212, [M+Na-2H]\u2212, [M+K-2H]\u2212 and [M-H2O\u2013H]\u2212 in the negative ionization mode, along with the derivatizing matrix FMP-10",
       "asbval:note": "Paper validates FMP-10 derivatized metabolites against HMDB and LIPID MAPS databases, not specifically 'Nature Methods FMP-10 data'. The paper does include MS2 database of FMP-10 derivatized standards (154 derivatized forms from 66 chemical standards) for validation, but the reference to 'Nature Methods FMP-10 data' appears to be a specific dataset name not mentioned in the paper.",
@@ -1906,7 +1906,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reference-dataset-validation-for-metabolite-ions/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/reference-dataset-validation-for-metabolite-ions/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID uses chemical information to optimize database queries, aiming to reduce the occurrence of false positives... By incorporating a priori knowledge about the specificity of derivatizing matrices and reagents, such as FMP-10 and AMPP, respectively, Met-ID uses the chemical structures in the form of simplified molecular-input line-entry system (SMILES) to parse the HMDB and LIPID MAPS and more effectively differentiate between potential candidates and noncandidates.",
       "asbval:note": "Paper demonstrates automated enumeration of FMP-10 derivatization sites (single, double, triple) and validation against experimental tissue data.",
@@ -1926,7 +1926,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reference-dataset-validation-for-metabolite-ions/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/reference-dataset-validation-for-metabolite-ions/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The Met-ID MS2 database currently contains 154 derivatized forms originating from 66 chemical standards, including spectra at collision-induced dissociation (CID) ranges between 0 and 50 eV... Met-ID functions as a frontend for viewing and searching these MS2 spectra, enabling targeted exploration.",
       "asbval:note": "Paper describes validation of predicted ions against curated MS2 database of FMP-10 derivatized standards.",
@@ -1946,7 +1946,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reference-dataset-validation-for-metabolite-ions/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/reference-dataset-validation-for-metabolite-ions/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To enable Met-ID to be used for any type of MSI experiment, it was developed to be dynamic, i.e., users can add their own metabolites, functional groups and matrices, as well as MS2 spectra to customize their own version of Met-ID... Met-ID also provides tools for calculating and supporting the different masses added by other derivatizing matrices.",
       "asbval:note": "Paper explicitly describes customization for new matrices and functional groups.",
@@ -1966,7 +1966,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reference-dataset-validation-for-metabolite-ions/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/reference-dataset-validation-for-metabolite-ions/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID uses the chemical structures in the form of simplified molecular-input line-entry system (SMILES) to parse the HMDB and LIPID MAPS... Met-ID is also dependent on rdkit, a C++ framework for computational chemistry.",
       "asbval:note": "Paper confirms RDKit use for SMILES parsing and molecular structure analysis for adduct prediction.",
@@ -1986,7 +1986,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reference-dataset-validation-for-metabolite-ions/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/reference-dataset-validation-for-metabolite-ions/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID, a graphical user interface software designed to efficiently identify metabolites from MALDI-MSI data sets... It utilizes structural information for derivatizing matrices to generate a subset of targets that contain only functional groups specific to the derivatization agent... The software is able to identify multiple derivatization sites on the same molecule, facilitating identification of the derivatized compound.",
       "asbval:note": "Paper confirms Met-ID's role in adduct enumeration and validation for derivatized metabolites in MALDI-MSI.",
@@ -2006,7 +2006,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/shell-environment-setup-and-dependency-management/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/shell-environment-setup-and-dependency-management/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The code was compiled into executable files for Windows, MacOS and Debian systems through Github Actions, allowing for simple compilations upon changes to the codebase.",
       "asbval:note": "Paper describes Met-ID's CI/CD setup (Github Actions compilation) but does not provide instructions or guidance on reproducing the CI/CD pipeline locally. The paper documents that Github Actions exists and compiles code, but does not address the task of setting up a local shell environment to mirror CI/CD execution.",
@@ -2026,7 +2026,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/shell-environment-setup-and-dependency-management/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/shell-environment-setup-and-dependency-management/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The complete codebase is freely available on GitHub",
       "asbval:note": "Paper confirms code is on GitHub but does not discuss git cloning or version control workflows. The task assumes git usage but the paper does not explicitly mention git as a tool used in the project.",
@@ -2046,7 +2046,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/shell-environment-setup-and-dependency-management/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/shell-environment-setup-and-dependency-management/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The code was compiled into executable files for Windows, MacOS and Debian systems through Github Actions, allowing for simple compilations upon changes to the codebase.",
       "asbval:note": "Paper confirms Github Actions is used for compilation and CI, but does not document workflow steps, environment variables, or dependency commands. The paper does not discuss API-based workflow triggering or monitoring.",
@@ -2066,7 +2066,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/shell-environment-setup-and-dependency-management/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/shell-environment-setup-and-dependency-management/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID was built in the Tauri software framework, which utilizes a Rust programming backend with a general web frontend consisting of HTML, CSS and Typescript. The code was compiled into executable files for Windows, MacOS and Debian systems through Github Actions",
       "asbval:note": "Paper explicitly states Met-ID uses Rust/Tauri and Github Actions for compilation, confirming Rust/cargo is the build system.",
@@ -2086,7 +2086,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/shell-environment-setup-and-dependency-management/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/shell-environment-setup-and-dependency-management/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The rdkit functionality was written in python files and turned into executable files using PyInstaller.",
       "asbval:note": "Paper confirms Python is used for rdkit integration via PyInstaller, but does not document Python-based tests or CI workflow steps involving Python execution.",
@@ -2106,7 +2106,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/shell-environment-setup-and-dependency-management/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/shell-environment-setup-and-dependency-management/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "a general web frontend consisting of HTML, CSS and Typescript",
       "asbval:note": "Paper confirms TypeScript is used in the frontend but does not mention npm, Node.js, or any npm-based build/test commands in the CI workflow.",
@@ -2126,7 +2126,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/shell-environment-setup-and-dependency-management/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/shell-environment-setup-and-dependency-management/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID is also dependent on rdkit, a C++ framework for computational chemistry. The rdkit functionality was written in python files and turned into executable files using PyInstaller.",
       "asbval:note": "Paper explicitly states Met-ID depends on rdkit for computational chemistry. RDKit is confirmed as a critical dependency.",
@@ -2146,7 +2146,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-plugin-development/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/software-plugin-development/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To enhance its versatility, Met-ID allows users to customize their own versions... Met-ID also provides tools for calculating and supporting the different masses added by other derivatizing matrices. Additionally, since some metabolites are not included in the HMDB, Met-ID enables users to add new entries, ensuring the software remains adaptable to specific research needs.",
       "asbval:note": "Paper confirms extensibility and customization without core modification, but describes this as direct database/configuration editing rather than formal 'plugin module' registration. The mechanism is configuration-driven (adding matrices, metabolites, MS2 spectra) but not explicitly framed as a plugin architecture with a plugin registry.",
@@ -2166,7 +2166,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-plugin-development/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/software-plugin-development/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID also provides tools for calculating and supporting the different masses added by other derivatizing matrices... FMP-10 is a suitable matrix for experiments targeting neurotransmitters, and the base version of Met-ID is optimized for its use. However, Met-ID also provides tools for calculating and supporting the different masses added by other derivatizing matrices.",
       "asbval:note": "Paper confirms Met-ID supports alternative matrices (TAHS is mentioned in introduction as an example of reactive matrices), but the mechanism is described as user-customizable database editing and configuration, not formal plugin registration. The example of TAHS is mentioned as context for derivatizing agents but not demonstrated as a worked example of adding it to Met-ID.",
@@ -2186,7 +2186,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-plugin-development/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/software-plugin-development/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce Met-ID, a graphical user interface software designed to efficiently identify metabolites from MALDI-MSI data sets.",
       "asbval:note": null,
@@ -2206,7 +2206,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-plugin-development/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/software-plugin-development/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The complete codebase is freely available on GitHub, allowing users to install and customize their own versions.",
       "asbval:note": "GitHub availability confirmed; exact URL not verbatim in passages but author name (Patrik Bj\u00e4rterot) matches repo path.",
@@ -2226,7 +2226,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-plugin-development/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/software-plugin-development/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID is released under an open Apache 2.0 license... Met-ID allows users to customize their own versions... Met-ID also provides tools for calculating and supporting the different masses added by other derivatizing matrices.",
       "asbval:note": "Met-ID is confirmed as the primary platform for metabolite identification in MSI and supports extensibility. However, the paper does not describe a formal 'plugin registry' mechanism; instead, it describes direct customization of databases and configuration files (SQLite databases, adding metabolites, functional groups, matrices, MS2 spectra). The term 'plugin registry' overstates the architectural formality.",
@@ -2246,7 +2246,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-plugin-development/005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/software-plugin-development/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID is also dependent on rdkit, a C++ framework for computational chemistry.",
       "asbval:note": null,
@@ -2266,7 +2266,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-plugin-development/006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/software-plugin-development/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID is also dependent on rdkit, a C++ framework for computational chemistry... The rdkit functionality was written in python files and turned into executable files using PyInstaller.",
       "asbval:note": "RDKit is confirmed as a dependency for computational chemistry. The paper states it is used but does not explicitly detail its role in computing 'ionization behavior' or 'adduct annotations for registered matrices.' The paper mentions Met-ID uses SMILES structures to parse databases and compute derivatization targets, but does not explicitly attribute this to RDKit's functionality.",
@@ -2286,7 +2286,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/test-output-parsing-and-status-validation/000",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/test-output-parsing-and-status-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper is about Met-ID, a metabolite identification software for MALDI-MSI. It contains no discussion of CI/CD workflows, test output parsing, GitHub Actions badge validation, or automated test pipeline verification. The research question is entirely orthogonal to the paper's scope.",
@@ -2306,7 +2306,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/test-output-parsing-and-status-validation/001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/test-output-parsing-and-status-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper mentions Met-ID is 'freely available as an open-source tool on GitHub' and code is 'compiled into executable files for Windows, MacOS and Debian systems through Github Actions' [passage 8], but does not discuss GitHub Actions as a CI/CD testing platform, workflow badge validation, or test output log parsing. The mention of Github Actions is incidental to build compilation, not CI/CD testing workflows.",
@@ -2326,7 +2326,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/test-output-parsing-and-status-validation/002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/test-output-parsing-and-status-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss git, repository cloning, .github/workflows/ directory structure, or local test environment setup. No evidence of this workflow-related task in the paper.",
@@ -2346,7 +2346,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/test-output-parsing-and-status-validation/003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/test-output-parsing-and-status-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Met-ID is also dependent on rdkit,37 a C++ framework for computational chemistry. The installation of rdkit is slightly more difficult than an average PYPI project but often works with anaconda. The rdkit functionality was written in python files and turned into executable files using PyInstaller.",
       "asbval:note": "Paper confirms RDKit is a dependency of Met-ID and discusses installation challenges, but does NOT discuss version mismatches causing CI failures or test environment setup in the context of CI/CD workflows. The card's claim about 'version mismatches can cause CI failures' is not supported by the paper; the paper only notes installation difficulty.",
@@ -2366,7 +2366,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/test-output-parsing-and-status-validation/004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/test-output-parsing-and-status-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss GitHub Actions workflow badges, CI pipeline status reporting, or badge validation. The task card's scope is entirely about CI/CD testing workflows; the paper is about metabolite identification software functionality.",
@@ -2386,7 +2386,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/adduct-mass-calculation-from-smiles/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/adduct-mass-calculation-from-smiles/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 3,
       "asbval:target_artifact_id": "adduct-mass-calculation-from-smiles",
@@ -2399,7 +2399,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ci-cd-pipeline-reproducibility-verification/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/ci-cd-pipeline-reproducibility-verification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "ci-cd-pipeline-reproducibility-verification",
@@ -2412,7 +2412,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/derivatizing-matrix-configuration/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/derivatizing-matrix-configuration/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "derivatizing-matrix-configuration",
@@ -2425,7 +2425,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/derivatizing-matrix-ionization-rule-application/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/derivatizing-matrix-ionization-rule-application/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "derivatizing-matrix-ionization-rule-application",
@@ -2438,7 +2438,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/git-repository-cloning-and-version-control/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/git-repository-cloning-and-version-control/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 4,
       "asbval:target_artifact_id": "git-repository-cloning-and-version-control",
@@ -2451,7 +2451,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/github-actions-workflow-inspection-and-execution/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/github-actions-workflow-inspection-and-execution/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "github-actions-workflow-inspection-and-execution",
@@ -2464,7 +2464,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-adduct-annotation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/mass-spectrometry-adduct-annotation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "mass-spectrometry-adduct-annotation",
@@ -2477,7 +2477,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-ion-formula-assignment/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/mass-spectrometry-ion-formula-assignment/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 4,
       "asbval:target_artifact_id": "mass-spectrometry-ion-formula-assignment",
@@ -2490,7 +2490,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-identification-validation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/metabolite-identification-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "metabolite-identification-validation",
@@ -2503,7 +2503,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-weight-prediction-with-modifications/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/molecular-weight-prediction-with-modifications/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "molecular-weight-prediction-with-modifications",
@@ -2516,7 +2516,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reference-dataset-validation-for-metabolite-ions/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/reference-dataset-validation-for-metabolite-ions/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "reference-dataset-validation-for-metabolite-ions",
@@ -2529,7 +2529,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/shell-environment-setup-and-dependency-management/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/shell-environment-setup-and-dependency-management/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "shell-environment-setup-and-dependency-management",
@@ -2542,7 +2542,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-plugin-development/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/software-plugin-development/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "software-plugin-development",
@@ -2555,7 +2555,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/test-output-parsing-and-status-validation/triage",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/skill/test-output-parsing-and-status-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "test-output-parsing-and-status-validation",
@@ -2568,7 +2568,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Metabolite identification in Mass Spectrometry Imaging is currently done manually by experts.",
       "asbval:note": "substring_in_paper=false; text is consistent with excerpt but generalizes 'at the moment' to present tense without temporal qualifier",
@@ -2588,7 +2588,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Manual metabolite identification is not feasible in high throughput studies.",
       "asbval:note": "substring_in_paper=false; text accurately reflects excerpt content but excerpt uses 'not feasable' (likely typo for 'feasible') which is preserved in claim",
@@ -2608,7 +2608,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Met-ID has been developed to automate metabolite identification in Mass Spectrometry Imaging.",
       "asbval:note": "substring_in_paper=false; excerpt text matches claim exactly but substring search failed, suggesting possible formatting or encoding issues in source",
@@ -2628,7 +2628,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Met-ID focuses on derivatizing matrices leading to ions other than the common [M+H]+ in positive mode and [M-H]- in negative mode.",
       "asbval:note": "substring_in_paper=false; text omits 'particular' qualifier and changes 'other ions' to 'ions other than' (minor rewording); content is consistent",
@@ -2648,7 +2648,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "FMP-10 was developed in house.",
       "asbval:note": "substring_in_paper=false; text accurately reflects excerpt but excerpt includes citation link that provides external context",
@@ -2668,7 +2668,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "FMP-10 features heavily in the Met-ID software.",
       "asbval:note": "substring_in_paper=false; excerpt is incomplete ('it features heavily in the software') lacks antecedent clarity without full context",
@@ -2688,7 +2688,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1021%2Facs.analchem.5c00633/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Met-ID is extendable to use any derivatizing matrix.",
       "asbval:note": "substring_in_paper=false; excerpt is truncated mid-word ('derivatizing ma') making full validation impossible; claim appears consistent with fragment",

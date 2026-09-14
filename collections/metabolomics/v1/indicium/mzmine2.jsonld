@@ -208,7 +208,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We focused on three main aims during the software design and implementation. First, the framework should be flexible and allow for easy and straightforward development of new data processing modules... Second, the graphical interface of the application should be intuitive and easy to use... The current version of the framework is already suitable for processing large batches of data, both for targeted and/or non-targeted analyses",
       "asbval:note": "Research question is well-supported by the paper's stated design goals and the abstract's emphasis on modularity, usability, and comprehensive workflow coverage.",
@@ -228,7 +228,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we introduce a new generation of a popular open-source data processing toolbox, MZmine 2.",
       "asbval:note": "[SUBSTRING-MATCH for MZmine 2 | role: primary software tool]",
@@ -248,7 +248,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MZmine 2 was developed using Java technology, and is therefore platform independent.",
       "asbval:note": "Lowercase variant of MZmine 2; case-insensitive match confirmed.",
@@ -268,7 +268,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/003",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/card/task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GitHub is not mentioned anywhere in the provided passages. The paper references SourceForge (http://mzmine.sourceforge.net/) as the project repository, not GitHub.",
@@ -288,7 +288,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/004",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/card/task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MZmine was first introduced in 2005 as an open-source software toolbox for LC-MS data processing",
       "asbval:note": "MZmine (version 1) is mentioned as the predecessor to MZmine 2; both are discussed in the paper.",
@@ -308,7 +308,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/005",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/card/task_001/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not contain file listings or supplementary material inventories. Cannot verify whether these specific figure files are part of the paper's outputs or supplementary materials from the provided text.",
@@ -328,7 +328,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The expected_outputs section lists 20 specific image files (icons and logos). These appear to be supplementary materials or assets rather than scientific outputs (results, tables, analyses). The paper itself does not enumerate such files in the provided passages.",
@@ -345,7 +345,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evidence-linking/000",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/evidence-linking/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The research_question describes a meta-level curation/auditing task about evidence linking and reproducibility. The paper (MZmine 2) is a software tool paper describing MS data processing capabilities, not a task about evidence linking itself. The card appears to conflate the paper's subject matter (MZmine 2 software) with a curation methodology that is not present in the paper.",
@@ -365,7 +365,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evidence-linking/001",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/evidence-linking/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The scope describes a meta-curation methodology for auditing workflows and tracing tool provenance. The paper is a technical description of MZmine 2 software features and validation benchmarks, not a methodological paper on evidence linking or reproducibility auditing.",
@@ -385,7 +385,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evidence-linking/002",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/evidence-linking/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MZmine 2 is freely available under a GNU GPL license and can be obtained from the project website at: http://mzmine.sourceforge.net/. The current version of MZmine 2 is suitable for processing large batches of data and has been applied to both targeted and non-targeted metabolomic analyses.",
       "asbval:note": "MZmine 2 is confirmed as open-source software for MS data processing in the paper abstract and introduction.",
@@ -405,7 +405,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evidence-linking/003",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/evidence-linking/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper (2010) describes MZmine 2 only. No mention of a successor version or active development fork is present in the passages. The GitHub repository URL cannot be verified from the paper text.",
@@ -425,7 +425,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evidence-linking/004",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/evidence-linking/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper provides the project website URL (http://mzmine.sourceforge.net/) but does not mention a GitHub repository. The GitHub URL in the card cannot be verified from the paper passages.",
@@ -445,7 +445,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evidence-linking/005",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/evidence-linking/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention GitHub as a repository platform. The project website is listed as http://mzmine.sourceforge.net/, indicating SourceForge was the primary repository at the time of publication (2010).",
@@ -465,7 +465,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/000",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/expert-review-preparation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper (MZmine 2, 2010) is a software methods paper describing the design, architecture, and performance of MZmine 2. It does not address or discuss the meta-task of 'preparing a scientific software project for expert review' or the methodology of 'systematically reconstructing and evaluating claims.' The card's research question describes a curation/validation workflow, not a scientific research question or software development goal present in the paper.",
@@ -485,7 +485,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/001",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/expert-review-preparation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "A key concept of the MZmine 2 software design is the strict separation of core functionality and data processing modules, with emphasis on easy usability and support for high-resolution spectra processing... We focused on three main aims during the software design and implementation. First, the framework should be flexible and allow for easy and straightforward development of new data processing modules... Second, the graphical interface of the application should be intuitive and easy to use... The third goal was to provide good support for processing high-resolution MS data",
       "asbval:note": "The paper does state goals of flexibility, usability, and extensibility, but the scope description is about a meta-skill for validating software projects before review. The paper itself is the software description, not a guide to the validation process. The example goals cited ('user-friendly, flexible, easily extendable') are present in the paper, but the scope's framing as a skill/workflow for validation is not addressed by the paper.",
@@ -505,7 +505,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/002",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/expert-review-preparation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MZmine 2 is freely available under a GNU GPL license and can be obtained from the project website at: http://mzmine.sourceforge.net/",
       "asbval:note": "The paper describes MZmine 2 and references the SourceForge project website (http://mzmine.sourceforge.net/), not a GitHub repository. The card claims the primary tool is 'mzmine' at GitHub, but the paper predates or does not reference GitHub as the canonical repository. The tool exists and is the subject, but the specific repo URL cannot be verified from the paper.",
@@ -525,7 +525,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/003",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/expert-review-preparation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper is about MZmine 2 itself (published 2010), not a later version. There is no reference to MZmine 2 as an 'archived predecessor' or to a separate 'mzmine2' GitHub repository. The paper describes MZmine 2 as the current release, not as a historical predecessor.",
@@ -545,7 +545,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/004",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/expert-review-preparation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention GitHub Actions, CI/CD pipelines, or automated build verification. The paper states MZmine 2 was 'tested on the Windows, Mac OS X, and Linux platforms' and was 'developed using Java technology' but does not describe CI/CD infrastructure or GitHub Actions.",
@@ -565,7 +565,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/005",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/expert-review-preparation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we introduce a new generation of a popular open-source data processing toolbox, MZmine 2... MZmine 2 is freely available under a GNU GPL license and can be obtained from the project website at: http://mzmine.sourceforge.net/",
       "asbval:note": "MZmine 2 is the primary subject of the paper. The tool is confirmed present and described in detail.",
@@ -585,7 +585,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/006",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/expert-review-preparation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GitHub is not mentioned in the paper. The paper references SourceForge (http://mzmine.sourceforge.net/) as the project hosting platform, not GitHub.",
@@ -605,7 +605,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/007",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/expert-review-preparation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MZmine was first introduced in 2005 as an open-source software toolbox for LC-MS data processing... the new release, MZmine 2, was completely redesigned to support modularity.",
       "asbval:note": "MZmine (the original version) is mentioned as the predecessor to MZmine 2, confirming its existence and role in the project history.",
@@ -625,7 +625,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/figure-table-interpretation/000",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/figure-table-interpretation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "This research_question describes a meta-task (validating paper claims) rather than the actual research question of the MZmine 2 paper. The paper's actual research question is to introduce MZmine 2, a new generation data processing toolbox for mass spectrometry, with emphasis on modularity, usability, and high-resolution spectra support. The card's research_question appears to be a generic instruction for the extraction task itself, not the paper's scientific goal.",
@@ -645,7 +645,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/figure-table-interpretation/001",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/figure-table-interpretation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The scope describes a meta-analytical skill for validating papers, not the scope of the MZmine 2 paper itself. The paper's actual scope is to describe the architecture and features of MZmine 2 software for LC-MS data processing, including new modules for peak detection, identification, alignment (RANSAC), and visualization.",
@@ -665,7 +665,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/figure-table-interpretation/002",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/figure-table-interpretation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we introduce a new generation of a popular open-source data processing toolbox, MZmine 2.",
       "asbval:note": "MZmine 2 is the primary subject of the paper. The paper describes its architecture, modules, and performance.",
@@ -685,7 +685,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/figure-table-interpretation/003",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/figure-table-interpretation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper (2010) does not mention a successor project called 'mzmine (current)'. The paper only discusses MZmine (first version, 2005) and MZmine 2 (the new version being introduced). No reference to a later 'current' version or migration is present in the provided passages.",
@@ -705,7 +705,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/figure-table-interpretation/004",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/figure-table-interpretation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MZmine 2 is freely available under a GNU GPL license and can be obtained from the project website at: http://mzmine.sourceforge.net/",
       "asbval:note": "The paper indicates MZmine 2 is available on SourceForge (http://mzmine.sourceforge.net/), not GitHub. The card claims GitHub is the primary source, but the paper references SourceForge as the distribution point. GitHub may host the code now, but the paper does not mention it.",
@@ -725,7 +725,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/figure-table-interpretation/005",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/figure-table-interpretation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MZmine 2 is freely available under a GNU GPL license and can be obtained from the project website at: http://mzmine.sourceforge.net/",
       "asbval:note": "The paper discusses 'MZmine 2' (with space and numeral), not 'mzmine2' (lowercase, no space). While semantically equivalent, the card's slug uses a different naming convention than the paper's official name.",
@@ -745,7 +745,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/figure-table-interpretation/006",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/figure-table-interpretation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MZmine was first introduced in 2005 as an open-source software toolbox for LC-MS data processing",
       "asbval:note": "The paper explicitly discusses the original MZmine (version 1) introduced in 2005, which is the predecessor to MZmine 2.",
@@ -765,7 +765,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/output-grounding/000",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/output-grounding/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MZmine 2 is freely available under a GNU GPL license and can be obtained from the project website at: http://mzmine.sourceforge.net/. The current version of MZmine 2 is suitable for processing large batches of data and has been applied to both targeted and non-targeted metabolomic analyses.",
       "asbval:note": "Paper describes MZmine 2 software and its capabilities, but the research_question as stated is a meta-skill about verification and grounding methodology, not a research question about MZmine itself. The paper is a tool paper describing MZmine 2 implementation, not a paper about the skill of output-grounding. The card appears to conflate the tool description with a methodological skill.",
@@ -785,7 +785,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/output-grounding/001",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/output-grounding/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MZmine 2 is freely available under a GNU GPL license and can be obtained from the project website at: http://mzmine.sourceforge.net/",
       "asbval:note": "Paper references MZmine 2 and its sourceforge repository (http://mzmine.sourceforge.net/), not the GitHub URL provided in the card. The card lists a modern GitHub repository URL that is not mentioned in this 2010 paper. The tool exists and is described, but the specific repository URL cannot be verified from the passages.",
@@ -805,7 +805,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/output-grounding/002",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/output-grounding/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MZmine 2 is freely available under a GNU GPL license and can be obtained from the project website at: http://mzmine.sourceforge.net/",
       "asbval:note": "Paper describes MZmine 2 extensively and confirms it is open-source and available, but the specific GitHub URL (https://github.com/mzmine/mzmine2) is not mentioned in the passages. The paper references sourceforge.net, not GitHub.",
@@ -825,7 +825,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/output-grounding/003",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/output-grounding/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper makes no mention of GitHub as a platform. The paper was published in 2010 and references sourceforge.net as the distribution platform. GitHub is not discussed in any passage.",
@@ -845,7 +845,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/output-grounding/004",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/output-grounding/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper describes MZmine 2 as a software tool for MS data processing, not as a skill or methodology. The card lists 'output-grounding' as a related skill, but the paper does not discuss or teach this skill; it only describes the tool's implementation.",
@@ -865,7 +865,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/output-grounding/005",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/output-grounding/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "A key concept of the MZmine 2 software design is the strict separation of core functionality and data processing modules, with emphasis on easy usability and support for high-resolution spectra processing... The typical MS data processing workflow comprises raw data file import, filtering/smoothing (optional), peak picking, peak list deisotoping, alignment, gap filling, and normalization. The MZmine 2 modules cover all these workflow stages",
       "asbval:note": "Paper explicitly describes MZmine 2's design goals (modularity, usability, high-resolution support) and demonstrates implementation across the full MS workflow.",
@@ -885,7 +885,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/000",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/reproducibility-gap-detection/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MZmine 2 is freely available under a GNU GPL license and can be obtained from the project website at: http://mzmine.sourceforge.net/. The current version of MZmine 2 is suitable for processing large batches of data and has been applied to both targeted and non-targeted metabolomic analyses.",
       "asbval:note": "The paper describes MZmine 2 as an open-source software with availability and licensing information, but does NOT discuss reproducibility gaps, missing artifacts, changelogs, version tracking, or dependency specifications. The paper is a software description/methods paper, not a reproducibility audit. The card's research question describes a meta-analytical task (auditing reproducibility barriers) that is not the paper's actual research question.",
@@ -905,7 +905,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/001",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/reproducibility-gap-detection/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper is a software methods paper describing MZmine 2's architecture, features, and performance. It does not conduct or discuss reproducibility gap detection, artifact auditing, changelog analysis, or version tracking. The scope describes a meta-analytical/auditing task that is outside the paper's scope.",
@@ -925,7 +925,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/002",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/reproducibility-gap-detection/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here we introduce a new generation of a popular open-source data processing toolbox, MZmine 2.",
       "asbval:note": "MZmine 2 is confirmed present in the paper as the primary subject. However, the paper does NOT identify or discuss reproducibility gaps in MZmine 2. The tool is used as the subject of a methods paper, not as a tool for conducting reproducibility audits.",
@@ -945,7 +945,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/003",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/reproducibility-gap-detection/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention or compare mzmine (current version) against MZmine 2. The paper is about MZmine 2 only and does not discuss subsequent versions or their documentation improvements.",
@@ -965,7 +965,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/004",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/reproducibility-gap-detection/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention GitHub or discuss accessing repository materials, changelogs, or version tags. The paper provides a SourceForge URL (http://mzmine.sourceforge.net/) as the distribution point, not GitHub.",
@@ -985,7 +985,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scientific-task-formulation/000",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/scientific-task-formulation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "This claim describes a meta-skill or methodology for task formulation, not a research question addressed by the paper. The paper is about MZmine 2 software design and implementation for MS data processing, not about formulating scientific tasks or validating workflow coverage claims. The paper does not discuss task formulation methodology, reproducibility gap detection, or bridging research claims to software outputs as a research contribution.",
@@ -1005,7 +1005,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scientific-task-formulation/001",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/scientific-task-formulation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MZmine 2 is freely available under a GNU GPL license and can be obtained from the project website at: http://mzmine.sourceforge.net/. The current version of MZmine 2 is suitable for processing large batches of data and has been applied to both targeted and non-targeted metabolomic analyses.",
       "asbval:note": "Paper confirms MZmine 2 is a reference implementation for MS data processing and describes its workflow coverage (peak detection, alignment, identification, etc.). However, the paper provides the SourceForge URL (http://mzmine.sourceforge.net/), not the GitHub URL claimed in the card. The GitHub repository URL cannot be verified from the passages provided.",
@@ -1025,7 +1025,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scientific-task-formulation/002",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/scientific-task-formulation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper (2010) describes MZmine 2 only. There is no mention of a successor project called 'mzmine (current)' or any GitHub repository for an updated version. The paper predates any such successor and cannot validate claims about current development status or GitHub URLs.",
@@ -1045,7 +1045,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scientific-task-formulation/003",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/scientific-task-formulation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MZmine 2 is freely available under a GNU GPL license and can be obtained from the project website at: http://mzmine.sourceforge.net/",
       "asbval:note": "The paper confirms the existence and role of MZmine 2 software, but the card entry 'mzmine2' is incomplete: canonical_url, evidence_spans, install, version_used, source_paper_doi, and source_paper_title are all null or empty. The paper's DOI is 10.1186/1471-2105-11-395 and title is 'MZmine 2: Modular framework for processing, visualizing, and analyzing mass spectrometry-based molecular profile data', which should populate these fields.",
@@ -1065,7 +1065,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scientific-task-formulation/004",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/scientific-task-formulation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GitHub is not mentioned in the paper. The paper only references the SourceForge project website (http://mzmine.sourceforge.net/). GitHub as a tool is not relevant to the paper's content and appears to be an extraction error or conflation with modern repository practices.",
@@ -1085,7 +1085,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scientific-task-formulation/005",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/scientific-task-formulation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "MZmine was first introduced in 2005 as an open-source software toolbox for LC-MS data processing [3]. The first version of MZmine defined the data analysis workflow and implemented simple methods for data processing and visualization [3,4].",
       "asbval:note": "The paper mentions the original MZmine (version 1, 2005) as a predecessor to MZmine 2, but the card entry 'MZmine' is incomplete and conflates the original version with the current project. The card should clarify whether it refers to MZmine v1 or the current MZmine project. The paper's focus is on MZmine 2, not the original MZmine.",
@@ -1105,7 +1105,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/evidence-linking/triage",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/evidence-linking/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "evidence-linking",
@@ -1118,7 +1118,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/expert-review-preparation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/expert-review-preparation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "expert-review-preparation",
@@ -1131,7 +1131,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/figure-table-interpretation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/figure-table-interpretation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "figure-table-interpretation",
@@ -1144,7 +1144,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/output-grounding/triage",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/output-grounding/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "output-grounding",
@@ -1157,7 +1157,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/reproducibility-gap-detection/triage",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/reproducibility-gap-detection/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "reproducibility-gap-detection",
@@ -1170,7 +1170,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/scientific-task-formulation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/skill/scientific-task-formulation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "scientific-task-formulation",
@@ -1183,7 +1183,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "All development of MZmine now happens in a new repository called mzmine3.",
       "asbval:note": null,
@@ -1203,7 +1203,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The mzmine2 repository serves only as a reference to the old MZmine 2.",
       "asbval:note": null,
@@ -1223,7 +1223,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MZmine 2 is an open-source software for mass-spectrometry data processing.",
       "asbval:note": null,
@@ -1243,7 +1243,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The goal of MZmine 2 is to provide user-friendly, flexible and easily extendable software with a complete set of modules covering the entire MS data analysis workflow.",
       "asbval:note": "Source excerpt is truncated mid-sentence ('easily extend'); claim completes the thought but cannot be fully verified against the incomplete excerpt",
@@ -1263,7 +1263,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1186%2F1471-2105-11-395/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "MZmine 2 was succeeded by mzmine.",
       "asbval:note": null,

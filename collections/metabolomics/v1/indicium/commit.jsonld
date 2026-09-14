@@ -221,7 +221,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_363932874__task_001/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/card/10_5281_zenodo_363932874__task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we describe COMMIT, a constraint-based approach that respects the composition of the microbial community and metabolite leakage in the process of gap filling metabolic reconstructions of the respective community members.",
       "asbval:note": "The paper describes COMMIT as a gap-filling approach that considers community composition and metabolite leakage, not as a consensus reconstruction generator. Consensus reconstructions are generated separately from four draft reconstruction methods (KBase, CarveMe, RAVEN 2.0, AuReMe/Pathway Tools) and then merged. COMMIT is applied to the consensus reconstructions for gap-filling, not for generating consensus. The research question conflates two distinct steps in the pipeline.",
@@ -241,7 +241,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_363932874__task_001/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/card/10_5281_zenodo_363932874__task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we describe COMMIT, a constraint-based approach that respects the composition of the microbial community and metabolite leakage in the process of gap filling metabolic reconstructions of the respective community members.",
       "asbval:note": "COMMIT is explicitly named and described as the primary methodological contribution of the paper.",
@@ -261,7 +261,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_363932874__task_001/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/card/10_5281_zenodo_363932874__task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We then devise an approach for gap filling, termed COMMIT, that considers metabolites for secretion based on their permeability and the composition of the community. By applying COMMIT with two soil communities from the Arabidopsis thaliana culture collection, we could significantly reduce the gap-filling solution in comparison to filling gaps in individual reconstructions without affecting the genomic support.",
       "asbval:note": "The paper produces gap-filled consensus metabolic reconstructions, but the consensus generation is a separate step from COMMIT. COMMIT's output is gap-filled reconstructions (functional models), not the consensus reconstructions themselves. The consensus reconstructions are generated first by merging draft reconstructions from four methods, then COMMIT gap-fills them.",
@@ -281,7 +281,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_363932874__task_001/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/card/10_5281_zenodo_363932874__task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We then apply COMMIT to high-quality consensus metabolic reconstructions based on genomes of the isolates from the Arabidopsis thaliana microbial culture collections, At-SPHERE, for two different soil community compositions [36,37].",
       "asbval:note": "The paper applies COMMIT to Arabidopsis thaliana-associated soil communities, but COMMIT is not a 'consensus reconstruction pipeline'\u2014it is a gap-filling pipeline that operates on pre-generated consensus reconstructions. The consensus reconstructions are generated from four separate draft reconstruction methods (KBase, CarveMe, RAVEN 2.0, AuReMe/Pathway Tools) before COMMIT is applied.",
@@ -301,7 +301,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_363932874__task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/card/10_5281_zenodo_363932874__task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card conflates two distinct methodological steps: (1) consensus reconstruction generation (merging draft reconstructions from four methods) and (2) gap-filling with community-aware constraints (COMMIT). COMMIT is the gap-filling step, not the consensus generation step.",
@@ -318,7 +318,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_363932874__task_002/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/card/10_5281_zenodo_363932874__task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we describe COMMIT, a constraint-based approach that respects the composition of the microbial community and metabolite leakage in the process of gap filling metabolic reconstructions of the respective community members.",
       "asbval:note": "The research question accurately captures the core mechanism of COMMIT as described in the paper.",
@@ -338,7 +338,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_363932874__task_002/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/card/10_5281_zenodo_363932874__task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we describe COMMIT, a constraint-based approach that respects the composition of the microbial community and metabolite leakage in the process of gap filling metabolic reconstructions of the respective community members.",
       "asbval:note": "COMMIT is the primary tool developed and applied in this paper.",
@@ -358,7 +358,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_363932874__task_002/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/card/10_5281_zenodo_363932874__task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We applied COMMIT to two soil microbial communities whose composition was determined by comparison of 16S rRNA sequences from environmental samples with those from the cross-reference operational taxonomic units (OTU) used in At-SPHERE [38]. This resulted in 20 and 24 recovered soil isolates from two respective studies, referred to as 'Bulgarelli' [37] and 'Schlaeppi' [36]. The draft metabolic reconstructions for the members of the two communities were gap-filled by applying COMMIT with 100 iterations, corresponding to different random orderings, and an initial gap-filling medium containing only D-glucose as a carbon source.",
       "asbval:note": "The paper demonstrates application of COMMIT to produce gap-filled models for community members. The annotation of filled reactions is implicit in the gap-filling procedure and explicitly discussed in the methods section regarding sequence support for added reactions.",
@@ -378,7 +378,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_363932874__task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/card/10_5281_zenodo_363932874__task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card focuses on the gap-filling step for Arabidopsis thaliana microbial communities, which is directly addressed in the paper. The paper applies COMMIT to two specific soil communities (Schlaeppi and Bulgarelli) derived from At-SPHERE, which are Arabidopsis thaliana-associated microbial communities.",
@@ -394,7 +394,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/community-dependent-reaction-inference/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/community-dependent-reaction-inference/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we describe COMMIT, a constraint-based approach that respects the composition of the microbial community and metabolite leakage in the process of gap filling metabolic reconstructions of the respective community members.",
       "asbval:note": "The research question accurately captures the core purpose of COMMIT as described in the paper.",
@@ -414,7 +414,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/community-dependent-reaction-inference/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/community-dependent-reaction-inference/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We then apply COMMIT to high-quality consensus metabolic reconstructions based on genomes of the isolates from the Arabidopsis thaliana microbial culture collections, At-SPHERE, for two different soil community compositions",
       "asbval:note": "The paper applies COMMIT to plant-associated microbial communities (Arabidopsis thaliana), matching the scope description.",
@@ -434,7 +434,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/community-dependent-reaction-inference/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/community-dependent-reaction-inference/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Since members of microbial communities are often dependent on each other, gap-filling solutions of the community members must also be put into context of the community in which the organisms co-exist. In addition, the usage of gap-filled solutions and exudates from other community members may further reduce the overall number of added reactions to fill in the gaps in the metabolic reconstruction for the community.",
       "asbval:note": "The paper explicitly states that community context is essential for gap-filling and that metabolite exchange between members reduces gaps.",
@@ -454,7 +454,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/community-dependent-reaction-inference/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/community-dependent-reaction-inference/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To address this issue, several algorithms for gap filling, applicable to single and community reconstructions [13], have been proposed; however, they are not feasible to gap fill reconstructions of large communities (as described e.g. in [27,28]) due to the sheer amount of computational resources required.",
       "asbval:note": "The paper implies COMMIT is designed for draft reconstructions with gaps, not fully curated models.",
@@ -474,7 +474,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/community-dependent-reaction-inference/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/community-dependent-reaction-inference/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The existing gap-filling medium as well as the order in which gap-filling is applied plays a very important role in the reconstructed model [29]. The problem of finding metabolic interactions within microbial communities using constraint-based methods has been addressed by multiple studies, focussing on pairwise or higher-level interactions [8,10,30\u201334].",
       "asbval:note": "The paper emphasizes that COMMIT is designed for community context, implying single-organism gap-filling is a different approach.",
@@ -494,7 +494,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/community-dependent-reaction-inference/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/community-dependent-reaction-inference/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we describe COMMIT, a constraint-based approach that respects the composition of the microbial community and metabolite leakage in the process of gap filling metabolic reconstructions of the respective community members.",
       "asbval:note": "COMMIT is the primary tool described in the paper.",
@@ -514,7 +514,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/community-dependent-reaction-inference/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/community-dependent-reaction-inference/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "COMMIT starts with a minimal medium; secreted metabolites from gap-filled (i.e. functional) models are then determined and used to enlarge the medium, thereby shaping the overall gap-filling solution over the course of each random ordering.",
       "asbval:note": "The paper describes COMMIT's operation on consensus reconstructions with metabolite exchange to fill gaps.",
@@ -534,7 +534,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/community-dependent-reaction-inference/007",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/community-dependent-reaction-inference/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not provide a Zenodo DOI or repository link for COMMIT. The DOI provided in the card cannot be verified from the passages.",
@@ -554,7 +554,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/community-metabolic-reconstruction-synthesis/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/community-metabolic-reconstruction-synthesis/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We then devise an approach for gap filling, termed COMMIT, that considers metabolites for secretion based on their permeability and the composition of the community... the consensus of automatically generated metabolic reconstructions improves the quality of the draft reconstructions",
       "asbval:note": "Paper does generate consensus reconstructions from multiple draft reconstructions, but the consensus approach does NOT retain 'only reactions and metabolites conserved across all input models.' Instead, passage [5] states: 'The consensus generation consisted of matching metabolite, reaction, and gene identifiers... We employed cosine similarity to identify reactions of similar stoichiometry that may have opposite directions, lack protons or whose coefficients differ by a factor.' The consensus merges complementary information from multiple approaches rather than retaining only conserved elements. The card's description is overly restrictive and mischaracterizes the actual consensus method.",
@@ -574,7 +574,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/community-metabolic-reconstruction-synthesis/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/community-metabolic-reconstruction-synthesis/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We then devise an approach for gap filling, termed COMMIT, that considers metabolites for secretion based on their permeability and the composition of the community. By applying COMMIT with two soil communities from the Arabidopsis thaliana culture collection, we could significantly reduce the gap-filling solution in comparison to filling gaps in individual reconstructions",
       "asbval:note": "Paper demonstrates reduction in gap-filling solution size and improved quality through consensus approach.",
@@ -594,7 +594,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/community-metabolic-reconstruction-synthesis/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/community-metabolic-reconstruction-synthesis/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used the high-quality draft genomes for 432 isolates available from At-SPHERE [38] to obtain their draft genome-scale metabolic reconstructions. To this end, we applied four widely-used, fully automated approaches for metabolic network reconstruction relying on few parameters, namely: KBase [19], CarveMe [14], RAVEN 2.0 [17], and AuReMe/ Pathway Tools [15,16]",
       "asbval:note": "Paper uses draft reconstructions from multiple approaches for organisms from ecological communities (Arabidopsis thaliana culture collections).",
@@ -614,7 +614,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/community-metabolic-reconstruction-synthesis/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/community-metabolic-reconstruction-synthesis/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The consensus generation consisted of matching metabolite, reaction, and gene identifiers... We then applied COMMIT to high-quality consensus metabolic reconstructions based on genomes of the isolates from the Arabidopsis thaliana microbial culture collections, At-SPHERE, for two different soil community compositions",
       "asbval:note": "Paper explicitly performs consensus generation first, then applies COMMIT gap-filling to the consensus reconstructions.",
@@ -634,7 +634,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/community-metabolic-reconstruction-synthesis/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/community-metabolic-reconstruction-synthesis/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we describe COMMIT, a constraint-based approach that respects the composition of the microbial community and metabolite leakage in the process of gap filling metabolic reconstructions of the respective community members.",
       "asbval:note": "COMMIT is the primary tool described in the paper for gap-filling and community-dependent metabolic reconstruction.",
@@ -654,7 +654,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/community-metabolic-reconstruction-synthesis/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/community-metabolic-reconstruction-synthesis/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "COMMIT relies on the FastGapFilling algorithm, which optimizes a weighted sum of the fluxes through the biomass and additional candidate reactions by using linear programming (LP) formulation",
       "asbval:note": "COMMIT performs community-dependent gap-filling (yes), but consensus generation is a separate step performed before COMMIT. Passage [5] states: 'The consensus generation consisted of matching metabolite, reaction, and gene identifiers... We then applied COMMIT to high-quality consensus metabolic reconstructions.' Consensus generation uses STATIS method and cosine similarity matching, not COMMIT. COMMIT is applied after consensus generation.",
@@ -674,7 +674,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-gap-filling-community-context/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/metabolic-gap-filling-community-context/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we describe COMMIT, a constraint-based approach that respects the composition of the microbial community and metabolite leakage in the process of gap filling metabolic reconstructions of the respective community members.",
       "asbval:note": "Paper explicitly describes COMMIT as a community-aware gap-filling approach that considers community composition and metabolite exchange.",
@@ -694,7 +694,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-gap-filling-community-context/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/metabolic-gap-filling-community-context/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Since members of microbial communities are often dependent on each other, gap-filling solutions of the community members must also be put into context of the community in which the organisms co-exist. In addition, the usage of gap-filled solutions and exudates from other community members may further reduce the overall number of added reactions to fill in the gaps in the metabolic reconstruction for the community.",
       "asbval:note": "Paper demonstrates that community context reduces gap-filling solution size compared to individual gap-filling.",
@@ -714,7 +714,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-gap-filling-community-context/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/metabolic-gap-filling-community-context/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We then apply COMMIT to high-quality consensus metabolic reconstructions based on genomes of the isolates from the Arabidopsis thaliana microbial culture collections, At-SPHERE, for two different soil community compositions",
       "asbval:note": "Paper explicitly applies COMMIT to Arabidopsis thaliana-associated soil communities.",
@@ -734,7 +734,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-gap-filling-community-context/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/metabolic-gap-filling-community-context/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "COMMIT relies on the FastGapFilling algorithm, which optimizes a weighted sum of the fluxes through the biomass and additional candidate reactions by using linear programming (LP) formulation... COMMIT starts with a minimal medium; secreted metabolites from gap-filled (i.e. functional) models are then determined and used to enlarge the medium, thereby shaping the overall gap-filling solution over the course of each random ordering.",
       "asbval:note": "Paper describes how COMMIT exploits inter-member metabolite exchange to shape gap-filling solutions.",
@@ -754,7 +754,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-gap-filling-community-context/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/metabolic-gap-filling-community-context/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we describe COMMIT, a constraint-based approach that respects the composition of the microbial community and metabolite leakage in the process of gap filling metabolic reconstructions of the respective community members.",
       "asbval:note": "COMMIT is the primary tool described in the paper for community-dependent gap-filling.",
@@ -774,7 +774,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-gap-filling-community-context/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/metabolic-gap-filling-community-context/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The consensus generation consisted of matching metabolite, reaction, and gene identifiers... We then apply COMMIT to high-quality consensus metabolic reconstructions based on genomes of the isolates from the Arabidopsis thaliana microbial culture collections",
       "asbval:note": "Paper confirms COMMIT operates on consensus reconstructions to perform community-aware gap-filling.",
@@ -794,7 +794,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-gap-filling-community-context/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/metabolic-gap-filling-community-context/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No repository URL is mentioned in the provided passages. The paper does not provide a Zenodo or GitHub link for COMMIT code availability.",
@@ -814,7 +814,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-model-consensus-integration/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/metabolic-model-consensus-integration/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We then devise an approach for gap filling, termed COMMIT, that considers metabolites for secretion based on their permeability and the composition of the community... the consensus of automatically generated metabolic reconstructions improves the quality of the draft reconstructions",
       "asbval:note": "The paper explicitly describes consensus reconstruction generation and COMMIT's role in integrating multiple draft models.",
@@ -834,7 +834,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-model-consensus-integration/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/metabolic-model-consensus-integration/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Composition and functions of microbial communities affect important traits in diverse hosts... mechanistic understanding of how metabolism of individual microbes is affected by the community composition and metabolite leakage is lacking.",
       "asbval:note": "Paper motivates the need for unified community-level analysis of microbial metabolic models.",
@@ -854,7 +854,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-model-consensus-integration/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/metabolic-model-consensus-integration/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used the high-quality draft genomes for 432 isolates available from At-SPHERE [38] to obtain their draft genome-scale metabolic reconstructions... we applied four widely-used, fully automated approaches for metabolic network reconstruction... KBase, CarveMe, RAVEN 2.0, and AuReMe/ Pathway Tools",
       "asbval:note": "Paper uses Arabidopsis thaliana culture collection (At-SPHERE) and generates draft reconstructions from multiple tools.",
@@ -874,7 +874,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-model-consensus-integration/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/metabolic-model-consensus-integration/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The consensus generation consisted of matching metabolite, reaction, and gene identifiers... We employed cosine similarity to identify reactions of similar stoichiometry that may have opposite directions, lack protons or whose coefficients differ by a factor.",
       "asbval:note": "Paper describes the consensus generation process that unifies multiple draft reconstructions.",
@@ -894,7 +894,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-model-consensus-integration/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/metabolic-model-consensus-integration/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we describe COMMIT, a constraint-based approach that respects the composition of the microbial community and metabolite leakage in the process of gap filling metabolic reconstructions of the respective community members.",
       "asbval:note": "COMMIT is the primary tool described in the paper for gap-filling and community-dependent metabolic reconstruction.",
@@ -914,7 +914,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-model-consensus-integration/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/metabolic-model-consensus-integration/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "COMMIT offers a versatile fully automated solution for large-scale modelling of microbial communities... the consensus approach in combination with the gap filling approach that respects the community composition renders COMMIT a valuable addition",
       "asbval:note": "Paper explicitly describes COMMIT's dual role in consensus generation and community-dependent gap-filling.",
@@ -934,7 +934,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-model-consensus-integration/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/metabolic-model-consensus-integration/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No DOI or repository URL for COMMIT is mentioned in the provided passages. The paper DOI is 10.1371/journal.pcbi.1009906 but no separate software repository identifier is given.",
@@ -954,7 +954,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-model-curation/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/metabolic-model-curation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we describe COMMIT, a constraint-based approach that respects the composition of the microbial community and metabolite leakage in the process of gap filling metabolic reconstructions of the respective community members.",
       "asbval:note": null,
@@ -974,7 +974,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-model-curation/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/metabolic-model-curation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We then apply COMMIT to high-quality consensus metabolic reconstructions based on genomes of the isolates from the Arabidopsis thaliana microbial culture collections, At-SPHERE, for two different soil community compositions",
       "asbval:note": null,
@@ -994,7 +994,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-model-curation/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/metabolic-model-curation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Since members of microbial communities are often dependent on each other, gap-filling solutions of the community members must also be put into context of the community in which the organisms co-exist.",
       "asbval:note": null,
@@ -1014,7 +1014,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-model-curation/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/metabolic-model-curation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we describe COMMIT, a constraint-based approach that respects the composition of the microbial community and metabolite leakage in the process of gap filling metabolic reconstructions of the respective community members.",
       "asbval:note": null,
@@ -1034,7 +1034,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-model-curation/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/metabolic-model-curation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "COMMIT relies on the FastGapFilling algorithm, which optimizes a weighted sum of the fluxes through the biomass and additional candidate reactions by using linear programming (LP) formulation... COMMIT starts with a minimal medium; secreted metabolites from gap-filled (i.e. functional) models are then determined and used to enlarge the medium, thereby shaping the overall gap-filling solution over the course of each random ordering.",
       "asbval:note": null,
@@ -1054,7 +1054,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-model-curation/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/metabolic-model-curation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Zenodo repository URL not mentioned in provided passages. Cannot verify this specific URL from the paper text.",
@@ -1074,7 +1074,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microbial-genome-annotation-harmonization/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/microbial-genome-annotation-harmonization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We then devise an approach for gap filling, termed COMMIT, that considers metabolites for secretion based on their permeability and the composition of the community... the consensus of automatically generated metabolic reconstructions improves the quality of the draft reconstructions",
       "asbval:note": "The paper explicitly describes generating consensus reconstructions from multiple draft reconstructions (KBase, CarveMe, RAVEN 2.0, AuReMe/Pathway Tools) and integrating them.",
@@ -1094,7 +1094,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microbial-genome-annotation-harmonization/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/microbial-genome-annotation-harmonization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Since members of microbial communities are often dependent on each other, gap-filling solutions of the community members must also be put into context of the community in which the organisms co-exist.",
       "asbval:note": "Paper emphasizes community context for metabolic reconstructions.",
@@ -1114,7 +1114,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microbial-genome-annotation-harmonization/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/microbial-genome-annotation-harmonization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We used the high-quality draft genomes for 432 isolates available from At-SPHERE [38] to obtain their draft genome-scale metabolic reconstructions. To this end, we applied four widely-used, fully automated approaches for metabolic network reconstruction relying on few parameters, namely: KBase [19], CarveMe [14], RAVEN 2.0 [17], and AuReMe/ Pathway Tools [15,16]",
       "asbval:note": "Paper uses multiple reconstruction methods on same organisms.",
@@ -1134,7 +1134,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microbial-genome-annotation-harmonization/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/microbial-genome-annotation-harmonization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The consensus generation consisted of matching metabolite, reaction, and gene identifiers (Fig 2B). Since the metabolites in the MetaNetX database are already structurally matched between various databases, duplicate metabolites could be removed from the consensus by only considering their identifiers.",
       "asbval:note": "Paper describes consensus generation by matching and integrating identifiers across multiple reconstructions.",
@@ -1154,7 +1154,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microbial-genome-annotation-harmonization/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/microbial-genome-annotation-harmonization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we describe COMMIT, a constraint-based approach that respects the composition of the microbial community and metabolite leakage in the process of gap filling metabolic reconstructions of the respective community members.",
       "asbval:note": "Paper explicitly uses consensus reconstructions as input to COMMIT for community-dependent gap-filling.",
@@ -1174,7 +1174,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microbial-genome-annotation-harmonization/005",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/microbial-genome-annotation-harmonization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we describe COMMIT, a constraint-based approach that respects the composition of the microbial community and metabolite leakage in the process of gap filling metabolic reconstructions",
       "asbval:note": "COMMIT is the primary method described in the paper.",
@@ -1194,7 +1194,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microbial-genome-annotation-harmonization/006",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/microbial-genome-annotation-harmonization/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "COMMIT relies on the FastGapFilling algorithm, which optimizes a weighted sum of the fluxes through the biomass and additional candidate reactions by using linear programming (LP) formulation",
       "asbval:note": "COMMIT is primarily a gap-filling algorithm that considers community composition and metabolite leakage, not a consensus generation algorithm per se. Consensus generation is performed separately using the STATIS method and identifier matching (passage 4). The card conflates consensus generation with COMMIT's role\u2014COMMIT uses consensus reconstructions as input but does not generate them.",
@@ -1214,7 +1214,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microbial-genome-annotation-harmonization/007",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/microbial-genome-annotation-harmonization/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No DOI or repository URL for COMMIT is provided in the paper passages. The paper does not cite a software repository or zenodo link for COMMIT.",
@@ -1234,7 +1234,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/plant-metabolic-network-validation/000",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/plant-metabolic-network-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we describe COMMIT, a constraint-based approach that respects the composition of the microbial community and metabolite leakage in the process of gap filling metabolic reconstructions of the respective community members. We then apply COMMIT to high-quality consensus metabolic reconstructions based on genomes of the isolates from the Arabidopsis thaliana microbial culture collections, At-SPHERE, for two different soil community compositions",
       "asbval:note": "Paper applies COMMIT to Arabidopsis thaliana-associated microbial communities (not plant reconstructions themselves). The validation performed is of microbial metabolic reconstructions in the context of plant-associated communities, not validation of plant metabolic networks. The card conflates plant-associated microbial community modeling with plant metabolic network validation.",
@@ -1254,7 +1254,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/plant-metabolic-network-validation/001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/plant-metabolic-network-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not perform validation of plant metabolic reconstructions. COMMIT is applied to microbial isolates from Arabidopsis thaliana culture collections (At-SPHERE), not to plant metabolic models. The paper validates microbial community models, not plant models.",
@@ -1274,7 +1274,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/plant-metabolic-network-validation/002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/plant-metabolic-network-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We then apply COMMIT to high-quality consensus metabolic reconstructions based on genomes of the isolates from the Arabidopsis thaliana microbial culture collections, At-SPHERE, for two different soil community compositions [36,37].",
       "asbval:note": "Paper does work with plant-associated microbial communities (Arabidopsis thaliana-associated), but does not validate against known Arabidopsis thaliana plant metabolism. Validation is performed by comparing to reference microbial models (B. megaterium iMZ1055, M. extorquens iRP911) and by analyzing metabolic interactions within the microbial community, not against plant metabolic data.",
@@ -1294,7 +1294,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/plant-metabolic-network-validation/003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/plant-metabolic-network-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we describe COMMIT, a constraint-based approach that respects the composition of the microbial community and metabolite leakage in the process of gap filling metabolic reconstructions of the respective community members.",
       "asbval:note": "COMMIT is the primary method described in the paper for community-dependent gap-filling.",
@@ -1314,7 +1314,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/plant-metabolic-network-validation/004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/plant-metabolic-network-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "COMMIT relies on the FastGapFilling algorithm, which optimizes a weighted sum of the fluxes through the biomass and additional candidate reactions by using linear programming (LP) formulation... To this end, six parameters were used for permeability prediction based on Lipinski's rule [52,53], resulting in reduced costs for 2534 out of 4520 transport reactions in the gap-filling database. Moreover, reactions assigned to enzymes with sequence evidence in the respective genome were assigned a lower cost",
       "asbval:note": "COMMIT does generate gap-filled reconstructions and does track sequence evidence (genomic support) for reactions, but the paper does not describe explicit confidence annotations or source tracking in the output models. The paper tracks 'genomic support' but does not report confidence scores or detailed source annotations in the final models.",
@@ -1334,7 +1334,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/community-dependent-reaction-inference/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/community-dependent-reaction-inference/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "community-dependent-reaction-inference",
@@ -1347,7 +1347,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/community-metabolic-reconstruction-synthesis/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/community-metabolic-reconstruction-synthesis/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "community-metabolic-reconstruction-synthesis",
@@ -1360,7 +1360,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-gap-filling-community-context/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/metabolic-gap-filling-community-context/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "metabolic-gap-filling-community-context",
@@ -1373,7 +1373,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-model-consensus-integration/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/metabolic-model-consensus-integration/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "metabolic-model-consensus-integration",
@@ -1386,7 +1386,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolic-model-curation/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/metabolic-model-curation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "metabolic-model-curation",
@@ -1399,7 +1399,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/microbial-genome-annotation-harmonization/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/microbial-genome-annotation-harmonization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "microbial-genome-annotation-harmonization",
@@ -1412,7 +1412,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/plant-metabolic-network-validation/triage",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/skill/plant-metabolic-network-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "plant-metabolic-network-validation",
@@ -1425,7 +1425,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "COMMIT is a tool for generation of consensus metabolic reconstructions and community-dependent gap-filling.",
       "asbval:note": null,
@@ -1445,7 +1445,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The work applies COMMIT to communities sampled from Arabidopsis thaliana.",
       "asbval:note": null,
@@ -1465,7 +1465,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The research is sourced from the github repository pwendering__COMMIT.",
       "asbval:note": null,
@@ -1485,7 +1485,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1371%2Fjournal.pcbi.1009906/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The document was synthesized on 2026-06-15T09:49:47+00:00.",
       "asbval:note": null,

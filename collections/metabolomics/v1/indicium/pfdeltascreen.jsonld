@@ -554,7 +554,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_001/000",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML) by using the MSConvert software from ProteoWizard [40, 41]. Only mzML files with centroided spectra and one collision energy (CE) should be used... Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS (or custom feature lists) with subsequent calculations for prioritization and identification of PFAS in both HPLC- and GC-HRMS data.",
       "asbval:note": "The paper explicitly describes pyOpenMS ingesting centroided mzML files for feature detection, producing feature lists with m/z, RT, and intensity values.",
@@ -574,7 +574,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_001/001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS (or custom feature lists)",
       "asbval:note": "[SUBSTRING-MATCH for pyOpenMS | role: feature detection tool]",
@@ -594,7 +594,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_001/002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This task is performed with pyOpenMS, a Python interface to the C++ OpenMS library [42\u201346].",
       "asbval:note": "OpenMS is the underlying C++ library that pyOpenMS wraps.",
@@ -614,7 +614,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_001/003",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": "The tool is written in Python and uses pyOpenMS for feature detection.",
@@ -634,7 +634,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_001/004",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The first step usually performed in NTS is detection of features in the MS raw data characterized by chromatographic peak shapes of coeluting isotopes, resulting in a list of m/z, retention time (RT), and peak area.",
       "asbval:note": "The paper explicitly states that feature detection produces m/z, RT, and peak area (intensity) values.",
@@ -654,7 +654,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card frames the task narrowly as 'how does pyOpenMS ingest and produce', suggesting a mechanistic/implementation question. The paper describes pyOpenMS as a tool used within PF\u0394Screen's workflow but does not provide detailed algorithmic or implementation documentation of pyOpenMS itself. The paper documents the INPUT (centroided mzML) and OUTPUT (feature list) but not the internal mechanics of pyOpenMS feature detection.",
@@ -671,7 +671,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_002/000",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Recently, a promising approach based on the MD normalized to the carbon number (MD/C) vs. the mass normalized to the carbon number (m/C) was proposed to separate PFAS much more efficiently from other hydrocarbon features in HRMS data... The carbon number can be easily estimated for all HRMS features by using the relative abundance of the M+1 isotope (13C). PFAS have a much higher m/C when their mass is dominated by fluorine (e.g., m/C ~ 50), while hydrocarbons of similar mass are dominated by carbon (m/C ~ 14), allowing a convenient separation.",
       "asbval:note": "Research question directly addresses the MD/C-m/C approach for PFAS feature filtering and prioritization, which is a core technique described in the paper.",
@@ -691,7 +691,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_002/001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": "Paper explicitly states the tool is written in Python 3.9.13.",
@@ -711,7 +711,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_002/002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "After execution, a folder is generated named after the sample file where important results are saved, including a summary in an Excel sheet which is formatted as a table that can be easily inspected, sorted, and subset for a faster overview of the results as well as an additional CSV file that includes the same data... For all MS1 features, the number of carbon atoms, MD, and both MD/C and m/C dimensions are determined.",
       "asbval:note": "Paper describes output as Excel/CSV tables containing MD/C and m/C dimensions for features, which aligns with the claim of filtered feature lists with MD/C scores and prioritization flags.",
@@ -731,7 +731,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card focuses narrowly on the MD/C-m/C filtering approach, which is one component of the broader PF\u0394Screen workflow. The paper describes a multi-step prioritization process that also includes KMD analysis, diagnostic fragment matching, and suspect screening. The card does not mention these additional prioritization techniques.",
@@ -747,7 +747,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_003/000",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To detect homologues series (HS), the KMD (with a predefined repeating unit required; e.g., CF2) is calculated and corresponding features belonging to a certain HS are aligned by providing a unique HS number (parameters: mass tolerance, minimum number of homologues).",
       "asbval:note": "The paper explicitly describes KMD calculation and homologous series detection with parameters for mass tolerance and minimum homologues.",
@@ -767,7 +767,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_003/001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": "Paper explicitly states PF\u0394Screen is written in Python 3.9.13.",
@@ -787,7 +787,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_003/002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for PF\u0394Screen | role: primary tool for PFAS feature prioritization]",
       "asbval:note": "PF\u0394Screen is the main tool discussed throughout the paper for PFAS feature prioritization including KMD analysis.",
@@ -807,7 +807,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_003/003",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "After execution, a folder is generated named after the sample file where important results are saved, including a summary in an Excel sheet which is formatted as a table that can be easily inspected, sorted, and subset for a faster overview of the results as well as an additional CSV file that includes the same data",
       "asbval:note": "The paper describes output as Excel/CSV tables with results. KMD values and HS assignments are explicitly mentioned: 'corresponding features belonging to a certain HS are aligned by providing a unique HS number' and KMD is calculated for all features.",
@@ -827,7 +827,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card focuses narrowly on KMD analysis as a standalone module, but the paper presents KMD as one component of a multi-step prioritization workflow that includes MD/C-m/C filtering, diagnostic fragment matching, and suspect screening. The card does not mention that KMD analysis is typically applied iteratively after MD/C-m/C data reduction to reduce false positives.",
@@ -843,7 +843,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_004/000",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_004/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For all MS2 spectra, fragment mass differences are calculated comprehensively. Therefore, all fragment differences within each MS2 spectrum are calculated and matched against a predefined list of PFAS typical mass differences (e.g., \u0394CF2, \u0394C2F4, \u0394HF, \u0394C10H3F17, more details can be found in [31]). This allows an efficient detection of fragments indicative for PFAS without prior knowledge on their actual mass [23, 31]. Furthermore, a list of typical PFAS diagnostic fragments (DFs, approximately 900 fragments) from literature are automatically matched with all fragmentation spectra (which is easily extendable) [52, 53].",
       "asbval:note": "The research question directly aligns with the paper's description of MS2 diagnostic fragment and mass difference matching in PF\u0394Screen.",
@@ -863,7 +863,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_004/001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_004/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS (or custom feature lists) with subsequent calculations for prioritization and identification of PFAS in both HPLC- and GC-HRMS data.",
       "asbval:note": "pyOpenMS is explicitly named as the tool used for feature detection from MS raw data.",
@@ -883,7 +883,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_004/002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_004/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394 Screen , a Python-based open-source tool with a simple graphical user interface (GUI) to perform efficient feature prioritization using several PFAS-specific techniques",
       "asbval:note": "The tool is explicitly described as Python-based.",
@@ -903,7 +903,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_004/003",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_004/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "After execution, a folder is generated named after the sample file where important results are saved, including a summary in an Excel sheet which is formatted as a table that can be easily inspected, sorted, and subset for a faster overview of the results as well as an additional CSV file that includes the same data (Fig. S2). Important plots are saved in the interactive HTML format which can easily be opened in any browser, allowing zooming and data inspection with interactive tooltips (Fig. S3). In the workflow to prioritize features according to their likelihood of being PFAS, several pieces of evidence are calculated individually for all detected features in the first place... Furthermore, a list of typical PFAS diagnostic fragments (DFs, approximately 900 fragments) from literature are automatically matched with all fragmentation spectra (which is easily extendable) [52, 53].",
       "asbval:note": "The paper describes output as Excel/CSV tables with results including diagnostic fragment matches and feature information.",
@@ -923,7 +923,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_004/scope_drift",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_004/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card focuses narrowly on MS2 diagnostic fragment screening, which is one component of PF\u0394Screen's multi-step workflow. The paper emphasizes that PF\u0394Screen combines multiple prioritization techniques (MD/C-m/C approach, KMD analysis, diagnostic fragments, fragment mass differences, and suspect screening) in an integrated workflow. The card's framing as 'reconstruct the MS2 diagnostic fragment screening filter' is accurate but represents only one module of the broader tool."
@@ -938,7 +938,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_005/000",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_005/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen can be applied vendor-independently either on mass spectrometric raw data (mzML, automated feature finding via pyOpenMS) or on custom feature lists (external feature finding by other software tools).",
       "asbval:note": "Paper describes PF\u0394Screen's existing capability to accept custom feature lists as input, not a proposed extension. The paper states this is already implemented: 'If feature finding by an external software is desired (e.g., vendor software), the following steps can also be performed by loading a feature table (.csv, that requires m/z, RT, and intensities of the [M] and [M+1] isotopes) into PF\u0394Screen without feature detection via OpenMS.'",
@@ -958,7 +958,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_005/001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_005/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen can be applied vendor-independently either on mass spectrometric raw data (mzML, automated feature finding via pyOpenMS) or on custom feature lists (external feature finding by other software tools). However, the raw mzML files are still needed to assign MS2 data to the features in the feature table.",
       "asbval:note": "Paper confirms custom feature lists are supported, but the research question frames this as a proposed extension ('Extend'), when it is already an existing feature. Additionally, the paper notes that raw mzML files are still required for MS2 assignment, which is a constraint not captured in the RQ.",
@@ -978,7 +978,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_005/002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_005/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": null,
@@ -998,7 +998,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_005/003",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_005/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS (or custom feature lists)",
       "asbval:note": null,
@@ -1018,7 +1018,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_005/004",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_005/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "After execution, a folder is generated named after the sample file where important results are saved, including a summary in an Excel sheet which is formatted as a table that can be easily inspected, sorted, and subset for a faster overview of the results as well as an additional CSV file that includes the same data",
       "asbval:note": null,
@@ -1038,7 +1038,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_005/005",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_005/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe generation of a dedicated 'filter validation report' with explicit per-feature pass/fail status for each criterion. The output is a prioritized feature table with annotations, but not a separate validation report documenting which features passed/failed each filter step.",
@@ -1058,7 +1058,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_1007_s00216_023_05070_2__task_005/scope_drift",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/card/10_1007_s00216_023_05070_2__task_005/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card frames custom feature list support as a proposed extension ('Extend PF\u0394Screen'), but the paper describes this as an existing, already-implemented capability of the tool.",
@@ -1075,7 +1075,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/centroided-ms-feature-detection/000",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/centroided-ms-feature-detection/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS (or custom feature lists) with subsequent calculations for prioritization and identification of PFAS in both HPLC- and GC-HRMS data.",
       "asbval:note": "Paper uses pyOpenMS for feature detection but names the algorithm 'FeatureFinderMetabo' not 'FeatureFinderCentroided'. Passage [5] states: 'For feature detection, the FeatureFinderMetabo algorithm is used, which is designed for metabolites and small molecules.' The card claims FeatureFinderCentroided but the paper actually uses FeatureFinderMetabo.",
@@ -1095,7 +1095,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/centroided-ms-feature-detection/001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/centroided-ms-feature-detection/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection, the FeatureFinderMetabo algorithm is used, which is designed for metabolites and small molecules [47\u201349]. Three parameters (mass error (ppm), intensity threshold, and an isotope model for more accurate detection of coeluting isotopologues) can be specified.",
       "asbval:note": "pyOpenMS is confirmed present and used for feature detection, but the algorithm is FeatureFinderMetabo, not FeatureFinderCentroided. The paper explicitly states FeatureFinderMetabo is used for metabolites and small molecules.",
@@ -1115,7 +1115,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/centroided-ms-feature-detection/002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/centroided-ms-feature-detection/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This task is performed with pyOpenMS, a Python interface to the C++ OpenMS library [42\u201346].",
       "asbval:note": "Confirmed as the underlying C++ library for pyOpenMS.",
@@ -1135,7 +1135,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/centroided-ms-feature-detection/003",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/centroided-ms-feature-detection/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML) by using the MSConvert software from ProteoWizard [40, 41].",
       "asbval:note": "MSConvert is explicitly named and described for converting to mzML format.",
@@ -1155,7 +1155,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/centroided-ms-feature-detection/004",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/centroided-ms-feature-detection/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": "PF\u0394Screen is confirmed as the complete pipeline integrating feature detection with PFAS prioritization techniques.",
@@ -1175,7 +1175,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/centroided-ms-feature-detection/005",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/centroided-ms-feature-detection/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": "Python is confirmed as the implementation language for PF\u0394Screen.",
@@ -1195,7 +1195,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/centroided-ms-feature-detection/006",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/centroided-ms-feature-detection/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The FeatureFinding tab (1) allows detection of feature via pyOpenMS in MS raw data followed by MS2 alignment and blank correction resulting in a feature list for a sample of interest. PFAS feature prioritization (2) includes techniques such as the MD/C-m/C approach, KMD analysis, fragment matching, and fragment mass differences which generates a strongly reduced feature list of potential PFAS.",
       "asbval:note": "Confirmed that feature detection produces a feature list for downstream prioritization.",
@@ -1215,7 +1215,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/centroided-ms-feature-detection/007",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/centroided-ms-feature-detection/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS",
       "asbval:note": "Confirmed that mzML files from ddMS2 are the input format.",
@@ -1235,7 +1235,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/centroided-ms-feature-detection/008",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/centroided-ms-feature-detection/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Only mzML files with centroided spectra and one collision energy (CE) should be used. If profile data was acquired and MS2 spectra from several different CEs per precursor m/z are present, the peak picking (for centroiding) and subset functions (from MSConvert) can be used to generate the correct mzML input files.",
       "asbval:note": "Confirmed that centroided spectra are required and MSConvert can be used for centroiding.",
@@ -1255,7 +1255,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-feature-extraction/000",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/chromatographic-feature-extraction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS (or custom feature lists) with subsequent calculations for prioritization and identification of PFAS in both HPLC- and GC-HRMS data.",
       "asbval:note": "Paper uses pyOpenMS for feature detection but specifies FeatureFinderMetabo algorithm, not FeatureFinderCentroided. Passage states: 'For feature detection, the FeatureFinderMetabo algorithm is used, which is designed for metabolites and small molecules' [passage 5]. The card claims FeatureFinderCentroided but the paper actually uses FeatureFinderMetabo.",
@@ -1275,7 +1275,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-feature-extraction/001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/chromatographic-feature-extraction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS (or custom feature lists) with subsequent calculations for prioritization and identification of PFAS in both HPLC- and GC-HRMS data.",
       "asbval:note": null,
@@ -1295,7 +1295,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-feature-extraction/002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/chromatographic-feature-extraction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For feature detection, the FeatureFinderMetabo algorithm is used, which is designed for metabolites and small molecules [47\u201349].",
       "asbval:note": "Paper uses pyOpenMS but with FeatureFinderMetabo algorithm, not FeatureFinderCentroided. The card incorrectly names the algorithm.",
@@ -1315,7 +1315,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-feature-extraction/003",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/chromatographic-feature-extraction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This task is performed with pyOpenMS, a Python interface to the C++ OpenMS library [42\u201346].",
       "asbval:note": "OpenMS is confirmed as the underlying C++ library, but the algorithm is FeatureFinderMetabo, not FeatureFinderCentroided.",
@@ -1335,7 +1335,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-feature-extraction/004",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/chromatographic-feature-extraction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML) by using the MSConvert software from ProteoWizard [40, 41].",
       "asbval:note": null,
@@ -1355,7 +1355,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-feature-extraction/005",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/chromatographic-feature-extraction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": null,
@@ -1375,7 +1375,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-feature-extraction/006",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/chromatographic-feature-extraction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": null,
@@ -1395,7 +1395,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-feature-extraction/007",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/chromatographic-feature-extraction/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML)",
       "asbval:note": null,
@@ -1415,7 +1415,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-feature-extraction/008",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/chromatographic-feature-extraction/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "With PF\u0394Screen, a single sample with a corresponding (optional) blank can be processed at a time. Blank correction is performed by setting an m/z and RT tolerance as well as a fold change with the desired increase of abundance in the sample compared to the blank.",
       "asbval:note": null,
@@ -1435,7 +1435,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/custom-data-schema-mapping/000",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/custom-data-schema-mapping/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "If feature finding by an external software is desired (e.g., vendor software, alternative open-source tools), the following steps can also be performed by loading a feature table (.csv, that requires m/z, RT, and intensities of the [M] and [M+1] isotopes) into PF\u0394Screen without feature detection via OpenMS.",
       "asbval:note": "Paper explicitly describes accepting external feature lists in CSV format with required columns (m/z, RT, intensities).",
@@ -1455,7 +1455,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/custom-data-schema-mapping/001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/custom-data-schema-mapping/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "If feature finding by an external software is desired (e.g., vendor software, alternative open-source tools), the following steps can also be performed by loading a feature table (.csv, that requires m/z, RT, and intensities of the [M] and [M+1] isotopes) into PF\u0394Screen without feature detection via OpenMS.",
       "asbval:note": "Explicitly states PF\u0394Screen can work with external feature-finding tools without relying on pyOpenMS.",
@@ -1475,7 +1475,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/custom-data-schema-mapping/002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/custom-data-schema-mapping/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "If feature finding by an external software is desired (e.g., vendor software, alternative open-source tools), the following steps can also be performed by loading a feature table (.csv, that requires m/z, RT, and intensities of the [M] and [M+1] isotopes) into PF\u0394Screen without feature detection via OpenMS. However, the raw mzML files are still needed to assign MS2 data to the features in the feature table",
       "asbval:note": "Paper describes the exact use case: loading pre-computed feature tables from external tools into PF\u0394Screen.",
@@ -1495,7 +1495,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/custom-data-schema-mapping/003",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/custom-data-schema-mapping/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS (or custom feature lists) with subsequent calculations for prioritization and identification of PFAS",
       "asbval:note": "pyOpenMS is confirmed as the feature detection tool used in PF\u0394Screen, with custom feature lists as an alternative.",
@@ -1515,7 +1515,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/custom-data-schema-mapping/004",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/custom-data-schema-mapping/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML) by using the MSConvert software from ProteoWizard",
       "asbval:note": "MSConvert is explicitly named for vendor-independent conversion to mzML format.",
@@ -1535,7 +1535,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/custom-data-schema-mapping/005",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/custom-data-schema-mapping/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": "PF\u0394Screen is confirmed as the host application performing PFAS prioritization with the specified techniques.",
@@ -1555,7 +1555,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/custom-data-schema-mapping/006",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/custom-data-schema-mapping/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": "Paper confirms PF\u0394Screen is written in Python 3.9.13.",
@@ -1575,7 +1575,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/custom-data-schema-mapping/007",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/custom-data-schema-mapping/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Only mzML files with centroided spectra and one collision energy (CE) should be used. If profile data was acquired and MS2 spectra from several different CEs per precursor m/z are present, the peak picking (for centroiding) and subset functions (to keep only one desired CE) from MSConvert can be used",
       "asbval:note": "Paper discusses centroided spectra as a requirement for PF\u0394Screen input.",
@@ -1595,7 +1595,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/custom-data-schema-mapping/008",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/custom-data-schema-mapping/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The chemical mass defect (MD) of PFAS is typically lower (MDF = \u2212 0.0016 Da) than the one of hydrocarbons (MDH = + 0.0078 Da) and has been used to remove detected features outside a predefined MD range",
       "asbval:note": "Mass defect calculation is a core technique in PF\u0394Screen's prioritization workflow.",
@@ -1615,7 +1615,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/custom-data-schema-mapping/009",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/custom-data-schema-mapping/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Besides the MD and MD/C-m/C approach, the Kendrick mass defect (KMD) analysis to detect homologous series of PFAS (e.g., with CF2 or CF2O as repeating units) is of great relevance",
       "asbval:note": "KMD analysis is explicitly described as a core PF\u0394Screen technique.",
@@ -1635,7 +1635,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/custom-data-schema-mapping/010",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/custom-data-schema-mapping/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In the MS2 data, lists of PFAS-specific diagnostic fragments (DFs) as well as fragment mass differences and neutral losses can be used to prioritize fragmentation spectra",
       "asbval:note": "MS2 diagnostic fragment matching is a core prioritization technique in PF\u0394Screen.",
@@ -1655,7 +1655,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/custom-data-schema-mapping/011",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/custom-data-schema-mapping/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "If feature finding by an external software is desired (e.g., vendor software, alternative open-source tools), the following steps can also be performed by loading a feature table (.csv, that requires m/z, RT, and intensities of the [M] and [M+1] isotopes) into PF\u0394Screen",
       "asbval:note": "Paper describes validation of required columns (m/z, RT, isotope intensities) in external feature lists.",
@@ -1675,7 +1675,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/custom-data-schema-mapping/012",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/custom-data-schema-mapping/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML) by using the MSConvert software from ProteoWizard",
       "asbval:note": "mzML file handling is central to PF\u0394Screen's workflow.",
@@ -1695,7 +1695,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/custom-data-schema-mapping/013",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/custom-data-schema-mapping/013",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "If feature finding by an external software is desired (e.g., vendor software, alternative open-source tools), the following steps can also be performed by loading a feature table (.csv, that requires m/z, RT, and intensities of the [M] and [M+1] isotopes) into PF\u0394Screen without feature detection via OpenMS. However, the raw mzML files are still needed to assign MS2 data to the features in the feature table",
       "asbval:note": "This is the core functionality described in the task card: mapping external feature lists into PF\u0394Screen's internal representation.",
@@ -1715,7 +1715,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-annotation-filtering/000",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-annotation-filtering/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Recently, a promising approach based on the MD normalized to the carbon number (MD/C) vs. the mass normalized to the carbon number (m/C) was proposed to separate PFAS much more efficiently from other hydrocarbon features in HRMS data",
       "asbval:note": "Claim accurately describes the MD/C-m/C approach as presented in the paper.",
@@ -1735,7 +1735,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-annotation-filtering/001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-annotation-filtering/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "if the number of features can be preliminarily reduced by the MD/C-m/C approach before applying those techniques, a faster and more accurate NTS workflow can be performed, decreasing both computational and manual effort",
       "asbval:note": "Paper confirms that MD/C-m/C reduces false positives and improves accuracy.",
@@ -1755,7 +1755,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-annotation-filtering/002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-annotation-filtering/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for PF\u0394Screen | role: GUI application that implements MD/C-m/C filtering]",
       "asbval:note": "Tool name confirmed in abstract and throughout paper. Case-insensitive match: 'PF\u0394Screen' in paper.",
@@ -1775,7 +1775,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-annotation-filtering/003",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-annotation-filtering/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Its source code is freely available on GitHub ( https://github.com/JonZwe/PFAScreen )",
       "asbval:note": "Repository URL confirmed in abstract.",
@@ -1795,7 +1795,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-annotation-filtering/004",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-annotation-filtering/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13) (Fig. 2). PF\u0394Screen is structured in several individual Python functions that are executed from one main file that allows data and parameter input via a simple GUI programmed with the tkinter library",
       "asbval:note": "Role description is accurate; paper confirms GUI, MD/C-m/C, KMD, MS2 fragment matching, pyOpenMS integration, and output formats.",
@@ -1815,7 +1815,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-annotation-filtering/005",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-annotation-filtering/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS (or custom feature lists)",
       "asbval:note": "pyOpenMS confirmed as feature detection tool.",
@@ -1835,7 +1835,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-annotation-filtering/006",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-annotation-filtering/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This task is performed with pyOpenMS, a Python interface to the C++ OpenMS library [42\u201346]. For feature detection, the FeatureFinderMetabo algorithm is used, which is designed for metabolites and small molecules",
       "asbval:note": "Role accurately describes pyOpenMS function in the workflow.",
@@ -1855,7 +1855,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-annotation-filtering/007",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-annotation-filtering/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML) by using the MSConvert software from ProteoWizard",
       "asbval:note": "MSConvert confirmed as conversion tool.",
@@ -1875,7 +1875,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-annotation-filtering/008",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-annotation-filtering/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML) by using the MSConvert software from ProteoWizard",
       "asbval:note": "Role accurately describes MSConvert function.",
@@ -1895,7 +1895,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-annotation-filtering/009",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-annotation-filtering/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": "Python confirmed as implementation language.",
@@ -1915,7 +1915,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-annotation-filtering/010",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-annotation-filtering/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen, an open-source Python-based software tool with a simple graphical user interface (GUI)",
       "asbval:note": "Evidence span is accurate paraphrase of paper content.",
@@ -1935,7 +1935,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-grouping-by-mass-defect/000",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-grouping-by-mass-defect/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Besides the MD and MD/C-m/C approach, the Kendrick mass defect (KMD) analysis to detect homologous series of PFAS (e.g., with CF2 or CF2O as repeating units) is of great relevance since it allows the grouping of structurally related PFAS, simplifying their identification... To detect homologues series (HS), the KMD (with a predefined repeating unit required; e.g., CF2) is calculated and corresponding features belonging to a certain HS are aligned by providing a unique HS number (parameters: mass tolerance, minimum number of homologues).",
       "asbval:note": "Claim is fully supported. Paper explicitly describes KMD analysis for grouping homologous PFAS series with repeating units (CF2, CF2O) using mass tolerance parameters.",
@@ -1955,7 +1955,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-grouping-by-mass-defect/001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-grouping-by-mass-defect/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We developed PF\u0394 Screen , a Python-based open-source tool with a simple graphical user interface (GUI) to perform efficient feature prioritization using several PFAS-specific techniques such as the highly promising MD/C-m/C approach, Kendrick mass defect analysis, diagnostic fragments (MS 2 ), fragment mass differences (MS 2 ), and suspect screening.",
       "asbval:note": "Tool name confirmed (case-insensitive match: PF\u0394Screen in paper, PF\u0394Screen in card). Role as KMD analysis orchestrator is supported.",
@@ -1975,7 +1975,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-grouping-by-mass-defect/002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-grouping-by-mass-defect/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS (or custom feature lists) with subsequent calculations for prioritization and identification of PFAS in both HPLC- and GC-HRMS data.",
       "asbval:note": "pyOpenMS confirmed as feature detection tool upstream of KMD analysis.",
@@ -1995,7 +1995,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-grouping-by-mass-defect/003",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-grouping-by-mass-defect/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML) by using the MSConvert software from ProteoWizard [40, 41].",
       "asbval:note": "MSConvert confirmed as vendor-neutral data conversion tool for generating mzML input files.",
@@ -2015,7 +2015,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-grouping-by-mass-defect/004",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-grouping-by-mass-defect/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": "Python confirmed as implementation language for PF\u0394Screen.",
@@ -2035,7 +2035,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-grouping-by-mass-defect/005",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-grouping-by-mass-defect/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Since NTS is typically a time-consuming and often partially manual process, efficient prioritization techniques are needed to separate detected matrix components from the analytes of interest... The intrinsic properties of PFAS (with a certain fluorine percentage) allow the use of several techniques for their prioritization [21, 26]... the Kendrick mass defect (KMD) analysis to detect homologous series of PFAS (e.g., with CF2 or CF2O as repeating units) is of great relevance since it allows the grouping of structurally related PFAS, simplifying their identification",
       "asbval:note": "Scope claim is supported: KMD analysis is presented as a prioritization technique for identifying homologous PFAS series in NTS workflows.",
@@ -2055,7 +2055,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-grouping-by-mass-defect/006",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-grouping-by-mass-defect/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "KMD, DFs, fragment mass differences, and especially suspect screening with large lists (e.g., PFASMASTER, gathering over 12,000 compounds [36]) in combination with complex samples (thousands of features) are prone to a high number of false-positive detections (depending on mass tolerance) that often need to be excluded manually, which is a time-consuming process.",
       "asbval:note": "Paper confirms KMD is a prioritization heuristic subject to false positives, not a definitive identification method.",
@@ -2075,7 +2075,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-grouping-by-mass-defect/007",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-grouping-by-mass-defect/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Even with extremely high mass resolution, naturally occurring compounds can still mimic certain PFAS-specific repeating units such as CF2, complicating KMD analysis and making retention time shifts a necessary criterion [37].",
       "asbval:note": "Paper confirms KMD analysis is optimized for homologous series with repeating units and can be confounded by non-PFAS compounds with similar mass patterns.",
@@ -2095,7 +2095,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-list-format-validation/000",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-list-format-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "If feature finding by an external software is desired (e.g., vendor software), the following steps can also be performed by loading a feature table (.csv, that requires m/z, RT, and intensities of the [M] and [M+1] isotopes) into PF\u0394Screen without feature detection via OpenMS. However, the raw mzML files are still needed to assign MS2 data to the features in the feature table",
       "asbval:note": "Passage explicitly describes loading custom feature tables in CSV format with required columns (m/z, RT, intensities) into PF\u0394Screen for downstream analysis.",
@@ -2115,7 +2115,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-list-format-validation/001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-list-format-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "loading a feature table (.csv, that requires m/z, RT, and intensities of the [M] and [M+1] isotopes)",
       "asbval:note": "Paper specifies mandatory columns: m/z, RT, and intensities (M and M+1 isotopes).",
@@ -2135,7 +2135,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-list-format-validation/002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-list-format-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the raw mzML files are still needed to assign MS2 data to the features in the feature table (see SI). Besides pyOpenMS, the mass spectrometric Python library Pyteomics is used for selected calculations",
       "asbval:note": "Paper indicates custom feature lists are integrated into the workflow for MD/C-m/C, KMD, and MS2 analysis; Pyteomics is used for calculations.",
@@ -2155,7 +2155,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-list-format-validation/003",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-list-format-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "If feature finding by an external software is desired (e.g., vendor software), the following steps can also be performed by loading a feature table (.csv, that requires m/z, RT, and intensities of the [M] and [M+1] isotopes) into PF\u0394Screen without feature detection via OpenMS.",
       "asbval:note": "Passage explicitly supports the use case of external feature-finding software as alternative to pyOpenMS.",
@@ -2175,7 +2175,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-list-format-validation/004",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-list-format-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "loading a feature table (.csv, that requires m/z, RT, and intensities of the [M] and [M+1] isotopes)",
       "asbval:note": "Paper explicitly mentions CSV format and required columns (m/z, RT, intensities). TSV and XLSX formats are mentioned in the card but only CSV is explicitly documented in passages; however, the GUI description mentions 'Browse SampleFeatures.xlsx' suggesting XLSX support exists but is not detailed in provided passages.",
@@ -2195,7 +2195,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-list-format-validation/005",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-list-format-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "However, the raw mzML files are still needed to assign MS2 data to the features in the feature table",
       "asbval:note": "Paper confirms that mzML files are required for MS2 data assignment.",
@@ -2215,7 +2215,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-list-format-validation/006",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-list-format-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13) (Fig. 2). PF\u0394Screen is structured in several individual Python functions that are executed from one main file that allows data and parameter input via a simple GUI programmed with the tkinter library (Fig. S1).",
       "asbval:note": "Paper confirms PF\u0394Screen has a GUI (tkinter-based) and supports custom feature list loading, but specific button names ('Browse SampleFeatures.xlsx', 'Run ExternalFeatureTable') are not mentioned in passages. The functionality is confirmed but button labels are not verified.",
@@ -2235,7 +2235,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-list-format-validation/007",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-list-format-validation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS (or custom feature lists) with subsequent calculations for prioritization and identification of PFAS",
       "asbval:note": "Paper explicitly states pyOpenMS is used for feature detection and custom feature lists are presented as an alternative.",
@@ -2255,7 +2255,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-list-format-validation/008",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-list-format-validation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML) by using the MSConvert software from ProteoWizard",
       "asbval:note": "Paper confirms MSConvert is used to generate mzML files from vendor raw data, which are required for custom feature list workflows.",
@@ -2275,7 +2275,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-list-format-validation/009",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-list-format-validation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": "Paper confirms PF\u0394Screen is written in Python 3.9.13.",
@@ -2295,7 +2295,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/high-resolution-mass-spectrometry-interpretation/000",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/high-resolution-mass-spectrometry-interpretation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen, an open-source Python-based software tool with a simple graphical user interface (GUI) that combines the discussed techniques to efficiently prioritize PFAS in LC- or GC-HRMS data acquired with electrospray (ESI) or atmospheric pressure chemical ionization (APCI)... PFAS feature prioritization (2) includes techniques such as the MD/C-m/C approach, KMD analysis, fragment matching, and fragment mass differences",
       "asbval:note": "Claim is fully supported; paper explicitly describes combining mass-defect filtering (MD/C-m/C), Kendrick mass defect (KMD) analysis, and MS2 fragment matching for PFAS prioritization in LC/GC-HRMS.",
@@ -2315,7 +2315,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/high-resolution-mass-spectrometry-interpretation/001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/high-resolution-mass-spectrometry-interpretation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen can be applied vendor-independently either on mass spectrometric raw data (mzML, automated feature finding via pyOpenMS) or on custom feature lists",
       "asbval:note": "Paper confirms vendor-independent mzML processing and PFAS identification.",
@@ -2335,7 +2335,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/high-resolution-mass-spectrometry-interpretation/002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/high-resolution-mass-spectrometry-interpretation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS (or custom feature lists) with subsequent calculations for prioritization and identification of PFAS... This task is performed with pyOpenMS, a Python interface to the C++ OpenMS library",
       "asbval:note": "pyOpenMS role is explicitly confirmed as feature detection engine with Python interface to OpenMS C++ library.",
@@ -2355,7 +2355,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/high-resolution-mass-spectrometry-interpretation/003",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/high-resolution-mass-spectrometry-interpretation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "pyOpenMS, a Python interface to the C++ OpenMS library [42\u201346]. For feature detection, the FeatureFinderMetabo algorithm is used",
       "asbval:note": "OpenMS is confirmed as the underlying C++ library providing feature finding algorithms.",
@@ -2375,7 +2375,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/high-resolution-mass-spectrometry-interpretation/004",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/high-resolution-mass-spectrometry-interpretation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML) by using the MSConvert software from ProteoWizard",
       "asbval:note": "MSConvert is explicitly described as the tool for converting raw MS data to vendor-independent mzML format.",
@@ -2395,7 +2395,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/high-resolution-mass-spectrometry-interpretation/005",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/high-resolution-mass-spectrometry-interpretation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We developed PF\u0394Screen, a Python-based open-source tool with a simple graphical user interface (GUI) to perform efficient feature prioritization using several PFAS-specific techniques such as the highly promising MD/C-m/C approach, Kendrick mass defect analysis, diagnostic fragments (MS2), fragment mass differences (MS2), and suspect screening.",
       "asbval:note": "PF\u0394Screen is confirmed as the complete toolkit integrating all specified techniques with GUI.",
@@ -2415,7 +2415,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/high-resolution-mass-spectrometry-interpretation/006",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/high-resolution-mass-spectrometry-interpretation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": "Python is confirmed as the implementation language for PF\u0394Screen (version 3.9.13 specified).",
@@ -2435,7 +2435,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/high-resolution-mass-spectrometry-interpretation/007",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/high-resolution-mass-spectrometry-interpretation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Only mzML files with centroided spectra and one collision energy (CE) should be used... Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format",
       "asbval:note": "Scope claim is fully supported; paper specifies centroided mzML from data-dependent acquisition as required input.",
@@ -2455,7 +2455,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/high-resolution-mass-spectrometry-interpretation/008",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/high-resolution-mass-spectrometry-interpretation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "efficient prioritization techniques are needed to separate detected matrix components from the analytes of interest (often a data reduction from ~ 5000 detected compounds to 10\u2013100 identified analytes or even less)",
       "asbval:note": "Paper confirms the goal of prioritizing true PFAS from false positives and matrix components.",
@@ -2475,7 +2475,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/high-resolution-mass-spectrometry-interpretation/009",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/high-resolution-mass-spectrometry-interpretation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For all MS1 features, the number of carbon atoms, MD, and both MD/C and m/C dimensions are determined... Furthermore, a list of typical PFAS diagnostic fragments (DFs, approximately 900 fragments) from literature are automatically matched with all fragmentation spectra",
       "asbval:note": "Paper confirms use of MS1 molecular formulas and MS2 diagnostic fragments for PFAS filtering.",
@@ -2495,7 +2495,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hrms-feature-annotation-integration/000",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/hrms-feature-annotation-integration/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "If feature finding by an external software is desired (e.g., vendor software), the following steps can also be performed by loading a feature table (.csv, that requires m/z, RT, and intensities of the [M] and [M+1] isotopes) into PF\u0394Screen without feature detection via OpenMS. However, the raw mzML files are still needed to assign MS2 data to the features in the feature table",
       "asbval:note": "Passage explicitly describes the workflow for integrating external feature lists and applying the full prioritization pipeline (MD/C-m/C, KMD, MS2 diagnostics).",
@@ -2515,7 +2515,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hrms-feature-annotation-integration/001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/hrms-feature-annotation-integration/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "If feature finding by an external software is desired (e.g., vendor software), the following steps can also be performed by loading a feature table (.csv, that requires m/z, RT, and intensities of the [M] and [M+1] isotopes) into PF\u0394Screen without feature detection via OpenMS.",
       "asbval:note": "Passage confirms CSV feature table input and bypass of pyOpenMS feature detection. mzML requirement confirmed in same passage.",
@@ -2535,7 +2535,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hrms-feature-annotation-integration/002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/hrms-feature-annotation-integration/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python",
       "asbval:note": "Tool name confirmed case-insensitive (PF\u0394Screen in paper, PF\u0394Screen in card). Role as primary execution environment for prioritization is supported.",
@@ -2555,7 +2555,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hrms-feature-annotation-integration/003",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/hrms-feature-annotation-integration/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS (or custom feature lists) with subsequent calculations for prioritization and identification of PFAS",
       "asbval:note": "pyOpenMS confirmed as feature detection tool; passage explicitly notes it as alternative to custom feature lists.",
@@ -2575,7 +2575,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hrms-feature-annotation-integration/004",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/hrms-feature-annotation-integration/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML) by using the MSConvert software from ProteoWizard",
       "asbval:note": "MSConvert confirmed for mzML conversion; role in enabling vendor-independent data processing is supported.",
@@ -2595,7 +2595,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hrms-feature-annotation-integration/005",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/hrms-feature-annotation-integration/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": "Python confirmed as implementation language; version 3.9.13 specified in paper.",
@@ -2615,7 +2615,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hrms-feature-annotation-integration/006",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/hrms-feature-annotation-integration/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Its source code is freely available on GitHub ( https://github.com/JonZwe/PFAScreen )",
       "asbval:note": "GitHub URL confirmed verbatim in abstract.",
@@ -2635,7 +2635,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-defect-calculation/000",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-defect-calculation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The chemical mass defect (MD) of PFAS is typically lower (MDF = \u2212 0.0016 Da) than the one of hydrocarbons (MDH = + 0.0078 Da) and has been used to remove detected features outside a predefined MD range",
       "asbval:note": "Mass defect is explicitly described as a computational metric for PFAS identification based on difference between observed and theoretical masses.",
@@ -2655,7 +2655,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-defect-calculation/001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-defect-calculation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Recently, a promising approach based on the MD normalized to the carbon number (MD/C) vs. the mass normalized to the carbon number (m/C) was proposed to separate PFAS much more efficiently from other hydrocarbon features in HRMS data... Besides the MD and MD/C-m/C approach, the Kendrick mass defect (KMD) analysis to detect homologous series of PFAS",
       "asbval:note": "Paper explicitly describes MD as foundational, with MD/C and KMD as downstream applications.",
@@ -2675,7 +2675,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-defect-calculation/002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-defect-calculation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS (or custom feature lists)... For feature detection, the FeatureFinderMetabo algorithm is used, which is designed for metabolites and small molecules",
       "asbval:note": "pyOpenMS confirmed as feature detection tool providing m/z and RT values.",
@@ -2695,7 +2695,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-defect-calculation/003",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-defect-calculation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We developed PF\u0394 Screen , a Python-based open-source tool with a simple graphical user interface (GUI) to perform efficient feature prioritization using several PFAS-specific techniques such as the highly promising MD/C-m/C approach, Kendrick mass defect analysis, diagnostic fragments (MS 2 ), fragment mass differences (MS 2 ), and suspect screening.",
       "asbval:note": "PF\u0394Screen confirmed as implementing mass defect-based prioritization with MD/C-m/C and KMD.",
@@ -2715,7 +2715,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-defect-calculation/004",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-defect-calculation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML) by using the MSConvert software from ProteoWizard",
       "asbval:note": "MSConvert explicitly described as converting vendor formats to mzML for PF\u0394Screen input.",
@@ -2735,7 +2735,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-defect-calculation/005",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-defect-calculation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": "Python 3.9.13 explicitly named as implementation language for PF\u0394Screen.",
@@ -2755,7 +2755,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-defect-calculation/006",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-defect-calculation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen can be applied vendor-independently either on mass spectrometric raw data (mzML, automated feature finding via pyOpenMS) or on custom feature lists (external feature finding by other software tools).",
       "asbval:note": "Paper confirms both mzML and custom feature list inputs are supported.",
@@ -2775,7 +2775,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-defect-calculation/007",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-defect-calculation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For all MS1 features, the number of carbon atoms, MD, and both MD/C and m/C dimensions are determined. To detect homologues series (HS), the KMD (with a predefined repeating unit required; e.g., CF2) is calculated",
       "asbval:note": "Paper describes MD calculation as prerequisite for MD/C and KMD calculations in the workflow.",
@@ -2795,7 +2795,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-defect-calculation/008",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-defect-calculation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For all MS1 features, the number of carbon atoms, MD, and both MD/C and m/C dimensions are determined... The carbon number can be easily estimated for all HRMS features by using the relative abundance of the M+1 isotope (13C).",
       "asbval:note": "Paper implies molecular formula (or at least carbon number) is required for MD calculation.",
@@ -2815,7 +2815,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-defect-calculation/009",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-defect-calculation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Since NTS is typically a time-consuming and often partially manual process, efficient prioritization techniques are needed to separate detected matrix components from the analytes of interest... NTS approaches led to the identification of more than 750 novel PFAS in various samples",
       "asbval:note": "Paper emphasizes NTS context where mass defect filtering is essential; targeted analysis would not require this prioritization.",
@@ -2835,7 +2835,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-defect-calculation/010",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-defect-calculation/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "high-resolution mass spectrometry (HRMS) is necessary for a more comprehensive characterization of PFAS... The chemical mass defect (MD) of PFAS is typically lower (MDF = \u2212 0.0016 Da)",
       "asbval:note": "Paper explicitly requires HRMS; mass defect calculations depend on high mass accuracy (ppm-level precision).",
@@ -2855,7 +2855,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectral-peak-annotation/000",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectral-peak-annotation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "a list of typical PFAS diagnostic fragments (DFs, approximately 900 fragments) from literature are automatically matched with all fragmentation spectra... fragment mass differences are calculated comprehensively. Therefore, all fragment differences within each MS2 spectrum are calculated and matched against a predefined list of PFAS typical mass differences (e.g., \u0394CF2, \u0394C2F4, \u0394HF, \u0394C10H3F17)",
       "asbval:note": "Core functionality of PF\u0394Screen explicitly described in passages 5\u20136.",
@@ -2875,7 +2875,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectral-peak-annotation/001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectral-peak-annotation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS (or custom feature lists)... For feature detection, the FeatureFinderMetabo algorithm is used... This task is performed with pyOpenMS, a Python interface to the C++ OpenMS library",
       "asbval:note": "[SUBSTRING-MATCH for pyOpenMS | role: MS data parsing and feature detection]",
@@ -2895,7 +2895,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectral-peak-annotation/002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectral-peak-annotation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We developed PF\u0394 Screen, a Python-based open-source tool with a simple graphical user interface (GUI) to perform efficient feature prioritization using several PFAS-specific techniques such as the highly promising MD/C-m/C approach, Kendrick mass defect analysis, diagnostic fragments (MS2), fragment mass differences (MS2), and suspect screening.",
       "asbval:note": "[SUBSTRING-MATCH for PF\u0394Screen | role: integrated PFAS prioritization tool]",
@@ -2915,7 +2915,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectral-peak-annotation/003",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectral-peak-annotation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML) by using the MSConvert software from ProteoWizard",
       "asbval:note": "[SUBSTRING-MATCH for MSConvert | role: vendor-independent format conversion]",
@@ -2935,7 +2935,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectral-peak-annotation/004",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectral-peak-annotation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": "Python version 3.9.13 explicitly stated; tool is Python-based.",
@@ -2955,7 +2955,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectral-peak-annotation/005",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectral-peak-annotation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Only mzML files with centroided spectra and one collision energy (CE) should be used. If profile data was acquired and MS2 spectra from several different CEs per precursor m/z are present, the peak picking (for centroiding) and subset functions (to keep only one desired CE) from MSConvert can be used to generate the correct mzML input files.",
       "asbval:note": "Input format and preprocessing requirements explicitly documented.",
@@ -2975,7 +2975,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectral-peak-annotation/006",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectral-peak-annotation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Only mzML files with centroided spectra and one collision energy (CE) should be used. If profile data was acquired... the peak picking (for centroiding)... from MSConvert can be used to generate the correct mzML input files.",
       "asbval:note": "Paper explicitly requires centroided spectra and describes centroiding as preprocessing step.",
@@ -2995,7 +2995,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectral-peak-annotation/007",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectral-peak-annotation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "data-dependent acquisition (ddMS2) files into the mzML data format... After feature finding in the MS1 data, MS2 spectra can be aligned to their respective precursors by specifying an m/z and RT tolerance. Only one unique MS2 spectrum with the highest precursor intensity is assigned to the respective MS1 precursor.",
       "asbval:note": "Paper uses data-dependent acquisition (DDA/ddMS2) exclusively and requires precursor-to-fragment alignment. DIA is not discussed; the claim about DIA ambiguity is inferred but not explicitly stated in the paper.",
@@ -3015,7 +3015,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectral-peak-annotation/008",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectral-peak-annotation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "a list of typical PFAS diagnostic fragments (DFs, approximately 900 fragments) from literature are automatically matched with all fragmentation spectra (which is easily extendable)",
       "asbval:note": "Exact fragment count and source (literature) confirmed.",
@@ -3035,7 +3035,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectral-peak-annotation/009",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectral-peak-annotation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "all fragment differences within each MS2 spectrum are calculated and matched against a predefined list of PFAS typical mass differences (e.g., \u0394CF2, \u0394C2F4, \u0394HF, \u0394C10H3F17)",
       "asbval:note": "Specific mass differences listed; comprehensive pairwise calculation confirmed.",
@@ -3055,7 +3055,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectral-peak-annotation/010",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectral-peak-annotation/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The most important parameter is the MS2 noise threshold, used to specify the lowest MS2 intensity to be considered for DF, and mass difference matching. It is important to select a suitable instrument-specific threshold as a too low input value may result in a high number of false-positive annotations.",
       "asbval:note": "Parameter explicitly documented with guidance on selection.",
@@ -3075,7 +3075,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectral-peak-annotation/011",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectral-peak-annotation/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Besides a mass tolerance for fragment matching, a minimal number of positive DFs or mass differences can be specified to flag a MS2 spectrum as potential hit.",
       "asbval:note": "Mass tolerance parameter confirmed; specific value (\u00b12 mDa) used in results section [passage 8].",
@@ -3095,7 +3095,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectral-peak-annotation/012",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectral-peak-annotation/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "After execution, a folder is generated named after the sample file where important results are saved, including a summary in an Excel sheet which is formatted as a table that can be easily inspected, sorted, and subset for a faster overview of the results as well as an additional CSV file that includes the same data",
       "asbval:note": "Output formats and structure explicitly documented.",
@@ -3115,7 +3115,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectral-peak-annotation/013",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectral-peak-annotation/013",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Important plots are saved in the interactive HTML format which can easily be opened in any browser, allowing zooming and data inspection with interactive tooltips",
       "asbval:note": "Interactive visualization confirmed.",
@@ -3135,7 +3135,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-feature-table-construction/000",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectrometry-feature-table-construction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS (or custom feature lists) with subsequent calculations for prioritization and identification of PFAS in both HPLC- and GC-HRMS data.",
       "asbval:note": "Paper uses pyOpenMS for feature detection from mzML files, but specifies FeatureFinderMetabo algorithm (not FeatureFinderCentroided). Passage [5] states: 'For feature detection, the FeatureFinderMetabo algorithm is used, which is designed for metabolites and small molecules.' Output format is CSV/Excel, not mzTab.",
@@ -3155,7 +3155,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-feature-table-construction/001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectrometry-feature-table-construction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS (or custom feature lists)",
       "asbval:note": "pyOpenMS confirmed as tool for feature detection in PF\u0394Screen workflow.",
@@ -3175,7 +3175,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-feature-table-construction/002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectrometry-feature-table-construction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This task is performed with pyOpenMS, a Python interface to the C++ OpenMS library [42\u201346].",
       "asbval:note": "OpenMS confirmed as underlying C++ library for pyOpenMS.",
@@ -3195,7 +3195,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-feature-table-construction/003",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectrometry-feature-table-construction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML) by using the MSConvert software from ProteoWizard [40, 41].",
       "asbval:note": "MSConvert confirmed as tool for converting vendor formats to mzML.",
@@ -3215,7 +3215,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-feature-table-construction/004",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectrometry-feature-table-construction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We developed PF\u0394 Screen , a Python-based open-source tool with a simple graphical user interface (GUI) to perform efficient feature prioritization",
       "asbval:note": "PF\u0394Screen confirmed as the main tool that wraps pyOpenMS feature detection.",
@@ -3235,7 +3235,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-feature-table-construction/005",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectrometry-feature-table-construction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": "Python confirmed as implementation language for PF\u0394Screen.",
@@ -3255,7 +3255,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-feature-table-construction/006",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectrometry-feature-table-construction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS",
       "asbval:note": "Scope alignment confirmed: paper uses centroided mzML from ddMS2 acquisition.",
@@ -3275,7 +3275,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-feature-table-construction/007",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectrometry-feature-table-construction/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "After execution, a folder is generated named after the sample file where important results are saved, including a summary in an Excel sheet which is formatted as a table that can be easily inspected, sorted, and subset for a faster overview of the results as well as an additional CSV file that includes the same data",
       "asbval:note": "Paper confirms CSV and Excel output formats, but no mention of mzTab format. Output is Excel/CSV, not mzTab.",
@@ -3295,7 +3295,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-feature-table-construction/008",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectrometry-feature-table-construction/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The FeatureFinding tab (1) allows detection of feature via pyOpenMS in MS raw data followed by MS2 alignment and blank correction resulting in a feature list for a sample of interest. PFAS feature prioritization (2) includes techniques such as the MD/C-m/C approach, KMD analysis, fragment matching, and fragment mass differences",
       "asbval:note": "Feature extraction is explicitly used for downstream PFAS prioritization in the workflow.",
@@ -3315,7 +3315,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-feature-table-construction/009",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectrometry-feature-table-construction/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For feature detection, the FeatureFinderMetabo algorithm is used, which is designed for metabolites and small molecules [47\u201349].",
       "asbval:note": "Paper uses FeatureFinderMetabo, not FeatureFinderCentroided. Both are OpenMS algorithms but serve different purposes; FeatureFinderMetabo is designed for metabolites and small molecules.",
@@ -3335,7 +3335,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-feature-table-construction/010",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectrometry-feature-table-construction/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Three parameters (mass error (ppm), intensity threshold, and an isotope model for more accurate detection of coeluting isotopologues) can be specified.",
       "asbval:note": "All three parameters confirmed in the paper.",
@@ -3355,7 +3355,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-feature-table-construction/011",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectrometry-feature-table-construction/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "After feature finding in the MS1 data, MS2 spectra can be aligned to their respective precursors by specifying an m/z and RT tolerance.",
       "asbval:note": "MS2 alignment parameters confirmed.",
@@ -3375,7 +3375,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-feature-table-construction/012",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectrometry-feature-table-construction/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Blank correction is performed by setting an m/z and RT tolerance as well as a fold change with the desired increase of abundance in the sample compared to the blank.",
       "asbval:note": "Blank correction parameters confirmed.",
@@ -3395,7 +3395,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/md-defect-ratio-calculation/000",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/md-defect-ratio-calculation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Recently, a promising approach based on the MD normalized to the carbon number (MD/C) vs. the mass normalized to the carbon number (m/C) was proposed to separate PFAS much more efficiently from other hydrocarbon features in HRMS data",
       "asbval:note": "The paper explicitly describes the MD/C-m/C approach as a core prioritization technique for PFAS identification.",
@@ -3415,7 +3415,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/md-defect-ratio-calculation/001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/md-defect-ratio-calculation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Therefore, if the number of features can be preliminarily reduced by the MD/C-m/C approach before applying those techniques, a faster and more accurate NTS workflow can be performed, decreasing both computational and manual effort regarding the further inspection of the features.",
       "asbval:note": "Paper confirms MD/C-m/C is used as an early filtering step to reduce computational burden of downstream analyses.",
@@ -3435,7 +3435,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/md-defect-ratio-calculation/002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/md-defect-ratio-calculation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen can be applied vendor-independently either on mass spectrometric raw data (mzML, automated feature finding via pyOpenMS) or on custom feature lists (external feature finding by other software tools).",
       "asbval:note": "Paper explicitly supports both pyOpenMS-detected and custom feature list inputs.",
@@ -3455,7 +3455,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/md-defect-ratio-calculation/003",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/md-defect-ratio-calculation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The PFAS prioritization workflow is intended in an iterative manner: after feature detection, the MD/C-m/C plot should firstly be manually inspected to determine reasonable boundaries to remove most of the detected features (e.g., ~ 90%) that cannot be PFAS due to their MD/C-m/C locations (depending on the underlying question). After determination of these cutoffs, the PFAS feature prioritization can be executed again focused on a subset of features, which will strongly decrease false positives in KMD analysis, fragment matching, and suspect screening",
       "asbval:note": "Paper confirms MD/C-m/C is applied before KMD analysis and fragment matching.",
@@ -3475,7 +3475,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/md-defect-ratio-calculation/004",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/md-defect-ratio-calculation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS (or custom feature lists) with subsequent calculations for prioritization and identification of PFAS",
       "asbval:note": "[SUBSTRING-MATCH for pyOpenMS | role: feature detection from mzML data]",
@@ -3495,7 +3495,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/md-defect-ratio-calculation/005",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/md-defect-ratio-calculation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We developed PF\u0394Screen, a Python-based open-source tool with a simple graphical user interface (GUI) to perform efficient feature prioritization using several PFAS-specific techniques such as the highly promising MD/C-m/C approach, Kendrick mass defect analysis, diagnostic fragments (MS2), fragment mass differences (MS2), and suspect screening.",
       "asbval:note": "[SUBSTRING-MATCH for PF\u0394Screen | role: integrated PFAS prioritization platform with MD/C-m/C, KMD, and MS2 matching]",
@@ -3515,7 +3515,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/md-defect-ratio-calculation/006",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/md-defect-ratio-calculation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Its source code is freely available on GitHub ( https://github.com/JonZwe/PFAScreen ).",
       "asbval:note": "Repository URL confirmed in abstract.",
@@ -3535,7 +3535,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/md-defect-ratio-calculation/007",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/md-defect-ratio-calculation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": "[SUBSTRING-MATCH for Python | role: implementation language for PF\u0394Screen]",
@@ -3555,7 +3555,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/md-defect-ratio-calculation/008",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/md-defect-ratio-calculation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Only mzML files with centroided spectra and one collision energy (CE) should be used.",
       "asbval:note": "Paper requires centroided spectra as input.",
@@ -3575,7 +3575,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/md-defect-ratio-calculation/009",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/md-defect-ratio-calculation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For all MS1 features, the number of carbon atoms, MD, and both MD/C and m/C dimensions are determined.",
       "asbval:note": "MD calculation is explicitly performed in the workflow.",
@@ -3595,7 +3595,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/md-defect-ratio-calculation/010",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/md-defect-ratio-calculation/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To detect homologues series (HS), the KMD (with a predefined repeating unit required; e.g., CF2) is calculated and corresponding features belonging to a certain HS are aligned by providing a unique HS number",
       "asbval:note": "KMD calculation is part of the workflow.",
@@ -3615,7 +3615,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/md-defect-ratio-calculation/011",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/md-defect-ratio-calculation/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Furthermore, a list of typical PFAS diagnostic fragments (DFs, approximately 900 fragments) from literature are automatically matched with all fragmentation spectra",
       "asbval:note": "MS2 diagnostic fragment matching is implemented.",
@@ -3635,7 +3635,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/md-defect-ratio-calculation/012",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/md-defect-ratio-calculation/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML) by using the MSConvert software from ProteoWizard",
       "asbval:note": "mzML format is the primary input format for PF\u0394Screen.",
@@ -3655,7 +3655,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/md-defect-ratio-calculation/013",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/md-defect-ratio-calculation/013",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "After feature detection, blank correction, and a short inspection of the results, the data can be reduced by the MD/C-m/C approach by setting an appropriate m/C cutoff value.",
       "asbval:note": "Feature filtering by MD/C-m/C cutoffs is a core workflow step.",
@@ -3675,7 +3675,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-formula-validation/000",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/molecular-formula-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For all MS1 features, the number of carbon atoms, MD, and both MD/C and m/C dimensions are determined... The chemical mass defect (MD) of PFAS is typically lower (MDF = \u2212 0.0016 Da) than the one of hydrocarbons (MDH = + 0.0078 Da)... Recently, a promising approach based on the MD normalized to the carbon number (MD/C) vs. the mass normalized to the carbon number (m/C) was proposed to separate PFAS much more efficiently from other hydrocarbon features in HRMS data",
       "asbval:note": "The paper explicitly describes calculating mass defect from elemental composition (carbon number derived from M+1 isotope) and using MD/C-m/C for PFAS prioritization in non-target screening.",
@@ -3695,7 +3695,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-formula-validation/001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/molecular-formula-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for PF\u0394Screen | role: tool] We developed PF\u0394 Screen , a Python-based open-source tool with a simple graphical user interface (GUI) to perform efficient feature prioritization using several PFAS-specific techniques such as the highly promising MD/C-m/C approach, Kendrick mass defect analysis, diagnostic fragments (MS 2 ), fragment mass differences (MS 2 ), and suspect screening.",
       "asbval:note": "PF\u0394Screen is the primary tool implementing the MD/C-m/C approach for PFAS prioritization.",
@@ -3715,7 +3715,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-formula-validation/002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/molecular-formula-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For all MS1 features, the number of carbon atoms, MD, and both MD/C and m/C dimensions are determined... The PFAS prioritization workflow is intended in an iterative manner: after feature detection, the MD/C-m/C plot should firstly be manually inspected to determine reasonable boundaries to remove most of the detected features",
       "asbval:note": "PF\u0394Screen explicitly calculates MD and MD/C from features and applies thresholding for PFAS prioritization.",
@@ -3735,7 +3735,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-formula-validation/003",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/molecular-formula-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394 Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": "PF\u0394Screen is explicitly written in Python.",
@@ -3755,7 +3755,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-formula-validation/004",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/molecular-formula-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394 Screen is a fully automated tool... written in Python (3.9.13)... PF\u0394Screen is structured in several individual Python functions that are executed from one main file",
       "asbval:note": "Python is the implementation language for all calculations including mass defect and filtering.",
@@ -3775,7 +3775,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-formula-validation/005",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/molecular-formula-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for pyOpenMS | role: tool] This task is performed with pyOpenMS, a Python interface to the C++ OpenMS library [42\u201346]. For feature detection, the FeatureFinderMetabo algorithm is used",
       "asbval:note": "pyOpenMS is explicitly used for feature detection in PF\u0394Screen.",
@@ -3795,7 +3795,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-formula-validation/006",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/molecular-formula-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS (or custom feature lists) with subsequent calculations for prioritization and identification of PFAS... After feature finding in the MS1 data, MS2 spectra can be aligned to their respective precursors",
       "asbval:note": "pyOpenMS provides feature detection; subsequent MD/C-m/C calculations operate on the resulting feature list.",
@@ -3815,7 +3815,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-formula-validation/007",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/molecular-formula-validation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The chemical formulas from suspect hits were used to check for reasonable isotope patterns with the RawDataVisualization of PF\u0394Screen... The carbon number can be easily estimated for all HRMS features by using the relative abundance of the M+1 isotope (13C).",
       "asbval:note": "The paper describes using molecular formulas to validate features and estimate carbon number from isotope patterns before applying PFAS filters.",
@@ -3835,7 +3835,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-formula-validation/008",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/molecular-formula-validation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In the suspect screening process, the hits by accurate mass (tolerance of 4 mDa) were reduced from 217 to 176 by the MD/C-m/C cutoff in soil M1... The verification and (partially manual) identification process of prioritized features from the PF\u0394Screen results table (Excel or CSV) was performed by sorting the table according to decreasing intensity",
       "asbval:note": "The workflow applies MD/C-m/C filtering to reduce suspect hits before manual verification, consistent with the 'when not to use' guidance.",
@@ -3855,7 +3855,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-diagnostic-fragment-matching/000",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/ms2-diagnostic-fragment-matching/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Furthermore, a list of typical PFAS diagnostic fragments (DFs, approximately 900 fragments) from literature are automatically matched with all fragmentation spectra (which is easily extendable) [52, 53]. Both negative and positive fragments are considered depending on the measurement polarity which can be specified in the GUI.",
       "asbval:note": "The paper explicitly describes matching MS2 spectra against a database of ~900 PFAS diagnostic fragments. Fragment mass differences are also calculated and matched.",
@@ -3875,7 +3875,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-diagnostic-fragment-matching/001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/ms2-diagnostic-fragment-matching/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For all MS2 spectra, fragment mass differences are calculated comprehensively. Therefore, all fragment differences within each MS2 spectrum are calculated and matched against a predefined list of PFAS typical mass differences (e.g., \u0394CF2, \u0394C2F4, \u0394HF, \u0394C10H3F17, more details can be found in [31]). This allows an efficient detection of fragments indicative for PFAS without prior knowledge on their actual mass [23, 31].",
       "asbval:note": "The paper describes flagging features based on PFAS-indicative fragment patterns and mass differences.",
@@ -3895,7 +3895,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-diagnostic-fragment-matching/002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/ms2-diagnostic-fragment-matching/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS (or custom feature lists) with subsequent calculations for prioritization and identification of PFAS in both HPLC- and GC-HRMS data.",
       "asbval:note": "pyOpenMS is explicitly used for processing mzML files and feature detection. The paper also states: 'This task is performed with pyOpenMS, a Python interface to the C++ OpenMS library [42\u201346].' MS2 spectra are aligned to precursors via pyOpenMS.",
@@ -3915,7 +3915,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-diagnostic-fragment-matching/003",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/ms2-diagnostic-fragment-matching/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML) by using the MSConvert software from ProteoWizard [40, 41]. Only mzML files with centroided spectra and one collision energy (CE) should be used.",
       "asbval:note": "MSConvert is explicitly named and described for converting vendor raw data to centroided mzML format.",
@@ -3935,7 +3935,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-diagnostic-fragment-matching/004",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/ms2-diagnostic-fragment-matching/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We developed PF\u0394 Screen , a Python-based open-source tool with a simple graphical user interface (GUI) to perform efficient feature prioritization using several PFAS-specific techniques such as the highly promising MD/C-m/C approach, Kendrick mass defect analysis, diagnostic fragments (MS 2 ), fragment mass differences (MS 2 ), and suspect screening.",
       "asbval:note": "PF\u0394Screen (case-insensitive match: PF\u0394Screen) is confirmed as the tool implementing MS2 diagnostic fragment matching alongside MD/C-m/C and KMD analysis with a GUI.",
@@ -3955,7 +3955,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-diagnostic-fragment-matching/005",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/ms2-diagnostic-fragment-matching/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": "Python 3.9.13 is explicitly stated as the implementation language for PF\u0394Screen.",
@@ -3975,7 +3975,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-diagnostic-fragment-matching/006",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/ms2-diagnostic-fragment-matching/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Only mzML files with centroided spectra and one collision energy (CE) should be used. If profile data was acquired and MS2 spectra from several different CEs per precursor m/z are present, the peak picking (for centroiding) and subset functions (from MSConvert) can be used to generate the correct mzML input files.",
       "asbval:note": "The paper explicitly requires centroided MS2 spectra and describes data-dependent acquisition (ddMS2) workflows.",
@@ -3995,7 +3995,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-diagnostic-fragment-matching/007",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/ms2-diagnostic-fragment-matching/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "a list of typical PFAS diagnostic fragments (DFs, approximately 900 fragments) from literature are automatically matched with all fragmentation spectra (which is easily extendable)",
       "asbval:note": "The paper describes a ~900-fragment database that is extendable, confirming the need for a reference database.",
@@ -4015,7 +4015,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-diagnostic-fragment-matching/008",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/ms2-diagnostic-fragment-matching/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "all fragment differences within each MS2 spectrum are calculated and matched against a predefined list of PFAS typical mass differences (e.g., \u0394CF2, \u0394C2F4, \u0394HF, \u0394C10H3F17, more details can be found in [31])",
       "asbval:note": "CF\u2082 and other characteristic mass differences are explicitly listed as PFAS-typical fragments.",
@@ -4035,7 +4035,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-diagnostic-fragment-matching/009",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/ms2-diagnostic-fragment-matching/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Since NTS is typically a time-consuming and often partially manual process, efficient prioritization techniques are needed to separate detected matrix components from the analytes of interest (often a data reduction from ~ 5000 detected compounds to 10\u2013100 identified analytes or even less)",
       "asbval:note": "The paper describes the non-target screening context with large feature sets requiring prioritization.",
@@ -4055,7 +4055,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-diagnostic-fragment-matching/010",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/ms2-diagnostic-fragment-matching/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Only mzML files with centroided spectra and one collision energy (CE) should be used. If profile data was acquired and MS2 spectra from several different CEs per precursor m/z are present, the peak picking (for centroiding) and subset functions (from MSConvert) can be used to generate the correct mzML input files.",
       "asbval:note": "The paper explicitly states that centroided spectra are required and profile data must be converted.",
@@ -4075,7 +4075,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-diagnostic-fragment-matching/011",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/ms2-diagnostic-fragment-matching/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For all MS2 spectra, fragment mass differences are calculated comprehensively. Therefore, all fragment differences within each MS2 spectrum are calculated and matched against a predefined list of PFAS typical mass differences",
       "asbval:note": "The paper makes clear that MS2 spectra are required for diagnostic fragment matching; MS1-only data cannot be used for this technique.",
@@ -4095,7 +4095,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-file-parsing/000",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mzml-file-parsing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML) by using the MSConvert software from ProteoWizard... PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)... This task is performed with pyOpenMS, a Python interface to the C++ OpenMS library",
       "asbval:note": "Claim is directly supported by multiple passages describing mzML parsing via pyOpenMS for PFAS feature detection.",
@@ -4115,7 +4115,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-file-parsing/001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mzml-file-parsing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This task is performed with pyOpenMS, a Python interface to the C++ OpenMS library [42\u201346]. For feature detection, the FeatureFinderMetabo algorithm is used, which is designed for metabolites and small molecules",
       "asbval:note": "pyOpenMS is explicitly named and described as the Python interface used for feature detection from mzML files.",
@@ -4135,7 +4135,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-file-parsing/002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mzml-file-parsing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This task is performed with pyOpenMS, a Python interface to the C++ OpenMS library [42\u201346].",
       "asbval:note": "OpenMS is identified as the underlying C++ library for pyOpenMS.",
@@ -4155,7 +4155,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-file-parsing/003",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mzml-file-parsing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML) by using the MSConvert software from ProteoWizard [40, 41]. Only mzML files with centroided spectra and one collision energy (CE) should be used. If profile data was acquired and MS2 spectra from several different CEs per precursor m/z are present, the peak picking (for centroiding) and subset functions (from MSConvert) can be used to generate the correct mzML input files.",
       "asbval:note": "MSConvert is explicitly described as the tool for converting vendor raw data to mzML with centroiding capability.",
@@ -4175,7 +4175,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-file-parsing/004",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mzml-file-parsing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)... The FeatureFinding tab (1) allows detection of feature via pyOpenMS in MS raw data followed by MS2 alignment and blank correction resulting in a feature list for a sample of interest.",
       "asbval:note": "PF\u0394Screen is confirmed as the complete workflow tool that integrates pyOpenMS for mzML parsing and feature detection.",
@@ -4195,7 +4195,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-file-parsing/005",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mzml-file-parsing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": "Python is explicitly stated as the language in which PF\u0394Screen is written.",
@@ -4215,7 +4215,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-file-parsing/006",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mzml-file-parsing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data... Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML)... After feature detection, the MS raw data can be directly visualized via the PF\u0394Screen GUI",
       "asbval:note": "Scope aligns with paper's description of LC/GC-HRMS with ESI/APCI and vendor-independent mzML processing.",
@@ -4235,7 +4235,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-file-parsing/007",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mzml-file-parsing/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Only mzML files with centroided spectra and one collision energy (CE) should be used. If profile data was acquired and MS2 spectra from several different CEs per precursor m/z are present, the peak picking (for centroiding) and subset functions (from MSConvert) can be used to generate the correct mzML input files.",
       "asbval:note": "Paper explicitly states that centroided spectra are required and provides guidance on handling profile data.",
@@ -4255,7 +4255,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-file-parsing/008",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mzml-file-parsing/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In the MS2 data, lists of PFAS-specific diagnostic fragments (DFs) as well as fragment mass differences and neutral losses can be used to prioritize fragmentation spectra... For all MS2 spectra, fragment mass differences are calculated comprehensively... Furthermore, a list of typical PFAS diagnostic fragments (DFs, approximately 900 fragments) from literature are automatically matched with all fragmentation spectra",
       "asbval:note": "Paper confirms MS2 data is essential for diagnostic fragment and mass difference matching in PFAS prioritization.",
@@ -4275,7 +4275,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-characteristic-mass-difference-detection/000",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-characteristic-mass-difference-detection/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For all MS2 spectra, fragment mass differences are calculated comprehensively. Therefore, all fragment differences within each MS2 spectrum are calculated and matched against a predefined list of PFAS typical mass differences (e.g., \u0394CF2, \u0394C2F4, \u0394HF, \u0394C10H3F17, more details can be found in [31]). This allows an efficient detection of fragments indicative for PFAS without prior knowledge on their actual mass [23, 31]. Furthermore, a list of typical PFAS diagnostic fragments (DFs, approximately 900 fragments) from literature are automatically matched with all fragmentation spectra... PFAS feature prioritization (2) includes techniques such as the MD/C-m/C approach, KMD analysis, fragment matching, and fragment mass differences which generates a strongly reduced feature list of potential PFAS.",
       "asbval:note": "Claim is directly supported. The paper explicitly describes detection of diagnostic fragment mass differences (\u0394CF2, \u0394C2F4, \u0394HF) in MS2 spectra and their use alongside MD/C-m/C and KMD analysis for PFAS prioritization.",
@@ -4295,7 +4295,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-characteristic-mass-difference-detection/001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-characteristic-mass-difference-detection/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS (or custom feature lists) with subsequent calculations for prioritization and identification of PFAS in both HPLC- and GC-HRMS data... This task is performed with pyOpenMS, a Python interface to the C++ OpenMS library [42\u201346]. For feature detection, the FeatureFinderMetabo algorithm is used, which is designed for metabolites and small molecules [47\u201349].",
       "asbval:note": "pyOpenMS is confirmed as the tool used for MS data parsing and feature detection from mzML files.",
@@ -4315,7 +4315,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-characteristic-mass-difference-detection/002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-characteristic-mass-difference-detection/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This task is performed with pyOpenMS, a Python interface to the C++ OpenMS library [42\u201346].",
       "asbval:note": "OpenMS is confirmed as the underlying C++ library accessed via pyOpenMS.",
@@ -4335,7 +4335,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-characteristic-mass-difference-detection/003",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-characteristic-mass-difference-detection/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML) by using the MSConvert software from ProteoWizard [40, 41]. Only mzML files with centroided spectra and one collision energy (CE) should be used.",
       "asbval:note": "MSConvert is explicitly mentioned for converting vendor-specific raw data to centroided mzML format.",
@@ -4355,7 +4355,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-characteristic-mass-difference-detection/004",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-characteristic-mass-difference-detection/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We developed PF\u0394Screen, a Python-based open-source tool with a simple graphical user interface (GUI) to perform efficient feature prioritization using several PFAS-specific techniques such as the highly promising MD/C-m/C approach, Kendrick mass defect analysis, diagnostic fragments (MS2), fragment mass differences (MS2), and suspect screening... PFAS feature prioritization (2) includes techniques such as the MD/C-m/C approach, KMD analysis, fragment matching, and fragment mass differences which generates a strongly reduced feature list of potential PFAS.",
       "asbval:note": "PF\u0394Screen is confirmed as the integrated tool implementing all these techniques together.",
@@ -4375,7 +4375,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-characteristic-mass-difference-detection/005",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-characteristic-mass-difference-detection/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We developed PF\u0394Screen, a Python-based open-source tool with a simple graphical user interface (GUI)... PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": "Python is confirmed as the implementation language for PF\u0394Screen (version 3.9.13 specified).",
@@ -4395,7 +4395,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-characteristic-mass-difference-detection/006",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-characteristic-mass-difference-detection/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Its source code is freely available on GitHub ( https://github.com/JonZwe/PFAScreen ).",
       "asbval:note": "Repository URL is confirmed in the abstract.",
@@ -4415,7 +4415,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-feature-prioritization/000",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-feature-prioritization/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen, a Python-based open-source tool with a simple graphical user interface (GUI) to perform efficient feature prioritization using several PFAS-specific techniques such as the highly promising MD/C-m/C approach, Kendrick mass defect analysis, diagnostic fragments (MS2), fragment mass differences (MS2), and suspect screening.",
       "asbval:note": null,
@@ -4435,7 +4435,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-feature-prioritization/001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-feature-prioritization/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen can be used efficiently for prioritizing features in both LC- and GC-HRMS (ESI and APCI) raw data in all kinds of samples independent of the vendor of the mass spectrometer used.",
       "asbval:note": null,
@@ -4455,7 +4455,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-feature-prioritization/002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-feature-prioritization/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We developed PF\u0394Screen, a Python-based open-source tool with a simple graphical user interface (GUI) to perform efficient feature prioritization using several PFAS-specific techniques such as the highly promising MD/C-m/C approach, Kendrick mass defect analysis, diagnostic fragments (MS2), fragment mass differences (MS2), and suspect screening.",
       "asbval:note": null,
@@ -4475,7 +4475,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-feature-prioritization/003",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-feature-prioritization/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Its source code is freely available on GitHub (https://github.com/JonZwe/PFAScreen).",
       "asbval:note": null,
@@ -4495,7 +4495,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-feature-prioritization/004",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-feature-prioritization/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13). PF\u0394Screen is structured in several individual Python functions that are executed from one main file that allows data and parameter input via a simple GUI programmed with the tkinter library.",
       "asbval:note": null,
@@ -4515,7 +4515,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-feature-prioritization/005",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-feature-prioritization/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS (or custom feature lists) with subsequent calculations for prioritization and identification of PFAS in both HPLC- and GC-HRMS data.",
       "asbval:note": null,
@@ -4535,7 +4535,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-feature-prioritization/006",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-feature-prioritization/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML) by using the MSConvert software from ProteoWizard.",
       "asbval:note": null,
@@ -4555,7 +4555,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-feature-prioritization/007",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-feature-prioritization/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We developed PF\u0394Screen, a Python-based open-source tool with a simple graphical user interface (GUI)",
       "asbval:note": null,
@@ -4575,7 +4575,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-homologous-series-detection/000",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-homologous-series-detection/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Besides the MD and MD/C-m/C approach, the Kendrick mass defect (KMD) analysis to detect homologous series of PFAS (e.g., with CF2 or CF2O as repeating units) is of great relevance since it allows the grouping of structurally related PFAS, simplifying their identification",
       "asbval:note": null,
@@ -4595,7 +4595,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-homologous-series-detection/001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-homologous-series-detection/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the Kendrick mass defect (KMD) analysis to detect homologous series of PFAS (e.g., with CF2 or CF2O as repeating units) is of great relevance since it allows the grouping of structurally related PFAS",
       "asbval:note": null,
@@ -4615,7 +4615,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-homologous-series-detection/002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-homologous-series-detection/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PFAS feature prioritization (2) includes techniques such as the MD/C-m/C approach, KMD analysis, fragment matching, and fragment mass differences which generates a strongly reduced feature list of potential PFAS",
       "asbval:note": null,
@@ -4635,7 +4635,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-homologous-series-detection/003",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-homologous-series-detection/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13) (Fig. 2). PF\u0394Screen is structured in several individual Python functions that are executed from one main file that allows data and parameter input via a simple GUI programmed with the tkinter library",
       "asbval:note": null,
@@ -4655,7 +4655,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-homologous-series-detection/004",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-homologous-series-detection/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature detection from vendor-independent MS raw data (mzML, data-dependent acquisition) is performed via pyOpenMS (or custom feature lists) with subsequent calculations for prioritization and identification of PFAS in both HPLC- and GC-HRMS data",
       "asbval:note": null,
@@ -4675,7 +4675,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-homologous-series-detection/005",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-homologous-series-detection/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The first step usually performed in NTS is detection of features in the MS raw data characterized by chromatographic peak shapes of coeluting isotopes, resulting in a list of m/z, retention time (RT), and peak area. This task is performed with pyOpenMS",
       "asbval:note": null,
@@ -4695,7 +4695,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-homologous-series-detection/006",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-homologous-series-detection/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": null,
@@ -4715,7 +4715,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-homologous-series-detection/007",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-homologous-series-detection/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is an open-source Python-based software tool with a simple graphical user interface (GUI)",
       "asbval:note": null,
@@ -4735,7 +4735,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-homologous-series-detection/008",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-homologous-series-detection/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Its source code is freely available on GitHub ( https://github.com/JonZwe/PFAScreen )",
       "asbval:note": null,
@@ -4755,7 +4755,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precursor-product-mass-pairing/000",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/precursor-product-mass-pairing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "a list of typical PFAS diagnostic fragments (DFs, approximately 900 fragments) from literature are automatically matched with all fragmentation spectra",
       "asbval:note": null,
@@ -4775,7 +4775,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precursor-product-mass-pairing/001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/precursor-product-mass-pairing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In the MS2 data, lists of PFAS-specific diagnostic fragments (DFs) as well as fragment mass differences and neutral losses can be used to prioritize fragmentation spectra",
       "asbval:note": null,
@@ -4795,7 +4795,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precursor-product-mass-pairing/002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/precursor-product-mass-pairing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML)",
       "asbval:note": null,
@@ -4815,7 +4815,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precursor-product-mass-pairing/003",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/precursor-product-mass-pairing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The PFAS prioritization workflow is intended in an iterative manner: after feature detection, the MD/C-m/C plot should firstly be manually inspected... After determination of these cutoffs, the PFAS feature prioritization can be executed again... where the respective parameters can be adjusted accordingly",
       "asbval:note": null,
@@ -4835,7 +4835,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precursor-product-mass-pairing/004",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/precursor-product-mass-pairing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Only mzML files with centroided spectra and one collision energy (CE) should be used. If profile data was acquired and MS2 spectra from several different CEs per precursor m/z are present, the peak picking (for centroiding) and subset functions (to keep only one desired CE) from MSConvert can be used to generate the correct mzML input files.",
       "asbval:note": null,
@@ -4855,7 +4855,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precursor-product-mass-pairing/005",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/precursor-product-mass-pairing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For all MS2 spectra, fragment mass differences are calculated comprehensively... Furthermore, a list of typical PFAS diagnostic fragments (DFs, approximately 900 fragments) from literature are automatically matched with all fragmentation spectra",
       "asbval:note": null,
@@ -4875,7 +4875,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precursor-product-mass-pairing/006",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/precursor-product-mass-pairing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "This task is performed with pyOpenMS, a Python interface to the C++ OpenMS library",
       "asbval:note": null,
@@ -4895,7 +4895,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precursor-product-mass-pairing/007",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/precursor-product-mass-pairing/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python... PFAS feature prioritization (2) includes techniques such as the MD/C-m/C approach, KMD analysis, fragment matching, and fragment mass differences",
       "asbval:note": null,
@@ -4915,7 +4915,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precursor-product-mass-pairing/008",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/precursor-product-mass-pairing/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML) by using the MSConvert software from ProteoWizard",
       "asbval:note": null,
@@ -4935,7 +4935,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precursor-product-mass-pairing/009",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/precursor-product-mass-pairing/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PF\u0394Screen is a fully automated tool for detection and prioritization of potential PFAS features (LC- or GC-HRMS with ESI or APCI source) in raw mass spectrometric data written in Python (3.9.13)",
       "asbval:note": null,
@@ -4955,7 +4955,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precursor-product-mass-pairing/010",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/precursor-product-mass-pairing/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The FeatureFinding tab (1) allows detection of feature via pyOpenMS in MS raw data followed by MS2 alignment and blank correction resulting in a feature list for a sample of interest.",
       "asbval:note": null,
@@ -4975,7 +4975,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precursor-product-mass-pairing/011",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/precursor-product-mass-pairing/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "a list of typical PFAS diagnostic fragments (DFs, approximately 900 fragments) from literature are automatically matched with all fragmentation spectra",
       "asbval:note": null,
@@ -4995,7 +4995,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precursor-product-mass-pairing/012",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/precursor-product-mass-pairing/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To detect homologues series (HS), the KMD (with a predefined repeating unit required; e.g., CF2) is calculated and corresponding features belonging to a certain HS are aligned by providing a unique HS number",
       "asbval:note": null,
@@ -5015,7 +5015,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precursor-product-mass-pairing/013",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/precursor-product-mass-pairing/013",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "PFAS feature prioritization (2) includes techniques such as the MD/C-m/C approach, KMD analysis, fragment matching, and fragment mass differences which generates a strongly reduced feature list of potential PFAS.",
       "asbval:note": null,
@@ -5035,7 +5035,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precursor-product-mass-pairing/014",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/precursor-product-mass-pairing/014",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Input MS raw data can be converted vendor-independently from data-dependent acquisition (ddMS2) files into the mzML data format (.mzML)",
       "asbval:note": null,
@@ -5055,7 +5055,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precursor-product-mass-pairing/015",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/precursor-product-mass-pairing/015",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For all MS2 spectra, fragment mass differences are calculated comprehensively. Therefore, all fragment differences within each MS2 spectrum are calculated and matched against a predefined list of PFAS typical mass differences",
       "asbval:note": null,
@@ -5075,7 +5075,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/centroided-ms-feature-detection/triage",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/centroided-ms-feature-detection/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "centroided-ms-feature-detection",
@@ -5088,7 +5088,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatographic-feature-extraction/triage",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/chromatographic-feature-extraction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "chromatographic-feature-extraction",
@@ -5101,7 +5101,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/custom-data-schema-mapping/triage",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/custom-data-schema-mapping/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 13,
       "asbval:target_artifact_id": "custom-data-schema-mapping",
@@ -5114,7 +5114,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-annotation-filtering/triage",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-annotation-filtering/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 11,
       "asbval:target_artifact_id": "feature-annotation-filtering",
@@ -5127,7 +5127,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-grouping-by-mass-defect/triage",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-grouping-by-mass-defect/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "feature-grouping-by-mass-defect",
@@ -5140,7 +5140,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/feature-list-format-validation/triage",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/feature-list-format-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "feature-list-format-validation",
@@ -5153,7 +5153,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/high-resolution-mass-spectrometry-interpretation/triage",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/high-resolution-mass-spectrometry-interpretation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "high-resolution-mass-spectrometry-interpretation",
@@ -5166,7 +5166,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hrms-feature-annotation-integration/triage",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/hrms-feature-annotation-integration/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "hrms-feature-annotation-integration",
@@ -5179,7 +5179,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-defect-calculation/triage",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-defect-calculation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "mass-defect-calculation",
@@ -5192,7 +5192,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectral-peak-annotation/triage",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectral-peak-annotation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 13,
       "asbval:target_artifact_id": "mass-spectral-peak-annotation",
@@ -5205,7 +5205,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-feature-table-construction/triage",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mass-spectrometry-feature-table-construction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 13,
       "asbval:target_artifact_id": "mass-spectrometry-feature-table-construction",
@@ -5218,7 +5218,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/md-defect-ratio-calculation/triage",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/md-defect-ratio-calculation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 13,
       "asbval:target_artifact_id": "md-defect-ratio-calculation",
@@ -5231,7 +5231,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/molecular-formula-validation/triage",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/molecular-formula-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "molecular-formula-validation",
@@ -5244,7 +5244,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms2-diagnostic-fragment-matching/triage",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/ms2-diagnostic-fragment-matching/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 11,
       "asbval:target_artifact_id": "ms2-diagnostic-fragment-matching",
@@ -5257,7 +5257,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mzml-file-parsing/triage",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/mzml-file-parsing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "mzml-file-parsing",
@@ -5270,7 +5270,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-characteristic-mass-difference-detection/triage",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-characteristic-mass-difference-detection/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "pfas-characteristic-mass-difference-detection",
@@ -5283,7 +5283,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-feature-prioritization/triage",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-feature-prioritization/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "pfas-feature-prioritization",
@@ -5296,7 +5296,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pfas-homologous-series-detection/triage",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/pfas-homologous-series-detection/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "pfas-homologous-series-detection",
@@ -5309,7 +5309,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/precursor-product-mass-pairing/triage",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/skill/precursor-product-mass-pairing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 15,
       "asbval:target_artifact_id": "precursor-product-mass-pairing",
@@ -5322,7 +5322,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "PF\u0394Screen is an open-source Python based non-target screening software tool.",
       "asbval:note": null,
@@ -5342,7 +5342,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "PF\u0394Screen prioritizes potential PFAS features in raw data from liquid- or gas chromatography coupled to high-resolution mass spectrometry.",
       "asbval:note": null,
@@ -5362,7 +5362,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "PF\u0394Screen has a simple graphical user interface (GUI).",
       "asbval:note": "Source excerpt refers to 'measurements with a simple GUI' but doesn't explicitly state PF\u0394Screen itself has a GUI; context suggests it but is not explicit",
@@ -5382,7 +5382,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "PF\u0394Screen uses pyOpenMS, the Python interface to the C++ OpenMS library, for feature detection in MS raw data.",
       "asbval:note": null,
@@ -5402,7 +5402,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "PF\u0394Screen allows optional inclusion of custom feature lists.",
       "asbval:note": null,
@@ -5422,7 +5422,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "PF\u0394Screen uses the MD/C-m/C approach for prioritization.",
       "asbval:note": "Source says PF\u0394Screen 'uses several techniques such as' MD/C-m/C, not that it exclusively uses this approach; claim omits 'several techniques'",
@@ -5442,7 +5442,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "PF\u0394Screen uses Kendrick mass defect (KMD) analysis for prioritization.",
       "asbval:note": null,
@@ -5462,7 +5462,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "PF\u0394Screen uses fragment mass differences and diagnostic fragments in MS2 data for prioritization.",
       "asbval:note": null,
@@ -5482,7 +5482,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "PF\u0394Screen is easily installable via batch files.",
       "asbval:note": null,
@@ -5502,7 +5502,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Raw mass spectrometric data can be included vendor-independently in the mzML format.",
       "asbval:note": null,
@@ -5522,7 +5522,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "PF\u0394Screen accepts data-dependent acquisition with centroided spectra in mzML format.",
       "asbval:note": "Source mentions data-dependent acquisition and mzML format separately; doesn't explicitly state PF\u0394Screen accepts both together, though context suggests compatibility",
@@ -5542,7 +5542,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_012",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/claim/claim_012",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The recommended citation for PF\u0394Screen is Zweigle et al. (2023) published in Analytical and Bioanalytical Chemistry.",
       "asbval:note": null,
@@ -5562,7 +5562,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_013",
+      "@id": "asbval:assertion/paper/10.1007%2Fs00216-023-05070-2/claim/claim_013",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A detailed Youtube tutorial for PF\u0394Screen is available at https://www.youtube.com/watch?v=mKcWTP7vLV4.",
       "asbval:note": "substring_in_paper=false; text adds 'for PF\u0394Screen' specification not explicitly stated in source_excerpt, though context suggests this is the tool being discussed",

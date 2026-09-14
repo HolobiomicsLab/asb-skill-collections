@@ -257,7 +257,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_001/000",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/card/10_5281_zenodo_5797920__task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd)... Scripts are available at https://github.com/oolonek/taxo_scorer.",
       "asbval:note": "Paper describes a taxonomically informed scoring system implemented as R scripts (markdown notebooks), not a formal R package named 'tima'. The workflow exists but is distributed as individual scripts rather than a packaged system. The research question conflates the methodology with a specific package implementation that is not named or described in the paper.",
@@ -277,7 +277,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_001/001",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/card/10_5281_zenodo_5797920__task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd)... An R notebook to analyze the results of the taxonomically informed scoring process and plot the figures of this manuscript is available online (taxo_figures.Rmd)",
       "asbval:note": null,
@@ -297,7 +297,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_001/002",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/card/10_5281_zenodo_5797920__task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "An R script was written to proceed to the taxonomically informed scoring on GNPS outputs and return an attribute table which can be directly loaded in Cytoscape.",
       "asbval:note": null,
@@ -317,7 +317,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_001/003",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/card/10_5281_zenodo_5797920__task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of workflow execution logs or pipeline step completion logs in the paper. The paper describes outputs but not execution logs.",
@@ -337,7 +337,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_001/004",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/card/10_5281_zenodo_5797920__task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The F1 score was calculated for each evaluated metabolite annotation tool before and after the taxonomically informed scoring step... An R notebook to analyze the results of the taxonomically informed scoring process and plot the figures of this manuscript is available online (taxo_figures.Rmd)",
       "asbval:note": null,
@@ -357,7 +357,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/card/10_5281_zenodo_5797920__task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The research question references a 'tima R package' which does not appear to exist as a named package in the paper. The paper describes R scripts and markdown notebooks implementing taxonomically informed scoring, but these are distributed as individual scripts on GitHub (https://github.com/oolonek/taxo_scorer), not as a formal R package.",
@@ -374,7 +374,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_002/000",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/card/10_5281_zenodo_5797920__task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper makes no mention of 'tima' R package, r-universe repository, or R-CMD-check testing. The paper focuses on taxonomically informed metabolite annotation using existing tools (ISDB-DNP, MS-Finder, Sirius) and develops R scripts for taxonomic scoring, but does not describe or test an R package called 'tima'.",
@@ -394,7 +394,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_002/001",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/card/10_5281_zenodo_5797920__task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd)... An R notebook to analyze the results of the taxonomically informed scoring process and plot the figures of this manuscript is available online (taxo_figures.Rmd)",
       "asbval:note": "Paper uses R for scripting and analysis (R markdown notebooks, R scripts for data processing), but does not involve installation or testing of an R package from r-universe. The R usage is for custom analysis scripts, not package development or installation testing.",
@@ -414,7 +414,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_002/002",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/card/10_5281_zenodo_5797920__task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No package installation logs or installation testing procedures are described in the paper. The paper provides R scripts and datasets but does not document package installation processes.",
@@ -434,7 +434,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_002/003",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/card/10_5281_zenodo_5797920__task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No package loading tests or error message documentation are present in the paper.",
@@ -454,7 +454,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_002/004",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/card/10_5281_zenodo_5797920__task_002/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No R-CMD-check testing or formal package validation procedures are described in the paper.",
@@ -474,7 +474,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_002/005",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/card/10_5281_zenodo_5797920__task_002/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not address R package installation, r-universe repositories, or reproduction of a 'tima' package. The paper is about taxonomically informed metabolite annotation methodology and benchmarking, not R package distribution or installation.",
@@ -494,7 +494,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/card/10_5281_zenodo_5797920__task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate task card describes an R package installation and testing workflow (tima from r-universe), which is entirely absent from the paper.",
@@ -512,7 +512,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_003/000",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/card/10_5281_zenodo_5797920__task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper makes no mention of Docker, containers, or any tool named 'tima' or 'adafede/tima-r'. The paper focuses on taxonomically informed metabolite annotation using computational tools (ISDB-DNP, MS-Finder, Sirius) applied to natural products research.",
@@ -532,7 +532,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_003/001",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/card/10_5281_zenodo_5797920__task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No Docker-related content, container testing, or 'tima' tool execution procedures appear in the paper. The paper does not describe containerization workflows or entry point testing.",
@@ -552,7 +552,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_003/002",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/card/10_5281_zenodo_5797920__task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd).",
       "asbval:note": "R is confirmed as a tool used in the paper for scripting and data analysis. However, the card's claim about R is disconnected from the actual research question and expected outputs, which concern Docker and 'tima'.",
@@ -572,7 +572,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_003/003",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/card/10_5281_zenodo_5797920__task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper contains no information about Docker image builds, 'tima' tool, or smoke-testing procedures. The paper's focus is on taxonomically informed scoring for metabolite annotation, not containerization or tool deployment testing.",
@@ -592,7 +592,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/10_5281_zenodo_5797920__task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/card/10_5281_zenodo_5797920__task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate task card describes a Docker containerization and smoke-test task that is entirely absent from the paper. The paper is about metabolite annotation methodology using computational tools (ISDB-DNP, MS-Finder, Sirius) with taxonomic information integration.",
@@ -609,7 +609,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/container-orchestration-verification/000",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/container-orchestration-verification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss Docker, containerization, or container orchestration. The paper focuses on metabolite annotation using computational tools (ISDB-DNP, MS-Finder, Sirius) applied to mass spectrometry data. No mention of Docker image verification, container runtime, or entry point testing.",
@@ -629,7 +629,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/container-orchestration-verification/001",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/container-orchestration-verification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Docker is not mentioned anywhere in the paper. The paper describes computational metabolite annotation workflows but does not discuss containerization or Docker.",
@@ -649,7 +649,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/container-orchestration-verification/002",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/container-orchestration-verification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention 'tima', the GitHub repository, or any Docker image (adafede/tima-r). The paper describes the taxonomically informed scoring system and benchmarks three tools (ISDB-DNP, MS-Finder, Sirius) but does not reference tima or any containerized implementation of these methods.",
@@ -669,7 +669,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/container-orchestration-verification/003",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/container-orchestration-verification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd).",
       "asbval:note": "The paper does use R for scripting and data processing (R notebooks, R scripts for taxonomic scoring). However, the paper does not discuss Docker, container orchestration, or container verification. The evidence_spans correctly cite the paper's DOI, but the related_skills list (including 'container-orchestration-verification', 'docker-image-management', 'tima-entry-point-validation') are not supported by the paper content. The paper is about taxonomically informed metabolite annotation, not container orchestration.",
@@ -689,7 +689,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-image-management/000",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/docker-image-management/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper contains no mention of Docker, containerization, or container management. The paper focuses on taxonomically informed scoring for metabolite annotation using computational tools (ISDB-DNP, MS-Finder, Sirius) and does not discuss Docker or container deployment.",
@@ -709,7 +709,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-image-management/001",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/docker-image-management/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Docker is not mentioned anywhere in the paper passages. The paper discusses computational metabolite annotation tools but not containerization technology.",
@@ -729,7 +729,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-image-management/002",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/docker-image-management/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Docker Hub is not mentioned in the paper. The paper does not discuss container registries or image hosting platforms.",
@@ -749,7 +749,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-image-management/003",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/docker-image-management/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention 'tima' or any R package by that name. The paper discusses ISDB-DNP, MS-Finder, and Sirius as metabolite annotation tools, but does not reference tima or its containerization.",
@@ -769,7 +769,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-image-management/004",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/docker-image-management/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd).",
       "asbval:note": "The paper does use R for scripting and data processing (R scripts, markdown notebooks, Bayesian optimization in R). However, the card's claim that R is the 'target scientific tool' for Docker containerization is not supported. R is used as a scripting language for post-processing metabolite annotation outputs, not as the primary focus of the work. The paper's DOI is correct (10.3389/fpls.2019.01329), but the card's framing of R as a containerized tool with entry point validation is not present in the paper.",
@@ -789,7 +789,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-image-management/005",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/docker-image-management/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper's scope is taxonomically informed scoring for metabolite annotation. While the paper emphasizes reproducibility (scripts available on GitHub, datasets on OSF), it does not address Docker containerization, container portability, or container runtime verification.",
@@ -809,7 +809,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-processing/000",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/mass-spectrometry-data-processing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MS data were converted from .RAW (Thermo) standard data format to .mzXML format using the MSConvert software... The converted files were treated using the MZMine software suite v. 2.38... Eventually the resulting aligned peaklist was filtered using the peak-list rows filter option in order to keep only features associated with MS2 scans.",
       "asbval:note": "Paper performs MS data conversion and validation using MZMine (v2.38) and MSConvert, not a dedicated 'tima' R package. The paper does convert to standardized formats (.mzXML, .mgf) and validates data, but uses different tools than claimed in the card.",
@@ -829,7 +829,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-processing/001",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/mass-spectrometry-data-processing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention 'tima' R package or any 'validate_inputs()' function. The paper was published in 2019 and describes a taxonomically informed scoring system but does not reference a tool called 'tima'. No evidence of this package exists in the passages.",
@@ -849,7 +849,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-processing/002",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/mass-spectrometry-data-processing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd)... An R notebook to analyze the results of the taxonomically informed scoring process and plot the figures of this manuscript is available online (taxo_figures.Rmd)",
       "asbval:note": "Paper does use R for data processing and taxonomically informed scoring, but the specific functions and workflow described in the card (validate_inputs, tima package orchestration) are not present. R is used for cleaning, standardization, and scoring, but not via a 'tima' package.",
@@ -869,7 +869,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-processing/003",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/mass-spectrometry-data-processing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MS data were converted from .RAW (Thermo) standard data format to .mzXML format using the MSConvert software, part of the ProteoWizard package... The converted files were treated using the MZMine software suite v. 2.38... Eventually the resulting aligned peaklist was filtered using the peak-list rows filter option in order to keep only features associated with MS2 scans.",
       "asbval:note": "The paper clearly describes MS data preparation and validation for taxonomically informed metabolite annotation, though using MZMine and MSConvert rather than the 'tima' package claimed.",
@@ -889,7 +889,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-processing/004",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/mass-spectrometry-data-processing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The MS data were converted from .RAW (Thermo) standard data format to .mzXML format using the MSConvert software... A python Jupyter notebook (mgf_filterer.ipynb) was created to filter.mgf spectral file according to specific parameters... The spectral file was filtered to retain only entries having at least 6 fragments.",
       "asbval:note": "Paper converts to .mzXML and .mgf formats and creates TSV/CSV outputs for metadata, matching the standardized format requirement.",
@@ -909,7 +909,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-processing/005",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/mass-spectrometry-data-processing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "A python Jupyter notebook (GNPS_parser_cleaner.ipynb) was written to proceed to 1) extraction of relevant metadata... 2) filtering entries having at least one structural information associated (SMILES and/or InChI) and corresponding to protonated adducts and 3) converting structures to their InChIKey",
       "asbval:note": "Paper validates structural integrity by filtering for structural information (SMILES/InChI) and verifying adduct types before downstream analysis.",
@@ -929,7 +929,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-processing/006",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/mass-spectrometry-data-processing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The spectra in the network were then searched against GNPS' spectral libraries... The output was visualised using Cytoscape 3.6 software... The spectral file (.mgf) and attributes metadata (.clustersummary) obtained after the MN step were annotated using the ISDB-DNP",
       "asbval:note": "Paper uses GNPS molecular networking and ISDB-DNP annotation as downstream steps, but the card's framing of these as 'optional additions' is not explicitly stated in the paper. The paper treats them as integral parts of the workflow.",
@@ -949,7 +949,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-processing/007",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/mass-spectrometry-data-processing/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper emphasizes the importance of biological source metadata and taxonomic information throughout. It does not discuss scenarios where metadata is optional or single-organism analysis without metadata. The paper's central hypothesis depends on taxonomic metadata availability.",
@@ -969,7 +969,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-annotation-taxonomic-integration/000",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/metabolite-annotation-taxonomic-integration/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we show that integrating the taxonomic position of analyzed samples and candidate structures enhances confidence in metabolite annotation... the consideration of the taxonomic distance allowed an efficient re-ranking of the candidate structures leading to a systematic enhancement of the recall and precision rates",
       "asbval:note": null,
@@ -989,7 +989,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-annotation-taxonomic-integration/001",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/metabolite-annotation-taxonomic-integration/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "A script is proposed to automatically input such information at various granularity levels (species, genus, and family) and complement the score obtained between experimental spectral data and output of available computational metabolite annotation tools (ISDB-DNP, MS-Finder, Sirius)",
       "asbval:note": "Paper uses Dictionary of Natural Products (DNP) and GNPS spectral libraries for structure-organism pairing and spectral data, not LOTUS. LOTUS is not mentioned in the paper.",
@@ -1009,7 +1009,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-annotation-taxonomic-integration/002",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/metabolite-annotation-taxonomic-integration/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention 'tima' or any R package by that name. The paper describes custom R scripts (1_taxo_cleaner.Rmd, 2_taxo_scorer.Rmd, 3_taxo_optimizer.Rmd) written by the authors to perform taxonomically informed scoring, but these are not packaged as 'tima'.",
@@ -1029,7 +1029,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-annotation-taxonomic-integration/003",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/metabolite-annotation-taxonomic-integration/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "LOTUS is not mentioned anywhere in the paper. The paper uses Dictionary of Natural Products (DNP) as the structure-organism pairing source: 'A curation process using the Global Names index, kept biological sources resolved against the Catalogue of Life and resulted in 219,800 entries' from DNP.",
@@ -1049,7 +1049,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-annotation-taxonomic-integration/004",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/metabolite-annotation-taxonomic-integration/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "the outputs of three different computational MS-based metabolite annotation solutions were considered (ISDB-DNP, MS-Finder and Sirius)... Sirius 4.0.1 is considered as a state-of-the-art metabolite annotation solution, which combines molecular formula calculation and the prediction of a molecular fingerprint",
       "asbval:note": "Paper uses Sirius 4.0.1, not v5/v6. Sirius is used as a core benchmarking tool (not optional) alongside ISDB-DNP and MS-Finder for metabolite annotation.",
@@ -1069,7 +1069,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-annotation-taxonomic-integration/005",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/metabolite-annotation-taxonomic-integration/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The GNPS libraries agglomerate a wide and publicly available ensemble of MS/MS spectra coming from various analytical platforms... All GNPS libraries and publicly accessible third-party libraries were retrieved online",
       "asbval:note": null,
@@ -1089,7 +1089,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-annotation-taxonomic-integration/006",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/metabolite-annotation-taxonomic-integration/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention an R package called 'Spectra'. The paper uses custom Python Jupyter notebooks and R scripts for processing spectral data in MGF format, but does not name a specific 'Spectra' R package.",
@@ -1109,7 +1109,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-annotation-taxonomic-integration/007",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/metabolite-annotation-taxonomic-integration/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The initial work is available at <https://doi.org/10.3389/fpls.2019.01329>",
       "asbval:note": "The DOI 10.3389/fpls.2019.01329 is the paper's publication identifier, not an R version number. R version is not specified in the paper. The paper uses R scripts but does not declare a specific R version.",
@@ -1129,7 +1129,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-cmd-check-validation/000",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-cmd-check-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper is about taxonomically informed scoring for metabolite annotation in natural products research using mass spectrometry. No mention of R package validation, CRAN compliance, GitHub Actions, or R-CMD-check. This task card describes software engineering practices entirely unrelated to the paper's content.",
@@ -1149,7 +1149,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-cmd-check-validation/001",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-cmd-check-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "R-CMD-check is not mentioned or used in the paper. The paper uses R scripts for data processing and taxonomic scoring, but does not employ R-CMD-check for package validation.",
@@ -1169,7 +1169,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-cmd-check-validation/002",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-cmd-check-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GitHub Actions is not mentioned in the paper. The paper does reference GitHub repositories for code availability (e.g., https://github.com/oolonek/taxo_scorer) but does not describe CI/CD workflows or GitHub Actions usage.",
@@ -1189,7 +1189,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-cmd-check-validation/003",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-cmd-check-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "r-universe is not mentioned in the paper. The paper does not discuss package repositories or pre-built binaries.",
@@ -1209,7 +1209,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-cmd-check-validation/004",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-cmd-check-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "While the paper uses R scripts and mentions GitHub repositories for code availability, it does not discuss install.packages() or package installation workflows.",
@@ -1229,7 +1229,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-cmd-check-validation/005",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-cmd-check-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention library() function or package loading verification.",
@@ -1249,7 +1249,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-cmd-check-validation/006",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-cmd-check-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd).",
       "asbval:note": "The paper does use R for data processing and analysis (R scripts, Bayesian optimization, figure generation). However, '10.3389' is not an R version number\u2014it is the paper's DOI (10.3389/fpls.2019.01329). The version_used field conflates the paper's DOI with an R version. The paper does perform metabolite annotation and mass spectrometry data processing with R, but the version identifier is incorrect.",
@@ -1269,7 +1269,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-and-execution/000",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-package-installation-and-execution/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss R package installation, custom repositories, or R-CMD-check validation. The paper focuses on metabolite annotation using computational tools (ISDB-DNP, MS-Finder, Sirius) and taxonomically informed scoring, not on R package development or installation workflows.",
@@ -1289,7 +1289,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-and-execution/001",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-package-installation-and-execution/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "r-universe is not mentioned anywhere in the paper. The paper does not discuss R package repositories or distribution platforms.",
@@ -1309,7 +1309,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-and-execution/002",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-package-installation-and-execution/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "R-CMD-check is not mentioned in the paper. The paper does not discuss R package validation workflows or CRAN submission standards.",
@@ -1329,7 +1329,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-and-execution/003",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-package-installation-and-execution/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "GitHub Actions is not mentioned in the paper. The paper does not discuss CI/CD platforms or automated testing workflows.",
@@ -1349,7 +1349,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-and-execution/004",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-package-installation-and-execution/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Docker is not mentioned in the paper. The paper does not discuss containerization or Docker images.",
@@ -1369,7 +1369,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-and-execution/005",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-package-installation-and-execution/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd).",
       "asbval:note": "Paper uses R for scripting and data analysis (R scripts, R notebooks mentioned), but the card's claim about 'R package installation and execution' is not supported. The paper uses R as a programming language for analysis, not as a package to be installed from a repository. The version_used field claims '10.3389' which appears to be a DOI fragment, not an R version.",
@@ -1389,7 +1389,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-and-execution/006",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-package-installation-and-execution/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper's scope is metabolite annotation using taxonomically informed scoring with computational tools (ISDB-DNP, MS-Finder, Sirius), not R package installation or validation. The paper uses R as a tool for data processing but does not address package installation workflows.",
@@ -1409,7 +1409,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-and-execution/007",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-package-installation-and-execution/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper's DOI is 10.3389/fpls.2019.01329 (from passage [1]), not null. However, this DOI is about metabolite annotation, not about R package installation.",
@@ -1429,7 +1429,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-and-execution/008",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-package-installation-and-execution/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Taxonomically Informed Scoring Enhances Confidence in Natural Products Annotation",
       "asbval:note": "The paper title is 'Taxonomically Informed Scoring Enhances Confidence in Natural Products Annotation', which is about metabolite annotation, not R package installation. The card's task is not aligned with the paper's content.",
@@ -1449,7 +1449,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-loading-and-diagnostics/000",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-package-loading-and-diagnostics/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss R package installation, r-universe repositories, or R-CMD-check workflows. The paper focuses on metabolite annotation using computational mass spectrometry tools (ISDB-DNP, MS-Finder, Sirius) and taxonomically informed scoring. No mention of package deployment or CI/CD validation.",
@@ -1469,7 +1469,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-loading-and-diagnostics/001",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-package-loading-and-diagnostics/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "r-universe is not mentioned anywhere in the paper. The paper does not discuss custom R package repositories or CI/CD infrastructure.",
@@ -1489,7 +1489,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-loading-and-diagnostics/002",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-package-loading-and-diagnostics/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "R-CMD-check and GitHub Actions workflows are not mentioned in the paper. The paper does not discuss automated testing pipelines or GitHub CI/CD.",
@@ -1509,7 +1509,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-loading-and-diagnostics/003",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-package-loading-and-diagnostics/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd)... An R notebook to analyze the results of the taxonomically informed scoring process and plot the figures of this manuscript is available online (taxo_figures.Rmd)",
       "asbval:note": "Paper uses R for scripting and analysis (R markdown notebooks, R scripts), but does not discuss R package installation, loading validation, or R-CMD-check compliance testing. The R usage is for data processing and analysis, not package diagnostics.",
@@ -1529,7 +1529,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-loading-and-diagnostics/004",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-package-loading-and-diagnostics/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not address R package deployment, CRAN submission standards, or package build reproducibility validation. The scope describes a software engineering task unrelated to the paper's metabolite annotation research.",
@@ -1549,7 +1549,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-loading-and-diagnostics/005",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-package-loading-and-diagnostics/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not produce or discuss R package loading diagnostics, R-CMD-check reports, or installation logs. The paper's outputs are metabolite annotation results, benchmarking datasets, and performance metrics (F1 scores).",
@@ -1569,7 +1569,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-matching-and-scoring/000",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/spectral-library-matching-and-scoring/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Computational metabolite annotation automatically links spectral data to candidate structures via a score, which is usually established between the acquired data and experimental or theoretical spectral databases (DB)... The design of a metascore is a way to capture complementary experimental attributes and improve the annotation process. Here, we show that integrating the taxonomic position of analyzed samples and candidate structures enhances confidence in metabolite annotation.",
       "asbval:note": "Paper demonstrates spectral matching and scoring with taxonomic integration (ISDB-DNP, MS-Finder, Sirius), but does not mention LOTUS, MassBank, or in-house libraries. The core concept of spectral matching with taxonomic scoring is present; the specific databases named in the card are not all validated in the paper.",
@@ -1589,7 +1589,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-matching-and-scoring/001",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/spectral-library-matching-and-scoring/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "LOTUS is not mentioned anywhere in the paper. The paper uses Dictionary of Natural Products (DNP) and GNPS libraries for structural and spectral data, not LOTUS.",
@@ -1609,7 +1609,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-matching-and-scoring/002",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/spectral-library-matching-and-scoring/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "complement the score obtained between experimental spectral data and output of available computational metabolite annotation tools (ISDB-DNP, MS-Finder, Sirius)",
       "asbval:note": "ISDB-DNP is explicitly used in the paper as one of three metabolite annotation tools benchmarked.",
@@ -1629,7 +1629,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-matching-and-scoring/003",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/spectral-library-matching-and-scoring/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "MassBank is not mentioned in the paper. The paper uses GNPS libraries as the spectral reference source.",
@@ -1649,7 +1649,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-matching-and-scoring/004",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/spectral-library-matching-and-scoring/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The third tool to be used is Sirius 4.0. It is considered as a state-of-the-art metabolite annotation solution, which combines molecular formula calculation and the prediction of a molecular fingerprint of a query from its fragmentation tree and spectrum",
       "asbval:note": "Paper uses Sirius 4.0.1, not v5/v6 as claimed in the card. The functional role (molecular formula and structure prediction) matches.",
@@ -1669,7 +1669,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-matching-and-scoring/005",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/spectral-library-matching-and-scoring/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Initiatives such as the Global Natural Products Social (GNPS) molecular networking (MN) project offer both a living MS repository and the possibility to establish MN organizing MS data",
       "asbval:note": "GNPS molecular networking is used in the paper for spectral data organization and contextualization.",
@@ -1689,7 +1689,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-matching-and-scoring/006",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/spectral-library-matching-and-scoring/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The 'tima' R package is not mentioned in the paper. The paper uses custom R scripts (1_taxo_cleaner.Rmd, 2_taxo_scorer.Rmd, 3_taxo_optimizer.Rmd) for taxonomically informed scoring, not a pre-built tima package.",
@@ -1709,7 +1709,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-matching-and-scoring/007",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/spectral-library-matching-and-scoring/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd)",
       "asbval:note": "R is used in the paper, but '10.3389' is not a valid R version number\u2014it is the DOI of the paper itself. The paper does not specify an R version.",
@@ -1729,7 +1729,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-matching-and-scoring/008",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/spectral-library-matching-and-scoring/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Computational metabolite annotation automatically links spectral data to candidate structures via a score, which is usually established between the acquired data and experimental or theoretical spectral databases (DB).",
       "asbval:note": "Core scope is directly supported by the paper's abstract and methods.",
@@ -1749,7 +1749,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-matching-and-scoring/009",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/spectral-library-matching-and-scoring/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Specialized metabolites, as products of biosynthetic clusters themselves part of the genome, are tightly linked to the taxonomic position of the producing organisms... the taxonomic distance between the biological source of the queried compound and the biological source of the candidate structures is a valuable attribute to integrate into the metabolite annotation process.",
       "asbval:note": "Paper explicitly demonstrates using taxonomic information (organism/sample type) to filter and rank candidates.",
@@ -1769,7 +1769,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tima-entry-point-validation/000",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/tima-entry-point-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper makes no mention of Docker, containerization, or the tima-r Docker image. The paper is about taxonomically informed scoring for metabolite annotation using computational tools (ISDB-DNP, MS-Finder, Sirius), not about Docker container validation.",
@@ -1789,7 +1789,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tima-entry-point-validation/001",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/tima-entry-point-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Docker is not mentioned anywhere in the paper. The paper discusses computational metabolite annotation tools but not containerization platforms.",
@@ -1809,7 +1809,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tima-entry-point-validation/002",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/tima-entry-point-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention tima, tima-r, or any Docker image. The paper predates or is unrelated to the tima project.",
@@ -1829,7 +1829,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tima-entry-point-validation/003",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/tima-entry-point-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "tima is not mentioned in the paper. The paper discusses ISDB-DNP, MS-Finder, and Sirius as metabolite annotation tools, not an R package called tima.",
@@ -1849,7 +1849,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tima-entry-point-validation/004",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/tima-entry-point-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd).",
       "asbval:note": "The paper does use R for scripting and analysis (R notebooks, R scripts mentioned in passages 9-12), but the card's evidence_spans incorrectly cite the paper's own DOI as if it were an external reference. The card claims source_paper_doi is null when it should reference the paper being validated (10.3389/fpls.2019.01329). The version_used field '10.3389' appears to be a malformed DOI fragment, not an R version number.",
@@ -1869,7 +1869,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/000",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/workflow-pipeline-execution-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The massive and complex sets of spectral data generated by such platforms require computational approaches for their interpretation. Computational metabolite annotation automatically links spectral data to candidate structures via a score, which is usually established between the acquired data and experimental or theoretical spectral databases (DB).",
       "asbval:note": "Paper describes metabolomics annotation pipeline and validation of outputs (F1 scores, precision/recall metrics), but does not explicitly address 'input data file validation' as a distinct preliminary step. The paper focuses on validating annotation quality post-execution rather than pre-execution data integrity checks.",
@@ -1889,7 +1889,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/001",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/workflow-pipeline-execution-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention 'tima' or 'tima R package' anywhere. The paper describes ISDB-DNP, MS-Finder, and Sirius as the three metabolite annotation tools evaluated, but does not reference a tool called 'tima'.",
@@ -1909,7 +1909,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/002",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/workflow-pipeline-execution-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The third tool to be used is Sirius 4.0. It is considered as a state-of-the-art metabolite annotation solution, which combines molecular formula calculation and the prediction of a molecular fingerprint of a query from its fragmentation tree and spectrum (D\u00fchrkop et al., 2019). Sirius uses a DB of 73,444,774 unique structures for its annotations.",
       "asbval:note": "Paper uses Sirius 4.0.1, not v5/v6. The version specified in the card (v5/v6) does not match the paper's actual version (4.0.1). Sirius is used as a primary annotation tool, not as 'optional external predictions'.",
@@ -1929,7 +1929,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/003",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/workflow-pipeline-execution-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Initiatives such as the Global Natural Products Social (GNPS) molecular networking (MN) project offer both a living MS repository and the possibility to establish MN organizing MS data (Wang et al., 2016)... A feature based molecular network (https://ccms-ucsd.github.io/GNPSDocumentation/featurebasedmolecularnetworking/) was created using the .mgf file resulting from the MZMine pretreatment step... Spectral data was uploaded on the GNPS molecular networking platform.",
       "asbval:note": "Paper uses GNPS molecular networking (MN) and feature-based molecular networking (FBMN), but as an intermediate processing step integrated into the workflow, not as 'optional' external results. The paper describes GNPS as part of the core pipeline for Glaucium analysis.",
@@ -1949,7 +1949,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/004",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/workflow-pipeline-execution-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention LOTUS database. Instead, it uses the Dictionary of Natural Products (DNP) as the primary structure-organism pairs database, which was curated to 219,800 entries with accepted scientific names and full taxonomy.",
@@ -1969,7 +1969,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/005",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/workflow-pipeline-execution-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention Docker or any containerized execution environment. The paper describes R scripts and computational tools but does not reference Docker or container-based deployment.",
@@ -1989,7 +1989,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/006",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/workflow-pipeline-execution-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "R scripts in the form of markdown notebooks were written to perform 1) cleaning and standardization of the outputs (1_taxo_cleaner.Rmd) 2) taxonomically informed scoring and re-ranking (2_taxo_scorer.Rmd)... Scripts are available at https://github.com/oolonek/taxo_scorer.",
       "asbval:note": "Paper uses R for taxonomically informed scoring scripts, but the version '10.3389' listed in the card is actually the paper's DOI (10.3389/fpls.2019.01329), not an R version. No specific R version is mentioned in the paper.",
@@ -2009,7 +2009,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/007",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/workflow-pipeline-execution-validation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The spectral file (.mgf) and attributes metadata (.clustersummary) obtained after the MN step were annotated using the ISDB-DNP with the following parameters: parent mass tolerance 0.005 Da, minimum cosine score 0.2, maximal number of returned candidates: 50.",
       "asbval:note": "Paper describes MGF format input and metadata handling for annotation, but the pipeline is ISDB-DNP (not TIMA). The paper does not reference a tool called TIMA.",
@@ -2029,7 +2029,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/008",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/workflow-pipeline-execution-validation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The prerequisite to apply a taxonomically informed scoring in a metabolite annotation process is to dispose of the biological source information of 1) the queried MS/MS spectra and 2) the candidate structures... This study uses the DNP which is commercially available and allows export of structures and biological sources as associated metadata.",
       "asbval:note": "Paper explicitly states that taxonomic metadata is a prerequisite for the taxonomically informed scoring system, confirming the scope statement.",
@@ -2049,7 +2049,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/009",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/workflow-pipeline-execution-validation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for ISDB-DNP | role: primary metabolite annotation tool] The first tool, denominated hereafter ISDB-DNP (In Silico DataBase\u2014Dictionary of Natural Products) is a metabolite annotation strategy that we previously developed (Allard et al., 2016). This approach is focused on specialized metabolites annotation and is constituted by a pre-fragmented theoretical spectral DB version of the DNP.",
       "asbval:note": "ISDB-DNP is explicitly described as a metabolite annotation tool in the paper, though not listed in the candidate card's tools array.",
@@ -2069,7 +2069,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/010",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/workflow-pipeline-execution-validation/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for MS-Finder | role: metabolite annotation tool] The second tool is MS-Finder. This in silico fragmentation approach considers multiple parameters such as bond dissociation energies, mass accuracies, fragment linkages and various hydrogen rearrangement rules at the candidate ranking phase (Tsugawa et al., 2016).",
       "asbval:note": "MS-Finder is explicitly described as a metabolite annotation tool in the paper, though not listed in the candidate card's tools array.",
@@ -2089,7 +2089,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/011",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/workflow-pipeline-execution-validation/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The converted files were treated using the MZMine software suite v. 2.38 (Pluskal et al., 2010). The parameters were adjusted as following: the centroid mass detector was used for mass detection...",
       "asbval:note": "MZMine is used for MS data pretreatment in the paper, though not listed in the candidate card's tools array.",
@@ -2109,7 +2109,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/container-orchestration-verification/triage",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/container-orchestration-verification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 4,
       "asbval:target_artifact_id": "container-orchestration-verification",
@@ -2122,7 +2122,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/docker-image-management/triage",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/docker-image-management/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "docker-image-management",
@@ -2135,7 +2135,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-processing/triage",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/mass-spectrometry-data-processing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "mass-spectrometry-data-processing",
@@ -2148,7 +2148,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/metabolite-annotation-taxonomic-integration/triage",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/metabolite-annotation-taxonomic-integration/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "metabolite-annotation-taxonomic-integration",
@@ -2161,7 +2161,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-cmd-check-validation/triage",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-cmd-check-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "r-cmd-check-validation",
@@ -2174,7 +2174,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-installation-and-execution/triage",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-package-installation-and-execution/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "r-package-installation-and-execution",
@@ -2187,7 +2187,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/r-package-loading-and-diagnostics/triage",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/r-package-loading-and-diagnostics/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "r-package-loading-and-diagnostics",
@@ -2200,7 +2200,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-library-matching-and-scoring/triage",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/spectral-library-matching-and-scoring/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "spectral-library-matching-and-scoring",
@@ -2213,7 +2213,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/tima-entry-point-validation/triage",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/tima-entry-point-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "tima-entry-point-validation",
@@ -2226,7 +2226,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/workflow-pipeline-execution-validation/triage",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/skill/workflow-pipeline-execution-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 11,
       "asbval:target_artifact_id": "workflow-pipeline-execution-validation",
@@ -2239,7 +2239,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The tima project's initial work is described in a publication available at https://doi.org/10.3389/fpls.2019.01329.",
       "asbval:note": null,
@@ -2259,7 +2259,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Many improvements have been made to tima since the initial publication.",
       "asbval:note": null,
@@ -2279,7 +2279,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The tima project is in an experimental lifecycle stage.",
       "asbval:note": null,
@@ -2299,7 +2299,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A Docker image for tima is available.",
       "asbval:note": null,
@@ -2319,7 +2319,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.3389%2Ffpls.2019.01329/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The tima package has a Zenodo DOI identifier 10.5281/zenodo.5797920.",
       "asbval:note": null,

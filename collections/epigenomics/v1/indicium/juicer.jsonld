@@ -480,7 +480,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click. Juicer produces a hic file containing compressed contact matrices at many resolutions",
       "asbval:note": "The paper explicitly describes Juicer's function of transforming raw sequence data (FASTQ) into .hic contact maps. The research question accurately captures the pipeline's input-to-output operation.",
@@ -500,7 +500,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer produces a hic file containing compressed contact matrices at many resolutions, facilitating visualization and analysis at multiple scales.",
       "asbval:note": "The paper confirms that Juicer generates .hic files from raw sequence data.",
@@ -520,7 +520,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce Juicer, an open-source tool for analyzing terabase-scale Hi-C datasets.",
       "asbval:note": "Juicer is the primary tool described throughout the paper.",
@@ -540,7 +540,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/card/task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No specific version number (1.6) is mentioned in any of the provided passages. The paper does not specify version numbers for Juicer.",
@@ -560,7 +560,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/card/task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No specific version number (2) is mentioned in any of the provided passages. The paper does not specify version numbers for Juicer.",
@@ -580,7 +580,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card includes specific version numbers (Juicer 1.6, Juicer 2) that are not present in the paper passages. These may be from supplementary materials or external sources not provided.",
@@ -596,7 +596,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/card/task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click. Juicer produces a hic file containing compressed contact matrices at many resolutions, facilitating visualization and analysis at multiple scales.",
       "asbval:note": "Paper confirms Juicer produces .hic files from raw sequence data, but does not mention ENCODE uniform processing pipeline, ENCODE reference format, checksum verification, or FASTQ-specific processing. The research question conflates Juicer (which the paper describes) with an ENCODE-specific pipeline (not mentioned in passages).",
@@ -616,7 +616,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/card/task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce Juicer, an open-source tool for analyzing terabase-scale Hi-C datasets.",
       "asbval:note": null,
@@ -636,7 +636,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/card/task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of 'ENCODE Hi-C uniform processing pipeline', 'encode_hic_pipeline', or any ENCODE-specific workflow in any passage. The paper describes Juicer as a general-purpose Hi-C analysis tool, not an ENCODE-specific implementation.",
@@ -656,7 +656,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/card/task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer produces a hic file containing compressed contact matrices at many resolutions, facilitating visualization and analysis at multiple scales.",
       "asbval:note": "Paper confirms .hic file output format, but does not mention 'ENCODE reference format', 'checksum verification', or 'reference matching'. The paper describes .hic files as a general compressed format, not ENCODE-specific standards.",
@@ -676,7 +676,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/card/task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card references an 'ENCODE Hi-C uniform processing pipeline' and 'ENCODE reference format' that are not present in the paper. The paper describes Juicer as a general-purpose Hi-C analysis tool, not an ENCODE-specific workflow.",
@@ -693,7 +693,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/card/task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer comprises three tools, which are designed to be run one-after-another... Finally, Juicer contains a suite of algorithms that are designed to annotate contact matrices and thus identify features of genome folding. These features include loops, loop anchor motifs, and contact domains.",
       "asbval:note": "Paper confirms Juicer provides feature annotation (loops, domains) but does not explicitly discuss 'command line tools' as a distinct product or 'juicer_cli_tools' as a named entity. The paper describes Juicer as a unified pipeline executable 'using a single command' rather than separate CLI tools. The research question assumes a modular CLI tool suite that is not explicitly named or described as such in the paper.",
@@ -713,7 +713,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/card/task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce Juicer, an open-source tool for analyzing terabase-scale Hi-C datasets.",
       "asbval:note": "Juicer is the primary tool discussed throughout the paper.",
@@ -733,7 +733,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/card/task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The entity 'juicer_cli_tools' does not appear in any passage. The paper refers to Juicer as a unified pipeline, not as a separate 'CLI tools' package. No evidence of this specific tool name or product.",
@@ -753,7 +753,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/card/task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Finally, Juicer contains a suite of algorithms that are designed to annotate contact matrices and thus identify features of genome folding. These features include loops, loop anchor motifs, and contact domains. Loops are identified using the HiCCUPS algorithm... Contact domains are identified using a dynamic programming algorithm that relies on applying the Arrowhead transformation...",
       "asbval:note": "Paper explicitly describes loop and domain annotation as outputs of Juicer's feature annotation suite.",
@@ -773,7 +773,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/card/task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card frames the task as using 'command line tools' (plural, modular) for feature annotation, but the paper describes Juicer as a single integrated pipeline with one-click execution. The card's framing suggests a toolkit of separate CLI utilities, which is not how the paper presents the tool.",
@@ -789,7 +789,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/checksum-verification-for-reproducibility/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/checksum-verification-for-reproducibility/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click. Juicer produces a hic file containing compressed contact matrices at many resolutions, facilitating visualization and analysis at multiple scales.",
       "asbval:note": "Paper describes Juicer producing .hic output files and emphasizes reproducibility/reliability ('making it possible to assess the success and reliability of a given experiment'), but does NOT discuss checksum verification, cryptographic hashing, or byte-for-byte validation as a reproducibility method. The card's specific methodology (checksums/hashes) is not mentioned in the paper.",
@@ -809,7 +809,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/checksum-verification-for-reproducibility/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/checksum-verification-for-reproducibility/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The ENCODE Hi-C uniform processing pipeline is not mentioned anywhere in the provided passages. The paper focuses on Juicer, not an ENCODE-specific pipeline variant.",
@@ -829,7 +829,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/checksum-verification-for-reproducibility/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/checksum-verification-for-reproducibility/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer, an open-source tool for analyzing terabase-scale Hi-C datasets. Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click. Juicer produces a hic file containing compressed contact matrices at many resolutions.",
       "asbval:note": "Juicer is confirmed as the tool for generating Hi-C maps from raw sequence data (FASTQ-equivalent). However, the paper does not discuss checksums or baseline runs for validation.",
@@ -849,7 +849,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/checksum-verification-for-reproducibility/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/checksum-verification-for-reproducibility/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Cryptographic hashing tools (sha256sum, md5sum) are not mentioned in the paper. The paper discusses quality statistics and validation but not checksum-based verification.",
@@ -869,7 +869,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/checksum-verification-for-reproducibility/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/checksum-verification-for-reproducibility/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss checksum verification or byte-for-byte validation as a reproducibility method. While Juicer emphasizes reproducibility and reliability, the specific methodology of cryptographic hash comparison is absent from the paper.",
@@ -889,7 +889,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-domain-boundary-detection/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/chromatin-domain-boundary-detection/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer contains a suite of algorithms that are designed to annotate contact matrices and thus identify features of genome folding. These features include loops, loop anchor motifs, and contact domains... Contact domains are identified using a dynamic programming algorithm that relies on applying the Arrowhead transformation",
       "asbval:note": "Paper explicitly describes Juicer's domain annotation capability using the Arrowhead algorithm on contact matrices.",
@@ -909,7 +909,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-domain-boundary-detection/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/chromatin-domain-boundary-detection/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer produces a hic file containing compressed contact matrices at many resolutions... Structural features, such as loops and domains, are automatically annotated.",
       "asbval:note": "Paper confirms .hic file format and automatic annotation of domains.",
@@ -929,7 +929,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-domain-boundary-detection/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/chromatin-domain-boundary-detection/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer is available as open source software at http://aidenlab.org/juicer/... Juicer is available at https://github.com/theaidenlab/juicer as a series of packages designed for a variety of hardware configurations",
       "asbval:note": "GitHub repository confirmed; tool explicitly performs domain annotation.",
@@ -949,7 +949,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-domain-boundary-detection/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/chromatin-domain-boundary-detection/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer comprises three tools, which are designed to be run one-after-another... Finally, Juicer contains a suite of algorithms that are designed to annotate contact matrices... Contact domains are identified using a dynamic programming algorithm that relies on applying the Arrowhead transformation",
       "asbval:note": "Paper confirms Arrowhead algorithm and domain-detection algorithms within Juicer, but does not explicitly name a separate 'juicer_tools' command-line suite or reference the specific wiki download page. The paper refers to 'Juicer' as the integrated platform containing these algorithms, not a distinct 'juicer_tools' subcomponent.",
@@ -969,7 +969,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-domain-boundary-detection/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/chromatin-domain-boundary-detection/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Contact matrices in the hic format can also be visualized using Juicebox, which is described in the accompanying paper (Durand et al., 2016).",
       "asbval:note": "Paper confirms Juicebox as visualization tool for .hic contact matrices; role aligns with domain boundary inspection.",
@@ -989,7 +989,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-domain-boundary-detection/005",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/chromatin-domain-boundary-detection/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ENCODE Hi-C uniform processing pipeline is not mentioned anywhere in the provided passages. The paper discusses Juicer's compatibility with cloud (AWS) and cluster systems, but does not reference an ENCODE wrapper pipeline.",
@@ -1009,7 +1009,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-domain-boundary-detection/006",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/chromatin-domain-boundary-detection/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we recently generated 6.5 billion reads and 1.6 Tb of DNA sequence in order to create a single 3D map of the genome at kilobase resolution (Rao et al., 2014)... Juicer is closely based on the algorithms that we recently developed to analyze and annotate our terabase-scale Hi-C experiments",
       "asbval:note": "Paper explicitly discusses kilobase-resolution Hi-C maps and Juicer's design for such data.",
@@ -1029,7 +1029,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-domain-boundary-detection/007",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/chromatin-domain-boundary-detection/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Contact domains are identified using a dynamic programming algorithm that relies on applying the Arrowhead transformation [Ai,i + d = (M* i,i-d \u2013 M* i,i+d )/(M* i,i-d + M* i,i+d )] to a normalized contact matrix M*",
       "asbval:note": "Paper uses the term 'contact domains' rather than 'TADs' (topologically associating domains). While these are functionally equivalent concepts, the paper does not use the acronym TAD.",
@@ -1049,7 +1049,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-domain-boundary-detection/008",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/chromatin-domain-boundary-detection/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer comprises three tools, which are designed to be run one-after-another... Finally, Juicer contains a suite of algorithms that are designed to annotate contact matrices",
       "asbval:note": "Paper describes domain annotation as the final step after contact matrix generation, confirming post-processing workflow.",
@@ -1069,7 +1069,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/encode-hic-pipeline-execution/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/encode-hic-pipeline-execution/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click. Juicer produces a hic file containing compressed contact matrices at many resolutions, facilitating visualization and analysis at multiple scales.",
       "asbval:note": "Paper describes Juicer's core function of transforming raw sequence data into .hic files and contact maps. However, the paper does not mention ENCODE Hi-C uniform processing pipeline, Cromwell/WDL workflows, or checksum validation. The claim conflates Juicer (the tool described in the paper) with an ENCODE-specific wrapper pipeline not discussed in these passages.",
@@ -1089,7 +1089,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/encode-hic-pipeline-execution/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/encode-hic-pipeline-execution/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce Juicer, an open-source tool for analyzing terabase-scale Hi-C datasets. Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click.",
       "asbval:note": "Juicer is the primary subject of the paper and is confirmed as the core tool for Hi-C pipeline execution.",
@@ -1109,7 +1109,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/encode-hic-pipeline-execution/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/encode-hic-pipeline-execution/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention ENCODE Hi-C uniform processing pipeline, encode_hic_pipeline, or any ENCODE-specific wrapper. The paper describes Juicer as a standalone tool, not as part of an ENCODE pipeline.",
@@ -1129,7 +1129,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/encode-hic-pipeline-execution/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/encode-hic-pipeline-execution/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Caper is not mentioned in the paper. The paper does not discuss Cromwell, WDL, or workflow management systems.",
@@ -1149,7 +1149,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/encode-hic-pipeline-execution/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/encode-hic-pipeline-execution/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "BWA is not mentioned in the paper. The paper states that 'read pairs are aligned to the genome' but does not name the specific alignment tool used. The alignment step is described generically without tool specification.",
@@ -1169,7 +1169,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/encode-hic-pipeline-execution/005",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/encode-hic-pipeline-execution/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer contains a suite of algorithms that are designed to annotate contact matrices and thus identify features of genome folding. These features include loops, loop anchor motifs, and contact domains. Loops are identified using the HiCCUPS algorithm... Contact domains are identified using a dynamic programming algorithm that relies on applying the Arrowhead transformation... Juicer includes an implementation of Aggregate Peak Analysis (Rao et al., 2014).",
       "asbval:note": "The paper describes HiCCUPS, Arrowhead, and APA as algorithms/components within Juicer, and notes that 'all feature annotation algorithms in Java as fully-automated, end-to-end tools' were re-implemented. However, the paper does not use the term 'Juicer Tools' as a distinct product name; these are described as integrated components of Juicer itself.",
@@ -1189,7 +1189,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/encode-hic-pipeline-execution/006",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/encode-hic-pipeline-execution/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click.",
       "asbval:note": "Paper confirms raw sequence data as input; FASTQ format is standard for sequencing but not explicitly named in passages.",
@@ -1209,7 +1209,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/encode-hic-pipeline-execution/007",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/encode-hic-pipeline-execution/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer produces a hic file containing compressed contact matrices at many resolutions, facilitating visualization and analysis at multiple scales.",
       "asbval:note": "Paper explicitly confirms .hic file as output format.",
@@ -1229,7 +1229,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/encode-hic-pipeline-execution/008",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/encode-hic-pipeline-execution/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "read pairs are aligned to the genome",
       "asbval:note": "Paper confirms genome alignment is performed but does not explicitly name FASTA format or reference genome file specification.",
@@ -1249,7 +1249,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/encode-hic-pipeline-execution/009",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/encode-hic-pipeline-execution/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages insufficient to judge. Paper mentions 'restriction fragment resolution for a 4-cutter restriction enzyme' but does not discuss restriction site file input requirements.",
@@ -1269,7 +1269,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/encode-hic-pipeline-execution/010",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/encode-hic-pipeline-execution/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer produces a hic file containing compressed contact matrices at many resolutions, facilitating visualization and analysis at multiple scales. Structural features, such as loops and domains, are automatically annotated.",
       "asbval:note": "Paper confirms contact matrices and feature annotation as outputs.",
@@ -1289,7 +1289,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/encode-hic-pipeline-execution/011",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/encode-hic-pipeline-execution/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention checksum validation, reproducibility verification, or format correctness validation procedures.",
@@ -1309,7 +1309,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/encode-hic-pipeline-execution/012",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/encode-hic-pipeline-execution/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Loops are identified using the HiCCUPS algorithm (Rao et al., 2014), which searches for clusters of contact matrix entries in which the frequency of contact is enriched relative to the local background. Because there are trillions of pixels in a kilobase-resolution Hi-C map, HiCCUPS is implemented using GPGPUs.",
       "asbval:note": "Paper confirms HiCCUPS as the loop annotation method within Juicer.",
@@ -1329,7 +1329,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/encode-hic-pipeline-execution/013",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/encode-hic-pipeline-execution/013",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Contact domains are identified using a dynamic programming algorithm that relies on applying the Arrowhead transformation [Ai,i + d = (M* i,i-d \u2013 M* i,i+d )/(M* i,i-d + M* i,i+d )] to a normalized contact matrix M*",
       "asbval:note": "Paper confirms Arrowhead as the contact domain identification method.",
@@ -1349,7 +1349,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/encode-hic-pipeline-execution/014",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/encode-hic-pipeline-execution/014",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer includes an implementation of Aggregate Peak Analysis (Rao et al., 2014).",
       "asbval:note": "Paper confirms APA as an integrated method in Juicer.",
@@ -1369,7 +1369,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/encode-hic-pipeline-execution/015",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/encode-hic-pipeline-execution/015",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Given CTCF and/or cohesin ChIP-seq tracks for the same cell type, HiCCUPS can frequently use FIMO (Grant et al., 2011) to identify the CTCF motif that serves as the anchor for each loop.",
       "asbval:note": "Paper confirms FIMO is used within Juicer for CTCF motif identification.",
@@ -1389,7 +1389,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genome-alignment-and-contact-matrix-construction/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/genome-alignment-and-contact-matrix-construction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click. Juicer produces a hic file containing compressed contact matrices at many resolutions... read pairs are aligned to the genome, both duplicates and near-duplicates are removed... contact matrices... are stored efficiently in a compressed format... 1 terabyte of raw sequencing data is represented as an 80 gigabyte hic file containing normalized and non-normalized contact matrices at 18 different resolutions, from 2.5 Mb resolution to single restriction fragment resolution",
       "asbval:note": "Paper explicitly describes FASTQ-to-.hic pipeline with alignment, deduplication, and normalization at multiple resolutions including kilobase scale.",
@@ -1409,7 +1409,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genome-alignment-and-contact-matrix-construction/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/genome-alignment-and-contact-matrix-construction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce Juicer, an open-source tool for analyzing terabase-scale Hi-C datasets. Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click.",
       "asbval:note": "Juicer is the primary tool described in the paper for Hi-C processing.",
@@ -1429,7 +1429,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genome-alignment-and-contact-matrix-construction/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/genome-alignment-and-contact-matrix-construction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention specific version numbers (1.6 or 2). Passages insufficient to confirm version claims.",
@@ -1449,7 +1449,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genome-alignment-and-contact-matrix-construction/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/genome-alignment-and-contact-matrix-construction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention version 2 or development versions. Passages insufficient to confirm.",
@@ -1469,7 +1469,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genome-alignment-and-contact-matrix-construction/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/genome-alignment-and-contact-matrix-construction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ENCODE Hi-C pipeline is not mentioned in any passage. Paper focuses on Juicer itself, not ENCODE implementations.",
@@ -1489,7 +1489,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genome-alignment-and-contact-matrix-construction/005",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/genome-alignment-and-contact-matrix-construction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not name BWA. Paper states 'read pairs are aligned to the genome' but does not specify which aligner is used. The paper references prior work (Rao et al., 2014) for algorithms but does not detail the specific alignment tool in these passages.",
@@ -1509,7 +1509,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genome-alignment-and-contact-matrix-construction/006",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/genome-alignment-and-contact-matrix-construction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer comprises three tools, which are designed to be run one-after-another... Finally, Juicer contains a suite of algorithms that are designed to annotate contact matrices and thus identify features of genome folding. These features include loops, loop anchor motifs, and contact domains.",
       "asbval:note": "Paper describes feature annotation algorithms within Juicer (HiCCUPS, Arrowhead, APA) but does not use the term 'Juicer Tools' as a separate named utility. The annotation functionality is integrated into Juicer itself, not presented as a separate tool suite.",
@@ -1529,7 +1529,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genome-alignment-and-contact-matrix-construction/007",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/genome-alignment-and-contact-matrix-construction/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer transforms raw sequence data into a list of Hi-C contacts... read pairs are aligned to the genome",
       "asbval:note": "Paper confirms paired-end read processing from raw sequencing data.",
@@ -1549,7 +1549,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genome-alignment-and-contact-matrix-construction/008",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/genome-alignment-and-contact-matrix-construction/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "read pairs are aligned to the genome",
       "asbval:note": "Alignment to genome is described; FASTA format is standard but not explicitly named in passages.",
@@ -1569,7 +1569,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genome-alignment-and-contact-matrix-construction/009",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/genome-alignment-and-contact-matrix-construction/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not mention chromosome sizes file or chrom.sizes format. Insufficient detail to confirm.",
@@ -1589,7 +1589,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genome-alignment-and-contact-matrix-construction/010",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/genome-alignment-and-contact-matrix-construction/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer produces a hic file containing compressed contact matrices at many resolutions... 1 terabyte of raw sequencing data is represented as an 80 gigabyte hic file",
       "asbval:note": "Paper explicitly describes .hic file output format.",
@@ -1609,7 +1609,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genome-alignment-and-contact-matrix-construction/011",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/genome-alignment-and-contact-matrix-construction/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click.",
       "asbval:note": "Paper emphasizes Juicer's role in transforming raw data, implying it is not for pre-processed inputs.",
@@ -1629,7 +1629,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genome-alignment-and-contact-matrix-construction/012",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/genome-alignment-and-contact-matrix-construction/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "read pairs are aligned to the genome, both duplicates and near-duplicates are removed, and read pairs that align to three or more locations are set aside",
       "asbval:note": "Paper describes paired-end read processing; single-end not mentioned, implying paired-end is the design assumption.",
@@ -1649,7 +1649,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-loop-call-interpretation/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/genomic-loop-call-interpretation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer contains a suite of algorithms that are designed to annotate contact matrices and thus identify features of genome folding. These features include loops, loop anchor motifs, and contact domains. Loops are identified using the HiCCUPS algorithm",
       "asbval:note": "Paper explicitly describes Juicer's feature annotation capabilities for loops and domains on contact matrices.",
@@ -1669,7 +1669,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-loop-call-interpretation/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/genomic-loop-call-interpretation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer produces a hic file containing compressed contact matrices at many resolutions, facilitating visualization and analysis at multiple scales. Structural features, such as loops and domains, are automatically annotated.",
       "asbval:note": "Paper confirms automatic annotation of loops and domains; kilobase resolution explicitly mentioned in context of HiCCUPS implementation.",
@@ -1689,7 +1689,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-loop-call-interpretation/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/genomic-loop-call-interpretation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer is available as open source software at http://aidenlab.org/juicer/. Juicer is available at https://github.com/theaidenlab/juicer as a series of packages",
       "asbval:note": "GitHub repository confirmed; note repo URL in card uses 'aidenlab' while paper uses 'theaidenlab' \u2014 both refer to same organization.",
@@ -1709,7 +1709,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-loop-call-interpretation/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/genomic-loop-call-interpretation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No tool named 'juicer_cli_tools' appears in paper. Paper describes Juicer as a unified pipeline with integrated algorithms (HiCCUPS, Arrowhead, APA) but does not name a separate 'juicer_cli_tools' package. The command-line execution is part of Juicer itself.",
@@ -1729,7 +1729,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-loop-call-interpretation/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/genomic-loop-call-interpretation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Loops are identified using the HiCCUPS algorithm (Rao et al., 2014), which searches for clusters of contact matrix entries in which the frequency of contact is enriched relative to the local background. Because there are trillions of pixels in a kilobase-resolution Hi-C map, HiCCUPS is implemented using GPGPUs.",
       "asbval:note": "HiCCUPS confirmed as loop-detection algorithm with GPU acceleration (GPGPUs mentioned; CUDA not explicitly named but GPU acceleration confirmed).",
@@ -1749,7 +1749,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-loop-call-interpretation/005",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/genomic-loop-call-interpretation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ENCODE Hi-C pipeline not mentioned in paper. Paper mentions Juicer is available on Amazon Web Services and supports various cluster systems (LSF, UGE, SLURM) but does not reference ENCODE pipeline or Docker containerization.",
@@ -1769,7 +1769,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-loop-call-interpretation/006",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/genomic-loop-call-interpretation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer produces a hic file containing compressed contact matrices at many resolutions",
       "asbval:note": ".hic file format confirmed as output of Juicer containing contact matrices.",
@@ -1789,7 +1789,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-loop-call-interpretation/007",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/genomic-loop-call-interpretation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click. Juicer comprises three tools, which are designed to be run one-after-another. First, Juicer transforms raw sequence data into a list of Hi-C contacts",
       "asbval:note": "Paper confirms Juicer processes raw sequence data in earlier pipeline stages; feature annotation is a downstream step.",
@@ -1809,7 +1809,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-fastq-read-preprocessing/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-fastq-read-preprocessing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click. Juicer produces a hic file containing compressed contact matrices at many resolutions... Juicer is closely based on the algorithms that we recently developed to analyze and annotate our terabase-scale Hi-C experiments (Rao et al., 2014)... we recently generated 6.5 billion reads and 1.6 Tb of DNA sequence in order to create a single 3D map of the genome at kilobase resolution",
       "asbval:note": "Paper explicitly describes Juicer transforming raw sequence data into normalized contact maps and mentions kilobase resolution capability.",
@@ -1829,7 +1829,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-fastq-read-preprocessing/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-fastq-read-preprocessing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce Juicer, an open-source tool for analyzing terabase-scale Hi-C datasets. Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click. Juicer produces a hic file containing compressed contact matrices at many resolutions.",
       "asbval:note": "Juicer is the primary tool described in the paper for this exact purpose.",
@@ -1849,7 +1849,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-fastq-read-preprocessing/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-fastq-read-preprocessing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention version numbers (1.6, 2, etc.). Published in 2016; no version specification provided in passages.",
@@ -1869,7 +1869,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-fastq-read-preprocessing/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-fastq-read-preprocessing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Juicer version 2 or development versions. No version numbering discussed in passages.",
@@ -1889,7 +1889,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-fastq-read-preprocessing/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-fastq-read-preprocessing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention ENCODE Hi-C uniform processing pipeline. Paper mentions Juicer is compatible with AWS but does not describe an ENCODE wrapper.",
@@ -1909,7 +1909,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-fastq-read-preprocessing/005",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-fastq-read-preprocessing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "read pairs are aligned to the genome, both duplicates and near-duplicates are removed, and read pairs that align to three or more locations are set aside.",
       "asbval:note": "Paper describes alignment step but does not name BWA or any specific aligner. The alignment tool used by Juicer is not explicitly identified in the passages.",
@@ -1929,7 +1929,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-fastq-read-preprocessing/006",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-fastq-read-preprocessing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer produces a hic file containing compressed contact matrices at many resolutions, facilitating visualization and analysis at multiple scales.",
       "asbval:note": "Paper explicitly describes .hic file output with normalized contact matrices at multiple resolutions.",
@@ -1949,7 +1949,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-fastq-read-preprocessing/007",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-fastq-read-preprocessing/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Structural features, such as loops and domains, are automatically annotated... Juicer contains a suite of algorithms that are designed to annotate contact matrices and thus identify features of genome folding. These features include loops, loop anchor motifs, and contact domains.",
       "asbval:note": "Paper confirms automatic annotation of loops and domains as part of Juicer pipeline.",
@@ -1969,7 +1969,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-fastq-read-preprocessing/008",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-fastq-read-preprocessing/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Loops are identified using the HiCCUPS algorithm (Rao et al., 2014), which searches for clusters of contact matrix entries in which the frequency of contact is enriched relative to the local background.",
       "asbval:note": "Paper explicitly names HiCCUPS as the loop detection algorithm used in Juicer.",
@@ -1989,7 +1989,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-fastq-read-preprocessing/009",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-fastq-read-preprocessing/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Contact domains are identified using a dynamic programming algorithm that relies on applying the Arrowhead transformation [Ai,i + d = (M* i,i-d \u2013 M* i,i+d )/(M* i,i-d + M* i,i+d )] to a normalized contact matrix M*",
       "asbval:note": "Paper explicitly describes Arrowhead algorithm for domain identification.",
@@ -2009,7 +2009,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-fastq-to-contact-map-pipeline/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-fastq-to-contact-map-pipeline/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click. Juicer produces a hic file containing compressed contact matrices at many resolutions... First, Juicer transforms raw sequence data into a list of Hi-C contacts (pairs of genomic positions that were adjacent to each other in 3D space during the experiment). To accomplish this, read pairs are aligned to the genome, both duplicates and near-duplicates are removed, and read pairs that align to three or more locations are set aside... Next, the catalog of contacts is used to create contact matrices.",
       "asbval:note": "Core workflow is explicitly described in abstract and methods.",
@@ -2029,7 +2029,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-fastq-to-contact-map-pipeline/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-fastq-to-contact-map-pipeline/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer is an open-source tool for analyzing terabase-scale Hi-C datasets.",
       "asbval:note": "Paper describes Juicer as the core tool but does not mention ENCODE uniform processing standards or reference to ENCODE pipelines. The card claims ENCODE standards compliance, but the paper does not discuss ENCODE standards explicitly.",
@@ -2049,7 +2049,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-fastq-to-contact-map-pipeline/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-fastq-to-contact-map-pipeline/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer is available as open source software at http://aidenlab.org/juicer/... Juicer is available at https://github.com/theaidenlab/juicer as a series of packages designed for a variety of hardware configurations",
       "asbval:note": "Tool name and repository confirmed in paper.",
@@ -2069,7 +2069,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-fastq-to-contact-map-pipeline/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-fastq-to-contact-map-pipeline/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer comprises three tools, which are designed to be run one-after-another... First, Juicer transforms raw sequence data into a list of Hi-C contacts... read pairs are aligned to the genome, both duplicates and near-duplicates are removed... Next, the catalog of contacts is used to create contact matrices... Finally, Juicer contains a suite of algorithms that are designed to annotate contact matrices and thus identify features of genome folding.",
       "asbval:note": "All claimed functions are explicitly described.",
@@ -2089,7 +2089,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-fastq-to-contact-map-pipeline/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-fastq-to-contact-map-pipeline/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention ENCODE Hi-C pipeline, ENCODE-DCC, or any wrapper around Juicer. This tool is not discussed in the provided passages.",
@@ -2109,7 +2109,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-fastq-to-contact-map-pipeline/005",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-fastq-to-contact-map-pipeline/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Caper, Cromwell, WDL, or any workflow execution engine. Not discussed in passages.",
@@ -2129,7 +2129,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-fastq-to-contact-map-pipeline/006",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-fastq-to-contact-map-pipeline/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "read pairs are aligned to the genome",
       "asbval:note": "Paper states that Juicer aligns reads to the genome but does not name BWA as the aligner. The paper does not specify which alignment tool is used internally by Juicer.",
@@ -2149,7 +2149,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-fastq-to-contact-map-pipeline/007",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-fastq-to-contact-map-pipeline/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer contains a suite of algorithms that are designed to annotate contact matrices and thus identify features of genome folding. These features include loops, loop anchor motifs, and contact domains. Loops are identified using the HiCCUPS algorithm... Contact domains are identified using a dynamic programming algorithm that relies on applying the Arrowhead transformation... Juicer includes an implementation of Aggregate Peak Analysis (Rao et al., 2014).",
       "asbval:note": "Paper confirms HiCCUPS, Arrowhead, and APA are part of Juicer's feature annotation suite, but does not explicitly name a separate 'Juicer Tools' command-line toolset. These algorithms are described as integrated into Juicer itself, not as a separate tool package.",
@@ -2169,7 +2169,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-map-artifact-validation/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-map-artifact-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click. Juicer produces a hic file containing compressed contact matrices at many resolutions, facilitating visualization and analysis at multiple scales.",
       "asbval:note": "Paper explicitly describes Juicer producing .hic files with normalized contact matrices.",
@@ -2189,7 +2189,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-map-artifact-validation/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-map-artifact-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer comprises three tools, which are designed to be run one-after-another... Next, the catalog of contacts is used to create contact matrices... Juicer can adjust for these biases in multiple ways. The options include our original normalization scheme (Lieberman-Aiden et al., 2009), as well as a matrix balancing scheme that ensures that each row and column of the contact matrix sums to the same value.",
       "asbval:note": "Paper describes contact matrix construction and normalization as core Juicer functions.",
@@ -2209,7 +2209,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-map-artifact-validation/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-map-artifact-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer is available as open source software at http://aidenlab.org/juicer/... Juicer is available at https://github.com/theaidenlab/juicer as a series of packages designed for a variety of hardware configurations.",
       "asbval:note": "Paper confirms Juicer is open-source and available on GitHub; role matches paper's description of transforming raw sequence data into contact maps.",
@@ -2229,7 +2229,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-map-artifact-validation/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-map-artifact-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Contact matrices in the hic format can also be visualized using Juicebox, which is described in the accompanying paper (Durand et al., 2016).",
       "asbval:note": "Paper mentions Juicebox (not 'Juicer Tools') for visualization of .hic files. The card claims a tool called 'Juicer Tools' for validation/viewing/analysis, but the paper only explicitly names Juicebox for visualization. No mention of a separate 'Juicer Tools' command-line utility in provided passages.",
@@ -2249,7 +2249,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-map-artifact-validation/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-map-artifact-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ENCODE Hi-C uniform processing pipeline is not mentioned anywhere in the provided passages. Paper discusses Juicer's compatibility with cloud (AWS) and cluster systems (LSF, UGE, SLURM) but does not reference ENCODE pipeline or Cromwell/Caper.",
@@ -2269,7 +2269,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-map-artifact-validation/005",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-map-artifact-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click. Juicer produces a hic file containing compressed contact matrices at many resolutions.",
       "asbval:note": "Scope aligns with paper's description of Juicer's primary function.",
@@ -2289,7 +2289,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-map-artifact-validation/006",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-map-artifact-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click.",
       "asbval:note": "Paper confirms Juicer processes raw sequence data, implying .hic format is output, not input.",
@@ -2309,7 +2309,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-map-artifact-validation/007",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-map-artifact-validation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not discuss pipeline stage parameters or early exit options. Insufficient information to verify.",
@@ -2329,7 +2329,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-map-artifact-validation/008",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-map-artifact-validation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click.",
       "asbval:note": "Paper confirms raw sequence data (FASTQ) as input.",
@@ -2349,7 +2349,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-map-artifact-validation/009",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-map-artifact-validation/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "To accomplish this, read pairs are aligned to the genome, both duplicates and near-duplicates are removed, and read pairs that align to three or more locations are set aside.",
       "asbval:note": "Paper describes genome alignment, implying reference genome is required input.",
@@ -2369,7 +2369,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-map-artifact-validation/010",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-map-artifact-validation/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages mention restriction fragment resolution (e.g., '4-cutter restriction enzyme (~400 bp)') but do not explicitly state that a restriction enzyme site file is a required input. Insufficient detail to confirm.",
@@ -2389,7 +2389,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-map-artifact-validation/011",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-map-artifact-validation/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not discuss pipeline execution logs as an input. Insufficient information to verify.",
@@ -2409,7 +2409,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-map-artifact-validation/012",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-map-artifact-validation/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer produces a hic file containing compressed contact matrices at many resolutions, facilitating visualization and analysis at multiple scales.",
       "asbval:note": "Paper explicitly confirms .hic file as output.",
@@ -2429,7 +2429,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-map-artifact-validation/013",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-map-artifact-validation/013",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "A wide array of quality statistics is also calculated, making it possible to assess the success and reliability of a given experiment before the costly deep-sequencing step.",
       "asbval:note": "Paper mentions quality statistics calculation, but does not explicitly name a 'validation status report' as a discrete output artifact.",
@@ -2449,7 +2449,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-map-artifact-validation/014",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-map-artifact-validation/014",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "A wide array of quality statistics is also calculated, making it possible to assess the success and reliability of a given experiment before the costly deep-sequencing step.",
       "asbval:note": "Paper confirms quality statistics (contact matrix statistics) are generated.",
@@ -2469,7 +2469,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-normalization-and-bias-correction/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-normalization-and-bias-correction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Due to factors such as chromatin accessibility, certain loci are observed more frequently in Hi-C experiments. Juicer can adjust for these biases in multiple ways. The options include our original normalization scheme (Lieberman-Aiden et al., 2009), as well as a matrix balancing scheme that ensures that each row and column of the contact matrix sums to the same value (Knight and Ruiz, 2012).",
       "asbval:note": "Paper confirms normalization and bias correction are performed by Juicer, but does not explicitly mention restriction enzyme cutting efficiency, GC content, or mappability as specific artifacts being corrected. Paper mentions 'chromatin accessibility' as a bias factor but not the full list of technical artifacts claimed.",
@@ -2489,7 +2489,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-normalization-and-bias-correction/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-normalization-and-bias-correction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce Juicer, an open-source tool for analyzing terabase-scale Hi-C datasets. Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click.",
       "asbval:note": "Juicer is the primary tool described in the paper for Hi-C analysis including normalization.",
@@ -2509,7 +2509,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-normalization-and-bias-correction/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-normalization-and-bias-correction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention version 1.6 specifically. Paper is from 2016 and does not discuss version numbering or releases.",
@@ -2529,7 +2529,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-normalization-and-bias-correction/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-normalization-and-bias-correction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Juicer 2 or any development version. Paper describes the initial release of Juicer.",
@@ -2549,7 +2549,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-normalization-and-bias-correction/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-normalization-and-bias-correction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer comprises three tools, which are designed to be run one-after-another (Figure 1)... Finally, Juicer contains a suite of algorithms that are designed to annotate contact matrices and thus identify features of genome folding.",
       "asbval:note": "Paper describes Juicer as comprising multiple tools/algorithms but does not use the specific term 'Juicer Tools' as a distinct product name. The paper refers to components within Juicer (HiCCUPS, Arrowhead, APA) but not a separate 'Juicer Tools' package.",
@@ -2569,7 +2569,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-normalization-and-bias-correction/005",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-normalization-and-bias-correction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention ENCODE Hi-C uniform processing pipeline or any ENCODE-specific implementation. Paper only describes the original Juicer tool.",
@@ -2589,7 +2589,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-normalization-and-bias-correction/006",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-normalization-and-bias-correction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer transforms raw sequence data into a list of Hi-C contacts (pairs of genomic loci)... Next, the catalog of contacts is used to create contact matrices... Juicer can adjust for these biases in multiple ways.",
       "asbval:note": "Paper confirms normalization occurs after contact matrix creation and before downstream analysis.",
@@ -2609,7 +2609,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-normalization-and-bias-correction/007",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-normalization-and-bias-correction/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "A wide array of quality statistics is also calculated, making it possible to assess the success and reliability of a given experiment... Finally, Juicer contains a suite of algorithms that are designed to annotate contact matrices and thus identify features of genome folding. These features include loops, loop anchor motifs, and contact domains.",
       "asbval:note": "Paper confirms normalization enables downstream analysis (domain detection, loop calling) but does not explicitly discuss merging replicates or comparative genomics applications.",
@@ -2629,7 +2629,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hic-contact-map-feature-annotation/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hic-contact-map-feature-annotation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer contains a suite of algorithms that are designed to annotate contact matrices and thus identify features of genome folding. These features include loops, loop anchor motifs, and contact domains. Loops are identified using the HiCCUPS algorithm... Contact domains are identified using a dynamic programming algorithm that relies on applying the Arrowhead transformation... Juicer produces a hic file containing compressed contact matrices at many resolutions",
       "asbval:note": "Core claim fully supported: Juicer annotates loops, domains, and peaks on .hic files.",
@@ -2649,7 +2649,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hic-contact-map-feature-annotation/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hic-contact-map-feature-annotation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer is available as open source software at http://aidenlab.org/juicer/... Juicer is available at https://github.com/theaidenlab/juicer as a series of packages",
       "asbval:note": "Tool name and repository confirmed (case-insensitive match: 'Juicer' in paper, 'juicer' in card).",
@@ -2669,7 +2669,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hic-contact-map-feature-annotation/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hic-contact-map-feature-annotation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer comprises three tools, which are designed to be run one-after-another... Finally, Juicer contains a suite of algorithms that are designed to annotate contact matrices... Loops are identified using the HiCCUPS algorithm... Contact domains are identified using a dynamic programming algorithm that relies on applying the Arrowhead transformation",
       "asbval:note": "Paper does not name a separate tool called 'juicer_tools'. Instead, the paper describes HiCCUPS and Arrowhead as algorithms within Juicer itself. The paper states 'M.S.S. re-implemented all feature annotation algorithms in Java as fully-automated, end-to-end tools' but does not use the term 'juicer_tools' as a distinct command-line toolkit name. The functionality (feature annotation via HiCCUPS and domain detection) is present, but the specific tool name 'juicer_tools' is not attested.",
@@ -2689,7 +2689,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hic-contact-map-feature-annotation/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hic-contact-map-feature-annotation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Contact matrices in the hic format can also be visualized using Juicebox, which is described in the accompanying paper (Durand et al., 2016).",
       "asbval:note": "Juicebox confirmed as visualization tool for .hic files and annotated features.",
@@ -2709,7 +2709,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hic-contact-map-feature-annotation/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hic-contact-map-feature-annotation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The ENCODE Hi-C uniform processing pipeline is not mentioned anywhere in the provided passages. The paper discusses Juicer's compatibility with cloud (Amazon Web Services) and cluster systems (LSF, UGE, SLURM), but does not reference or describe an ENCODE wrapper pipeline.",
@@ -2729,7 +2729,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hic-contact-map-feature-annotation/005",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hic-contact-map-feature-annotation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click... Finally, Juicer contains a suite of algorithms that are designed to annotate contact matrices and thus identify features of genome folding. These features include loops, loop anchor motifs, and contact domains.",
       "asbval:note": "Scope aligns with paper's description of Juicer's feature annotation capabilities on contact maps.",
@@ -2749,7 +2749,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hic-contact-map-feature-annotation/006",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hic-contact-map-feature-annotation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer comprises three tools, which are designed to be run one-after-another... First, Juicer transforms raw sequence data into a list of Hi-C contacts... Next, the catalog of contacts is used to create contact matrices... Finally, Juicer contains a suite of algorithms that are designed to annotate contact matrices and thus identify features of genome folding.",
       "asbval:note": "Paper confirms sequential workflow: raw reads \u2192 contact matrices \u2192 feature annotation (loops, domains).",
@@ -2769,7 +2769,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hic-contact-map-feature-annotation/007",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hic-contact-map-feature-annotation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer comprises three tools, which are designed to be run one-after-another. First, Juicer transforms raw sequence data into a list of Hi-C contacts (pairs of genomic positions that were adjacent to each other in 3D space during the experiment). To accomplish this, read pairs are aligned to the genome, both duplicates and near-duplicates are removed...",
       "asbval:note": "Paper confirms that Juicer handles alignment, deduplication, and .hic file creation before feature annotation.",
@@ -2789,7 +2789,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hic-map-format-validation/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hic-map-format-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer produces a hic file containing compressed contact matrices at many resolutions, facilitating visualization and analysis at multiple scales.",
       "asbval:note": "Paper confirms .hic file format is produced by Juicer and describes it as a compressed format. However, the paper does NOT discuss validation against format specifications, ENCODE reference standards, checksums, or data integrity verification. The card's research question describes a validation/QA workflow that is not present in the paper. The paper focuses on pipeline execution and feature annotation, not post-hoc validation.",
@@ -2809,7 +2809,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hic-map-format-validation/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hic-map-format-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click. Juicer produces a hic file containing compressed contact matrices at many resolutions.",
       "asbval:note": "Paper confirms Juicer transforms raw sequence data (FASTQ) into .hic output. However, the paper does not discuss validation workflows, ENCODE submissions, quality assurance verification, or checksum comparison. The scope describes a post-processing validation task not covered in the paper.",
@@ -2829,7 +2829,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hic-map-format-validation/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hic-map-format-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce Juicer, an open-source tool for analyzing terabase-scale Hi-C datasets. Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click.",
       "asbval:note": "Juicer is the primary subject of the paper and is confirmed as the tool that generates .hic files from raw Hi-C data.",
@@ -2849,7 +2849,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hic-map-format-validation/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hic-map-format-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention ENCODE Hi-C uniform processing pipeline, encode_hic_pipeline, or any ENCODE-specific wrapper around Juicer. The paper is about Juicer itself, not an ENCODE wrapper.",
@@ -2869,7 +2869,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hic-map-format-validation/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hic-map-format-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not mention checksums, md5sum, sha256sum, or any cryptographic verification tools. The paper focuses on pipeline execution and feature annotation, not data integrity verification via checksums.",
@@ -2889,7 +2889,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hic-map-format-validation/005",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hic-map-format-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click. Juicer produces a hic file containing compressed contact matrices at many resolutions.",
       "asbval:note": "Confirmed: Juicer transforms raw sequence data (FASTQ) into .hic output files.",
@@ -2909,7 +2909,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-cli-tool-execution/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-cli-tool-execution/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer contains a suite of algorithms that are designed to annotate contact matrices and thus identify features of genome folding. These features include loops, loop anchor motifs, and contact domains. Loops are identified using the HiCCUPS algorithm... Contact domains are identified using a dynamic programming algorithm that relies on applying the Arrowhead transformation",
       "asbval:note": "Paper describes feature annotation algorithms (HiCCUPS for loops, Arrowhead for domains) as core Juicer functionality applied to contact matrices.",
@@ -2929,7 +2929,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-cli-tool-execution/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-cli-tool-execution/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Loops are identified using the HiCCUPS algorithm... Contact domains are identified using a dynamic programming algorithm that relies on applying the Arrowhead transformation",
       "asbval:note": "Paper identifies loops and contact domains but does not use the term 'TAD' (topologically associating domain); 'contact domains' is the paper's terminology. The functional claim is supported but the specific acronym TAD is not used in the paper.",
@@ -2949,7 +2949,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-cli-tool-execution/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-cli-tool-execution/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer comprises three tools, which are designed to be run one-after-another... Finally, Juicer contains a suite of algorithms that are designed to annotate contact matrices and thus identify features of genome folding. These features include loops, loop anchor motifs, and contact domains. Loops are identified using the HiCCUPS algorithm... Contact domains are identified using a dynamic programming algorithm that relies on applying the Arrowhead transformation",
       "asbval:note": "Juicer explicitly described as containing suite of algorithms for feature annotation; HiCCUPS and Arrowhead are named as specific algorithms within Juicer.",
@@ -2969,7 +2969,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-cli-tool-execution/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-cli-tool-execution/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention version 1.6 or any specific version numbering. Published in 2016; no version history provided in passages.",
@@ -2989,7 +2989,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-cli-tool-execution/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-cli-tool-execution/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Juicer 2 or version numbering. No discussion of development versions in passages.",
@@ -3009,7 +3009,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-cli-tool-execution/005",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-cli-tool-execution/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ENCODE Hi-C pipeline not mentioned in paper. Paper mentions Juicer is compatible with Amazon Web Services and various cluster systems (LSF, UGE, SLURM) but does not reference ENCODE pipeline wrapper.",
@@ -3029,7 +3029,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-cli-tool-execution/006",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-cli-tool-execution/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "M.S.S. re-implemented all feature annotation algorithms in Java as fully-automated, end-to-end tools.",
       "asbval:note": "Paper confirms Juicer tools are implemented in Java, confirming JRE is a dependency. However, paper does not specify minimum version requirement (>= 1.8).",
@@ -3049,7 +3049,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-cli-tool-execution/007",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-cli-tool-execution/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer is closely based on the algorithms that we recently developed to analyze and annotate our terabase-scale Hi-C experiments... we recently generated 6.5 billion reads and 1.6 Tb of DNA sequence in order to create a single 3D map of the genome at kilobase resolution",
       "asbval:note": "Paper explicitly describes Juicer as designed for kilobase-resolution Hi-C analysis.",
@@ -3069,7 +3069,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-cli-tool-execution/008",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-cli-tool-execution/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer comprises three tools, which are designed to be run one-after-another... Finally, Juicer contains a suite of algorithms that are designed to annotate contact matrices and thus identify features of genome folding.",
       "asbval:note": "Paper describes Juicer as modular pipeline with separate stages; feature annotation is final stage applied to contact matrices.",
@@ -3089,7 +3089,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-cli-tool-execution/009",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-cli-tool-execution/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages insufficient to judge whether re-annotation would overwrite or conflict with existing annotations. Paper does not discuss this scenario.",
@@ -3109,7 +3109,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-cli-tool-execution/010",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-cli-tool-execution/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Contact matrices in the hic format can also be visualized using Juicebox, which is described in the accompanying paper (Durand et al., 2016).",
       "asbval:note": "Paper confirms Juicebox is the visualization tool for .hic files, supporting the scope distinction between CLI tools and GUI visualization.",
@@ -3129,7 +3129,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-pipeline-configuration-and-execution/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-pipeline-configuration-and-execution/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click. Juicer produces a hic file containing compressed contact matrices at many resolutions",
       "asbval:note": null,
@@ -3149,7 +3149,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-pipeline-configuration-and-execution/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-pipeline-configuration-and-execution/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we recently generated 6.5 billion reads and 1.6 Tb of DNA sequence in order to create a single 3D map of the genome at kilobase resolution",
       "asbval:note": null,
@@ -3169,7 +3169,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-pipeline-configuration-and-execution/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-pipeline-configuration-and-execution/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not specify version 1.6 or distinguish between stable/development versions. Paper is from 2016 and does not mention version numbering.",
@@ -3189,7 +3189,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-pipeline-configuration-and-execution/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-pipeline-configuration-and-execution/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Passages do not mention Juicer 2 or version numbering. Paper is from 2016 and does not discuss version history.",
@@ -3209,7 +3209,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-pipeline-configuration-and-execution/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-pipeline-configuration-and-execution/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "ENCODE-DCC/hic-pipeline is not mentioned in the paper. Paper mentions Juicer is compatible with AWS and various cluster systems, but does not reference ENCODE-DCC wrapper.",
@@ -3229,7 +3229,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-pipeline-configuration-and-execution/005",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-pipeline-configuration-and-execution/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "BWA is not mentioned in the paper. Paper states 'read pairs are aligned to the genome' but does not name the specific alignment tool used.",
@@ -3249,7 +3249,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-pipeline-configuration-and-execution/006",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-pipeline-configuration-and-execution/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "M.S.S. re-implemented all feature annotation algorithms in Java as fully-automated, end-to-end tools.",
       "asbval:note": "Paper confirms Juicer uses Java but does not specify minimum version requirement (\u22651.8).",
@@ -3269,7 +3269,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-pipeline-configuration-and-execution/007",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-pipeline-configuration-and-execution/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer, an open-source tool for analyzing terabase-scale Hi-C datasets",
       "asbval:note": null,
@@ -3289,7 +3289,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-pipeline-configuration-and-execution/008",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-pipeline-configuration-and-execution/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer transforms raw sequence data into a list of Hi-C contacts (pairs of genomic positions that were adjacent to each other in 3D space during the experiment). To accomplish this, read pairs are aligned to the genome",
       "asbval:note": null,
@@ -3309,7 +3309,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-pipeline-configuration-and-execution/009",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-pipeline-configuration-and-execution/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer produces a hic file containing compressed contact matrices at many resolutions",
       "asbval:note": null,
@@ -3329,7 +3329,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-pipeline-configuration-and-execution/010",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-pipeline-configuration-and-execution/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer comprises three tools, which are designed to be run one-after-another... First, Juicer transforms raw sequence data into a list of Hi-C contacts... Next, the catalog of contacts is used to create contact matrices... Juicer can adjust for these biases in multiple ways. The options include our original normalization scheme",
       "asbval:note": null,
@@ -3349,7 +3349,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-pipeline-configuration-and-execution/011",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-pipeline-configuration-and-execution/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "read pairs are aligned to the genome, both duplicates and near-duplicates are removed, and read pairs that align to three or more locations are set aside",
       "asbval:note": null,
@@ -3369,7 +3369,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-pipeline-configuration-and-execution/012",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-pipeline-configuration-and-execution/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer produces a hic file containing compressed contact matrices at many resolutions, facilitating visualization and analysis at multiple scales",
       "asbval:note": "Logically consistent with pipeline purpose, though not explicitly stated as exclusion criterion.",
@@ -3389,7 +3389,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/kilobase-resolution-contact-map-analysis/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/kilobase-resolution-contact-map-analysis/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Hi-C experiments explore the 3D structure of the genome, generating terabases of data to create high-resolution contact maps. Here, we introduce Juicer, an open-source tool for analyzing terabase-scale Hi-C datasets. Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click.",
       "asbval:note": "Paper confirms Juicer generates Hi-C contact maps from raw sequence data at kilobase resolution (mentioned: 'we recently generated 6.5 billion reads and 1.6 Tb of DNA sequence in order to create a single 3D map of the genome at kilobase resolution'). However, the paper does NOT mention ENCODE's uniform processing workflow or validation procedures. The card conflates Juicer (confirmed) with ENCODE pipeline (not mentioned in passages).",
@@ -3409,7 +3409,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/kilobase-resolution-contact-map-analysis/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/kilobase-resolution-contact-map-analysis/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce Juicer, an open-source tool for analyzing terabase-scale Hi-C datasets. Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click.",
       "asbval:note": "Juicer is the primary subject of the paper and is confirmed as the core tool for Hi-C analysis.",
@@ -3429,7 +3429,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/kilobase-resolution-contact-map-analysis/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/kilobase-resolution-contact-map-analysis/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The ENCODE Hi-C uniform processing pipeline is not mentioned anywhere in the provided passages. The paper focuses solely on Juicer as a standalone tool.",
@@ -3449,7 +3449,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/kilobase-resolution-contact-map-analysis/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/kilobase-resolution-contact-map-analysis/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "BWA is not mentioned in the passages. The paper states that 'read pairs are aligned to the genome' but does not specify which aligner is used. The paper does not name BWA as the underlying alignment tool.",
@@ -3469,7 +3469,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/kilobase-resolution-contact-map-analysis/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/kilobase-resolution-contact-map-analysis/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Caper is not mentioned in the passages. The paper mentions Juicer is compatible with 'LSF, Univa Grid Engine, or SLURM' and 'Amazon Web Services' but does not reference Caper or Cromwell.",
@@ -3489,7 +3489,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/kilobase-resolution-contact-map-analysis/005",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/kilobase-resolution-contact-map-analysis/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer comprises three tools, which are designed to be run one-after-another... Finally, Juicer contains a suite of algorithms that are designed to annotate contact matrices and thus identify features of genome folding. These features include loops, loop anchor motifs, and contact domains. Loops are identified using the HiCCUPS algorithm... Contact domains are identified using a dynamic programming algorithm that relies on applying the Arrowhead transformation...",
       "asbval:note": "The paper describes feature annotation algorithms (HiCCUPS, Arrowhead, APA) as part of Juicer but does not explicitly name a separate 'Juicer Tools' package. The paper mentions 'M.S.S. re-implemented all feature annotation algorithms in Java as fully-automated, end-to-end tools' but does not use the term 'Juicer Tools' as a distinct entity.",
@@ -3509,7 +3509,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/kilobase-resolution-contact-map-analysis/006",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/kilobase-resolution-contact-map-analysis/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "we recently generated 6.5 billion reads and 1.6 Tb of DNA sequence in order to create a single 3D map of the genome at kilobase resolution",
       "asbval:note": "Kilobase resolution is explicitly mentioned as an output resolution of Juicer.",
@@ -3529,7 +3529,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/kilobase-resolution-contact-map-analysis/007",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/kilobase-resolution-contact-map-analysis/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer produces a hic file containing compressed contact matrices at many resolutions, facilitating visualization and analysis at multiple scales.",
       "asbval:note": "The paper confirms .hic file format as the output of Juicer.",
@@ -3549,7 +3549,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/kilobase-resolution-contact-map-analysis/008",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/kilobase-resolution-contact-map-analysis/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not discuss format validation or output integrity verification procedures. It mentions 'A wide array of quality statistics is also calculated, making it possible to assess the success and reliability of a given experiment' but does not describe validation or integrity verification workflows.",
@@ -3569,7 +3569,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/kilobase-resolution-contact-map-analysis/009",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/kilobase-resolution-contact-map-analysis/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click.",
       "asbval:note": "The paper confirms Juicer accepts raw sequence data (FASTQ implied by context of Hi-C sequencing).",
@@ -3589,7 +3589,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/kilobase-resolution-contact-map-analysis/010",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/kilobase-resolution-contact-map-analysis/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Hi-C experiments explore the 3D structure of the genome... The resulting maps reflect patterns of physical contact between loci, making it possible to deduce how loci are organized in 3D.",
       "asbval:note": "The paper confirms that Juicer generates 3D genome contact matrices.",
@@ -3609,7 +3609,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/kilobase-resolution-genomics-analysis/000",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/kilobase-resolution-genomics-analysis/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer allows users without a computational background to transform raw sequence data into normalized contact maps with one click. Juicer produces a hic file containing compressed contact matrices at many resolutions... Structural features, such as loops and domains, are automatically annotated.",
       "asbval:note": "Paper confirms Juicer processes raw sequence data into .hic files and annotates loops and domains. TADs are referred to as 'contact domains' in the paper.",
@@ -3629,7 +3629,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/kilobase-resolution-genomics-analysis/001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/kilobase-resolution-genomics-analysis/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Juicer comprises three tools, which are designed to be run one-after-another... First, Juicer transforms raw sequence data into a list of Hi-C contacts... read pairs are aligned to the genome, both duplicates and near-duplicates are removed... Next, the catalog of contacts is used to create contact matrices... Finally, Juicer contains a suite of algorithms that are designed to annotate contact matrices and thus identify features of genome folding.",
       "asbval:note": "Paper explicitly describes the three-stage pipeline: alignment/deduplication, contact matrix creation, and feature annotation.",
@@ -3649,7 +3649,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/kilobase-resolution-genomics-analysis/002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/kilobase-resolution-genomics-analysis/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Here, we introduce Juicer, an open-source tool for analyzing terabase-scale Hi-C datasets.",
       "asbval:note": "Juicer is the main subject of the paper.",
@@ -3669,7 +3669,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/kilobase-resolution-genomics-analysis/003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/kilobase-resolution-genomics-analysis/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention version numbers (1.6 or 2.0). Paper is from 2016 and does not discuss version history or releases.",
@@ -3689,7 +3689,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/kilobase-resolution-genomics-analysis/004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/kilobase-resolution-genomics-analysis/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention version numbers. No discussion of development versions.",
@@ -3709,7 +3709,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/kilobase-resolution-genomics-analysis/005",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/kilobase-resolution-genomics-analysis/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention ENCODE pipeline or Docker. Paper mentions compatibility with 'LSF, Univa Grid Engine, or SLURM' and 'Amazon Web Services' but not ENCODE-DCC pipeline.",
@@ -3729,7 +3729,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/kilobase-resolution-genomics-analysis/006",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/kilobase-resolution-genomics-analysis/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper states 'read pairs are aligned to the genome' but does not name BWA as the aligner. The specific alignment tool is not identified in the passages provided.",
@@ -3749,7 +3749,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/kilobase-resolution-genomics-analysis/007",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/kilobase-resolution-genomics-analysis/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Loops are identified using the HiCCUPS algorithm (Rao et al., 2014), which searches for clusters of contact matrix entries in which the frequency of contact is enriched relative to the local background. Because there are trillions of pixels in a kilobase-resolution Hi-C map, HiCCUPS is implemented using GPGPUs.",
       "asbval:note": "Paper confirms HiCCUPS is used for loop annotation and mentions GPU implementation (GPGPUs), but does not explicitly name CUDA. The claim about CUDA is not verified in the passages.",
@@ -3769,7 +3769,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/kilobase-resolution-genomics-analysis/008",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/kilobase-resolution-genomics-analysis/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Contact matrices in the hic format can also be visualized using Juicebox, which is described in the accompanying paper (Durand et al., 2016).",
       "asbval:note": "Paper confirms Juicebox is used for visualization of .hic files.",
@@ -3789,7 +3789,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/checksum-verification-for-reproducibility/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/checksum-verification-for-reproducibility/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "checksum-verification-for-reproducibility",
@@ -3802,7 +3802,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/chromatin-domain-boundary-detection/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/chromatin-domain-boundary-detection/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "chromatin-domain-boundary-detection",
@@ -3815,7 +3815,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/encode-hic-pipeline-execution/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/encode-hic-pipeline-execution/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 15,
       "asbval:target_artifact_id": "encode-hic-pipeline-execution",
@@ -3828,7 +3828,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genome-alignment-and-contact-matrix-construction/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/genome-alignment-and-contact-matrix-construction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 12,
       "asbval:target_artifact_id": "genome-alignment-and-contact-matrix-construction",
@@ -3841,7 +3841,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/genomic-loop-call-interpretation/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/genomic-loop-call-interpretation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "genomic-loop-call-interpretation",
@@ -3854,7 +3854,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-fastq-read-preprocessing/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-fastq-read-preprocessing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "hi-c-fastq-read-preprocessing",
@@ -3867,7 +3867,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-fastq-to-contact-map-pipeline/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-fastq-to-contact-map-pipeline/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "hi-c-fastq-to-contact-map-pipeline",
@@ -3880,7 +3880,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-map-artifact-validation/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-map-artifact-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 15,
       "asbval:target_artifact_id": "hi-c-map-artifact-validation",
@@ -3893,7 +3893,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hi-c-normalization-and-bias-correction/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hi-c-normalization-and-bias-correction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "hi-c-normalization-and-bias-correction",
@@ -3906,7 +3906,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hic-contact-map-feature-annotation/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hic-contact-map-feature-annotation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "hic-contact-map-feature-annotation",
@@ -3919,7 +3919,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hic-map-format-validation/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/hic-map-format-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "hic-map-format-validation",
@@ -3932,7 +3932,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-cli-tool-execution/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-cli-tool-execution/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "juicer-cli-tool-execution",
@@ -3945,7 +3945,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/juicer-pipeline-configuration-and-execution/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/juicer-pipeline-configuration-and-execution/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 12,
       "asbval:target_artifact_id": "juicer-pipeline-configuration-and-execution",
@@ -3958,7 +3958,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/kilobase-resolution-contact-map-analysis/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/kilobase-resolution-contact-map-analysis/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "kilobase-resolution-contact-map-analysis",
@@ -3971,7 +3971,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/kilobase-resolution-genomics-analysis/triage",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/skill/kilobase-resolution-genomics-analysis/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "kilobase-resolution-genomics-analysis",
@@ -3984,7 +3984,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Juicer 1.6 is the last stable release of Juicer.",
       "asbval:note": null,
@@ -4004,7 +4004,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Cloning the Juicer repository directly from Github will clone Juicer 2, which is under active development.",
       "asbval:note": null,
@@ -4024,7 +4024,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Juicer is a platform for analyzing kilobase resolution Hi-C data.",
       "asbval:note": null,
@@ -4044,7 +4044,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Juicer includes a pipeline for generating Hi-C maps from fastq raw data files.",
       "asbval:note": null,
@@ -4064,7 +4064,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Juicer includes command line tools for feature annotation on the Hi-C maps.",
       "asbval:note": null,
@@ -4084,7 +4084,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The main Juicer repository on Github is now focused on the Juicer 2.0 release and is under active development.",
       "asbval:note": null,
@@ -4104,7 +4104,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "A dockerized version of Juicer is hosted by ENCODE.",
       "asbval:note": null,
@@ -4124,7 +4124,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Users should not file an issue to ask a question about Juicer.",
       "asbval:note": null,
@@ -4144,7 +4144,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "The 3D-Genomics Official Forum is available for asking questions about Juicer.",
       "asbval:note": null,
@@ -4164,7 +4164,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Questions related to sensitive datasets can be sent to aidenlab@bcm.edu.",
       "asbval:note": null,
@@ -4184,7 +4184,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Cosmetic changes that do not add anything to the stability, functionality, or testability of Juicer are still welcome contributions.",
       "asbval:note": null,
@@ -4204,7 +4204,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_012",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/claim/claim_012",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "New features or changes to Juicer should be suggested by creating a Github issue.",
       "asbval:note": null,
@@ -4224,7 +4224,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_013",
+      "@id": "asbval:assertion/paper/10.1016%2Fj.cels.2016.07.002/claim/claim_013",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "Juicer is developed by the Center for Genome Architecture at Baylor College of Medicine and Rice University.",
       "asbval:note": "Text accurately represents the source_excerpt. Despite substring_in_paper=false, the excerpt clearly identifies the Center for Genome Architecture as a joint entity of Baylor College of Medicine & Rice University, which directly supports the claim that Juicer is developed by these institutions.",

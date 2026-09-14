@@ -723,7 +723,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch currently has over 250,000 lipid species spanning 56 lipid types contained in in silico fragmentation libraries.",
       "asbval:note": "Paper states LipidMatch contains 'over 250,000 lipid species spanning 56 lipid types', not 500,000+ species or 60+ types. The card's thresholds (500,000 species, 60 types) exceed what the paper documents.",
@@ -743,7 +743,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We introduce LipidMatch, an R-based tool for lipid identification for liquid chromatography tandem mass spectrometry workflows.",
       "asbval:note": "LipidMatch is the primary tool discussed throughout the paper.",
@@ -763,7 +763,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch currently has over 250,000 lipid species spanning 56 lipid types contained in in silico fragmentation libraries. With 56 lipid types, LipidMatch in silico libraries cover the greatest number of lipid types of any open source software to date, with MS-DIAL containing 34 lipid types, and Greazy containing 24 lipid types.",
       "asbval:note": "Paper documents 250,000+ species and 56 types as of 2017 publication. The card specifies thresholds of 500,000 species and 60 types, which are not supported by the paper. The paper does not describe a task to validate these higher thresholds or generate such a report.",
@@ -783,7 +783,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card's research question and expected outputs specify thresholds (500,000 species, 60 types) that are substantially higher than what the paper documents (250,000 species, 56 types). This suggests either: (1) the card reflects a later version of LipidMatch not described in this 2017 paper, or (2) the extractor conflated aspirational/future goals with documented capabilities.",
@@ -800,7 +800,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_002/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For each MS/MS scan of each feature, experimental fragments are matched against in silico lipid fragments m/z using a tolerance window (ppm). The total number of scans across a feature containing that fragment is calculated.",
       "asbval:note": "The paper explicitly describes the fragment m/z matching process as a core operation of LipidMatch.",
@@ -820,7 +820,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_002/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for LipidMatch | role: primary tool for lipid identification]",
       "asbval:note": "LipidMatch is the main subject of the paper and is used throughout all experiments.",
@@ -840,7 +840,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_002/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA).",
       "asbval:note": "Explicitly stated as the primary instrument used for LipidMatch development and testing.",
@@ -860,7 +860,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_002/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA).",
       "asbval:note": "Paper confirms testing on Agilent Q-TOF instrument.",
@@ -880,7 +880,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_002/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of Bruker Q-TOF in any passage. Paper mentions Q-Exactive orbitrap and Agilent 6540 Q-TOF as tested instruments, but does not mention Bruker.",
@@ -900,7 +900,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_002/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of SCIEX Q-TOF in the passages. Paper states 'LipidMatch can be used with a variety of other vendors and data formats' but does not specifically name SCIEX as tested. SCIEX is mentioned only in context of Lipidyzer software (a competing tool), not as a tested platform for LipidMatch.",
@@ -920,7 +920,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_002/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The final ranked lipid identifications are appended onto the feature table, along with the lipid class and adduct of the top ranked lipid and summed fragment intensities for each identification.",
       "asbval:note": "Paper confirms CSV output with lipid class, adduct, and summed fragment intensities. However, the paper does not explicitly mention 'mass error' or 'match score' as output columns. The ranking is based on 'summed fragment intensities' rather than a traditional 'match score'. The output includes lipid identifications and fragment intensity information, but the exact column structure described in the card is not fully specified in the passages.",
@@ -940,7 +940,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_002/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_002/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card includes two instruments (Bruker and SCIEX Q-TOF) that are not mentioned as tested platforms in the paper. The paper states LipidMatch 'can be used with a variety of other vendors and data formats' but only explicitly documents testing on Q-Exactive orbitrap and Agilent 6540 Q-TOF.",
@@ -957,7 +957,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_003/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA). LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA). LipidMatch can be used with a variety of other vendors and data formats... LipidMatch is not recommended for most applications using low resolution mass spectrometers.",
       "asbval:note": "Paper explicitly validates only Q-Exactive orbitrap and Agilent 6540 Q-TOF. Paper does not provide a complete matrix of all instrument/vendor/acquisition mode combinations, nor does it enumerate Bruker or SCIEX platforms as validated. Paper only states LipidMatch 'can be used with a variety of other vendors' without specifics.",
@@ -977,7 +977,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_003/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for LipidMatch | role: primary tool] We introduce LipidMatch, an R-based tool for lipid identification for liquid chromatography tandem mass spectrometry workflows.",
       "asbval:note": "LipidMatch is the primary subject of the paper.",
@@ -997,7 +997,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_003/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA).",
       "asbval:note": "Explicitly stated as tested platform.",
@@ -1017,7 +1017,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_003/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA).",
       "asbval:note": "Explicitly stated as tested platform (Agilent 6540 Q-TOF).",
@@ -1037,7 +1037,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_003/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of Bruker Q-TOF validation in any passage. Paper only mentions Q-Exactive orbitrap and Agilent 6540 Q-TOF as tested platforms.",
@@ -1057,7 +1057,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_003/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of SCIEX Q-TOF validation. Paper states 'LipidMatch can be used with a variety of other vendors and data formats' but does not name SCIEX specifically as a tested/validated platform.",
@@ -1077,7 +1077,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_003/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not present or generate a structured CSV table enumerating instrument/vendor and acquisition mode combinations with validation status. The paper describes tested platforms (Q-Exactive orbitrap, Agilent 6540 Q-TOF) and supported acquisition modes (DDA, DIA, AIF, ddMS2-topN) but does not create a comprehensive matrix table as output.",
@@ -1097,7 +1097,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_003/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_003/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card's research question asks for a 'complete matrix' of instrument/vendor and acquisition mode combinations, but the paper only explicitly validates two instruments (Q-Exactive orbitrap and Agilent 6540 Q-TOF) and does not present a comprehensive validation matrix.",
@@ -1115,7 +1115,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_004/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch libraries are static excel files, as with all four software previously mentioned, the user can select which lipid types to query using LipidMatch... LipidMatch contains all lipid types in MS-DIAL 2.24, as well as LipidBlast release 3 development libraries... the user can select which lipid types to query using LipidMatch, hence limiting searches only to biologically relevant or expected lipid types and reducing run time. LipidMatch libraries contain only exact m/z values of precursors and fragment ions, making it relatively trivial for users to generate in silico libraries and/or convert other databases to the LipidMatch library format.",
       "asbval:note": "The paper explicitly states that users can develop and integrate custom libraries, and that the library format is trivial to generate.",
@@ -1135,7 +1135,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_004/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for LipidMatch | role: primary tool for lipid identification]",
       "asbval:note": "LipidMatch is the central tool discussed throughout the paper.",
@@ -1155,7 +1155,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_004/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Once the user runs LipidMatch and enters user parameters, LipidMatch will automatically append identifications to each feature table using MS/MS files contained in that feature table's subfolder.",
       "asbval:note": "The paper describes that LipidMatch appends identifications to feature tables but does not explicitly mention a 'custom library integration log or status report' as a distinct output. The paper focuses on the final lipid identifications appended to feature tables rather than a separate library loading confirmation report.",
@@ -1175,7 +1175,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_004/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The final ranked lipid identifications are appended onto the feature table, along with the lipid class and adduct of the top ranked lipid and summed fragment intensities for each identification.",
       "asbval:note": "The paper confirms that LipidMatch outputs feature tables with lipid identifications in .csv format.",
@@ -1195,7 +1195,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_004/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_004/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card frames the task as 'reconstructing' a user-generated library integration module, which implies reverse-engineering or detailed implementation work. The paper describes the capability to use custom libraries but does not detail the internal mechanics of the library loading module itself.",
@@ -1211,7 +1211,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_005/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The feature table can have nearly any format, allowing flexibility in choosing feature processing workflows. Video tutorial 2 explains how users can process data using MSConvert and MZmine 2.20 using a batch file for MZmine... Once feature tables are created for each biological substrate and each polarity, features can be directly annotated using LipidMatch and the previously generated MS/MS data.",
       "asbval:note": "The paper explicitly describes MZmine output integration into LipidMatch workflow.",
@@ -1231,7 +1231,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_005/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For LC-MS/MS workflows, LipidMatch can be used with any feature processing software, such as MZmine, XCMS, or MS-DIAL.",
       "asbval:note": "Confirms MZmine compatibility as one of multiple peak-picking software options.",
@@ -1251,7 +1251,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_005/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for LipidMatch | role: primary lipid identification tool]",
       "asbval:note": "LipidMatch is the central tool throughout the paper.",
@@ -1271,7 +1271,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_005/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The user first chooses directories containing feature table(s), for example those generated by MZmine (Fig. 2).",
       "asbval:note": "MZmine explicitly named as peak-picking software compatible with LipidMatch.",
@@ -1291,7 +1291,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_005/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For LC-MS/MS workflows, LipidMatch can be used with any feature processing software, such as MZmine, XCMS, or MS-DIAL.",
       "asbval:note": "XCMS explicitly listed as compatible peak-picking software.",
@@ -1311,7 +1311,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_005/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For LC-MS/MS workflows, LipidMatch can be used with any feature processing software, such as MZmine, XCMS, or MS-DIAL.",
       "asbval:note": "MS-DIAL explicitly listed as compatible peak-picking software.",
@@ -1331,7 +1331,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_005/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition, metabolite, xenobiotic, or other identifications from software such as Compound Discoverer (Thermo Scientific, San Jose, CA) or MS-DIAL can be appended for a more global approach.",
       "asbval:note": "Compound Discoverer is mentioned for appending identifications post-LipidMatch, not as a peak-picking input source. The paper describes it as a tool for appending metabolite/xenobiotic identifications to feature tables, not as a peak-picking software that feeds into LipidMatch like MZmine, XCMS, or MS-DIAL.",
@@ -1351,7 +1351,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_005/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature tables should end in 'n.csv' or 'neg.csv' (not case sensitive) for negative mode, and 'p.csv' or 'pos.csv' for positive mode... Each folder should contain respective MS/MS data for that substrate in .ms2 format also ending in 'neg.csv' or 'pos.csv', depending on polarity.",
       "asbval:note": "The paper specifies CSV format requirements for feature tables input to LipidMatch, with m/z and retention time information.",
@@ -1371,7 +1371,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_005/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For LC-MS/MS workflows, LipidMatch can be used with any feature processing software, such as MZmine, XCMS, or MS-DIAL.",
       "asbval:note": "The paper confirms MZmine, XCMS, and MS-DIAL as compatible peak-picking inputs, but Compound Discoverer is not described as a peak-picking tool that feeds into LipidMatch. Compound Discoverer is mentioned only for post-LipidMatch identification appending, not as a peak-picking dispatch source.",
@@ -1391,7 +1391,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_005/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/card/task_005/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The card title refers to a 'modular peak-picking dispatch layer' which is somewhat overstated. The paper describes LipidMatch as accepting feature tables from multiple peak-picking tools (MZmine, XCMS, MS-DIAL) but does not detail a sophisticated dispatch mechanism\u2014rather, it simply accepts CSV-formatted feature tables from any of these sources.",
@@ -1408,7 +1408,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/acquisition-mode-enumeration-and-validation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/acquisition-mode-enumeration-and-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA). LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA). LipidMatch can be used with a variety of other vendors and data formats. Ion selection techniques used to acquire fragmentation, including all-ion-fragmentation (AIF), inclusion list-based targeted approaches, and data-dependent topN (ddMS2-topN) approaches can be used with LipidMatch to annotate lipids acquired using liquid chromatography, direct injection, or imaging approaches. LipidMatch is not recommended for most applications using low resolution mass spectrometers.",
       "asbval:note": "Paper documents validated platforms (Q-Exactive orbitrap, Agilent 6540 Q-TOF) and acquisition modes (AIF, targeted, ddMS2-topN, LC, direct injection, imaging), but does NOT enumerate a complete matrix with explicit negative cases for all vendor/platform combinations. The claim of 'complete matrix' and 'explicit negative cases' is overstated; the paper provides selective validation examples and one negative case (low-resolution MS not recommended) but not a systematic enumeration.",
@@ -1428,7 +1428,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/acquisition-mode-enumeration-and-validation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/acquisition-mode-enumeration-and-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We introduce LipidMatch, an R-based tool for lipid identification for liquid chromatography tandem mass spectrometry workflows. For each MS/MS scan of each feature, experimental fragments are matched against in silico lipid fragments m/z using a tolerance window (ppm).",
       "asbval:note": "LipidMatch is confirmed as the primary tool; fragment matching mechanism is explicitly described.",
@@ -1448,7 +1448,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/acquisition-mode-enumeration-and-validation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/acquisition-mode-enumeration-and-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA). Ion selection techniques used to acquire fragmentation, including all-ion-fragmentation (AIF), inclusion list-based targeted approaches, and data-dependent topN (ddMS2-topN) approaches can be used with LipidMatch.",
       "asbval:note": "Q-Exactive orbitrap is explicitly named as a tested platform; AIF, targeted, and ddMS2-topN modes are all mentioned as compatible.",
@@ -1468,7 +1468,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/acquisition-mode-enumeration-and-validation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/acquisition-mode-enumeration-and-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA). LipidMatch can be used with a variety of other vendors and data formats. Ion selection techniques used to acquire fragmentation, including all-ion-fragmentation (AIF), inclusion list-based targeted approaches, and data-dependent topN (ddMS2-topN) approaches can be used with LipidMatch to annotate lipids acquired using liquid chromatography, direct injection, or imaging approaches.",
       "asbval:note": "Agilent Q-TOF is confirmed as tested, and direct infusion and imaging are mentioned as compatible modes generally, but the paper does not explicitly state that Agilent Q-TOF was tested with direct infusion and imaging specifically\u2014only that these modes are compatible with LipidMatch in general.",
@@ -1488,7 +1488,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/acquisition-mode-enumeration-and-validation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/acquisition-mode-enumeration-and-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Bruker Q-TOF is not mentioned anywhere in the paper. Only Q-Exactive orbitrap and Agilent 6540 Q-TOF are explicitly named as tested platforms.",
@@ -1508,7 +1508,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/acquisition-mode-enumeration-and-validation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/acquisition-mode-enumeration-and-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SCIEX Q-TOF is not mentioned in the paper as a validated platform. The paper only explicitly names Q-Exactive orbitrap and Agilent 6540 Q-TOF.",
@@ -1528,7 +1528,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/acquisition-mode-enumeration-and-validation/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/acquisition-mode-enumeration-and-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The user first chooses directories containing feature table(s), for example those generated by MZmine (Fig. 2). Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12].",
       "asbval:note": "MZmine is explicitly named as compatible peak picking software in the LipidMatch workflow.",
@@ -1548,7 +1548,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/acquisition-mode-enumeration-and-validation/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/acquisition-mode-enumeration-and-validation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA).",
       "asbval:note": "This is a duplicate of tools[1] with slightly different wording. The claim is supported.",
@@ -1568,7 +1568,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-script-execution-and-automation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/batch-script-execution-and-automation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Video tutorial 2 explains how users can process data using MSConvert and MZmine 2.20 using a batch file for MZmine. The batch file was optimized for lipids using the chromatographic methods in Additional file 2: Table S2 and is included with the tutorial videos in the LipidMatch file.",
       "asbval:note": "Paper confirms batch file execution for MZmine and mentions feature processing with MZmine, XCMS, MS-DIAL. However, Compound Discoverer is mentioned only as a tool for appending identifications post-LipidMatch (not as an upstream peak-picking input tool). The paper states: 'In addition, metabolite, xenobiotic, or other identifications from software such as Compound Discoverer (Thermo Scientific, San Jose, CA) or MS-DIAL can be appended for a more global approach.' This is a different role than the card claims.",
@@ -1588,7 +1588,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-script-execution-and-automation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/batch-script-execution-and-automation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for LipidMatch | role: downstream analysis pipeline]",
       "asbval:note": "LipidMatch is the primary tool discussed throughout the paper for lipid identification.",
@@ -1608,7 +1608,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-script-execution-and-automation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/batch-script-execution-and-automation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Video tutorial 2 explains how users can process data using MSConvert and MZmine 2.20 using a batch file for MZmine. The batch file was optimized for lipids using the chromatographic methods in Additional file 2: Table S2 and is included with the tutorial videos in the LipidMatch file. Features can be determined from various peak picking software such as MZmine, XCMS, or MS-DIAL.",
       "asbval:note": "MZmine is explicitly mentioned as an upstream peak-picking tool with batch file support for LipidMatch integration.",
@@ -1628,7 +1628,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-script-execution-and-automation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/batch-script-execution-and-automation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine, XCMS, or MS-DIAL.",
       "asbval:note": "XCMS is listed as a supported peak-picking tool for feature generation.",
@@ -1648,7 +1648,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-script-execution-and-automation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/batch-script-execution-and-automation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine, XCMS, or MS-DIAL.",
       "asbval:note": "MS-DIAL is listed as a supported peak-picking tool for feature generation.",
@@ -1668,7 +1668,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-script-execution-and-automation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/batch-script-execution-and-automation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition, metabolite, xenobiotic, or other identifications from software such as Compound Discoverer (Thermo Scientific, San Jose, CA) or MS-DIAL can be appended for a more global approach.",
       "asbval:note": "Compound Discoverer is mentioned in the paper, but NOT as an upstream peak-picking tool generating feature lists for LipidMatch input. Instead, it is described as a tool whose identifications are appended AFTER LipidMatch analysis. The card incorrectly positions it as an upstream peak-picking tool in the same role as MZmine, XCMS, and MS-DIAL.",
@@ -1688,7 +1688,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-script-execution-and-automation/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/batch-script-execution-and-automation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Video tutorial 2 explains how users can process data using MSConvert and MZmine 2.20 using a batch file for MZmine. The batch file was optimized for lipids using the chromatographic methods in Additional file 2: Table S2 and is included with the tutorial videos in the LipidMatch file. Once feature tables are created for each biological substrate and each polarity, features can be directly annotated using LipidMatch and the previously generated MS/MS data.",
       "asbval:note": "Paper confirms batch file execution for MZmine and feature table generation, but the scope description overstates the automation. The paper describes batch file use for MZmine processing and MSConvert conversion, but does not describe automated conversion scripts that transform peak-picking output into LipidMatch format. Rather, users manually place feature tables in directories with specific naming conventions (.csv files ending in 'n.csv', 'neg.csv', 'p.csv', or 'pos.csv').",
@@ -1708,7 +1708,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-script-execution-and-automation/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/batch-script-execution-and-automation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The feature table can have nearly any format, allowing flexibility in choosing feature processing workflows. Video tutorial 2 explains how users can process data using MSConvert and MZmine 2.20 using a batch file for MZmine. Once feature tables are created for each biological substrate and each polarity, features can be directly annotated using LipidMatch and the previously generated MS/MS data.",
       "asbval:note": "Paper confirms that feature tables from MZmine, XCMS, MS-DIAL can be used as input. However, Compound Discoverer is not described as a source of peak-picking feature tables for LipidMatch input; it is only mentioned as a tool for appending identifications post-analysis.",
@@ -1728,7 +1728,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-script-execution-and-automation/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/batch-script-execution-and-automation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The feature table can have nearly any format, allowing flexibility in choosing feature processing workflows. Each folder should contain respective MS/MS data for that substrate in .ms2 format also ending in 'neg.csv' or 'pos.csv', depending on polarity. Feature table(s) and MS/MS data are placed into a directory as shown in Fig. 2.",
       "asbval:note": "Paper indicates that feature tables are placed in directories with specific naming conventions, but does not explicitly describe a conversion process that outputs a 'mapped' file with specific column names. The paper states 'The feature table can have nearly any format', suggesting minimal transformation is required rather than active column mapping.",
@@ -1748,7 +1748,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/csv-data-aggregation-and-deduplication/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/csv-data-aggregation-and-deduplication/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch in silico libraries were developed in Excel as described in video tutorial 6 in the Additional file 1. Briefly, an R script was used to generate a list of possible fatty acid combinations for acyl containing lipids with 2 or 3 fatty acids... LipidMatch currently contains the most comprehensive lipid fragmentation libraries of freely available software, when ranked by the number of lipid types. LipidMatch includes in silico libraries with over 250,000 lipid species across 56 lipid types",
       "asbval:note": "Paper describes LipidMatch library generation and composition (250,000+ species, 56 types) but does NOT describe a task of loading/parsing multiple .csv files to aggregate and deduplicate them for validation. The paper describes library CREATION and VALIDATION by developers, not a user-facing workflow for verifying library completeness post-download. The card conflates library development (internal to LipidMatch) with a user task (external validation).",
@@ -1768,7 +1768,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/csv-data-aggregation-and-deduplication/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/csv-data-aggregation-and-deduplication/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not describe a user workflow for downloading and validating LipidMatch libraries post-hoc. LipidMatch libraries are static .csv files distributed with the software; the paper describes internal validation during development (using internal standards, literature, MS/MS databases) but not a user-facing aggregation/deduplication task. The 250,000 species and 56 types are fixed library properties, not user-computed thresholds.",
@@ -1788,7 +1788,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/csv-data-aggregation-and-deduplication/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/csv-data-aggregation-and-deduplication/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for LipidMatch | role: in-silico fragmentation library source] LipidMatch currently has over 250,000 lipid species spanning 56 lipid types contained in in silico fragmentation libraries.",
       "asbval:note": "LipidMatch does contain .csv library files (confirmed: 'LipidMatch in silico libraries were developed in Excel' and distributed as .csv format per passage 4). However, the paper does not describe a user task of aggregating/deduplicating multiple LipidMatch .csv files. LipidMatch libraries are pre-aggregated and static; users select which lipid types to query, not aggregate multiple library files.",
@@ -1808,7 +1808,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/csv-data-aggregation-and-deduplication/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/csv-data-aggregation-and-deduplication/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Python, pandas, or set operations for library validation. LipidMatch is written in R; the paper does not describe a user-facing Python workflow for library aggregation.",
@@ -1828,7 +1828,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/csv-data-aggregation-and-deduplication/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/csv-data-aggregation-and-deduplication/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was written in R [9]. The user interface for LipidMatch consists of a series of dialogue boxes developed using gWidgets API and the tcltk R package.",
       "asbval:note": "Paper confirms LipidMatch is written in R and uses gWidgets/tcltk for UI, but does not describe data.table or dplyr for library aggregation/deduplication. The paper does not document a user-facing R workflow for validating library completeness via CSV parsing and deduplication.",
@@ -1848,7 +1848,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-format-conversion-peak-picking-to-lipidmatch/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/file-format-conversion-peak-picking-to-lipidmatch/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The feature table can have nearly any format, allowing flexibility in choosing feature processing workflows... Once feature tables are created for each biological substrate and each polarity, features can be directly annotated using LipidMatch and the previously generated MS/MS data.",
       "asbval:note": "Paper confirms LipidMatch accepts feature tables from MZmine, XCMS, MS-DIAL with flexible format, but does NOT explicitly mention Compound Discoverer as a source tool for conversion. Paper states: 'Features can be determined from various peak picking software such as MZmine, XCMS, or MS-DIAL.' Compound Discoverer is mentioned only as a tool for appending metabolite/xenobiotic identifications post-hoc, not as a peak-picking source.",
@@ -1868,7 +1868,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-format-conversion-peak-picking-to-lipidmatch/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/file-format-conversion-peak-picking-to-lipidmatch/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12]... Video tutorial 2 explains how users can process data using MSConvert [16] and MZmine 2.20 using a batch file for MZmine.",
       "asbval:note": null,
@@ -1888,7 +1888,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-format-conversion-peak-picking-to-lipidmatch/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/file-format-conversion-peak-picking-to-lipidmatch/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12].",
       "asbval:note": null,
@@ -1908,7 +1908,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-format-conversion-peak-picking-to-lipidmatch/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/file-format-conversion-peak-picking-to-lipidmatch/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12].",
       "asbval:note": null,
@@ -1928,7 +1928,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-format-conversion-peak-picking-to-lipidmatch/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/file-format-conversion-peak-picking-to-lipidmatch/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition, metabolite, xenobiotic, or other identifications from software such as Compound Discoverer (Thermo Scientific, San Jose, CA) or MS-DIAL can be appended for a more global approach.",
       "asbval:note": "Compound Discoverer is mentioned only as a tool for appending identifications post-hoc (after LipidMatch identification), not as a source peak-picking tool. The paper explicitly lists MZmine, XCMS, and MS-DIAL as the peak-picking sources compatible with LipidMatch.",
@@ -1948,7 +1948,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-format-conversion-peak-picking-to-lipidmatch/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/file-format-conversion-peak-picking-to-lipidmatch/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Once feature tables are created for each biological substrate and each polarity, features can be directly annotated using LipidMatch and the previously generated MS/MS data.",
       "asbval:note": null,
@@ -1968,7 +1968,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-format-conversion-peak-picking-to-lipidmatch/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/file-format-conversion-peak-picking-to-lipidmatch/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The feature table can have nearly any format, allowing flexibility in choosing feature processing workflows.",
       "asbval:note": "Scope statement about when NOT to use is consistent with paper's description of flexible input formats.",
@@ -1988,7 +1988,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-format-conversion-peak-picking-to-lipidmatch/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/file-format-conversion-peak-picking-to-lipidmatch/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA). LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA).",
       "asbval:note": "Paper does not explicitly mention Waters support or lack thereof, but lists only Thermo and Agilent instruments as tested. Waters is not mentioned as supported.",
@@ -2008,7 +2008,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-format-conversion-peak-picking-to-lipidmatch/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/file-format-conversion-peak-picking-to-lipidmatch/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA). LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA).",
       "asbval:note": "Paper does not explicitly state Waters is unsupported, but only documents testing with Thermo and Agilent instruments.",
@@ -2028,7 +2028,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-format-validation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/file-format-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch libraries can be developed using LipidBlast Templates [11] or as explained in video tutorial 6 found in the Additional file 1. Each library should be developed with the correct annotation based on the structural resolution that can be inferred by fragments chosen for the identification criteria.",
       "asbval:note": "Paper confirms users can develop custom libraries and provides guidance on format/annotation requirements.",
@@ -2048,7 +2048,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-format-validation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/file-format-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In silico libraries were developed in Excel as described in video tutorial 6 in the Additional file 1. Briefly, an R script was used to generate a list of possible fatty acid combinations for acyl containing lipids with 2 or 3 fatty acids.",
       "asbval:note": "Paper describes library development process with m/z fragmentation patterns and integration into LipidMatch.",
@@ -2068,7 +2068,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-format-validation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/file-format-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch libraries are static excel files, as with all four software previously mentioned, the user can select which lipid types to query using LipidMatch, hence limiting searches only to biologically relevant or expected lipid types and reducing run time. LipidMatch libraries contain only exact m/z values of precursors and fragment ions, making it relatively trivial for users to generate in silico libraries and/or convert other databases to the LipidMatch library format.",
       "asbval:note": "Paper confirms users can author libraries and describes the format (exact m/z values of precursors and fragments).",
@@ -2088,7 +2088,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-format-validation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/file-format-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for LipidMatch | role: primary tool for lipid identification]",
       "asbval:note": "LipidMatch is the primary tool discussed throughout; it consumes in silico libraries and performs identification.",
@@ -2108,7 +2108,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-format-validation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/file-format-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In silico libraries were developed in Excel as described in video tutorial 6 in the Additional file 1.",
       "asbval:note": "Paper explicitly states libraries are developed in Excel, confirming spreadsheet application role.",
@@ -2128,7 +2128,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-format-validation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/file-format-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Users can modify which fragment ions for each lipid class must be observed for identification using a simple Excel sheet as outlined in the 6th video tutorial. In certain cases it may be important to optimize fragment criteria for applications not employing HCD fragmentation with an orbitrap analyzer.",
       "asbval:note": "Paper discusses validation of fragments and importance of correct annotation, but does not explicitly address 'silent registration failures' or malformed entry detection mechanisms. The concept of preventing errors is implied but not explicitly stated as a validation step.",
@@ -2148,7 +2148,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-pattern-annotation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/fragmentation-pattern-annotation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch libraries can be developed using LipidBlast Templates or as explained in video tutorial 6 found in the Additional file 1. Each library should be developed with the correct annotation based on the structural resolution that can be inferred by fragments chosen for the identification criteria.",
       "asbval:note": "Paper explicitly describes user ability to develop custom in silico fragmentation libraries for LipidMatch in Excel format.",
@@ -2168,7 +2168,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-pattern-annotation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/fragmentation-pattern-annotation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In silico libraries were developed in Excel as described in video tutorial 6 in the Additional file 1. Briefly, an R script was used to generate a list of possible fatty acid combinations for acyl containing lipids... LipidMatch libraries contain only exact m/z values of precursors and fragment ions, making it relatively trivial for users to generate in silico libraries and/or convert other databases to the LipidMatch library format.",
       "asbval:note": "Paper confirms Excel/CSV format for library development and that users can create custom libraries.",
@@ -2188,7 +2188,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-pattern-annotation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/fragmentation-pattern-annotation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch currently has over 250,000 lipid species spanning 56 lipid types contained in in silico fragmentation libraries.",
       "asbval:note": "Paper states 250,000+ lipid species, not 500,000+. The card overstates the built-in library size.",
@@ -2208,7 +2208,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-pattern-annotation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/fragmentation-pattern-annotation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For each lipid class, structurally indicative fragments were compiled using other MS/MS databases (LIPID MAPS, LipidBlast, and MS-DIAL), literature, and/or experimentally derived fragmentation. Using multiple sources to obtain fragmentation allowed for cross-validation of fragments and generation of lipid class-specific fragmentation rules.",
       "asbval:note": "Paper describes obtaining fragmentation patterns from literature, databases, and experimental sources.",
@@ -2228,7 +2228,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-pattern-annotation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/fragmentation-pattern-annotation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA). LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA). LipidMatch can be used with a variety of other vendors and data formats.",
       "asbval:note": "Paper does not explicitly state that Waters instruments are unsupported. It mentions Thermo and Agilent support and states 'variety of other vendors' without naming Waters as excluded.",
@@ -2248,7 +2248,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-pattern-annotation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/fragmentation-pattern-annotation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for LipidMatch | role: primary tool] LipidMatch uses rule-based identification. For each lipid type, the user can select which fragments must be observed for identification... Each fragment is assigned 1 if it is above the user defined minimum intensity and scans threshold and 0 if the fragment does not meet these criteria or was not found within the m/z tolerance.",
       "asbval:note": "LipidMatch confirmed as the primary matching tool that loads libraries and matches fragments.",
@@ -2268,7 +2268,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-pattern-annotation/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/fragmentation-pattern-annotation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for MZmine | role: upstream peak picking] The user first chooses directories containing feature table(s), for example those generated by MZmine (Fig. 2)... Features can be determined from various peak picking software such as MZmine, XCMS, or MS-DIAL.",
       "asbval:note": "MZmine explicitly named as peak picking software whose output feeds into LipidMatch.",
@@ -2288,7 +2288,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-pattern-annotation/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/fragmentation-pattern-annotation/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for XCMS | role: upstream peak picking] Features can be determined from various peak picking software such as MZmine, XCMS, or MS-DIAL.",
       "asbval:note": "XCMS explicitly named as alternative peak picking software compatible with LipidMatch.",
@@ -2308,7 +2308,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-pattern-annotation/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/fragmentation-pattern-annotation/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for MS-DIAL | role: upstream peak picking] Features can be determined from various peak picking software such as MZmine, XCMS, or MS-DIAL.",
       "asbval:note": "MS-DIAL explicitly named as alternative peak picking software compatible with LipidMatch.",
@@ -2328,7 +2328,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hrms-data-format-parsing/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/hrms-data-format-parsing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA). LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA). LipidMatch can be used with a variety of other vendors and data formats.",
       "asbval:note": "Paper confirms LipidMatch accepts multiple vendor formats and instruments, but the actual parsing/loading mechanism is delegated to external tools (MSConvert, MZmine, XCMS, MS-DIAL). LipidMatch itself operates on .ms2 files and CSV feature tables, not raw vendor formats. The card conflates data format parsing (done by MSConvert/MZmine) with LipidMatch's role (matching against libraries).",
@@ -2348,7 +2348,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hrms-data-format-parsing/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/hrms-data-format-parsing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12]... Video tutorial 2 explains how users can process data using MSConvert [16] and MZmine 2.20 using a batch file for MZmine.",
       "asbval:note": "MZmine is explicitly named as a peak-picking tool that generates feature tables for LipidMatch input.",
@@ -2368,7 +2368,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hrms-data-format-parsing/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/hrms-data-format-parsing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12].",
       "asbval:note": "XCMS is named as a peak-picking alternative; paper does not specify netCDF but confirms it as a feature-detection tool.",
@@ -2388,7 +2388,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hrms-data-format-parsing/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/hrms-data-format-parsing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12].",
       "asbval:note": "MS-DIAL is named as a peak-picking tool; paper confirms it generates feature tables compatible with LipidMatch.",
@@ -2408,7 +2408,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hrms-data-format-parsing/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/hrms-data-format-parsing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition, metabolite, xenobiotic, or other identifications from software such as Compound Discoverer (Thermo Scientific, San Jose, CA) or MS-DIAL can be appended for a more global approach.",
       "asbval:note": "Paper mentions Compound Discoverer only in the context of appending identifications to feature tables, not as a peak-picking tool that generates LipidMatch input. Role is different from what card claims.",
@@ -2428,7 +2428,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hrms-data-format-parsing/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/hrms-data-format-parsing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA).",
       "asbval:note": "Q-Exactive is explicitly named as the primary instrument used for LipidMatch development and testing.",
@@ -2448,7 +2448,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hrms-data-format-parsing/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/hrms-data-format-parsing/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA).",
       "asbval:note": "Agilent Q-TOF is explicitly named as a tested instrument platform.",
@@ -2468,7 +2468,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hrms-data-format-parsing/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/hrms-data-format-parsing/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Bruker Q-TOF is not mentioned anywhere in the paper. Paper states LipidMatch 'can be used with a variety of other vendors' but does not name Bruker specifically.",
@@ -2488,7 +2488,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hrms-data-format-parsing/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/hrms-data-format-parsing/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "SCIEX is mentioned only in the context of Lipidyzer (a non-open-source lipid identification tool), not as a supported instrument platform for LipidMatch.",
@@ -2508,7 +2508,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/instrument-platform-compatibility-mapping/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/instrument-platform-compatibility-mapping/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA). LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA). LipidMatch can be used with a variety of other vendors and data formats.",
       "asbval:note": "Paper explicitly documents tested platforms and acquisition modes (AIF, ddMS2-topN, direct infusion, imaging).",
@@ -2528,7 +2528,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/instrument-platform-compatibility-mapping/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/instrument-platform-compatibility-mapping/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for LipidMatch | role: target software tool]",
       "asbval:note": "LipidMatch is the primary subject of the paper.",
@@ -2548,7 +2548,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/instrument-platform-compatibility-mapping/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/instrument-platform-compatibility-mapping/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA).",
       "asbval:note": "Explicitly stated as tested platform.",
@@ -2568,7 +2568,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/instrument-platform-compatibility-mapping/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/instrument-platform-compatibility-mapping/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA).",
       "asbval:note": "Explicitly stated as tested platform.",
@@ -2588,7 +2588,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/instrument-platform-compatibility-mapping/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/instrument-platform-compatibility-mapping/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Bruker instruments. Only Q-Exactive (Thermo) and Agilent 6540 Q-TOF are explicitly named as tested platforms.",
@@ -2608,7 +2608,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/instrument-platform-compatibility-mapping/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/instrument-platform-compatibility-mapping/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention SCIEX instruments. Only Q-Exactive (Thermo) and Agilent 6540 Q-TOF are explicitly named as tested platforms.",
@@ -2628,7 +2628,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/library-integration-workflow/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/library-integration-workflow/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch libraries can be developed using LipidBlast Templates or as explained in video tutorial 6 found in the Additional file 1. Each library should be developed with the correct annotation based on the structural resolution that can be inferred by fragments chosen for the identification criteria.",
       "asbval:note": "Paper explicitly describes user-developed libraries and references video tutorial 6 for library development process.",
@@ -2648,7 +2648,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/library-integration-workflow/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/library-integration-workflow/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch currently has over 250,000 lipid species spanning 56 lipid types contained in in silico fragmentation libraries.",
       "asbval:note": "Paper states 250,000 lipid species across 56 types, not >500,000 across >60 types. The card overstates the library size.",
@@ -2668,7 +2668,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/library-integration-workflow/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/library-integration-workflow/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Furthermore, lipidome coverage can be increased by the user community by adding new in silico fragmentation libraries. Libraries for LipidMatch can be developed using LipidBlast Templates or as explained in video tutorial 6 found in the Additional file 1.",
       "asbval:note": "Paper supports the concept of extending coverage with user-developed libraries for lipids not in default set.",
@@ -2688,7 +2688,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/library-integration-workflow/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/library-integration-workflow/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch currently has over 250,000 lipid species spanning 56 lipid types contained in in silico fragmentation libraries.",
       "asbval:note": "Paper states 250,000 species across 56 types, not >500,000 across >60 types.",
@@ -2708,7 +2708,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/library-integration-workflow/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/library-integration-workflow/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Waters instruments or lack of support for Waters files. Paper states LipidMatch 'can be used with a variety of other vendors and data formats' and was 'tested using data acquired on an Agilent 6540 Q-TOF' and 'Q-Exactive orbitrap mass spectrometer', but does not explicitly exclude Waters.",
@@ -2728,7 +2728,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/library-integration-workflow/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/library-integration-workflow/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch libraries are static excel files, as with all four software previously mentioned, the user can select which lipid types to query using LipidMatch... LipidMatch libraries contain only exact m/z values of precursors and fragment ions, making it relatively trivial for users to generate in silico libraries and/or convert other databases to the LipidMatch library format.",
       "asbval:note": "Paper confirms LipidMatch accepts user-generated libraries in Excel/CSV format and uses exact m/z matching.",
@@ -2748,7 +2748,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/library-integration-workflow/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/library-integration-workflow/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine, XCMS, or MS-DIAL. The user interface for LipidMatch consists of a series of dialogue boxes... The user first chooses directories containing feature table(s), for example those generated by MZmine (Fig. 2).",
       "asbval:note": "[SUBSTRING-MATCH for MZmine | role: peak-picking]",
@@ -2768,7 +2768,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/library-integration-workflow/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/library-integration-workflow/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine, XCMS, or MS-DIAL.",
       "asbval:note": "[SUBSTRING-MATCH for XCMS | role: peak-picking]",
@@ -2788,7 +2788,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/library-integration-workflow/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/library-integration-workflow/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine, XCMS, or MS-DIAL. For LC-MS/MS workflows, LipidMatch can be used with any feature processing software, such as MZmine, XCMS, or MS-DIAL.",
       "asbval:note": "[SUBSTRING-MATCH for MS-DIAL | role: peak-picking]",
@@ -2808,7 +2808,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/library-integration-workflow/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/library-integration-workflow/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition, metabolite, xenobiotic, or other identifications from software such as Compound Discoverer (Thermo Scientific, San Jose, CA) or MS-DIAL can be appended for a more global approach.",
       "asbval:note": "Paper mentions Compound Discoverer but in context of appending identifications post-LipidMatch, not as upstream peak-picking software. The card's role assignment appears incorrect; Compound Discoverer is used for post-processing, not feature extraction upstream of LipidMatch.",
@@ -2828,7 +2828,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-candidate-matching/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-candidate-matching/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For each MS/MS scan of each feature, experimental fragments are matched against in silico lipid fragments m/z using a tolerance window (ppm)... Lipids are identified if they contain the necessary observed fragments... If multiple lipids are identified for a single feature, the lipids are ranked by the summed intensity of all their fragments with in silico fragment exact mass matches",
       "asbval:note": null,
@@ -2848,7 +2848,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-candidate-matching/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-candidate-matching/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12]... Video tutorial 2 explains how users can process data using MSConvert [16] and MZmine 2.20 using a batch file for MZmine.",
       "asbval:note": null,
@@ -2868,7 +2868,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-candidate-matching/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-candidate-matching/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12]",
       "asbval:note": null,
@@ -2888,7 +2888,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-candidate-matching/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-candidate-matching/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12]",
       "asbval:note": null,
@@ -2908,7 +2908,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-candidate-matching/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-candidate-matching/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition, metabolite, xenobiotic, or other identifications from software such as Compound Discoverer (Thermo Scientific, San Jose, CA) or MS-DIAL can be appended for a more global approach.",
       "asbval:note": "Paper mentions Compound Discoverer as a tool for appending identifications (post-processing), not as a peak picking tool prior to LipidMatch. The card claims it is used for 'peak picking and feature detection prior to lipid matching,' but the paper only describes it as a tool for appending metabolite/xenobiotic identifications after LipidMatch analysis.",
@@ -2928,7 +2928,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-candidate-matching/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-candidate-matching/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We introduce LipidMatch, an R-based tool for lipid identification for liquid chromatography tandem mass spectrometry workflows... For each MS/MS scan of each feature, experimental fragments are matched against in silico lipid fragments m/z using a tolerance window (ppm).",
       "asbval:note": null,
@@ -2948,7 +2948,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-candidate-matching/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-candidate-matching/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12]... In addition, metabolite, xenobiotic, or other identifications from software such as Compound Discoverer (Thermo Scientific, San Jose, CA) or MS-DIAL can be appended",
       "asbval:note": "MZmine, XCMS, and MS-DIAL are confirmed as peak picking tools. Compound Discoverer is mentioned only for appending identifications post-analysis, not as a peak picking tool for LipidMatch input.",
@@ -2968,7 +2968,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-candidate-matching/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-candidate-matching/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA). LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA). LipidMatch can be used with a variety of other vendors and data formats.",
       "asbval:note": "Paper confirms Q-Exactive orbitrap and Agilent 6540 Q-TOF. Bruker and SCIEX are not explicitly mentioned as tested instruments in the passages provided.",
@@ -2988,7 +2988,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-candidate-matching/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-candidate-matching/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of Waters instruments or any unsupported instrument types in the provided passages. This claim cannot be verified from the paper text.",
@@ -3008,7 +3008,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-candidate-matching/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-candidate-matching/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Once feature tables are created for each biological substrate and each polarity, features can be directly annotated using LipidMatch and the previously generated MS/MS data.",
       "asbval:note": "Paper confirms that LipidMatch requires pre-processed feature tables, not raw data.",
@@ -3028,7 +3028,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-candidate-matching/010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-candidate-matching/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We introduce LipidMatch, an R-based tool for lipid identification for liquid chromatography tandem mass spectrometry workflows... LipidMatch currently has over 250,000 lipid species spanning 56 lipid types contained in in silico fragmentation libraries.",
       "asbval:note": "Paper confirms LipidMatch is specifically designed for lipid identification, not general metabolite analysis.",
@@ -3048,7 +3048,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-identification-scoring/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-identification-scoring/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For each MS/MS scan of each feature, experimental fragments are matched against in silico lipid fragments m/z using a tolerance window (ppm)... Each fragment is assigned 1 if it is above the user defined minimum intensity and scans threshold and 0 if the fragment does not meet these criteria or was not found within the m/z tolerance... If multiple lipids are identified for a single feature, the lipids are ranked by the summed intensity of all their fragments with in silico fragment exact mass matches",
       "asbval:note": "Core workflow of LipidMatch confirmed: experimental m/z matching against in silico library with tolerance windows, intensity thresholds, and ranking by summed fragment intensity.",
@@ -3068,7 +3068,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-identification-scoring/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-identification-scoring/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Lipids are identified if they contain the necessary observed fragments... After lipids are identified, they are assigned a number based on whether they are identified by class and fatty acyl constituents (1), by data-independent analysis (2), only by class (3), or only by precursor m/z without fragment matching (4)",
       "asbval:note": "LipidMatch assigns confidence levels (1-4) to lipid identifications based on fragment matching quality.",
@@ -3088,7 +3088,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-identification-scoring/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-identification-scoring/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Once feature tables are created for each biological substrate and each polarity, features can be directly annotated using LipidMatch and the previously generated MS/MS data... Feature table(s) and MS/MS data are placed into a directory",
       "asbval:note": "LipidMatch workflow explicitly requires pre-processed feature tables from peak picking software.",
@@ -3108,7 +3108,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-identification-scoring/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-identification-scoring/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch currently has over 250,000 lipid species spanning 56 lipid types contained in in silico fragmentation libraries... With 56 lipid types, LipidMatch in silico libraries cover the greatest number of lipid types of any open source software to date",
       "asbval:note": "Paper states 250,000+ lipid species across 56 lipid types, not 500,000+ across 60+. Card overstates library size and lipid type count.",
@@ -3128,7 +3128,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-identification-scoring/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-identification-scoring/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA). LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA)... LipidMatch can be used with a variety of other vendors and data formats... LipidMatch can be used with liquid chromatography, direct injection, or imaging approaches",
       "asbval:note": "Paper confirms Q-Exactive orbitrap and Agilent Q-TOF testing, and mentions direct infusion/imaging. No explicit mention of Bruker or SCIEX Q-TOF testing in passages provided.",
@@ -3148,7 +3148,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-identification-scoring/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-identification-scoring/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of Waters instruments or lack of Waters support in provided passages. Cannot confirm this claim from available text.",
@@ -3168,7 +3168,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-identification-scoring/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-identification-scoring/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch is not recommended for most applications using low resolution mass spectrometers.",
       "asbval:note": "Paper explicitly states LipidMatch is not recommended for low-resolution MS.",
@@ -3188,7 +3188,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-identification-scoring/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-identification-scoring/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for LipidMatch | role: primary tool for lipid identification] LipidMatch uses rule-based identification... For each lipid type, the user can select which fragments must be observed for identification.",
       "asbval:note": "LipidMatch confirmed as primary tool for fragment matching and lipid identification.",
@@ -3208,7 +3208,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-identification-scoring/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-identification-scoring/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The user first chooses directories containing feature table(s), for example those generated by MZmine (Fig. 2)... Video tutorial 2 explains how users can process data using MSConvert [16] and MZmine 2.20 using a batch file for MZmine.",
       "asbval:note": "MZmine explicitly mentioned as compatible peak picking software for LipidMatch.",
@@ -3228,7 +3228,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-identification-scoring/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-identification-scoring/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12].",
       "asbval:note": "XCMS explicitly listed as compatible peak picking software.",
@@ -3248,7 +3248,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-identification-scoring/010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-identification-scoring/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12].",
       "asbval:note": "MS-DIAL explicitly listed as compatible peak picking software.",
@@ -3268,7 +3268,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-identification-scoring/011",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-identification-scoring/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition, metabolite, xenobiotic, or other identifications from software such as Compound Discoverer (Thermo Scientific, San Jose, CA) or MS-DIAL can be appended for a more global approach.",
       "asbval:note": "Compound Discoverer is mentioned as software whose identifications can be appended to LipidMatch results, not as a peak picking tool that generates input for LipidMatch. Role differs from claim.",
@@ -3288,7 +3288,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-identification-scoring/012",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-identification-scoring/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA).",
       "asbval:note": "Q-Exactive orbitrap explicitly confirmed as tested platform.",
@@ -3308,7 +3308,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-library-annotation-from-mz/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-library-annotation-from-mz/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch currently has over 250,000 lipid species spanning 56 lipid types contained in in silico fragmentation libraries... LipidMatch uses rule-based identification... For each lipid candidate, the intensities of experimental fragments with exact mass matches to expected in silico fragments are summed.",
       "asbval:note": "Paper states 250,000 lipid species across 56 lipid types, not >500,000 species across >60 lipid classes. The rule-based matching and m/z tolerance thresholds are correctly described.",
@@ -3328,7 +3328,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-library-annotation-from-mz/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-library-annotation-from-mz/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for LipidMatch | role: Core matching engine]",
       "asbval:note": "LipidMatch is the primary tool described throughout the paper for lipid identification using rule-based matching.",
@@ -3348,7 +3348,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-library-annotation-from-mz/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-library-annotation-from-mz/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12]... Video tutorial 2 explains how users can process data using MSConvert [16] and MZmine 2.20 using a batch file for MZmine.",
       "asbval:note": "MZmine is explicitly mentioned as a peak picking tool used upstream of LipidMatch.",
@@ -3368,7 +3368,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-library-annotation-from-mz/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-library-annotation-from-mz/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12].",
       "asbval:note": "XCMS is explicitly mentioned as a peak picking tool compatible with LipidMatch.",
@@ -3388,7 +3388,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-library-annotation-from-mz/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-library-annotation-from-mz/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12].",
       "asbval:note": "MS-DIAL is explicitly mentioned as a peak picking tool compatible with LipidMatch.",
@@ -3408,7 +3408,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-library-annotation-from-mz/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-library-annotation-from-mz/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition, metabolite, xenobiotic, or other identifications from software such as Compound Discoverer (Thermo Scientific, San Jose, CA) or MS-DIAL can be appended for a more global approach.",
       "asbval:note": "Compound Discoverer is mentioned as software whose identifications can be appended to LipidMatch results, not as a peak picking tool upstream of LipidMatch. The card lists it as peak picking upstream, but the paper describes it as a tool for appending identifications.",
@@ -3428,7 +3428,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-library-annotation-from-mz/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-library-annotation-from-mz/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA).",
       "asbval:note": "Q-Exactive orbitrap is explicitly mentioned as a validated platform for LipidMatch.",
@@ -3448,7 +3448,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-library-annotation-from-mz/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-library-annotation-from-mz/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA).",
       "asbval:note": "Agilent Q-TOF is explicitly mentioned as a validated platform for LipidMatch.",
@@ -3468,7 +3468,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-library-annotation-from-mz/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-library-annotation-from-mz/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Bruker Q-TOF as a validated platform. Only Q-Exactive orbitrap and Agilent 6540 Q-TOF are explicitly tested. Paper states 'LipidMatch can be used with a variety of other vendors and data formats' but does not specifically validate Bruker.",
@@ -3488,7 +3488,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-library-annotation-from-mz/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-library-annotation-from-mz/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention SCIEX Q-TOF as a validated platform. Only Q-Exactive orbitrap and Agilent 6540 Q-TOF are explicitly tested.",
@@ -3508,7 +3508,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-library-format-specification/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-library-format-specification/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch libraries are static excel files, as with all four software previously mentioned, the user can select which lipid types to query using LipidMatch... LipidMatch libraries contain only exact m/z values of precursors and fragment ions, making it relatively trivial for users to generate in silico libraries and/or convert other databases to the LipidMatch library format.",
       "asbval:note": "Paper confirms .csv format and user-authored libraries with m/z fragmentation patterns, but describes libraries as 'Excel files' (not explicitly .csv) and emphasizes generation/conversion rather than formal 'specification and validation' process. The paper mentions video tutorial 6 for library development but does not detail a formal specification or validation framework.",
@@ -3528,7 +3528,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-library-format-specification/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-library-format-specification/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Users can modify which fragment ions for each lipid class must be observed for identification using a simple Excel sheet as outlined in the 6th video tutorial... Libraries for LipidMatch can be developed using LipidBlast Templates or as explained in video tutorial 6 found in the Additional file 1. Each library should be developed with the correct annotation based on the structural resolution that can be inferred by fragments chosen for the identification criteria.",
       "asbval:note": "Paper confirms that user-authored libraries must conform to format requirements and provides guidance (video tutorial 6) for correct development.",
@@ -3548,7 +3548,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-library-format-specification/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-library-format-specification/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch currently has over 250,000 lipid species spanning 56 lipid types contained in in silico fragmentation libraries.",
       "asbval:note": "Paper states 'over 250,000 lipid species', not 500,000+. The card's claim of 500,000+ is unsupported; the actual number is approximately half that.",
@@ -3568,7 +3568,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-library-format-specification/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-library-format-specification/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Furthermore, lipidome coverage can be increased by the user community by adding new in silico fragmentation libraries. Libraries for LipidMatch can be developed using LipidBlast Templates or as explained in video tutorial 6 found in the Additional file 1.",
       "asbval:note": "Paper explicitly supports user integration of custom libraries for expanded lipidome coverage.",
@@ -3588,7 +3588,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-library-format-specification/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-library-format-specification/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch currently has over 250,000 lipid species spanning 56 lipid types contained in in silico fragmentation libraries.",
       "asbval:note": "The 500,000+ figure is incorrect; paper states 'over 250,000 lipid species'. The logic of the 'when NOT to use' clause is sound but based on inflated library size.",
@@ -3608,7 +3608,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-library-format-specification/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-library-format-specification/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for LipidMatch | role: Primary software for lipid identification and library integration]",
       "asbval:note": "LipidMatch is the primary tool discussed throughout the paper for lipid identification and library management.",
@@ -3628,7 +3628,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-library-format-specification/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-library-format-specification/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Users can modify which fragment ions for each lipid class must be observed for identification using a simple Excel sheet as outlined in the 6th video tutorial... Libraries for LipidMatch can be developed using LipidBlast Templates or as explained in video tutorial 6.",
       "asbval:note": "Paper confirms LipidMatch's role in library development and matching, but describes libraries as 'Excel files' rather than explicitly '.csv format'. The paper does not use the term 'validation' in the formal sense implied by the card.",
@@ -3648,7 +3648,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-species-abundance-counting/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-species-abundance-counting/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch currently has over 250,000 lipid species spanning 56 lipid types contained in in silico fragmentation libraries.",
       "asbval:note": "Paper reports pre-counted library statistics (250,000+ species, 56 types) but does not describe a workflow or skill for users to perform counting/enumeration themselves. The card frames this as a user-facing skill/task, but the paper only documents LipidMatch's library contents as a static property, not as a procedure users execute.",
@@ -3668,7 +3668,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-species-abundance-counting/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-species-abundance-counting/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch libraries are static excel files... LipidMatch libraries contain only exact m/z values of precursors and fragment ions, making it relatively trivial for users to generate in silico libraries and/or convert other databases to the LipidMatch library format.",
       "asbval:note": "Paper confirms LipidMatch libraries are stored as static .csv/.excel files and that users can modify/develop libraries, but does not describe a documented workflow or tutorial for counting/enumerating species. The paper mentions video tutorials for library development (tutorial 6) but does not detail a counting/auditing procedure.",
@@ -3688,7 +3688,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-species-abundance-counting/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-species-abundance-counting/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not discuss or exemplify any workflow for validating library thresholds or reporting species/type counts to stakeholders. The example threshold values (500,000 species, 60+ types) are not mentioned in the paper; LipidMatch is documented as having 250,000+ species and 56 types.",
@@ -3708,7 +3708,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-species-abundance-counting/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-species-abundance-counting/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch currently has over 250,000 lipid species spanning 56 lipid types contained in in silico fragmentation libraries... In silico libraries were developed in Excel... LipidMatch libraries are static excel files.",
       "asbval:note": "LipidMatch is confirmed as the tool containing in-silico fragmentation libraries in .csv/.excel format. However, the paper does not document a user-facing counting/enumeration workflow; it only reports pre-computed library statistics.",
@@ -3728,7 +3728,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-species-abundance-counting/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-species-abundance-counting/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper provides project home page (http://secim.ufl.edu/secim-tools/) but does not mention or confirm a GitHub repository URL. Cannot verify the GitHub link from passages.",
@@ -3748,7 +3748,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-type-category-enumeration/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-type-category-enumeration/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch currently has over 250,000 lipid species spanning 56 lipid types contained in in silico fragmentation libraries.",
       "asbval:note": "The paper explicitly describes the task of enumerating and counting lipid types in LipidMatch's in silico libraries. The research validates library breadth across lipid taxonomy.",
@@ -3768,7 +3768,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-type-category-enumeration/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-type-category-enumeration/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch leverages the most extensive in silico fragmentation libraries of freely available software. When integrated into a larger lipidomics workflow, LipidMatch may increase the probability of finding lipid-based biomarkers and determining etiology of disease by covering a greater portion of the lipidome",
       "asbval:note": "The paper validates that comprehensive lipid-type coverage is essential for unbiased identification in untargeted MS workflows.",
@@ -3788,7 +3788,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-type-category-enumeration/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-type-category-enumeration/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch in silico libraries cover the greatest number of lipid types of any open source software to date, with 56 lipid types, LipidMatch in silico libraries, MS-DIAL containing 34 lipid types, and Greazy containing 24 lipid types",
       "asbval:note": "The paper explicitly discusses auditing and comparing lipid-type coverage across different lipidomics libraries.",
@@ -3808,7 +3808,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-type-category-enumeration/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-type-category-enumeration/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "With 56 lipid types, LipidMatch in silico libraries cover the greatest number of lipid types of any current open-source software platform",
       "asbval:note": "The paper reports 56 lipid types in LipidMatch, which is close to the \u226560 threshold mentioned in the card. The paper validates this as a comprehensive benchmark.",
@@ -3828,7 +3828,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-type-category-enumeration/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-type-category-enumeration/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch libraries are static excel files... LipidMatch libraries contain only exact m/z values of precursors and fragment ions, making it relatively trivial for users to generate in silico libraries and/or convert other databases to the LipidMatch library format.",
       "asbval:note": "The paper confirms that LipidMatch libraries are stored in Excel/CSV format and are user-accessible for auditing.",
@@ -3848,7 +3848,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-type-category-enumeration/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-type-category-enumeration/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for LipidMatch | role: lipidomics library tool]",
       "asbval:note": "LipidMatch is the primary tool discussed throughout the paper for lipid identification using in silico fragmentation libraries.",
@@ -3868,7 +3868,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-type-category-enumeration/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-type-category-enumeration/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch currently has over 250,000 lipid species spanning 56 lipid types contained in in silico fragmentation libraries. Unique fragmentation libraries, compared to other open source software, include oxidized lipids, bile acids, sphingosines, and previously uncharacterized adducts",
       "asbval:note": "The paper confirms LipidMatch contains organized in silico fragmentation data across multiple lipid types.",
@@ -3888,7 +3888,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-type-category-enumeration/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-type-category-enumeration/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "The paper does not provide a GitHub URL. It states: 'Users can access LipidMatch as a file in the Additional file 1, with the latest version available at http://secim.ufl.edu/secim-tools/' The GitHub URL cannot be verified from the provided passages.",
@@ -3908,7 +3908,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-accuracy-tolerance-calibration/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-accuracy-tolerance-calibration/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For each MS/MS scan of each feature, experimental fragments are matched against in silico lipid fragments m/z using a tolerance window (ppm).",
       "asbval:note": null,
@@ -3928,7 +3928,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-accuracy-tolerance-calibration/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-accuracy-tolerance-calibration/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The user modifiable intensity threshold for fragment ions to be considered real is dependent on the mass analyzer, the type of detector and the noise level.",
       "asbval:note": "Paper discusses user-modifiable thresholds to distinguish real fragments from noise/spurious hits.",
@@ -3948,7 +3948,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-accuracy-tolerance-calibration/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-accuracy-tolerance-calibration/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA). LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA).",
       "asbval:note": null,
@@ -3968,7 +3968,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-accuracy-tolerance-calibration/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-accuracy-tolerance-calibration/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch currently has over 250,000 lipid species spanning 56 lipid types contained in in silico fragmentation libraries.",
       "asbval:note": "Paper states 250,000+ lipid species, not 500,000+. Card overstates library size.",
@@ -3988,7 +3988,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-accuracy-tolerance-calibration/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-accuracy-tolerance-calibration/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA). LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA). LipidMatch can be used with a variety of other vendors and data formats.",
       "asbval:note": "Paper explicitly validates Thermo and Agilent; states 'variety of other vendors' but does not explicitly name Bruker or SCIEX as tested platforms.",
@@ -4008,7 +4008,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-accuracy-tolerance-calibration/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-accuracy-tolerance-calibration/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Waters instruments or explicitly state lack of support for Waters. Cannot confirm this negative claim from passages.",
@@ -4028,7 +4028,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-accuracy-tolerance-calibration/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-accuracy-tolerance-calibration/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "For each MS/MS scan of each feature, experimental fragments are matched against in silico lipid fragments m/z using a tolerance window (ppm). The final ranked lipid identifications are appended onto the feature table, along with the lipid class and adduct of the top ranked lipid and summed fragment intensities for each identification.",
       "asbval:note": null,
@@ -4048,7 +4048,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-accuracy-tolerance-calibration/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-accuracy-tolerance-calibration/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12].",
       "asbval:note": null,
@@ -4068,7 +4068,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-accuracy-tolerance-calibration/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-accuracy-tolerance-calibration/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12].",
       "asbval:note": null,
@@ -4088,7 +4088,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-accuracy-tolerance-calibration/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-accuracy-tolerance-calibration/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12].",
       "asbval:note": null,
@@ -4108,7 +4108,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-accuracy-tolerance-calibration/010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-accuracy-tolerance-calibration/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition, metabolite, xenobiotic, or other identifications from software such as Compound Discoverer (Thermo Scientific, San Jose, CA) or MS-DIAL can be appended for a more global approach.",
       "asbval:note": "Paper mentions Compound Discoverer as software for appending identifications, not as peak picking software. Role differs from card claim.",
@@ -4128,7 +4128,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-accuracy-tolerance-calibration/011",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-accuracy-tolerance-calibration/011",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA).",
       "asbval:note": null,
@@ -4148,7 +4148,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-accuracy-tolerance-calibration/012",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-accuracy-tolerance-calibration/012",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA).",
       "asbval:note": null,
@@ -4168,7 +4168,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-accuracy-tolerance-calibration/013",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-accuracy-tolerance-calibration/013",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Bruker instruments as tested or validated platforms.",
@@ -4188,7 +4188,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-accuracy-tolerance-calibration/014",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-accuracy-tolerance-calibration/014",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention SCIEX instruments as tested or validated platforms. Paper mentions Lipidyzer (SCIEX) as excluded from comparison but does not validate SCIEX instruments for LipidMatch.",
@@ -4208,7 +4208,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-column-mapping/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-spectrometry-data-column-mapping/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The feature table can have nearly any format, allowing flexibility in choosing feature processing workflows... Once feature tables are created for each biological substrate and each polarity, features can be directly annotated using LipidMatch and the previously generated MS/MS data... Features can be determined from various peak picking software such as MZmine, XCMS, or MS-DIAL.",
       "asbval:note": "Paper explicitly states LipidMatch accepts feature tables from MZmine, XCMS, MS-DIAL with flexible format, and describes the workflow of converting/preparing these tables for LipidMatch input.",
@@ -4228,7 +4228,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-column-mapping/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-spectrometry-data-column-mapping/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch is designed to be integrated with other open-source software to streamline the lipidomics workflow... The feature table can have nearly any format, allowing flexibility in choosing feature processing workflows.",
       "asbval:note": "Paper describes LipidMatch as designed for integration with multiple peak-picking tools, supporting the bridging concept.",
@@ -4248,7 +4248,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-column-mapping/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-spectrometry-data-column-mapping/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We introduce LipidMatch, an R-based tool for lipid identification for liquid chromatography tandem mass spectrometry workflows... Once feature tables are created for each biological substrate and each polarity, features can be directly annotated using LipidMatch",
       "asbval:note": "LipidMatch is confirmed as the target annotation tool that consumes peak tables.",
@@ -4268,7 +4268,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-column-mapping/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-spectrometry-data-column-mapping/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine, XCMS, or MS-DIAL. The user first chooses directories containing feature table(s), for example those generated by MZmine",
       "asbval:note": "MZmine is explicitly named as a peak-picking tool that generates feature tables for LipidMatch input.",
@@ -4288,7 +4288,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-column-mapping/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-spectrometry-data-column-mapping/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine, XCMS, or MS-DIAL.",
       "asbval:note": "XCMS is explicitly named as an alternative peak-picking tool.",
@@ -4308,7 +4308,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-column-mapping/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-spectrometry-data-column-mapping/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine, XCMS, or MS-DIAL.",
       "asbval:note": "MS-DIAL is explicitly named as an alternative peak-picking tool.",
@@ -4328,7 +4328,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-column-mapping/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-spectrometry-data-column-mapping/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition, metabolite, xenobiotic, or other identifications from software such as Compound Discoverer (Thermo Scientific, San Jose, CA) or MS-DIAL can be appended for a more global approach.",
       "asbval:note": "Compound Discoverer is mentioned in the paper, but only in the context of appending identifications to feature tables, not as a peak-picking tool that generates the initial feature table. The paper does not explicitly state that Compound Discoverer is used for peak-picking/feature detection upstream of LipidMatch.",
@@ -4348,7 +4348,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-column-mapping/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-spectrometry-data-column-mapping/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Feature table(s) and MS/MS data are placed into a directory... Each folder should contain respective MS/MS data for that substrate in .ms2 format also ending in 'neg.csv' or 'pos.csv', depending on polarity.",
       "asbval:note": "Paper describes feature table format requirements but does not explicitly enumerate m/z, retention time, and intensity as the specific required columns. The paper mentions feature tables contain m/z and retention time (used for matching), but intensity is not explicitly stated as a required input column for LipidMatch feature tables.",
@@ -4368,7 +4368,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-fragment-matching/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-spectrometry-fragment-matching/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch currently has over 250,000 lipid species spanning 56 lipid types contained in in silico fragmentation libraries... For each MS/MS scan of each feature, experimental fragments are matched against in silico lipid fragments m/z using a tolerance window (ppm).",
       "asbval:note": "Paper states LipidMatch contains 'over 250,000 lipid species spanning 56 lipid types', not '>500,000 species across 60+ lipid classes' as claimed. The core function (matching experimental fragments against in silico libraries using m/z tolerance) is correct, but the database size and lipid type counts are overstated in the card.",
@@ -4388,7 +4388,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-fragment-matching/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-spectrometry-fragment-matching/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for LipidMatch | role: core identification tool] LipidMatch, an R-based tool for lipid identification for liquid chromatography tandem mass spectrometry workflows... For each MS/MS scan of each feature, experimental fragments are matched against in silico lipid fragments m/z using a tolerance window (ppm).",
       "asbval:note": null,
@@ -4408,7 +4408,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-fragment-matching/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-spectrometry-fragment-matching/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12]... The user first chooses directories containing feature table(s), for example those generated by MZmine (Fig. 2).",
       "asbval:note": null,
@@ -4428,7 +4428,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-fragment-matching/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-spectrometry-fragment-matching/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12].",
       "asbval:note": null,
@@ -4448,7 +4448,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-fragment-matching/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-spectrometry-fragment-matching/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12].",
       "asbval:note": null,
@@ -4468,7 +4468,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-fragment-matching/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-spectrometry-fragment-matching/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition, metabolite, xenobiotic, or other identifications from software such as Compound Discoverer (Thermo Scientific, San Jose, CA) or MS-DIAL can be appended for a more global approach.",
       "asbval:note": "Paper mentions Compound Discoverer as software for appending identifications (post-processing), not as a peak picking tool upstream of LipidMatch. The role stated in the card is not supported; Compound Discoverer is mentioned for annotation appending, not feature extraction.",
@@ -4488,7 +4488,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-fragment-matching/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-spectrometry-fragment-matching/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA).",
       "asbval:note": null,
@@ -4508,7 +4508,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-fragment-matching/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-spectrometry-fragment-matching/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA).",
       "asbval:note": null,
@@ -4528,7 +4528,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-fragment-matching/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-spectrometry-fragment-matching/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Bruker Q-TOF instruments. Only Q-Exactive orbitrap and Agilent 6540 Q-TOF are explicitly tested. Paper states 'LipidMatch can be used with a variety of other vendors and data formats' but does not specifically validate Bruker.",
@@ -4548,7 +4548,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-fragment-matching/009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-spectrometry-fragment-matching/009",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention SCIEX Q-TOF instruments. Only Q-Exactive orbitrap and Agilent 6540 Q-TOF are explicitly tested. SCIEX is mentioned only in context of excluded software (Lipidyzer by SCIEX) in the comparison section.",
@@ -4568,7 +4568,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-fragment-matching/010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-spectrometry-fragment-matching/010",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch is not recommended for most applications using low resolution mass spectrometers... LipidMatch can be used with a variety of other vendors and data formats.",
       "asbval:note": "While the paper does not explicitly state that Waters is unsupported, it lists supported formats (.ms2, vendor file conversion via MSConvert) and does not mention Waters. The scope note is reasonable inference but not explicitly stated.",
@@ -4588,7 +4588,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-vendor-documentation-extraction/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/ms-vendor-documentation-extraction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA). LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA).",
       "asbval:note": "Paper explicitly documents tested instrument vendors, models, and acquisition modes (Q-Exactive orbitrap, Agilent 6540 Q-TOF) with validation status.",
@@ -4608,7 +4608,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-vendor-documentation-extraction/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/ms-vendor-documentation-extraction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for LipidMatch | role: target software]",
       "asbval:note": "LipidMatch is the primary subject of the paper and its instrument support is documented throughout.",
@@ -4628,7 +4628,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-vendor-documentation-extraction/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/ms-vendor-documentation-extraction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA).",
       "asbval:note": "Explicitly named as tested/validated platform for LipidMatch development.",
@@ -4648,7 +4648,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-vendor-documentation-extraction/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/ms-vendor-documentation-extraction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA).",
       "asbval:note": "Explicitly named as tested/validated platform; specific model (6540) is documented.",
@@ -4668,7 +4668,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-vendor-documentation-extraction/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/ms-vendor-documentation-extraction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of Bruker Q-TOF in any passage. Paper documents only Thermo (Q-Exactive orbitrap) and Agilent (6540 Q-TOF) as tested platforms.",
@@ -4688,7 +4688,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-vendor-documentation-extraction/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/ms-vendor-documentation-extraction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of SCIEX Q-TOF in tested/validated platforms. Paper only documents Thermo and Agilent as tested instruments.",
@@ -4708,7 +4708,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-vendor-documentation-extraction/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/ms-vendor-documentation-extraction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA).",
       "asbval:note": "Direct match to development and testing statement.",
@@ -4728,7 +4728,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-vendor-documentation-extraction/007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/ms-vendor-documentation-extraction/007",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA). LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA). LipidMatch can be used with a variety of other vendors and data formats. Ion selection techniques used to acquire fragmentation, including all-ion-fragmentation (AIF), inclusion list-based targeted approaches, and data-dependent topN (ddMS2-topN) approaches can be used with LipidMatch",
       "asbval:note": "Paper documents vendor (Thermo, Agilent), model (Q-Exactive orbitrap, 6540 Q-TOF), and acquisition modes (AIF, ddMS2-topN, targeted).",
@@ -4748,7 +4748,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-vendor-documentation-extraction/008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/ms-vendor-documentation-extraction/008",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch is not recommended for most applications using low resolution mass spectrometers.",
       "asbval:note": "Paper provides explicit guidance on instrument suitability and limitations, supporting the use case of pre-workflow compatibility assessment.",
@@ -4768,7 +4768,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-table-schema-validation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/peak-table-schema-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The feature table can have nearly any format, allowing flexibility in choosing feature processing workflows... Feature table(s) and MS/MS data are placed into a directory... Each folder should contain respective MS/MS data for that substrate in .ms2 format also ending in \"neg.csv\" or \"pos.csv\", depending on polarity.",
       "asbval:note": "Paper confirms that LipidMatch accepts feature tables from various peak-picking software (MZmine, XCMS, MS-DIAL) and describes file naming conventions (.csv format, polarity suffixes). However, the paper does NOT describe a formal schema validation step or explicit requirement checking for m/z, retention time, and intensity columns before ingestion. The paper states 'The feature table can have nearly any format, allowing flexibility' which suggests LipidMatch is permissive rather than strict about schema validation. The card's claim about preventing 'silent failures and data loss' through pre-ingestion validation is not explicitly addressed in the paper.",
@@ -4788,7 +4788,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-table-schema-validation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/peak-table-schema-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for LipidMatch | role: target software for lipid identification]",
       "asbval:note": "LipidMatch is the primary tool described throughout the paper. It is an R-based tool for lipid identification that accepts feature tables from peak-picking software.",
@@ -4808,7 +4808,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-table-schema-validation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/peak-table-schema-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12]... Video tutorial 2 explains how users can process data using MSConvert [16] and MZmine 2.20 using a batch file for MZmine.",
       "asbval:note": "MZmine is explicitly named as a peak-picking software whose output can be processed for use with LipidMatch.",
@@ -4828,7 +4828,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-table-schema-validation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/peak-table-schema-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12].",
       "asbval:note": "XCMS is explicitly named as a peak-picking software option compatible with LipidMatch.",
@@ -4848,7 +4848,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-table-schema-validation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/peak-table-schema-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Features can be determined from various peak picking software such as MZmine [14], XCMS [15], or MS-DIAL [12].",
       "asbval:note": "MS-DIAL is explicitly named as a peak-picking software option compatible with LipidMatch.",
@@ -4868,7 +4868,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-table-schema-validation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/peak-table-schema-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In addition, metabolite, xenobiotic, or other identifications from software such as Compound Discoverer (Thermo Scientific, San Jose, CA) or MS-DIAL can be appended for a more global approach.",
       "asbval:note": "Compound Discoverer is mentioned in the paper, but in a different context: as software whose identifications can be APPENDED to LipidMatch results, not as a peak-picking software whose output is validated and converted to LipidMatch input format. The card claims Compound Discoverer is a 'peak-picking software producing feature lists that must be validated and converted to LipidMatch input format,' but the paper describes it as software for appending metabolite/xenobiotic identifications post-identification, not as a source of peak tables for LipidMatch input.",
@@ -4888,7 +4888,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-table-schema-validation/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/peak-table-schema-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The feature table can have nearly any format, allowing flexibility in choosing feature processing workflows... Once feature tables are created for each biological substrate and each polarity, features can be directly annotated using LipidMatch and the previously generated MS/MS data.",
       "asbval:note": "Paper confirms that peak tables from MZmine, XCMS, and MS-DIAL can be used with LipidMatch. However, Compound Discoverer is not described as a peak-picking source in the paper; it is mentioned only as software for appending identifications post-analysis. The paper does not describe a formal 'conversion' or 'validation' step; it states feature tables 'can have nearly any format,' suggesting flexibility rather than strict schema enforcement.",
@@ -4908,7 +4908,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-support-matrix-construction/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/software-support-matrix-construction/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA). LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA). LipidMatch can be used with a variety of other vendors and data formats.",
       "asbval:note": "Paper documents validation for Q-Exactive orbitrap and Agilent 6540 Q-TOF only. No explicit mention of Bruker or SCIEX Q-TOF validation in passages. No mention of Waters as explicitly unsupported. Card overstates the scope of validated platforms.",
@@ -4928,7 +4928,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-support-matrix-construction/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/software-support-matrix-construction/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA). LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA)... Ion selection techniques used to acquire fragmentation, including all-ion-fragmentation (AIF), inclusion list-based targeted approaches, and data-dependent topN (ddMS2-topN) approaches can be used with LipidMatch to annotate lipids acquired using liquid chromatography, direct injection, or imaging approaches.",
       "asbval:note": "Paper validates Q-Exactive orbitrap and Agilent 6540 Q-TOF only. Bruker and SCIEX Q-TOF are not mentioned as tested/validated in the passages. Acquisition modes (AIF, ddMS2-topN, direct infusion, imaging) are supported, but vendor validation is narrower than card claims.",
@@ -4948,7 +4948,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-support-matrix-construction/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/software-support-matrix-construction/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA)... Default fragments which must be observed for each lipid class were determined using high collisional induced dissociation (HCD) on a Q-Exactive orbitrap mass spectrometer of internal standards, or endogenous lipids verified in literature.",
       "asbval:note": null,
@@ -4968,7 +4968,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-support-matrix-construction/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/software-support-matrix-construction/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA).",
       "asbval:note": "Paper states Agilent 6540 Q-TOF has been tested but does not explicitly specify which acquisition modes (direct infusion, imaging, etc.) were validated. Card claims specific mode validation not explicitly confirmed in passages.",
@@ -4988,7 +4988,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-support-matrix-construction/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/software-support-matrix-construction/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of Bruker Q-TOF validation in any passage. Paper only mentions Q-Exactive orbitrap and Agilent 6540 Q-TOF as tested platforms.",
@@ -5008,7 +5008,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-support-matrix-construction/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/software-support-matrix-construction/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of SCIEX Q-TOF validation in any passage. Paper only mentions Q-Exactive orbitrap and Agilent 6540 Q-TOF as tested platforms.",
@@ -5028,7 +5028,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-support-matrix-construction/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/software-support-matrix-construction/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "No mention of Waters instruments or explicit unsupported platforms in any passage. Paper states LipidMatch 'can be used with a variety of other vendors and data formats' but does not name Waters or any explicitly unsupported vendor.",
@@ -5048,7 +5048,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/technical-specification-tabulation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/technical-specification-tabulation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA). LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA). LipidMatch can be used with a variety of other vendors and data formats. Ion selection techniques used to acquire fragmentation, including all-ion-fragmentation (AIF), inclusion list-based targeted approaches, and data-dependent topN (ddMS2-topN) approaches can be used with LipidMatch to annotate lipids acquired using liquid chromatography, direct injection, or imaging approaches.",
       "asbval:note": "Paper documents validated platforms (Q-Exactive orbitrap, Agilent 6540 Q-TOF) and acquisition modes (AIF, ddMS2-topN, targeted, LC, direct injection, imaging), but does NOT provide a formal CSV-formatted compatibility matrix or comprehensive tabulation. The paper states compatibility in prose form only. Card claims extraction of 'definitive support matrix' in CSV format, but paper provides only narrative documentation of tested platforms and modes.",
@@ -5068,7 +5068,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/technical-specification-tabulation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/technical-specification-tabulation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for LipidMatch | role: Software tool whose instrument/mode compatibility matrix is being extracted and tabulated]",
       "asbval:note": "LipidMatch is the primary subject of the paper and is explicitly named throughout.",
@@ -5088,7 +5088,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/technical-specification-tabulation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/technical-specification-tabulation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA)... Ion selection techniques used to acquire fragmentation, including all-ion-fragmentation (AIF), inclusion list-based targeted approaches, and data-dependent topN (ddMS2-topN) approaches can be used with LipidMatch... Default fragments which must be observed for each lipid class were determined using high collisional induced dissociation (HCD) on a Q-Exactive orbitrap mass spectrometer of internal standards",
       "asbval:note": "Paper confirms Q-Exactive orbitrap was used for development and testing, and that AIF, targeted, and ddMS2-topN modes are supported by LipidMatch. However, paper does not explicitly state that all three modes were validated specifically on the Q-Exactive orbitrap\u2014only that the tool supports these modes generally and was developed/tested on Q-Exactive.",
@@ -5108,7 +5108,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/technical-specification-tabulation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/technical-specification-tabulation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA)... LipidMatch can be used with a variety of other vendors and data formats... LipidMatch allows users to annotate lipids across a wide range of high resolution tandem mass spectrometry experiments, including imaging experiments, direct infusion experiments, and experiments employing liquid chromatography.",
       "asbval:note": "Paper confirms Agilent 6540 Q-TOF was tested with LipidMatch and that the tool supports direct infusion and imaging modes. However, paper does not explicitly state that direct infusion and imaging modes were validated on the Agilent platform specifically\u2014only that the tool supports these modes generally and was tested on Agilent.",
@@ -5128,7 +5128,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/technical-specification-tabulation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/technical-specification-tabulation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention Bruker instruments at any point. No evidence of Bruker Q-TOF validation or testing.",
@@ -5148,7 +5148,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/technical-specification-tabulation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/technical-specification-tabulation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "Paper does not mention SCIEX instruments. Paper does mention 'Lipidyzer (SCIEX)' as a non-open-source software tool excluded from comparison, but does not validate LipidMatch on SCIEX hardware.",
@@ -5168,7 +5168,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/technical-specification-tabulation/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/technical-specification-tabulation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch was developed and tested using data acquired from a Q-Exactive orbitrap mass spectrometer (Thermo Scientific, San Jose, CA). LipidMatch has also been tested using data acquired on an Agilent 6540 Q-TOF (Agilent Technologies, Santa Clara, CA). LipidMatch can be used with a variety of other vendors and data formats.",
       "asbval:note": "Paper documents instrument compatibility in prose narrative form only. No CSV-formatted compatibility matrix, support table, or formal specification document is provided or referenced. The paper states compatibility in text but does not produce the structured tabular output claimed by the card.",
@@ -5188,7 +5188,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/threshold-based-library-validation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/threshold-based-library-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch currently has over 250,000 lipid species spanning 56 lipid types contained in in silico fragmentation libraries.",
       "asbval:note": "Paper describes LipidMatch library as containing 250,000 species across 56 lipid types, not 500,000 species across 60+ types. The card's threshold example (\u2265500,000 species across \u226560 lipid types) exceeds what LipidMatch actually provides. The research question concept (validating library comprehensiveness against thresholds) is sound and supported, but the specific numerical thresholds cited in the example are higher than LipidMatch's actual specifications.",
@@ -5208,7 +5208,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/threshold-based-library-validation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/threshold-based-library-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch currently has over 250,000 lipid species spanning 56 lipid types contained in in silico fragmentation libraries.",
       "asbval:note": "Paper explicitly enumerates both species count and lipid type categories.",
@@ -5228,7 +5228,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/threshold-based-library-validation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/threshold-based-library-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Users can access LipidMatch as a file in the Additional file 1, with the latest version available at <http://secim.ufl.edu/secim-tools/>.",
       "asbval:note": "LipidMatch is confirmed as a downloadable/accessible fragmentation library repository.",
@@ -5248,7 +5248,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/threshold-based-library-validation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/threshold-based-library-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch currently contains the most comprehensive lipid fragmentation libraries of freely available software, when ranked by the number of lipid types. LipidMatch includes in silico libraries with over 250,000 lipid species across 56 lipid types, including oxidized lipids.",
       "asbval:note": "Paper explicitly discusses validation of library breadth in terms of species count and lipid-type categories.",
@@ -5268,7 +5268,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/threshold-based-library-validation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/threshold-based-library-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch is designed to be integrated with other open-source software to streamline the lipidomics workflow",
       "asbval:note": "Paper confirms LipidMatch is integrated into annotation pipelines.",
@@ -5288,7 +5288,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/threshold-based-library-validation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/threshold-based-library-validation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "[SUBSTRING-MATCH for LipidMatch | role: in-silico fragmentation library tool]",
       "asbval:note": "LipidMatch is confirmed throughout as the primary tool providing in-silico fragmentation libraries in .csv format.",
@@ -5308,7 +5308,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/threshold-based-library-validation/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/threshold-based-library-validation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "LipidMatch libraries are static excel files",
       "asbval:note": "Paper confirms libraries are in Excel/CSV format. Also: 'This information on fragments for each feature-lipid pair is saved as a table in .csv format for each lipid class.'",
@@ -5328,7 +5328,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/acquisition-mode-enumeration-and-validation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/acquisition-mode-enumeration-and-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "acquisition-mode-enumeration-and-validation",
@@ -5341,7 +5341,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/batch-script-execution-and-automation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/batch-script-execution-and-automation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "batch-script-execution-and-automation",
@@ -5354,7 +5354,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/csv-data-aggregation-and-deduplication/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/csv-data-aggregation-and-deduplication/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "csv-data-aggregation-and-deduplication",
@@ -5367,7 +5367,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-format-conversion-peak-picking-to-lipidmatch/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/file-format-conversion-peak-picking-to-lipidmatch/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "file-format-conversion-peak-picking-to-lipidmatch",
@@ -5380,7 +5380,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/file-format-validation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/file-format-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "file-format-validation",
@@ -5393,7 +5393,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/fragmentation-pattern-annotation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/fragmentation-pattern-annotation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "fragmentation-pattern-annotation",
@@ -5406,7 +5406,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/hrms-data-format-parsing/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/hrms-data-format-parsing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "hrms-data-format-parsing",
@@ -5419,7 +5419,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/instrument-platform-compatibility-mapping/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/instrument-platform-compatibility-mapping/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "instrument-platform-compatibility-mapping",
@@ -5432,7 +5432,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/library-integration-workflow/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/library-integration-workflow/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "library-integration-workflow",
@@ -5445,7 +5445,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-candidate-matching/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-candidate-matching/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "lipid-candidate-matching",
@@ -5458,7 +5458,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-identification-scoring/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-identification-scoring/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 12,
       "asbval:target_artifact_id": "lipid-identification-scoring",
@@ -5471,7 +5471,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-library-annotation-from-mz/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-library-annotation-from-mz/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 9,
       "asbval:target_artifact_id": "lipid-library-annotation-from-mz",
@@ -5484,7 +5484,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-library-format-specification/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-library-format-specification/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "lipid-library-format-specification",
@@ -5497,7 +5497,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-species-abundance-counting/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-species-abundance-counting/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "lipid-species-abundance-counting",
@@ -5510,7 +5510,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/lipid-type-category-enumeration/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/lipid-type-category-enumeration/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "lipid-type-category-enumeration",
@@ -5523,7 +5523,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-accuracy-tolerance-calibration/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-accuracy-tolerance-calibration/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 14,
       "asbval:target_artifact_id": "mass-accuracy-tolerance-calibration",
@@ -5536,7 +5536,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-data-column-mapping/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-spectrometry-data-column-mapping/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "mass-spectrometry-data-column-mapping",
@@ -5549,7 +5549,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/mass-spectrometry-fragment-matching/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/mass-spectrometry-fragment-matching/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 10,
       "asbval:target_artifact_id": "mass-spectrometry-fragment-matching",
@@ -5562,7 +5562,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/ms-vendor-documentation-extraction/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/ms-vendor-documentation-extraction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 8,
       "asbval:target_artifact_id": "ms-vendor-documentation-extraction",
@@ -5575,7 +5575,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/peak-table-schema-validation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/peak-table-schema-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "peak-table-schema-validation",
@@ -5588,7 +5588,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/software-support-matrix-construction/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/software-support-matrix-construction/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "software-support-matrix-construction",
@@ -5601,7 +5601,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/technical-specification-tabulation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/technical-specification-tabulation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "technical-specification-tabulation",
@@ -5614,7 +5614,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/threshold-based-library-validation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/skill/threshold-based-library-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "threshold-based-library-validation",
@@ -5627,7 +5627,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "LipidMatch uses in-silico fragmentation libraries containing over 500,000 lipid species.",
       "asbval:note": null,
@@ -5647,7 +5647,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "LipidMatch covers over 60 lipid types.",
       "asbval:note": null,
@@ -5667,7 +5667,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "LipidMatch is described as one of the most comprehensive open-source software in its domain.",
       "asbval:note": null,
@@ -5687,7 +5687,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "LipidMatch has been validated using Q-Exactive orbitrap UHPLC-HRMS/MS data.",
       "asbval:note": null,
@@ -5707,7 +5707,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "LipidMatch has been validated using targeted LC-MS/MS approaches.",
       "asbval:note": "Text says 'targeted LC-MS/MS' but excerpt specifies three distinct approaches (targeted, ddMS2-topN, AIF); claim omits important methodological details",
@@ -5727,7 +5727,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/claim/claim_006",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "LipidMatch has been tested and validated using Agilent Q-TOF UHPLC-HRMS/MS experiments.",
       "asbval:note": null,
@@ -5747,7 +5747,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_007",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/claim/claim_007",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "LipidMatch has been tested and validated using Bruker Q-TOF UHPLC-HRMS/MS experiments.",
       "asbval:note": null,
@@ -5767,7 +5767,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_008",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/claim/claim_008",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "LipidMatch has been tested and validated using SCIEX Q-TOF UHPLC-HRMS/MS experiments.",
       "asbval:note": null,
@@ -5787,7 +5787,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_009",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/claim/claim_009",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "LipidMatch has been applied for annotation of direct infusion experiments.",
       "asbval:note": null,
@@ -5807,7 +5807,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_010",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/claim/claim_010",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "LipidMatch has been applied for annotation of imaging experiments.",
       "asbval:note": null,
@@ -5827,7 +5827,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_011",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/claim/claim_011",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "LipidMatch does not currently support Waters files.",
       "asbval:note": null,
@@ -5847,7 +5847,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_012",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/claim/claim_012",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "LipidMatch allows integration of user-generated libraries.",
       "asbval:note": null,
@@ -5867,7 +5867,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_013",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/claim/claim_013",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "LipidMatch is modular in design.",
       "asbval:note": null,
@@ -5887,7 +5887,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_014",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/claim/claim_014",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "LipidMatch can be used with MZmine peak picking software.",
       "asbval:note": null,
@@ -5907,7 +5907,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_015",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/claim/claim_015",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "LipidMatch can be used with XCMS peak picking software.",
       "asbval:note": null,
@@ -5927,7 +5927,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_016",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/claim/claim_016",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "LipidMatch can be used with MS-DIAL peak picking software.",
       "asbval:note": null,
@@ -5947,7 +5947,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_017",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/claim/claim_017",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "LipidMatch can be used with Compound Discoverer peak picking software.",
       "asbval:note": null,
@@ -5967,7 +5967,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_018",
+      "@id": "asbval:assertion/paper/10.1186%2Fs12859-017-1744-3/claim/claim_018",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "LipidMatch can combine results from other lipidomics software.",
       "asbval:note": null,

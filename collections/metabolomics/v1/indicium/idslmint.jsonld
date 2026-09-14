@@ -227,7 +227,7 @@
       "workflow_coupling": "loose"
     },
     {
-      "@id": "asbval:assertion/card/task_001/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/card/task_001/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT was developed upon the transformer model architecture originally proposed by Vaswani et al. [17] and is implemented within the python PyTorch framework. The IDSL_MINT transformer model architecture for predicting molecular fingerprint is displayed in Figs. 1. IDSL_MINT only takes MS/MS spectra accompanied with precursor m/z values in the.msp text format. First, m/z fragments are tokenized using constant m/z interval steps, and intensity values are sorted by the maximum intensity after normalization to the unit sum of the total intensities.",
       "asbval:note": "The paper explicitly describes adaptation of Vaswani et al.'s transformer architecture for MS/MS spectra processing, including tokenization of m/z fragments and intensity values.",
@@ -247,7 +247,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/card/task_001/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT was developed using Python 3.10 and implemented with PyTorch 2.0.",
       "asbval:note": "PyTorch is explicitly named as the implementation framework.",
@@ -267,7 +267,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/card/task_001/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "RDKit is not mentioned anywhere in the passages. The paper uses SMILES/InChI strings and mentions fingerprint generation (ECFP, MACCS Keys) but does not name RDKit as the tool performing this function. The paper does not specify which cheminformatics library generates these fingerprints.",
@@ -287,7 +287,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/card/task_001/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT was developed using Python 3.10 and implemented with PyTorch 2.0.",
       "asbval:note": "Python is explicitly named as the programming language.",
@@ -307,7 +307,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/card/task_001/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The model weights are exported at the directory outlined in the configuration file (.yaml), for the minimal LOSS value achieved during the training phase.",
       "asbval:note": "The paper describes model weight export and training, but does not explicitly discuss model instantiation in evaluation mode or validation of initialization. The paper focuses on training and prediction workflows rather than explicit model instance validation.",
@@ -327,7 +327,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/card/task_001/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The output of the decoder structure of the transformer was fed into a linear layer followed by a SoftMax layer to calculate the probability of the fingerprint bit locations (Fig. 1).",
       "asbval:note": "The paper describes the forward pass producing probability outputs for fingerprint bit locations, but does not explicitly discuss tensor shape validation or numerical content validation procedures.",
@@ -347,7 +347,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/card/task_001/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The training in ESI+ and ESI\u2212 took 70 and 45 h, respectively on 35 CPU processing threads.",
       "asbval:note": "The paper reports training timing but does not describe logging of input/output shapes or forward pass execution logs as part of the standard workflow.",
@@ -367,7 +367,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/card/task_001/scope_drift",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/card/task_001/scope_drift",
       "@type": "asbval:ScopeDriftAssertion",
       "asbval:drift_notes": [
         "The candidate card focuses on model instantiation, forward pass validation, and logging procedures, which are implementation/testing concerns. The paper's scope is broader: it presents IDSL_MINT as a complete framework for training and deploying custom models on MS/MS spectra, with emphasis on training data curation, model accuracy evaluation, and application to annotation tasks.",
@@ -384,7 +384,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/attention-mechanism-validation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/attention-mechanism-validation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT was developed upon the transformer model architecture originally proposed by Vaswani et al. [17] and is implemented within the python PyTorch framework... The embedded m/z space is converted into the encoder structure of the transformer model... We used a sinusoidal positional encoding similar to Vaswani et al. [17] to account for the effects of intensity on the tokenized embedded m/z tokens",
       "asbval:note": "Paper describes transformer encoder with positional encoding and multi-head attention applied to MS/MS spectra, but does not explicitly discuss validation of numerical stability or attention mechanism correctness as a standalone task. The paper implements these components but does not present a validation workflow as the card describes.",
@@ -404,7 +404,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/attention-mechanism-validation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/attention-mechanism-validation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT was developed using Python 3.10 and implemented with PyTorch 2.0... The model weights are exported at the directory outlined in the configuration file (.yaml), for the minimal LOSS value achieved during the training phase.",
       "asbval:note": "Paper describes IDSL_MINT training and inference workflow but does not explicitly describe a validation step for the attention mechanism before training. The scope assumes a validation task that is not explicitly documented in the paper.",
@@ -424,7 +424,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/attention-mechanism-validation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/attention-mechanism-validation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT was developed upon the transformer model architecture originally proposed by Vaswani et al. [17] and is implemented within the python PyTorch framework (https://pytorch.org).",
       "asbval:note": "PyTorch is explicitly named as the implementation framework for IDSL_MINT transformer models.",
@@ -444,7 +444,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/attention-mechanism-validation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/attention-mechanism-validation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT can generate molecular fingerprint descriptors using SMILES or InChI strings for extended connectivity fingerprint (ECFP) using an adjustable radius [19] or MACCS Keys [20] fingerprint types",
       "asbval:note": "Paper mentions SMILES and InChI processing for fingerprint generation, but does not explicitly name RDKit as the tool used. RDKit is a standard cheminformatics library for this function, but the paper does not confirm its use.",
@@ -464,7 +464,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/attention-mechanism-validation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/attention-mechanism-validation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT was developed using Python 3.10 and implemented with PyTorch 2.0.",
       "asbval:note": "Python is explicitly stated as the language used for IDSL_MINT development.",
@@ -484,7 +484,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-head-attention-mechanism-design/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/multi-head-attention-mechanism-design/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT was developed upon the transformer model architecture originally proposed by Vaswani et al. [17] and is implemented within the python PyTorch framework... The MS2Fingerprint models include 4 hidden encoder and decoder layers and 2 attention heads (80 \u00d7 106 parameters including parameters of the embedding layer).",
       "asbval:note": "Paper uses transformer with 2 attention heads (not multi-head in the sense of many independent heads), and applies it to MS/MS spectra. The architecture is confirmed, but the paper does not explicitly discuss multi-head attention as a design principle for capturing diverse patterns in different representation subspaces. The paper mentions '2 attention heads' but does not elaborate on multi-head attention theory or its benefits for pattern capture.",
@@ -504,7 +504,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-head-attention-mechanism-design/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/multi-head-attention-mechanism-design/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT was developed using Python 3.10 and implemented with PyTorch 2.0.",
       "asbval:note": "PyTorch is explicitly named as the implementation framework for the transformer model.",
@@ -524,7 +524,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-head-attention-mechanism-design/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/multi-head-attention-mechanism-design/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In case, customized binary fingerprint bit locations are not provided within the MSP blocks for training, IDSL_MINT can generate molecular fingerprint descriptors using SMILES or InChI strings for extended connectivity fingerprint (ECFP) using an adjustable radius [19] or MACCS Keys [20] fingerprint types which are widely recognized in the field of cheminformatics [21].",
       "asbval:note": "Paper generates ECFP and MACCS Keys fingerprints but does not explicitly name RDKit as the tool. The paper cites references [19] and [20] for these fingerprint types but does not specify which software library (RDKit, Avalon, or other) is used for generation. The function is present but the specific tool name is not confirmed in the passages.",
@@ -544,7 +544,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-head-attention-mechanism-design/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/multi-head-attention-mechanism-design/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT was developed using Python 3.10 and implemented with PyTorch 2.0.",
       "asbval:note": "Python 3.10 is explicitly stated as the development language.",
@@ -564,7 +564,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/positional-encoding-for-spectral-sequences/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/positional-encoding-for-spectral-sequences/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "We hypothesized the intensity of ions in a mass spectrum indicates the abundance of the ions and consequently the importance of the related sub-structure. Therefore, we used a sinusoidal positional encoding similar to Vaswani et al. [17] to account for the effects of intensity on the tokenized embedded m/z tokens",
       "asbval:note": "The paper explicitly describes using sinusoidal positional encoding to embed intensity information into m/z tokens for the transformer model, matching the claim's core concept.",
@@ -584,7 +584,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/positional-encoding-for-spectral-sequences/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/positional-encoding-for-spectral-sequences/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Next, tokenized m/z tensors are embedded into the transformer model dimension... the intensity-weighted positional encoding tensor is summed up with the embedded m/z tokens followed by a dropout layer to control potential overfittings. The embedded m/z space is converted into the encoder structure of the transformer model.",
       "asbval:note": "The paper describes the exact workflow: tokenization \u2192 embedding \u2192 positional encoding \u2192 encoder structure, matching the scope description.",
@@ -604,7 +604,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/positional-encoding-for-spectral-sequences/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/positional-encoding-for-spectral-sequences/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT was developed using Python 3.10 and implemented with PyTorch 2.0.",
       "asbval:note": "PyTorch is explicitly named as the implementation framework for IDSL_MINT.",
@@ -624,7 +624,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/positional-encoding-for-spectral-sequences/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/positional-encoding-for-spectral-sequences/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In case, customized binary fingerprint bit locations are not provided within the MSP blocks for training, IDSL_MINT can generate molecular fingerprint descriptors using SMILES or InChI strings for extended connectivity fingerprint (ECFP) using an adjustable radius [19] or MACCS Keys [20] fingerprint types",
       "asbval:note": "The paper mentions generating fingerprints from SMILES/InChI strings but does not explicitly name RDKit as the tool used. The paper references ECFP and MACCS Keys generation but does not specify the implementation library. RDKit is a common tool for this function, but the paper does not confirm its use.",
@@ -644,7 +644,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/positional-encoding-for-spectral-sequences/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/positional-encoding-for-spectral-sequences/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT was developed using Python 3.10 and implemented with PyTorch 2.0.",
       "asbval:note": "Python 3.10 is explicitly stated as the development language.",
@@ -664,7 +664,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pytorch-model-instantiation-and-forward-pass/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/pytorch-model-instantiation-and-forward-pass/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT was developed using Python 3.10 and implemented with PyTorch 2.0... The IDSL_MINT transformer model architecture for predicting molecular fingerprint is displayed in Figs. 1. IDSL_MINT only takes MS/MS spectra accompanied with precursor m/z values in the.msp text format. First, m/z fragments are tokenized using constant m/z interval steps, and intensity values are sorted by the maximum intensity after normalization to the unit sum of the total intensities.",
       "asbval:note": "Paper describes instantiation of transformer model with MS/MS data input, tokenization, and tensor creation for forward pass.",
@@ -684,7 +684,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pytorch-model-instantiation-and-forward-pass/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/pytorch-model-instantiation-and-forward-pass/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT was developed using Python 3.10 and implemented with PyTorch 2.0.",
       "asbval:note": "Paper explicitly states PyTorch 2.0 is used for implementation.",
@@ -704,7 +704,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pytorch-model-instantiation-and-forward-pass/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/pytorch-model-instantiation-and-forward-pass/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "In case, customized binary fingerprint bit locations are not provided within the MSP blocks for training, IDSL_MINT can generate molecular fingerprint descriptors using SMILES or InChI strings for extended connectivity fingerprint (ECFP) using an adjustable radius [19] or MACCS Keys [20] fingerprint types",
       "asbval:note": "Paper mentions SMILES and fingerprint generation but does not explicitly name RDKit as the tool used. The paper generates ECFP and MACCS Keys fingerprints from SMILES/InChI but does not specify which library performs this conversion. RDKit is a common tool for this function but is not named in the passages.",
@@ -724,7 +724,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pytorch-model-instantiation-and-forward-pass/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/pytorch-model-instantiation-and-forward-pass/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT was developed using Python 3.10 and implemented with PyTorch 2.0.",
       "asbval:note": "Paper explicitly states Python 3.10 was used.",
@@ -744,7 +744,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pytorch-model-instantiation-and-forward-pass/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/pytorch-model-instantiation-and-forward-pass/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "Tokenized m/z and intensity tensors... Next, tokenized m/z tensors are embedded into the transformer model dimension... The output of the decoder structure of the transformer was fed into a linear layer followed by a SoftMax layer to calculate the probability of the fingerprint bit locations",
       "asbval:note": "Paper describes tensor creation, embedding, and forward pass through transformer architecture with output layer.",
@@ -764,7 +764,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pytorch-model-instantiation-and-forward-pass/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/pytorch-model-instantiation-and-forward-pass/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The embedded m/z space is converted into the encoder structure of the transformer model... we used a sinusoidal positional encoding similar to Vaswani et al. [17] to account for the effects of intensity on the tokenized embedded m/z tokens",
       "asbval:note": "Paper describes encoder structure and positional encoding implementation.",
@@ -784,7 +784,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-tensor-representation-and-preprocessing/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/spectral-tensor-representation-and-preprocessing/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "First, m/z fragments are tokenized using constant m/z interval steps, and intensity values are sorted by the maximum intensity after normalization to the unit sum of the total intensities... Tokenized m/z tensors are embedded into the transformer model dimension... we used a sinusoidal positional encoding similar to Vaswani et al. [17] to account for the effects of intensity on the tokenized embedded m/z tokens",
       "asbval:note": "Core preprocessing pipeline is explicitly described in Methods section.",
@@ -804,7 +804,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-tensor-representation-and-preprocessing/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/spectral-tensor-representation-and-preprocessing/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT only takes MS/MS spectra accompanied with precursor m/z values in the.msp text format. First, m/z fragments are tokenized using constant m/z interval steps, and intensity values are sorted by the maximum intensity after normalization to the unit sum of the total intensities.",
       "asbval:note": "Paper explicitly describes .msp input format and preservation of m/z and intensity information through tokenization.",
@@ -824,7 +824,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-tensor-representation-and-preprocessing/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/spectral-tensor-representation-and-preprocessing/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT was developed upon the transformer model architecture originally proposed by Vaswani et al. [17] and is implemented within the python PyTorch framework (https://pytorch.org)... IDSL_MINT was developed using Python 3.10 and implemented with PyTorch 2.0... GPUs and CPUs are both supported by IDSL_MINT.",
       "asbval:note": "PyTorch is explicitly named as the implementation framework with GPU/CPU support.",
@@ -844,7 +844,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-tensor-representation-and-preprocessing/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/spectral-tensor-representation-and-preprocessing/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "RDKit is not mentioned anywhere in the provided passages. The paper mentions SMILES and InChI strings are used for fingerprint generation (ECFP, MACCS Keys), but does not name RDKit as the tool performing this parsing. The paper states 'IDSL_MINT can generate molecular fingerprint descriptors using SMILES or InChI strings' but does not specify which library performs this parsing.",
@@ -864,7 +864,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-tensor-representation-and-preprocessing/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/spectral-tensor-representation-and-preprocessing/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT only takes MS/MS spectra accompanied with precursor m/z values in the.msp text format... IDSL_MINT code is publicly available at https://github.com/idslme/IDSL_MINT... Users can train a new model on these notebooks using the test data or they can use their own input data for creating customized models... Typically, users should specify the criteria for MS/MS spectra input, molecular fingerprint type, transformer model settings, parameters for the cross-entropy LOSS function, and configurations for the Adam optimization strategy.",
       "asbval:note": "IDSL_MINT is confirmed as the framework managing .msp parsing, YAML configuration, and transformer training/inference.",
@@ -884,7 +884,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-tensor-representation-and-preprocessing/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/spectral-tensor-representation-and-preprocessing/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT was developed using Python 3.10 and implemented with PyTorch 2.0.",
       "asbval:note": "Python 3.10 is explicitly mentioned as the version used for IDSL_MINT development.",
@@ -904,7 +904,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transformer-architecture-implementation/000",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/transformer-architecture-implementation/000",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT was developed upon the transformer model architecture originally proposed by Vaswani et al. [17] and is implemented within the python PyTorch framework... The embedded m/z space is converted into the encoder structure of the transformer model... We used a sinusoidal positional encoding similar to Vaswani et al. [17] to account for the effects of intensity on the tokenized embedded m/z tokens",
       "asbval:note": "Paper explicitly implements transformer encoder with positional encoding in PyTorch for MS/MS spectra processing, directly matching the research question.",
@@ -924,7 +924,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transformer-architecture-implementation/001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/transformer-architecture-implementation/001",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT was developed using Python 3.10 and implemented with PyTorch 2.0... The IDSL_MINT transformer model architecture for predicting molecular fingerprint is displayed in Figs. 1. IDSL_MINT only takes MS/MS spectra accompanied with precursor m/z values in the.msp text format. First, m/z fragments are tokenized... Next, tokenized m/z tensors are embedded into the transformer model dimension.",
       "asbval:note": "Paper confirms PyTorch 2.0 implementation with transformer encoder blocks and positional encoding for MS/MS data.",
@@ -944,7 +944,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transformer-architecture-implementation/002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/transformer-architecture-implementation/002",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": null,
       "asbval:note": "RDKit is not mentioned anywhere in the provided passages. The paper uses SMILES and InChI strings but does not explicitly name RDKit as the tool for conversion. Paper states 'IDSL_MINT can generate molecular fingerprint descriptors using SMILES or InChI strings for extended connectivity fingerprint (ECFP)' but does not specify the tool used for this conversion.",
@@ -964,7 +964,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transformer-architecture-implementation/003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/transformer-architecture-implementation/003",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT (https://github.com/idslme/IDSL_MINT), a deep learning mass spectrometry framework, designed to create data-centric models for mass spectrometry applications using transformer models... IDSL_MINT code is publicly available at https://github.com/idslme/IDSL_MINT... users should specify the criteria for MS/MS spectra input, molecular fingerprint type, transformer model settings, parameters for the cross-entropy LOSS function, and configurations for the Adam optimization strategy... IDSL_MINT can be executed via a simple and easy to modify YAML configuration files",
       "asbval:note": "Paper explicitly describes IDSL_MINT as a transformer-based framework with YAML configuration for training and inference.",
@@ -984,7 +984,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transformer-architecture-implementation/004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/transformer-architecture-implementation/004",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT was developed using Python 3.10 and implemented with PyTorch 2.0.",
       "asbval:note": "Paper specifies Python 3.10 was used for development, though the card does not specify a version.",
@@ -1004,7 +1004,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transformer-architecture-implementation/005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/transformer-architecture-implementation/005",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "The majority of tandem mass spectrometry (MS/MS) spectra in untargeted metabolomics and exposomics studies lack any annotation. Our deep learning framework, Integrated Data Science Laboratory for Metabolomics and Exposomics-Mass INTerpreter (IDSL_MINT) can translate MS/MS spectra into molecular fingerprint descriptors... Models are trained on user-provided reference MS/MS libraries via any customizable molecular fingerprint descriptors.",
       "asbval:note": "Paper demonstrates mapping MS/MS spectra to molecular fingerprints, matching the scope description.",
@@ -1024,7 +1024,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transformer-architecture-implementation/006",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/transformer-architecture-implementation/006",
       "@type": "asbval:ClaimAssessment",
       "asbval:evidence_quote": "IDSL_MINT can be executed via a simple and easy to modify YAML configuration files using a simple command 'MINT_workflow \u2013yaml path/to/yaml/file' in a Linux terminal. Typically, users should specify the criteria for MS/MS spectra input, molecular fingerprint type, transformer model settings, parameters for the cross-entropy LOSS function, and configurations for the Adam optimization strategy.",
       "asbval:note": "Paper confirms YAML configuration files are used to specify transformer model settings for training pipelines.",
@@ -1044,7 +1044,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/attention-mechanism-validation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/attention-mechanism-validation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "attention-mechanism-validation",
@@ -1057,7 +1057,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/multi-head-attention-mechanism-design/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/multi-head-attention-mechanism-design/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 4,
       "asbval:target_artifact_id": "multi-head-attention-mechanism-design",
@@ -1070,7 +1070,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/positional-encoding-for-spectral-sequences/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/positional-encoding-for-spectral-sequences/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 5,
       "asbval:target_artifact_id": "positional-encoding-for-spectral-sequences",
@@ -1083,7 +1083,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/pytorch-model-instantiation-and-forward-pass/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/pytorch-model-instantiation-and-forward-pass/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "pytorch-model-instantiation-and-forward-pass",
@@ -1096,7 +1096,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/spectral-tensor-representation-and-preprocessing/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/spectral-tensor-representation-and-preprocessing/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 6,
       "asbval:target_artifact_id": "spectral-tensor-representation-and-preprocessing",
@@ -1109,7 +1109,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/skill/transformer-architecture-implementation/triage",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/skill/transformer-architecture-implementation/triage",
       "@type": "asbval:SkillTriageAssertion",
       "asbval:n_claims": 7,
       "asbval:target_artifact_id": "transformer-architecture-implementation",
@@ -1122,7 +1122,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_001",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/claim/claim_001",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "IDSL_MINT is a mass spectrometry data processing framework developed by the Integrated Data Science Laboratory for Metabolomics and Exposomics (IDSL.ME).",
       "asbval:note": "substring_in_paper=false; source_excerpt only names the organization, doesn't confirm IDSL_MINT is their framework or describe its function",
@@ -1142,7 +1142,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_002",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/claim/claim_002",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "IDSL_MINT's approach for mass spectrometry data processing is constructed upon transformer models.",
       "asbval:note": "substring_in_paper=false; excerpt confirms transformer-based approach but is incomplete (truncated at 'Attention is all'); cannot fully verify claim without complete source",
@@ -1162,7 +1162,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_003",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/claim/claim_003",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "IDSL_MINT is powered by RDKit.",
       "asbval:note": "substring_in_paper=false; source_excerpt appears to be metadata/structured field rather than natural paper text; cannot verify context",
@@ -1182,7 +1182,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_004",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/claim/claim_004",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "IDSL_MINT uses PyTorch.",
       "asbval:note": "substring_in_paper=false; single word 'PyTorch' insufficient to confirm IDSL_MINT uses it; lacks context",
@@ -1202,7 +1202,7 @@
       }
     },
     {
-      "@id": "asbval:assertion/claim/claim_005",
+      "@id": "asbval:assertion/paper/10.1186%2Fs13321-024-00804-5/claim/claim_005",
       "@type": "asbval:ClaimAssessment",
       "asbval:claim_text": "IDSL_MINT is developed by Sadjad Fakouri Baygi.",
       "asbval:note": "substring_in_paper=false; source_excerpt appears to be structured metadata field, not natural paper text; cannot verify authorship claim",
