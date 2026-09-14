@@ -15,6 +15,14 @@ This repo ships **two** things on **two** tag schemes, both noted per release:
 ## [Unreleased]
 
 ### Changed
+- Make CI gate 1 (LinkML) blocking once its schema is resolvable. It now
+  validates every `collection.yaml` closed against `SkillCollection` in
+  `asb-schema` >= 0.3.0, the first version that declares the ten keys the
+  released manifests carry, and it runs outside `continue-on-error`. While that
+  package is not installable, or an older one resolves, the step says it did not
+  run and exits 0. The four released manifests validate against a locally built
+  0.3.0 wheel; `asb-schema` is not on PyPI yet, so CI still reports that the gate
+  did not run.
 - Make `router` the default offline selector rule and give it a relevance-bearing
   tie-break inside an equal-score block: candidates are ordered by how many query
   terms reached their `name`, then by how much of the `name` those terms are,
